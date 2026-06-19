@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksRequest extends TeaModel {
     /**
-     * <p>The disk IDs. You can specify a JSON array that contains a maximum of 100 disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>The IDs of disks. You can specify up to 100 disk IDs at a time. The DiskIds parameter is a JSON array. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;d-bp1d6tsvznfghy7y****&quot;, &quot;d-bp1ippxbaql9zet7****&quot;, … &quot;d-bp1ib7bcz07lcxa9****&quot;]</p>
@@ -23,12 +23,11 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page. Maximum value: 100. Default value:</p>
+     * <p>The maximum number of entries per page for a paged query. Maximum value: 100.
+     * Default value:</p>
      * <ul>
-     * <li><p>If you do not specify this parameter or if you set a value smaller than 10, the default value is 10.</p>
-     * </li>
-     * <li><p>If you set a value greater than 100, the default value is 100.</p>
-     * </li>
+     * <li>If this parameter is not specified or is set to a value less than 10, the default value is 10.</li>
+     * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +37,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -53,7 +52,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number of the disk status list. Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +62,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page for a paged query. Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +72,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the disk. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +88,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The snapshot chain IDs. You can specify a JSON array that contains a maximum of 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
+     * <p>The IDs of snapshot chains. You can specify up to 100 snapshot chain IDs at a time. The SnapshotLinkIds parameter is a JSON array. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;sl-bp1grgphbcc9brb5****&quot;, &quot;sl-bp1c4izumvq0i5bs****&quot;, … &quot;sl-bp1akk7isz866dds****&quot;]</p>

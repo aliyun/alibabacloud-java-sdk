@@ -8,7 +8,7 @@ public class DescribeTaskAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeTaskAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the list of task IDs.</p>
+     * <p>The task ID. You can call <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> to query task IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

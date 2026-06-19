@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouterInterfaceRequest extends TeaModel {
-    /**
-     * <p>A client-generated, case-sensitive token used to ensure request idempotency. You must ensure that the token is unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -17,8 +14,6 @@ public class DeleteRouterInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the router interface is located.</p>
-     * <p>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to get the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -31,15 +26,11 @@ public class DeleteRouterInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the router interface that you want to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
 
-    /**
-     * <p>This parameter is used for auditing and is required in specific scenarios, such as when deleting a router interface for a peer-to-peer connection.</p>
-     */
     @NameInMap("UserCidr")
     public String userCidr;
 

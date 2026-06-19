@@ -4,33 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteTablesResponseBody extends TeaModel {
-    /**
-     * <p>The page number.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the route tables.</p>
-     */
     @NameInMap("RouteTables")
     public DescribeRouteTablesResponseBodyRouteTables routeTables;
 
-    /**
-     * <p>The total number of matching entries.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

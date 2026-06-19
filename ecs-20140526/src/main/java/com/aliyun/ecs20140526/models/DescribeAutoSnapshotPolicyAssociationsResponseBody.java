@@ -8,7 +8,7 @@ public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel
     public DescribeAutoSnapshotPolicyAssociationsResponseBodyAutoSnapshotPolicyAssociations autoSnapshotPolicyAssociations;
 
     /**
-     * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>

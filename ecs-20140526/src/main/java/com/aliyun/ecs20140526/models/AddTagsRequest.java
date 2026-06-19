@@ -8,7 +8,7 @@ public class AddTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the resource is located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AddTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource to tag. For example, if <code>ResourceType</code> is set to <code>instance</code>, this parameter is the instance ID.</p>
+     * <p>The ID of the resource to which you want to add tags. For example, when ResourceType is set to instance, ResourceId is the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,32 +36,20 @@ public class AddTagsRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><p>instance: an ECS instance</p>
-     * </li>
-     * <li><p>disk: a disk</p>
-     * </li>
-     * <li><p>snapshot: a snapshot</p>
-     * </li>
-     * <li><p>image: an image</p>
-     * </li>
-     * <li><p>securitygroup: a security group</p>
-     * </li>
-     * <li><p>volume: a storage volume</p>
-     * </li>
-     * <li><p>eni: an elastic network interface (ENI)</p>
-     * </li>
-     * <li><p>ddh: a Dedicated Host</p>
-     * </li>
-     * <li><p>keypair: an SSH key pair</p>
-     * </li>
-     * <li><p>launchtemplate: a launch template</p>
-     * </li>
-     * <li><p>reservedinstance: a reserved instance</p>
-     * </li>
-     * <li><p>snapshotpolicy: an automatic snapshot policy</p>
-     * </li>
+     * <li>instance: ECS instance</li>
+     * <li>disk: cloud disk</li>
+     * <li>snapshot: snapshot</li>
+     * <li>image: image</li>
+     * <li>securitygroup: security group</li>
+     * <li>volume: storage volume</li>
+     * <li>eni: Elastic Network Interface (ENI)</li>
+     * <li>ddh: dedicated host</li>
+     * <li>keypair: SSH key pair</li>
+     * <li>launchtemplate: launch template</li>
+     * <li>reservedinstance: reserved instance</li>
+     * <li>snapshotpolicy: automatic snapshot policy</li>
      * </ul>
-     * <p>All values are in lowercase.</p>
+     * <p>All valid values are in lowercase.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +59,7 @@ public class AddTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -140,10 +128,7 @@ public class AddTagsRequest extends TeaModel {
 
     public static class AddTagsRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <blockquote>
-         * <p>For compatibility, we recommend that you use the <code>Tag.N.Key</code> parameter.</p>
-         * </blockquote>
+         * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -152,7 +137,7 @@ public class AddTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The value can be up to 128 characters in length and can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

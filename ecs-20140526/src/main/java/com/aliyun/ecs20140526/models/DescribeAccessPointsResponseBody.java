@@ -4,33 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsResponseBody extends TeaModel {
-    /**
-     * <p>Contains details about the access points.</p>
-     */
     @NameInMap("AccessPointSet")
     public DescribeAccessPointsResponseBodyAccessPointSet accessPointSet;
 
-    /**
-     * <p>The page number.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of access points.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

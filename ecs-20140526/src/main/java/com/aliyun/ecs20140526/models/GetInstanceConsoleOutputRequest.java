@@ -21,7 +21,7 @@ public class GetInstanceConsoleOutputRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,12 +31,10 @@ public class GetInstanceConsoleOutputRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to remove formatting symbols from the returned command output. Valid values:</p>
+     * <p>Specifies whether to remove formatting symbols from the returned text. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: removes formatting symbols.</li>
+     * <li>false: does not remove formatting symbols.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

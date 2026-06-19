@@ -8,7 +8,7 @@ public class RemoveTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the resource is located. Call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to get the latest list of Alibaba Cloud regions.</p>
+     * <p>The region to which the resource belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class RemoveTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource from which to remove tags. For example, if ResourceType is set to instance, this parameter is the instance ID.</p>
+     * <p>The ID of the resource from which you want to unbind tags. For example, when the resource type (ResourceType) is instance, the resource ID is the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,34 +34,22 @@ public class RemoveTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><p>instance: an ECS instance.</p>
-     * </li>
-     * <li><p>disk: a disk.</p>
-     * </li>
-     * <li><p>snapshot: a snapshot.</p>
-     * </li>
-     * <li><p>image: an image.</p>
-     * </li>
-     * <li><p>securitygroup: a security group.</p>
-     * </li>
-     * <li><p>volume: a volume.</p>
-     * </li>
-     * <li><p>eni: an elastic network interface.</p>
-     * </li>
-     * <li><p>ddh: a dedicated host.</p>
-     * </li>
-     * <li><p>keypair: an SSH key pair.</p>
-     * </li>
-     * <li><p>launchtemplate: a launch template.</p>
-     * </li>
-     * <li><p>reservedinstance: a reserved instance.</p>
-     * </li>
-     * <li><p>snapshotpolicy: an automatic snapshot policy.</p>
-     * </li>
+     * <li>instance: ECS instance.</li>
+     * <li>disk: disk.</li>
+     * <li>snapshot: snapshot.</li>
+     * <li>image: image.</li>
+     * <li>securitygroup: security group.</li>
+     * <li>volume: storage volume.</li>
+     * <li>eni: elastic network interface (ENI).</li>
+     * <li>ddh: dedicated host.</li>
+     * <li>keypair: SSH key pair.</li>
+     * <li>launchtemplate: launch template.</li>
+     * <li>reservedinstance: reserved instance.</li>
+     * <li>snapshotpolicy: automatic snapshot policy.</li>
      * </ul>
-     * <p>All values must be in lowercase.</p>
+     * <p>All valid values are in lowercase.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +59,7 @@ public class RemoveTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
@@ -139,10 +127,7 @@ public class RemoveTagsRequest extends TeaModel {
 
     public static class RemoveTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
-         * <blockquote>
-         * <p>For compatibility, we recommend that you use the Tag.N.Key parameter.</p>
-         * </blockquote>
+         * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string once specified. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -151,7 +136,7 @@ public class RemoveTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. The value can be an empty string and up to 128 characters long. It cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</p>
+         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string once specified. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

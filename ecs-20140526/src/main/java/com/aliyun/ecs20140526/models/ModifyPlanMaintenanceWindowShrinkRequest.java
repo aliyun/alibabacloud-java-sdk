@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the maintenance window. If this parameter is not specified, the enabled status remains unchanged.</p>
+     * <p>Specifies whether to enable or disable the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -17,7 +17,7 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     public Integer minMaintenanceInterval;
 
     /**
-     * <p>The ID of the maintenance window to modify.</p>
+     * <p>The ID of the O&amp;M window to modify. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String planWindowId;
 
     /**
-     * <p>The new name of the maintenance window. If this parameter is not specified, the name remains unchanged.</p>
+     * <p>The name of the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
      * 
      * <strong>example:</strong>
      * <p>WIndowName</p>
@@ -36,7 +36,7 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String planWindowName;
 
     /**
-     * <p>The ID of the region where the instance is located. You can call the DescribeRegions operation to query the most recent list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maintenance action for the maintenance window. If this parameter is not specified, the action remains unchanged.</p>
+     * <p>The supported O&amp;M actions. Leave this parameter empty if no modification is needed.</p>
      * 
      * <strong>example:</strong>
      * <p>Reboot</p>
@@ -55,13 +55,13 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String supportMaintenanceAction;
 
     /**
-     * <p>The resources to which the maintenance window applies. If this parameter is not specified, the target resources remain unchanged.</p>
+     * <p>The resource to which the O&amp;M window applies. Leave this parameter empty if no modification is needed.</p>
      */
     @NameInMap("TargetResource")
     public String targetResourceShrink;
 
     /**
-     * <p>The recurrence schedule for the maintenance window. If this parameter is not specified, the schedule remains unchanged.</p>
+     * <p>The recurring cycle of the O&amp;M window. Leave this parameter empty if no modification is needed.</p>
      */
     @NameInMap("TimePeriod")
     public String timePeriodShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account to which the permission is granted. The account can be an Alibaba Cloud partner (certified ISV) or an individual user.</p>
+     * <p>The ID of the Alibaba Cloud partner (certified ISV) account or individual user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long accountId;
 
     /**
-     * <p>The ID of the elastic network interface.</p>
+     * <p>The ID of the ENI.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,8 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The permission to grant. The only supported value is InstanceAttach.</p>
-     * <p>InstanceAttach: Allows an authorized account to attach your elastic network interface to one of its ECS instances. The ECS instance and the elastic network interface must be in the same availability zone.</p>
+     * <p>The ENI permission. Only InstanceAttach is currently supported.</p>
+     * <p>InstanceAttach: allows the authorized user to attach your ENI to their ECS instance. The ECS instance must be in the same zone as the ENI.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public String permission;
 
     /**
-     * <p>The ID of the region where the elastic network interface is located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to obtain the latest list of Alibaba Cloud regions.</p>
+     * <p>The region of the ENI permission. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list of Alibaba Cloud.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,20 +4,13 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyHaVipAttributeRequest extends TeaModel {
-    /**
-     * <p>A client-generated token used to ensure the idempotence of the request. Make sure that the token is unique across requests. The token can contain only ASCII characters and be no more than 64 characters long.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The new description of the HaVip. The description must be 2 to 256 characters long and must not start with <code>http://</code> or <code>https://</code>.</p>
-     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the HaVip that you want to modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HaVipId")
@@ -30,7 +23,6 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the HaVip is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

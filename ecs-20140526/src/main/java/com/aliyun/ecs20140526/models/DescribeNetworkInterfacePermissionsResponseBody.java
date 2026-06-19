@@ -4,14 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
-    /**
-     * <p>The elastic network interface permissions.</p>
-     */
     @NameInMap("NetworkInterfacePermissions")
     public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +17,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +35,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

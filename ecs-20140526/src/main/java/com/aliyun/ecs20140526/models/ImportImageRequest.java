@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class ImportImageRequest extends TeaModel {
     /**
-     * <p>The system architecture. Valid values:</p>
+     * <p>The system architecture. Valid values: </p>
      * <ul>
-     * <li><p>i386</p>
-     * </li>
-     * <li><p>x86_64</p>
-     * </li>
-     * <li><p>arm64</p>
-     * </li>
+     * <li>i386.</li>
+     * <li>x86_64.</li>
+     * <li>arm64.</li>
      * </ul>
      * <p>Default value: x86_64.</p>
      * 
@@ -25,16 +22,14 @@ public class ImportImageRequest extends TeaModel {
     /**
      * <p>The boot mode of the image. Valid values:</p>
      * <ul>
-     * <li><p>BIOS: the BIOS boot mode.</p>
-     * </li>
-     * <li><p>UEFI: the UEFI boot mode.</p>
-     * </li>
+     * <li>BIOS: BIOS boot mode.</li>
+     * <li>UEFI: UEFI boot mode.</li>
      * </ul>
-     * <p>Default value: BIOS. If you set <code>Architecture</code> to <code>arm64</code>, the value of this parameter defaults to UEFI and can only be set to UEFI.</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>To prevent startup failures, ensure the boot mode you specify is supported by the image. For more information, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
+     * <p>Default value: BIOS. If <code>Architecture=arm64</code>, the default value is UEFI, and only UEFI is supported.</p>
+     * <notice>
+     * 
+     * <p>To prevent instances from failing to start due to an unsupported boot mode, make sure that you understand the boot mode supported by the target image before you set this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
+     * <p></notice>.</p>
      * 
      * <strong>example:</strong>
      * <p>BIOS</p>
@@ -43,7 +38,7 @@ public class ImportImageRequest extends TeaModel {
     public String bootMode;
 
     /**
-     * <p>A client-generated token that ensures the idempotence of a request. The token must be unique across requests. The token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -52,7 +47,7 @@ public class ImportImageRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the image. The description must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>. Both English and Chinese characters are supported.</p>
+     * <p>The description of the image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>TestDescription</p>
@@ -61,9 +56,9 @@ public class ImportImageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The policy for checking the image. If you do not specify this parameter, the system does not check the image. This parameter supports only the standard detection mode. Set the value to <code>Standard</code>.</p>
+     * <p>The image detection strategy. If this parameter is not specified, detection is not triggered. Only the Standard detection mode is supported.</p>
      * <blockquote>
-     * <p>This feature is supported on most Linux and Windows versions. For more information about the check items and the operating systems that support this feature, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limitations for image detection</a>.</p>
+     * <p>Most Linux and Windows versions are supported. For more information about image detection items and operating system limitations, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limitations for image detection</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,18 +68,16 @@ public class ImportImageRequest extends TeaModel {
     public String detectionStrategy;
 
     /**
-     * <p>A list of disk device mappings for the custom image.</p>
+     * <p>The information list of the custom image to create.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
 
     /**
-     * <p>Specifies whether to perform a dry run for the request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: performs a check request without executing the actual operation. The system checks whether the request parameters are valid, the request format is correct, and the required permissions are granted. If the check fails, the system returns an error message. If the check succeeds, the system returns the <code>DryRunOperation</code> error code.</p>
-     * </li>
-     * <li><p><code>false</code>: sends a normal request. After the request passes the check, the system returns a 2xx HTTP status code and performs the operation.</p>
-     * </li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the resource status is queried.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -95,13 +88,13 @@ public class ImportImageRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The properties of image features.</p>
+     * <p>The image feature-related properties.</p>
      */
     @NameInMap("Features")
     public ImportImageRequestFeatures features;
 
     /**
-     * <p>The name of the image. The name must be 2 to 128 characters long and start with a letter or a Chinese character. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-). The name cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the image. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ImageTestName</p>
@@ -110,12 +103,10 @@ public class ImportImageRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The license type. This parameter sets the licensing model for instances that are created from the image by calling the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation. This parameter applies only to Windows Server images. Valid values:</p>
+     * <p>The license type. This parameter specifies the authorization mode when instances are created by calling <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> with the image. This value takes effect only for Windows Server images. Valid values:</p>
      * <ul>
-     * <li><p>Aliyun: Uses a license provided by Alibaba Cloud. When you start an instance created from this image, the system attempts to automatically connect to the Alibaba Cloud KMS server for activation. The fees for the instance include the cost of the Windows Server license.</p>
-     * </li>
-     * <li><p>BYOL: Bring Your Own License. When you start an instance created from this image, Alibaba Cloud does not provide activation. You must use your own license key to manually activate the operating system. The fees for the instance do not include the cost of the Windows Server license.</p>
-     * </li>
+     * <li>Aliyun: Use the Alibaba Cloud official license. After the instance starts, the system attempts to automatically connect to the Alibaba Cloud KMS server for activation. The billing for the instance includes the Windows Server license fee.</li>
+     * <li>BYOL: Bring Your Own License. After the instance starts, Alibaba Cloud does not automatically activate it. You must manually activate it by using your own valid license key. The billing for the instance does not include the Windows Server license fee.</li>
      * </ul>
      * <p>Default value: Aliyun.</p>
      * 
@@ -126,12 +117,10 @@ public class ImportImageRequest extends TeaModel {
     public String licenseType;
 
     /**
-     * <p>The operating system type. Valid values:</p>
+     * <p>The operating system type. Valid values: </p>
      * <ul>
-     * <li><p><code>windows</code>: You must also set the <code>LicenseType</code> parameter.</p>
-     * </li>
-     * <li><p><code>linux</code></p>
-     * </li>
+     * <li>windows. You must also set <code>LicenseType</code>.</li>
+     * <li>linux.</li>
      * </ul>
      * <p>Default value: linux.</p>
      * 
@@ -145,62 +134,35 @@ public class ImportImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operating system distribution. Valid values:</p>
+     * <p>The operating system version. Valid values: </p>
      * <ul>
-     * <li><p>Aliyun</p>
-     * </li>
-     * <li><p>Anolis</p>
-     * </li>
-     * <li><p>CentOS</p>
-     * </li>
-     * <li><p>Ubuntu</p>
-     * </li>
-     * <li><p>CoreOS</p>
-     * </li>
-     * <li><p>SUSE</p>
-     * </li>
-     * <li><p>Debian</p>
-     * </li>
-     * <li><p>OpenSUSE</p>
-     * </li>
-     * <li><p>FreeBSD</p>
-     * </li>
-     * <li><p>RedHat</p>
-     * </li>
-     * <li><p>Kylin</p>
-     * </li>
-     * <li><p>UOS</p>
-     * </li>
-     * <li><p>Fedora</p>
-     * </li>
-     * <li><p>Fedora CoreOS</p>
-     * </li>
-     * <li><p>CentOS Stream</p>
-     * </li>
-     * <li><p>AlmaLinux</p>
-     * </li>
-     * <li><p>Rocky Linux</p>
-     * </li>
-     * <li><p>Gentoo</p>
-     * </li>
-     * <li><p>Customized Linux</p>
-     * </li>
-     * <li><p>Others Linux</p>
-     * </li>
-     * <li><p>Windows Server 2022</p>
-     * </li>
-     * <li><p>Windows Server 2019</p>
-     * </li>
-     * <li><p>Windows Server 2016</p>
-     * </li>
-     * <li><p>Windows Server 2012</p>
-     * </li>
-     * <li><p>Windows Server 2008</p>
-     * </li>
-     * <li><p>Windows Server 2003</p>
-     * </li>
-     * <li><p>Other Windows</p>
-     * </li>
+     * <li>Aliyun</li>
+     * <li>Anolis</li>
+     * <li>CentOS</li>
+     * <li>Ubuntu</li>
+     * <li>CoreOS</li>
+     * <li>SUSE</li>
+     * <li>Debian</li>
+     * <li>OpenSUSE</li>
+     * <li>FreeBSD</li>
+     * <li>RedHat</li>
+     * <li>Kylin</li>
+     * <li>UOS</li>
+     * <li>Fedora</li>
+     * <li>Fedora CoreOS</li>
+     * <li>CentOS Stream</li>
+     * <li>AlmaLinux</li>
+     * <li>Rocky Linux</li>
+     * <li>Gentoo</li>
+     * <li>Customized Linux</li>
+     * <li>Others Linux</li>
+     * <li>Windows Server 2022</li>
+     * <li>Windows Server 2019</li>
+     * <li>Windows Server 2016</li>
+     * <li>Windows Server 2012</li>
+     * <li>Windows Server 2008</li>
+     * <li>Windows Server 2003</li>
+     * <li>Other Windows</li>
      * </ul>
      * <p>Default value: Others Linux.</p>
      * 
@@ -211,7 +173,7 @@ public class ImportImageRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The ID of the region where the source custom image is located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the source custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -221,7 +183,7 @@ public class ImportImageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the imported image belongs.</p>
+     * <p>The ID of the enterprise resource group to which the imported image belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -245,11 +207,11 @@ public class ImportImageRequest extends TeaModel {
     public String roleName;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the CloudBox, which uniquely identifies the cloud storage location.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the CloudBox, which is used to uniquely identify the cloud storage location.</p>
      * <blockquote>
-     * <p>You must specify this parameter only when you import an image file from OSS ON CloudBox. If you do not use OSS ON CloudBox, do not specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/430190.html">What is OSS ON CloudBox?</a>.</p>
+     * <p>You need to specify this parameter only when you import an image file from OSS on CloudBox. If you do not use OSS on CloudBox, do not set this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/430190.html">What is OSS on CloudBox</a>.</p>
      * </blockquote>
-     * <p>The ARN must be in the <code>arn:acs:cloudbox:{RegionId}:{AliUid}:cloudbox/{CloudBoxId}</code> format. Replace <code>{RegionId}</code> with the ID of the region where the CloudBox is located, <code>{AliUid}</code> with the ID of your Alibaba Cloud account, and <code>{CloudBoxId}</code> with the ID of the CloudBox.</p>
+     * <p>The ARN must follow this format: <code>arn:acs:cloudbox:{RegionId}:{AliUid}:cloudbox/{CloudBoxId}</code>, where <code>{RegionId}</code> is the region ID of the CloudBox, <code>{AliUid}</code> is the Alibaba Cloud account ID, and <code>{CloudBoxId}</code> is the CloudBox ID.</p>
      * 
      * <strong>example:</strong>
      * <p>arn:acs:cloudbox:cn-hangzhou:123456:cloudbox/cb-xx***123</p>
@@ -258,7 +220,7 @@ public class ImportImageRequest extends TeaModel {
     public String storageLocationArn;
 
     /**
-     * <p>The tags to add to the image.</p>
+     * <p>The tags of the image.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ImportImageRequestTag> tag;
@@ -430,9 +392,9 @@ public class ImportImageRequest extends TeaModel {
 
     public static class ImportImageRequestDiskDeviceMapping extends TeaModel {
         /**
-         * <p>The device name of the disk (<code>DiskDeviceMapping.N.Device</code>) in the custom image.</p>
+         * <p>The device name of DiskDeviceMapping.N.Device in the custom image.</p>
          * <blockquote>
-         * <p>This parameter is being phased out. To ensure compatibility, we recommend that you avoid using this parameter.</p>
+         * <p>This parameter will be deprecated. For better compatibility, do not use this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -442,17 +404,15 @@ public class ImportImageRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The size of the disk, in GiB.</p>
-         * <p>The system disk size must be greater than or equal to the size of the imported image file. Valid values:</p>
+         * <p>The size of the custom image. Unit: GiB.</p>
+         * <p>The size includes the system disk and data disks. Make sure that the system disk space is greater than or equal to the size of the imported image file. Valid values:</p>
          * <ul>
-         * <li><p>For N=1, the disk is a system disk. The value must be in the range of 1 to 2,048.</p>
-         * </li>
-         * <li><p>For N=2 to 17, the disk is a data disk. The value must be in the range of 1 to 2,048.</p>
-         * </li>
+         * <li>When N is 1, the value specifies the system disk size. Valid values: 1 to 2048.</li>
+         * <li>When N is 2 to 17, the value specifies the data disk size. Valid values: 1 to 2048.</li>
          * </ul>
-         * <p>After you upload the source image file to an OSS bucket, you can view the size of the file in the bucket.</p>
+         * <p>After you upload the source image file to OSS, you can view the image file size in the OSS bucket.</p>
          * <blockquote>
-         * <p>This parameter is being deprecated. For better compatibility, we recommend that you use the <code>DiskDeviceMapping.N.DiskImageSize</code> parameter.</p>
+         * <p>This parameter will be deprecated. For better compatibility, use <code>DiskDeviceMapping.N.DiskImageSize</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -462,15 +422,13 @@ public class ImportImageRequest extends TeaModel {
         public Integer diskImSize;
 
         /**
-         * <p>The size of the disk after the image is imported, in GiB.</p>
-         * <p>The value of this parameter for the system disk must be greater than or equal to the size of the image file. Valid values:</p>
+         * <p>The size of the custom image after the image is imported.</p>
+         * <p>The size includes the system disk and data disks. Make sure that the system disk space is greater than or equal to the size of the imported image file. Valid values:</p>
          * <ul>
-         * <li><p>For N=1, the disk is a system disk. The value must be in the range of 1 to 2,048.</p>
-         * </li>
-         * <li><p>For N=2 to 17, the disk is a data disk. The value must be in the range of 1 to 2,048.</p>
-         * </li>
+         * <li>When N is 1, the value specifies the system disk size. Valid values: 1 to 2048. Unit: GiB.</li>
+         * <li>When N is 2 to 17, the value specifies the data disk size. Valid values: 1 to 2048. Unit: GiB.</li>
          * </ul>
-         * <p>After you upload the source image file to an OSS bucket, you can view the size of the file in the bucket.</p>
+         * <p>After you upload the source image file to OSS, you can view the image file size in the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -479,18 +437,14 @@ public class ImportImageRequest extends TeaModel {
         public Integer diskImageSize;
 
         /**
-         * <p>The format of the image file. Valid values:</p>
+         * <p>The image format. Valid values:</p>
          * <ul>
-         * <li><p>RAW</p>
-         * </li>
-         * <li><p>VHD</p>
-         * </li>
-         * <li><p>QCOW2</p>
-         * </li>
-         * <li><p>VMDK (This feature is in invitation-only preview.)</p>
-         * </li>
+         * <li>RAW.</li>
+         * <li>VHD.</li>
+         * <li>QCOW2.</li>
+         * <li>VMDK (in invitational preview).</li>
          * </ul>
-         * <p>Default value: None. If you leave this parameter empty, Alibaba Cloud automatically detects the image format and uses the detected format.</p>
+         * <p>Default value: null, which indicates that Alibaba Cloud automatically detects the image format. The detected format prevails.</p>
          * 
          * <strong>example:</strong>
          * <p>QCOW2</p>
@@ -501,7 +455,7 @@ public class ImportImageRequest extends TeaModel {
         /**
          * <p>The OSS bucket where the image file is stored.</p>
          * <blockquote>
-         * <p>Before you import an image from an OSS bucket for the first time, you must add a RAM policy as described in the <strong>Description</strong> section of this topic. Otherwise, the API returns the <code>NoSetRoletoECSServiceAccount</code> error.</p>
+         * <p>Before you import an image to this OSS bucket for the first time, add the RAM authorization policy as described in the <strong>Operation description</strong> section of this topic. Otherwise, the <code>NoSetRoletoECSServiceAccount</code> error is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -511,7 +465,7 @@ public class ImportImageRequest extends TeaModel {
         public String OSSBucket;
 
         /**
-         * <p>The object key of the image file in the OSS bucket.</p>
+         * <p>The file name (key) of the image file stored in the OSS bucket after the image is uploaded to OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS_5.4_32.raw</p>
@@ -578,10 +532,8 @@ public class ImportImageRequest extends TeaModel {
         /**
          * <p>The metadata access mode of the image. Valid values:</p>
          * <ul>
-         * <li><p>v1: When you create an ECS instance from the image, you cannot set the metadata access mode to Security-Hardened Mode.</p>
-         * </li>
-         * <li><p>v2: When you create an ECS instance from the image, you can set the metadata access mode to Security-Hardened Mode.</p>
-         * </li>
+         * <li>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to hardened mode only.</li>
+         * <li>v2: When you create an ECS instance from this image, you can set the metadata access mode to hardened mode only.</li>
          * </ul>
          * <p>Default value: v1.</p>
          * 
@@ -594,10 +546,8 @@ public class ImportImageRequest extends TeaModel {
         /**
          * <p>Specifies whether the image supports NVMe. Valid values:</p>
          * <ul>
-         * <li><p>supported: Instances created from the image support the NVMe protocol.</p>
-         * </li>
-         * <li><p>unsupported: Instances created from the image do not support the NVMe protocol.</p>
-         * </li>
+         * <li>supported: Instances created from this image support NVMe.</li>
+         * <li>unsupported: Instances created from this image do not support NVMe.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -631,7 +581,7 @@ public class ImportImageRequest extends TeaModel {
 
     public static class ImportImageRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters long and cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the image tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -640,7 +590,7 @@ public class ImportImageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters long, cannot start with <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the image tag. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

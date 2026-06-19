@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
-    /**
-     * <p>The container for EIP monitoring data.</p>
-     */
     @NameInMap("EipMonitorDatas")
     public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -21,7 +21,7 @@ public class CancelCopyImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image copy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the destination image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

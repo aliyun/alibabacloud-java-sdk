@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -14,7 +14,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the snapshot chain list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page as specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -46,7 +46,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     /**
      * <p>The total number of snapshot chains.</p>
      * <blockquote>
-     * <p>When using the <code>MaxResults</code> and <code>NextToken</code> parameters for a paginated query, the returned <code>TotalCount</code> parameter value is invalid.</p>
+     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for a paged query, the returned <code>TotalCount</code> value is invalid. For paging, use <code>MaxResults</code> and <code>NextToken</code> instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

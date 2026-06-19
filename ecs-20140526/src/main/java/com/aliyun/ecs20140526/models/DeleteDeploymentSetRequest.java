@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDeploymentSetRequest extends TeaModel {
     /**
-     * <p>The ID of the deployment set that you want to delete.</p>
+     * <p>The ID of the deployment set to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DeleteDeploymentSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent Alibaba Cloud region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,14 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesResponseBody extends TeaModel {
-    /**
-     * <p>A collection of instance types.</p>
-     */
     @NameInMap("InstanceTypes")
     public DescribeInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
     /**
-     * <p>The token used to retrieve the next page of results.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>

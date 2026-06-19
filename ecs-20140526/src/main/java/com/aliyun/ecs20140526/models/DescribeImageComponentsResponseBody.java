@@ -8,7 +8,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     public DescribeImageComponentsResponseBodyImageComponent imageComponent;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -17,7 +17,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the returned value, see the &quot;Usage notes&quot; section of this topic.</p>
+     * <p>The pagination token returned in this call. For more information about how to use it, refer to the operation description.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>

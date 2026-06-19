@@ -11,7 +11,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
     public AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets;
 
     /**
-     * <p>The ENI ID.</p>
+     * <p>The ID of the ENI.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp1iqejowblx6h8j****</p>

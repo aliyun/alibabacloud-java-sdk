@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateHaVipRequest extends TeaModel {
-    /**
-     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique across requests, contain only ASCII characters, and be no more than 64 characters long.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The description of the HaVip. The description must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The IP address of the HaVip. The IP address must be available and fall within the CIDR block of the vSwitch. If this parameter is not specified, an available IP address is randomly allocated from the CIDR block of the vSwitch.</p>
-     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
@@ -29,7 +20,6 @@ public class CreateHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which to create the HaVip. You can call the operation to get the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -42,7 +32,6 @@ public class CreateHaVipRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vSwitch to which the HaVip belongs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")

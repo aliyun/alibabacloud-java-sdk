@@ -4,36 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends TeaModel {
-    /**
-     * <p>The filter criteria.</p>
-     */
     @NameInMap("Filter")
     public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number. Default: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page. Valid values: 1 to 50. Default: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the physical connection.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
-     * <p>The ID of the region where the virtual border router (VBR) is deployed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -115,15 +104,9 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     }
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter extends TeaModel {
-        /**
-         * <p>The filter key. The only supported value is <code>VbrId</code>.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The VBR IDs. You can specify up to 20 IDs.</p>
-         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

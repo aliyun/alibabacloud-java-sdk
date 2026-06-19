@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeImageComponentsRequest extends TeaModel {
     /**
-     * <p>The type of the image component.</p>
+     * <p>The component type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>Build</p>
-     * </li>
-     * <li><p>Test</p>
-     * </li>
+     * <li>Build</li>
+     * <li>Test.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,9 +19,9 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String componentType;
 
     /**
-     * <p>The version number of the image component in the \<major>.\<minor>.\<patch> format. You can set \<major>, \<minor>, and \<patch> to non-negative integers, or set one of \<major>, \<minor>, and \<patch> to the wildcard (\*) and the other two to non-negative integers.</p>
+     * <p>The component version number in the format of major.minor.patch. All values are non-negative integers. You can also use the wildcard character (*) to replace one of the values for fuzzy matching.</p>
      * <blockquote>
-     * <p>This parameter takes effect only if you specify Name.</p>
+     * <p>This parameter takes effect only when Name is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +31,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String componentVersion;
 
     /**
-     * <p>The IDs of image components. Valid values of N: 1 to 20.</p>
+     * <p>The ID of the image component to query. Valid values of N: 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>ic-bp67acfmxazb4p****</p>
@@ -42,7 +40,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public java.util.List<String> imageComponentId;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries per page for paging. Valid values: 1 to 500.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +50,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the image component. You must specify an exact name to search for the image component.</p>
+     * <p>The image component name. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>testComponent</p>
@@ -61,7 +59,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -70,12 +68,10 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The type of the image component. Valid values:</p>
+     * <p>The image component type. Valid values:</p>
      * <ul>
-     * <li><p>SELF: the custom component that you created.</p>
-     * </li>
-     * <li><p>ALIYUN: the system component provided by Alibaba Cloud.</p>
-     * </li>
+     * <li>SELF: custom image components that you created.</li>
+     * <li>ALIYUN: system components provided by Alibaba Cloud.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +87,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image component. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,9 +97,9 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
-     * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,13 +115,11 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the operating system supported by the image component.</p>
+     * <p>The operating system supported by the component.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>Linux</p>
-     * </li>
-     * <li><p>Windows</p>
-     * </li>
+     * <li>Linux</li>
+     * <li>Windows.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +129,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String systemType;
 
     /**
-     * <p>The tags of the image component.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImageComponentsRequestTag> tag;
@@ -267,7 +261,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
 
     public static class DescribeImageComponentsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+         * <p>The tag key. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -276,7 +270,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+         * <p>The tag value. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

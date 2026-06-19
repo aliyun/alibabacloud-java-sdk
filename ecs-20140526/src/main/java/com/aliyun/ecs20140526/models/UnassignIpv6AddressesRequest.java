@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassignIpv6AddressesRequest extends TeaModel {
     /**
-     * <p>IPv6 address N to unassign. Valid values of N: 1 to 10.</p>
+     * <p>One or more IPv6 addresses to delete. Valid values of N: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>2001:db8:1234:1a00::***</p>
@@ -14,7 +14,7 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>IPv6 prefix N to unassign. Valid values of N: 1 to 10.</p>
+     * <p>One or more IPv6 prefixes to unassign. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
@@ -36,7 +36,7 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

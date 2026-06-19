@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
-     * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
+     * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
      * <ul>
-     * <li><p>-1: The snapshot copy is retained until it is deleted.</p>
-     * </li>
-     * <li><p>1 to 65535: The snapshot copy is retained for a specified number of days.</p>
-     * </li>
+     * <li>-1: permanently retained.</li>
+     * <li>1 to 65535: the specified number of days for which snapshot replicas are retained.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -21,18 +19,16 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer copiedSnapshotsRetentionDays;
 
     /**
-     * <p>The encryption configurations for cross-region snapshot replication.</p>
+     * <p>The encryption parameter for cross-region snapshot replication.</p>
      */
     @NameInMap("CopyEncryptionConfiguration")
     public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
     /**
-     * <p>Specifies whether to enable cross-region replication for the automatic snapshot.</p>
+     * <p>Specifies whether to allow automatic cross-region replication.</p>
      * <ul>
-     * <li><p>true: enables cross-region replication for the automatic snapshot.</p>
-     * </li>
-     * <li><p>false: disables cross-region replication for the automatic snapshot.</p>
-     * </li>
+     * <li>true: allowed.</li>
+     * <li>false: not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +47,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination region to which to copy the snapshot. You can specify only a single destination region.</p>
+     * <p>The destination region for cross-region snapshot replication. You can set one destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou&quot;]</p>
@@ -60,7 +56,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String targetCopyRegions;
 
     /**
-     * <p>The ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> operation to query available automatic snapshot policies.</p>
+     * <p>The ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> to query available automatic snapshot policies.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +66,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.</p>
+     * <p>The name of the automatic snapshot policy. If this parameter is left empty, the name is not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>SPTestName</p>
@@ -79,7 +75,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyName;
 
     /**
-     * <p>The region ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,13 +85,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.</p>
-     * <p>To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.</p>
+     * <p>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday.</p>
+     * <p>To create multiple automatic snapshots within a week, specify multiple days:</p>
      * <ul>
-     * <li><p>You can specify up to seven days over a one-week period.</p>
-     * </li>
-     * <li><p>You must set this parameter to a JSON array such as <code>[&quot;1&quot;, &quot;2&quot; ... &quot;7&quot;]</code>. Separate the values in the array with commas (,).</p>
-     * </li>
+     * <li>You can specify up to 7 days.</li>
+     * <li>Specify multiple days in a JSON array in the format of <code>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</code>. Separate the days with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,12 +99,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String repeatWeekdays;
 
     /**
-     * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
+     * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
      * <ul>
-     * <li><p>-1: The automatic snapshot is permanently retained.</p>
-     * </li>
-     * <li><p>1 to 65536: The auto snapshot is retained for the specified number of days.</p>
-     * </li>
+     * <li>-1: permanently retained.</li>
+     * <li>1 to 65536: the specified number of days for which snapshots are retained.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -121,13 +113,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.</p>
-     * <p>To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.</p>
+     * <p>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00.</p>
+     * <p>To create multiple automatic snapshots within a day, specify multiple points in time:</p>
      * <ul>
-     * <li><p>You can specify up to 24 points in time.</p>
-     * </li>
-     * <li><p>You must set this parameter to a JSON array such as <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>. Separate the points in time with commas (,).</p>
-     * </li>
+     * <li>You can specify up to 24 points in time.</li>
+     * <li>Specify multiple points in time in a JSON array in the format of <code>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</code>. Separate the points in time with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -314,10 +304,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: enabled. </li>
+         * <li>false: disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -328,7 +316,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The ID of the KMS key used for encryption in cross-region snapshot replication.</p>
+         * <p>The key ID of the KMS key used for encrypted cross-region snapshot replication.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>

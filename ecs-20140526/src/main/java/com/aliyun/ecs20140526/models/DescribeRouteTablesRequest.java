@@ -10,21 +10,12 @@ public class DescribeRouteTablesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number. Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The region ID. You can call the <a href="https://www.alibabacloud.com/help/en/doc-detail/40654.htm"><code>DescribeRegions</code></a> operation to query the latest list of regions.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,37 +25,18 @@ public class DescribeRouteTablesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the route table.</p>
-     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
-    /**
-     * <p>The name of the route table.</p>
-     */
     @NameInMap("RouteTableName")
     public String routeTableName;
 
-    /**
-     * <p>The ID of the router associated with the route table.</p>
-     */
     @NameInMap("RouterId")
     public String routerId;
 
-    /**
-     * <p>The type of the router associated with the route table. Valid values:</p>
-     * <ul>
-     * <li><code>VRouter</code>: VPC router</li>
-     * <li><code>VBR</code>: virtual border router</li>
-     * </ul>
-     */
     @NameInMap("RouterType")
     public String routerType;
 
-    /**
-     * <p>The ID of the VRouter.</p>
-     */
     @NameInMap("VRouterId")
     public String VRouterId;
 

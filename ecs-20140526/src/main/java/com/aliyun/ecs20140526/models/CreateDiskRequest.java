@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiskRequest extends TeaModel {
     /**
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not publicly available.</p>
      * 
      * <strong>example:</strong>
      * <p>hide</p>
@@ -15,22 +15,20 @@ public class CreateDiskRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("Arn")
     public java.util.List<CreateDiskRequestArn> arn;
 
     /**
-     * <p>Specifies whether to enable performance bursting. Valid values:</p>
+     * <p>Specifies whether to enable burst (performance bursting). Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: enables burst.</li>
+     * <li>false: disables burst.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available only for ESSD AutoPL disks (<code>cloud_auto</code>). For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+     * <p>This parameter is supported only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +38,7 @@ public class CreateDiskRequest extends TeaModel {
     public Boolean burstingEnabled;
 
     /**
-     * <p>A client-generated, unique, case-sensitive token that you can use to ensure the idempotency of the request. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. <strong>ClientToken</strong> only supports ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -49,7 +47,7 @@ public class CreateDiskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The disk description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -61,26 +59,17 @@ public class CreateDiskRequest extends TeaModel {
     /**
      * <p>The category of the data disk. Valid values:</p>
      * <ul>
-     * <li><p><code>cloud</code>: basic disk</p>
-     * </li>
-     * <li><p><code>cloud_efficiency</code>: ultra disk</p>
-     * </li>
-     * <li><p><code>cloud_ssd</code>: standard SSD</p>
-     * </li>
-     * <li><p><code>cloud_essd</code>: ESSD</p>
-     * </li>
-     * <li><p><code>cloud_auto</code>: ESSD AutoPL disk</p>
-     * </li>
-     * <li><p><code>cloud_essd_entry</code>: ESSD Entry disk</p>
-     * </li>
-     * <li><p><code>cloud_regional_disk_auto</code>: ESSD zone-redundant disk</p>
-     * </li>
-     * <li><p><code>elastic_ephemeral_disk_standard</code>: Elastic Ephemeral Disk - Standard</p>
-     * </li>
-     * <li><p><code>elastic_ephemeral_disk_premium</code>: Elastic Ephemeral Disk - Premium</p>
-     * </li>
+     * <li>cloud: basic disk.</li>
+     * <li>cloud_efficiency: ultra disk.</li>
+     * <li>cloud_ssd: standard SSD.</li>
+     * <li>cloud_essd: ESSD.</li>
+     * <li>cloud_auto: ESSD AutoPL disk.</li>
+     * <li>cloud_essd_entry: ESSD Entry disk.</li>
+     * <li>cloud_regional_disk_auto: ESSD zone-redundant disk.</li>
+     * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - standard.</li>
+     * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - premium.</li>
      * </ul>
-     * <p>Default value: <code>cloud</code>.</p>
+     * <p>Default value: cloud.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_ssd</p>
@@ -89,7 +78,7 @@ public class CreateDiskRequest extends TeaModel {
     public String diskCategory;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter as defined by Unicode and can contain letters (including English and Chinese characters), digits (0-9), colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The disk name. The name must be 2 to 128 characters in length and can contain Unicode letters (including English and Chinese characters) and ASCII digits (0-9). It can contain colons (:), underscores (_), periods (.), or hyphens (-). It must start with a Unicode letter.</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +88,7 @@ public class CreateDiskRequest extends TeaModel {
     public String diskName;
 
     /**
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not publicly available.</p>
      * 
      * <strong>example:</strong>
      * <p>hide</p>
@@ -110,10 +99,8 @@ public class CreateDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to encrypt the disk. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: encrypts the disk.</li>
+     * <li>false: does not encrypt the disk.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -124,14 +111,12 @@ public class CreateDiskRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>Creates a subscription disk and automatically attaches it to the specified subscription instance.</p>
+     * <p>Creates a subscription disk and automatically attaches it to the specified subscription instance (InstanceId).</p>
      * <ul>
-     * <li><p>If you set this parameter, the <code>ResourceGroupId</code>, <code>Tag.N.Key</code>, <code>Tag.N.Value</code>, <code>ClientToken</code>, and <code>KMSKeyId</code> parameters are ignored.</p>
-     * </li>
-     * <li><p>You cannot specify both <code>ZoneId</code> and <code>InstanceId</code>.</p>
-     * </li>
+     * <li>After you set the instance ID, the ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId parameters that you set are ignored.</li>
+     * <li>You cannot specify both ZoneId and InstanceId.</li>
      * </ul>
-     * <p>Default value: empty. An empty value indicates that you are creating a pay-as-you-go disk. The disk\&quot;s location is determined by <code>RegionId</code> and <code>ZoneId</code>.</p>
+     * <p>Default value: empty, which means a pay-as-you-go disk is created. The location of the disk is determined by RegionId and ZoneId.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp18pnlg1ds9rky4****</p>
@@ -140,24 +125,24 @@ public class CreateDiskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the KMS key to use for the disk.</p>
+     * <p>The KMS key ID used by the disk.</p>
      * <blockquote>
-     * <p>If <code>Encrypted</code> is set to true and you do not specify <code>KMSKeyId</code>, a default key is used for encryption. The <code>KMSKeyId</code> is returned in the response after the instance is created.</p>
+     * <p>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is successfully created.</p>
      * <ul>
      * <li><ul>
-     * <li>If the disk is created from an unshared encrypted snapshot, the encryption key used by that snapshot is used by default.</li>
+     * <li>Disk created from a non-shared encrypted snapshot: The encryption key used by the snapshot is used by default.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If the disk is created from a shared encrypted snapshot, the service key is used by default.</li>
+     * <li>Disk created from a shared encrypted snapshot: The service key is used by default.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If the disk is created in a region with account-level default encryption enabled, the specified account-level key is used by default.</li>
+     * <li>Disk created in a region where account-level default encryption for block storage is enabled: The specified account-level key is used by default.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>In other cases, the service key is used by default.</li>
+     * <li>Other cases: The service key is used by default.</li>
      * </ul>
      * </li>
      * </ul>
@@ -172,14 +157,12 @@ public class CreateDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the multi-attach feature. Valid values:</p>
      * <ul>
-     * <li><p>Disabled: The feature is disabled.</p>
-     * </li>
-     * <li><p>Enabled: The feature is enabled. Currently, only ESSDs support setting this parameter to <code>Enabled</code>.</p>
-     * </li>
+     * <li>Disabled: disables the feature.</li>
+     * <li>Enabled: enables the feature. Currently, only ESSDs support setting this to <code>Enabled</code>.</li>
      * </ul>
      * <p>Default value: Disabled.</p>
      * <blockquote>
-     * <p>Disks with the multi-attach feature enabled can only be billed on a pay-as-you-go basis. Therefore, you cannot set the <code>InstanceId</code> parameter when <code>MultiAttach</code> is <code>Enabled</code>. After you create the disk, you can call <a href="https://help.aliyun.com/document_detail/25515.html">AttachDisk</a> to attach it. Note that a multi-attach disk can be attached only as a data disk.</p>
+     * <p>Disks with the multi-attach feature enabled only support the pay-as-you-go billing method. Therefore, when <code>MultiAttach=Enabled</code>, you cannot set the <code>InstanceId</code> parameter. You can call <a href="https://help.aliyun.com/document_detail/25515.html">AttachDisk</a> to attach the disk after creation, but note that disks with multi-attach enabled can only be attached as data disks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -195,19 +178,15 @@ public class CreateDiskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The performance level of the ESSD. Valid values:</p>
+     * <p>Sets the performance level of the disk when creating an ESSD. Valid values:</p>
      * <ul>
-     * <li><p>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</p>
-     * </li>
-     * <li><p>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</p>
-     * </li>
-     * <li><p>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</p>
-     * </li>
-     * <li><p>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</p>
-     * </li>
+     * <li>PL0: maximum random read/write IOPS of 10,000 per disk.</li>
+     * <li>PL1: maximum random read/write IOPS of 50,000 per disk.</li>
+     * <li>PL2: maximum random read/write IOPS of 100,000 per disk.</li>
+     * <li>PL3: maximum random read/write IOPS of 1,000,000 per disk.</li>
      * </ul>
      * <p>Default value: PL1.</p>
-     * <p>For more information about how to choose an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+     * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -216,16 +195,17 @@ public class CreateDiskRequest extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>The provisioned read/write IOPS of a single ESSD AutoPL disk. Valid values:</p>
+     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk (per disk). Possible values:</p>
      * <ul>
-     * <li><p>Capacity &lt;= 3 GiB: You cannot set provisioned performance.</p>
+     * <li><p>Capacity (GiB) &lt;= 3: provisioned performance cannot be set.</p>
      * </li>
-     * <li><p>Capacity &gt;= 4 GiB: 0 to min(1,000 IOPS/GiB × Capacity - Baseline IOPS, 50,000).</p>
+     * <li><p>Capacity (GiB) &gt;= 4: [0, min{(1,000</p>
      * </li>
      * </ul>
-     * <p>Baseline IOPS = max(min(1,800 + 50 × Capacity, 50,000), 3,000).</p>
+     * <p> IOPS/GiB * capacity - baseline IOPS), 50,000}]</p>
+     * <p>Baseline performance = max{min{1,800 + 50 * capacity, 50,000}, 3,000}.</p>
      * <blockquote>
-     * <p>This parameter is available only for ESSD AutoPL disks (<code>cloud_auto</code>). For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+     * <p>This parameter is supported only when <code>DiskCategory</code> = <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -235,7 +215,7 @@ public class CreateDiskRequest extends TeaModel {
     public Long provisionedIops;
 
     /**
-     * <p>The ID of the region in which to create the disk. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -245,7 +225,7 @@ public class CreateDiskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the disk belongs.</p>
+     * <p>The ID of the enterprise resource group to which the disk belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -260,43 +240,28 @@ public class CreateDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The capacity of the disk, in GiB. You must specify a value for this parameter. Value range:</p>
+     * <p>The capacity size. Unit: GiB. You must specify a value for this parameter. Valid values:</p>
      * <ul>
-     * <li><p><code>cloud</code>: 5 to 2,000</p>
-     * </li>
-     * <li><p><code>cloud_efficiency</code>: 20 to 32,768</p>
-     * </li>
-     * <li><p><code>cloud_ssd</code>: 20 to 32,768</p>
-     * </li>
-     * <li><p><code>PerformanceLevel</code></p>
-     * <ul>
-     * <li><p>PL0: 1 to 65,536</p>
-     * </li>
-     * <li><p>PL1: 20 to 65,536</p>
-     * </li>
-     * <li><p>PL2: 461 to 65,536</p>
-     * </li>
-     * <li><p>PL3: 1,261 to 65,536</p>
-     * </li>
+     * <li>cloud: 5 to 2,000.</li>
+     * <li>cloud_efficiency: 20 to 32,768.</li>
+     * <li>cloud_ssd: 20 to 32,768.</li>
+     * <li>cloud_essd: The valid value range depends on the value of <code>PerformanceLevel</code>.<ul>
+     * <li>PL0: 1 to 65,536.</li>
+     * <li>PL1: 20 to 65,536.</li>
+     * <li>PL2: 461 to 65,536.</li>
+     * <li>PL3: 1,261 to 65,536.</li>
      * </ul>
      * </li>
-     * <li><p><code>cloud_auto</code>: 1 to 65,536</p>
-     * </li>
-     * <li><p><code>cloud_essd_entry</code>: 10 to 32,768</p>
-     * </li>
-     * <li><p><code>cloud_regional_disk_auto</code>: 10 to 65,536</p>
-     * </li>
-     * <li><p><code>elastic_ephemeral_disk_standard</code>: 64 to 8,192</p>
-     * </li>
-     * <li><p><code>elastic_ephemeral_disk_premium</code>: 64 to 8,192</p>
-     * </li>
+     * <li>cloud_auto: 1 to 65,536.</li>
+     * <li>cloud_essd_entry: 10 to 32,768.</li>
+     * <li>cloud_regional_disk_auto: 10 to 65,536.</li>
+     * <li>elastic_ephemeral_disk_standard: 64 to 8,192.</li>
+     * <li>elastic_ephemeral_disk_premium: 64 to 8,192.</li>
      * </ul>
-     * <p>If you specify <code>SnapshotId</code>, the following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
+     * <p>If you specify the <code>SnapshotId</code> parameter, the <code>SnapshotId</code> and <code>Size</code> parameters have the following restrictions:</p>
      * <ul>
-     * <li><p>If the snapshot capacity is greater than the specified <code>Size</code>, the actual disk size is the snapshot capacity.</p>
-     * </li>
-     * <li><p>If the snapshot capacity is smaller than the specified <code>Size</code>, the actual disk size is the specified <code>Size</code>.</p>
-     * </li>
+     * <li>If the snapshot capacity corresponding to the <code>SnapshotId</code> parameter is greater than the specified <code>Size</code> parameter value, the actual size of the created disk equals the size of the specified snapshot.</li>
+     * <li>If the snapshot capacity corresponding to the <code>SnapshotId</code> parameter is less than the specified <code>Size</code> parameter value, the actual size of the created disk equals the specified <code>Size</code> parameter value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -306,15 +271,12 @@ public class CreateDiskRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The ID of the snapshot used to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks.</p>
-     * <p>The <code>SnapshotId</code> and <code>Size</code> parameters have the following limits:</p>
+     * <p>The snapshot ID used to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks.</p>
+     * <p>The <code>SnapshotId</code> and <code>Size</code> parameters have the following restrictions:</p>
      * <ul>
-     * <li><p>If the snapshot capacity is greater than the specified <code>Size</code>, the actual disk size is the snapshot capacity.</p>
-     * </li>
-     * <li><p>If the snapshot capacity is smaller than the specified <code>Size</code>, the actual disk size is the specified <code>Size</code>.</p>
-     * </li>
-     * <li><p>You cannot use snapshots to create Elastic Ephemeral Disks.</p>
-     * </li>
+     * <li>If the snapshot capacity corresponding to the <code>SnapshotId</code> parameter is greater than the specified <code>Size</code> parameter value, the actual size of the created disk equals the size of the specified snapshot.</li>
+     * <li>If the snapshot capacity corresponding to the <code>SnapshotId</code> parameter is less than the specified <code>Size</code> parameter value, the actual size of the created disk equals the specified <code>Size</code> parameter value.</li>
+     * <li>Creating elastic ephemeral disks from snapshots is not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -324,9 +286,9 @@ public class CreateDiskRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The ID of the dedicated block storage cluster. If you need to create a disk in a specific dedicated block storage cluster, specify this parameter.</p>
+     * <p>The dedicated block storage cluster ID. If you need to create a disk in a specified dedicated block storage cluster, specify this parameter.</p>
      * <blockquote>
-     * <p>You can specify either storage set parameters (<code>StorageSetId</code> and <code>StorageSetPartitionNumber</code>) or the dedicated block storage cluster parameter (<code>StorageClusterId</code>), but not both. The request fails if you specify parameters for both.</p>
+     * <p>Storage set parameters (<code>StorageSetId</code>, <code>StorageSetPartitionNumber</code>) and dedicated block storage cluster parameter (<code>StorageClusterId</code>) are mutually exclusive. If both are set, the API call will fail.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -336,9 +298,9 @@ public class CreateDiskRequest extends TeaModel {
     public String storageClusterId;
 
     /**
-     * <p>The ID of the storage set.</p>
+     * <p>The storage set ID.</p>
      * <blockquote>
-     * <p>You can specify either storage set parameters (<code>StorageSetId</code> and <code>StorageSetPartitionNumber</code>) or the dedicated block storage cluster parameter (<code>StorageClusterId</code>), but not both. The request fails if you specify parameters for both.</p>
+     * <p>Storage set parameters (<code>StorageSetId</code>, <code>StorageSetPartitionNumber</code>) and dedicated block storage cluster parameter (<code>StorageClusterId</code>) are mutually exclusive. If both are set, the API call will fail.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -348,7 +310,7 @@ public class CreateDiskRequest extends TeaModel {
     public String storageSetId;
 
     /**
-     * <p>The number of partitions in the storage set. The value must be greater than or equal to 2 and cannot exceed the quota returned by the <a href="https://help.aliyun.com/document_detail/73772.html">DescribeAccountAttributes</a> operation.</p>
+     * <p>The number of storage set partitions. Valid values: greater than or equal to 2, and cannot exceed the quota limit displayed after calling <a href="https://help.aliyun.com/document_detail/73772.html">DescribeAccountAttributes</a>.</p>
      * <p>Default value: 2.</p>
      * 
      * <strong>example:</strong>
@@ -358,21 +320,19 @@ public class CreateDiskRequest extends TeaModel {
     public Integer storageSetPartitionNumber;
 
     /**
-     * <p>A list of tags for the disk.</p>
+     * <p>The list of tag information for the disk.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDiskRequestTag> tag;
 
     /**
-     * <p>The ID of the zone in which to create the pay-as-you-go disk.</p>
+     * <p>Creates a pay-as-you-go disk in the specified zone.</p>
      * <ul>
-     * <li><p>If you do not set <code>InstanceId</code>, this parameter is required.</p>
-     * </li>
-     * <li><p>You cannot specify both <code>ZoneId</code> and <code>InstanceId</code>.</p>
-     * </li>
+     * <li>If you do not set InstanceId, ZoneId is required.</li>
+     * <li>You cannot specify both ZoneId and InstanceId.</li>
      * </ul>
      * <blockquote>
-     * <p>ESSD zone-redundant disks (<code>cloud_regional_disk_auto</code>) do not require a zone ID.</p>
+     * <p>Disks of the <code>cloud_regional_disk_auto</code> type do not require ZoneId to be set.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -605,7 +565,7 @@ public class CreateDiskRequest extends TeaModel {
     public static class CreateDiskRequestArn extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -616,7 +576,7 @@ public class CreateDiskRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -627,7 +587,7 @@ public class CreateDiskRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -669,10 +629,7 @@ public class CreateDiskRequest extends TeaModel {
 
     public static class CreateDiskRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the disk.</p>
-         * <blockquote>
-         * <p>For better code compatibility, we recommend that you use the <code>Tag.N.Key</code> parameter.</p>
-         * </blockquote>
+         * <p>The tag key of the disk. Valid values of N: 1 to 20. Once a Tag.N.Key value is specified, it cannot be an empty string. It supports up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -681,7 +638,7 @@ public class CreateDiskRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the disk. The value of N ranges from 1 to 20. If you specify <code>Tag.N.Value</code>, the value can be an empty string. The value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the disk. Valid values of N: 1 to 20. Once a Tag.N.Value value is specified, it can be an empty string. It supports up to 128 characters and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

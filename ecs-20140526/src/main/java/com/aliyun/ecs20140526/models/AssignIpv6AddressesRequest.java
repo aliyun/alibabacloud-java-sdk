@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.\<em>\</em>\<em>\</em> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,10 +14,10 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <p>One or more IPv6 addresses to assign to the ENI. You can set up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
      * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\<em>\</em>\<em>\</em></p>
      * <blockquote>
-     * <p>You must specify <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but not both.</p>
+     * <p>When you invoke this operation, you must set either the <code>Ipv6Addresses.N</code> parameter or the <code>Ipv6AddressCount</code> parameter, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</p>
      * <blockquote>
-     * <p>You must specify <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but not both.</p>
+     * <p>When you invoke this operation, you must set either the <code>Ipv6Addresses.N</code> parameter or the <code>Ipv6AddressCount</code> parameter, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,9 +39,9 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
-     * <p>The IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <p>One or more IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <blockquote>
-     * <p>To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
+     * <p>To set IPv6 prefixes for the ENI, you must set either the Ipv6Prefix.N parameter or the Ipv6PrefixCount parameter, but not both.</p>
      * </blockquote>
      */
     @NameInMap("Ipv6Prefix")
@@ -50,7 +50,7 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
      * <blockquote>
-     * <p>To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
+     * <p>To set IPv6 prefixes for the ENI, you must set either the Ipv6Prefix.N parameter or the Ipv6PrefixCount parameter, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public Integer ipv6PrefixCount;
 
     /**
-     * <p>The ENI ID.</p>
+     * <p>The ID of the ENI.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteLaunchTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
-     * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+     * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to determine the launch template.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-bp1apo0bbbkuy0rj****</p>
@@ -16,7 +16,7 @@ public class DeleteLaunchTemplateRequest extends TeaModel {
 
     /**
      * <p>The name of the launch template.</p>
-     * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+     * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to determine the launch template.</p>
      * 
      * <strong>example:</strong>
      * <p>testLaunchTemplateName</p>
@@ -31,7 +31,7 @@ public class DeleteLaunchTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the launch template. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

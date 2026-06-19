@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     /**
-     * <p>The default version number of the instance launch template.</p>
+     * <p>The version number of the launch template to be set as the default version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     public Long defaultVersionNumber;
 
     /**
-     * <p>The ID of the launch template. You must specify the LaunchTemplateId or LaunchTemplateName parameter to determine an instance launch template.</p>
+     * <p>The ID of the launch template. You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-s-bp177juajht6****</p>
@@ -24,7 +24,7 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>The name of the instance launch template. You must specify the LaunchTemplateId or LaunchTemplateName parameter to determine an instance launch template.</p>
+     * <p>The name of the launch template. You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
      * 
      * <strong>example:</strong>
      * <p>testLaunchTemplateName</p>

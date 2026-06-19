@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupAttributeRequest extends TeaModel {
     /**
-     * <p>The new description of the security group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * <p>By default, the parameter is empty, which indicates that the description remains unchanged.</p>
+     * <p>The description of the security group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>Default value: null. The description is not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>TestDescription</p>
@@ -21,7 +21,7 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,8 +47,8 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <p>By default, the parameter is empty, which indicates that the name remains unchanged.</p>
+     * <p>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters that are categorized as letters in Unicode, including Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>Default value: null. The name is not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>SecurityGroupTestName</p>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeTagsRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is deprecated. We recommend that you use other parameters to ensure compatibility.</p>
+     * <p>This parameter is about to be deprecated. To ensure compatibility, use other parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeTagsRequest extends TeaModel {
 
     /**
      * <p>The page number of the tag list.</p>
-     * <p>Starts from 1.</p>
+     * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 50.</p>
      * 
@@ -41,7 +41,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to obtain the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource. For example, if the <code>ResourceType</code> is <code>instance</code>, this parameter specifies the instance ID.</p>
+     * <p>The ID of the resource to which the tag is attached. For example, if the resource type (ResourceType) is instance, the resource ID is the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>s-946ntx4wr****</p>
@@ -68,32 +68,20 @@ public class DescribeTagsRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><code>instance</code>: an ECS instance.</p>
-     * </li>
-     * <li><p><code>disk</code>: a disk.</p>
-     * </li>
-     * <li><p><code>snapshot</code>: a snapshot.</p>
-     * </li>
-     * <li><p><code>image</code>: an image.</p>
-     * </li>
-     * <li><p><code>securitygroup</code>: a security group.</p>
-     * </li>
-     * <li><p><code>volume</code>: a volume.</p>
-     * </li>
-     * <li><p><code>eni</code>: an elastic network interface.</p>
-     * </li>
-     * <li><p><code>ddh</code>: a dedicated host.</p>
-     * </li>
-     * <li><p><code>keypair</code>: an SSH key pair.</p>
-     * </li>
-     * <li><p><code>launchtemplate</code>: a launch template.</p>
-     * </li>
-     * <li><p><code>reservedinstance</code>: a reserved instance.</p>
-     * </li>
-     * <li><p><code>snapshotpolicy</code>: a snapshot policy.</p>
-     * </li>
+     * <li>instance: ECS instance.</li>
+     * <li>disk: cloud disk.</li>
+     * <li>snapshot: snapshot.</li>
+     * <li>image: image.</li>
+     * <li>securitygroup: security group.</li>
+     * <li>volume: storage volume.</li>
+     * <li>eni: network interface controller (NIC).</li>
+     * <li>ddh: dedicated host.</li>
+     * <li>keypair: SSH key pair.</li>
+     * <li>launchtemplate: launch template.</li>
+     * <li>reservedinstance: reserved instance.</li>
+     * <li>snapshotpolicy: automatic snapshot policy.</li>
      * </ul>
-     * <p>All values must be in lowercase.</p>
+     * <p>All valid values are in lowercase.</p>
      * 
      * <strong>example:</strong>
      * <p>snapshot</p>
@@ -102,7 +90,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeTagsRequestTag> tag;
@@ -194,10 +182,7 @@ public class DescribeTagsRequest extends TeaModel {
 
     public static class DescribeTagsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource.</p>
-         * <blockquote>
-         * <p>We recommend that you use the <code>Tag.N.Key</code> parameter to ensure compatibility.</p>
-         * </blockquote>
+         * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -206,7 +191,7 @@ public class DescribeTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The value can be up to 128 characters in length and can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

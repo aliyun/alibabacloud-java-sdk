@@ -17,7 +17,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the custom image.</p>
+     * <p>The region ID of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -56,7 +56,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     public DescribeImageSharePermissionResponseBodyShareGroups shareGroups;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

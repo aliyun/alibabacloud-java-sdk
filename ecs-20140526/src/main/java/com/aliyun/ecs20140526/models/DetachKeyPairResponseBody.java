@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachKeyPairResponseBody extends TeaModel {
     /**
-     * <p>The number of instances from which the SSH key pair failed to be unbound.</p>
+     * <p>The number of instances from which the key pair failed to be unbound.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -35,7 +35,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public DetachKeyPairResponseBodyResults results;
 
     /**
-     * <p>The total number of instances from which you want to unbind the SSH key pair.</p>
+     * <p>The total number of instances from which the key pair is unbound.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

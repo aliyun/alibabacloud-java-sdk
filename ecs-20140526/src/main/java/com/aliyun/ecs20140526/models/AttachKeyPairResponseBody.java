@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachKeyPairResponseBody extends TeaModel {
     /**
-     * <p>The number of instances to which the SSH key pair fails to be bound.</p>
+     * <p>The number of instances to which the key pair failed to be bound.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public String failCount;
 
     /**
-     * <p>The name of the SSH key pair.</p>
+     * <p>The name of the key pair.</p>
      * 
      * <strong>example:</strong>
      * <p>testKeyPairName</p>
@@ -35,7 +35,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public AttachKeyPairResponseBodyResults results;
 
     /**
-     * <p>The total number of instances to which the SSH key pair is bound.</p>
+     * <p>The total number of instances to which the key pair is bound.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -4,21 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssociateHaVipRequest extends TeaModel {
-    /**
-     * <p>A client-generated token that ensures request idempotency. This token must be unique across requests and can contain only ASCII characters.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the HaVip.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HaVipId")
     public String haVipId;
 
     /**
-     * <p>The ID of the ECS instance to associate with the HaVip.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
@@ -31,7 +26,6 @@ public class AssociateHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the HaVip is located. To obtain the latest list of regions, call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

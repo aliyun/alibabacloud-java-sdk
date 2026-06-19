@@ -7,10 +7,8 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
      * <ul>
-     * <li><p>PrePaid: subscription</p>
-     * </li>
-     * <li><p>PostPaid: pay-as-you-go</p>
-     * </li>
+     * <li>PrePaid: subscription.</li>
+     * <li>PostPaid: pay-as-you-go.</li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -21,7 +19,7 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,14 +29,11 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies the operation for which to query the maximum public bandwidth. Valid values:</p>
+     * <p>The operation type for querying public bandwidth limits. Valid values:</p>
      * <ul>
-     * <li><p>Upgrade: upgrades the public bandwidth.</p>
-     * </li>
-     * <li><p>Downgrade: downgrades the public bandwidth.</p>
-     * </li>
-     * <li><p>Create: creates an ECS instance.</p>
-     * </li>
+     * <li>Upgrade: upgrades the public bandwidth.</li>
+     * <li>Downgrade: downgrades the public bandwidth.</li>
+     * <li>Create: creates an ECS instance.</li>
      * </ul>
      * <p>Default value: Create.</p>
      * 
@@ -55,7 +50,7 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the target region. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +62,7 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
      * <p>The resource ID.</p>
      * <blockquote>
-     * <p>This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
+     * <p>When you set the OperationType parameter to Upgrade or Downgrade, the ResourceId parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,14 +78,11 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+     * <p>The bidding strategy for pay-as-you-go instances. Valid values:</p>
      * <ul>
-     * <li><p>NoSpot: The instance is a pay-as-you-go instance.</p>
-     * </li>
-     * <li><p>SpotWithPriceLimit: The instance is a spot instance for which you can specify the maximum hourly price.</p>
-     * </li>
-     * <li><p>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
-     * </li>
+     * <li>NoSpot: a regular pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: a preemptible instance with a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: a preemptible instance priced at the market price at the time of purchase.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * <blockquote>

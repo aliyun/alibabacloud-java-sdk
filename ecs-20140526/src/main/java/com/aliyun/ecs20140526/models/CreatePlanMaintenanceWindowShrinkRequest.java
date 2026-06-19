@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the maintenance window.</p>
+     * <p>Specifies whether to enable or disable the O&amp;M window.</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables the maintenance window.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disables the maintenance window.</p>
-     * </li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -24,7 +22,7 @@ public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     public Integer minMaintenanceInterval;
 
     /**
-     * <p>The name of the maintenance window. The name can be up to 200 characters long.</p>
+     * <p>The name of the O&amp;M window. You can specify a custom name. The name can be up to 200 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +32,7 @@ public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String planWindowName;
 
     /**
-     * <p>The ID of the region. You can call the DescribeRegions operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +42,7 @@ public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maintenance operation supported by the maintenance window.</p>
+     * <p>The O&amp;M operations supported by the O&amp;M window.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,14 +52,14 @@ public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String supportMaintenanceAction;
 
     /**
-     * <p>The resources to which the maintenance window applies.</p>
+     * <p>The resources on which the O&amp;M window takes effect.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TargetResource")
     public String targetResourceShrink;
 
     /**
-     * <p>The recurring schedule for the maintenance window.</p>
+     * <p>The recurring cycle of the O&amp;M window.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TimePeriod")

@@ -8,7 +8,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     public DescribeDisksResponseBodyDisks disks;
 
     /**
-     * <p>The token returned to retrieve the next page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -18,7 +18,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is deprecated. We recommend that you use the <code>NextToken </code>and <code>MaxResults </code>parameters for pagination.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is deprecated. We recommend that you use the <code>NextToken </code>and <code>MaxResults </code>parameters for pagination.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     /**
      * <p>The total number of entries returned.</p>
      * <blockquote>
-     * <p>When you use the<code>MaxResults</code> and<code>NextToken</code> parameters for pagination, the value of <code>TotalCount</code> is invalid.</p>
+     * <p>When you use MaxResults and NextToken parameters for paging query, the returned TotalCount parameter value is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -168,6 +168,36 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDisksResponseBodyDisksDiskAttachmentsAttachment> getAttachment() {
             return this.attachment;
+        }
+
+    }
+
+    public static class DescribeDisksResponseBodyDisksDiskDataSource extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeDisksResponseBodyDisksDiskDataSource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDiskDataSource self = new DescribeDisksResponseBodyDisksDiskDataSource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseBodyDisksDiskDataSource setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeDisksResponseBodyDisksDiskDataSource setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -359,6 +389,13 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         @NameInMap("CreationTime")
         public String creationTime;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("DataSource")
+        public DescribeDisksResponseBodyDisksDiskDataSource dataSource;
 
         @NameInMap("DeleteAutoSnapshot")
         public Boolean deleteAutoSnapshot;
@@ -552,6 +589,14 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeDisksResponseBodyDisksDisk setDataSource(DescribeDisksResponseBodyDisksDiskDataSource dataSource) {
+            this.dataSource = dataSource;
+            return this;
+        }
+        public DescribeDisksResponseBodyDisksDiskDataSource getDataSource() {
+            return this.dataSource;
         }
 
         public DescribeDisksResponseBodyDisksDisk setDeleteAutoSnapshot(Boolean deleteAutoSnapshot) {

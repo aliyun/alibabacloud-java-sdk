@@ -15,7 +15,7 @@ public class RedeployInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the redeployment task.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the redeployment result.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the migration result.</p>
      * 
      * <strong>example:</strong>
      * <p>t-bp10e8orkp8x****</p>

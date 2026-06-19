@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p>false (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is released.</p>
-     * </li>
+     * <li>true: Sends a check request without releasing the instance. The system checks whether the required parameters are specified, the request format is valid, business requirements are met, and ECS resources are sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li>false (default): Sends a normal request. After the request passes the check, the instance is directly deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,16 +18,15 @@ public class DeleteInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release the ECS instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
+     * <p>Specifies whether to forcefully release a <strong>running</strong> (<code>Running</code>) instance.</p>
      * <ul>
-     * <li><p>true: forcefully releases the ECS instance in the <strong>Running</strong> (<code>Running</code>) state.</p>
-     * </li>
-     * <li><p>false: normally releases the ECS instance. This value is valid only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</p>
-     * </li>
+     * <li>true: Forcefully releases a <strong>running</strong> (<code>Running</code>) instance.</li>
+     * <li>false: Releases the instance in the normal way. The instance must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Warning</strong> When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * <blockquote>
+     * <p>Warning: A forceful release is equivalent to a power-off. Temporary data in the instance memory and storage is erased and cannot be recovered..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -38,14 +35,13 @@ public class DeleteInstanceRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>Specifies whether to forcefully stop the ECS instance in the <strong>Running</strong> (<code>Running</code>) state before the instance is released. This parameter takes effect only when <code>Force</code> is set to true. Valid values:</p>
+     * <p>Specifies whether to use the forced shutdown policy when releasing a <strong>running</strong> (<code>Running</code>) instance. This parameter takes effect only when <code>Force=true</code>. Valid values:</p>
      * <ul>
-     * <li><p>true: forcefully stops and releases the ECS instance. In this case, this operation is equivalent to a power-off operation. The instance directly enters the resource release process.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Warning</strong> A forceful stop and release is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * <li>true: Forcefully shuts down and releases the instance. This is equivalent to a typical power-off operation. The instance directly enters the resource release process.<blockquote>
+     * <p>Warning: A forceful release is equivalent to a power-off. Temporary data in the instance memory and storage is erased and cannot be recovered.</p>
+     * </blockquote>
      * </li>
-     * <li><p>false: stops the ECS instance in the normal stop process and then releases the instance. In this case, the release process takes several minutes to complete. You can configure business drainage actions to reduce the noise of the business system on operating system shutdown.</p>
-     * </li>
+     * <li>false: Before the instance is released, the system preferentially performs a standard shutdown process. This mode causes the instance release to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -56,7 +52,7 @@ public class DeleteInstanceRequest extends TeaModel {
     public Boolean forceStop;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,12 +74,10 @@ public class DeleteInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to release the expired subscription instance. Valid values:</p>
+     * <p>Specifies whether to release an expired subscription instance.</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Releases the instance.</li>
+     * <li>false: Does not release the instance.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

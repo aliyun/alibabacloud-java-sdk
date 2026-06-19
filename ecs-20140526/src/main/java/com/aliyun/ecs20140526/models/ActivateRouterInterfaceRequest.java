@@ -8,8 +8,6 @@ public class ActivateRouterInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the router interface is deployed.</p>
-     * <p>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to get the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -22,7 +20,6 @@ public class ActivateRouterInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the router interface.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RouterInterfaceId")

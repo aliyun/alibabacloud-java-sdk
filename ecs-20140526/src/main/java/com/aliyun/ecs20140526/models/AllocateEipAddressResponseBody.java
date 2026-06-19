@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipAddressResponseBody extends TeaModel {
-    /**
-     * <p>The unique ID of the allocation.</p>
-     */
     @NameInMap("AllocationId")
     public String allocationId;
 
-    /**
-     * <p>The allocated elastic IP address.</p>
-     */
     @NameInMap("EipAddress")
     public String eipAddress;
 
-    /**
-     * <p>The unique ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

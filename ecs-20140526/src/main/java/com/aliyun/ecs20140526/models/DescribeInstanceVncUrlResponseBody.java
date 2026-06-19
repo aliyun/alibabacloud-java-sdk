@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceVncUrlResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -14,9 +14,9 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The VNC logon address.</p>
+     * <p>The VNC logon URL.</p>
      * <blockquote>
-     * <p>The VNC logon address returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful call, the VNC logon address expires and you must call the DescribeInstanceVncUrl operation to obtain a new logon address.</p>
+     * <p>Notice: <strong>The VNC logon URL is time-sensitive and valid for 15 seconds. If you do not use the URL within 15 seconds after a successful call, the URL expires and you must call this operation again to obtain a new one.</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstancesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -16,10 +16,8 @@ public class DeleteInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
      * <ul>
-     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DRYRUN.SUCCESS error code is returned.</p>
-     * </li>
-     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
-     * </li>
+     * <li>true: sends a check request without querying resource status. The check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DRYRUN.SUCCESS error code is returned.</li>
+     * <li>false: sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the resource status is queried directly.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -30,16 +28,15 @@ public class DeleteInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release the ECS instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
+     * <p>Specifies whether to forcefully release an instance that is in the <strong>Running</strong> (<code>Running</code>) state.</p>
      * <ul>
-     * <li><p>true: forcefully releases the ECS instance in the <strong>Running</strong> (<code>Running</code>) state.</p>
-     * </li>
-     * <li><p>false: normally releases the ECS instance. This value is valid only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</p>
-     * </li>
+     * <li>true: forcefully releases ECS instance that is in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * <li>false: releases ECS instance only when it is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Warning</strong> When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * <blockquote>
+     * <p>Warning: Forceful release is equivalent to powering off ECS instance. All in-memory data and temporary data in the storage are erased and cannot be recovered..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -48,14 +45,13 @@ public class DeleteInstancesRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>Specifies whether to forcefully stop the ECS instance in the <strong>Running</strong> (<code>Running</code>) state before the instance is released. This parameter takes effect only when <code>Force</code> is set to true. Valid values:</p>
+     * <p>Specifies whether to forcefully shut down the instance before release when the instance is in the <strong>Running</strong> (<code>Running</code>) state. This parameter takes effect only when <code>Force=true</code>. Valid values:</p>
      * <ul>
-     * <li><p>true: forcefully stops and releases the ECS instance. In this case, this operation is equivalent to a power-off operation. The instance directly enters the resource release process.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Warning</strong> A forceful stop and release is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * <li>true: forcefully shuts down and releases the instance. This is equivalent to a power-off operation. The instance directly enters the resource release process.<blockquote>
+     * <p>Warning: Forceful release is equivalent to powering off the instance. All in-memory data and temporary data in the storage are erased and cannot be recovered.</p>
+     * </blockquote>
      * </li>
-     * <li><p>false: stops the ECS instance in the normal stop process and then releases the instance. In this case, the release process takes several minutes to complete. You can configure business drainage actions to reduce the noise of the business system on operating system shutdown.</p>
-     * </li>
+     * <li>false: performs a standard shutdown before releasing the instance. This mode causes the release process to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -66,7 +62,7 @@ public class DeleteInstancesRequest extends TeaModel {
     public Boolean forceStop;
 
     /**
-     * <p>The IDs of ECS instances. You can specify 1 to 100 ECS instances.</p>
+     * <p>The instance ID array. Array length: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +78,7 @@ public class DeleteInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,12 +94,10 @@ public class DeleteInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to release the expired subscription instance.</p>
+     * <p>Specifies whether to release an expired subscription instance.</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: releases the instance.</li>
+     * <li>false: does not release the instance.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

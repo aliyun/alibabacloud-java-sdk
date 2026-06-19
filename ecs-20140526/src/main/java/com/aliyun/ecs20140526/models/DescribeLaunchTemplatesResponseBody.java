@@ -8,7 +8,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

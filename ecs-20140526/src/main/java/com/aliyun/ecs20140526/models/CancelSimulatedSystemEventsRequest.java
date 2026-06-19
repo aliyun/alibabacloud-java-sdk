@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelSimulatedSystemEventsRequest extends TeaModel {
     /**
-     * <p>The IDs of simulated system events. You can specify up to 100 event IDs in a single request.</p>
+     * <p>The list of system event IDs. You can specify up to 100 event IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class CancelSimulatedSystemEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

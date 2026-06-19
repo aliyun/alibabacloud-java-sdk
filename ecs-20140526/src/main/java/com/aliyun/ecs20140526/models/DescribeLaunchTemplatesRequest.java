@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesRequest extends TeaModel {
     /**
-     * <p>The IDs of launch templates.</p>
+     * <p>An array of one or more launch template IDs.</p>
      * <ul>
-     * <li><p>You can query up to 100 launch templates.</p>
+     * <li><p>You can query up to 100 launch templates at a time.</p>
      * </li>
-     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
+     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to determine the templates.</p>
      * </li>
      * </ul>
      * 
@@ -20,11 +20,11 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public java.util.List<String> launchTemplateId;
 
     /**
-     * <p>The names of launch templates.</p>
+     * <p>An array of one or more launch template names.</p>
      * <ul>
-     * <li><p>You can query up to 100 launch templates.</p>
+     * <li><p>You can query up to 100 launch templates at a time.</p>
      * </li>
-     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
+     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to determine the templates.</p>
      * </li>
      * </ul>
      * 
@@ -41,7 +41,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Page starts from page 1.</p>
+     * <p>The page number of the launch template list. Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paginated query.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,9 +77,9 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
+     * <p>The ID of the resource group to which the launch template belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1000.</p>
      * <blockquote>
-     * <p>The default resource group is not supported.</p>
+     * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,9 +89,9 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public String templateResourceGroupId;
 
     /**
-     * <p>The tags of the launch template.</p>
+     * <p>The list of tag key-value pairs of the launch template.</p>
      * <blockquote>
-     * <p>You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
+     * <p>Currently, you can create and query launch template tags only by calling API operations. The console does not support creating or viewing launch template tags.</p>
      * </blockquote>
      */
     @NameInMap("TemplateTag")
@@ -192,8 +192,8 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
 
     public static class DescribeLaunchTemplatesRequestTemplateTag extends TeaModel {
         /**
-         * <p>The key of tag N of the launch template. Valid values of N: 1 to 20.</p>
-         * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag key of the launch template. Valid values of N: 1 to 20.</p>
+         * <p>If you use a single tag to filter resources, the number of resources with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the number of resources that are bound with all the specified tags cannot exceed 1000. If the number of resources exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query them.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -202,7 +202,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the launch template. Valid values of N: 1 to 20.</p>
+         * <p>The tag value of the launch template. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

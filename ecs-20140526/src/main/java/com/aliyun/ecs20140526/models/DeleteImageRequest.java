@@ -8,12 +8,10 @@ public class DeleteImageRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully delete the custom image. Valid values:</p>
+     * <p>Specifies whether to forcibly delete the custom image. Valid values:</p>
      * <ul>
-     * <li><p>true: Forcefully deletes the custom image, regardless of whether it is used by any instances.</p>
-     * </li>
-     * <li><p>false: Performs a standard deletion. Before the deletion, the system checks whether the image is used by any instances.</p>
-     * </li>
+     * <li>true: Forcibly deletes the custom image, ignoring whether the image is currently used by other instances.</li>
+     * <li>false: Normally deletes the custom image. Before deletion, the system checks whether the image is currently used by other instances.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -24,7 +22,7 @@ public class DeleteImageRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The ID of the custom image to delete. If the image does not exist, the request is ignored.</p>
+     * <p>The image ID. If the specified custom image does not exist, the request will be ignored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +38,7 @@ public class DeleteImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of regions.</p>
+     * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

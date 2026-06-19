@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNetworkSpecResponseBody extends TeaModel {
     /**
-     * <p>The order ID.</p>
+     * <p>The order ID. This parameter is returned only when the bandwidth configuration of a subscription (PrePaid) instance is modified.</p>
      * 
      * <strong>example:</strong>
      * <p>123457890</p>

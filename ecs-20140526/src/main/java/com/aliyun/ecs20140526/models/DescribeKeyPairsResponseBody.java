@@ -8,7 +8,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

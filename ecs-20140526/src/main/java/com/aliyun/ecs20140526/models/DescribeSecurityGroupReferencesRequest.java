@@ -11,7 +11,7 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of security groups. You can specify up to 10 IDs of security groups.</p>
+     * <p>The array of security group IDs. Array length: 0 to 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

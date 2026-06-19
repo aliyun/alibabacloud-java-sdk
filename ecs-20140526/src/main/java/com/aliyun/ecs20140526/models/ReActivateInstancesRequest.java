@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReActivateInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance that you want to reactivate.</p>
+     * <p>The instance ID of the instance that you want to restart.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ReActivateInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

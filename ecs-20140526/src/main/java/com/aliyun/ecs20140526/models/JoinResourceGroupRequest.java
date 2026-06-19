@@ -11,7 +11,7 @@ public class JoinResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -20,7 +20,7 @@ public class JoinResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which you want to add the instance.</p>
+     * <p>The ID of the destination resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -29,7 +29,7 @@ public class JoinResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the resource. For example, if you set ResourceType to instance, set this parameter to the ID of the instance.</p>
+     * <p>The ID of the resource. For example, when ResourceType is set to instance, ResourceId can be interpreted as the InstanceId.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp67acfmxazb4p****</p>
@@ -46,34 +46,21 @@ public class JoinResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of the ECS resource. Valid values:</p>
      * <ul>
-     * <li><p>instance: instance</p>
-     * </li>
-     * <li><p>disk: Elastic Block Storage (EBS) device</p>
-     * </li>
-     * <li><p>snapshot: snapshot</p>
-     * </li>
-     * <li><p>image: image</p>
-     * </li>
-     * <li><p>securitygroup: security group</p>
-     * </li>
-     * <li><p>ddh: dedicated host</p>
-     * </li>
-     * <li><p>ddhcluster: dedicated host cluster</p>
-     * </li>
-     * <li><p>eni: ENI</p>
-     * </li>
-     * <li><p>keypair: SSH key pair</p>
-     * </li>
-     * <li><p>launchtemplate: launch template</p>
-     * </li>
-     * <li><p>command: Cloud Assistant command</p>
-     * </li>
-     * <li><p>activation: activation code for a Cloud Assistant managed instance</p>
-     * </li>
-     * <li><p>managedinstance: Cloud Assistant managed instance</p>
-     * </li>
+     * <li>instance: instance.</li>
+     * <li>disk: block storage.</li>
+     * <li>snapshot: snapshot.</li>
+     * <li>image: image.</li>
+     * <li>securitygroup: security group.</li>
+     * <li>ddh: dedicated host.</li>
+     * <li>ddhcluster: dedicated host cluster.</li>
+     * <li>eni: elastic network interface.</li>
+     * <li>keypair: SSH key pair.</li>
+     * <li>launchtemplate: launch template.</li>
+     * <li>command: Cloud Assistant command.</li>
+     * <li>activation: Cloud Assistant managed instance activation code.</li>
+     * <li>managedinstance: Cloud Assistant managed instance.</li>
      * </ul>
-     * <p>The values are case-sensitive.</p>
+     * <p>The preceding values are case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>securitygroup</p>

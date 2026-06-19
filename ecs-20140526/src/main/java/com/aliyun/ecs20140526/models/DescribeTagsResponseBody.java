@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the tag list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page settings for the paged query. This is the paging size.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

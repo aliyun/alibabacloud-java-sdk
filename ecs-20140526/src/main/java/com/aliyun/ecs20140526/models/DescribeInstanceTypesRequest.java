@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesRequest extends TeaModel {
     /**
-     * <p>The advanced attributes of the instance type to return.</p>
+     * <p>The list of advanced features to return for instance types.</p>
      */
     @NameInMap("AdditionalAttributes")
     public java.util.List<String> additionalAttributes;
@@ -13,10 +13,8 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     /**
      * <p>The CPU architecture. Valid values:</p>
      * <ul>
-     * <li><p>X86</p>
-     * </li>
-     * <li><p>ARM</p>
-     * </li>
+     * <li>X86.</li>
+     * <li>ARM.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +24,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String cpuArchitecture;
 
     /**
-     * <p>An array of 1 to 2 CPU architectures.</p>
+     * <p>The CPU architectures to query. Array length: 1 to 2.</p>
      */
     @NameInMap("CpuArchitectures")
     public java.util.List<String> cpuArchitectures;
@@ -34,7 +32,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     /**
      * <p>The GPU type.</p>
      * <blockquote>
-     * <p>This parameter supports fuzzy search. For example, specifying <code>NVIDIA</code> returns instance types with <code>NVIDIA V100</code> GPUs.</p>
+     * <p>Fuzzy matching is supported. For example, if the GPU type of an instance type is NVIDIA V100, you can enter NVIDIA to query the instance type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,52 +42,36 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String GPUSpec;
 
     /**
-     * <p>An array of 1 to 10 GPU types.</p>
+     * <p>The GPU types to query. Array length: 1 to 10.</p>
      */
     @NameInMap("GpuSpecs")
     public java.util.List<String> gpuSpecs;
 
     /**
-     * <p>An array of 1 to 10 instance categories.</p>
+     * <p>The instance type categories to query. Array length: 1 to 10.</p>
      */
     @NameInMap("InstanceCategories")
     public java.util.List<String> instanceCategories;
 
     /**
-     * <p>The instance category. Valid values:</p>
+     * <p>The category of the instance type. Valid values:</p>
      * <ul>
-     * <li><p>General-purpose</p>
-     * </li>
-     * <li><p>Compute-optimized</p>
-     * </li>
-     * <li><p>Memory-optimized</p>
-     * </li>
-     * <li><p>Big data</p>
-     * </li>
-     * <li><p>Local SSDs</p>
-     * </li>
-     * <li><p>High clock speed</p>
-     * </li>
-     * <li><p>Enhanced</p>
-     * </li>
-     * <li><p>Shared</p>
-     * </li>
-     * <li><p>Compute-optimized with GPU</p>
-     * </li>
-     * <li><p>Visual Compute-optimized</p>
-     * </li>
-     * <li><p>Heterogeneous service</p>
-     * </li>
-     * <li><p>Compute-optimized with FPGA</p>
-     * </li>
-     * <li><p>Compute-optimized with NPU</p>
-     * </li>
-     * <li><p>ECS Bare Metal</p>
-     * </li>
-     * <li><p>Super Computing Cluster</p>
-     * </li>
-     * <li><p>High performance compute</p>
-     * </li>
+     * <li>General-purpose: general-purpose instance type.</li>
+     * <li>Compute-optimized: compute-optimized instance type.</li>
+     * <li>Memory-optimized: memory-optimized instance type.</li>
+     * <li>Big data: big data instance type.</li>
+     * <li>Local SSDs: local SSD instance type.</li>
+     * <li>High Clock Speed: high clock speed instance type.</li>
+     * <li>Enhanced: enhanced instance type.</li>
+     * <li>Shared: shared instance type.</li>
+     * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
+     * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
+     * <li>Heterogeneous Service: heterogeneous service instance type.</li>
+     * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
+     * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
+     * <li>ECS Bare Metal: ECS Bare Metal Instance.</li>
+     * <li>Super Computing Cluster: Super Computing Cluster instance type.</li>
+     * <li>High Performance Compute: high-performance computing instance type.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,14 +81,11 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String instanceCategory;
 
     /**
-     * <p>The instance family level. Valid values:</p>
+     * <p>The level of the instance family. Valid values:</p>
      * <ul>
-     * <li><p><code>EntryLevel</code>: Entry-level (shared).</p>
-     * </li>
-     * <li><p><code>EnterpriseLevel</code>: Enterprise-level.</p>
-     * </li>
-     * <li><p><code>CreditEntryLevel</code>: Credit-based entry-level.</p>
-     * </li>
+     * <li>EntryLevel: entry level (shared).</li>
+     * <li>EnterpriseLevel: enterprise level.</li>
+     * <li>CreditEntryLevel: credit-based entry level.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,14 +95,14 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String instanceFamilyLevel;
 
     /**
-     * <p>An array of 1 to 10 instance type families.</p>
+     * <p>The instance families to query. Array length: 1 to 10.</p>
      */
     @NameInMap("InstanceTypeFamilies")
     public java.util.List<String> instanceTypeFamilies;
 
     /**
-     * <p>The instance type family. For valid values, call the <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a> operation.</p>
-     * <p>For more information about instance type families, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance type families</a>.</p>
+     * <p>The instance family that the instance type belongs to. For valid values, see <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a>.</p>
+     * <p>For more information about instance families, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6</p>
@@ -132,7 +111,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>An array of 1 to 10 instance types. If you do not specify this parameter, the operation returns information about all instance types.</p>
+     * <p>The specified instance types. Array length: 1 to 10. If this parameter is not specified, information about all instance types is queried by default.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
@@ -141,7 +120,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>An array of 1 to 2 local disk categories.</p>
+     * <p>The local disk categories to query. Array length: 1 to 2.</p>
      */
     @NameInMap("LocalStorageCategories")
     public java.util.List<String> localStorageCategories;
@@ -149,10 +128,8 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     /**
      * <p>The category of local disks. For more information, see <a href="~~63138#section_n2w_8yc_5u1~~">Local disks</a>. Valid values:</p>
      * <ul>
-     * <li><p><code>local_hdd_pro</code>: SATA HDD local disks, supported by d1ne and d1 instance types.</p>
-     * </li>
-     * <li><p><code>local_ssd_pro</code>: NVMe SSD local disks, supported by i2, i2g, i1, ga1, and gn5 instance types.</p>
-     * </li>
+     * <li>local_hdd_pro: SATA HDDs used by the d1ne and d1 instance families.</li>
+     * <li>local_ssd_pro: NVMe SSDs used by the i2, i2g, i1, ga1, and gn5 instance families.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -162,7 +139,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String localStorageCategory;
 
     /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 1600.</p>
+     * <p>The maximum number of entries per page for a paginated query. Maximum value: 1600.</p>
      * <p>Default value: 1600.</p>
      * 
      * <strong>example:</strong>
@@ -175,9 +152,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The maximum number of vCPU cores for the instance type. The value must be a positive integer.</p>
+     * <p>The maximum number of vCPU cores when you query instance types. Valid values: positive integers.</p>
      * <blockquote>
-     * <p>The response excludes instance types with more vCPU cores than this value.</p>
+     * <p>Instance types with more vCPU cores than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -187,9 +164,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer maximumCpuCoreCount;
 
     /**
-     * <p>The maximum clock speed.</p>
+     * <p>The maximum CPU base clock speed when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types with a clock speed higher than this value.</p>
+     * <p>Instance types with a base clock speed higher than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -199,9 +176,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Float maximumCpuSpeedFrequency;
 
     /**
-     * <p>The maximum turbo frequency.</p>
+     * <p>The maximum CPU turbo frequency when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types with a turbo frequency higher than this value.</p>
+     * <p>Instance types with a turbo frequency higher than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -211,9 +188,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Float maximumCpuTurboFrequency;
 
     /**
-     * <p>The maximum number of GPUs. The value must be a positive integer.</p>
+     * <p>The maximum number of GPUs when you query instance types. Valid values: positive integers.</p>
      * <blockquote>
-     * <p>The response excludes instance types with more GPUs than this value.</p>
+     * <p>Instance types with more GPUs than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -223,9 +200,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer maximumGPUAmount;
 
     /**
-     * <p>The maximum memory size for the instance type. Unit: GiB.</p>
+     * <p>The maximum memory size when you query instance types. Unit: GiB.</p>
      * <blockquote>
-     * <p>The response excludes instance types with a larger memory size than this value.</p>
+     * <p>Instance types with a memory size larger than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -235,9 +212,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Float maximumMemorySize;
 
     /**
-     * <p>The minimum baseline vCPU performance of a t5 or t6 burstable performance instance. This value is the sum of the baseline performance of all vCPUs.</p>
+     * <p>The minimum baseline vCPU computing performance (total of all vCPUs) for burstable instance types t5 and t6 when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types with a baseline vCPU performance lower than this value.</p>
+     * <p>Instance types with a baseline vCPU computing performance lower than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -247,9 +224,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumBaselineCredit;
 
     /**
-     * <p>The minimum number of vCPU cores for the instance type. The value must be a positive integer.</p>
+     * <p>The minimum number of vCPU cores when you query instance types. Valid values: positive integers.</p>
      * <blockquote>
-     * <p>The response excludes instance types with fewer vCPU cores than this value.</p>
+     * <p>Instance types with fewer vCPU cores than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -259,9 +236,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumCpuCoreCount;
 
     /**
-     * <p>The minimum clock speed.</p>
+     * <p>The minimum CPU base clock speed when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types with a clock speed lower than this value.</p>
+     * <p>Instance types with a base clock speed lower than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -271,9 +248,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Float minimumCpuSpeedFrequency;
 
     /**
-     * <p>The minimum turbo frequency.</p>
+     * <p>The minimum CPU turbo frequency when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types with a turbo frequency lower than this value.</p>
+     * <p>Instance types with a turbo frequency lower than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -283,9 +260,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Float minimumCpuTurboFrequency;
 
     /**
-     * <p>The minimum value for the maximum number of cloud disks that can be attached to the instance type.</p>
+     * <p>The minimum number of cloud disks that can be attached when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types that support fewer attachable cloud disks than this value.</p>
+     * <p>Instance types that support fewer cloud disks than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -295,9 +272,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumDiskQuantity;
 
     /**
-     * <p>The minimum value for the maximum number of IPv6 addresses that can be assigned to a single elastic network interface.</p>
+     * <p>The minimum number of IPv6 addresses per ENI when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types whose ENIs support fewer assignable IPv6 addresses than this value.</p>
+     * <p>Instance types that support fewer IPv6 addresses per ENI than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -307,9 +284,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumEniIpv6AddressQuantity;
 
     /**
-     * <p>The minimum value for the maximum number of IPv4 addresses that can be assigned to a single elastic network interface.</p>
+     * <p>The minimum number of IPv4 addresses per ENI when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types whose ENIs support fewer assignable IPv4 addresses than this value.</p>
+     * <p>Instance types that support fewer IPv4 addresses per ENI than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -319,9 +296,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumEniPrivateIpAddressQuantity;
 
     /**
-     * <p>The minimum value for the maximum number of elastic network interfaces (ENIs) that can be attached to the instance type.</p>
+     * <p>The minimum number of ENIs that can be attached when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types that support fewer ENIs than this value.</p>
+     * <p>Instance types that support fewer ENIs than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -331,9 +308,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumEniQuantity;
 
     /**
-     * <p>The minimum number of Elastic RDMA Interfaces (ERIs).</p>
+     * <p>The minimum number of ERIs when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types that support fewer ERIs than this value.</p>
+     * <p>Instance types with fewer ERIs than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -343,9 +320,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumEriQuantity;
 
     /**
-     * <p>The minimum number of GPUs. The value must be a positive integer.</p>
+     * <p>The minimum number of GPUs when you query instance types. Valid values: positive integers.</p>
      * <blockquote>
-     * <p>The response excludes instance types with fewer GPUs than this value.</p>
+     * <p>Instance types with fewer GPUs than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -355,9 +332,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumGPUAmount;
 
     /**
-     * <p>The minimum initial vCPU credits of a t5 or t6 burstable performance instance.</p>
+     * <p>The minimum initial vCPU credits for burstable instance types t5 and t6 when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types with fewer initial vCPU credits than this value.</p>
+     * <p>Instance types with initial vCPU credits lower than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -367,9 +344,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumInitialCredit;
 
     /**
-     * <p>The minimum inbound bandwidth over the internal network. Unit: kbit/s.</p>
+     * <p>The minimum inbound internal bandwidth when you query instance types. Unit: kbit/s.</p>
      * <blockquote>
-     * <p>The response excludes instance types that have a lower inbound bandwidth limit over the internal network than this value.</p>
+     * <p>Instance types with an inbound internal bandwidth lower than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -379,9 +356,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumInstanceBandwidthRx;
 
     /**
-     * <p>The minimum outbound bandwidth over the internal network. Unit: kbit/s.</p>
+     * <p>The minimum outbound internal bandwidth when you query instance types. Unit: kbit/s.</p>
      * <blockquote>
-     * <p>The response excludes instance types that have a lower outbound bandwidth limit over the internal network than this value.</p>
+     * <p>Instance types with an outbound internal bandwidth lower than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -391,9 +368,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumInstanceBandwidthTx;
 
     /**
-     * <p>The minimum inbound packet rate over the internal network. Unit: pps.</p>
+     * <p>The minimum inbound packet forwarding rate over the internal network when you query instance types. Unit: pps.</p>
      * <blockquote>
-     * <p>The response excludes instance types that have a lower inbound packet rate over the internal network than this value.</p>
+     * <p>Instance types with an inbound packet forwarding rate lower than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -403,9 +380,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Long minimumInstancePpsRx;
 
     /**
-     * <p>The minimum outbound packet rate over the internal network. Unit: pps.</p>
+     * <p>The minimum outbound packet forwarding rate over the internal network when you query instance types. Unit: pps.</p>
      * <blockquote>
-     * <p>The response excludes instance types that have a lower outbound packet rate over the internal network than this value.</p>
+     * <p>Instance types with an outbound packet forwarding rate lower than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -415,9 +392,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Long minimumInstancePpsTx;
 
     /**
-     * <p>The minimum number of local disks available on the instance type.</p>
+     * <p>The minimum number of local disks attached to the instance when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types that support fewer local disks than this value.</p>
+     * <p>Instance types with fewer local disks than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -427,7 +404,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumLocalStorageAmount;
 
     /**
-     * <p>The minimum capacity of a single local disk, in GiB. The response excludes instance types whose local disks have a capacity smaller than this value.</p>
+     * <p>The capacity of a single local disk attached to the instance. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -436,9 +413,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Long minimumLocalStorageCapacity;
 
     /**
-     * <p>The minimum memory size for the instance type. Unit: GiB.</p>
+     * <p>The minimum memory size when you query instance types. Unit: GiB.</p>
      * <blockquote>
-     * <p>The response excludes instance types with a smaller memory size than this value.</p>
+     * <p>Instance types with a memory size smaller than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -448,9 +425,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Float minimumMemorySize;
 
     /**
-     * <p>The minimum number of queues supported by the primary elastic network interface.</p>
+     * <p>The minimum default number of queues supported by the primary ENI when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types that support fewer queues for the primary elastic network interface than this value.</p>
+     * <p>Instance types with fewer default queues on the primary ENI than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -460,9 +437,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumPrimaryEniQueueNumber;
 
     /**
-     * <p>The minimum value for the maximum number of queue pairs (QPs) supported by a single Elastic RDMA Interface (ERI).</p>
+     * <p>The minimum number of QueuePair (QP) queues per Elastic RDMA Interface (ERI) when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types whose ERIs support fewer queue pairs than this value.</p>
+     * <p>Instance types with fewer QP queues per ERI than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -472,9 +449,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumQueuePairNumber;
 
     /**
-     * <p>The minimum number of queues supported by a secondary elastic network interface.</p>
+     * <p>The minimum default number of queues supported by the secondary ENI when you query instance types.</p>
      * <blockquote>
-     * <p>The response excludes instance types that support fewer queues for a secondary elastic network interface than this value.</p>
+     * <p>Instance types with fewer default queues on the secondary ENI than the specified value are not returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -484,7 +461,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumSecondaryEniQueueNumber;
 
     /**
-     * <p>The token used to retrieve the next page of results. You do not need to set this parameter for the first request. For subsequent requests, set this to the <code>NextToken</code> value from the previous response.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call to this API operation. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -496,12 +473,10 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Specifies whether cloud disks attached to the instance type support NVMe. Valid values:</p>
+     * <p>Indicates whether cloud disks attached to the instance type support NVMe. Valid values:</p>
      * <ul>
-     * <li><p><code>required</code>: Cloud disks are attached using the NVMe protocol.</p>
-     * </li>
-     * <li><p><code>unsupported</code>: Cloud disks are attached without using the NVMe protocol.</p>
-     * </li>
+     * <li>required: supported. Cloud disks are attached in NVMe mode.</li>
+     * <li>unsupported: not supported. Cloud disks are not attached in NVMe mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -519,7 +494,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     /**
      * <p>The processor model.</p>
      * <blockquote>
-     * <p>This parameter supports fuzzy search. For example, specifying <code>Intel</code> returns instance types with <code>Intel Xeon(Ice Lake) Platinum 8369B</code> processors.</p>
+     * <p>Fuzzy matching is supported. For example, if the processor model of an instance type is Intel Xeon(Ice Lake) Platinum 8369B, you can enter Intel to query the instance type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -529,7 +504,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String physicalProcessorModel;
 
     /**
-     * <p>An array of 1 to 10 processor models.</p>
+     * <p>The processor models to query. Array length: 1 to 10.</p>
      */
     @NameInMap("PhysicalProcessorModels")
     public java.util.List<String> physicalProcessorModels;

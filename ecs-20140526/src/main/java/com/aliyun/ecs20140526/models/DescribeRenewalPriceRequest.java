@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
     /**
-     * <p>The unified expiration day. If you specify this parameter, the system queries the price for renewing the instance until the unified expiration day. Valid values: 1 to 28.</p>
-     * <p>For more information about the unified expiration day feature, see <a href="https://help.aliyun.com/document_detail/108486.html">Unify Instance Expiration Dates</a>.</p>
+     * <p>The unified expiration date. After you specify this parameter, the price for renewing the instance to the unified expiration date is returned. Valid values: 1 to 28.</p>
+     * <p>For more information about the unified expiration date feature, see <a href="https://help.aliyun.com/document_detail/108486.html">Settings for instance expires</a>.</p>
      * <blockquote>
-     * <p>You cannot specify both the renewal duration parameters (<code>Period</code> and <code>PeriodUnit</code>) and the unified expiration day parameter (<code>ExpectedRenewDay</code>) at the same time.</p>
+     * <p>The renewal duration parameters (<code>Period</code> and <code>PeriodUnit</code>) and the unified expiration date parameter (<code>ExpectedRenewDay</code>) cannot be set at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,14 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies the renewal duration. Valid values:</p>
+     * <p>The renewal duration. Valid values:</p>
      * <ul>
-     * <li><p>When the <code>PriceUnit</code> parameter is set to <code>Month</code>: 1 to 9.</p>
-     * </li>
-     * <li><p>When the <code>PriceUnit</code> parameter is set to <code>Year</code>: 1 to 3.</p>
-     * </li>
+     * <li>When <code>PriceUnit</code> is set to <code>Month</code>: 1 to 9.</li>
+     * <li>When <code>PriceUnit</code> is set to <code>Year</code>: 1 to 3.</li>
      * </ul>
-     * <p>Default Value: 1.</p>
+     * <p>Default value: 1.</p>
      * <blockquote>
-     * <p>You cannot specify both the renewal duration parameters (<code>Period</code> and <code>PeriodUnit</code>) and the unified expiration day parameter (<code>ExpectedRenewDay</code>) at the same time.</p>
+     * <p>The renewal duration parameters (<code>Period</code> and <code>PeriodUnit</code>) and the unified expiration date parameter (<code>ExpectedRenewDay</code>) cannot be set at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,14 +41,12 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>Specifies the renewal period. Valid values:</p>
+     * <p>The unit of the renewal duration. Valid values:</p>
      * <ul>
-     * <li><p>Month: The renewal period is one month.</p>
-     * </li>
-     * <li><p>Year: The renewal period is one year.</p>
-     * </li>
+     * <li>Month: the renewal duration is measured in months.</li>
+     * <li>Year: the renewal duration is measured in years.</li>
      * </ul>
-     * <p>Default Value: Month.</p>
+     * <p>Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -59,7 +55,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String priceUnit;
 
     /**
-     * <p>The Region ID of the instance. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud Regions.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +65,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID for which to query the renewal price. When the parameter <code>ResourceType</code> is set to <code>instance</code>, <code>ResourceId</code> can be interpreted as <code>InstanceId</code>.</p>
+     * <p>The ID of the resource whose renewal price you want to query. When <code>ResourceType</code> is set to <code>instance</code>, <code>ResourceId</code> is equivalent to <code>InstanceId</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,8 +81,8 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type for which to query the renewal price. Valid value: instance.</p>
-     * <p>Default Value: instance.</p>
+     * <p>The type of the resource whose renewal price you want to query. Valid values: instance.</p>
+     * <p>Default value: instance.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>

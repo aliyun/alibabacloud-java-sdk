@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class EnablePhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>A client token that ensures the request is idempotent.</p>
-     * <p>Your client generates this token, which must be unique for each request. The token can contain only ASCII characters and must not exceed 64 characters in length.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ClientToken")
@@ -19,15 +17,12 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the physical connection.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
-     * <p>The ID of the region where the physical connection is located.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -39,9 +34,6 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The IPv4 CIDR block of the gateway device in your data center.</p>
-     */
     @NameInMap("UserCidr")
     public String userCidr;
 

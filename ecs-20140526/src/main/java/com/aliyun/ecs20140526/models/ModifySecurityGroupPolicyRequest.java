@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupPolicyRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,15 +14,13 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The internal access control policy of the security group. Valid values:</p>
+     * <p>The internal connectivity policy between ECS instances in the security group. Valid values:</p>
      * <ul>
-     * <li><p>Accept: the internal interconnectivity policy</p>
-     * </li>
-     * <li><p>Drop: the internal isolation policy</p>
-     * </li>
+     * <li>Accept: intra-group connectivity</li>
+     * <li>Drop: internal isolation</li>
      * </ul>
      * <blockquote>
-     * <p>The value of this parameter is case-insensitive.</p>
+     * <p>The value is case-insensitive.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +37,7 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

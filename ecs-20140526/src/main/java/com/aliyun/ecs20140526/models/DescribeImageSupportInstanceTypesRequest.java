@@ -7,10 +7,8 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     /**
      * <p>The scenario in which the image is used. Valid values:</p>
      * <ul>
-     * <li><p>CreateEcs (default): instance creation</p>
-     * </li>
-     * <li><p>ChangeOS: replacement of the system disk or operating system</p>
-     * </li>
+     * <li>CreateEcs (default): instance creation.</li>
+     * <li>ChangeOS: replacement of the system disk or operating system.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,13 +18,13 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public String actionType;
 
     /**
-     * <p>The number of vCPUs of the instance type.</p>
+     * <p>The list of filter conditions for querying resources.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeImageSupportInstanceTypesRequestFilter> filter;
 
     /**
-     * <p>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>m-o6w3gy99qf89rkga****</p>
@@ -38,7 +36,7 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Details about the instance types that are supported by the image.</p>
+     * <p>The region ID of the image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,7 +114,14 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
 
     public static class DescribeImageSupportInstanceTypesRequestFilter extends TeaModel {
         /**
-         * <p>Filter N used to filter instance types.</p>
+         * <p>The filter condition key. Currently, only filtering by image ID is supported. Valid values:</p>
+         * <ul>
+         * <li>imageId: filters by image ID.</li>
+         * <li>filter: filters by image ID.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is not effective and will be deprecated soon.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>imageId</p>
@@ -125,7 +130,10 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The filter condition value.</p>
+         * <blockquote>
+         * <p>This parameter is not effective and will be deprecated soon.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>m-o6w3gy99qf89rkga****</p>

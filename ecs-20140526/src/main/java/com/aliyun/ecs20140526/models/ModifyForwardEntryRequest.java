@@ -4,47 +4,30 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyForwardEntryRequest extends TeaModel {
-    /**
-     * <p>The public IP address for the forward entry.</p>
-     */
     @NameInMap("ExternalIp")
     public String externalIp;
 
-    /**
-     * <p>The external port for the forward entry.</p>
-     */
     @NameInMap("ExternalPort")
     public String externalPort;
 
     /**
-     * <p>The ID of the forward entry that you want to modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
     /**
-     * <p>The ID of the forward table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
 
-    /**
-     * <p>The internal IP address for the forward entry.</p>
-     */
     @NameInMap("InternalIp")
     public String internalIp;
 
-    /**
-     * <p>The internal port for the forward entry.</p>
-     */
     @NameInMap("InternalPort")
     public String internalPort;
 
-    /**
-     * <p>The IP protocol. Valid values are tcp, udp, and any.</p>
-     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
@@ -55,7 +38,6 @@ public class ModifyForwardEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the forward table is located.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

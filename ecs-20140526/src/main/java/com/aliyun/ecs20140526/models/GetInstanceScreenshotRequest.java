@@ -21,7 +21,7 @@ public class GetInstanceScreenshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class GetInstanceScreenshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to wake up the hibernated instance.</p>
+     * <p>Specifies whether to wake up an instance that is in hibernation.</p>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk that you want to query.</p>
+     * <p>The ID of the disk to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The end time of the data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the end time is automatically set to the beginning of the next minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,18 +31,24 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</p>
+     * <p>The granularity of the data. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><p>60</p>
+     * <li><ol start="60">
+     * <li></li>
+     * </ol>
      * </li>
-     * <li><p>600</p>
+     * <li><ol start="600">
+     * <li></li>
+     * </ol>
      * </li>
-     * <li><p>3600</p>
+     * <li><ol start="3600">
+     * <li></li>
+     * </ol>
      * </li>
      * </ul>
      * <p>Default value: 60.</p>
      * <blockquote>
-     * <p>Up to 400 monitoring data entries can be returned at a time. Make sure that the TotalCount value does not exceed 400. The value is calculated by using the following formula: TotalCount = (EndTime - StartTime)/Period.</p>
+     * <p>The value of (EndTime – StartTime) / Period must be less than or equal to 400. A maximum of 400 data entries can be returned at a time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,9 +64,9 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The start time of the data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the start time is automatically set to the beginning of the next minute.</p>
      * <blockquote>
-     * <p>You can query the monitoring data in the last 30 days. If the value of <code>StartTime</code> is more than 30 days earlier than the current time, an error is returned.</p>
+     * <p>You can query the monitoring information of up to the last 30 days. The <code>StartTime</code> parameter cannot be more than 30 days earlier than the current time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

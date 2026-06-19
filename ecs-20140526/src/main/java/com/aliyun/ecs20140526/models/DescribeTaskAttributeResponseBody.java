@@ -35,7 +35,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public DescribeTaskAttributeResponseBodyOperationProgressSet operationProgressSet;
 
     /**
-     * <p>The region ID of the task.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -53,7 +53,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of completed tasks.</p>
+     * <p>The number of successful tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,12 +62,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public Integer successCount;
 
     /**
-     * <p>Indicates whether the task can be canceled by calling the <a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a> operation. Valid values:</p>
+     * <p>Indicates whether the task can be canceled (<a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a>). Valid values: </p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The task can be canceled. </li>
+     * <li>false: The task cannot be canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +75,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String supportCancel;
 
     /**
-     * <p>The name of the operation that generated the task.</p>
+     * <p>The name of the API operation associated with the task.</p>
      * 
      * <strong>example:</strong>
      * <p>ExportImage</p>
@@ -86,7 +84,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String taskAction;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-ce946ntx4wr****</p>
@@ -95,7 +93,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The progress of the task.</p>
+     * <p>The task progress.</p>
      * 
      * <strong>example:</strong>
      * <p>100%</p>
@@ -104,7 +102,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String taskProcess;
 
     /**
-     * <p>The status of the task.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>Finished</p>

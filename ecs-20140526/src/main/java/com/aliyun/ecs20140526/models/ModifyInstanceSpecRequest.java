@@ -11,23 +11,21 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public ModifyInstanceSpecRequestTemporary temporary;
 
     /**
-     * <p>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</p>
+     * <p>Specifies whether to support cross-cluster instance type upgrade. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Cross-cluster instance type upgrade is supported.</li>
+     * <li>false: Cross-cluster instance type upgrade is not supported.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>When you set <code>AllowMigrateAcrossZone</code> to true and upgrade the instance based on the returned information, take note of the following items:</p>
-     * <p>Instance that resides in the classic network:</p>
+     * <p>If you set the parameter <code>AllowMigrateAcrossZone</code> to true and upgrade the Elastic Compute Service instance based on the response, take note of the following items:</p>
+     * <p>Classic network type instances:</p>
      * <ul>
-     * <li><p>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (<code>cloud</code>) are identified as xvd\* such as <strong>xvda</strong> and <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as vd\* such as <strong>vda</strong> and <strong>vdb</strong>.</p>
+     * <li><p>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For Linux instances, basic disks (<code>cloud</code>) are identified as <strong>xvda</strong> or <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as <strong>vda</strong> or <strong>vdb</strong>.</p>
      * </li>
-     * <li><p>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</p>
+     * <li><p>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families that are available for purchase</a>, the private IP address of the instance changes.</p>
      * </li>
      * </ul>
-     * <p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (<code>cloud</code>) are identified as xvd\* such as <strong>xvda</strong> and <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as vd\* such as <strong>vda</strong> and <strong>vdb</strong>.</p>
+     * <p>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For Linux instances, basic disks (<code>cloud</code>) are identified as <strong>xvda</strong> or <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as <strong>vda</strong> or <strong>vdb</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -38,10 +36,8 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to submit an asynchronous request. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The request is submitted asynchronously.</li>
+     * <li>false: The request is not submitted asynchronously.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -52,7 +48,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -62,19 +58,17 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("Disk")
     public java.util.List<ModifyInstanceSpecRequestDisk> disk;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p>false (default): performs a dry run and performs the actual request.</p>
-     * </li>
+     * <li>true: performs only a dry run. The instance type and public bandwidth are not changed. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS resources are sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false (default): performs a dry run and sends the request. If the check succeeds, the instance type and public bandwidth are changed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +78,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,7 +88,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+     * <p>The target instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
@@ -105,13 +99,11 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     /**
      * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
      * <ul>
-     * <li><p>When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid value of this parameter ranges from 1 to 10 and the default value is 10.</p>
-     * </li>
-     * <li><p>When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <code>InternetMaxBandwidthOut</code> value and the default value is the <code>InternetMaxBandwidthOut</code> value.</p>
-     * </li>
+     * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
+     * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>InternetMaxBandwidthOut</code>. Default value: the value of <code>InternetMaxBandwidthOut</code>.</li>
      * </ul>
      * <blockquote>
-     * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -123,7 +115,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
      * <blockquote>
-     * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -290,15 +282,15 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     public static class ModifyInstanceSpecRequestSystemDisk extends TeaModel {
         /**
-         * <p>The new category of the system disk. Valid values:</p>
+         * <p>更换系统盘类型。取值范围：</p>
          * <ul>
-         * <li><p>cloud_efficiency: ultra disk</p>
+         * <li><p>cloud_efficiency：高效云盘</p>
          * </li>
-         * <li><p>cloud_ssd: standard SSD</p>
+         * <li><p>cloud_ssd：SSD云盘</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect only when you upgrade a non-I/O optimized instance of <a href="https://help.aliyun.com/document_detail/55263.html">a retired instance type</a> to an I/O optimized instance of <a href="https://help.aliyun.com/document_detail/25378.html">an instance type available for purchase</a>.</p>
+         * <p>该参数只有在从<a href="https://help.aliyun.com/document_detail/55263.html">已停售的实例规格</a>升级到<a href="https://help.aliyun.com/document_detail/25378.html">正常售卖的实例规格族</a>，并将非I/O优化实例规格升级为I/O优化实例规格时有效。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -325,7 +317,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public static class ModifyInstanceSpecRequestTemporary extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>该参数正在邀测中，暂未开放使用。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -336,7 +328,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>该参数正在邀测中，暂未开放使用。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -347,7 +339,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>该参数正在邀测中，暂未开放使用。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -390,7 +382,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public static class ModifyInstanceSpecRequestDisk extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -401,7 +393,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -412,7 +404,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

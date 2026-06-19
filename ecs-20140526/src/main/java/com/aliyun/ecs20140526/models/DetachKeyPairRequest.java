@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachKeyPairRequest extends TeaModel {
     /**
-     * <p>The IDs of instances from which you want to unbind the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).</p>
+     * <p>The IDs of the instances from which you want to unbind the SSH key pair. The value is a JSON array that consists of up to 50 instance IDs. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DetachKeyPairRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the SSH key pair. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the SSH key pair. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

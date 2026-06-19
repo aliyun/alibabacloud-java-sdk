@@ -23,7 +23,7 @@ public class GetInstanceScreenshotResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Base64-encoded instance screenshot in the JPG format.</p>
+     * <p>The instance screenshot in JPG image format, returned as a Base64-encoded image.</p>
      * 
      * <strong>example:</strong>
      * <p>iVBORw0KGgoA...AAABJRU5ErkJggg==</p>

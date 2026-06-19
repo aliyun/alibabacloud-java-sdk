@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.</p>
+     * <p>The query token returned in this call. When you use the MaxResults and NextToken method for paged queries and this return value is empty, no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -14,9 +14,9 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * <blockquote>
-     * <p>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <blockquote>
-     * <p>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
 
     /**
-     * <p>The total number of security groups returned. If <code>MaxResults</code> and <code>NextToken</code> are specified in the request, the value of this parameter is not returned.</p>
+     * <p>The total number of security groups. This parameter value is not returned when you use the <code>MaxResults</code> and <code>NextToken</code> parameters for queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
