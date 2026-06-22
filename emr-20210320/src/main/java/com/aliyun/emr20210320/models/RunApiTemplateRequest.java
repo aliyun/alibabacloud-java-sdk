@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunApiTemplateRequest extends TeaModel {
     /**
-     * <p>接口名。</p>
+     * <p>The API name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RunApiTemplateRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>幂等客户端TOKEN。</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
@@ -24,7 +24,7 @@ public class RunApiTemplateRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>地域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class RunApiTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>集群模板id。</p>
+     * <p>The cluster template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClusterSummary extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c-b933c5aac8fe****</p>
@@ -14,7 +14,7 @@ public class ClusterSummary extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>集群名称。</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>emrtest</p>
@@ -23,16 +23,24 @@ public class ClusterSummary extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>集群状态。取值范围：</p>
+     * <p>The state of the cluster. Valid values:</p>
      * <ul>
-     * <li>STARTING：启动中。</li>
-     * <li>START_FAILED：启动失败。</li>
-     * <li>BOOTSTRAPPING：引导操作初始化。</li>
-     * <li>RUNNING：运行中。</li>
-     * <li>TERMINATING：终止中。</li>
-     * <li>TERMINATED：已终止。</li>
-     * <li>TERMINATED_WITH_ERRORS：发生异常导致终止。</li>
-     * <li>TERMINATE_FAILED：终止失败。</li>
+     * <li><p><code>STARTING</code>: The cluster is starting.</p>
+     * </li>
+     * <li><p><code>START_FAILED</code>: The cluster fails to be started.</p>
+     * </li>
+     * <li><p><code>BOOTSTRAPPING</code>: The cluster is being initialized.</p>
+     * </li>
+     * <li><p><code>RUNNING</code>: The cluster is running.</p>
+     * </li>
+     * <li><p><code>TERMINATING</code>: The cluster is being terminated.</p>
+     * </li>
+     * <li><p><code>TERMINATED</code>: The cluster is terminated.</p>
+     * </li>
+     * <li><p><code>TERMINATED_WITH_ERRORS</code>: The cluster is terminated with errors.</p>
+     * </li>
+     * <li><p><code>TERMINATE_FAILED</code>: The cluster fails to be terminated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,12 +50,16 @@ public class ClusterSummary extends TeaModel {
     public String clusterState;
 
     /**
-     * <p>集群类型。取值范围：</p>
+     * <p>The cluster type. Valid values:</p>
      * <ul>
-     * <li>DATALAKE：新版数据湖。</li>
-     * <li>OLAP：数据分析。</li>
-     * <li>DATAFLOW：实时数据流。</li>
-     * <li>DATASERVING：数据服务。</li>
+     * <li><p><code>DATALAKE</code>: data lake.</p>
+     * </li>
+     * <li><p><code>OLAP</code>: data analytics.</p>
+     * </li>
+     * <li><p><code>DATAFLOW</code>: real-time dataflow.</p>
+     * </li>
+     * <li><p><code>DATASERVING</code>: data serving.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,49 +69,66 @@ public class ClusterSummary extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>创建时间。</p>
+     * <p>The time when the cluster was created.</p>
      * 
      * <strong>example:</strong>
-     * <p>1592837465784</p>
+     * <p>1592837465788</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The release protection feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
+    /**
+     * <p>The description of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EMR cluster</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>EMR服务角色。</p>
+     * <p>The EMR service role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunEMRDefaultRole</p>
      */
     @NameInMap("EmrDefaultRole")
     public String emrDefaultRole;
 
     /**
-     * <p>删除时间。</p>
+     * <p>The time when the cluster was deleted.</p>
      * 
      * <strong>example:</strong>
-     * <p>1592837465784</p>
+     * <p>1592837485788</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>过期时间。</p>
+     * <p>The expiration time.</p>
      * 
      * <strong>example:</strong>
-     * <p>1592837465784</p>
+     * <p>1592837475788</p>
      */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
     /**
-     * <p>付费类型。取值范围：</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo：后付费。</li>
-     * <li>Subscription：预付费。</li>
+     * <li><p><code>PayAsYouGo</code>: pay-as-you-go.</p>
+     * </li>
+     * <li><p><code>Subscription</code>: subscription.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,16 +138,16 @@ public class ClusterSummary extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>可用时间。</p>
+     * <p>The time when the cluster is available.</p>
      * 
      * <strong>example:</strong>
-     * <p>1592837465784</p>
+     * <p>1592837465788</p>
      */
     @NameInMap("ReadyTime")
     public Long readyTime;
 
     /**
-     * <p>EMR发行版。</p>
+     * <p>The E-MapReduce (EMR) release version.</p>
      * 
      * <strong>example:</strong>
      * <p>EMR-5.8.0</p>
@@ -127,7 +156,7 @@ public class ClusterSummary extends TeaModel {
     public String releaseVersion;
 
     /**
-     * <p>资源组ID。</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -136,13 +165,13 @@ public class ClusterSummary extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>失败原因。</p>
+     * <p>The reason for the failure.</p>
      */
     @NameInMap("StateChangeReason")
     public ClusterStateChangeReason stateChangeReason;
 
     /**
-     * <p>标签列表。</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class NodeGroup extends TeaModel {
     /**
-     * <p>安全组ID。</p>
+     * <p>The additional security group IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;sg-hp3abbae8lb6lmb1****&quot;]</p>
@@ -14,6 +14,8 @@ public class NodeGroup extends TeaModel {
     public java.util.List<String> additionalSecurityGroupIds;
 
     /**
+     * <p>Applies only when <code>NodeResizeStrategy</code> is set to <code>COST_OPTIMIZED</code>. If set to <code>true</code>, the system creates Pay-As-You-Go instances to meet the target capacity if it fails to create enough spot instances due to price or inventory constraints.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,25 +23,28 @@ public class NodeGroup extends TeaModel {
     public Boolean compensateWithOnDemand;
 
     /**
-     * <p>成本优化模式配置。</p>
+     * <p>The configurations of the cost-optimized mode.</p>
      */
     @NameInMap("CostOptimizedConfig")
     public CostOptimizedConfig costOptimizedConfig;
 
     /**
-     * <p>数据盘列表。</p>
+     * <p>The data disks.</p>
      */
     @NameInMap("DataDisks")
     public java.util.List<DataDisk> dataDisks;
 
     /**
-     * <p>部署集策略。取值范围：</p>
+     * <p>The Deployment Set strategy. Valid values:</p>
      * <ul>
-     * <li>NONE：不适用部署集。</li>
-     * <li>CLUSTER：使用集群级别部署集。</li>
-     * <li>NODE_GROUP：使用节点组级别部署集。</li>
+     * <li><p>NONE: Does not use a Deployment Set.</p>
+     * </li>
+     * <li><p>CLUSTER: Uses a cluster-level Deployment Set.</p>
+     * </li>
+     * <li><p>NODE_GROUP: Uses a node group-level Deployment Set.</p>
+     * </li>
      * </ul>
-     * <p>默认值：NONE。</p>
+     * <p>Default: <code>NONE</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>NONE</p>
@@ -48,10 +53,12 @@ public class NodeGroup extends TeaModel {
     public String deploymentSetStrategy;
 
     /**
-     * <p>节点组上部署的组件是否开启优雅下线。取值范围：</p>
+     * <p>Specifies whether to enable graceful shutdown for components deployed in the node group. Valid values:</p>
      * <ul>
-     * <li>true：开启优雅下线。</li>
-     * <li>false：不开启优雅下线。</li>
+     * <li><p>true: Enables graceful shutdown.</p>
+     * </li>
+     * <li><p>false: Disables graceful shutdown.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +68,7 @@ public class NodeGroup extends TeaModel {
     public Boolean gracefulShutdown;
 
     /**
-     * <p>实例类型列表。</p>
+     * <p>The instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ecs.g6.4xlarge&quot;]</p>
@@ -70,7 +77,7 @@ public class NodeGroup extends TeaModel {
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>节点组ID。</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ng-869471354ecd****</p>
@@ -79,7 +86,7 @@ public class NodeGroup extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>节点组名称。最大长度128个字符。</p>
+     * <p>The node group name.</p>
      * 
      * <strong>example:</strong>
      * <p>core-1</p>
@@ -88,32 +95,39 @@ public class NodeGroup extends TeaModel {
     public String nodeGroupName;
 
     /**
-     * <p>节点组状态。</p>
+     * <p>The state of the node group.</p>
      * 
      * <strong>example:</strong>
-     * <p>CREATED</p>
+     * <p>RESIZING</p>
      */
     @NameInMap("NodeGroupState")
     public String nodeGroupState;
 
     /**
-     * <p>节点组类型。取值范围：</p>
+     * <p>The type of the node group. Valid values:</p>
      * <ul>
-     * <li>MASTER：管理类型节点组。</li>
-     * <li>CORE：存储类型节点组。</li>
-     * <li>TASK：计算类型节点组。</li>
+     * <li><p>MASTER: A master node.</p>
+     * </li>
+     * <li><p>CORE: A core node.</p>
+     * </li>
+     * <li><p>TASK: A task node.</p>
+     * </li>
+     * <li><p>GATEWAY: A gateway node. This value is not applicable to DATALAKE, OLAP, or DATASERVING clusters.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>CORE</p>
+     * <p>MASTER</p>
      */
     @NameInMap("NodeGroupType")
     public String nodeGroupType;
 
     /**
      * <ul>
-     * <li>COST_OPTIMIZED：成本优化策略。</li>
-     * <li>PRIORITY：优先级策略。</li>
+     * <li><p>COST_OPTIMIZED: The cost-optimized strategy.</p>
+     * </li>
+     * <li><p>PRIORITY: The priority-based strategy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,23 +137,22 @@ public class NodeGroup extends TeaModel {
     public String nodeResizeStrategy;
 
     /**
-     * <p>节点组付费类型。取值范围：</p>
-     * <ul>
-     * <li>PayAsYouGo：后付费，按量付费。</li>
-     * <li>Subscription：预付费，包年包月。</li>
-     * </ul>
+     * <p>The payment type. Valid values are <code>Subscription</code> for the subscription billing method and <code>PayAsYouGo</code> for the Pay-As-You-Go billing method.</p>
      * 
      * <strong>example:</strong>
-     * <p>PayAsYouGo</p>
+     * <p>Subscription</p>
      */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <p>The private pool options.</p>
+     */
     @NameInMap("PrivatePoolOptions")
     public PrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>存活节点数量。</p>
+     * <p>The number of running nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -147,25 +160,39 @@ public class NodeGroup extends TeaModel {
     @NameInMap("RunningNodeCount")
     public Integer runningNodeCount;
 
+    /**
+     * <p>The bid prices for the spot instances. This parameter is effective only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>. The array can contain 0 to 100 elements.</p>
+     */
     @NameInMap("SpotBidPrices")
     public java.util.List<SpotBidPrice> spotBidPrices;
 
     /**
-     * <p>开启补齐抢占式实例后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值范围：</p>
+     * <p>Specifies whether to enable spot instance remedy. If enabled, the scaling group attempts to create a new instance to replace a spot instance that is about to be reclaimed. Valid values:</p>
      * <ul>
-     * <li>true：开启补齐抢占式实例。</li>
-     * <li>false：不开启补齐抢占式实例。</li>
+     * <li><p>true: Enables spot instance remedy.</p>
+     * </li>
+     * <li><p>false: Disables spot instance remedy.</p>
+     * </li>
      * </ul>
-     * <p>默认值：false。</p>
+     * <p>Default: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("SpotInstanceRemedy")
     public Boolean spotInstanceRemedy;
 
     /**
-     * <p>是否支持竞价实例。</p>
+     * <p>The policy for using spot instances. Valid values:</p>
+     * <ul>
+     * <li><p>NoSpot: No spot instances are used.</p>
+     * </li>
+     * <li><p>SpotWithPriceLimit: Spot instances are created with a user-defined maximum bid price.</p>
+     * </li>
+     * <li><p>SpotAsPriceGo: The system automatically bids for spot instances. The bid price does not exceed the price of a Pay-As-You-Go instance.</p>
+     * </li>
+     * </ul>
+     * <p>Default: <code>NoSpot</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>NoSpot</p>
@@ -174,12 +201,17 @@ public class NodeGroup extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>状态变化原因。</p>
+     * <p>The reason for the state change.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>手动重启</p>
      */
     @NameInMap("StateChangeReason")
     public NodeGroupStateChangeReason stateChangeReason;
 
     /**
+     * <p>The node group state.</p>
+     * 
      * <strong>example:</strong>
      * <p>CREATED</p>
      */
@@ -187,13 +219,13 @@ public class NodeGroup extends TeaModel {
     public String status;
 
     /**
-     * <p>系统盘信息。</p>
+     * <p>The system disk.</p>
      */
     @NameInMap("SystemDisk")
     public SystemDisk systemDisk;
 
     /**
-     * <p>虚拟机交换机ID列表。</p>
+     * <p>The VSwitch IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;vsw-hp35g7ya5ymw68mmg****&quot;]</p>
@@ -202,23 +234,19 @@ public class NodeGroup extends TeaModel {
     public java.util.List<String> vSwitchIds;
 
     /**
-     * <p>是否开公网IP。取值范围：</p>
-     * <ul>
-     * <li>true：开公网。</li>
-     * <li>false：不开公网。</li>
-     * </ul>
+     * <p>Specifies whether to assign a public IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("WithPublicIp")
     public Boolean withPublicIp;
 
     /**
-     * <p>可用区ID。</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-beijing-h</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

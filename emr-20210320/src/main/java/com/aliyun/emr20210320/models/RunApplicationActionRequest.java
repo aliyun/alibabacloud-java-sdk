@@ -7,12 +7,18 @@ public class RunApplicationActionRequest extends TeaModel {
     /**
      * <p>The name of the action. Valid values:</p>
      * <ul>
-     * <li>start</li>
-     * <li>stop</li>
-     * <li>config</li>
-     * <li>restart</li>
-     * <li>refresh_queues</li>
-     * <li>refresh_labels</li>
+     * <li><p>start</p>
+     * </li>
+     * <li><p>stop</p>
+     * </li>
+     * <li><p>config</p>
+     * </li>
+     * <li><p>restart</p>
+     * </li>
+     * <li><p>refresh_queues</p>
+     * </li>
+     * <li><p>refresh_labels</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +58,7 @@ public class RunApplicationActionRequest extends TeaModel {
      * <p>The description of the execution.</p>
      * 
      * <strong>example:</strong>
-     * <p>运行描述</p>
+     * <p>Running description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -60,8 +66,10 @@ public class RunApplicationActionRequest extends TeaModel {
     /**
      * <p>The execution policy. Valid values:</p>
      * <ul>
-     * <li>FAILED_BLOCK: The system stops the execution if the execution fails.</li>
-     * <li>FAILED_CONTINUE: The system continues the execution if the execution fails.</li>
+     * <li><p>FAILED_BLOCK: The system stops the execution if the execution fails.</p>
+     * </li>
+     * <li><p>FAILED_CONTINUE: The system continues the execution if the execution fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

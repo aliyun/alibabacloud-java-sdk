@@ -119,7 +119,7 @@ public class ListApplicationsResponseBody extends TeaModel {
          * <p>The version of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.8.1</p>
+         * <p>2.8.5-20230620</p>
          */
         @NameInMap("ApplicationVersion")
         @Deprecated

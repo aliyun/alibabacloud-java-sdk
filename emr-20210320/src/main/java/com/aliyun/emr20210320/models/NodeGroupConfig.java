@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class NodeGroupConfig extends TeaModel {
     /**
-     * <p>附加安全组。除集群设置的安全组外，为节点组单独设置的附加安全组。数组元数个数N的取值范围：0~2。</p>
+     * <p>The IDs of the additional security groups. In addition to the security group of the cluster, you can specify additional security groups for the node group. You can specify up to two security group IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;sg-hp3abbae8lb6lmb1****&quot;]</p>
@@ -13,39 +13,50 @@ public class NodeGroupConfig extends TeaModel {
     @NameInMap("AdditionalSecurityGroupIds")
     public java.util.List<String> additionalSecurityGroupIds;
 
+    /**
+     * <p>The auto scaling policy.</p>
+     */
     @NameInMap("AutoScalingPolicy")
     public AutoScalingPolicy autoScalingPolicy;
 
     /**
+     * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required capacity when the number of preemptible instances is insufficient. This parameter is effective only when <code>nodeResizeStrategy</code> is set to <code>COST_OPTIMIZED</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("CompensateWithOnDemand")
     public Boolean compensateWithOnDemand;
 
+    /**
+     * <p>A list of custom component tags.</p>
+     */
     @NameInMap("ComponentTags")
     public java.util.List<String> componentTags;
 
     /**
-     * <p>成本优化模式配置。</p>
+     * <p>The cost optimization settings.</p>
      */
     @NameInMap("CostOptimizedConfig")
     public CostOptimizedConfig costOptimizedConfig;
 
     /**
-     * <p>数据盘。当前数据盘只支持一种磁盘类型，即数组元数个数N的取值范围：1~1。</p>
+     * <p>The data disks. Currently, the array can contain only one data disk.</p>
      */
     @NameInMap("DataDisks")
     public java.util.List<DataDisk> dataDisks;
 
     /**
-     * <p>部署集策略。取值范围：</p>
+     * <p>The deployment set strategy. Valid values:</p>
      * <ul>
-     * <li>NONE：不适用部署集。</li>
-     * <li>CLUSTER：使用集群级别部署集。</li>
-     * <li>NODE_GROUP：使用节点组级别部署集。</li>
+     * <li><p><code>NONE</code>: No deployment sets are used.</p>
+     * </li>
+     * <li><p><code>CLUSTER</code>: The cluster-level deployment set is used.</p>
+     * </li>
+     * <li><p><code>NODE_GROUP</code>: The node group-level deployment set is used.</p>
+     * </li>
      * </ul>
-     * <p>默认值：NONE。</p>
+     * <p>Default value: <code>NONE</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>NONE</p>
@@ -54,12 +65,14 @@ public class NodeGroupConfig extends TeaModel {
     public String deploymentSetStrategy;
 
     /**
-     * <p>节点组上部署的组件是否开启优雅下线。取值范围：</p>
+     * <p>Specifies whether to enable graceful shutdown for the components in the node group. Valid values:</p>
      * <ul>
-     * <li>true：开启优雅下线。</li>
-     * <li>false：不开启优雅下线。</li>
+     * <li><p><code>true</code>: Enables graceful shutdown.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables graceful shutdown.</p>
+     * </li>
      * </ul>
-     * <p>默认值：false。</p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -68,7 +81,7 @@ public class NodeGroupConfig extends TeaModel {
     public Boolean gracefulShutdown;
 
     /**
-     * <p>节点实例类型列表。数组元数个数N的取值范围：1~100。</p>
+     * <p>The instance types. You can specify 1 to 100 instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ecs.g6.xlarge&quot;]</p>
@@ -77,7 +90,7 @@ public class NodeGroupConfig extends TeaModel {
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>节点数量。取值范围：1~1000。</p>
+     * <p>The number of nodes in the node group. Valid values: 1 to 1,000.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -86,7 +99,7 @@ public class NodeGroupConfig extends TeaModel {
     public Integer nodeCount;
 
     /**
-     * <p>节点组名称。最大长度128个字符。集群内要求节点组名称唯一。</p>
+     * <p>The name of the node group. The name can be up to 128 characters in length and must be unique within the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>core-1</p>
@@ -95,11 +108,14 @@ public class NodeGroupConfig extends TeaModel {
     public String nodeGroupName;
 
     /**
-     * <p>节点组类型。取值范围：</p>
+     * <p>The type of the node group. Valid values:</p>
      * <ul>
-     * <li>MASTER：管理类型节点组。</li>
-     * <li>CORE：存储类型节点组。</li>
-     * <li>TASK：计算类型节点组。</li>
+     * <li><p><code>MASTER</code>: a master node group.</p>
+     * </li>
+     * <li><p><code>CORE</code>: a core node group.</p>
+     * </li>
+     * <li><p><code>TASK</code>: a task node group.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -110,12 +126,14 @@ public class NodeGroupConfig extends TeaModel {
     public String nodeGroupType;
 
     /**
-     * <p>节点扩容策略。取值范围：</p>
+     * <p>The node scale-out strategy. Valid values:</p>
      * <ul>
-     * <li>COST_OPTIMIZED：成本优化策略。</li>
-     * <li>PRIORITY：优先级策略。</li>
+     * <li><p><code>COST_OPTIMIZED</code>: The cost-optimized strategy.</p>
+     * </li>
+     * <li><p><code>PRIORITY</code>: The priority-based strategy.</p>
+     * </li>
      * </ul>
-     * <p>默认值：PRIORITY。</p>
+     * <p>Default value: <code>PRIORITY</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIORITY</p>
@@ -124,12 +142,14 @@ public class NodeGroupConfig extends TeaModel {
     public String nodeResizeStrategy;
 
     /**
-     * <p>节点组付费类型。不传入时默认和集群付费类型一致。取值范围：</p>
+     * <p>The billing method of the node group. If you do not specify this parameter, the billing method of the cluster is used. Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo：后付费，按量付费。</li>
-     * <li>Subscription：预付费，包年包月。</li>
+     * <li><p><code>PayAsYouGo</code>: pay-as-you-go.</p>
+     * </li>
+     * <li><p><code>Subscription</code>: subscription.</p>
+     * </li>
      * </ul>
-     * <p>默认值：PayAsYouGo。</p>
+     * <p>Default value: <code>PayAsYouGo</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
@@ -137,22 +157,27 @@ public class NodeGroupConfig extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <p>The private pool options. This parameter is effective only when you create pay-as-you-go instances.</p>
+     */
     @NameInMap("PrivatePoolOptions")
     public PrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>抢占式Spot实例出价价格。参数SpotStrategy取值为SpotWithPriceLimit时生效。数组元数个数N的取值范围：0~100。</p>
+     * <p>The bid prices for the preemptible instances. This parameter is effective only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>. You can specify up to 100 bid prices.</p>
      */
     @NameInMap("SpotBidPrices")
     public java.util.List<SpotBidPrice> spotBidPrices;
 
     /**
-     * <p>开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值范围：</p>
+     * <p>If enabled, the auto scaling group attempts to create a new instance to replace a spot instance that is about to be reclaimed. This process is triggered when the auto scaling group receives a system message about the impending reclamation. Valid values:</p>
      * <ul>
-     * <li>true：开启补齐抢占式实例。</li>
-     * <li>false：不开启补齐抢占式实例。</li>
+     * <li><p><code>true</code>: The auto scaling group attempts to replace a spot instance that is about to be reclaimed.</p>
+     * </li>
+     * <li><p><code>false</code>: The auto scaling group does not attempt to replace a spot instance that is about to be reclaimed.</p>
+     * </li>
      * </ul>
-     * <p>默认值：false。</p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -161,13 +186,16 @@ public class NodeGroupConfig extends TeaModel {
     public Boolean spotInstanceRemedy;
 
     /**
-     * <p>抢占式Spot实例策略。取值范围：</p>
+     * <p>The preemption strategy for preemptible instances. Valid values:</p>
      * <ul>
-     * <li>NoSpot：正常按量付费实例。</li>
-     * <li>SpotWithPriceLimit：设置最高出价的抢占式实例。</li>
-     * <li>SpotAsPriceGo：系统自动出价，最高按量付费价格的抢占式实例。</li>
+     * <li><p><code>NoSpot</code>: pay-as-you-go instances.</p>
+     * </li>
+     * <li><p><code>SpotWithPriceLimit</code>: preemptible instances with a user-defined maximum hourly price.</p>
+     * </li>
+     * <li><p><code>SpotAsPriceGo</code>: preemptible instances that are automatically bid at the pay-as-you-go price.</p>
+     * </li>
      * </ul>
-     * <p>默认值：NoSpot。</p>
+     * <p>Default value: <code>NoSpot</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>NoSpot</p>
@@ -176,19 +204,19 @@ public class NodeGroupConfig extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>节点组预付费配置。不传入时默认和集群预付费配置一致。</p>
+     * <p>The subscription settings of the node group. If you do not specify this parameter, the subscription settings of the cluster are used.</p>
      */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>系统盘。</p>
+     * <p>The system disk.</p>
      */
     @NameInMap("SystemDisk")
     public SystemDisk systemDisk;
 
     /**
-     * <p>虚拟机交换机ID列表。数组元数个数N的取值范围：1~20。</p>
+     * <p>The vSwitch IDs. You can specify 1 to 20 vSwitch IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;vsw-hp35g7ya5ymw68mmg****&quot;]</p>
@@ -197,12 +225,14 @@ public class NodeGroupConfig extends TeaModel {
     public java.util.List<String> vSwitchIds;
 
     /**
-     * <p>是否开公网IP。取值范围：</p>
+     * <p>Specifies whether to assign a public IP address to the instances. Valid values:</p>
      * <ul>
-     * <li>true：开公网。</li>
-     * <li>false：不开公网。</li>
+     * <li><p><code>true</code>: Assigns a public IP address.</p>
+     * </li>
+     * <li><p><code>false</code>: Does not assign a public IP address.</p>
+     * </li>
      * </ul>
-     * <p>默认值：false。</p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

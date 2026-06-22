@@ -4,11 +4,14 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
+    /**
+     * <p>The analytical data for the batch analysis of HDFS directories.</p>
+     */
     @NameInMap("Data")
     public java.util.List<Data> data;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of records returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>The starting position for the next read.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -26,7 +29,7 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -35,7 +38,7 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries that match the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -90,6 +93,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class ColdDataDayGrowthSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth size of cold data</p>
          */
@@ -97,6 +102,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>coldDataDayGrowthSize</p>
          */
@@ -104,6 +111,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -111,6 +120,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>-182636577752</p>
          */
@@ -158,6 +169,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class ColdDataSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Size of the cold data size</p>
          */
@@ -165,6 +178,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>coldDataSize</p>
          */
@@ -172,6 +187,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -179,6 +196,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>5570958082267</p>
          */
@@ -226,6 +245,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class ColdDataSizeDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of cold data size</p>
          */
@@ -233,6 +254,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>coldDataSizeDayGrowthRatio</p>
          */
@@ -240,6 +263,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -247,6 +272,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>-0.03</p>
          */
@@ -294,6 +321,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class EmptyFileCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of empty files</p>
          */
@@ -301,6 +330,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>emptyFileCount</p>
          */
@@ -308,6 +339,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -315,6 +348,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>15595897</p>
          */
@@ -362,6 +397,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class EmptyFileCountDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of empty files</p>
          */
@@ -369,6 +406,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>emptyFileCountDayGrowthRatio</p>
          */
@@ -376,6 +415,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -383,6 +424,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.005</p>
          */
@@ -430,6 +473,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class EmptyFileDayGrowthCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth count of empty files</p>
          */
@@ -437,6 +482,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>emptyFileDayGrowthCount</p>
          */
@@ -444,6 +491,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -451,6 +500,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>114</p>
          */
@@ -498,6 +549,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class FreezeDataDayGrowthSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth size of freeze data</p>
          */
@@ -505,6 +558,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>freezeDataDayGrowthSize</p>
          */
@@ -512,6 +567,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -519,6 +576,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>-167683929450</p>
          */
@@ -566,6 +625,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class FreezeDataSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Size of the freeze data size</p>
          */
@@ -573,6 +634,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>freezeDataSize</p>
          */
@@ -580,6 +643,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -587,6 +652,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1231312431</p>
          */
@@ -634,6 +701,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class FreezeDataSizeDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of freeze data size</p>
          */
@@ -641,6 +710,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>freezeDataSizeDayGrowthRatio</p>
          */
@@ -648,6 +719,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -655,6 +728,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>-0.09</p>
          */
@@ -702,6 +777,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class HotDataDayGrowthSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth size of hot data</p>
          */
@@ -709,6 +786,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>hotDataDayGrowthSize</p>
          */
@@ -716,6 +795,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -723,6 +804,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>123154</p>
          */
@@ -770,6 +853,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class HotDataSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Size of the hot data size</p>
          */
@@ -777,6 +862,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>hotDataSize</p>
          */
@@ -784,6 +871,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -791,6 +880,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>6701531944206</p>
          */
@@ -838,6 +929,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class HotDataSizeDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of hot data size</p>
          */
@@ -845,6 +938,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>hotDataSizeDayGrowthRatio</p>
          */
@@ -852,6 +947,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -859,6 +956,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1114</p>
          */
@@ -906,6 +1005,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class LargeFileCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of large files</p>
          */
@@ -913,6 +1014,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>largeFileCount</p>
          */
@@ -920,6 +1023,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -927,6 +1032,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -974,6 +1081,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class LargeFileCountDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of large files</p>
          */
@@ -981,6 +1090,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>largeFileCountDayGrowthRatio</p>
          */
@@ -988,6 +1099,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -995,6 +1108,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.39</p>
          */
@@ -1042,6 +1157,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class LargeFileDayGrowthCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth count of large files</p>
          */
@@ -1049,6 +1166,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>largeFileDayGrowthCount</p>
          */
@@ -1056,6 +1175,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1063,6 +1184,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1110,6 +1233,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class MediumFileCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of medium files</p>
          */
@@ -1117,6 +1242,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>mediumFileCount</p>
          */
@@ -1124,6 +1251,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1131,6 +1260,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>323</p>
          */
@@ -1178,6 +1309,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class MediumFileCountDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of medium files</p>
          */
@@ -1185,6 +1318,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>mediumFileCountDayGrowthRatio</p>
          */
@@ -1192,6 +1327,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1199,6 +1336,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.19</p>
          */
@@ -1246,6 +1385,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class MediumFileDayGrowthCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth count of medium files</p>
          */
@@ -1253,6 +1394,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>mediumFileDayGrowthCount</p>
          */
@@ -1260,6 +1403,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1267,6 +1412,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>176</p>
          */
@@ -1314,6 +1461,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class SmallFileCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of small files</p>
          */
@@ -1321,6 +1470,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>smallFileCount</p>
          */
@@ -1328,6 +1479,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1335,6 +1488,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -1382,6 +1537,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class SmallFileCountDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of small files</p>
          */
@@ -1389,6 +1546,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>smallFileCountDayGrowthRatio</p>
          */
@@ -1396,6 +1555,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1403,6 +1564,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.02</p>
          */
@@ -1450,6 +1613,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class SmallFileDayGrowthCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth count of small files</p>
          */
@@ -1457,6 +1622,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>smallFileDayGrowthCount</p>
          */
@@ -1464,6 +1631,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1471,6 +1640,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -1518,6 +1689,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TinyFileCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of tiny files</p>
          */
@@ -1525,6 +1698,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>tinyFileCount</p>
          */
@@ -1532,6 +1707,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -1539,6 +1716,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>232131</p>
          */
@@ -1586,6 +1765,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TinyFileCountDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of tiny files</p>
          */
@@ -1593,6 +1774,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>tinyFileCountDayGrowthRatio</p>
          */
@@ -1600,6 +1783,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1607,6 +1792,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.003</p>
          */
@@ -1654,6 +1841,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TinyFileDayGrowthCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth count of tiny files</p>
          */
@@ -1661,6 +1850,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>tinyFileDayGrowthCount</p>
          */
@@ -1668,6 +1859,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1675,6 +1868,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>-123</p>
          */
@@ -1722,6 +1917,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TotalDataDayGrowthSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth size of total data</p>
          */
@@ -1729,6 +1926,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>totalDataDayGrowthSize</p>
          */
@@ -1736,6 +1935,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -1743,6 +1944,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>256482228248</p>
          */
@@ -1790,6 +1993,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TotalDataSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Total data size in megabytes (MB)</p>
          */
@@ -1797,6 +2002,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>totalDataSize</p>
          */
@@ -1804,6 +2011,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -1811,6 +2020,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>62086342083623</p>
          */
@@ -1858,6 +2069,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TotalDataSizeDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of total data size</p>
          */
@@ -1865,6 +2078,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>totalDataSizeDayGrowthRatio</p>
          */
@@ -1872,6 +2087,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1879,6 +2096,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.14</p>
          */
@@ -1926,6 +2145,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TotalFileCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Number of total files</p>
          */
@@ -1933,6 +2154,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>totalFileCount</p>
          */
@@ -1940,6 +2163,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -1947,6 +2172,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>51683279</p>
          */
@@ -1994,6 +2221,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TotalFileCountDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of total files</p>
          */
@@ -2001,6 +2230,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>totalFileCountDayGrowthRatio</p>
          */
@@ -2008,6 +2239,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -2015,6 +2248,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.02</p>
          */
@@ -2062,6 +2297,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class TotalFileDayGrowthCount extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth count of total files</p>
          */
@@ -2069,6 +2306,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>totalFileDayGrowthCount</p>
          */
@@ -2076,6 +2315,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -2083,6 +2324,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>27809</p>
          */
@@ -2130,6 +2373,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class WarmDataDayGrowthSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth size of warm data</p>
          */
@@ -2137,6 +2382,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>warmDataDayGrowthSize</p>
          */
@@ -2144,6 +2391,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -2151,6 +2400,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>-64806998319</p>
          */
@@ -2198,6 +2449,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class WarmDataSize extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Size of the warm data size</p>
          */
@@ -2205,6 +2458,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>warmDataSize</p>
          */
@@ -2212,6 +2467,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>MB</p>
          */
@@ -2219,6 +2476,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>4062349775577</p>
          */
@@ -2266,6 +2525,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class WarmDataSizeDayGrowthRatio extends TeaModel {
         /**
+         * <p>The description of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Day growth ratio of warm data size</p>
          */
@@ -2273,6 +2534,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>warmDataSizeDayGrowthRatio</p>
          */
@@ -2280,6 +2543,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unit of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>”“</p>
          */
@@ -2287,6 +2552,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String unit;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>-0.015</p>
          */
@@ -2333,102 +2600,201 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class Metrics extends TeaModel {
+        /**
+         * <p>The daily growth in the size of cold data. Cold data is data that was last accessed between 30 and 90 days ago.</p>
+         */
         @NameInMap("ColdDataDayGrowthSize")
         public ColdDataDayGrowthSize coldDataDayGrowthSize;
 
+        /**
+         * <p>The size of the cold data. Cold data is data that was last accessed between 30 and 90 days ago.</p>
+         */
         @NameInMap("ColdDataSize")
         public ColdDataSize coldDataSize;
 
+        /**
+         * <p>The day-over-day growth rate of the cold data size. Cold data refers to data last accessed between 30 and 90 days ago.</p>
+         */
         @NameInMap("ColdDataSizeDayGrowthRatio")
         public ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio;
 
+        /**
+         * <p>The count of empty files. An empty file is a file with a size of 0 MB.</p>
+         */
         @NameInMap("EmptyFileCount")
         public EmptyFileCount emptyFileCount;
 
+        /**
+         * <p>The day-over-day growth ratio of the empty file count. An empty file is a file with a size of 0 MB.</p>
+         */
         @NameInMap("EmptyFileCountDayGrowthRatio")
         public EmptyFileCountDayGrowthRatio emptyFileCountDayGrowthRatio;
 
+        /**
+         * <p>The daily growth in the number of empty files. An empty file has a size of 0 MB.</p>
+         */
         @NameInMap("EmptyFileDayGrowthCount")
         public EmptyFileDayGrowthCount emptyFileDayGrowthCount;
 
+        /**
+         * <p>The daily growth in the size of freeze data. Freeze data is data that has not been accessed for 90 days.</p>
+         */
         @NameInMap("FreezeDataDayGrowthSize")
         public FreezeDataDayGrowthSize freezeDataDayGrowthSize;
 
+        /**
+         * <p>The size of the frozen data. Data is considered frozen if it has not been accessed in the last 90 days.</p>
+         */
         @NameInMap("FreezeDataSize")
         public FreezeDataSize freezeDataSize;
 
+        /**
+         * <p>The daily growth rate of freeze data. Freeze data is data that has not been accessed in 90 days.</p>
+         */
         @NameInMap("FreezeDataSizeDayGrowthRatio")
         public FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio;
 
+        /**
+         * <p>The daily increase in hot data size. Hot data is data that has been accessed within the last 7 days.</p>
+         */
         @NameInMap("HotDataDayGrowthSize")
         public HotDataDayGrowthSize hotDataDayGrowthSize;
 
+        /**
+         * <p>The size of the hot data. Hot data is data accessed within the last 7 days.</p>
+         */
         @NameInMap("HotDataSize")
         public HotDataSize hotDataSize;
 
+        /**
+         * <p>The daily growth rate of the hot data size. Hot data is any data accessed in the past 7 days.</p>
+         */
         @NameInMap("HotDataSizeDayGrowthRatio")
         public HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio;
 
+        /**
+         * <p>The number of large files. A large file is a file that is 1 GB or larger.</p>
+         */
         @NameInMap("LargeFileCount")
         public LargeFileCount largeFileCount;
 
+        /**
+         * <p>The day-over-day growth ratio of the large file count. A large file is a file that is 1 GB or larger.</p>
+         */
         @NameInMap("LargeFileCountDayGrowthRatio")
         public LargeFileCountDayGrowthRatio largeFileCountDayGrowthRatio;
 
+        /**
+         * <p>The daily increase in the number of large files. A large file is a file larger than 1 GB.</p>
+         */
         @NameInMap("LargeFileDayGrowthCount")
         public LargeFileDayGrowthCount largeFileDayGrowthCount;
 
+        /**
+         * <p>The number of files larger than 128 MB and up to 1 GB.</p>
+         */
         @NameInMap("MediumFileCount")
         public MediumFileCount mediumFileCount;
 
+        /**
+         * <p>The day-over-day growth ratio of the number of medium-sized files. A medium-sized file is larger than 128 MB and smaller than 1 GB.</p>
+         */
         @NameInMap("MediumFileCountDayGrowthRatio")
         public MediumFileCountDayGrowthRatio mediumFileCountDayGrowthRatio;
 
+        /**
+         * <p>The daily increase in the number of medium-sized files. A medium-sized file is larger than 128 MB and less than or equal to 1 GB.</p>
+         */
         @NameInMap("MediumFileDayGrowthCount")
         public MediumFileDayGrowthCount mediumFileDayGrowthCount;
 
+        /**
+         * <p>The number of small files. A small file is a file with a size from 10 MB to 128 MB.</p>
+         */
         @NameInMap("SmallFileCount")
         public SmallFileCount smallFileCount;
 
+        /**
+         * <p>The day-over-day growth ratio of the number of small files. A small file has a size greater than 10 MB and less than or equal to 128 MB.</p>
+         */
         @NameInMap("SmallFileCountDayGrowthRatio")
         public SmallFileCountDayGrowthRatio smallFileCountDayGrowthRatio;
 
+        /**
+         * <p>The number of new small files added each day. A small file is 10 MB to 128 MB.</p>
+         */
         @NameInMap("SmallFileDayGrowthCount")
         public SmallFileDayGrowthCount smallFileDayGrowthCount;
 
+        /**
+         * <p>The number of tiny files. A tiny file is larger than 0 MB and up to 10 MB in size.</p>
+         */
         @NameInMap("TinyFileCount")
         public TinyFileCount tinyFileCount;
 
+        /**
+         * <p>The daily growth rate of tiny files. A tiny file is larger than 0 MB and smaller than 10 MB.</p>
+         */
         @NameInMap("TinyFileCountDayGrowthRatio")
         public TinyFileCountDayGrowthRatio tinyFileCountDayGrowthRatio;
 
+        /**
+         * <p>The daily growth in the tiny file count. A tiny file is a file larger than 0 MB and smaller than 10 MB.</p>
+         */
         @NameInMap("TinyFileDayGrowthCount")
         public TinyFileDayGrowthCount tinyFileDayGrowthCount;
 
+        /**
+         * <p>The daily growth in the total data size.</p>
+         */
         @NameInMap("TotalDataDayGrowthSize")
         public TotalDataDayGrowthSize totalDataDayGrowthSize;
 
+        /**
+         * <p>The total data size.</p>
+         */
         @NameInMap("TotalDataSize")
         public TotalDataSize totalDataSize;
 
+        /**
+         * <p>The day-over-day growth ratio of the total data size.</p>
+         */
         @NameInMap("TotalDataSizeDayGrowthRatio")
         public TotalDataSizeDayGrowthRatio totalDataSizeDayGrowthRatio;
 
+        /**
+         * <p>The total number of files.</p>
+         */
         @NameInMap("TotalFileCount")
         public TotalFileCount totalFileCount;
 
+        /**
+         * <p>The day-over-day growth ratio of the total file count.</p>
+         */
         @NameInMap("TotalFileCountDayGrowthRatio")
         public TotalFileCountDayGrowthRatio totalFileCountDayGrowthRatio;
 
+        /**
+         * <p>The daily growth in the total file count.</p>
+         */
         @NameInMap("TotalFileDayGrowthCount")
         public TotalFileDayGrowthCount totalFileDayGrowthCount;
 
+        /**
+         * <p>The daily growth in the size of warm data. Warm data is data that has not been accessed in the last 7 days, but has been accessed in the last 30 days.</p>
+         */
         @NameInMap("WarmDataDayGrowthSize")
         public WarmDataDayGrowthSize warmDataDayGrowthSize;
 
+        /**
+         * <p>The size of the warm data. Warm data is data that has been accessed within the past 30 days, but not within the past 7 days.</p>
+         */
         @NameInMap("WarmDataSize")
         public WarmDataSize warmDataSize;
 
+        /**
+         * <p>The day-over-day growth ratio of the warm data size. Warm data has not been accessed in the last 7 days but has been accessed in the last 30 days.</p>
+         */
         @NameInMap("WarmDataSizeDayGrowthRatio")
         public WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio;
 
@@ -2705,6 +3071,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     public static class Data extends TeaModel {
         /**
+         * <p>The directory level.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -2712,6 +3080,8 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public Integer depth;
 
         /**
+         * <p>The directory name.</p>
+         * 
          * <strong>example:</strong>
          * <p>/tmp/test</p>
          */
@@ -2719,16 +3089,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         public String dirPath;
 
         /**
+         * <p>The group of the folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>DW</p>
          */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The metric information.</p>
+         */
         @NameInMap("Metrics")
         public Metrics metrics;
 
         /**
+         * <p>The owner of the directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>DW</p>
          */

@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class NodeAttributes extends TeaModel {
     /**
-     * <p>是否启用云盘加密。取值范围：</p>
+     * <p>Specifies whether to enable encryption for the data disk. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/ecs/user-guide/encrypt-a-data-disk">Encrypt a data disk</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/encryption-overview">Encrypt a data disk</a>. Valid values:</p>
      * <ul>
-     * <li>true：启用加密。</li>
-     * <li>false：不加密。</li>
+     * <li><p>true: Enables encryption.</p>
+     * </li>
+     * <li><p>false (default): Disables encryption.</p>
+     * </li>
      * </ul>
-     * <p>默认值：false，不加密</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,7 +20,7 @@ public class NodeAttributes extends TeaModel {
     public Boolean dataDiskEncrypted;
 
     /**
-     * <p>KMS加密秘钥ID。</p>
+     * <p>The ID of the KMS key for the data disk.</p>
      * 
      * <strong>example:</strong>
      * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -28,7 +29,7 @@ public class NodeAttributes extends TeaModel {
     public String dataDiskKMSKeyId;
 
     /**
-     * <p>ECS ssh登录秘钥。</p>
+     * <p>The SSH key pair for logging on to the ECS instances.</p>
      * 
      * <strong>example:</strong>
      * <p>emr_login</p>
@@ -37,16 +38,17 @@ public class NodeAttributes extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>MASTER节点root密码。</p>
+     * <p>The password of the root user for the master node. This parameter is left empty in the response of an API call.</p>
      * 
      * <strong>example:</strong>
-     * <p>Adxefswfd****</p>
+     * <p>EAQ#86****</p>
      */
     @NameInMap("MasterRootPassword")
     public String masterRootPassword;
 
     /**
-     * <p>ECS访问资源绑定的角色。</p>
+     * <p>The RAM role that is attached to the ECS instances to access other cloud resources.
+     * Default value: AliyunECSInstanceForEMRRole.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunECSInstanceForEMRRole</p>
@@ -55,7 +57,7 @@ public class NodeAttributes extends TeaModel {
     public String ramRole;
 
     /**
-     * <p>安全组ID。EMR只支持普通安全组，不支持企业安全组。</p>
+     * <p>The ID of the security group. EMR supports only basic security groups and does not support enterprise security groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,12 +67,13 @@ public class NodeAttributes extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>是否启用云盘加密。取值范围：</p>
+     * <p>Specifies whether to enable disk encryption for the system disk. Valid values:</p>
      * <ul>
-     * <li>true：启用加密。</li>
-     * <li>false：不加密。</li>
+     * <li><p>true: Enables encryption.</p>
+     * </li>
+     * <li><p>false (default): Disables encryption.</p>
+     * </li>
      * </ul>
-     * <p>默认值：false，不加密</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -79,7 +82,7 @@ public class NodeAttributes extends TeaModel {
     public Boolean systemDiskEncrypted;
 
     /**
-     * <p>KMS加密秘钥ID。</p>
+     * <p>The ID of the KMS key.</p>
      * 
      * <strong>example:</strong>
      * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -88,7 +91,7 @@ public class NodeAttributes extends TeaModel {
     public String systemDiskKMSKeyId;
 
     /**
-     * <p>专有网络ID。</p>
+     * <p>The ID of the VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +101,7 @@ public class NodeAttributes extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>可用区ID。</p>
+     * <p>The ID of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

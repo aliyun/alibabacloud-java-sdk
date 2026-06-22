@@ -15,13 +15,13 @@ public class PutAutoScalingPolicyRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The constraints on the maximum and minimum numbers of nodes in a node group.</p>
+     * <p>The maximum and minimum size constraints for the node group.</p>
      */
     @NameInMap("Constraints")
     public ScalingConstraints constraints;
 
     /**
-     * <p>The ID of the node group.</p>
+     * <p>The node group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class PutAutoScalingPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The description list of auto scaling rules. Number of elements in the array: 0 to 100.</p>
+     * <p>The scaling rules. The number of elements in the array can be from 0 to 100.</p>
      */
     @NameInMap("ScalingRules")
     public java.util.List<ScalingRule> scalingRules;

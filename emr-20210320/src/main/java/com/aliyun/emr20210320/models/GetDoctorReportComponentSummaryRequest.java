@@ -15,14 +15,20 @@ public class GetDoctorReportComponentSummaryRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Select component filter type. Values: </p>
+     * <p>Select component filter type. Values:</p>
      * <ul>
-     * <li>compute </li>
-     * <li>hive</li>
-     * <li>hdfs</li>
-     * <li>yarn</li>
-     * <li>oss</li>
-     * <li>hbase</li>
+     * <li><p>compute</p>
+     * </li>
+     * <li><p>hive</p>
+     * </li>
+     * <li><p>hdfs</p>
+     * </li>
+     * <li><p>yarn</p>
+     * </li>
+     * <li><p>oss</p>
+     * </li>
+     * <li><p>hbase</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

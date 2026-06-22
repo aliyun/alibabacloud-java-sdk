@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationConfig extends TeaModel {
     /**
-     * <p>修改描述。</p>
+     * <p>A description of the modification.</p>
      * 
      * <strong>example:</strong>
      * <p>dfs.namenode.checkpoint.period</p>
@@ -14,7 +14,7 @@ public class UpdateApplicationConfig extends TeaModel {
     public String configDescription;
 
     /**
-     * <p>应用配置文件名。</p>
+     * <p>The name of the application configuration file.</p>
      * 
      * <strong>example:</strong>
      * <p>hdfs-site.xml</p>
@@ -23,7 +23,7 @@ public class UpdateApplicationConfig extends TeaModel {
     public String configFileName;
 
     /**
-     * <p>配置项键。</p>
+     * <p>The configuration item key.</p>
      * 
      * <strong>example:</strong>
      * <p>dfs.namenode.checkpoint.period</p>
@@ -32,7 +32,7 @@ public class UpdateApplicationConfig extends TeaModel {
     public String configItemKey;
 
     /**
-     * <p>配置项值。</p>
+     * <p>The configuration item value.</p>
      * 
      * <strong>example:</strong>
      * <p>3600s</p>

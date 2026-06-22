@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class RunClusterRequest extends TeaModel {
     /**
-     * <p>The application configurations. Number of elements in the array: 1 to 1000.</p>
+     * <p>The application configurations. The number of array elements N can range from 1 to 1000.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfig> applicationConfigs;
 
     /**
-     * <p>The list of services. Number of elements in the array: 1 to 100.</p>
+     * <p>The list of applications. The number of array elements N can range from 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
     public java.util.List<Application> applications;
 
     /**
-     * <p>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</p>
+     * <p>The array of bootstrap scripts. The number of array elements N can range from 1 to 10.</p>
      */
     @NameInMap("BootstrapScripts")
     public java.util.List<Script> bootstrapScripts;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. The same ClientToken value for multiple calls to the RunCluster operation results in identical responses. Only one cluster can be created by using the same ClientToken value.</p>
+     * <p>A client token to ensure the idempotence of the request. Multiple calls with the same client token return the same result and create only one cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
@@ -33,7 +33,7 @@ public class RunClusterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cluster name. The name must be 1 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The cluster name. The name must be 1 to 128 characters in length. It must start with a letter or a Chinese character. It cannot start with http\:// or https\://. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,16 +43,22 @@ public class RunClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the cluster. Valid values:</p>
+     * <p>The cluster type. Valid values:</p>
      * <ul>
-     * <li>DATALAKE</li>
-     * <li>OLAP</li>
-     * <li>DATAFLOW</li>
-     * <li>DATASERVING</li>
-     * <li>CUSTOM</li>
-     * <li>HADOOP: We recommend that you set this parameter to DATALAKE rather than HADOOP.</li>
+     * <li><p>DATALAKE: new data lake.</p>
+     * </li>
+     * <li><p>OLAP: data analytics.</p>
+     * </li>
+     * <li><p>DATAFLOW: real-time data stream.</p>
+     * </li>
+     * <li><p>DATASERVING: DataService Studio.</p>
+     * </li>
+     * <li><p>CUSTOM: custom cluster.</p>
+     * </li>
+     * <li><p>HADOOP: legacy data lake. This value is not recommended. Use the new data lake cluster type instead.</p>
+     * </li>
      * </ul>
-     * <p>If the first time you create an EMR cluster is after 17:00 (UTC+8) on December 19, 2022, you cannot create a Hadoop, Data Science, Presto, or ZooKeeper cluster.</p>
+     * <p>If you create an EMR cluster for the first time after 17:00 (UTC+8) on December 19, 2022, you cannot select HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER as the cluster type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,10 +68,12 @@ public class RunClusterRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Specifies whether to enable release protection for the cluster. Valid values:</p>
+     * <p>Specifies whether to enable deletion protection for the cluster. Valid values:</p>
      * <ul>
-     * <li>true: enables release protection for the cluster.</li>
-     * <li>false: disables release protection for the cluster.</li>
+     * <li><p>true: Enables deletion protection.</p>
+     * </li>
+     * <li><p>false: Disables deletion protection.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -76,10 +84,12 @@ public class RunClusterRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
+     * <p>The deployment mode of applications in the cluster. Valid values:</p>
      * <ul>
-     * <li>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</li>
-     * <li>HA: high availability mode. A cluster that contains at least three master nodes is created.</li>
+     * <li><p>NORMAL (default): non-high availability deployment. The cluster has one master node.</p>
+     * </li>
+     * <li><p>HA: high availability (HA) deployment. This deployment mode requires at least three master nodes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +99,7 @@ public class RunClusterRequest extends TeaModel {
     public String deployMode;
 
     /**
-     * <p>The cluster description.</p>
+     * <p>The description of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>Emr cluster for ETL</p>
@@ -98,23 +108,25 @@ public class RunClusterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The node attributes. The basic attributes of all ECS nodes in the cluster.</p>
+     * <p>The node attributes. These are the basic attributes of all ECS nodes in the cluster.</p>
      */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</p>
+     * <p>The array of node group configurations. The number of array elements N can range from 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<NodeGroupConfig> nodeGroups;
 
     /**
-     * <p>The billing method of the cluster. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo</li>
-     * <li>Subscription</li>
+     * <li><p>PayAsYouGo: pay-as-you-go.</p>
+     * </li>
+     * <li><p>Subscription: subscription.</p>
+     * </li>
      * </ul>
      * <p>Default value: PayAsYouGo.</p>
      * 
@@ -138,7 +150,7 @@ public class RunClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The EMR version. You can query available EMR versions in the EMR console.</p>
+     * <p>The EMR release version. You can find the EMR release version on the EMR cluster purchase page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,7 +160,7 @@ public class RunClusterRequest extends TeaModel {
     public String releaseVersion;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -157,10 +169,12 @@ public class RunClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The security mode of the cluster. Valid values:</p>
+     * <p>The Kerberos security mode of the cluster. Valid values:</p>
      * <ul>
-     * <li>NORMAL: regular mode. Kerberos authentication is disabled. This is the default value.</li>
-     * <li>KERBEROS: Kerberos mode. Kerberos authentication is enabled.</li>
+     * <li><p>NORMAL (default): normal mode. Kerberos is disabled.</p>
+     * </li>
+     * <li><p>KERBEROS: Kerberos mode. Kerberos is enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,13 +184,13 @@ public class RunClusterRequest extends TeaModel {
     public String securityMode;
 
     /**
-     * <p>The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.</p>
+     * <p>The subscription configurations. This parameter is required if you set PaymentType to Subscription.</p>
      */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>The tag. Number of elements in the array: 0 to 20.</p>
+     * <p>The tags. The number of array elements N can range from 0 to 20.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

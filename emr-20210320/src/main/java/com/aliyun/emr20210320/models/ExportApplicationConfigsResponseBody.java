@@ -4,11 +4,14 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ExportApplicationConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The list of exported application configurations.</p>
+     */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfigs> applicationConfigs;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -39,7 +42,7 @@ public class ExportApplicationConfigsResponseBody extends TeaModel {
 
     public static class ApplicationConfigs extends TeaModel {
         /**
-         * <p>应用名称。</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>YARN</p>
@@ -48,7 +51,7 @@ public class ExportApplicationConfigsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>文件名称。</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>yarn-site.xml</p>
@@ -57,7 +60,7 @@ public class ExportApplicationConfigsResponseBody extends TeaModel {
         public String configFileName;
 
         /**
-         * <p>文件内容，base64加密。</p>
+         * <p>The file content. The content is Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>export key=value</p>

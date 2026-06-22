@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptsRequest extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListScriptsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The maximum number of records to retrieve at once.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +24,7 @@ public class ListScriptsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Marks the current position to start reading from.</p>
+     * <p>The token that marks the position from which to start reading.</p>
      * 
      * <strong>example:</strong>
      * <p>dd6b1b2a-5837-5237-abe4-ff0c89568980</p>
@@ -33,7 +33,7 @@ public class ListScriptsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,22 +43,24 @@ public class ListScriptsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The script ID. Only common scripts are supported.</p>
+     * <p>The ID of the cluster script. This parameter is valid only for NORMAL scripts.</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;
 
     /**
-     * <p>The name of the script. Only common scripts are supported. Fuzzy search is supported.</p>
+     * <p>The name of the cluster script. This parameter is valid only for NORMAL scripts and supports fuzzy search.</p>
      */
     @NameInMap("ScriptName")
     public String scriptName;
 
     /**
-     * <p>Type of cluster script. Possible values:</p>
+     * <p>The type of the cluster script. Valid values:</p>
      * <ul>
-     * <li>BOOTSTRAP: Bootstrap script.</li>
-     * <li>NORMAL: Regular cluster script.</li>
+     * <li><p>BOOTSTRAP: a bootstrap script.</p>
+     * </li>
+     * <li><p>NORMAL: a normal cluster script.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,7 +71,7 @@ public class ListScriptsRequest extends TeaModel {
     public String scriptType;
 
     /**
-     * <p>The script status list.</p>
+     * <p>The list of script statuses.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DecreaseNodesResponseBody extends TeaModel {
     /**
-     * <p>Operation ID.</p>
+     * <p>The operation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>op-13c37a77c505****</p>
@@ -14,7 +14,7 @@ public class DecreaseNodesResponseBody extends TeaModel {
     public String operationId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>44430037-E59A-3E66-A2B0-97D155346F22</p>

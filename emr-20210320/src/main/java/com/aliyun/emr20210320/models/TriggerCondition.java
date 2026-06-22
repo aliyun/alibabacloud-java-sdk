@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class TriggerCondition extends TeaModel {
     /**
-     * <p>比较符。取值范围：</p>
+     * <p>The comparison operator. This parameter is required. Valid values:</p>
      * <ul>
-     * <li>EQ:等于。</li>
-     * <li>NE:不等于。</li>
-     * <li>GT:大于。</li>
-     * <li>LT:小于。</li>
-     * <li>GE:大于等于。</li>
-     * <li>LE:小于等于。</li>
+     * <li>EQ: equal to</li>
+     * <li>NE: not equal to</li>
+     * <li>GT: greater than</li>
+     * <li>LT: less than</li>
+     * <li>GE: greater than or equal to</li>
+     * <li>LE: less than or equal to</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,21 +23,21 @@ public class TriggerCondition extends TeaModel {
     public String comparisonOperator;
 
     /**
-     * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
+     * <p>The name of the metric. This parameter is required and cannot be an empty string. You can view the metric name in <a href="https://help.aliyun.com/document_detail/445658.html">Add Auto Scaling Rules</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>yarn_resourcemanager_root_availablememoryusage</p>
+     * <p>yarn_resourcemanager_queue_PendingVCores</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
-     * <p>统计量名称。取值范围：</p>
+     * <p>The name of the statistic. This parameter is required. Valid values:</p>
      * <ul>
-     * <li>MAX：最大值。</li>
-     * <li>MIN：最小值。</li>
-     * <li>AVG：平均值。</li>
+     * <li>MAX</li>
+     * <li>MIN</li>
+     * <li>AVG</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,13 +48,13 @@ public class TriggerCondition extends TeaModel {
     public String statistics;
 
     /**
-     * <p>指标Tag。</p>
+     * <p>The tags for the metrics of a partition. This parameter is available for only metrics that contain ByPartition. For other metrics, leave this parameter empty.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;
 
     /**
-     * <p>阈值。</p>
+     * <p>The trigger threshold. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

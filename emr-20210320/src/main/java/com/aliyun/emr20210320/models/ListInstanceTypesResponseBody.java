@@ -11,7 +11,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     public java.util.List<InstanceType> instanceTypes;
 
     /**
-     * <p>The maximum number of records returned in this request.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Returns the position of the read data.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -29,7 +29,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -38,7 +38,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total amount of data under the conditions of this request.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

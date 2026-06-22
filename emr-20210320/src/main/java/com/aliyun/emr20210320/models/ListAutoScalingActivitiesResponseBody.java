@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAutoScalingActivitiesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of entries returned for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -32,13 +32,13 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scaling activities.</p>
+     * <p>The list of scaling activities.</p>
      */
     @NameInMap("ScalingActivities")
     public java.util.List<ScalingActivities> scalingActivities;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -149,10 +149,14 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         /**
          * <p>The status of the scaling activity. Valid values:</p>
          * <ul>
-         * <li>REJECTED</li>
-         * <li>SUCCESSFUL</li>
-         * <li>FAILED</li>
-         * <li>IN_PROGRESS</li>
+         * <li><p>REJECTED: The scaling activity is rejected.</p>
+         * </li>
+         * <li><p>SUCCESSFUL: The scaling activity is successful.</p>
+         * </li>
+         * <li><p>FAILED: The scaling activity failed.</p>
+         * </li>
+         * <li><p>IN_PROGRESS: The scaling activity is in progress.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,8 +168,10 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         /**
          * <p>The type of the scaling activity. Valid values:</p>
          * <ul>
-         * <li>SCALE_OUT</li>
-         * <li>SCALE_IN</li>
+         * <li><p>SCALE_OUT: Scale-out.</p>
+         * </li>
+         * <li><p>SCALE_IN: Scale-in.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +199,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The end time of the scaling. Unit: milliseconds.</p>
+         * <p>The end time of the scaling activity. The unit is milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1639715634819</p>
@@ -202,7 +208,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The number of added or removed instances.</p>
+         * <p>The number of instances to be added or removed in this scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -217,7 +223,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         public java.util.Map<String, Integer> instanceTypeToNum;
 
         /**
-         * <p>The ID of the node group.</p>
+         * <p>The node group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-869471354ecd****</p>
@@ -260,7 +266,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The start time of the scaling. Unit: milliseconds.</p>
+         * <p>The start time of the scaling activity. The unit is milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1639714634819</p>

@@ -105,7 +105,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
          * <p>The EMR version.</p>
          * 
          * <strong>example:</strong>
-         * <p>EMR-5.3.0</p>
+         * <p>EMR-5.8.0</p>
          */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
@@ -114,7 +114,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
          * <p>The version series.</p>
          * 
          * <strong>example:</strong>
-         * <p>EMR-6.X</p>
+         * <p>EMR-5.X</p>
          */
         @NameInMap("Series")
         public String series;

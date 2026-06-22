@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SpotBidPrice extends TeaModel {
     /**
-     * <p>实例的每小时最高出价。支持最大3位小数，参数SpotStrategy=SpotWithPriceLimit时，该参数生效。</p>
+     * <p>The maximum hourly bid price for the instance, with up to three decimal places. This parameter applies only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1000.0</p>
@@ -14,7 +14,7 @@ public class SpotBidPrice extends TeaModel {
     public Double bidPrice;
 
     /**
-     * <p>实例类型。</p>
+     * <p>The ECS instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g7.2xlarge</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManagedScalingConstraints extends TeaModel {
     /**
-     * <p>最大值。</p>
+     * <p>The maximum number of nodes in a node group.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -14,7 +14,7 @@ public class ManagedScalingConstraints extends TeaModel {
     public Integer maxCapacity;
 
     /**
-     * <p>最大按量节点数量</p>
+     * <p>The maximum number of pay-as-you-go task nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class ManagedScalingConstraints extends TeaModel {
     public Integer maxOnDemandCapacity;
 
     /**
-     * <p>最小值。</p>
+     * <p>The minimum number of nodes in a node group.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

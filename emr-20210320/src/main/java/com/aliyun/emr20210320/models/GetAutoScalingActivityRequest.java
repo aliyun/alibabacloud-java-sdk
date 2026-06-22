@@ -25,7 +25,7 @@ public class GetAutoScalingActivityRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the scaling activity.</p>
+     * <p>The scaling activity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

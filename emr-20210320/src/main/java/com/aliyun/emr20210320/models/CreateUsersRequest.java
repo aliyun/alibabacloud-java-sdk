@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUsersRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateUsersRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateUsersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>用户列表。</p>
+     * <p>The list of users. The number of users must be from 0 to 10.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")
@@ -62,7 +62,7 @@ public class CreateUsersRequest extends TeaModel {
 
     public static class Users extends TeaModel {
         /**
-         * <p>用户密码。</p>
+         * <p>The password of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class CreateUsersRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>用户名。</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

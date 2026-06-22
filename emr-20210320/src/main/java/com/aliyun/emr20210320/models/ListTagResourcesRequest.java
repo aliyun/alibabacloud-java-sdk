@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The number of maximum number of records to obtain at a time.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,16 +14,16 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the request to retrieve a new page of results. If NextToken is empty, the query starts from the beginning.</p>
+     * <p>The token to start the query. Leave this parameter empty to start the query from the beginning.</p>
      * 
      * <strong>example:</strong>
-     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+     * <p>2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region in which you want to create the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resource IDs. Number of array elements N Valid values: 1 to 1</p>
+     * <p>The list of resource IDs. The number of elements in the array N must be 1.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -42,7 +42,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The type of the resource. Set the value to cluster.</p>
+     * <p>The resource type. Set the value to \<code>cluster\\</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>An array of tags. The number of elements in the array. Valid values: 1 to 20.</p>
+     * <p>The tags. The number of elements in the array N can be from 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

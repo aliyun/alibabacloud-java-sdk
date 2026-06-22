@@ -105,7 +105,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
          * <p>The description of read imbalance.</p>
          * 
          * <strong>example:</strong>
-         * <p>read request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;</p>
+         * <p>ead request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;表分区总数量为15，分区平均读请求数量为764361，以下分区存在读请求热点访问：</p>&lt;ul class=\&quot;report-detail-ul\&quot;&gt;&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： f1c922d41529785e21b61cf4c672b98a 读请求数量： 1543919</li>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： 5f019e8cf7c16be9768634cb99ccbe05 读请求数量： 1512817</li>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： d113992fea3a457f60b8b8aa5d6fa037 读请求数量： 1504293</li></ul>&lt;p style=\&quot;line-height： 16px; font-size： 16px; margin： 0 auto\&quot;&gt;&nbsp;</p></p>
          */
         @NameInMap("ReadRequestUnbalanceSuggestion")
         public String readRequestUnbalanceSuggestion;
@@ -123,7 +123,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
          * <p>The description of read/write imbalance.</p>
          * 
          * <strong>example:</strong>
-         * <p>read request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;</p>
+         * <p>ead request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;表分区总数量为15，分区平均读请求数量为764361，以下分区存在读请求热点访问：</p>&lt;ul class=\&quot;report-detail-ul\&quot;&gt;&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： f1c922d41529785e21b61cf4c672b98a 读请求数量： 1543919</li>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： 5f019e8cf7c16be9768634cb99ccbe05 读请求数量： 1512817</li>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： d113992fea3a457f60b8b8aa5d6fa037 读请求数量： 1504293</li></ul>&lt;p style=\&quot;line-height： 16px; font-size： 16px; margin： 0 auto\&quot;&gt;&nbsp;</p></p>
          */
         @NameInMap("RequestUnbalanceSuggestion")
         public String requestUnbalanceSuggestion;
@@ -150,7 +150,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
          * <p>The description of write imbalance.</p>
          * 
          * <strong>example:</strong>
-         * <p>write request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;</p>
+         * <p>write request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;表分区总数量为15，分区平均写请求数量为786142，以下分区存在写请求热点访问：</p>&lt;ul class=\&quot;report-detail-ul\&quot;&gt;&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： f1c922d41529785e21b61cf4c672b98a 写请求数量： 1588305</li>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： 5f019e8cf7c16be9768634cb99ccbe05 写请求数量： 1556984</li>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： d113992fea3a457f60b8b8aa5d6fa037 写请求数量： 1548764</li></ul>&lt;p style=\&quot;line-height： 16px; font-size： 16px; margin： 0 auto\&quot;&gt;&nbsp;</p></p>
          */
         @NameInMap("WriteRequestUnbalanceSuggestion")
         public String writeRequestUnbalanceSuggestion;

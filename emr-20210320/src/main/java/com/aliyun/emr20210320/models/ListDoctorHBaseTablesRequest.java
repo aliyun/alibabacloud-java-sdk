@@ -58,8 +58,10 @@ public class ListDoctorHBaseTablesRequest extends TeaModel {
     /**
      * <p>The order in which you want to sort the query results. Valid value:</p>
      * <ul>
-     * <li>ASC: in ascending order</li>
-     * <li>DESC: in descending order</li>
+     * <li><p>ASC: in ascending order</p>
+     * </li>
+     * <li><p>DESC: in descending order</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

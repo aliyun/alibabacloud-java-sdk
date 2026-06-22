@@ -54,13 +54,20 @@ public class ListDoctorApplicationsRequest extends TeaModel {
     /**
      * <p>The field that you use to sort the query results. Valid values:</p>
      * <ol>
-     * <li>startTime: the time when the job starts</li>
-     * <li>endTime: the time when the job ends</li>
-     * <li>vcoreUtilization: the vCPU utilization of the job</li>
-     * <li>memUtilization: the memory usage of the job</li>
-     * <li>vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</li>
-     * <li>memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</li>
-     * <li>score: the score of the job</li>
+     * <li><p>startTime: the time when the job starts</p>
+     * </li>
+     * <li><p>endTime: the time when the job ends</p>
+     * </li>
+     * <li><p>vcoreUtilization: the vCPU utilization of the job</p>
+     * </li>
+     * <li><p>memUtilization: the memory usage of the job</p>
+     * </li>
+     * <li><p>vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</p>
+     * </li>
+     * <li><p>memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</p>
+     * </li>
+     * <li><p>score: the score of the job</p>
+     * </li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -72,8 +79,10 @@ public class ListDoctorApplicationsRequest extends TeaModel {
     /**
      * <p>The order in which you want to sort the query results. Valid values:</p>
      * <ul>
-     * <li>ASC: the ascending order</li>
-     * <li>DESC: the descending order</li>
+     * <li><p>ASC: the ascending order</p>
+     * </li>
+     * <li><p>DESC: the descending order</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

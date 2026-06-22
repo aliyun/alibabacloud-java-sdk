@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ScalingRule extends TeaModel {
     /**
-     * <p>伸缩活动类型。取值范围：</p>
+     * <p>The type of the scaling activity. This parameter is required. Valid values:</p>
      * <ul>
-     * <li>SCALE_OUT：扩容。</li>
-     * <li>SCALE_IN：缩容。</li>
+     * <li><p>SCALE_OUT: scale-out.</p>
+     * </li>
+     * <li><p>SCALE_IN: scale-in.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class ScalingRule extends TeaModel {
     public String activityType;
 
     /**
-     * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
+     * <p>The adjustment value. This parameter is required and must be a positive integer. It specifies the number of instances to add for a scale-out activity or remove for a scale-in activity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,13 +31,14 @@ public class ScalingRule extends TeaModel {
     public Integer adjustmentValue;
 
     /**
-     * <p>按照负载伸缩描述。</p>
-     * <p>
+     * <p>The configurations for load-based scaling.</p>
      */
     @NameInMap("MetricsTrigger")
     public MetricsTrigger metricsTrigger;
 
     /**
+     * <p>The minimum number of instances to add during a scale-out activity.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,27 +46,28 @@ public class ScalingRule extends TeaModel {
     public Integer minAdjustmentValue;
 
     /**
-     * <p>规则名称。</p>
+     * <p>The name of the rule. This parameter is required and cannot be an empty string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>scale-out-memory</p>
+     * <p>scalingByYarnMemory</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>按照时间伸缩描述。</p>
-     * <p>
+     * <p>The configurations for time-based scaling.</p>
      */
     @NameInMap("TimeTrigger")
     public TimeTrigger timeTrigger;
 
     /**
-     * <p>伸缩规则类型。 取值范围：</p>
+     * <p>The type of the scaling rule. This parameter is required. Valid values:</p>
      * <ul>
-     * <li>TIME_TRIGGER: 按时间伸缩。</li>
-     * <li>METRICS_TRIGGER: 按负载伸缩。</li>
+     * <li><p>TIME_TRIGGER: time-based scaling.</p>
+     * </li>
+     * <li><p>METRICS_TRIGGER: load-based scaling.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

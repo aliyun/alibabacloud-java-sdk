@@ -15,7 +15,7 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The end timestamp for querying the creation time of scaling activities. The unit is milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1639718634819</p>
@@ -24,12 +24,12 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>实例付费类型枚举值：</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li>ONDEMAND: 按量付费实例</li>
-     * <li>SPOT: 竞价实例
-     * 默认为null代表全选
-     * 举例: [&quot;ONDEMAND&quot;, &quot;SPOT&quot;]</li>
+     * <li><p>ONDEMAND: Pay-as-you-go instance.</p>
+     * </li>
+     * <li><p>SPOT: Spot instance.The default value is null, which means all billing methods are selected.Example: [&quot;ONDEMAND&quot;, &quot;SPOT&quot;]</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     public java.util.List<String> instanceChargeTypes;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -48,7 +48,7 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * <p>The token that marks the position from which the query starts.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -57,7 +57,7 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the node group.</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ng-869471354ecd****</p>
@@ -76,7 +76,7 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status of the scaling activity. Number of elements in the array: 1-20.</p>
+     * <p>The status of the scaling activity. The number of elements in the array can range from 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;REJECTED&quot;,&quot;SUCCESSFUL&quot;]</p>
@@ -87,8 +87,10 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     /**
      * <p>The type of the scaling activity. Valid values:</p>
      * <ul>
-     * <li>SCALE_OUT</li>
-     * <li>SCALE_IN</li>
+     * <li><p>SCALE_OUT: Scale-out.</p>
+     * </li>
+     * <li><p>SCALE_IN: Scale-in.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +116,7 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     public String scalingRuleName;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The start timestamp for querying the creation time of scaling activities. The unit is milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1639714634819</p>

@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterAutoRenewRequest extends TeaModel {
     /**
-     * <p>自动续费ECS实例列表。</p>
+     * <p>The list of ECS instances for which to enable auto-renewal. This parameter takes effect only when RenewAllInstances is not set to true.</p>
      */
     @NameInMap("AutoRenewInstances")
     public java.util.List<AutoRenewInstance> autoRenewInstances;
 
     /**
-     * <p>集群是否自动续费。</p>
+     * <p>Specifies whether to enable auto-renewal for the cluster. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enables auto-renewal.</p>
+     * </li>
+     * <li><p>false: Disables auto-renewal.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +27,8 @@ public class UpdateClusterAutoRenewRequest extends TeaModel {
     public Boolean clusterAutoRenew;
 
     /**
-     * <p>集群自动续费时长。</p>
+     * <p>The auto-renewal duration for the cluster. This parameter takes effect only when ClusterAutoRenew is set to true.
+     * If ClusterAutoRenewDurationUnit is set to Month, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, and 36. If ClusterAutoRenewDurationUnit is set to Year, the valid values are 1, 2, and 3.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +37,14 @@ public class UpdateClusterAutoRenewRequest extends TeaModel {
     public Integer clusterAutoRenewDuration;
 
     /**
-     * <p>集群续费时长单位。</p>
+     * <p>The unit of the auto-renewal duration. Valid values:</p>
+     * <ul>
+     * <li><p>Month</p>
+     * </li>
+     * <li><p>Year</p>
+     * </li>
+     * </ul>
+     * <p>Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Monthly</p>
@@ -38,7 +53,7 @@ public class UpdateClusterAutoRenewRequest extends TeaModel {
     public String clusterAutoRenewDurationUnit;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +63,7 @@ public class UpdateClusterAutoRenewRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +73,14 @@ public class UpdateClusterAutoRenewRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>续费所有ECS实例。</p>
+     * <p>Specifies whether to enable auto-renewal for all ECS instances in the cluster. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enables auto-renewal for all ECS instances in the cluster. The default auto-renewal duration is one month.</p>
+     * </li>
+     * <li><p>false: Does not enable auto-renewal for all ECS instances in the cluster. You can specify the ECS instances for which to enable auto-renewal in the AutoRenewInstances parameter.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: false.</p>
      */
     @NameInMap("RenewAllInstances")
     public Boolean renewAllInstances;

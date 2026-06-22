@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetManagedScalingPolicyRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetManagedScalingPolicyRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

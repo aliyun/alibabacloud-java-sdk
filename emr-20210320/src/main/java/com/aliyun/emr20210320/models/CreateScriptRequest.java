@@ -25,10 +25,12 @@ public class CreateScriptRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the script. Valid values:</p>
+     * <p>The script type. Valid values:</p>
      * <ul>
-     * <li>BOOTSTRAP: indicates a bootstrap action of the Elastic Compute Service (ECS) instance.</li>
-     * <li>NORMAL: indicates a common script.</li>
+     * <li><p>BOOTSTRAP: an ECS instance bootstrap script.</p>
+     * </li>
+     * <li><p>NORMAL: a normal script.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +48,7 @@ public class CreateScriptRequest extends TeaModel {
     public java.util.List<Script> scripts;
 
     /**
-     * <p>The timeout period for a manual execution script. You cannot specify a timeout period for a bootstrap action.</p>
+     * <p>The timeout period for manually executing the script. This parameter is not supported for bootstrap scripts.</p>
      */
     @NameInMap("TimeoutSecs")
     public String timeoutSecs;

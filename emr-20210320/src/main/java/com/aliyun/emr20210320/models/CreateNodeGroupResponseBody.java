@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the machine group.</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>G-21E39B11837E****</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class MetricsTrigger extends TeaModel {
     /**
-     * <p>多指标逻辑关系。默认：Or。取值范围：</p>
+     * <p>The logical relationship between multiple metrics. Valid values:</p>
      * <ul>
-     * <li>And:与</li>
-     * <li>Or：或</li>
+     * <li>And</li>
+     * <li>Or (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class MetricsTrigger extends TeaModel {
     public String conditionLogicOperator;
 
     /**
-     * <p>指标触发条件列表。</p>
+     * <p>The trigger conditions for the metric.</p>
      */
     @NameInMap("Conditions")
     public java.util.List<TriggerCondition> conditions;
 
     /**
-     * <p>冷却时间。 单位为秒</p>
+     * <p>The cooldown interval. Unit: seconds. Valid values: 0 to 10800.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -33,7 +33,7 @@ public class MetricsTrigger extends TeaModel {
     public Integer coolDownInterval;
 
     /**
-     * <p>统计次数。</p>
+     * <p>The number of times that the statistics are collected. This parameter is required. Valid values: 1 to 5.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,13 +43,13 @@ public class MetricsTrigger extends TeaModel {
     public Integer evaluationCount;
 
     /**
-     * <p>时间限制。</p>
+     * <p>The limits on time.</p>
      */
     @NameInMap("TimeConstraints")
     public java.util.List<TimeConstraint> timeConstraints;
 
     /**
-     * <p>统计窗口。单位为秒。</p>
+     * <p>The time window for statistics. This parameter is required. Unit: seconds. Valid values: 30 to 1800.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

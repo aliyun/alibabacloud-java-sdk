@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceTypesRequest extends TeaModel {
     /**
-     * <p>The ID of cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c-b933c5aac8fe****</p>
@@ -14,7 +14,7 @@ public class ListInstanceTypesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Cluster type.</p>
+     * <p>The cluster type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListInstanceTypesRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Deployment mode.</p>
+     * <p>Specifies the deployment mode.</p>
      * 
      * <strong>example:</strong>
      * <p>HA</p>
@@ -33,7 +33,7 @@ public class ListInstanceTypesRequest extends TeaModel {
     public String deployMode;
 
     /**
-     * <p>Instance Type</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.xlarge</p>
@@ -42,7 +42,7 @@ public class ListInstanceTypesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Whether to change the configuration.</p>
+     * <p>Specifies whether the instance type is for an instance type change. A value of true indicates an instance type change.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -51,7 +51,7 @@ public class ListInstanceTypesRequest extends TeaModel {
     public Boolean isModification;
 
     /**
-     * <p>Node group ID.</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>G-F06C4B47966A****</p>
@@ -60,7 +60,7 @@ public class ListInstanceTypesRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>Node group type.</p>
+     * <p>The node group type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class ListInstanceTypesRequest extends TeaModel {
     public String nodeGroupType;
 
     /**
-     * <p>Payment type.</p>
+     * <p>The billing method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class ListInstanceTypesRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The ID of the region in which you want to create the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,16 +90,16 @@ public class ListInstanceTypesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>EMR distribution.</p>
+     * <p>The EMR release version.</p>
      * 
      * <strong>example:</strong>
-     * <p>EMR-5.8.0</p>
+     * <p>Released version EMR-5.8.0</p>
      */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
     /**
-     * <p>Availability Zone ID</p>
+     * <p>The zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

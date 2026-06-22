@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApiTemplatesRequest extends TeaModel {
     /**
-     * <p>接口名。</p>
+     * <p>The API operation name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListApiTemplatesRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,7 +24,7 @@ public class ListApiTemplatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The starting position for the read operation.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -33,7 +33,7 @@ public class ListApiTemplatesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ListApiTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>资源组ID。</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -52,7 +52,7 @@ public class ListApiTemplatesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>集群模板id。</p>
+     * <p>The cluster template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>at-41b4c6a0fc63****</p>
@@ -61,7 +61,7 @@ public class ListApiTemplatesRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>集群模板id列表。</p>
+     * <p>A list of API template IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;AT-****&quot;]</p>
@@ -70,10 +70,10 @@ public class ListApiTemplatesRequest extends TeaModel {
     public java.util.List<String> templateIds;
 
     /**
-     * <p>集群模板名字。</p>
+     * <p>The name of the cluster template.</p>
      * 
      * <strong>example:</strong>
-     * <p>DATALAKE模板</p>
+     * <p>DATALAKE template</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

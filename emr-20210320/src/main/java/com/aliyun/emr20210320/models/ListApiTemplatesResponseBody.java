@@ -12,7 +12,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
     public java.util.List<ApiTemplate> apiTemplates;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -21,7 +21,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>The token to use to retrieve the next page of results. This value is empty when there are no more results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -30,7 +30,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -39,7 +39,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries that meet the filter criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>The service configurations. Number of elements in the array: 1 to 1,000.</p>
+     * <p>The application configurations. The number of array elements N must be in the range of 1 to 1000.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfig> applicationConfigs;
 
     /**
-     * <p>The services. Number of elements in the array: 1 to 100.</p>
+     * <p>The list of applications. The number of array elements N must be in the range of 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
     public java.util.List<Application> applications;
 
     /**
-     * <p>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</p>
+     * <p>The array of bootstrap scripts. The number of array elements N must be in the range of 1 to 10.</p>
      */
     @NameInMap("BootstrapScripts")
     public java.util.List<Script> bootstrapScripts;
 
     /**
-     * <p>The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. The results of multiple calls that use the same client token are the same. A maximum of one cluster can be created with the same client token.</p>
      * 
      * <strong>example:</strong>
      * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
@@ -33,7 +33,7 @@ public class CreateClusterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The cluster name. The name must be 1 to 128 characters in length. It must start with a letter or a Chinese character. It cannot start with http\:// or https\://. It can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,16 +43,22 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the cluster. Valid values:</p>
+     * <p>The cluster type. Valid values:</p>
      * <ul>
-     * <li>DATALAKE: data lake</li>
-     * <li>OLAP: online analytical processing (OLAP)</li>
-     * <li>DATAFLOW: Dataflow</li>
-     * <li>DATASERVING: DataServing</li>
-     * <li>CUSTOM: a custom hybrid cluster.</li>
-     * <li>HADOOP: the old data lake. We recommend that you use the new data lake.</li>
+     * <li><p>DATALAKE: new data lake.</p>
+     * </li>
+     * <li><p>OLAP: data analytics.</p>
+     * </li>
+     * <li><p>DATAFLOW: real-time data stream.</p>
+     * </li>
+     * <li><p>DATASERVING: data serving.</p>
+     * </li>
+     * <li><p>CUSTOM: custom cluster.</p>
+     * </li>
+     * <li><p>HADOOP: earlier-version data lake. We recommend that you use the new data lake.</p>
+     * </li>
      * </ul>
-     * <p>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</p>
+     * <p>If you create an EMR cluster for the first time after 17:00 (UTC+8) on December 19, 2022, you cannot select HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER as the cluster type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,10 +68,12 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Specifies whether to enable release protection for the cluster. Valid values:</p>
+     * <p>Specifies whether to enable deletion protection for the cluster. Valid values:</p>
      * <ul>
-     * <li>true: enables release protection for the cluster.</li>
-     * <li>false: disables release protection for the cluster.</li>
+     * <li><p>true: enables deletion protection.</p>
+     * </li>
+     * <li><p>false: disables deletion protection.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -76,10 +84,12 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
+     * <p>The deployment mode of applications in the cluster. Valid values:</p>
      * <ul>
-     * <li>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</li>
-     * <li>HA: high availability (HA) mode. A cluster that contains three master nodes is created.</li>
+     * <li><p>NORMAL (default): non-high availability (HA) deployment. The cluster has one master node.</p>
+     * </li>
+     * <li><p>HA: HA deployment. An HA deployment requires at least three master nodes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +99,7 @@ public class CreateClusterRequest extends TeaModel {
     public String deployMode;
 
     /**
-     * <p>The cluster description.</p>
+     * <p>The description of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>Emr cluster for ETL</p>
@@ -98,14 +108,14 @@ public class CreateClusterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The node attributes. The basic attributes of all ECS nodes in the cluster.</p>
+     * <p>The node attributes. This parameter specifies the basic attributes of all Elastic Compute Service (ECS) nodes in the cluster.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</p>
+     * <p>The array of node group configurations. The number of array elements N must be in the range of 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,10 +125,12 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<NodeGroupConfig> nodeGroups;
 
     /**
-     * <p>The billing cycle of the instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo: pay-as-you-go</li>
-     * <li>Subscription: subscription</li>
+     * <li><p>PayAsYouGo: pay-as-you-go.</p>
+     * </li>
+     * <li><p>Subscription: subscription.</p>
+     * </li>
      * </ul>
      * <p>Default value: PayAsYouGo.</p>
      * 
@@ -139,17 +151,17 @@ public class CreateClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The EMR version. You can query available E-MapReduce (EMR) versions in the EMR console.</p>
+     * <p>The EMR release version. You can find the EMR release versions on the EMR cluster purchase page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>EMR-5.8.0</p>
+     * <p>EMR-5.16.0</p>
      */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
     /**
-     * <p>The ID of the resource group to which to assign the ENI.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -158,10 +170,12 @@ public class CreateClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The security mode of the cluster. Valid values:</p>
+     * <p>The Kerberos security mode of the cluster. Valid values:</p>
      * <ul>
-     * <li>NORMAL: disables Kerberos authentication for the cluster. This is the default value.</li>
-     * <li>KERBEROS: enables Kerberos authentication for the cluster.</li>
+     * <li><p>NORMAL (default): normal mode. Kerberos is disabled.</p>
+     * </li>
+     * <li><p>KERBEROS: Kerberos mode. Kerberos is enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,13 +185,13 @@ public class CreateClusterRequest extends TeaModel {
     public String securityMode;
 
     /**
-     * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
+     * <p>The subscription configurations. This parameter is required if you set PaymentType to Subscription.</p>
      */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>The tag. Number of elements in the array: 0 to 20.</p>
+     * <p>The tags. The number of array elements N must be in the range of 0 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>

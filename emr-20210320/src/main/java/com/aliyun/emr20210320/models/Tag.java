@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Tag extends TeaModel {
     /**
-     * <p>标签键。必填参数，不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或https://。</p>
+     * <p>The key of the tag. This parameter is required and cannot be an empty string. The key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class Tag extends TeaModel {
     public String key;
 
     /**
-     * <p>标签值。非必填，可以为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。</p>
+     * <p>The value of the tag This parameter is optional and can be an empty string. The value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>IT</p>

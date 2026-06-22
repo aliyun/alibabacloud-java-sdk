@@ -25,7 +25,7 @@ public class GetNodeGroupRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The ID of the region in which you want to create the instance.</p>
+     * <p>The ID of the region in which the cluster resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

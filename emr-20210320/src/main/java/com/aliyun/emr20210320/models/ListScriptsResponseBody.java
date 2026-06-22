@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records returned in this request.</p>
+     * <p>The maximum number of entries returned in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListScriptsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The position of the data read.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>dd6b1b2a-5837-5237-abe4-ff0c89568982</p>
@@ -23,7 +23,7 @@ public class ListScriptsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -32,13 +32,13 @@ public class ListScriptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scripts.</p>
+     * <p>The list of scripts.</p>
      */
     @NameInMap("Scripts")
     public java.util.List<Scripts> scripts;
 
     /**
-     * <p>The total amount of data under the conditions of this request.</p>
+     * <p>The total number of entries that meet the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -93,7 +93,7 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class Scripts extends TeaModel {
         /**
-         * <p>API name.</p>
+         * <p>The name of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>ListScripts</p>
@@ -102,7 +102,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>End execution time. This value is returned only when <code>ScriptType</code> is <code>NORMAL</code>.</p>
+         * <p>The time when the execution ended. This parameter is returned only when ScriptType is set to NORMAL.</p>
          * 
          * <strong>example:</strong>
          * <p>1639715635819</p>
@@ -111,10 +111,12 @@ public class ListScriptsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>Execution failure strategy. Possible values:</p>
+         * <p>The policy used to handle an execution failure. Valid values:</p>
          * <ul>
-         * <li>FAILED_CONTINUE: Continue after failure.</li>
-         * <li>FAILED_BLOCK: Block after failure.</li>
+         * <li><p>FAILED_CONTINUE: Continue the execution.</p>
+         * </li>
+         * <li><p>FAILED_BLOCK: Block the execution.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,10 +126,12 @@ public class ListScriptsResponseBody extends TeaModel {
         public String executionFailStrategy;
 
         /**
-         * <p>Execution timing. Possible values:</p>
+         * <p>The time to execute the script. Valid values:</p>
          * <ul>
-         * <li>BEFORE_INSTALL: Before application installation.</li>
-         * <li>AFTER_STARTED: After application startup.</li>
+         * <li><p>BEFORE_INSTALL: before application installation.</p>
+         * </li>
+         * <li><p>AFTER_STARTED: after application startup.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,11 +141,14 @@ public class ListScriptsResponseBody extends TeaModel {
         public String executionMoment;
 
         /**
-         * <p>Script execution state. This value is returned only when <code>ScriptType</code> is <code>NORMAL</code>. Possible values:</p>
+         * <p>The execution status of the script. This parameter is returned only when <code>ScriptType</code> is set to <code>NORMAL</code>. Valid values:</p>
          * <ul>
-         * <li>SCRIPT_COMPLETED: Script executed successfully.</li>
-         * <li>SCRIPT_SUBMISSION_FAILED: Script execution failed.</li>
-         * <li>SCRIPT_RUNNING: Script is running.</li>
+         * <li><p>SCRIPT_COMPLETED: The script is successfully executed.</p>
+         * </li>
+         * <li><p>SCRIPT_SUBMISSION_FAILED: The script fails to be executed.</p>
+         * </li>
+         * <li><p>SCRIPT_RUNNING: The script is being executed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +158,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String executionState;
 
         /**
-         * <p>Time of the last update.</p>
+         * <p>The time when the script was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1639714634819</p>
@@ -166,7 +173,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public NodeSelector nodeSelector;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -175,7 +182,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Script execution parameters.</p>
+         * <p>The runtime parameters of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>--mode=client -h -p</p>
@@ -184,7 +191,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String scriptArgs;
 
         /**
-         * <p>Script ID.</p>
+         * <p>The script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-bf25219d103043a0820613e32781****</p>
@@ -193,7 +200,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String scriptId;
 
         /**
-         * <p>Script name.</p>
+         * <p>The script name.</p>
          * 
          * <strong>example:</strong>
          * <p>check_env</p>
@@ -202,7 +209,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String scriptName;
 
         /**
-         * <p>Script path.</p>
+         * <p>The script path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket1/check_evn.sh</p>
@@ -211,7 +218,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String scriptPath;
 
         /**
-         * <p>Start execution time. This value is returned only when <code>ScriptType</code> is <code>NORMAL</code>.</p>
+         * <p>The time when the execution started. This parameter is returned only when ScriptType is set to NORMAL.</p>
          * 
          * <strong>example:</strong>
          * <p>1639714634000</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DecreaseNodesRequest extends TeaModel {
     /**
-     * <p>The cooldown interval between two batches.</p>
+     * <p>The cooldown time between batches.</p>
      */
     @NameInMap("BatchInterval")
     public Integer batchInterval;
 
     /**
-     * <p>The number of nodes to be removed in a single batch.</p>
+     * <p>The number of nodes to concurrently take offline in a single batch.</p>
      */
     @NameInMap("BatchSize")
     public Integer batchSize;
@@ -27,7 +27,7 @@ public class DecreaseNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of nodes to scale out. The number of nodes to be scaled out. The value should be less than the number of surviving nodes in the current node group.</p>
+     * <p>The number of nodes to remove. The value must be less than the number of active nodes in the node group.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -36,7 +36,7 @@ public class DecreaseNodesRequest extends TeaModel {
     public Integer decreaseNodeCount;
 
     /**
-     * <p>The ID of the node group.</p>
+     * <p>The node group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DecreaseNodesRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The array of node IDs. Valid values of array element N: 1 to 500.</p>
+     * <p>An array of node IDs. The array can contain from 1 to 500 elements.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp1cudc25w2bfwl5****&quot;]</p>
@@ -55,7 +55,7 @@ public class DecreaseNodesRequest extends TeaModel {
     public java.util.List<String> nodeIds;
 
     /**
-     * <p>The ID of the region in which you want to create the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the scaling activity.</p>
+     * <p>The details of the scaling activity.</p>
      */
     @NameInMap("ScalingActivity")
     public ScalingActivity scalingActivity;
@@ -51,18 +51,22 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         public String activityId;
 
         /**
-         * <p>The instances that correspond to the scaling activity.</p>
+         * <p>The list of instances involved in the scaling activity.</p>
          */
         @NameInMap("ActivityResults")
         public java.util.List<ScalingActivityResult> activityResults;
 
         /**
-         * <p>The status of the scaling activity. Valid values:</p>
+         * <p>The state of the scaling activity. Valid values:</p>
          * <ul>
-         * <li>REJECTED</li>
-         * <li>SUCCESSFUL</li>
-         * <li>FAILED</li>
-         * <li>IN_PROGRESS</li>
+         * <li><p>REJECTED: rejected.</p>
+         * </li>
+         * <li><p>SUCCESSFUL: successful.</p>
+         * </li>
+         * <li><p>FAILED: failed.</p>
+         * </li>
+         * <li><p>IN_PROGRESS: in progress.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,10 +76,12 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         public String activityState;
 
         /**
-         * <p>The type of the scaling activity. Valid value:</p>
+         * <p>The type of the scaling activity. Valid values:</p>
          * <ul>
-         * <li>SCALE_OUT</li>
-         * <li>SCALE_IN</li>
+         * <li><p>SCALE_OUT: scale-out.</p>
+         * </li>
+         * <li><p>SCALE_IN: scale-in.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +109,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when scaling ended.</p>
+         * <p>The end time of the scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>1639715634819</p>
@@ -112,7 +118,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The number of added or removed instances.</p>
+         * <p>The number of instances that are added or removed.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -121,7 +127,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         public Integer expectNum;
 
         /**
-         * <p>The ID of the node group.</p>
+         * <p>The node group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-869471354ecd****</p>
@@ -157,7 +163,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The description of the scaling rule.</p>
+         * <p>The details of the scaling rule.</p>
          */
         @NameInMap("RuleDetail")
         public ScalingRule ruleDetail;
@@ -172,7 +178,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The time when scaling started.</p>
+         * <p>The start time of the scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>1639714634819</p>

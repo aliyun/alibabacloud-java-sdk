@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class NodeSelector extends TeaModel {
     /**
-     * <p>节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。</p>
+     * <blockquote>
+     * <p>This parameter is deprecated. Use <code>NodeGroupIds</code> instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ng-869471354ecd****</p>
@@ -14,11 +16,16 @@ public class NodeSelector extends TeaModel {
     @Deprecated
     public String nodeGroupId;
 
+    /**
+     * <p>The IDs of the node groups to select.</p>
+     */
     @NameInMap("NodeGroupIds")
     public java.util.List<String> nodeGroupIds;
 
     /**
-     * <p>节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。</p>
+     * <blockquote>
+     * <p>This parameter is deprecated. Use <code>NodeGroupNames</code> instead.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>master-1</p>
@@ -27,11 +34,14 @@ public class NodeSelector extends TeaModel {
     @Deprecated
     public String nodeGroupName;
 
+    /**
+     * <p>The names of the node groups to select.</p>
+     */
     @NameInMap("NodeGroupNames")
     public java.util.List<String> nodeGroupNames;
 
     /**
-     * <p>节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。</p>
+     * <p>The types of node groups to select. This parameter applies only when <code>NodeSelectType</code> is set to <code>NODE_GROUP</code> and <code>NodeGroupIds</code> is not specified. The array can contain up to 10 elements.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;CORE&quot;,&quot;TASK&quot;]</p>
@@ -40,7 +50,7 @@ public class NodeSelector extends TeaModel {
     public java.util.List<String> nodeGroupTypes;
 
     /**
-     * <p>节点名称列表。当NodeSelectType取值Node时，该参数生效。</p>
+     * <p>The names of the nodes to select. This parameter applies only when <code>NodeSelectType</code> is set to <code>NODE</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;core1-1&quot;]</p>
@@ -49,11 +59,14 @@ public class NodeSelector extends TeaModel {
     public java.util.List<String> nodeNames;
 
     /**
-     * <p>节点选择类型。取值范围：</p>
+     * <p>The node selection type. Valid values:</p>
      * <ul>
-     * <li>CLUSTER：集群。</li>
-     * <li>NODE_GROUP：节点组。</li>
-     * <li>NODE：节点。</li>
+     * <li><p><code>CLUSTER</code>: Selects all nodes in the cluster.</p>
+     * </li>
+     * <li><p><code>NODE_GROUP</code>: Selects nodes by their node group.</p>
+     * </li>
+     * <li><p><code>NODE</code>: Selects specific nodes by name.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

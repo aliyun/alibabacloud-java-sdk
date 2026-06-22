@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Operation extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c-b933c5aac8fe****</p>
@@ -14,7 +14,7 @@ public class Operation extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>创建时间。</p>
+     * <p>The time when the operation was created. This value is a UNIX timestamp, measured in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1628589439114</p>
@@ -23,7 +23,7 @@ public class Operation extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>描述。</p>
+     * <p>The description of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -32,7 +32,7 @@ public class Operation extends TeaModel {
     public String description;
 
     /**
-     * <p>结束时间。</p>
+     * <p>The time when the operation ended. This value is a UNIX timestamp, measured in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1628589439114</p>
@@ -41,7 +41,7 @@ public class Operation extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>操作ID。</p>
+     * <p>The operation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>op-13c37a77c505****</p>
@@ -50,7 +50,17 @@ public class Operation extends TeaModel {
     public String operationId;
 
     /**
-     * <p>操作状态。</p>
+     * <p>The operation state. Valid values:</p>
+     * <ul>
+     * <li><p><code>IN_PROGRESS</code>: The operation is in progress.</p>
+     * </li>
+     * <li><p><code>COMPLETED</code>: The operation completed.</p>
+     * </li>
+     * <li><p><code>HUMAN_PROCESSING</code>: The operation requires manual intervention.</p>
+     * </li>
+     * <li><p><code>FAILED</code>: The operation failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>COMPLETED</p>
@@ -59,16 +69,16 @@ public class Operation extends TeaModel {
     public String operationState;
 
     /**
-     * <p>操作类型。</p>
+     * <p>The operation type.</p>
      * 
      * <strong>example:</strong>
-     * <p>CLUSTER</p>
+     * <p>CREATE_CLUSTER</p>
      */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
-     * <p>开始时间。</p>
+     * <p>The time when the operation started. This value is a UNIX timestamp, measured in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1628589439114</p>
@@ -77,7 +87,7 @@ public class Operation extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>状态转换原因。</p>
+     * <p>The reason for the state change.</p>
      */
     @NameInMap("StateChangeReason")
     public OperationStateChangeReason stateChangeReason;

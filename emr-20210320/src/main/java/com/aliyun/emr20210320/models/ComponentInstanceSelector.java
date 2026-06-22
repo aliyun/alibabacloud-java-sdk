@@ -4,12 +4,26 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ComponentInstanceSelector extends TeaModel {
+    /**
+     * <p>The action scope. Valid values:</p>
+     * <ul>
+     * <li><p>APPLICATION: The application level.</p>
+     * </li>
+     * <li><p>COMPONENT: The component level.</p>
+     * </li>
+     * <li><p>COMPONENT_INSTANCE: The component instance level.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>APPLICATION</p>
+     */
     @NameInMap("ActionScope")
     @Deprecated
     public String actionScope;
 
     /**
-     * <p>应用名称。</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>HDFS</p>
@@ -18,24 +32,26 @@ public class ComponentInstanceSelector extends TeaModel {
     public String applicationName;
 
     /**
-     * <p>组件实例列表。actionScope为COPONENT_INSTANCE时使用。</p>
+     * <p>A list of component instances. This parameter is used when <code>RunActionScope</code> is set to <code>COMPONENT_INSTANCE</code>.</p>
      */
     @NameInMap("ComponentInstances")
     public java.util.List<ComponentInstances> componentInstances;
 
     /**
-     * <p>组件列表。
-     * actionScope为COPONENT时使用。</p>
+     * <p>A list of components. This parameter is used when <code>RunActionScope</code> is set to <code>COMPONENT</code>.</p>
      */
     @NameInMap("Components")
     public java.util.List<Components> components;
 
     /**
-     * <p>动作执行范围。取值范围：</p>
+     * <p>The action scope. Valid values:</p>
      * <ul>
-     * <li>APPLICATION：应用级别。</li>
-     * <li>COMPONENT：组件级别。</li>
-     * <li>COMPONENT_INSTANCE：组件实例级别。</li>
+     * <li><p>APPLICATION: The application level.</p>
+     * </li>
+     * <li><p>COMPONENT: The component level.</p>
+     * </li>
+     * <li><p>COMPONENT_INSTANCE: The component instance level.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -93,7 +109,7 @@ public class ComponentInstanceSelector extends TeaModel {
 
     public static class ComponentInstances extends TeaModel {
         /**
-         * <p>应用名称。</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>HDFS</p>
@@ -102,7 +118,7 @@ public class ComponentInstanceSelector extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>组件名称。</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>DataNode</p>
@@ -111,7 +127,7 @@ public class ComponentInstanceSelector extends TeaModel {
         public String componentName;
 
         /**
-         * <p>节点ID。</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1cudc25w2bfwl5****</p>
@@ -152,7 +168,7 @@ public class ComponentInstanceSelector extends TeaModel {
 
     public static class Components extends TeaModel {
         /**
-         * <p>应用名称。</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>HDFS</p>
@@ -161,7 +177,7 @@ public class ComponentInstanceSelector extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>组件名称。</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>DataNode</p>

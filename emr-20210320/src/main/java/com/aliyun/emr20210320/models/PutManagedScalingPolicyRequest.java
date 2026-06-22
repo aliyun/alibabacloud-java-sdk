@@ -15,7 +15,7 @@ public class PutManagedScalingPolicyRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The constrains on the maximum and minimum numbers of nodes in a node group.</p>
+     * <p>The maximum and minimum value constraints for the cluster.</p>
      */
     @NameInMap("Constraints")
     public ManagedScalingConstraints constraints;

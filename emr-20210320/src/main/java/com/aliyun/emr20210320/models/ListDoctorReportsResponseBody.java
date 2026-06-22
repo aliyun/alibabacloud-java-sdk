@@ -105,7 +105,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
          * <p>The optimization suggestion.</p>
          * 
          * <strong>example:</strong>
-         * <p>block</p>
+         * <h3>Compute health score: 88. The cluster is in healthy state. Keep it up.</h3><ul><li><strong>Compute task scan</strong><ul><li>Scanned 1518 compute tasks in the cluster: <span style=\\"color: #D93026;\\">209 tasks in unhealthy state</span>, <span style=\\"color: #F1A600;\\">596 tasks in sub-healthy state</span>, <span style=\\"color: #1E8E3E;\\">713 tasks in healthy state</span>.</li></ul><ul><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1518 Tez tasks with a weighted average score of 88. Memory usage accounts for 100.0% of the cluster, CPU usage accounts for 100.0% of the cluster. 209 tasks are in unhealthy state, 596 tasks are in sub-healthy state.</li></ul><ul>Click \\"View Details\\" in the task detail list below to view specific issues and solutions. The \\"Low-Score Task Compute Memory Time (GB*Sec) Top 20\\" table is sorted by memory time usage. Large tasks may have a greater impact on the overall cluster, so prioritize them.</ul><li><strong><span style=\\"color: #D93026;\\">Low memory utilization</span></strong><ul><li>Overall cluster memory utilization is 47.8%, which is relatively low. Compute resources are being wasted. Prioritize optimizing TOP tasks with high memory compute time but low memory utilization.</li></ul><ul><li>Tez jobs have an average memory utilization of 47.8%.</li></ul></li></ul>
          */
         @NameInMap("Suggestion")
         public String suggestion;
@@ -114,7 +114,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
          * <p>The summary of the report.</p>
          * 
          * <strong>example:</strong>
-         * <p>eastbuy-mse-plugin-auth</p>
+         * <h4>[Compute Check] Compute health score: 88. Good health. Keep it up.</h4><p style=\\"text-indent:2em\\">Most tasks in the cluster are in healthy state.</p><p style=\\"text-indent:2em\\">Cluster memory utilization: 47.8%, relatively low.</p>
          */
         @NameInMap("Summary")
         public String summary;

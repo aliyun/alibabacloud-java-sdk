@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Cluster extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c-b933c5aac8fe****</p>
@@ -14,7 +14,7 @@ public class Cluster extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>集群名称。</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>emrtest</p>
@@ -23,7 +23,25 @@ public class Cluster extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>集群状态。</p>
+     * <p>The cluster state. Valid values:</p>
+     * <ul>
+     * <li><p><code>STARTING</code>: The cluster is starting.</p>
+     * </li>
+     * <li><p><code>START_FAILED</code>: The cluster failed to start.</p>
+     * </li>
+     * <li><p><code>BOOTSTRAPPING</code>: The cluster is running bootstrap actions.</p>
+     * </li>
+     * <li><p><code>RUNNING</code>: The cluster is running.</p>
+     * </li>
+     * <li><p><code>TERMINATING</code>: The cluster is terminating.</p>
+     * </li>
+     * <li><p><code>TERMINATED</code>: The cluster is terminated.</p>
+     * </li>
+     * <li><p><code>TERMINATED_WITH_ERRORS</code>: The cluster terminated due to errors.</p>
+     * </li>
+     * <li><p><code>TERMINATE_FAILED</code>: The cluster failed to terminate.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -32,7 +50,21 @@ public class Cluster extends TeaModel {
     public String clusterState;
 
     /**
-     * <p>集群类型。</p>
+     * <p>The cluster type. Valid values:</p>
+     * <ul>
+     * <li><p><code>DATALAKE</code>: New data lake.</p>
+     * </li>
+     * <li><p><code>OLAP</code>: Data analysis.</p>
+     * </li>
+     * <li><p><code>DATAFLOW</code>: Real-time data flow.</p>
+     * </li>
+     * <li><p><code>DATASERVING</code>: Data serving.</p>
+     * </li>
+     * <li><p><code>CUSTOM</code>: Custom cluster.</p>
+     * </li>
+     * <li><p><code>HADOOP</code>: Legacy data lake.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DATALAKE</p>
@@ -41,7 +73,7 @@ public class Cluster extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>创建时间。</p>
+     * <p>The time when the cluster was created. The time is a Unix timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1592837465784</p>
@@ -50,6 +82,8 @@ public class Cluster extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>Indicates whether deletion protection is enabled for the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -57,7 +91,13 @@ public class Cluster extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>部署模式。</p>
+     * <p>The application deployment mode. Valid values:</p>
+     * <ul>
+     * <li><p><code>NORMAL</code>: Standard deployment.</p>
+     * </li>
+     * <li><p><code>HA</code>: High-availability deployment.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>HA</p>
@@ -65,11 +105,17 @@ public class Cluster extends TeaModel {
     @NameInMap("DeployMode")
     public String deployMode;
 
+    /**
+     * <p>The cluster description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EMR cluster</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>EMR默认角色。</p>
+     * <p>The default role for E-MapReduce.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunEMRDefaultRole</p>
@@ -78,7 +124,7 @@ public class Cluster extends TeaModel {
     public String emrDefaultRole;
 
     /**
-     * <p>删除时间。</p>
+     * <p>The time when the cluster was deleted. The time is a Unix timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1592837465784</p>
@@ -87,7 +133,7 @@ public class Cluster extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>过期时间。</p>
+     * <p>The time when the cluster is scheduled to expire. The time is a Unix timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1592837465784</p>
@@ -96,13 +142,19 @@ public class Cluster extends TeaModel {
     public Long expireTime;
 
     /**
-     * <p>节点属性。</p>
+     * <p>The node attributes.</p>
      */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>付费类型。</p>
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><p><code>PayAsYouGo</code>: Pay-as-you-go.</p>
+     * </li>
+     * <li><p><code>Subscription</code>: Subscription.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
@@ -111,7 +163,7 @@ public class Cluster extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>可用时间。</p>
+     * <p>The time when the cluster became ready. The time is a Unix timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1592837465784</p>
@@ -120,7 +172,7 @@ public class Cluster extends TeaModel {
     public Long readyTime;
 
     /**
-     * <p>地域ID。</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -129,16 +181,16 @@ public class Cluster extends TeaModel {
     public String regionId;
 
     /**
-     * <p>EMR发行版。</p>
+     * <p>The release version of E-MapReduce.</p>
      * 
      * <strong>example:</strong>
-     * <p>EMR-5.3.0</p>
+     * <p>EMR-5.8.0</p>
      */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
     /**
-     * <p>资源组ID。</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -147,7 +199,13 @@ public class Cluster extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Kerberos安全模式。</p>
+     * <p>The security mode of the cluster. Valid values:</p>
+     * <ul>
+     * <li><p><code>NORMAL</code>: Kerberos is disabled.</p>
+     * </li>
+     * <li><p><code>KERBEROS</code>: Kerberos is enabled.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -155,17 +213,20 @@ public class Cluster extends TeaModel {
     @NameInMap("SecurityMode")
     public String securityMode;
 
+    /**
+     * <p>The reason for the cluster state change.</p>
+     */
     @NameInMap("StateChangeReason")
     public ClusterStateChangeReason stateChangeReason;
 
     /**
-     * <p>预付费配置。</p>
+     * <p>The subscription configuration.</p>
      */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>集群标签。</p>
+     * <p>The cluster tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

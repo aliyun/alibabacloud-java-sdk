@@ -7,8 +7,10 @@ public class ListUsersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the user is an admin user. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +130,7 @@ public class ListUsersResponseBody extends TeaModel {
          * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>添加test用户</p>
+         * <p>Add test user</p>
          */
         @NameInMap("Description")
         public String description;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ExportApplicationConfigsRequest extends TeaModel {
     /**
-     * <p>导出应用配置。</p>
+     * <p>The list of application configurations to export.</p>
      */
     @NameInMap("ApplicationConfigFiles")
     public java.util.List<ApplicationConfigFile> applicationConfigFiles;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,14 @@ public class ExportApplicationConfigsRequest extends TeaModel {
     public String configScope;
 
     /**
+     * <p>The mode for exporting service configurations. Valid values:</p>
+     * <ul>
+     * <li><p>MODIFICATION</p>
+     * </li>
+     * <li><p>ALL</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MODIFICATION</p>
      */
@@ -31,7 +39,13 @@ public class ExportApplicationConfigsRequest extends TeaModel {
     public String exportMode;
 
     /**
-     * <p>导出应用配置的文件格式。</p>
+     * <p>The file format of the exported application configurations. Valid values:</p>
+     * <ul>
+     * <li><p>JSON</p>
+     * </li>
+     * <li><p>XML</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>XML</p>
@@ -46,7 +60,7 @@ public class ExportApplicationConfigsRequest extends TeaModel {
     public java.util.List<String> nodeIds;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

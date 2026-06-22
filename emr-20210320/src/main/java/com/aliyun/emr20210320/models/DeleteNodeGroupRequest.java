@@ -3,7 +3,7 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class GetAutoScalingPolicyRequest extends TeaModel {
+public class DeleteNodeGroupRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -13,6 +13,15 @@ public class GetAutoScalingPolicyRequest extends TeaModel {
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>机器组不再需要</p>
+     */
+    @NameInMap("Description")
+    public String description;
 
     /**
      * <p>The node group ID.</p>
@@ -25,7 +34,7 @@ public class GetAutoScalingPolicyRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call <a href="url">ListRegions</a> to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,12 +43,12 @@ public class GetAutoScalingPolicyRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static GetAutoScalingPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetAutoScalingPolicyRequest self = new GetAutoScalingPolicyRequest();
+    public static DeleteNodeGroupRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteNodeGroupRequest self = new DeleteNodeGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAutoScalingPolicyRequest setClusterId(String clusterId) {
+    public DeleteNodeGroupRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -47,7 +56,15 @@ public class GetAutoScalingPolicyRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public GetAutoScalingPolicyRequest setNodeGroupId(String nodeGroupId) {
+    public DeleteNodeGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DeleteNodeGroupRequest setNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
     }
@@ -55,7 +72,7 @@ public class GetAutoScalingPolicyRequest extends TeaModel {
         return this.nodeGroupId;
     }
 
-    public GetAutoScalingPolicyRequest setRegionId(String regionId) {
+    public DeleteNodeGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

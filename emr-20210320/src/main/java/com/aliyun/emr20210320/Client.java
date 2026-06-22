@@ -51,7 +51,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "emr.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "emr.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "emr.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "emr.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "emr.aliyuncs.com"),
+            new TeaPair("us-east-1", "emr.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "emr.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "emr.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "emr.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "emr.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "emr.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "emr.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "emr.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "emr.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "emr.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "emr.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "emr.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "emr.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "emr.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "emr.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("emr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -302,7 +317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</p>
+     * <p>Creates a bootstrap script or a regular cluster script.</p>
      * 
      * @param request CreateScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -350,7 +365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</p>
+     * <p>Creates a bootstrap script or a regular cluster script.</p>
      * 
      * @param request CreateScriptRequest
      * @return CreateScriptResponse
@@ -362,10 +377,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple users at a time.</p>
+     * <p>Creates users in a batch.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple users at a time.</p>
+     * <p>Creates users in a batch.</p>
      * 
      * @param request CreateUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -405,10 +420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple users at a time.</p>
+     * <p>Creates users in a batch.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple users at a time.</p>
+     * <p>Creates users in a batch.</p>
      * 
      * @param request CreateUsersRequest
      * @return CreateUsersResponse
@@ -420,7 +435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a scale-out operation on the target node group.</p>
+     * <p>Scales in a target node group.</p>
      * 
      * @param request DecreaseNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -476,7 +491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a scale-out operation on the target node group.</p>
+     * <p>Scales in a target node group.</p>
      * 
      * @param request DecreaseNodesRequest
      * @return DecreaseNodesResponse
@@ -543,6 +558,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a pay-as-you-go cluster.</p>
+     * 
      * @param request DeleteClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteClusterResponse
@@ -576,12 +594,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a pay-as-you-go cluster.</p>
+     * 
      * @param request DeleteClusterRequest
      * @return DeleteClusterResponse
      */
     public DeleteClusterResponse deleteCluster(DeleteClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a created cluster node group.</p>
+     * 
+     * @param request DeleteNodeGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNodeGroupResponse
+     */
+    public DeleteNodeGroupResponse deleteNodeGroupWithOptions(DeleteNodeGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            query.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNodeGroup"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNodeGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a created cluster node group.</p>
+     * 
+     * @param request DeleteNodeGroupRequest
+     * @return DeleteNodeGroupResponse
+     */
+    public DeleteNodeGroupResponse deleteNodeGroup(DeleteNodeGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNodeGroupWithOptions(request, runtime);
     }
 
     /**
@@ -708,7 +785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出应用服务配置</p>
+     * <p>Exports the configurations of a specified service in a cluster.</p>
      * 
      * @param request ExportApplicationConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -768,7 +845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出应用服务配置</p>
+     * <p>Exports the configurations of a specified service in a cluster.</p>
      * 
      * @param request ExportApplicationConfigsRequest
      * @return ExportApplicationConfigsResponse
@@ -828,7 +905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用详情。</p>
+     * <p>Queries the details of an application.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of an application.</p>
@@ -871,7 +948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用详情。</p>
+     * <p>Queries the details of an application.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of an application.</p>
@@ -886,7 +963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an auto scaling activity.</p>
+     * <p>Retrieves the details of an Auto Scaling activity.</p>
      * 
      * @param request GetAutoScalingActivityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -926,7 +1003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an auto scaling activity.</p>
+     * <p>Retrieves the details of an Auto Scaling activity.</p>
      * 
      * @param request GetAutoScalingActivityRequest
      * @return GetAutoScalingActivityResponse
@@ -938,7 +1015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries custom auto scaling rules.</p>
+     * <p>Retrieves the details of a custom Auto Scaling policy.</p>
      * 
      * @param request GetAutoScalingPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -978,7 +1055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries custom auto scaling rules.</p>
+     * <p>Retrieves the details of a custom Auto Scaling policy.</p>
      * 
      * @param request GetAutoScalingPolicyRequest
      * @return GetAutoScalingPolicyResponse
@@ -1038,7 +1115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains metadata of the E-MapReduce (EMR) cluster that you want to clone. This helps you call the CreateCluster API operation to quickly create an EMR cluster.</p>
+     * <p>Retrieves the clone metadata of an E-MapReduce (EMR) cluster. You can use this metadata to quickly create a cluster by calling the CreateCluster operation.</p>
      * 
      * @param request GetClusterCloneMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1074,7 +1151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains metadata of the E-MapReduce (EMR) cluster that you want to clone. This helps you call the CreateCluster API operation to quickly create an EMR cluster.</p>
+     * <p>Retrieves the clone metadata of an E-MapReduce (EMR) cluster. You can use this metadata to quickly create a cluster by calling the CreateCluster operation.</p>
      * 
      * @param request GetClusterCloneMetaRequest
      * @return GetClusterCloneMetaResponse
@@ -1875,6 +1952,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a managed scaling policy.</p>
+     * 
      * @param request GetManagedScalingPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetManagedScalingPolicyResponse
@@ -1908,6 +1988,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a managed scaling policy.</p>
+     * 
      * @param request GetManagedScalingPolicyRequest
      * @return GetManagedScalingPolicyResponse
      */
@@ -1918,10 +2001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取节点组详情。</p>
+     * <p>Queries the details of a node group.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to obtain the details of a node group.</p>
+     * <p>Queries the details of a node group.</p>
      * 
      * @param request GetNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1961,10 +2044,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取节点组详情。</p>
+     * <p>Queries the details of a node group.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to obtain the details of a node group.</p>
+     * <p>Queries the details of a node group.</p>
      * 
      * @param request GetNodeGroupRequest
      * @return GetNodeGroupResponse
@@ -2028,7 +2111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales out the node group.</p>
+     * <p>Scales out a target node group.</p>
      * 
      * @param request IncreaseNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2100,7 +2183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales out the node group.</p>
+     * <p>Scales out a target node group.</p>
      * 
      * @param request IncreaseNodesRequest
      * @return IncreaseNodesResponse
@@ -2168,7 +2251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询API模板</p>
+     * <p>Lists API templates.</p>
      * 
      * @param request ListApiTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2228,7 +2311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询API模板</p>
+     * <p>Lists API templates.</p>
      * 
      * @param request ListApiTemplatesRequest
      * @return ListApiTemplatesResponse
@@ -2240,7 +2323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用配置。</p>
+     * <p>Queries application configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the configurations of the application.</p>
@@ -2311,7 +2394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用配置。</p>
+     * <p>Queries application configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the configurations of the application.</p>
@@ -2386,7 +2469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of auto scaling activities.</p>
+     * <p>Lists Auto Scaling activities.</p>
      * 
      * @param request ListAutoScalingActivitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2462,7 +2545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of auto scaling activities.</p>
+     * <p>Lists Auto Scaling activities.</p>
      * 
      * @param request ListAutoScalingActivitiesRequest
      * @return ListAutoScalingActivitiesResponse
@@ -2474,7 +2557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries E-MapReduce (EMR) clusters.</p>
+     * <p>Lists EMR clusters.</p>
      * 
      * @param request ListClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2542,7 +2625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries E-MapReduce (EMR) clusters.</p>
+     * <p>Lists EMR clusters.</p>
      * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
@@ -3026,7 +3109,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>list Doctor HDFSNodes</p>
+     * <p>Queries the analysis results for HDFS directories.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves batch analysis results for specific directories using EMR Doctor. The directory depth cannot exceed five levels.</p>
      * 
      * @param request ListDoctorHDFSDirectoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3086,7 +3172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>list Doctor HDFSNodes</p>
+     * <p>Queries the analysis results for HDFS directories.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves batch analysis results for specific directories using EMR Doctor. The directory depth cannot exceed five levels.</p>
      * 
      * @param request ListDoctorHDFSDirectoriesRequest
      * @return ListDoctorHDFSDirectoriesResponse
@@ -3570,7 +3659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists instance types.</p>
+     * <p>Retrieves a list of EMR instance types.</p>
      * 
      * @param request ListInstanceTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3642,7 +3731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists instance types.</p>
+     * <p>Retrieves a list of EMR instance types.</p>
      * 
      * @param request ListInstanceTypesRequest
      * @return ListInstanceTypesResponse
@@ -3654,7 +3743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of node groups in an EMR cluster.</p>
+     * <p>Queries the node groups in an EMR cluster.</p>
      * 
      * @param request ListNodeGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3718,7 +3807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of node groups in an EMR cluster.</p>
+     * <p>Queries the node groups in an EMR cluster.</p>
      * 
      * @param request ListNodeGroupsRequest
      * @return ListNodeGroupsResponse
@@ -3814,7 +3903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询主版本。</p>
+     * <p>Queries release versions.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the major E-MapReduce (EMR) versions.</p>
@@ -3857,7 +3946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询主版本。</p>
+     * <p>Queries release versions.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the major E-MapReduce (EMR) versions.</p>
@@ -3872,7 +3961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query EMR cluster bootstrap scripts or regular scripts.</p>
+     * <p>Queries the bootstrap or normal scripts of an EMR cluster.</p>
      * 
      * @param request ListScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3932,7 +4021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query EMR cluster bootstrap scripts or regular scripts.</p>
+     * <p>Queries the bootstrap or normal scripts of an EMR cluster.</p>
      * 
      * @param request ListScriptsRequest
      * @return ListScriptsResponse
@@ -3944,7 +4033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are bound to an EMR cluster.</p>
+     * <p>Queries the tags attached to E-MapReduce (EMR) clusters.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3996,7 +4085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are bound to an EMR cluster.</p>
+     * <p>Queries the tags attached to E-MapReduce (EMR) clusters.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -4078,10 +4167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to configure auto scaling policies.</p>
+     * <p>Configures an Auto Scaling policy.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a custom auto scaling rule.</p>
+     * <p>Creates a custom Auto Scaling policy.</p>
      * 
      * @param request PutAutoScalingPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4129,10 +4218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to configure auto scaling policies.</p>
+     * <p>Configures an Auto Scaling policy.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a custom auto scaling rule.</p>
+     * <p>Creates a custom Auto Scaling policy.</p>
      * 
      * @param request PutAutoScalingPolicyRequest
      * @return PutAutoScalingPolicyResponse
@@ -4241,6 +4330,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Runs an API template.</p>
+     * 
      * @param request RunApiTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunApiTemplateResponse
@@ -4282,6 +4374,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Runs an API template.</p>
+     * 
      * @param request RunApiTemplateRequest
      * @return RunApiTemplateResponse
      */
@@ -4368,10 +4463,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</p>
+     * <p>RunCluster is an upgraded version of CreateCluster. It uses HTTPS POST requests and supports larger parameter values. For complex parameters, such as objects and arrays, RunCluster uses the JSON format. This improves compatibility with command-line interface (CLI) tools.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</p>
+     * <p>Creates a pay-as-you-go or subscription cluster.</p>
      * 
      * @param tmpReq RunClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4511,10 +4606,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</p>
+     * <p>RunCluster is an upgraded version of CreateCluster. It uses HTTPS POST requests and supports larger parameter values. For complex parameters, such as objects and arrays, RunCluster uses the JSON format. This improves compatibility with command-line interface (CLI) tools.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</p>
+     * <p>Creates a pay-as-you-go or subscription cluster.</p>
      * 
      * @param request RunClusterRequest
      * @return RunClusterResponse
@@ -4642,7 +4737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>修改集群模板</p>
+     * <p>Modifies a cluster template.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an API operation template.</p>
@@ -4697,7 +4792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>修改集群模板</p>
+     * <p>Modifies a cluster template.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an API operation template.</p>
@@ -4712,7 +4807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the application configurations.</p>
+     * <p>Updates the configurations of an application.</p>
      * 
      * @param request UpdateApplicationConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4787,7 +4882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the application configurations.</p>
+     * <p>Updates the configurations of an application.</p>
      * 
      * @param request UpdateApplicationConfigsRequest
      * @return UpdateApplicationConfigsResponse
@@ -4858,6 +4953,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.d54d281ftXTbvg#/emapreduce/detail/emrpre">pricing</a> of E-MapReduce. Note: Auto-renewal is different from manual renewal. If an instance has expired or will expire the next day, you must perform a manual renewal first.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables auto-renewal for an EMR cluster and its Elastic Compute Service (ECS) instances.</p>
+     * 
      * @param request UpdateClusterAutoRenewRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateClusterAutoRenewResponse
@@ -4911,12 +5012,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.d54d281ftXTbvg#/emapreduce/detail/emrpre">pricing</a> of E-MapReduce. Note: Auto-renewal is different from manual renewal. If an instance has expired or will expire the next day, you must perform a manual renewal first.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables auto-renewal for an EMR cluster and its Elastic Compute Service (ECS) instances.</p>
+     * 
      * @param request UpdateClusterAutoRenewRequest
      * @return UpdateClusterAutoRenewResponse
      */
     public UpdateClusterAutoRenewResponse updateClusterAutoRenew(UpdateClusterAutoRenewRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateClusterAutoRenewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新节点组基本属性。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the attributes of a node group.</p>
+     * 
+     * @param request UpdateNodeGroupAttributesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNodeGroupAttributesResponse
+     */
+    public UpdateNodeGroupAttributesResponse updateNodeGroupAttributesWithOptions(UpdateNodeGroupAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ackConfig)) {
+            query.put("AckConfig", request.ackConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalSecurityGroupIds)) {
+            query.put("AdditionalSecurityGroupIds", request.additionalSecurityGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoCompensateState)) {
+            query.put("AutoCompensateState", request.autoCompensateState);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.costOptimizedConfig)) {
+            query.put("CostOptimizedConfig", request.costOptimizedConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecsSpotStrategy)) {
+            query.put("EcsSpotStrategy", request.ecsSpotStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableGracefulDecommission)) {
+            query.put("EnableGracefulDecommission", request.enableGracefulDecommission);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeList)) {
+            query.put("InstanceTypeList", request.instanceTypeList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxSize)) {
+            query.put("MaxSize", request.maxSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minSize)) {
+            query.put("MinSize", request.minSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeCount)) {
+            query.put("NodeCount", request.nodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            query.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupName)) {
+            query.put("NodeGroupName", request.nodeGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeResizeStrategy)) {
+            query.put("NodeResizeStrategy", request.nodeResizeStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spotBidPrices)) {
+            query.put("SpotBidPrices", request.spotBidPrices);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spotInstanceRemedy)) {
+            query.put("SpotInstanceRemedy", request.spotInstanceRemedy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNodeGroupAttributes"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNodeGroupAttributesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新节点组基本属性。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the attributes of a node group.</p>
+     * 
+     * @param request UpdateNodeGroupAttributesRequest
+     * @return UpdateNodeGroupAttributesResponse
+     */
+    public UpdateNodeGroupAttributesResponse updateNodeGroupAttributes(UpdateNodeGroupAttributesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateNodeGroupAttributesWithOptions(request, runtime);
     }
 
     /**

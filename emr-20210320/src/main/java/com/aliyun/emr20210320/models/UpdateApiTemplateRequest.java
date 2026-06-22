@@ -19,7 +19,7 @@ public class UpdateApiTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CreateCluster</p>
+     * <p>content</p>
      */
     @NameInMap("Content")
     public String content;
@@ -58,7 +58,7 @@ public class UpdateApiTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>datalakeTest1</p>
+     * <p>DATALAKE template</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

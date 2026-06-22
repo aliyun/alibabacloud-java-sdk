@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationConfigsRequest extends TeaModel {
     /**
-     * <p>应用配置列表。</p>
+     * <p>The list of application configurations.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<UpdateApplicationConfig> applicationConfigs;
@@ -32,11 +35,14 @@ public class UpdateApplicationConfigsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The operation performed on configuration items. Valid values:</p>
+     * <p>The operation on the configuration items. Valid values:</p>
      * <ul>
-     * <li>ADD</li>
-     * <li>UPDATE</li>
-     * <li>DELETE</li>
+     * <li><p>ADD: Adds configuration items.</p>
+     * </li>
+     * <li><p>UPDATE: Updates configuration items.</p>
+     * </li>
+     * <li><p>DELETE: Deletes configuration items.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,10 +52,12 @@ public class UpdateApplicationConfigsRequest extends TeaModel {
     public String configAction;
 
     /**
-     * <p>The operation scope. Valid values:</p>
+     * <p>The scope of the configuration operation. Valid values:</p>
      * <ul>
-     * <li>CLUSTER</li>
-     * <li>NODE_GROUP</li>
+     * <li><p>CLUSTER: The cluster level.</p>
+     * </li>
+     * <li><p>NODE_GROUP: The node group level.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +70,7 @@ public class UpdateApplicationConfigsRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>更新YARN内存配置。</p>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -86,7 +94,8 @@ public class UpdateApplicationConfigsRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>Specifies whether to refresh the configurations. Default value: True.</p>
+     * <p>Specifies whether to refresh the configurations.
+     * The default value is true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

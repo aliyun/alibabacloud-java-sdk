@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class Script extends TeaModel {
     /**
-     * <p>执行失败策略。</p>
+     * <p>The execution failure strategy. Valid values:</p>
+     * <ul>
+     * <li><p><code>FAILED_CONTINUE</code>: If the script fails, cluster creation or scaling continues.</p>
+     * </li>
+     * <li><p><code>FAILED_BLOCK</code>: If the script fails, cluster creation or scaling is blocked.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>FAILED_CONTINUE</p>
@@ -14,7 +20,13 @@ public class Script extends TeaModel {
     public String executionFailStrategy;
 
     /**
-     * <p>脚本的执行时机。</p>
+     * <p>The execution timing for the script. Valid values:</p>
+     * <ul>
+     * <li><p><code>BEFORE_INSTALL</code>: The script runs before applications are installed.</p>
+     * </li>
+     * <li><p><code>AFTER_STARTED</code>: The script runs after applications start.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>BEFORE_INSTALL</p>
@@ -23,14 +35,16 @@ public class Script extends TeaModel {
     public String executionMoment;
 
     /**
-     * <p>节点选择器。</p>
+     * <p>Specifies the nodes on which the script runs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeSelector")
     public NodeSelector nodeSelector;
 
     /**
-     * <p>脚本执行优先级。取值范围：1~100。</p>
+     * <blockquote>
+     * <p>This parameter is deprecated. Scripts run in the order they are defined.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,7 +54,7 @@ public class Script extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>脚本执行参数。</p>
+     * <p>The optional script execution arguments.</p>
      * 
      * <strong>example:</strong>
      * <p>-host 10.0.10.5 -m 30</p>
@@ -49,7 +63,7 @@ public class Script extends TeaModel {
     public String scriptArgs;
 
     /**
-     * <p>脚本名称。长度为1~64个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、下划线（_）、或者短划线（-）</p>
+     * <p>The required script name. The name must be 1 to 64 characters long and start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, numbers, underscores (<code>_</code>), or hyphens (<code>-</code>).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +73,7 @@ public class Script extends TeaModel {
     public String scriptName;
 
     /**
-     * <p>脚本所在OSS路径。</p>
+     * <p>The required path to the script in Object Storage Service (OSS). The path must start with <code>oss://</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

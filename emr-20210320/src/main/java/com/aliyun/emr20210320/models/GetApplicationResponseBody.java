@@ -45,7 +45,7 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>Value description.</p>
          * 
          * <strong>example:</strong>
-         * <p>描述</p>
+         * <p>Set timeout duration</p>
          */
         @NameInMap("Description")
         public String description;
@@ -90,7 +90,7 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>The unit of the value.</p>
          * 
          * <strong>example:</strong>
-         * <p>number</p>
+         * <p>Second</p>
          */
         @NameInMap("ValueUnit")
         public String valueUnit;
@@ -155,7 +155,7 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>Description</p>
          * 
          * <strong>example:</strong>
-         * <p>start</p>
+         * <p>Decommission action</p>
          */
         @NameInMap("Description")
         public String description;
@@ -244,7 +244,7 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>The description of the action.</p>
          * 
          * <strong>example:</strong>
-         * <p>描述</p>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -252,9 +252,12 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * <p>The execution scope. Valid values:</p>
          * <ul>
-         * <li>APPLICATION: the application scope.</li>
-         * <li>COMPONENT: the component scope.</li>
-         * <li>COMPONENT_INSTANCE: the component instance scope.</li>
+         * <li><p>APPLICATION: the application scope.</p>
+         * </li>
+         * <li><p>COMPONENT: the component scope.</p>
+         * </li>
+         * <li><p>COMPONENT_INSTANCE: the component instance scope.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

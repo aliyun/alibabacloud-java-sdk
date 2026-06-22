@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
     /**
-     * <p>The cluster IDs. Number of elements in the array: 1 to 100.</p>
+     * <p>A list of cluster IDs. The number of array elements N can range from 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -23,7 +23,7 @@ public class ListClustersRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The states of the clusters. Number of elements in the array: 1 to 100.</p>
+     * <p>An array of cluster states. The number of array elements N can range from 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;HADOOP&quot;]</p>
@@ -32,7 +32,7 @@ public class ListClustersRequest extends TeaModel {
     public java.util.List<String> clusterStates;
 
     /**
-     * <p>The list of cluster types. Number of elements in the array: 1 to 100.</p>
+     * <p>A list of cluster types. The number of array elements N can range from 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;c-b933c5aac8fe****&quot;]</p>
@@ -41,7 +41,7 @@ public class ListClustersRequest extends TeaModel {
     public java.util.List<String> clusterTypes;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return on each page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class ListClustersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The starting point of the current query. If you do not configure this parameter, the query starts from the beginning.</p>
+     * <p>The token that specifies the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJlY21OZXh0VG9rZW4iOiIxIiwidGFpaGFvTmV4dFRva2VuIjoiNTYiLCJ0YWloYW9OZXh0VG9rZW5JbnQiOjU2LCJlY21OZXh0VG9rZW5JbnQiOjF9</p>
@@ -59,7 +59,7 @@ public class ListClustersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The billing methods. You can specify a maximum of 2 items.</p>
+     * <p>The billing methods. The number of array elements N can be 1 or 2.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ECS&quot;]</p>
@@ -87,7 +87,7 @@ public class ListClustersRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tag list. Number of elements in the array: 1 to 20.</p>
+     * <p>A list of tags. The number of array elements N can range from 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;PayAsYouGo&quot;]</p>

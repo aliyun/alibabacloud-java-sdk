@@ -5,7 +5,17 @@ import com.aliyun.tea.*;
 
 public class SystemDisk extends TeaModel {
     /**
-     * <p>磁盘类型。</p>
+     * <p>The type of the system disk. Valid values:</p>
+     * <ul>
+     * <li><p><code>cloud_efficiency</code>: Ultra Disk.</p>
+     * </li>
+     * <li><p><code>cloud_ssd</code>: SSD Cloud Disk.</p>
+     * </li>
+     * <li><p><code>cloud_essd</code>: ESSD.</p>
+     * </li>
+     * <li><p><code>cloud</code>: Basic Disk.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +25,7 @@ public class SystemDisk extends TeaModel {
     public String category;
 
     /**
-     * <p>每个节点系统盘数量，默认值为1。</p>
+     * <p>Specifies the number of system disks on each node. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,14 +34,17 @@ public class SystemDisk extends TeaModel {
     public Integer count;
 
     /**
-     * <p>创建ESSD云盘作为系统盘使用时，设置云盘的性能等级。取值范围：</p>
+     * <p>The performance level of the ESSD. This parameter is valid only when <code>Category</code> is set to <code>cloud_essd</code>. Valid values:</p>
      * <ul>
-     * <li>PL0：单盘最高随机读写IOPS 1万。</li>
-     * <li>PL1（默认）：单盘最高随机读写IOPS 5万。</li>
-     * <li>PL2：单盘最高随机读写IOPS 10万。</li>
-     * <li>PL3：单盘最高随机读写IOPS 100万。</li>
+     * <li><p><code>PL0</code>: Up to 10,000 random read/write IOPS per disk.</p>
+     * </li>
+     * <li><p><code>PL1</code> (default): Up to 50,000 random read/write IOPS per disk.</p>
+     * </li>
+     * <li><p><code>PL2</code>: Up to 100,000 random read/write IOPS per disk.</p>
+     * </li>
+     * <li><p><code>PL3</code>: Up to 1,000,000 random read/write IOPS per disk.</p>
+     * </li>
      * </ul>
-     * <p>默认值：PL1。</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -40,7 +53,7 @@ public class SystemDisk extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>单位GB。</p>
+     * <p>The size of the system disk, in GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

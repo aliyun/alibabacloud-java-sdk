@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class Node extends TeaModel {
     /**
-     * <p>节点是否自动续费。</p>
+     * <p>Whether auto-renewal is enabled for the node. Valid values:</p>
+     * <ul>
+     * <li><p>true: Auto-renewal is enabled.</p>
+     * </li>
+     * <li><p>false: Auto-renewal is disabled.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +20,7 @@ public class Node extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>节点自动续费时长。</p>
+     * <p>The auto-renewal duration for the node.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +29,7 @@ public class Node extends TeaModel {
     public Integer autoRenewDuration;
 
     /**
-     * <p>节点自动续费时长单位。</p>
+     * <p>The unit of the auto-renewal duration.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -31,11 +37,17 @@ public class Node extends TeaModel {
     @NameInMap("AutoRenewDurationUnit")
     public String autoRenewDurationUnit;
 
+    /**
+     * <p>The creation time of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1603728394857</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
-     * <p>节点过期时间。</p>
+     * <p>The expiration time of the node.</p>
      * 
      * <strong>example:</strong>
      * <p>1603728394857</p>
@@ -44,27 +56,29 @@ public class Node extends TeaModel {
     public Long expireTime;
 
     /**
-     * <p>实例类型。</p>
+     * <p>The instance type of the node. This corresponds to an ECS instance type. You can call the ECS <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the available instance types.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs.g6e.xlarge</p>
+     * <p>ecs.g7.xlarge</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>运维模式状态。取值范围：</p>
+     * <p>The maintenance status of the node. Valid values:</p>
      * <ul>
-     * <li>ON：处于运维模式。</li>
-     * <li>OFF：处于非运维模式。</li>
+     * <li><p>ON: The node is in maintenance mode.</p>
+     * </li>
+     * <li><p>OFF: The node is not in maintenance mode.</p>
+     * </li>
      * </ul>
-     * <p>为空表示处于非运维模式。</p>
+     * <p>If this parameter is empty, the node is not in maintenance mode.</p>
      */
     @NameInMap("MaintenanceStatus")
     public String maintenanceStatus;
 
     /**
-     * <p>节点组ID。</p>
+     * <p>The ID of the node group.</p>
      * 
      * <strong>example:</strong>
      * <p>ng-869471354ecd****</p>
@@ -73,7 +87,15 @@ public class Node extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>节点组类型。</p>
+     * <p>The type of the node group. Valid values:</p>
+     * <ul>
+     * <li><p>MASTER: A master node group.</p>
+     * </li>
+     * <li><p>CORE: A core node group.</p>
+     * </li>
+     * <li><p>TASK: A task node group.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CORE</p>
@@ -82,7 +104,7 @@ public class Node extends TeaModel {
     public String nodeGroupType;
 
     /**
-     * <p>节点ID。</p>
+     * <p>The ID of the node.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1cudc25w2bfwl5****</p>
@@ -91,7 +113,7 @@ public class Node extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>节点名称。</p>
+     * <p>The name of the node.</p>
      * 
      * <strong>example:</strong>
      * <p>core1-1</p>
@@ -100,14 +122,20 @@ public class Node extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>节点状态。取值范围：</p>
+     * <p>The state of the node. Valid values:</p>
      * <ul>
-     * <li>Pending：创建中。</li>
-     * <li>Starting：启动中。</li>
-     * <li>Running：运行中。</li>
-     * <li>Stopping：停止中。</li>
-     * <li>Stopped：已停止。</li>
-     * <li>Terminated：已终止。</li>
+     * <li><p>Pending: The node is being created.</p>
+     * </li>
+     * <li><p>Starting: The node is starting up.</p>
+     * </li>
+     * <li><p>Running: The node is operational and running services.</p>
+     * </li>
+     * <li><p>Stopping: The node is shutting down.</p>
+     * </li>
+     * <li><p>Stopped: The node is powered off.</p>
+     * </li>
+     * <li><p>Terminated: The node has been permanently deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,25 +145,25 @@ public class Node extends TeaModel {
     public String nodeState;
 
     /**
-     * <p>私网IP。</p>
+     * <p>The private IP address of the node.</p>
      * 
      * <strong>example:</strong>
-     * <p>10.10.10.1</p>
+     * <p><code>10.10.**.**</code></p>
      */
     @NameInMap("PrivateIp")
     public String privateIp;
 
     /**
-     * <p>公网IP。</p>
+     * <p>The public IP address of the node.</p>
      * 
      * <strong>example:</strong>
-     * <p>42.120.75.***</p>
+     * <p>42.1.1.**</p>
      */
     @NameInMap("PublicIp")
     public String publicIp;
 
     /**
-     * <p>可用区ID。</p>
+     * <p>The ID of the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing-h</p>

@@ -14,7 +14,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The auto scaling policy.</p>
+     * <p>The Auto Scaling policy.</p>
      */
     @NameInMap("ScalingPolicy")
     public ScalingPolicy scalingPolicy;
@@ -42,7 +42,8 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     public static class Constraints extends TeaModel {
         /**
-         * <p>The maximum number of nodes in the node group. Default value: 2000.</p>
+         * <p>The maximum number of nodes in the node group.
+         * Default value: 2000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -51,7 +52,8 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public Integer maxCapacity;
 
         /**
-         * <p>The minimum number of nodes in the node group. Default value: 0.</p>
+         * <p>The minimum number of nodes in the node group.
+         * Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -84,10 +86,12 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     public static class ScalingRules extends TeaModel {
         /**
-         * <p>The scaling type. Valid values:</p>
+         * <p>The type of the scaling activity. Valid values:</p>
          * <ul>
-         * <li>SCALE_OUT</li>
-         * <li>SCALE_IN</li>
+         * <li><p>SCALE_OUT: scale-out.</p>
+         * </li>
+         * <li><p>SCALE_IN: scale-in.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +110,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public String adjustmentType;
 
         /**
-         * <p>The adjustment value. The parameter value must be a positive integer, which indicates the number of instances that you want to add or remove.</p>
+         * <p>The adjustment value. The value must be a positive integer. It specifies the number of instances to add or remove.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -118,13 +122,13 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public CollationTimeZone collationTimeZone;
 
         /**
-         * <p>The description of load-based scaling.</p>
+         * <p>The description of the metric-based scaling rule.</p>
          */
         @NameInMap("MetricsTrigger")
         public MetricsTrigger metricsTrigger;
 
         /**
-         * <p>The name of the auto scaling rule.</p>
+         * <p>The name of the scaling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>scaling-out-memory</p>
@@ -133,16 +137,18 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The description of time-based scaling.</p>
+         * <p>The description of the time-based scaling rule.</p>
          */
         @NameInMap("TimeTrigger")
         public TimeTrigger timeTrigger;
 
         /**
-         * <p>The type of the auto scaling rule. Valid values:</p>
+         * <p>The type of the scaling rule. Valid values:</p>
          * <ul>
-         * <li>TIME_TRIGGER: time-based scaling</li>
-         * <li>METRICS_TRIGGER: load-based scaling</li>
+         * <li><p>TIME_TRIGGER: a time-based scaling rule.</p>
+         * </li>
+         * <li><p>METRICS_TRIGGER: a metric-based scaling rule.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,13 +239,13 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The maximum and minimum number of nodes in the node group.</p>
+         * <p>The constraints on the minimum and maximum number of nodes in the node group.</p>
          */
         @NameInMap("Constraints")
         public Constraints constraints;
 
         /**
-         * <p>The ID of the node group.</p>
+         * <p>The node group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-869471354ecd****</p>
@@ -248,7 +254,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public String nodeGroupId;
 
         /**
-         * <p>The ID of the scaling policy.</p>
+         * <p>The scaling policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asp-asduwe23znl***</p>
@@ -257,7 +263,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public String scalingPolicyId;
 
         /**
-         * <p>The auto scaling rules.</p>
+         * <p>The list of scaling rules.</p>
          */
         @NameInMap("ScalingRules")
         public java.util.List<ScalingRules> scalingRules;

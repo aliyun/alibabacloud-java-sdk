@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncreaseNodesRequest extends TeaModel {
     /**
-     * <p>The application configurations. Number of elements in the array: 1 to 1,000.</p>
+     * <p>The application configurations. The number of array elements can range from 1 to 1,000.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -14,12 +14,14 @@ public class IncreaseNodesRequest extends TeaModel {
     public java.util.List<ApplicationConfig> applicationConfigs;
 
     /**
-     * <p>Indicates whether to automatically pay for the orders involved in the scale-out operation. This parameter takes effect only when the PaymentType parameter is set to Subscription. Valid values:</p>
+     * <p>Specifies whether to automatically pay for the order. This parameter is effective only when the PaymentType of the node group is Subscription. Valid values:</p>
      * <ul>
-     * <li>true: automatically pays for the order involved in this operation.</li>
-     * <li>false: does not automatically pay for the orders involved in this operation.</li>
+     * <li><p>true: Automatically pays for the order.</p>
+     * </li>
+     * <li><p>false: Does not automatically pay for the order.</p>
+     * </li>
      * </ul>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -28,10 +30,12 @@ public class IncreaseNodesRequest extends TeaModel {
     public Boolean autoPayOrder;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for nodes. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the added nodes. The default value is false. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default value)</li>
+     * <li><p>true: Enables auto-renewal.</p>
+     * </li>
+     * <li><p>false: Disables auto-renewal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +45,7 @@ public class IncreaseNodesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +55,7 @@ public class IncreaseNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of nodes to add.Valid values: 1 to 500.</p>
+     * <p>The number of nodes to add. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,17 +65,19 @@ public class IncreaseNodesRequest extends TeaModel {
     public Integer increaseNodeCount;
 
     /**
-     * <p>The minimum number of nodes that can be added. Valid values: 1 to 500.</p>
+     * <p>The minimum number of nodes to add in this scale-out operation. The value must be between 1 and 500.</p>
      * <ul>
-     * <li>If you configure this parameter, and the number of available Elastic Compute Service (ECS) instances is less than the value of the IncreaseNodeCount parameter, the system tries to add nodes based on the number specified by the <code>MinIncreaseNodeCount</code> parameter. If the minimum number of nodes are added, the scale-out status is <code>PARTIAL_COMPLETED</code>.</li>
-     * <li>If you do not configure this parameter, and the number of available ECS instances is less than the value of the IncreaseNodeCount parameter, the scale-out process fails. The scale-out status is <code>FAILED</code>.</li>
+     * <li><p>If you set this parameter and the available ECS inventory is less than IncreaseNodeCount, the system attempts to create at least the number of nodes specified by MinIncreaseNodeCount. The scale-out flow is then marked as <code>PARTIAL_COMPLETED</code>.</p>
+     * </li>
+     * <li><p>If you do not set this parameter and the available ECS inventory is less than IncreaseNodeCount, the scale-out flow fails and is marked as <code>FAILED</code>.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("MinIncreaseNodeCount")
     public Integer minIncreaseNodeCount;
 
     /**
-     * <p>The ID of the node group. The target node group to which you want to scale out the cluster.</p>
+     * <p>The ID of the node group to scale out.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +87,7 @@ public class IncreaseNodesRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The subscription duration. Valid values when the PaymentDurationUnit value is Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * <p>The subscription duration. If PaymentDurationUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -92,7 +98,7 @@ public class IncreaseNodesRequest extends TeaModel {
     /**
      * <p>The unit of the subscription duration. Valid values:</p>
      * <ul>
-     * <li>Month</li>
+     * <li>Month: The unit is month.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +111,7 @@ public class IncreaseNodesRequest extends TeaModel {
     public java.util.List<Promotion> promotions;
 
     /**
-     * <p>The ID of the region in which you want to create the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

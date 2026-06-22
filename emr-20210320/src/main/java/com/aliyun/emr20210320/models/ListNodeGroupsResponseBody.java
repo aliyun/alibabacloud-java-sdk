@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodeGroupsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of entries returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Returns the location of the data that was read. Empty indicates that the data has been read.</p>
+     * <p>The token to retrieve the next page of results. An empty value indicates that all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -23,13 +23,13 @@ public class ListNodeGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The array of node groups.</p>
+     * <p>An array of node groups.</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<NodeGroup> nodeGroups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -38,7 +38,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

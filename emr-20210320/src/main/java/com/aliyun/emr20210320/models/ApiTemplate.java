@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApiTemplate extends TeaModel {
     /**
-     * <p>接口名。</p>
+     * <p>The name of the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateCluster</p>
@@ -14,13 +14,16 @@ public class ApiTemplate extends TeaModel {
     public String apiName;
 
     /**
-     * <p>模版接口参数。</p>
+     * <p>The parameters in the API operation template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>content</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -29,7 +32,7 @@ public class ApiTemplate extends TeaModel {
     public String regionId;
 
     /**
-     * <p>资源组ID。</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -38,7 +41,7 @@ public class ApiTemplate extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>模板状态。</p>
+     * <p>The status of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -47,7 +50,7 @@ public class ApiTemplate extends TeaModel {
     public String status;
 
     /**
-     * <p>模板ID。</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AT-Af***</p>
@@ -56,10 +59,10 @@ public class ApiTemplate extends TeaModel {
     public String templateId;
 
     /**
-     * <p>模板ID。</p>
+     * <p>The name of the template.</p>
      * 
      * <strong>example:</strong>
-     * <p>AT-Af***</p>
+     * <p>datalakeTest1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

@@ -103,6 +103,12 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The suggestion on executing the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <h5>当前节点：container</h5>
+         * <h5>存在问题：</h5>
+         * <p>最大内存利用率为7.75%，利用率较低</p>
+         * <p>尝试减小Tez Container内存，可通过hive.tez.container.size进行设置</p>
          */
         @NameInMap("Suggestion")
         public String suggestion;

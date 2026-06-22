@@ -266,7 +266,7 @@ public class DRPlanConfiguration extends TeaModel {
 
     public static class Tags extends TeaModel {
         /**
-         * <p>标签键。必填参数，不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或https://。</p>
+         * <p>The tag key. This parameter is required. The key can be up to 128 characters in length and cannot be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class DRPlanConfiguration extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值。非必填，可以为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。</p>
+         * <p>The tag value. This parameter is optional. The value can be up to 128 characters in length and can be an empty string. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>IT</p>

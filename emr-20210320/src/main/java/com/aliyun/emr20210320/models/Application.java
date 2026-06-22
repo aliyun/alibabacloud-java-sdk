@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class Application extends TeaModel {
     /**
-     * <p>应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。</p>
+     * <p>The application name. You can find the list of application names for each EMR distribution on the cluster creation page in the EMR console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>HDFS</p>
+     * <p>SPARK</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;

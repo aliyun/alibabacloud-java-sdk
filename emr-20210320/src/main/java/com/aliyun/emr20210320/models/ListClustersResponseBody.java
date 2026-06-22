@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
     /**
-     * <p>The clusters.</p>
+     * <p>The list of clusters.</p>
      */
     @NameInMap("Clusters")
     public java.util.List<ClusterSummary> clusters;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListClustersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The page number of the next page returned.</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJlY21OZXh0VG9rZW4iOiIxIiwidGFpaGFvTmV4dFRva2VuIjoiNTYiLCJ0YWloYW9OZXh0VG9rZW5JbnQiOjU2LCJlY21OZXh0VG9rZW5JbnQiOjF9</p>
@@ -29,7 +29,7 @@ public class ListClustersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3896A</p>
@@ -38,7 +38,7 @@ public class ListClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

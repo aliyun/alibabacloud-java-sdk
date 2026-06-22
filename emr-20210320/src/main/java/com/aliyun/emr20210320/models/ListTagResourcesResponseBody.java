@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of entries returned in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Returns the location of the data that was read. Empty indicates that the data has been read.</p>
+     * <p>The token that is used to start the next query. If this parameter is not returned, all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>372D4E9B-2509-5EFA-846B-B34FBF143F56</p>
@@ -32,13 +32,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the tag. Contains the resource ID, resource type, and tag key-value information.</p>
+     * <p>The list of tag resources. It contains the resource ID, resource type, tag key, and tag value.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<TagResources> tagResources;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the filter criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -93,7 +93,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class TagResources extends TeaModel {
         /**
-         * <p>Indicates the ID of a resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-b933c5aac8fe****</p>
@@ -111,7 +111,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tag key of the ENI.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>Department</p>
@@ -120,7 +120,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the ENI.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>Dev</p>

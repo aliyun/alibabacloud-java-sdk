@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class InstanceType extends TeaModel {
     /**
-     * <p>cpu架构。</p>
+     * <p>The CPU architecture. Valid values:</p>
+     * <ul>
+     * <li><p><code>X86</code>: X86 architecture.</p>
+     * </li>
+     * <li><p><code>ARM</code>: ARM architecture.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>X86</p>
@@ -14,7 +20,7 @@ public class InstanceType extends TeaModel {
     public String cpuArchitecture;
 
     /**
-     * <p>vCPU内核数目。</p>
+     * <p>The number of vCPUs.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -23,23 +29,38 @@ public class InstanceType extends TeaModel {
     public Integer cpuCore;
 
     /**
-     * <p>实例规格分类。取值范围：</p>
+     * <p>The instance category. Valid values:</p>
      * <ul>
-     * <li>General-purpose： 通用型。</li>
-     * <li>Compute-optimized：计算型。</li>
-     * <li>Memory-optimized：内存型。</li>
-     * <li>Big data：大数据型。</li>
-     * <li>Local SSDs ：本地SSD型。</li>
-     * <li>High Clock Speed ：高主频型。</li>
-     * <li>Enhanced ：增强型。</li>
-     * <li>Shared：共享型。</li>
-     * <li>Compute-optimized with GPU ：GPU计算型。</li>
-     * <li>Visual Compute-optimized ：视觉计算型。</li>
-     * <li>Heterogeneous Service ：异构服务型。</li>
-     * <li>Compute-optimized with FPGA ：FPGA计算型。</li>
-     * <li>Compute-optimized with NPU ：NPU计算型。</li>
-     * <li>ECS Bare Metal ：弹性裸金属服务器。</li>
-     * <li>Super Computing Cluster：超级计算集群。</li>
+     * <li><p><code>General-purpose</code>: A general-purpose instance type.</p>
+     * </li>
+     * <li><p><code>Compute-optimized</code>: A compute-optimized instance type.</p>
+     * </li>
+     * <li><p><code>Memory-optimized</code>: A memory-optimized instance type.</p>
+     * </li>
+     * <li><p><code>Big data</code>: A big data instance type.</p>
+     * </li>
+     * <li><p><code>Local SSDs</code>: A local SSD instance type.</p>
+     * </li>
+     * <li><p><code>High Clock Speed</code>: A high clock speed instance type.</p>
+     * </li>
+     * <li><p><code>Enhanced</code>: An enhanced instance type.</p>
+     * </li>
+     * <li><p><code>Shared</code>: A shared instance type.</p>
+     * </li>
+     * <li><p><code>Compute-optimized with GPU</code>: A compute-optimized instance type with GPUs.</p>
+     * </li>
+     * <li><p><code>Visual Compute-optimized</code>: A visual compute-optimized instance type.</p>
+     * </li>
+     * <li><p><code>Heterogeneous Service</code>: A heterogeneous service instance type.</p>
+     * </li>
+     * <li><p><code>Compute-optimized with FPGA</code>: A compute-optimized instance type with FPGAs.</p>
+     * </li>
+     * <li><p><code>Compute-optimized with NPU</code>: A compute-optimized instance type with NPUs.</p>
+     * </li>
+     * <li><p><code>ECS Bare Metal</code>: An ECS Bare Metal instance.</p>
+     * </li>
+     * <li><p><code>Super Computing Cluster</code>: A supercomputing cluster instance type.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +70,7 @@ public class InstanceType extends TeaModel {
     public String instanceCategory;
 
     /**
-     * <p>实例规格。</p>
+     * <p>The ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance type families</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
@@ -58,7 +79,7 @@ public class InstanceType extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>实例规格所属的实例规格族。取值请参见DescribeInstanceTypeFamilies。</p>
+     * <p>The instance type family. For valid values, see the ECS documentation for <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6</p>
@@ -67,7 +88,7 @@ public class InstanceType extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>实例挂载的本地盘的数量。</p>
+     * <p>The number of local disks attached to the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -76,7 +97,7 @@ public class InstanceType extends TeaModel {
     public Integer localStorageAmount;
 
     /**
-     * <p>实例挂载的本地盘的单盘容量。单位：GiB</p>
+     * <p>The capacity of each local disk attached to the instance, in GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -88,7 +109,13 @@ public class InstanceType extends TeaModel {
     public String modifyType;
 
     /**
-     * <p>是否IO优化类型。</p>
+     * <p>Specifies whether the instance type is I/O optimized. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The instance type is I/O optimized.</p>
+     * </li>
+     * <li><p><code>false</code>: The instance type is not I/O optimized.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

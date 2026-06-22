@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetManagedScalingPolicyResponseBody extends TeaModel {
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -13,6 +13,9 @@ public class GetManagedScalingPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The elastic scaling policy.</p>
+     */
     @NameInMap("ScalingPolicy")
     public ScalingPolicy scalingPolicy;
 
@@ -39,7 +42,7 @@ public class GetManagedScalingPolicyResponseBody extends TeaModel {
 
     public static class Constraints extends TeaModel {
         /**
-         * <p>最大值</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -48,7 +51,7 @@ public class GetManagedScalingPolicyResponseBody extends TeaModel {
         public Integer maxCapacity;
 
         /**
-         * <p>最大按量数量</p>
+         * <p>The maximum number of pay-as-you-go task nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -57,7 +60,7 @@ public class GetManagedScalingPolicyResponseBody extends TeaModel {
         public Integer maxOnDemandCapacity;
 
         /**
-         * <p>最小值</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -98,7 +101,7 @@ public class GetManagedScalingPolicyResponseBody extends TeaModel {
 
     public static class ScalingPolicy extends TeaModel {
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-b933c5aac8fe****</p>
@@ -107,13 +110,13 @@ public class GetManagedScalingPolicyResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>最大最小值约束</p>
+         * <p>The constraints on the maximum and minimum values.</p>
          */
         @NameInMap("Constraints")
         public Constraints constraints;
 
         /**
-         * <p>伸缩策略ID。</p>
+         * <p>The scaling policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asp-asduwe23znl***</p>

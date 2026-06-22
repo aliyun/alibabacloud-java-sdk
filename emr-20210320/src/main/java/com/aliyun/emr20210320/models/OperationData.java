@@ -4,9 +4,21 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class OperationData extends TeaModel {
+    /**
+     * <p>The number of units actually delivered.</p>
+     */
     @NameInMap("actualDeliveredAmounts")
     public Integer actualDeliveredAmounts;
 
+    /**
+     * <p>The IDs of instances that could not be refunded.</p>
+     */
+    @NameInMap("failedRefundInstanceIds")
+    public java.util.List<String> failedRefundInstanceIds;
+
+    /**
+     * <p>The number of units requested.</p>
+     */
     @NameInMap("toBeDeliveredAmounts")
     public Integer toBeDeliveredAmounts;
 
@@ -21,6 +33,14 @@ public class OperationData extends TeaModel {
     }
     public Integer getActualDeliveredAmounts() {
         return this.actualDeliveredAmounts;
+    }
+
+    public OperationData setFailedRefundInstanceIds(java.util.List<String> failedRefundInstanceIds) {
+        this.failedRefundInstanceIds = failedRefundInstanceIds;
+        return this;
+    }
+    public java.util.List<String> getFailedRefundInstanceIds() {
+        return this.failedRefundInstanceIds;
     }
 
     public OperationData setToBeDeliveredAmounts(Integer toBeDeliveredAmounts) {

@@ -15,7 +15,7 @@ public class CreateNodeGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The information about the node group.</p>
+     * <p>The information about the machine group.</p>
      */
     @NameInMap("NodeGroup")
     public NodeGroupConfig nodeGroup;
