@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeACLProtectTrendResponseBody extends TeaModel {
     /**
-     * <p>The number of inbound sessions blocked by access control policies for internet traffic.</p>
+     * <p>The number of inbound interceptions by Internet access control.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -20,10 +20,11 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
      * <p>0</p>
      */
     @NameInMap("InterVPCProtectCnt")
+    @Deprecated
     public Long interVPCProtectCnt;
 
     /**
-     * <p>The interval between data points. Unit: seconds.</p>
+     * <p>The interval at which data is returned. Unit: seconds. A result is returned at each interval.</p>
      * 
      * <strong>example:</strong>
      * <p>86400</p>
@@ -32,7 +33,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The number of outbound sessions blocked by access control policies for internet traffic.</p>
+     * <p>The number of outbound interceptions by Internet access control.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +42,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     public Long outProtectCnt;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9063AB86-6FFA-5B2D-A16D-697C966DECA3</p>
@@ -50,7 +51,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of sessions that trigger the alert action in access control policies in the query time range.</p>
+     * <p>The cumulative total of AlertCnt across all time points within the query time range. This value indicates the total number of sessions that matched an ACL policy and triggered the monitor (alert) action during the entire time period.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +60,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     public Long totalAlertCnt;
 
     /**
-     * <p>The total number of sessions that are allowed by access control policies in the query time range.</p>
+     * <p>The cumulative total of PassCnt across all time points within the query time range. This value indicates the total number of sessions that matched an ACL policy and were allowed during the entire time period.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -68,7 +69,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     public Long totalPassCnt;
 
     /**
-     * <p>The total number of sessions blocked by access control policies for internet traffic.</p>
+     * <p>The total number of Internet access control interceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -77,7 +78,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     public Long totalProtectCnt;
 
     /**
-     * <p>The trend of sessions blocked by access control policies for internet traffic.</p>
+     * <p>The list of Internet access control intercept trend data.</p>
      */
     @NameInMap("TrendList")
     public java.util.List<DescribeACLProtectTrendResponseBodyTrendList> trendList;
@@ -95,6 +96,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         return this.inProtectCnt;
     }
 
+    @Deprecated
     public DescribeACLProtectTrendResponseBody setInterVPCProtectCnt(Long interVPCProtectCnt) {
         this.interVPCProtectCnt = interVPCProtectCnt;
         return this;
@@ -161,7 +163,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
 
     public static class DescribeACLProtectTrendResponseBodyTrendList extends TeaModel {
         /**
-         * <p>The total number of sessions that trigger the alert action in access control policies at the specified point in time.</p>
+         * <p>The total number of sessions that matched an ACL policy and triggered the monitor (alert) action at this point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -170,7 +172,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         public Integer alertCnt;
 
         /**
-         * <p>The total number of sessions that are allowed by access control policies at the specified point in time.</p>
+         * <p>The total number of sessions that matched an ACL policy and were allowed at this point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +181,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         public Integer passCnt;
 
         /**
-         * <p>The number of sessions blocked by access control policies for internet traffic on the current day.</p>
+         * <p>The number of Internet access control interceptions on the day.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -188,7 +190,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         public Integer protectCnt;
 
         /**
-         * <p>The timestamp that indicates the start of the query time range. Unit: seconds.</p>
+         * <p>The timestamp of 00:00 on each day. Unit: seconds. Indicates the date.</p>
          * 
          * <strong>example:</strong>
          * <p>1697299200</p>

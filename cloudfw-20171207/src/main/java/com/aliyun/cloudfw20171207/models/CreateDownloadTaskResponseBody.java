@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E7F333E0-7B70-54DA-A307-4B2B49DEE923</p>
@@ -14,11 +14,17 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the task. Valid values:</p>
-     * <p>finish: The task is complete. You can query the task to get the file download link.</p>
-     * <p>start: The task has started.</p>
-     * <p>error: The task failed.</p>
-     * <p>expire: The task expired. The task file is invalid and cannot be downloaded.</p>
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><p>finish: The task is complete. You can query the task to obtain the download URL of the task file.</p>
+     * </li>
+     * <li><p>start: The task has started.</p>
+     * </li>
+     * <li><p>error: The task failed.</p>
+     * </li>
+     * <li><p>expire: The task has expired. The task file is no longer valid and cannot be downloaded.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -27,7 +33,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The unique ID of the task.</p>
+     * <p>The task ID, which uniquely identifies the task.</p>
      * 
      * <strong>example:</strong>
      * <p>132</p>

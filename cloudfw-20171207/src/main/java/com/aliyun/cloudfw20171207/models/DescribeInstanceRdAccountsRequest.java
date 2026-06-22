@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRdAccountsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The language of the request and response.</p>
+     * <p>The language type for the request and response messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +23,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The description of the member account.</p>
+     * <p>The remarks of the Cloud Firewall member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>renewal</p>
@@ -32,7 +32,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String memberDesc;
 
     /**
-     * <p>The display name of the member account.</p>
+     * <p>The name of the Cloud Firewall member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>cloudfirewall_2</p>
@@ -41,7 +41,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String memberDisplayName;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -50,7 +50,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.170.XXX</p>

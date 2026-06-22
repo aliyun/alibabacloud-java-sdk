@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
     /**
-     * <p>The list of data.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeUnprotectedPortTrendResponseBodyDataList> dataList;
@@ -20,7 +20,7 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E599A84E-CD22-5E42-A2A9-01A254AC****</p>
@@ -59,7 +59,7 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
 
     public static class DescribeUnprotectedPortTrendResponseBodyDataList extends TeaModel {
         /**
-         * <p>The number of blocks.</p>
+         * <p>The number of blocked requests.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

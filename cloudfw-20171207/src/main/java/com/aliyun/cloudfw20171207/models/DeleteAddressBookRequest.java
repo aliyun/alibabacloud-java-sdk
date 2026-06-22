@@ -7,7 +7,7 @@ public class DeleteAddressBookRequest extends TeaModel {
     /**
      * <p>The unique ID of the address book.</p>
      * <blockquote>
-     * <p>To obtain this ID, call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation.</p>
+     * <p>You can call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation to query the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,11 @@ public class DeleteAddressBookRequest extends TeaModel {
     public String groupUuid;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language type. Valid values:</p>
+     * <ul>
+     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese (default).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

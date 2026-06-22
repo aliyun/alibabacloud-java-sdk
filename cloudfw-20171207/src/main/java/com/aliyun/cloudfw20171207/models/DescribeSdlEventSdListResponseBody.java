@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlEventSdListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
@@ -14,13 +14,13 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of sensitive data from the data breach.</p>
+     * <p>The list of sensitive data involved in data leaks.</p>
      */
     @NameInMap("SdlEventSensitiveDataList")
     public java.util.List<DescribeSdlEventSdListResponseBodySdlEventSensitiveDataList> sdlEventSensitiveDataList;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -68,7 +68,7 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         public String sensitiveData;
 
         /**
-         * <p>The number of times the sensitive data appears.</p>
+         * <p>The number of occurrences of the sensitive data.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -77,7 +77,7 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         public Long sensitiveDataCnt;
 
         /**
-         * <p>The sensitivity level of the data.</p>
+         * <p>The level of the sensitive data.</p>
          * 
          * <strong>example:</strong>
          * <p>S3</p>
@@ -86,7 +86,7 @@ public class DescribeSdlEventSdListResponseBody extends TeaModel {
         public String sensitiveLevel;
 
         /**
-         * <p>The type of sensitive data.</p>
+         * <p>The type of the sensitive data.</p>
          * 
          * <strong>example:</strong>
          * <p>id_card</p>

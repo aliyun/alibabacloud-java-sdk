@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
@@ -32,7 +32,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of configurations.</p>
+     * <p>The configuration list.</p>
      */
     @NameInMap("VfwIpsSwitchConfigList")
     public java.util.List<DescribeVfwIPSConfigListResponseBodyVfwIpsSwitchConfigList> vfwIpsSwitchConfigList;
@@ -93,7 +93,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
 
     public static class DescribeVfwIPSConfigListResponseBodyVfwIpsSwitchConfigList extends TeaModel {
         /**
-         * <p>The status of the basic policies.</p>
+         * <p>The status of the Basic Policies switch.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public Integer basicRules;
 
         /**
-         * <p>The UID of the member account.</p>
+         * <p>The UID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>134646920647****</p>
@@ -111,7 +111,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>The status of the virtual patching policies.</p>
+         * <p>The status of the virtual patches switch.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -120,7 +120,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public Integer patchRules;
 
         /**
-         * <p>The policy for the block mode.</p>
+         * <p>The rule class for Block Mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,7 +129,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public Integer ruleClass;
 
         /**
-         * <p>The protection mode.</p>
+         * <p>The defense mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public Integer runMode;
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-h678sl4wv3yd5v****</p>
@@ -147,13 +147,13 @@ public class DescribeVfwIPSConfigListResponseBody extends TeaModel {
         public String vpcFirewallId;
 
         /**
-         * <p>The list of instance IDs of the VPC firewalls.</p>
+         * <p>The list of instance IDs of virtual private cloud (VPC) firewalls.</p>
          */
         @NameInMap("VpcFirewallIdList")
         public java.util.List<String> vpcFirewallIdList;
 
         /**
-         * <p>The instance name of the VPC firewall.</p>
+         * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-test</p>

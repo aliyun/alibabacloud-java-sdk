@@ -14,7 +14,7 @@ public class UpdateSecurityProxyResponseBody extends TeaModel {
     public String module;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9E2CCAB4-E789-5BC9-88DC-5CE0358E****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityProxyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the NAT firewall.</p>
+     * <p>The NAT firewall ID.</p>
      * 
      * <strong>example:</strong>
      * <p>proxy-nat97a******</p>
@@ -14,7 +14,7 @@ public class CreateSecurityProxyResponseBody extends TeaModel {
     public String proxyId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>

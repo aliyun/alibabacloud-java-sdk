@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeVpcFirewallAssetListResponseBodyDataList> dataList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>924A6CCC-4EAD-5554-8AD0-45F5ED56****</p>
@@ -20,7 +20,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -95,7 +95,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>The number of intrusion prevention system (IPS) hits.</p>
+         * <p>The number of IPS hits.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The threat level.</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -137,7 +137,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The reason for the threat.</p>
+         * <p>The risk reason.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

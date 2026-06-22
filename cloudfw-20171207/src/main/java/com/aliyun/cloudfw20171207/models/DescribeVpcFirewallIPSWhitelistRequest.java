@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
-     * <p>The language of the request and response messages.</p>
+     * <p>The language of the request and response.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese</p>
      * </li>
-     * <li><p><strong>en</strong>: English</p>
+     * <li><p><strong>en</strong>: English.</p>
      * </li>
      * </ul>
      * 
@@ -21,7 +21,7 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the Cloud Firewall member account.</p>
+     * <p>The UID of the Cloud Firewall member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>176618****104675</p>
@@ -32,10 +32,8 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall. Valid values:</p>
      * <ul>
-     * <li><p>If the VPC firewall protects a network instance in a Cloud Enterprise Network (CEN) instance, set the value to the ID of the CEN instance. For a CEN instance of Basic Edition, you can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the instance ID. For a CEN instance of Enterprise Edition, you can call the <a href="https://help.aliyun.com/document_detail/2384695.html">DescribeTrFirewallsV2List</a> operation to query the instance ID.</p>
-     * </li>
-     * <li><p>If the VPC firewall protects traffic between two VPCs that are connected by an Express Connect circuit, set the value to the instance ID of the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the VPC firewall.</p>
-     * </li>
+     * <li>If the VPC firewall protects network instances in a Cloud Enterprise Network (CEN) instance, the instance ID is the CEN instance ID. For CEN Basic Edition, call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the CEN instance ID. For CEN Enterprise Edition, call the <a href="https://help.aliyun.com/document_detail/2384695.html">DescribeTrFirewallsV2List</a> operation to query the CEN instance ID.</li>
+     * <li>If the VPC firewall protects traffic between two VPCs connected through Express Connect, the instance ID is the VPC firewall instance ID. Call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the VPC firewall instance ID.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

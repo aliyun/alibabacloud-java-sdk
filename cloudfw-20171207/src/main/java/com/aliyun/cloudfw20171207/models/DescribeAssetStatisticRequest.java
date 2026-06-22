@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetStatisticRequest extends TeaModel {
     /**
-     * <p>Language for the request and response messages. Valid values:- <strong>zh</strong>: Chinese- <strong>en</strong>: English</p>
+     * <p>The language of the request and response. Valid values:- <strong>zh</strong>: Chinese- <strong>en</strong>: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class DescribeAssetStatisticRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Source IP address of the requester.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>112.239.XX.XX</p>

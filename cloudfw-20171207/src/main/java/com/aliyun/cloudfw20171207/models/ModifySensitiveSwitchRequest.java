@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifySensitiveSwitchRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language type. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ModifySensitiveSwitchRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of sensitive data.</p>
+     * <p>The type.</p>
      * 
      * <strong>example:</strong>
      * <p>id_card</p>
@@ -29,12 +27,10 @@ public class ModifySensitiveSwitchRequest extends TeaModel {
     public String sensitiveCategory;
 
     /**
-     * <p>The status of the switch. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: on.</p>
-     * </li>
-     * <li><p><strong>0</strong>: off.</p>
-     * </li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

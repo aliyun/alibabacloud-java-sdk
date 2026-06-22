@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVfwIPSConfigListRequest extends TeaModel {
     /**
-     * <p>The language of the response.</p>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class DescribeVfwIPSConfigListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeVfwIPSConfigListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeVfwIPSConfigListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-m5e7dbc4y****</p>

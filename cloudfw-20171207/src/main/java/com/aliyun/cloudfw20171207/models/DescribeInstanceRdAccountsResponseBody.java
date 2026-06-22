@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
     /**
-     * <p>The information about the accounts.</p>
+     * <p>The account information.</p>
      */
     @NameInMap("Accounts")
     public java.util.List<DescribeInstanceRdAccountsResponseBodyAccounts> accounts;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>06D1EC07-C9EB-58AC-A750-C87C9A0****</p>
@@ -42,7 +42,7 @@ public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
 
     public static class DescribeInstanceRdAccountsResponseBodyAccounts extends TeaModel {
         /**
-         * <p>The ID of the member account.</p>
+         * <p>The ID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>171054237268****</p>
@@ -51,7 +51,7 @@ public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The display name of the member.</p>
+         * <p>The name of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

@@ -20,7 +20,7 @@ public class DeleteDownloadTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the file download task.</p>
+     * <p>The task ID of the file download task.</p>
      * 
      * <strong>example:</strong>
      * <p>4376</p>

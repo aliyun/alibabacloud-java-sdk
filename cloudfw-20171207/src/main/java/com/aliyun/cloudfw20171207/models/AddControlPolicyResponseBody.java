@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The unique ID of the access control policy for the Internet firewall.</p>
+     * <p>The unique identity ID of the access control policy for the Internet Border firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>00281255-d220-4db1-8f4f-c4df221ad84c</p>
@@ -14,7 +14,7 @@ public class AddControlPolicyResponseBody extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>

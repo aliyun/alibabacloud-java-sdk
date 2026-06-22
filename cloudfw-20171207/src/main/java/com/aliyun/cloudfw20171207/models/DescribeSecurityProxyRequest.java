@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityProxyRequest extends TeaModel {
     /**
-     * <p>The language of the request and response. Valid values:</p>
+     * <p>The language type for the request and response messages. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>
@@ -20,7 +20,7 @@ public class DescribeSecurityProxyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member account within the current Alibaba Cloud account.</p>
+     * <p>The UID of the member accounts of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -29,7 +29,7 @@ public class DescribeSecurityProxyRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The ID of the NAT Gateway.</p>
+     * <p>The ID of the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-zm0h3c1exm5bifuorg8c5</p>
@@ -47,7 +47,7 @@ public class DescribeSecurityProxyRequest extends TeaModel {
     public String pageNo;
 
     /**
-     * <p>The maximum number of entries to return on each page. The maximum value is 50.</p>
+     * <p>The maximum number of entries per page in a paged query. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,7 +65,7 @@ public class DescribeSecurityProxyRequest extends TeaModel {
     public String proxyId;
 
     /**
-     * <p>The name of the NAT firewall. The name must be 4 to 50 characters in length. It can contain letters, digits, underscores (<em>), and Chinese characters. It cannot start with an underscore (</em>).</p>
+     * <p>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
      * 
      * <strong>example:</strong>
      * <p>nat-idmp-fir</p>
@@ -83,22 +83,15 @@ public class DescribeSecurityProxyRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The status of the Cloud Firewall. Valid values:</p>
+     * <p>The status of Cloud Firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>configuring</strong>: The firewall is being created.</p>
-     * </li>
-     * <li><p><strong>deleting</strong>: The firewall is being deleted.</p>
-     * </li>
-     * <li><p><strong>normal</strong>: The firewall is running.</p>
-     * </li>
-     * <li><p><strong>abnormal</strong>: The firewall is not running as expected.</p>
-     * </li>
-     * <li><p><strong>opening</strong>: The firewall is being enabled.</p>
-     * </li>
-     * <li><p><strong>closing</strong>: The firewall is being disabled.</p>
-     * </li>
-     * <li><p><strong>closed</strong>: The firewall is disabled.</p>
-     * </li>
+     * <li><strong>configuring</strong>: Being created.</li>
+     * <li><strong>deleting</strong>: Being deleted.</li>
+     * <li><strong>normal</strong>: Normal.</li>
+     * <li><strong>abnormal</strong>: Abnormal.</li>
+     * <li><strong>opening</strong>: Being enabled.</li>
+     * <li><strong>closing</strong>: Being disabled.</li>
+     * <li><strong>closed</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,7 +101,7 @@ public class DescribeSecurityProxyRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the VPC instance.</p>
+     * <p>The VPC-connected instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-8vbwbo90rq0anm6t****</p>

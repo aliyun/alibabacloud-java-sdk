@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAclRuleCountResponseBody extends TeaModel {
     /**
-     * <p>The number of inbound access control policies on the Internet border.</p>
+     * <p>The number of inbound access control policies for the Internet firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,16 +23,17 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer internetOutAclCount;
 
     /**
-     * <p>The number of inbound access control policies on the NAT boundary.&gt;Notice:  This field is deprecated.</p>
+     * <p>The number of inbound access control policies for the NAT firewall.&gt;Notice: This field is deprecated..</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("NatInAclCount")
+    @Deprecated
     public Integer natInAclCount;
 
     /**
-     * <p>The number of outbound access control policies on the NAT boundary.</p>
+     * <p>The number of internal-to-external access control policies for the NAT firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +42,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer natOutAclCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>27936D6C-1B7A-5A5A-B9E4-FBEBBDAA****</p>
@@ -50,7 +51,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of policies.</p>
+     * <p>The total number of access control policies.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -59,7 +60,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer totalAclCount;
 
     /**
-     * <p>The number of access control policies on the VPC border.</p>
+     * <p>The number of access control policies for the VPC firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -88,6 +89,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
         return this.internetOutAclCount;
     }
 
+    @Deprecated
     public DescribeAclRuleCountResponseBody setNatInAclCount(Integer natInAclCount) {
         this.natInAclCount = natInAclCount;
         return this;

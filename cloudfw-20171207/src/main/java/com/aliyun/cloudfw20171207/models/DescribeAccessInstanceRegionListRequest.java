@@ -16,7 +16,7 @@ public class DescribeAccessInstanceRegionListRequest extends TeaModel {
     /**
      * <p>The type of the synchronization node. Valid values:</p>
      * <ul>
-     * <li><p><strong>PrivateDns</strong>: private DNS.</p>
+     * <li><p><strong>PrivateDns</strong>: Private DNS resolution.</p>
      * </li>
      * <li><p><strong>AckClusterConnector</strong>: ACK cluster connector.</p>
      * </li>

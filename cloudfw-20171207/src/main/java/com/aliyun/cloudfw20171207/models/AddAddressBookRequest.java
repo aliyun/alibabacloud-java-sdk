@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddAddressBookRequest extends TeaModel {
     /**
-     * <p>The ID of the ACK cluster connector. You can obtain this value from the following operation:</p>
+     * <p>The ACK cluster connector ID. You can obtain the value from:</p>
      * <ul>
-     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</li>
+     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: queries a list of ACK cluster connectors.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class AddAddressBookRequest extends TeaModel {
     /**
      * <p>The list of ACK cluster pod labels.</p>
      * <blockquote>
-     * <p>You can specify a maximum of 10 labels.</p>
+     * <p>A maximum of 10 labels are supported.</p>
      * </blockquote>
      */
     @NameInMap("AckLabels")
@@ -28,23 +28,23 @@ public class AddAddressBookRequest extends TeaModel {
     /**
      * <p>The list of ACK cluster pod namespaces.</p>
      * <blockquote>
-     * <p>You can specify a maximum of 10 namespaces.</p>
+     * <p>A maximum of 10 namespaces are supported.</p>
      * </blockquote>
      */
     @NameInMap("AckNamespaces")
     public java.util.List<String> ackNamespaces;
 
     /**
-     * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address, separate the address and its description with a space.</p>
+     * <p>The address list of the address book. Multiple addresses are separated by commas, and within each address element, the address and its description are separated by a space.</p>
      * <blockquote>
      * <p>This parameter is required when GroupType is set to <code>ip</code>, <code>port</code>, or <code>domain</code>.</p>
      * </blockquote>
      * <ul>
-     * <li><p>If you set GroupType to <code>ip</code>, enter IP addresses in the list. Example: 192.0.XX.XX/32 development segment,10.0.0.X/24,192.0.XX.XX/24 test segment.</p>
+     * <li><p>When GroupType is set to <code>ip</code>, enter IP addresses in the address list. Example: 192.0.XX.XX/32 development network segment, 10.0.0.X/24,192.0.XX.XX/24 test network segment.</p>
      * </li>
-     * <li><p>If you set GroupType to <code>port</code>, enter ports or port ranges in the list. Example: 80 HTTP port,100/200,3306 database port.</p>
+     * <li><p>When GroupType is set to <code>port</code>, enter ports or port ranges in the address list. Example: 80 HTTP port, 100/200,3306 database port.</p>
      * </li>
-     * <li><p>If you set GroupType to <code>domain</code>, enter domain names in the list. Example: example.com test domain name,aliyundoc.com,www\.aliyun.com Alibaba Cloud official website.</p>
+     * <li><p>When GroupType is set to <code>domain</code>, enter domain names in the address list. Example: example.com test domain, aliyundoc.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</p>
      * </li>
      * </ul>
      * 
@@ -55,7 +55,7 @@ public class AddAddressBookRequest extends TeaModel {
     public String addressList;
 
     /**
-     * <p>Specifies whether to automatically add the public IP addresses of ECS instances that match the specified tags to the address book.</p>
+     * <p>Specifies whether to automatically add the public IP addresses of ECS instances that match new tags to the address book.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -94,7 +94,7 @@ public class AddAddressBookRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The language of the address book description.</p>
+     * <p>The language type of the address book description.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -103,7 +103,7 @@ public class AddAddressBookRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -119,7 +119,7 @@ public class AddAddressBookRequest extends TeaModel {
     public java.util.List<AddAddressBookRequestTagList> tagList;
 
     /**
-     * <p>The logical relationship between multiple ECS tags.</p>
+     * <p>The logical relationship among multiple ECS tags to be matched.</p>
      * 
      * <strong>example:</strong>
      * <p>and</p>

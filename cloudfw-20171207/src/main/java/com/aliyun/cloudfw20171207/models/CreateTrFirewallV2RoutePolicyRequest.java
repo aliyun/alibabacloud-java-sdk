@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     /**
-     * <p>The list of destination network instances.</p>
+     * <p>The list of secondary traffic redirection instances.</p>
      */
     @NameInMap("DestCandidateList")
     public java.util.List<CreateTrFirewallV2RoutePolicyRequestDestCandidateList> destCandidateList;
 
     /**
-     * <p>The ID of the VPC firewall instance.</p>
+     * <p>The VPC border firewall instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-f8ce36689b224f77****</p>
@@ -20,12 +20,10 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language type for receiving messages. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +33,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The description of the routing policy.</p>
+     * <p>The traffic redirection description.</p>
      * 
      * <strong>example:</strong>
      * <p>Singapore Point to Multipoint</p>
@@ -44,7 +42,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String policyDescription;
 
     /**
-     * <p>The name of the routing policy.</p>
+     * <p>The traffic redirection name.</p>
      * 
      * <strong>example:</strong>
      * <p>Singapore Point to Multipoint</p>
@@ -53,13 +51,13 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The traffic redirection scenario of the Enterprise Edition transit router. Valid values:</p>
+     * <p>The traffic redirection scenario type for the VPC border firewall with Cloud Enterprise Network Enterprise Edition. Valid values:</p>
      * <ul>
-     * <li><p><strong>fullmesh</strong>: full-mesh</p>
+     * <li><p><strong>fullmesh</strong>: Multi-point interconnection</p>
      * </li>
-     * <li><p><strong>one_to_one</strong>: point-to-point</p>
+     * <li><p><strong>one_to_one</strong>: Point-to-point</p>
      * </li>
-     * <li><p><strong>end_to_end</strong>: point-to-multipoint</p>
+     * <li><p><strong>end_to_end</strong>: Point-to-multipoint</p>
      * </li>
      * </ul>
      * 
@@ -70,7 +68,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The list of source network instances.</p>
+     * <p>The list of primary traffic redirection instances.</p>
      */
     @NameInMap("SrcCandidateList")
     public java.util.List<CreateTrFirewallV2RoutePolicyRequestSrcCandidateList> srcCandidateList;
@@ -138,7 +136,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
 
     public static class CreateTrFirewallV2RoutePolicyRequestDestCandidateList extends TeaModel {
         /**
-         * <p>The ID of the network instance.</p>
+         * <p>The ID of the traffic redirection instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze9epancaw8t4sha****</p>
@@ -147,7 +145,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
         public String candidateId;
 
         /**
-         * <p>The type of the network instance.</p>
+         * <p>The type of the traffic redirection instance.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -180,7 +178,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
 
     public static class CreateTrFirewallV2RoutePolicyRequestSrcCandidateList extends TeaModel {
         /**
-         * <p>The ID of the network instance.</p>
+         * <p>The ID of the traffic redirection instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze9epancaw8t4sha****</p>
@@ -189,7 +187,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
         public String candidateId;
 
         /**
-         * <p>The type of the network instance.</p>
+         * <p>The type of the traffic redirection instance.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>

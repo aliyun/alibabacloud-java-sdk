@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddPrivateDnsDomainNameResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribePageDocumentsRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language type. Valid values:</p>
+     * <ul>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +18,12 @@ public class DescribePageDocumentsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page name.</p>
+     * <p>The page name. Valid values:</p>
+     * <ul>
+     * <li><strong>overview</strong>: overview page</li>
+     * <li><strong>access</strong>: access control page</li>
+     * <li><strong>switch</strong>: firewall page.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +33,7 @@ public class DescribePageDocumentsRequest extends TeaModel {
     public String pageName;
 
     /**
-     * <p>The tracing code for the source.</p>
+     * <p>The tracing code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +43,7 @@ public class DescribePageDocumentsRequest extends TeaModel {
     public String sourceCode;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>223.167.221.XXX</p>

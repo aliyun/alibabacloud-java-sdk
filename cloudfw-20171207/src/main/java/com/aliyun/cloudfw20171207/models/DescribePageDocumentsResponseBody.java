@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePageDocumentsResponseBody extends TeaModel {
     /**
-     * <p>The list of documents.</p>
+     * <p>The document list.</p>
      */
     @NameInMap("Docs")
     public java.util.List<DescribePageDocumentsResponseBodyDocs> docs;
 
     /**
-     * <p>The URL of the image.</p>
+     * <p>The image URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://img.alicdn.com/tfs/TB1E4FCAuT2gK0jSZFvXXXnFXXa-3399-662.png">https://img.alicdn.com/tfs/TB1E4FCAuT2gK0jSZFvXXXnFXXa-3399-662.png</a></p>
@@ -29,7 +29,7 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
     public String module;
 
     /**
-     * <p>Additional information.</p>
+     * <p>The list of additional resources.</p>
      */
     @NameInMap("More")
     public DescribePageDocumentsResponseBodyMore more;
@@ -99,7 +99,7 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The URL of the document.</p>
+         * <p>The document path.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://notify-center-test.ybaobx.com/webhook/arms">https://notify-center-test.ybaobx.com/webhook/arms</a></p>
@@ -141,7 +141,7 @@ public class DescribePageDocumentsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The URL of the document.</p>
+         * <p>The document path.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://zjysfy.womanhospital.cn/pub/hos/0/noneBackGround.png">https://zjysfy.womanhospital.cn/pub/hos/0/noneBackGround.png</a></p>

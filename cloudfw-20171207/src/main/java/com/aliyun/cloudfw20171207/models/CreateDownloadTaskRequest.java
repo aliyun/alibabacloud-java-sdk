@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadTaskRequest extends TeaModel {
     /**
-     * <p>The language of the response message.</p>
+     * <p>The language of the received messages.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Chinese (default)</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong>: (default) Chinese</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +28,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String taskData;
 
     /**
-     * <p>The type of the task. For a list of valid values, see the API for querying file download task types.</p>
+     * <p>The task type. For valid values, call the API operation that queries file download task types.</p>
      * 
      * <strong>example:</strong>
      * <p>InternetFirewallAsset</p>
@@ -39,7 +37,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The time zone of the time information in the downloaded file. The value is an IANA time zone identifier. The default value is Asia/Shanghai, which corresponds to UTC+8.</p>
+     * <p>The time zone for time information in the downloaded file. The value is an IANA time zone identifier. Default value: Asia/Shanghai (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeACLProtectTrendRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a timestamp in seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1670397599</p>
@@ -14,14 +14,11 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of the firewall. Valid values:</p>
+     * <p>The type of the firewall border. Valid values:</p>
      * <ul>
-     * <li><p><strong>internet</strong> (default): internet firewall</p>
-     * </li>
-     * <li><p><strong>vpc</strong>: VPC firewall</p>
-     * </li>
-     * <li><p><strong>nat</strong>: NAT firewall</p>
-     * </li>
+     * <li><strong>internet</strong> (default): Internet Border firewall, which detects and controls traffic between your assets and the Internet.</li>
+     * <li><strong>vpc</strong>: virtual private cloud (VPC) firewalls, which detect and control traffic between VPCs.</li>
+     * <li><strong>nat</strong>: NAT firewalls, which detect and control traffic from internal-facing assets to the Internet.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,16 +28,12 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>The time granularity for aggregating trend data, in seconds. Valid values:</p>
+     * <p>The time aggregation granularity for trend data. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><p><strong>60</strong>: 1 minute</p>
-     * </li>
-     * <li><p><strong>1800</strong>: 30 minutes</p>
-     * </li>
-     * <li><p><strong>3600</strong>: 1 hour</p>
-     * </li>
-     * <li><p><strong>86400</strong> (default): 1 day</p>
-     * </li>
+     * <li><strong>60</strong>: 1-minute granularity (uses the minute-level detail table).</li>
+     * <li><strong>1800</strong>: 30-minute granularity.</li>
+     * <li><strong>3600</strong>: 1-hour granularity.</li>
+     * <li><strong>86400</strong> (default): 1-day granularity.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,10 +64,11 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
      * <p>223.95.87.130</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     /**
-     * <p>The beginning of the time range to query. The value is a timestamp in seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1677050306</p>
@@ -119,6 +113,7 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public DescribeACLProtectTrendRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

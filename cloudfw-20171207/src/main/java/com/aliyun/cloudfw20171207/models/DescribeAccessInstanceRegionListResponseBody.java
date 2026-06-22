@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceRegionListResponseBody extends TeaModel {
     /**
-     * <p>The list of regions that support the specified type of synchronization node.</p>
+     * <p>The list of regions that support the current synchronization node type.</p>
      */
     @NameInMap("RegionNoList")
     public java.util.List<String> regionNoList;

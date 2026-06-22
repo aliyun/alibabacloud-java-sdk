@@ -14,7 +14,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The type of the Cloud Firewall instance.</p>
+     * <p>The Cloud Firewall type.</p>
      * 
      * <strong>example:</strong>
      * <p>internet</p>
@@ -23,7 +23,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>The supported ip version.</p>
+     * <p>The supported IP address version.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -32,7 +32,11 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public Integer ipVersion;
 
     /**
-     * <p>The language of the request and response.</p>
+     * <p>The language type. Valid values:</p>
+     * <ul>
+     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

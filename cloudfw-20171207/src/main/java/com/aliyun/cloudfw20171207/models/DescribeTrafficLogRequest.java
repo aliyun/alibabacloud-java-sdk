@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficLogRequest extends TeaModel {
     /**
-     * <p>The ID of the pre-matched ACL rule.</p>
+     * <p>The ACL pre-match rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-000000000000</p>
@@ -14,7 +14,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String aclPreRuleId;
 
     /**
-     * <p>The pre-matching status of the ACL.</p>
+     * <p>The ACL pre-match status.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -23,7 +23,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String aclPreState;
 
     /**
-     * <p>The status of deep packet inspection.</p>
+     * <p>The application identification status.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -68,7 +68,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The direction.</p>
+     * <p>The traffic direction.</p>
      * 
      * <strong>example:</strong>
      * <p>out</p>
@@ -86,7 +86,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The URL in the flow log.</p>
+     * <p>The URL of the flow log.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -131,7 +131,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String dstVpcRegionNo;
 
     /**
-     * <p>The end time. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time. Specify a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The Internet Service Provider (ISP).</p>
+     * <p>The Internet service provider (ISP).</p>
      * 
      * <strong>example:</strong>
      * <p>telecom</p>
@@ -186,12 +186,10 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language type of the received message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -210,7 +208,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String location;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>128599825273****</p>
@@ -219,7 +217,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public Long memberUid;
 
     /**
-     * <p>The ID of the NAT firewall.</p>
+     * <p>The NAT firewall ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-7a9c8901ed394****</p>
@@ -228,7 +226,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String natFirewallId;
 
     /**
-     * <p>The ID of the NAT Gateway.</p>
+     * <p>The NAT gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-2zew6yn017hhzbm****</p>
@@ -237,7 +235,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The page number to query. The maximum value is 20.</p>
+     * <p>The number of entries per page. Maximum value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -255,7 +253,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The action of the rule.</p>
+     * <p>The rule action result. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -264,7 +262,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ruleResult;
 
     /**
-     * <p>The source of the rule.</p>
+     * <p>The rule source.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -273,7 +271,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ruleSource;
 
     /**
-     * <p>The module that takes effect in the end.</p>
+     * <p>The final effective module.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -282,7 +280,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String ruleSourceFinal;
 
     /**
-     * <p>The traceability code.</p>
+     * <p>The tracing watermark.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -292,7 +290,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String sourceCode;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>139.217.234.XXX</p>
@@ -346,7 +344,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String srcVpcRegionNo;
 
     /**
-     * <p>The start time. This value is a UNIX timestamp. Unit: seconds. You can query data within the last 7 days. The time range for a single query cannot exceed one day.</p>
+     * <p>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. We recommend that a single query does not exceed one day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -356,7 +354,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the TLS inspection scope.</p>
+     * <p>The TLS inspection scope ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tis-98fd64c5****</p>
@@ -365,7 +363,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String tlsScopeId;
 
     /**
-     * <p>The instance ID of the VPC border firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-a42bbb7b887148c9****</p>

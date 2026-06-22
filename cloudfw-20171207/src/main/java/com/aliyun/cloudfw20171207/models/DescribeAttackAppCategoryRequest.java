@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAttackAppCategoryRequest extends TeaModel {
     /**
-     * <p>The language of the request and response messages. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>

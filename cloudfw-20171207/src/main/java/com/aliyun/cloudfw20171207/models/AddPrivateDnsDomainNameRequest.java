@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddPrivateDnsDomainNameRequest extends TeaModel {
     /**
-     * <p>The ID of the private DNS instance.</p>
+     * <p>The ID of the private DNS resolution instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,9 +22,9 @@ public class AddPrivateDnsDomainNameRequest extends TeaModel {
     public java.util.List<String> domainNameList;
 
     /**
-     * <p>The ID of the region where the instance is located.</p>
+     * <p>The region ID of the instance.</p>
      * <blockquote>
-     * <p>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

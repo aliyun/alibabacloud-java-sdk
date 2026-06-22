@@ -14,7 +14,7 @@ public class AddDomainResolveRealtimeTaskRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The type of the Cloud Firewall.</p>
+     * <p>The Cloud Firewall type.</p>
      * 
      * <strong>example:</strong>
      * <p>internet</p>

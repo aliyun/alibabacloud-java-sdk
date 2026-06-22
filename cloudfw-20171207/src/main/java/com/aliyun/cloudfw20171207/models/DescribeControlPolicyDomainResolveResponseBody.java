@@ -14,7 +14,7 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The domain resolution results.</p>
+     * <p>The domain name resolution results.</p>
      */
     @NameInMap("ResolveResult")
     public java.util.List<DescribeControlPolicyDomainResolveResponseBodyResolveResult> resolveResult;
@@ -51,13 +51,13 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The list of ip addresses.</p>
+         * <p>The IP address list.</p>
          */
         @NameInMap("IpAddrList")
         public java.util.List<String> ipAddrList;
 
         /**
-         * <p>The supported ip version.</p>
+         * <p>The supported IP address version.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -66,7 +66,7 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
-         * <p>The update time, provided as a unix timestamp in seconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>1579091739</p>

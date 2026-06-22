@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNatFirewallControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>31306819-C4BC-56F3-BBE6-*****</p>

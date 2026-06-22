@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUnprotectedPortTrendRequest extends TeaModel {
     /**
-     * <p>The end time. Use a UNIX timestamp in seconds.</p>
+     * <p>The end time. Specify a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1751210395</p>
@@ -14,7 +14,11 @@ public class DescribeUnprotectedPortTrendRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of the response message.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +27,7 @@ public class DescribeUnprotectedPortTrendRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>61.155.60.XXX</p>
@@ -32,7 +36,7 @@ public class DescribeUnprotectedPortTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start time. Use a UNIX timestamp in seconds.</p>
+     * <p>The start time. Specify a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1655778046</p>

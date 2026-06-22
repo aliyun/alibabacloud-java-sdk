@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteVpcFirewallControlPolicyRequest extends TeaModel {
     /**
-     * <p>The list of UUIDs of the access control policies.</p>
+     * <p>The list of ACL UUIDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclUuidList")
     public java.util.List<String> aclUuidList;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

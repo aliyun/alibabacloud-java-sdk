@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The unique ID of the access control policy.</p>
-     * <p>To delete an access control policy, provide its unique ID. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</p>
+     * <p>To delete a security access control policy, you must provide the unique ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The traffic direction that the access control policy manages.</p>
-     * <p>Valid value:</p>
+     * <p>The direction of traffic that the access control policy controls.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li><strong>out</strong>: outbound traffic.</li>
      * </ul>
@@ -30,12 +30,10 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language type of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +43,7 @@ public class DeleteNatFirewallControlPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT Gateway.</p>
+     * <p>The ID of the NAT gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

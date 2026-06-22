@@ -11,7 +11,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
     public java.util.List<DescribeSecurityProxyResponseBodyProxyList> proxyList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
@@ -68,7 +68,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The details of the exception.</p>
+         * <p>The error details.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -77,7 +77,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The UID of the Cloud Firewall member account.</p>
+         * <p>The UID of the Cloud Firewall member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>1797733170015112</p>
@@ -86,7 +86,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>The ID of the NAT Gateway.</p>
+         * <p>The ID of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-2zex8sf4s5vus8rq3rjqo</p>
@@ -95,7 +95,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The name of the NAT Gateway.</p>
+         * <p>The name of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs-slb-eip-waf</p>
@@ -137,22 +137,15 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public java.util.List<String> snatIpList;
 
         /**
-         * <p>The status of the Cloud Firewall. Valid values:</p>
+         * <p>The status of Cloud Firewall. Valid values:</p>
          * <ul>
-         * <li><p><strong>configuring</strong>: The firewall is being created.</p>
-         * </li>
-         * <li><p><strong>deleting</strong>: The firewall is being deleted.</p>
-         * </li>
-         * <li><p><strong>normal</strong>: The firewall is running.</p>
-         * </li>
-         * <li><p><strong>abnormal</strong>: The firewall is not running as expected.</p>
-         * </li>
-         * <li><p><strong>opening</strong>: The firewall is being enabled.</p>
-         * </li>
-         * <li><p><strong>closing</strong>: The firewall is being disabled.</p>
-         * </li>
-         * <li><p><strong>closed</strong>: The firewall is disabled.</p>
-         * </li>
+         * <li><strong>configuring</strong>: Being created.</li>
+         * <li><strong>deleting</strong>: Being deleted.</li>
+         * <li><strong>normal</strong>: Normal.</li>
+         * <li><strong>abnormal</strong>: Abnormal.</li>
+         * <li><strong>opening</strong>: Being enabled.</li>
+         * <li><strong>closing</strong>: Being disabled.</li>
+         * <li><strong>closed</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +155,11 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether the strict mode is enabled. 1: The strict mode is enabled. 0: The strict mode is disabled.</p>
+         * <p>Indicates whether strict mode is enabled. Valid values:</p>
+         * <ul>
+         * <li>1: Strict mode is enabled.</li>
+         * <li>0: Strict mode is disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -171,7 +168,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public Integer strictMode;
 
         /**
-         * <p>The ID of the vSwitch to which the Cloud Firewall instance belongs.</p>
+         * <p>The ID of the vSwitch to which the Cloud Firewall interface belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-5gu2qqfmjmwl8ktzgfekl</p>
@@ -180,7 +177,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC instance.</p>
+         * <p>The VPC-connected instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9xn35tq33hunzvpu0se</p>
@@ -189,7 +186,7 @@ public class DescribeSecurityProxyResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The instance name of the VPC.</p>
+         * <p>The name of the VPC instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1kw9igsq0yyzeanqamx</p>

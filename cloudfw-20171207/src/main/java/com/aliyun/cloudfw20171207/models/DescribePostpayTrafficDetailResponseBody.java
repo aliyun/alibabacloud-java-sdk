@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0525EADE-C112-5702-A5BC-0E2F6F94DB23</p>
@@ -23,7 +23,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of traffic statistics.</p>
+     * <p>The traffic statistics list.</p>
      */
     @NameInMap("TrafficList")
     public java.util.List<DescribePostpayTrafficDetailResponseBodyTrafficList> trafficList;
@@ -59,7 +59,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
 
     public static class DescribePostpayTrafficDetailResponseBodyTrafficList extends TeaModel {
         /**
-         * <p>The inbound network throughput, in bytes.</p>
+         * <p>The inbound network throughput (total bytes). Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1115096939</p>
@@ -77,7 +77,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The asset type. This value is valid only for the Internet border.</p>
+         * <p>The asset type. This value takes effect only for Internet border traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>EcsPublicIP</p>
@@ -86,7 +86,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The outbound network throughput, in bytes.</p>
+         * <p>The outbound network throughput (total bytes). Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>100000000</p>
@@ -95,7 +95,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The protection duration, in hours.</p>
+         * <p>The protection duration. Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -104,7 +104,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public Long protectionDuration;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -113,7 +113,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The ID of the resource. For Internet border traffic, this is the public IP address of the asset. For NAT border traffic, this is the instance ID of the firewall.</p>
+         * <p>The resource ID. For Internet border traffic, this is the public IP address of the asset. For NAT border traffic, this is the firewall instance ID of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>39.106.146.214</p>
@@ -122,7 +122,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The total network throughput for both inbound and outbound traffic, in bytes.</p>
+         * <p>The total network throughput in both inbound and outbound directions (total bytes sent and received). Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1215096939</p>
@@ -140,13 +140,13 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         public String trafficDay;
 
         /**
-         * <p>The type of the firewall border for which traffic is queried. Valid values:</p>
+         * <p>The type of traffic boundary for statistics. Valid values:</p>
          * <ul>
-         * <li><p><strong>EIP_TRAFFIC</strong>: traffic on the Internet border.</p>
+         * <li><p><strong>EIP_TRAFFIC</strong>: Internet border traffic.</p>
          * </li>
-         * <li><p><strong>NatGateway_TRAFFIC</strong>: traffic on the NAT border.</p>
+         * <li><p><strong>NatGateway_TRAFFIC</strong>: NAT border traffic.</p>
          * </li>
-         * <li><p><strong>VPC_TRAFFIC</strong>: traffic on the VPC border.</p>
+         * <li><p><strong>VPC_TRAFFIC</strong>: VPC border traffic.</p>
          * </li>
          * </ul>
          * 

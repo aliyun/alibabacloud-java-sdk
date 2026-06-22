@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetListRequest extends TeaModel {
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number of the current page in a paginated query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class DescribeAssetListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The IP version of the asset. Valid values:</p>
+     * <p>The IP version of the assets protected by Cloud Firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>4</strong> (default): IPv4</p>
-     * </li>
-     * <li><p><strong>6</strong>: IPv6</p>
-     * </li>
+     * <li><strong>4</strong> (default): IPv4.</li>
+     * <li><strong>6</strong>: IPv6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +28,10 @@ public class DescribeAssetListRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language type of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +41,7 @@ public class DescribeAssetListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the Cloud Firewall member account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -54,14 +50,11 @@ public class DescribeAssetListRequest extends TeaModel {
     public Long memberUid;
 
     /**
-     * <p>Filters for assets discovered within a specific time window. Valid values:</p>
+     * <p>The time when the asset was discovered. Valid values:</p>
      * <ul>
-     * <li><p><strong>discovered in 1 hour</strong>: The asset was added within the last hour.</p>
-     * </li>
-     * <li><p><strong>discovered in 1 day</strong>: The asset was added within the last day.</p>
-     * </li>
-     * <li><p><strong>discovered in 7 days</strong>: The asset was added within the last 7 days.</p>
-     * </li>
+     * <li><strong>discovered in 1 hour</strong>: The asset was discovered within 1 hour.</li>
+     * <li><strong>discovered in 1 day</strong>: The asset was discovered within 1 day.</li>
+     * <li><strong>discovered in 7 days</strong>: The asset was discovered within 7 days.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +64,7 @@ public class DescribeAssetListRequest extends TeaModel {
     public String newResourceTag;
 
     /**
-     * <p>Specifies whether to query information about outbound traffic.</p>
+     * <p>Specifies whether to query outbound traffic information.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -80,7 +73,7 @@ public class DescribeAssetListRequest extends TeaModel {
     public String outStatistic;
 
     /**
-     * <p>The number of assets to return per page.</p>
+     * <p>The number of Cloud Firewall-protected assets to display on each page in a paginated query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,9 +83,9 @@ public class DescribeAssetListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of your Cloud Firewall instance.</p>
+     * <p>The region ID of the Cloud Firewall.</p>
      * <blockquote>
-     * <p>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -104,44 +97,25 @@ public class DescribeAssetListRequest extends TeaModel {
     /**
      * <p>The asset type. Valid values:</p>
      * <ul>
-     * <li><p><strong>BastionHostEgressIP</strong>: The egress IP address of a Bastionhost instance.</p>
-     * </li>
-     * <li><p><strong>BastionHostIngressIP</strong>: The ingress IP address of a Bastionhost instance.</p>
-     * </li>
-     * <li><p><strong>EcsEIP</strong>: The Elastic IP Address (EIP) of an ECS instance.</p>
-     * </li>
-     * <li><p><strong>EcsPublicIP</strong>: The public IP address of an ECS instance.</p>
-     * </li>
-     * <li><p><strong>EIP</strong>: An Elastic IP Address (EIP).</p>
-     * </li>
-     * <li><p><strong>EniEIP</strong>: The EIP of an elastic network interface (ENI).</p>
-     * </li>
-     * <li><p><strong>NatEIP</strong>: The EIP of a NAT Gateway instance.</p>
-     * </li>
-     * <li><p><strong>SlbEIP</strong>: The EIP of a Server Load Balancer (SLB) or Classic Load Balancer (CLB) instance.</p>
-     * </li>
-     * <li><p><strong>SlbPublicIP</strong>: The public IP address of a Server Load Balancer (SLB) or Classic Load Balancer (CLB) instance.</p>
-     * </li>
-     * <li><p><strong>NatPublicIP</strong>: The public IP address of a NAT Gateway instance.</p>
-     * </li>
-     * <li><p><strong>HAVIP</strong>: A High-availability Virtual IP (HAVIP).</p>
-     * </li>
-     * <li><p><strong>NlbEIP</strong>: The EIP of a Network Load Balancer (NLB) instance.</p>
-     * </li>
-     * <li><p><strong>ApiGatewayEIP</strong>: The public IP address of an API Gateway instance.</p>
-     * </li>
-     * <li><p><strong>AlbEIP</strong>: The EIP of an Application Load Balancer (ALB) instance.</p>
-     * </li>
-     * <li><p><strong>AiGatewayEIP</strong>: The public IP address of an AI Gateway instance.</p>
-     * </li>
-     * <li><p><strong>GaEIP</strong>: The EIP of a Global Accelerator (GA) instance.</p>
-     * </li>
-     * <li><p><strong>SwasEIP</strong>: The public IP address of a Simple Application Server instance.</p>
-     * </li>
-     * <li><p><strong>EcdEIP</strong>: The public IP address of a Wuying instance.</p>
-     * </li>
-     * <li><p><strong>BastionHostIP</strong>: The IP address of a Bastionhost instance.</p>
-     * </li>
+     * <li><strong>BastionHostEgressIP</strong>: Bastion host egress IP.</li>
+     * <li><strong>BastionHostIngressIP</strong>: Bastion host ingress IP.</li>
+     * <li><strong>EcsEIP</strong>: ECS EIP.</li>
+     * <li><strong>EcsPublicIP</strong>: ECS public IP.</li>
+     * <li><strong>EIP</strong>: Elastic IP address.</li>
+     * <li><strong>EniEIP</strong>: Elastic network interface EIP.</li>
+     * <li><strong>NatEIP</strong>: NAT EIP.</li>
+     * <li><strong>SlbEIP</strong>: SLB EIP (CLB EIP).</li>
+     * <li><strong>SlbPublicIP</strong>: SLB public IP (CLB public IP).</li>
+     * <li><strong>NatPublicIP</strong>: NAT public IP.</li>
+     * <li><strong>HAVIP</strong>: High-availability virtual IP.</li>
+     * <li><strong>NlbEIP</strong>: NLB EIP.</li>
+     * <li><strong>ApiGatewayEIP</strong>: API Gateway public IP.</li>
+     * <li><strong>AlbEIP</strong>: ALB EIP.</li>
+     * <li><strong>AiGatewayEIP</strong>: AI Gateway public IP.</li>
+     * <li><strong>GaEIP</strong>: GA EIP.</li>
+     * <li><strong>SwasEIP</strong>: Simple Application Server public IP.</li>
+     * <li><strong>EcdEIP</strong>: Elastic Desktop Service public IP.</li>
+     * <li><strong>BastionHostIP</strong>: Bastion host IP.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,7 +134,7 @@ public class DescribeAssetListRequest extends TeaModel {
     public String searchItem;
 
     /**
-     * <p>The status of the data leak detection feature.</p>
+     * <p>The status of data leakage detection.</p>
      * 
      * <strong>example:</strong>
      * <p>open</p>
@@ -169,18 +143,15 @@ public class DescribeAssetListRequest extends TeaModel {
     public String sensitiveStatus;
 
     /**
-     * <p>The status of the security group policy. Valid values:</p>
+     * <p>The security group policy status. Valid values:</p>
      * <ul>
-     * <li><p><strong>pass</strong>: The security group policy is enforced.</p>
-     * </li>
-     * <li><p><strong>block</strong>: The security group policy is not enforced.</p>
-     * </li>
-     * <li><p><strong>unsupport</strong>: The asset does not support security group policies.</p>
+     * <li><strong>pass</strong>: Delivered.</li>
+     * <li><strong>block</strong>: Not delivered.</li>
+     * <li><strong>unsupport</strong>: Not supported.<blockquote>
+     * <p>If this parameter is not set, all security group policy statuses are queried.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you do not specify this parameter, assets are queried regardless of the security group policy status.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>pass</p>
@@ -189,19 +160,15 @@ public class DescribeAssetListRequest extends TeaModel {
     public String sgStatus;
 
     /**
-     * <p>The protection status of the asset. Valid values:</p>
+     * <p>The Cloud Firewall status. Valid values:</p>
      * <ul>
-     * <li><p><strong>open</strong>: Protection is enabled.</p>
-     * </li>
-     * <li><p><strong>opening</strong>: Protection is being enabled.</p>
-     * </li>
-     * <li><p><strong>closed</strong>: Protection is disabled.</p>
-     * </li>
-     * <li><p><strong>closing</strong>: Protection is being disabled.</p>
-     * </li>
+     * <li><strong>open</strong>: Protected.</li>
+     * <li><strong>opening</strong>: Protection enabling.</li>
+     * <li><strong>closed</strong>: Not protected.</li>
+     * <li><strong>closing</strong>: Protection disabling.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, assets are queried regardless of their protection status.</p>
+     * <p>If this parameter is not set, all firewall statuses are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -217,15 +184,14 @@ public class DescribeAssetListRequest extends TeaModel {
      * <p>eip</p>
      */
     @NameInMap("Type")
+    @Deprecated
     public String type;
 
     /**
-     * <p>The type of the user. Valid values:</p>
+     * <p>The user type. Valid values:</p>
      * <ul>
-     * <li><p><strong>buy</strong> (default): A user with a paid subscription.</p>
-     * </li>
-     * <li><p><strong>free</strong>: A user on the free tier.</p>
-     * </li>
+     * <li><strong>buy</strong> (default): Paid user.</li>
+     * <li><strong>free</strong>: Free user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -343,6 +309,7 @@ public class DescribeAssetListRequest extends TeaModel {
         return this.status;
     }
 
+    @Deprecated
     public DescribeAssetListRequest setType(String type) {
         this.type = type;
         return this;

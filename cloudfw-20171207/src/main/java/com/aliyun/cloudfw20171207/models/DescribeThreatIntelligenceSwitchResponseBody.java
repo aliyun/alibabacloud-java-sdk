@@ -11,7 +11,7 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
     public java.util.List<DescribeThreatIntelligenceSwitchResponseBodyCategoryList> categoryList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6B8E0379-2629-59A1-B811-96F3E****</p>
@@ -20,7 +20,7 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>
@@ -60,8 +60,8 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
     public static class DescribeThreatIntelligenceSwitchResponseBodyCategoryList extends TeaModel {
         /**
          * <p>The action of the rule. Valid values:</p>
-         * <p><strong>alert</strong>: Monitor.</p>
-         * <p><strong>drop</strong>: Block.</p>
+         * <p> <strong>alert</strong>: monitor mode.</p>
+         * <p> <strong>drop</strong>: Block Mode.</p>
          * 
          * <strong>example:</strong>
          * <p>alert</p>
@@ -70,7 +70,7 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The description of the category.</p>
+         * <p>The category description.</p>
          * 
          * <strong>example:</strong>
          * <p>Tor Export Malicious IP</p>
@@ -88,7 +88,7 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
         public String categoryId;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The category name.</p>
          * 
          * <strong>example:</strong>
          * <p>Tor Export Malicious IP</p>
@@ -106,9 +106,9 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
         public String categoryParentId;
 
         /**
-         * <p>The status of the switch. Valid values:</p>
-         * <p><strong>1</strong>: enabled.</p>
-         * <p><strong>0</strong>: disabled.</p>
+         * <p>The enabling status. Valid values:</p>
+         * <p> <strong>1</strong>: enabled.</p>
+         * <p> <strong>0</strong>: disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

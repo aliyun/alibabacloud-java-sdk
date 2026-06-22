@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAttackAppCategoryResponseBody extends TeaModel {
     /**
-     * <p>A list of attack application categories.</p>
+     * <p>The list of attack application categories.</p>
      */
     @NameInMap("AppCategories")
     public java.util.List<DescribeAttackAppCategoryResponseBodyAppCategories> appCategories;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID of the returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>B14757D0-4640-4B44-AC67-7F558FE****</p>
@@ -42,7 +42,7 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
 
     public static class DescribeAttackAppCategoryResponseBodyAppCategories extends TeaModel {
         /**
-         * <p>A list of attack applications.</p>
+         * <p>The list of attack applications.</p>
          */
         @NameInMap("AttackApps")
         public java.util.List<String> attackApps;

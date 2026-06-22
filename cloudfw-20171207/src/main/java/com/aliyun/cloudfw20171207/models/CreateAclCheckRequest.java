@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAclCheckRequest extends TeaModel {
     /**
-     * <p>The type of the ACL check.</p>
+     * <p>The ACL check type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

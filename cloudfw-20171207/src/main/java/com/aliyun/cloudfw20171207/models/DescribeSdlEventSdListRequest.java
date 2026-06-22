@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlEventSdListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the response.</p>
+     * <p>The language type of the received message.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -41,7 +41,7 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class DescribeSdlEventSdListRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The unique ID.</p>
+     * <p>The unique identifier ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aa58cdf6-6cf8-493c-912d-97619a24****</p>

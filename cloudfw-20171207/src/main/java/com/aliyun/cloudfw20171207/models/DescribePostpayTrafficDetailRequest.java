@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePostpayTrafficDetailRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return.
+     * <p>The page number in a paged query.
      * Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>Set the end time for the query. Use the YYYYMMDD date format.</p>
+     * <p>The end time of the query. Specify the value in the YYYYMMDD format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,8 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,12 +38,10 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The field to use for sorting. Valid values:</p>
+     * <p>The field by which to sort the results. Valid values:</p>
      * <ul>
-     * <li><p><strong>resourceId</strong>: resource ID.</p>
-     * </li>
-     * <li><p><strong>trafficDay</strong>: date.</p>
-     * </li>
+     * <li><strong>resourceId</strong>: resource ID.</li>
+     * <li><strong>trafficDay</strong>: date.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +51,7 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
+     * <p>The number of entries per page in a paged query. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -82,7 +78,7 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     public String searchItem;
 
     /**
-     * <p>Set the start time for the query. Use the YYYYMMDD date format.</p>
+     * <p>The start time of the query. Specify the value in the YYYYMMDD format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,13 +88,13 @@ public class DescribePostpayTrafficDetailRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of the firewall border for which to query traffic. This parameter is required. Valid values:</p>
+     * <p>The type of traffic boundary for statistics. This parameter is required. Valid values:</p>
      * <ul>
-     * <li><p><strong>EIP_TRAFFIC</strong>: traffic on the Internet border.</p>
+     * <li><p><strong>EIP_TRAFFIC</strong>: Internet border traffic.</p>
      * </li>
-     * <li><p><strong>NatGateway_TRAFFIC</strong>: traffic on the NAT border.</p>
+     * <li><p><strong>NatGateway_TRAFFIC</strong>: NAT border traffic.</p>
      * </li>
-     * <li><p><strong>VPC_TRAFFIC</strong>: traffic on the VPC border.</p>
+     * <li><p><strong>VPC_TRAFFIC</strong>: VPC border traffic.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

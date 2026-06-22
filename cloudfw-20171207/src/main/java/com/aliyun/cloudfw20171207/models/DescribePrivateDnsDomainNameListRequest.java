@@ -24,7 +24,7 @@ public class DescribePrivateDnsDomainNameListRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class DescribePrivateDnsDomainNameListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

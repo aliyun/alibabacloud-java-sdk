@@ -7,8 +7,10 @@ public class DeleteVpcFirewallCenConfigureRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DeleteVpcFirewallCenConfigureRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member account of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -27,7 +29,7 @@ public class DeleteVpcFirewallCenConfigureRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The list of instance IDs of the VPC firewalls.</p>
+     * <p>The instance IDs of VPC firewalls.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallIdList")

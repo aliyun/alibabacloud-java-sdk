@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionInfoResponseBody extends TeaModel {
     /**
-     * <p>The list of data.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeRegionInfoResponseBodyDataList> dataList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25E655B0-CAED-53D4-8054-F983126****</p>
@@ -20,7 +20,7 @@ public class DescribeRegionInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -59,7 +59,7 @@ public class DescribeRegionInfoResponseBody extends TeaModel {
 
     public static class DescribeRegionInfoResponseBodyDataList extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -68,7 +68,7 @@ public class DescribeRegionInfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>Shanghai</p>

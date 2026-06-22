@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNatFirewallSyncTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3E048D45-A563-5F81-9D97-536B4A84****</p>

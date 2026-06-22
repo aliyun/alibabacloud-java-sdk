@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateVpcFirewallConfigureRequest extends TeaModel {
     /**
-     * <p>The status of the VPC firewall after it is created. Valid values:</p>
+     * <p>Settings for the enabling status of the virtual private cloud (VPC) firewall after it is created. Valid values:</p>
      * <ul>
-     * <li><p><strong>open</strong> (default): The VPC firewall is automatically enabled after it is created.</p>
+     * <li><p><strong>open</strong> (default): Protection is automatically enabled after the VPC firewall is created.</p>
      * </li>
-     * <li><p><strong>close</strong>: The VPC firewall is not automatically enabled after it is created. To enable the firewall, call the <a href="https://help.aliyun.com/document_detail/342935.html">ModifyVpcFirewallSwitchStatus</a> operation.</p>
+     * <li><p><strong>close</strong>: Protection is not automatically enabled after the VPC firewall is created. You can invoke the <a href="https://help.aliyun.com/document_detail/342935.html">ModifyVpcFirewallSwitchStatus</a> operation to enable protection.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -36,12 +36,10 @@ public class CreateVpcFirewallConfigureRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:</p>
+     * <p>The CIDR block list of the local VPC, in JSON format. This parameter contains the following fields:</p>
      * <ul>
-     * <li><p><strong>RouteTableId</strong>: The ID of the route table for the local VPC.</p>
-     * </li>
-     * <li><p>RouteEntryList: The route entries. The value is a JSON string that contains DestinationCidr (the destination CIDR block of the local VPC) and <strong>NextHopInstanceId</strong> (the ID of the next hop instance of the local VPC).</p>
-     * </li>
+     * <li><strong>RouteTableId</strong>: the route table ID of the local VPC.</li>
+     * <li><strong>RouteEntryList</strong>: specified in JSON format. This field contains DestinationCidr (the destination CIDR block of the local VPC) and NextHopInstanceId (the next hop instance ID of the local VPC).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -64,7 +62,7 @@ public class CreateVpcFirewallConfigureRequest extends TeaModel {
     /**
      * <p>The region ID of the local VPC.</p>
      * <blockquote>
-     * <p>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -75,7 +73,7 @@ public class CreateVpcFirewallConfigureRequest extends TeaModel {
     public String localVpcRegion;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the Alibaba Cloud member account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -84,12 +82,10 @@ public class CreateVpcFirewallConfigureRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:</p>
+     * <p>The CIDR block list of the peer VPC, in JSON format. This parameter contains the following fields:</p>
      * <ul>
-     * <li><p><strong>RouteTableId</strong>: The ID of the route table for the peer VPC.</p>
-     * </li>
-     * <li><p>RouteEntryList: The route entries. The value is a JSON string that contains DestinationCidr (the destination CIDR block of the peer VPC) and <strong>NextHopInstanceId</strong> (the ID of the next hop instance of the peer VPC).</p>
-     * </li>
+     * <li><strong>RouteTableId</strong>: the route table ID of the peer VPC.</li>
+     * <li><strong>RouteEntryList</strong>: specified in JSON format. This field contains DestinationCidr (the destination CIDR block of the peer VPC) and NextHopInstanceId (the next hop instance ID of the peer VPC).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -112,7 +108,7 @@ public class CreateVpcFirewallConfigureRequest extends TeaModel {
     /**
      * <p>The region ID of the peer VPC.</p>
      * <blockquote>
-     * <p>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -123,7 +119,7 @@ public class CreateVpcFirewallConfigureRequest extends TeaModel {
     public String peerVpcRegion;
 
     /**
-     * <p>The instance name of the VPC firewall.</p>
+     * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

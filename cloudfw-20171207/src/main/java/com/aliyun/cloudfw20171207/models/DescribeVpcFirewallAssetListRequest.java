@@ -41,7 +41,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The ID of the ECS instance.</p>
+     * <p>The instance ID of the ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-hp3ez3rs9bxwt034****</p>
@@ -78,7 +78,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String IPProtocol;
 
     /**
-     * <p>Specifies whether to count only the traffic to AI services.</p>
+     * <p>Specifies whether to collect statistics only on traffic that accesses AI services.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -87,7 +87,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String isAITraffic;
 
     /**
-     * <p>The language of the request and response.</p>
+     * <p>The language type of the request and response messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -105,7 +105,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -114,7 +114,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the peer VPC instance.</p>
+     * <p>The instance ID of the peer VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-90rq0anm6t8vbwbo****</p>
@@ -132,7 +132,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The threat level.</p>
+     * <p>The risk level.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -141,7 +141,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The sorting method.</p>
+     * <p>The sort method.</p>
      * 
      * <strong>example:</strong>
      * <p>SessionCount</p>
@@ -160,7 +160,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the VPC instance.</p>
+     * <p>The instance ID of the VPC-connected instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
