@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>agentloop20260520</artifactId>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
   <packaging>jar</packaging>
   <name>agentloop20260520</name>
   <description>Alibaba Cloud AgentLoop (20260520) SDK for Java

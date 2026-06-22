@@ -4,6 +4,10 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class SearchContextResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

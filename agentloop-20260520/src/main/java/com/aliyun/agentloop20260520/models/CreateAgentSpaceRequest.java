@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class CreateAgentSpaceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-agent-space</p>
      */
     @NameInMap("agentSpace")
     public String agentSpace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-cms-workspace</p>
+     */
     @NameInMap("cmsWorkspace")
     public String cmsWorkspace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 

@@ -3,7 +3,7 @@ package com.aliyun.agentloop20260520.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteMem0MemoryResponse extends TeaModel {
+public class AddDatasetDataResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteMem0MemoryResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public java.util.Map<String, ?> body;
+    public AddDatasetDataResponseBody body;
 
-    public static DeleteMem0MemoryResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteMem0MemoryResponse self = new DeleteMem0MemoryResponse();
+    public static AddDatasetDataResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddDatasetDataResponse self = new AddDatasetDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMem0MemoryResponse setHeaders(java.util.Map<String, String> headers) {
+    public AddDatasetDataResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteMem0MemoryResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteMem0MemoryResponse setStatusCode(Integer statusCode) {
+    public AddDatasetDataResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteMem0MemoryResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteMem0MemoryResponse setBody(java.util.Map<String, ?> body) {
+    public AddDatasetDataResponse setBody(AddDatasetDataResponseBody body) {
         this.body = body;
         return this;
     }
-    public java.util.Map<String, ?> getBody() {
+    public AddDatasetDataResponseBody getBody() {
         return this.body;
     }
 

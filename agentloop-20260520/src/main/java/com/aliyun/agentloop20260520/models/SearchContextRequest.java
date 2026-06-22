@@ -4,24 +4,47 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class SearchContextRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;userId&quot;:&quot;alice&quot;}</p>
+     */
     @NameInMap("filter")
     public java.util.Map<String, ?> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("formatted")
     public Boolean formatted;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户最近的偏好设置</p>
      */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>semantic</p>
+     */
     @NameInMap("retrievalOption")
     public String retrievalOption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.5</p>
+     */
     @NameInMap("threshold")
     public Double threshold;
 

@@ -8,7 +8,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "agentloop.cn-beijing.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("agentloop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,23 +35,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给记忆库中增加数据</p>
+     * <p>向指定 Dataset 追加结构化数据行，避免客户端拼接 SQL。</p>
      * 
-     * @param request AddMem0MemoriesRequest
+     * @param request AddDatasetDataRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
-     * @return AddMem0MemoriesResponse
+     * @return AddDatasetDataResponse
      */
-    public AddMem0MemoriesResponse addMem0MemoriesWithOptions(AddMem0MemoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public AddDatasetDataResponse addDatasetDataWithOptions(String agentSpace, String datasetName, AddDatasetDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
-            query.put("agentSpace", request.agentSpace);
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body.put("body", request.body);
+        if (!com.aliyun.teautil.Common.isUnset(request.dataArray)) {
+            body.put("dataArray", request.dataArray);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -53,30 +60,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "AddMem0Memories"),
+            new TeaPair("action", "AddDatasetData"),
             new TeaPair("version", "2026-05-20"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1/memories"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/dataset/" + com.aliyun.openapiutil.Client.getEncodeParam(datasetName) + "/rows"),
             new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
+            new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new AddMem0MemoriesResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDatasetDataResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>给记忆库中增加数据</p>
+     * <p>向指定 Dataset 追加结构化数据行，避免客户端拼接 SQL。</p>
      * 
-     * @param request AddMem0MemoriesRequest
-     * @return AddMem0MemoriesResponse
+     * @param request AddDatasetDataRequest
+     * @return AddDatasetDataResponse
      */
-    public AddMem0MemoriesResponse addMem0Memories(AddMem0MemoriesRequest request) throws Exception {
+    public AddDatasetDataResponse addDatasetData(String agentSpace, String datasetName, AddDatasetDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.addMem0MemoriesWithOptions(request, headers, runtime);
+        return this.addDatasetDataWithOptions(agentSpace, datasetName, request, headers, runtime);
     }
 
     /**
@@ -499,150 +506,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除记忆</p>
-     * 
-     * @param tmpReq DeleteMem0MemoriesRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteMem0MemoriesResponse
-     */
-    public DeleteMem0MemoriesResponse deleteMem0MemoriesWithOptions(DeleteMem0MemoriesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        DeleteMem0MemoriesShrinkRequest request = new DeleteMem0MemoriesShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metadata)) {
-            request.metadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metadata, "metadata", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
-            query.put("agentSpace", request.agentSpace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
-            query.put("agent_id", request.agentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            query.put("app_id", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.contextStoreId)) {
-            query.put("context_store_id", request.contextStoreId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.metadataShrink)) {
-            query.put("metadata", request.metadataShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            query.put("org_id", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            query.put("project_id", request.projectId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
-            query.put("run_id", request.runId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("user_id", request.userId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteMem0Memories"),
-            new TeaPair("version", "2026-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1/memories"),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new DeleteMem0MemoriesResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>批量删除记忆</p>
-     * 
-     * @param request DeleteMem0MemoriesRequest
-     * @return DeleteMem0MemoriesResponse
-     */
-    public DeleteMem0MemoriesResponse deleteMem0Memories(DeleteMem0MemoriesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteMem0MemoriesWithOptions(request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>删除记忆</p>
-     * 
-     * @param request DeleteMem0MemoryRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteMem0MemoryResponse
-     */
-    public DeleteMem0MemoryResponse deleteMem0MemoryWithOptions(String memoryId, DeleteMem0MemoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
-            query.put("agentSpace", request.agentSpace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.contextStoreId)) {
-            query.put("context_store_id", request.contextStoreId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            query.put("org_id", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            query.put("project_id", request.projectId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteMem0Memory"),
-            new TeaPair("version", "2026-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1/memories/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryId) + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new DeleteMem0MemoryResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>删除记忆</p>
-     * 
-     * @param request DeleteMem0MemoryRequest
-     * @return DeleteMem0MemoryResponse
-     */
-    public DeleteMem0MemoryResponse deleteMem0Memory(String memoryId, DeleteMem0MemoryRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteMem0MemoryWithOptions(memoryId, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>删除流水线</p>
      * 
      * @param request DeletePipelineRequest
@@ -950,134 +813,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getDatasetWithOptions(agentSpace, datasetName, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询记忆库数据</p>
-     * 
-     * @param request GetMem0MemoriesRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetMem0MemoriesResponse
-     */
-    public GetMem0MemoriesResponse getMem0MemoriesWithOptions(GetMem0MemoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
-            query.put("agentSpace", request.agentSpace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.contextStoreId)) {
-            query.put("context_store_id", request.contextStoreId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.enableGraph)) {
-            query.put("enable_graph", request.enableGraph);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            query.put("org_id", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            query.put("project_id", request.projectId);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body.put("body", request.body);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetMem0Memories"),
-            new TeaPair("version", "2026-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v2/memories"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "array")
-        ));
-        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new GetMem0MemoriesResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询记忆库数据</p>
-     * 
-     * @param request GetMem0MemoriesRequest
-     * @return GetMem0MemoriesResponse
-     */
-    public GetMem0MemoriesResponse getMem0Memories(GetMem0MemoriesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getMem0MemoriesWithOptions(request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询记忆</p>
-     * 
-     * @param request GetMem0MemoryRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetMem0MemoryResponse
-     */
-    public GetMem0MemoryResponse getMem0MemoryWithOptions(String memoryId, GetMem0MemoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
-            query.put("agentSpace", request.agentSpace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.contextStoreId)) {
-            query.put("context_store_id", request.contextStoreId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            query.put("org_id", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            query.put("project_id", request.projectId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetMem0Memory"),
-            new TeaPair("version", "2026-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1/memories/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryId) + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new GetMem0MemoryResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询记忆</p>
-     * 
-     * @param request GetMem0MemoryRequest
-     * @return GetMem0MemoryResponse
-     */
-    public GetMem0MemoryResponse getMem0Memory(String memoryId, GetMem0MemoryRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getMem0MemoryWithOptions(memoryId, request, headers, runtime);
     }
 
     /**
@@ -1465,75 +1200,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询记忆库内容</p>
-     * 
-     * @param request SearchMem0MemoriesRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return SearchMem0MemoriesResponse
-     */
-    public SearchMem0MemoriesResponse searchMem0MemoriesWithOptions(SearchMem0MemoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
-            query.put("agentSpace", request.agentSpace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.contextStoreId)) {
-            query.put("context_store_id", request.contextStoreId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.enableGraph)) {
-            query.put("enable_graph", request.enableGraph);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            query.put("org_id", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            query.put("project_id", request.projectId);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body.put("body", request.body);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SearchMem0Memories"),
-            new TeaPair("version", "2026-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v2/memories/search"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "array")
-        ));
-        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new SearchMem0MemoriesResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询记忆库内容</p>
-     * 
-     * @param request SearchMem0MemoriesRequest
-     * @return SearchMem0MemoriesResponse
-     */
-    public SearchMem0MemoriesResponse searchMem0Memories(SearchMem0MemoriesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.searchMem0MemoriesWithOptions(request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>更新AgentSpace</p>
      * 
      * @param request UpdateAgentSpaceRequest
@@ -1709,71 +1375,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改记忆</p>
-     * 
-     * @param request UpdateMem0MemoryRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateMem0MemoryResponse
-     */
-    public UpdateMem0MemoryResponse updateMem0MemoryWithOptions(String memoryId, UpdateMem0MemoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
-            query.put("agentSpace", request.agentSpace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.contextStoreId)) {
-            query.put("context_store_id", request.contextStoreId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            query.put("org_id", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
-            query.put("project_id", request.projectId);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body.put("body", request.body);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateMem0Memory"),
-            new TeaPair("version", "2026-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1/memories/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryId) + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new UpdateMem0MemoryResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>修改记忆</p>
-     * 
-     * @param request UpdateMem0MemoryRequest
-     * @return UpdateMem0MemoryResponse
-     */
-    public UpdateMem0MemoryResponse updateMem0Memory(String memoryId, UpdateMem0MemoryRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateMem0MemoryWithOptions(memoryId, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>更新流水线</p>
      * 
      * @param request UpdatePipelineRequest
@@ -1839,52 +1440,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updatePipelineWithOptions(agentSpace, pipelineName, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>校验 Mem0 / ContextStore API Key</p>
-     * 
-     * @param request ValidateMem0APIKeyRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ValidateMem0APIKeyResponse
-     */
-    public ValidateMem0APIKeyResponse validateMem0APIKeyWithOptions(ValidateMem0APIKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
-            query.put("agentSpace", request.agentSpace);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ValidateMem0APIKey"),
-            new TeaPair("version", "2026-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1/ping"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new ValidateMem0APIKeyResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>校验 Mem0 / ContextStore API Key</p>
-     * 
-     * @param request ValidateMem0APIKeyRequest
-     * @return ValidateMem0APIKeyResponse
-     */
-    public ValidateMem0APIKeyResponse validateMem0APIKey(ValidateMem0APIKeyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.validateMem0APIKeyWithOptions(request, headers, runtime);
     }
 }

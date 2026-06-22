@@ -4,6 +4,10 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentSpaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AA689779-61AB-5077-BD91-9F7EA1205D68</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
