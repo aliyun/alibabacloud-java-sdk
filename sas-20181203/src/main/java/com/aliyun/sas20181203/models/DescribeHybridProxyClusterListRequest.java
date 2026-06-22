@@ -14,7 +14,7 @@ public class DescribeHybridProxyClusterListRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page to display in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeHybridProxyClusterListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries to display on each page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

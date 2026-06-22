@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccesskeyLeakListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,9 @@ public class DescribeAccesskeyLeakListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page.\
-     * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page for a paged query. The maximum value of PageSize is 100. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,19 +37,19 @@ public class DescribeAccesskeyLeakListRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the ID.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>127608589417****</p>
+     * <p>1232428423234****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The beginning of the time range to query. You can query all AccessKey pair leaks that are detected later than this time point. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The discovery time of the leaked information that you want to query. All AccessKey leak information discovered after this point in time is returned. This parameter is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1614155361489</p>
@@ -59,10 +58,10 @@ public class DescribeAccesskeyLeakListRequest extends TeaModel {
     public Long startTs;
 
     /**
-     * <p>Specifies whether an AccessKey pair leak is handled. Valid values:</p>
+     * <p>The processing status of the leaked AccessKey information that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>pending</strong>: unhandled</li>
-     * <li><strong>dealed</strong>: handled</li>
+     * <li><strong>pending</strong>: unprocessed</li>
+     * <li><strong>dealed</strong>: processed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

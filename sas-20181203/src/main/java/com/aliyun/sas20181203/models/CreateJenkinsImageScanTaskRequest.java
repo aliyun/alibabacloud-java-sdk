@@ -8,7 +8,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
      * <p>The digest of the image.</p>
      * 
      * <strong>example:</strong>
-     * <p>a8c9f3765684cd8d9053db9523eab58878e99a199217500efd9ae2a860a7e01e</p>
+     * <p>a8c9f3765684cd8d9053db9523eab58878e99a199217500efd9ae2a860a7****</p>
      */
     @NameInMap("Digest")
     public String digest;
@@ -26,7 +26,7 @@ public class CreateJenkinsImageScanTaskRequest extends TeaModel {
      * <p>The ID of the image.</p>
      * 
      * <strong>example:</strong>
-     * <p>b10ef7b245c34a0822055c74fc4a0e8b5baf0279306316b2c517a501ed250b1e</p>
+     * <p>b10ef7b245c34a0822055c74fc4a0e8b5baf0279306316b2c517a501ed25****</p>
      */
     @NameInMap("ImageId")
     public String imageId;

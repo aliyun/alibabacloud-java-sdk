@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeChartListResponseBody extends TeaModel {
     /**
-     * <p>The charts.</p>
+     * <p>The list of charts.</p>
      */
     @NameInMap("ChartList")
     public java.util.List<DescribeChartListResponseBodyChartList> chartList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>35B434CC-1615-5937-A04E-A9BC2868DB45</p>
@@ -42,15 +42,15 @@ public class DescribeChartListResponseBody extends TeaModel {
 
     public static class DescribeChartListResponseBodyChartList extends TeaModel {
         /**
-         * <p>The name of the business type. Valid values:</p>
+         * <p>The business type name. Valid values:</p>
          * <ul>
-         * <li>Overall Operations Metrics</li>
-         * <li>Asset Operations Metrics</li>
-         * <li>Security Alert Operations Metrics</li>
-         * <li>Vulnerability Operations Metrics</li>
-         * <li>Baseline Operations Metrics</li>
-         * <li>Cloud Product Operations Metrics</li>
-         * <li>Honeypot Operations Metrics</li>
+         * <li>Overall operation metrics</li>
+         * <li>Asset operation metrics</li>
+         * <li>Security alert operation metrics</li>
+         * <li>Vulnerability operation metrics</li>
+         * <li>Baseline operation metrics</li>
+         * <li>Cloud service operation metrics</li>
+         * <li>Cloud honeypot operation metrics.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class DescribeChartListResponseBody extends TeaModel {
          * <li>INDEX_VUL_OPERATION</li>
          * <li>INDEX_BASELINE_CHECK_OPERATION</li>
          * <li>INDEX_CLOUD_ASSET_OPERATION</li>
-         * <li>INDEX_HONEYPOT_RISK_OPERATION</li>
+         * <li>INDEX_HONEYPOT_RISK_OPERATION.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeChartListResponseBody extends TeaModel {
         public String businessType;
 
         /**
-         * <p>The ID of the chart.</p>
+         * <p>The chart ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CID_CLOUD_ASSET_SUMMARY</p>
@@ -87,7 +87,7 @@ public class DescribeChartListResponseBody extends TeaModel {
         public String chartId;
 
         /**
-         * <p>The name of the chart.</p>
+         * <p>The chart name.</p>
          * 
          * <strong>example:</strong>
          * <p>Security Score</p>
@@ -96,16 +96,16 @@ public class DescribeChartListResponseBody extends TeaModel {
         public String chartName;
 
         /**
-         * <p>The type of the chart. Valid values:</p>
+         * <p>The chart type. Valid values:</p>
          * <ul>
-         * <li><strong>text</strong></li>
-         * <li><strong>table</strong></li>
-         * <li><strong>gauge</strong></li>
-         * <li><strong>pie</strong></li>
-         * <li><strong>line</strong></li>
-         * <li><strong>bar</strong></li>
-         * <li><strong>timeBar</strong></li>
-         * <li><strong>timeLine</strong></li>
+         * <li><strong>text</strong>: text</li>
+         * <li><strong>table</strong>: table</li>
+         * <li><strong>gauge</strong>: gauge chart</li>
+         * <li><strong>pie</strong>: pie chart</li>
+         * <li><strong>line</strong>: line chart</li>
+         * <li><strong>bar</strong>: bar chart</li>
+         * <li><strong>timeBar</strong>: timeline bar chart</li>
+         * <li><strong>timeLine</strong>: timeline line chart.</li>
          * </ul>
          * 
          * <strong>example:</strong>

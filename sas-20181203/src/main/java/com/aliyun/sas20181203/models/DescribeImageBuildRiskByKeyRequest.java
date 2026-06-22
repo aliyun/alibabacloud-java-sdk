@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBuildRiskByKeyRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,10 +23,10 @@ public class DescribeImageBuildRiskByKeyRequest extends TeaModel {
     public String imageUuid;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the content in the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,9 +36,9 @@ public class DescribeImageBuildRiskByKeyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,9 +48,9 @@ public class DescribeImageBuildRiskByKeyRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The key of the risk rule. </p>
+     * <p>The key of the build risk rule.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeImageBuildRiskList~~">DescribeImageBuildRiskList</a> operation to obtain the value of <strong>RiskKey</strong>.</p>
+     * <p>You can call the <a href="~~DescribeImageBuildRiskList~~">DescribeImageBuildRiskList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeImageBuildRiskByKeyRequest extends TeaModel {
     public String riskKey;
 
     /**
-     * <p>The status of the alert event. Valid values:</p>
+     * <p>The status of the alert event to query. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: unhandled.</li>
      * <li><strong>1</strong>: ignored.</li>

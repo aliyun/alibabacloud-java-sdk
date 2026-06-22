@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public Long endTimeQuery;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of client tasks per page in a paged query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,9 +32,9 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the root task.</p>
+     * <p>The root task ID.</p>
      * <blockquote>
-     * <p>You must specify at least one of the <strong>TaskType</strong> and <strong>RootTaskId</strong> parameters.</p>
+     * <p><strong>TaskType</strong> and <strong>RootTaskId</strong> cannot both be empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,10 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public String rootTaskId;
 
     /**
-     * <p>The source of the task. Valid values include the following values:</p>
+     * <p>The node source. Valid values include but are not limited to:</p>
      * <ul>
-     * <li><strong>schedule</strong>: automatic scheduling of Cloud Security Scanner.</li>
-     * <li><strong>console</strong>: one-click detection in the Cloud Security Scanner console.</li>
+     * <li><strong>schedule</strong>: automatic scheduling of vulnerability scanning</li>
+     * <li><strong>console</strong>: one-click detection from the vulnerability scanning console</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public Long startTimeQuery;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d7b2acf8d362742123e4a84e1bf8****</p>
@@ -75,15 +75,16 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center agent</li>
-     * <li><strong>CLIENT_DEV_OPS</strong>: an O\&amp;M task of Cloud Assistant</li>
-     * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
-     * </ul>
-     * <blockquote>
-     * <p>You must specify at least one of the <strong>TaskType</strong> and <strong>RootTaskId</strong> parameters.</p>
+     * <li><strong>VUL_CHECK_TASK</strong>: vulnerability scanning node</li>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client node</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: cloud O&amp;M node</li>
+     * <li><strong>ASSET_SECURITY_CHECK</strong>: asset information collection node<blockquote>
+     * <p><strong>TaskType</strong> and <strong>RootTaskId</strong> cannot both be empty.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CLIENT_PROBLEM_CHECK</p>

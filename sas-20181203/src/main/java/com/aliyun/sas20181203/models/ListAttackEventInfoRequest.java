@@ -16,22 +16,38 @@ public class ListAttackEventInfoRequest extends TeaModel {
     /**
      * <p>Attack type. Values:</p>
      * <ul>
-     * <li>9: SQL Server brute force attack</li>
-     * <li>5: SSH brute force attack</li>
-     * <li>6: RDP brute force attack</li>
-     * <li>101: Java Struts2 attack interception</li>
-     * <li>102: Redis attack interception</li>
-     * <li>103: Chinese AntSword WebShell communication</li>
-     * <li>104: Chinese Chopper WebShell communication</li>
-     * <li>133: XISE WebShell communication</li>
-     * <li>161: WebShell upload</li>
-     * <li>209: PHP WebShell upload</li>
-     * <li>210: JSP WebShell upload</li>
-     * <li>211: ASP WebShell upload</li>
-     * <li>215: Special suffix WebShell upload</li>
-     * <li>ai_webshell: Intelligent defense for WebShell upload</li>
-     * <li>java_common_rce: Java common RCE vulnerability interception</li>
-     * <li>alinet_webrce: Adaptive web attack defense</li>
+     * <li><p>9: SQL Server brute force attack</p>
+     * </li>
+     * <li><p>5: SSH brute force attack</p>
+     * </li>
+     * <li><p>6: RDP brute force attack</p>
+     * </li>
+     * <li><p>101: Java Struts2 attack interception</p>
+     * </li>
+     * <li><p>102: Redis attack interception</p>
+     * </li>
+     * <li><p>103: Chinese AntSword WebShell communication</p>
+     * </li>
+     * <li><p>104: Chinese Chopper WebShell communication</p>
+     * </li>
+     * <li><p>133: XISE WebShell communication</p>
+     * </li>
+     * <li><p>161: WebShell upload</p>
+     * </li>
+     * <li><p>209: PHP WebShell upload</p>
+     * </li>
+     * <li><p>210: JSP WebShell upload</p>
+     * </li>
+     * <li><p>211: ASP WebShell upload</p>
+     * </li>
+     * <li><p>215: Special suffix WebShell upload</p>
+     * </li>
+     * <li><p>ai_webshell: Intelligent defense for WebShell upload</p>
+     * </li>
+     * <li><p>java_common_rce: Java common RCE vulnerability interception</p>
+     * </li>
+     * <li><p>alinet_webrce: Adaptive web attack defense</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,8 +86,10 @@ public class ListAttackEventInfoRequest extends TeaModel {
     /**
      * <p>Set the language type for request and response messages. Default is <strong>zh</strong>. Values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

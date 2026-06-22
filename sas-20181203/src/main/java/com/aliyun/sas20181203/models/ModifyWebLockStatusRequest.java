@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockStatusRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyWebLockStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>125.71.XX.XX</p>
@@ -27,13 +27,13 @@ public class ModifyWebLockStatusRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>Specifies whether to enable or disable web tamper proofing for the specified server. Valid values:</p>
+     * <p>The protection status of the server. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enables web tamper proofing</li>
-     * <li><strong>off</strong>: disables web tamper proofing</li>
+     * <li><strong>on</strong>: Enables protection.</li>
+     * <li><strong>off</strong>: Shuts down protection.</li>
      * </ul>
      * <blockquote>
-     * <p>After you disable web tamper proofing for the specified server, one quota is released.</p>
+     * <p>After you shut down web tamper-proofing for the server, a tamper-proofing authorization quota is released.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +44,8 @@ public class ModifyWebLockStatusRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The UUID of the server for which you want to enable or disable web tamper proofing. You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>The UUID of the server for which you want to modify the brute-force attacks prevention status.
+     * You can invoke the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

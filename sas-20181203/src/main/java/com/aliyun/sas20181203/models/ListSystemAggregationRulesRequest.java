@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSystemAggregationRulesRequest extends TeaModel {
     /**
-     * <p>The IDs of the aggregation types.</p>
+     * <p>The rule cluster ID.</p>
      */
     @NameInMap("AggregationIds")
     public java.util.List<Integer> aggregationIds;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,10 +21,10 @@ public class ListSystemAggregationRulesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListSystemAggregationRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,26 +44,26 @@ public class ListSystemAggregationRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Rule\<em>\</em>\<em>\</em></p>
+     * <p>规则****</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The types of the rules.</p>
+     * <p>The list of rule types.</p>
      */
     @NameInMap("RuleTypes")
     public java.util.List<Integer> ruleTypes;
 
     /**
-     * <p>The type of the operating system. Valid values:</p>
+     * <p>The operating system type. Valid values:</p>
      * <ul>
      * <li><strong>2</strong>: Windows</li>
      * <li><strong>1</strong>: Linux</li>
-     * <li><strong>0</strong>: all</li>
+     * <li><strong>0</strong>: all.</li>
      * </ul>
      * 
      * <strong>example:</strong>

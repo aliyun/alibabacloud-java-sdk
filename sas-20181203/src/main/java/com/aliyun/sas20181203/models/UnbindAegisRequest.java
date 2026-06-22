@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UnbindAegisRequest extends TeaModel {
     /**
-     * <p>The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUIDs of the non-Alibaba Cloud servers that you want to unbind. Separate multiple UUIDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

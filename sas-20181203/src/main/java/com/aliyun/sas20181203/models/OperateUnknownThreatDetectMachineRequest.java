@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class OperateUnknownThreatDetectMachineRequest extends TeaModel {
     /**
+     * <p>The operation type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>restart_study</strong>: Restarts the learning process.</p>
+     * </li>
+     * <li><p><strong>increment_study</strong>: Starts incremental learning.</p>
+     * </li>
+     * <li><p><strong>change_status</strong>: Changes the status.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>restart_study</p>
      */
@@ -12,12 +22,23 @@ public class OperateUnknownThreatDetectMachineRequest extends TeaModel {
     public String operateType;
 
     /**
+     * <p>The target status. This parameter applies only when <code>OperateType</code> is set to <code>change_status</code>. Valid values:</p>
+     * <ul>
+     * <li><p><strong>monitoring</strong>: Monitoring mode.</p>
+     * </li>
+     * <li><p><strong>blocking</strong>: Blocking mode.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>monitoring</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>A list of server UUIDs.</p>
+     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

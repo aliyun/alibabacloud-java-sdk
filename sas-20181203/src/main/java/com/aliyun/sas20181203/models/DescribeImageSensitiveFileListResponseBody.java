@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The detailed information about the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     public DescribeImageSensitiveFileListResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8D19A089-E6BC-5244-800C-7E590D50487F</p>
@@ -47,16 +47,16 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the information about the sensitive files.</p>
+     * <p>The list of sensitive files.</p>
      */
     @NameInMap("SensitiveFileList")
     public java.util.List<DescribeImageSensitiveFileListResponseBodySensitiveFileList> sensitiveFileList;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the query was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong>: successful</li>
+     * <li><strong>false</strong>: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -146,10 +146,10 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The key of the last data entry.</p>
+         * <p>The key of the last entry.</p>
          * 
          * <strong>example:</strong>
-         * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY1Nzg2NTcxNjE2NDc4NjE=</p>
+         * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY1Nzg2NTcxNjE2N******</p>
          */
         @NameInMap("LastRowKey")
         public String lastRowKey;
@@ -164,7 +164,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>149</p>
@@ -221,16 +221,16 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
 
     public static class DescribeImageSensitiveFileListResponseBodySensitiveFileList extends TeaModel {
         /**
-         * <p>The suggestion.</p>
+         * <p>The hardening suggestion for the sensitive file check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Assess risks based on business conditions, remove risky content.</p>
+         * <p>PEM (Privacy Enhanced Mail) format is a common format for digital certificates. PEM files can contain certificates, public keys, private keys, and other sensitive information. When a PEM file is either unencrypted or protected with a weak password, or if the password has been compromise, it poses a significantly higher security risk. This detection rule aims to identify such PEM files.</p>
          */
         @NameInMap("Advice")
         public String advice;
 
         /**
-         * <p>The key of the sensitive file type.</p>
+         * <p>The classification key of the sensitive file.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -239,7 +239,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public String classKey;
 
         /**
-         * <p>The name of the sensitive file type.</p>
+         * <p>The classification name of the sensitive file.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -248,7 +248,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public String className;
 
         /**
-         * <p>The number of scans that are performed on the sensitive file.</p>
+         * <p>The number of times the sensitive file was detected by scans.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -257,16 +257,16 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The description of the sensitive file.</p>
+         * <p>The description of the sensitive file check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Verify the validity of the leaked AK.</p>
+         * <p>Assess the risk based on business context and promptly remove any risky content.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the first scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1663321552000</p>
@@ -275,7 +275,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public Long firstScanTime;
 
         /**
-         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the most recent scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1663321552000</p>
@@ -286,9 +286,12 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><p><strong>high</strong>: high</p>
+         * </li>
+         * <li><p><strong>medium</strong>: medium</p>
+         * </li>
+         * <li><p><strong>low</strong>: low.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,120 +301,120 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The type of the alert for the sensitive file. Valid values:</p>
+         * <p>The sensitive file alerting type. Valid values:</p>
          * <ul>
-         * <li><strong>npm_token</strong>: Node Package Manager (NPM) access token.</li>
-         * <li><strong>ftp_cfg</strong>: FTP configuration.</li>
-         * <li><strong>google_oauth_key</strong>: Google OAuth key.</li>
-         * <li><strong>planetscale_passwd</strong>: PlanetScale password.</li>
-         * <li><strong>github_ssh_key</strong>: GitHub SSH key.</li>
-         * <li><strong>msbuild_publish_profile</strong>: MSBuild publish profile.</li>
-         * <li><strong>fastly_cdn_token</strong>: Fastly CDN token.</li>
-         * <li><strong>ssh_private_key</strong>: SSH private key.</li>
-         * <li><strong>aws_cli</strong>: Amazon Web Services (AWS) CLI credential.</li>
-         * <li><strong>cpanel_proftpd</strong>: cPanel ProFTPD credential.</li>
-         * <li><strong>postgresql_passwd</strong>: PostgreSQL password file.</li>
-         * <li><strong>discord_client_cred</strong>: Discord client credential.</li>
-         * <li><strong>rails_database</strong>: Rails database configuration.</li>
-         * <li><strong>aws_access_key</strong>: AWS access key.</li>
-         * <li><strong>esmtp_cfg</strong>: Extended Simple Mail Transfer Protocol (ESMTP) configuration.</li>
-         * <li><strong>docker_registry_cfg</strong>: Docker image repository configuration.</li>
-         * <li><strong>pem</strong>: Privacy-Enhanced Mail (PEM).</li>
-         * <li><strong>common_cred</strong>: common credential.</li>
-         * <li><strong>sftp_cfg</strong>: Secure File Transfer Protocol (SFTP) connection configuration.</li>
-         * <li><strong>grafana_token</strong>: Grafana token.</li>
-         * <li><strong>slack_token</strong>: Slack token.</li>
-         * <li><strong>ec_private_key</strong>: EC private key.</li>
-         * <li><strong>pypi_token</strong>: upload token for the Python Package Index (PyPI).</li>
-         * <li><strong>finicity_token</strong>: Finicity token.</li>
-         * <li><strong>k8s_client_key</strong>: Kubernetes client private key.</li>
-         * <li><strong>git_cfg</strong>: Git configuration.</li>
-         * <li><strong>django_key</strong>: Django key.</li>
-         * <li><strong>jenkins_ssh</strong>: Jenkins SSH configuration file.</li>
-         * <li><strong>openssh_private_key</strong>: OpenSSH private key.</li>
-         * <li><strong>square_oauth</strong>: OAuth credential for Square.</li>
-         * <li><strong>typeform_token</strong>: Typeform token.</li>
-         * <li><strong>common_database_cfg</strong>: general database connection configuration.</li>
-         * <li><strong>wordpress_database_cfg</strong>: WordPress database configuration.</li>
-         * <li><strong>googlecloud_api_key</strong>: API key for Google Cloud.</li>
-         * <li><strong>vscode_sftp</strong>: VS Code SFTP configuration.</li>
-         * <li><strong>apache_htpasswd</strong>: Apache htpasswd.</li>
-         * <li><strong>planetscale_token</strong>: PlanetScale token.</li>
-         * <li><strong>contentful_preview_token</strong>: preview token for Contentful.</li>
-         * <li><strong>php_database_cfg</strong>: database password for a PHP application.</li>
-         * <li><strong>atom_remote_sync</strong>: Atom remote synchronization configuration.</li>
-         * <li><strong>aws_session_token</strong>: AWS session token.</li>
-         * <li><strong>atom_sftp_cfg</strong>: Atom SFTP configuration.</li>
-         * <li><strong>asana_client_private_key</strong>: Asana client key.</li>
-         * <li><strong>tencentcloud_ak</strong>: secret ID of a third-party cloud.</li>
-         * <li><strong>rsa_private_key</strong>: Rivest-Shamir-Adleman (RSA) private key.</li>
-         * <li><strong>github_personal_token</strong>: personal access token for GitHub.</li>
-         * <li><strong>pgp</strong>: Pretty Good Privacy (PGP) encrypted file.</li>
-         * <li><strong>stripe_skpk</strong>: Stripe secret key.</li>
-         * <li><strong>square_token</strong>: Square access token.</li>
-         * <li><strong>rails_carrierwave</strong>: file upload credential for Rails Carrierwave.</li>
-         * <li><strong>dbeaver_database_cfg</strong>: DBeaver database configuration.</li>
-         * <li><strong>robomongo_cred</strong>: Robomongo credential.</li>
-         * <li><strong>github_oauth_token</strong>: OAuth access token for GitHub.</li>
-         * <li><strong>pulumi_token</strong>: Pulumi token.</li>
-         * <li><strong>ventrilo_voip</strong>: Ventrilo VoIP server configuration.</li>
-         * <li><strong>macos_keychain</strong>: macOS keychain.</li>
-         * <li><strong>amazon_mws_token</strong>: Amazon MWS token.</li>
-         * <li><strong>dynatrace_token</strong>: Dynatrace token.</li>
-         * <li><strong>java_keystore</strong>: Java KeyStore (JKS).</li>
-         * <li><strong>microsoft_sdf</strong>: Microsoft SQL Server Compact Edition (CE) database.</li>
-         * <li><strong>kubernetes_dashboard_cred</strong>: user credential for Kubernetes Dashboard.</li>
-         * <li><strong>atlassian_token</strong>: Atlassian token.</li>
-         * <li><strong>rdp</strong>: remote desktop protocol (RDP).</li>
-         * <li><strong>mailgun_key</strong>: Mailgun webhook signing key.</li>
-         * <li><strong>mailchimp_api_key</strong>: API key for Mailchimp.</li>
-         * <li><strong>netrc_cfg</strong>: .netrc configuration file.</li>
-         * <li><strong>openvpn_cfg</strong>: OpenVPN client configuration.</li>
-         * <li><strong>github_refresh_token</strong>: GitHub refresh token.</li>
-         * <li><strong>salesforce</strong>: Salesforce credential.</li>
-         * <li><strong>sendinblue</strong>: Sendinblue token.</li>
-         * <li><strong>pkcs_private_key</strong>: PKCS#12 key.</li>
-         * <li><strong>rubyonrails_passwd</strong>: Ruby on Rails password file.</li>
-         * <li><strong>filezilla_ftp</strong>: FileZilla FTP configuration.</li>
-         * <li><strong>databricks_token</strong>: Databricks token.</li>
-         * <li><strong>gitLab_personal_token</strong>: personal access token for GitLab.</li>
-         * <li><strong>rails_master_key</strong>: Rails master key.</li>
-         * <li><strong>sqlite</strong>: SQLite3 or SQLite database.</li>
-         * <li><strong>firefox_logins</strong>: Firefox logon configuration.</li>
-         * <li><strong>mailgun_private_token</strong>: Mailgun private token.</li>
-         * <li><strong>joomla_cfg</strong>: Joomla configuration.</li>
-         * <li><strong>hashicorp_terraform_token</strong>: HashiCorp Terraform token.</li>
-         * <li><strong>jetbrains_ides</strong>: JetBrains IDEs configuration.</li>
-         * <li><strong>heroku_api_key</strong>: Heroku API key.</li>
-         * <li><strong>messagebird_token</strong>: MessageBird token.</li>
-         * <li><strong>github_app_token</strong>: GitHub app token.</li>
-         * <li><strong>hashicorp_vault_token</strong>: HashiCorp Vault token.</li>
-         * <li><strong>pgp_private_key</strong>: PGP private key.</li>
-         * <li><strong>sshpasswd</strong>: SSH password.</li>
-         * <li><strong>huaweicloud_ak</strong>: secret access key of a third-party cloud.</li>
-         * <li><strong>aws_s3cmd</strong>: AWS S3cmd configuration.</li>
-         * <li><strong>php_config</strong>: PHP configuration.</li>
-         * <li><strong>common_private_key</strong>: private key of a common type.</li>
-         * <li><strong>microsoft_mdf</strong>: Microsoft SQL Server database.</li>
-         * <li><strong>mediawiki_cfg</strong>: MediaWiki configuration.</li>
-         * <li><strong>jenkins_cred</strong>: Jenkins credential.</li>
-         * <li><strong>rubygems_cred</strong>: RubyGems credential.</li>
-         * <li><strong>clojars_token</strong>: Clojars token.</li>
-         * <li><strong>phoenix_web_passwd</strong>: Phoenix web credential.</li>
-         * <li><strong>puttygen_private_key</strong>: PuTTYgen private key.</li>
-         * <li><strong>google_oauth_token</strong>: Google OAuth access token.</li>
-         * <li><strong>rubyonrails_cfg</strong>: Ruby on Rails database configuration.</li>
-         * <li><strong>lob_api_key</strong>: Lob API key.</li>
-         * <li><strong>pkcs_cred</strong>: PKCS#12 certificate.</li>
-         * <li><strong>otr_private_key</strong>: Off-the-Record Messaging (OTR) private key.</li>
-         * <li><strong>contentful_delivery_token</strong>: delivery token for Contentful.</li>
-         * <li><strong>digital_ocean_tugboat</strong>: DigitalOcean Tugboat configuration.</li>
-         * <li><strong>dsa_private_key</strong>: Digital Signature Algorithm (DSA) private key.</li>
-         * <li><strong>rails_app_token</strong>: Rails app token.</li>
-         * <li><strong>git_cred</strong>: Git user credential.</li>
-         * <li><strong>newrelic_api_key</strong>: user API key for New Relic.</li>
-         * <li><strong>github_hub</strong>: hub configuration for storing GitHub tokens.</li>
-         * <li><strong>rubygem</strong>: RubyGems token.</li>
+         * <li><strong>npm_token</strong>: NPM access token</li>
+         * <li><strong>ftp_cfg</strong>: FTP configuration</li>
+         * <li><strong>google_oauth_key</strong>: Google OAuth Key</li>
+         * <li><strong>planetscale_passwd</strong>: Planetscale password</li>
+         * <li><strong>github_ssh_key</strong>: Github SSH key</li>
+         * <li><strong>msbuild_publish_profile</strong>: MSBuild publish profile</li>
+         * <li><strong>fastly_cdn_token</strong>: Fastly CDN token</li>
+         * <li><strong>ssh_private_key</strong>: SSH private key</li>
+         * <li><strong>aws_cli</strong>: AWS CLI credentials</li>
+         * <li><strong>cpanel_proftpd</strong>: cPanel ProFTPd credentials</li>
+         * <li><strong>postgresql_passwd</strong>: PostgreSQL password file</li>
+         * <li><strong>discord_client_cred</strong>: Discord client credentials</li>
+         * <li><strong>rails_database</strong>: Rails database configuration</li>
+         * <li><strong>aws_access_key</strong>: AWS Access Key</li>
+         * <li><strong>esmtp_cfg</strong>: ESMTP mail server configuration</li>
+         * <li><strong>docker_registry_cfg</strong>: Docker image repository configuration</li>
+         * <li><strong>pem</strong>: PEM</li>
+         * <li><strong>common_cred</strong>: common credentials</li>
+         * <li><strong>sftp_cfg</strong>: SFTP connection configuration</li>
+         * <li><strong>grafana_token</strong>: Grafana token</li>
+         * <li><strong>slack_token</strong>: Slack Token</li>
+         * <li><strong>ec_private_key</strong>: EC private key</li>
+         * <li><strong>pypi_token</strong>: PyPI upload token</li>
+         * <li><strong>finicity_token</strong>: Finicity platform token</li>
+         * <li><strong>k8s_client_key</strong>: Kubernetes client private key</li>
+         * <li><strong>git_cfg</strong>: Git configuration</li>
+         * <li><strong>django_key</strong>: Django key</li>
+         * <li><strong>jenkins_ssh</strong>: Jenkins SSH configuration file</li>
+         * <li><strong>openssh_private_key</strong>: OPENSSH private key</li>
+         * <li><strong>square_oauth</strong>: Square OAuth credentials</li>
+         * <li><strong>typeform_token</strong>: Typeform token</li>
+         * <li><strong>common_database_cfg</strong>: common database connection configuration</li>
+         * <li><strong>wordpress_database_cfg</strong>: WordPress database configuration</li>
+         * <li><strong>googlecloud_api_key</strong>: Google Cloud API Key</li>
+         * <li><strong>vscode_sftp</strong>: VSCode SFTP configuration</li>
+         * <li><strong>apache_htpasswd</strong>: Apache htpasswd</li>
+         * <li><strong>planetscale_token</strong>: Planetscale token</li>
+         * <li><strong>contentful_preview_token</strong>: Contentful Preview token</li>
+         * <li><strong>php_database_cfg</strong>: PHP application database password</li>
+         * <li><strong>atom_remote_sync</strong>: Atom remote synchronization configuration</li>
+         * <li><strong>aws_session_token</strong>: AWS session token</li>
+         * <li><strong>atom_sftp_cfg</strong>: Atom SFTP configuration</li>
+         * <li><strong>asana_client_private_key</strong>: Asana client private key</li>
+         * <li><strong>tencentcloud_ak</strong>: third-party cloud SecretId</li>
+         * <li><strong>rsa_private_key</strong>: RSA private key</li>
+         * <li><strong>github_personal_token</strong>: Github Personal access token</li>
+         * <li><strong>pgp</strong>: PGP encrypt file</li>
+         * <li><strong>stripe_skpk</strong>: Stripe Secret Key</li>
+         * <li><strong>square_token</strong>: Square access token</li>
+         * <li><strong>rails_carrierwave</strong>: Rails Carrierwave file upload credentials</li>
+         * <li><strong>dbeaver_database_cfg</strong>: DBeaver database configuration</li>
+         * <li><strong>robomongo_cred</strong>: Robomongo credentials</li>
+         * <li><strong>github_oauth_token</strong>: Github OAuth access token</li>
+         * <li><strong>pulumi_token</strong>: Pulumi token</li>
+         * <li><strong>ventrilo_voip</strong>: Ventrilo VoIP Server configuration</li>
+         * <li><strong>macos_keychain</strong>: macOS Keychain</li>
+         * <li><strong>amazon_mws_token</strong>: Amazon MWS Token</li>
+         * <li><strong>dynatrace_token</strong>: Dynatrace token</li>
+         * <li><strong>java_keystore</strong>: Java KeyStore</li>
+         * <li><strong>microsoft_sdf</strong>: Microsoft SQL CE database</li>
+         * <li><strong>kubernetes_dashboard_cred</strong>: Kubernetes Dashboard user credentials</li>
+         * <li><strong>atlassian_token</strong>: Atlassian token</li>
+         * <li><strong>rdp</strong>: Remote Desktop Protocol (RDP) connection</li>
+         * <li><strong>mailgun_key</strong>: Mailgun Webhook Signing Key</li>
+         * <li><strong>mailchimp_api_key</strong>: Mailchimp API Key</li>
+         * <li><strong>netrc_cfg</strong>: .netrc configuration file</li>
+         * <li><strong>openvpn_cfg</strong>: OpenVPN client configuration</li>
+         * <li><strong>github_refresh_token</strong>: Github Refresh Token</li>
+         * <li><strong>salesforce</strong>: Salesforce credentials</li>
+         * <li><strong>sendinblue</strong>: Sendinblue token</li>
+         * <li><strong>pkcs_private_key</strong>: PKCS#12 key</li>
+         * <li><strong>rubyonrails_passwd</strong>: Ruby on Rails password file</li>
+         * <li><strong>filezilla_ftp</strong>: FileZilla FTP configuration</li>
+         * <li><strong>databricks_token</strong>: Databricks token</li>
+         * <li><strong>gitLab_personal_token</strong>: GitLab Personal access token</li>
+         * <li><strong>rails_master_key</strong>: Rails Master Key</li>
+         * <li><strong>sqlite</strong>: SQLite3/SQLite database</li>
+         * <li><strong>firefox_logins</strong>: Firefox logon configuration</li>
+         * <li><strong>mailgun_private_token</strong>: Mailgun Private token</li>
+         * <li><strong>joomla_cfg</strong>: Joomla configuration</li>
+         * <li><strong>hashicorp_terraform_token</strong>: Hashicorp Terraform Token</li>
+         * <li><strong>jetbrains_ides</strong>: Jetbrains IDEs configuration</li>
+         * <li><strong>heroku_api_key</strong>: Heroku API key</li>
+         * <li><strong>messagebird_token</strong>: MessageBird token</li>
+         * <li><strong>github_app_token</strong>: Github App Token</li>
+         * <li><strong>hashicorp_vault_token</strong>: Hashicorp Vault Token</li>
+         * <li><strong>pgp_private_key</strong>: PGP private key</li>
+         * <li><strong>sshpasswd</strong>: SSH password</li>
+         * <li><strong>huaweicloud_ak</strong>: third-party cloud Secret Access Key</li>
+         * <li><strong>aws_s3cmd</strong>: AWS S3cmd configuration</li>
+         * <li><strong>php_config</strong>: PHP configuration</li>
+         * <li><strong>common_private_key</strong>: common private key types</li>
+         * <li><strong>microsoft_mdf</strong>: Microsoft SQL database</li>
+         * <li><strong>mediawiki_cfg</strong>: MediaWiki configuration</li>
+         * <li><strong>jenkins_cred</strong>: Jenkins credentials</li>
+         * <li><strong>rubygems_cred</strong>: Rubygems credentials</li>
+         * <li><strong>clojars_token</strong>: Clojars token</li>
+         * <li><strong>phoenix_web_passwd</strong>: Phoenix Web credentials</li>
+         * <li><strong>puttygen_private_key</strong>: PuTTYgen private key</li>
+         * <li><strong>google_oauth_token</strong>: Google OAuth access token</li>
+         * <li><strong>rubyonrails_cfg</strong>: Ruby On Rails database configuration</li>
+         * <li><strong>lob_api_key</strong>: Lob API Key</li>
+         * <li><strong>pkcs_cred</strong>: PKCS#12 certificate</li>
+         * <li><strong>otr_private_key</strong>: OTR private key</li>
+         * <li><strong>contentful_delivery_token</strong>: Contentful Delivery token</li>
+         * <li><strong>digital_ocean_tugboat</strong>: Digital Ocean Tugboat configuration</li>
+         * <li><strong>dsa_private_key</strong>: DSA private key</li>
+         * <li><strong>rails_app_token</strong>: Rails App token</li>
+         * <li><strong>git_cred</strong>: Git user credentials</li>
+         * <li><strong>newrelic_api_key</strong>: New Relic User API Key</li>
+         * <li><strong>github_hub</strong>: hub configuration that stores Github tokens</li>
+         * <li><strong>rubygem</strong>: Rubygem token.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -421,7 +424,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public String sensitiveFileKey;
 
         /**
-         * <p>The name of the alert type for the sensitive file.</p>
+         * <p>The name of the sensitive file alerting type.</p>
          * 
          * <strong>example:</strong>
          * <p>AccessKeyLeak</p>
@@ -430,10 +433,10 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public String sensitiveFileName;
 
         /**
-         * <p>The status of the sensitive file. Valid values:</p>
+         * <p>The status of the sensitive file check item. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unhandled.</li>
-         * <li><strong>1</strong>: handled.</li>
+         * <li><strong>0</strong>: Unprocessed.</li>
+         * <li><strong>1</strong>: Processed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -443,7 +446,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The number of unprocessed mirrors.</p>
+         * <p>The number of unprocessed images.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

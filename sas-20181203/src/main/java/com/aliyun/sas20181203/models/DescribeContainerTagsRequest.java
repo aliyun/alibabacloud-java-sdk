@@ -38,10 +38,14 @@ public class DescribeContainerTagsRequest extends TeaModel {
     /**
      * <p>The name of the attribute that is used for the query. Valid values:</p>
      * <ul>
-     * <li><strong>namespace</strong>: the namespace</li>
-     * <li><strong>appName</strong>: the application name</li>
-     * <li><strong>image</strong>: the image</li>
-     * <li><strong>tag</strong>: the tag</li>
+     * <li><p><strong>namespace</strong>: the namespace</p>
+     * </li>
+     * <li><p><strong>appName</strong>: the application name</p>
+     * </li>
+     * <li><p><strong>image</strong>: the image</p>
+     * </li>
+     * <li><p><strong>tag</strong>: the tag</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

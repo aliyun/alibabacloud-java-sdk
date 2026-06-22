@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomBlockRecordRequest extends TeaModel {
     /**
-     * <p>The IP address that you want to specify in the policy.</p>
+     * <p>The IP address blocked for brute-force attacks prevention.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class ModifyCustomBlockRecordRequest extends TeaModel {
     public String blockIp;
 
     /**
-     * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
+     * <p>The direction in which the brute-force attacks blocking policy blocks the IP address on the server. Valid values:</p>
      * <ul>
      * <li><strong>in</strong>: inbound</li>
-     * <li><strong>out</strong>: outbound</li>
+     * <li><strong>out</strong>: outbound.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class ModifyCustomBlockRecordRequest extends TeaModel {
     public String bound;
 
     /**
-     * <p>The expiration time of the policy.</p>
+     * <p>The expiration time of the blocking record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ModifyCustomBlockRecordRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The UUIDs of servers.</p>
+     * <p>The list of servers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

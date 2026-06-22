@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomizedDictResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>85B5D55F-B341-528F-A2CA-AB1207F9****</p>

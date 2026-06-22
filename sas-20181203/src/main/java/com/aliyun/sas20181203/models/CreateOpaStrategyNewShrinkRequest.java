@@ -60,8 +60,10 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,9 +75,12 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The action that is performed when the rule is hit. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: trigger alerts</li>
-     * <li><strong>2</strong>: block</li>
-     * <li><strong>3</strong>: allow</li>
+     * <li><p><strong>1</strong>: trigger alerts</p>
+     * </li>
+     * <li><p><strong>2</strong>: block</p>
+     * </li>
+     * <li><p><strong>3</strong>: allow</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +98,7 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
      * </blockquote>
      * <blockquote>
      * <p>This parameter is invalid when you create a rule.</p>
@@ -117,7 +122,7 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the rule template.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,8 +134,10 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -278,8 +285,10 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
         /**
          * <p>Specifies whether to include all namespaces. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: includes all namespaces.</li>
-         * <li><strong>0</strong>: does not include all namespaces.</li>
+         * <li><p><strong>1</strong>: includes all namespaces.</p>
+         * </li>
+         * <li><p><strong>0</strong>: does not include all namespaces.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,7 +300,7 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
         /**
          * <p>The ID of the cluster that is specified in the rule.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

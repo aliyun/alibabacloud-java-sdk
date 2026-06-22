@@ -8,7 +8,7 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>379a9b8f-107b-4630-9e95-2299a1ea****</p>
+     * <p>32A73759-4C0F-4801-BE98-901223ACEE9A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

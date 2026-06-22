@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class OperateVirusEventsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to handle all alert events. Valid values:</p>
+     * <p>Specifies whether to handle all alerts. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><strong>0</strong>: no.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,12 +19,12 @@ public class OperateVirusEventsRequest extends TeaModel {
     public Integer operationAll;
 
     /**
-     * <p>The operation that you want to perform on the alert events. Valid values:</p>
+     * <p>The method to handle the alert event. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: performs in-depth detection and removal</li>
-     * <li><strong>ignore</strong>: ignores the alert event</li>
-     * <li><strong>advance_mark_mis_info</strong>: adds the alert events to the whitelist</li>
-     * <li><strong>manual_handled</strong>: marks the alert events as manually handled</li>
+     * <li><strong>default</strong>: deep scan and removal</li>
+     * <li><strong>ignore</strong>: ignore</li>
+     * <li><strong>advance_mark_mis_info</strong>: add to whitelist</li>
+     * <li><strong>manual_handled</strong>: manually handled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,7 +35,7 @@ public class OperateVirusEventsRequest extends TeaModel {
     public String operationCode;
 
     /**
-     * <p>The handling scope.</p>
+     * <p>The scope of the handling operation.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;type\&quot;:\&quot;machine\&quot;,\&quot;list\&quot;:[\&quot;xxxxxxxxx-4cbf-4ca6-a1b7-8a09d1f86ab0\&quot;]}]</p>

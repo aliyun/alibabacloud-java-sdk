@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateFileProtectClientRuleRequest extends TeaModel {
     /**
+     * <p>The alert notification level. Valid values:</p>
+     * <ul>
+     * <li>0: no alert</li>
+     * <li>1: reminder</li>
+     * <li>2: suspicious</li>
+     * <li>3: high-risk.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,31 +20,47 @@ public class CreateFileProtectClientRuleRequest extends TeaModel {
     public Integer alertLevel;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of excluded users.</p>
+     */
     @NameInMap("ExcludeUsers")
     public java.util.List<String> excludeUsers;
 
     /**
+     * <p>The list of operations performed on files.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileOps")
     public java.util.List<String> fileOps;
 
     /**
+     * <p>The list of monitored file paths. Wildcards are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FilePaths")
     public java.util.List<String> filePaths;
 
+    /**
+     * <p>The list of monitored file types.</p>
+     */
     @NameInMap("FileTypes")
     public java.util.List<String> fileTypes;
 
     /**
+     * <p>The operating system type. Valid values:</p>
+     * <ul>
+     * <li><strong>windows</strong>: Windows.</li>
+     * <li><strong>linux</strong>: Linux.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>linux</p>
      */
@@ -44,12 +68,19 @@ public class CreateFileProtectClientRuleRequest extends TeaModel {
     public String platform;
 
     /**
+     * <p>The list of process monitoring paths. Wildcards are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProcPaths")
     public java.util.List<String> procPaths;
 
     /**
+     * <p>The action to take when the policy is hit. Valid values:</p>
+     * <ul>
+     * <li><strong>monitor</strong>: Alert.</li>
+     * <li><strong>block</strong>: Block.</li>
+     * <li><strong>pass</strong>: Allow.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,12 +90,21 @@ public class CreateFileProtectClientRuleRequest extends TeaModel {
     public String ruleAction;
 
     /**
+     * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>规则****</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
+     * <p>The status of the rule. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +114,8 @@ public class CreateFileProtectClientRuleRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The switch ID associated with the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>
      */

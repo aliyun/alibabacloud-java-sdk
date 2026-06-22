@@ -54,7 +54,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
          * <p>The name of the item.</p>
          * 
          * <strong>example:</strong>
-         * <p>DownloadUrl</p>
+         * <p>DownloadUrl。</p>
          */
         @NameInMap("Name")
         public String name;
@@ -63,7 +63,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
          * <p>The display name of the item.</p>
          * 
          * <strong>example:</strong>
-         * <p>DownloadUrl</p>
+         * <p>DownloadUrl。</p>
          */
         @NameInMap("NameDisplay")
         public String nameDisplay;

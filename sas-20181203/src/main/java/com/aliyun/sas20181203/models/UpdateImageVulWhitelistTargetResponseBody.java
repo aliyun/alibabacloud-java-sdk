@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateImageVulWhitelistTargetResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of a failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,10 +14,10 @@ public class UpdateImageVulWhitelistTargetResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the image vulnerability is added to the whitelist. Valid values:</p>
+     * <p>The processing result. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class UpdateImageVulWhitelistTargetResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -36,7 +36,7 @@ public class UpdateImageVulWhitelistTargetResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The returned message of the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -45,7 +45,7 @@ public class UpdateImageVulWhitelistTargetResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
@@ -54,10 +54,10 @@ public class UpdateImageVulWhitelistTargetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The API call was successful.</li>
+     * <li><strong>false</strong>: The API call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

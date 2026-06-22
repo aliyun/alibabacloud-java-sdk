@@ -8,6 +8,8 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public String analyzeResult;
 
     /**
+     * <p>The page number of the current page in a paged query. This parameter is used for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The unique identifier of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a212417e65c26ff133cfff28f6c****</p>
      */
@@ -25,6 +29,8 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of entries to return on each page in a paged query. This parameter is used for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -32,6 +38,8 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The parent process path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/bin/bash</p>
      */
@@ -39,6 +47,8 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public String parentProcessPath;
 
     /**
+     * <p>The process path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/test</p>
      */
@@ -46,6 +56,8 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public String processPath;
 
     /**
+     * <p>The filter condition. You can filter by instance name or IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.167.XX.XX</p>
      */
@@ -53,6 +65,13 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The event status. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Unhandled.</li>
+     * <li><strong>2</strong>: Blocked.</li>
+     * <li><strong>3</strong>: Ignored.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -60,6 +79,8 @@ public class ListUnknownThreatDetectEventRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The UUID of the server to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>18b7336e-d469-473b-af83-8e5420f9****</p>
      */

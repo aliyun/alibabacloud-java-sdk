@@ -11,13 +11,13 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
     public DescribeHybridProxyListResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The information about the proxy clusters.</p>
+     * <p>The proxy cluster list.</p>
      */
     @NameInMap("ProxyList")
     public java.util.List<DescribeHybridProxyListResponseBodyProxyList> proxyList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>75801E5D-E2EB-5C1D-B65D-2F7D2B00EF93</p>
@@ -56,7 +56,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyListResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries returned on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -65,7 +65,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number.</p>
+         * <p>The number of the page to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -74,7 +74,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries returned on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -132,7 +132,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyListResponseBodyProxyList extends TeaModel {
         /**
-         * <p>The number of servers that are connected to the proxy instance.</p>
+         * <p>The number of Security Center agents connected to the proxy instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -150,7 +150,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>i-uf61q03boqhhmeai1XXX</p>
@@ -159,7 +159,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -186,7 +186,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The UUID of the proxy node.</p>
+         * <p>The unique key that identifies the proxy node.</p>
          * 
          * <strong>example:</strong>
          * <p>inet-proxy-3bb11fad-37d6-4aee-9c37-b0ad1612a18e</p>
@@ -195,10 +195,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String proxyUuid;
 
         /**
-         * <p>The status of the proxy server. Valid values:</p>
+         * <p>The running status of the proxy machine. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong></li>
-         * <li><strong>offline</strong></li>
+         * <li><strong>online</strong>: online</li>
+         * <li><strong>offline</strong>: offline.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,10 +208,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The UUID of the server that is connected to the proxy instance.</p>
+         * <p>The UUID of the Security Center agent deployed on the proxy instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>59a9d158-b2f0-4766-a893-ae67b943XXXX</p>
+         * <p>59a9d158-b2f0-4766-a893-ae67b9432721</p>
          */
         @NameInMap("Uuid")
         public String uuid;

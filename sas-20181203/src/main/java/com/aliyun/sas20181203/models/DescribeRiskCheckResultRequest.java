@@ -25,12 +25,18 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
     /**
      * <p>The type of the check item that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: identity authentication and permissions</li>
-     * <li><strong>2</strong>: network access control</li>
-     * <li><strong>3</strong>: log audit</li>
-     * <li><strong>4</strong>: data security</li>
-     * <li><strong>5</strong>: monitoring and alerting</li>
-     * <li><strong>6</strong>: basic security protection</li>
+     * <li><p><strong>1</strong>: identity authentication and permissions</p>
+     * </li>
+     * <li><p><strong>2</strong>: network access control</p>
+     * </li>
+     * <li><p><strong>3</strong>: log audit</p>
+     * </li>
+     * <li><p><strong>4</strong>: data security</p>
+     * </li>
+     * <li><p><strong>5</strong>: monitoring and alerting</p>
+     * </li>
+     * <li><p><strong>6</strong>: basic security protection</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>If you do not specify this parameter, all types of check items are queried.</p>
@@ -54,8 +60,10 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,8 +93,10 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
     /**
      * <p>Specifies whether the check item is supported by the edition of Security Center that you purchase. Valid values:</p>
      * <ul>
-     * <li><strong>enabled</strong>: yes</li>
-     * <li><strong>disabled</strong>: no</li>
+     * <li><p><strong>enabled</strong>: yes</p>
+     * </li>
+     * <li><p><strong>disabled</strong>: no</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,9 +111,12 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
     /**
      * <p>The risk level of the check item that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>high</strong></li>
-     * <li><strong>medium</strong></li>
-     * <li><strong>low</strong></li>
+     * <li><p><strong>high</strong></p>
+     * </li>
+     * <li><p><strong>medium</strong></p>
+     * </li>
+     * <li><p><strong>low</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,12 +137,18 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
     /**
      * <p>The status of the check results. Valid values:</p>
      * <ul>
-     * <li><strong>pass</strong></li>
-     * <li><strong>failed</strong></li>
-     * <li><strong>running</strong></li>
-     * <li><strong>waiting</strong></li>
-     * <li><strong>ignored</strong></li>
-     * <li><strong>falsePositive</strong></li>
+     * <li><p><strong>pass</strong></p>
+     * </li>
+     * <li><p><strong>failed</strong></p>
+     * </li>
+     * <li><p><strong>running</strong></p>
+     * </li>
+     * <li><p><strong>waiting</strong></p>
+     * </li>
+     * <li><p><strong>ignored</strong></p>
+     * </li>
+     * <li><p><strong>falsePositive</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulWhitelistRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number in paging. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,7 +16,7 @@ public class DescribeVulWhitelistRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -27,7 +27,7 @@ public class DescribeVulWhitelistRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of entries per page in paging. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

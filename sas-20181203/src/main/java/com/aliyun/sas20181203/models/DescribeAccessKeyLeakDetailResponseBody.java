@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the AccessKey pair that is leaked.</p>
+     * <p>The leaked AccessKey ID.</p>
      * 
      * <strong>example:</strong>
      * <p>yourAccessKeyID</p>
@@ -14,16 +14,16 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String accesskeyId;
 
     /**
-     * <p>The platform to which the asset belongs. The value is fixed as <strong>Cloud platform</strong>.</p>
+     * <p>The platform where the asset resides. The value is fixed as <strong>Cloud Platform</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Cloud platform</p>
+     * <p>云平台</p>
      */
     @NameInMap("Asset")
     public String asset;
 
     /**
-     * <p>The code snippet that is leaked.</p>
+     * <p>The leaked code snippet.</p>
      * 
      * <strong>example:</strong>
      * <p>\n1231 \nak=yourAccessKeyID \n12311123 \nsk1999 \nsk1999sk1999 \nsk1999sk1999 \n\n\ntest001 ak hht \nak=yourAccessKeyID \nsk=yourAccessKeySecret</p>
@@ -32,7 +32,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the AccessKey pair leak was handled.</p>
+     * <p>The time when the AccessKey pair leak event was handled.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-17 15:47:08</p>
@@ -41,12 +41,12 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String dealTime;
 
     /**
-     * <p>The solution to the AccessKey pair leak. Valid values:</p>
+     * <p>The method used to handle the AccessKey pair leak event. Valid values:</p>
      * <ul>
      * <li><strong>manual</strong>: manually deleted</li>
      * <li><strong>disable</strong>: manually disabled</li>
      * <li><strong>add-whitelist</strong>: added to the whitelist</li>
-     * <li><strong>pending</strong>: unhandled</li>
+     * <li><strong>pending</strong>: not handled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String dealType;
 
     /**
-     * <p>The name of the GitHub file.</p>
+     * <p>The GitHub file name.</p>
      * 
      * <strong>example:</strong>
      * <p>testAkLeak</p>
@@ -65,7 +65,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String githubFileName;
 
     /**
-     * <p>The type of the GitHub file. Valid values:</p>
+     * <p>The GitHub file type. Valid values:</p>
      * <ul>
      * <li>Python</li>
      * <li>XML</li>
@@ -73,7 +73,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
      * <li>Javascript</li>
      * <li>INI</li>
      * <li>JSON</li>
-     * <li>C++</li>
+     * <li>C++.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String githubFileType;
 
     /**
-     * <p>The time when the GitHub file was updated.</p>
+     * <p>The time when the GitHub file was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-06T09:49:33</p>
@@ -101,7 +101,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String githubFileUrl;
 
     /**
-     * <p>The name of the GitHub repository.</p>
+     * <p>The GitHub repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>ExamOnline</p>
@@ -119,7 +119,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String githubRepoUrl;
 
     /**
-     * <p>The username of the GitHub user.</p>
+     * <p>The GitHub username.</p>
      * 
      * <strong>example:</strong>
      * <p>Blue00Blue</p>
@@ -128,7 +128,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String githubUser;
 
     /**
-     * <p>The URL of the profile picture for the GitHub user.</p>
+     * <p>The profile picture URL of the GitHub user.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://avatars.githubusercontent.com/u/26296896?s=48&v=">https://avatars.githubusercontent.com/u/26296896?s=48&amp;v=</a>****</p>
@@ -137,7 +137,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String githubUserPicUrl;
 
     /**
-     * <p>The first time when the AccessKey pair leak was detected.</p>
+     * <p>The time when the AccessKey pair leak event was first detected.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-06 17:49:41</p>
@@ -146,7 +146,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The last time when the AccessKey pair leak was detected.</p>
+     * <p>The most recent time when the leak event was detected.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-06 17:49:39</p>
@@ -155,7 +155,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>The remarks of the AccessKey pair leak.</p>
+     * <p>The remarks of the AccessKey pair leak event.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -164,7 +164,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String remark;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
@@ -173,7 +173,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The platform on which the AccessKey pair leak is detected.</p>
+     * <p>The intelligence source of the AccessKey pair leak event.</p>
      * 
      * <strong>example:</strong>
      * <p>GitHub</p>
@@ -182,10 +182,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String source;
 
     /**
-     * <p>The validity of the key that is associated with the AccessKey pair. Valid values:</p>
+     * <p>The validity of the key associated with the AccessKey pair. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: to be confirmed.</li>
-     * <li><strong>1</strong>: valid.</li>
+     * <li><strong>0</strong>: to be confirmed</li>
+     * <li><strong>1</strong>: valid</li>
      * <li><strong>2</strong>: invalid.</li>
      * </ul>
      * 
@@ -196,7 +196,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public Integer tokenValid;
 
     /**
-     * <p>The type of the leak. The value is fixed as <strong>AccessKey</strong>.</p>
+     * <p>The type of the leaked information. The value is fixed as <strong>AccessKey</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>AccessKey</p>
@@ -205,10 +205,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>Indicates whether the AccessKey pair leak is added to the whitelist. Valid values:</p>
+     * <p>Indicates whether the AccessKey pair leak event is added to the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>no</strong>: no</li>
-     * <li><strong>yes</strong>: yes</li>
+     * <li><strong>no</strong>: not added to the whitelist</li>
+     * <li><strong>yes</strong>: added to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>

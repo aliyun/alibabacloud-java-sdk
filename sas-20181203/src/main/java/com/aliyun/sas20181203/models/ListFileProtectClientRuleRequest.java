@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListFileProtectClientRuleRequest extends TeaModel {
     /**
+     * <p>The alert notification level. Valid values:</p>
+     * <ul>
+     * <li><p>0: no alert</p>
+     * </li>
+     * <li><p>1: reminder</p>
+     * </li>
+     * <li><p>2: suspicious</p>
+     * </li>
+     * <li><p>3: high-risk.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +24,8 @@ public class ListFileProtectClientRuleRequest extends TeaModel {
     public Integer alertLevel;
 
     /**
+     * <p>The page number of the current page in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +33,8 @@ public class ListFileProtectClientRuleRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The maximum number of entries per page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +42,12 @@ public class ListFileProtectClientRuleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The operating system type. Valid values:</p>
+     * <ul>
+     * <li><strong>windows</strong>: Windows</li>
+     * <li><strong>linux</strong>: Linux.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>linux</p>
      */
@@ -33,6 +55,16 @@ public class ListFileProtectClientRuleRequest extends TeaModel {
     public String platform;
 
     /**
+     * <p>The rule action. Valid values:</p>
+     * <ul>
+     * <li><p><strong>block</strong>: blocks the request.</p>
+     * </li>
+     * <li><p><strong>monitor</strong>: monitors the request.</p>
+     * </li>
+     * <li><p><strong>pass</strong>: allows the request.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>pass</p>
      */
@@ -40,6 +72,8 @@ public class ListFileProtectClientRuleRequest extends TeaModel {
     public String ruleAction;
 
     /**
+     * <p>The rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>tetsRule</p>
      */

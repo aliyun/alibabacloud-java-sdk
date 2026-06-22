@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAntiBruteForceRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>

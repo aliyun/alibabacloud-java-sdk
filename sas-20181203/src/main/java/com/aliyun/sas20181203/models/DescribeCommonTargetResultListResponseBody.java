@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCommonTargetResultListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
@@ -14,7 +14,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the configuration item.</p>
+     * <p>The configuration information.</p>
      */
     @NameInMap("TargetConfig")
     public DescribeCommonTargetResultListResponseBodyTargetConfig targetConfig;
@@ -42,10 +42,10 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
 
     public static class DescribeCommonTargetResultListResponseBodyTargetConfig extends TeaModel {
         /**
-         * <p>The identifier that indicates whether the configuration item is applied to the server. Valid values:</p>
+         * <p>The asset configuration flag. Valid values:</p>
          * <ul>
-         * <li><strong>add</strong>: applied</li>
-         * <li><strong>del</strong>: not applied</li>
+         * <li><strong>add</strong>: The configuration takes effect on the asset.</li>
+         * <li><strong>del</strong>: The configuration does not take effect on the asset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         public String flag;
 
         /**
-         * <p>The default identifier.</p>
+         * <p>The default flag for asset configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -64,19 +64,19 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         public String targetDefault;
 
         /**
-         * <p>An array that consists of the IDs of the server groups or the UUIDs of the servers.</p>
+         * <p>The group ID or asset UUID on which the configuration takes effect.</p>
          * <blockquote>
-         * <p> If <strong>uuid</strong> is returned for the <strong>TargetType</strong> parameter, <strong>UUIDs</strong> of the servers are returned. If <strong>groupId</strong> is returned for the <strong>TargetType</strong> parameter, IDs of the server groups are returned.</p>
+         * <p>If <strong>TargetType</strong> returns <strong>uuid</strong>, this field indicates the <strong>UUID</strong> of the asset. If <strong>TargetType</strong> returns <strong>groupId</strong>, this field indicates the group ID.</p>
          * </blockquote>
          */
         @NameInMap("TargetList")
         public java.util.List<String> targetList;
 
         /**
-         * <p>The type of the server to which the configuration item is applied. Valid values:</p>
+         * <p>The selection mode for the assets on which the configuration takes effect. Valid values:</p>
          * <ul>
-         * <li><strong>uuid</strong>: a server</li>
-         * <li><strong>groupId</strong>: a server group</li>
+         * <li><strong>uuid</strong>: Added by individual asset.</li>
+         * <li><strong>groupId</strong>: Added by server group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,12 +95,12 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         public String totalCount;
 
         /**
-         * <p>The type of the configuration item. Valid values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>webshell_timescan</strong>: webshell detection and removal</li>
-         * <li><strong>aliscriptengine</strong>: in-depth detection engine</li>
-         * <li><strong>alidetect</strong>: installation scope of local file detection</li>
-         * <li><strong>alidetect-scan-enable</strong>: detection scope of local file detection</li>
+         * <li><strong>webshell_timescan</strong>: web shell scan.</li>
+         * <li><strong>aliscriptengine</strong>: deep detection engine.</li>
+         * <li><strong>alidetect</strong>: installation scope of the local file detection engine.</li>
+         * <li><strong>alidetect-scan-enable</strong>: detection scope of the local file detection engine.</li>
          * </ul>
          * 
          * <strong>example:</strong>

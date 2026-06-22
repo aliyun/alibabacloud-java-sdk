@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAssetSelectionSelectedTargetRequest extends TeaModel {
     /**
-     * <p>The unique ID of the asset.</p>
+     * <p>The unique identifier of the asset selection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListAssetSelectionSelectedTargetRequest extends TeaModel {
     public String selectionKey;
 
     /**
-     * <p>The details of queries.</p>
+     * <p>The query list.</p>
      */
     @NameInMap("TargetList")
     public java.util.List<String> targetList;

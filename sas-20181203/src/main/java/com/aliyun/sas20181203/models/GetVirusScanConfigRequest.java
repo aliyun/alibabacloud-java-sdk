@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetVirusScanConfigRequest extends TeaModel {
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: a virus scan task.</li>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
      * </ul>
      * 
      * <strong>example:</strong>

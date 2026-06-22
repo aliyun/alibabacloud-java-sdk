@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of entries returned on the current page in a paged query. If paging is not used, this value indicates the total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeMatchedMaliciousNamesResponseBodyData> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>C7CD1BE6-97A2-5524-A529-B55C63E55D59</p>
@@ -59,7 +59,7 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
 
     public static class DescribeMatchedMaliciousNamesResponseBodyData extends TeaModel {
         /**
-         * <p>The display name of the malicious image sample type.</p>
+         * <p>The display name of the malicious sample type.</p>
          * 
          * <strong>example:</strong>
          * <p>displayname</p>
@@ -68,7 +68,7 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The key of the malicious image sample type.</p>
+         * <p>The key of the malicious sample type.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>

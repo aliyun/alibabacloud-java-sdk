@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAttackEventDetailRequest extends TeaModel {
     /**
-     * <p>The unique identifier ID for the alert event.</p>
+     * <p>The unique ID of the alert event.</p>
      * 
      * <strong>example:</strong>
      * <p>18825544674********</p>
@@ -14,7 +14,7 @@ public class GetAttackEventDetailRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The language type for requesting and receiving messages. Values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>

@@ -72,7 +72,7 @@ public class GetVulWhitelistResponseBody extends TeaModel {
          * <p>The reason why the vulnerability is added to the whitelist.</p>
          * 
          * <strong>example:</strong>
-         * <p>Ignore</p>
+         * <p>忽略</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -82,8 +82,10 @@ public class GetVulWhitelistResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>type</strong>: the type of the assets to which the rule is applied. Valid values:</p>
          * <ul>
-         * <li><strong>Uuid</strong>: server</li>
-         * <li><strong>GroupId</strong>: server group</li>
+         * <li><p><strong>Uuid</strong>: server</p>
+         * </li>
+         * <li><p><strong>GroupId</strong>: server group</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p><strong>groupIds</strong>: the ID of the server group</p>
@@ -123,11 +125,16 @@ public class GetVulWhitelistResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>Type</strong>: the type of the vulnerability. Valid values:</p>
          * <ul>
-         * <li><strong>cve</strong>: Linux software vulnerability</li>
-         * <li><strong>sys</strong>: Windows system vulnerability</li>
-         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-         * <li><strong>app</strong>: application vulnerability</li>
-         * <li><strong>emg</strong>: urgent vulnerabilities</li>
+         * <li><p><strong>cve</strong>: Linux software vulnerability</p>
+         * </li>
+         * <li><p><strong>sys</strong>: Windows system vulnerability</p>
+         * </li>
+         * <li><p><strong>cms</strong>: Web-CMS vulnerability</p>
+         * </li>
+         * <li><p><strong>app</strong>: application vulnerability</p>
+         * </li>
+         * <li><p><strong>emg</strong>: urgent vulnerabilities</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p><strong>AliasName</strong>: the alias of the vulnerability.</p>

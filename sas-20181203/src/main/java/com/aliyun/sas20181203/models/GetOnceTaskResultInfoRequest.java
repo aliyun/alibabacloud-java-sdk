@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOnceTaskResultInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the scan task.</p>
+     * <p>The ID of the one-time task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,26 @@ public class GetOnceTaskResultInfoRequest extends TeaModel {
     /**
      * <p>The name of the task. Valid values:</p>
      * <ul>
-     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center agent</li>
-     * <li><strong>CLIENT_DEV_OPS</strong>: an O\&amp;M task of Cloud Assistant</li>
-     * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+     * <li><p><strong>CLIENT_PROBLEM_CHECK</strong>: client troubleshooting task</p>
+     * </li>
+     * <li><p><strong>CLIENT_DEV_OPS</strong>: cloud O\&amp;M task</p>
+     * </li>
+     * <li><p><strong>ASSET_SECURITY_CHECK</strong>: asset collection task</p>
+     * </li>
+     * <li><p><strong>ASSETS_COLLECTION</strong>: asset fingerprint collection task</p>
+     * </li>
+     * <li><p><strong>IMAGE_SCAN</strong>: container image scan task</p>
+     * </li>
+     * <li><p><strong>AI_SECURITY_CHECK</strong>: AI asset synchronization task</p>
+     * </li>
+     * <li><p><strong>IDC_PROBE_SCAN</strong>: IDC probe scan task</p>
+     * </li>
+     * <li><p><strong>ATTACK_SURFACE_SCAN</strong>: attack surface and boundary asset scan task</p>
+     * </li>
+     * <li><p><strong>ASSET_EXPOSURE_SCAN</strong>: asset exposure scan task</p>
+     * </li>
+     * <li><p><strong>VUL_CHECK_TASK</strong>: vulnerability scan task</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,9 +49,26 @@ public class GetOnceTaskResultInfoRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <ul>
-     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center agent</li>
-     * <li><strong>CLIENT_DEV_OPS</strong>: an O\&amp;M task of Cloud Assistant</li>
-     * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+     * <li><p><strong>CLIENT_PROBLEM_CHECK</strong>: client troubleshooting task</p>
+     * </li>
+     * <li><p><strong>CLIENT_DEV_OPS</strong>: cloud O\&amp;M task</p>
+     * </li>
+     * <li><p><strong>ASSET_SECURITY_CHECK</strong>: asset collection task</p>
+     * </li>
+     * <li><p><strong>ASSETS_COLLECTION</strong>: asset fingerprint collection task</p>
+     * </li>
+     * <li><p><strong>IMAGE_SCAN</strong>: container image scan task</p>
+     * </li>
+     * <li><p><strong>AI_SECURITY_CHECK</strong>: AI asset synchronization task</p>
+     * </li>
+     * <li><p><strong>IDC_PROBE_SCAN</strong>: IDC probe scan task</p>
+     * </li>
+     * <li><p><strong>ATTACK_SURFACE_SCAN</strong>: attack surface and boundary asset scan task</p>
+     * </li>
+     * <li><p><strong>ASSET_EXPOSURE_SCAN</strong>: asset exposure scan task</p>
+     * </li>
+     * <li><p><strong>VUL_CHECK_TASK</strong>: vulnerability scan task</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

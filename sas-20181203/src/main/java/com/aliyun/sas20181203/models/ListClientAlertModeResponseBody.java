@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListClientAlertModeResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The data returned by the request.</p>
      */
     @NameInMap("Data")
     public ListClientAlertModeResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
@@ -51,7 +51,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The UUIDs of the assets.</p>
+         * <p>The list of asset UUIDs.</p>
          */
         @NameInMap("Uuids")
         public java.util.List<String> uuids;

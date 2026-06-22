@@ -14,7 +14,7 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
     public String aliasName;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,9 +23,9 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -36,7 +36,7 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates that 10 auto-fix vulnerability configurations are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,7 +48,7 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
      * <p>The type of the vulnerability. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: Linux software vulnerability</li>
-     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability.</li>
      * </ul>
      * 
      * <strong>example:</strong>

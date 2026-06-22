@@ -58,7 +58,7 @@ public class ListCheckTypesRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("ShowChecks")
     public Boolean showChecks;

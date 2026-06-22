@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMatchedMaliciousNamesRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class DescribeMatchedMaliciousNamesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:</p>
+     * <p>The risk levels of the malicious samples in images to query. You can specify multiple values. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>serious</strong></li>
-     * <li><strong>suspicious</strong></li>
-     * <li><strong>remind</strong></li>
+     * <li><strong>serious</strong>: urgent</li>
+     * <li><strong>suspicious</strong>: suspicious</li>
+     * <li><strong>remind</strong>: reminder.</li>
      * </ul>
      * 
      * <strong>example:</strong>

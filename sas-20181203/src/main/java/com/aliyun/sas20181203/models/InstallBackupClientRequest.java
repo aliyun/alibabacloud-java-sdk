@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class InstallBackupClientRequest extends TeaModel {
     /**
-     * <p>The version of the anti-ransomware policy. Valid values:</p>
+     * <p>The version of the mitigation policies. Valid values:</p>
      * <ul>
-     * <li><strong>1.0.0</strong></li>
-     * <li><strong>2.0.0</strong></li>
+     * <li><strong>1.0.0</strong>: The version of the mitigation policies is 1.0.0.</li>
+     * <li><strong>2.0.0</strong>: The version of the mitigation policies is 2.0.0.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,9 +19,11 @@ public class InstallBackupClientRequest extends TeaModel {
     public String policyVersion;
 
     /**
-     * <p>The UUID of the server on which you want to install the anti-ransomware agent.</p>
+     * <p>The UUID of the server on which you want to install the anti-ransomware client.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers. You must specify at least one of the UuidList and Uuid parameters.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this value. UuidList and Uuid cannot both be empty.</p>
+     * </blockquote>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,9 +33,9 @@ public class InstallBackupClientRequest extends TeaModel {
     public String uuid;
 
     /**
-     * <p>The UUIDs of servers on which you want to install the anti-ransomware agent.</p>
+     * <p>The list of UUIDs of the servers that you want to protect.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

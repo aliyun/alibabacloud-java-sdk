@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQuaraFileDownloadInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to sas.</p>
+     * <p>The source identifier of the request. Set the value to sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -16,7 +16,7 @@ public class DescribeQuaraFileDownloadInfoRequest extends TeaModel {
     /**
      * <p>The ID of the quarantined file.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, you cannot call the RollbackSuspEventQuaraFile operation to restore a quarantined file. You can call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to query the IDs of quarantined files.</p>
+     * <p>If you do not specify this parameter, calling the RollbackSuspEventQuaraFile operation does not cancel the quarantine of the file in the quarantine box, which means the call does not take effect. Call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to obtain the quarantined file ID (the value of the Id parameter).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

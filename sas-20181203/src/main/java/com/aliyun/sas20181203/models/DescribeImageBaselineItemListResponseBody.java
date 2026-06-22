@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBaselineItemListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of baseline check items.</p>
+     * <p>The list of image baseline data.</p>
      */
     @NameInMap("BaselineItemInfos")
     public java.util.List<DescribeImageBaselineItemListResponseBodyBaselineItemInfos> baselineItemInfos;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination information of the query results.</p>
      */
     @NameInMap("PageInfo")
     public DescribeImageBaselineItemListResponseBodyPageInfo pageInfo;
@@ -56,16 +56,16 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineItemListResponseBodyBaselineItemInfos extends TeaModel {
         /**
-         * <p>The alias of the baseline type.</p>
+         * <p>The alias of the baseline category.</p>
          * 
          * <strong>example:</strong>
-         * <p>AccessKey pair leak</p>
+         * <p>Access Key泄漏</p>
          */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
         /**
-         * <p>The key of the baseline type.</p>
+         * <p>The key of the baseline category.</p>
          * 
          * <strong>example:</strong>
          * <p>ak_leak</p>
@@ -74,16 +74,16 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         public String baselineClassKey;
 
         /**
-         * <p>The alias of the baseline check item.</p>
+         * <p>The alias of the baseline sub-item.</p>
          * 
          * <strong>example:</strong>
-         * <p>AccessKey pair leak</p>
+         * <p>Access Key泄漏</p>
          */
         @NameInMap("BaselineItemAlias")
         public String baselineItemAlias;
 
         /**
-         * <p>The key of the baseline check item.</p>
+         * <p>The key of the baseline sub-item.</p>
          * 
          * <strong>example:</strong>
          * <p>ak_leak</p>
@@ -92,10 +92,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         public String baselineItemKey;
 
         /**
-         * <p>The alias of the baseline.</p>
+         * <p>The alias of the baseline name.</p>
          * 
          * <strong>example:</strong>
-         * <p>AccessKey pair leak</p>
+         * <p>Access Key泄漏</p>
          */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
@@ -110,12 +110,12 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         public String baselineNameKey;
 
         /**
-         * <p>The status of the baseline risks. Valid values:</p>
+         * <p>The fix status of the baseline risk. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: unfixed</li>
          * <li><strong>1</strong>: fixed</li>
          * <li><strong>2</strong>: pending verification</li>
-         * <li><strong>3</strong>: fixing failed</li>
+         * <li><strong>3</strong>: fix failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,10 +125,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Indicates whether the baseline check item is added to the whitelist. Valid values:</p>
+         * <p>The whitelist status of the baseline check item. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The baseline check item is not added to the whitelist.</li>
-         * <li><strong>1</strong>: The baseline check item is added to the whitelist.</li>
+         * <li><strong>0</strong>: not whitelisted</li>
+         * <li><strong>1</strong>: whitelisted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineItemListResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -219,7 +219,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

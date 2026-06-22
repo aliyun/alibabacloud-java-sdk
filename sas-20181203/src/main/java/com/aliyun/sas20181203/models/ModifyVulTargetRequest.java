@@ -5,14 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyVulTargetRequest extends TeaModel {
     /**
-     * <p>The configurations. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <p>The configuration target. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><p><strong>vulType</strong>: the type of the vulnerabilities to scan. Valid values:</p>
-     * <ul>
-     * <li><strong>cve</strong>: Linux software vulnerabilities</li>
-     * <li><strong>sys</strong>: Windows system vulnerabilities</li>
-     * <li><strong>cms</strong>: Web-CMS vulnerabilities</li>
-     * <li><strong>emg</strong>: urgent vulnerabilities</li>
+     * <li><strong>vulType</strong>: The vulnerability type. Valid values:<ul>
+     * <li><strong>cve</strong>: Linux software vulnerability.</li>
+     * <li><strong>sys</strong>: Windows system vulnerability.</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
+     * <li><strong>emg</strong>: Emergency vulnerability.</li>
      * </ul>
      * </li>
      * </ul>
@@ -24,16 +23,13 @@ public class ModifyVulTargetRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The operation. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <p>The operation target. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><p><strong>target</strong>: the UUID of the server.</p>
-     * </li>
-     * <li><p><strong>targetType</strong>: the application scope of the operation. Set the value to uuid.</p>
-     * </li>
-     * <li><p><strong>flag</strong>: the type of the operation. Valid values:</p>
-     * <ul>
-     * <li><strong>add</strong>: select</li>
-     * <li><strong>del</strong>: deselect</li>
+     * <li><strong>target</strong>: The UUID of the target machine.</li>
+     * <li><strong>targetType</strong>: The target type. Fixed value: uuid.</li>
+     * <li><strong>flag</strong>: The flag. Valid values:<ul>
+     * <li><strong>add</strong>: Selected.</li>
+     * <li><strong>del</strong>: Deselected.</li>
      * </ul>
      * </li>
      * </ul>

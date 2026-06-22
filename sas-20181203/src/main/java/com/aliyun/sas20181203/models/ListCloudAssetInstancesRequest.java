@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesRequest extends TeaModel {
     /**
-     * <p>Query data list based on keywords.</p>
+     * <p>The data list queried by keyword.</p>
      */
     @NameInMap("CloudAssetQueryData")
     public java.util.List<ListCloudAssetInstancesRequestCloudAssetQueryData> cloudAssetQueryData;
 
     /**
-     * <p>The details of the cloud asset.</p>
+     * <p>The list of assets of the cloud asset instance.</p>
      */
     @NameInMap("CloudAssetTypes")
     public java.util.List<ListCloudAssetInstancesRequestCloudAssetTypes> cloudAssetTypes;
 
     /**
-     * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <p>The conditions used to search for assets. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><p><strong>name</strong>: the name of the search condition.</p>
-     * </li>
-     * <li><p><strong>value</strong>: the value of the search condition.</p>
-     * </li>
-     * <li><p><strong>logicalExp</strong>: the logical relation for multiple search conditions. Valid values:</p>
-     * <ul>
-     * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
-     * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query supported search conditions.</p>
+     * <li><strong>name</strong>: the search item.</li>
+     * <li><strong>value</strong>: the value of the search item.</li>
+     * <li><strong>logicalExp</strong>: the logical relationship between multiple search item values. Valid values:<ul>
+     * <li><strong>OR</strong>: indicates that multiple search item values have an <strong>OR</strong> relationship.</li>
+     * <li><strong>AND</strong>: indicates that multiple search item values have an <strong>AND</strong> relationship.<blockquote>
+     * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;name\&quot;:\&quot;internetIp\&quot;,\&quot;value\&quot;:\&quot;192.168\&quot;,\&quot;logicalExp\&quot;:\&quot;OR\&quot;}]</p>
@@ -41,7 +38,7 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of the current page to return in paginated queries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -49,11 +46,14 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("IsSaleData")
+    public Boolean isSaleData;
+
     /**
-     * <p>The logical relation for multiple search conditions. Valid values:</p>
+     * <p>The logical relationship between multiple search conditions. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
-     * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+     * <li><strong>OR</strong>: indicates that multiple search conditions have an <strong>OR</strong> relationship.</li>
+     * <li><strong>AND</strong>: indicates that multiple search conditions have an <strong>AND</strong> relationship.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     * <p>The maximum number of rows that can be displayed per page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -72,7 +72,7 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -117,6 +117,14 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public ListCloudAssetInstancesRequest setIsSaleData(Boolean isSaleData) {
+        this.isSaleData = isSaleData;
+        return this;
+    }
+    public Boolean getIsSaleData() {
+        return this.isSaleData;
+    }
+
     public ListCloudAssetInstancesRequest setLogicalExp(String logicalExp) {
         this.logicalExp = logicalExp;
         return this;
@@ -143,7 +151,7 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
 
     public static class ListCloudAssetInstancesRequestCloudAssetQueryData extends TeaModel {
         /**
-         * <p>Query content.</p>
+         * <p>The query content.</p>
          * 
          * <strong>example:</strong>
          * <p>163.8.8.9</p>
@@ -152,7 +160,7 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
         public String data;
 
         /**
-         * <p>Query operator, currently only supports: INCLUDE.</p>
+         * <p>The query operator. Currently, only INCLUDE is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>INCLUDE</p>
@@ -185,8 +193,10 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
 
     public static class ListCloudAssetInstancesRequestCloudAssetTypes extends TeaModel {
         /**
-         * <p>The subtype of the cloud asset.</p>
-         * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the subtype of the cloud asset.</p>
+         * <p>The subtype of the cloud service.</p>
+         * <blockquote>
+         * <p>For details, refer to AssetSubType in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -196,7 +206,9 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
 
         /**
          * <p>The type of the cloud asset.</p>
-         * <p>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the cloud asset type.</p>
+         * <blockquote>
+         * <p>For details, refer to AssetType in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -205,13 +217,13 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
         public Integer assetType;
 
         /**
-         * <p>The server type. Valid values:</p>
+         * <p>The server vendor. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: a cloud asset provided by Alibaba Cloud</li>
-         * <li><strong>1</strong>: a cloud asset outside Alibaba Cloud</li>
-         * <li><strong>2</strong>: a cloud asset in a data center</li>
-         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: a cloud asset provided by a third-party service provider</li>
-         * <li><strong>8</strong>: a lightweight cloud asset</li>
+         * <li><strong>0</strong>: Alibaba Cloud asset</li>
+         * <li><strong>1</strong>: Off-cloud asset</li>
+         * <li><strong>2</strong>: IDC asset</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: Other cloud assets</li>
+         * <li><strong>8</strong>: Lightweight asset</li>
          * </ul>
          * 
          * <strong>example:</strong>

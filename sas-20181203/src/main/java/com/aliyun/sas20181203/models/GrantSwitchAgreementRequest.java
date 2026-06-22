@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class GrantSwitchAgreementRequest extends TeaModel {
     /**
-     * <p>Indicates whether to agree to migrate the client connections from overseas servers to the Singapore center.</p>
+     * <p>Specifies whether you agree to the data migration from the Hong Kong (China) region to the Singapore data center. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Agree.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disagree.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,25 +20,22 @@ public class GrantSwitchAgreementRequest extends TeaModel {
     public Boolean isAgree;
 
     /**
-     * <p>Has the user confirmed the migration of Hong Kong region data to Singapore data center</p>
+     * <p>Specifies whether the user confirms that the data migration from the Hong Kong (China) region to the Singapore data center has been completed.</p>
      * <ul>
-     * <li><p><strong>true:</strong> The user has confirmed that Hong Kong region data has been migrated to the Singapore data center. No notification popup needs to be displayed subsequently.</p>
-     * </li>
-     * <li><p><strong>false</strong>:The user has not confirmed that Hong Kong region data has been migrated to the Singapore data center. Notification popup still needs to be displayed subsequently.</p>
-     * </li>
+     * <li><strong>true</strong>: Confirmed. The user has confirmed that the data migration from the Hong Kong (China) region to the Singapore data center has been completed, and the notification pop-up window no longer needs to be displayed.</li>
+     * <li><strong>false</strong>: Not confirmed. The user has not confirmed that the data migration from the Hong Kong (China) region to the Singapore data center has been completed, and the notification pop-up window still needs to be displayed.</li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("IsConfirmed")
     public Boolean isConfirmed;
 
     /**
-     * <p>Whether to schedule the migration of data from the Hong Kong region to the Singapore data center within 24 hours. Values:</p>
+     * <p>Specifies whether to schedule data migration of data from the Hong Kong (China) region to the Singapore data center within 24 hours. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Schedule the switch within 24 hours.</li>
-     * <li><strong>false</strong>: Do not schedule. Users with cloud products in the Hong Kong region will be automatically migrated on March 5, 2026; users without cloud products in the Hong Kong region will be automatically migrated on November 17, 2025.</li>
+     * <li><p><strong>true</strong>: Schedule the switch within 24 hours.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not schedule. For users who have cloud services in the Hong Kong (China) region, data migration will be automatically completed on March 5, 2026. For users who do not have cloud services in the Hong Kong (China) region, data migration will be automatically completed on November 17, 2025.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,10 +45,10 @@ public class GrantSwitchAgreementRequest extends TeaModel {
     public Boolean isImmediate;
 
     /**
-     * <p>The language type for requests and responses. The default value is <strong>zh</strong>. Possible values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,9 +58,9 @@ public class GrantSwitchAgreementRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Switching type. Possible values:</p>
+     * <p>The switch type. Valid values:</p>
      * <ul>
-     * <li><strong>sg_switch</strong>: Migrate client connections from overseas servers to Singapore</li>
+     * <li><strong>sg_switch</strong>: data migration from the Hong Kong (China) region to the Singapore data center.</li>
      * </ul>
      * 
      * <strong>example:</strong>

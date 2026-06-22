@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudAssetMatchOperatorsResponseBody extends TeaModel {
     /**
-     * <p>List of operator types</p>
+     * <p>The operator type.</p>
      */
     @NameInMap("MatchTypeOperators")
     public java.util.List<ListCloudAssetMatchOperatorsResponseBodyMatchTypeOperators> matchTypeOperators;
@@ -246,7 +246,10 @@ public class ListCloudAssetMatchOperatorsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Operator display name. Values: - For LIST type: </p>
+         * <p>Operator display name. Values: </p>
+         * <ul>
+         * <li>For LIST type:</li>
+         * </ul>
          * <ol>
          * <li>Contains: includes </li>
          * <li>SizeGreaterThan: size greater than </li>
@@ -279,14 +282,8 @@ public class ListCloudAssetMatchOperatorsResponseBody extends TeaModel {
          * <li>Equals: equals </li>
          * <li>In: in the list </li>
          * <li>NotEquals: does not equal </li>
-         * <li><blockquote>
-         * <p>: greater than </p>
-         * </blockquote>
-         * </li>
-         * <li><blockquote>
-         * <p>=: greater than or equal to </p>
-         * </blockquote>
-         * </li>
+         * <li><code>&gt;</code>: greater than </li>
+         * <li><code>&gt;=</code>: greater than or equal to </li>
          * <li>&lt;: less than </li>
          * <li>&lt;=: less than or equal to</li>
          * </ol>
@@ -298,14 +295,8 @@ public class ListCloudAssetMatchOperatorsResponseBody extends TeaModel {
          * <li>Equals: equals </li>
          * <li>In: in the list </li>
          * <li>NotEquals: does not equal </li>
-         * <li><blockquote>
-         * <p>: greater than </p>
-         * </blockquote>
-         * </li>
-         * <li><blockquote>
-         * <p>=: greater than or equal to </p>
-         * </blockquote>
-         * </li>
+         * <li><code>&gt;</code>: greater than </li>
+         * <li><code>&gt;=</code>: greater than or equal to </li>
          * <li>&lt;: less than </li>
          * <li>&lt;=: less than or equal to (Note: There seems to be a repetition here, likely meant to be \&quot;&lt;=\&quot; for \&quot;less than or equal to\&quot;)</li>
          * </ol>
@@ -317,14 +308,8 @@ public class ListCloudAssetMatchOperatorsResponseBody extends TeaModel {
          * <li>Equals: equals </li>
          * <li>In: in the list </li>
          * <li>NotEquals: does not equal </li>
-         * <li><blockquote>
-         * <p>: greater than </p>
-         * </blockquote>
-         * </li>
-         * <li><blockquote>
-         * <p>=: greater than or equal to </p>
-         * </blockquote>
-         * </li>
+         * <li><code>&gt;</code>: greater than </li>
+         * <li><code>&gt;=</code>: greater than or equal to </li>
          * <li>&lt;: less than </li>
          * <li>&lt;=: less than or equal to</li>
          * </ol>
@@ -355,14 +340,8 @@ public class ListCloudAssetMatchOperatorsResponseBody extends TeaModel {
          * <li>Equals: equals </li>
          * <li>In: in the list </li>
          * <li>NotEquals: does not equal </li>
-         * <li><blockquote>
-         * <p>: greater than </p>
-         * </blockquote>
-         * </li>
-         * <li><blockquote>
-         * <p>=: greater than or equal to </p>
-         * </blockquote>
-         * </li>
+         * <li><code>&gt;</code>: greater than </li>
+         * <li><code>&gt;=</code>: greater than or equal to </li>
          * <li>&lt;: less than </li>
          * <li>&lt;=: less than or equal to</li>
          * </ol>
@@ -499,7 +478,7 @@ public class ListCloudAssetMatchOperatorsResponseBody extends TeaModel {
 
     public static class ListCloudAssetMatchOperatorsResponseBodyMatchTypeOperators extends TeaModel {
         /**
-         * <p>List of operators</p>
+         * <p>The list of operators.</p>
          */
         @NameInMap("MatchOperators")
         public java.util.List<ListCloudAssetMatchOperatorsResponseBodyMatchTypeOperatorsMatchOperators> matchOperators;

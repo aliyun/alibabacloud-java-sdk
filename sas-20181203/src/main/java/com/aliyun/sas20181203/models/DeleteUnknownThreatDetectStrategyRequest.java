@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteUnknownThreatDetectStrategyRequest extends TeaModel {
     /**
+     * <p>The list of policy IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

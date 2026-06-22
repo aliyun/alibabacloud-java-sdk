@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedVulRequest extends TeaModel {
     /**
-     * <p>The alias of the vulnerability.</p>
+     * <p>The alias of the vulnerability to query.</p>
      * 
      * <strong>example:</strong>
      * <p>RHSA-2019:0230-Important: polkit security update</p>
@@ -14,10 +14,10 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String aliasName;
 
     /**
-     * <p>The type of the asset on which the vulnerability is detected. Separate multiple types with commas (,). Valid values:</p>
+     * <p>The Asset Type where the vulnerability is detected. Separate multiple types with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance</li>
-     * <li><strong>CONTAINER</strong>: container</li>
+     * <li><strong>ECS</strong>: host asset</li>
+     * <li><strong>CONTAINER</strong>: container asset.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String assetType;
 
     /**
-     * <p>The type of the vulnerability. This parameter is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:</p>
+     * <p>The vulnerability type. This query condition is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>sca</strong>: vulnerability that is detected based on software component analysis</li>
-     * <li><strong>app</strong>: application vulnerability</li>
+     * <li><strong>sca</strong>: software constituency parsing vulnerability</li>
+     * <li><strong>app</strong>: application vulnerability.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,20 +49,20 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The key of the condition that is used to query containers. Valid values:</p>
+     * <p>The container search field. Valid values:</p>
      * <ul>
-     * <li><strong>instanceId</strong>: the ID of the asset</li>
-     * <li><strong>appName</strong>: the name of the application</li>
-     * <li><strong>clusterId</strong>: the ID of the cluster</li>
-     * <li><strong>regionId</strong>: the ID of the region</li>
-     * <li><strong>nodeName</strong>: the name of the node</li>
-     * <li><strong>namespace</strong>: the namespace</li>
-     * <li><strong>clusterName</strong>: the name of the cluster</li>
-     * <li><strong>image</strong>: the name of the image</li>
-     * <li><strong>imageRepoName</strong>: the name of the image repository</li>
-     * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
-     * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
-     * <li><strong>imageDigest</strong>: the digest of the image</li>
+     * <li><strong>instanceId</strong>: instance ID</li>
+     * <li><strong>appName</strong>: application name</li>
+     * <li><strong>clusterId</strong>: cluster ID</li>
+     * <li><strong>regionId</strong>: region</li>
+     * <li><strong>nodeName</strong>: node name</li>
+     * <li><strong>namespace</strong>: namespace</li>
+     * <li><strong>clusterName</strong>: cluster name</li>
+     * <li><strong>image</strong>: image name</li>
+     * <li><strong>imageRepoName</strong>: image repository name</li>
+     * <li><strong>imageRepoNamespace</strong>: image repository namespace</li>
+     * <li><strong>imageRepoTag</strong>: image tag</li>
+     * <li><strong>imageDigest</strong>: image digest.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String containerFieldName;
 
     /**
-     * <p>The value specified by <strong>ContainerFieldName</strong>.</p>
+     * <p>The value that corresponds to <strong>ContainerFieldName</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cc914b0df156d40148412afe4a581****</p>
@@ -81,7 +81,7 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String containerFieldValue;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the first page to display in the query results. Default value: <strong>1</strong>, which indicates that the results start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -92,7 +92,7 @@ public class DescribeGroupedVulRequest extends TeaModel {
     /**
      * <p>The CVE ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeVulListPage~~">DescribeVulListPage</a> operation to query the CVE ID.</p>
+     * <p>Call the <a href="~~DescribeVulListPage~~">DescribeVulListPage</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeGroupedVulRequest extends TeaModel {
      * <p>Specifies whether the vulnerability is handled. Valid values:</p>
      * <ul>
      * <li><strong>y</strong>: handled</li>
-     * <li><strong>n</strong>: not handled</li>
+     * <li><strong>n</strong>: not handled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,10 +124,10 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -137,11 +137,11 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The priorities to fix the vulnerabilities. Separate multiple priorities with commas (,). Valid values:</p>
+     * <p>The priority of the vulnerability fix to query. Separate multiple priorities with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>asap</strong>: high</li>
      * <li><strong>later</strong>: medium</li>
-     * <li><strong>nntf</strong>: low</li>
+     * <li><strong>nntf</strong>: low.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of vulnerability entries per page in a paged query. Default value: 10, which indicates that 10 vulnerability entries are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -160,12 +160,10 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+     * <p>Specifies whether Runtime Application Self-Protection (RASP) supports real-time protection against the vulnerability. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: no.</p>
-     * </li>
-     * <li><p><strong>1</strong>: yes.</p>
-     * </li>
+     * <li><strong>0</strong>: Not supported.</li>
+     * <li><strong>1</strong>: Supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,9 +173,9 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public Integer raspDefend;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The ID of the Alibaba Cloud account that is added as one of the member accounts in a resource folder.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</p>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -187,14 +185,14 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The tag that is used to search for the vulnerability. Valid values:</p>
+     * <p>The label used for filtering. Valid values:</p>
      * <ul>
      * <li><strong>Restart required</strong></li>
      * <li><strong>Remote utilization</strong></li>
      * <li><strong>EXP exists</strong></li>
      * <li><strong>Available</strong></li>
-     * <li><strong>Elevation of Privilege</strong></li>
-     * <li><strong>Code Execution</strong></li>
+     * <li><strong>Privilege escalation</strong></li>
+     * <li><strong>Code execution</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,10 +202,10 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String searchTags;
 
     /**
-     * <p>The query type for containers. Valid values:</p>
+     * <p>The container query type. Valid values:</p>
      * <ul>
-     * <li><strong>containerId</strong>: the ID of the container</li>
-     * <li><strong>uuid</strong>: the ID of the asset</li>
+     * <li><strong>containerId</strong>: container ID</li>
+     * <li><strong>uuid</strong>: asset ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -217,13 +215,13 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The type of the vulnerability that you want to query. Default value: cve. Valid values:</p>
+     * <p>The type of the vulnerability to query. Default value: cve. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: Linux software vulnerability</li>
      * <li><strong>sys</strong>: Windows system vulnerability</li>
      * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-     * <li><strong>app</strong>: application vulnerability that is detected by network scanning</li>
-     * <li><strong>sca</strong>: application vulnerability that is detected by software component analysis</li>
+     * <li><strong>app</strong>: application vulnerability (network scan)</li>
+     * <li><strong>sca</strong>: application vulnerability (software constituency parsing).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -233,7 +231,7 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUIDs of the servers to query. Separate multiple UUIDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>d42f938c-d962-48a0-90f9-05e4ea****</p>

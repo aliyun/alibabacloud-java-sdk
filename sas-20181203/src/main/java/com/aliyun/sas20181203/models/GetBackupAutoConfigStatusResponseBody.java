@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetBackupAutoConfigStatusResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>898F7AA7-CECD-5EC7-AF4D-664C601B****</p>
@@ -42,10 +42,10 @@ public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
 
     public static class GetBackupAutoConfigStatusResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the anti-ransomware policy for servers can be automatically configured by the managed anti-ransomware feature. Valid values:</p>
+         * <p>Indicates whether the managed service supports configuring anti-ransomware backup policies. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: Not supported.</li>
+         * <li><strong>true</strong>: Supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

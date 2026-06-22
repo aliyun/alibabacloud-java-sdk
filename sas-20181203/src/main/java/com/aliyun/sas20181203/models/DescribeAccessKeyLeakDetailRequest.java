@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessKeyLeakDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the AccessKey pair leak event.</p>
+     * <p>The ID of the AccessKey pair leak event to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain the event ID.</p>
+     * <p>Call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DescribeAccessKeyLeakDetailRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the ID.</p>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

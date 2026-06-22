@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUnknownThreatDetectProcessResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3956048F-9D73-5EDB-834B-4827BB******</p>

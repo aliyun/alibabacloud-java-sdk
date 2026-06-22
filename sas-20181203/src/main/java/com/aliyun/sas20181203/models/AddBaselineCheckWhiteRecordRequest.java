@@ -33,7 +33,7 @@ public class AddBaselineCheckWhiteRecordRequest extends TeaModel {
      * <p>The reason why the check item is added to the whitelist.</p>
      * 
      * <strong>example:</strong>
-     * <p>AutoRun</p>
+     * <p>无效</p>
      */
     @NameInMap("Reason")
     public String reason;

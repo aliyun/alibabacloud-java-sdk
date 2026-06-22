@@ -14,13 +14,13 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
     public Integer protectedDatabaseCount;
 
     /**
-     * <p>The regions of the database instances.</p>
+     * <p>The list of regions in which database instances can be configured.</p>
      */
     @NameInMap("RegionCountList")
     public java.util.List<DescribeUniBackupStatisticsResponseBodyRegionCountList> regionCountList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>7532B7EE-7CE7-5F4D-BF04-B12447DD****</p>
@@ -29,7 +29,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of the restoration tasks that are running.</p>
+     * <p>The number of tasks that are being restored.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -38,7 +38,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
     public Integer restoringTaskCount;
 
     /**
-     * <p>The total number of database instances that can be restored.</p>
+     * <p>The number of recoverable database instances.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -47,7 +47,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
     public Integer totalRecoverableCount;
 
     /**
-     * <p>The total number of the restoration tasks.</p>
+     * <p>The total number of restoration records.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         public String automaticCount;
 
         /**
-         * <p>The ID of the region in which the database instance resides.</p>
+         * <p>The region ID of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

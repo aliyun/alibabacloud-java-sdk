@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyClientUserDefineRuleRequest extends TeaModel {
     /**
-     * <p>The action of the rule. Valid values:</p>
+     * <p>The action type. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: allow</li>
-     * <li><strong>1</strong>: block</li>
+     * <li><strong>1</strong>: block.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,9 +55,9 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public String IP;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The ID of the custom rule.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> operation to query the IDs of rules.</p>
+     * <p>Call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -68,7 +68,7 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The hash values of processes.</p>
+     * <p>The list of process hashes.</p>
      * 
      * <strong>example:</strong>
      * <p>aa5ee3ed4363c9d195a591a70281****,3e522d6f3bf5cf88bb77e9ff3d13****</p>
@@ -77,16 +77,16 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public String md5List;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Rule\<em>\</em>\<em>\</em></p>
+     * <p>规则****</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The new file path after the file is renamed.</p>
+     * <p>The new file path for file rename.</p>
      * 
      * <strong>example:</strong>
      * <p>/etc/pam****</p>
@@ -95,7 +95,7 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public String newFilePath;
 
     /**
-     * <p>The parent command line.</p>
+     * <p>The parent process command line.</p>
      * 
      * <strong>example:</strong>
      * <p>/usr/sbin/s****</p>
@@ -104,7 +104,7 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public String parentCmdline;
 
     /**
-     * <p>The path to the parent process.</p>
+     * <p>The parent process path.</p>
      * 
      * <strong>example:</strong>
      * <p>C:/Windows/System32/cmd****</p>
@@ -113,11 +113,11 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public String parentProcPath;
 
     /**
-     * <p>The type of the operating system. Valid values:</p>
+     * <p>The operating system type. Valid values:</p>
      * <ul>
      * <li><strong>windows</strong>: Windows</li>
      * <li><strong>linux</strong>: Linux</li>
-     * <li><strong>all</strong>: all types</li>
+     * <li><strong>all</strong>: all.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public String portStr;
 
     /**
-     * <p>The path to the process.</p>
+     * <p>The process path.</p>
      * 
      * <strong>example:</strong>
      * <p>/root/1111/****</p>
@@ -175,15 +175,15 @@ public class ModifyClientUserDefineRuleRequest extends TeaModel {
     public String registryKey;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Process hash</li>
-     * <li><strong>2</strong>: Command line</li>
-     * <li><strong>3</strong>: Process Network</li>
-     * <li><strong>4</strong>: File Read and Write</li>
-     * <li><strong>5</strong>: Operation on Registry</li>
-     * <li><strong>6</strong>: Dynamic-link Library Loading</li>
-     * <li><strong>7</strong>: File Renaming</li>
+     * <li><strong>1</strong>: process hash</li>
+     * <li><strong>2</strong>: command line</li>
+     * <li><strong>3</strong>: process network</li>
+     * <li><strong>4</strong>: file read/write</li>
+     * <li><strong>5</strong>: registry operation</li>
+     * <li><strong>6</strong>: dynamic-link library loading</li>
+     * <li><strong>7</strong>: file rename.</li>
      * </ul>
      * 
      * <strong>example:</strong>

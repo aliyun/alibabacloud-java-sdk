@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the chart that is included in the report. Multiple IDs are separated by commas (,).</p>
+     * <p>The report chart configuration IDs, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>BIZ_STAT_QUERY_KEY_ATTACK,CUSTOM_VUL_CVE_LIST,CUSTOM_VUL_SYS_LIST,CUSTOM_VUL_WEBCMS_LIST,CUSTOM_AUTO_BREAKING_PIE,CUSTOM_AK_LEAK_LIST,KEY_HP_TAMPERPROOF,KEY_HP_DEFENCE</p>
@@ -14,10 +14,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String chartIds;
 
     /**
-     * <p>The grouping type. Valid values:</p>
+     * <p>The group type. Valid values:</p>
      * <ul>
-     * <li><strong>ALIYUN_RG</strong></li>
-     * <li><strong>SAS_GROUP</strong></li>
+     * <li><strong>ALIYUN_RG</strong>: ALIYUN_RG.</li>
+     * <li><strong>SAS_GROUP</strong>: SAS_GROUP.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String groupType;
 
     /**
-     * <p>Indicates whether the report is the default report. Valid values:</p>
+     * <p>Indicates whether the report is a default report. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no.</li>
-     * <li><strong>1</strong>: yes.</li>
+     * <li><strong>0</strong>: Not a default report.</li>
+     * <li><strong>1</strong>: A default report.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,11 +40,11 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public Integer isDefault;
 
     /**
-     * <p>Whether the new account is connected by default. Values:</p>
+     * <p>Specifies whether newly added accounts are included by default. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Yes.</li>
-     * <li><strong>false</strong>: No.<blockquote>
-     * <p>Only supported in version 2.0.0.</p>
+     * <li><strong>true</strong>: Included.</li>
+     * <li><strong>false</strong>: Not included.<blockquote>
+     * <p>Only version 2.0.0 supports this parameter.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -56,7 +56,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public Boolean memberAccountSyncFlag;
 
     /**
-     * <p>The time when the report is pinned.</p>
+     * <p>The pinned time.</p>
      * 
      * <strong>example:</strong>
      * <p>1717430400000</p>
@@ -65,7 +65,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public Long pinnedTime;
 
     /**
-     * <p>The email address of the recipient. Multiple email addresses are separated by commas (,).</p>
+     * <p>The recipient email addresses, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:PengZheng@eaton.com">PengZheng@eaton.com</a>,<a href="mailto:ZhongJi@Eaton.com">ZhongJi@Eaton.com</a></p>
@@ -74,7 +74,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String recipients;
 
     /**
-     * <p>The most recent days for report statistics.</p>
+     * <p>The number of recent days covered by the report statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -83,7 +83,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public Integer reportDays;
 
     /**
-     * <p>The end date on which the report is sent.</p>
+     * <p>The end date for report delivery.</p>
      * 
      * <strong>example:</strong>
      * <p>1720022399999</p>
@@ -92,7 +92,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String reportEndDate;
 
     /**
-     * <p>The ID of the report.</p>
+     * <p>The report ID.</p>
      * 
      * <strong>example:</strong>
      * <p>663434</p>
@@ -101,10 +101,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public Long reportId;
 
     /**
-     * <p>The language of the report. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,10 +114,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String reportLang;
 
     /**
-     * <p>The time range in which the report is sent. Valid values:</p>
+     * <p>The report delivery time range. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: 00:00 to 06:00.</li>
-     * <li><strong>2</strong>: 06:00 to 12:00.</li>
+     * <li><strong>1</strong>: 0:00 to 6:00.</li>
+     * <li><strong>2</strong>: 6:00 to 12:00.</li>
      * <li><strong>3</strong>: 12:00 to 18:00.</li>
      * <li><strong>4</strong>: 18:00 to 24:00.</li>
      * </ul>
@@ -129,7 +129,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String reportSendType;
 
     /**
-     * <p>The start date on which the report is sent.</p>
+     * <p>The start date for report delivery.</p>
      * 
      * <strong>example:</strong>
      * <p>1717430400000</p>
@@ -138,10 +138,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String reportStartDate;
 
     /**
-     * <p>The status of the report. Valid values:</p>
+     * <p>The report status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: disabled.</li>
-     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,12 +151,12 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String reportStatus;
 
     /**
-     * <p>The type of the report. Valid values:</p>
+     * <p>The report type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: daily report.</li>
-     * <li><strong>1</strong>: weekly report.</li>
-     * <li><strong>2</strong>: monthly report.</li>
-     * <li><strong>3</strong>: report whose statistics are collected in a custom time range.</li>
+     * <li><strong>0</strong>: Daily report.</li>
+     * <li><strong>1</strong>: Weekly report.</li>
+     * <li><strong>2</strong>: Monthly report.</li>
+     * <li><strong>3</strong>: Custom period.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The end time at which the report is sent. The value is in the HH:mm:ss format.</p>
+     * <p>The delivery end time, in the format of HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>10:00:00</p>
@@ -184,7 +184,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String sendEndTime;
 
     /**
-     * <p>The exact day within the sending period.</p>
+     * <p>The specific execution dates within the delivery period.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -193,11 +193,11 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public Integer sendPeriodDays;
 
     /**
-     * <p>The interval at which the report is sent. Valid values:</p>
+     * <p>The delivery period type. Valid values:</p>
      * <ul>
-     * <li><strong>DAY</strong></li>
-     * <li><strong>WEEK</strong></li>
-     * <li><strong>MONTH</strong></li>
+     * <li><strong>DAY</strong>: day.</li>
+     * <li><strong>WEEK</strong>: week.</li>
+     * <li><strong>MONTH</strong>: month.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String sendPeriodType;
 
     /**
-     * <p>The start time at which the report is sent. The value is in the HH:mm:ss format.</p>
+     * <p>The delivery start time, in the format of HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>09:00:00</p>
@@ -216,7 +216,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String sendStartTime;
 
     /**
-     * <p>The time at which the report is sent. The value is in the HH:mm:ss format.</p>
+     * <p>The delivery time, in the format of HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>09:00:00</p>
@@ -225,7 +225,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String sendTime;
 
     /**
-     * <p>The groups.</p>
+     * <p>The targets within the group.</p>
      * 
      * <strong>example:</strong>
      * <p>12125884,12140191</p>
@@ -234,7 +234,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String targetGroups;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. Multiple IDs are separated by commas (,).</p>
+     * <p>The list of target UIDs, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1457515594445744,1600011353839072,1766185894104675,1674080148055995,1627510829033157</p>
@@ -243,7 +243,7 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     public String targetUids;
 
     /**
-     * <p>The title of the report.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
      * <p>marketing report</p>

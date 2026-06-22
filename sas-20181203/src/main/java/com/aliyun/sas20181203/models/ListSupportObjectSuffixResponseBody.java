@@ -11,7 +11,7 @@ public class ListSupportObjectSuffixResponseBody extends TeaModel {
     public java.util.List<String> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The system generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>571B2642-BF51-5BDD-906B-D2340DB9****</p>

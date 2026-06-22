@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockUnbindResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. It is a unique identifier that Alibaba Cloud generates for the request. You can use it to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F0A8A039-930D-5EC1-97C8-43F05776188A</p>

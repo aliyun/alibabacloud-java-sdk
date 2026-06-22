@@ -254,11 +254,16 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * <p>The states of check items. Multiple states are separated with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>PASS</strong>: passed</li>
-         * <li><strong>NOT_PASS</strong>: failed</li>
-         * <li><strong>CHECKING</strong>: being checked</li>
-         * <li><strong>NOT_CHECK</strong>: not checked</li>
-         * <li><strong>WHITELIST</strong>: added to the whitelist</li>
+         * <li><p><strong>PASS</strong>: passed</p>
+         * </li>
+         * <li><p><strong>NOT_PASS</strong>: failed</p>
+         * </li>
+         * <li><p><strong>CHECKING</strong>: being checked</p>
+         * </li>
+         * <li><p><strong>NOT_CHECK</strong>: not checked</p>
+         * </li>
+         * <li><p><strong>WHITELIST</strong>: added to the whitelist</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +276,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
          * <p>The exception message of the check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Task is failed.</p>
+         * <p>检查任务失败。</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
@@ -378,8 +383,10 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * <p>The format of the check result for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>text</strong></li>
-         * <li><strong>link</strong></li>
+         * <li><p><strong>text</strong></p>
+         * </li>
+         * <li><p><strong>link</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -438,8 +445,10 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the search condition is used. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -469,8 +478,10 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * <p>The type of the check result for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>text</strong></li>
-         * <li><strong>link</strong></li>
+         * <li><p><strong>text</strong></p>
+         * </li>
+         * <li><p><strong>link</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

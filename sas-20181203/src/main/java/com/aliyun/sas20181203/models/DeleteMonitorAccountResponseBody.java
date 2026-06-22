@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitorAccountResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>

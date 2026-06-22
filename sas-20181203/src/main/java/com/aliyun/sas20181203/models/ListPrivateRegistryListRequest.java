@@ -7,10 +7,14 @@ public class ListPrivateRegistryListRequest extends TeaModel {
     /**
      * <p>The type of the image repository. Valid values:</p>
      * <ul>
-     * <li><strong>acr</strong>: Container Registry</li>
-     * <li><strong>harbor</strong>: Harbor</li>
-     * <li><strong>quay</strong>: Quay</li>
-     * <li><strong>CI/CD</strong>: Jenkins</li>
+     * <li><p><strong>acr</strong>: ACR</p>
+     * </li>
+     * <li><p><strong>harbor</strong>: Harbor</p>
+     * </li>
+     * <li><p><strong>quay</strong>: Quay</p>
+     * </li>
+     * <li><p><strong>CI/CD</strong>: Jenkins</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

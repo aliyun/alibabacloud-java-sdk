@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class FixCheckWarningsRequest extends TeaModel {
     /**
-     * <p>The parameters for the baseline risk item that you want to fix.</p>
+     * <p>The parameters of the baseline check items to fix. The following parameters are included:</p>
      * <ul>
-     * <li><p><strong>checkId</strong>: the ID of the check item that corresponds to the baseline risk item.</p>
-     * </li>
-     * <li><p><strong>rules</strong>: an array that consists of the rules applied to fixes.</p>
-     * <ul>
-     * <li><strong>value</strong>: specifies whether a fix method is selected. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.</li>
-     * <li><strong>ruleId</strong>: the ID of the fix method.</li>
-     * <li><strong>paramList</strong>: an array that consists of the details about the fix method.\
-     * • <strong>paramName</strong>: the name of the fix method.\
-     * • <strong>value</strong>: the value of the fix method.</li>
+     * <li><strong>checkId</strong>: The ID of the check item.</li>
+     * <li><strong>rules</strong>: The fix rules (in array format).<ul>
+     * <li><strong>value</strong>: Specifies whether the fix method is selected. Valid values: <strong>0</strong> (not selected), <strong>1</strong> (selected).</li>
+     * <li><strong>ruleId</strong>: The ID of the fix method.</li>
+     * <li><strong>paramList</strong>: The list of fix methods (in array format).<br>      • <strong>paramName</strong>: The name of the fix method.<br>      • <strong>value</strong>: The value of the fix method.</li>
      * </ul>
      * </li>
      * </ul>
@@ -28,10 +24,10 @@ public class FixCheckWarningsRequest extends TeaModel {
     public String checkParams;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +37,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The retention period of the snapshot that is created when you fix the baseline risk. Valid values: 1 to 365. Unit: days.</p>
+     * <p>The retention period of the snapshot to create when performing the baseline fix operation. Valid values: 1 to 365. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +48,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     /**
      * <p>The ID of the risk item.</p>
      * <blockquote>
-     * <p> To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+     * <p>To query the check item information for a specified risk item and a specified server, you must provide the risk item ID. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +58,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     public Long riskId;
 
     /**
-     * <p>The name of the snapshot that is created when you fix the baseline risk.</p>
+     * <p>The name of the snapshot to create when performing the baseline fix operation.</p>
      * 
      * <strong>example:</strong>
      * <p>sas_fix_2024-12-04</p>
@@ -71,7 +67,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     public String snapshotName;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>165.225.XX.XX</p>
@@ -80,7 +76,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The UUID of the asset for which you want to fix the baseline risk item. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to query the UUIDs of assets.</p>
+     * <p>The unique ID of the asset instance to fix. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75a417dda5f25edb5bed8f208a9a****,c7e10fd794262a1510d5648f9e5d****</p>

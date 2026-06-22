@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of image repository types.</p>
+     * <p>The information about image repository types.</p>
      */
     @NameInMap("RegistryTypeInfos")
     public java.util.List<ListPrivateRegistryTypeResponseBodyRegistryTypeInfos> registryTypeInfos;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The China Chinese Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
@@ -51,12 +51,12 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The name of the image repository type. Valid values:</p>
+         * <p>The type of the image repository. Valid values:</p>
          * <ul>
-         * <li><strong>acr</strong>: Container Registry</li>
-         * <li><strong>harbor</strong>: Harbor</li>
-         * <li><strong>quay</strong>: Quay</li>
-         * <li><strong>CI/CD</strong>: Jenkins</li>
+         * <li><strong>acr</strong>: ACR.</li>
+         * <li><strong>harbor</strong>: Harbor.</li>
+         * <li><strong>quay</strong>: Quay.</li>
+         * <li><strong>CI/CD</strong>: Jenkins.</li>
          * </ul>
          * 
          * <strong>example:</strong>

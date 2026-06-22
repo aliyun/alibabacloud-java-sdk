@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListAgentlessRiskUuidResponseBody extends TeaModel {
     /**
-     * <p>The information about the hosts.</p>
+     * <p>The list of servers.</p>
      */
     @NameInMap("List")
     public java.util.List<ListAgentlessRiskUuidResponseBodyList> list;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The paging information for the query.</p>
      */
     @NameInMap("PageInfo")
     public ListAgentlessRiskUuidResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>05AE6B16-741A-5A75-9BF0-BC747DD9****</p>
@@ -56,7 +56,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
 
     public static class ListAgentlessRiskUuidResponseBodyList extends TeaModel {
         /**
-         * <p>The number of baseline risks.</p>
+         * <p>The number of baseline risk items.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -65,7 +65,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         public Integer baselineCount;
 
         /**
-         * <p>The instance ID of the asset.</p>
+         * <p>The ID of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp1g6wxdwps7s9dz****</p>
@@ -110,7 +110,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         public Integer maliciousCount;
 
         /**
-         * <p>The timestamp of the detection. Unit: milliseconds.</p>
+         * <p>The timestamp of the scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>168257753****</p>
@@ -119,7 +119,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         public Long scanTime;
 
         /**
-         * <p>The ID of the asset that is detected.</p>
+         * <p>The ID of the scan target.</p>
          * 
          * <strong>example:</strong>
          * <p>30****</p>
@@ -128,7 +128,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>The name of the asset that is detected.</p>
+         * <p>The name of the scan target.</p>
          * 
          * <strong>example:</strong>
          * <p>test****</p>
@@ -251,7 +251,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
 
     public static class ListAgentlessRiskUuidResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -260,7 +260,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page when using paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

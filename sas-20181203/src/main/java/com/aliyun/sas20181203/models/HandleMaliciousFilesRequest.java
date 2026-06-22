@@ -5,19 +5,20 @@ import com.aliyun.tea.*;
 
 public class HandleMaliciousFilesRequest extends TeaModel {
     /**
-     * <p>List of file IDs to be processed.</p>
+     * <p>The list of file IDs to process.</p>
      * <blockquote>
-     * <h2>You can call <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> to get the IDs.</h2>
+     * <p>You can call <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> to obtain the IDs.
+     * -.</p>
      * </blockquote>
      */
     @NameInMap("FileIdList")
     public java.util.List<Long> fileIdList;
 
     /**
-     * <p>Type of operation:</p>
+     * <p>The type of operation. Valid values:</p>
      * <ul>
-     * <li>addWhitelist: Add to whitelist</li>
-     * <li>offWhitelist: Remove from whitelist</li>
+     * <li>addWhitelist: adds to the whitelist.</li>
+     * <li>offWhitelist: removes from the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>

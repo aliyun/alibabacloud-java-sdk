@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number from which to start displaying the returned results. Default value: 1, which indicates that the display starts from page 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.</p>
+     * <p>The identification information of the server protected by the anti-ransomware policy to query. You can enter the IP address or instance ID of the server.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -24,7 +24,7 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     public String machineRemark;
 
     /**
-     * <p>The name of the anti-ransomware policy that you want to query.</p>
+     * <p>The name of the anti-ransomware protection policy to query.</p>
      * 
      * <strong>example:</strong>
      * <p>SecurityStrategy-20200303</p>
@@ -33,7 +33,7 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of backup policies on each page during paginated queries. Default value: 10, which indicates that each page contains 10 protection policies.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,11 +43,14 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The status of the anti-ransomware policy. Valid values:</p>
+     * <p>The status of the anti-ransomware protection policy.</p>
      * <ul>
-     * <li><strong>enabled</strong>: The anti-ransomware policy is manually enabled.</li>
-     * <li><strong>disabled</strong>: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</li>
-     * <li><strong>closed</strong>: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</li>
+     * <li><p><strong>enabled</strong>: The policy is manually enabled.</p>
+     * </li>
+     * <li><p><strong>disabled</strong>: The policy is manually disabled. After the policy is disabled, running backup tasks will stop.</p>
+     * </li>
+     * <li><p><strong>closed</strong>: The anti-ransomware capacity is exceeded, and the system disables the policy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

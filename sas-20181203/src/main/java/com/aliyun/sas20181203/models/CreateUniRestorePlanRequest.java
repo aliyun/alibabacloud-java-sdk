@@ -14,9 +14,9 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The UUID of the Hybrid Backup Recovery (HBR) agent that is used to restore the data of the database on your server.</p>
+     * <p>The unique identifier of the database backup client on the destination server for restoration.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</p>
+     * <p>Call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     public String instanceUuid;
 
     /**
-     * <p>The ID of the anti-ransomware policy.</p>
+     * <p>The ID of the database anti-ransomware backup policy.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the ID.</p>
+     * <p>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,9 +39,9 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     public Long policyId;
 
     /**
-     * <p>The identifier of the point in time for restoration in the backup version that you want to use. The database is an Oracle database.****</p>
+     * <p>The <strong>reset_scn</strong> value of the selected record from the recoverable points in time when you query backups for an Oracle database.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the value.</p>
+     * <p>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,9 +51,9 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     public String resetScn;
 
     /**
-     * <p>The point in time for restoration in the backup version that you want to use. The database is an Oracle database.****</p>
+     * <p>The <strong>reset_time</strong> value of the selected record from the recoverable points in time when you query backups for an Oracle database.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the value.</p>
+     * <p>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,14 +63,14 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     public String resetTime;
 
     /**
-     * <p>The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:</p>
+     * <p>The database restoration information when the database type is MSSQL. The value is a JSON string. Valid values:</p>
      * <ul>
-     * <li><strong>name</strong>: the name of the database</li>
-     * <li><strong>files</strong>: the path to the database files</li>
-     * </ul>
-     * <blockquote>
-     * <p> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the information.</p>
+     * <li><strong>name</strong>: the name of the database.</li>
+     * <li><strong>files</strong>: the file path of the database.<blockquote>
+     * <p>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{&quot;files&quot;: {&quot;qtc&quot;:&quot;F:\\database\\qtc.mdf&quot;,&quot;qtc_log&quot;:&quot;F:\\database\\qtc_0.ldf&quot;},
@@ -80,9 +80,9 @@ public class CreateUniRestorePlanRequest extends TeaModel {
     public String restoreInfo;
 
     /**
-     * <p>The point in time to which you want to restore data.</p>
+     * <p>The point in time to which you want to restore the database.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to query the point in time.</p>
+     * <p>Call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

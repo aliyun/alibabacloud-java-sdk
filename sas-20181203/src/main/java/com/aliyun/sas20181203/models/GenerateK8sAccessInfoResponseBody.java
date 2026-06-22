@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GenerateK8sAccessInfoResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GenerateK8sAccessInfoResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>061955B2-BC40-589F-AF63-C40A901EE279</p>
@@ -42,7 +42,7 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
 
     public static class GenerateK8sAccessInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The aliuid of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1766185894104***</p>
@@ -51,7 +51,7 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+         * <p>The SLS Logstore of the audit log.</p>
          * 
          * <strong>example:</strong>
          * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
@@ -60,7 +60,7 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         public String auditLogStore;
 
         /**
-         * <p>The Simple Log Service project that is used to store the audit logs.</p>
+         * <p>The SLS project of the audit log.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-custom-your-project-sd89ehaaa</p>
@@ -69,7 +69,7 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         public String auditProject;
 
         /**
-         * <p>The ID of the region in which the server is deployed.</p>
+         * <p>The region ID of the server.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -96,16 +96,22 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>CPU architectures are divided into ARM architecture and x86 architecture.</p>
+         * <p>The CPU architecture, which can be ARM or x86. Valid values:</p>
+         * <ul>
+         * <li><p>arm64</p>
+         * </li>
+         * <li><p>x86</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>arm</p>
+         * <p>x86</p>
          */
         @NameInMap("CpuArch")
         public String cpuArch;
 
         /**
-         * <p>The expiration time. Unit: milliseconds.</p>
+         * <p>The expiration time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1804230578566</p>

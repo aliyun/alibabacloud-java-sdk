@@ -5,7 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListAegisContainerPluginRuleRequest extends TeaModel {
     /**
-     * <p>The query condition.</p>
+     * <p>The query conditions. The format is as follows:</p>
+     * <pre><code class="language-json">[
+     *   {
+     *     &quot;name&quot;: &quot;ruleName&quot;,
+     *     &quot;value&quot;: &quot;test&quot;
+     *   }
+     * ]
+     * </code></pre>
+     * <p><strong>- name</strong>: The condition name. The following conditions are supported:</p>
+     * <ul>
+     * <li><strong>ruleName</strong>: The rule name.</li>
+     * </ul>
+     * <p><strong>- value</strong>: The condition value.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;name\&quot;: \&quot;name\&quot;, \&quot;value\&quot;: \&quot;test-1818\&quot;}]</p>
@@ -14,7 +26,7 @@ public class ListAegisContainerPluginRuleRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paginated query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +36,10 @@ public class ListAegisContainerPluginRuleRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +49,7 @@ public class ListAegisContainerPluginRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page in a paginated query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,10 +59,10 @@ public class ListAegisContainerPluginRuleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: custom</li>
-     * <li><strong>1</strong>: system</li>
+     * <li><strong>0</strong>: User-defined.</li>
+     * <li><strong>1</strong>: System built-in.</li>
      * </ul>
      * 
      * <strong>example:</strong>

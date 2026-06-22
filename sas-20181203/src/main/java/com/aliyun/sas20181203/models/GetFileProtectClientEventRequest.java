@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFileProtectClientEventRequest extends TeaModel {
     /**
+     * <p>The unique ID of the alert event.</p>
+     * 
      * <strong>example:</strong>
      * <p>131231</p>
      */

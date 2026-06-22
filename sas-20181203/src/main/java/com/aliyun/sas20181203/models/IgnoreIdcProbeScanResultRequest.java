@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class IgnoreIdcProbeScanResultRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Valid values:</p>
+     * <p>The action to perform. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: adds the scan result to the whitelist.</li>
-     * <li><strong>2</strong>: ignores the scan result.</li>
+     * <li><strong>1</strong>: whitelist</li>
+     * <li><strong>2</strong>: ignore.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,9 +19,9 @@ public class IgnoreIdcProbeScanResultRequest extends TeaModel {
     public Integer ignoreAction;
 
     /**
-     * <p>The ID of the scan result. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of scan results. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeIdcProbeScanResultList~~">DescribeIdcProbeScanResultList</a> operation to query the ID.</p>
+     * <p>Call the <a href="~~DescribeIdcProbeScanResultList~~">DescribeIdcProbeScanResultList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

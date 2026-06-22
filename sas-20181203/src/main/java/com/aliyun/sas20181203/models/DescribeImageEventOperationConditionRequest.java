@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeImageEventOperationConditionRequest extends TeaModel {
     /**
-     * <p>The alert type.</p>
+     * <p>The alerting type.</p>
      * <ul>
-     * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+     * <li><strong>sensitiveFile</strong>: sensitive file.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeImageEventOperationConditionRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the configurations of the cluster.</p>
+     * <p>The list of cluster configuration information.</p>
      */
     @NameInMap("ClusterConfigList")
     public java.util.List<ListClusterInterceptionConfigResponseBodyClusterConfigList> clusterConfigList;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The paging information for a paged query.</p>
      */
     @NameInMap("PageInfo")
     public ListClusterInterceptionConfigResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>49FDE92F-A0B8-56CC-B7A8-23B17646****</p>
@@ -56,12 +56,12 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
 
     public static class ListClusterInterceptionConfigResponseBodyClusterConfigList extends TeaModel {
         /**
-         * <p>The status of the container firewall feature. Valid values:</p>
+         * <p>The container firewall status of the cluster. Valid values:</p>
          * <ul>
          * <li><strong>-1</strong>: unknown</li>
          * <li><strong>0</strong>: abnormal</li>
          * <li><strong>1</strong>: normal</li>
-         * <li><strong>2</strong>: normal to be confirmed</li>
+         * <li><strong>2</strong>: normal pending confirmation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public Integer clusterCNNFStatus;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c9051d30d8a044b4d99e1cb5d25ac****</p>
@@ -80,7 +80,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>container-opa-kill-02</p>
@@ -89,13 +89,13 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The type of the cluster. Valid values:</p>
+         * <p>The cluster type. Valid values:</p>
          * <ul>
-         * <li><strong>ManagedKubernetes</strong>: managed Kubernetes cluster</li>
-         * <li><strong>NotManagedKubernetes</strong>: non-managed Kubernetes cluster</li>
+         * <li><strong>ManagedKubernetes</strong>: managed Kubernetes</li>
+         * <li><strong>NotManagedKubernetes</strong>: non-managed Kubernetes</li>
          * <li><strong>PrivateKubernetes</strong>: private cluster</li>
-         * <li><strong>kubernetes</strong>: dedicated Kubernetes cluster</li>
-         * <li><strong>ask</strong>: dedicated serverless Kubernetes (ASK) cluster</li>
+         * <li><strong>kubernetes</strong>: dedicated Kubernetes</li>
+         * <li><strong>ask</strong>: dedicated ASK.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,10 +105,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The status of the defense rule. Valid values:</p>
+         * <p>The status of the rule interception switch. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>1</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public Integer interceptionSwitch;
 
         /**
-         * <p>The number of defense rules that are in effect.</p>
+         * <p>The number of active rules.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -127,7 +127,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public Long openRuleCount;
 
         /**
-         * <p>Indicates whether the container firewall feature is supported.</p>
+         * <p>Indicates whether the container firewall is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -136,7 +136,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public Boolean supportCNNF;
 
         /**
-         * <p>The total number of defense rules.</p>
+         * <p>The total number of rules.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -217,7 +217,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
 
     public static class ListClusterInterceptionConfigResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of cluster interception rules on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -226,7 +226,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -235,7 +235,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public Integer currrentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of cluster interception rules per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -244,7 +244,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of cluster interception rules.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>

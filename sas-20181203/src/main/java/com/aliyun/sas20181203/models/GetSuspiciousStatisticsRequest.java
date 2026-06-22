@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetSuspiciousStatisticsRequest extends TeaModel {
     /**
-     * <p>The ID of the asset group. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the asset groups that you want to query. Separate multiple asset group IDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+     * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class GetSuspiciousStatisticsRequest extends TeaModel {
     public String groupIdList;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>10.12.XX.XX</p>

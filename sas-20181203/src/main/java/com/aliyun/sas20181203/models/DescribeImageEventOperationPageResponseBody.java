@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageEventOperationPageResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeImageEventOperationPageResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,10 +38,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The API call was successful.</li>
+     * <li><strong>false</strong>: The API call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
 
     public static class DescribeImageEventOperationPageResponseBodyDataList extends TeaModel {
         /**
-         * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+         * <p>The rule conditions in JSON format. Valid keys:</p>
          * <ul>
          * <li><strong>condition</strong>: the matching condition.</li>
          * <li><strong>type</strong>: the matching type.</li>
@@ -111,7 +111,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         public String conditions;
 
         /**
-         * <p>The keyword of the alert item.</p>
+         * <p>The keyword of the alert metric.</p>
          * 
          * <strong>example:</strong>
          * <p>PEM</p>
@@ -120,7 +120,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         public String eventKey;
 
         /**
-         * <p>The name of the alert item.</p>
+         * <p>The name of the alert metric.</p>
          * 
          * <strong>example:</strong>
          * <p>PEM</p>
@@ -129,9 +129,9 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The alert type.</p>
+         * <p>The alerting type. Valid values:</p>
          * <ul>
-         * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+         * <li><strong>sensitiveFile</strong>: sensitive file tampering.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,9 +159,9 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         public String note;
 
         /**
-         * <p>The operation code.</p>
+         * <p>The operation code. Valid values:</p>
          * <ul>
-         * <li>Only <strong>whitelist</strong> may be returned, which means that the alert item is added to the whitelist.</li>
+         * <li><strong>whitelist</strong>: whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,10 +171,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         public String operationCode;
 
         /**
-         * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+         * <p>The rule scope in JSON format. Valid keys:</p>
          * <ul>
-         * <li><strong>type</strong></li>
-         * <li><strong>value</strong></li>
+         * <li><strong>type</strong>: the scope type.</li>
+         * <li><strong>value</strong>: the scope value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,14 +184,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         public String scenarios;
 
         /**
-         * <p>The source of the whitelist. Valid values:</p>
+         * <p>The source of the alert handling rule. Valid values:</p>
          * <ul>
-         * <li><strong>image</strong>: image.</li>
-         * <li><strong>agentless</strong>: agentless detection.</li>
+         * <li><strong>default</strong>: image</li>
+         * <li><strong>agentless</strong>: agentless.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>agentless</p>
+         * <p>default</p>
          */
         @NameInMap("Source")
         public String source;
@@ -277,7 +277,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
 
     public static class DescribeImageEventOperationPageResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The number of the page to return in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -286,7 +286,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries to return on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -336,13 +336,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
 
     public static class DescribeImageEventOperationPageResponseBodyData extends TeaModel {
         /**
-         * <p>The alert handling rules.</p>
+         * <p>The list of alert handling rules.</p>
          */
         @NameInMap("List")
         public java.util.List<DescribeImageEventOperationPageResponseBodyDataList> list;
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paged query parameters.</p>
          */
         @NameInMap("PageInfo")
         public DescribeImageEventOperationPageResponseBodyDataPageInfo pageInfo;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of entries returned on the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The data collection configurations of the proxy cluster.</p>
+     * <p>The list of data collection configurations for the proxy cluster.</p>
      */
     @NameInMap("PolicyList")
     public java.util.List<DescribeHybridProxyPolicyResponseBodyPolicyList> policyList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F7A1B40A-7EED-55A0-BCBC-2F83A486F0AB</p>
@@ -59,7 +59,7 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyPolicyResponseBodyPolicyListInfo extends TeaModel {
         /**
-         * <p>The value of the policy configurations.</p>
+         * <p>The specific value of the policy configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -68,7 +68,7 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The name of the file. After you configure a blocking policy, the blocked data is written to the file.</p>
+         * <p>The file to which the data intercepted by the proxy cluster policy is written.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -77,11 +77,11 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The type of the policy that you configured. Valid values:</p>
+         * <p>The configured policy type. Valid values:</p>
          * <ul>
-         * <li><strong>file</strong></li>
-         * <li><strong>net</strong></li>
-         * <li><strong>process</strong></li>
+         * <li><strong>file</strong>: file data collection</li>
+         * <li><strong>net</strong>: network data collection</li>
+         * <li><strong>process</strong>: process data collection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,16 +123,16 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyPolicyResponseBodyPolicyList extends TeaModel {
         /**
-         * <p>The information about the policy.</p>
+         * <p>The policy information.</p>
          */
         @NameInMap("Info")
         public java.util.List<DescribeHybridProxyPolicyResponseBodyPolicyListInfo> info;
 
         /**
-         * <p>The type of the policy. Valid values:</p>
+         * <p>The policy type. Valid values:</p>
          * <ul>
-         * <li><strong>limitFrequency</strong></li>
-         * <li><strong>limitBandWidth</strong></li>
+         * <li><strong>limitFrequency</strong>: collection frequency control</li>
+         * <li><strong>limitBandWidth</strong>: collection bandwidth control.</li>
          * </ul>
          * 
          * <strong>example:</strong>

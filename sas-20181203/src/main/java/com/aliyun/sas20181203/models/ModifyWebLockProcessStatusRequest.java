@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockProcessStatusRequest extends TeaModel {
     /**
-     * <p>Specifies whether to change the status of the process on multiple servers on which the process runs at the same time. Valid values:</p>
+     * <p>The identity is simultaneous processing of servers that have the same process. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: Do not use simultaneous processing.</li>
+     * <li><strong>1</strong>: Use simultaneous processing.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyWebLockProcessStatusRequest extends TeaModel {
     public Integer dealAll;
 
     /**
-     * <p>The parameters required to change the status of multiple processes at a time. The value is in the JSON format.</p>
+     * <p>The operation parameters for batch setting the tamper-proofing process status. The value is in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;processPath&quot;:&quot;/etc/test1&quot;,&quot;uuid&quot;:&quot;0c1714dc-f7a3-4265-8364-7aa3fce8****&quot;},{&quot;processPath&quot;:&quot;/etc/test2&quot;,&quot;uuid&quot;:&quot;1cc45e7d-7698-4b2c-89d8-e8cba407****&quot;}]</p>
@@ -27,16 +27,16 @@ public class ModifyWebLockProcessStatusRequest extends TeaModel {
     public String operateInfo;
 
     /**
-     * <p>The paths to the processes.</p>
+     * <p>The list of process paths.</p>
      */
     @NameInMap("ProcessPath")
     public java.util.List<String> processPath;
 
     /**
-     * <p>The status of the process. Valid values:</p>
+     * <p>The status of the tamper-proofing process. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: cancels adding the process to the process whitelist</li>
-     * <li><strong>1</strong>: adds the process to the process whitelist</li>
+     * <li><strong>0</strong>: Remove from the whitelist.</li>
+     * <li><strong>1</strong>: Add to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ModifyWebLockProcessStatusRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server for which you want to set the tamper-proofing process status.</p>
      * 
      * <strong>example:</strong>
      * <p>bc8510e7-7327-4030-b75c-956e434d****</p>

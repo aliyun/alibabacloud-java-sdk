@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAllGroupsRequest extends TeaModel {
     /**
-     * <p>The natural language of the request and response. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

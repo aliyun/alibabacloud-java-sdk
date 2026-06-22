@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySoarStrategySubscribeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8BF56229-7FF5-51ED-B958-00B8573E77CD</p>

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
+    /**
+     * <p>The returned data details.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListUnknownThreatDetectEventResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListUnknownThreatDetectEventResponseBodyPageInfo pageInfo;
 
@@ -56,6 +62,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String analyzeResult;
 
         /**
+         * <p>The process chain.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;5133&quot;:&quot;pickup -l -t unix -u&quot;},{&quot;1077&quot;:&quot;/usr/libexec/postfix/master -w&quot;},{&quot;1&quot;:&quot;/usr/lib/systemd/systemd --switched-root --system --deserialize 22&quot;}]</p>
          */
@@ -63,6 +71,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String cmdChain;
 
         /**
+         * <p>The process command line.</p>
+         * 
          * <strong>example:</strong>
          * <p>/usr/sbin/sshd -D</p>
          */
@@ -70,6 +80,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String cmdline;
 
         /**
+         * <p>The number of occurrences.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -77,13 +89,20 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The timestamp of the first occurrence.</p>
+         * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        @NameInMap("HandleType")
+        public String handleType;
+
         /**
+         * <p>The unique identifier of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>30368144069e7567bbb10eabc2******</p>
          */
@@ -91,6 +110,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String hashKey;
 
         /**
+         * <p>The event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -98,6 +119,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>centos****</p>
          */
@@ -105,6 +128,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>
          */
@@ -112,6 +137,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.42.XX.XX</p>
          */
@@ -119,6 +146,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
+         * <p>The timestamp of the most recent occurrence.</p>
+         * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
          */
@@ -126,6 +155,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public Long lastTime;
 
         /**
+         * <p>The MD5 hash of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>5b394b54ca632fe51c4ab4a6dbaf****</p>
          */
@@ -133,6 +164,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String md5;
 
         /**
+         * <p>The parent command line.</p>
+         * 
          * <strong>example:</strong>
          * <p>/usr/sbin/sshd -D</p>
          */
@@ -140,6 +173,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String parentCmdline;
 
         /**
+         * <p>The parent process ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -147,6 +182,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String parentPid;
 
         /**
+         * <p>The parent process path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/usr/bin/tar</p>
          */
@@ -154,6 +191,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String parentProcessPath;
 
         /**
+         * <p>The process ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -161,6 +200,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String pid;
 
         /**
+         * <p>The process path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/usr/bin/tar</p>
          */
@@ -168,6 +209,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String processPath;
 
         /**
+         * <p>The SHA-256 hash of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</p>
          */
@@ -175,6 +218,13 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public String sha256;
 
         /**
+         * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Unhandled.</li>
+         * <li><strong>2</strong>: Blocked.</li>
+         * <li><strong>3</strong>: Ignored.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -182,6 +232,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The UUID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
          */
@@ -239,6 +291,14 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         }
         public Long getFirstTime() {
             return this.firstTime;
+        }
+
+        public ListUnknownThreatDetectEventResponseBodyData setHandleType(String handleType) {
+            this.handleType = handleType;
+            return this;
+        }
+        public String getHandleType() {
+            return this.handleType;
         }
 
         public ListUnknownThreatDetectEventResponseBodyData setHashKey(String hashKey) {
@@ -365,6 +425,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectEventResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of alerting events displayed on the current page in a paged query. This parameter is used for paging.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -372,6 +434,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The page number of the current page in a paged query. This parameter is used for paging.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -379,6 +443,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The maximum number of entries displayed on each page in a paged query. This parameter is used for paging.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -386,6 +452,8 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>149</p>
          */

@@ -67,8 +67,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         /**
          * <p>The returned code after you install the Security Center agent. Valid values:</p>
          * <ol>
-         * <li>0: The installation is successful.</li>
-         * <li>\-2: The kernel does not support the installation.</li>
+         * <li><p>0: The installation is successful.</p>
+         * </li>
+         * <li><p>-2: The kernel does not support the installation.</p>
+         * </li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -125,8 +127,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Security Center agent is online. Valid value:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,8 +142,10 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the operating system. Valid values:</p>
          * <ul>
-         * <li><strong>windows</strong>: Windows</li>
-         * <li><strong>linux</strong>: Linux</li>
+         * <li><p><strong>windows</strong>: Windows</p>
+         * </li>
+         * <li><p><strong>linux</strong>: Linux</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

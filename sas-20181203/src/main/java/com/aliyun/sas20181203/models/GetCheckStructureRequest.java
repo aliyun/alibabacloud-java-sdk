@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCheckStructureRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,10 @@ public class GetCheckStructureRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetCheckStructureRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -36,9 +36,9 @@ public class GetCheckStructureRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the asset. Valid values:</p>
+     * <p>The region where the asset resides. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: China.</li>
+     * <li>cn-hangzhou: China</li>
      * <li>ap-southeast-1: outside China.</li>
      * </ul>
      * 
@@ -49,7 +49,7 @@ public class GetCheckStructureRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>List of task sources.</p>
+     * <p>The list of task sources.</p>
      */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;

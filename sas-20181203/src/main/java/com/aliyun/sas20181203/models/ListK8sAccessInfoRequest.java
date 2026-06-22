@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListK8sAccessInfoRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class ListK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayApiName;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,7 +23,7 @@ public class ListK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayPopName;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,10 +32,10 @@ public class ListK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayProjectName;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language type for requests and responses. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

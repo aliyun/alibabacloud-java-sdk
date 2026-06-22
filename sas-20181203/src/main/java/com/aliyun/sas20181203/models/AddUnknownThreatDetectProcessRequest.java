@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddUnknownThreatDetectProcessRequest extends TeaModel {
+    /**
+     * <p>A list of associated event IDs.</p>
+     */
     @NameInMap("EventIdList")
     public java.util.List<Long> eventIdList;
 
+    /**
+     * <p>The list of processes to add.</p>
+     */
     @NameInMap("ProcessList")
     public java.util.List<AddUnknownThreatDetectProcessRequestProcessList> processList;
 
+    /**
+     * <p>The UUIDs of assets on which the processes are located.</p>
+     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 
@@ -44,6 +53,8 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
 
     public static class AddUnknownThreatDetectProcessRequestProcessList extends TeaModel {
         /**
+         * <p>The MD5 hash of the process file.</p>
+         * 
          * <strong>example:</strong>
          * <p>e59b63ae983377f131ab20ec0d******</p>
          */
@@ -51,6 +62,8 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
         public String md5;
 
         /**
+         * <p>The path to the process executable.</p>
+         * 
          * <strong>example:</strong>
          * <p>/bin/rm</p>
          */
@@ -58,6 +71,8 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
         public String processPath;
 
         /**
+         * <p>A remark for the process.</p>
+         * 
          * <strong>example:</strong>
          * <p>1330</p>
          */
@@ -65,6 +80,8 @@ public class AddUnknownThreatDetectProcessRequest extends TeaModel {
         public String remark;
 
         /**
+         * <p>The SHA-256 hash of the process file.</p>
+         * 
          * <strong>example:</strong>
          * <p>f204693a7d2ce99d6c4434e550d985ee1c7be7cb5dd9a76094369af0d2******</p>
          */

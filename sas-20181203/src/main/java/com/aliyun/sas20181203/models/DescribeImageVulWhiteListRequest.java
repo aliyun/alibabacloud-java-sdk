@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageVulWhiteListRequest extends TeaModel {
     /**
-     * <p>The alias of the vulnerability that you want to query.</p>
+     * <p>The alias of the vulnerability to query.</p>
      * 
      * <strong>example:</strong>
      * <p>CVE-2007-5686:rpath_linux</p>
@@ -14,7 +14,7 @@ public class DescribeImageVulWhiteListRequest extends TeaModel {
     public String aliasName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query. Paging is used to display results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,9 +23,9 @@ public class DescribeImageVulWhiteListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -36,7 +36,7 @@ public class DescribeImageVulWhiteListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>The maximum number of entries per page in a paged query. Paging is used to display results. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,8 +47,8 @@ public class DescribeImageVulWhiteListRequest extends TeaModel {
     /**
      * <p>The source of the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>image</strong></li>
-     * <li><strong>agentless</strong></li>
+     * <li><strong>image</strong>: image</li>
+     * <li><strong>agentless</strong>: agentless.</li>
      * </ul>
      * 
      * <strong>example:</strong>

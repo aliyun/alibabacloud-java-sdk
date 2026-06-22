@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyContainerPluginRuleRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class ModifyContainerPluginRuleRequest extends TeaModel {
     /**
      * <p>The action mode of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: alerts</li>
-     * <li><strong>2</strong>: block</li>
+     * <li><strong>1</strong>: Alert.</li>
+     * <li><strong>2</strong>: Block.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,10 @@ public class ModifyContainerPluginRuleRequest extends TeaModel {
     public Integer mode;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2623606.html">ListSasContainerWebDefenseRule</a> operation to obtain this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +44,7 @@ public class ModifyContainerPluginRuleRequest extends TeaModel {
     public Integer ruleId;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -50,10 +53,10 @@ public class ModifyContainerPluginRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: user-defined rule</li>
-     * <li><strong>1</strong>: built-in rule</li>
+     * <li><strong>0</strong>: User-defined.</li>
+     * <li><strong>1</strong>: System built-in.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,13 +66,13 @@ public class ModifyContainerPluginRuleRequest extends TeaModel {
     public Integer ruleType;
 
     /**
-     * <p>The rule items.</p>
+     * <p>The list of rule items.</p>
      */
     @NameInMap("SelectedPolicy")
     public java.util.List<String> selectedPolicy;
 
     /**
-     * <p>The images that are added to the whitelist.</p>
+     * <p>The list of whitelisted images.</p>
      */
     @NameInMap("WhiteImages")
     public java.util.List<String> whiteImages;

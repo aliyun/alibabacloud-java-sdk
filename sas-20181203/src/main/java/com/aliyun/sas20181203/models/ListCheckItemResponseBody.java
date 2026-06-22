@@ -77,7 +77,7 @@ public class ListCheckItemResponseBody extends TeaModel {
          * <p>The display name of the check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Ensure RAM password policy prevents password reuse</p>
+         * <p>IP列表</p>
          */
         @NameInMap("ShowName")
         public String showName;
@@ -164,7 +164,7 @@ public class ListCheckItemResponseBody extends TeaModel {
          * <p>The content of the description for the check item when the Type parameter is text.</p>
          * 
          * <strong>example:</strong>
-         * <p>The download of query results that are returned by SELECT statements in DataStudio must be prohibited at the MaxCompute level.</p>
+         * <p>Checks whether strict access control policies are configured. Requirements: 1. If no blacklists and whitelist are configured, configure a whitelist first. 2. If a blacklist is configured, find the blacklist in the list of access control policies. We recommend that you do not configure an empty blacklist. 3. If a whitelist is configured, find the whitelist in the list of access control policies. We recommend that you do not configure an empty whitelist. Make sure that the whitelist does not contain 0.0.0.0. You can add the following IP addresses to the whitelist: ${IPList}.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -206,16 +206,18 @@ public class ListCheckItemResponseBody extends TeaModel {
          * <p>The name of the check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Enable deletion protection</p>
+         * <p>IPv4 Access Control</p>
          */
         @NameInMap("CheckShowName")
         public String checkShowName;
 
         /**
-         * <p>The source type of the Situation Awareness check item: </p>
+         * <p>The source type of the Situation Awareness check item:</p>
          * <ul>
-         * <li><strong>CUSTOM</strong>: User-defined </li>
-         * <li><strong>SYSTEM</strong>: Predefined by the Situation Awareness platform</li>
+         * <li><p><strong>CUSTOM</strong>: User-defined</p>
+         * </li>
+         * <li><p><strong>SYSTEM</strong>: Predefined by the Situation Awareness platform</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,23 +252,32 @@ public class ListCheckItemResponseBody extends TeaModel {
          * <ul>
          * <li><p>If <strong>InstanceType</strong> is set to <strong>ECS</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>INSTANCE</strong></li>
-         * <li><strong>DISK</strong></li>
-         * <li><strong>SECURITY_GROUP</strong></li>
+         * <li><p><strong>INSTANCE</strong></p>
+         * </li>
+         * <li><p><strong>DISK</strong></p>
+         * </li>
+         * <li><p><strong>SECURITY_GROUP</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If <strong>InstanceType</strong> is set to <strong>ACR</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>REPOSITORY_ENTERPRISE</strong></li>
-         * <li><strong>REPOSITORY_PERSON</strong></li>
+         * <li><p><strong>REPOSITORY_ENTERPRISE</strong></p>
+         * </li>
+         * <li><p><strong>REPOSITORY_PERSON</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If <strong>InstanceType</strong> is set to <strong>RAM</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>ALIAS</strong></li>
-         * <li><strong>USER</strong></li>
-         * <li><strong>POLICY</strong></li>
-         * <li><strong>GROUP</strong></li>
+         * <li><p><strong>ALIAS</strong></p>
+         * </li>
+         * <li><p><strong>USER</strong></p>
+         * </li>
+         * <li><p><strong>POLICY</strong></p>
+         * </li>
+         * <li><p><strong>GROUP</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If <strong>InstanceType</strong> is set to <strong>WAF</strong>, this parameter supports the following valid value:</p>
@@ -282,7 +293,7 @@ public class ListCheckItemResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ECS</p>
+         * <p>INSTANCE</p>
          */
         @NameInMap("InstanceSubType")
         public String instanceSubType;
@@ -290,32 +301,54 @@ public class ListCheckItemResponseBody extends TeaModel {
         /**
          * <p>The asset type of the cloud service. Valid values:</p>
          * <ul>
-         * <li><strong>ECS</strong>: Elastic Compute Service (ECS).</li>
-         * <li><strong>SLB</strong>: Server Load Balancer (SLB).</li>
-         * <li><strong>RDS</strong>: ApsaraDB RDS.</li>
-         * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB (MongoDB).</li>
-         * <li><strong>KVSTORE</strong>: ApsaraDB for Redis (Redis).</li>
-         * <li><strong>ACR</strong>: Container Registry.</li>
-         * <li><strong>CSK</strong>: Container Service for Kubernetes (ACK).</li>
-         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC).</li>
-         * <li><strong>ACTIONTRAIL</strong>: ActionTrail.</li>
-         * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN).</li>
-         * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service).</li>
-         * <li><strong>RDC</strong>: Apsara Devops.</li>
-         * <li><strong>RAM</strong>: Resource Access Management (RAM).</li>
-         * <li><strong>DDOS</strong>: Anti-DDoS.</li>
-         * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
-         * <li><strong>OSS</strong>: Object Storage Service (OSS).</li>
-         * <li><strong>POLARDB</strong>: PolarDB.</li>
-         * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL.</li>
-         * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
-         * <li><strong>NAS</strong>: File Storage NAS (NAS).</li>
-         * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP).</li>
-         * <li><strong>EIP</strong>: Elastic IP Address (EIP).</li>
+         * <li><p><strong>ECS</strong>: Elastic Compute Service (ECS).</p>
+         * </li>
+         * <li><p><strong>SLB</strong>: Server Load Balancer (SLB).</p>
+         * </li>
+         * <li><p><strong>RDS</strong>: ApsaraDB RDS.</p>
+         * </li>
+         * <li><p><strong>MONGODB</strong>: ApsaraDB for MongoDB (MongoDB).</p>
+         * </li>
+         * <li><p><strong>KVSTORE</strong>: ApsaraDB for Redis (Redis).</p>
+         * </li>
+         * <li><p><strong>ACR</strong>: Container Registry.</p>
+         * </li>
+         * <li><p><strong>CSK</strong>: Container Service for Kubernetes (ACK).</p>
+         * </li>
+         * <li><p><strong>VPC</strong>: Virtual Private Cloud (VPC).</p>
+         * </li>
+         * <li><p><strong>ACTIONTRAIL</strong>: ActionTrail.</p>
+         * </li>
+         * <li><p><strong>CDN</strong>: Alibaba Cloud CDN (CDN).</p>
+         * </li>
+         * <li><p><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service).</p>
+         * </li>
+         * <li><p><strong>RDC</strong>: Apsara Devops.</p>
+         * </li>
+         * <li><p><strong>RAM</strong>: Resource Access Management (RAM).</p>
+         * </li>
+         * <li><p><strong>DDOS</strong>: Anti-DDoS.</p>
+         * </li>
+         * <li><p><strong>WAF</strong>: Web Application Firewall (WAF).</p>
+         * </li>
+         * <li><p><strong>OSS</strong>: Object Storage Service (OSS).</p>
+         * </li>
+         * <li><p><strong>POLARDB</strong>: PolarDB.</p>
+         * </li>
+         * <li><p><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL.</p>
+         * </li>
+         * <li><p><strong>MSE</strong>: Microservices Engine (MSE).</p>
+         * </li>
+         * <li><p><strong>NAS</strong>: File Storage NAS (NAS).</p>
+         * </li>
+         * <li><p><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP).</p>
+         * </li>
+         * <li><p><strong>EIP</strong>: Elastic IP Address (EIP).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>OSS</p>
+         * <p>API_GATEWAY</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -323,9 +356,12 @@ public class ListCheckItemResponseBody extends TeaModel {
         /**
          * <p>The risk level of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>HIGH</strong></li>
-         * <li><strong>MEDIUM</strong></li>
-         * <li><strong>LOW</strong></li>
+         * <li><p><strong>HIGH</strong></p>
+         * </li>
+         * <li><p><strong>MEDIUM</strong></p>
+         * </li>
+         * <li><p><strong>LOW</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,11 +379,16 @@ public class ListCheckItemResponseBody extends TeaModel {
         /**
          * <p>The type of the cloud asset. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
-         * <li><strong>1</strong>: an asset outside Alibaba Cloud.</li>
-         * <li><strong>2</strong>: an asset in a data center.</li>
-         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset.</li>
-         * <li><strong>8</strong>: a simple application server.</li>
+         * <li><p><strong>0</strong>: an asset provided by Alibaba Cloud.</p>
+         * </li>
+         * <li><p><strong>1</strong>: an asset outside Alibaba Cloud.</p>
+         * </li>
+         * <li><p><strong>2</strong>: an asset in a data center.</p>
+         * </li>
+         * <li><p><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset.</p>
+         * </li>
+         * <li><p><strong>8</strong>: a simple application server.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

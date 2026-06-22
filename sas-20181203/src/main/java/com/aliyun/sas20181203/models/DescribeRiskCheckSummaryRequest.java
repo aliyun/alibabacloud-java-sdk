@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskCheckSummaryRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeRiskCheckSummaryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that is added as a member by using the multi-account control feature.</p>
+     * <p>The Alibaba Cloud account ID of the member account in the resource directory for multi-account security management.</p>
      * 
      * <strong>example:</strong>
      * <p>1232428423234****</p>
@@ -30,7 +30,7 @@ public class DescribeRiskCheckSummaryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>

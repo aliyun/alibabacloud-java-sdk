@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeBackupPolicyVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9F5B8057-3E44-54DC-AC89-6814A4CD****</p>

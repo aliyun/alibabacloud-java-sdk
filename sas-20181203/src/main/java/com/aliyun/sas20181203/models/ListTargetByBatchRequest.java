@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTargetByBatchRequest extends TeaModel {
     /**
-     * <p>The ID of the release batch.</p>
+     * <p>The publish batch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1371</p>
@@ -14,7 +14,7 @@ public class ListTargetByBatchRequest extends TeaModel {
     public Long batchId;
 
     /**
-     * <p>The page number of the current page in a paginated query.</p>
+     * <p>The page number of the current page to display in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,11 @@ public class ListTargetByBatchRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Asset selection dimension. Values:</p>
+     * <p>The asset selection dimension. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Machine instance</li>
-     * <li><strong>1</strong>: Machine group</li>
-     * <li><strong>2</strong>: VPC instance ID</li>
+     * <li><strong>0</strong>: machine instance</li>
+     * <li><strong>1</strong>: machine group</li>
+     * <li><strong>2</strong>: VPC-connected instance ID</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListTargetByBatchRequest extends TeaModel {
     public Integer operationBase;
 
     /**
-     * <p>The maximum number of items to return per page in a paginated query.</p>
+     * <p>The maximum number of entries to display per page in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

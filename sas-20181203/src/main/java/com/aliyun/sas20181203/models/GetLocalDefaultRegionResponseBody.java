@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLocalDefaultRegionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F6D23860-55C2-55AA-B484-****</p>
@@ -16,9 +16,9 @@ public class GetLocalDefaultRegionResponseBody extends TeaModel {
     /**
      * <p>The access type of the multi-cloud site. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The current site is not the default site of the multi-cloud site. You can specify a site as the default site of the multi-cloud site.</li>
-     * <li><strong>1</strong>: The current site is the default site of the multi-cloud site.</li>
-     * <li><strong>2</strong>: Another site is set as the default site of the multi-cloud site.</li>
+     * <li><strong>0</strong>: No default site exists. You can select one.</li>
+     * <li><strong>1</strong>: The current site is already the default site.</li>
+     * <li><strong>2</strong>: Another site is already set as the default site.</li>
      * </ul>
      * 
      * <strong>example:</strong>

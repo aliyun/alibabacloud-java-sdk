@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFileDetectResponseBody extends TeaModel {
     /**
-     * <p>The identifier of the file.</p>
+     * <p>The unique identifier of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>0a212417e65c26ff133cfff28f6c****</p>
@@ -14,7 +14,7 @@ public class CreateFileDetectResponseBody extends TeaModel {
     public String hashKey;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class SetBuildRiskDefineRuleConfigRequest extends TeaModel {
     /**
-     * <p>The configuration item for scanning image build command risks. Valid values:</p>
+     * <p>The risk items in the risk scan configuration for image build instructions. Valid values:</p>
      * <ul>
-     * <li><strong>classKey</strong>: Set the value to a valid value of the ClassKey parameter in RuleTree.</li>
-     * <li><strong>ruleList</strong>: Set the value to a valid value of the RuleKey parameter in RuleList.</li>
-     * </ul>
-     * <blockquote>
-     * <p> You can call the <a href="~~GetBuildRiskDefineRuleConfig~~">GetBuildRiskDefineRuleConfig</a> operation to query the valid values.</p>
+     * <li><strong>classKey</strong>: the ClassKey field value from RuleTree</li>
+     * <li><strong>ruleList</strong>: the RuleKey field values under RuleList<blockquote>
+     * <p>Call the <a href="~~GetBuildRiskDefineRuleConfig~~">GetBuildRiskDefineRuleConfig</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>[

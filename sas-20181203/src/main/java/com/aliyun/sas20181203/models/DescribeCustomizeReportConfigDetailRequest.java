@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizeReportConfigDetailRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class DescribeCustomizeReportConfigDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the report.\
-     * You can call the <a href="https://help.aliyun.com/document_detail/271655.html">DescribeCustomizeReportList</a> operation to query the ID.</p>
+     * <p>The report ID.\
+     * The ReportId returned by calling the <a href="https://help.aliyun.com/document_detail/271655.html">DescribeCustomizeReportList</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeCustomizeReportConfigDetailRequest extends TeaModel {
     public Long reportId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>202.104.XXX.XXX</p>

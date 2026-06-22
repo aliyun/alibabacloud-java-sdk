@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBackupRecordRequest extends TeaModel {
     /**
-     * <p>The timestamp when the backup task ended. Unit: milliseconds.</p>
+     * <p>The backup end time. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1699600611000</p>
@@ -14,7 +14,7 @@ public class ListBackupRecordRequest extends TeaModel {
     public Long backupEndTime;
 
     /**
-     * <p>The timestamp when the backup task started. Unit: milliseconds.</p>
+     * <p>The backup start time. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1699514211000</p>
@@ -23,7 +23,7 @@ public class ListBackupRecordRequest extends TeaModel {
     public Long backupStartTime;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListBackupRecordRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.</p>
+     * <p>The identification information of the server protected by the anti-ransomware policy that you want to query. You can enter the IP address or instance ID of the server.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -41,9 +41,9 @@ public class ListBackupRecordRequest extends TeaModel {
     public String machineRemark;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,11 +53,11 @@ public class ListBackupRecordRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The backup task status. Valid values:</p>
+     * <p>The list of backup task statuses. Valid values:</p>
      * <ul>
-     * <li><strong>BACKUP_COMPLETE</strong>: The backup task is successful.</li>
-     * <li><strong>BACKUP_FAILED</strong>: The backup task failed.</li>
-     * <li><strong>PARTIAL_COMPLETE</strong>: The backup task is partially successful.</li>
+     * <li><strong>BACKUP_COMPLETE</strong>: backup succeeded</li>
+     * <li><strong>BACKUP_FAILED</strong>: backup failed</li>
+     * <li><strong>PARTIAL_COMPLETE</strong>: partial backup succeeded.</li>
      * </ul>
      */
     @NameInMap("StatusList")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSuspEventNoteRequest extends TeaModel {
     /**
-     * <p>The ID of the alert event to which you want to add remarks. You can call the <a href="https://help.aliyun.com/document_detail/251497.html">DescribeSuspEvents</a> operation to query the IDs of alert events.</p>
+     * <p>The ID of the security alert event to which you want to add a note. Call <a href="https://help.aliyun.com/document_detail/251497.html">DescribeSuspEvents</a> to obtain the ID of the alert event.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateSuspEventNoteRequest extends TeaModel {
     public Long eventId;
 
     /**
-     * <p>The remarks that you want to add.</p>
+     * <p>The note to add.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

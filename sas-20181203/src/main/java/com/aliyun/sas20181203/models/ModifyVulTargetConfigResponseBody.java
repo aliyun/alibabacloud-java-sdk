@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVulTargetConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1FF908BA-ADD8-5138-8595-614C6E3C6658</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
@@ -14,7 +14,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the information about the task.</p>
+     * <p>The task information.</p>
      */
     @NameInMap("Task")
     public java.util.List<DescribeImageLatestScanTaskResponseBodyTask> task;
@@ -42,7 +42,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
 
     public static class DescribeImageLatestScanTaskResponseBodyTask extends TeaModel {
         /**
-         * <p>The time when the task was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The time when the task was created. Format: yyyy-MM-ddTHH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-20 11:59:05</p>
@@ -51,7 +51,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String create;
 
         /**
-         * <p>The number of images that are scanned.</p>
+         * <p>The number of completed image tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -60,7 +60,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public Integer finish;
 
         /**
-         * <p>The end time of the task. A value is returned only when the task is in the Finished state. Otherwise, the returned value is empty.</p>
+         * <p>The time when the task ended. This parameter is returned only when the task status is Finished. Otherwise, an empty value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1669693430977</p>
@@ -78,7 +78,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The time when the task was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The time when the task was last modified. Format: yyyy-MM-ddTHH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-20 12:00:05</p>
@@ -87,7 +87,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String modified;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE_SCAN</p>
@@ -96,10 +96,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The method in which the task was created. A task can be created in the Security Center console or by calling an API operation. Valid values:</p>
+         * <p>The creation method. Valid values:</p>
          * <ul>
-         * <li><strong>console_batch</strong>: The task was created in the Security Center console.</li>
-         * <li><strong>openapi</strong>: The task was created by calling an API operation.</li>
+         * <li><strong>console_batch</strong>: console</li>
+         * <li><strong>openapi</strong>: API.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The start time of the task.</p>
+         * <p>The time when the task started.</p>
          * 
          * <strong>example:</strong>
          * <p>1668614400000</p>
@@ -118,13 +118,13 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the task. Valid value:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>PROCESSING</strong>: The task is running.</li>
-         * <li><strong>START</strong>: The task is being started.</li>
-         * <li><strong>MESSAGE_SEND</strong>: The scan task is sent.</li>
-         * <li><strong>PRE_ANALYZER</strong>: The image is in precheck.</li>
-         * <li><strong>SUCCESS</strong>: The task was successful.</li>
+         * <li><strong>PROCESSING</strong>: The task is being executed.</li>
+         * <li><strong>START</strong>: The task is starting.</li>
+         * <li><strong>MESSAGE_SEND</strong>: The scan is being distributed.</li>
+         * <li><strong>PRE_ANALYZER</strong>: The image is being pre-checked.</li>
+         * <li><strong>SUCCESS</strong>: The task is executed.</li>
          * <li><strong>FAIL</strong>: The task failed.</li>
          * <li><strong>TIMOUT</strong>: The task timed out.</li>
          * </ul>
@@ -136,7 +136,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The digest value of the image.</p>
+         * <p>The digest of the target image.</p>
          * 
          * <strong>example:</strong>
          * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</p>
@@ -145,9 +145,9 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The type of the scanned asset. Valid value:</p>
+         * <p>The scan target type. Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE</strong></li>
+         * <li><strong>IMAGE</strong>: image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,9 +166,9 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The type of the task. Valid value:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE_SCAN</strong></li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
          * </ul>
          * 
          * <strong>example:</strong>

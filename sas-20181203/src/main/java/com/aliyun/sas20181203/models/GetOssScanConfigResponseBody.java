@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetOssScanConfigResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The data details.</p>
      */
     @NameInMap("Data")
     public GetOssScanConfigResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E10BAF1C-A6C5-51E2-866C-76D5922E****</p>
@@ -42,7 +42,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
 
     public static class GetOssScanConfigResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the prefixes of all objects are matched.</p>
+         * <p>Indicates whether all prefixes are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,22 +60,22 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Integer bucketCount;
 
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
-         * <p>hz-new01****</p>
+         * <p>hz-new02****</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
-         * <p>The names of the buckets.</p>
+         * <p>The list of bucket names.</p>
          */
         @NameInMap("BucketNameList")
         public java.util.List<String> bucketNameList;
 
         /**
-         * <p>The maximum number of objects that can be extracted during decompression. Valid values: 1 to 1000. If the maximum number of objects that can be extracted is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
+         * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. If the number of files exceeds this value, the decompression operation stops. Files that have already been decompressed are still scanned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -84,7 +84,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Integer decompressMaxFileCount;
 
         /**
-         * <p>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the maximum number of decompression levels is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
+         * <p>The maximum number of decompression layers for nested compressed files. Minimum value: 1. Maximum value: 5. If the number of layers exceeds this value, the decompression operation stops. Files that have already been decompressed are still scanned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -93,15 +93,15 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Integer decompressMaxLayer;
 
         /**
-         * <p>The decryption methods.</p>
+         * <p>The list of decryption types.</p>
          */
         @NameInMap("DecryptionList")
         public java.util.List<String> decryptionList;
 
         /**
-         * <p>Indicates whether the check policy is enabled. Valid values:</p>
+         * <p>Indicates whether the policy is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>1</strong>: enabled</li>
          * <li><strong>0</strong>: disabled.</li>
          * </ul>
          * 
@@ -112,7 +112,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Integer enable;
 
         /**
-         * <p>The end time of the check. The time is in the HH:mm:ss format.</p>
+         * <p>The scan end time in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -124,25 +124,25 @@ public class GetOssScanConfigResponseBody extends TeaModel {
          * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1274****</p>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The prefixes of the objects.</p>
+         * <p>The file prefix list.</p>
          */
         @NameInMap("KeyPrefixList")
         public java.util.List<String> keyPrefixList;
 
         /**
-         * <p>The suffixes of the objects that are checked.</p>
+         * <p>The list of file suffixes to scan.</p>
          */
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
 
         /**
-         * <p>The timestamp when the object was last modified. The time must be later than the timestamp that you specify. Unit: milliseconds.</p>
+         * <p>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1724301769834</p>
@@ -151,7 +151,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Long lastModifiedStartTime;
 
         /**
-         * <p>The timestamp when the configuration was last modified.</p>
+         * <p>The timestamp of the last update.</p>
          * 
          * <strong>example:</strong>
          * <p>1702025633079</p>
@@ -163,13 +163,13 @@ public class GetOssScanConfigResponseBody extends TeaModel {
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test0104</p>
+         * <p>testPolicy****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+         * <p>Specifies whether to enable real-time incremental scanning. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -178,13 +178,13 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public Boolean realTimeIncr;
 
         /**
-         * <p>The days when the check is performed. The value indicates the days of the week.</p>
+         * <p>The scan days. Each number represents a day of the week.</p>
          */
         @NameInMap("ScanDayList")
         public java.util.List<Integer> scanDayList;
 
         /**
-         * <p>The start time of the check. The time is in the HH:mm:ss format.</p>
+         * <p>The scan start time in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>

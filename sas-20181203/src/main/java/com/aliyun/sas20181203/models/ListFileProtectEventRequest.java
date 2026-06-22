@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListFileProtectEventRequest extends TeaModel {
     /**
-     * <p>The severities of alerts.</p>
+     * <p>The list of alert notification levels.</p>
      */
     @NameInMap("AlertLevels")
     public java.util.List<Integer> alertLevels;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,25 +20,25 @@ public class ListFileProtectEventRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end timestamp of the query.</p>
+     * <p>The timestamp of the end time.</p>
      * 
      * <strong>example:</strong>
-     * <p>1683195595204</p>
+     * <p>1683257937775</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The instance ID of the asset.</p>
+     * <p>The ID of the asset instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-bp1fu4aqltf1huhc****</p>
+     * <p>i-bp1g6wxdwps7s9dz****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The name of the server.</p>
+     * <p>The name of the server to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ca_cpm_****</p>
@@ -47,7 +47,7 @@ public class ListFileProtectEventRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The public IP address of the server.</p>
+     * <p>The public IP address of the asset to query.</p>
      * 
      * <strong>example:</strong>
      * <p>120.27.XX.XX</p>
@@ -56,7 +56,7 @@ public class ListFileProtectEventRequest extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The private IP address of the server.</p>
+     * <p>The private IP address of the asset to query.</p>
      * 
      * <strong>example:</strong>
      * <p>172.26.XX.XX</p>
@@ -65,13 +65,13 @@ public class ListFileProtectEventRequest extends TeaModel {
     public String intranetIp;
 
     /**
-     * <p>Type of operation on a file. eg:</p>
+     * <p>The type of operation performed on the file. Valid values:</p>
      * <ul>
-     * <li><strong>DELETE</strong>: delete the file.</li>
-     * <li><strong>WRITE</strong>: write the file.</li>
-     * <li><strong>READ</strong>: read the file.</li>
-     * <li><strong>RENAME</strong>: rename the file.</li>
-     * <li><strong>CHOWN</strong>: set the file owner and file association group operations.</li>
+     * <li><strong>DELETE</strong>: deletes the file.</li>
+     * <li><strong>WRITE</strong>: writes to the file.</li>
+     * <li><strong>READ</strong>: reads the file.</li>
+     * <li><strong>RENAME</strong>: renames the file.</li>
+     * <li><strong>CHOWN</strong>: changes the file owner and associated group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class ListFileProtectEventRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -90,7 +90,7 @@ public class ListFileProtectEventRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-rule-1</p>
@@ -99,21 +99,21 @@ public class ListFileProtectEventRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The start timestamp of the query.</p>
+     * <p>The timestamp of the start time.</p>
      * 
      * <strong>example:</strong>
-     * <p>1683080489594</p>
+     * <p>1656038740435</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
-     * <p>The status of the event. Valid values:</p>
+     * <p>The event status. Valid values:</p>
      * <ul>
-     * <li>0: unhandled</li>
-     * <li>1: handled</li>
-     * <li>2: added to the whitelist</li>
-     * <li>3: ignored</li>
+     * <li>0: Unhandled. </li>
+     * <li>1: Manually handled.</li>
+     * <li>2: Whitelisted.</li>
+     * <li>3: Ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,13 +123,13 @@ public class ListFileProtectEventRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID of the server.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>inet-ecs-4e876cb0-09f7-43b8-82ef-4bc7a937***</p>
+     * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

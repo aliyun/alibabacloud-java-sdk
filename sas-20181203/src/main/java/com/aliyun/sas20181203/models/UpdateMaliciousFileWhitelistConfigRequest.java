@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.</p>
+     * <p>The rule ID. This parameter is optional. If you do not specify this parameter, a whitelist rule is created.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,9 +14,9 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The name of the alert.</p>
+     * <p>The alerting name. Valid values:</p>
      * <ul>
-     * <li>Set the value to ALL, which indicates all alert types.</li>
+     * <li>ALL: all Alarm Metric.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The field that you want to use in the whitelist rule.</p>
+     * <p>The field to be whitelisted.</p>
      * 
      * <strong>example:</strong>
      * <p>fileMd5</p>
@@ -35,7 +35,7 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String field;
 
     /**
-     * <p>The value of the field that you want to use in the whitelist rule.</p>
+     * <p>The value of the field to be whitelisted.</p>
      * 
      * <strong>example:</strong>
      * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
@@ -44,9 +44,9 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>The logical operator that you want to use in the whitelist rule.</p>
+     * <p>The operator used for rule matching. Valid values:</p>
      * <ul>
-     * <li>Set the value to strEqual, which indicates the equality operator (=).</li>
+     * <li>strEqual: string equals.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String operator;
 
     /**
-     * <p>Remark.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -65,9 +65,9 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The feature to which this operation belongs.</p>
+     * <p>The business source. Valid values:</p>
      * <ul>
-     * <li>Set the value to agentless, which indicates the agentless detection feature.</li>
+     * <li>agentless: agentless detection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,10 +77,10 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The type of the assets on which you want the whitelist rule to take effect. Valid values:</p>
+     * <p>The type of the target scope. Valid values:</p>
      * <ul>
      * <li>ALL: all assets</li>
-     * <li>SELECTION_KEY: selected assets</li>
+     * <li>SELECTION_KEY: assets selected by using the asset selection component.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,10 +90,10 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The assets on which you want the whitelist rule to take effect. Valid values:</p>
+     * <p>The target scope. Valid values:</p>
      * <ul>
      * <li>ALL: all assets</li>
-     * <li>Others: selected assets</li>
+     * <li>Other values: the key of the asset scope selected by using the asset selection component.</li>
      * </ul>
      * 
      * <strong>example:</strong>

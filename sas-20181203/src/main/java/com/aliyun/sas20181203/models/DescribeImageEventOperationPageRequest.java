@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageEventOperationPageRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The number of the page to return in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The keyword of the alert item.</p>
+     * <p>The keyword of the alert metric.</p>
      * 
      * <strong>example:</strong>
      * <p>PEM</p>
@@ -23,7 +23,7 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     public String eventKey;
 
     /**
-     * <p>The name of the alert item.</p>
+     * <p>The name of the alert metric.</p>
      * 
      * <strong>example:</strong>
      * <p>PEM</p>
@@ -32,9 +32,9 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The alert type.</p>
+     * <p>The alerting type. Valid values:</p>
      * <ul>
-     * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+     * <li><strong>sensitiveFile</strong>: sensitive file tampering.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,9 +53,9 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -66,7 +66,7 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -77,7 +77,7 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     /**
      * <p>The source of the alert handling rule. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: image.</li>
+     * <li><strong>default</strong>: image</li>
      * <li><strong>agentless</strong>: agentless detection.</li>
      * </ul>
      * 

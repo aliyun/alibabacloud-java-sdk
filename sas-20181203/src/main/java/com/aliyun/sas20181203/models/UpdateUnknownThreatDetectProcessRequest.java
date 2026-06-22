@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUnknownThreatDetectProcessRequest extends TeaModel {
     /**
+     * <p>The process ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026011210040602108912721603151374234</p>
      */
@@ -12,6 +14,8 @@ public class UpdateUnknownThreatDetectProcessRequest extends TeaModel {
     public String processId;
 
     /**
+     * <p>The remark for the process.</p>
+     * 
      * <strong>example:</strong>
      * <p>remark</p>
      */

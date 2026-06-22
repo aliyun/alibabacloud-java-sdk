@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether you use the free trial of Security Center. Valid values:</p>
+     * <p>Indicates whether the current Security Center edition is a trial version. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: not a trial version</li>
+     * <li><strong>1</strong>: a trial version.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
     public String canTry;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
@@ -27,15 +27,15 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The edition of Security Center that you use. Valid values:</p>
+     * <p>The edition of Security Center that you purchased. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Basic edition</li>
-     * <li><strong>2</strong> or <strong>3</strong>: Enterprise edition</li>
-     * <li><strong>5</strong>: Advanced edition</li>
-     * <li><strong>6</strong>: Anti-virus edition</li>
+     * <li><strong>1</strong>: Free Edition</li>
+     * <li><strong>2</strong> or <strong>3</strong>: Enterprise Edition  </li>
+     * <li><strong>5</strong>: Premium Edition  </li>
+     * <li><strong>6</strong>: Anti-virus Edition</li>
      * </ul>
      * <blockquote>
-     * <p> Both the value 2 and the value 3 indicate the Enterprise edition.</p>
+     * <p>Both 2 and 3 correspond to Enterprise Edition. There is no difference between the two values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
     public String sasVersion;
 
     /**
-     * <p>The number of weak passwords that can cause high risks to your assets.</p>
+     * <p>The number of high-risk weak password risks detected in your assets.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

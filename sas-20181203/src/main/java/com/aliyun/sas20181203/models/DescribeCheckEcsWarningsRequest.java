@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckEcsWarningsRequest extends TeaModel {
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.3.4</p>

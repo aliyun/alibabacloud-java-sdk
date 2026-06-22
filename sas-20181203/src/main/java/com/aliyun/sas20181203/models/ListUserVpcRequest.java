@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserVpcRequest extends TeaModel {
     /**
-     * <p>Region.</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

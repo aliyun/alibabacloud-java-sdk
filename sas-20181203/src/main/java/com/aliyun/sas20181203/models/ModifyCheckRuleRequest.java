@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyCheckRuleRequest extends TeaModel {
     /**
-     * <p>The list of instances to be added in this rule update. This parameter does not need to be passed if there are no instances to add.</p>
+     * <p>The list of instances to add in this rule update. If no instances need to be added, you do not need to specify this parameter.</p>
      */
     @NameInMap("AddInstanceList")
     public java.util.List<ModifyCheckRuleRequestAddInstanceList> addInstanceList;
 
     /**
-     * <p>The list of instances to be removed in this rule update. This parameter does not need to be passed if there are no instances to remove.</p>
+     * <p>The list of instances to delete in this rule update. If no instances need to be deleted, you do not need to specify this parameter.</p>
      */
     @NameInMap("DeleteInstanceList")
     public java.util.List<ModifyCheckRuleRequestDeleteInstanceList> deleteInstanceList;
 
     /**
-     * <p>Remarks.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>testRemark</p>
@@ -26,9 +26,9 @@ public class ModifyCheckRuleRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>Rule ID.</p>
+     * <p>The rule ID.</p>
      * <blockquote>
-     * <p>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> API.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,9 +39,9 @@ public class ModifyCheckRuleRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>Rule type. Default is <strong>WHITE</strong>. Values:</p>
+     * <p>The rule type. Default value: <strong>WHITE</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>WHITE</strong>: Add to whitelist</li>
+     * <li><strong>WHITE</strong>: whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,10 +51,10 @@ public class ModifyCheckRuleRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>The scope of effect for modifying the rule:</p>
+     * <p>The scope of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>INSTANCE</strong>: Instance</li>
-     * <li><strong>ITEM</strong>: Check item</li>
+     * <li><strong>INSTNACE</strong>: instance</li>
+     * <li><strong>ITEM</strong>: check item.</li>
      * </ul>
      * 
      * <strong>example:</strong>

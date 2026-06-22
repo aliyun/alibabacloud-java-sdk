@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerInstancesRequest extends TeaModel {
     /**
-     * <p>The search conditions that are used to filter containers. The value of this parameter is in the JSON format and is case-sensitive. The value contains the following fields:</p>
+     * <p>The search conditions for assets. This parameter is in JSON format. Note that field names are case-sensitive. The following fields are included:</p>
      * <ul>
-     * <li><p><strong>name</strong>: the search condition.</p>
-     * </li>
-     * <li><p><strong>name</strong>: the value of the search condition.</p>
-     * </li>
-     * <li><p><strong>logicalExp</strong>: the logical relationship among multiple search conditions. Valid values:</p>
-     * <ul>
-     * <li><strong>OR</strong>: Search conditions are evaluated by using a logical <strong>OR</strong>.</li>
-     * <li><strong>AND</strong>: Search conditions are evaluated by using a logical <strong>AND</strong>.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>You can use search conditions such as the container ID, cluster ID, cluster name, cluster type, risk level, and region. You can call the <a href="~~DescribeContainerCriteria~~">DescribeContainerCriteria</a> operation to query the supported search conditions.</p>
+     * <li><strong>name</strong>: the search item.</li>
+     * <li><strong>value</strong>: the value of the search item.</li>
+     * <li><strong>logicalExp</strong>: the logical relationship between multiple conditions. Valid values:<ul>
+     * <li><strong>OR</strong>: The conditions are in an OR relationship.</li>
+     * <li><strong>AND</strong>: The conditions are in an AND relationship.<blockquote>
+     * <p>You can search for assets by container ID, cluster ID, cluster name, cluster type, risk level, region, and other conditions. Call the <a href="~~DescribeContainerCriteria~~">DescribeContainerCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;flag&quot;,&quot;value&quot;:&quot;0|8&quot;,&quot;logicalExp&quot;:&quot;AND&quot;},{&quot;name&quot;:&quot;ecsType&quot;,&quot;value&quot;:&quot;!8&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}][{&quot;name&quot;:&quot;clusterType&quot;,&quot;value&quot;:&quot;NotManagedKubernetes&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]</p>
@@ -29,7 +26,7 @@ public class DescribeContainerInstancesRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,10 +35,10 @@ public class DescribeContainerInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The logical operator that you want to use to evaluate multiple search conditions. Valid values:</p>
+     * <p>The logical relationship between multiple search conditions. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong>: Search conditions are evaluated by using a logical <strong>OR</strong>.</li>
-     * <li><strong>AND</strong>: Search conditions are evaluated by using a logical <strong>AND</strong>.</li>
+     * <li><strong>OR</strong>: The conditions are in an OR relationship.</li>
+     * <li><strong>AND</strong>: The conditions are in an AND relationship.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,9 +48,9 @@ public class DescribeContainerInstancesRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

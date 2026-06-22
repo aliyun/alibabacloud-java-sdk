@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitorAccountRequest extends TeaModel {
     /**
-     * <p>The ID of the member that you want to delete.</p>
+     * <p>The ID of the member account that you want to delete from the Security Center monitoring account list.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of the members in the Security Center console.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the list of member accounts IDs that are managed by Security Center.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

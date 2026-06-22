@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the current page in the paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,13 +14,13 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the image vulnerabilities.</p>
+     * <p>The list of image vulnerabilities.</p>
      */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> groupedVulItems;
 
     /**
-     * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+     * <p>The number of image vulnerabilities returned on each page in the paging query. Default value: <strong>20</strong>, which indicates that 20 image vulnerability records are returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>5E244439-UJND-8BF7-26F36E21B9AA</p>
@@ -102,7 +102,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public String aliasName;
 
         /**
-         * <p>The number of vulnerabilities that have the high priority.</p>
+         * <p>The number of high-risk vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>26</p>
@@ -111,10 +111,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public Integer asapCount;
 
         /**
-         * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
+         * <p>Indicates whether the vulnerability can be fixed. Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong></li>
-         * <li><strong>no</strong></li>
+         * <li><strong>yes</strong>: The vulnerability can be fixed.</li>
+         * <li><strong>no</strong>: The vulnerability cannot be fixed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public String canFix;
 
         /**
-         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the first scan, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1611201274000</p>
@@ -133,7 +133,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public Long gmtLast;
 
         /**
-         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the latest scan, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1611201274000</p>
@@ -142,7 +142,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public Long lastScanTime;
 
         /**
-         * <p>The number of vulnerabilities that have the medium priority.</p>
+         * <p>The number of medium-risk vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>26</p>
@@ -160,7 +160,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of vulnerabilities that have the low priority.</p>
+         * <p>The number of low-risk vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>29</p>
@@ -169,9 +169,9 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public Integer nntfCount;
 
         /**
-         * <p>The tag of this vulnerability. Valid values:</p>
+         * <p>The vulnerability tag. Valid values:</p>
          * <ul>
-         * <li><strong>AI</strong>: AI-related components.</li>
+         * <li><strong>AI</strong>: vulnerabilities related to AI components.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,12 +181,12 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public String ruleTag;
 
         /**
-         * <p>The status of the vulnerability. Valid values:</p>
+         * <p>The processing status of the vulnerability. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unhandled</li>
-         * <li><strong>1</strong>: handled</li>
-         * <li><strong>2</strong>: verifying</li>
-         * <li><strong>3</strong>: added to the whitelist</li>
+         * <li><strong>0</strong>: Unhandled.</li>
+         * <li><strong>1</strong>: Handled.</li>
+         * <li><strong>2</strong>: Verifying.</li>
+         * <li><strong>3</strong>: Added to the whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,12 +196,12 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The tag of the vulnerability. Valid values:</p>
+         * <p>The label of the vulnerability. Valid values:</p>
          * <ul>
          * <li>Restart required</li>
-         * <li>Remote exploitation</li>
-         * <li>Exploit exists</li>
-         * <li>Exploitable</li>
+         * <li>Remote utilization</li>
+         * <li>EXP exists</li>
+         * <li>Available</li>
          * <li>Privilege escalation</li>
          * <li>Code execution</li>
          * </ul>
@@ -213,10 +213,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The type of vulnerability to query. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: image system vulnerability</li>
-         * <li><strong>sca</strong>: image application vulnerability</li>
+         * <li><strong>sca</strong>: image application vulnerability.</li>
          * </ul>
          * 
          * <strong>example:</strong>

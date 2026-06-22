@@ -7,7 +7,7 @@ public class GetOpaClusterLabelListRequest extends TeaModel {
     /**
      * <p>The ID of the cluster to which the container belongs.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class GetOpaClusterLabelListRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Default value: 200. If you leave the PageSize parameter empty, 200 entries are returned by default. Maximum value: 200.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you do not leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

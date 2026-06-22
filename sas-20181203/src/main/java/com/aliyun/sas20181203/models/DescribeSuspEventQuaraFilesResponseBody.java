@@ -167,7 +167,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
          * <p>The private IP address of the server on which the quarantined file is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.XX.XX</p>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;

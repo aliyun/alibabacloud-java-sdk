@@ -14,7 +14,7 @@ public class ExportRecordResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The ID of the exported file.</p>
+     * <p>The ID of the export task.</p>
      * 
      * <strong>example:</strong>
      * <p>131231</p>
@@ -23,7 +23,7 @@ public class ExportRecordResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request, used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>

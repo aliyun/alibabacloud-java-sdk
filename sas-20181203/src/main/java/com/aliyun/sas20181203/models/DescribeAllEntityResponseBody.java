@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAllEntityResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of servers.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("EntityList")
     public java.util.List<DescribeAllEntityResponseBodyEntityList> entityList;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
@@ -51,7 +51,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         public Integer groupId;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The name of the server instance.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -60,7 +60,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The public IP address of the server.</p>
+         * <p>The public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.19.XX.XX</p>
@@ -69,7 +69,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>The private IP address of the server.</p>
+         * <p>The private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>100.104.XX.XX</p>
@@ -90,7 +90,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
          * <p>The operating system of the server. Valid values:</p>
          * <ul>
          * <li><strong>linux</strong></li>
-         * <li><strong>windows</strong></li>
+         * <li><strong>windows</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

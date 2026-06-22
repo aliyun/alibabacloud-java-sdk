@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetLocalDefaultRegionRequest extends TeaModel {
     /**
-     * <p>The cloud service provider. Valid values:</p>
+     * <p>The cloud asset vendor. Valid values:</p>
      * <ul>
-     * <li><strong>Tencent</strong>: Tencent Cloud.</li>
-     * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
-     * <li><strong>Azure</strong>: Microsoft Azure.</li>
-     * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
+     * <li><strong>Tencent</strong>: Tencent Cloud</li>
+     * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
+     * <li><strong>Azure</strong>: Azure</li>
+     * <li><strong>AWS</strong>: AWS.</li>
      * </ul>
      * 
      * <strong>example:</strong>

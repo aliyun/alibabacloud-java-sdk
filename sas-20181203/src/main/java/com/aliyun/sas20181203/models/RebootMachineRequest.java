@@ -7,7 +7,7 @@ public class RebootMachineRequest extends TeaModel {
     /**
      * <p>The UUID of the server that you want to restart.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

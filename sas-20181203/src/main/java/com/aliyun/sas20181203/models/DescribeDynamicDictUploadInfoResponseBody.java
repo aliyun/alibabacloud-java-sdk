@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
     /**
-     * <p>The AccessKey ID that is used to access OSS.</p>
+     * <p>The AccessKey ID of OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>yourAccessKeyID</p>
@@ -14,7 +14,7 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
     public String accessid;
 
     /**
-     * <p>The validity period of the signature. The value is a UNIX timestamp.</p>
+     * <p>The expiration time of the OSS authorization, in timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1719919893</p>
@@ -23,7 +23,7 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
     public String expire;
 
     /**
-     * <p>The OSS endpoint.</p>
+     * <p>The OSS domain name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com">https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -32,7 +32,7 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
     public String host;
 
     /**
-     * <p>The name of the OSS object.</p>
+     * <p>The key of the OSS file name.</p>
      * 
      * <strong>example:</strong>
      * <p>DegradePool_Offset_****</p>
@@ -50,7 +50,7 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
     public String policy;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61***</p>
@@ -59,7 +59,7 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The signature that is calculated based on <strong>AccessKeySecret</strong> and <strong>Policy</strong>. When you call an OSS API operation, OSS uses the signature information to check the validity of the POST request.</p>
+     * <p>The signature information calculated based on <strong>AccessKeySecret</strong> and <strong>Policy</strong>. When you call an OSS API operation, OSS verifies this signature information to confirm the validity of the POST request.</p>
      * 
      * <strong>example:</strong>
      * <p>wBiwkhd5LGcLzijtc3FhI****</p>

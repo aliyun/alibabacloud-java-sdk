@@ -15,7 +15,7 @@ public class ListCompressFileDetectResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+     * <p>The unique identifier for the file.</p>
      * 
      * <strong>example:</strong>
      * <p>0a212417e65c26ff133cfff28f6c****</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUsageTopRequest extends TeaModel {
     /**
-     * <p>The type of the asset fingerprint. Valid value:</p>
+     * <p>The Asset Fingerprints type. Valid values:</p>
      * <ul>
      * <li><strong>port</strong>: port</li>
      * <li><strong>process</strong>: process</li>
      * <li><strong>software</strong>: software</li>
      * <li><strong>user</strong>: account</li>
-     * <li><strong>sca</strong>: middleware</li>
+     * <li><strong>sca</strong>: middleware.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

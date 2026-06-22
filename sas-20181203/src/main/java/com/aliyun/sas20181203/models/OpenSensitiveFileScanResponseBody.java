@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenSensitiveFileScanResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data.</p>
+     * <p>The data returned for modifying the sensitive file scan switch.</p>
      */
     @NameInMap("Data")
     public OpenSensitiveFileScanResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The detailed information of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,7 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>B4A4C081-7F06-5481-9323-02A5419B9423</p>
@@ -47,10 +47,10 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The result status of the API call. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong>: The API call was successful.</li>
+     * <li><strong>false</strong>: The API call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,10 +114,10 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
 
     public static class OpenSensitiveFileScanResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether sensitive file scan is enabled or disabled. Valid values:</p>
+         * <p>The switch operation. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled</li>
-         * <li><strong>off</strong>: disabled</li>
+         * <li><strong>on</strong>: Enable.</li>
+         * <li><strong>off</strong>: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>

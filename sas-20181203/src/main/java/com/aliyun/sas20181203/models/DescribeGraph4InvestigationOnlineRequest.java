@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGraph4InvestigationOnlineRequest extends TeaModel {
     /**
-     * <p>The ID of the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the alert event ID, with the value path being: data.SuspEvents[index].UniqueInfo.</p>
+     * <p>The ID of the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the alert event ID. The value is in the data.SuspEvents[index].UniqueInfo path.</p>
      * 
      * <strong>example:</strong>
      * <p>786fc80896b25422b5324cb6e57bxxxx</p>
@@ -14,7 +14,7 @@ public class DescribeGraph4InvestigationOnlineRequest extends TeaModel {
     public String anomalyId;
 
     /**
-     * <p>The UUID of the alert event asset. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the asset UUID, with the value path being: data.SuspEvents[index].Uuid.</p>
+     * <p>The UUID of the asset associated with the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the asset UUID. The value is in the data.SuspEvents[index].Uuid path.</p>
      * 
      * <strong>example:</strong>
      * <p>3502e4b0-f362-4059-84a2-f47fa2b5exxx</p>
@@ -23,10 +23,10 @@ public class DescribeGraph4InvestigationOnlineRequest extends TeaModel {
     public String anomalyUuid;
 
     /**
-     * <p>Sets the language type for the request and response messages. The default is <strong>zh</strong>. Values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribeGraph4InvestigationOnlineRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The namespace of the graph, which is fixed as: hundun_dc_online.</p>
+     * <p>The namespace of the graph. Set this parameter to hundun_dc_online.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeGraph4InvestigationOnlineRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Vertex ID. This does not need to be proactively provided.</p>
+     * <p>The vertex ID. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>29872354f741b1b044b8a9b4e2ab****</p>

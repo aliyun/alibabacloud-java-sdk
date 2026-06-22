@@ -719,11 +719,14 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
 
     public static class ListMultiUserInstancesResponseBodyDaInstanceVersionSummary extends TeaModel {
         /**
-         * <p>The type of authorization consumed during binding. Values: </p>
+         * <p>The type of authorization consumed during binding. Values:</p>
          * <ul>
-         * <li>ASSET: consumes the number of authorized instances</li>
-         * <li>CORE: consumes the number of authorized cores</li>
-         * <li>ASSET_AND_CORE: consumes both the number of authorized instances and cores</li>
+         * <li><p>ASSET: consumes the number of authorized instances</p>
+         * </li>
+         * <li><p>CORE: consumes the number of authorized cores</p>
+         * </li>
+         * <li><p>ASSET_AND_CORE: consumes both the number of authorized instances and cores</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -745,15 +748,22 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         public ListMultiUserInstancesResponseBodyDaInstanceVersionSummaryEcsCount ecsCount;
 
         /**
-         * <p>Purchased version of Cloud Security Center. Values:  </p>
+         * <p>Purchased version of Cloud Security Center. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition </li>
-         * <li><strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>6</strong>: Antivirus Edition    </li>
-         * <li><strong>7</strong>: Flagship Edition   </li>
-         * <li><strong>8</strong>: Multiple Editions   </li>
-         * <li><strong>10</strong>: Only Value-Added Services Purchased</li>
+         * <li><p><strong>1</strong>: Free Edition</p>
+         * </li>
+         * <li><p><strong>3</strong>: Enterprise Edition</p>
+         * </li>
+         * <li><p><strong>5</strong>: Advanced Edition</p>
+         * </li>
+         * <li><p><strong>6</strong>: Antivirus Edition</p>
+         * </li>
+         * <li><p><strong>7</strong>: Flagship Edition</p>
+         * </li>
+         * <li><p><strong>8</strong>: Multiple Editions</p>
+         * </li>
+         * <li><p><strong>10</strong>: Only Value-Added Services Purchased</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -906,8 +916,10 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         /**
          * <p>Instance purchase type. Values:</p>
          * <ul>
-         * <li><strong>0</strong>：Self-purchased.</li>
-         * <li><strong>1</strong>：Allocated.</li>
+         * <li><p><strong>0</strong>:Self-purchased.</p>
+         * </li>
+         * <li><p><strong>1</strong>:Allocated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -935,10 +947,12 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         public ListMultiUserInstancesResponseBodyDaInstanceSlsCapacity slsCapacity;
 
         /**
-         * <p>Administrator account instance status. Values: </p>
+         * <p>Administrator account instance status. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: Active.</li>
-         * <li><strong>2</strong>: Inactive.</li>
+         * <li><p><strong>1</strong>: Active.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Inactive.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -960,10 +974,12 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         public ListMultiUserInstancesResponseBodyDaInstanceThreatAnalysisFlow threatAnalysisFlow;
 
         /**
-         * <p>User type. Values: </p>
+         * <p>User type. Values:</p>
          * <ul>
-         * <li><strong>Administrator User</strong>: 1</li>
-         * <li><strong>Regular User</strong>: 2</li>
+         * <li><p><strong>Administrator User</strong>: 1</p>
+         * </li>
+         * <li><p><strong>Regular User</strong>: 2</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -973,15 +989,22 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         public Integer userType;
 
         /**
-         * <p>Purchased version of Cloud Security Center. Values:  </p>
+         * <p>Purchased version of Cloud Security Center. Values:</p>
          * <ul>
-         * <li><strong>1</strong>：Free Edition </li>
-         * <li><strong>3</strong>：Enterprise Edition</li>
-         * <li><strong>5</strong>：Advanced Edition</li>
-         * <li><strong>6</strong>：Anti-Virus Edition    </li>
-         * <li><strong>7</strong>：Flagship Edition   </li>
-         * <li><strong>8</strong>：Multiple Editions   </li>
-         * <li><strong>10</strong>：Value-Added Services Only</li>
+         * <li><p><strong>1</strong>:Free Edition</p>
+         * </li>
+         * <li><p><strong>3</strong>:Enterprise Edition</p>
+         * </li>
+         * <li><p><strong>5</strong>:Advanced Edition</p>
+         * </li>
+         * <li><p><strong>6</strong>:Anti-Virus Edition</p>
+         * </li>
+         * <li><p><strong>7</strong>:Flagship Edition</p>
+         * </li>
+         * <li><p><strong>8</strong>:Multiple Editions</p>
+         * </li>
+         * <li><p><strong>10</strong>:Value-Added Services Only</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1738,9 +1761,12 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         /**
          * <p>Authorization type consumed during binding, with values:</p>
          * <ul>
-         * <li><strong>ASSET</strong>：Consumes the number of authorized instances</li>
-         * <li><strong>CORE</strong>：Consumes the number of authorized cores</li>
-         * <li><strong>ASSET_AND_CORE</strong>：Consumes both the number of authorized instances and cores.</li>
+         * <li><p><strong>ASSET</strong>:Consumes the number of authorized instances</p>
+         * </li>
+         * <li><p><strong>CORE</strong>:Consumes the number of authorized cores</p>
+         * </li>
+         * <li><p><strong>ASSET_AND_CORE</strong>:Consumes both the number of authorized instances and cores.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1762,15 +1788,22 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         public ListMultiUserInstancesResponseBodySaleInstanceListVersionSummaryEcsCount ecsCount;
 
         /**
-         * <p>Version of the Cloud Security Center for the member account. Values:  </p>
+         * <p>Version of the Cloud Security Center for the member account. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition </li>
-         * <li><strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>6</strong>: Anti-Virus Edition    </li>
-         * <li><strong>7</strong>: Flagship Edition   </li>
-         * <li><strong>8</strong>: Multiple Versions   </li>
-         * <li><strong>10</strong>: Value-Added Services Only</li>
+         * <li><p><strong>1</strong>: Free Edition</p>
+         * </li>
+         * <li><p><strong>3</strong>: Enterprise Edition</p>
+         * </li>
+         * <li><p><strong>5</strong>: Advanced Edition</p>
+         * </li>
+         * <li><p><strong>6</strong>: Anti-Virus Edition</p>
+         * </li>
+         * <li><p><strong>7</strong>: Flagship Edition</p>
+         * </li>
+         * <li><p><strong>8</strong>: Multiple Versions</p>
+         * </li>
+         * <li><p><strong>10</strong>: Value-Added Services Only</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1904,10 +1937,12 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Instance purchase type. Values: </p>
+         * <p>Instance purchase type. Values:</p>
          * <ul>
-         * <li><strong>0</strong>: Self-purchased.</li>
-         * <li><strong>1</strong>: Allocated.</li>
+         * <li><p><strong>0</strong>: Self-purchased.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Allocated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1935,10 +1970,12 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         public ListMultiUserInstancesResponseBodySaleInstanceListSlsCapacity slsCapacity;
 
         /**
-         * <p>Status of the member account instance. Values: </p>
+         * <p>Status of the member account instance. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: Active.</li>
-         * <li><strong>2</strong>: Inactive.</li>
+         * <li><p><strong>1</strong>: Active.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Inactive.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1962,8 +1999,10 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         /**
          * <p>User type. Values:</p>
          * <ul>
-         * <li><strong>Administrator User</strong>：1</li>
-         * <li><strong>Regular User</strong>：2</li>
+         * <li><p><strong>Administrator User</strong>:1</p>
+         * </li>
+         * <li><p><strong>Regular User</strong>:2</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1973,15 +2012,22 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         public Integer userType;
 
         /**
-         * <p>Version of the Cloud Security Center for the member account. Values:  </p>
+         * <p>Version of the Cloud Security Center for the member account. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition </li>
-         * <li><strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>6</strong>: Anti-Virus Edition    </li>
-         * <li><strong>7</strong>: Flagship Edition   </li>
-         * <li><strong>8</strong>: Multiple Versions   </li>
-         * <li><strong>10</strong>: Only Purchased Value-Added Services</li>
+         * <li><p><strong>1</strong>: Free Edition</p>
+         * </li>
+         * <li><p><strong>3</strong>: Enterprise Edition</p>
+         * </li>
+         * <li><p><strong>5</strong>: Advanced Edition</p>
+         * </li>
+         * <li><p><strong>6</strong>: Anti-Virus Edition</p>
+         * </li>
+         * <li><p><strong>7</strong>: Flagship Edition</p>
+         * </li>
+         * <li><p><strong>8</strong>: Multiple Versions</p>
+         * </li>
+         * <li><p><strong>10</strong>: Only Purchased Value-Added Services</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

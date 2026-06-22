@@ -11,7 +11,7 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
     public java.util.List<DescribeIdcAssetCriteriaResponseBodyCriteriaList> criteriaList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>11C96623-E106-59C9-866D-A6C82911****</p>
@@ -42,7 +42,7 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
 
     public static class DescribeIdcAssetCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
-         * <p>The name of the search condition.</p>
+         * <p>The name of the corresponding search condition.</p>
          * 
          * <strong>example:</strong>
          * <p>scannedIp</p>
@@ -53,8 +53,8 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
         /**
          * <p>The type of the search condition. Valid values:</p>
          * <ul>
-         * <li><strong>input</strong>: The search condition needs to be specified.</li>
-         * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+         * <li><strong>input</strong>: You must manually enter the search field.</li>
+         * <li><strong>select</strong>: You must select a child class of the search condition from the drop-down list.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The attribute values of the assets that match the keyword.</p>
+         * <p>The specific asset property values that correspond to the entered fuzzy match value.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.*</p>

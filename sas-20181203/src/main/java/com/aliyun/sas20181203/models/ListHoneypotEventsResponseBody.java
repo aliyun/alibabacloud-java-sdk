@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotEventsResponseBody extends TeaModel {
     /**
-     * <p>The intrusion events.</p>
+     * <p>The list of honeypot attack events.</p>
      */
     @NameInMap("HoneypotEvents")
     public java.util.List<ListHoneypotEventsResponseBodyHoneypotEvents> honeypotEvents;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The paging information.</p>
      */
     @NameInMap("PageInfo")
     public ListHoneypotEventsResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>FBD28009-6096-5E90-BFE6-62CCD67*****</p>
@@ -56,7 +56,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
 
     public static class ListHoneypotEventsResponseBodyHoneypotEventsMergeFieldList extends TeaModel {
         /**
-         * <p>The supplementary information about the field.</p>
+         * <p>The supplementary information of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>data</p>
@@ -74,7 +74,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         public String fieldKey;
 
         /**
-         * <p>The type of the field.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>level2_item1</p>
@@ -168,7 +168,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         public String dstIp;
 
         /**
-         * <p>The timestamp at which the event was first detected.</p>
+         * <p>The timestamp of the first occurrence.</p>
          * 
          * <strong>example:</strong>
          * <p>1692670297</p>
@@ -180,13 +180,13 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
          * <p>The name of the honeypot.</p>
          * 
          * <strong>example:</strong>
-         * <p>honeypot-2</p>
+         * <p>主机 tcp监听****</p>
          */
         @NameInMap("HoneypotName")
         public String honeypotName;
 
         /**
-         * <p>The timestamp at which the event was last detected.</p>
+         * <p>The timestamp of the most recent occurrence.</p>
          * 
          * <strong>example:</strong>
          * <p>1676558664</p>
@@ -198,13 +198,13 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
          * <p>The region.</p>
          * 
          * <strong>example:</strong>
-         * <p>China Beijing</p>
+         * <p>北京市</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
-         * <p>The extended values that correspond to the field key.</p>
+         * <p>The list of extended field key-value pairs.</p>
          */
         @NameInMap("MergeFieldList")
         public java.util.List<ListHoneypotEventsResponseBodyHoneypotEventsMergeFieldList> mergeFieldList;
@@ -212,8 +212,8 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         /**
          * <p>The protocol. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><strong>tcp</strong>.</li>
+         * <li><strong>udp</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,9 +225,9 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: low</li>
-         * <li><strong>3</strong>: medium</li>
-         * <li><strong>4</strong>: high</li>
+         * <li><strong>2</strong>: Low risk.</li>
+         * <li><strong>3</strong>: Medium risk.</li>
+         * <li><strong>4</strong>: High risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The ID of the intrusion event.</p>
+         * <p>The unique ID of the attack event.</p>
          * 
          * <strong>example:</strong>
          * <p>70427821</p>
@@ -367,7 +367,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
 
     public static class ListHoneypotEventsResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -376,7 +376,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -385,7 +385,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The key of the last data entry.</p>
+         * <p>The key of the last entry.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY*********</p>
@@ -394,7 +394,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         public String lastRowKey;
 
         /**
-         * <p>The value of the NextToken parameter that is returned by using the NextToken method.</p>
+         * <p>The NextToken value returned when the NextToken-based pagination method is used.</p>
          * 
          * <strong>example:</strong>
          * <p>B604532DEF982B875E8360A6EFA3B***</p>
@@ -403,7 +403,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -412,7 +412,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

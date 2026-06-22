@@ -4,30 +4,45 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileProtectClientEventRequest extends TeaModel {
+    /**
+     * <p>The list of alert notification levels.</p>
+     */
     @NameInMap("AlertLevels")
     public java.util.List<Integer> alertLevels;
 
     /**
+     * <p>The timestamp of the end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1650470399999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The list of excluded event IDs.</p>
+     */
     @NameInMap("ExcludeIdList")
     public java.util.List<Long> excludeIdList;
 
     /**
+     * <p>The file path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/etc/pam****</p>
      */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>The list of event IDs.</p>
+     */
     @NameInMap("IdList")
     public java.util.List<Long> idList;
 
     /**
+     * <p>The ID of the asset instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-bp1fu4aqltf1huhc****</p>
      */
@@ -35,6 +50,8 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the asset instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -42,6 +59,8 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>120.27.XX.XX</p>
      */
@@ -49,6 +68,8 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public String internetIp;
 
     /**
+     * <p>The internal IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.26.XX.XX</p>
      */
@@ -56,6 +77,12 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public String intranetIp;
 
     /**
+     * <p>The new status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Unhandled.</li>
+     * <li><strong>1</strong>: Handled.</li>
+     * <li><strong>2</strong>: Whitelisted.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +92,8 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public Integer newStatus;
 
     /**
+     * <p>The type of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>READ</p>
      */
@@ -72,16 +101,23 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public String operation;
 
     /**
+     * <p>The process path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/1111/****</p>
      */
     @NameInMap("ProcPath")
     public String procPath;
 
+    /**
+     * <p>The remarks.</p>
+     */
     @NameInMap("Remark")
     public java.util.List<String> remark;
 
     /**
+     * <p>The rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>tetsRule</p>
      */
@@ -89,6 +125,7 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Specifies whether to select all.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,6 +135,8 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public Boolean selectAll;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1649260800000</p>
      */
@@ -105,6 +144,13 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The event status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Unhandled.</li>
+     * <li><strong>1</strong>: Handled.</li>
+     * <li><strong>2</strong>: Whitelisted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -112,6 +158,8 @@ public class UpdateFileProtectClientEventRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The UUID of the protected server.</p>
+     * 
      * <strong>example:</strong>
      * <p>ae1527a9-2308-46ab-b10a-48ae7ff7****</p>
      */

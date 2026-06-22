@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySasContainerWebDefenseRuleResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>A447E4E3-42A3-58B7-A7D4-2287745BEFDC</p>

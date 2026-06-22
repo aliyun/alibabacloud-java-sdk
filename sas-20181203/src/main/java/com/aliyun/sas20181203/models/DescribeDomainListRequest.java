@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,10 @@ public class DescribeDomainListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The type of the domain name that you want to query. Valid values:</p>
+     * <p>The type of the domain name to query. Valid values:</p>
      * <ul>
      * <li><strong>root</strong>: root domain name</li>
-     * <li><strong>sub</strong>: subdomain name</li>
+     * <li><strong>sub</strong>: subdomain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeDomainListRequest extends TeaModel {
     public String domainType;
 
     /**
-     * <p>The keyword that is used to query domain names. Fuzzy match is supported.</p>
+     * <p>The search keyword for the domain name to query. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -36,7 +36,7 @@ public class DescribeDomainListRequest extends TeaModel {
     public String fuzzyDomain;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of domain names to display on each page in a paged query. Default value: <strong>10</strong>, which indicates that 10 domain names are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeDomainListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>192.122.XX.XX</p>

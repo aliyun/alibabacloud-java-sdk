@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the anti-ransomware policy.</p>
+     * <p>The ID of the anti-ransomware policy that you want to enable or shutdown.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyBackupPolicyStatusRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The version of the anti-ransomware policy. Set the value to <strong>2.0.0</strong>.</p>
+     * <p>The version of the policy that you want to enable or disable. Set the value to <strong>2.0.0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0.0</p>
@@ -27,11 +27,11 @@ public class ModifyBackupPolicyStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable the anti-ransomware policy. Valid values:</p>
      * <ul>
-     * <li><strong>enabled</strong>: enables the anti-ransomware policy. After you enable the anti-ransomware policy, the anti-ransomware feature protects data on your servers. Data on your servers is backed up based on the policy.</li>
-     * <li><strong>disabled</strong>: disables the anti-ransomware policy. After you disable the anti-ransomware policy, the data backup task that is running based on the policy stops.</li>
+     * <li><strong>enabled</strong>: Enables the anti-ransomware policy. After the policy is enabled, anti-ransomware can protect your server data by backing up data on specified servers based on your anti-ransomware policy.</li>
+     * <li><strong>disabled</strong>: Disables the anti-ransomware policy. After the policy is disabled, running backup tasks are stopped.</li>
      * </ul>
      * <blockquote>
-     * <p> When the system runs data backup tasks, your network bandwidth is consumed. We recommend that you enable the anti-ransomware policy during peak-off hours to back up data.</p>
+     * <p>Backup tasks consume network bandwidth. Enable the policy during off-peak hours to execute data backup tasks.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

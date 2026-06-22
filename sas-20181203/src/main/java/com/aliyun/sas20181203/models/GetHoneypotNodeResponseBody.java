@@ -49,8 +49,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,8 +118,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a honeypot is allowed to access the Internet. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The honeypot is allowed to access the Internet.</li>
-         * <li><strong>false</strong>: The honeypot is not allowed to access the Internet.</li>
+         * <li><p><strong>true</strong>: The honeypot is allowed to access the Internet.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The honeypot is not allowed to access the Internet.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,11 +220,16 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         /**
          * <p>The status of the management node. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: preparing</li>
-         * <li><strong>1</strong>: normal</li>
-         * <li><strong>2</strong>: abnormal</li>
-         * <li><strong>4</strong>: starting</li>
-         * <li><strong>5</strong>: upgrading</li>
+         * <li><p><strong>0</strong>: preparing</p>
+         * </li>
+         * <li><p><strong>1</strong>: normal</p>
+         * </li>
+         * <li><p><strong>2</strong>: abnormal</p>
+         * </li>
+         * <li><p><strong>4</strong>: starting</p>
+         * </li>
+         * <li><p><strong>5</strong>: upgrading</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,8 +241,10 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the management node can be upgraded. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

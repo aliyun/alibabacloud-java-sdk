@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHybridProxyClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>414EC213-AD2D-56C3-B140-108773B24405</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeUserBaselineAuthorizationRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language type for requests and responses. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeUserBaselineAuthorizationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the asset owner.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.3.4</p>

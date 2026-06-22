@@ -55,8 +55,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,7 +142,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
          * <p>The most recent honeypot that was attacked.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc tcp honeypot</p>
+         * <p>vpc tcp 蜜罐</p>
          */
         @NameInMap("LastTargetHoneypot")
         public String lastTargetHoneypot;
@@ -166,9 +168,12 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: low</li>
-         * <li><strong>3</strong>: medium</li>
-         * <li><strong>4</strong>: high</li>
+         * <li><p><strong>2</strong>: low</p>
+         * </li>
+         * <li><p><strong>3</strong>: medium</p>
+         * </li>
+         * <li><p><strong>4</strong>: high</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

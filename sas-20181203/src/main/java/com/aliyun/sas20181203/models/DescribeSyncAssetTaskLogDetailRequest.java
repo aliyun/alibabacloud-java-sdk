@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1. Pages start from page 1.</p>
+     * <p>The page number from which to start displaying query results. Default value: 1, which indicates that query results are displayed starting from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end timestamp of the task.</p>
+     * <p>The timestamp of the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1668064495000</p>
@@ -23,9 +23,9 @@ public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to display on each page when you perform a paginated query. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the IDC scan task. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeSyncAssetTaskList</a> operation to obtain the ID.</p>
+     * <p>The ID of the IDC scan task that you want to query. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeSyncAssetTaskList</a> operation to obtain the ID of an abnormal task.</p>
      * 
      * <strong>example:</strong>
      * <p>7e9565f537146fdf6bfb4e01f6f08818</p>
@@ -44,7 +44,7 @@ public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     public String rootTaskId;
 
     /**
-     * <p>The start timestamp of the task.</p>
+     * <p>The timestamp of the start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1644027670</p>
@@ -53,7 +53,7 @@ public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The name of the IDC scan task.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>IDC_PROBE_SCAN-TEST_001</p>

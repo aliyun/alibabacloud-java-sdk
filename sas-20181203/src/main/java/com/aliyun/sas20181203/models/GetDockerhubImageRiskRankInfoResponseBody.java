@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
@@ -51,7 +51,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String digest;
 
         /**
-         * <p>The number of baseline risks detected on the image repository.</p>
+         * <p>The number of baseline risks in the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -78,7 +78,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public Long imageSize;
 
         /**
-         * <p>The name of the Container Registry repository.</p>
+         * <p>The name of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>glz123</p>
@@ -87,7 +87,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The namespace to which the repository belongs.</p>
+         * <p>The repository namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-01</p>
@@ -96,7 +96,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
-         * <p>The risk statistics of all hosts, images, and containers.</p>
+         * <p>The risk statistics information for all hosts, images, and containers.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;account\&quot;:0,\&quot;agentlessAll\&quot;:0,\&quot;agentlessBaseline\&quot;:0,\&quot;agentlessMalicious\&quot;:0,\&quot;agentlessSensitiveFile\&quot;:0,\&quot;agentlessVulCve\&quot;:0,\&quot;agentlessVulSca\&quot;:0,\&quot;agentlessVulSys\&quot;:0,\&quot;appNum\&quot;:0,\&quot;asapVulCount\&quot;:0,\&quot;baselineHigh\&quot;:0,\&quot;baselineLow\&quot;:0,\&quot;baselineMedium\&quot;:0,\&quot;baselineNum\&quot;:0,\&quot;cmsNum\&quot;:0,\&quot;containerAsap\&quot;:0,\&quot;containerLater\&quot;:0,\&quot;containerNntf\&quot;:0,\&quot;containerRemind\&quot;:0,\&quot;containerSerious\&quot;:0,\&quot;containerSuspicious\&quot;:0,\&quot;cveNum\&quot;:0,\&quot;emgNum\&quot;:0,\&quot;health\&quot;:0,\&quot;imageBaselineHigh\&quot;:1,\&quot;imageBaselineLow\&quot;:0,\&quot;imageBaselineMedium\&quot;:0,\&quot;imageBaselineNum\&quot;:1,\&quot;imageMaliciousFileRemind\&quot;:0,\&quot;imageMaliciousFileSerious\&quot;:0,\&quot;imageMaliciousFileSuspicious\&quot;:0,\&quot;imageVulAsap\&quot;:0,\&quot;imageVulLater\&quot;:0,\&quot;imageVulNntf\&quot;:0,\&quot;laterVulCount\&quot;:0,\&quot;newSuspicious\&quot;:0,\&quot;nntfVulCount\&quot;:0,\&quot;remindNum\&quot;:0,\&quot;scaNum\&quot;:0,\&quot;seriousNum\&quot;:0,\&quot;suspNum\&quot;:0,\&quot;suspicious\&quot;:0,\&quot;sysNum\&quot;:0,\&quot;trojan\&quot;:0,\&quot;uuid\&quot;:\&quot;009635bf00c0585e3122ab92f5449919\&quot;,\&quot;vul\&quot;:0,\&quot;weakPWNum\&quot;:0}</p>
@@ -105,7 +105,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String riskLevelDetail;
 
         /**
-         * <p>The tag of the image.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>machineResource</p>
@@ -114,7 +114,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The UUID of the record.</p>
+         * <p>The unique identifier of the record.</p>
          * 
          * <strong>example:</strong>
          * <p>5583aa03-922e-4709-a888-389f2489****</p>
@@ -229,7 +229,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String digest;
 
         /**
-         * <p>The number of risks detected on the image repository.</p>
+         * <p>The number of risks in the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -265,7 +265,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The namespace to which the image repository belongs.</p>
+         * <p>The namespace of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-01</p>
@@ -274,7 +274,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
-         * <p>The risk statistics of all hosts, images, and containers.</p>
+         * <p>The risk statistics information for all hosts, images, and containers.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;account\&quot;:0,\&quot;agentlessAll\&quot;:0,\&quot;agentlessBaseline\&quot;:0,\&quot;agentlessMalicious\&quot;:0,\&quot;agentlessSensitiveFile\&quot;:0,\&quot;agentlessVulCve\&quot;:0,\&quot;agentlessVulSca\&quot;:0,\&quot;agentlessVulSys\&quot;:0,\&quot;appNum\&quot;:0,\&quot;asapVulCount\&quot;:0,\&quot;baselineHigh\&quot;:0,\&quot;baselineLow\&quot;:0,\&quot;baselineMedium\&quot;:0,\&quot;baselineNum\&quot;:0,\&quot;cmsNum\&quot;:0,\&quot;containerAsap\&quot;:0,\&quot;containerLater\&quot;:0,\&quot;containerNntf\&quot;:0,\&quot;containerRemind\&quot;:0,\&quot;containerSerious\&quot;:0,\&quot;containerSuspicious\&quot;:0,\&quot;cveNum\&quot;:513,\&quot;emgNum\&quot;:0,\&quot;health\&quot;:0,\&quot;imageBaselineHigh\&quot;:0,\&quot;imageBaselineLow\&quot;:0,\&quot;imageBaselineMedium\&quot;:0,\&quot;imageBaselineNum\&quot;:0,\&quot;imageMaliciousFileRemind\&quot;:0,\&quot;imageMaliciousFileSerious\&quot;:0,\&quot;imageMaliciousFileSuspicious\&quot;:0,\&quot;imageVulAsap\&quot;:3,\&quot;imageVulLater\&quot;:182,\&quot;imageVulNntf\&quot;:328,\&quot;laterVulCount\&quot;:0,\&quot;newSuspicious\&quot;:0,\&quot;nntfVulCount\&quot;:0,\&quot;remindNum\&quot;:0,\&quot;scaNum\&quot;:0,\&quot;seriousNum\&quot;:0,\&quot;suspNum\&quot;:0,\&quot;suspicious\&quot;:0,\&quot;sysNum\&quot;:0,\&quot;trojan\&quot;:0,\&quot;uuid\&quot;:\&quot;44ffb29d6f66d8509598bcdfa660a21d\&quot;,\&quot;vul\&quot;:513,\&quot;weakPWNum\&quot;:0}</p>
@@ -292,7 +292,7 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The UUID of the record.</p>
+         * <p>The unique identifier of the record.</p>
          * 
          * <strong>example:</strong>
          * <p>6636c286-8063-4c97-8508-6aaf16a8****</p>
@@ -398,13 +398,13 @@ public class GetDockerhubImageRiskRankInfoResponseBody extends TeaModel {
 
     public static class GetDockerhubImageRiskRankInfoResponseBodyRiskRankInfo extends TeaModel {
         /**
-         * <p>The baseline risks.</p>
+         * <p>The baseline risk information.</p>
          */
         @NameInMap("Baseline")
         public java.util.List<GetDockerhubImageRiskRankInfoResponseBodyRiskRankInfoBaseline> baseline;
 
         /**
-         * <p>The risk information of high-risk vulnerabilities.</p>
+         * <p>The risk information about high-priority vulnerabilities.</p>
          */
         @NameInMap("VulAsap")
         public java.util.List<GetDockerhubImageRiskRankInfoResponseBodyRiskRankInfoVulAsap> vulAsap;

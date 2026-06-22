@@ -118,7 +118,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
          * <p>The instance name of the server.</p>
          * 
          * <strong>example:</strong>
-         * <p>win-oracl****</p>
+         * <p>test****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListClusterInterceptionConfigRequest extends TeaModel {
     /**
-     * <p>The status of the container firewall feature. Valid values:</p>
+     * <p>The container firewall status of the cluster. Valid values:</p>
      * <ul>
      * <li><strong>-1</strong>: unknown</li>
      * <li><strong>0</strong>: abnormal</li>
      * <li><strong>1</strong>: normal</li>
-     * <li><strong>2</strong>: normal to be confirmed</li>
+     * <li><strong>2</strong>: normal pending confirmation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,9 +20,9 @@ public class ListClusterInterceptionConfigRequest extends TeaModel {
     public Integer clusterCNNFStatus;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the container cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeContainerInstances~~">DescribeContainerInstances</a> operation to query the IDs of clusters.</p>
+     * <p>You can call the <a href="~~DescribeContainerInstances~~">DescribeContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ListClusterInterceptionConfigRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -41,7 +41,7 @@ public class ListClusterInterceptionConfigRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number of the page to return. Default value: 1, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class ListClusterInterceptionConfigRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

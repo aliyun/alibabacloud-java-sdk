@@ -94,7 +94,7 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1232428423234****</p>
+     * <p>1082098404740323</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

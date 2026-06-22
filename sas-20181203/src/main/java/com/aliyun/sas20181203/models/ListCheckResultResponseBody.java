@@ -177,14 +177,22 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The type of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: an ECS instance</li>
-         * <li><strong>1</strong>: a SLB instance</li>
-         * <li><strong>2</strong>: a NAT gateway</li>
-         * <li><strong>3</strong>: an ApsaraDB RDS instance</li>
-         * <li><strong>4</strong>: an ApsaraDB for MongoDB instance</li>
-         * <li><strong>5</strong>: an ApsaraDB for Redis instance</li>
-         * <li><strong>6</strong>: a container image</li>
-         * <li><strong>7</strong>: a container</li>
+         * <li><p><strong>0</strong>: an ECS instance</p>
+         * </li>
+         * <li><p><strong>1</strong>: a SLB instance</p>
+         * </li>
+         * <li><p><strong>2</strong>: a NAT gateway</p>
+         * </li>
+         * <li><p><strong>3</strong>: an ApsaraDB RDS instance</p>
+         * </li>
+         * <li><p><strong>4</strong>: an ApsaraDB for MongoDB instance</p>
+         * </li>
+         * <li><p><strong>5</strong>: an ApsaraDB for Redis instance</p>
+         * </li>
+         * <li><p><strong>6</strong>: a container image</p>
+         * </li>
+         * <li><p><strong>7</strong>: a container</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,11 +204,16 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The service provider of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Alibaba Cloud</li>
-         * <li><strong>3</strong>: Huawei Cloud</li>
-         * <li><strong>4</strong>: Microsoft Azure</li>
-         * <li><strong>5</strong>: AWS</li>
-         * <li><strong>7</strong>: Tencent Cloud</li>
+         * <li><p><strong>0</strong>: Alibaba Cloud</p>
+         * </li>
+         * <li><p><strong>3</strong>: Huawei Cloud</p>
+         * </li>
+         * <li><p><strong>4</strong>: Microsoft Azure</p>
+         * </li>
+         * <li><p><strong>5</strong>: AWS</p>
+         * </li>
+         * <li><p><strong>7</strong>: Tencent Cloud</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,8 +240,10 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The type of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: paid</li>
-         * <li><strong>1</strong>: free</li>
+         * <li><p><strong>0</strong>: paid</p>
+         * </li>
+         * <li><p><strong>1</strong>: free</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,10 +262,12 @@ public class ListCheckResultResponseBody extends TeaModel {
         public String checkShowName;
 
         /**
-         * <p>The source type of the situation awareness check item: </p>
+         * <p>The source type of the situation awareness check item:</p>
          * <ul>
-         * <li><strong>CUSTOM</strong>: User-defined </li>
-         * <li><strong>SYSTEM</strong>: Predefined by the situation awareness platform</li>
+         * <li><p><strong>CUSTOM</strong>: User-defined</p>
+         * </li>
+         * <li><p><strong>SYSTEM</strong>: Predefined by the situation awareness platform</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,23 +281,32 @@ public class ListCheckResultResponseBody extends TeaModel {
          * <ul>
          * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>ECS</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>INSTANCE</strong></li>
-         * <li><strong>DISK</strong></li>
-         * <li><strong>SECURITY_GROUP</strong></li>
+         * <li><p><strong>INSTANCE</strong></p>
+         * </li>
+         * <li><p><strong>DISK</strong></p>
+         * </li>
+         * <li><p><strong>SECURITY_GROUP</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>ACR</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>REPOSITORY_ENTERPRISE</strong></li>
-         * <li><strong>REPOSITORY_PERSON</strong></li>
+         * <li><p><strong>REPOSITORY_ENTERPRISE</strong></p>
+         * </li>
+         * <li><p><strong>REPOSITORY_PERSON</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>RAM</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>ALIAS</strong></li>
-         * <li><strong>USER</strong></li>
-         * <li><strong>POLICY</strong></li>
-         * <li><strong>GROUP</strong></li>
+         * <li><p><strong>ALIAS</strong></p>
+         * </li>
+         * <li><p><strong>USER</strong></p>
+         * </li>
+         * <li><p><strong>POLICY</strong></p>
+         * </li>
+         * <li><p><strong>GROUP</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>WAF</strong>, this parameter supports the following valid values:</p>
@@ -304,28 +330,50 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The asset type of the cloud service. Valid values:</p>
          * <ul>
-         * <li><strong>ECS</strong>: ECS</li>
-         * <li><strong>SLB</strong>: SLB</li>
-         * <li><strong>RDS</strong>: ApsaraDB RDS</li>
-         * <li><strong>MONGODB</strong>: MongoDB</li>
-         * <li><strong>KVSTORE</strong>: Redis</li>
-         * <li><strong>ACR</strong>: Container Registry</li>
-         * <li><strong>CSK</strong>: ACK</li>
-         * <li><strong>VPC</strong>: VPC</li>
-         * <li><strong>ACTIONTRAIL</strong>: ActionTrail</li>
-         * <li><strong>CDN</strong>: CDN</li>
-         * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
-         * <li><strong>RDC</strong>: Apsara Devops</li>
-         * <li><strong>RAM</strong>: RAM</li>
-         * <li><strong>DDOS</strong>: Anti-DDoS</li>
-         * <li><strong>WAF</strong>: WAF</li>
-         * <li><strong>OSS</strong>: OSS</li>
-         * <li><strong>POLARDB</strong>: PolarDB</li>
-         * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</li>
-         * <li><strong>MSE</strong>: MSE</li>
-         * <li><strong>NAS</strong>: NAS</li>
-         * <li><strong>SDDP</strong>: SDDP</li>
-         * <li><strong>EIP</strong>: EIP</li>
+         * <li><p><strong>ECS</strong>: ECS</p>
+         * </li>
+         * <li><p><strong>SLB</strong>: SLB</p>
+         * </li>
+         * <li><p><strong>RDS</strong>: ApsaraDB RDS</p>
+         * </li>
+         * <li><p><strong>MONGODB</strong>: MongoDB</p>
+         * </li>
+         * <li><p><strong>KVSTORE</strong>: Redis</p>
+         * </li>
+         * <li><p><strong>ACR</strong>: Container Registry</p>
+         * </li>
+         * <li><p><strong>CSK</strong>: ACK</p>
+         * </li>
+         * <li><p><strong>VPC</strong>: VPC</p>
+         * </li>
+         * <li><p><strong>ACTIONTRAIL</strong>: ActionTrail</p>
+         * </li>
+         * <li><p><strong>CDN</strong>: CDN</p>
+         * </li>
+         * <li><p><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</p>
+         * </li>
+         * <li><p><strong>RDC</strong>: Apsara Devops</p>
+         * </li>
+         * <li><p><strong>RAM</strong>: RAM</p>
+         * </li>
+         * <li><p><strong>DDOS</strong>: Anti-DDoS</p>
+         * </li>
+         * <li><p><strong>WAF</strong>: WAF</p>
+         * </li>
+         * <li><p><strong>OSS</strong>: OSS</p>
+         * </li>
+         * <li><p><strong>POLARDB</strong>: PolarDB</p>
+         * </li>
+         * <li><p><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</p>
+         * </li>
+         * <li><p><strong>MSE</strong>: MSE</p>
+         * </li>
+         * <li><p><strong>NAS</strong>: NAS</p>
+         * </li>
+         * <li><p><strong>SDDP</strong>: SDDP</p>
+         * </li>
+         * <li><p><strong>EIP</strong>: EIP</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,8 +394,10 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>Indicates whether fixing is supported. Valid values:</p>
          * <ul>
-         * <li><strong>SUPPORT_REPAIR</strong></li>
-         * <li><strong>NOT_SUPPORT_REPAIR</strong></li>
+         * <li><p><strong>SUPPORT_REPAIR</strong></p>
+         * </li>
+         * <li><p><strong>NOT_SUPPORT_REPAIR</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -359,9 +409,12 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The risk level of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>HIGH</strong></li>
-         * <li><strong>MEDIUM</strong></li>
-         * <li><strong>LOW</strong></li>
+         * <li><p><strong>HIGH</strong></p>
+         * </li>
+         * <li><p><strong>MEDIUM</strong></p>
+         * </li>
+         * <li><p><strong>LOW</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,12 +426,18 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The status of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>PASS</strong>: passed</li>
-         * <li><strong>NOT_PASS</strong>: failed</li>
-         * <li><strong>CHECKING</strong>: being checked</li>
-         * <li><strong>NOT_CHECK</strong>: not checked</li>
-         * <li><strong>WHITELIST</strong>: added to the whitelist</li>
-         * <li><strong>FAILED</strong>: failed</li>
+         * <li><p><strong>PASS</strong>: passed</p>
+         * </li>
+         * <li><p><strong>NOT_PASS</strong>: failed</p>
+         * </li>
+         * <li><p><strong>CHECKING</strong>: being checked</p>
+         * </li>
+         * <li><p><strong>NOT_CHECK</strong>: not checked</p>
+         * </li>
+         * <li><p><strong>WHITELIST</strong>: added to the whitelist</p>
+         * </li>
+         * <li><p><strong>FAILED</strong>: failed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -417,8 +476,10 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>Check whether the data delivery period for ActionTrail is enabled for more than 30 days to establish a baseline of behaviour.</p>
          * <ul>
-         * <li><strong>0</strong>: REQUIRED</li>
-         * <li><strong>1</strong>: NOT REQUIRED</li>
+         * <li><p><strong>0</strong>: REQUIRED</p>
+         * </li>
+         * <li><p><strong>1</strong>: NOT REQUIRED</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

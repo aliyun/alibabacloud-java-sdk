@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     /**
-     * <p>An array consisting of the servers to which the anti-ransomware policy is applied.</p>
+     * <p>The information about servers that have backup policies enabled.</p>
      */
     @NameInMap("Machines")
     public java.util.List<DescribeUserBackupMachinesResponseBodyMachines> machines;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA04B21</p>
@@ -42,7 +42,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
 
     public static class DescribeUserBackupMachinesResponseBodyMachines extends TeaModel {
         /**
-         * <p>The ID of the anti-ransomware policy that is applied to the server.</p>
+         * <p>The ID of the policy enabled on the server.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -51,7 +51,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the anti-ransomware policy that is applied to the server.</p>
+         * <p>The name of the policy enabled on the server.</p>
          * 
          * <strong>example:</strong>
          * <p>policy_name_A</p>
@@ -60,7 +60,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The UUID of the server to which the anti-ransomware policy is applied.</p>
+         * <p>The UUID of the server that has a backup policy enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     /**
+     * <p>The page number to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The maximum number of entries to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The server name or IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-ecs</p>
      */
@@ -26,6 +32,18 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The status of the machine. Valid values:</p>
+     * <ul>
+     * <li><p><strong>monitoring</strong>: Monitoring</p>
+     * </li>
+     * <li><p><strong>blocking</strong>: Blocking</p>
+     * </li>
+     * <li><p><strong>studying</strong>: Learning</p>
+     * </li>
+     * <li><p><strong>study_finish</strong>: Learning complete</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>studying</p>
      */
@@ -33,6 +51,14 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The whitelist mode. Valid values:</p>
+     * <ul>
+     * <li><p><strong>hash</strong>: process hash</p>
+     * </li>
+     * <li><p><strong>path</strong>: process path</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hash</p>
      */
@@ -40,6 +66,8 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public String studyMode;
 
     /**
+     * <p>The end of the time range for model creation, specified as a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1768891966346</p>
      */
@@ -47,6 +75,8 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Long studyTimeEnd;
 
     /**
+     * <p>The start of the time range for model creation, specified as a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1768891966344</p>
      */
@@ -54,6 +84,8 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Long studyTimeStart;
 
     /**
+     * <p>The UUID of the server.</p>
+     * 
      * <strong>example:</strong>
      * <p>d2d94e8b-bb25-4744-8004-1e08a53c****</p>
      */

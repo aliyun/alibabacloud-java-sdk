@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockDeleteConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the protected directory that you want to delete.</p>
+     * <p>The ID of the protected directory to delete.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeWebLockConfigList~~">DescribeWebLockConfigList</a> operation to query the IDs of protected directories.</p>
+     * <p>You can call the <a href="~~DescribeWebLockConfigList~~">DescribeWebLockConfigList</a> operation to obtain the ID of the protected directory.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,10 @@ public class ModifyWebLockDeleteConfigRequest extends TeaModel {
     public Integer id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ModifyWebLockDeleteConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>
@@ -40,9 +40,9 @@ public class ModifyWebLockDeleteConfigRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The UUID of the server for which you want to delete the protected directory.</p>
+     * <p>The UUID of the server from which you want to delete the protected directory.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeWebLockConfigList~~">DescribeWebLockConfigList</a> operation to query the UUIDs of servers.</p>
+     * <p>You can call the <a href="~~DescribeWebLockConfigList~~">DescribeWebLockConfigList</a> operation to obtain the UUID of the server.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

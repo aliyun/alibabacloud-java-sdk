@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RefreshContainerAssetsRequest extends TeaModel {
     /**
-     * <p>The type of the container asset whose statistics you want to refresh. Valid values:</p>
+     * <p>The Asset Type of the container asset to refresh. Valid values:</p>
      * <ul>
-     * <li><strong>IMAGE</strong></li>
-     * <li><strong>CONTAINER</strong></li>
+     * <li><strong>IMAGE</strong>: container image.</li>
+     * <li><strong>CONTAINER</strong>: container.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

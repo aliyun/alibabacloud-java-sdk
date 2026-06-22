@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSecureScoreResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>11C96623-E106-59C9-866D-A6C82911****</p>

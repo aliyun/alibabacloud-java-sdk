@@ -44,8 +44,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Advanced version count. Values:</p>
          * <ul>
-         * <li><strong>1-2000000000</strong>: Range</li>
-         * <li><strong>1</strong>: Step</li>
+         * <li><p><strong>1-2000000000</strong>: Range</p>
+         * </li>
+         * <li><p><strong>1</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,8 +59,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Anti-ransomware capacity. Values:</p>
          * <ul>
-         * <li><strong>1-9000000000</strong>: Range</li>
-         * <li><strong>10</strong>: Step</li>
+         * <li><p><strong>1-9000000000</strong>: Range</p>
+         * </li>
+         * <li><p><strong>10</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -70,8 +74,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Anti-ransomware service. Values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not enabled</li>
-         * <li><strong>1</strong>: Enabled</li>
+         * <li><p><strong>0</strong>: Not enabled</p>
+         * </li>
+         * <li><p><strong>1</strong>: Enabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,8 +89,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Anti-virus core count. Values:</p>
          * <ul>
-         * <li><strong>1-2000000000</strong>: Range</li>
-         * <li><strong>1</strong>: Step</li>
+         * <li><p><strong>1-2000000000</strong>: Range</p>
+         * </li>
+         * <li><p><strong>1</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,8 +104,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Flagship version core count. Values:</p>
          * <ul>
-         * <li><strong>1-2000000000</strong>: Range</li>
-         * <li><strong>1</strong>: Step</li>
+         * <li><p><strong>1-2000000000</strong>: Range</p>
+         * </li>
+         * <li><p><strong>1</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,8 +119,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Flagship version count. Values:</p>
          * <ul>
-         * <li><strong>1-2000000000</strong>: Range</li>
-         * <li><strong>1</strong>: Step</li>
+         * <li><p><strong>1-2000000000</strong>: Range</p>
+         * </li>
+         * <li><p><strong>1</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,8 +134,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Number of cloud platform configuration check scans. Value:</p>
          * <ul>
-         * <li><strong>15000-9999999999</strong>：Range</li>
-         * <li><strong>55000</strong>：Step</li>
+         * <li><p><strong>15000-9999999999</strong>:Range</p>
+         * </li>
+         * <li><p><strong>55000</strong>:Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,8 +149,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Enterprise version count. Range:</p>
          * <ul>
-         * <li><strong>Value</strong>: 1-2000000000</li>
-         * <li><strong>Step</strong>: 1</li>
+         * <li><p><strong>Value</strong>: 1-2000000000</p>
+         * </li>
+         * <li><p><strong>Step</strong>: 1</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,8 +164,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Number of authorized honeypots. Value:</p>
          * <ul>
-         * <li><strong>20-500</strong>：Range</li>
-         * <li><strong>1</strong>：Step</li>
+         * <li><p><strong>20-500</strong>:Range</p>
+         * </li>
+         * <li><p><strong>1</strong>:Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,8 +179,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Image scan authorization count. Values:</p>
          * <ul>
-         * <li><strong>1-200000</strong>: Range</li>
-         * <li><strong>20</strong>: Step</li>
+         * <li><p><strong>1-200000</strong>: Range</p>
+         * </li>
+         * <li><p><strong>20</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,8 +194,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Application protection count. Values:</p>
          * <ul>
-         * <li><strong>1-100000000</strong>: Range</li>
-         * <li><strong>1</strong>: Step</li>
+         * <li><p><strong>1-100000000</strong>: Range</p>
+         * </li>
+         * <li><p><strong>1</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,8 +209,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Number of authorized malicious file detection SDKs. Value:</p>
          * <ul>
-         * <li><strong>10-9999999999</strong>：Range</li>
-         * <li><strong>10</strong>：Step</li>
+         * <li><p><strong>10-9999999999</strong>:Range</p>
+         * </li>
+         * <li><p><strong>10</strong>:Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,8 +224,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Log storage capacity. Values:</p>
          * <ul>
-         * <li><strong>1-600000000</strong>: Range</li>
-         * <li><strong>10</strong>: Step</li>
+         * <li><p><strong>1-600000000</strong>: Range</p>
+         * </li>
+         * <li><p><strong>10</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,8 +239,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Threat analysis capacity. Values:</p>
          * <ul>
-         * <li><strong>1-9999999999</strong>: Range</li>
-         * <li><strong>1000</strong>: Step</li>
+         * <li><p><strong>1-9999999999</strong>: Range</p>
+         * </li>
+         * <li><p><strong>1000</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,8 +254,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Threat analysis and response log access traffic. Values:</p>
          * <ul>
-         * <li><strong>1-9999999999</strong>: Range</li>
-         * <li><strong>100</strong>: Step</li>
+         * <li><p><strong>1-9999999999</strong>: Range</p>
+         * </li>
+         * <li><p><strong>100</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,8 +269,10 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         /**
          * <p>Web tamper-proof authorization count. Values:</p>
          * <ul>
-         * <li><strong>1-9999</strong>: Range</li>
-         * <li><strong>1</strong>: Step</li>
+         * <li><p><strong>1-9999</strong>: Range</p>
+         * </li>
+         * <li><p><strong>1</strong>: Step</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

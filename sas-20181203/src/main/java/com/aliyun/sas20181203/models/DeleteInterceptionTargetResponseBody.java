@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInterceptionTargetResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>D81DD78E-E006-5C65-A171-C8CB09XXXXX</p>
@@ -14,10 +14,10 @@ public class DeleteInterceptionTargetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the network objects are removed. Valid values:</p>
+     * <p>Indicates whether the network objects were deleted. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The network objects are removed.</li>
-     * <li><strong>false</strong>: The network objects fail to be removed.</li>
+     * <li><strong>true</strong>: The network objects were deleted.</li>
+     * <li><strong>false</strong>: The network objects failed to be deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>

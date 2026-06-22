@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCycleTaskResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1AA33E30-7192-5648-93CD-D0E476A2****</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVulNumStatisticsRequest extends TeaModel {
     /**
-     * <p>The source of the request.</p>
+     * <p>The request source.</p>
      * <ul>
-     * <li>If you want to query Security Center-related data, set the value to <strong>sas</strong>.</li>
-     * <li>If you want to query Server Guard-related data, you do not need to specify this parameter.</li>
+     * <li>When querying Security Center data, set this parameter to <strong>sas</strong>.</li>
+     * <li>When querying Server Guard data, you do not need to set this parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class DescribeVulNumStatisticsRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The member account ID in the resource directory (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

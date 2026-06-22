@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAttackPathEventRequest extends TeaModel {
     /**
-     * <p>List of cloud product assets in the attack path.</p>
+     * <p>The list of cloud service assets in the attack path.</p>
      */
     @NameInMap("AttackPathAssetList")
     public java.util.List<ListAttackPathEventRequestAttackPathAssetList> attackPathAssetList;
 
     /**
-     * <p>Specifies from which page of the returned results the query results should be displayed. The default value is 1, indicating that the display starts from the first page.</p>
+     * <p>The page number of the results to return. Default value: 1, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListAttackPathEventRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Timestamp of the end time. Unit: milliseconds.</p>
+     * <p>The end time as a timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1668064495000</p>
@@ -29,10 +29,10 @@ public class ListAttackPathEventRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Sets the language type for requests and received messages, with the default being <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListAttackPathEventRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of data entries displayed per page in a paginated query. The default value is <strong>20</strong>.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,9 +51,9 @@ public class ListAttackPathEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Description of the path name.</p>
+     * <p>The path name description.</p>
      * <blockquote>
-     * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path name description.</p>
+     * <p>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path name descriptions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,9 +63,9 @@ public class ListAttackPathEventRequest extends TeaModel {
     public String pathNameDesc;
 
     /**
-     * <p>Path type.</p>
+     * <p>The path type.</p>
      * <blockquote>
-     * <p>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path type.</p>
+     * <p>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,13 +75,13 @@ public class ListAttackPathEventRequest extends TeaModel {
     public String pathType;
 
     /**
-     * <p>List of risk level information.</p>
+     * <p>The list of risk levels.</p>
      */
     @NameInMap("RiskLevelList")
     public java.util.List<String> riskLevelList;
 
     /**
-     * <p>Timestamp of the start time. Unit: milliseconds.</p>
+     * <p>The start time as a timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1666886400000</p>
@@ -168,9 +168,9 @@ public class ListAttackPathEventRequest extends TeaModel {
 
     public static class ListAttackPathEventRequestAttackPathAssetList extends TeaModel {
         /**
-         * <p>Subtype of the cloud product asset.</p>
+         * <p>The subtype of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the subtype of the cloud product asset.</p>
+         * <p>Call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the subtypes of cloud service assets.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -180,9 +180,9 @@ public class ListAttackPathEventRequest extends TeaModel {
         public Integer assetSubType;
 
         /**
-         * <p>Type of the cloud product asset.</p>
+         * <p>The type of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the type of the cloud product asset.</p>
+         * <p>Call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the types of cloud service assets.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -192,10 +192,10 @@ public class ListAttackPathEventRequest extends TeaModel {
         public Integer assetType;
 
         /**
-         * <p>Node type, values:</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>start</strong>: start point.</li>
-         * <li><strong>end</strong>: end point.</li>
+         * <li><strong>start</strong>: start node.</li>
+         * <li><strong>end</strong>: end node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,9 +205,9 @@ public class ListAttackPathEventRequest extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>Vendor of the cloud product asset.</p>
+         * <p>The vendor of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the vendor of the cloud product asset.</p>
+         * <p>Call <a href="~~ListSupportAttackPathAsset~~">ListSupportAttackPathAsset</a> to query the vendors of cloud service assets.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

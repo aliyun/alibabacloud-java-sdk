@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyInterceptionTargetRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class ModifyInterceptionTargetRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>An array that consists of images.</p>
+     * <p>The list of images.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</p>
      * </blockquote>
      */
     @NameInMap("ImageList")
@@ -28,7 +28,7 @@ public class ModifyInterceptionTargetRequest extends TeaModel {
     /**
      * <p>The namespace.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,9 +39,9 @@ public class ModifyInterceptionTargetRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>An array that consists of tags.</p>
+     * <p>The list of labels.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+     * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</p>
      * </blockquote>
      */
     @NameInMap("TagList")
@@ -50,7 +50,7 @@ public class ModifyInterceptionTargetRequest extends TeaModel {
     /**
      * <p>The ID of the network object.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain the value of this parameter.</p>
+     * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -71,9 +71,9 @@ public class ModifyInterceptionTargetRequest extends TeaModel {
     public String targetName;
 
     /**
-     * <p>The object type. Valid values:</p>
+     * <p>The target type. Valid values:</p>
      * <ul>
-     * <li><strong>IMAGE</strong></li>
+     * <li><strong>IMAGE</strong>: image.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

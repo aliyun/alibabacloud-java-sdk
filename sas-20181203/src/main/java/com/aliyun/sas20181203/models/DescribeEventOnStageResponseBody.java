@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventOnStageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>24A20733-10A0-4AF6-BE6B-E332241XXXXX</p>
@@ -14,7 +14,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The platforms that are supported by the feature of container threat detection.</p>
+     * <p>The platforms supported by threat detection.</p>
      */
     @NameInMap("SecurityEventStageResponse")
     public DescribeEventOnStageResponseBodySecurityEventStageResponse securityEventStageResponse;
@@ -42,11 +42,11 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
 
     public static class DescribeEventOnStageResponseBodySecurityEventStageResponse extends TeaModel {
         /**
-         * <p>The platform that is supported by the feature of container threat detection. Valid values:</p>
+         * <p>The platforms supported by threat detection.</p>
          * <ul>
-         * <li><strong>container</strong></li>
-         * <li><strong>linux</strong></li>
-         * <li><strong>windows</strong></li>
+         * <li><strong>container</strong>: container</li>
+         * <li><strong>linux</strong>: linux</li>
+         * <li><strong>windows</strong>: windows.</li>
          * </ul>
          */
         @NameInMap("SecurityEventOnStag")

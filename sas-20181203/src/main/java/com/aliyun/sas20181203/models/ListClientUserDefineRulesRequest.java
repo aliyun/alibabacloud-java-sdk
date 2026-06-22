@@ -18,7 +18,7 @@ public class ListClientUserDefineRulesRequest extends TeaModel {
      * <p>The name of the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>Rule\<em>\</em>\<em>\</em></p>
+     * <p>规则****</p>
      */
     @NameInMap("Name")
     public String name;

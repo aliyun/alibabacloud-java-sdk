@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInterceptionHistoryRequest extends TeaModel {
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the container cluster to query.</p>
      * 
      * <strong>example:</strong>
      * <p>c7c190a82d9a048be9038d352840f****</p>
@@ -14,7 +14,7 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp.</p>
+     * <p>The end timestamp of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1635575219000</p>
@@ -32,25 +32,25 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The name of the alert.</p>
+     * <p>The alert name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Abnormal access</p>
+     * <p>异常访问。</p>
      */
     @NameInMap("HistoryName")
     public String historyName;
 
     /**
-     * <p>The types of exceptions.</p>
+     * <p>The types of exception events.</p>
      */
     @NameInMap("InterceptionTypes")
     public java.util.List<Integer> interceptionTypes;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -69,7 +69,7 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start of the time range to query. The value is a UNIX timestamp.</p>
+     * <p>The start timestamp of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1651290987000</p>

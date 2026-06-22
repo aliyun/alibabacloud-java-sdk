@@ -8,7 +8,7 @@ public class ListHoneypotAlarmEventsRequest extends TeaModel {
      * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -22,7 +22,7 @@ public class ListHoneypotAlarmEventsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>n</p>
+     * <p>a</p>
      */
     @NameInMap("Dealed")
     public String dealed;
@@ -31,7 +31,7 @@ public class ListHoneypotAlarmEventsRequest extends TeaModel {
      * <p>The destination IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.20.XX.XX</p>
+     * <p>183.224.XX.XX</p>
      */
     @NameInMap("DstIp")
     public String dstIp;
@@ -43,7 +43,7 @@ public class ListHoneypotAlarmEventsRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -58,7 +58,7 @@ public class ListHoneypotAlarmEventsRequest extends TeaModel {
      * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>101.132.XX.XX</p>
+     * <p>185.224.XX.XX</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;

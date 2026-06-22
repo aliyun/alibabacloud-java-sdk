@@ -30,7 +30,7 @@ public class DescribeWebLockConfigListRequest extends TeaModel {
      * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.2.3.4</p>
+     * <p>123.24.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

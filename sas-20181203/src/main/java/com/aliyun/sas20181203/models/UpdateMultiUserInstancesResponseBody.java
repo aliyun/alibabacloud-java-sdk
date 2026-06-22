@@ -69,10 +69,12 @@ public class UpdateMultiUserInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Update status. Values:  </p>
+         * <p>Update status. Values:</p>
          * <ul>
-         * <li><strong>1</strong>：Success </li>
-         * <li><strong>2</strong>：Failure</li>
+         * <li><p><strong>1</strong>:Success</p>
+         * </li>
+         * <li><p><strong>2</strong>:Failure</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

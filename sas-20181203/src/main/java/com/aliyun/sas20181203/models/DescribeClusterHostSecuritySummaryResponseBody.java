@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
     /**
-     * <p>The alert details of the hosts.</p>
+     * <p>The host alert details.</p>
      */
     @NameInMap("ClusterHostEvent")
     public DescribeClusterHostSecuritySummaryResponseBodyClusterHostEvent clusterHostEvent;
@@ -51,11 +51,11 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The alert level. Valid values:</p>
+         * <p>The warning level. Valid values:</p>
          * <ul>
-         * <li><strong>serious</strong></li>
-         * <li><strong>suspicious</strong></li>
-         * <li><strong>remind</strong></li>
+         * <li><strong>serious</strong>: urgent.</li>
+         * <li><strong>suspicious</strong>: suspicious.</li>
+         * <li><strong>remind</strong>: reminder.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -98,11 +98,11 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The risk level of the baseline. Valid values:</p>
+         * <p>The baseline risk level. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><strong>high</strong>: high risk.</li>
+         * <li><strong>medium</strong>: medium risk.</li>
+         * <li><strong>low</strong>: low risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,11 +145,11 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The risk level of the vulnerability. Valid values:</p>
+         * <p>The warning level. Valid values:</p>
          * <ul>
-         * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
-         * <li><strong>nntf</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
-         * <li><strong>later</strong>: low. You can ignore the vulnerability.</li>
+         * <li><strong>asap</strong>: high. Fix the vulnerability at the earliest opportunity.</li>
+         * <li><strong>nntf</strong>: medium. The vulnerability can be temporarily left unfixed.</li>
+         * <li><strong>later</strong>: low. The vulnerability can be left unfixed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,19 +183,19 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
 
     public static class DescribeClusterHostSecuritySummaryResponseBodyClusterHostEvent extends TeaModel {
         /**
-         * <p>The alert details of the host.</p>
+         * <p>The host alert details.</p>
          */
         @NameInMap("AlarmEvent")
         public java.util.List<DescribeClusterHostSecuritySummaryResponseBodyClusterHostEventAlarmEvent> alarmEvent;
 
         /**
-         * <p>The baseline details of the host.</p>
+         * <p>The host baseline details.</p>
          */
         @NameInMap("BaselineEvent")
         public java.util.List<DescribeClusterHostSecuritySummaryResponseBodyClusterHostEventBaselineEvent> baselineEvent;
 
         /**
-         * <p>The vulnerability details of the host.</p>
+         * <p>The host vulnerability details.</p>
          */
         @NameInMap("VulEvent")
         public java.util.List<DescribeClusterHostSecuritySummaryResponseBodyClusterHostEventVulEvent> vulEvent;

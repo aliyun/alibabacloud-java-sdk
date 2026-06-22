@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentlessTaskRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query. Paging starts from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end timestamp of the task.</p>
+     * <p>The timestamp of the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1635575219000</p>
@@ -23,7 +23,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The public IP address of the asset that you want to query.</p>
+     * <p>The public IP address of the asset to query.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -32,7 +32,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The private IP address of the asset that you want to query.</p>
+     * <p>The private IP address of the asset to query.</p>
      * 
      * <strong>example:</strong>
      * <p>172.26.XX.XX</p>
@@ -41,10 +41,10 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public String intranetIp;
 
     /**
-     * <p>The language type. Valid values:</p>
+     * <p>The language type. Valid values:  </p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public String machineName;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page in a paged query. Paging is performed based on this value.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -72,10 +72,10 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to query main tasks. Valid values:</p>
+     * <p>Specifies whether to query the root task list. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: queries main tasks.</li>
-     * <li><strong>false</strong>: queries subtasks.</li>
+     * <li><strong>true</strong>: Root tasks.</li>
+     * <li><strong>false</strong>: Subtasks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public Boolean rootTask;
 
     /**
-     * <p>The ID of the main task.</p>
+     * <p>The ID of the root task.</p>
      * 
      * <strong>example:</strong>
      * <p>12c27343861610c5db3f7a2573b4****</p>
@@ -94,7 +94,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public String rootTaskId;
 
     /**
-     * <p>The start timestamp of the task.</p>
+     * <p>The timestamp of the start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1651290987000</p>
@@ -103,12 +103,12 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status of the detection task.</p>
+     * <p>The detection status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The detection task is in progress.</li>
-     * <li><strong>2</strong>: The detection task is complete.</li>
-     * <li><strong>3</strong>: The detection task fails.</li>
-     * <li><strong>4</strong>: The detection task times out.</li>
+     * <li><strong>1</strong>: Detecting.</li>
+     * <li><strong>2</strong>: Completed.</li>
+     * <li><strong>3</strong>: Failed.</li>
+     * <li><strong>4</strong>: Timed out.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The name of the asset that you want to detect.</p>
+     * <p>The name of the detection target.</p>
      * 
      * <strong>example:</strong>
      * <p>source-test-obj-0****</p>
@@ -127,10 +127,10 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public String targetName;
 
     /**
-     * <p>The type of the asset that you want to detect. Valid values:</p>
+     * <p>The scan object type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: snapshot</li>
-     * <li><strong>2</strong>: image</li>
+     * <li><strong>1</strong>: snapshot </li>
+     * <li><strong>2</strong>: image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public Integer targetType;
 
     /**
-     * <p>The ID of the main task. If you want to query subtasks of a main task, you must specify this parameter.</p>
+     * <p>The ID of the root task. Specify this parameter to query the subtask list of a root task.</p>
      * 
      * <strong>example:</strong>
      * <p>d7b2acf8d362742123e4a84e1bf8****</p>
@@ -149,7 +149,7 @@ public class ListAgentlessTaskRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server to query.</p>
      * 
      * <strong>example:</strong>
      * <p>e4af3620-6895-4e2f-a641-a9d8fb53****</p>

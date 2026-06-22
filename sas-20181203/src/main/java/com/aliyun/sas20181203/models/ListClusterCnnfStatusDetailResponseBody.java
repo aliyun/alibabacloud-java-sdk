@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the protection status of the container firewall.</p>
+     * <p>The list of container firewall statuses.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListClusterCnnfStatusDetailResponseBodyData> data;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>64329F40-5C94-51D3-A400-37AA7BAC****</p>
@@ -42,7 +42,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
 
     public static class ListClusterCnnfStatusDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
@@ -60,7 +60,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         public Boolean installed;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The instance ID of the server.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp180bogui4fc0z4****</p>
@@ -87,11 +87,11 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The cause why the plug-in is invalid. Valid values:</p>
+         * <p>The invalid type of the plug-in. Valid values:</p>
          * <ul>
-         * <li><strong>PLUGIN_OFFLINE</strong>: The plug-in is offline.</li>
-         * <li><strong>PLUGIN_NOT_INSTALLED</strong>: The plug-in is not installed.</li>
-         * <li><strong>PLUGIN_INVALID_VERSION</strong>: The version of the plug-in is invalid.</li>
+         * <li><strong>PLUGIN_OFFLINE</strong>: offline</li>
+         * <li><strong>PLUGIN_NOT_INSTALLED</strong>: not installed</li>
+         * <li><strong>PLUGIN_INVALID_VERSION</strong>: invalid version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         public String machineName;
 
         /**
-         * <p>The machine type of the instance. The value is fixed as <strong>ecs</strong>.</p>
+         * <p>The type of the instance. The value is fixed as <strong>ecs</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -119,7 +119,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         public Integer machineType;
 
         /**
-         * <p>The name of the plug-in. The value is fixed as <strong>alinet</strong>.</p>
+         * <p>The name of the plug-in type. The value is fixed as <strong>alinet</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>alinet</p>
@@ -139,8 +139,8 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         /**
          * <p>The online status of the plug-in. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: The plug-in is offline.</li>
-         * <li><strong>true</strong>: The plug-in is online.</li>
+         * <li><strong>false</strong>: offline</li>
+         * <li><strong>true</strong>: online.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The UUID of the asset.</p>
+         * <p>The UUID of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>

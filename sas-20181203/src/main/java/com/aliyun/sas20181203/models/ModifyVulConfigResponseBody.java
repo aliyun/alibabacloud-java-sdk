@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVulConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24DDBE06-58FF-5E5E-9241-D2010D7913C1</p>

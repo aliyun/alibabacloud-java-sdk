@@ -7,8 +7,10 @@ public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the configurations of the scheduled image fix are modified.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

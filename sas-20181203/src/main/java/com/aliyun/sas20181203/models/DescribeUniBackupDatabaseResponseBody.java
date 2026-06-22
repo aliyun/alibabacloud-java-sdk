@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the databases.</p>
+     * <p>The list of database details.</p>
      */
     @NameInMap("DatabaseList")
     public java.util.List<DescribeUniBackupDatabaseResponseBodyDatabaseList> databaseList;
@@ -17,7 +17,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     public DescribeUniBackupDatabaseResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
@@ -56,12 +56,12 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
 
     public static class DescribeUniBackupDatabaseResponseBodyDatabaseList extends TeaModel {
         /**
-         * <p>The status of the anti-ransomware agent. Valid values:</p>
+         * <p>The status of the database client agent. Valid values:</p>
          * <ul>
-         * <li><strong>UNKNOWN</strong>: unknown</li>
-         * <li><strong>INSTALLED</strong>: installed</li>
-         * <li><strong>INSTALL_FAILED</strong>: installation failed</li>
-         * <li><strong>UNINSTALL_FAILED</strong>: uninstallation failed</li>
+         * <li><strong>UNKNOWN</strong>: unknown.</li>
+         * <li><strong>INSTALLED</strong>: installed.</li>
+         * <li><strong>INSTALL_FAILED</strong>: installation failed.</li>
+         * <li><strong>UNINSTALL_FAILED</strong>: uninstallation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -71,10 +71,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public String agentStatus;
 
         /**
-         * <p>The service from which the database is created. Valid values:</p>
+         * <p>The method used to create the database. Valid values:</p>
          * <ul>
-         * <li><strong>HBR</strong>: HBR</li>
-         * <li><strong>AEGIS</strong>: Security Center</li>
+         * <li><strong>HBR</strong>: Cloud Backup.</li>
+         * <li><strong>AEGIS</strong>: Security Center.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
          * <ul>
          * <li><strong>MYSQL</strong></li>
          * <li><strong>MSSQL</strong></li>
-         * <li><strong>Oracle</strong></li>
+         * <li><strong>Oracle</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The version of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>12.0.4100.1</p>
@@ -116,7 +116,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public String databaseVersion;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The instance ID of the server.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp15aho9hhftvmhw****</p>
@@ -134,7 +134,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The UUID of the Hybrid Backup Recovery (HBR) agent that is used to back up the data of the database.</p>
+         * <p>The unique identifier of the database backup client on the server.</p>
          * 
          * <strong>example:</strong>
          * <p>85878b284df911ec800000163e19****</p>
@@ -143,7 +143,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public String instanceUuid;
 
         /**
-         * <p>The ID of the anti-ransomware policy.</p>
+         * <p>The ID of the anti-ransomware backup policy for the database.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -152,10 +152,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public Long policyId;
 
         /**
-         * <p>The status of the ECS instance. Valid values:</p>
+         * <p>The instance status of the ECS instance. Valid values:</p>
          * <ul>
-         * <li><strong>Stopped</strong></li>
-         * <li><strong>Running</strong></li>
+         * <li><strong>Stopped</strong>: stopped.</li>
+         * <li><strong>Running</strong>: running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
 
     public static class DescribeUniBackupDatabaseResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of databases on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -262,7 +262,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -271,7 +271,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of databases per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -280,7 +280,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of databases.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>

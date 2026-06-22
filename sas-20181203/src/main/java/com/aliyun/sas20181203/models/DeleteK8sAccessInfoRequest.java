@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteK8sAccessInfoRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class DeleteK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayApiName;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,7 +23,7 @@ public class DeleteK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayPopName;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,7 +32,7 @@ public class DeleteK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayProjectName;
 
     /**
-     * <p>The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.</p>
+     * <p>The default value generated when accessing Kubernetes. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2623602.html">GenerateK8sAccessInfo</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPodRiskRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>nginx1</p>
@@ -14,9 +14,9 @@ public class ListPodRiskRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the container cluster to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ListPodRiskRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page when paging is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class ListPodRiskRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The namespace of the Kubernetes cluster.</p>
+     * <p>The Kubernetes cluster namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>taas</p>
@@ -44,7 +44,7 @@ public class ListPodRiskRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The number of entries per page when paging is used. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -53,7 +53,7 @@ public class ListPodRiskRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The name of the pod.</p>
+     * <p>The pod name.</p>
      * 
      * <strong>example:</strong>
      * <p>abcd-84898334227-p****</p>

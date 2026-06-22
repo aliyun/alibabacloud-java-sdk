@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
     /**
-     * <p>The domain names.</p>
+     * <p>The list of domain names.</p>
      */
     @NameInMap("DomainList")
     public java.util.List<String> domainList;
 
     /**
-     * <p>The company name.</p>
+     * <p>The company names.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test</p>
+     * <p>****技术股份有限公司</p>
      */
     @NameInMap("Names")
     public String names;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>BE120DAB-F4E7-4C53-ADC3-A97578A****</p>

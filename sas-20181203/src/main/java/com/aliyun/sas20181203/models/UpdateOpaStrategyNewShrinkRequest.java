@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
-     * <p>The risks that you want to detect by using the rule.</p>
+     * <p>The alert content details included in the policy.</p>
      */
     @NameInMap("AlarmDetail")
     public String alarmDetailShrink;
@@ -13,7 +13,7 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.</p>
+     * <p>Notice: This parameter is deprecated. Use the Scopes parameter to specify the scope of clusters to which the policy applies..</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
      * <p>The cluster name.</p>
      * <blockquote>
-     * <p>This parameter is deprecated.</p>
+     * <p>Notice: This parameter is deprecated..</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The rule description.</p>
+     * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
      * <p>4566</p>
@@ -44,22 +44,22 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The image names.</p>
+     * <p>The list of image names included in the policy.</p>
      */
     @NameInMap("ImageName")
     public java.util.List<String> imageName;
 
     /**
-     * <p>The image tags.</p>
+     * <p>The list of image tags included in the policy.</p>
      */
     @NameInMap("Label")
     public java.util.List<String> label;
 
     /**
-     * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
+     * <p>Specifies whether the policy supports Internet malicious images. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Supported.</li>
+     * <li><strong>false</strong>: Not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,11 +69,11 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public Boolean maliciousImage;
 
     /**
-     * <p>The action that is performed when the rule is hit. Valid values:</p>
+     * <p>The action to take when the policy is hit. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: alert</li>
-     * <li><strong>2</strong>: block</li>
-     * <li><strong>3</strong>: allow</li>
+     * <li><strong>1</strong>: Alert.</li>
+     * <li><strong>2</strong>: Block.</li>
+     * <li><strong>3</strong>: Allow.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,15 +83,15 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public Integer ruleAction;
 
     /**
-     * <p>The application scope.</p>
+     * <p>The scope of the policy.</p>
      */
     @NameInMap("Scopes")
     public java.util.List<UpdateOpaStrategyNewShrinkRequestScopes> scopes;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The policy ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public Long strategyId;
 
     /**
-     * <p>The rule name.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -110,9 +110,9 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public String strategyName;
 
     /**
-     * <p>The ID of the rule template.</p>
+     * <p>The policy template ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,10 +122,10 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public Long strategyTemplateId;
 
     /**
-     * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
+     * <p>Specifies whether the policy supports unscanned images. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Supported.</li>
+     * <li><strong>false</strong>: Not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public Boolean unScanedImage;
 
     /**
-     * <p>The whitelists.</p>
+     * <p>The whitelist.</p>
      */
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;
@@ -259,9 +259,9 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
 
     public static class UpdateOpaStrategyNewShrinkRequestScopes extends TeaModel {
         /**
-         * <p>The ID of the cluster node to which the rule is applied.</p>
+         * <p>The policy instance ID in the cluster.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~GetOpaStrategyDetailNew~~">GetOpaStrategyDetailNew</a> operation to query the ID of the cluster node to which the rule is applied.</p>
+         * <p>Call the <a href="~~GetOpaStrategyDetailNew~~">GetOpaStrategyDetailNew</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -273,8 +273,8 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
         /**
          * <p>Specifies whether all namespaces are included. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not all namespaces are included.</li>
-         * <li><strong>1</strong>: All namespaces are included.</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,9 +284,9 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
         public Integer allNamespace;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the container cluster.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+         * <p>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -296,9 +296,9 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The namespaces.</p>
+         * <p>The list of namespaces.</p>
          * <blockquote>
-         * <p>This parameter is valid only when the AllNamespace parameter is set to 0.</p>
+         * <p>Notice: This parameter takes effect only when AllNamespace is set to 0..</p>
          * </blockquote>
          */
         @NameInMap("NamespaceList")

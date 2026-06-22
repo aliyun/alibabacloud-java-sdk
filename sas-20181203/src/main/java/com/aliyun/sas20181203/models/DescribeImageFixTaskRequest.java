@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageFixTaskRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong></p>
+     * <p>The page number of the results to return. Default value: <strong>1</strong>, which indicates that the results start from page 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeImageFixTaskRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The timestamp when the task ends. Unit: milliseconds.</p>
+     * <p>The end timestamp of the repair task that you want to query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1635575219000</p>
@@ -24,7 +24,7 @@ public class DescribeImageFixTaskRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong></p>
+     * <p>The number of entries per page in a paginated query. Default value: <strong>20</strong>, which indicates that up to 20 entries are returned per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeImageFixTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The timestamp when the task starts. Unit: milliseconds.</p>
+     * <p>The start timestamp of the repair task that you want to query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1634725571000</p>
@@ -43,11 +43,11 @@ public class DescribeImageFixTaskRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The status of the image repair task that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The task is running.</li>
-     * <li><strong>2</strong>: The task is successful.</li>
-     * <li><strong>3</strong>: The task failed.</li>
+     * <li><strong>1</strong>: Repairing</li>
+     * <li><strong>2</strong>: Repaired</li>
+     * <li><strong>3</strong>: Repair failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

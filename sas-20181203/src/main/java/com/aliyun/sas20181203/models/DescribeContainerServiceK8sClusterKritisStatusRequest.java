@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerServiceK8sClusterKritisStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c0e9efc6dea5f41db93b7e977123c****</p>
@@ -17,7 +17,7 @@ public class DescribeContainerServiceK8sClusterKritisStatusRequest extends TeaMo
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>119.145.XXX.XXX</p>

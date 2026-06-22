@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupRestoreCountResponseBody extends TeaModel {
     /**
-     * <p>The statistics of restoration tasks.</p>
+     * <p>The statistics of anti-ransomware restoration tasks.</p>
      */
     @NameInMap("BackupRestoreCount")
     public DescribeBackupRestoreCountResponseBodyBackupRestoreCount backupRestoreCount;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</p>
@@ -42,7 +42,7 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
 
     public static class DescribeBackupRestoreCountResponseBodyBackupRestoreCount extends TeaModel {
         /**
-         * <p>The number of the restoration tasks that are in the <strong>being restored</strong> state.</p>
+         * <p>The number of tasks in the <strong>Restoring</strong> state.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -51,7 +51,7 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
         public Integer recovering;
 
         /**
-         * <p>The total number of the restoration tasks that you create.</p>
+         * <p>The total number of restoration tasks that have been created.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

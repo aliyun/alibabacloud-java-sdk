@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The status code returned by the API request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,13 +23,13 @@ public class ListGroupsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The groups.</p>
+     * <p>The list of server groups.</p>
      */
     @NameInMap("List")
     public java.util.List<ListGroupsResponseBodyList> list;
 
     /**
-     * <p>The error message.</p>
+     * <p>The detailed information of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,13 +38,13 @@ public class ListGroupsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination information of the query results.</p>
      */
     @NameInMap("PageInfo")
     public ListGroupsResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>CB414DB5-F692-5DAB-9F0F-975C060AF***</p>
@@ -53,10 +53,10 @@ public class ListGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether exceptions are handled. Valid values:</p>
+     * <p>Indicates whether the exception event was processed. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Processed.</li>
+     * <li><strong>false</strong>: Not processed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,10 +128,10 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyList extends TeaModel {
         /**
-         * <p>The server group type. Valid values:</p>
+         * <p>The type of the server group. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: default group</li>
-         * <li><strong>1</strong>: other group</li>
+         * <li><strong>1</strong>: other group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public Integer groupFlag;
 
         /**
-         * <p>The server group ID.</p>
+         * <p>The ID of the server group.</p>
          * 
          * <strong>example:</strong>
          * <p>11028542</p>
@@ -150,7 +150,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public Long groupId;
 
         /**
-         * <p>The server group name.</p>
+         * <p>The name of the server group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen+dir-1440978***</p>
@@ -200,7 +200,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,7 +209,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The NextToken value returned when the NextToken method is used.</p>
          * 
          * <strong>example:</strong>
          * <p>B604532DEF982B875E8360A6EFA3B***</p>

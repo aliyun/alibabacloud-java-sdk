@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupClientsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the anti-ransomware agent.</p>
+     * <p>The anti-ransomware client information.</p>
      */
     @NameInMap("Clients")
     public java.util.List<DescribeBackupClientsResponseBodyClients> clients;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E3ED094C-9EB7-4239-962B-D0FB3D5F23C7</p>
@@ -42,7 +42,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
 
     public static class DescribeBackupClientsResponseBodyClients extends TeaModel {
         /**
-         * <p>The ID of the anti-ransomware agent.</p>
+         * <p>The anti-ransomware client ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c-000az2f537r73dyh****</p>
@@ -51,15 +51,21 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The status of the anti-ransomware agent.</p>
+         * <p>The status of the anti-ransomware client.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>INSTALLING</strong>: The agent is being installed.</li>
-         * <li><strong>ONLINE</strong>: The agent is online.</li>
-         * <li><strong>UNINSTALLING</strong>: The agent is being uninstalled.</li>
-         * <li><strong>NOT_INSTALLED</strong>: The agent is not installed.</li>
-         * <li><strong>ACTIVATED</strong>: The agent is enabled.</li>
-         * <li><strong>CLIENT_CONNECTION_ERROR</strong>: A connection error occurs on the agent.</li>
+         * <li><p><strong>INSTALLING</strong>: The client is being installed.</p>
+         * </li>
+         * <li><p><strong>ONLINE</strong>: The client is online.</p>
+         * </li>
+         * <li><p><strong>UNINSTALLING</strong>: The client is being uninstalled.</p>
+         * </li>
+         * <li><p><strong>NOT_INSTALLED</strong>: The client is not installed.</p>
+         * </li>
+         * <li><p><strong>ACTIVATED</strong>: The client is activated.</p>
+         * </li>
+         * <li><p><strong>CLIENT_CONNECTION_ERROR</strong>: A client connection error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -69,7 +75,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String clientStatus;
 
         /**
-         * <p>The version of the anti-ransomware agent.</p>
+         * <p>The version number of the anti-ransomware client.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.0</p>
@@ -78,7 +84,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String clientVersion;
 
         /**
-         * <p>The ID of the ECS instance on which the anti-ransomware agent is installed.</p>
+         * <p>The instance ID of the ECS instance that has the anti-ransomware client installed.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp15hyph4aci99dv****</p>
@@ -87,7 +93,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The UUID of the Elastic Compute Service (ECS) instance on which the anti-ransomware agent is installed.</p>
+         * <p>The UUID of the ECS instance that has the anti-ransomware client installed.</p>
          * 
          * <strong>example:</strong>
          * <p>22f6550d-f294-449b-b6e6-90638fd1****</p>

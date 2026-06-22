@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSoarStrategyTaskResultRequest extends TeaModel {
     /**
-     * <p>Condition parameters for task scheduling.</p>
+     * <p>The condition parameter for task scheduling.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;status&quot;:1}</p>
@@ -14,7 +14,7 @@ public class DescribeSoarStrategyTaskResultRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>The current page number during paginated queries.</p>
+     * <p>The page number of the current page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeSoarStrategyTaskResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of entries to display per page during paginated queries.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,9 +32,9 @@ public class DescribeSoarStrategyTaskResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Strategy task ID.</p>
+     * <p>The ID of the policy task.</p>
      * <blockquote>
-     * <p>You can obtain this parameter by calling the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> interface.</p>
+     * <p>Call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -62,7 +62,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>all</p>
+         * <p>linux</p>
          */
         @NameInMap("Platform")
         public String platform;

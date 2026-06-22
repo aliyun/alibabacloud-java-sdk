@@ -44,10 +44,14 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         /**
          * <p>The severity of alerts. Valid values:</p>
          * <ul>
-         * <li>0: does not generate alerts</li>
-         * <li>1: sends notifications</li>
-         * <li>2: suspicious</li>
-         * <li>3: high-risk</li>
+         * <li><p>0: does not generate alerts</p>
+         * </li>
+         * <li><p>1: sends notifications</p>
+         * </li>
+         * <li><p>2: suspicious</p>
+         * </li>
+         * <li><p>3: high-risk</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,8 +162,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         /**
          * <p>The type of the operating system. Valid values:</p>
          * <ul>
-         * <li><strong>windows</strong>: Windows</li>
-         * <li><strong>linux</strong>: Linux</li>
+         * <li><p><strong>windows</strong>: Windows</p>
+         * </li>
+         * <li><p><strong>linux</strong>: Linux</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,9 +213,12 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         /**
          * <p>The status of the event. Valid values:</p>
          * <ul>
-         * <li>0: not handled</li>
-         * <li>1: handled</li>
-         * <li>2: added to the whitelist</li>
+         * <li><p>0: not handled</p>
+         * </li>
+         * <li><p>1: handled</p>
+         * </li>
+         * <li><p>2: added to the whitelist</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

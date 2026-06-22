@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The members in the resource directory.</p>
+     * <p>The list of member accounts in the resource directory.</p>
      */
     @NameInMap("Accounts")
     public java.util.List<ListAccountsInResourceDirectoryResponseBodyAccounts> accounts;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>B7A839E8-70AE-591D-8D9E-C5419A2240DB</p>
@@ -51,7 +51,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>This parameter is deprecated and should be ignored.</p>
+         * <p>This parameter is deprecated and does not need to be used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -61,10 +61,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public Integer buySas;
 
         /**
-         * <p>Whether a yearly or monthly subscription of Cloud Security Center is purchased. Values:</p>
+         * <p>Indicates whether a Security Center subscription instance is purchased. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes</li>
-         * <li><strong>false</strong>: No</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,10 +74,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public Boolean buySasNew;
 
         /**
-         * <p>Subscription type. Values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Prepaid</li>
-         * <li><strong>1</strong>: Pay-As-You-Go</li>
+         * <li><strong>0</strong>: upfront</li>
+         * <li><strong>1</strong>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public Integer chargeType;
 
         /**
-         * <p>The name of the member.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p>abc**</p>
@@ -105,10 +105,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>Instance purchase type. Values:</p>
+         * <p>The instance purchase type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Self-purchased</li>
-         * <li><strong>1</strong>: Multi-account allocation</li>
+         * <li><strong>0</strong>: self-purchased</li>
+         * <li><strong>1</strong>: allocated through multi-account management.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,10 +118,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public Integer instanceBuyType;
 
         /**
-         * <p>Indicates whether the member is an administrator account of the resource directory. Valid values:</p>
+         * <p>Indicates whether the account is the management account of the resource directory. Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong></li>
-         * <li><strong>no</strong></li>
+         * <li><p><strong>yes</strong></p>
+         * </li>
+         * <li><p><strong>no</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +133,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isMaAccount;
 
         /**
-         * <p>Indicates whether the member is marked as followed.</p>
+         * <p>Indicates whether the account is marked as followed.</p>
          * 
          * <strong>example:</strong>
          * <p>no</p>
@@ -140,10 +142,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isMarked;
 
         /**
-         * <p>Indicates whether the member is a delegated administrator account of Security Center. Valid values:</p>
+         * <p>Indicates whether the account is a delegated administrator account of Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong></li>
-         * <li><strong>no</strong></li>
+         * <li><p><strong>yes</strong></p>
+         * </li>
+         * <li><p><strong>no</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,10 +157,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isSasDaAccount;
 
         /**
-         * <p>Indicates whether the member is an account of the threat analysis and response feature. Valid values:</p>
+         * <p>Indicates whether the account is a management account of Cloud Threat Detection and Response (CTDR). Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong></li>
-         * <li><strong>no</strong></li>
+         * <li><p><strong>yes</strong></p>
+         * </li>
+         * <li><p><strong>no</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,10 +172,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isSiemControlAccount;
 
         /**
-         * <p>Indicates whether the member is a delegated administrator account of the threat analysis and response feature. Valid values:</p>
+         * <p>Indicates whether the account is a delegated administrator account of Cloud Threat Detection and Response (CTDR). Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong></li>
-         * <li><strong>no</strong></li>
+         * <li><p><strong>yes</strong></p>
+         * </li>
+         * <li><p><strong>no</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,10 +187,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String isSiemDaAccount;
 
         /**
-         * <p>Post-paid module switch. Values:</p>
+         * <p>The pay-as-you-go module switch. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Off</li>
-         * <li><strong>1</strong>: On</li>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,22 +200,21 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public Integer postBasicService;
 
         /**
-         * <p>The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:</p>
+         * <p>The status of pay-as-you-go module switches, in JsonString format. Valid values:</p>
          * <ul>
-         * <li><p>Key:</p>
-         * <ul>
-         * <li><strong>VUL</strong>: vulnerability fixing module</li>
-         * <li><strong>CSPM</strong>: cloud service configuration check module</li>
+         * <li>Key:<ul>
+         * <li><strong>VUL</strong>: vulnerability management module</li>
+         * <li><strong>CSPM</strong>: Cloud Security Posture Management (CSPM) module</li>
          * <li><strong>AGENTLESS</strong>: agentless detection module</li>
          * <li><strong>SERVERLESS</strong>: serverless asset module</li>
+         * <li><strong>CTDR</strong>: Cloud Threat Detection and Response (CTDR) module</li>
+         * <li><strong>RASP</strong>: Runtime Application Self-Protection (RASP) module</li>
+         * <li><strong>SDK</strong>: malicious file detection SDK module</li>
+         * <li><strong>POST_HOST</strong>: host and container security module</li>
          * </ul>
          * </li>
-         * <li><p>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</p>
-         * </li>
+         * <li>Value: 0 indicates disabled. 1 indicates enabled.</li>
          * </ul>
-         * <blockquote>
-         * <p> If you do not specify a value for a module, the original value of the module is retained.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;VUL\&quot;:0}</p>
@@ -216,7 +223,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String postPayModuleSwitch;
 
         /**
-         * <p>Cloud Security Center Instance ID.</p>
+         * <p>The Security Center instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>postpay-sas-x5x3hy1ly***</p>
@@ -225,13 +232,13 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         public String saleInstance;
 
         /**
-         * <p>The edition of Security Center that you use. Valid value:</p>
+         * <p>The purchased edition of Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> or <strong>1</strong>: Basic</li>
-         * <li><strong>2</strong> or <strong>3</strong>: Enterprise</li>
-         * <li><strong>5</strong>: Advanced</li>
-         * <li><strong>6</strong>: Anti-virus</li>
-         * <li><strong>7</strong>: Ultimate</li>
+         * <li><strong>0</strong> or <strong>1</strong>: Free Edition</li>
+         * <li><strong>2</strong> or <strong>3</strong>: Enterprise Edition  </li>
+         * <li><strong>5</strong>: Premium Edition  </li>
+         * <li><strong>6</strong>: Anti-virus Edition </li>
+         * <li><strong>7</strong>: Ultimate Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>

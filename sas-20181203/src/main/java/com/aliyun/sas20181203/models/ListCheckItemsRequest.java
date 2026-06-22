@@ -40,8 +40,10 @@ public class ListCheckItemsRequest extends TeaModel {
     /**
      * <p>The language type for requests and responses. The default value is <strong>zh</strong>. Values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

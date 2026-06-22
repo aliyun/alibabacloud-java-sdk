@@ -14,19 +14,19 @@ public class DeleteVulAutoRepairConfigRequest extends TeaModel {
     public String aliasName;
 
     /**
-     * <p>The IDs of the configurations.</p>
+     * <p>The list of configuration IDs to delete.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to query the IDs.</p>
+     * <p>You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to obtain configuration IDs.</p>
      * </blockquote>
      */
     @NameInMap("ConfigIdList")
     public java.util.List<Long> configIdList;
 
     /**
-     * <p>The type of the vulnerability. Valid values:</p>
+     * <p>The type of the vulnerability. Valid values: </p>
      * <ul>
-     * <li>cve: Linux software vulnerability</li>
-     * <li>sys: Windows system vulnerability</li>
+     * <li>cve: Linux software vulnerability </li>
+     * <li>sys: Windows system vulnerability.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BindAuthToMachineRequest extends TeaModel {
     /**
-     * <p>The edition of Security Center that is authorized to scan the asset. Valid values:</p>
+     * <p>The authorization version of the asset. Valid values:</p>
      * <ul>
-     * <li><strong>6</strong>: Anti-virus</li>
-     * <li><strong>5</strong>: Advanced</li>
-     * <li><strong>3</strong>: Enterprise</li>
-     * <li><strong>7</strong>: Ultimate</li>
-     * <li><strong>10</strong>: Value-added Plan</li>
+     * <li><strong>6</strong>: Anti-virus Edition</li>
+     * <li><strong>5</strong>: Advanced Edition</li>
+     * <li><strong>3</strong>: Enterprise Edition</li>
+     * <li><strong>7</strong>: Ultimate Edition</li>
+     * <li><strong>10</strong>: Value-added Service Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,10 +21,10 @@ public class BindAuthToMachineRequest extends TeaModel {
     public Integer authVersion;
 
     /**
-     * <p>Specifies whether to automatically bind servers to Security Center. Valid values:</p>
+     * <p>Specifies whether to enable automatic binding. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,19 +34,19 @@ public class BindAuthToMachineRequest extends TeaModel {
     public Integer autoBind;
 
     /**
-     * <p>The UUIDs of the servers that you want to bind to Security Center.</p>
+     * <p>The UUIDs of the servers to bind.</p>
      * <blockquote>
-     * <p> You must specify at least one of the <strong>Bind</strong> and <strong>UnBind</strong> parameters.</p>
+     * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
      * </blockquote>
      */
     @NameInMap("Bind")
     public java.util.List<String> bind;
 
     /**
-     * <p>Specifies whether to bind all servers to Security Center. Default value: <strong>false</strong>. Valid values:</p>
+     * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: Bind all assets.</li>
+     * <li><strong>false</strong>: Do not bind all assets.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,9 +56,9 @@ public class BindAuthToMachineRequest extends TeaModel {
     public Boolean bindAll;
 
     /**
-     * <p>The search conditions that are used to filter servers. The value of this parameter is in the JSON format and is case-sensitive.</p>
+     * <p>The search conditions for assets. This parameter is in JSON format. Note that the parameter values are case-sensitive.</p>
      * <blockquote>
-     * <p> A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, or public IP address. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,13 +68,13 @@ public class BindAuthToMachineRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>Specifies whether to specify servers for protection when you purchase Security Center. Valid values:</p>
+     * <p>Specifies whether this is a pre-binding operation. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: No.</li>
+     * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * <blockquote>
-     * <p> If you specify servers, the servers are automatically added to Security Center for protection after the purchase order is complete.</p>
+     * <p>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,10 +84,10 @@ public class BindAuthToMachineRequest extends TeaModel {
     public Integer isPreBind;
 
     /**
-     * <p>The logical relationship that you want to use to evaluate multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
+     * <p>The logical relationship among multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong></li>
-     * <li><strong>AND</strong></li>
+     * <li><strong>OR</strong>: The search conditions are evaluated with a logical OR.</li>
+     * <li><strong>AND</strong>: The search conditions are evaluated with a logical AND.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,13 +97,13 @@ public class BindAuthToMachineRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The edition of Security Center that you purchase in the order. Valid values:</p>
+     * <p>The order version associated with the pre-binding. Valid values:</p>
      * <ul>
-     * <li><strong>level7</strong>: Anti-virus</li>
-     * <li><strong>level3</strong>: Advanced</li>
-     * <li><strong>level2</strong>: Enterprise</li>
-     * <li><strong>level8</strong>: Ultimate</li>
-     * <li><strong>level10</strong>: Value-added Plan</li>
+     * <li><strong>level7</strong>: Anti-virus Edition</li>
+     * <li><strong>level3</strong>: Advanced Edition</li>
+     * <li><strong>level2</strong>: Enterprise Edition</li>
+     * <li><strong>level8</strong>: Ultimate Edition</li>
+     * <li><strong>level10</strong>: Value-added service only.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class BindAuthToMachineRequest extends TeaModel {
     public String ntmVersion;
 
     /**
-     * <p>The ID of the order in which Security Center is purchased and servers are specified for protection.</p>
+     * <p>The order ID associated with the pre-binding.</p>
      * 
      * <strong>example:</strong>
      * <p>233016**0482</p>
@@ -122,9 +122,21 @@ public class BindAuthToMachineRequest extends TeaModel {
     public Long preBindOrderId;
 
     /**
-     * <p>The UUIDs of the servers that you want to unbind from Security Center.</p>
+     * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p> You must specify at least one of the <strong>Bind</strong> and <strong>UnBind</strong> parameters.</p>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16670360956*****</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
+     * <p>The UUIDs of the servers to unbind.</p>
+     * <blockquote>
+     * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
      * </blockquote>
      */
     @NameInMap("UnBind")
@@ -205,6 +217,14 @@ public class BindAuthToMachineRequest extends TeaModel {
     }
     public Long getPreBindOrderId() {
         return this.preBindOrderId;
+    }
+
+    public BindAuthToMachineRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public BindAuthToMachineRequest setUnBind(java.util.List<String> unBind) {

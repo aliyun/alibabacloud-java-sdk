@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteVpcHoneyPotRequest extends TeaModel {
     /**
-     * <p>The ID of the virtual private cloud (VPC) on which the honeypot is deployed.</p>
+     * <p>The VPC ID of the honeypot instance that you want to delete.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to query the IDs of VPCs.</p>
+     * <p>You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to obtain the VPC ID of the honeypot instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

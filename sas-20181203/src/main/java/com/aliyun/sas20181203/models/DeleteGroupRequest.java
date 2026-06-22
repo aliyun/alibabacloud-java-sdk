@@ -7,7 +7,7 @@ public class DeleteGroupRequest extends TeaModel {
     /**
      * <p>The ID of the server group that you want to delete.</p>
      * <blockquote>
-     * <p> To delete a server group, you must provide the ID of the server group. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the ID.</p>
+     * <p>To delete a server group, you must specify the server group ID. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the server group ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

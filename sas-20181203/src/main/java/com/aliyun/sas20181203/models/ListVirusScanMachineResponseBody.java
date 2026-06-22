@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanMachineResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data details.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListVirusScanMachineResponseBodyData> data;
@@ -17,7 +17,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
     public ListVirusScanMachineResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>A27C1C09-828B-5CB8-9203-F55423BE****</p>
@@ -56,7 +56,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
 
     public static class ListVirusScanMachineResponseBodyData extends TeaModel {
         /**
-         * <p>The number of times that the alert is triggered.</p>
+         * <p>The number of security alert occurrences.</p>
          * 
          * <strong>example:</strong>
          * <p>28</p>
@@ -74,7 +74,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>centos****</p>
@@ -83,7 +83,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The public IP address of the associated server.</p>
+         * <p>The public IP address of the associated instance.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>
@@ -92,7 +92,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>The private IP address of the associated server.</p>
+         * <p>The private IP address of the associated instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10.42.XX.XX</p>
@@ -101,7 +101,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The UUID of the server.</p>
+         * <p>The UUID of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
@@ -166,7 +166,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
 
     public static class ListVirusScanMachineResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,7 +175,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries returned per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>168</p>

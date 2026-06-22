@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUniBackupDatabaseRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -18,7 +18,7 @@ public class DescribeUniBackupDatabaseRequest extends TeaModel {
      * <ul>
      * <li><strong>MYSQL</strong></li>
      * <li><strong>MSSQL</strong></li>
-     * <li><strong>Oracle</strong></li>
+     * <li><strong>Oracle</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeUniBackupDatabaseRequest extends TeaModel {
     public String databaseType;
 
     /**
-     * <p>The name of the Elastic Compute Service (ECS) instance.</p>
+     * <p>The name of the ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -37,9 +37,9 @@ public class DescribeUniBackupDatabaseRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,10 +49,10 @@ public class DescribeUniBackupDatabaseRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The condition that is used to query the database. Valid values:</p>
+     * <p>The query type for the database. Valid values:</p>
      * <ul>
-     * <li><strong>create</strong>: newly created</li>
-     * <li><strong>restore</strong>: restored</li>
+     * <li><strong>create</strong>: create</li>
+     * <li><strong>restore</strong>: restore.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class DescribeUniBackupDatabaseRequest extends TeaModel {
     public String queryType;
 
     /**
-     * <p>The region ID of the server that hosts the database.</p>
+     * <p>The region ID of the database server.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hongkong</p>

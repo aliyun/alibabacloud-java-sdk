@@ -241,7 +241,7 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Webshell</p>
+     * <p>other</p>
      */
     @NameInMap("ParentEventTypes")
     public String parentEventTypes;

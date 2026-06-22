@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanTaskRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the results to return. Default value: <strong>1</strong>, which indicates that results start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The timestamp when the virus scan task ended. Unit: milliseconds.</p>
+     * <p>The timestamp of the task end time to query, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1680919232999</p>
@@ -23,7 +23,7 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The public IP address of the server.</p>
+     * <p>The public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>120.27.XX.XX</p>
@@ -32,7 +32,7 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The private IP address of the server.</p>
+     * <p>The private IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>172.26.XX.XX</p>
@@ -41,10 +41,10 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public String intranetIp;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public String machineName;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * <p>The number of tasks per page in a paged query. Default value: <strong>20</strong>, which indicates that each page contains 20 tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -72,7 +72,7 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether the virus scan task is the root task.</p>
+     * <p>Specifies whether the task is the root task of the virus scan.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -81,9 +81,9 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public Boolean rootTask;
 
     /**
-     * <p>The ID of the root task.</p>
+     * <p>The root task ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~GetVirusScanLatestTaskStatistic~~">GetVirusScanLatestTaskStatistic</a> operation to query the ID.</p>
+     * <p>Call <a href="~~GetVirusScanLatestTaskStatistic~~">GetVirusScanLatestTaskStatistic</a> to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,10 +93,10 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public String rootTaskId;
 
     /**
-     * <p>The type of the virus scan task. Valid values:</p>
+     * <p>The scan type of the virus scan task to query. Valid values:</p>
      * <ul>
-     * <li><strong>system</strong>: automatic scan task</li>
-     * <li><strong>user</strong>: custom scan task</li>
+     * <li><strong>system</strong>: automatic system scan</li>
+     * <li><strong>user</strong>: custom user scan.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public String scanType;
 
     /**
-     * <p>The timestamp when the virus scan task started. Unit: milliseconds.</p>
+     * <p>The timestamp of the task start time to query, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1680919232000</p>
@@ -115,12 +115,12 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status of the virus scan task. Valid values:</p>
+     * <p>The execution status of the virus scan task. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: running</li>
-     * <li><strong>2</strong>: complete</li>
-     * <li><strong>3</strong>: failed</li>
-     * <li><strong>4</strong>: timed out</li>
+     * <li><strong>1</strong>: Scanning.</li>
+     * <li><strong>2</strong>: Completed.</li>
+     * <li><strong>3</strong>: Failed.</li>
+     * <li><strong>4</strong>: Timed out.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -130,15 +130,15 @@ public class ListVirusScanTaskRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The statuses of virus scan tasks.</p>
+     * <p>The list of statuses used to filter tasks by multiple statuses.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<Integer> statusList;
 
     /**
-     * <p>The ID of the virus scan task.</p>
+     * <p>The ID of the virus scan task to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListVirusScanTask~~">ListVirusScanTask</a> operation to query the ID.</p>
+     * <p>Call <a href="~~ListVirusScanTask~~">ListVirusScanTask</a> to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

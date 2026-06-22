@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSoarSubscribedStrategyRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeSoarSubscribedStrategyRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

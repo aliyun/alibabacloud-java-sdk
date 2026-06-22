@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeIdcAssetCriteriaRequest extends TeaModel {
     /**
-     * <p>The status of the IP address. Valid values:</p>
+     * <p>Indicates whether the corresponding IP address is valid. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The IP address is valid.</li>
-     * <li><strong>1</strong>: The IP address is ignored.</li>
-     * <li><em>2</em>: The IP address is invalid.</li>
-     * <li><em>3</em>: The IP address is expired.</li>
-     * <li><em>4</em>: The probe that is used to scan the IP address does not exist.</li>
+     * <li><strong>0</strong>: valid</li>
+     * <li><strong>1</strong>: ignored</li>
+     * <li><strong>2</strong>: invalid</li>
+     * <li><strong>3</strong>: expired</li>
+     * <li><strong>4</strong>: probe does not exist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeIdcAssetCriteriaRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The keyword that is used to match assets in fuzzy mode.</p>
+     * <p>The fuzzy match value entered when querying assets.</p>
      * 
      * <strong>example:</strong>
      * <p>testwww</p>

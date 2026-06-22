@@ -7,7 +7,7 @@ public class DeleteSoarStrategyTaskRequest extends TeaModel {
     /**
      * <p>The ID of the policy task that is in the waiting state.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain the ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2837958.html">DescribeSoarStrategyTasks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

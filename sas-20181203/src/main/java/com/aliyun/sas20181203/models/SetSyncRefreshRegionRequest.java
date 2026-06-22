@@ -7,8 +7,8 @@ public class SetSyncRefreshRegionRequest extends TeaModel {
     /**
      * <p>The access type of the multi-cloud site. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The current site is not the default site of multi-cloud site. You can specify the current site as the default site of the multi-cloud site.</li>
-     * <li><strong>1</strong>: The current site is the default site of multi-cloud site.</li>
+     * <li><strong>0</strong>: no default site is configured, and you can select regions as needed.</li>
+     * <li><strong>1</strong>: the current site is already the default site.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,18 +18,18 @@ public class SetSyncRefreshRegionRequest extends TeaModel {
     public Integer defaultRegion;
 
     /**
-     * <p>The regions from which you want to synchronize assets at the current site.</p>
+     * <p>The list of regions to be synchronized for the current site.</p>
      */
     @NameInMap("RegionIds")
     public java.util.List<String> regionIds;
 
     /**
-     * <p>The cloud service provider. Valid values:</p>
+     * <p>The cloud asset vendor. Valid values:</p>
      * <ul>
-     * <li><strong>Tencent</strong>: Tencent Cloud</li>
-     * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
-     * <li><strong>Azure</strong>: Microsoft Azure</li>
-     * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+     * <li><strong>Tencent</strong>: Tencent Cloud.</li>
+     * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
+     * <li><strong>Azure</strong>: Azure.</li>
+     * <li><strong>AWS</strong>: AWS.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UploadedHoneyPotFileRequest extends TeaModel {
     /**
-     * <p>The file key that you use to upload the file.</p>
+     * <p>The FileKey used to upload the file.</p>
      * <blockquote>
-     * <p> The key is in the format of HONEYPOT_FILE/{Timestamp}_{Custom file name}.</p>
+     * <p>Format: HONEYPOT_FILE/{timestamp}_{custom_file_name}.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     public String fileKey;
 
     /**
-     * <p>The name of the file that you want to upload.</p>
+     * <p>The name of the uploaded file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,10 +48,10 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     public String honeypotImageName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,9 +61,9 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the management node to which the honeypot belongs.</p>
+     * <p>The ID of the honeypot management node.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the IDs of management nodes. operation to query the management node ID.</p>
+     * <p>Call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class UploadedHoneyPotFileRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The prompt template that corresponds to the file.</p>
+     * <p>The template prompt corresponding to the uploaded file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

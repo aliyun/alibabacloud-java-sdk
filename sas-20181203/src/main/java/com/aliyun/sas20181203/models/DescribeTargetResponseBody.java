@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTargetResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
@@ -14,13 +14,13 @@ public class DescribeTargetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the server.</p>
+     * <p>The machine settings for the vulnerability type.</p>
      */
     @NameInMap("Targets")
     public java.util.List<DescribeTargetResponseBodyTargets> targets;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of machine configuration entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class DescribeTargetResponseBody extends TeaModel {
 
     public static class DescribeTargetResponseBodyTargets extends TeaModel {
         /**
-         * <p>The flag that is added to the server. This parameter can be empty.</p>
+         * <p>The flag. This parameter can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>del</p>
@@ -68,7 +68,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         public String flag;
 
         /**
-         * <p>The UUID of the server or the ID of the server group.</p>
+         * <p>The target. The value is a machine UUID or a machine group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5c5f0169-3527-40a2-b5ff-0bc1db8f****</p>
@@ -77,10 +77,10 @@ public class DescribeTargetResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The type of the object. Valid values:</p>
+         * <p>The target type. Valid values:</p>
          * <ul>
-         * <li><strong>uuid</strong>: a server</li>
-         * <li><strong>groupId</strong>: a server group</li>
+         * <li><strong>uuid</strong>: added by individual asset</li>
+         * <li><strong>groupId</strong>: added by server group.</li>
          * </ul>
          * 
          * <strong>example:</strong>

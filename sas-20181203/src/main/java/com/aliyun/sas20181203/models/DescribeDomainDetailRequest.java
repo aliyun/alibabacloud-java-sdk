@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainDetailRequest extends TeaModel {
     /**
-     * <p>The domain name or the name of website that you want to query.</p>
+     * <p>The name of the domain name or website to query.</p>
      * <blockquote>
-     * <p> Fuzzy match is not supported. You must enter a complete domain name or a website.</p>
+     * <p>Fuzzy match is not supported. Enter the complete domain name or website name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeDomainDetailRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>

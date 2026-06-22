@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCountScannedImageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>3F4236AB-7070-538D-85EB-98EBFE6C****</p>
@@ -14,7 +14,7 @@ public class DescribeCountScannedImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of images that are scanned.</p>
+     * <p>The number of scanned images.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>

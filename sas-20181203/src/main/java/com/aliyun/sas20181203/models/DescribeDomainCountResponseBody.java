@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainCountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</p>
@@ -14,7 +14,7 @@ public class DescribeDomainCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of root domains.</p>
+     * <p>The number of root domains in the assets.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class DescribeDomainCountResponseBody extends TeaModel {
     public Integer rootDomainsCount;
 
     /**
-     * <p>The number of subdomains.</p>
+     * <p>The number of subdomains in the assets.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -32,7 +32,7 @@ public class DescribeDomainCountResponseBody extends TeaModel {
     public Integer subDomainsCount;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of domain name assets returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

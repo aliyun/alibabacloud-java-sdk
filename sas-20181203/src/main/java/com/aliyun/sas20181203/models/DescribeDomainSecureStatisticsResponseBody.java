@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The number of domain names that trigger security alerts.</p>
+     * <p>The number of domain names that have security alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
     public Integer alarmCount;
 
     /**
-     * <p>The number of the websites for which no certificates are installed.</p>
+     * <p>The number of websites without certificates.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
     public Integer noSslCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
@@ -32,7 +32,7 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of the domain names that have security risks.</p>
+     * <p>The number of domain names that have security risks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
     public Integer totalDomainCount;
 
     /**
-     * <p>The number of the domain names that have vulnerabilities.</p>
+     * <p>The number of domain names that have vulnerabilities.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

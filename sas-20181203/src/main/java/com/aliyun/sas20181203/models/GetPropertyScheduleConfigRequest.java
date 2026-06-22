@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPropertyScheduleConfigRequest extends TeaModel {
     /**
-     * <p>The type of the asset fingerprints. Valid values:</p>
+     * <p>The type of Asset Fingerprints for which the automatic collection frequency is configured. Valid values:</p>
      * <ul>
      * <li><strong>scheduler_port_period</strong>: listening port</li>
      * <li><strong>scheduler_process_period</strong>: running process</li>
-     * <li><strong>scheduler_account_period</strong>: account</li>
-     * <li><strong>scheduler_software_period</strong>: software</li>
-     * <li><strong>scheduler_cron_period</strong>: scheduled task</li>
+     * <li><strong>scheduler_account_period</strong>: account asset</li>
+     * <li><strong>scheduler_software_period</strong>: software asset</li>
+     * <li><strong>scheduler_cron_period</strong>: scheduled node</li>
      * <li><strong>scheduler_sca_period</strong>: middleware</li>
      * <li><strong>scheduler_autorun_period</strong>: startup item</li>
      * <li><strong>scheduler_lkm_period</strong>: kernel module</li>
@@ -25,9 +25,9 @@ public class GetPropertyScheduleConfigRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

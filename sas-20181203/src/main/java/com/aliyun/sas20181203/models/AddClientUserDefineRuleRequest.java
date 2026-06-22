@@ -68,7 +68,7 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Rule 1</p>
+     * <p>规则1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -159,6 +159,16 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
     @NameInMap("RegistryKey")
     public String registryKey;
 
+    /**
+     * <p>Whether machines are automatically added to the rule. Default value: add. Valid values:  </p>
+     * <ul>
+     * <li><strong>add</strong>: Added by default  </li>
+     * <li><strong>del</strong>: Not added by default</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>add</p>
+     */
     @NameInMap("TargetDefault")
     public String targetDefault;
 

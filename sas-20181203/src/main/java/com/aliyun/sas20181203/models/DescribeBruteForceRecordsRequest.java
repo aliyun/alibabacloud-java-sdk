@@ -26,7 +26,7 @@ public class DescribeBruteForceRecordsRequest extends TeaModel {
      * <p>The ID of the server.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-bp1g6wxdwps7s9dz****</p>
+     * <p>i-bp1fu4aqltf1huhc****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -44,7 +44,7 @@ public class DescribeBruteForceRecordsRequest extends TeaModel {
      * <p>The name or IP address of the server to query.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.2.XX.XX</p>
+     * <p>222.185.XX.XX</p>
      */
     @NameInMap("Remark")
     public String remark;

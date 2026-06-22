@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotEventsRequest extends TeaModel {
     /**
-     * <p>The probe IDs.</p>
+     * <p>The list of probe IDs.</p>
      */
     @NameInMap("AgentIdList")
     public java.util.List<String> agentIdList;
@@ -20,7 +20,7 @@ public class ListHoneypotEventsRequest extends TeaModel {
     public Long alarmEventId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,11 +29,11 @@ public class ListHoneypotEventsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The status of the event. Valid values:</p>
+     * <p>The event status. Valid values:</p>
      * <ul>
-     * <li><strong>y</strong>: handled</li>
-     * <li><strong>n</strong>: unhandled</li>
-     * <li><strong>a</strong>: all statuses</li>
+     * <li><strong>y</strong>: Handled.</li>
+     * <li><strong>n</strong>: Unhandled.</li>
+     * <li><strong>a</strong>: All.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,16 +43,16 @@ public class ListHoneypotEventsRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>The honeypot IDs.</p>
+     * <p>The list of honeypot IDs.</p>
      */
     @NameInMap("HoneypotIdList")
     public java.util.List<String> honeypotIdList;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ListHoneypotEventsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -71,7 +71,7 @@ public class ListHoneypotEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the attacker profile.</p>
+     * <p>The ID of the attacker portrait.</p>
      * 
      * <strong>example:</strong>
      * <p>cd48604a-1694-4f03-ade0-ec6994c3*****</p>
@@ -80,7 +80,7 @@ public class ListHoneypotEventsRequest extends TeaModel {
     public String portraitId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>2F9CE167-58D5-5DA6-AA3B-923EED02****</p>
@@ -89,7 +89,7 @@ public class ListHoneypotEventsRequest extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The risk levels.</p>
+     * <p>The list of risk levels.</p>
      */
     @NameInMap("RiskLevelList")
     public java.util.List<String> riskLevelList;

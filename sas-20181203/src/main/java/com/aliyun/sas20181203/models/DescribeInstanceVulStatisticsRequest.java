@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceVulStatisticsRequest extends TeaModel {
     /**
-     * <p>The vulnerability type of the serverless instance. Valid values:</p>
+     * <p>The vulnerability type of the Serverless asset. Valid values:</p>
      * <ul>
-     * <li><strong>sca</strong>: middleware vulnerabilities</li>
-     * <li><strong>app</strong>: application vulnerabilities detected by using a scanner</li>
+     * <li><p><strong>sca</strong>: middleware vulnerability</p>
+     * </li>
+     * <li><p><strong>app</strong>: scanner vulnerability</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Serverless instances allow you to detect only application vulnerabilities by using a scanner.</p>
+     * <p>Serverless assets currently support only application vulnerability scanning.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,9 +23,9 @@ public class DescribeInstanceVulStatisticsRequest extends TeaModel {
     public String types;
 
     /**
-     * <p>The UUID of the instance to query.</p>
+     * <p>The UUID of the asset instance to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID of the instance.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

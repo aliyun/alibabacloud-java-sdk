@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLogMetaRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Default value: <strong>aegis</strong>. Valid values:</p>
+     * <p>The source identifier of the request. Default value: <strong>aegis</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>aegis</strong>: Server Guard</li>
-     * <li><strong>sas</strong>: Security Center</li>
+     * <li><strong>aegis</strong>: Server Guard edition.</li>
+     * <li><strong>sas</strong>: Security Center edition.</li>
      * </ul>
      * <blockquote>
-     * <p> If you use Server Guard, set the value to <strong>aegis</strong>. If you use Security Center, set the value to <strong>sas</strong>.</p>
+     * <p>Server Guard users should use <strong>aegis</strong>, and Security Center users should use <strong>sas</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,10 +21,10 @@ public class DescribeLogMetaRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,9 +34,9 @@ public class DescribeLogMetaRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeLogMetaRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>123.168.XX.XX</p>

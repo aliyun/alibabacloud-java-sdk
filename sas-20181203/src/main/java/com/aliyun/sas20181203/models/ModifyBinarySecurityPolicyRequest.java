@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBinarySecurityPolicyRequest extends TeaModel {
     /**
-     * <p>Cluster information.</p>
+     * <p>The cluster information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyBinarySecurityPolicyRequest extends TeaModel {
     public String clusters;
 
     /**
-     * <p>Policy name.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-policy-04-11</p>
@@ -24,21 +24,21 @@ public class ModifyBinarySecurityPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Policy content. JSON format, Key values:</p>
+     * <p>The policy content in JSON format. Valid keys:</p>
      * <ul>
-     * <li><strong>policyMode</strong>: Type of policy, default is requireAttestor.</li>
-     * <li><strong>requiredAttestors</strong>: Required attestors.</li>
+     * <li><strong>policyMode</strong>: The policy type. Default value: requireAttestor.</li>
+     * <li><strong>requiredAttestors</strong>: The required attestors.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;PolicyMode\&quot;:\&quot;requireAttestor\&quot;,\&quot;RequiredAttestors\&quot;:[\&quot;test-xcs-04-11-hhht\&quot;]}</p>
+     * <p>{\&quot;PolicyMode\&quot;:\&quot;requireAttestor\&quot;,\&quot;RequiredAttestors\&quot;:[\&quot;test-xcs-04-11-****\&quot;]}</p>
      */
     @NameInMap("Policy")
     public String policy;
 
     /**
-     * <p>Remark.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>Remark</p>
@@ -53,16 +53,16 @@ public class ModifyBinarySecurityPolicyRequest extends TeaModel {
      * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.2.3.4</p>
+     * <p>115.213.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
-     * <p>Set to enable or disable the policy. Values:</p>
+     * <p>Settings to enable or disable the policy. Valid values:</p>
      * <ul>
-     * <li><strong>enabled</strong>: Enable the protection policy.</li>
-     * <li><strong>disabled</strong>: Disable the protection policy.</li>
+     * <li><strong>enabled</strong>: Enables the mitigation policies.</li>
+     * <li><strong>disabled</strong>: Disables the mitigation policies.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -4,14 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
+    /**
+     * <p>An array of strategies.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListUnknownThreatDetectStrategyResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListUnknownThreatDetectStrategyResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>898F7AA7-CECD-5EC7-AF4D-664C601B****</p>
@@ -50,6 +56,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectStrategyResponseBodyData extends TeaModel {
         /**
+         * <p>The asset selection identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>UNKNOWN_THREAT_DETECT_CONFIG_****</p>
          */
@@ -57,6 +65,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public String assetSelectionType;
 
         /**
+         * <p>The duration, in days, of the learning phase after model creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -64,6 +74,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer durationDaysAfterInit;
 
         /**
+         * <p>The number of consecutive days without new process detections before the learning phase automatically ends.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -71,6 +83,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer durationDaysAfterStop;
 
         /**
+         * <p>The strategy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -78,6 +92,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The number of servers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -85,6 +101,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer machineCount;
 
         /**
+         * <p>The strategy name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test****</p>
          */
@@ -92,6 +110,14 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The whitelist mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>hash</strong>: process hash</p>
+         * </li>
+         * <li><p><strong>path</strong>: process path</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>hash</p>
          */
@@ -163,6 +189,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectStrategyResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries returned on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -170,6 +198,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -177,6 +207,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -184,6 +216,8 @@ public class ListUnknownThreatDetectStrategyResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of matching entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>69</p>
          */

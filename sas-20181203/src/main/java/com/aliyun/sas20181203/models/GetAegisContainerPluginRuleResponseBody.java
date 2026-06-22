@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetAegisContainerPluginRuleResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>09969D2C-***0DEF8BF6F</p>
@@ -60,11 +60,11 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The action mode of the rule. Valid values:</p>
+         * <p>The rule action mode. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: allows escape behavior.</li>
-         * <li><strong>1</strong>: triggers alerts.</li>
-         * <li><strong>2</strong>: blocks escape behavior.</li>
+         * <li><strong>0</strong>: allow</li>
+         * <li><strong>1</strong>: alert</li>
+         * <li><strong>2</strong>: block</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         public Integer mode;
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
          * <p>autoTest</p>
@@ -83,7 +83,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         public String ruleDescription;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>21**</p>
@@ -92,7 +92,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>auto_test_rule-EmzIXZ</p>
@@ -101,7 +101,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The template ID of the rule.</p>
+         * <p>The rule template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100**</p>
@@ -110,7 +110,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         public String ruleTemplateId;
 
         /**
-         * <p>The template name of the rule.</p>
+         * <p>The rule template name.</p>
          * 
          * <strong>example:</strong>
          * <p>template01</p>
@@ -119,13 +119,13 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         public String ruleTemplateName;
 
         /**
-         * <p>The rule items.</p>
+         * <p>The list of selected rule items.</p>
          */
         @NameInMap("SelectedPolicy")
         public java.util.List<String> selectedPolicy;
 
         /**
-         * <p>The ID of the switch.</p>
+         * <p>The ID of the corresponding switch.</p>
          * 
          * <strong>example:</strong>
          * <p>USER-CONTAINER-RULE-SWITCH-TYPE_***</p>
@@ -134,7 +134,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         public String switchId;
 
         /**
-         * <p>The images that are added to the whitelist.</p>
+         * <p>The list of whitelisted images.</p>
          */
         @NameInMap("WhiteImages")
         public java.util.List<String> whiteImages;

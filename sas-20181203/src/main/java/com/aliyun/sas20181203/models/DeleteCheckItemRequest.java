@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCheckItemRequest extends TeaModel {
     /**
-     * <p>List of check item IDs.</p>
+     * <p>The list of check item IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CheckIds")

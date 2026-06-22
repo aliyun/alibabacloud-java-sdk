@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListContainerDefenseRuleRequest extends TeaModel {
     /**
-     * <p>The details of the condition.</p>
+     * <p>The list of conditions.</p>
      */
     @NameInMap("Conditions")
     public java.util.List<ListContainerDefenseRuleRequestConditions> conditions;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,10 +20,7 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether to query system rules.</p>
-     * <blockquote>
-     * <p> This parameter is deprecated.</p>
-     * </blockquote>
+     * <p>Specifies whether the rule is a system default rule.&gt;Notice: This parameter is deprecated..</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +31,7 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -45,9 +42,9 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +57,7 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
      * <p>The rule type. Valid values:</p>
      * <ul>
      * <li>1: system rule</li>
-     * <li>2: user-defined rule</li>
+     * <li>2: user rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,9 +121,9 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
 
     public static class ListContainerDefenseRuleRequestConditions extends TeaModel {
         /**
-         * <p>The condition type. Valid values:</p>
+         * <p>The condition type. The following type is supported:</p>
          * <ul>
-         * <li><strong>ruleName</strong>: the rule name</li>
+         * <li><strong>ruleName</strong>: rule name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +133,7 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The rule content.</p>
+         * <p>The condition content.</p>
          * 
          * <strong>example:</strong>
          * <p>auto-test-rule-**</p>

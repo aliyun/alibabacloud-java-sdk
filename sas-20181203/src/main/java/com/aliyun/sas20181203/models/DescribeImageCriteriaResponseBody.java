@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageCriteriaResponseBody extends TeaModel {
     /**
-     * <p>The list of the search conditions.</p>
+     * <p>The list of image query criteria.</p>
      */
     @NameInMap("CriteriaList")
     public java.util.List<DescribeImageCriteriaResponseBodyCriteriaList> criteriaList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
@@ -42,14 +42,14 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
 
     public static class DescribeImageCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
-         * <p>The name of the search condition.</p>
+         * <p>The name of the query criterion.</p>
          * <ul>
-         * <li><strong>tag</strong>: the tag of the image</li>
-         * <li><strong>digest</strong>: the digest of the image</li>
-         * <li><strong>vulStatus</strong>: the status of the vulnerability</li>
-         * <li><strong>alarmStatus</strong>: the status of the alert</li>
-         * <li><strong>riskStatus</strong>: the status of the risk</li>
-         * <li><strong>registryType</strong>: the type of the image repository</li>
+         * <li><strong>tag</strong>: image tag.</li>
+         * <li><strong>digest</strong>: image digest.</li>
+         * <li><strong>vulStatus</strong>: vulnerability status.</li>
+         * <li><strong>alarmStatus</strong>: security alert status.</li>
+         * <li><strong>riskStatus</strong>: risk status.</li>
+         * <li><strong>registryType</strong>: image repository type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -59,10 +59,10 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the search condition. Valid values:</p>
+         * <p>The type of the query criterion. Valid values:</p>
          * <ul>
-         * <li><strong>input</strong>: The search condition needs to be specified.</li>
-         * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+         * <li><strong>input</strong>: requires manual input of the query field.</li>
+         * <li><strong>select</strong>: requires selecting a subtype from a drop-down list.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,9 +72,9 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The values of the search condition. This parameter is returned only if the value of Type is select.</p>
+         * <p>The available option values when <strong>Type</strong> (the type of the query criterion) is <strong>select</strong>.</p>
          * <blockquote>
-         * <p>If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is an empty string.</p>
+         * <p>When <strong>Type</strong> (the type of the query criterion) is <strong>input</strong>, this parameter returns an empty value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

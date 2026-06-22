@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallAegisForLingjunRequest extends TeaModel {
     /**
-     * <p>List of unique UUIDs for Lingjun bare metal.</p>
+     * <p>The list of unique UUIDs for Lingjun bare metal servers.</p>
      */
     @NameInMap("Uuids")
     public java.util.List<String> uuids;

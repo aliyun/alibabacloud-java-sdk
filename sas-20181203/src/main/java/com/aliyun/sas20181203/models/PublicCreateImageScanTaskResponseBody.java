@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PublicCreateImageScanTaskResponseBody extends TeaModel {
     /**
-     * <p>The data returned if the call is successful.</p>
+     * <p>The data returned when the operation is successful.</p>
      */
     @NameInMap("Data")
     public PublicCreateImageScanTaskResponseBodyData data;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F9353221-40F4-5F98-B73C-2803DC804033</p>
@@ -42,13 +42,13 @@ public class PublicCreateImageScanTaskResponseBody extends TeaModel {
 
     public static class PublicCreateImageScanTaskResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether you can create more image scan tasks. Valid values:</p>
+         * <p>Indicates whether more scan tasks can be created. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: More scan tasks can be created.</li>
+         * <li><strong>false</strong>: No more scan tasks can be created.</li>
          * </ul>
          * <blockquote>
-         * <p>By default, a maximum of 10 image scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create an image scan task by calling this operation. You must wait for at least one of the 10 existing image scan tasks to complete before you can create an image scan task.</p>
+         * <p>By default, up to 10 scan tasks can exist at the same time. If the number of scan tasks exceeds 10, creating a scan task by calling this operation fails. Wait until an existing scan task is completed before creating a new scan task.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class PublicCreateImageScanTaskResponseBody extends TeaModel {
         public Boolean canCreate;
 
         /**
-         * <p>The timestamp when the image information was collected. Unit: milliseconds.</p>
+         * <p>The timestamp when image information was collected, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1644286364150</p>
@@ -67,7 +67,7 @@ public class PublicCreateImageScanTaskResponseBody extends TeaModel {
         public Long collectTime;
 
         /**
-         * <p>The timestamp when the image scan task started to run. Unit: milliseconds.</p>
+         * <p>The timestamp when the scan task started running, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1644286364150</p>
@@ -85,7 +85,7 @@ public class PublicCreateImageScanTaskResponseBody extends TeaModel {
         public Integer finishCount;
 
         /**
-         * <p>The progress of the image scan task in percentage.</p>
+         * <p>The progress percentage of the scan task.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -94,13 +94,13 @@ public class PublicCreateImageScanTaskResponseBody extends TeaModel {
         public Integer progress;
 
         /**
-         * <p>The result of the image scan task. Valid values:</p>
+         * <p>The execution result of the scan task. Valid values:</p>
          * <ul>
-         * <li><strong>SUCCESS</strong>: The task is successful.</li>
-         * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The images are deployed in a region that is not supported by container image scan.</li>
+         * <li><strong>SUCCESS</strong>: The scan task succeeded.</li>
+         * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The image is in a region that does not support scanning.</li>
          * </ul>
          * <blockquote>
-         * <p>For more information about the regions supported by container image scan, see the &quot;Regions supported by container image scan&quot; section in this topic.</p>
+         * <p>For the regions that support image security scanning, see the table of supported regions after the response parameters table in this topic.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -110,12 +110,12 @@ public class PublicCreateImageScanTaskResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The status of the image scan task. Valid values:</p>
+         * <p>The status of the scan task. Valid values:</p>
          * <ul>
-         * <li><strong>INIT</strong>: The task is being initialized.</li>
-         * <li><strong>PRE_ANALYZER</strong>: The task is being pre-processed.</li>
-         * <li><strong>SUCCESS</strong>: The task is successful.</li>
-         * <li><strong>FAIL</strong>: The task fails.</li>
+         * <li><strong>INIT</strong>: Initializing.</li>
+         * <li><strong>PRE_ANALYZER</strong>: Pre-analyzing.</li>
+         * <li><strong>SUCCESS</strong>: Succeeded.</li>
+         * <li><strong>FAIL</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class PublicCreateImageScanTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the image scan task.</p>
+         * <p>The ID of the scan task.</p>
          * 
          * <strong>example:</strong>
          * <p>a410bb3e68c217a3368bc0238c66886d</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomizeReportRequest extends TeaModel {
     /**
-     * <p>The ID of the report.</p>
+     * <p>The report ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+     * <p>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

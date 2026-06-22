@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     /**
-     * <p>The list of hosts that are associated with the risk.</p>
+     * <p>The list of servers with associated risks.</p>
      */
     @NameInMap("List")
     public java.util.List<ListAgentlessRelateMaliciousResponseBodyList> list;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The paging information for the paging query.</p>
      */
     @NameInMap("PageInfo")
     public ListAgentlessRelateMaliciousResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>FCA270CC-24C8-5DA1-9184-20F2605C****</p>
@@ -56,7 +56,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
 
     public static class ListAgentlessRelateMaliciousResponseBodyListDetails extends TeaModel {
         /**
-         * <p>The name of the detailed item.</p>
+         * <p>The name of the alert event detail item.</p>
          * 
          * <strong>example:</strong>
          * <p>MD5</p>
@@ -65,7 +65,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name key of the detailed item.</p>
+         * <p>The name key of the alert event detail item.</p>
          * 
          * <strong>example:</strong>
          * <p>${suspicious.mp.db.maliciousfilemd5}</p>
@@ -74,7 +74,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String nameKey;
 
         /**
-         * <p>The type of the detailed item.</p>
+         * <p>The type of the alert event detail item.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -83,7 +83,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the detailed item.</p>
+         * <p>The value of the alert event detail item.</p>
          * 
          * <strong>example:</strong>
          * <p>1f2e13a7c51ee89316ae50066515****</p>
@@ -132,13 +132,13 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
 
     public static class ListAgentlessRelateMaliciousResponseBodyList extends TeaModel {
         /**
-         * <p>The details of the alert events.</p>
+         * <p>The alert event details.</p>
          */
         @NameInMap("Details")
         public java.util.List<ListAgentlessRelateMaliciousResponseBodyListDetails> details;
 
         /**
-         * <p>The URL to download the malicious image sample.</p>
+         * <p>The download URL of the malicious sample.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/">https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/</a>***</p>
@@ -156,7 +156,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String filePath;
 
         /**
-         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the first scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>168257753****</p>
@@ -165,7 +165,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public Long firstScanTimestamp;
 
         /**
-         * <p>The highlighted JSON string.</p>
+         * <p>The highlighted text, in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;highlight\&quot;:{\&quot;ruleVersion\&quot;:\&quot;20230223\&quot;,\&quot;ruleId\&quot;:600139,\&quot;events\&quot;:[[207,284]]}}</p>
@@ -183,7 +183,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the asset.</p>
+         * <p>The name of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sql-test-0****</p>
@@ -210,7 +210,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the latest scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>168257753****</p>
@@ -219,11 +219,11 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public Long latestScanTimestamp;
 
         /**
-         * <p>The severity of the malicious file. Valid values:</p>
+         * <p>The severity level. Valid values:</p>
          * <ul>
-         * <li>serious</li>
-         * <li>suspicious</li>
-         * <li>remind</li>
+         * <li>serious: urgent</li>
+         * <li>suspicious: suspicious</li>
+         * <li>remind: reminder.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The MD5 hash value of the malicious file.</p>
+         * <p>The MD5 hash of the malicious file.</p>
          * 
          * <strong>example:</strong>
          * <p>1f2e13a7c51ee89316ae50066515****</p>
@@ -251,7 +251,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String maliciousName;
 
         /**
-         * <p>The type of the virus.</p>
+         * <p>The virus type.</p>
          * 
          * <strong>example:</strong>
          * <p>WebShell</p>
@@ -260,7 +260,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String maliciousType;
 
         /**
-         * <p>The handling result of the alert.</p>
+         * <p>The alert handling result.</p>
          * 
          * <strong>example:</strong>
          * <p>addWhitelist.USER.Success</p>
@@ -269,7 +269,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String operateResult;
 
         /**
-         * <p>The timestamp when the alert is handled. Unit: milliseconds.</p>
+         * <p>The timestamp when the alert was handled. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>168257753****</p>
@@ -278,7 +278,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String operateTimestamp;
 
         /**
-         * <p>The partition of the disk.</p>
+         * <p>The disk partition.</p>
          * 
          * <strong>example:</strong>
          * <p>/dev/xvda1</p>
@@ -287,7 +287,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String partition;
 
         /**
-         * <p>The ID of the task object.</p>
+         * <p>The ID of the task target.</p>
          * 
          * <strong>example:</strong>
          * <p>m-****</p>
@@ -296,7 +296,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>The name of the task object.</p>
+         * <p>The name of the task target.</p>
          * 
          * <strong>example:</strong>
          * <p>image_***</p>
@@ -305,9 +305,9 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The type of the task object. Valid values:</p>
+         * <p>The object type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: snapshot.</li>
+         * <li><strong>1</strong>: snapshot</li>
          * <li><strong>2</strong>: image.</li>
          * </ul>
          * 
@@ -503,7 +503,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
 
     public static class ListAgentlessRelateMaliciousResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -512,7 +512,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -521,7 +521,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -530,7 +530,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>197</p>

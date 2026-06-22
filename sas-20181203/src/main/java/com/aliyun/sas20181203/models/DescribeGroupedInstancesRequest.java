@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedInstancesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number from which query results start to be displayed. Default value: <strong>1</strong>, indicating that query results are displayed starting from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the group to which the assets belong. Fuzzy search is supported.</p>
+     * <p>The name of the asset group to query. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test-01</p>
@@ -23,11 +23,11 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>The filter condition that you want to use to query the assets. Valid values:</p>
+     * <p>The filter condition for querying assets. Valid values:</p>
      * <ul>
-     * <li><strong>groupId</strong>: the group to which the assets belong</li>
-     * <li><strong>regionId</strong>: the region in which the assets reside</li>
-     * <li><strong>vpcInstanceId</strong>: the virtual private cloud (VPC) in which the assets reside</li>
+     * <li><strong>groupId</strong>: queries assets by group.</li>
+     * <li><strong>regionId</strong>: queries assets by region.</li>
+     * <li><strong>vpcInstanceId</strong>: queries assets by Virtual Private Cloud (VPC).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String groupField;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -51,7 +51,7 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the assets that you want to query. Set the value to <strong>ecs</strong>, which indicates Elastic Compute Service (ECS) instances.</p>
+     * <p>The type of assets to query. Fixed value: <strong>ecs</strong>, indicating Elastic Compute Service (ECS) instances.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -60,10 +60,10 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String machineTypes;
 
     /**
-     * <p>Specifies whether to enable paged query. Default value: <strong>true</strong>. Valid values:</p>
+     * <p>Specifies whether to enable paginated queries. Default value: <strong>true</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: enables paginated queries.</li>
+     * <li><strong>false</strong>: disables paginated queries.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public Boolean noPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page in a paginated query. Default value: <strong>20</strong>, indicating that 20 entries of asset information are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -82,13 +82,13 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The edition of Security Center that protects the asset. Valid values:</p>
+     * <p>The edition filter for querying assets. Valid values:</p>
      * <ul>
-     * <li><strong>sas_gte_advanced</strong>: the Advanced edition or higher</li>
-     * <li><strong>sas_gte_enterprise</strong>: the Enterprise edition or higher</li>
-     * <li><strong>sas_gt_basic:</strong> a paid edition</li>
-     * <li><strong>sas_eq_advanced:</strong> the Advanced edition</li>
-     * <li><strong>sas_gt_anti_virus:</strong> an edition higher than the Anti-virus edition</li>
+     * <li><strong>sas_gte_advanced</strong>: Advanced edition or higher</li>
+     * <li><strong>sas_gte_enterprise</strong>: Enterprise edition or higher</li>
+     * <li><strong>sas_gt_basic</strong>: paid editions</li>
+     * <li><strong>sas_eq_advanced</strong>: Advanced edition only</li>
+     * <li><strong>sas_gt_anti_virus</strong>: editions higher than Anti-virus edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,13 +98,13 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public String saleVersionCheckCode;
 
     /**
-     * <p>The source of the server. Valid values:</p>
+     * <p>The server vendor. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
-     * <li><strong>1</strong>: a third-party cloud server</li>
-     * <li><strong>2</strong>: a server in a data center</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
-     * <li><strong>8</strong>: a lightweight asset</li>
+     * <li><strong>0</strong>: Alibaba Cloud assets</li>
+     * <li><strong>1</strong>: non-cloud assets</li>
+     * <li><strong>2</strong>: IDC assets</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: assets from other cloud providers</li>
+     * <li><strong>8</strong>: lightweight assets</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,13 +114,13 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     public Integer vendor;
 
     /**
-     * <p>The source of the server. Separate multiple sources with commas (,).Valid values:</p>
+     * <p>The server vendors. Separate multiple vendors with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
-     * <li><strong>1</strong>: a third-party cloud server</li>
-     * <li><strong>2</strong>: a server in a data center</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
-     * <li><strong>8</strong>: a lightweight asset</li>
+     * <li><strong>0</strong>: Alibaba Cloud assets</li>
+     * <li><strong>1</strong>: non-cloud assets</li>
+     * <li><strong>2</strong>: IDC assets</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: assets from other cloud providers</li>
+     * <li><strong>8</strong>: lightweight assets</li>
      * </ul>
      * 
      * <strong>example:</strong>

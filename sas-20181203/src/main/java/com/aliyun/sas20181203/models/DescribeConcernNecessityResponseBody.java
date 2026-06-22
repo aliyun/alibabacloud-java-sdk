@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeConcernNecessityResponseBody extends TeaModel {
     /**
-     * <p>The priorities to fix the vulnerabilities. Valid values:</p>
+     * <p>The list of vulnerability fix necessity levels. Valid values:</p>
      * <ul>
-     * <li>asap: high</li>
-     * <li>later: medium</li>
-     * <li>nntf: low</li>
+     * <li><p>asap: high.</p>
+     * </li>
+     * <li><p>later: medium.</p>
+     * </li>
+     * <li><p>nntf: low.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ConcernNecessity")
     public java.util.List<String> concernNecessity;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</p>

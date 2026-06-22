@@ -62,7 +62,7 @@ public class ModifyTagWithUuidRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;target&quot;:&quot;inet-7c676676-06fa-442e-90fb-b802e5d6****&quot;,&quot;targetType&quot;:&quot;uuid&quot;,&quot;flag&quot;:&quot;add&quot;}]</p>
+     * <p>[{&quot;target&quot;:&quot;inet-7c676676-06fa-432e-90fb-b802e5d6****&quot;,&quot;targetType&quot;:&quot;uuid&quot;,&quot;flag&quot;:&quot;add&quot;}]</p>
      */
     @NameInMap("Target")
     public String target;

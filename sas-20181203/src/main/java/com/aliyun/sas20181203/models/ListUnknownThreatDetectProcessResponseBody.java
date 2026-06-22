@@ -4,14 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
+    /**
+     * <p>An array of process details.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListUnknownThreatDetectProcessResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListUnknownThreatDetectProcessResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>
@@ -50,6 +56,16 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectProcessResponseBodyData extends TeaModel {
         /**
+         * <p>The analysis result. Valid values:</p>
+         * <ul>
+         * <li><p><strong>black</strong>: A malicious process.</p>
+         * </li>
+         * <li><p><strong>white</strong>: A normal process.</p>
+         * </li>
+         * <li><p><strong>abnormal</strong>: An abnormal process.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>white</p>
          */
@@ -63,6 +79,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String explanationZh;
 
         /**
+         * <p>The timestamp of the first occurrence.</p>
+         * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
          */
@@ -70,6 +88,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
+         * <p>The MD5 hash of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>5b394b54ca632fe51c4ab4a6dbaf****</p>
          */
@@ -77,6 +97,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String md5;
 
         /**
+         * <p>The process ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025031506350619216822625103151158982</p>
          */
@@ -84,6 +106,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String processId;
 
         /**
+         * <p>The process path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/usr/bin/tar</p>
          */
@@ -91,6 +115,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String processPath;
 
         /**
+         * <p>Remarks about the process.</p>
+         * 
          * <strong>example:</strong>
          * <p>safe process</p>
          */
@@ -98,6 +124,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The SHA-256 hash of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</p>
          */
@@ -185,6 +213,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectProcessResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -192,6 +222,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String count;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -199,6 +231,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries to return on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -206,6 +240,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>83</p>
          */

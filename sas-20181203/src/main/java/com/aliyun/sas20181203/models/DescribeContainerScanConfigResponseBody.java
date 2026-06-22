@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerScanConfigResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeContainerScanConfigResponseBodyData data;
@@ -59,7 +59,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
 
     public static class DescribeContainerScanConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The total number of container applications in the cluster.</p>
+         * <p>The total number of applications in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -68,7 +68,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         public Integer allCount;
 
         /**
-         * <p>The names of the container applications.</p>
+         * <p>The container application name.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;alicloud-monitor-controller\&quot;]</p>
@@ -77,7 +77,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         public String appNames;
 
         /**
-         * <p>The number of selected container applications.</p>
+         * <p>The number of selected applications.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -95,7 +95,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>hhht-cluster-02</p>

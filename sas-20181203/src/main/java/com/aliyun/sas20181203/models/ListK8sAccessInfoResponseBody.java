@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListK8sAccessInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the Kubernetes clusters.</p>
+     * <p>The list of K8s access information.</p>
      */
     @NameInMap("K8sAccessInfos")
     public java.util.List<ListK8sAccessInfoResponseBodyK8sAccessInfos> k8sAccessInfos;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
@@ -42,7 +42,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
 
     public static class ListK8sAccessInfoResponseBodyK8sAccessInfos extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud UID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1960721413485****</p>
@@ -51,7 +51,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+         * <p>The Simple Log Service Logstore for audit logs.</p>
          * 
          * <strong>example:</strong>
          * <p>audit-cf6baf6afa106eca665296fdf68b****</p>
@@ -60,7 +60,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String auditLogStore;
 
         /**
-         * <p>The Simple Log Service project that is used to store the audit logs.</p>
+         * <p>The Simple Log Service project for audit logs.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-custom-your-project-sd89eh****</p>
@@ -69,7 +69,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String auditProject;
 
         /**
-         * <p>The ID of the region in which the server is deployed.</p>
+         * <p>The region ID of the server.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -78,7 +78,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String auditRegionId;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c0da5e4cb82a848c4a57c4dc9f49a****</p>
@@ -87,7 +87,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -96,7 +96,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>CPU architecture, divided into ARM and x86 architectures.</p>
+         * <p>The CPU architecture. Valid values: ARM architecture and x86 architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>arm</p>
@@ -114,7 +114,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public Long expireDate;
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The server group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11088522</p>
@@ -123,7 +123,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The name of the server group.</p>
+         * <p>The server group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -132,7 +132,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The UUID of the access information.</p>
+         * <p>The unique ID of the access information.</p>
          * 
          * <strong>example:</strong>
          * <p>67070</p>
@@ -141,7 +141,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The installation key of the Kubernetes cluster.</p>
+         * <p>The K8s installation key.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -150,7 +150,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String installKey;
 
         /**
-         * <p>The service provider.</p>
+         * <p>The vendor.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>

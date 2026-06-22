@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyOpenLogShipperRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Default value: <strong>aegis</strong>. Valid values:</p>
+     * <p>The identifier of the request source. Default value: <strong>aegis</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>aegis</strong>: Server Guard</li>
-     * <li><strong>sas</strong>: Security Center</li>
+     * <li><strong>aegis</strong>: Server Guard edition.</li>
+     * <li><strong>sas</strong>: Security Center edition.</li>
      * </ul>
      * <blockquote>
-     * <p> If you use Server Guard, set the value to <strong>aegis</strong>. If you use Security Center, set the value to <strong>sas</strong>.</p>
+     * <p>Server Guard users must use <strong>aegis</strong>, and Security Center users must use <strong>sas</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,9 +21,9 @@ public class ModifyOpenLogShipperRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

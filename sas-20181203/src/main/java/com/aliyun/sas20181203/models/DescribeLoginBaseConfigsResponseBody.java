@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     /**
-     * <p>The description of the configuration.</p>
+     * <p>The list of logon configuration details.</p>
      */
     @NameInMap("BaseConfigs")
     public java.util.List<DescribeLoginBaseConfigsResponseBodyBaseConfigs> baseConfigs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number in the paging query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+     * <p>The number of logon configuration entries displayed on each page in the paging query result. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>2C2D4B3C-0524-17B1-93D2-DA50119F4E1E</p>
@@ -38,7 +38,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of logon configuration entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -93,7 +93,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
 
     public static class DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList extends TeaModel {
         /**
-         * <p>The UUID or group ID of the server.</p>
+         * <p>The UUID of the server or the ID of the server group on which the rule takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>0011ea53-738c-4bff-93be-ce6a1cc9****</p>
@@ -102,11 +102,11 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The type of the server to which the configuration is applied. Valid values:</p>
+         * <p>The selection mode for the assets on which the rule takes effect. Valid values:</p>
          * <ul>
-         * <li><strong>uuid</strong>: a server</li>
-         * <li><strong>groupId</strong>: a server group</li>
-         * <li><strong>global</strong>: all servers</li>
+         * <li><strong>uuid</strong>: added by individual asset.</li>
+         * <li><strong>groupId</strong>: added by server group.</li>
+         * <li><strong>global</strong>: all assets are selected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,13 +170,13 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
          * <p>The common logon location.</p>
          * 
          * <strong>example:</strong>
-         * <p>Montenegro</p>
+         * <p>BeiJing</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
-         * <p>Corresponding configuration remark information.</p>
+         * <p>The remark information displayed for the corresponding configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -194,7 +194,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The details of the servers to which the configuration is applied.</p>
+         * <p>The list of details about the servers on which the rule takes effect.</p>
          */
         @NameInMap("TargetList")
         public java.util.List<DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList> targetList;
@@ -209,7 +209,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The number of servers to which the configuration is applied.</p>
+         * <p>The number of servers on which the rule takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>

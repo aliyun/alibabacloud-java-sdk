@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFileProtectBindMachineRequest extends TeaModel {
     /**
+     * <p>The page number of the current page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListFileProtectBindMachineRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The maximum number of entries per page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

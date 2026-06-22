@@ -7,7 +7,7 @@ public class ListHoneypotProbeUuidRequest extends TeaModel {
     /**
      * <p>The ID of the management node.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the ID.</p>
+     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,10 @@ public class ListHoneypotProbeUuidRequest extends TeaModel {
     public String controlNodeId;
 
     /**
-     * <p>The language of the content within the request and the response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,10 +30,12 @@ public class ListHoneypotProbeUuidRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the probe. Valid values:</p>
+     * <p>The probe type. Valid values:</p>
      * <ul>
-     * <li><strong>host_probe</strong>: host probe</li>
-     * <li><strong>vpc_black_hole_probe</strong>: virtual private cloud (VPC) probe</li>
+     * <li><p><strong>host_probe</strong>: host probe</p>
+     * </li>
+     * <li><p><strong>vpc_black_hole_probe</strong>: VPC blackhole probe.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

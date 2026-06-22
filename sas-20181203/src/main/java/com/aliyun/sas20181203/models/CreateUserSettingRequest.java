@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserSettingRequest extends TeaModel {
     /**
-     * <p>The severities of alerts.</p>
+     * <p>The list of alert notification levels.</p>
      * 
      * <strong>example:</strong>
      * <p>high,low</p>
@@ -14,7 +14,7 @@ public class CreateUserSettingRequest extends TeaModel {
     public String alertLevels;
 
     /**
-     * <p>The number of days during which you want to retain invalid alerts.</p>
+     * <p>The number of days to retain false positive alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -23,7 +23,7 @@ public class CreateUserSettingRequest extends TeaModel {
     public Integer invalidWarningKeepDays;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>112.48.16.***</p>

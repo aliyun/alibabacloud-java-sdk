@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVersionConfigRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account ID using the Cloud Security Center service.   </p>
+     * <p>The Alibaba Cloud account ID that uses the Security Center service.  </p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> API to obtain this parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

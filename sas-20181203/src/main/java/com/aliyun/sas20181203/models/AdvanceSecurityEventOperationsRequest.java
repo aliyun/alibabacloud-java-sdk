@@ -8,7 +8,7 @@ public class AdvanceSecurityEventOperationsRequest extends TeaModel {
      * <p>The alert name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Execution of malicious script code</p>
+     * <p>恶意脚本代码执行</p>
      */
     @NameInMap("EventName")
     public String eventName;
@@ -43,7 +43,7 @@ public class AdvanceSecurityEventOperationsRequest extends TeaModel {
      * <p>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Alerts</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Malicious script</p>
+     * <p>恶意脚本</p>
      */
     @NameInMap("EventType")
     public String eventType;

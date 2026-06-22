@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the container cluster to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * <p>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page when using paging. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String image;
 
     /**
-     * <p>The image digest.</p>
+     * <p>The digest of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>6a5e103187b31a94592a47a5858617f7a179ead61df7606****</p>
@@ -63,7 +63,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String imageDigest;
 
     /**
-     * <p>The image layer.</p>
+     * <p>The layer of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>27213ad375b53628dd152a5ca****</p>
@@ -72,7 +72,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String imageLayer;
 
     /**
-     * <p>The tag that is added to the image.</p>
+     * <p>The tag of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>0.2</p>
@@ -81,10 +81,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String imageTag;
 
     /**
-     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <p>The language type of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,11 +94,11 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The severity level of the malicious image sample. Separate multiple severity levels with commas (,). Valid values:</p>
+     * <p>The severity levels. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>serious</strong></li>
-     * <li><strong>suspicious</strong></li>
-     * <li><strong>remind</strong></li>
+     * <li><strong>serious</strong>: urgent</li>
+     * <li><strong>suspicious</strong>: suspicious</li>
+     * <li><strong>remind</strong>: reminder.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,9 +108,9 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String levels;
 
     /**
-     * <p>The MD5 hash value of the malicious image sample.</p>
+     * <p>The MD5 hash of the malicious file.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeGroupedMaliciousFiles~~">DescribeGroupedMaliciousFiles</a> operation to query the MD5 hash values of malicious image samples.</p>
+     * <p>Call the <a href="~~DescribeGroupedMaliciousFiles~~">DescribeGroupedMaliciousFiles</a> operation to obtain the MD5 hash of the malicious file.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of entries per page when using paging. Default value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     /**
      * <p>The ID of the image repository.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation to query the IDs of image repositories from the value of the <strong>RepoId</strong> response parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry. You can obtain the image repository ID from the <strong>RepoId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -160,9 +160,9 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The ID of the container image.</p>
+     * <p>The ID of the container image instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation to query the IDs of container images from the value of the <strong>InstanceId</strong> response parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry. You can obtain the container image instance ID from the <strong>InstanceId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     /**
      * <p>The name of the image repository.</p>
      * <blockquote>
-     * <p> Fuzzy match is supported.</p>
+     * <p>Fuzzy match is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -184,9 +184,9 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The namespace to which the image repository belongs.</p>
+     * <p>The namespace of the image repository.</p>
      * <blockquote>
-     * <p> Fuzzy match is supported.</p>
+     * <p>Fuzzy match is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -203,13 +203,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
      * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
      * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
      * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>cn-hongkong</strong>: Hong Kong (China)</li>
      * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
      * <li><strong>us-east-1</strong>: US (Virginia)</li>
      * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
      * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>eu-west-1</strong>: UK (London)</li>
+     * <li><strong>eu-west-1</strong>: UK (London).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -219,18 +219,18 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String repoRegionId;
 
     /**
-     * <p>The types of the assets that you want to scan.</p>
+     * <p>The collection of scan ranges.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
     /**
-     * <p>The status of the malicious image sample. Valid values:</p>
+     * <p>The processing status of the malicious image sample. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The malicious image sample is not handled.</li>
-     * <li><strong>1</strong>: The malicious image sample is handled.</li>
-     * <li><strong>2</strong>: The malicious image sample is being verified.</li>
-     * <li><strong>3</strong>: The malicious image sample is added to the whitelist.</li>
+     * <li><strong>0</strong>: unhandled</li>
+     * <li><strong>1</strong>: handled</li>
+     * <li><strong>2</strong>: verifying</li>
+     * <li><strong>3</strong>: added to whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>

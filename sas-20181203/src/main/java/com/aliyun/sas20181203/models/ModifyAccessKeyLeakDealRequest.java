@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyAccessKeyLeakDealRequest extends TeaModel {
     /**
-     * <p>The ID of the AccessKey pair leak.</p>
+     * <p>The ID of the AccessKey pair leak record.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to query the ID. You must specify at least one of the Id and <strong>IdList</strong> parameters.</p>
+     * <p>Call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain this parameter. This parameter and the <strong>IdList</strong> parameter cannot both be empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,13 +17,13 @@ public class ModifyAccessKeyLeakDealRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The IDs of AccessKey pair leaks.</p>
+     * <p>The IDs of the AccessKey pair leak records.</p>
      */
     @NameInMap("IdList")
     public java.util.List<Long> idList;
 
     /**
-     * <p>The remarks that are added.</p>
+     * <p>The remarks for handling the AccessKey pair leak record.</p>
      * 
      * <strong>example:</strong>
      * <p>disabled.</p>
@@ -32,11 +32,11 @@ public class ModifyAccessKeyLeakDealRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The method to handle the AccessKey pair leak. Valid values:</p>
+     * <p>The method to handle the AccessKey pair leak information. Valid values:</p>
      * <ul>
-     * <li><strong>manual</strong>: manually handle</li>
-     * <li><strong>disable</strong>: disable</li>
-     * <li><strong>add-whitelist</strong>: add to the whitelist</li>
+     * <li><strong>manual</strong>: Manual handling.</li>
+     * <li><strong>disable</strong>: Disable.</li>
+     * <li><strong>add-whitelist</strong>: Add to whitelist.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

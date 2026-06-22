@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTagWithUuidRequest extends TeaModel {
     /**
-     * <p>The name of the tag.</p>
+     * <p>The label name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DeleteTagWithUuidRequest extends TeaModel {
     public String tagName;
 
     /**
-     * <p>The UUIDs of servers.</p>
+     * <p>The list of server UUIDs.</p>
      * <blockquote>
-     * <p>If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.</p>
+     * <p>If UuidList is specified, Security Center deletes the label only from the servers included in UuidList. If UuidList is empty, Security Center deletes the label from all servers.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

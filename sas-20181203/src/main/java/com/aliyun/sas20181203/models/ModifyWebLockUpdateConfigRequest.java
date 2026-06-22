@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     /**
-     * <p>The prevention mode. Valid values:</p>
+     * <p>The defense mode. Valid values:</p>
      * <ul>
-     * <li><strong>block</strong>: Interception Mode</li>
-     * <li><strong>audit</strong>: Alert Mode</li>
+     * <li><strong>block</strong>: Block.</li>
+     * <li><strong>audit</strong>: Alert.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String defenceMode;
 
     /**
-     * <p>The directory for which you want to enable web tamper proofing.</p>
+     * <p>The full path of the directory that you want to protect.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String dir;
 
     /**
-     * <p>The directory for which you want to disable web tamper proofing.</p>
+     * <p>The directory that does not require web tamper-proofing protection (excluded directory).</p>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>blacklist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the protection pattern <strong>Mode</strong> is set to <strong>blacklist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,9 +41,9 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String exclusiveDir;
 
     /**
-     * <p>The file for which you want to disable web tamper proofing.</p>
+     * <p>The file that does not require web tamper-proofing protection (excluded file).</p>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>blacklist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the protection pattern <strong>Mode</strong> is set to <strong>blacklist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String exclusiveFile;
 
     /**
-     * <p>The type of the file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</p>
+     * <p>The file types that do not require web tamper-proofing protection (excluded file types). Separate multiple file types with semicolons (;). Valid values:</p>
      * <ul>
      * <li>php</li>
      * <li>jsp</li>
@@ -71,7 +71,7 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
      * <li>png</li>
      * </ul>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>blacklist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the protection pattern <strong>Mode</strong> is set to <strong>blacklist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,9 +81,9 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String exclusiveFileType;
 
     /**
-     * <p>The ID of the protected directory for which you want to change the status of web tamper proofing.</p>
+     * <p>The ID of the protected directory configuration that you want to modify.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeWebLockConfigList~~">DescribeWebLockConfigList</a> operation to query the IDs of protected directories.</p>
+     * <p>You can call the <a href="~~DescribeWebLockConfigList~~">DescribeWebLockConfigList</a> operation to obtain the ID of the protected directory.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -94,9 +94,9 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public Integer id;
 
     /**
-     * <p>The file for which you want to enable web tamper proofing.</p>
+     * <p>The file that requires protection.</p>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>whitelist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the protection pattern <strong>Mode</strong> is set to <strong>whitelist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String inclusiveFile;
 
     /**
-     * <p>The type of the file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</p>
+     * <p>The file types that require web tamper-proofing protection. Separate multiple file types with semicolons (;). Valid values:</p>
      * <ul>
      * <li>php</li>
      * <li>jsp</li>
@@ -124,7 +124,7 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
      * <li>png</li>
      * </ul>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>whitelist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the protection pattern <strong>Mode</strong> is set to <strong>whitelist</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -134,10 +134,10 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String inclusiveFileType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,11 +147,10 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The local path to the backup files of the protected directory.\
-     * The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples:</p>
+     * <p>The local backup path for securely backing up the protected directory.<br>The format of the directory path may differ between Linux servers and Windows servers. Make sure that you enter the correct format. Refer to the following directory formats:</p>
      * <ul>
      * <li>Linux server: /usr/local/aegis/bak</li>
-     * <li>Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak</li>
+     * <li>Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -162,10 +161,10 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String localBackupDir;
 
     /**
-     * <p>The protection mode of web tamper proofing. Valid values:</p>
+     * <p>The protection pattern. Valid values:</p>
      * <ul>
-     * <li><strong>whitelist</strong>: In this mode, web tamper proofing is enabled for the specified directories and file types.</li>
-     * <li><strong>blacklist</strong>: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.</li>
+     * <li><strong>whitelist</strong>: whitelist mode. Protects only the specified directories and file types.</li>
+     * <li><strong>blacklist</strong>: blacklist mode. Protects all subdirectories, file types, and files under the specified directory except those that are excluded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,7 +174,7 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>36.112.XX.XX</p>
@@ -184,9 +183,9 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The UUID of the server on which the protected directory is located.</p>
+     * <p>The UUID of the server whose protected directory you want to modify.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

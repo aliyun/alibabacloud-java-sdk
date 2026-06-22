@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetSasContainerWebDefenseRuleRequest extends TeaModel {
     /**
-     * <p>Rule ID.</p>
+     * <p>The rule ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListSasContainerWebDefenseRule~~">ListSasContainerWebDefenseRule</a> API to get this parameter.</p>
+     * <p>You can call the <a href="~~ListSasContainerWebDefenseRule~~">ListSasContainerWebDefenseRule</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

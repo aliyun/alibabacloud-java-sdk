@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssBucketScanStatisticRequest extends TeaModel {
     /**
-     * <p>The names of the buckets.</p>
+     * <p>The list of bucket names.</p>
      */
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
@@ -13,8 +13,8 @@ public class GetOssBucketScanStatisticRequest extends TeaModel {
     /**
      * <p>The data source. Valid values:</p>
      * <ul>
-     * <li><strong>API</strong>: API operations.</li>
-     * <li><strong>OSS</strong>: Object Storage Service (OSS) file check.</li>
+     * <li><strong>API</strong>: API-based scan.</li>
+     * <li><strong>OSS</strong>: OSS-based scan.</li>
      * </ul>
      * 
      * <strong>example:</strong>

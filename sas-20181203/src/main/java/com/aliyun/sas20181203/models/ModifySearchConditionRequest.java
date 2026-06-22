@@ -5,34 +5,32 @@ import com.aliyun.tea.*;
 
 public class ModifySearchConditionRequest extends TeaModel {
     /**
-     * <p>The filter condition. The value of this parameter is in the JSON format and is case-sensitive. The value contains the following fields:</p>
+     * <p>The filter conditions. This parameter is in JSON format. Pay attention to the letter case when you specify this parameter. The following fields are included:</p>
      * <ul>
-     * <li><p><strong>filterParams</strong>: the filter-related parameters. The value is in the JSON format. Valid values:</p>
+     * <li><p><strong>filterParams</strong>: The filter parameters. This parameter is in JSON format. The following fields are included:</p>
      * <ul>
-     * <li><p><strong>label</strong>: the display name of the filter condition in the console.</p>
+     * <li><p><strong>label</strong>: The display name for the search in the console.</p>
      * </li>
-     * <li><p><strong>value</strong>: the settings of the filter condition. The value is in the JSON format. The value contains the following fields:</p>
+     * <li><p><strong>value</strong>: The filter parameter condition. This parameter is in JSON format. The following fields are included:</p>
      * <ul>
-     * <li><strong>name</strong>: the name of the field for filtering. For more information, see the value description of name.</li>
-     * <li><strong>value</strong>: the value of the field for filtering.</li>
+     * <li><strong>name</strong>: The filter condition field. For more information about the valid values of this field, see the description below.</li>
+     * <li><strong>value</strong>: The value that corresponds to the filter condition field.</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
-     * <li><p><strong>LogicalExp</strong>: the logical relationship among multiple filter conditions. Valid values:</p>
+     * <li><p><strong>LogicalExp</strong>: The logical relationship between multiple filter conditions. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong></li>
-     * <li><strong>AND</strong></li>
+     * <li><strong>OR</strong>: or</li>
+     * <li><strong>AND</strong>: and<blockquote>
+     * <p>Valid values of <strong>name</strong>:</p>
+     * <ul>
+     * <li>If <strong>Type</strong> is set to <strong>ecs</strong>, call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</li>
+     * <li>If <strong>Type</strong> is set to <strong>cloud_product</strong>, call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported search conditions.</li>
      * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p> Value description of <strong>name</strong>:</p>
      * </blockquote>
-     * <ul>
-     * <li><p>If <strong>Type</strong> is set to <strong>ecs</strong>, you can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported filter conditions.</p>
      * </li>
-     * <li><p>If <strong>Type</strong> is set to <strong>cloud_product</strong>, you can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported filter conditions.</p>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -61,7 +59,7 @@ public class ModifySearchConditionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+     * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
      * 
      * <strong>example:</strong>
      * <p>27.223.XX.XX</p>
@@ -70,10 +68,10 @@ public class ModifySearchConditionRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of the asset. Default value: <strong>ecs</strong>. Valid values:</p>
+     * <p>The asset type. Default value: <strong>ecs</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: host</li>
-     * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+     * <li><strong>ecs</strong>: host asset</li>
+     * <li><strong>cloud_product</strong>: cloud service.</li>
      * </ul>
      * 
      * <strong>example:</strong>

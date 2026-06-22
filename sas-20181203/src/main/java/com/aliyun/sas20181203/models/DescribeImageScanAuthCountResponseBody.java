@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageScanAuthCountResponseBody extends TeaModel {
     /**
-     * <p>The details about the quota for container image scan.</p>
+     * <p>The authorization details of image security scanning.</p>
      */
     @NameInMap("ImageScan")
     public DescribeImageScanAuthCountResponseBodyImageScan imageScan;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The China Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>892NYH839-0EDC-4CD0-A2EF-5BD294656C99</p>
@@ -42,7 +42,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
 
     public static class DescribeImageScanAuthCountResponseBodyImageScan extends TeaModel {
         /**
-         * <p>The quota for container image scan.</p>
+         * <p>The total number of authorization quotas.</p>
          * 
          * <strong>example:</strong>
          * <p>15340</p>
@@ -51,7 +51,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         public Long imageScanCapacity;
 
         /**
-         * <p>The instance ID of Security Center.</p>
+         * <p>The instance ID of the purchased Security Center instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sas-qdl123412****</p>
@@ -60,7 +60,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The consumed quota for container image scan.</p>
+         * <p>The number of used authorization quotas.</p>
          * 
          * <strong>example:</strong>
          * <p>5489</p>

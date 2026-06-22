@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListFileProtectBindMachineResponseBody extends TeaModel {
+    /**
+     * <p>The list of servers. The UUID of each server is returned.</p>
+     */
     @NameInMap("List")
     public java.util.List<String> list;
 
+    /**
+     * <p>The paging information for the paged query.</p>
+     */
     @NameInMap("PageInfo")
     public ListFileProtectBindMachineResponseBodyPageInfo pageInfo;
 
@@ -50,6 +56,8 @@ public class ListFileProtectBindMachineResponseBody extends TeaModel {
 
     public static class ListFileProtectBindMachineResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries on the current page for a paged query.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -57,6 +65,8 @@ public class ListFileProtectBindMachineResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>69</p>
          */

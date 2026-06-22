@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>EA15BA8A-D631-4375-8D40-CB7C769B0279</p>
@@ -16,10 +16,10 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
     /**
      * <p>The progress of the virus scan task. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong>: The task is being initialized.</li>
-     * <li><strong>Processing</strong>: The task is running.</li>
-     * <li><strong>Success</strong>: The task is complete.</li>
-     * <li><strong>Failed</strong>: The task fails.</li>
+     * <li><strong>init</strong>: The scan task is being initialized.</li>
+     * <li><strong>Processing</strong>: The scan task is in progress.</li>
+     * <li><strong>Success</strong>: The scan task is complete.</li>
+     * <li><strong>Failed</strong>: The scan task failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,20 +29,17 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
     public String scanTaskProgress;
 
     /**
-     * <p>The information about the asset on which the virus scan task runs. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+     * <p>The asset information scanned by the virus scan node. This parameter is a string converted from a JSON array in character format. The following fields are included:</p>
      * <ul>
-     * <li><p><strong>type</strong>: the type of the asset on which you want to perform a virus scan task. Valid values:</p>
-     * <ul>
+     * <li><strong>type</strong>: The Asset Type on which the virus scan is executed. Valid values:<ul>
      * <li><strong>groupId</strong>: server group.</li>
      * <li><strong>uuid</strong>: server.</li>
      * </ul>
      * </li>
-     * <li><p><strong>name</strong>: the name of the server group or server.</p>
-     * </li>
-     * <li><p><strong>target</strong>: the asset on which the virus scan task runs. The value of this field varies based on the value of the type field.</p>
-     * <ul>
-     * <li>If the <strong>type</strong> field is set to <strong>groupId</strong>, the value of this field is the ID of the server group.</li>
-     * <li>If the <strong>type</strong> field is set to <strong>uuid</strong>, the value of this field is the universally unique identifier (UUID) of the server.</li>
+     * <li><strong>name</strong>: The name of the server group or server.</li>
+     * <li><strong>target</strong>: The asset on which the virus scan is executed. The following describes the values of this field:<ul>
+     * <li>If <strong>type</strong> is set to <strong>groupId</strong>, this field specifies the server group ID.</li>
+     * <li>If <strong>type</strong> is set to <strong>uuid</strong>, this field specifies the UUID of the server.</li>
      * </ul>
      * </li>
      * </ul>

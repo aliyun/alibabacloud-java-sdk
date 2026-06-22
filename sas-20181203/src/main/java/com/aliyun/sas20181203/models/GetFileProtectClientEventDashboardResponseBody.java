@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetFileProtectClientEventDashboardResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
 
     public static class GetFileProtectClientEventDashboardResponseBodyDataFilePathStats extends TeaModel {
         /**
+         * <p>The file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/usr/a</p>
          */
@@ -46,6 +51,8 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The total number of events.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -77,6 +84,8 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
 
     public static class GetFileProtectClientEventDashboardResponseBodyDataFileTypeStats extends TeaModel {
         /**
+         * <p>The file type name.</p>
+         * 
          * <strong>example:</strong>
          * <p>txt</p>
          */
@@ -84,6 +93,8 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The count.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -115,6 +126,8 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
 
     public static class GetFileProtectClientEventDashboardResponseBodyDataProcessNameStats extends TeaModel {
         /**
+         * <p>The process name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -122,6 +135,8 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The number of events.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -152,23 +167,36 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
     }
 
     public static class GetFileProtectClientEventDashboardResponseBodyData extends TeaModel {
+        /**
+         * <p>The tamper-proofing event statistics grouped by file path.</p>
+         */
         @NameInMap("FilePathStats")
         public java.util.List<GetFileProtectClientEventDashboardResponseBodyDataFilePathStats> filePathStats;
 
+        /**
+         * <p>The event statistics grouped by file type.</p>
+         */
         @NameInMap("FileTypeStats")
         public java.util.List<GetFileProtectClientEventDashboardResponseBodyDataFileTypeStats> fileTypeStats;
 
         /**
+         * <p>The number of file tamper-proofing events for today.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("OneDayFileChangeCount")
         public Integer oneDayFileChangeCount;
 
+        /**
+         * <p>The event statistics grouped by process name.</p>
+         */
         @NameInMap("ProcessNameStats")
         public java.util.List<GetFileProtectClientEventDashboardResponseBodyDataProcessNameStats> processNameStats;
 
         /**
+         * <p>The number of file tamper-proofing events in the last 15 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>33</p>
          */
@@ -176,6 +204,8 @@ public class GetFileProtectClientEventDashboardResponseBody extends TeaModel {
         public Integer recentFileChangeCount;
 
         /**
+         * <p>The number of affected servers.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

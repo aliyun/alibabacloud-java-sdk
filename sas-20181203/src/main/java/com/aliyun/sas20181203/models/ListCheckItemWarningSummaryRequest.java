@@ -128,7 +128,7 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>127608589417****</p>
+     * <p>1232428423234****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

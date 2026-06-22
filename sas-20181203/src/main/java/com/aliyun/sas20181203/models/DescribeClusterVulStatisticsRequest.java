@@ -14,11 +14,11 @@ public class DescribeClusterVulStatisticsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the vulnerabilities. Valid values:</p>
+     * <p>The type of vulnerability that you want to query. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: Linux software vulnerabilities</li>
      * <li><strong>app</strong>: application vulnerabilities</li>
-     * <li><strong>sca</strong>: vulnerabilities that are detected based on software component analysis</li>
+     * <li><strong>sca</strong>: software composition analysis (SCA) vulnerabilities</li>
      * </ul>
      * 
      * <strong>example:</strong>

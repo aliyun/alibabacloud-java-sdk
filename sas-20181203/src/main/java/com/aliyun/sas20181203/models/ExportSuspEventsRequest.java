@@ -89,7 +89,7 @@ public class ExportSuspEventsRequest extends TeaModel {
      * <p>The ID of the asset group.</p>
      * 
      * <strong>example:</strong>
-     * <p>8076980</p>
+     * <p>9454789</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

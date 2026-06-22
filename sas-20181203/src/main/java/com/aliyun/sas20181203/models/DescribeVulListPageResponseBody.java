@@ -88,8 +88,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vulnerability was detected based on version comparison. Valid values:</p>
          * <ul>
-         * <li>1: The vulnerability was detected based on version comparison.</li>
-         * <li>0: The vulnerability was not detected based on version comparison.</li>
+         * <li><p>1: The vulnerability was detected based on version comparison.</p>
+         * </li>
+         * <li><p>0: The vulnerability was not detected based on version comparison.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,8 +103,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:</p>
          * <ul>
-         * <li>1: The vulnerability was detected based on POC verification.</li>
-         * <li>0: The vulnerability was not detected based on POC verification.</li>
+         * <li><p>1: The vulnerability was detected based on POC verification.</p>
+         * </li>
+         * <li><p>0: The vulnerability was not detected based on POC verification.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +137,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
          * <p>The name of the vulnerability.</p>
          * 
          * <strong>example:</strong>
-         * <p>Windows RCE vulnerability</p>
+         * <p>Windows 终端远程代码执行漏洞</p>
          */
         @NameInMap("Title")
         public String title;

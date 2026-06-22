@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanMachineRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListVirusScanMachineRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListVirusScanMachineRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The information about the server that you want to query. The value can be the name or the IP address of the server.</p>
+     * <p>The asset information to query. You can set this parameter to an asset name or IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1****</p>
@@ -34,7 +34,7 @@ public class ListVirusScanMachineRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the asset instance.</p>
      * 
      * <strong>example:</strong>
      * <p>7cc91747-2845-40d4-bb69-c077597f****</p>

@@ -5,63 +5,60 @@ import com.aliyun.tea.*;
 
 public class ModifyLoginBaseConfigRequest extends TeaModel {
     /**
-     * <p>The details of the configuration that is used to detect unusual logons to your servers. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <p>The detailed configuration of the unusual logon detection rule for the server. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>totalCount</strong>: the total number of servers.</li>
-     * <li><strong>uuidCount</strong>: the number of servers to which the configuration is applied.</li>
-     * <li><strong>id</strong>: the ID of the configuration.</li>
-     * <li><strong>location</strong>: the common logon location.</li>
+     * <li><strong>totalCount</strong>: the total number of assets.</li>
+     * <li><strong>uuidCount</strong>: the number of assets on which the rule takes effect.</li>
+     * <li><strong>id</strong>: the ID of the unusual logon detection rule.</li>
+     * <li><strong>location</strong>: the name of the common logon location.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify this field if the Type parameter is set to login_common_location.</p>
+     * <p>This field is required only when the Type parameter is set to login_common_location.</p>
      * </blockquote>
      * <ul>
      * <li><strong>ip</strong>: the common logon IP address.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify this field if the Type parameter is set to login_common_ip.</p>
+     * <p>This field is required only when the Type parameter is set to login_common_ip.</p>
      * </blockquote>
      * <ul>
      * <li><strong>endTime</strong>: the end time of the common logon time range.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify this field if the Type parameter is set to login_common_time.</p>
+     * <p>This field is required only when the Type parameter is set to login_common_time.</p>
      * </blockquote>
      * <ul>
      * <li><strong>startTime</strong>: the start time of the common logon time range.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify this field if the Type parameter is set to login_common_time.</p>
+     * <p>This field is required only when the Type parameter is set to login_common_time.</p>
      * </blockquote>
      * <ul>
      * <li><strong>account</strong>: the common logon account.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify this field if the Type parameter is set to login_common_account.</p>
+     * <p>This field is required only when the Type parameter is set to login_common_account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;totalCount&quot;:174,&quot;uuidCount&quot;:4,&quot;location&quot;:&quot;Montenegro&quot;,&quot;id&quot;:0}</p>
+     * <p>{&quot;totalCount&quot;:174,&quot;uuidCount&quot;:4,&quot;location&quot;:&quot;黑山&quot;,&quot;id&quot;:0}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The details of the server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <p>The configuration of the servers on which the unusual logon detection rule takes effect. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><p><strong>Target</strong>: the UUID of the server.</p>
-     * </li>
-     * <li><p><strong>targetType</strong>: the type of the server to which the configuration is applied. Valid values:</p>
-     * <ul>
-     * <li><strong>uuid</strong>: a server</li>
-     * <li><strong>groupId</strong>: a server group</li>
+     * <li><strong>Target</strong>: the UUID of the server to add or remove.</li>
+     * <li><strong>targetType</strong>: the mode for adding assets on which the rule takes effect. Valid values:<ul>
+     * <li><strong>uuid</strong>: add by individual server.</li>
+     * <li><strong>groupId</strong>: add by server group.</li>
      * </ul>
      * </li>
-     * <li><p><strong>flag</strong>: the operation that you want to perform on the server. Valid values:</p>
-     * <ul>
-     * <li><strong>del</strong>: removes the server from the configuration.</li>
-     * <li><strong>add</strong>: adds the server to the configuration.</li>
+     * <li><strong>flag</strong>: the operation to perform on the asset. Valid values:<ul>
+     * <li><strong>del</strong>: remove the server from the rule.</li>
+     * <li><strong>add</strong>: add the server to the rule.</li>
      * </ul>
      * </li>
      * </ul>
@@ -74,12 +71,12 @@ public class ModifyLoginBaseConfigRequest extends TeaModel {
     public String target;
 
     /**
-     * <p>The logon type of the configuration to modify. Valid values:</p>
+     * <p>The type of unusual logon detection for the server. Valid values:</p>
      * <ul>
-     * <li><strong>login_common_location</strong>: common logon location</li>
-     * <li><strong>login_common_ip</strong>: common logon IP address</li>
-     * <li><strong>login_common_time</strong>: common logon time range</li>
-     * <li><strong>login_common_account</strong>: common logon account</li>
+     * <li><strong>login_common_location</strong>: common logon location.</li>
+     * <li><strong>login_common_ip</strong>: common logon IP address.</li>
+     * <li><strong>login_common_time</strong>: common logon time.</li>
+     * <li><strong>login_common_account</strong>: common logon account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

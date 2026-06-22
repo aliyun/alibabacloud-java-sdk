@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTaskErrorLogResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the error logs.</p>
+     * <p>The list of error logs.</p>
      */
     @NameInMap("Logs")
     public java.util.List<DescribeTaskErrorLogResponseBodyLogs> logs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F929E952-EBFC-56C3-BD35-BF8B59024C69</p>

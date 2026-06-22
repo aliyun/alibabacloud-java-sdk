@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
@@ -14,7 +14,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistics of the vulnerabilities.</p>
+     * <p>The vulnerability statistics.</p>
      */
     @NameInMap("VulStat")
     public DescribeClusterVulStatisticsResponseBodyVulStat vulStat;
@@ -42,7 +42,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
 
     public static class DescribeClusterVulStatisticsResponseBodyVulStat extends TeaModel {
         /**
-         * <p>The number of high-risk vulnerabilities.</p>
+         * <p>The number of high-severity vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -51,7 +51,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         public String asapCount;
 
         /**
-         * <p>The number of medium-risk vulnerabilities.</p>
+         * <p>The number of medium-severity vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -60,7 +60,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         public String laterCount;
 
         /**
-         * <p>The number of low-risk vulnerabilities.</p>
+         * <p>The number of low-severity vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

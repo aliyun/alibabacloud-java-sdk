@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteOpaStrategyNewRequest extends TeaModel {
     /**
-     * <p>The IDs of rules.</p>
+     * <p>The list of policy IDs.</p>
      */
     @NameInMap("StrategyIds")
     public java.util.List<Long> strategyIds;

@@ -14,20 +14,20 @@ public class DescribeClusterHostSecuritySummaryRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The key of the condition that is used to query containers. Valid values:</p>
+     * <p>The container search field. Valid values:</p>
      * <ul>
-     * <li><strong>instanceId</strong>: the instance ID</li>
-     * <li><strong>appName</strong>: the name of the application</li>
-     * <li><strong>clusterId</strong>: the ID of the cluster</li>
-     * <li><strong>regionId</strong>: the region ID</li>
-     * <li><strong>nodeName</strong>: the name of the node</li>
-     * <li><strong>namespace</strong>: the namespace</li>
-     * <li><strong>clusterName</strong>: the name of the cluster</li>
-     * <li><strong>image</strong>: the name of the image</li>
-     * <li><strong>imageRepoName</strong>: the name of the image repository</li>
-     * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
-     * <li><strong>imageRepoTag</strong>: the tag that is added to the image repository</li>
-     * <li><strong>imageDigest</strong>: the digest of the image</li>
+     * <li><strong>instanceId</strong>: instance ID.</li>
+     * <li><strong>appName</strong>: application name.</li>
+     * <li><strong>clusterId</strong>: cluster ID.</li>
+     * <li><strong>regionId</strong>: region.</li>
+     * <li><strong>nodeName</strong>: node name.</li>
+     * <li><strong>namespace</strong>: namespace.</li>
+     * <li><strong>clusterName</strong>: cluster name.</li>
+     * <li><strong>image</strong>: image name.</li>
+     * <li><strong>imageRepoName</strong>: image repository name.</li>
+     * <li><strong>imageRepoNamespace</strong>: image repository namespace.</li>
+     * <li><strong>imageRepoTag</strong>: image tag.</li>
+     * <li><strong>imageDigest</strong>: image digest.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeClusterHostSecuritySummaryRequest extends TeaModel {
     public String containerFieldName;
 
     /**
-     * <p>The value of the condition that is used to query containers.</p>
+     * <p>The value of the container search field.</p>
      * 
      * <strong>example:</strong>
      * <p>c1fdb5fd8d42e425d88fd73eec7be****</p>
@@ -49,7 +49,7 @@ public class DescribeClusterHostSecuritySummaryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>222.71.XXX.XXX</p>
@@ -58,10 +58,10 @@ public class DescribeClusterHostSecuritySummaryRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of the query. Valid values:</p>
+     * <p>The query type. Valid values:</p>
      * <ul>
-     * <li><strong>containerId</strong></li>
-     * <li><strong>uuid</strong></li>
+     * <li><strong>containerId</strong>: container ID.</li>
+     * <li><strong>uuid</strong>: asset ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>

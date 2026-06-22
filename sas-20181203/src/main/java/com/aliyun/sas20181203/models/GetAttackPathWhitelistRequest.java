@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetAttackPathWhitelistRequest extends TeaModel {
     /**
-     * <p>Attack path whitelist ID.</p>
+     * <p>The attack path whitelist ID.</p>
      * <blockquote>
-     * <p>You can call <a href="~~ListAttackPathWhitelist~~">ListAttackPathWhitelist</a> to query the attack path whitelist ID.</p>
+     * <p>You can call <a href="~~ListAttackPathWhitelist~~">ListAttackPathWhitelist</a> to query attack path whitelist IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

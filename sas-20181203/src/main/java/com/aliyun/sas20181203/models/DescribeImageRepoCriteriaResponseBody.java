@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
     /**
-     * <p>An array consisting of the filter conditions that are supported by the image repository.</p>
+     * <p>The list of supported search criteria for image repositories.</p>
      */
     @NameInMap("CriteriaList")
     public java.util.List<DescribeImageRepoCriteriaResponseBodyCriteriaList> criteriaList;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>
@@ -42,20 +42,20 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
 
     public static class DescribeImageRepoCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
-         * <p>The name of the search condition. Valid values:</p>
+         * <p>The name of the search criterion. Valid values:</p>
          * <ul>
-         * <li><strong>instanceId</strong>: the ID of the image instance.</li>
-         * <li><strong>repoName</strong>: the name of the image repository.</li>
-         * <li><strong>repoId</strong>: the ID of the image repository.</li>
-         * <li><strong>repoNamespace</strong>: the namespace of the image repository.</li>
-         * <li><strong>regionId</strong>: the region in which the image resides.</li>
-         * <li><strong>vulStatus</strong>: indicates whether vulnerabilities exist.</li>
-         * <li><strong>alarmStatus</strong>: indicates whether security alerts exist.</li>
-         * <li><strong>hcStatus</strong>: indicates whether baseline risks exist.</li>
-         * <li><strong>riskStatus</strong>: indicates whether risks exist.</li>
-         * <li><strong>registryType</strong>: the type of the image repository.</li>
-         * <li><strong>ImageId</strong>: the image ID.</li>
-         * <li><strong>tag</strong>: the image tag.</li>
+         * <li><strong>instanceId</strong>: image instance ID.</li>
+         * <li><strong>repoName</strong>: repository name.</li>
+         * <li><strong>repoId</strong>: repository ID.</li>
+         * <li><strong>repoNamespace</strong>: repository namespace.</li>
+         * <li><strong>regionId</strong>: image region.</li>
+         * <li><strong>vulStatus</strong>: whether vulnerabilities exist.</li>
+         * <li><strong>alarmStatus</strong>: whether security alerts exist.</li>
+         * <li><strong>hcStatus</strong>: whether baseline risks exist.</li>
+         * <li><strong>riskStatus</strong>: whether risks exist.</li>
+         * <li><strong>registryType</strong>: repository type.</li>
+         * <li><strong>imageId</strong>: image ID.</li>
+         * <li><strong>tag</strong>: image tag.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,10 +65,10 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the search condition. Valid values:</p>
+         * <p>The type of the search criterion. Valid values:</p>
          * <ul>
-         * <li><strong>input</strong>: The search condition needs to be specified.</li>
-         * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+         * <li><strong>input</strong>: requires manual input of the search field.</li>
+         * <li><strong>select</strong>: requires selecting a subtype from a drop-down list.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,9 +78,9 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is set to <strong>select</strong>.</p>
+         * <p>The available options when <strong>Type</strong> (the type of the search criterion) is <strong>select</strong> (selection type).</p>
          * <blockquote>
-         * <p>If the value of <strong>Type</strong> is set to <strong>input</strong>, the return value of this parameter is empty.</p>
+         * <p>When <strong>Type</strong> (the type of the search criterion) is <strong>input</strong> (input type), this parameter returns an empty value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -210,8 +210,10 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
         /**
          * <p>Source type of the security check item:</p>
          * <ul>
-         * <li><strong>CUSTOM</strong>：User-defined</li>
-         * <li><strong>SYSTEM</strong>：Predefined by the Security Platform</li>
+         * <li><p><strong>CUSTOM</strong>:User-defined</p>
+         * </li>
+         * <li><p><strong>SYSTEM</strong>:Predefined by the Security Platform</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,29 +225,43 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
         /**
          * <p>Subtype of the cloud product asset. Values:</p>
          * <ul>
-         * <li>When <strong>InstanceType</strong> is <strong>ECS</strong>, this parameter can take the following values:<ul>
-         * <li><strong>INSTANCE</strong></li>
-         * <li><strong>DISK</strong></li>
-         * <li><strong>SECURITY_GROUP</strong></li>
+         * <li><p>When <strong>InstanceType</strong> is <strong>ECS</strong>, this parameter can take the following values:</p>
+         * <ul>
+         * <li><p><strong>INSTANCE</strong></p>
+         * </li>
+         * <li><p><strong>DISK</strong></p>
+         * </li>
+         * <li><p><strong>SECURITY_GROUP</strong></p>
+         * </li>
          * </ul>
          * </li>
-         * <li>When <strong>InstanceType</strong> is <strong>ACR</strong>, this parameter can take the following values:<ul>
-         * <li><strong>REPOSITORY_ENTERPRISE</strong></li>
-         * <li><strong>REPOSITORY_PERSON</strong></li>
+         * <li><p>When <strong>InstanceType</strong> is <strong>ACR</strong>, this parameter can take the following values:</p>
+         * <ul>
+         * <li><p><strong>REPOSITORY_ENTERPRISE</strong></p>
+         * </li>
+         * <li><p><strong>REPOSITORY_PERSON</strong></p>
+         * </li>
          * </ul>
          * </li>
-         * <li>When <strong>InstanceType</strong> is <strong>RAM</strong>, this parameter can take the following values:<ul>
-         * <li><strong>ALIAS</strong></li>
-         * <li><strong>USER</strong></li>
-         * <li><strong>POLICY</strong></li>
-         * <li><strong>GROUP</strong></li>
+         * <li><p>When <strong>InstanceType</strong> is <strong>RAM</strong>, this parameter can take the following values:</p>
+         * <ul>
+         * <li><p><strong>ALIAS</strong></p>
+         * </li>
+         * <li><p><strong>USER</strong></p>
+         * </li>
+         * <li><p><strong>POLICY</strong></p>
+         * </li>
+         * <li><p><strong>GROUP</strong></p>
+         * </li>
          * </ul>
          * </li>
-         * <li>When <strong>InstanceType</strong> is <strong>WAF</strong>, this parameter can take the following values:<ul>
+         * <li><p>When <strong>InstanceType</strong> is <strong>WAF</strong>, this parameter can take the following values:</p>
+         * <ul>
          * <li><strong>DOMAIN</strong></li>
          * </ul>
          * </li>
-         * <li>For other <strong>InstanceType</strong> values, this parameter can take the following value:<ul>
+         * <li><p>For other <strong>InstanceType</strong> values, this parameter can take the following value:</p>
+         * <ul>
          * <li><strong>INSTANCE</strong></li>
          * </ul>
          * </li>
@@ -278,9 +294,12 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
         /**
          * <p>Risk level of the check item. Possible values:</p>
          * <ul>
-         * <li><strong>HIGH</strong>：High</li>
-         * <li><strong>MEDIUM</strong>：Medium</li>
-         * <li><strong>LOW</strong>：Low</li>
+         * <li><p><strong>HIGH</strong>:High</p>
+         * </li>
+         * <li><p><strong>MEDIUM</strong>:Medium</p>
+         * </li>
+         * <li><p><strong>LOW</strong>:Low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,11 +311,16 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
         /**
          * <p>Status of the check item. Values:</p>
          * <ul>
-         * <li><strong>PASS</strong>: Passed</li>
-         * <li><strong>NOT_PASS</strong>: Not passed</li>
-         * <li><strong>CHECKING</strong>: Checking</li>
-         * <li><strong>NOT_CHECK</strong>: Not checked</li>
-         * <li><strong>WHITELIST</strong>: Whitelisted</li>
+         * <li><p><strong>PASS</strong>: Passed</p>
+         * </li>
+         * <li><p><strong>NOT_PASS</strong>: Not passed</p>
+         * </li>
+         * <li><p><strong>CHECKING</strong>: Checking</p>
+         * </li>
+         * <li><p><strong>NOT_CHECK</strong>: Not checked</p>
+         * </li>
+         * <li><p><strong>WHITELIST</strong>: Whitelisted</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,8 +341,10 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
         /**
          * <p>Whether the check item requires enabling data delivery of operation audit for more than 30 days to build a behavior baseline.</p>
          * <ul>
-         * <li><strong>1</strong>：Required</li>
-         * <li><strong>0</strong>：Not Required</li>
+         * <li><p><strong>1</strong>:Required</p>
+         * </li>
+         * <li><p><strong>0</strong>:Not Required</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,11 +355,7 @@ public class ListClusterCheckResultResponseBody extends TeaModel {
 
         /**
          * <p>Vendor of the asset. Values:</p>
-         * <p>0: Alibaba Cloud
-         * 3: Other cloud
-         * 4: Other cloud
-         * 5: Other cloud
-         * 7: Other cloud</p>
+         * <p>0: Alibaba Cloud 3: Other cloud 4: Other cloud 5: Other cloud 7: Other cloud</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

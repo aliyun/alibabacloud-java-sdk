@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteCycleTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the task configuration.</p>
+     * <p>The ID of the configuration.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</p>
+     * <p>Call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

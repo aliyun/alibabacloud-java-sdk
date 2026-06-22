@@ -37,65 +37,124 @@ public class DescribeAttackAnalysisDataResponseBody extends TeaModel {
      * </li>
      * <li><p><strong>crack_type</strong>: the type of the attack. Valid values:</p>
      * <ul>
-     * <li><strong>113</strong>: improper authorization.</li>
-     * <li><strong>112</strong>: redirection attack.</li>
-     * <li><strong>upload</strong>: vulnerability upload.</li>
-     * <li><strong>other</strong>: others.</li>
-     * <li><strong>webshell</strong>: trojan script.</li>
-     * <li><strong>201</strong>: suspicious connection.</li>
-     * <li><strong>9</strong>: brute-force attack on Microsoft SQL Server.</li>
-     * <li><strong>5</strong>: SSH brute-force attack.</li>
-     * <li><strong>6</strong>: RDP brute-force attack.</li>
-     * <li><strong>lfi</strong>: local file inclusion.</li>
-     * <li><strong>7</strong>: code execution.</li>
-     * <li><strong>sqli</strong>: SQL injection.</li>
-     * <li><strong>209</strong>: web attack.</li>
-     * <li><strong>31</strong>: buffer overflow.</li>
-     * <li><strong>3</strong>: brute-force attack on MySQL.</li>
-     * <li><strong>30</strong>: clickjacking.</li>
-     * <li><strong>4</strong>: FTP brute-force attack.</li>
-     * <li><strong>bypass</strong>: unauthorized access.</li>
-     * <li><strong>33</strong>: format string.</li>
-     * <li><strong>deeplearning</strong>: others.</li>
-     * <li><strong>32</strong>: integer overflow.</li>
-     * <li><strong>203</strong>: brute-force attack.</li>
-     * <li><strong>34</strong>: race condition.</li>
-     * <li><strong>rfi</strong>: remote file inclusion.</li>
-     * <li><strong>0</strong>: SQL injection attack.</li>
-     * <li><strong>212</strong>: mining behavior.</li>
-     * <li><strong>213</strong>: reverse shell.</li>
-     * <li><strong>211</strong>: worm.</li>
-     * <li><strong>61</strong>: session timeout.</li>
-     * <li><strong>20</strong>: directory traversal.</li>
-     * <li><strong>xss</strong>: XSS attack.</li>
-     * <li><strong>22</strong>: unauthorized access.</li>
-     * <li><strong>21</strong>: scan attack.</li>
-     * <li><strong>24</strong>: file modification.</li>
-     * <li><strong>26</strong>: file deletion.</li>
-     * <li><strong>25</strong>: file reading.</li>
-     * <li><strong>28</strong>: CRLF injection.</li>
-     * <li><strong>27</strong>: logic error.</li>
-     * <li><strong>29</strong>: template injection.</li>
-     * <li><strong>csrf</strong>: CSRF.</li>
-     * <li><strong>path</strong>: directory traversal.</li>
-     * <li><strong>crlf</strong>: CRLF.</li>
-     * <li><strong>102</strong>: CSRF.</li>
-     * <li><strong>103</strong>: server-side request forgery (SSRF).</li>
-     * <li><strong>101</strong>: XSS.</li>
-     * <li><strong>11</strong>: file inclusion.</li>
-     * <li><strong>10</strong>: file upload.</li>
-     * <li><strong>12</strong>: vulnerability upload.</li>
-     * <li><strong>15</strong>: unauthorized access.</li>
-     * <li><strong>14</strong>: information leakage.</li>
-     * <li><strong>17</strong>: XML entity injection.</li>
-     * <li><strong>16</strong>: insecure configuration.</li>
-     * <li><strong>19</strong>: Lightweight Directory Access Protocol (LDAP) injection.</li>
-     * <li><strong>18</strong>: XPath injection.</li>
-     * <li><strong>codei</strong>: code execution.</li>
-     * <li><strong>ai_webshell</strong>: intelligent defense against webshell upload.</li>
-     * <li><strong>alinet_webrce</strong>: adaptive web attack defense.</li>
-     * <li><strong>210</strong>: JSP webshell upload.</li>
-     * <li><strong>161</strong>: webshell upload.</li>
+     * <li><p><strong>113</strong>: improper authorization.</p>
+     * </li>
+     * <li><p><strong>112</strong>: redirection attack.</p>
+     * </li>
+     * <li><p><strong>upload</strong>: vulnerability upload.</p>
+     * </li>
+     * <li><p><strong>other</strong>: others.</p>
+     * </li>
+     * <li><p><strong>webshell</strong>: trojan script.</p>
+     * </li>
+     * <li><p><strong>201</strong>: suspicious connection.</p>
+     * </li>
+     * <li><p><strong>9</strong>: brute-force attack on Microsoft SQL Server.</p>
+     * </li>
+     * <li><p><strong>5</strong>: SSH brute-force attack.</p>
+     * </li>
+     * <li><p><strong>6</strong>: RDP brute-force attack.</p>
+     * </li>
+     * <li><p><strong>lfi</strong>: local file inclusion.</p>
+     * </li>
+     * <li><p><strong>7</strong>: code execution.</p>
+     * </li>
+     * <li><p><strong>sqli</strong>: SQL injection.</p>
+     * </li>
+     * <li><p><strong>209</strong>: web attack.</p>
+     * </li>
+     * <li><p><strong>31</strong>: buffer overflow.</p>
+     * </li>
+     * <li><p><strong>3</strong>: brute-force attack on MySQL.</p>
+     * </li>
+     * <li><p><strong>30</strong>: clickjacking.</p>
+     * </li>
+     * <li><p><strong>4</strong>: FTP brute-force attack.</p>
+     * </li>
+     * <li><p><strong>bypass</strong>: unauthorized access.</p>
+     * </li>
+     * <li><p><strong>33</strong>: format string.</p>
+     * </li>
+     * <li><p><strong>deeplearning</strong>: others.</p>
+     * </li>
+     * <li><p><strong>32</strong>: integer overflow.</p>
+     * </li>
+     * <li><p><strong>203</strong>: brute-force attack.</p>
+     * </li>
+     * <li><p><strong>34</strong>: race condition.</p>
+     * </li>
+     * <li><p><strong>rfi</strong>: remote file inclusion.</p>
+     * </li>
+     * <li><p><strong>0</strong>: SQL injection attack.</p>
+     * </li>
+     * <li><p><strong>212</strong>: mining behavior.</p>
+     * </li>
+     * <li><p><strong>213</strong>: reverse shell.</p>
+     * </li>
+     * <li><p><strong>211</strong>: worm.</p>
+     * </li>
+     * <li><p><strong>61</strong>: session timeout.</p>
+     * </li>
+     * <li><p><strong>20</strong>: directory traversal.</p>
+     * </li>
+     * <li><p><strong>xss</strong>: XSS attack.</p>
+     * </li>
+     * <li><p><strong>22</strong>: unauthorized access.</p>
+     * </li>
+     * <li><p><strong>21</strong>: scan attack.</p>
+     * </li>
+     * <li><p><strong>24</strong>: file modification.</p>
+     * </li>
+     * <li><p><strong>26</strong>: file deletion.</p>
+     * </li>
+     * <li><p><strong>25</strong>: file reading.</p>
+     * </li>
+     * <li><p><strong>28</strong>: CRLF injection.</p>
+     * </li>
+     * <li><p><strong>27</strong>: logic error.</p>
+     * </li>
+     * <li><p><strong>29</strong>: template injection.</p>
+     * </li>
+     * <li><p><strong>csrf</strong>: CSRF.</p>
+     * </li>
+     * <li><p><strong>path</strong>: directory traversal.</p>
+     * </li>
+     * <li><p><strong>crlf</strong>: CRLF.</p>
+     * </li>
+     * <li><p><strong>102</strong>: CSRF.</p>
+     * </li>
+     * <li><p><strong>103</strong>: server-side request forgery (SSRF).</p>
+     * </li>
+     * <li><p><strong>101</strong>: XSS.</p>
+     * </li>
+     * <li><p><strong>11</strong>: file inclusion.</p>
+     * </li>
+     * <li><p><strong>10</strong>: file upload.</p>
+     * </li>
+     * <li><p><strong>12</strong>: vulnerability upload.</p>
+     * </li>
+     * <li><p><strong>15</strong>: unauthorized access.</p>
+     * </li>
+     * <li><p><strong>14</strong>: information leakage.</p>
+     * </li>
+     * <li><p><strong>17</strong>: XML entity injection.</p>
+     * </li>
+     * <li><p><strong>16</strong>: insecure configuration.</p>
+     * </li>
+     * <li><p><strong>19</strong>: Lightweight Directory Access Protocol (LDAP) injection.</p>
+     * </li>
+     * <li><p><strong>18</strong>: XPath injection.</p>
+     * </li>
+     * <li><p><strong>codei</strong>: code execution.</p>
+     * </li>
+     * <li><p><strong>ai_webshell</strong>: intelligent defense against webshell upload.</p>
+     * </li>
+     * <li><p><strong>alinet_webrce</strong>: adaptive web attack defense.</p>
+     * </li>
+     * <li><p><strong>210</strong>: JSP webshell upload.</p>
+     * </li>
+     * <li><p><strong>161</strong>: webshell upload.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>

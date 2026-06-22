@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListFileProtectClientEventRequest extends TeaModel {
+    /**
+     * <p>The list of alert notification levels.</p>
+     */
     @NameInMap("AlertLevels")
     public java.util.List<Integer> alertLevels;
 
     /**
+     * <p>The page number of the current page when paging is used in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The end timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1650470399999</p>
      */
@@ -22,6 +29,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The file path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/etc/pam****</p>
      */
@@ -29,6 +38,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String filePath;
 
     /**
+     * <p>The ID of the asset instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-bp1fu4aqltf1huhc****</p>
      */
@@ -36,6 +47,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the asset instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ca_cpm_****</p>
      */
@@ -43,6 +56,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>120.27.XX.XX</p>
      */
@@ -50,6 +65,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String internetIp;
 
     /**
+     * <p>The private IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.26.XX.XX</p>
      */
@@ -57,6 +74,15 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String intranetIp;
 
     /**
+     * <p>The type of operation performed on the file. Valid values:</p>
+     * <ul>
+     * <li><strong>DELETE</strong>: deletes the file.</li>
+     * <li><strong>WRITE</strong>: writes to the file.</li>
+     * <li><strong>READ</strong>: reads the file.</li>
+     * <li><strong>RENAME</strong>: renames the file.</li>
+     * <li><strong>CHOWN</strong>: changes the file owner and associated group.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>READ</p>
      */
@@ -64,6 +90,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String operation;
 
     /**
+     * <p>The maximum number of entries per page when paging is used in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -71,6 +99,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The process path.</p>
+     * 
      * <strong>example:</strong>
      * <p>c:/windows/system32/i****</p>
      */
@@ -78,6 +108,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String procPath;
 
     /**
+     * <p>The name of the configuration rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>text-001</p>
      */
@@ -85,6 +117,8 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1650470399999</p>
      */
@@ -92,6 +126,13 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The event status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Unhandled.</li>
+     * <li><strong>1</strong>: Handled.</li>
+     * <li><strong>2</strong>: Whitelisted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -99,6 +140,11 @@ public class ListFileProtectClientEventRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The UUID of the server to query.</p>
+     * <blockquote>
+     * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
      */

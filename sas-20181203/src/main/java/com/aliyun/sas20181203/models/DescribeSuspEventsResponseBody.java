@@ -490,7 +490,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>8</p>
          */
         @NameInMap("EventStatus")
         public Integer eventStatus;
@@ -584,7 +584,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
          * <p>The name of the Kubernetes cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>k8s-daily</p>
+         * <p>test-daily</p>
          */
         @NameInMap("K8sClusterName")
         public String k8sClusterName;
@@ -693,7 +693,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
          * <p>The advanced whitelist rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;uuid\&quot;:\&quot;ALL\&quot;,\&quot;field\&quot;:\&quot;gmtModified\&quot;,\&quot;operate\&quot;:\&quot;contains\&quot;,\&quot;fieldValue\&quot;:\&quot;222\&quot;}]</p>
+         * <p><strong>1.</strong>&amp;nbsp&amp;nbsppath&amp;nbsp&amp;nbspcontain&amp;nbsp&amp;nbsp232&amp;nbsp&amp;nbsp</p>
          */
         @NameInMap("MarkMisRules")
         public String markMisRules;

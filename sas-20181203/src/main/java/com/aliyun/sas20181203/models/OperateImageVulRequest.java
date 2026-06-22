@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class OperateImageVulRequest extends TeaModel {
     /**
-     * <p>The information about the vulnerability. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <p>The information about the vulnerability to be processed. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li>namespace: the namespace of the image</li>
-     * <li>repoName: the name of the Container Registry repository</li>
-     * <li>regionId: the region ID</li>
-     * <li>instanceId: the ID of the Container Registry instance</li>
-     * <li>repoId: the name of the repository</li>
-     * <li>tag: the tad added to the image</li>
-     * <li>digest: the digest of the image</li>
-     * <li>newTag: the tag added to the image after the vulnerability is fixed</li>
-     * <li>uuid: the UUID of the image</li>
-     * <li>ids: the IDs of the vulnerability primary keys</li>
+     * <li>namespace: the image namespace.</li>
+     * <li>repoName: the name of the ACR image repository.</li>
+     * <li>regionId: the region.</li>
+     * <li>instanceId: the ID of the ACR instance.</li>
+     * <li>repoId: the ID of the repository.</li>
+     * <li>tag: the original tag of the image.</li>
+     * <li>digest: the digest of the image.</li>
+     * <li>newTag: the tag of the image after the fix.</li>
+     * <li>uuid: the UUID of the image.</li>
+     * <li>ids: the list of primary key IDs of the vulnerabilities.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class OperateImageVulRequest extends TeaModel {
     public String info;
 
     /**
-     * <p>If you want to fix the vulnerability, set the value to vul_fix.</p>
+     * <p>The operation type for image vulnerability fix. Set this parameter to vul_fix.</p>
      * 
      * <strong>example:</strong>
      * <p>vul_fix</p>
@@ -35,7 +35,7 @@ public class OperateImageVulRequest extends TeaModel {
     public String operateType;
 
     /**
-     * <p>The type of the vulnerability. Set the value to cve.</p>
+     * <p>The vulnerability type. Set this parameter to cve.</p>
      * 
      * <strong>example:</strong>
      * <p>cve</p>

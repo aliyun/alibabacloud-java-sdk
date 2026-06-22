@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventMarkMissListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeSecurityEventMarkMissListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the alert event. The value indicates a subtype.</p>
+     * <p>The alert event name (child class).</p>
      * 
      * <strong>example:</strong>
      * <p>Login with unusual location</p>
@@ -24,7 +24,7 @@ public class DescribeSecurityEventMarkMissListRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * <p>The number of whitelist rules to display on each page in a paged query. Default value: <strong>20</strong>, which indicates that 20 whitelist rules are displayed on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeSecurityEventMarkMissListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The condition that is used to query alert events by asset. You can enter an IP address, a public IP address, an internal IP address, or an asset name for fuzzy match.</p>
+     * <p>The asset search keyword. You can enter the IP address, public IP address, private IP address, or asset name for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -46,7 +46,7 @@ public class DescribeSecurityEventMarkMissListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>125.210.XX.XX</p>

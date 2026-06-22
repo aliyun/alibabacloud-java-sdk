@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteUnknownThreatDetectProcessRequest extends TeaModel {
+    /**
+     * <p>The IDs of the processes to delete.</p>
+     */
     @NameInMap("ProcessIdList")
     public java.util.List<String> processIdList;
 

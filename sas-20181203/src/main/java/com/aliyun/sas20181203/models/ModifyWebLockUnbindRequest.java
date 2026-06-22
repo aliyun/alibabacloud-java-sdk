@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockUnbindRequest extends TeaModel {
     /**
-     * <p>The UUID of the server for which you want to disable web tamper proofing.</p>
+     * <p>The UUID of the server from which you want to remove the protection directories.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> operation to query the UUIDs of servers.</p>
+     * <p>Call <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> to obtain the UUID of the server.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

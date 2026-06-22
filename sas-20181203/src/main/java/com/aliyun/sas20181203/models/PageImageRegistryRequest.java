@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PageImageRegistryRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class PageImageRegistryRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class PageImageRegistryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the image repository. Fuzzy match is supported.</p>
+     * <p>The image repository name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>asa</p>
@@ -32,13 +32,13 @@ public class PageImageRegistryRequest extends TeaModel {
     public String registryNameLike;
 
     /**
-     * <p>The types of image repositories.</p>
+     * <p>The list of image repository types to include.</p>
      */
     @NameInMap("RegistryTypeInList")
     public java.util.List<String> registryTypeInList;
 
     /**
-     * <p>The types of excluded image repositories.</p>
+     * <p>The list of image repository types to exclude.</p>
      */
     @NameInMap("RegistryTypeNotInList")
     public java.util.List<String> registryTypeNotInList;

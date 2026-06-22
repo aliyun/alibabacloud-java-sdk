@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogstoreStorageRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+     * <p>The identifier of the request source. Set this parameter to <strong>sas</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class DescribeLogstoreStorageRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

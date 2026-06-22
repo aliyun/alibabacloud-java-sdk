@@ -7,7 +7,7 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,19 +17,22 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     public Long checkId;
 
     /**
-     * <p>List of item IDs to be checked.</p>
+     * <p>The list of IDs of the check items.</p>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
     /**
-     * <p>The instance IDs of the assets on which risks are detected based on the check item.</p>
+     * <p>The list of instance IDs of the assets affected by the check item.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The source of task.</p>
+     * <p>The source of the task. Valid values:</p>
+     * <ul>
+     * <li><strong>YAO_CHI</strong>: YaoChi console.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>YAO_CHI</p>

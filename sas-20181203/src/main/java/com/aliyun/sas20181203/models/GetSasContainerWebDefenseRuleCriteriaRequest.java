@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSasContainerWebDefenseRuleCriteriaRequest extends TeaModel {
     /**
-     * <p>The value of the search condition. Fuzzy match is supported.</p>
+     * <p>The value of the query criterion. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>525</p>

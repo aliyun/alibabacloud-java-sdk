@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetSwitchRegionDetailRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class GetSwitchRegionDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the migration operation. Valid values:</p>
+     * <p>The service switchover type. Valid values:</p>
      * <ul>
-     * <li><strong>sg_switch</strong>: the migration of a server from a region in the Chinese mainland to the Singapore region.</li>
-     * <li><strong>sls_meta_version_switch_stage_1</strong>: the upgrade of log dictionaries.</li>
+     * <li><strong>sg_switch</strong>: The server connection is migrated from China to Singapore.</li>
+     * <li><strong>sls_meta_version_switch_stage_1</strong>: The log analysis delivery field upgrade switchover.</li>
      * </ul>
      * 
      * <strong>example:</strong>

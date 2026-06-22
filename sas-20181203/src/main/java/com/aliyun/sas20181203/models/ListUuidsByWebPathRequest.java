@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUuidsByWebPathRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page to display in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListUuidsByWebPathRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to display on each page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class ListUuidsByWebPathRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The path type of the web directory. Valid values:</p>
+     * <p>The type of the web path. Valid values:</p>
      * <ul>
-     * <li><strong>def</strong>: automatically identified</li>
-     * <li><strong>customize</strong>: manually added</li>
+     * <li><strong>def</strong>: automatically identified by the system</li>
+     * <li><strong>customize</strong>: manually added.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListUuidsByWebPathRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The path to the web directory.</p>
+     * <p>The web path.</p>
      * 
      * <strong>example:</strong>
      * <p>/root/www****</p>

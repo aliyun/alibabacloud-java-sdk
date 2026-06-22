@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectStrategyRequest extends TeaModel {
     /**
+     * <p>The page number for a paginated query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListUnknownThreatDetectStrategyRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The strategy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>210****</p>
      */
@@ -21,6 +24,8 @@ public class ListUnknownThreatDetectStrategyRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The strategy name.</p>
+     * 
      * <strong>example:</strong>
      * <p>strategy****</p>
      */
@@ -28,6 +33,7 @@ public class ListUnknownThreatDetectStrategyRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of entries to return per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,14 @@ public class ListUnknownThreatDetectStrategyRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The whitelist mode. Valid values:</p>
+     * <ul>
+     * <li><p><strong>hash</strong>: process hash</p>
+     * </li>
+     * <li><p><strong>path</strong>: process path</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hash</p>
      */

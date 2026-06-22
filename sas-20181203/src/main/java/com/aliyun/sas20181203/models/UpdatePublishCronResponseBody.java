@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePublishCronResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1052B989-305B-50A5-B5F5-998450******</p>

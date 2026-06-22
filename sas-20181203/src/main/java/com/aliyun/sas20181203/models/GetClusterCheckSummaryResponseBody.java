@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetClusterCheckSummaryResponseBody extends TeaModel {
     /**
-     * <p>Return data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetClusterCheckSummaryResponseBodyData data;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
@@ -42,7 +42,7 @@ public class GetClusterCheckSummaryResponseBody extends TeaModel {
 
     public static class GetClusterCheckSummaryResponseBodyData extends TeaModel {
         /**
-         * <p>Total number of items that failed the check.</p>
+         * <p>The total number of check items that failed the check.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -51,7 +51,7 @@ public class GetClusterCheckSummaryResponseBody extends TeaModel {
         public Integer notPassCount;
 
         /**
-         * <p>Number of high-risk inspection items that have not passed.</p>
+         * <p>The number of check items with a high-risk level that failed the check.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class GetClusterCheckSummaryResponseBody extends TeaModel {
         public Integer notPassHighCount;
 
         /**
-         * <p>Number of low-risk inspection items that have not passed.</p>
+         * <p>The number of check items with a low-risk level that failed the check.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -69,7 +69,7 @@ public class GetClusterCheckSummaryResponseBody extends TeaModel {
         public Integer notPassLowCount;
 
         /**
-         * <p>Number of medium-risk failed inspection items.</p>
+         * <p>The number of check items with a medium-risk level that failed the check.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ReceiveFunctionTrialRewardByAliUidRequest extends TeaModel {
     /**
-     * <p>The name of the feature for which you want to apply for a free trial. Valid values:</p>
+     * <p>The name of the trial feature. Valid values:</p>
      * <ul>
      * <li><strong>trail_honeypot_reward</strong>: cloud honeypot</li>
-     * <li><strong>trail_file_detect_api_reward</strong>: SDK for malicious file detection</li>
+     * <li><strong>trail_file_detect_api_reward</strong>: malicious file detection SDK.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ReceiveFunctionTrialRewardByAliUidRequest extends TeaModel {
     public String functionName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

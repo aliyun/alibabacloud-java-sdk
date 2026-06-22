@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUninstallAegisMachinesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the first page to display in the query results. Default value: <strong>1</strong>, which indicates that the query results are displayed from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -14,9 +14,9 @@ public class ListUninstallAegisMachinesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The operating system of the server.</p>
+     * <p>The operating system.</p>
      * <blockquote>
-     * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>osType</strong>, the value of the <strong>Values</strong> parameter indicates an operating system.</p>
+     * <p>You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to obtain supported operating systems from the <strong>Values</strong> of the item whose <strong>Name</strong> is <strong>osType</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ListUninstallAegisMachinesRequest extends TeaModel {
     public String os;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>5</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>5</strong>, which indicates that 5 entries are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -35,9 +35,9 @@ public class ListUninstallAegisMachinesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the server resides.</p>
+     * <p>The region where the server resides.</p>
      * <blockquote>
-     * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>regionId</strong>, the value of the <strong>Values</strong> parameter indicates a region ID.</p>
+     * <p>You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to obtain supported regions from the <strong>Values</strong> of the item whose <strong>Name</strong> is <strong>regionId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,9 +47,9 @@ public class ListUninstallAegisMachinesRequest extends TeaModel {
     public String regionIdStr;
 
     /**
-     * <p>The region in which the server resides.</p>
+     * <p>The region where the server resides.</p>
      * <blockquote>
-     * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>regionId</strong>, the value of the <strong>Values</strong> parameter indicates a region ID.</p>
+     * <p>You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to obtain supported regions from the <strong>Values</strong> of the item whose <strong>Name</strong> is <strong>regionId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class ListUninstallAegisMachinesRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The information about the server that you want to query. The value can be the name or the public IP address of the server.</p>
+     * <p>The asset information to query. You can set this parameter to the asset name or public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>172.20.XX.XX</p>
@@ -68,7 +68,7 @@ public class ListUninstallAegisMachinesRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>180.113.XX.XX</p>
@@ -77,13 +77,13 @@ public class ListUninstallAegisMachinesRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The source of the server. Valid values:</p>
+     * <p>The server vendor. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
-     * <li><strong>1</strong>: a third-party cloud server</li>
-     * <li><strong>2</strong>: a server in a data center</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
-     * <li><strong>8</strong>: a lightweight asset</li>
+     * <li><strong>0</strong>: Alibaba Cloud asset</li>
+     * <li><strong>1</strong>: non-cloud asset</li>
+     * <li><strong>2</strong>: IDC asset</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>: third-party cloud asset</li>
+     * <li><strong>8</strong>: lightweight asset.</li>
      * </ul>
      * 
      * <strong>example:</strong>

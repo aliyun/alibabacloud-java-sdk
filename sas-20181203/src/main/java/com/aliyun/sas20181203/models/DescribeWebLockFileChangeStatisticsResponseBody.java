@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array consisting of the files that are changed.</p>
+     * <p>The list of web tamper-proofing events.</p>
      */
     @NameInMap("List")
     public java.util.List<DescribeWebLockFileChangeStatisticsResponseBodyList> list;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>709A8C3D-A543-5B79-AB75-361B206F71D9</p>
@@ -38,7 +38,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of files that are attempted to change.</p>
+     * <p>The total number of web tamper-proofing events.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -102,7 +102,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The file path.</p>
+         * <p>The path of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp</p>

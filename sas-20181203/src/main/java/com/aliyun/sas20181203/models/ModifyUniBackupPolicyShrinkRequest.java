@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The username of the database account.</p>
      * 
      * <strong>example:</strong>
      * <p>sa</p>
@@ -23,12 +23,12 @@ public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The policy for full backup. The value of this parameter is a JSON string that contains the following fields:</p>
+     * <p>The full backup policy. The value is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>start</strong>: the start time of a backup task</li>
-     * <li><strong>interval</strong>: the interval of backup tasks</li>
-     * <li><strong>type</strong>: the unit of the interval</li>
-     * <li><strong>days</strong>: the days of a week on which a backup task is performed</li>
+     * <li><strong>start</strong>: the backup start time.</li>
+     * <li><strong>interval</strong>: the interval.</li>
+     * <li><strong>type</strong>: the unit of the interval.</li>
+     * <li><strong>days</strong>: the days of the week on which the backup is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,12 +38,12 @@ public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     public String fullPlanShrink;
 
     /**
-     * <p>The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:</p>
+     * <p>The incremental backup policy. The value is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>start</strong>: the start time of a backup task</li>
-     * <li><strong>interval</strong>: the interval of backup tasks</li>
-     * <li><strong>type</strong>: the unit of the interval</li>
-     * <li><strong>days</strong>: the days of a week on which a backup task is performed</li>
+     * <li><strong>start</strong>: the backup start time.</li>
+     * <li><strong>interval</strong>: the interval.</li>
+     * <li><strong>type</strong>: the unit of the interval.</li>
+     * <li><strong>days</strong>: the days of the week on which the backup is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,9 +53,9 @@ public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     public String incPlanShrink;
 
     /**
-     * <p>The ID of the anti-ransomware policy.</p>
+     * <p>The ID of the anti-ransomware backup policy for databases.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+     * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -66,7 +66,7 @@ public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     public Long policyId;
 
     /**
-     * <p>The name of the anti-ransomware policy.</p>
+     * <p>The name of the anti-ransomware backup policy for databases.</p>
      * 
      * <strong>example:</strong>
      * <p>databak</p>
@@ -75,10 +75,10 @@ public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The status of the anti-ransomware policy. Valid values:</p>
+     * <p>The status of the policy. Valid values:</p>
      * <ul>
-     * <li><strong>enabled</strong></li>
-     * <li><strong>disabled</strong></li>
+     * <li><strong>enabled</strong>: The policy is enabled.</li>
+     * <li><strong>disabled</strong>: The policy is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     public String policyStatus;
 
     /**
-     * <p>The retention period of the backup snapshot.</p>
+     * <p>The number of days for which backup snapshots are retained.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -97,7 +97,7 @@ public class ModifyUniBackupPolicyShrinkRequest extends TeaModel {
     public Integer retention;
 
     /**
-     * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+     * <p>The network bandwidth throttling for backup network bandwidth. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1048576</p>

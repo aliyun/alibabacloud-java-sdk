@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListSystemAggregationRulesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the aggregation types.</p>
+     * <p>The result list.</p>
      */
     @NameInMap("AggregationList")
     public java.util.List<ListSystemAggregationRulesResponseBodyAggregationList> aggregationList;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination information of the query result.</p>
      */
     @NameInMap("PageInfo")
     public ListSystemAggregationRulesResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6800B790-B10A-5C2F-BEB3-F1D5CE61****</p>
@@ -56,7 +56,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
 
     public static class ListSystemAggregationRulesResponseBodyAggregationList extends TeaModel {
         /**
-         * <p>The ID of the aggregation type.</p>
+         * <p>The ID of the rule cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -65,16 +65,16 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The name of the aggregation type.</p>
+         * <p>The name of the rule cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>Remote control\<em>\</em>\<em>\</em></p>
+         * <p>远程控制****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The number of rules that are of the aggregation type.</p>
+         * <p>The number of rules in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -115,7 +115,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
 
     public static class ListSystemAggregationRulesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -124,7 +124,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -133,7 +133,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

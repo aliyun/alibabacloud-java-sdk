@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetCheckConfigResponseBody extends TeaModel {
     /**
-     * <p>The days in a week on which an automatic check is performed.</p>
+     * <p>The periodic check schedule.</p>
      */
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
     /**
-     * <p>Indicates whether the check for new check items in the selected requirement item is enabled by default. Valid values:</p>
+     * <p>Indicates whether new check items added to the selected standards are checked by default. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true:</strong> Enabled.</li>
+     * <li><strong>false:</strong> Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
     public Boolean enableAddCheck;
 
     /**
-     * <p>Indicates whether the automatic check is enabled. Valid values:</p>
+     * <p>Indicates whether automatic periodic checks are enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true:</strong> Enabled.</li>
+     * <li><strong>false:</strong> Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,12 +37,12 @@ public class GetCheckConfigResponseBody extends TeaModel {
     public Boolean enableAutoCheck;
 
     /**
-     * <p>The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:</p>
+     * <p>The end time of the check period, indicating the hour of the day. The start time and end time must fall within one of the following time ranges:</p>
      * <ul>
-     * <li><strong>00:00 to 06:00</strong>: If StartTime is set to 00:00, EndTime must be set to 06:00.</li>
-     * <li><strong>06:00 to 12:00</strong>: If StartTime is set to 06:00, EndTime must be set to 12:00.</li>
-     * <li><strong>12:00 to 18:00</strong>: If StartTime is set to 12:00, EndTime must be set to 18:00.</li>
-     * <li><strong>18:00 to 24:00</strong>: If StartTime is set to 18:00, EndTime must be set to 24:00.</li>
+     * <li><strong>0~6</strong>: If the start time is 0, the end time must be set to 6.</li>
+     * <li><strong>6~12</strong>: If the start time is 6, the end time must be set to 12.</li>
+     * <li><strong>12~18</strong>: If the start time is 12, the end time must be set to 18.</li>
+     * <li><strong>18~24</strong>: If the start time is 18, the end time must be set to 24.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
     public Integer endTime;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>5A3D5C8F-2A42-5477-BDD8-27E64B5F1739</p>
@@ -67,13 +67,13 @@ public class GetCheckConfigResponseBody extends TeaModel {
     public java.util.List<GetCheckConfigResponseBodySelectedChecks> selectedChecks;
 
     /**
-     * <p>The information about the check items.</p>
+     * <p>The list of check item information.</p>
      */
     @NameInMap("Standards")
     public java.util.List<GetCheckConfigResponseBodyStandards> standards;
 
     /**
-     * <p>The start time of the check. The value indicates a point in time.</p>
+     * <p>The start time of the check period, indicating the hour of the day.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -206,16 +206,16 @@ public class GetCheckConfigResponseBody extends TeaModel {
          * <p>The name of the check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cloud service configuration management</p>
+         * <p>云产品配置管理</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
-         * <p>The status of the check item. Valid values:</p>
+         * <p>The enabling status of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>ON</strong>: The check item is enabled.</li>
-         * <li><strong>OFF</strong>: The check item is disabled.</li>
+         * <li><strong>ON:</strong> Enabled.</li>
+         * <li><strong>OFF:</strong> Shutdown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,9 +227,9 @@ public class GetCheckConfigResponseBody extends TeaModel {
         /**
          * <p>The type of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>RISK</strong>: cloud service configuration management</li>
-         * <li><strong>IDENTITY_PERMISSION</strong>: identity and permission management</li>
-         * <li><strong>COMPLIANCE</strong>: compliance</li>
+         * <li><strong>RISK:</strong> cloud service configuration management</li>
+         * <li><strong>IDENTITY_PERMISSION:</strong> permission management</li>
+         * <li><strong>COMPLIANCE:</strong> compliance.</li>
          * </ul>
          * 
          * <strong>example:</strong>

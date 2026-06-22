@@ -11,7 +11,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
     public DescribeOnceTaskResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
@@ -20,7 +20,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the tasks.</p>
+     * <p>The list of client task query results.</p>
      */
     @NameInMap("TaskManageResponseList")
     public java.util.List<DescribeOnceTaskResponseBodyTaskManageResponseList> taskManageResponseList;
@@ -56,7 +56,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
 
     public static class DescribeOnceTaskResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of client tasks displayed on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -65,7 +65,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -74,7 +74,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of client tasks per page in a paged query. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -83,7 +83,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of client tasks returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -132,19 +132,19 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
 
     public static class DescribeOnceTaskResponseBodyTaskManageResponseList extends TeaModel {
         /**
-         * <p>The execution details of the task. The value of this parameter is in the JSON format.</p>
+         * <p>The task execution details. This parameter is in JSON format.</p>
          * <ul>
-         * <li><strong>causeCode</strong>: the returned code for the cause.</li>
-         * <li><strong>causeMsg</strong>: the returned message for the cause.</li>
-         * <li><strong>resCode</strong>: the returned code for troubleshooting.</li>
-         * <li><strong>resMsg</strong>: the returned message for troubleshooting.</li>
-         * <li><strong>problemType</strong>: the type of the issue.</li>
-         * <li><strong>dispatchType</strong>: the task delivery method.</li>
-         * <li><strong>uuid</strong>: the UUID of the server.</li>
-         * <li><strong>instanceId</strong>: the instance ID of the server.</li>
+         * <li><strong>causeCode</strong>: the return code of the troubleshooting cause.</li>
+         * <li><strong>causeMsg</strong>: the return message of the troubleshooting cause.</li>
+         * <li><strong>resCode</strong>: the troubleshooting return code.</li>
+         * <li><strong>resMsg</strong>: the troubleshooting return message.</li>
+         * <li><strong>problemType</strong>: the problem type.</li>
+         * <li><strong>dispatchType</strong>: the task dispatch method.</li>
+         * <li><strong>uuid</strong>: the server UUID.</li>
+         * <li><strong>instanceId</strong>: the ID of the server instance.</li>
          * <li><strong>internetIp</strong>: the public IP address of the server.</li>
          * <li><strong>intranetIp</strong>: the private IP address of the server.</li>
-         * <li><strong>instanceName</strong>: the instance name of the server.</li>
+         * <li><strong>instanceName</strong>: the name of the server instance.</li>
          * <li><strong>url</strong>: the download URL of the troubleshooting log.</li>
          * </ul>
          * 
@@ -169,7 +169,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public String detailData;
 
         /**
-         * <p>The number of tasks that fail to be executed.</p>
+         * <p>The number of tasks that failed to be executed.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -178,7 +178,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public Integer failCount;
 
         /**
-         * <p>The progress of the task. Unit: percent (%).</p>
+         * <p>The task progress, in percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>10%</p>
@@ -187,7 +187,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The execution result of the task.</p>
+         * <p>The task execution result.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -196,7 +196,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
-         * <p>The number of tasks that are executed.</p>
+         * <p>The number of tasks that are executed successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -205,7 +205,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
-         * <p>The timestamp that indicates the time when the task ends. Unit: milliseconds.</p>
+         * <p>The timestamp when the task actually ends. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1650267989000</p>
@@ -223,7 +223,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>CLIENT_PROBLEM_CHECK</p>
@@ -232,7 +232,7 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The timestamp that indicates the time when the task starts. Unit: milliseconds.</p>
+         * <p>The timestamp when the task actually starts. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649732012000</p>
@@ -241,12 +241,12 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public Long taskStartTime;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The task is started.</li>
-         * <li><strong>2</strong>: The task is complete.</li>
-         * <li><strong>3</strong>: The task fails.</li>
-         * <li><strong>4</strong>: The task times out.</li>
+         * <li><strong>1</strong>: Started.</li>
+         * <li><strong>2</strong>: Completed.</li>
+         * <li><strong>3</strong>: Failed.</li>
+         * <li><strong>4</strong>: Timed out.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,14 +256,14 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public Integer taskStatus;
 
         /**
-         * <p>The text description of the status for the task. Valid values:</p>
+         * <p>The text representation of the task status. Valid values:</p>
          * <ul>
-         * <li><strong>INIT</strong>: The task is pending start.</li>
-         * <li><strong>START</strong>: The task is started.</li>
-         * <li><strong>DISPATCH</strong>: The self-check command is issued.</li>
-         * <li><strong>SUCCESS</strong>: The self-check is complete.</li>
-         * <li><strong>FAIL</strong>: The task fails.</li>
-         * <li><strong>TIMEOUT</strong>: The task times out.</li>
+         * <li><strong>INIT</strong>: Pending.</li>
+         * <li><strong>START</strong>: Started.</li>
+         * <li><strong>DISPATCH</strong>: Self-check command dispatched.</li>
+         * <li><strong>SUCCESS</strong>: Self-check completed.</li>
+         * <li><strong>FAIL</strong>: Execution failed.</li>
+         * <li><strong>TIMEOUT</strong>: Timed out.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,11 +273,11 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         public String taskStatusText;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center client</li>
-         * <li><strong>CLIENT_DEV_OPS</strong>: an O\&amp;M task of Cloud Assistant</li>
-         * <li><strong>ASSET_SECURITY_CHECK</strong>: a task for asset information collection</li>
+         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client task</li>
+         * <li><strong>CLIENT_DEV_OPS</strong>: cloud O&amp;M task</li>
+         * <li><strong>ASSET_SECURITY_CHECK</strong>: asset information collection task.</li>
          * </ul>
          * 
          * <strong>example:</strong>

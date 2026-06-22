@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class OpenSensitiveFileScanRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable or disable sensitive file scan. Valid values:</p>
+     * <p>The switch operation. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enables sensitive file scan</li>
-     * <li><strong>off</strong>: disables sensitive file scan</li>
+     * <li><strong>on</strong>: Enable.</li>
+     * <li><strong>off</strong>: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>

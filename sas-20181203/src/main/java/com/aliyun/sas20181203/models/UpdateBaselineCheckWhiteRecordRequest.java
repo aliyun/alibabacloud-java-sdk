@@ -7,7 +7,7 @@ public class UpdateBaselineCheckWhiteRecordRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</p>
+     * <p>Call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,10 @@ public class UpdateBaselineCheckWhiteRecordRequest extends TeaModel {
     public Long checkId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,10 +30,10 @@ public class UpdateBaselineCheckWhiteRecordRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The reason why the check item is added to the whitelist.</p>
+     * <p>The reason for adding the whitelist entry.</p>
      * 
      * <strong>example:</strong>
-     * <p>AutoRun</p>
+     * <p>Manually processed.</p>
      */
     @NameInMap("Reason")
     public String reason;
@@ -48,7 +48,7 @@ public class UpdateBaselineCheckWhiteRecordRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>A list of asset UUIDs from which container names need to be removed from the whitelist.</p>
+     * <p>The list of asset UUIDs for which container names are to be removed from the whitelist.</p>
      */
     @NameInMap("RemoveContainerUuids")
     public java.util.List<String> removeContainerUuids;
@@ -56,8 +56,8 @@ public class UpdateBaselineCheckWhiteRecordRequest extends TeaModel {
     /**
      * <p>The data source. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: server</li>
-     * <li><strong>agentless</strong>: agentless detection</li>
+     * <li><strong>default</strong>: host</li>
+     * <li><strong>agentless</strong>: agentless.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,10 +67,10 @@ public class UpdateBaselineCheckWhiteRecordRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The type of the assets on which the whitelist rule takes effect. Valid values:</p>
+     * <p>The type of the target on which the whitelist takes effect. Valid values:</p>
      * <ul>
      * <li><strong>all_instance</strong>: all servers</li>
-     * <li><strong>instance</strong>: specific servers</li>
+     * <li><strong>instance</strong>: specific servers.</li>
      * </ul>
      * 
      * <strong>example:</strong>

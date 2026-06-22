@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetAegisContainerPluginRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the defense rule against container escapes.</p>
+     * <p>The ID of the container escape prevention rule.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> operation to obtain the ID.</p>
+     * <p>You can call the <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> operation to query this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetAegisContainerPluginRuleRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -30,10 +30,10 @@ public class GetAegisContainerPluginRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: custom rule</li>
-     * <li><strong>1</strong>: system rule</li>
+     * <li><strong>0</strong>: user-defined</li>
+     * <li><strong>1</strong>: system built-in</li>
      * </ul>
      * 
      * <strong>example:</strong>

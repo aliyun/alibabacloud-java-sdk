@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AF20EB0-EBBC-4B94-9B84-F3BAFAC53EDE</p>
@@ -14,7 +14,7 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about whether Security Center is authorized to run configuration checks on cloud services.</p>
+     * <p>The authorization information for cloud baseline configuration check.</p>
      */
     @NameInMap("UserBaselineAuthorization")
     public DescribeUserBaselineAuthorizationResponseBodyUserBaselineAuthorization userBaselineAuthorization;
@@ -42,10 +42,10 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
 
     public static class DescribeUserBaselineAuthorizationResponseBodyUserBaselineAuthorization extends TeaModel {
         /**
-         * <p>Indicates whether Security Center is authorized to run configuration checks on cloud services.</p>
+         * <p>The authorization status of the cloud platform configuration check. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no. Security Center is not authorized to run configuration checks on cloud services.</li>
-         * <li><strong>1</strong>: yes. Security Center is authorized to run configuration checks on cloud services.</li>
+         * <li><strong>0</strong>: Authorization is disabled. If authorization is disabled, you cannot use the cloud platform configuration check feature.</li>
+         * <li><strong>1</strong>: Authorization is enabled. If authorization is enabled, you can use the cloud platform configuration check feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>

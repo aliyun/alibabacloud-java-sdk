@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the check results of image baselines.</p>
+     * <p>The details of the image baseline check list.</p>
      */
     @NameInMap("BaselineResultSummary")
     public java.util.List<DescribeImageBaselineCheckSummaryResponseBodyBaselineResultSummary> baselineResultSummary;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The paging information displayed on the page in a paged query.</p>
      */
     @NameInMap("PageInfo")
     public DescribeImageBaselineCheckSummaryResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>5BD95679-D63A-4151-97D0-188432F4A57</p>
@@ -56,7 +56,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineCheckSummaryResponseBodyBaselineResultSummary extends TeaModel {
         /**
-         * <p>The category of the baseline.</p>
+         * <p>The baseline category.</p>
          * 
          * <strong>example:</strong>
          * <p>Unauthorized access</p>
@@ -74,7 +74,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public String baselineClassKey;
 
         /**
-         * <p>The name of the baseline.</p>
+         * <p>The baseline name.</p>
          * 
          * <strong>example:</strong>
          * <p>Unauthorized access</p>
@@ -92,11 +92,14 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public String baselineNameKey;
 
         /**
-         * <p>The severity of the image baseline. Valid values:</p>
+         * <p>The risk level of the baseline. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><p><strong>high</strong>: high risk</p>
+         * </li>
+         * <li><p><strong>medium</strong>: medium risk</p>
+         * </li>
+         * <li><p><strong>low</strong>: low risk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +109,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public String baselineNameLevel;
 
         /**
-         * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the first scan, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1626628760000</p>
@@ -115,7 +118,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Long firstScanTime;
 
         /**
-         * <p>The number of images on which <strong>high</strong> baseline risks are detected.</p>
+         * <p>The number of images with a <strong>high</strong> risk level that have baseline risk issues.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -124,7 +127,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Integer highRiskImage;
 
         /**
-         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the most recent scan, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1626628760000</p>
@@ -133,7 +136,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Long lastScanTime;
 
         /**
-         * <p>The number of images on which <strong>low</strong> baseline risks are detected.</p>
+         * <p>The number of images with a <strong>low</strong> risk level that have baseline risk issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -142,7 +145,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Integer lowRiskImage;
 
         /**
-         * <p>The number of images on which <strong>medium</strong> baseline risks are detected.</p>
+         * <p>The number of images with a <strong>medium</strong> risk level that have baseline risk issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -151,12 +154,12 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Integer middleRiskImage;
 
         /**
-         * <p>The status of the baseline risks. Valid values:</p>
+         * <p>The fix status of the baseline risk. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unfixed</li>
-         * <li><strong>1</strong>: fixed</li>
-         * <li><strong>2</strong>: pending verification</li>
-         * <li><strong>3</strong>: fixing failed</li>
+         * <li><strong>0</strong>: Unfixed.</li>
+         * <li><strong>1</strong>: Fixed.</li>
+         * <li><strong>2</strong>: Pending verification.</li>
+         * <li><strong>3</strong>: Fix failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +265,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineCheckSummaryResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -271,7 +274,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -280,7 +283,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of image baseline check results per page in a paged query. Default value: <strong>20</strong>, which indicates that 20 image baseline check results are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -289,7 +292,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

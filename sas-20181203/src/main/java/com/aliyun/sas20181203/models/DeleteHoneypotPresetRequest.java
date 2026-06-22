@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteHoneypotPresetRequest extends TeaModel {
     /**
-     * <p>The ID of the honeypot template.</p>
+     * <p>The unique ID of the honeypot template.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to query the IDs of honeypot templates.</p>
+     * <p>Call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DeleteHoneypotPresetRequest extends TeaModel {
     public String honeypotPresetId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 

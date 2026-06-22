@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedContainerInstancesRequest extends TeaModel {
     /**
-     * <p>The search conditions for assets. Specify the value in the JSON format. Separate multiple search conditions with commas (,). Example: <code>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</code>.</p>
+     * <p>The conditions for searching assets. This parameter is in JSON format. Separate multiple conditions with commas (,). Example: <code>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</code>.</p>
      * <blockquote>
-     * <p> Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call <a href="~~DescribeCriteria~~">DescribeCriteria</a> to query the supported search conditions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeGroupedContainerInstancesRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,17 +26,17 @@ public class DescribeGroupedContainerInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The keyword that you want to use to query containers. This parameter depends on the value of the GroupField parameter.</p>
+     * <p>The search condition for the specified group type. Set the search condition based on the type specified by GroupField:</p>
      * <ul>
-     * <li>If the <strong>GroupField</strong> parameter is set to <strong>pod</strong>, set this parameter to the name of the pod that you want to query.</li>
-     * <li>If the <strong>GroupField</strong> parameter is set to <strong>appName</strong>, set this parameter to the name of the application that you want to query.</li>
-     * <li>If the <strong>GroupField</strong> parameter is set to <strong>namespace</strong>, set this parameter to the namespace that you want to query.</li>
-     * <li>If the <strong>GroupField</strong> parameter is set to <strong>clusterId</strong>, set this parameter to the ID of the cluster that you want to query.</li>
-     * <li>If the <strong>GroupField</strong> parameter is set to <strong>image</strong>, set this parameter to the name of the image that you want to query.</li>
-     * </ul>
-     * <blockquote>
-     * <p> Fuzzy match is supported.</p>
+     * <li>If <strong>GroupField</strong> is set to <strong>pod</strong>: specify the pod name to query.</li>
+     * <li>If <strong>GroupField</strong> is set to <strong>appName</strong>: specify the application name to query.</li>
+     * <li>If <strong>GroupField</strong> is set to <strong>namespace</strong>: specify the namespace to query.</li>
+     * <li>If <strong>GroupField</strong> is set to <strong>clusterId</strong>: specify the cluster ID to query.</li>
+     * <li>If <strong>GroupField</strong> is set to <strong>image</strong>: specify the image name to query.<blockquote>
+     * <p>All the preceding search conditions support fuzzy match.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cas-adad-qeqwe</p>
@@ -45,13 +45,13 @@ public class DescribeGroupedContainerInstancesRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>The group type that you want to use to query containers. Valid values:</p>
+     * <p>The group type to query. Valid values:</p>
      * <ul>
-     * <li><strong>pod</strong></li>
-     * <li><strong>appName</strong></li>
-     * <li><strong>namespace</strong></li>
-     * <li><strong>clusterId</strong></li>
-     * <li><strong>image</strong></li>
+     * <li><strong>pod</strong>: pod</li>
+     * <li><strong>appName</strong>: application name</li>
+     * <li><strong>namespace</strong>: namespace</li>
+     * <li><strong>clusterId</strong>: cluster ID</li>
+     * <li><strong>image</strong>: image.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,10 +62,10 @@ public class DescribeGroupedContainerInstancesRequest extends TeaModel {
     public String groupField;
 
     /**
-     * <p>The logical relationship that you want to use to evaluate multiple search conditions. Valid values:</p>
+     * <p>The logical relationship among multiple search conditions. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong>: Search conditions are evaluated by using a logical <strong>OR</strong>.</li>
-     * <li><strong>AND</strong>: Search conditions are evaluated by using a logical <strong>AND</strong>.</li>
+     * <li><strong>OR</strong>: The search conditions are evaluated with a logical OR.</li>
+     * <li><strong>AND</strong>: The search conditions are evaluated with a logical AND.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,9 +75,9 @@ public class DescribeGroupedContainerInstancesRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of container assets to display on each page when paging is used. Default value: <strong>20</strong>, which indicates that 20 container assets are displayed on each page.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

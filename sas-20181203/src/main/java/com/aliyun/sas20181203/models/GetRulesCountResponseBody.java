@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRulesCountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The China Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
@@ -23,7 +23,7 @@ public class GetRulesCountResponseBody extends TeaModel {
     public Long totalSystemClientRuleCount;
 
     /**
-     * <p>The total number of custom defense rules.</p>
+     * <p>The total number of user-defined rules.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

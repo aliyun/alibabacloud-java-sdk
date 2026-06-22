@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIdcProbeListRequest extends TeaModel {
     /**
-     * <p>Sets the page number from which to start displaying the query results. The default value is 1, indicating that the display starts from the first page.</p>
+     * <p>The page number of the page to return. Default value: 1, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,9 +23,9 @@ public class DescribeIdcProbeListRequest extends TeaModel {
     public String idcName;
 
     /**
-     * <p>Specifies the maximum number of data entries to display per page in a paginated query. The default number of data entries per page is 20, and if the PageSize parameter is empty, it will default to returning 20 data entries.</p>
+     * <p>The maximum number of entries per page when paging. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p>It is recommended that the PageSize value is not empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class DescribeIdcProbeListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Probe status. Values:</p>
+     * <p>The usage status of the probe. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Enabled</li>
-     * <li><strong>1</strong>: Disabled</li>
+     * <li><strong>0</strong>: enabled</li>
+     * <li><strong>1</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

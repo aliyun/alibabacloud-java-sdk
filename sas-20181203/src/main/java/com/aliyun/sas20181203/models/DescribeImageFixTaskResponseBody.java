@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageFixTaskResponseBody extends TeaModel {
     /**
-     * <p>The tasks returned.</p>
+     * <p>The details of the image repair tasks.</p>
      */
     @NameInMap("BuildTasks")
     public java.util.List<DescribeImageFixTaskResponseBodyBuildTasks> buildTasks;
@@ -17,7 +17,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     public DescribeImageFixTaskResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, which is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8AC52BBA-85D3-5F64-9B48-D08437CAF916</p>
@@ -56,7 +56,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
 
     public static class DescribeImageFixTaskResponseBodyBuildTasks extends TeaModel {
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the image repair task.</p>
          * 
          * <strong>example:</strong>
          * <p>ivf-939536b5-c3ca-427b-8183-91007756</p>
@@ -65,7 +65,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String buildTaskId;
 
         /**
-         * <p>The timestamp when the task starts. Unit: milliseconds.</p>
+         * <p>The timestamp when the repair task started. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-14 20:34:07</p>
@@ -74,7 +74,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The timestamp when the task ends. Unit: milliseconds.</p>
+         * <p>The timestamp when the repair task ended. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-14 20:32:05</p>
@@ -83,7 +83,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String fixTime;
 
         /**
-         * <p>The version of the image after image risks are fixed.</p>
+         * <p>The tag of the repaired image.</p>
          * 
          * <strong>example:</strong>
          * <p>redhat8-vault</p>
@@ -92,7 +92,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String newTag;
 
         /**
-         * <p>The UUID of the image after image risks are fixed.</p>
+         * <p>The UUID of the repaired image.</p>
          * 
          * <strong>example:</strong>
          * <p>2fa731681911ae8d1b5f11893ace****</p>
@@ -101,7 +101,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String newUuid;
 
         /**
-         * <p>The version of the image.</p>
+         * <p>The tag of the original image.</p>
          * 
          * <strong>example:</strong>
          * <p>centos8.1-ja</p>
@@ -110,7 +110,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String oldTag;
 
         /**
-         * <p>The UUID of the image.</p>
+         * <p>The UUID of the original image.</p>
          * 
          * <strong>example:</strong>
          * <p>2fa731681911ae8d1b5f11893ace****</p>
@@ -119,7 +119,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String oldUuid;
 
         /**
-         * <p>The region of the image.</p>
+         * <p>The region ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -146,11 +146,11 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The status of the image repair task. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The task is running.</li>
-         * <li><strong>2</strong>: The task is successful.</li>
-         * <li><strong>3</strong>: The task failed.</li>
+         * <li><strong>1</strong>: Repairing</li>
+         * <li><strong>2</strong>: Repaired</li>
+         * <li><strong>3</strong>: Repair failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The type of the task. The value is fixed as IMAGE_REPAIR. The value indicates a task that fixes image risks.</p>
+         * <p>The type of the image repair task. The value is fixed as IMAGE_REPAIR, which indicates image repair.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE_REPAIR</p>
@@ -169,7 +169,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The alias of the fixed vulnerability.</p>
+         * <p>The name of the vulnerability that was repaired.</p>
          * 
          * <strong>example:</strong>
          * <p>CVE-2007-5686:rpath_linux Information Disclosure</p>
@@ -290,7 +290,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
 
     public static class DescribeImageFixTaskResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of tasks returned on the current page.</p>
+         * <p>The number of image repair tasks on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -299,7 +299,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page. Default value: <strong>1</strong></p>
+         * <p>The page number of the results returned. Default value: <strong>1</strong>, which indicates that the results start from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -308,7 +308,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: <strong>20</strong></p>
+         * <p>The number of entries per page in a paginated query. Default value: <strong>20</strong>, which indicates that up to 20 entries are returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -317,7 +317,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of tasks returned.</p>
+         * <p>The total number of image repair tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

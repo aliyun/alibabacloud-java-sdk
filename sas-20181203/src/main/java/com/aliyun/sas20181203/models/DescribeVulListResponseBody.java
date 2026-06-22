@@ -964,7 +964,7 @@ public class DescribeVulListResponseBody extends TeaModel {
          * <p>The name of the operating system for your asset.</p>
          * 
          * <strong>example:</strong>
-         * <p>CentOS 7.2 64-bit</p>
+         * <p>CentOS  7.2 64位</p>
          */
         @NameInMap("OsName")
         public String osName;

@@ -228,7 +228,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
          * <p>The name of the check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Create Alert Rule</p>
+         * <p>使用SSH密钥对登录</p>
          */
         @NameInMap("CheckName")
         public String checkName;
@@ -541,7 +541,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
          * <p>The server group to which the server belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>sg-bp1iw5enua6gf5i2xr7z</p>
+         * <p>test-group****</p>
          */
         @NameInMap("GroupNo")
         public String groupNo;

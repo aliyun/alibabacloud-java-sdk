@@ -92,8 +92,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The type of the source node. Valid values:</p>
          * <ul>
-         * <li><strong>cluster</strong>: a cluster.</li>
-         * <li><strong>internet</strong>: a network node outside the cluster</li>
+         * <li><p><strong>cluster</strong>: a cluster.</p>
+         * </li>
+         * <li><p><strong>internet</strong>: a network node outside the cluster</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,8 +163,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The status of the microsegmentation switch. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: off.</li>
-         * <li><strong>1</strong>: on.</li>
+         * <li><p><strong>0</strong>: off.</p>
+         * </li>
+         * <li><p><strong>1</strong>: on.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,8 +187,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: classic network.</li>
-         * <li><strong>1</strong>: virtual private cloud (VPC).</li>
+         * <li><p><strong>0</strong>: classic network.</p>
+         * </li>
+         * <li><p><strong>1</strong>: virtual private cloud (VPC).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,8 +211,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The status of the network topology switch. Valid values:</p>
          * <ul>
-         * <li><strong>ON</strong></li>
-         * <li><strong>OFF</strong></li>
+         * <li><p><strong>ON</strong></p>
+         * </li>
+         * <li><p><strong>OFF</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,11 +226,16 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>3</strong>: high.</li>
-         * <li><strong>2</strong>: medium.</li>
-         * <li><strong>1</strong>: low.</li>
-         * <li><strong>0</strong>: secure.</li>
-         * <li><strong>-1</strong>: unknown.</li>
+         * <li><p><strong>3</strong>: high.</p>
+         * </li>
+         * <li><p><strong>2</strong>: medium.</p>
+         * </li>
+         * <li><p><strong>1</strong>: low.</p>
+         * </li>
+         * <li><p><strong>0</strong>: secure.</p>
+         * </li>
+         * <li><p><strong>-1</strong>: unknown.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,8 +247,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The type of the node. Valid values:</p>
          * <ul>
-         * <li><strong>cluster</strong>: a cluster.</li>
-         * <li><strong>internet</strong>: a network node outside the cluster.</li>
+         * <li><p><strong>cluster</strong>: a cluster.</p>
+         * </li>
+         * <li><p><strong>internet</strong>: a network node outside the cluster.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

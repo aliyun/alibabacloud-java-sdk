@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHoneypotProbeRequest extends TeaModel {
     /**
-     * <p>Specifies whether address resolution protocol (ARP) is enabled for the check type.</p>
+     * <p>The ARP check type.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class UpdateHoneypotProbeRequest extends TeaModel {
     public Boolean arp;
 
     /**
-     * <p>The name of the probe.</p>
+     * <p>The probe name.</p>
      * 
      * <strong>example:</strong>
      * <p>svwsx-vpc-4430</p>
@@ -23,9 +23,9 @@ public class UpdateHoneypotProbeRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -36,7 +36,7 @@ public class UpdateHoneypotProbeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether ping is enabled for the check type.</p>
+     * <p>The ping detection type.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -45,9 +45,9 @@ public class UpdateHoneypotProbeRequest extends TeaModel {
     public Boolean ping;
 
     /**
-     * <p>The ID of the probe.</p>
+     * <p>The probe ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+     * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +58,7 @@ public class UpdateHoneypotProbeRequest extends TeaModel {
     public String probeId;
 
     /**
-     * <p>The IP addresses that are monitored.</p>
+     * <p>The list of listening IP addresses.</p>
      */
     @NameInMap("ServiceIpList")
     public java.util.List<String> serviceIpList;

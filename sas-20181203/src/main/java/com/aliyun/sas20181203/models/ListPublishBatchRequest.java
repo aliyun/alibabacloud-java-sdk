@@ -8,13 +8,13 @@ public class ListPublishBatchRequest extends TeaModel {
      * <p>The name of the release batch.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>批次1</p>
      */
     @NameInMap("BatchName")
     public String batchName;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page when paging is used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListPublishBatchRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page when paging is used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListPublishBatchRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The destination version of the Security Center agent.</p>
+     * <p>The target version to upgrade to.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

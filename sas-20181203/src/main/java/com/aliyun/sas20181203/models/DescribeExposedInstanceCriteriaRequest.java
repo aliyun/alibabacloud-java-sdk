@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceCriteriaRequest extends TeaModel {
     /**
-     * <p>The ID of the member in the resource directory.</p>
+     * <p>The ID of the member account in the resource directory.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</p>
+     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1232428423234****</p>
+     * <p>127608589417****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;
 
     /**
-     * <p>The value of the search condition. Fuzzy match is supported.</p>
+     * <p>The value of the query condition. Fuzzy match is supported.</p>
      * <blockquote>
-     * <p> You can specify the name, ID, public IP address, private IP address, component, port, or IP address of an exposed asset.</p>
+     * <p>This parameter supports queries by asset name, asset ID, public IP address of the asset, private IP address of the asset, exposed component, exposed port, or exposed IP address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>id</p>
+     * <p>testInstanceName</p>
      */
     @NameInMap("Value")
     public String value;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTargetListByBatchResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The China value is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>FBBEB173-1F43-505F-A876-C03ECD******</p>

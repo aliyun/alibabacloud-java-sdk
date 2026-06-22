@@ -7,7 +7,7 @@ public class ListVulGlobalConfigRequest extends TeaModel {
     /**
      * <p>The key of the configuration item. Valid values:</p>
      * <ul>
-     * <li><strong>vul_scan_ip_list</strong>: The IP addresses that are detected.</li>
+     * <li><strong>vul_scan_ip_list</strong>: the collection of vulnerability scanning IP addresses.</li>
      * </ul>
      * 
      * <strong>example:</strong>

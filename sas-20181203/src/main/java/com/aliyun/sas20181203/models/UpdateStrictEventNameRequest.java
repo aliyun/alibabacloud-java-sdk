@@ -5,19 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateStrictEventNameRequest extends TeaModel {
     /**
-     * <p>List of strict alarms to be operated on. This list is a complete list, and any strict alarms not included in this list will have the opposite operation performed.</p>
+     * <p>The list of strict mode alerts to operate on. This is a full list. Strict mode alerts not included in this list will have the opposite action applied.</p>
      * <blockquote>
-     * <h2>You can call <a href="~~DescribeStrictEventName~~">DescribeStrictEventName</a> to get the list of all strict mode alarms.</h2>
+     * <p>Call <a href="~~DescribeStrictEventName~~">DescribeStrictEventName</a> to obtain the list of all strict mode alerts.
+     * -.</p>
      * </blockquote>
      */
     @NameInMap("EventNameList")
     public java.util.List<String> eventNameList;
 
     /**
-     * <p>Sets the language type for requests and received messages, default is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +28,10 @@ public class UpdateStrictEventNameRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Operation rule determination operator:</p>
+     * <p>The operator for the rule action. Valid values:</p>
      * <ul>
-     * <li><em>on</em>: Turn on the alarm</li>
-     * <li><em>off</em>: Turn off the alarm</li>
+     * <li><em>on</em>: enables alerting</li>
+     * <li><em>off</em>: disables alerting.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

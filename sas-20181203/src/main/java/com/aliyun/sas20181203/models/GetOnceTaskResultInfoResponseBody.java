@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     /**
-     * <p>The execution time of the task.</p>
+     * <p>The time when the task was executed.</p>
      * 
      * <strong>example:</strong>
      * <p>1671184531000</p>
@@ -14,7 +14,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     public Long collectTime;
 
     /**
-     * <p>The number of tasks that were completed.</p>
+     * <p>The number of tasks that have been completed.</p>
      * 
      * <strong>example:</strong>
      * <p>47</p>
@@ -23,7 +23,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     public Integer finishCount;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. This uniquely identifies the request and can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>CE500770-42D3-442E-9DDD-156E0F9F****</p>
@@ -32,7 +32,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the scan task.</p>
+     * <p>The ID of the one-time task.</p>
      * 
      * <strong>example:</strong>
      * <p>e7b70a4b030db086db52231f1b58****</p>
@@ -41,7 +41,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The information about the task.</p>
+     * <p>Details of the task.</p>
      */
     @NameInMap("TaskInfo")
     public GetOnceTaskResultInfoResponseBodyTaskInfo taskInfo;
@@ -112,10 +112,14 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li><strong>INIT</strong>: The task is not started.</li>
-         * <li><strong>START</strong>: The task is started.</li>
-         * <li><strong>SUCCESS</strong>: The task is complete.</li>
-         * <li><strong>TIMEOUT</strong>: The task times out.</li>
+         * <li><p><strong>INIT</strong>: The task is pending start.</p>
+         * </li>
+         * <li><p><strong>START</strong>: The task is running.</p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong>: The task is completed.</p>
+         * </li>
+         * <li><p><strong>TIMEOUT</strong>: The task has timed out.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

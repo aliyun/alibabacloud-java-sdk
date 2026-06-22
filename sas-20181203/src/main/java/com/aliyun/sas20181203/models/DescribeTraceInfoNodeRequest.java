@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTraceInfoNodeRequest extends TeaModel {
     /**
-     * <p>The name of the alert event.</p>
+     * <p>The event name.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the names of alerts events.</p>
+     * <p>For more information, call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The ID of the request source. Set the value to sas.</p>
+     * <p>The source identifier of the request. Set the value to sas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The time when the alert event was first detected.</p>
+     * <p>The time when the event was first detected.</p>
      * 
      * <strong>example:</strong>
      * <p>1635978934000</p>
@@ -36,10 +36,10 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public Long incidentTime;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+     * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.XX.XX</p>
@@ -58,7 +58,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of the vertex. You can call the <a href="~~DescribeTraceInfoDetail~~">DescribeTraceInfoDetail</a> operation to query the types of vertexes.</p>
+     * <p>The vertex type. You can call the <a href="~~DescribeTraceInfoDetail~~">DescribeTraceInfoDetail</a> operation to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUID of the server. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the UUIDs of servers.</p>
+     * <p>The UUID of the server to query. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeTraceInfoNodeRequest extends TeaModel {
     public String uuid;
 
     /**
-     * <p>The ID of the vertex.</p>
+     * <p>The vertex ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

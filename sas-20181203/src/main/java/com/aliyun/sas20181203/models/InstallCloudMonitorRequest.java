@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class InstallCloudMonitorRequest extends TeaModel {
     /**
-     * <p>The AccessKey ID that is required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to query the AccessKey ID.</p>
+     * <p>The AccessKey required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to obtain this parameter.</p>
      * <blockquote>
-     * <p>This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
+     * <p>This parameter is required only when you install the CloudMonitor agent on a non-Alibaba Cloud server.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class InstallCloudMonitorRequest extends TeaModel {
     public String agentAccessKey;
 
     /**
-     * <p>The AccessKey secret that is required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to query the AccessKey secret.</p>
+     * <p>The AccessSecret required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to obtain this parameter.</p>
      * <blockquote>
-     * <p>This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
+     * <p>This parameter is required only when you install the CloudMonitor agent on a non-Alibaba Cloud server.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class InstallCloudMonitorRequest extends TeaModel {
     public String agentSecretKey;
 
     /**
-     * <p>The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183431.html">Overview</a>.</p>
+     * <p>The version of the CloudMonitor agent to install. You can obtain the latest CloudMonitor agent version from <a href="https://help.aliyun.com/document_detail/183431.html">Plugin overview</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,13 +39,13 @@ public class InstallCloudMonitorRequest extends TeaModel {
     public String argusVersion;
 
     /**
-     * <p>The IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).</p>
+     * <p>The list of instance IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).</p>
      */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
     /**
-     * <p>The UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).</p>
+     * <p>The list of UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

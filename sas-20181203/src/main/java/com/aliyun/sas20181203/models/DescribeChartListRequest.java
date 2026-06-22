@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeChartListRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language type for the request and response messages. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class DescribeChartListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The code of the report. Valid value:</p>
+     * <p>The project code. Valid values:</p>
      * <ul>
-     * <li><strong>customize_report</strong></li>
+     * <li><strong>customize_report</strong>: custom report.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,9 @@ public class DescribeChartListRequest extends TeaModel {
     public String projectCode;
 
     /**
-     * <p>The ID of the report.</p>
+     * <p>The report ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+     * <p>Call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

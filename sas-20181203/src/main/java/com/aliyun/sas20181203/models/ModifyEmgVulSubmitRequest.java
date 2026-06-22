@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyEmgVulSubmitRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the vulnerability.</p>
+     * <p>The name of the vulnerability to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,22 +28,22 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1232428423234****</p>
+     * <p>16670360956*****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Specifies whether to scan for urgent vulnerabilities. Valid values:</p>
+     * <p>Specifies whether to perform vulnerability detection. Valid values:</p>
      * <ul>
-     * <li><strong>yes</strong></li>
-     * <li><strong>no</strong></li>
+     * <li><strong>yes</strong>: Perform vulnerability detection.</li>
+     * <li><strong>no</strong>: Do not perform vulnerability detection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

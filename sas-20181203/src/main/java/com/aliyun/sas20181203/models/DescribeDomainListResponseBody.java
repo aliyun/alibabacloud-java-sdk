@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about domain names.</p>
+     * <p>The list of domain name asset information.</p>
      */
     @NameInMap("DomainListResponseList")
     public java.util.List<DescribeDomainListResponseBodyDomainListResponseList> domainListResponseList;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination information of the query result.</p>
      */
     @NameInMap("PageInfo")
     public DescribeDomainListResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
@@ -56,7 +56,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
 
     public static class DescribeDomainListResponseBodyDomainListResponseList extends TeaModel {
         /**
-         * <p>The name of the domain or website.</p>
+         * <p>The domain name or website name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -65,7 +65,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The IP addresses of the domain name.</p>
+         * <p>The IP address information associated with the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.XX.XX,1.0.XX.XX</p>
@@ -98,7 +98,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
 
     public static class DescribeDomainListResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of domain names displayed on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -107,7 +107,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -116,7 +116,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of domain names displayed on each page in a paged query. Default value: <strong>10</strong>, which indicates that 10 domain names are displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of domain names returned.</p>
          * 
          * <strong>example:</strong>
          * <p>27</p>

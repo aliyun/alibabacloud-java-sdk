@@ -11,7 +11,7 @@ public class GetRdTreeResponseBody extends TeaModel {
     public GetRdTreeResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
@@ -42,7 +42,7 @@ public class GetRdTreeResponseBody extends TeaModel {
 
     public static class GetRdTreeResponseBodyData extends TeaModel {
         /**
-         * <p>The subfolder.</p>
+         * <p>The child folders.</p>
          */
         @NameInMap("Children")
         public java.util.List<?> children;
@@ -57,7 +57,7 @@ public class GetRdTreeResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The name of the folder.</p>
+         * <p>The folder name.</p>
          * 
          * <strong>example:</strong>
          * <p>Root</p>

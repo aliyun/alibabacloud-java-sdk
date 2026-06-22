@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateImageEventOperationRequest extends TeaModel {
     /**
-     * <p>The rule conditions. Specify a value in the JSON format. You can specify the following keys:</p>
+     * <p>The rule conditions. The value is in JSON format. The following keys are supported:</p>
      * <ul>
      * <li><strong>condition</strong>: the matching condition.</li>
      * <li><strong>type</strong>: the matching type.</li>
@@ -19,9 +19,9 @@ public class UpdateImageEventOperationRequest extends TeaModel {
     public String conditions;
 
     /**
-     * <p>The ID of the alert handling rule. </p>
+     * <p>The ID of the alert handling rule.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeImageEventOperationPage~~">DescribeImageEventOperationPage</a> operation to query the ID.</p>
+     * <p>You can call <a href="~~DescribeImageEventOperationPage~~">DescribeImageEventOperationPage</a> to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class UpdateImageEventOperationRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The remarks that you want to add.</p>
+     * <p>The remarks to add.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -40,10 +40,13 @@ public class UpdateImageEventOperationRequest extends TeaModel {
     public String note;
 
     /**
-     * <p>The application scope of the rule. The value is in the JSON format. Valid values:</p>
+     * <p>The rule scope. The value is in JSON format. The following keys are supported:</p>
      * <ul>
-     * <li><strong>type</strong></li>
-     * <li><strong>value</strong></li>
+     * <li><strong>type</strong>: the scope type.</li>
+     * <li><strong>value</strong>: the scope value.<blockquote>
+     * <p>This parameter and Source cannot both be empty. If Source is set to agentless, this parameter does not take effect.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,10 +56,13 @@ public class UpdateImageEventOperationRequest extends TeaModel {
     public String scenarios;
 
     /**
-     * <p>The source of the whitelist. Valid values:</p>
+     * <p>The whitelist source. Valid values:</p>
      * <ul>
      * <li><strong>image</strong>: image.</li>
-     * <li><strong>agentless</strong>: agentless detection.</li>
+     * <li><strong>agentless</strong>: agentless detection.<blockquote>
+     * <p>This parameter and Scenarios cannot both be empty. If this parameter is set to agentless, the Scenarios parameter does not take effect.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

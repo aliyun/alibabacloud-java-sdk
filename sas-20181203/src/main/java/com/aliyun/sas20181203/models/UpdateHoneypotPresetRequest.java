@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHoneypotPresetRequest extends TeaModel {
     /**
-     * <p>The name of the image that is used for the honeypot.</p>
+     * <p>The name of the honeypot image.</p>
      * 
      * <strong>example:</strong>
      * <p>metabase</p>
@@ -14,9 +14,9 @@ public class UpdateHoneypotPresetRequest extends TeaModel {
     public String honeypotImageName;
 
     /**
-     * <p>The ID of the honeypot template.</p>
+     * <p>The unique ID of the honeypot template.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to query the IDs of honeypot templates.</p>
+     * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class UpdateHoneypotPresetRequest extends TeaModel {
     public String honeypotPresetId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -40,11 +40,11 @@ public class UpdateHoneypotPresetRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:</p>
+     * <p>The custom parameters of the honeypot template. The value is a JSON string that contains the following fields:</p>
      * <ul>
-     * <li><strong>portrait_option</strong>: Social Source Tracing</li>
-     * <li><strong>burp</strong>: Burp-specific Defense</li>
-     * <li><strong>trojan_git</strong>: Git-specific Defense</li>
+     * <li><strong>portrait_option</strong>: social tracing</li>
+     * <li><strong>burp</strong>: Burp countermeasure</li>
+     * <li><strong>trojan_git</strong>: Git countermeasure.</li>
      * </ul>
      * 
      * <strong>example:</strong>

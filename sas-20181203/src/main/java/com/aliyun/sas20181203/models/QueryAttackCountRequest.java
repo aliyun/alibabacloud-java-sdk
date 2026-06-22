@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAttackCountRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to sas.</p>
+     * <p>The source identifier of the request. Set this parameter to sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -14,10 +14,10 @@ public class QueryAttackCountRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class QueryAttackCountRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>175.0.XX.XX</p>
@@ -36,13 +36,13 @@ public class QueryAttackCountRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The UUID of the asset.</p>
+     * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of assets.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>0c1714dc-f7a3-4265-8364-7aa3fce8****,1cc45e7d-7698-4b2c-89d8-e8cba407****</p>
+     * <p>1587bedb-fdb4-48c4-9330-************</p>
      */
     @NameInMap("Uuids")
     public String uuids;

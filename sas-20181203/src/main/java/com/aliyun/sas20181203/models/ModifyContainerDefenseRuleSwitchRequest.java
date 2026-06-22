@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyContainerDefenseRuleSwitchRequest extends TeaModel {
     /**
-     * <p>The IDs of the rules.</p>
+     * <p>The IDs of the rules that you want to modify.</p>
      */
     @NameInMap("RuleIds")
     public java.util.List<Long> ruleIds;
 
     /**
-     * <p>The status of the rule. Valid values:</p>
+     * <p>The switch status of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

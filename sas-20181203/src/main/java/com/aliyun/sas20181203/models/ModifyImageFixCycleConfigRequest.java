@@ -16,8 +16,10 @@ public class ModifyImageFixCycleConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the schedule image fix.</p>
      * <ul>
-     * <li><strong>on</strong>: enable</li>
-     * <li><strong>off</strong>: disable</li>
+     * <li><p><strong>on</strong>: enable</p>
+     * </li>
+     * <li><p><strong>off</strong>: disable</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +31,10 @@ public class ModifyImageFixCycleConfigRequest extends TeaModel {
     /**
      * <p>The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>type</strong>: The type of the image. The value is fixed to repo.</li>
-     * <li><strong>target</strong>: The content of the image. The value is in the format of Namespace/Image repository.</li>
+     * <li><p><strong>type</strong>: The type of the image. The value is fixed to repo.</p>
+     * </li>
+     * <li><p><strong>target</strong>: The content of the image. The value is in the format of Namespace/Image repository.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

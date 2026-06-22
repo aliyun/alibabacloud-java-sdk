@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateOssScanConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to match the prefixes of all objects.</p>
+     * <p>Specifies whether to match all file prefixes.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,13 +14,13 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public Boolean allKeyPrefix;
 
     /**
-     * <p>The names of the buckets.</p>
+     * <p>The list of bucket names.</p>
      */
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
     /**
-     * <p>The maximum number of objects that can be extracted from a package. Valid values: 1 to 1000. If the value is reached, the decompression operation immediately finishes. The detection of extracted objects is not affected.</p>
+     * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. If the maximum number of decompressed files is exceeded, the decompression operation stops. The detection of already decompressed files is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +29,7 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public Integer decompressMaxFileCount;
 
     /**
-     * <p>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the value is reached, the decompression operation immediately finishes. The detection of extracted objects is not affected.</p>
+     * <p>The maximum number of decompression layers for nested compressed files. Minimum value: 1. Maximum value: 5. If the maximum number of decompression layers is exceeded, the decompression operation stops. The detection of already decompressed files is not affected.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,16 +38,16 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public Integer decompressMaxLayer;
 
     /**
-     * <p>The decryption methods.</p>
+     * <p>The list of decryption types.</p>
      */
     @NameInMap("DecryptionList")
     public java.util.List<String> decryptionList;
 
     /**
-     * <p>Specifies whether to enable the bucket check policy. Valid values:</p>
+     * <p>Specifies whether to enable the scan policy. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enables the bucket check policy.</li>
-     * <li><strong>0</strong>: disables the bucket check policy.</li>
+     * <li><strong>1</strong>: Enable.</li>
+     * <li><strong>0</strong>: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public Integer enable;
 
     /**
-     * <p>The end time of the check. Specify the time in the HH:mm:ss format.</p>
+     * <p>The scan end time in the HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00:01</p>
@@ -66,28 +66,28 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The policy ID.</p>
+     * <p>The scan policy ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>65778</p>
+     * <p>1141****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The prefixes of the objects.</p>
+     * <p>The prefix list of files.</p>
      */
     @NameInMap("KeyPrefixList")
     public java.util.List<String> keyPrefixList;
 
     /**
-     * <p>The suffixes of the objects that you want to check.</p>
+     * <p>The list of file suffixes.</p>
      */
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
     /**
-     * <p>The timestamp. The objects whose last modification time is later than the specified value are detected. Unit: milliseconds.</p>
+     * <p>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1724301769834</p>
@@ -96,16 +96,16 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public Long lastModifiedStartTime;
 
     /**
-     * <p>The policy name.</p>
+     * <p>The scan policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>nacos****</p>
+     * <p>testStrategy</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+     * <p>Specifies whether to enable real-time incremental detection. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -114,13 +114,13 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public Boolean realTimeIncr;
 
     /**
-     * <p>The time when the check is performed. The value specifies the days of the week.</p>
+     * <p>The scan days. The number indicates the day of the week.</p>
      */
     @NameInMap("ScanDayList")
     public java.util.List<Integer> scanDayList;
 
     /**
-     * <p>The start time of the check. Specify the time in the HH:mm:ss format.</p>
+     * <p>The scan start time in the HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00:00</p>

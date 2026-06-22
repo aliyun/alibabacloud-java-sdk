@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInterceptionRuleSwitchResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>DE725A60-95F2-50E8-8F5D-81055215E7DA</p>

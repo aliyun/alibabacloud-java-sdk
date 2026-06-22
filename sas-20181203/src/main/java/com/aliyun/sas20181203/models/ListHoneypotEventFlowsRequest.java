@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotEventFlowsRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,12 @@ public class ListHoneypotEventFlowsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The status of the event. Valid values: y, n, and a. The value y indicates handled. The value n indicates unhandled. The value a indicates all.</p>
+     * <p>Specifies whether the event has been handled. Valid values:</p>
+     * <ul>
+     * <li><strong>y</strong>: Handled. </li>
+     * <li><strong>n</strong>: Unhandled. </li>
+     * <li><strong>a</strong>: All.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>n</p>
@@ -23,10 +28,10 @@ public class ListHoneypotEventFlowsRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,9 +41,9 @@ public class ListHoneypotEventFlowsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return per page in a paged query. Default value: 100. If the PageSize parameter is left empty, 100 entries are returned by default.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,18 +53,18 @@ public class ListHoneypotEventFlowsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Invalid parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>20540822-520E-54F5-B7E6-236CF1EC987F</p>
+     * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the alert event. The ID of the management account of the ListHoneypotEvents resource directory.</p>
+     * <p>The ID of the alert event.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListHoneypotEvents~~">ListHoneypotEvents</a> operation to query the IDs of alert events.</p>
+     * <p>You can call the <a href="~~ListHoneypotEvents~~">ListHoneypotEvents</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

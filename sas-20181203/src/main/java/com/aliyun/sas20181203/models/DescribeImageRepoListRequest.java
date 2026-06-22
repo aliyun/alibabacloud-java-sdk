@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageRepoListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeImageRepoListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the field that is used for the query. Valid values:</p>
+     * <p>The search field. Valid values:</p>
      * <ul>
-     * <li><strong>repoName</strong>: the name of the image repository</li>
-     * <li><strong>repoNamespace</strong>: the namespace to which the image repository belongs</li>
+     * <li><strong>repoName</strong>: image repository name</li>
+     * <li><strong>repoNamespace</strong>: image repository namespace</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only when the <strong>OperateType</strong> parameter is set to <strong>other</strong>.</p>
+     * <p>This parameter takes effect only when <strong>OperateType</strong> is set to <strong>other</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class DescribeImageRepoListRequest extends TeaModel {
     public String fieldName;
 
     /**
-     * <p>The value of the field that is used for the query.</p>
+     * <p>The value of the search field.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when the <strong>OperateType</strong> parameter is set to <strong>other</strong>.</p>
+     * <p>This parameter takes effect only when <strong>OperateType</strong> is set to <strong>other</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,10 +42,10 @@ public class DescribeImageRepoListRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>The type of the operation. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><strong>count</strong>: counts statistics</li>
-     * <li><strong>other</strong>: others</li>
+     * <li><strong>count</strong>: statistics</li>
+     * <li><strong>other</strong>: other.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,9 +55,9 @@ public class DescribeImageRepoListRequest extends TeaModel {
     public String operateType;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page during paging.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Set PageSize to a non-empty value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class DescribeImageRepoListRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The namespace to which the image repository belongs.</p>
+     * <p>The namespace of the container image repository.</p>
      * 
      * <strong>example:</strong>
      * <p>libssh2</p>
@@ -85,10 +85,10 @@ public class DescribeImageRepoListRequest extends TeaModel {
     public String repoNamespace;
 
     /**
-     * <p>Whether it is selected. Values:</p>
+     * <p>Specifies whether the item is selected. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: NO</li>
-     * <li><strong>1</strong>: YES</li>
+     * <li><strong>0</strong>: No.</li>
+     * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,9 +98,9 @@ public class DescribeImageRepoListRequest extends TeaModel {
     public Integer selected;
 
     /**
-     * <p>The condition by which the feature is applied. Valid values:</p>
+     * <p>The dimension of the defense switch configuration. Valid values:</p>
      * <ul>
-     * <li><strong>image_repo</strong>: the ID of the image repository</li>
+     * <li><strong>image_repo</strong>: image repository ID.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -111,9 +111,9 @@ public class DescribeImageRepoListRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The type of the feature. Valid values:</p>
+     * <p>The type of the defense switch. Valid values:</p>
      * <ul>
-     * <li><strong>image_repo</strong>: image repository protection</li>
+     * <li><strong>image_repo</strong>: image repository defense.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

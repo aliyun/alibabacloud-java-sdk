@@ -14,9 +14,9 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String aliasName;
 
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the container cluster to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</p>
+     * <p>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return in the query results. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+     * <p>The CVE ID of the vulnerability.</p>
      * 
      * <strong>example:</strong>
      * <p>CVE-2017-15420</p>
@@ -53,7 +53,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The SHA-256 value of the image digest.</p>
+     * <p>The SHA256 value of the image digest.</p>
      * 
      * <strong>example:</strong>
      * <p>w213412341dfsfasdfafadfasfasf</p>
@@ -80,10 +80,10 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String imageTag;
 
     /**
-     * <p>Specifies whether to query the vulnerabilities in the latest images. If you do not specify this parameter, the vulnerabilities in all images are queried. Valid values:</p>
+     * <p>Specifies whether to query vulnerabilities of only the latest image. If this parameter is not set, vulnerabilities of all images are queried. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: does not query the vulnerabilities in the latest images.</li>
-     * <li><strong>1</strong>: queries the vulnerabilities in the latest images.</li>
+     * <li><strong>0</strong>: No.</li>
+     * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,10 +93,10 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public Integer isLatest;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,11 +115,11 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The priority to fix the vulnerability. Valid values:</p>
+     * <p>The priority level for fixing the vulnerability. Valid values:</p>
      * <ul>
-     * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
-     * <li><strong>later</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
-     * <li><strong>nntf</strong>: low. You can ignore the vulnerability.</li>
+     * <li><strong>asap</strong>: high-priority vulnerability (typically a high-risk vulnerability)</li>
+     * <li><strong>later</strong>: medium-priority vulnerability (typically a medium-risk vulnerability)</li>
+     * <li><strong>nntf</strong>: low-priority vulnerability (typically a low-risk vulnerability).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of image vulnerabilities to display on each page during a paging query. Default value: <strong>20</strong>, which indicates that 20 image vulnerabilities are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -138,7 +138,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the patch that is used to fix the vulnerability.</p>
+     * <p>The ID of the vulnerability patch.</p>
      * 
      * <strong>example:</strong>
      * <p>1341512412</p>
@@ -174,7 +174,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The namespace to which the image repository belongs.</p>
+     * <p>The namespace of the image repository.</p>
      * 
      * <strong>example:</strong>
      * <p>libssh2</p>
@@ -192,9 +192,9 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String repoRegionId;
 
     /**
-     * <p>The tag of this vulnerability. Valid values:</p>
+     * <p>The vulnerability tag. Valid values:</p>
      * <ul>
-     * <li><strong>AI</strong>: AI-related components.</li>
+     * <li><strong>AI</strong>: vulnerabilities related to AI components.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,16 +204,16 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String ruleTag;
 
     /**
-     * <p>An array consisting of the types of the assets that you want to scan.</p>
+     * <p>The collection of scan ranges.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
     /**
-     * <p>The type of the vulnerability that you want to query. Valid values:</p>
+     * <p>The type of vulnerability to query. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: image system vulnerability</li>
-     * <li><strong>sca</strong>: image application vulnerability</li>
+     * <li><strong>sca</strong>: image application vulnerability.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUID of the asset. Separate multiple UUIDs with commas (,).</p>
+     * <p>The list of unique IDs of asset instances. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>uuid-13134124****</p>

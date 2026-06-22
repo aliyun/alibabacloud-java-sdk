@@ -4,11 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageRegistryRequest extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>114.55.xxx.xxx</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The ID of the image repository. You can call the listImageRegistry operation to query the ID of the image repository.</p>
+     * <p>The image registry ID. Call the <a href="https://help.aliyun.com/document_detail/471986.html">ListImageRegistry</a> operation to obtain this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>390103286</p>
@@ -25,14 +31,26 @@ public class ModifyImageRegistryRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The port number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The registry IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.1</p>
+     */
     @NameInMap("RegistryHostIp")
     public String registryHostIp;
 
     /**
-     * <p>The number of images that are scanned per hour.</p>
+     * <p>The number of images to scan per hour.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

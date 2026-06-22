@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyGroupPropertyRequest extends TeaModel {
     /**
-     * <p>The new attributes of the server group. You can specify the following parameters to configure the attributes:</p>
+     * <p>The new property information of the server group after modification. The following parameters are described:</p>
      * <ul>
-     * <li><strong>groupFlag</strong>: the type of the server group. Valid values: 0 and 1. The value <strong>0</strong> specifies the Default server group. The value <strong>1</strong> specifies other server groups.</li>
-     * <li><strong>groupId</strong>: the ID of the server group.</li>
-     * <li><strong>groupIndex</strong>: no meaning. You can leave this parameter empty.</li>
-     * <li><strong>groupName</strong>: the name of the server group. The value is the new name of the server group. The new name cannot be the same as the original name of the server group.</li>
+     * <li><strong>groupFlag</strong>: The type of the server group. Valid values: <strong>0</strong> (default group) | <strong>1</strong> (other group).</li>
+     * <li><strong>groupId</strong>: The ID of the server group.</li>
+     * <li><strong>groupIndex</strong>: The sorting number of the server group. Sorted in ascending order.</li>
+     * <li><strong>groupName</strong>: The name of the server group. Set this parameter to the new name of the server group. The new name must be different from the original name.</li>
      * </ul>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the values of the groupFlag and groupId parameters. You cannot change the value of the groupFlag or groupId parameter. You can change only the value of the groupName parameter.</p>
+     * <p>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the values of groupFlag and groupId. The values of groupFlag and groupId cannot be modified. Only the value of groupName can be modified.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;groupFlag&quot;:1,&quot;groupId&quot;:8436682,&quot;groupIndex&quot;:,&quot;groupName&quot;:&quot;example&quot;}]</p>
+     * <p>[{&quot;groupFlag&quot;:1,&quot;groupId&quot;:8436682,&quot;groupIndex&quot;:1,&quot;groupName&quot;:&quot;example&quot;}]</p>
      */
     @NameInMap("Data")
     public String data;

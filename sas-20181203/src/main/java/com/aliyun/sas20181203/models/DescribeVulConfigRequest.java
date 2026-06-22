@@ -14,16 +14,16 @@ public class DescribeVulConfigRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of configuration. By default, all types of configurations are queried. Valid values:</p>
+     * <p>The type of vulnerability management configuration. By default, all types of configurations are queried. Valid values:</p>
      * <ul>
-     * <li><strong>cve</strong>: Linux software vulnerability.</li>
-     * <li><strong>sys</strong>: Windows system vulnerability.</li>
-     * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
-     * <li><strong>app</strong>: application vulnerability that is detected by using web scanner.</li>
-     * <li><strong>emg</strong>: urgent vulnerability.</li>
-     * <li><strong>scanMode</strong>: displays easily exploitable vulnerability.</li>
-     * <li><strong>imageVulClean</strong>: vulnerability retention duration.</li>
-     * <li><strong>yum</strong>: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</li>
+     * <li><strong>cve</strong>: Linux software vulnerability</li>
+     * <li><strong>sys</strong>: Windows system vulnerability</li>
+     * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+     * <li><strong>app</strong>: application vulnerability (web scanner)</li>
+     * <li><strong>emg</strong>: emergency vulnerability</li>
+     * <li><strong>scanMode</strong>: display real-risk vulnerabilities</li>
+     * <li><strong>imageVulClean</strong>: vulnerability retention period</li>
+     * <li><strong>yum</strong>: prioritize Alibaba Cloud sources for vulnerability fixing.</li>
      * </ul>
      * 
      * <strong>example:</strong>

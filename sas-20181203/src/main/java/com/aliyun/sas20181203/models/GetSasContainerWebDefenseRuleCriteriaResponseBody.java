@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel {
     /**
-     * <p>The search conditions.</p>
+     * <p>The list of query criteria.</p>
      */
     @NameInMap("CriteriaList")
     public java.util.List<GetSasContainerWebDefenseRuleCriteriaResponseBodyCriteriaList> criteriaList;
@@ -42,7 +42,7 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
 
     public static class GetSasContainerWebDefenseRuleCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
-         * <p>The name of the search condition.</p>
+         * <p>The name of the query criterion.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -51,10 +51,10 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
         public String name;
 
         /**
-         * <p>The type of the search condition. Valid values:</p>
+         * <p>The type of the query criterion. Valid values:</p>
          * <ul>
-         * <li><strong>input</strong>: You must manually enter the search condition.</li>
-         * <li><strong>select</strong>: You must select a search condition from the <strong>Values</strong> drop-down list.</li>
+         * <li><strong>input</strong>: Input type. You must manually enter the query content when using this query criterion.</li>
+         * <li><strong>select</strong>: Selection type. You must select a value from the options list (the <strong>Values</strong> field) when using this query criterion.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,9 +64,9 @@ public class GetSasContainerWebDefenseRuleCriteriaResponseBody extends TeaModel 
         public String type;
 
         /**
-         * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is <strong>select</strong>.</p>
+         * <p>The available options when <strong>Type</strong> (the type of the query criterion) is set to <strong>select</strong> (selection type).</p>
          * <blockquote>
-         * <p> If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is empty.</p>
+         * <p>When <strong>Type</strong> (the type of the query criterion) is set to <strong>input</strong> (input type), this parameter returns an empty value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

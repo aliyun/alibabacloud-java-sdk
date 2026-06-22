@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUserItemRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page to display in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,10 @@ public class DescribePropertyUserItemRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether to forcefully refresh the data that you want to query. Valid values:</p>
+     * <p>Specifies whether to forcefully refresh the data to be queried. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: Forcefully refresh.</li>
+     * <li><strong>false</strong>: Do not forcefully refresh.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribePropertyUserItemRequest extends TeaModel {
     public Boolean forceFlush;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to display on each page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -36,7 +36,7 @@ public class DescribePropertyUserItemRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The information about the account.</p>
+     * <p>The account information of Asset Fingerprints.</p>
      * 
      * <strong>example:</strong>
      * <p>adm</p>

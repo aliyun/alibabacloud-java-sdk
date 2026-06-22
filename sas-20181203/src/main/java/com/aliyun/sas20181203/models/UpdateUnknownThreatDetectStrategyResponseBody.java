@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUnknownThreatDetectStrategyResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1383B0DB-D5D6-4B0C-9E6B-75939C******</p>

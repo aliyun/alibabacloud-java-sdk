@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
     /**
-     * <p>The URL that is used to download the file. The URL is valid for five minutes.</p>
+     * <p>The download URL. The URL is valid for 5 minutes.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></p>
@@ -14,7 +14,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
     public String downloadUrl;
 
     /**
-     * <p>The MD5 hash value of the quarantined file.</p>
+     * <p>The MD5 hash of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>bb62ef1311bc564377a0378d3axxxxxx</p>
@@ -41,7 +41,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
     public Integer quaraFileId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>29874225-EAAC-5415-8501-32DD20FXXXXX</p>
@@ -50,7 +50,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tag that is added to the related alert.</p>
+     * <p>The tag of the alert record.</p>
      * 
      * <strong>example:</strong>
      * <p>6d4ff40a22b15c86adecf2aa48xxxxx</p>
@@ -59,7 +59,7 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
     public String tag;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The unique identifier of the asset.</p>
      * 
      * <strong>example:</strong>
      * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>

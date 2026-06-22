@@ -8,7 +8,7 @@ public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
      * <p>The description of the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>Prevent non-mirror programs from starting in containers</p>
+     * <p>防御规则。</p>
      */
     @NameInMap("Description")
     public String description;
@@ -16,8 +16,10 @@ public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
     /**
      * <p>The action specified in the rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: alert</li>
-     * <li><strong>2</strong>: block</li>
+     * <li><p><strong>1</strong>: alert</p>
+     * </li>
+     * <li><p><strong>2</strong>: block</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the IDs of rules.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the IDs of rules.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,8 +52,10 @@ public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
     /**
      * <p>The status of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><p><strong>1</strong>: enabled</p>
+     * </li>
+     * <li><p><strong>0</strong>: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,8 +67,10 @@ public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
     /**
      * <p>The type of the rule. Valid values:</p>
      * <ul>
-     * <li>1: system rule</li>
-     * <li>2: custom rule</li>
+     * <li><p>1: system rule</p>
+     * </li>
+     * <li><p>2: custom rule</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,8 +164,10 @@ public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
         /**
          * <p>Specifies whether to include all namespaces. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><p><strong>0</strong>: no</p>
+         * </li>
+         * <li><p><strong>1</strong>: yes</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +179,7 @@ public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
         /**
          * <p>The ID of the cluster on which the rule takes effect.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

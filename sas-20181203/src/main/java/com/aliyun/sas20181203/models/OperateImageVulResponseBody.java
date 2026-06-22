@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateImageVulResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>486F2228-438A-544A-A533-433F943C15CD</p>

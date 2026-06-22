@@ -52,8 +52,10 @@ public class ModifyIdcProbeRequest extends TeaModel {
     /**
      * <p>The unit of the scan interval. Valid values:</p>
      * <ul>
-     * <li><strong>day</strong></li>
-     * <li><strong>hour</strong></li>
+     * <li><p><strong>day</strong></p>
+     * </li>
+     * <li><p><strong>hour</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,8 +67,10 @@ public class ModifyIdcProbeRequest extends TeaModel {
     /**
      * <p>The usage status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: enabled.</li>
-     * <li><strong>1</strong>: disabled.</li>
+     * <li><p><strong>0</strong>: enabled.</p>
+     * </li>
+     * <li><p><strong>1</strong>: disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

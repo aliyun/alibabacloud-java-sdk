@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperationSuspEventsRequest extends TeaModel {
     /**
-     * <p>The ID of the request source.</p>
-     * <p>Set the value to <strong>sas</strong>, which indicates that the request is sent from Security Center.</p>
+     * <p>The request source identifier.</p>
+     * <p>Set this parameter to <strong>sas</strong>, which indicates a request from the Security Center client.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -15,13 +15,13 @@ public class OperationSuspEventsRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The operation that you want to perform on alerts. Valid values:</p>
+     * <p>The operation to perform on the alert. Valid values:</p>
      * <ul>
-     * <li><strong>deal</strong>: quarantines the source file of the malicious process.</li>
-     * <li><strong>ignore</strong>: ignores the alerts.</li>
-     * <li><strong>mark_mis_info</strong>: marks the alerts as false positives by adding the alerts to the whitelist.</li>
-     * <li><strong>rm_mark_mis_info</strong>: cancels false positives by removing the alerts from the whitelist.</li>
-     * <li><strong>offline_handled</strong>: marks the alerts as handled.</li>
+     * <li><strong>deal</strong>: handles the alert (quarantine).</li>
+     * <li><strong>ignore</strong>: ignores the alert.</li>
+     * <li><strong>mark_mis_info</strong>: marks the alert as a false positive (adds it to the whitelist).</li>
+     * <li><strong>rm_mark_mis_info</strong>: unmarks the alert as a false positive (removes it from the whitelist).</li>
+     * <li><strong>offline_handled</strong>: marks the alert as handled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +32,7 @@ public class OperationSuspEventsRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>
@@ -41,9 +41,9 @@ public class OperationSuspEventsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The suboperation that you want to perform when you quarantine the source file of the malicious process. Valid values:</p>
+     * <p>The sub-operation type to perform when quarantining the alert event. Valid values:</p>
      * <ul>
-     * <li><strong>killAndQuaraFileByPidAndMd5andPath</strong>: terminates the process based on its process ID (PID) and quarantines the source file of the process.</li>
+     * <li><strong>killAndQuaraFileByPidAndMd5andPath</strong>: terminates the process by PID and quarantines the source file of the process.</li>
      * <li><strong>quaraFileByMd5andPath</strong>: quarantines the source file of the process.</li>
      * <li><strong>killAndQuaraFileByMd5andPath</strong>: terminates the process and quarantines the source file of the process.</li>
      * </ul>
@@ -55,9 +55,9 @@ public class OperationSuspEventsRequest extends TeaModel {
     public String subOperation;
 
     /**
-     * <p>The IDs of alert events.</p>
+     * <p>The list of alert event IDs.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the IDs of alert events from the SecurityEventIds response parameter.</p>
+     * <p>You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain alert event IDs from the SecurityEventIds response parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -68,10 +68,10 @@ public class OperationSuspEventsRequest extends TeaModel {
     public String suspiciousEventIds;
 
     /**
-     * <p>The type of the exceptions. Valid values:</p>
+     * <p>The type of the exception event to handle. Valid values:</p>
      * <ul>
-     * <li><strong>alarm</strong>: alerts</li>
-     * <li><strong>null</strong>: exceptions</li>
+     * <li><strong>alarm</strong>: alert.</li>
+     * <li><strong>Empty</strong>: exception.</li>
      * </ul>
      * 
      * <strong>example:</strong>

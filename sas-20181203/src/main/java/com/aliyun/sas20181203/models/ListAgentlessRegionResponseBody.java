@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAgentlessRegionResponseBody extends TeaModel {
     /**
-     * <p>The information about the regions.</p>
+     * <p>The region list information.</p>
      */
     @NameInMap("RegionList")
     public java.util.List<String> regionList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>7E0618A9-D5EF-4220-9471-C42B5E92****</p>
@@ -20,7 +20,7 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the regions.</p>
+     * <p>The region list information.</p>
      */
     @NameInMap("VendorRegionList")
     public java.util.List<ListAgentlessRegionResponseBodyVendorRegionList> vendorRegionList;
@@ -56,7 +56,7 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
 
     public static class ListAgentlessRegionResponseBodyVendorRegionList extends TeaModel {
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region in which the server resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -65,13 +65,13 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The type of the server. Valid values:</p>
+         * <p>The server vendor. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Alibaba Cloud</li>
-         * <li><strong>3</strong>: Tencent Cloud</li>
-         * <li><strong>4</strong>: Huawei Cloud</li>
-         * <li><strong>5</strong>: Azure</li>
-         * <li><strong>7</strong>: AWS</li>
+         * <li><strong>0</strong>: Alibaba Cloud.</li>
+         * <li><strong>3</strong>: Tencent Cloud.</li>
+         * <li><strong>4</strong>: Huawei Cloud.</li>
+         * <li><strong>5</strong>: Azure.</li>
+         * <li><strong>7</strong>: AWS.</li>
          * </ul>
          * 
          * <strong>example:</strong>

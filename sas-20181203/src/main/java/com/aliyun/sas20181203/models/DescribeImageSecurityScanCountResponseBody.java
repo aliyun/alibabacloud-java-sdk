@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageSecurityScanCountResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeImageSecurityScanCountResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>C699E4E4-F2F4-58FC-A949-457FFE59****</p>
@@ -42,7 +42,7 @@ public class DescribeImageSecurityScanCountResponseBody extends TeaModel {
 
     public static class DescribeImageSecurityScanCountResponseBodyData extends TeaModel {
         /**
-         * <p>The number of image baseline risks detected on the current asset.</p>
+         * <p>The number of image baseline risks in the current asset.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class DescribeImageSecurityScanCountResponseBody extends TeaModel {
         public Integer imageBaselineCount;
 
         /**
-         * <p>The number of image system vulnerabilities returned on the current page.</p>
+         * <p>The number of image system vulnerabilities on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -60,7 +60,7 @@ public class DescribeImageSecurityScanCountResponseBody extends TeaModel {
         public Integer imageCveVulCount;
 
         /**
-         * <p>The number of malicious image samples returned on the current page.</p>
+         * <p>The number of malicious image samples on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -69,7 +69,7 @@ public class DescribeImageSecurityScanCountResponseBody extends TeaModel {
         public Integer imageMaliciousFileCount;
 
         /**
-         * <p>The number of image application vulnerabilities returned on the current page.</p>
+         * <p>The number of image application vulnerabilities displayed on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

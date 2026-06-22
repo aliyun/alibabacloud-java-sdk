@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterCnnfStatusDetailRequest extends TeaModel {
     /**
-     * <p>An array that consists of the ID of the cluster.</p>
+     * <p>The list of cluster IDs.</p>
      */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;

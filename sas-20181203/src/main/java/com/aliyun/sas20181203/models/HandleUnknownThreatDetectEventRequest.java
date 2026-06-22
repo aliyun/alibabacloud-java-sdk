@@ -4,10 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class HandleUnknownThreatDetectEventRequest extends TeaModel {
+    /**
+     * <p>The list of event IDs.</p>
+     */
     @NameInMap("EventIdList")
     public java.util.List<String> eventIdList;
 
     /**
+     * <p>The event handling status. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Unhandled.</li>
+     * <li><strong>2</strong>: Blocked.</li>
+     * <li><strong>3</strong>: Ignored.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

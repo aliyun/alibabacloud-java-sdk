@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserSettingResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>A1EE5AFD-0867-5F4F-9BE1-EBDD2C35****</p>

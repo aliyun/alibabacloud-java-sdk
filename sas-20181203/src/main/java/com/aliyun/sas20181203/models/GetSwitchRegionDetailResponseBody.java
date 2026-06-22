@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetSwitchRegionDetailResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetSwitchRegionDetailResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The China Chinese mainland generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
@@ -51,7 +51,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         public Integer ecsCount;
 
         /**
-         * <p>The time when the migration is scheduled.</p>
+         * <p>The planned migration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1692858597000</p>
@@ -60,7 +60,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         public Long gmtPlanSwitchTime;
 
         /**
-         * <p>The region in which the server resides.</p>
+         * <p>The region where the server resides.</p>
          * 
          * <strong>example:</strong>
          * <p>us-east-1</p>
@@ -71,8 +71,8 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         /**
          * <p>The migration status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: pending</li>
-         * <li><strong>1</strong>: successful</li>
+         * <li><strong>0</strong>: waiting for migration</li>
+         * <li><strong>1</strong>: switchover succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
 
     public static class GetSwitchRegionDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the permissions were modified.</p>
+         * <p>The time when the authorization operation was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1692858597000</p>
@@ -140,7 +140,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         public Long gmtNoticed;
 
         /**
-         * <p>Indicates whether the migration is approved.</p>
+         * <p>Indicates whether the migration is agreed to.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -149,7 +149,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         public String isAgree;
 
         /**
-         * <p>Indicates whether the notification is sent.</p>
+         * <p>Indicates whether the notification has been sent.</p>
          * 
          * <strong>example:</strong>
          * <p>YES</p>
@@ -158,16 +158,28 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         public String isNoticed;
 
         /**
-         * <p>Specifies whether to notify the account.</p>
+         * <p>Indicates whether a pop-up notification needs to be displayed to the user.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: A pop-up notification needs to be displayed.</p>
+         * </li>
+         * <li><p><strong>false</strong>: No pop-up notification needs to be displayed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("NeedNotice")
         public Boolean needNotice;
 
         /**
-         * <p>Specifies whether to switch.</p>
+         * <p>Indicates whether a switchover to the new console is required.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: A switchover to the new console is required.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The legacy console is still in use.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -176,7 +188,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         public Boolean needSwitch;
 
         /**
-         * <p>The status of the switching to the region.</p>
+         * <p>The switchover status of the region.</p>
          */
         @NameInMap("RegionStatus")
         public java.util.List<GetSwitchRegionDetailResponseBodyDataRegionStatus> regionStatus;

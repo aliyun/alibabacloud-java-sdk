@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedCheckWarningRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class DescribeExposedCheckWarningRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the baseline.</p>
+     * <p>The type to which the baseline belongs.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain the types of baselines from the response parameter <strong>TypeName</strong>.</p>
+     * <p>The <strong>TypeName</strong> field returned by calling the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class DescribeExposedCheckWarningRequest extends TeaModel {
     public String typeName;
 
     /**
-     * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUID of the server to query. Separate multiple UUIDs with commas (,).</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of a server.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

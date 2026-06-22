@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MarkMonitorAccountsRequest extends TeaModel {
     /**
-     * <p>The IDs of the members.</p>
+     * <p>The list of member account IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

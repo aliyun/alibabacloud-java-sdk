@@ -60,8 +60,10 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,9 +75,12 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>The action that is performed when the rule is hit. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: trigger alerts</li>
-     * <li><strong>2</strong>: block</li>
-     * <li><strong>3</strong>: allow</li>
+     * <li><p><strong>1</strong>: trigger alerts</p>
+     * </li>
+     * <li><p><strong>2</strong>: block</p>
+     * </li>
+     * <li><p><strong>3</strong>: allow</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +98,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
      * </blockquote>
      * <blockquote>
      * <p>This parameter is invalid when you create a rule.</p>
@@ -117,7 +122,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>The ID of the rule template.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,8 +134,10 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -266,7 +273,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the baseline check item.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -278,7 +285,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the baseline check item.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the name.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -350,7 +357,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the image build risk.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+         * <p>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -362,7 +369,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the image build risk.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+         * <p>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -434,7 +441,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the malicious sample.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the ID.</p>
+         * <p>You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -446,7 +453,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the malicious sample.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the name.</p>
+         * <p>You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -518,7 +525,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the sensitive files.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+         * <p>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -530,7 +537,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the sensitive files.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+         * <p>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -602,7 +609,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the vulnerability.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -614,7 +621,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the vulnerability.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the name.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -650,8 +657,10 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the vulnerability types. Valid values:</p>
          * <ul>
-         * <li><strong>cve</strong>: system vulnerability</li>
-         * <li><strong>app</strong>: application vulnerability</li>
+         * <li><p><strong>cve</strong>: system vulnerability</p>
+         * </li>
+         * <li><p><strong>app</strong>: application vulnerability</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -663,12 +672,14 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the vulnerability. Valid values:</p>
          * <ul>
-         * <li><strong>system vulnerability</strong></li>
-         * <li><strong>application vulnerability</strong></li>
+         * <li><p><strong>system vulnerability</strong></p>
+         * </li>
+         * <li><p><strong>application vulnerability</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>system vulnerability</p>
+         * <p>系统漏洞</p>
          */
         @NameInMap("Name")
         public String name;
@@ -840,8 +851,10 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>Specifies whether to include all namespaces. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: includes all namespaces.</li>
-         * <li><strong>0</strong>: does not include all namespaces.</li>
+         * <li><p><strong>1</strong>: includes all namespaces.</p>
+         * </li>
+         * <li><p><strong>0</strong>: does not include all namespaces.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -853,7 +866,7 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the cluster that is specified in the rule.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

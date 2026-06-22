@@ -9,7 +9,7 @@ public class AddPublishBatchRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>批次1</p>
      */
     @NameInMap("BatchName")
     public String batchName;

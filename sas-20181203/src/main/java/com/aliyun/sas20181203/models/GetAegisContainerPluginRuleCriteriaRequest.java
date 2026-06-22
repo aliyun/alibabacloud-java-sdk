@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAegisContainerPluginRuleCriteriaRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language type for requesting and receiving messages. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -18,7 +18,7 @@ public class GetAegisContainerPluginRuleCriteriaRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The value of the search condition.</p>
+     * <p>The matching condition value of the plugin.</p>
      * 
      * <strong>example:</strong>
      * <p>ss</p>

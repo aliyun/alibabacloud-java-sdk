@@ -7,7 +7,7 @@ public class DescribeClusterBasicInfoRequest extends TeaModel {
     /**
      * <p>The ID of the cluster that you want to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DescribeClusterBasicInfoRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The dimension from which you want to configure the feature. Valid values:</p>
+     * <p>The operation dimension of the target switch configuration. Valid values:</p>
      * <ul>
-     * <li><strong>Cluster</strong>: the ID of the cluster</li>
+     * <li><strong>Cluster</strong>: cluster ID.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,10 +31,10 @@ public class DescribeClusterBasicInfoRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The type of the feature. Valid values:</p>
+     * <p>The configuration type. Valid values:</p>
      * <ul>
-     * <li><strong>containerNetwork</strong>: container network topology</li>
-     * <li><strong>interceptionSwitch</strong>: cluster microsegmentation</li>
+     * <li><strong>containerNetwork</strong>: container network topology switch</li>
+     * <li><strong>interceptionSwitch</strong>: cluster microsegmentation switch.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

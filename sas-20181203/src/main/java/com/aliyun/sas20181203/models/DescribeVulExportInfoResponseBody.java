@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulExportInfoResponseBody extends TeaModel {
     /**
-     * <p>The number of exported entries.</p>
+     * <p>The number of data entries that have been exported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,9 +16,9 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
     /**
      * <p>The status of the export task. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong>: The task is being initialized.</li>
-     * <li><strong>exporting</strong>: The task is in progress.</li>
-     * <li><strong>success</strong>: The task is complete.</li>
+     * <li><strong>init</strong>: initializing</li>
+     * <li><strong>exporting</strong>: exporting in progress</li>
+     * <li><strong>success</strong>: export successful.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The ID of the vulnerability export task.</p>
      * 
      * <strong>example:</strong>
      * <p>14356</p>
@@ -46,7 +46,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The URL at which you can download the exported Excel file.</p>
+     * <p>The download link of the exported Excel file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
@@ -55,7 +55,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
     public String link;
 
     /**
-     * <p>The message that shows the results of the task. The value is fixed as <strong>success</strong>, which indicates that the task is complete.</p>
+     * <p>The message about the export result. Fixed value: <strong>success</strong>. This value indicates that the export is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -64,7 +64,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The progress percentage of the task.</p>
+     * <p>The export progress percentage (%).</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -73,7 +73,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
     public Integer progress;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>4C1AE3F3-18FA-4108-BXXX-AFA1A032756C</p>
@@ -82,7 +82,7 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the exported Excel file.</p>
+     * <p>The total number of data entries in the exported Excel file.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

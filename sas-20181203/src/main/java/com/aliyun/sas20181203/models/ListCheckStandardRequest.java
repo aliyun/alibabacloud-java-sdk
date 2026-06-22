@@ -25,8 +25,10 @@ public class ListCheckStandardRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,11 +46,16 @@ public class ListCheckStandardRequest extends TeaModel {
     /**
      * <p>The cloud service providers. Valid values:</p>
      * <ul>
-     * <li><strong>ALIYUN</strong>: Alibaba Cloud.</li>
-     * <li><strong>TENCENT</strong>: Tencent Cloud.</li>
-     * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
-     * <li><strong>MICROSOFT</strong>: Microsoft Azure.</li>
-     * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
+     * <li><p><strong>ALIYUN</strong>: Alibaba Cloud.</p>
+     * </li>
+     * <li><p><strong>TENCENT</strong>: Tencent Cloud.</p>
+     * </li>
+     * <li><p><strong>HUAWEICLOUD</strong>: Huawei Cloud.</p>
+     * </li>
+     * <li><p><strong>MICROSOFT</strong>: Microsoft Azure.</p>
+     * </li>
+     * <li><p><strong>AWS</strong>: Amazon Web Services (AWS).</p>
+     * </li>
      * </ul>
      */
     @NameInMap("Vendors")

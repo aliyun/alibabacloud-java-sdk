@@ -7,8 +7,8 @@ public class UpdatePublishAutoUpgradeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic upgrade. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

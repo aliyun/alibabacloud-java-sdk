@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateHcWarningsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>722C4F88-7867-4E7B-8ADE-7451053</p>

@@ -15,7 +15,7 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
     public Long batchId;
 
     /**
-     * <p>The operations on assets.</p>
+     * <p>The list of asset operations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OperationList")
@@ -46,7 +46,7 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
         /**
          * <p>The ID of the server group.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * <p>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the server group ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -58,8 +58,8 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
         /**
          * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><strong>add</strong>: the add operation.</li>
-         * <li><strong>del</strong>: the remove operation.</li>
+         * <li><strong>add</strong>: increase.</li>
+         * <li><strong>del</strong>: delete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class UpdateTargetListByBatchRequest extends TeaModel {
         /**
          * <p>The UUID of the server.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

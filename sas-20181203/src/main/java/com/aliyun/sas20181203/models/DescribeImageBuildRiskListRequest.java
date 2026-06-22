@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBuildRiskListRequest extends TeaModel {
     /**
-     * <p>The <strong>rule name</strong> or <strong>type name</strong> of the risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the name. Optional parameters:</p>
+     * <p>The <strong>rule name</strong> or <strong>category name</strong> of the build risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value. Valid values:</p>
      * <ul>
-     * <li>If <strong>CriteriaType</strong> is set to <strong>RiskKeyName</strong>, you must specify a <strong>rule name</strong> for this parameter.</li>
-     * <li>If <strong>CriteriaType</strong> is set to<strong>RiskClassName</strong>, you must specify a <strong>type name</strong> for this parameter.</li>
+     * <li>If <strong>CriteriaType</strong> is set to <strong>RiskKeyName</strong>, the value is the <strong>rule name</strong> of the build risk.</li>
+     * <li>If <strong>CriteriaType</strong> is set to <strong>RiskClassName</strong>, the value is the <strong>category name</strong> of the build risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class DescribeImageBuildRiskListRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The query type.of the risk. Valid values:</p>
+     * <p>The query type of the build risk. Valid values:</p>
      * <ul>
-     * <li><strong>RiskKeyName</strong>: the rule name of the risk</li>
-     * <li><strong>RiskClassName</strong>: the type name of the risk</li>
+     * <li><strong>RiskKeyName</strong>: build risk rule name.</li>
+     * <li><strong>RiskClassName</strong>: build risk category name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeImageBuildRiskListRequest extends TeaModel {
     public String criteriaType;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page when paging is used. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,10 +40,10 @@ public class DescribeImageBuildRiskListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,9 +53,9 @@ public class DescribeImageBuildRiskListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page when paging is used. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,9 +67,12 @@ public class DescribeImageBuildRiskListRequest extends TeaModel {
     /**
      * <p>The risk level. Valid values:</p>
      * <ul>
-     * <li><strong>high</strong></li>
-     * <li><strong>medium</strong></li>
-     * <li><strong>low</strong></li>
+     * <li><p><strong>high</strong>: High.</p>
+     * </li>
+     * <li><p><strong>medium</strong>: Medium.</p>
+     * </li>
+     * <li><p><strong>low</strong>: Low.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

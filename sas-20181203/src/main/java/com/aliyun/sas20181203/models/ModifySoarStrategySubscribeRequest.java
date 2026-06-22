@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifySoarStrategySubscribeRequest extends TeaModel {
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeSoarStrategies~~">DescribeSoarStrategies</a> operation to obtain the ID.</p>
+     * <p>Call the <a href="~~DescribeSoarStrategies~~">DescribeSoarStrategies</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,10 @@ public class ModifySoarStrategySubscribeRequest extends TeaModel {
     public Long strategyId;
 
     /**
-     * <p>Specifies whether to create the policy template. Valid values:</p>
+     * <p>The add or remove status. Valid values:</p>
      * <ul>
-     * <li>true: creates the policy template</li>
-     * <li>false: deletes the policy template</li>
+     * <li>true: adds the policy template to My Policies</li>
+     * <li>false: removes the policy template from My Policies.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

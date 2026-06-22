@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned list.</p>
      */
     @NameInMap("List")
     public java.util.List<DescribeHybridProxyLinkedClientListResponseBodyList> list;
@@ -17,7 +17,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
     public DescribeHybridProxyLinkedClientListResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>B01B804F-947C-5623-B050-1C8FDFA796CF</p>
@@ -110,7 +110,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String os;
 
         /**
-         * <p>The name of the operating system for your asset.</p>
+         * <p>The operating system name of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>centos</p>
@@ -119,7 +119,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String osName;
 
         /**
-         * <p>The ID of the region in which the server resides.</p>
+         * <p>The region ID of the server.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -128,7 +128,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the region in which the server resides.</p>
+         * <p>The region name of the server.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
@@ -137,7 +137,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String regionName;
 
         /**
-         * <p>The status of the Security Center agent.</p>
+         * <p>The status of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>
@@ -146,7 +146,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The name of the tag added to the server.</p>
+         * <p>The tag name of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -285,7 +285,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
 
     public static class DescribeHybridProxyLinkedClientListResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries on the current page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -294,7 +294,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -303,7 +303,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -312,7 +312,7 @@ public class DescribeHybridProxyLinkedClientListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>149</p>

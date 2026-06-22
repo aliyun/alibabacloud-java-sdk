@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOssBucketRequest extends TeaModel {
     /**
-     * <p>The name of the bucket.</p>
+     * <p>The bucket name.</p>
      * 
      * <strong>example:</strong>
      * <p>iboxpublic****</p>
@@ -14,9 +14,9 @@ public class ListOssBucketRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 

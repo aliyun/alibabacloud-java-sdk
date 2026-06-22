@@ -42,7 +42,7 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
 
     public static class GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems extends TeaModel {
         /**
-         * <p>检查项展示名称</p>
+         * <p>Check item display name</p>
          * 
          * <strong>example:</strong>
          * <p>开启公网访问</p>
@@ -91,23 +91,32 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
          * <ul>
          * <li><p>If <strong>InstanceTypeName</strong> is set to <strong>ECS</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>INSTANCE</strong></li>
-         * <li><strong>DISK</strong></li>
-         * <li><strong>SECURITY_GROUP</strong></li>
+         * <li><p><strong>INSTANCE</strong></p>
+         * </li>
+         * <li><p><strong>DISK</strong></p>
+         * </li>
+         * <li><p><strong>SECURITY_GROUP</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If <strong>InstanceTypeName</strong> is set to <strong>ACR</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>REPOSITORY_ENTERPRISE</strong></li>
-         * <li><strong>REPOSITORY_PERSON</strong></li>
+         * <li><p><strong>REPOSITORY_ENTERPRISE</strong></p>
+         * </li>
+         * <li><p><strong>REPOSITORY_PERSON</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If <strong>InstanceTypeName</strong> is set to <strong>RAM</strong>, this parameter supports the following valid values:</p>
          * <ul>
-         * <li><strong>ALIAS</strong></li>
-         * <li><strong>USER</strong></li>
-         * <li><strong>POLICY</strong></li>
-         * <li><strong>GROUP</strong></li>
+         * <li><p><strong>ALIAS</strong></p>
+         * </li>
+         * <li><p><strong>USER</strong></p>
+         * </li>
+         * <li><p><strong>POLICY</strong></p>
+         * </li>
+         * <li><p><strong>GROUP</strong></p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If <strong>InstanceTypeName</strong> is set to <strong>WAF</strong>, this parameter supports the following valid value:</p>
@@ -131,14 +140,22 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         /**
          * <p>The asset type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Elastic Compute Service (ECS) instance.</li>
-         * <li><strong>1</strong>: Server Load Balancer (SLB) instance.</li>
-         * <li><strong>2</strong>: NAT gateway.</li>
-         * <li><strong>3</strong>: ApsaraDB RDS instance.</li>
-         * <li><strong>4</strong>: ApsaraDB for MongoDB (MongoDB) instance.</li>
-         * <li><strong>5</strong>: Tair (Redis OSS-compatible) (Tair) instance.</li>
-         * <li><strong>6</strong>: container image.</li>
-         * <li><strong>7</strong>: container.</li>
+         * <li><p><strong>0</strong>: Elastic Compute Service (ECS) instance.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Server Load Balancer (SLB) instance.</p>
+         * </li>
+         * <li><p><strong>2</strong>: NAT gateway.</p>
+         * </li>
+         * <li><p><strong>3</strong>: ApsaraDB RDS instance.</p>
+         * </li>
+         * <li><p><strong>4</strong>: ApsaraDB for MongoDB (MongoDB) instance.</p>
+         * </li>
+         * <li><p><strong>5</strong>: Tair (Redis OSS-compatible) (Tair) instance.</p>
+         * </li>
+         * <li><p><strong>6</strong>: container image.</p>
+         * </li>
+         * <li><p><strong>7</strong>: container.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,28 +167,50 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         /**
          * <p>The asset type of the cloud service. Valid values:</p>
          * <ul>
-         * <li><strong>ECS</strong>: ECS.</li>
-         * <li><strong>SLB</strong>: SLB.</li>
-         * <li><strong>RDS</strong>: ApsaraDB RDS.</li>
-         * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB.</li>
-         * <li><strong>KVSTORE</strong>: Tair.</li>
-         * <li><strong>ACR</strong>: Container Registry.</li>
-         * <li><strong>CSK</strong>: Container Service for Kubernetes (ACK).</li>
-         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC).</li>
-         * <li><strong>ACTIONTRAIL</strong>: ActionTrail.</li>
-         * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN).</li>
-         * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service).</li>
-         * <li><strong>RDC</strong>: Alibaba Cloud DevOps.</li>
-         * <li><strong>RAM</strong>: Resource Access Management (RAM).</li>
-         * <li><strong>DDOS</strong>: Anti-DDoS.</li>
-         * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
-         * <li><strong>OSS</strong>: Object Storage Service (OSS).</li>
-         * <li><strong>POLARDB</strong>: PolarDB.</li>
-         * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL.</li>
-         * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
-         * <li><strong>NAS</strong>: File Storage NAS (NAS).</li>
-         * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP).</li>
-         * <li><strong>EIP</strong>: Elastic IP Address (EIP).</li>
+         * <li><p><strong>ECS</strong>: ECS.</p>
+         * </li>
+         * <li><p><strong>SLB</strong>: SLB.</p>
+         * </li>
+         * <li><p><strong>RDS</strong>: ApsaraDB RDS.</p>
+         * </li>
+         * <li><p><strong>MONGODB</strong>: ApsaraDB for MongoDB.</p>
+         * </li>
+         * <li><p><strong>KVSTORE</strong>: Tair.</p>
+         * </li>
+         * <li><p><strong>ACR</strong>: Container Registry.</p>
+         * </li>
+         * <li><p><strong>CSK</strong>: Container Service for Kubernetes (ACK).</p>
+         * </li>
+         * <li><p><strong>VPC</strong>: Virtual Private Cloud (VPC).</p>
+         * </li>
+         * <li><p><strong>ACTIONTRAIL</strong>: ActionTrail.</p>
+         * </li>
+         * <li><p><strong>CDN</strong>: Alibaba Cloud CDN (CDN).</p>
+         * </li>
+         * <li><p><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service).</p>
+         * </li>
+         * <li><p><strong>RDC</strong>: Alibaba Cloud DevOps.</p>
+         * </li>
+         * <li><p><strong>RAM</strong>: Resource Access Management (RAM).</p>
+         * </li>
+         * <li><p><strong>DDOS</strong>: Anti-DDoS.</p>
+         * </li>
+         * <li><p><strong>WAF</strong>: Web Application Firewall (WAF).</p>
+         * </li>
+         * <li><p><strong>OSS</strong>: Object Storage Service (OSS).</p>
+         * </li>
+         * <li><p><strong>POLARDB</strong>: PolarDB.</p>
+         * </li>
+         * <li><p><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL.</p>
+         * </li>
+         * <li><p><strong>MSE</strong>: Microservices Engine (MSE).</p>
+         * </li>
+         * <li><p><strong>NAS</strong>: File Storage NAS (NAS).</p>
+         * </li>
+         * <li><p><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP).</p>
+         * </li>
+         * <li><p><strong>EIP</strong>: Elastic IP Address (EIP).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,10 +276,14 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         /**
          * <p>The cloud service provider. Valid values:</p>
          * <ul>
-         * <li><strong>ALIYUN</strong>: Alibaba Cloud.</li>
-         * <li><strong>TENCENT</strong>: Tencent Cloud.</li>
-         * <li><strong>MICROSOFT</strong>: Microsoft Azure.</li>
-         * <li><strong>AWS</strong>: AWS.</li>
+         * <li><p><strong>ALIYUN</strong>: Alibaba Cloud.</p>
+         * </li>
+         * <li><p><strong>TENCENT</strong>: Tencent Cloud.</p>
+         * </li>
+         * <li><p><strong>MICROSOFT</strong>: Microsoft Azure.</p>
+         * </li>
+         * <li><p><strong>AWS</strong>: AWS.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +293,7 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         public Integer vendor;
 
         /**
-         * <p>厂商名称</p>
+         * <p>Vendor name</p>
          * 
          * <strong>example:</strong>
          * <p>阿里云</p>
@@ -420,9 +463,12 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         /**
          * <p>The type of the statistics. Valid values:</p>
          * <ul>
-         * <li><strong>user</strong>: the top five users that are granted excessive permissions.</li>
-         * <li><strong>role</strong>: the top five roles that are granted excessive permissions.</li>
-         * <li><strong>instance</strong>: the top five cloud services on which risks are detected.</li>
+         * <li><p><strong>user</strong>: the top five users that are granted excessive permissions.</p>
+         * </li>
+         * <li><p><strong>role</strong>: the top five roles that are granted excessive permissions.</p>
+         * </li>
+         * <li><p><strong>instance</strong>: the top five cloud services on which risks are detected.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

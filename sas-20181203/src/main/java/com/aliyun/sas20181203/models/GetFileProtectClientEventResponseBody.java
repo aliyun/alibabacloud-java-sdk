@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileProtectClientEventResponseBody extends TeaModel {
+    /**
+     * <p>The data details.</p>
+     */
     @NameInMap("Data")
     public GetFileProtectClientEventResponseBodyData data;
 
@@ -39,6 +42,14 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
 
     public static class GetFileProtectClientEventResponseBodyData extends TeaModel {
         /**
+         * <p>The alert notification level. Valid values:</p>
+         * <ul>
+         * <li>0: no alert</li>
+         * <li>1: reminder</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -46,6 +57,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Integer alertLevel;
 
         /**
+         * <p>The command line of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;touch&quot;,&quot;/usr/local/aaaa&quot;]</p>
          */
@@ -53,6 +66,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String cmdLine;
 
         /**
+         * <p>The number of times the alert occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -60,6 +75,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/usr/local</p>
          */
@@ -67,6 +84,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String filePath;
 
         /**
+         * <p>The process permissions.</p>
+         * 
          * <strong>example:</strong>
          * <p>rwxr-xr-x</p>
          */
@@ -74,6 +93,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String filePermission;
 
         /**
+         * <p>The timestamp when the event first occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
          */
@@ -81,6 +102,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
+         * <p>The time when the event was handled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
          */
@@ -88,6 +111,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Long handleTime;
 
         /**
+         * <p>The event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3454</p>
          */
@@ -95,6 +120,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-wz92q7m5hsbgfhdss***</p>
          */
@@ -102,6 +129,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address of the associated instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>17.16.XX.XX</p>
          */
@@ -109,6 +138,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address of the associated instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.42.XX.XX</p>
          */
@@ -116,6 +147,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
+         * <p>The time when the event most recently occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
          */
@@ -123,6 +156,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Long latestTime;
 
         /**
+         * <p>The operation that the process performed on the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>DELETE</p>
          */
@@ -130,6 +165,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String operation;
 
         /**
+         * <p>The operating system type.</p>
+         * 
          * <strong>example:</strong>
          * <p>linux</p>
          */
@@ -137,6 +174,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String platform;
 
         /**
+         * <p>The process path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/bin/bash33</p>
          */
@@ -144,6 +183,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String procPath;
 
         /**
+         * <p>The process ID of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>3453</p>
          */
@@ -151,6 +192,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String processId;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -158,6 +201,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The action of the blocking rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
@@ -165,6 +210,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String ruleAction;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-000</p>
          */
@@ -172,6 +219,13 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li>0: unhandled </li>
+         * <li>1: handled</li>
+         * <li>2: whitelisted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -179,6 +233,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The user ID of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -186,6 +242,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The username of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>root</p>
          */
@@ -193,6 +251,8 @@ public class GetFileProtectClientEventResponseBody extends TeaModel {
         public String userName;
 
         /**
+         * <p>The UUID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
          */

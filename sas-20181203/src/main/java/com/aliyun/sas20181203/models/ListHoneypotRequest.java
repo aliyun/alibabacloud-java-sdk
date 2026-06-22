@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListHoneypotRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The IDs of the honeypots.</p>
+     * <p>The list of honeypot IDs.</p>
      */
     @NameInMap("HoneypotIds")
     public java.util.List<String> honeypotIds;
@@ -29,7 +29,7 @@ public class ListHoneypotRequest extends TeaModel {
     public String honeypotName;
 
     /**
-     * <p>The ID of the management node.</p>
+     * <p>The ID of the honeypot management node.</p>
      * 
      * <strong>example:</strong>
      * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
@@ -38,7 +38,7 @@ public class ListHoneypotRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The name of the management node.</p>
+     * <p>The name of the honeypot management node.</p>
      * 
      * <strong>example:</strong>
      * <p>honeypot_master</p>
@@ -47,7 +47,7 @@ public class ListHoneypotRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

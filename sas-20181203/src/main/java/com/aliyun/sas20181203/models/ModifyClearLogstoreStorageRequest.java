@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClearLogstoreStorageRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+     * <p>The identifier of the request source. Set the value to <strong>sas</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -14,9 +14,9 @@ public class ModifyClearLogstoreStorageRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -27,7 +27,7 @@ public class ModifyClearLogstoreStorageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the Logstore that stores logs.</p>
+     * <p>The name of the user LogStore.</p>
      * 
      * <strong>example:</strong>
      * <p>sas_sls_storage</p>
@@ -36,7 +36,7 @@ public class ModifyClearLogstoreStorageRequest extends TeaModel {
     public String userLogStore;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>The user project.</p>
      * 
      * <strong>example:</strong>
      * <p>sas-log-1234(uid)-cn-hangzhou</p>

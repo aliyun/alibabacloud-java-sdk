@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeImageFixCycleConfigResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
 
     public static class DescribeImageFixCycleConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The cycle of the scheduled fix. Unit: day.</p>
+         * <p>The scheduled fix cycle. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -51,10 +51,10 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         public Integer imageFixCycle;
 
         /**
-         * <p>Indicates whether the scheduled fix of image risks is enabled.</p>
+         * <p>The scheduled image fix switch. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled</li>
-         * <li><strong>off</strong>: disabled</li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,10 +64,10 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         public String imageFixSwitch;
 
         /**
-         * <p>The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The scope of the scheduled image fix. This parameter is in JSON format and contains the following fields:</p>
          * <ul>
-         * <li><strong>type</strong>: The type of the image risk. The value is fixed to repo.</li>
-         * <li><strong>target</strong>: The content of the image risk. The value is in the format of Namespace/Image repository.</li>
+         * <li><strong>type</strong>: The target type. The value is fixed as repo.</li>
+         * <li><strong>target</strong>: The target content. Format: namespace/image repository.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         public String imageFixTarget;
 
         /**
-         * <p>The time range during which the image was modified. Unit: day.</p>
+         * <p>The time range during which the image was modified. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

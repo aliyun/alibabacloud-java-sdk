@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportVulRequest extends TeaModel {
     /**
-     * <p>The name of the vulnerability.</p>
+     * <p>The vulnerability name.</p>
      * 
      * <strong>example:</strong>
      * <p>RHSA-2019:3197-Important: sudo security update</p>
@@ -14,9 +14,9 @@ public class ExportVulRequest extends TeaModel {
     public String aliasName;
 
     /**
-     * <p>The additional type of the vulnerabilities. You need to specify this parameter when you query application vulnerabilities. If you set the Type parameter to app, you must specify this parameter. Set the value to <strong>sca</strong>.</p>
+     * <p>An additional vulnerability type to export. This parameter is required and must be set to <strong>sca</strong> if the <code>Type</code> parameter is set to <code>app</code>.</p>
      * <blockquote>
-     * <p>If this parameter is set to <strong>sca</strong>, <strong>application vulnerabilities</strong> and the <strong>vulnerabilities that are detected based on software component analysis</strong> are queried. If you do not specify this parameter, only application vulnerabilities are queried.</p>
+     * <p>If you set this parameter to <strong>sca</strong>, the query returns both application vulnerabilities (<strong>app</strong>) and software composition analysis (<strong>sca</strong>) vulnerabilities. If you do not set this parameter, only application vulnerabilities are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ExportVulRequest extends TeaModel {
     public String attachTypes;
 
     /**
-     * <p>The name of the container that is affected by the vulnerability.</p>
+     * <p>The affected container name.</p>
      * 
      * <strong>example:</strong>
      * <p>xxljob-7b87597b99-mcskr</p>
@@ -35,9 +35,9 @@ public class ExportVulRequest extends TeaModel {
     public String containerName;
 
     /**
-     * <p>The end time of the first scan.</p>
+     * <p>The end of the creation time range for the vulnerabilities to export.</p>
      * <blockquote>
-     * <p> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>A Unix timestamp in milliseconds.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,9 +47,9 @@ public class ExportVulRequest extends TeaModel {
     public Long createTsEnd;
 
     /**
-     * <p>The start time of the first scan.</p>
+     * <p>The start of the creation time range for the vulnerabilities to export.</p>
      * <blockquote>
-     * <p> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>A Unix timestamp in milliseconds.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class ExportVulRequest extends TeaModel {
     public Long createTsStart;
 
     /**
-     * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+     * <p>The CVE ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CVE-2022-44702</p>
@@ -68,10 +68,12 @@ public class ExportVulRequest extends TeaModel {
     public String cveId;
 
     /**
-     * <p>Specifies whether the vulnerability is fixed. Valid values:</p>
+     * <p>Indicates whether the vulnerability is remediated. Valid values:</p>
      * <ul>
-     * <li><strong>y</strong>: The vulnerability is fixed.</li>
-     * <li><strong>n</strong>: The vulnerability is not fixed.</li>
+     * <li><p><strong>y</strong>: Remediated</p>
+     * </li>
+     * <li><p><strong>n</strong>: Not remediated</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,9 +83,9 @@ public class ExportVulRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>The server group ID of the server on which the vulnerabilities are detected.</p>
+     * <p>The ID of the asset group that contains the affected servers.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+     * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +95,7 @@ public class ExportVulRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the image that is affected by the vulnerability.</p>
+     * <p>The affected image name.</p>
      * 
      * <strong>example:</strong>
      * <p>container-<em><strong>:</strong></em>*</p>
@@ -102,10 +104,12 @@ public class ExportVulRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,11 +119,14 @@ public class ExportVulRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+     * <p>The remediation priority of the vulnerabilities to export. Separate multiple priorities with commas. Valid values:</p>
      * <ul>
-     * <li><strong>asap</strong>: high</li>
-     * <li><strong>later</strong>: medium</li>
-     * <li><strong>nntf</strong>: low</li>
+     * <li><p><strong>asap</strong>: High</p>
+     * </li>
+     * <li><p><strong>later</strong>: Medium</p>
+     * </li>
+     * <li><p><strong>nntf</strong>: Low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +136,7 @@ public class ExportVulRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The path of the process that is affected by the vulnerability.</p>
+     * <p>The affected process path.</p>
      * 
      * <strong>example:</strong>
      * <p>/etc/test</p>
@@ -138,11 +145,11 @@ public class ExportVulRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+     * <p>Specifies whether the vulnerability is protected by runtime application self-protection (RASP). Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: no.</p>
+     * <li><p><strong>0</strong>: Not supported</p>
      * </li>
-     * <li><p><strong>1</strong>: yes.</p>
+     * <li><p><strong>1</strong>: Supported</p>
      * </li>
      * </ul>
      * 
@@ -160,14 +167,36 @@ public class ExportVulRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The tag that is used to search for the vulnerabilities. Valid values:</p>
+     * <p>A tag for filtering vulnerabilities. Separate multiple tags with commas. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Restart required</li>
-     * <li>Remote exploitation</li>
-     * <li>Exploit exists</li>
-     * <li>Exploitable</li>
-     * <li>Privilege escalation</li>
-     * <li>Code execution</li>
+     * <li><p>Restart required</p>
+     * </li>
+     * <li><p>remote exploitation</p>
+     * </li>
+     * <li><p>exploit exists</p>
+     * </li>
+     * <li><p>exploitable</p>
+     * </li>
+     * <li><p>Elevation of Privilege</p>
+     * </li>
+     * <li><p>Code Execution</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><p><strong>Restart required</strong></p>
+     * </li>
+     * <li><p><strong>remote exploitation</strong></p>
+     * </li>
+     * <li><p><strong>exploit exists</strong></p>
+     * </li>
+     * <li><p><strong>exploitable</strong></p>
+     * </li>
+     * <li><p><strong>Elevation of Privilege</strong></p>
+     * </li>
+     * <li><p><strong>Code Execution</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -177,13 +206,18 @@ public class ExportVulRequest extends TeaModel {
     public String searchTags;
 
     /**
-     * <p>The type of the vulnerability that you want to export. Valid values:</p>
+     * <p>The type of vulnerabilities to export. Valid values:</p>
      * <ul>
-     * <li><strong>cve</strong>: Linux software vulnerability</li>
-     * <li><strong>sys</strong>: Windows system vulnerability</li>
-     * <li><strong>cms</strong>: Web-CMS vulnerability</li>
-     * <li><strong>app</strong>: application vulnerability</li>
-     * <li><strong>emg</strong>: urgent vulnerability</li>
+     * <li><p><strong>cve</strong>: Linux software vulnerability</p>
+     * </li>
+     * <li><p><strong>sys</strong>: Windows system vulnerability</p>
+     * </li>
+     * <li><p><strong>cms</strong>: Web-CMS vulnerability</p>
+     * </li>
+     * <li><p><strong>app</strong>: application vulnerability</p>
+     * </li>
+     * <li><p><strong>emg</strong>: emergency vulnerability</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -194,7 +228,7 @@ public class ExportVulRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUID of the server on which the vulnerabilities are detected. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUIDs of the servers for which to export vulnerabilities. Separate multiple UUIDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1587bedb-fdb4-48c4-9330-****</p>
@@ -203,9 +237,9 @@ public class ExportVulRequest extends TeaModel {
     public String uuids;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) in which the vulnerabilities are detected. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the VPC instances for which to export vulnerabilities. Separate multiple IDs with commas.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the IDs of VPCs.</p>
+     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -215,7 +249,7 @@ public class ExportVulRequest extends TeaModel {
     public String vpcInstanceIds;
 
     /**
-     * <p>漏洞组件信息列表</p>
+     * <p>A list of vulnerability component information.</p>
      */
     @NameInMap("VulEntityList")
     public java.util.List<ExportVulRequestVulEntityList> vulEntityList;
@@ -379,7 +413,7 @@ public class ExportVulRequest extends TeaModel {
 
     public static class ExportVulRequestVulEntityList extends TeaModel {
         /**
-         * <p>组件名称</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>Ollama</p>
@@ -388,7 +422,7 @@ public class ExportVulRequest extends TeaModel {
         public String entityName;
 
         /**
-         * <p>组件版本</p>
+         * <p>The component version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

@@ -4,11 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddUnknownThreatDetectProcessResponseBody extends TeaModel {
+    /**
+     * <p>A list of results for the added processes.</p>
+     */
     @NameInMap("IdList")
     public java.util.List<AddUnknownThreatDetectProcessResponseBodyIdList> idList;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
@@ -39,6 +42,8 @@ public class AddUnknownThreatDetectProcessResponseBody extends TeaModel {
 
     public static class AddUnknownThreatDetectProcessResponseBodyIdList extends TeaModel {
         /**
+         * <p>The ID generated for the added process.</p>
+         * 
          * <strong>example:</strong>
          * <p>92666883</p>
          */

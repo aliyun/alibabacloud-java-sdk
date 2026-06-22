@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomizeReportStatusResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>64C76BEE-6A47-54D9-BD91-BD3E8A1B****</p>

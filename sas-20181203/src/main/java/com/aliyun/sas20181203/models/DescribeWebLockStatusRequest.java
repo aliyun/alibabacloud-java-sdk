@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWebLockStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to sas.</p>
+     * <p>The identifier of the request source. Set this parameter to sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -14,10 +14,10 @@ public class DescribeWebLockStatusRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeWebLockStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>221.214.XXX.XX</p>

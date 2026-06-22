@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteContainerPluginRuleResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the container plug-in is manually deleted. Valid values:</p>
+     * <p>Indicates whether the container escape prevention rule is deleted. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The rule is deleted.</li>
+     * <li><strong>false</strong>: The rule failed to be deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteContainerPluginRuleResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>

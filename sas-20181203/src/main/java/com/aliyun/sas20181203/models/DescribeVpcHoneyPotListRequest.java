@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcHoneyPotListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,10 +14,10 @@ public class DescribeVpcHoneyPotListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether the cloud honeypot feature is enabled for the VPCs. Valid values:</p>
+     * <p>Specifies whether the VPCs to query have cloud honeypot enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class DescribeVpcHoneyPotListRequest extends TeaModel {
     public Boolean honeyPotExistence;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,9 +39,9 @@ public class DescribeVpcHoneyPotListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the VPC on which the honeypot is deployed.</p>
+     * <p>The ID of the VPC in which the honeypot instance that you want to query resides.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the IDs of VPCs.</p>
+     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the VPC ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,9 +51,9 @@ public class DescribeVpcHoneyPotListRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The name of the VPC.</p>
+     * <p>The name of the VPC in which the honeypot instance that you want to query resides.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the names of VPCs.</p>
+     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the VPC name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,9 +63,9 @@ public class DescribeVpcHoneyPotListRequest extends TeaModel {
     public String vpcName;
 
     /**
-     * <p>The region ID of the VPC.</p>
+     * <p>The region ID of the VPC in which the honeypot instance that you want to query resides.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the region IDs of VPCs.</p>
+     * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the region ID of the VPC.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

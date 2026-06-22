@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStrategyDetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>C5B28F65-9245-5DC1-B3CF-5F2756A756A8</p>
@@ -14,7 +14,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the baseline check policy.</p>
+     * <p>The information about the policy.</p>
      */
     @NameInMap("Strategy")
     public DescribeStrategyDetailResponseBodyStrategy strategy;
@@ -42,7 +42,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
     public static class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList extends TeaModel {
         /**
-         * <p>The options that can be selected for the rule parameter if the value of ParamType is set to 2.</p>
+         * <p>The options for the rule parameter when the parameter type is selection.</p>
          * 
          * <strong>example:</strong>
          * <p>0,1,2,3</p>
@@ -99,7 +99,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
          * <p>The type of the rule parameter. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: input</li>
-         * <li><strong>2</strong>: selection</li>
+         * <li><strong>2</strong>: selection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,10 +199,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Integer defaultValue;
 
         /**
-         * <p>Indicates whether the rule can be selected. Valid values:</p>
+         * <p>Indicates whether the rule is optional. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: Optional.</li>
+         * <li><strong>0</strong>: Not optional.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Integer optional;
 
         /**
-         * <p>The rule parameters.</p>
+         * <p>The list of rule parameters.</p>
          */
         @NameInMap("ParamList")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList> paramList;
@@ -227,7 +227,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String ruleDesc;
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>login_unlock_deny_pam_faillock.must.cus</p>
@@ -311,7 +311,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String checkItem;
 
         /**
-         * <p>The details of rules.</p>
+         * <p>The list of rule information.</p>
          */
         @NameInMap("Rules")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRules> rules;
@@ -366,16 +366,16 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The details of custom check items.</p>
+         * <p>The list of custom check item details.</p>
          */
         @NameInMap("CheckDetails")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetails> checkDetails;
 
         /**
-         * <p>Indicates whether the sub-check item is selected. Valid values:</p>
+         * <p>Indicates whether the sub-risk item is selected. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Selected.</li>
+         * <li><strong>false</strong>: Not selected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -385,10 +385,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Boolean on;
 
         /**
-         * <p>The operating system type of the server. Valid values:</p>
+         * <p>The supported operating system. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong></li>
-         * <li><strong>linux</strong></li>
+         * <li><strong>linux</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -398,7 +398,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String supportedOs;
 
         /**
-         * <p>The type of the sub-check item.</p>
+         * <p>The type name of the sub-check item.</p>
          * 
          * <strong>example:</strong>
          * <p>hc_exploit_redis</p>
@@ -464,10 +464,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>Indicates whether the check item is selected. Valid values:</p>
+         * <p>Indicates whether the risk item is selected. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Selected.</li>
+         * <li><strong>false</strong>: Not selected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -477,13 +477,13 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Boolean on;
 
         /**
-         * <p>The information about sub-check items.</p>
+         * <p>The list of sub-risk items.</p>
          */
         @NameInMap("SubTypes")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypes> subTypes;
 
         /**
-         * <p>The name of the check item.</p>
+         * <p>The check item.</p>
          * 
          * <strong>example:</strong>
          * <p>hc_exploit</p>
@@ -532,10 +532,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
     public static class DescribeStrategyDetailResponseBodyStrategy extends TeaModel {
         /**
-         * <p>The type of the baseline check policy that you want to query. Valid values:</p>
+         * <p>The type of the policy. Valid values:</p>
          * <ul>
-         * <li><strong>common</strong>: standard baseline check policy</li>
-         * <li><strong>custom</strong>: custom baseline check policy</li>
+         * <li><strong>common</strong>: Standard policy.</li>
+         * <li><strong>custom</strong>: Custom policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -545,7 +545,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String customType;
 
         /**
-         * <p>The check interval of the policy.</p>
+         * <p>The detection cycle of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -554,12 +554,12 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Integer cycleDays;
 
         /**
-         * <p>The time period during which the check starts. Valid values:</p>
+         * <p>The detection cycle of the policy. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: 00:00 to 06:00</li>
          * <li><strong>6</strong>: 06:00 to 12:00</li>
          * <li><strong>12</strong>: 12:00 to 18:00</li>
-         * <li><strong>18</strong>: 18:00 to 24:00</li>
+         * <li><strong>18</strong>: 18:00 to 24:00.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -569,7 +569,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Integer cycleStartTime;
 
         /**
-         * <p>The end time of the check. Specify the time in the HH:mm:ss format.</p>
+         * <p>The end time of the baseline check policy execution.</p>
          * 
          * <strong>example:</strong>
          * <p>03:00:00</p>
@@ -578,7 +578,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the baseline check policy.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -587,7 +587,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The name of the baseline check policy.</p>
+         * <p>The Policy Name.</p>
          * 
          * <strong>example:</strong>
          * <p>TestStrategy</p>
@@ -596,10 +596,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The subtype of the baselines. </p>
-         * <blockquote>
-         * <p>You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the subtypes of baselines.</p>
-         * </blockquote>
+         * <p>The subtype of the baseline check item.</p>
          * 
          * <strong>example:</strong>
          * <p>hc_nginx_linux,tomcat7,hc_mysql_ali,hc_docker</p>
@@ -608,13 +605,13 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String riskSubTypeName;
 
         /**
-         * <p>The information about the whitelist of risk items.</p>
+         * <p>The list of risk item whitelists.</p>
          */
         @NameInMap("RiskTypeWhiteListQueryResultList")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList;
 
         /**
-         * <p>The start time of the check. Specify the time in the HH:mm:ss format.</p>
+         * <p>The start time of the baseline check policy.</p>
          * 
          * <strong>example:</strong>
          * <p>02:00:00</p>
@@ -623,10 +620,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The method that is used to apply the baseline check policy. Valid values:</p>
+         * <p>The method used to add assets to the policy. Valid values:</p>
          * <ul>
-         * <li><strong>groupId</strong>: asset groups</li>
-         * <li><strong>uuid</strong>: assets</li>
+         * <li><strong>groupId</strong>: Assets are added by asset group.</li>
+         * <li><strong>uuid</strong>: Assets are added individually.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -636,10 +633,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The type of the baseline check policy. Valid values:</p>
+         * <p>The type of the policy. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: standard policies</li>
-         * <li><strong>2</strong>: custom policies</li>
+         * <li><strong>1</strong>: system-added policy. The policy name is the default policy.</li>
+         * <li><strong>2</strong>: user-added policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>

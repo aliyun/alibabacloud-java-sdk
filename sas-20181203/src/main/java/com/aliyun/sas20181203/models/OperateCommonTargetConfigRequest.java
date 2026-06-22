@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class OperateCommonTargetConfigRequest extends TeaModel {
     /**
-     * <p>The type of the image. Valid values:</p>
+     * <p>The target type of the image switch. Valid values:</p>
      * <ul>
-     * <li><strong>repoName</strong>: the name of the image repository</li>
-     * <li><strong>repoNamespace</strong>: the namespace of the image repository</li>
+     * <li><strong>repoName</strong>: repository name.</li>
+     * <li><strong>repoNamespace</strong>: repository namespace name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
     public String fieldName;
 
     /**
-     * <p>The name of the image repository or the namespace of the image repository.</p>
+     * <p>The repository name or repository namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>cafcmc-dev</p>
@@ -27,7 +27,7 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>182.92.XXX.XXX</p>
@@ -36,11 +36,11 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The configuration of proactive defense for your server. The value includes the following fields:</p>
+     * <p>The parameters for configuring proactive defense on servers. The following parameters are included:</p>
      * <ul>
-     * <li><strong>targetType</strong>: specifies the dimension from which you manage proactive defense. UUIDs are supported. Set the value to <strong>uuid</strong>.</li>
-     * <li><strong>target</strong>: specifies the UUID of the server for which you want to configure proactive defense.</li>
-     * <li><strong>flag</strong>: specifies whether to enable or disable proactive defense for your server. Valid values are <strong>add</strong> and <strong>del</strong>. The value add indicates that proactive defense will be enabled for your server. The value del indicates that proactive defense will be disabled for your server.</li>
+     * <li><strong>targetType</strong>: the dimension of the defense configuration. Currently, only the UUID dimension is supported. Fixed value: <strong>uuid</strong>.</li>
+     * <li><strong>target</strong>: the UUID of the server for which you want to configure proactive defense.</li>
+     * <li><strong>flag</strong>: specifies whether to enable or disable proactive defense for the server. Valid values: <strong>add</strong> (enable) and <strong>del</strong> (disable).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -57,11 +57,11 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
     public String targetOperations;
 
     /**
-     * <p>The dimension based on which the asset is selected. Valid values:</p>
+     * <p>The Asset Type of the target. Valid values:</p>
      * <ul>
-     * <li><strong>uuid</strong>: the UUID of the server</li>
-     * <li><strong>Cluster</strong>: the ID of the cluster</li>
-     * <li><strong>image_repo</strong>: the name of the image repository</li>
+     * <li><strong>uuid</strong>: server UUID.</li>
+     * <li><strong>Cluster</strong>: cluster ID.</li>
+     * <li><strong>image_repo</strong>: image repository name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,19 +71,19 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The type of the feature. Valid values:</p>
+     * <p>The switch type. Valid values:</p>
      * <ul>
-     * <li><strong>alidetect-scan-enable</strong>: local file detection</li>
-     * <li><strong>ACTION-TRIAL-PERMISSION</strong>: data delivery to ActionTrail</li>
-     * <li><strong>alidetect</strong>: local file detection engine</li>
-     * <li><strong>container_prevent_escape</strong>: container escape prevention</li>
-     * <li><strong>image_repo</strong>: repository image scan</li>
-     * <li><strong>proc_filter_switch</strong>: log filtering</li>
-     * <li><strong>agentless</strong>: agentless detection</li>
-     * <li><strong>rasp</strong>: application protection</li>
-     * <li><strong>sensitiveFile</strong>: sensitive file detection</li>
-     * <li><strong>aliscriptengine</strong>: in-depth detection engine</li>
-     * <li><strong>containerNetwork</strong>: container network visualization</li>
+     * <li><strong>alidetect-scan-enable</strong>: local file detection that performs detection only locally.</li>
+     * <li><strong>ACTION-TRIAL-PERMISSION</strong>: ActionTrail data delivery.</li>
+     * <li><strong>alidetect</strong>: local file detection engine.</li>
+     * <li><strong>container_prevent_escape</strong>: container escape prevention.</li>
+     * <li><strong>image_repo</strong>: repository image scanning.</li>
+     * <li><strong>proc_filter_switch</strong>: log filtering.</li>
+     * <li><strong>agentless</strong>: agentless detection.</li>
+     * <li><strong>rasp</strong>: application protection.</li>
+     * <li><strong>sensitiveFile</strong>: sensitive information scanning.</li>
+     * <li><strong>aliscriptengine</strong>: deep detection engine.</li>
+     * <li><strong>containerNetwork</strong>: container visualization.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

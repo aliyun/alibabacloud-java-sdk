@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPluginForUuidRequest extends TeaModel {
     /**
-     * <p>The plug-in types.</p>
+     * <p>The list of plugin types.</p>
      */
     @NameInMap("Types")
     public java.util.List<String> types;
@@ -13,7 +13,7 @@ public class ListPluginForUuidRequest extends TeaModel {
     /**
      * <p>The UUID of the server.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

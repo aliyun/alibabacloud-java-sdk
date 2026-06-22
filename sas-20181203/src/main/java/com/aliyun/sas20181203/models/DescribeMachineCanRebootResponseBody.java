@@ -7,8 +7,8 @@ public class DescribeMachineCanRebootResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the server can be restarted. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: The server can be restarted.</li>
+     * <li><strong>false</strong>: The server cannot be restarted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeMachineCanRebootResponseBody extends TeaModel {
     public Boolean canReboot;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>

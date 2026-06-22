@@ -54,7 +54,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
          * <p>The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.</p>
          * 
          * <strong>example:</strong>
-         * <p>[1,100]</p>
+         * <p>[100,1]</p>
          */
         @NameInMap("AuthLimitList")
         public String authLimitList;

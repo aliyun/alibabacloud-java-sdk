@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     /**
-     * <p>The type of the information that you want to query. Valid values:</p>
+     * <p>The query type of the element to query. Valid values:</p>
      * <ul>
-     * <li><strong>EDGE</strong>: connection information</li>
+     * <li><strong>EDGE</strong>: connection information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public String criteriaType;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,13 +26,13 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The information about the destination node.</p>
+     * <p>The destination node information, which is used to filter destination nodes.</p>
      */
     @NameInMap("DstNode")
     public String dstNodeShrink;
 
     /**
-     * <p>The end time of the network connection.</p>
+     * <p>The end time of the network connectivity.</p>
      * 
      * <strong>example:</strong>
      * <p>1649260799999</p>
@@ -41,9 +41,9 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class FindContainerNetworkConnectShrinkRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The information about the source node.</p>
+     * <p>The source node information, which is used to filter source nodes.</p>
      */
     @NameInMap("SrcNode")
     public String srcNodeShrink;
 
     /**
-     * <p>The start time of the network connection.</p>
+     * <p>The start time of the network connectivity.</p>
      * 
      * <strong>example:</strong>
      * <p>1666886400000</p>

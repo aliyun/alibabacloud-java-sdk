@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+     * <p>The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by hackers.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedAsapVulCount;
 
     /**
-     * <p>The total number of system components that are exposed on the Internet. The components include OpenSSL and OpenSSH.</p>
+     * <p>The total number of system components (such as OpenSSL and OpenSSH) on your servers that are exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -23,7 +23,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedComponentCount;
 
     /**
-     * <p>The number of ApsaraDB for MongoDB instances that are exposed on the Internet.</p>
+     * <p>The number of ApsaraDB for MongoDB database assets exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedDdsCount;
 
     /**
-     * <p>The number of Elastic Compute Service (ECS) instances that are exposed on the Internet.</p>
+     * <p>The number of ECS assets exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -41,16 +41,16 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedEcsCount;
 
     /**
-     * <p>The total number of assets that are exposed on the Internet.</p>
+     * <p>The total number of assets exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>10</p>
      */
     @NameInMap("ExposedInstanceCount")
     public Integer exposedInstanceCount;
 
     /**
-     * <p>The total number of IP addresses that are exposed on the Internet.</p>
+     * <p>The total number of IP addresses exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedIpCount;
 
     /**
-     * <p>The number of ApsaraDB for Redis instances that are exposed on the Internet.</p>
+     * <p>The number of ApsaraDB for Redis database assets exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -68,7 +68,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedKvstoreCount;
 
     /**
-     * <p>The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+     * <p>The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by hackers.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -77,7 +77,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedLaterVulCount;
 
     /**
-     * <p>The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+     * <p>The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by hackers.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -86,7 +86,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedNntfVulCount;
 
     /**
-     * <p>The total number of ports that are exposed on the Internet.</p>
+     * <p>The total number of ports exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -95,7 +95,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedPortCount;
 
     /**
-     * <p>The number of ApsaraDB RDS instances that are exposed on the Internet.</p>
+     * <p>The number of RDS database assets exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -104,7 +104,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedRdsCount;
 
     /**
-     * <p>The total number of system keys that are detected on your servers and are exposed on the Internet.</p>
+     * <p>The total number of system keys on your servers that are exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -113,7 +113,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer exposedWeekPasswordMachineCount;
 
     /**
-     * <p>The total number of gateway assets that are exposed on the Internet. The gateway assets include NAT gateways and Server Load Balancer (SLB) instances.</p>
+     * <p>The total number of gateway assets (Server Load Balancer and NAT Gateway) exposed on the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -122,7 +122,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public Integer gatewayAssetCount;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of this request, which is a unique identifier generated by Alibaba Cloud for the request. It can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>4B897D10-B3CD-4A93-A5FA-591F3ED12A86</p>

@@ -117,8 +117,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         /**
          * <p>The action of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: allow</li>
-         * <li><strong>1</strong>: block</li>
+         * <li><p><strong>0</strong>: allow</p>
+         * </li>
+         * <li><p><strong>1</strong>: block</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +142,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
          * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Rule\<em>\</em>\<em>\</em></p>
+         * <p>规则****</p>
          */
         @NameInMap("Name")
         public String name;
@@ -148,9 +150,12 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the operating system. Valid values:</p>
          * <ul>
-         * <li><strong>windows</strong>: Windows</li>
-         * <li><strong>linux</strong>: Linux</li>
-         * <li><strong>all</strong>: all types</li>
+         * <li><p><strong>windows</strong>: Windows</p>
+         * </li>
+         * <li><p><strong>linux</strong>: Linux</p>
+         * </li>
+         * <li><p><strong>all</strong>: all types</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,13 +176,20 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Process hash</li>
-         * <li><strong>2</strong>: Command line</li>
-         * <li><strong>3</strong>: Process Network</li>
-         * <li><strong>4</strong>: File Read and Write</li>
-         * <li><strong>5</strong>: Operation on Registry</li>
-         * <li><strong>6</strong>: Dynamic-link Library Loading</li>
-         * <li><strong>7</strong>: File Renaming</li>
+         * <li><p><strong>1</strong>: Process hash</p>
+         * </li>
+         * <li><p><strong>2</strong>: Command line</p>
+         * </li>
+         * <li><p><strong>3</strong>: Process Network</p>
+         * </li>
+         * <li><p><strong>4</strong>: File Read and Write</p>
+         * </li>
+         * <li><p><strong>5</strong>: Operation on Registry</p>
+         * </li>
+         * <li><p><strong>6</strong>: Dynamic-link Library Loading</p>
+         * </li>
+         * <li><p><strong>7</strong>: File Renaming</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

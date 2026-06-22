@@ -14,7 +14,7 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
     public Integer itemCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>16AA5B62-A3C1-520B-B289-4BD971CC17AB</p>
@@ -23,19 +23,19 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistical results.</p>
+     * <p>The collection of statistics results.</p>
      */
     @NameInMap("TopStatisticItems")
     public java.util.List<DescribePropertyUsageTopResponseBodyTopStatisticItems> topStatisticItems;
 
     /**
-     * <p>The type of the asset fingerprint. Valid value:</p>
+     * <p>The Asset Fingerprints type. Valid values:</p>
      * <ul>
      * <li><strong>port</strong>: port</li>
      * <li><strong>process</strong>: process</li>
      * <li><strong>software</strong>: software</li>
      * <li><strong>user</strong>: account</li>
-     * <li><strong>sca</strong>: middleware</li>
+     * <li><strong>sca</strong>: middleware.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
 
     public static class DescribePropertyUsageTopResponseBodyTopStatisticItems extends TeaModel {
         /**
-         * <p>The quantity.</p>
+         * <p>The count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -92,7 +92,7 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The statistical item.</p>
+         * <p>The statistics item.</p>
          * 
          * <strong>example:</strong>
          * <p>openssl</p>

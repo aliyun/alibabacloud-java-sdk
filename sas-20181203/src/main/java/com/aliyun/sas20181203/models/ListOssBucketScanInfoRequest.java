@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOssBucketScanInfoRequest extends TeaModel {
     /**
-     * <p>The name of the bucket.</p>
+     * <p>The bucket name.</p>
      * 
      * <strong>example:</strong>
      * <p>iboxpublic****</p>
@@ -14,7 +14,7 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the bucket that is used for fuzzy match.</p>
+     * <p>The bucket name for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -33,10 +33,10 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public String fuzzBucketName;
 
     /**
-     * <p>Specifies whether at-risk objects are detected. Valid values:</p>
+     * <p>Specifies whether risky files are detected. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: No at-risk objects are detected.</li>
-     * <li><strong>1</strong>: At-risk objects are detected.</li>
+     * <li><strong>0</strong>: No risks detected.</li>
+     * <li><strong>1</strong>: Risky files exist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,9 +46,9 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public Integer hasRisk;
 
     /**
-     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -59,7 +59,7 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,12 +69,12 @@ public class ListOssBucketScanInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The check status of the bucket. Valid values:</p>
+     * <p>The detection status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The bucket is not checked.</li>
-     * <li><strong>2</strong>: All objects in the bucket are being checked.</li>
-     * <li><strong>3</strong>: Only new objects in the bucket are being checked.</li>
-     * <li><strong>4</strong>: The bucket is checked.</li>
+     * <li><strong>1</strong>: Not scanned.</li>
+     * <li><strong>2</strong>: Full scan in progress.</li>
+     * <li><strong>3</strong>: Incremental scan in progress.</li>
+     * <li><strong>4</strong>: Scanned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

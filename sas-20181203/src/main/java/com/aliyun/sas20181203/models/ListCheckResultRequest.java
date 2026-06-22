@@ -37,8 +37,10 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>Specifies whether the check item supports custom parameters. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,28 +58,50 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>The asset type of the cloud services. Valid values:</p>
      * <ul>
-     * <li><strong>ECS</strong>: Elastic Compute Service (ECS)</li>
-     * <li><strong>SLB</strong>: Server Load Balancer (SLB)</li>
-     * <li><strong>RDS</strong>: ApsaraDB RDS</li>
-     * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB (MongoDB)</li>
-     * <li><strong>KVSTORE</strong>: ApsaraDB for Redis (Redis)</li>
-     * <li><strong>ACR</strong>: Container Registry</li>
-     * <li><strong>CSK</strong>: Container Service for Kubernetes (ACK)</li>
-     * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
-     * <li><strong>ACTIONTRAIL</strong>: ActionTrail</li>
-     * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN)</li>
-     * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
-     * <li><strong>RDC</strong>: Apsara Devops</li>
-     * <li><strong>RAM</strong>: Resource Access Management (RAM)</li>
-     * <li><strong>DDOS</strong>: Anti-DDoS</li>
-     * <li><strong>WAF</strong>: Web Application Firewall (WAF)</li>
-     * <li><strong>OSS</strong>: Object Storage Service (OSS)</li>
-     * <li><strong>POLARDB</strong>: PolarDB</li>
-     * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</li>
-     * <li><strong>MSE</strong>: Microservices Engine (MSE)</li>
-     * <li><strong>NAS</strong>: File Storage NAS (NAS)</li>
-     * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP)</li>
-     * <li><strong>EIP</strong>: Elastic IP Address (EIP)</li>
+     * <li><p><strong>ECS</strong>: Elastic Compute Service (ECS)</p>
+     * </li>
+     * <li><p><strong>SLB</strong>: Server Load Balancer (SLB)</p>
+     * </li>
+     * <li><p><strong>RDS</strong>: ApsaraDB RDS</p>
+     * </li>
+     * <li><p><strong>MONGODB</strong>: ApsaraDB for MongoDB (MongoDB)</p>
+     * </li>
+     * <li><p><strong>KVSTORE</strong>: ApsaraDB for Redis (Redis)</p>
+     * </li>
+     * <li><p><strong>ACR</strong>: Container Registry</p>
+     * </li>
+     * <li><p><strong>CSK</strong>: Container Service for Kubernetes (ACK)</p>
+     * </li>
+     * <li><p><strong>VPC</strong>: Virtual Private Cloud (VPC)</p>
+     * </li>
+     * <li><p><strong>ACTIONTRAIL</strong>: ActionTrail</p>
+     * </li>
+     * <li><p><strong>CDN</strong>: Alibaba Cloud CDN (CDN)</p>
+     * </li>
+     * <li><p><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</p>
+     * </li>
+     * <li><p><strong>RDC</strong>: Apsara Devops</p>
+     * </li>
+     * <li><p><strong>RAM</strong>: Resource Access Management (RAM)</p>
+     * </li>
+     * <li><p><strong>DDOS</strong>: Anti-DDoS</p>
+     * </li>
+     * <li><p><strong>WAF</strong>: Web Application Firewall (WAF)</p>
+     * </li>
+     * <li><p><strong>OSS</strong>: Object Storage Service (OSS)</p>
+     * </li>
+     * <li><p><strong>POLARDB</strong>: PolarDB</p>
+     * </li>
+     * <li><p><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</p>
+     * </li>
+     * <li><p><strong>MSE</strong>: Microservices Engine (MSE)</p>
+     * </li>
+     * <li><p><strong>NAS</strong>: File Storage NAS (NAS)</p>
+     * </li>
+     * <li><p><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP)</p>
+     * </li>
+     * <li><p><strong>EIP</strong>: Elastic IP Address (EIP)</p>
+     * </li>
      * </ul>
      */
     @NameInMap("InstanceTypes")
@@ -86,8 +110,10 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,8 +125,10 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>Specifies whether fixing is supported. Valid values:</p>
      * <ul>
-     * <li><strong>SUPPORT_REPAIR</strong></li>
-     * <li><strong>NOT_SUPPORT_REPAIR</strong></li>
+     * <li><p><strong>SUPPORT_REPAIR</strong></p>
+     * </li>
+     * <li><p><strong>NOT_SUPPORT_REPAIR</strong></p>
+     * </li>
      * </ul>
      */
     @NameInMap("OperationTypes")
@@ -118,8 +146,10 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>The region ID of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: International</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><p><strong>cn-hangzhou</strong>: International</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Singapore</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -137,7 +167,7 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -149,9 +179,12 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>The risk levels of check items. Separate multiple risk levels with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>HIGH</strong></li>
-     * <li><strong>MEDIUM</strong></li>
-     * <li><strong>LOW</strong></li>
+     * <li><p><strong>HIGH</strong></p>
+     * </li>
+     * <li><p><strong>MEDIUM</strong></p>
+     * </li>
+     * <li><p><strong>LOW</strong></p>
+     * </li>
      * </ul>
      */
     @NameInMap("RiskLevels")
@@ -160,8 +193,10 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>The types of the conditions based on which check items are sorted. Valid values:</p>
      * <ul>
-     * <li><strong>RISK_LEVEL</strong>: risk level</li>
-     * <li><strong>STATUS</strong>: status</li>
+     * <li><p><strong>RISK_LEVEL</strong>: risk level</p>
+     * </li>
+     * <li><p><strong>STATUS</strong>: status</p>
+     * </li>
      * </ul>
      */
     @NameInMap("SortTypes")
@@ -176,11 +211,16 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>The statuses of check items. Separate multiple statuses with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>PASS</strong></li>
-     * <li><strong>NOT_PASS</strong></li>
-     * <li><strong>CHECKING</strong></li>
-     * <li><strong>NOT_CHECK</strong></li>
-     * <li><strong>WHITELIST</strong></li>
+     * <li><p><strong>PASS</strong></p>
+     * </li>
+     * <li><p><strong>NOT_PASS</strong></p>
+     * </li>
+     * <li><p><strong>CHECKING</strong></p>
+     * </li>
+     * <li><p><strong>NOT_CHECK</strong></p>
+     * </li>
+     * <li><p><strong>WHITELIST</strong></p>
+     * </li>
      * </ul>
      */
     @NameInMap("Statuses")
@@ -201,10 +241,14 @@ public class ListCheckResultRequest extends TeaModel {
     /**
      * <p>The cloud service providers. Valid values:</p>
      * <ul>
-     * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
-     * <li><strong>TENCENT</strong>: Tencent Cloud</li>
-     * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
-     * <li><strong>MICROSOFT</strong>: Microsoft Azure</li>
+     * <li><p><strong>ALIYUN</strong>: Alibaba Cloud</p>
+     * </li>
+     * <li><p><strong>TENCENT</strong>: Tencent Cloud</p>
+     * </li>
+     * <li><p><strong>AWS</strong>: Amazon Web Services (AWS)</p>
+     * </li>
+     * <li><p><strong>MICROSOFT</strong>: Microsoft Azure</p>
+     * </li>
      * </ul>
      */
     @NameInMap("Vendors")

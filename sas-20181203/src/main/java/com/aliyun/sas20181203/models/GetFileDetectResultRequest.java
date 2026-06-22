@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileDetectResultRequest extends TeaModel {
     /**
-     * <p>The identifiers of files. Only MD5 hash values are supported.</p>
+     * <p>An array of up to 100 unique file identifiers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HashKeyList")
@@ -21,16 +21,13 @@ public class GetFileDetectResultRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of the file. Valid values:</p>
+     * <p>The type of file to detect. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: unknown file</li>
-     * <li><strong>1</strong>: binary file</li>
-     * <li><strong>2</strong>: webshell file</li>
-     * <li><strong>4</strong>: script file</li>
+     * <li><p><strong>0</strong>: malicious file detection</p>
+     * </li>
+     * <li><p><strong>6</strong>: Skill compressed package detection</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you do not know the type of the file, set this parameter to 0.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

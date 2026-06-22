@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeEmgUserAgreementResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether Security Center is authorized to scan for urgent vulnerabilities. Valid values:</p>
+     * <p>Indicates whether the emergency vulnerability scan is authorized. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: Authorized.</li>
+     * <li><strong>false</strong>: Not authorized.</li>
      * </ul>
      * 
      * <strong>example:</strong>

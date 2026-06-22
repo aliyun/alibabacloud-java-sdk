@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListBaselineCheckWhiteRecordRequest extends TeaModel {
     /**
-     * <p>The IDs of check items.</p>
+     * <p>The list of check item IDs.</p>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
     /**
-     * <p>The name of the check item. Fuzzy match is supported.</p>
+     * <p>The check item name for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>redis</p>
@@ -20,7 +20,7 @@ public class ListBaselineCheckWhiteRecordRequest extends TeaModel {
     public String checkItemFuzzy;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the current page when using paging. The value starts from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,10 +29,10 @@ public class ListBaselineCheckWhiteRecordRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListBaselineCheckWhiteRecordRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page when using paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,16 +51,16 @@ public class ListBaselineCheckWhiteRecordRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IDs of the whitelist rules.</p>
+     * <p>The list of whitelist record IDs.</p>
      */
     @NameInMap("RecordIds")
     public java.util.List<Long> recordIds;
 
     /**
-     * <p>The data source. If you leave this parameter empty, the default value is used. Valid values:</p>
+     * <p>The data source. If this parameter is left empty, host data is queried by default. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: server</li>
-     * <li><strong>agentless</strong>: agentless detection</li>
+     * <li><strong>default</strong>: host</li>
+     * <li><strong>agentless</strong>: agentless.</li>
      * </ul>
      * 
      * <strong>example:</strong>

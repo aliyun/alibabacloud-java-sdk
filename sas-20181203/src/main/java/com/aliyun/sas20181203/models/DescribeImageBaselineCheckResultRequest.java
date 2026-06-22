@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     /**
-     * <p>The search condition for the image baseline.</p>
+     * <p>The query condition for the baseline.</p>
      * 
      * <strong>example:</strong>
      * <p>ak_leak</p>
@@ -14,10 +14,12 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The type of the search condition. Valid values:</p>
+     * <p>The query type of the baseline to query. Valid values:</p>
      * <ul>
-     * <li><strong>BaselineNameAlias</strong>: baseline name</li>
-     * <li><strong>BaselineClassAlias</strong>: baseline category</li>
+     * <li><p><strong>BaselineNameAlias</strong>: baseline name</p>
+     * </li>
+     * <li><p><strong>BaselineClassAlias</strong>: baseline category.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String criteriaType;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number of the current page when using paging. Default value: 20, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,10 +48,10 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String imageUuid;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +61,7 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page when using paging. Default value: <strong>20</strong>, which indicates that 20 logon configuration entries are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -68,11 +70,14 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The severity of the image baseline that you want to query. Separate multiple severities with commas (,). By default, all valid values are used. Valid values:</p>
+     * <p>The risk level of the baseline to query. Separate multiple levels with commas (,). By default, all levels are included. Valid values:</p>
      * <ul>
-     * <li><strong>high</strong></li>
-     * <li><strong>medium</strong></li>
-     * <li><strong>low</strong></li>
+     * <li><p><strong>high</strong>: high risk</p>
+     * </li>
+     * <li><p><strong>medium</strong>: medium risk</p>
+     * </li>
+     * <li><p><strong>low</strong>: low risk.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +87,7 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The types of the assets that you want to scan.</p>
+     * <p>The scan scope.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;

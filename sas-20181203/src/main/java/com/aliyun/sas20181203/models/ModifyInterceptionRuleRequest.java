@@ -7,7 +7,7 @@ public class ModifyInterceptionRuleRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,10 @@ public class ModifyInterceptionRuleRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The destination objects of the rule. The following parameters are included:</p>
+     * <p>The destination object. The metric description is as follows:</p>
      * <ul>
-     * <li>targetId: the ID of the destination object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</li>
-     * <li>ports: the destination port ranges.</li>
+     * <li>targetId: the ID of the destination object. You can invoke the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</li>
+     * <li>ports: the list of destination port ranges.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,9 +32,9 @@ public class ModifyInterceptionRuleRequest extends TeaModel {
     /**
      * <p>The interception mode. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: block</li>
-     * <li><strong>2</strong>: alert</li>
-     * <li><strong>3</strong>: allow</li>
+     * <li><strong>1</strong>: Block Mode</li>
+     * <li><strong>2</strong>: Alert mode</li>
+     * <li><strong>3</strong>: Allow mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ModifyInterceptionRuleRequest extends TeaModel {
     public Integer interceptType;
 
     /**
-     * <p>The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
+     * <p>The priority of the rule. The priority ranges from 1 to 1000. A smaller number indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +53,7 @@ public class ModifyInterceptionRuleRequest extends TeaModel {
     public Long orderIndex;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ModifyInterceptionRuleRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>tetsRule</p>
@@ -72,10 +72,10 @@ public class ModifyInterceptionRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Specifies whether the rule is enabled. Valid values:</p>
+     * <p>The switch status of the rule. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,9 +85,9 @@ public class ModifyInterceptionRuleRequest extends TeaModel {
     public Integer ruleSwitch;
 
     /**
-     * <p>The source object of the rule. The following parameters are included:</p>
+     * <p>The source rule object. The metric description is as follows:</p>
      * <ul>
-     * <li>targetId: the ID of the source object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</li>
+     * <li>targetId: the ID of the source object. You can invoke the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>

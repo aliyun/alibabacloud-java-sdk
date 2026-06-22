@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The number of container images in your assets. Only Container Registry Enterprise Edition instances are counted.</p>
+     * <p>The number of container images in your assets. Only container images in Enterprise instances of Container Registry are counted.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -14,7 +14,7 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
     public Integer instanceCount;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
@@ -23,7 +23,7 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of container images that have security risks. Only Container Registry Enterprise Edition instances are counted.</p>
+     * <p>The number of container images that have security risks in your assets. Only container images in Enterprise instances of Container Registry are counted.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

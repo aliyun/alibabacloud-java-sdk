@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUnknownThreatDetectStrategyResponseBody extends TeaModel {
     /**
+     * <p>The strategy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,7 +14,7 @@ public class CreateUnknownThreatDetectStrategyResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>

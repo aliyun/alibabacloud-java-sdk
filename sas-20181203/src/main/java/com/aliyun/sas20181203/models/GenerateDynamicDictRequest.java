@@ -8,7 +8,7 @@ public class GenerateDynamicDictRequest extends TeaModel {
      * <p>The keyword of the dictionary.</p>
      * 
      * <strong>example:</strong>
-     * <p>keyword</p>
+     * <p>Admin</p>
      */
     @NameInMap("ArgKeywords")
     public String argKeywords;

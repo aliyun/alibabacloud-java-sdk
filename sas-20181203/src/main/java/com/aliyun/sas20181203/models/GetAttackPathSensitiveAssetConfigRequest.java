@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAttackPathSensitiveAssetConfigRequest extends TeaModel {
     /**
-     * <p>ID of the created attack path sensitive asset setting.</p>
+     * <p>The ID of the attack path sensitive asset configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>apsac-123</p>
@@ -14,9 +14,9 @@ public class GetAttackPathSensitiveAssetConfigRequest extends TeaModel {
     public String attackPathSensitiveAssetConfigId;
 
     /**
-     * <p>Configuration type. Possible values:</p>
+     * <p>The configuration type. Valid values:</p>
      * <ul>
-     * <li>asset_instance: Asset.</li>
+     * <li>asset_instance: asset.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

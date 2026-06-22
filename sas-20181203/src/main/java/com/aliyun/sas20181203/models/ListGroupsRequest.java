@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the current page to return. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>89</p>
@@ -14,10 +14,10 @@ public class ListGroupsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListGroupsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return value of NextToken is empty, no next query is to be sent. If a value of NextToken is returned, the value indicates the token that is used for the next query.</p>
+     * <p>The token for the next query. If NextToken is empty, no additional results exist. If NextToken has a value, the value indicates the token to use for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>1426C575705AE8545E8360A6EFA3B***</p>
@@ -36,7 +36,7 @@ public class ListGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 2000.</p>
+     * <p>The maximum number of entries to return on each page in a paging query. Default value: 20. Maximum value: 2000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,10 +45,10 @@ public class ListGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to use NextToken to query vulnerabilities. If you set this parameter to true, TotalCount is not returned. Valid values:</p>
+     * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Uses the NextToken method.</li>
+     * <li><strong>false</strong>: Does not use the NextToken method.</li>
      * </ul>
      * 
      * <strong>example:</strong>

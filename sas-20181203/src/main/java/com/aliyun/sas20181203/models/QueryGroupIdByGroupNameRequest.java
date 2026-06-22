@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryGroupIdByGroupNameRequest extends TeaModel {
     /**
-     * <p>The name of the asset group.</p>
+     * <p>The name of the group to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryGroupIdByGroupNameRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>10.12.XX.XX</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCycleTaskListRequest extends TeaModel {
     /**
-     * <p>The ID of the task configuration.</p>
+     * <p>The ID of the configuration.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~CreateCycleTask~~">CreateCycleTask</a> operation to query the IDs of task configurations.</p>
+     * <p>Call the <a href="~~CreateCycleTask~~">CreateCycleTask</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     public String configId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page when using paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page when using paging. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,11 +35,11 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the task. Valid values:</p>
+     * <p>The node name. Valid values:</p>
      * <ul>
-     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
-     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,11 +49,11 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
-     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+     * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan.</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scan.</li>
+     * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: emergency vulnerability scanning.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class PageImageRegistryResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of image repositories.</p>
+     * <p>The image repository list data.</p>
      */
     @NameInMap("List")
     public java.util.List<PageImageRegistryResponseBodyList> list;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination information for the paged query.</p>
      */
     @NameInMap("PageInfo")
     public PageImageRegistryResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>FDA9E37C-6114-5945-8FF1-E3D4D397****</p>
@@ -56,7 +56,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
 
     public static class PageImageRegistryResponseBodyList extends TeaModel {
         /**
-         * <p>The IP address blacklist.</p>
+         * <p>The blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>129.211.XXX.XXX</p>
@@ -65,7 +65,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String blackList;
 
         /**
-         * <p>The domain name of the image repository.</p>
+         * <p>The domain name of the repository.</p>
          * 
          * <strong>example:</strong>
          * <p>sinochem.com</p>
@@ -74,7 +74,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The time when the image repository was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-30 10:23:30</p>
@@ -83,7 +83,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the image repository was updated. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The update time, in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-30 10:23:30</p>
@@ -92,7 +92,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the image repository.</p>
+         * <p>The unique ID of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>1078312</p>
@@ -101,7 +101,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The number of images that are stored in the image repository.</p>
+         * <p>The number of images in the repository.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -110,7 +110,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public Integer imageCount;
 
         /**
-         * <p>The information about the Jenkins environment.</p>
+         * <p>The Jenkins environment context.</p>
          * 
          * <strong>example:</strong>
          * <p>projectInfo</p>
@@ -121,8 +121,8 @@ public class PageImageRegistryResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Internet.</li>
-         * <li><strong>2</strong>: virtual private cloud (VPC).</li>
+         * <li><strong>1</strong>: public network</li>
+         * <li><strong>2</strong>: VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The number of days for which assets are retained.</p>
+         * <p>The number of days that assets are retained.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -150,9 +150,9 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public Integer persistenceDay;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: HTTP.</li>
+         * <li><strong>1</strong>: HTTP</li>
          * <li><strong>2</strong>: HTTPS.</li>
          * </ul>
          * 
@@ -163,7 +163,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public Integer protocolType;
 
         /**
-         * <p>The region ID of the image repository.</p>
+         * <p>The region ID of the repository.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -172,7 +172,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The IP address of the image repository.</p>
+         * <p>The IP address of the repository.</p>
          * 
          * <strong>example:</strong>
          * <p>39.104.XXX.XXX</p>
@@ -190,11 +190,11 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String registryName;
 
         /**
-         * <p>The type of the image repository. Valid values:</p>
+         * <p>The image repository type. Valid values:</p>
          * <ul>
-         * <li><strong>acr</strong>: Container Registry.</li>
-         * <li><strong>harbor</strong>: Harbor.</li>
-         * <li><strong>quay</strong>: Quay.</li>
+         * <li><strong>acr</strong>: ACR</li>
+         * <li><strong>harbor</strong>: Harbor</li>
+         * <li><strong>quay</strong>: Quay</li>
          * <li><strong>CI/CD</strong>: Jenkins.</li>
          * </ul>
          * 
@@ -214,7 +214,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>The number of scan tasks that are performed per hour.</p>
+         * <p>The number of scan tasks per hour.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -232,7 +232,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The instance ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-5gu8iu68w9b472jbb****</p>
@@ -241,7 +241,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XXX.XXX</p>
@@ -418,7 +418,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
 
     public static class PageImageRegistryResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -427,7 +427,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -436,7 +436,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

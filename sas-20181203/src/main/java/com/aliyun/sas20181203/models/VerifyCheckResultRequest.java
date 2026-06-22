@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class VerifyCheckResultRequest extends TeaModel {
     /**
-     * <p>The IDs of the check items.</p>
+     * <p>The list of check item IDs.</p>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
     /**
-     * <p>List of instance IDs for the check item assets.</p>
+     * <p>The list of instance IDs of the assets associated with the check items.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The source of task.</p>
+     * <p>The task source. Valid values:</p>
+     * <ul>
+     * <li><strong>YAO_CHI</strong>: ApsaraDB console.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>YAO_CHI</p>

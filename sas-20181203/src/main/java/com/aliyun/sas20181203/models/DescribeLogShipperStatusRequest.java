@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogShipperStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+     * <p>The request source identifier. Set this parameter to <strong>sas</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>

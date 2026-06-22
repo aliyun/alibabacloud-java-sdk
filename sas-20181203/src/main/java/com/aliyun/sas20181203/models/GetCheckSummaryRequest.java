@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetCheckSummaryRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you. Default value: <strong>false</strong>. Valid values:</p>
+     * <p>Specifies whether to return check item statistics information, including the number of check items published by the system and the number of check items currently owned by the user. Default value: <strong>false</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Returns the statistics information.</li>
+     * <li><strong>false</strong>: Does not return the statistics information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class GetCheckSummaryRequest extends TeaModel {
     public Boolean isItemStatistic;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language type for requests and responses.</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,9 +31,9 @@ public class GetCheckSummaryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The ID of the member accounts in the resource directory.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</p>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,13 +43,13 @@ public class GetCheckSummaryRequest extends TeaModel {
     public String resourceDirectoryAccountId;
 
     /**
-     * <p>List of task sources.</p>
+     * <p>The list of task sources.</p>
      */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 
     /**
-     * <p>The cloud service providers.</p>
+     * <p>The list of cloud service providers.</p>
      */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;

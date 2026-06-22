@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
+    /**
+     * <p>The data returned when the API call is successful.</p>
+     */
     @NameInMap("Data")
     public GetFileProtectClientRuleDashboardResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
 
     public static class GetFileProtectClientRuleDashboardResponseBodyData extends TeaModel {
         /**
+         * <p>The total number of web tamper-proofing licenses.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -46,6 +51,8 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
         public String authTotal;
 
         /**
+         * <p>The number of bound tamper-proofing licenses.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -53,6 +60,8 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
         public Integer bindCount;
 
         /**
+         * <p>The total number of web tamper-proofing rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -60,6 +69,8 @@ public class GetFileProtectClientRuleDashboardResponseBody extends TeaModel {
         public Integer protectedDirectoriesCount;
 
         /**
+         * <p>The total number of online web tamper-proofing clients.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */

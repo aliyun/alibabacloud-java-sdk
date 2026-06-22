@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     /**
-     * <p>The name of the image baseline.</p>
+     * <p>The name of the image baseline check result.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String baselineNameKey;
 
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the container cluster to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>docker-law</p>
@@ -36,7 +36,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The ID of the container.</p>
+     * <p>The container ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c08d5fc1a329a4b88950a253d082f****</p>
@@ -45,7 +45,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The search condition for the image baseline.</p>
+     * <p>The query condition for the baseline.</p>
      * 
      * <strong>example:</strong>
      * <p>Unauthorized access</p>
@@ -54,10 +54,10 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The type of the search condition. Valid values:</p>
+     * <p>The query type for the baseline. Valid values:</p>
      * <ul>
      * <li><strong>BaselineNameAlias</strong>: baseline name</li>
-     * <li><strong>BaselineClassAlias</strong>: baseline category</li>
+     * <li><strong>BaselineClassAlias</strong>: baseline category.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String criteriaType;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,7 +76,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the image to which the container belongs.</p>
+     * <p>The container image name.</p>
      * 
      * <strong>example:</strong>
      * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
@@ -85,7 +85,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String image;
 
     /**
-     * <p>The SHA-256 value of the image digest.</p>
+     * <p>The SHA256 value of the image digest.</p>
      * 
      * <strong>example:</strong>
      * <p>2e6daffce524ffeae66cccaa90c8fc47de912346dcec295c27395b6d66db6423</p>
@@ -94,10 +94,10 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String imageDigest;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>Settings for paged query paging. The number of image baseline check result details to display per page. Default value: <strong>10</strong>, which indicates that 10 image baseline check result details are displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -152,7 +152,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The namespace to which the image repository belongs.</p>
+     * <p>The namespace of the image repository.</p>
      * 
      * <strong>example:</strong>
      * <p>libssh2</p>
@@ -161,7 +161,7 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     public String repoNamespace;
 
     /**
-     * <p>The types of the assets that you want to scan.</p>
+     * <p>The collection of scan ranges.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;

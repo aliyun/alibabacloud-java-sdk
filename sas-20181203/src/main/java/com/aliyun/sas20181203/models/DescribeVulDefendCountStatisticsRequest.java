@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVulDefendCountStatisticsRequest extends TeaModel {
     /**
-     * <p>The type of the vulnerabilities. Valid values:</p>
+     * <p>The type of vulnerability to query. Valid values:</p>
      * <ul>
-     * <li>app: application vulnerabilities</li>
-     * <li>emg: urgent vulnerabilities</li>
+     * <li>app: application vulnerability</li>
+     * <li>emg: emergency vulnerability.</li>
      * </ul>
      * 
      * <strong>example:</strong>

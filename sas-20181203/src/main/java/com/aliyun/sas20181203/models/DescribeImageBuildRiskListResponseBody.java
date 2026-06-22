@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBuildRiskListResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
     public DescribeImageBuildRiskListResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The detailed information about the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
@@ -38,10 +38,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the first scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1723710827000</p>
@@ -115,7 +115,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         public Long firstScanTime;
 
         /**
-         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the most recent scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1723710827999</p>
@@ -124,7 +124,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         public Long lastScanTime;
 
         /**
-         * <p>The type key of the risk.</p>
+         * <p>The key of the build risk rule category.</p>
          * 
          * <strong>example:</strong>
          * <p>other</p>
@@ -133,7 +133,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         public String riskClass;
 
         /**
-         * <p>The type name of the risk.</p>
+         * <p>The category name of the build risk rule.</p>
          * 
          * <strong>example:</strong>
          * <p>other</p>
@@ -142,7 +142,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         public String riskClassName;
 
         /**
-         * <p>The key of the risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value of <strong>RiskKey</strong>.</p>
+         * <p>The key of the build risk rule. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value of <strong>RiskKey</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>no_user</p>
@@ -151,7 +151,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         public String riskKey;
 
         /**
-         * <p>The rule name of the risk.</p>
+         * <p>The name of the build risk rule.</p>
          * 
          * <strong>example:</strong>
          * <p>no_user</p>
@@ -162,9 +162,12 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><p><strong>high</strong>: High.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: Medium.</p>
+         * </li>
+         * <li><p><strong>low</strong>: Low.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,7 +266,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
 
     public static class DescribeImageBuildRiskListResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the current page when paging is used. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -272,9 +275,9 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <p>The maximum number of entries per page when paging is used. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
          * <blockquote>
-         * <p> We recommend that you do not leave this parameter empty.</p>
+         * <p>Do not leave PageSize empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -325,13 +328,13 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
 
     public static class DescribeImageBuildRiskListResponseBodyData extends TeaModel {
         /**
-         * <p>The risks.</p>
+         * <p>The summary list of build risks.</p>
          */
         @NameInMap("List")
         public java.util.List<DescribeImageBuildRiskListResponseBodyDataList> list;
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paging parameters.</p>
          */
         @NameInMap("PageInfo")
         public DescribeImageBuildRiskListResponseBodyDataPageInfo pageInfo;

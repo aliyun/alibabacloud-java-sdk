@@ -14,13 +14,13 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The grouping information about the servers.</p>
+     * <p>The server group information.</p>
      */
     @NameInMap("Groups")
     public java.util.List<DescribeAllGroupsResponseBodyGroups> groups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
@@ -62,7 +62,7 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
          * <p>The type of the server group. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: default group</li>
-         * <li><strong>1</strong>: other groups</li>
+         * <li><strong>1</strong>: other group.</li>
          * </ul>
          * 
          * <strong>example:</strong>

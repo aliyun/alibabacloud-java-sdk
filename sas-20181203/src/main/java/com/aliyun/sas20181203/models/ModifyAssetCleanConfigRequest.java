@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAssetCleanConfigRequest extends TeaModel {
     /**
-     * <p>The asset cleanup configurations.</p>
+     * <p>The list of asset cleanup configurations.</p>
      */
     @NameInMap("AssetCleanConfigs")
     public java.util.List<ModifyAssetCleanConfigRequestAssetCleanConfigs> assetCleanConfigs;
@@ -25,7 +25,7 @@ public class ModifyAssetCleanConfigRequest extends TeaModel {
 
     public static class ModifyAssetCleanConfigRequestAssetCleanConfigs extends TeaModel {
         /**
-         * <p>The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.</p>
+         * <p>The number of offline days after which non-Alibaba Cloud hosts are automatically cleaned up. Valid values: integers from 1 to 30.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -34,10 +34,10 @@ public class ModifyAssetCleanConfigRequest extends TeaModel {
         public Integer cleanDays;
 
         /**
-         * <p>Specifies whether to enable the feature of cleaning the offline hosts whose provider cannot be identified. Valid values:</p>
+         * <p>Specifies whether to enable automatic cleanup of offline non-Alibaba Cloud hosts. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disables the feature.</li>
-         * <li><strong>1</strong>: enables the feature.</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -47,8 +47,10 @@ public class ModifyAssetCleanConfigRequest extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The type of hosts that you want to clean.</p>
-         * <p>Set the value to <strong>1</strong>, which indicates hosts whose provider cannot be identified.</p>
+         * <p>The type of host to clean up. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: non-Alibaba Cloud host.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeImageInstancesRequest extends TeaModel {
     /**
-     * <p>The search condition that is used to filter the server. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <p>Sets the conditions for searching assets. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><p><strong>name</strong>: the search condition</p>
-     * </li>
-     * <li><p><strong>name</strong>: the value of the search condition</p>
-     * </li>
-     * <li><p><strong>logicalExp</strong>: the logical relation for multiple search conditions Valid values:</p>
-     * <ul>
-     * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
-     * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/471822.html">DescribeImageCriteria</a> operation to query the supported search conditions.</p>
+     * <li><strong>name</strong>: The search item.</li>
+     * <li><strong>value</strong>: The value of the search item.</li>
+     * <li><strong>logicalExp</strong>: The logical relationship between multiple search item values. Valid values:<ul>
+     * <li><strong>OR</strong>: The multiple search item values are in an <strong>OR</strong> relationship.</li>
+     * <li><strong>AND</strong>: The multiple search item values are in an <strong>AND</strong> relationship.<blockquote>
+     * <p>You can call the <a href="~~DescribeImageRepoCriteria~~">DescribeImageRepoCriteria</a> operation to query supported search conditions.</p>
      * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;instanceId&quot;,&quot;value&quot;:&quot;390100182&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]</p>
@@ -29,7 +26,7 @@ public class DescribeImageInstancesRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the returned results to start displaying. The starting value is <strong>1</strong>. Default value: <strong>1</strong>, which indicates that page 1 is displayed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,10 +35,10 @@ public class DescribeImageInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The logical relationship that you want to use to evaluate multiple search conditions. Valid values:</p>
+     * <p>Sets the logical relationship between multiple search conditions. Valid values:</p>
      * <ul>
-     * <li><strong>OR</strong>: The search conditions are evaluated by using a logical <strong>OR</strong>.</li>
-     * <li><strong>AND</strong>: The search conditions are evaluated by using a logical <strong>AND</strong>.</li>
+     * <li><strong>OR</strong>: The multiple search conditions are in an <strong>OR</strong> relationship.</li>
+     * <li><strong>AND</strong>: The multiple search conditions are in an <strong>AND</strong> relationship.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,9 +48,9 @@ public class DescribeImageInstancesRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return on each page during a paged query. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>: We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you do not leave the PageSize parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,10 +60,10 @@ public class DescribeImageInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether the image is scanned. Valid values:</p>
+     * <p>Indicates whether the image has been scanned. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: processed.</li>
+     * <li><strong>false</strong>: not processed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

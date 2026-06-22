@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     /**
-     * <p>Specifies whether to set the defense rule as the default rule. Valid values:</p>
+     * <p>Specifies whether the defense rule against brute-force attacks is set as the default policy in Settings. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: The rule is set as the default policy.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The rule is not set as the default policy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +20,16 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public Boolean defaultRule;
 
     /**
-     * <p>The threshold of logon failures that you specify. Valid values:</p>
+     * <p>The threshold for the number of logon failures. Valid values:</p>
      * <ul>
-     * <li><strong>2</strong></li>
-     * <li><strong>3</strong></li>
-     * <li><strong>4</strong></li>
-     * <li><strong>5</strong></li>
-     * <li><strong>10</strong></li>
-     * <li><strong>50</strong></li>
-     * <li><strong>80</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><strong>2</strong>: 2 times</li>
+     * <li><strong>3</strong>: 3 times</li>
+     * <li><strong>4</strong>: 4 times</li>
+     * <li><strong>5</strong>: 5 times</li>
+     * <li><strong>10</strong>: 10 times</li>
+     * <li><strong>50</strong>: 50 times</li>
+     * <li><strong>80</strong>: 80 times</li>
+     * <li><strong>100</strong>: 100 times.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,18 +39,18 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public Integer failCount;
 
     /**
-     * <p>The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:</p>
+     * <p>The duration for which logon is prohibited, in minutes. Valid values:</p>
      * <ul>
-     * <li><strong>5</strong></li>
-     * <li><strong>15</strong></li>
-     * <li><strong>30</strong></li>
-     * <li><strong>60</strong></li>
-     * <li><strong>120</strong></li>
-     * <li><strong>360</strong></li>
-     * <li><strong>720</strong></li>
-     * <li><strong>1440</strong></li>
-     * <li><strong>10080</strong></li>
-     * <li><strong>52560000</strong>: permanent</li>
+     * <li><strong>5</strong>: 5 minutes</li>
+     * <li><strong>15</strong>: 15 minutes</li>
+     * <li><strong>30</strong>: 30 minutes</li>
+     * <li><strong>60</strong>: 1 hour</li>
+     * <li><strong>120</strong>: 2 hours</li>
+     * <li><strong>360</strong>: 6 hours</li>
+     * <li><strong>720</strong>: 12 hours</li>
+     * <li><strong>1440</strong>: 24 hours</li>
+     * <li><strong>10080</strong>: 7 days</li>
+     * <li><strong>52560000</strong>: permanent (100 years).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +60,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public Integer forbiddenTime;
 
     /**
-     * <p>The ID of the defense rule.</p>
+     * <p>The ID of the defense rule against brute-force attacks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +70,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the defense rule.</p>
+     * <p>The name of the defense rule against brute-force attacks.</p>
      * 
      * <strong>example:</strong>
      * <p>TestRule</p>
@@ -77,7 +79,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol types supported by the anti-brute force rule for interception.</p>
+     * <p>The protocol types that the defense rule against brute-force attacks supports for interception.</p>
      */
     @NameInMap("ProtocolType")
     public ModifyAntiBruteForceRuleRequestProtocolType protocolType;
@@ -86,7 +88,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>
@@ -95,13 +97,13 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The period of time during which logon failures from an account are measured. Unit: minutes. Valid values:</p>
+     * <p>The threshold for the period of time during which logon failures are counted, in minutes. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong></li>
-     * <li><strong>2</strong></li>
-     * <li><strong>5</strong></li>
-     * <li><strong>10</strong></li>
-     * <li><strong>15</strong></li>
+     * <li><strong>1</strong>: 1 minute</li>
+     * <li><strong>2</strong>: 2 minutes</li>
+     * <li><strong>5</strong>: 5 minutes</li>
+     * <li><strong>10</strong>: 10 minutes</li>
+     * <li><strong>15</strong>: 15 minutes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +113,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public Integer span;
 
     /**
-     * <p>An array consisting of the UUIDs of the servers to which the defense rule is applied.</p>
+     * <p>The list of servers to which the defense rule against brute-force attacks applies.</p>
      * 
      * <strong>example:</strong>
      * <p>uuid-13213-dasda</p>
@@ -206,10 +208,10 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
 
     public static class ModifyAntiBruteForceRuleRequestProtocolType extends TeaModel {
         /**
-         * <p>Whether to modify the RDP interception method, which is enabled by default. Values:</p>
+         * <p>Specifies whether to enable RDP interception. This is enabled by default. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enable</li>
-         * <li><strong>off</strong>: Disable</li>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,10 +221,10 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         public String rdp;
 
         /**
-         * <p>Whether to modify the SQL Server interception method, which is disabled by default. Values:</p>
+         * <p>Specifies whether to enable SqlServer interception. This is disabled by default. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enable</li>
-         * <li><strong>off</strong>: Disable</li>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,10 +234,10 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         public String sqlServer;
 
         /**
-         * <p>Whether to modify the SSH interception method, which is enabled by default. Values:</p>
+         * <p>Specifies whether to enable SSH interception. This is enabled by default. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enable</li>
-         * <li><strong>off</strong>: Disable</li>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

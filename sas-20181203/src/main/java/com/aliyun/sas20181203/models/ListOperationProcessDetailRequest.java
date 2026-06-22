@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationProcessDetailRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The query end time based on the task completion time, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1731555850000</p>
@@ -23,9 +23,9 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -45,7 +45,7 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The query start time based on the task creation time, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1731469330000</p>
@@ -54,13 +54,13 @@ public class ListOperationProcessDetailRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The subtask status codes.</p>
+     * <p>The list of operation subtask status codes.</p>
      */
     @NameInMap("StatusCodes")
     public java.util.List<Integer> statusCodes;
 
     /**
-     * <p>The IDs of operation tasks.</p>
+     * <p>The list of operation task IDs.</p>
      */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;

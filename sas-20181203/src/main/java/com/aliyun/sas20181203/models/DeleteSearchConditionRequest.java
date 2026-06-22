@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteSearchConditionRequest extends TeaModel {
     /**
-     * <p>The name of the frequently used search condition.</p>
+     * <p>The name of the saved search condition.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeSearchCondition~~">DescribeSearchCondition</a> operation to query frequently used search conditions.</p>
+     * <p>Call the <a href="~~DescribeSearchCondition~~">DescribeSearchCondition</a> operation to obtain the name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DeleteSearchConditionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>19.12.XX.XX</p>
@@ -27,10 +27,10 @@ public class DeleteSearchConditionRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of the asset. Default value: ecs. Valid values:</p>
+     * <p>The asset type. Default value: ecs. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
-     * <li><strong>cloud_product</strong>: an Alibaba Cloud service.</li>
+     * <li><strong>ecs</strong>: host asset</li>
+     * <li><strong>cloud_product</strong>: cloud service.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAlarmMachineCountResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The data details.</p>
      */
     @NameInMap("Data")
     public GetAlarmMachineCountResponseBodyData data;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6D3A2E7D-1238-5DD4-B3C3-BF06FCAD****</p>
@@ -42,7 +42,7 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
 
     public static class GetAlarmMachineCountResponseBodyData extends TeaModel {
         /**
-         * <p>The number of servers on which alerts are generated.</p>
+         * <p>The number of servers that have security alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -50,7 +50,7 @@ public class DescribeVulListPageRequest extends TeaModel {
      * <p>The name of the vulnerability.</p>
      * 
      * <strong>example:</strong>
-     * <p>RCE vulnerability</p>
+     * <p>远程代码执行漏洞</p>
      */
     @NameInMap("VulNameLike")
     public String vulNameLike;
@@ -58,9 +58,12 @@ public class DescribeVulListPageRequest extends TeaModel {
     /**
      * <p>The type of the vulnerabilities. Valid values:</p>
      * <ul>
-     * <li><strong>cve</strong>: Linux software vulnerability.</li>
-     * <li><strong>sys</strong>: Windows system vulnerability.</li>
-     * <li><strong>app</strong>: Application vulnerability that is detected by using web scanner.</li>
+     * <li><p><strong>cve</strong>: Linux software vulnerability.</p>
+     * </li>
+     * <li><p><strong>sys</strong>: Windows system vulnerability.</p>
+     * </li>
+     * <li><p><strong>app</strong>: Application vulnerability that is detected by using web scanner.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

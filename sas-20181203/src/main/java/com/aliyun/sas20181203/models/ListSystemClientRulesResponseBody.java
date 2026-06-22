@@ -127,7 +127,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
          * <p>The name of the policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>System self-starting task\<em>\</em>\<em>\</em></p>
+         * <p>系统自启动任务****</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
@@ -160,7 +160,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
          * <p>The name of the aggregation type for the system defense rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Initial entry</p>
+         * <p>初始入口</p>
          */
         @NameInMap("AggregationName")
         public String aggregationName;
@@ -169,7 +169,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
          * <p>The description of the system defense rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Supports alerting or blocking of images that have high-risk vulnerabilities\<em>\</em>\<em>\</em></p>
+         * <p>支持告警或拦截存在高危漏洞的镜像在集****</p>
          */
         @NameInMap("Description")
         public String description;
@@ -177,9 +177,12 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the OS. Valid values:</p>
          * <ul>
-         * <li><strong>windows</strong>: Windows</li>
-         * <li><strong>linux</strong>: Linux</li>
-         * <li><strong>all</strong>: all types</li>
+         * <li><p><strong>windows</strong>: Windows</p>
+         * </li>
+         * <li><p><strong>linux</strong>: Linux</p>
+         * </li>
+         * <li><p><strong>all</strong>: all types</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +210,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
          * <p>The name of the system defense rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Rule\<em>\</em>\<em>\</em></p>
+         * <p>规则****</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -215,8 +218,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the system defense rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: alihips, process-specific defense</li>
-         * <li><strong>2</strong>: alinet, network-specific defense</li>
+         * <li><p><strong>1</strong>: alihips, process-specific defense</p>
+         * </li>
+         * <li><p><strong>2</strong>: alinet, network-specific defense</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,8 +233,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         /**
          * <p>The status of the system defense rule. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: enabled</li>
-         * <li><strong>offline</strong>: disabled</li>
+         * <li><p><strong>online</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>offline</strong>: disabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,8 +248,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         /**
          * <p>Whether the current rule switch takes effect. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><p><strong>true</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

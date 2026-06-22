@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHcExportInfoResponseBody extends TeaModel {
     /**
-     * <p>The number of exported entries.</p>
+     * <p>The number of data entries that have been exported.</p>
      * 
      * <strong>example:</strong>
      * <p>148</p>
@@ -23,7 +23,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The time when the export task was created.</p>
+     * <p>The time when the task was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-11-03T15:15Z</p>
@@ -41,7 +41,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The download URL for the exported file.</p>
+     * <p>The download link of the exported file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://hc-export.oss-cn-shanghai.aliyuncs.com/export_hc/health_check_export_20221222_1671699255808.zip?Expires=1672304056&OSSAccessKeyId=****&Signature=">https://hc-export.oss-cn-shanghai.aliyuncs.com/export_hc/health_check_export_20221222_1671699255808.zip?Expires=1672304056&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
@@ -50,7 +50,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
     public String link;
 
     /**
-     * <p>The progress percentage of the export task.</p>
+     * <p>The export progress in percentage (%).</p>
      * 
      * <strong>example:</strong>
      * <p>89</p>
@@ -59,7 +59,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
     public Integer progress;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>3C2C94CF-ED08-50C0-BC72-C5029251****</p>
@@ -70,8 +70,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
     /**
      * <p>The status of the export task. Valid values:</p>
      * <ul>
-     * <li><strong>exporting</strong>: The task is in progress.</li>
-     * <li><strong>success</strong>: The task is complete.</li>
+     * <li><p><strong>exporting</strong>: The export is in progress.</p>
+     * </li>
+     * <li><p><strong>success</strong>: The export is successful.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +83,7 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
     public String resultStatus;
 
     /**
-     * <p>The total number of exported entries.</p>
+     * <p>The total number of data entries to be exported.</p>
      * 
      * <strong>example:</strong>
      * <p>624</p>

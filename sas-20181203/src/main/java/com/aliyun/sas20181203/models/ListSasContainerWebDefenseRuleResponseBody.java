@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     /**
-     * <p>The rules for container tamper-proofing.</p>
+     * <p>The list of container file defense rules.</p>
      */
     @NameInMap("ContainerWebDefenseRuleList")
     public java.util.List<ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleList> containerWebDefenseRuleList;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination information of the query result.</p>
      */
     @NameInMap("PageInfo")
     public ListSasContainerWebDefenseRuleResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID, which is used to query logs and troubleshoot issues.</p>
+     * <p>The request ID. It is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8C376***AE74FB4</p>
@@ -56,7 +56,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
 
     public static class ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList extends TeaModel {
         /**
-         * <p>The backup paths.</p>
+         * <p>The backup path.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/test</p>
@@ -65,10 +65,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String backupPath;
 
         /**
-         * <p>The prevention mode. Valid values:</p>
+         * <p>The action to take. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong></li>
-         * <li><strong>audit</strong></li>
+         * <li><strong>block</strong>: Block.</li>
+         * <li><strong>audit</strong>: Alert.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String defenseMode;
 
         /**
-         * <p>The protected path.</p>
+         * <p>The defense path.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/test/</p>
@@ -87,7 +87,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String defensePath;
 
         /**
-         * <p>The file that is excluded.</p>
+         * <p>The excluded file.</p>
          * 
          * <strong>example:</strong>
          * <p>php</p>
@@ -96,7 +96,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String excludeFile;
 
         /**
-         * <p>The path to the file that is excluded.</p>
+         * <p>The excluded file path.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/tt</p>
@@ -105,7 +105,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String excludeFilePath;
 
         /**
-         * <p>The type of the file that is excluded.</p>
+         * <p>The excluded file type.</p>
          * 
          * <strong>example:</strong>
          * <p>jsp</p>
@@ -114,10 +114,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String excludeFileType;
 
         /**
-         * <p>The protection mode. Valid values:</p>
+         * <p>The defense mode. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: basic mode (whitelist)</li>
-         * <li><strong>1</strong>: complex mode (blacklist)</li>
+         * <li><strong>0</strong>: Basic pattern (whitelist).</li>
+         * <li><strong>1</strong>: Advanced pattern (blacklist).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public Integer guardType;
 
         /**
-         * <p>The file that is included.</p>
+         * <p>The included file.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/test</p>
@@ -136,7 +136,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String includeFile;
 
         /**
-         * <p>The type of the file that is included.</p>
+         * <p>The type of the included file.</p>
          * 
          * <strong>example:</strong>
          * <p>php</p>
@@ -145,7 +145,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String includeFileType;
 
         /**
-         * <p>The processes that are added to the whitelist.</p>
+         * <p>The list of whitelisted processes.</p>
          */
         @NameInMap("ProcessPathList")
         public java.util.List<String> processPathList;
@@ -248,7 +248,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The number of the applications.</p>
+         * <p>The number of configured applications.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -275,7 +275,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>420336648</p>
@@ -284,13 +284,13 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The paths that are protected.</p>
+         * <p>The list of rule defense paths.</p>
          */
         @NameInMap("PathConfDTOList")
         public java.util.List<ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList> pathConfDTOList;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test2</p>
@@ -299,10 +299,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The status of the rule. Valid values:</p>
+         * <p>The rule status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -384,7 +384,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
 
     public static class ListSasContainerWebDefenseRuleResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -393,7 +393,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -402,7 +402,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

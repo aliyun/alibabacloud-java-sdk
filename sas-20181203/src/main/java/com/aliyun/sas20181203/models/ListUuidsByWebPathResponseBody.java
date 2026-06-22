@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUuidsByWebPathResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the protected assets.</p>
+     * <p>The list of protected assets.</p>
      */
     @NameInMap("List")
     public java.util.List<ListUuidsByWebPathResponseBodyList> list;
@@ -17,7 +17,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
     public ListUuidsByWebPathResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>A3C1240F-9DAC-5EE8-ADF5-2F930A95****</p>
@@ -132,7 +132,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
 
     public static class ListUuidsByWebPathResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries displayed on the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +141,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries displayed on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

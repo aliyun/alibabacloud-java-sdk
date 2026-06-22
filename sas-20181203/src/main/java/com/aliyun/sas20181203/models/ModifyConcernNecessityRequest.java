@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyConcernNecessityRequest extends TeaModel {
     /**
-     * <p>The priorities to fix the vulnerabilities. Valid values:</p>
+     * <p>The list of vulnerability fix necessity levels.</p>
      * <ul>
-     * <li>asap: high</li>
-     * <li>later: medium</li>
-     * <li>nntf: low</li>
+     * <li><p>asap: High</p>
+     * </li>
+     * <li><p>later: Medium</p>
+     * </li>
+     * <li><p>nntf: Low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

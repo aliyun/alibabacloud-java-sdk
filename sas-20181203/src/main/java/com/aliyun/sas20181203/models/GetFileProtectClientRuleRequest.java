@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFileProtectClientRuleRequest extends TeaModel {
     /**
+     * <p>The policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

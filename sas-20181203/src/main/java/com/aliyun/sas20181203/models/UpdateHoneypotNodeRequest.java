@@ -17,7 +17,7 @@ public class UpdateHoneypotNodeRequest extends TeaModel {
     /**
      * <p>The ID of the management node.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class UpdateHoneypotNodeRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>The CIDR blocks that are allowed to access the management node.</p>
+     * <p>The collection of allowed CIDR blocks.</p>
      */
     @NameInMap("SecurityGroupProbeIpList")
     public java.util.List<String> securityGroupProbeIpList;

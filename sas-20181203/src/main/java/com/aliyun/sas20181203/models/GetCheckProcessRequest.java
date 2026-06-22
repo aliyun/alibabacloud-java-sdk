@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetCheckProcessRequest extends TeaModel {
     /**
-     * <p>The ID of the task.</p>
+     * <p>The ID of the cloud service configuration check task to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~SubmitCheck~~">SubmitCheck</a> operation to query the ID.</p>
+     * <p>You can call the <a href="~~SubmitCheck~~">SubmitCheck</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

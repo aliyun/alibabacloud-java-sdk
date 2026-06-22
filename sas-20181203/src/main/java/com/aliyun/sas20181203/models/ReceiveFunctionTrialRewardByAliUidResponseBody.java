@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReceiveFunctionTrialRewardByAliUidResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. The value is a unique identifier that Alibaba Cloud generates for the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>94004FDB-27EC-5666-83D4-D0C5C624****</p>

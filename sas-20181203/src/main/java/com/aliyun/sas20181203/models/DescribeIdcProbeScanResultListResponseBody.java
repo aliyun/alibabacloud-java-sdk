@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
     /**
-     * <p>The instances.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeIdcProbeScanResultListResponseBodyInstances> instances;
@@ -17,7 +17,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
     public DescribeIdcProbeScanResultListResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
@@ -56,10 +56,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
 
     public static class DescribeIdcProbeScanResultListResponseBodyInstances extends TeaModel {
         /**
-         * <p>The status of the client of the instance on which the probe is installed. Valid values:</p>
+         * <p>The online status of the probe instance client. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: The Security Center agent on the asset is <strong>enabled</strong>.</li>
-         * <li><strong>offline</strong>: The Security Center agent on the asset is <strong>disabled</strong>.</li>
+         * <li><strong>online</strong>: The Agent client on the asset is enabled.</li>
+         * <li><strong>offline</strong>: The Agent client on the asset is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -69,16 +69,16 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String clientStatus;
 
         /**
-         * <p>The name of the IDC.</p>
+         * <p>The name of the IDC server room.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>3K机房广州</p>
          */
         @NameInMap("IdcName")
         public String idcName;
 
         /**
-         * <p>The CIDR blocks.</p>
+         * <p>The IP segment list.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.2.0/24</p>
@@ -87,7 +87,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String ipSegment;
 
         /**
-         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the latest scan, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1720006818000</p>
@@ -99,7 +99,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
          * <p>The operating system type of the asset. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong></li>
-         * <li><strong>linux</strong></li>
+         * <li><strong>linux</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String os;
 
         /**
-         * <p>The private IP address of the associated instance.</p>
+         * <p>The public IP address of the associated machine instance.</p>
          * 
          * <strong>example:</strong>
          * <p>42.121.<em>.</em></p>
@@ -118,7 +118,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String probeInternetIp;
 
         /**
-         * <p>The private IP address of the associated instance.</p>
+         * <p>The private IP address of the associated machine instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.<em>.</em></p>
@@ -127,7 +127,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String probeIntranetIp;
 
         /**
-         * <p>The name of the associated instance.</p>
+         * <p>The name of the associated machine instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxx</p>
@@ -136,7 +136,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String probeMachineName;
 
         /**
-         * <p>The UUID of the associated instance.</p>
+         * <p>The UUID of the associated machine instance.</p>
          * 
          * <strong>example:</strong>
          * <p>11C96623-E106-59C9-866D-A6C82911****</p>
@@ -145,7 +145,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String probeUuid;
 
         /**
-         * <p>The ID of the scan result.</p>
+         * <p>The scan result ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1231</p>
@@ -154,7 +154,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public Long scanResultId;
 
         /**
-         * <p>The IP address that is scanned.</p>
+         * <p>The scanned IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.<em>.</em></p>
@@ -163,7 +163,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public String scannedIp;
 
         /**
-         * <p>The port that is scanned.</p>
+         * <p>The scanned port.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -276,7 +276,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
 
     public static class DescribeIdcProbeScanResultListResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -285,7 +285,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -303,7 +303,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>69</p>

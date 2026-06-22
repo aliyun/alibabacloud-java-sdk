@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecStrategyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>7F84EBCA-86F8-5AA0-BF74-A0276ECB****</p>

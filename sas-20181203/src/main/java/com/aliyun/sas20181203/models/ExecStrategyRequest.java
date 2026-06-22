@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class ExecStrategyRequest extends TeaModel {
     /**
-     * <p>Set the action for this execution, default is <strong>exec</strong>. Values:</p>
+     * <p>The action to perform. Default value: <strong>exec</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>exec</strong>: Execute. - <strong>terminate</strong>: Terminate.</li>
+     * <li><strong>exec</strong>: exec.</li>
+     * <li><strong>terminate</strong>: stop.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,10 +18,10 @@ public class ExecStrategyRequest extends TeaModel {
     public String execAction;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +33,7 @@ public class ExecStrategyRequest extends TeaModel {
     /**
      * <p>The ID of the baseline check policy.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to query the IDs of baseline check policies.</p>
+     * <p>You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

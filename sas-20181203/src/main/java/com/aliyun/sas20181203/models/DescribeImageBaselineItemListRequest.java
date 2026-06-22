@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBaselineItemListRequest extends TeaModel {
     /**
-     * <p>The key of the baseline type.</p>
+     * <p>The key of the baseline category.</p>
      * 
      * <strong>example:</strong>
      * <p>ak_leak</p>
@@ -17,13 +17,13 @@ public class DescribeImageBaselineItemListRequest extends TeaModel {
      * <p>The key of the baseline name.</p>
      * 
      * <strong>example:</strong>
-     * <p>AccessKey pair leak</p>
+     * <p>Access Key泄露</p>
      */
     @NameInMap("BaselineNameKey")
     public String baselineNameKey;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,10 +42,10 @@ public class DescribeImageBaselineItemListRequest extends TeaModel {
     public String imageUuid;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DescribeImageBaselineItemListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -64,18 +64,18 @@ public class DescribeImageBaselineItemListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The types of the assets that are scanned.</p>
+     * <p>The scan scope collection.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
     /**
-     * <p>The status of the baseline risk item. Valid values:</p>
+     * <p>The fix status of the baseline risk. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: unfixed</li>
      * <li><strong>1</strong>: fixed</li>
      * <li><strong>2</strong>: pending verification</li>
-     * <li><strong>3</strong>: fixing failed</li>
+     * <li><strong>3</strong>: fix failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class DescribeImageBaselineItemListRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The UUIDs of images.</p>
+     * <p>The list of image UUIDs.</p>
      */
     @NameInMap("Uuids")
     public java.util.List<String> uuids;

@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     /**
+     * <p>The analysis result. Valid values:</p>
+     * <ul>
+     * <li><p><strong>black</strong>: abnormal process</p>
+     * </li>
+     * <li><p><strong>white</strong>: normal process</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>white</p>
      */
@@ -12,6 +20,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String analyzeResult;
 
     /**
+     * <p>The page number to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +29,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The end of the time range for the first detection, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1768891966345</p>
      */
@@ -26,6 +38,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public Long firstTimeEnd;
 
     /**
+     * <p>The start of the time range for the first detection, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1768891966344</p>
      */
@@ -33,6 +47,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public Long firstTimeStart;
 
     /**
+     * <p>The MD5 value of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>0552c44e243abdea1729d4507bce****</p>
      */
@@ -40,6 +56,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String md5;
 
     /**
+     * <p>The number of entries to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -47,6 +65,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The file path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/etc/test</p>
      */
@@ -54,6 +74,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The process path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/bin/rm</p>
      */
@@ -61,6 +83,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String processPath;
 
     /**
+     * <p>The server name or IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.20.XX.XX</p>
      */
@@ -68,6 +92,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The SHA-256 value of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>f204693a7d2ce99d6c4434e550d985ee1c7be7cb5dd9a76094369af0d2******</p>
      */
@@ -75,6 +101,8 @@ public class ListUnknownThreatDetectProcessRequest extends TeaModel {
     public String sha256;
 
     /**
+     * <p>The UUID of the server to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
      */

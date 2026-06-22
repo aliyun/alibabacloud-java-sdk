@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHoneypotProbeBindRequest extends TeaModel {
     /**
-     * <p>The unique ID of the honeypot to which the probe is bound.</p>
+     * <p>The unique ID of the bound service.</p>
      * 
      * <strong>example:</strong>
      * <p>f52e8624-e43c-473c-8312-e0fed384****</p>
@@ -14,16 +14,16 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public String bindId;
 
     /**
-     * <p>The ports that are bound to the probe.</p>
+     * <p>The list of bound ports.</p>
      */
     @NameInMap("BindPortList")
     public java.util.List<UpdateHoneypotProbeBindRequestBindPortList> bindPortList;
 
     /**
-     * <p>The operation that the probe performs. Valid values:</p>
+     * <p>The service binding type. Valid values:</p>
      * <ul>
-     * <li><strong>forward_honey</strong>: forward traffic to a honeypot</li>
-     * <li><strong>scan_port</strong>: monitor and scan</li>
+     * <li><strong>forward_honey</strong>: forward to honeypot</li>
+     * <li><strong>scan_port</strong>: listen for scans.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public String bindType;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     /**
      * <p>The honeypot ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain the IDs of honeypots.</p>
+     * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public String honeypotId;
 
     /**
-     * <p>The port ID of the probe service.</p>
+     * <p>The probe service port ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1906</p>
@@ -63,10 +63,10 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,9 +76,9 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+     * <p>The maximum number of entries to return on each page when using paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by paging.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Do not leave PageSize empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ports that are monitored.</p>
+     * <p>The listening port range.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;tcp\&quot;:\&quot;1-65535\&quot;,\&quot;udp\&quot;:\&quot;1-65535\&quot;}</p>
@@ -99,7 +99,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     /**
      * <p>The probe ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+     * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,13 +109,13 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     public String probeId;
 
     /**
-     * <p>The IP addresses that are monitored.</p>
+     * <p>The list of listening IP addresses.</p>
      */
     @NameInMap("ServiceIpList")
     public java.util.List<String> serviceIpList;
 
     /**
-     * <p>The status of the port.</p>
+     * <p>The listening port status setting.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -226,10 +226,10 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
 
     public static class UpdateHoneypotProbeBindRequestBindPortList extends TeaModel {
         /**
-         * <p>Specifies whether to bind a port. Valid values:</p>
+         * <p>Specifies whether to bind the port. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
         public Boolean bindPort;
 
         /**
-         * <p>The end port on which the probe monitors.</p>
+         * <p>The end port that the probe listens on.</p>
          * 
          * <strong>example:</strong>
          * <p>81</p>
@@ -250,8 +250,8 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
         /**
          * <p>Specifies whether the port is fixed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: No.</li>
+         * <li><strong>1</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
         public Boolean fixed;
 
         /**
-         * <p>The UUID of the port.</p>
+         * <p>The unique identifier of the bound port.</p>
          * 
          * <strong>example:</strong>
          * <p>3183</p>
@@ -270,10 +270,10 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <ul>
          * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><strong>udp</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
         public String proto;
 
         /**
-         * <p>The start port on which the probe monitors.</p>
+         * <p>The start port that the probe listens on.</p>
          * 
          * <strong>example:</strong>
          * <p>81</p>

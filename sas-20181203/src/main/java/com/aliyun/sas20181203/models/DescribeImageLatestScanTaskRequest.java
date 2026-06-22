@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageLatestScanTaskRequest extends TeaModel {
     /**
-     * <p>The digest value of the image.</p>
+     * <p>The digest of the image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

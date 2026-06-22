@@ -28,8 +28,10 @@ public class ListOperationTaskRequest extends TeaModel {
     /**
      * <p>Set the language type for the request and response messages. The default value is <strong>zh</strong>. Values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,26 +58,46 @@ public class ListOperationTaskRequest extends TeaModel {
     /**
      * <p>A list of task statuses. Multiple statuses should be separated by commas (,). Values:</p>
      * <ul>
-     * <li><strong>INIT</strong>: Initialization</li>
-     * <li><strong>FAIL</strong>: Processing failed</li>
-     * <li><strong>THROTTLING</strong>: Repairing concurrently</li>
-     * <li><strong>IN_BACKUP</strong>: Backing up</li>
-     * <li><strong>BACKED_UP</strong>: Backed up</li>
-     * <li><strong>BACKUP_FAIL</strong>: Backup failed</li>
-     * <li><strong>REPAIRING</strong>: Repairing</li>
-     * <li><strong>REPAIR_SUCCESS</strong>: Repair succeeded</li>
-     * <li><strong>REPAIR_FAIL</strong>: Repair failed</li>
-     * <li><strong>REPAIR_SUCCESS_VERIFYING</strong>: Verifying repair success</li>
-     * <li><strong>REPAIR_SUCCESS_UNVERIFIED</strong>: Repair success verification failed</li>
-     * <li><strong>REPAIR_SUCCESS_VERIFIED</strong>: Repair success verified</li>
-     * <li><strong>REPAIR_RE_EXECUTE</strong>: Re-executing repair</li>
-     * <li><strong>ROLL_BACKING</strong>: Rolling back</li>
-     * <li><strong>ROLL_BACKED</strong>: Rolled back</li>
-     * <li><strong>ROLL_BACK_FAIL</strong>: Rollback failed</li>
-     * <li><strong>ROLL_BACK_INIT</strong>: Rollback initiated</li>
-     * <li><strong>ROLL_BACK_VERIFYING</strong>: Verifying rollback success</li>
-     * <li><strong>ROLL_BACK_UNVERIFIED</strong>: Rollback success verification failed</li>
-     * <li><strong>ROLL_BACK_VERIFIED</strong>: Rollback success verified</li>
+     * <li><p><strong>INIT</strong>: Initialization</p>
+     * </li>
+     * <li><p><strong>FAIL</strong>: Processing failed</p>
+     * </li>
+     * <li><p><strong>THROTTLING</strong>: Repairing concurrently</p>
+     * </li>
+     * <li><p><strong>IN_BACKUP</strong>: Backing up</p>
+     * </li>
+     * <li><p><strong>BACKED_UP</strong>: Backed up</p>
+     * </li>
+     * <li><p><strong>BACKUP_FAIL</strong>: Backup failed</p>
+     * </li>
+     * <li><p><strong>REPAIRING</strong>: Repairing</p>
+     * </li>
+     * <li><p><strong>REPAIR_SUCCESS</strong>: Repair succeeded</p>
+     * </li>
+     * <li><p><strong>REPAIR_FAIL</strong>: Repair failed</p>
+     * </li>
+     * <li><p><strong>REPAIR_SUCCESS_VERIFYING</strong>: Verifying repair success</p>
+     * </li>
+     * <li><p><strong>REPAIR_SUCCESS_UNVERIFIED</strong>: Repair success verification failed</p>
+     * </li>
+     * <li><p><strong>REPAIR_SUCCESS_VERIFIED</strong>: Repair success verified</p>
+     * </li>
+     * <li><p><strong>REPAIR_RE_EXECUTE</strong>: Re-executing repair</p>
+     * </li>
+     * <li><p><strong>ROLL_BACKING</strong>: Rolling back</p>
+     * </li>
+     * <li><p><strong>ROLL_BACKED</strong>: Rolled back</p>
+     * </li>
+     * <li><p><strong>ROLL_BACK_FAIL</strong>: Rollback failed</p>
+     * </li>
+     * <li><p><strong>ROLL_BACK_INIT</strong>: Rollback initiated</p>
+     * </li>
+     * <li><p><strong>ROLL_BACK_VERIFYING</strong>: Verifying rollback success</p>
+     * </li>
+     * <li><p><strong>ROLL_BACK_UNVERIFIED</strong>: Rollback success verification failed</p>
+     * </li>
+     * <li><p><strong>ROLL_BACK_VERIFIED</strong>: Rollback success verified</p>
+     * </li>
      * </ul>
      */
     @NameInMap("Statuses")
@@ -93,8 +115,10 @@ public class ListOperationTaskRequest extends TeaModel {
     /**
      * <p>The type of operation task to be queried:</p>
      * <ul>
-     * <li>REPAIR: Repair</li>
-     * <li>ROLLBACK: Rollback</li>
+     * <li><p>REPAIR: Repair</p>
+     * </li>
+     * <li><p>ROLLBACK: Rollback</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

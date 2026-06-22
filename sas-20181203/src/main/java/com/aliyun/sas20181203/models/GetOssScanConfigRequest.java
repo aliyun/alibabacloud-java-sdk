@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssScanConfigRequest extends TeaModel {
     /**
-     * <p>The name of the bucket.</p>
+     * <p>The bucket name.</p>
      * 
      * <strong>example:</strong>
      * <p>iboxpublic****</p>

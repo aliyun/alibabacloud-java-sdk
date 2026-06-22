@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     /**
-     * <p>The cluster ID of the container on which the malicious image sample is detected.</p>
+     * <p>The cluster ID of the server for which you want to query exception events.</p>
      * 
      * <strong>example:</strong>
      * <p>c556c8133b5ad4378b7fc533ddbda****</p>
@@ -14,7 +14,7 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,9 +24,9 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the malicious image sample that you want to query.</p>
+     * <p>The name of the malicious file that you want to query.</p>
      * <blockquote>
-     * <p> Fuzzy match is supported.</p>
+     * <p>Fuzzy match is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public String imageTag;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,11 +76,11 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:</p>
+     * <p>The severity levels of the malicious samples in container images that you want to query. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>serious</strong></li>
-     * <li><strong>suspicious</strong></li>
-     * <li><strong>remind</strong></li>
+     * <li><strong>serious</strong>: urgent</li>
+     * <li><strong>suspicious</strong>: suspicious</li>
+     * <li><strong>remind</strong>: reminder.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public String levels;
 
     /**
-     * <p>The MD5 hash value of the malicious image sample.</p>
+     * <p>The MD5 hash of the malicious file.</p>
      * 
      * <strong>example:</strong>
      * <p>d836968041f7683b5459****</p>
@@ -99,7 +99,7 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public String maliciousMd5;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     /**
      * <p>The ID of the image repository.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation to query the IDs of image repositories from the value of the <strong>RepoId</strong> response parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry to obtain the value of the <strong>RepoId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,9 +121,9 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The ID of the container image.</p>
+     * <p>The instance ID of the container image.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation to query the IDs of container images from the value of the <strong>InstanceId</strong> response parameter.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry to obtain the value of the <strong>InstanceId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     /**
      * <p>The name of the image repository.</p>
      * <blockquote>
-     * <p> Fuzzy match is supported.</p>
+     * <p>Fuzzy match is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -145,9 +145,9 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The namespace to which the image repository belongs.</p>
+     * <p>The namespace of the image repository.</p>
      * <blockquote>
-     * <p> Fuzzy match is supported.</p>
+     * <p>Fuzzy match is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,13 +164,13 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
      * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
      * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
      * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>cn-hongkong</strong>: Hong Kong (China)</li>
      * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
      * <li><strong>us-east-1</strong>: US (Virginia)</li>
      * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
      * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>eu-west-1</strong>: UK (London)</li>
+     * <li><strong>eu-west-1</strong>: UK (London).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public String repoRegionId;
 
     /**
-     * <p>The types of the assets that you want to scan.</p>
+     * <p>The collection of scan ranges.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;

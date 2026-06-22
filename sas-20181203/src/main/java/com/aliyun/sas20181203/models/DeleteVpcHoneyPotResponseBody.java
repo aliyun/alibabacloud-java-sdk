@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVpcHoneyPotResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>4347E985-6E64-467B-96EC-30D4EA9E32FB</p>

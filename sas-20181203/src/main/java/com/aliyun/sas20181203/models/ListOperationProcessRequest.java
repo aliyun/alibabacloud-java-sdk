@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationProcessRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page to display in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListOperationProcessRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The end time of the query based on the task completion time. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1635575219000</p>
@@ -32,7 +32,7 @@ public class ListOperationProcessRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The start time of the query based on the task creation time. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1680919232000</p>
@@ -41,31 +41,31 @@ public class ListOperationProcessRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The task status codes.</p>
+     * <p>The list of task status codes.</p>
      */
     @NameInMap("StatusCodes")
     public java.util.List<Integer> statusCodes;
 
     /**
-     * <p>The task IDs.</p>
+     * <p>The list of task IDs.</p>
      */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
     /**
-     * <p>List of task sources.</p>
+     * <p>The list of task sources.</p>
      */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 
     /**
-     * <p>The task types. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
      * <li>CHECK_ALL: full check.</li>
-     * <li>CHECK_POLICY: policy-based check for which check items are configured.</li>
+     * <li>CHECK_POLICY: check performed based on check items in the configured policy.</li>
      * <li>CHECK_SCHEDULE: scheduled check.</li>
-     * <li>CHECK_ITEM: specific check item-based check.</li>
-     * <li>CHECK_INSTANCE: specific check item-based check on specific instances.</li>
+     * <li>CHECK_ITEM: check performed based on specified check items.</li>
+     * <li>CHECK_INSTANCE: check performed based on specified check items and instances.</li>
      * </ul>
      */
     @NameInMap("TaskTypes")

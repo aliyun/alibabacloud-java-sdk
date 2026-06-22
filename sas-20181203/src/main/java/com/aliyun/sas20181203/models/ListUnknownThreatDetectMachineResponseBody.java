@@ -4,14 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
+    /**
+     * <p>An array of instance details.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListUnknownThreatDetectMachineResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListUnknownThreatDetectMachineResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A4EB8B1C-1DEC-5E18-BCD0-XXXXXXXXX</p>
@@ -53,6 +59,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Long effectDays;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -60,6 +68,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>
          */
@@ -67,6 +77,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.42.XX.XX</p>
          */
@@ -77,6 +89,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public String pluginStatus;
 
         /**
+         * <p>The process count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -84,6 +98,16 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer processCount;
 
         /**
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>monitoring</strong>: The instance is being monitored for threats.</p>
+         * </li>
+         * <li><p><strong>blocking</strong>: The instance is blocking unauthorized processes.</p>
+         * </li>
+         * <li><p><strong>studying</strong>: The instance is in a learning phase.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>studying</p>
          */
@@ -91,6 +115,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The whitelist mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>hash</strong>: process hash</p>
+         * </li>
+         * <li><p><strong>path</strong>: process path</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>hash</p>
          */
@@ -101,6 +133,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Long studyRemainDays;
 
         /**
+         * <p>The timestamp when the learning phase started. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1766988192</p>
          */
@@ -108,6 +142,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Long studyStartTime;
 
         /**
+         * <p>The UUID of the asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
          */
@@ -211,6 +247,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectMachineResponseBodyPageInfo extends TeaModel {
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -218,6 +256,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -225,6 +265,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -232,6 +274,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>149</p>
          */

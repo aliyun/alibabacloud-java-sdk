@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ProcessSoarStrategyTaskRequest extends TeaModel {
     /**
-     * <p>ID of the strategy task.</p>
+     * <p>The ID of the policy task.</p>
      * <blockquote>
-     * <p>You can obtain this parameter by calling the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> interface.</p>
+     * <p>Call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,10 @@ public class ProcessSoarStrategyTaskRequest extends TeaModel {
     public Long strategyTaskId;
 
     /**
-     * <p>Task action status. Values:</p>
+     * <p>The action status of the task. Valid values:</p>
      * <ul>
-     * <li>SCHEDULE: Schedule</li>
-     * <li>PAUSE: Pause</li>
+     * <li>SCHEDULE: scheduling</li>
+     * <li>PAUSE: pause.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

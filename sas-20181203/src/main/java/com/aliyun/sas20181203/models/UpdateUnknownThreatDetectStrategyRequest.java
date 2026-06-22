@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUnknownThreatDetectStrategyRequest extends TeaModel {
     /**
+     * <p>The number of days the model learns for after its creation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class UpdateUnknownThreatDetectStrategyRequest extends TeaModel {
     public Integer durationDaysAfterInit;
 
     /**
+     * <p>The number of consecutive days without new processes before the model stops learning.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,7 @@ public class UpdateUnknownThreatDetectStrategyRequest extends TeaModel {
     public Integer durationDaysAfterStop;
 
     /**
+     * <p>The ID of the unknown threat detection strategy to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class UpdateUnknownThreatDetectStrategyRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the unknown threat detection strategy.</p>
+     * 
      * <strong>example:</strong>
      * <p>strategy****</p>
      */
@@ -35,6 +42,14 @@ public class UpdateUnknownThreatDetectStrategyRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The whitelist mode. Valid values are:</p>
+     * <ul>
+     * <li><p><strong>hash</strong>: process hash</p>
+     * </li>
+     * <li><p><strong>path</strong>: process path</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>hash</p>
      */

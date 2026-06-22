@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateHoneypotRequest extends TeaModel {
     /**
-     * <p>The ID of the honeypot.</p>
+     * <p>The honeypot ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</p>
+     * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>945607c2ae2a1a737c04599d6608065688bfc6048d9b9d306ce8dc8191c278b4</p>
+     * <p>945607c2ae2a1a737c04599d6608065688bfc6048d9b9d306ce8dc8191c*****</p>
      */
     @NameInMap("HoneypotId")
     public String honeypotId;
@@ -27,10 +27,10 @@ public class UpdateHoneypotRequest extends TeaModel {
     public String honeypotName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class UpdateHoneypotRequest extends TeaModel {
     /**
      * <p>The custom configuration of the honeypot.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the configurations of honeypots from the <strong>Template</strong> response parameter.</p>
+     * <p>The value of this parameter is obtained from the <strong>Template</strong> field returned by the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

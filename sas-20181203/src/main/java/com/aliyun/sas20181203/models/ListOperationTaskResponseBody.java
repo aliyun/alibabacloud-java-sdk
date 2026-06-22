@@ -68,7 +68,7 @@ public class ListOperationTaskResponseBody extends TeaModel {
          * <p>The name of the check item.</p>
          * 
          * <strong>example:</strong>
-         * <p>checkShowName</p>
+         * <p>开启恶意主机行为防御功能</p>
          */
         @NameInMap("CheckShowName")
         public String checkShowName;
@@ -103,8 +103,10 @@ public class ListOperationTaskResponseBody extends TeaModel {
         /**
          * <p>Whether the instance is released:</p>
          * <ul>
-         * <li>true: Released</li>
-         * <li>false: Not released</li>
+         * <li><p>true: Released</p>
+         * </li>
+         * <li><p>false: Not released</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,9 +145,12 @@ public class ListOperationTaskResponseBody extends TeaModel {
         /**
          * <p>The type of repair supported by the check item:</p>
          * <ul>
-         * <li><strong>1</strong>：Supports repair and rollback operations</li>
-         * <li><strong>2</strong>：Supports repair but not rollback</li>
-         * <li><strong>3</strong>：Redirect to a third-party platform for operation</li>
+         * <li><p><strong>1</strong>:Supports repair and rollback operations</p>
+         * </li>
+         * <li><p><strong>2</strong>:Supports repair but not rollback</p>
+         * </li>
+         * <li><p><strong>3</strong>:Redirect to a third-party platform for operation</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,9 +162,12 @@ public class ListOperationTaskResponseBody extends TeaModel {
         /**
          * <p>The risk level of the detected alert. Values:</p>
          * <ul>
-         * <li><strong>high</strong>: High risk.</li>
-         * <li><strong>medium</strong>: Medium risk. </li>
-         * <li><strong>low</strong>: Low risk.</li>
+         * <li><p><strong>high</strong>: High risk.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: Medium risk.</p>
+         * </li>
+         * <li><p><strong>low</strong>: Low risk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,26 +188,46 @@ public class ListOperationTaskResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Possible values:</p>
          * <ul>
-         * <li><strong>INIT</strong>：Initialization</li>
-         * <li><strong>FAIL</strong>：Processing failed</li>
-         * <li><strong>THROTTLING</strong>：Repairing concurrently</li>
-         * <li><strong>IN_BACKUP</strong>：Backing up</li>
-         * <li><strong>BACKED_UP</strong>：Backed up</li>
-         * <li><strong>BACKUP_FAIL</strong>：Backup failed</li>
-         * <li><strong>REPAIRING</strong>：Repairing</li>
-         * <li><strong>REPAIR_SUCCESS</strong>：Repair succeeded</li>
-         * <li><strong>REPAIR_FAIL</strong>：Repair failed</li>
-         * <li><strong>REPAIR_SUCCESS_VERIFYING</strong>：Verifying repair success</li>
-         * <li><strong>REPAIR_SUCCESS_UNVERIFIED</strong>：Verification of repair success failed</li>
-         * <li><strong>REPAIR_SUCCESS_VERIFIED</strong>：Verification of repair success succeeded</li>
-         * <li><strong>REPAIR_RE_EXECUTE</strong>：Re-executing repair</li>
-         * <li><strong>ROLL_BACKING</strong>：Rolling back</li>
-         * <li><strong>ROLL_BACKED</strong>：Rolled back</li>
-         * <li><strong>ROLL_BACK_FAIL</strong>：Rollback failed</li>
-         * <li><strong>ROLL_BACK_INIT</strong>：Initiating rollback</li>
-         * <li><strong>ROLL_BACK_VERIFYING</strong>：Verifying rollback success</li>
-         * <li><strong>ROLL_BACK_UNVERIFIED</strong>：Verification of rollback success failed</li>
-         * <li><strong>ROLL_BACK_VERIFIED</strong>：Verification of rollback success succeeded</li>
+         * <li><p><strong>INIT</strong>:Initialization</p>
+         * </li>
+         * <li><p><strong>FAIL</strong>:Processing failed</p>
+         * </li>
+         * <li><p><strong>THROTTLING</strong>:Repairing concurrently</p>
+         * </li>
+         * <li><p><strong>IN_BACKUP</strong>:Backing up</p>
+         * </li>
+         * <li><p><strong>BACKED_UP</strong>:Backed up</p>
+         * </li>
+         * <li><p><strong>BACKUP_FAIL</strong>:Backup failed</p>
+         * </li>
+         * <li><p><strong>REPAIRING</strong>:Repairing</p>
+         * </li>
+         * <li><p><strong>REPAIR_SUCCESS</strong>:Repair succeeded</p>
+         * </li>
+         * <li><p><strong>REPAIR_FAIL</strong>:Repair failed</p>
+         * </li>
+         * <li><p><strong>REPAIR_SUCCESS_VERIFYING</strong>:Verifying repair success</p>
+         * </li>
+         * <li><p><strong>REPAIR_SUCCESS_UNVERIFIED</strong>:Verification of repair success failed</p>
+         * </li>
+         * <li><p><strong>REPAIR_SUCCESS_VERIFIED</strong>:Verification of repair success succeeded</p>
+         * </li>
+         * <li><p><strong>REPAIR_RE_EXECUTE</strong>:Re-executing repair</p>
+         * </li>
+         * <li><p><strong>ROLL_BACKING</strong>:Rolling back</p>
+         * </li>
+         * <li><p><strong>ROLL_BACKED</strong>:Rolled back</p>
+         * </li>
+         * <li><p><strong>ROLL_BACK_FAIL</strong>:Rollback failed</p>
+         * </li>
+         * <li><p><strong>ROLL_BACK_INIT</strong>:Initiating rollback</p>
+         * </li>
+         * <li><p><strong>ROLL_BACK_VERIFYING</strong>:Verifying rollback success</p>
+         * </li>
+         * <li><p><strong>ROLL_BACK_UNVERIFIED</strong>:Verification of rollback success failed</p>
+         * </li>
+         * <li><p><strong>ROLL_BACK_VERIFIED</strong>:Verification of rollback success succeeded</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +240,7 @@ public class ListOperationTaskResponseBody extends TeaModel {
          * <p>The display status of the repair task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Verified After Repair Success</p>
+         * <p>回滚已验证</p>
          */
         @NameInMap("StatusShowName")
         public String statusShowName;
@@ -220,8 +248,10 @@ public class ListOperationTaskResponseBody extends TeaModel {
         /**
          * <p>Whether rollback is supported:</p>
          * <ul>
-         * <li>true: Supported</li>
-         * <li>false: Not supported</li>
+         * <li><p>true: Supported</p>
+         * </li>
+         * <li><p>false: Not supported</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,8 +272,10 @@ public class ListOperationTaskResponseBody extends TeaModel {
         /**
          * <p>The type of the operation task being queried:</p>
          * <ul>
-         * <li>REPAIR: Repair</li>
-         * <li>ROLLBACK: Rollback</li>
+         * <li><p>REPAIR: Repair</p>
+         * </li>
+         * <li><p>ROLLBACK: Rollback</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

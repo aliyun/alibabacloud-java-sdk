@@ -7,8 +7,8 @@ public class UpgradeHoneypotNodeRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow the honeypot to access the Internet. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Allowed.</li>
+     * <li><strong>false</strong>: Not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class UpgradeHoneypotNodeRequest extends TeaModel {
     public Boolean allowHoneypotAccessInternet;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,9 +31,9 @@ public class UpgradeHoneypotNodeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the management node that you want to upgrade.</p>
+     * <p>The ID of the management node to upgrade.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the ID.</p>
+     * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAlarmMachineCountRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to sas.</p>
+     * <p>The source identifier of the request. Set this parameter to sas.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>

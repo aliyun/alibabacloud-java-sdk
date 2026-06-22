@@ -14,7 +14,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the vulnerability.</p>
+     * <p>The vulnerability information returned.</p>
      */
     @NameInMap("VulRecords")
     public java.util.List<DescribeCanFixVulListResponseBodyVulRecords> vulRecords;
@@ -42,7 +42,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
 
     public static class DescribeCanFixVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
         /**
-         * <p>The complete version number of the software package.</p>
+         * <p>The full version number of the software package.</p>
          * 
          * <strong>example:</strong>
          * <p>3.10.0-693.2.2.el7</p>
@@ -51,7 +51,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String fullVersion;
 
         /**
-         * <p>The SHA-256 value of the digest of the image layer.</p>
+         * <p>The SHA256 value of the container image layer digest.</p>
          * 
          * <strong>example:</strong>
          * <p>b1f5b9420803ad0657cf21566e3e20acc08581e7f22991249ef3aa80b8b1****</p>
@@ -60,7 +60,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String layer;
 
         /**
-         * <p>The information about the detected vulnerability.</p>
+         * <p>The details of the vulnerability match.</p>
          * 
          * <strong>example:</strong>
          * <p>python-perf version less than 0:3.10.0-693.21.1.el7</p>
@@ -69,7 +69,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String matchDetail;
 
         /**
-         * <p>The rule that is used to detect the vulnerability.</p>
+         * <p>The rule hits.</p>
          */
         @NameInMap("MatchList")
         public java.util.List<String> matchList;
@@ -84,7 +84,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The path of the software that has the vulnerability.</p>
+         * <p>The path of the software that contains the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/lib64/python2.7/site-packages</p>
@@ -93,7 +93,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The command that is used to fix the vulnerability.</p>
+         * <p>The command to fix the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>apt-get update &amp;&amp; apt-get install libseccomp2  --only-upgrade</p>
@@ -192,7 +192,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String os;
 
         /**
-         * <p>The version of the operating system in the image.</p>
+         * <p>The release version of the operating system corresponding to the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>10.9</p>
@@ -201,7 +201,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String osRelease;
 
         /**
-         * <p>The RPM packages.</p>
+         * <p>The list of RPM packages.</p>
          */
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeCanFixVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
@@ -248,10 +248,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String aliasName;
 
         /**
-         * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
+         * <p>Indicates whether the vulnerability can be fixed in the console. Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong></li>
-         * <li><strong>no</strong></li>
+         * <li><strong>yes</strong>: Fixable.</li>
+         * <li><strong>no</strong>: Not fixable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,10 +261,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String canFix;
 
         /**
-         * <p>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
+         * <p>Specifies whether the software package that causes the vulnerability can be upgraded through Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>docker-law</p>
@@ -301,13 +301,13 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String containerId;
 
         /**
-         * <p>The extended information about the vulnerability.</p>
+         * <p>The extended content of the vulnerability information.</p>
          */
         @NameInMap("ExtendContentJson")
         public DescribeCanFixVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
         /**
-         * <p>The timestamp generated when the vulnerability was first detected. Unit: milliseconds.</p>
+         * <p>The timestamp when the vulnerability was first detected. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620752053000</p>
@@ -316,7 +316,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public Long firstTs;
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-conta****</p>
@@ -325,7 +325,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The unique identifier of the image.</p>
+         * <p>The unique identifier of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</p>
@@ -334,7 +334,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String imageDigest;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
@@ -362,7 +362,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The timestamp generated when the vulnerability was last detected. Unit: milliseconds.</p>
+         * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620404763000</p>
@@ -371,7 +371,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public Long lastTs;
 
         /**
-         * <p>The image layers.</p>
+         * <p>The list of container image layers.</p>
          */
         @NameInMap("Layers")
         public java.util.List<String> layers;
@@ -379,9 +379,9 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         /**
          * <p>The source of the malicious file. Valid values:</p>
          * <ul>
-         * <li><strong>agentless</strong></li>
-         * <li><strong>image</strong></li>
-         * <li><strong>container</strong></li>
+         * <li><strong>agentless</strong>: Agentless detection.</li>
+         * <li><strong>image</strong>: Image.</li>
+         * <li><strong>container</strong>: Container.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -391,7 +391,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String maliciousSource;
 
         /**
-         * <p>The timestamp generated when the vulnerability status was modified. Unit: milliseconds.</p>
+         * <p>The timestamp when the vulnerability status was modified. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620404763000</p>
@@ -418,14 +418,14 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The priority to fix the vulnerability. Valid values:</p>
+         * <p>The priority level of the vulnerability fix. Valid values:</p>
          * <ul>
-         * <li><strong>asap</strong>: high</li>
-         * <li><strong>later</strong>: medium</li>
-         * <li><strong>nntf</strong>: low</li>
+         * <li><strong>asap</strong>: High.</li>
+         * <li><strong>later</strong>: Medium.</li>
+         * <li><strong>nntf</strong>: Low.</li>
          * </ul>
          * <blockquote>
-         * <p> We recommend that you fix high-level vulnerabilities as soon as possible.</p>
+         * <p>Fix vulnerabilities with the <strong>High</strong> priority level as soon as possible.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -435,7 +435,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String necessity;
 
         /**
-         * <p>The name of the container group.</p>
+         * <p>The name of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>22222-7xsqq</p>
@@ -444,7 +444,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String pod;
 
         /**
-         * <p>The vulnerability ID.</p>
+         * <p>The ID of the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>782661</p>
@@ -453,7 +453,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public Long primaryId;
 
         /**
-         * <p>The CVE IDs related to the vulnerability. Multiple CVE IDs are separated by commas (,).</p>
+         * <p>The list of CVEs associated with the vulnerability. Multiple values are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>CVE-2017-7518,CVE-2017-12188</p>
@@ -462,7 +462,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String related;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The name of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>varnish</p>
@@ -471,7 +471,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The namespace to which the image repository belongs.</p>
+         * <p>The namespace of the container image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>3rdparty</p>
@@ -480,7 +480,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
-         * <p>The timestamp generated when the scan task was performed. Unit: milliseconds.</p>
+         * <p>The timestamp of the scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649814050000</p>
@@ -489,11 +489,11 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public Long scanTime;
 
         /**
-         * <p>The status of the vulnerability. Valid values:</p>
+         * <p>The fix status of the vulnerability. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The vulnerability is unfixed.</li>
-         * <li><strong>4</strong>: The vulnerability is being fixed.</li>
-         * <li><strong>7</strong>: The vulnerability is fixed.</li>
+         * <li><strong>1</strong>: Unfixed.</li>
+         * <li><strong>4</strong>: Being fixed.</li>
+         * <li><strong>7</strong>: Fixed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -503,7 +503,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The tag that is added to the image.</p>
+         * <p>The tag of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -512,7 +512,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The ID of the asset that is scanned.</p>
+         * <p>The ID of the scan target.</p>
          * 
          * <strong>example:</strong>
          * <p>300269</p>
@@ -521,7 +521,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>The name of the asset that is scanned.</p>
+         * <p>The name of the scan target.</p>
          * 
          * <strong>example:</strong>
          * <p>source-test-obj-XM0Ma</p>
@@ -530,11 +530,11 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The type of the asset that is scanned. Valid values:</p>
+         * <p>The object type of the scan target. Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE</strong></li>
-         * <li><strong>ECS_IMAGE</strong></li>
-         * <li><strong>ECS_SNAPSHOT</strong></li>
+         * <li><strong>IMAGE</strong>: Container image.</li>
+         * <li><strong>ECS_IMAGE</strong>: Host image.</li>
+         * <li><strong>ECS_SNAPSHOT</strong>: Snapshot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -544,10 +544,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The type of the vulnerability. Valid values:</p>
+         * <p>The vulnerability type. Valid values:</p>
          * <ul>
          * <li><strong>cve</strong>: system vulnerability</li>
-         * <li><strong>sca</strong>: application vulnerability</li>
+         * <li><strong>sca</strong>: application vulnerability.</li>
          * </ul>
          * 
          * <strong>example:</strong>

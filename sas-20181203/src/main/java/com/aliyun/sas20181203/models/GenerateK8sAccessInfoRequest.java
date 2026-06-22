@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateK8sAccessInfoRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayApiName;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,7 +23,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayPopName;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,7 +32,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String aliyunYundunGatewayProjectName;
 
     /**
-     * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+     * <p>The SLS Logstore of the audit log.</p>
      * 
      * <strong>example:</strong>
      * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
@@ -41,7 +41,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String auditLogStore;
 
     /**
-     * <p>The Simple Log Service project that is used to store the audit logs.</p>
+     * <p>The SLS project of the audit log.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-log-custom-huxintest1018-2</p>
@@ -50,7 +50,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String auditProject;
 
     /**
-     * <p>The ID of the region in which the audit logs are stored.</p>
+     * <p>The region of the audit log.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -69,7 +69,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>CPU architectures are divided into ARM architecture and x86 architecture.</p>
+     * <p>The CPU architecture, which can be ARM or x86.</p>
      * 
      * <strong>example:</strong>
      * <p>arm</p>
@@ -78,7 +78,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String cpuArch;
 
     /**
-     * <p>The time at which the container ends to be added.</p>
+     * <p>The expiration time for container access.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public Long expireDate;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The queried group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,13 +98,13 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The service provider of the cloud asset. Valid values:</p>
+     * <p>The cloud asset vendor. Valid values:</p>
      * <ul>
      * <li><strong>Tencent</strong></li>
      * <li><strong>HUAWEICLOUD</strong></li>
      * <li><strong>Azure</strong></li>
-     * <li><strong>AWS</strong></li>
-     * <li><strong>Others</strong></li>
+     * <li><strong>AWS</strong> </li>
+     * <li><strong>Other cloud assets</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -15,10 +15,10 @@ public class DescribeInstanceStatisticsRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeInstanceStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>
@@ -37,7 +37,8 @@ public class DescribeInstanceStatisticsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The UUIDs of the assets to query. Separate multiple UUIDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of assets.</p>
+     * <p>The UUIDs of the assets that you want to query. Separate multiple UUIDs with commas (,).
+     * You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUIDs of asset instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

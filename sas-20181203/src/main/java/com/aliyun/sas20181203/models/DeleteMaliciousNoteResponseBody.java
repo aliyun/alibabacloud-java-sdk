@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMaliciousNoteResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>D65AADFC-1D20-5A6A-8F6A-9FA53CXXXXX</p>

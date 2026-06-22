@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateImageBaselineWhitelistRequest extends TeaModel {
     /**
-     * <p>The keys of baseline check items.</p>
+     * <p>The list of baseline sub-item keys.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class OperateImageBaselineWhitelistRequest extends TeaModel {
     public String baselineItemKeyList;
 
     /**
-     * <p>The UUID of the image.</p>
+     * <p>The image UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>a5250ebca765dc9eb1a84b790b0e****</p>
@@ -24,10 +24,10 @@ public class OperateImageBaselineWhitelistRequest extends TeaModel {
     public String imageUuid;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,10 +37,10 @@ public class OperateImageBaselineWhitelistRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The operation that you want to perform on the check items. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><strong>add</strong>: adds the check items to the whitelist</li>
-     * <li><strong>del</strong>: removes the check items from the whitelist</li>
+     * <li><strong>add</strong>: increase.</li>
+     * <li><strong>del</strong>: delete.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,7 +51,7 @@ public class OperateImageBaselineWhitelistRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The types of the assets that you want to scan.</p>
+     * <p>The collection of scan ranges.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;

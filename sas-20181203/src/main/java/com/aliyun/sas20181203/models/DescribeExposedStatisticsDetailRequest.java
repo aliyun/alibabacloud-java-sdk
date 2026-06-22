@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     /**
-     * <p>The search condition for components.</p>
+     * <p>The query condition.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The public IP address of the server or the cloud asset.</p>
+     * <p>The public IP address that is exposed on the Internet for the asset to query.</p>
      * 
      * <strong>example:</strong>
      * <p>116.12.XX.XX</p>
@@ -32,7 +32,7 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public String exposureIp;
 
     /**
-     * <p>The instance ID of the asset.</p>
+     * <p>The instance ID of the asset to query.</p>
      * 
      * <strong>example:</strong>
      * <p>s-bp1g6wxdwps7s9dz****</p>
@@ -41,9 +41,9 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Set PageSize to a non-empty value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,24 +53,24 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the ID.</p>
+     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>127608589417****</p>
+     * <p>1232428423234****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The type of the exposed asset. Valid values:</p>
+     * <p>The type of statistics to query. Valid values:</p>
      * <ul>
-     * <li><strong>exposureType</strong>: gateway assets</li>
-     * <li><strong>exposurePort</strong>: ports</li>
-     * <li><strong>exposureComponent</strong>: system components</li>
-     * <li><strong>exposureIp</strong>: IP addresses</li>
+     * <li><strong>exposureType</strong>: gateway assets exposed on the Internet.</li>
+     * <li><strong>exposurePort</strong>: ports exposed on the Internet.</li>
+     * <li><strong>exposureComponent</strong>: system components exposed on the Internet.</li>
+     * <li><strong>exposureIp</strong>: IP addresses exposed on the Internet.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -81,10 +81,10 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public String statisticsType;
 
     /**
-     * <p>The type of the gateway asset. This parameter is required when the <strong>StatisticsType</strong> parameter is set to <strong>exposureType</strong>. Valid values:</p>
+     * <p>The Asset Type of the gateway to query. This parameter takes effect only when <strong>StatisticsType</strong> is set to <strong>exposureType</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance</li>
-     * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+     * <li><strong>SLB</strong>: public IP address of a load balancing SLB instance.</li>
+     * <li><strong>DNAT</strong>: NAT gateway that uses the DNAT feature to connect to the Internet.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public String statisticsTypeGatewayType;
 
     /**
-     * <p>The ID of the gateway asset. This parameter is required when the <strong>StatisticsType</strong> parameter is set to <strong>exposureType</strong>.</p>
+     * <p>The instance ID of the gateway to query. This parameter takes effect only when <strong>StatisticsType</strong> is set to <strong>exposureType</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-2ze4rso39h4nczcqs****</p>
@@ -103,7 +103,7 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public String statisticsTypeInstanceValue;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server to query.</p>
      * 
      * <strong>example:</strong>
      * <p>c9107c04-942f-40c1-981a-f1c1***</p>

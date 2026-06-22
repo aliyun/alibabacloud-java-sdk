@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     /**
-     * <p>The ID of the specified container cluster.</p>
+     * <p>The ID of the container cluster to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The search condition for the image baseline.</p>
+     * <p>The query condition of the baseline.</p>
      * 
      * <strong>example:</strong>
      * <p>Unauthorized access</p>
@@ -26,10 +26,12 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The type of the search condition. Valid values:</p>
+     * <p>The query type of the baselines to query. Valid values:</p>
      * <ul>
-     * <li><strong>BaselineNameAlias</strong>: baseline name</li>
-     * <li><strong>BaselineClassAlias</strong>: baseline category</li>
+     * <li><p><strong>BaselineNameAlias</strong>: baseline name</p>
+     * </li>
+     * <li><p><strong>BaselineClassAlias</strong>: baseline category.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     public String criteriaType;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number to display from the returned results. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>, which indicates that the first page is displayed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,10 +50,10 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +63,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -70,11 +72,14 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The severity of the image baseline that you want to query. Separate multiple severities with commas (,). Valid values:</p>
+     * <p>The risk level of the baselines to query. Separate multiple levels with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>high</strong></li>
-     * <li><strong>medium</strong></li>
-     * <li><strong>low</strong></li>
+     * <li><p><strong>high</strong>: high risk</p>
+     * </li>
+     * <li><p><strong>medium</strong>: medium risk</p>
+     * </li>
+     * <li><p><strong>low</strong>: low risk.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +89,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The types of the assets that you want to scan.</p>
+     * <p>The collection of scan ranges.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;

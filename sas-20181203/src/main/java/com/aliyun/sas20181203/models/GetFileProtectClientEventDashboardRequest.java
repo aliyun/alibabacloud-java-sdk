@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFileProtectClientEventDashboardRequest extends TeaModel {
     /**
+     * <p>The page number of the current page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetFileProtectClientEventDashboardRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The end timestamp of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1656038940435</p>
      */
@@ -19,6 +23,8 @@ public class GetFileProtectClientEventDashboardRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The maximum number of entries per page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class GetFileProtectClientEventDashboardRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The start timestamp of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1648438617000</p>
      */

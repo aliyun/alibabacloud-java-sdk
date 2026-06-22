@@ -9,9 +9,6 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert event.</p>
-     * <blockquote>
-     * <p> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,10 +18,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     public Long securityEventId;
 
     /**
-     * <p>The codes of alert events that are triggered by the same rule or of the same alert type.</p>
-     * <blockquote>
-     * <p> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</p>
-     * </blockquote>
+     * <p>The code of the alerting event that has the same type or rule hits.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -33,7 +27,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     public String similarEventScenarioCode;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>

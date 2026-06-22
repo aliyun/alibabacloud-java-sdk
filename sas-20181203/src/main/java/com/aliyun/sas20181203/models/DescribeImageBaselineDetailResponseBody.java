@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageBaselineDetailResponseBody extends TeaModel {
     /**
-     * <p>The details about the image baseline.</p>
+     * <p>The image baseline details.</p>
      */
     @NameInMap("BaselineDetail")
     public DescribeImageBaselineDetailResponseBodyBaselineDetail baselineDetail;
@@ -42,16 +42,16 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineDetailResponseBodyBaselineDetail extends TeaModel {
         /**
-         * <p>The suggestion for the management of the risk item.</p>
+         * <p>The remediation suggestion for the baseline check risk item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Delete the leaked AccessKey pairs.</p>
+         * <p>删除泄漏的AK信息。</p>
          */
         @NameInMap("Advice")
         public String advice;
 
         /**
-         * <p>The alias of the baseline type.</p>
+         * <p>The alias of the baseline classification.</p>
          * 
          * <strong>example:</strong>
          * <p>ak_leak</p>
@@ -60,16 +60,16 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         public String baselineClassAlias;
 
         /**
-         * <p>The alias of the baseline check item.</p>
+         * <p>The alias of the baseline sub-item.</p>
          * 
          * <strong>example:</strong>
-         * <p>AccessKey pair leak</p>
+         * <p>Access Key泄露</p>
          */
         @NameInMap("BaselineItemAlias")
         public String baselineItemAlias;
 
         /**
-         * <p>The key of the baseline check item.</p>
+         * <p>The key of the baseline sub-item.</p>
          * 
          * <strong>example:</strong>
          * <p>ak_leak</p>
@@ -78,29 +78,32 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         public String baselineItemKey;
 
         /**
-         * <p>The alias of the baseline.</p>
+         * <p>The alias of the baseline name.</p>
          * 
          * <strong>example:</strong>
-         * <p>AccessKey pair leak</p>
+         * <p>Access Key泄露</p>
          */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
         /**
-         * <p>The description of the risk item.</p>
+         * <p>The description of the baseline risk item.</p>
          * 
          * <strong>example:</strong>
-         * <p>If an AccessKey pair is leaked, the AccessKey pair may be fraudulently used.</p>
+         * <p>Access Key泄露，会导致Access Key被冒用的风险。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The risk level of the baseline check item. Valid values:</p>
+         * <p>The risk level of the check item. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><p><strong>high</strong>: High risk level.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: Medium risk level.</p>
+         * </li>
+         * <li><p><strong>low</strong>: Low risk level.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +113,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The issue that is detected by using the baseline.</p>
+         * <p>The baseline issue prompt.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/aksk.txt:yourAccessKeyID</p>
@@ -119,7 +122,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         public String prompt;
 
         /**
-         * <p>The ID of the asynchronous request.</p>
+         * <p>The asynchronous request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>async__c6f3b0b54613383b40bdce593ffe****</p>

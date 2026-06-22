@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
     /**
-     * <p>Check item ID.</p>
+     * <p>The ID of the check item.</p>
      * 
      * <strong>example:</strong>
      * <p>76</p>
@@ -14,28 +14,28 @@ public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
     public Long checkId;
 
     /**
-     * <p>Custom check item to validate input parameters.</p>
+     * <p>The input parameters for custom check item validation.</p>
      */
     @NameInMap("CustomCheckConfig")
     public String customCheckConfigShrink;
 
     /**
-     * <p>List of custom configuration items for the check item.</p>
+     * <p>The list of custom parameter configuration items for the check item.</p>
      */
     @NameInMap("CustomConfigs")
     public java.util.List<VerifyCheckCustomConfigShrinkRequestCustomConfigs> customConfigs;
 
     /**
-     * <p>Repair parameters supported by the check item\&quot;s repair function.</p>
+     * <p>The repair parameters supported by the repair feature of the check item.</p>
      */
     @NameInMap("RepairConfigs")
     public java.util.List<VerifyCheckCustomConfigShrinkRequestRepairConfigs> repairConfigs;
 
     /**
-     * <p>Situation Awareness parameter validation types: </p>
+     * <p>The validation type for Threat Detection Service parameters. Valid values:</p>
      * <ul>
-     * <li><strong>REPAIR_CONFIG</strong>: Repair and custom parameter validation (default) </li>
-     * <li><strong>CHECK_ITEM_CONFIG</strong>: Custom check item validation</li>
+     * <li><strong>REPAIR_CONFIG</strong>: repair and custom parameter validation (default).</li>
+     * <li><strong>CHECK_ITEM_CONFIG</strong>: custom check item validation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
 
     public static class VerifyCheckCustomConfigShrinkRequestCustomConfigs extends TeaModel {
         /**
-         * <p>Name of the custom configuration item for the check item, unique within the same check item.</p>
+         * <p>The name of the custom configuration item for the check item. The name is unique within the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>IPList</p>
@@ -100,7 +100,7 @@ public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Operation type for the custom configuration item of the check item. Only pass DELETE when deleting; no need to pass for creation or update.</p>
+         * <p>The operation type of the custom configuration item for the check item. Set this parameter to DELETE only for deletion operations. You do not need to specify this parameter for creation or update operations.</p>
          * 
          * <strong>example:</strong>
          * <p>DELETE</p>
@@ -109,7 +109,7 @@ public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
         public String operation;
 
         /**
-         * <p>User-configured value string for the custom configuration item of the check item.</p>
+         * <p>The user-configured value string of the custom configuration item for the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>10.12.4.XX</p>
@@ -150,7 +150,7 @@ public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
 
     public static class VerifyCheckCustomConfigShrinkRequestRepairConfigs extends TeaModel {
         /**
-         * <p>ID of the repair process during the repair.</p>
+         * <p>The ID of the repair flow that corresponds to the repair operation.</p>
          * 
          * <strong>example:</strong>
          * <p>7fec0a3395b345c18f108ffc9fc0****</p>
@@ -159,7 +159,7 @@ public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
         public String flowId;
 
         /**
-         * <p>Name of the repair parameter for the check item, unique within the same check item.</p>
+         * <p>The name of the repair parameter for the check item. The name is unique within the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>IPLists</p>
@@ -168,7 +168,7 @@ public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Operation type for the custom configuration item of the check item. Only pass DELETE when deleting; no need to pass for creation or update.</p>
+         * <p>The operation type of the custom configuration item for the check item. Set this parameter to DELETE only for deletion operations. You do not need to specify this parameter for creation or update operations.</p>
          * 
          * <strong>example:</strong>
          * <p>DELETE</p>
@@ -177,7 +177,7 @@ public class VerifyCheckCustomConfigShrinkRequest extends TeaModel {
         public String operation;
 
         /**
-         * <p>User-configured value string for the repair parameter of the check item.</p>
+         * <p>The user-configured value string of the repair configuration item for the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>172.26.49.XX</p>

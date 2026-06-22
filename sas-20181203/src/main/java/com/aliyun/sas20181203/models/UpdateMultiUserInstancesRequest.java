@@ -43,15 +43,22 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long ecsCount;
 
         /**
-         * <p>Version of the Cloud Security Center for the member account. Values:  </p>
+         * <p>Version of the Cloud Security Center for the member account. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition </li>
-         * <li><strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>6</strong>: Antivirus Edition    </li>
-         * <li><strong>7</strong>: Flagship Edition   </li>
-         * <li><strong>8</strong>: Multiple Versions   </li>
-         * <li><strong>10</strong>: Only Purchase Value-Added Services</li>
+         * <li><p><strong>1</strong>: Free Edition</p>
+         * </li>
+         * <li><p><strong>3</strong>: Enterprise Edition</p>
+         * </li>
+         * <li><p><strong>5</strong>: Advanced Edition</p>
+         * </li>
+         * <li><p><strong>6</strong>: Antivirus Edition</p>
+         * </li>
+         * <li><p><strong>7</strong>: Flagship Edition</p>
+         * </li>
+         * <li><p><strong>8</strong>: Multiple Versions</p>
+         * </li>
+         * <li><p><strong>10</strong>: Only Purchase Value-Added Services</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,8 +120,10 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         /**
          * <p>Charge type, values:</p>
          * <ul>
-         * <li><strong>PREPAID</strong>: Prepaid.</li>
-         * <li><strong>POSTPAID</strong> (default): Postpaid.</li>
+         * <li><p><strong>PREPAID</strong>: Prepaid.</p>
+         * </li>
+         * <li><p><strong>POSTPAID</strong> (default): Postpaid.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,11 +169,14 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Operation type. Values:  </p>
+         * <p>Operation type. Values:</p>
          * <ul>
-         * <li><strong>ADD</strong>: Add </li>
-         * <li><strong>CHANGE</strong>: Change</li>
-         * <li><strong>DEL</strong>: Delete</li>
+         * <li><p><strong>ADD</strong>: Add</p>
+         * </li>
+         * <li><p><strong>CHANGE</strong>: Change</p>
+         * </li>
+         * <li><p><strong>DEL</strong>: Delete</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,10 +213,12 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long slsCapacity;
 
         /**
-         * <p>Status of the member account instance. Values: </p>
+         * <p>Status of the member account instance. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: Valid. </li>
-         * <li><strong>2</strong>: Invalid.</li>
+         * <li><p><strong>1</strong>: Valid.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Invalid.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,13 +246,18 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long threatAnalysisFlow;
 
         /**
-         * <p>The version of Cloud Security Center protection to be bound. Values:  </p>
+         * <p>The version of Cloud Security Center protection to be bound. Values:</p>
          * <ul>
-         * <li><strong>1</strong>: Free Edition </li>
-         * <li><strong>3</strong>: Enterprise Edition</li>
-         * <li><strong>5</strong>: Advanced Edition</li>
-         * <li><strong>6</strong>: Antivirus Edition    </li>
-         * <li><strong>7</strong>: Flagship Edition</li>
+         * <li><p><strong>1</strong>: Free Edition</p>
+         * </li>
+         * <li><p><strong>3</strong>: Enterprise Edition</p>
+         * </li>
+         * <li><p><strong>5</strong>: Advanced Edition</p>
+         * </li>
+         * <li><p><strong>6</strong>: Antivirus Edition</p>
+         * </li>
+         * <li><p><strong>7</strong>: Flagship Edition</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

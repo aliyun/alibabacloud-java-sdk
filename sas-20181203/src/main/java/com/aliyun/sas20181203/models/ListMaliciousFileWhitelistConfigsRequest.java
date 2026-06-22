@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the current page to return. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,9 +14,9 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the alert.</p>
+     * <p>The alerting name. Valid values:</p>
      * <ul>
-     * <li>Set the value to ALL, which indicates all alert types.</li>
+     * <li>ALL: all Alarm Metric values.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,10 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>Event ID. <notice>Field is deprecated.</notice></p>
+     * <p>The event ID.</p>
+     * <blockquote>
+     * <p>Notice: This field is deprecated..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -36,10 +39,10 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     public Long idList;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +52,7 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>The maximum number of entries to return per page in a paging query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -58,7 +61,7 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The feature to which this operation belongs. If you leave this parameter empty, the default value agentless is used.</p>
+     * <p>The business source. This parameter can be left empty. Default value: agentless.</p>
      * 
      * <strong>example:</strong>
      * <p>agentless</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetClusterCheckItemWarningStatisticsRequest extends TeaModel {
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the container cluster that you want to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,13 +17,13 @@ public class GetClusterCheckItemWarningStatisticsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The server UUID.</p>
+     * <p>The UUID of the server.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the server UUID.</p>
+     * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>e4af3620-6895-4e2f-a641-a9d8fb53****</p>
+     * <p>ae1527a9-2308-46ab-b10a-48ae7ff7****</p>
      */
     @NameInMap("Uuid")
     public String uuid;

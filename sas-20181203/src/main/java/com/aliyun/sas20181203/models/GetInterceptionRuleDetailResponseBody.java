@@ -340,10 +340,14 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         /**
          * <p>The interception mode. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: monitor</li>
-         * <li><strong>1</strong>: block</li>
-         * <li><strong>2</strong>: alert</li>
-         * <li><strong>3</strong>: allow</li>
+         * <li><p><strong>0</strong>: monitor</p>
+         * </li>
+         * <li><p><strong>1</strong>: block</p>
+         * </li>
+         * <li><p><strong>2</strong>: alert</p>
+         * </li>
+         * <li><p><strong>3</strong>: allow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -382,8 +386,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         /**
          * <p>The status of the defense rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The rule is enabled.</li>
-         * <li><strong>0</strong>: The rule is disabled.</li>
+         * <li><p><strong>1</strong>: The rule is enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: The rule is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -395,8 +401,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>suggest</strong>: a suggestion rule</li>
-         * <li><strong>customize</strong>: a custom rule</li>
+         * <li><p><strong>suggest</strong>: a suggestion rule</p>
+         * </li>
+         * <li><p><strong>customize</strong>: a custom rule</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

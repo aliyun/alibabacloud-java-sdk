@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end timestamp of the sub-task.</p>
+     * <p>The timestamp of the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1668064495000</p>
@@ -24,7 +24,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether extension information is associated.</p>
+     * <p>Specifies whether to associate extended information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     public Boolean relateInfo;
 
     /**
-     * <p>The source of the request.</p>
+     * <p>The request source.</p>
      * 
      * <strong>example:</strong>
      * <p>console_batch</p>
@@ -53,7 +53,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The start timestamp of the sub-task.</p>
+     * <p>The timestamp of the start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1648438617000</p>
@@ -62,13 +62,13 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status information.</p>
+     * <p>The list of statuses.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
     /**
-     * <p>The ID of the sub-task.</p>
+     * <p>The ID of the task to retrieve.</p>
      * 
      * <strong>example:</strong>
      * <p>1471d8ebb96795b41ede090b9758****</p>
@@ -77,10 +77,10 @@ public class DescribeOnceTaskLeafRecordPageRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The type of the sub-task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
-     * <li><strong>IMAGE_REGISTRY_PULL</strong>: image asset synchronization task</li>
+     * <li><strong>IMAGE_SCAN</strong>: image scanning</li>
+     * <li><strong>IMAGE_REGISTRY_PULL</strong>: image asset synchronization.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

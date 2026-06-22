@@ -90,7 +90,7 @@ public class CreateOssScanConfigRequest extends TeaModel {
      * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>runtime</p>
+     * <p>testName</p>
      */
     @NameInMap("Name")
     public String name;

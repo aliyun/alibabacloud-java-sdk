@@ -14,7 +14,7 @@ public class RemoveCheckInstanceResultWhiteListRequest extends TeaModel {
     public Long checkId;
 
     /**
-     * <p>The IDs of instances. Separate multiple IDs with commas (,).</p>
+     * <p>The instance ID to query. Separate multiple instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;

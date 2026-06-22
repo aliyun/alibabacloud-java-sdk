@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageRiskLevelStatisticResponseBody extends TeaModel {
     /**
-     * <p>The information about risks at the image level. The risks include vulnerabilities, baselines risks, and malicious file risks.</p>
+     * <p>The risk information at the image level, including risks from vulnerability, baseline, and malicious file detection.</p>
      */
     @NameInMap("ImageRiskLevelList")
     public java.util.List<DescribeImageRiskLevelStatisticResponseBodyImageRiskLevelList> imageRiskLevelList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>A60DA4EC-7CD8-577D-AD73-******</p>
@@ -42,7 +42,7 @@ public class DescribeImageRiskLevelStatisticResponseBody extends TeaModel {
 
     public static class DescribeImageRiskLevelStatisticResponseBodyImageRiskLevelList extends TeaModel {
         /**
-         * <p>The number of images at the risk level.</p>
+         * <p>The number of images at the specified risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -51,11 +51,11 @@ public class DescribeImageRiskLevelStatisticResponseBody extends TeaModel {
         public Integer cnt;
 
         /**
-         * <p>The risk level of the image. Valid values:</p>
+         * <p>The image risk level. Valid values:</p>
          * <ul>
-         * <li><strong>3</strong>: high risk.</li>
-         * <li><strong>2</strong>: medium risk.</li>
-         * <li><strong>1</strong>: low risk.</li>
+         * <li><strong>3</strong>: high risk</li>
+         * <li><strong>2</strong>: medium risk</li>
+         * <li><strong>1</strong>: low risk</li>
          * <li><strong>0</strong>: no risk.</li>
          * </ul>
          * 

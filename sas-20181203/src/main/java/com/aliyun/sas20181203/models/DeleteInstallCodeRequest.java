@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteInstallCodeRequest extends TeaModel {
     /**
-     * <p>The installation command.</p>
+     * <p>The installation code.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeInstallCodes~~">DescribeInstallCodes</a> operation to query installation commands.</p>
+     * <p>You can call the <a href="~~DescribeInstallCodes~~">DescribeInstallCodes</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

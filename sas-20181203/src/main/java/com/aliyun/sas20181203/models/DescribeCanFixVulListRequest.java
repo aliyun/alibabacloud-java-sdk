@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCanFixVulListRequest extends TeaModel {
     /**
-     * <p>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</p>
+     * <p>The alias in the vulnerability advisory.</p>
      * 
      * <strong>example:</strong>
      * <p>RHSA-2017:0184-Important: mysql security update</p>
@@ -14,9 +14,9 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String aliasName;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the container cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The name of the container cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>sas-test-cnnf</p>
@@ -44,7 +44,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the current page in a paging query. The value starts from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +54,8 @@ public class DescribeCanFixVulListRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the vulnerability is handled. Valid values:</p>
-     * <p><strong>y</strong>: The vulnerability is handled. <strong>n</strong>: The vulnerability is not handled.</p>
+     * <p><strong>y</strong>: Handled.
+     * <strong>n</strong>: Not handled.</p>
      * 
      * <strong>example:</strong>
      * <p>n</p>
@@ -63,7 +64,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>The unique identifier of the image.</p>
+     * <p>The unique identifier of the container image.</p>
      * 
      * <strong>example:</strong>
      * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</p>
@@ -72,7 +73,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>The name of the image.</p>
+     * <p>The name of the container image.</p>
      * 
      * <strong>example:</strong>
      * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
@@ -81,9 +82,9 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String image;
 
     /**
-     * <p>The ID of the container image.</p>
+     * <p>The container image instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the ID of the container image from <strong>InstanceId</strong> in the response.</p>
+     * <p>Invoke the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the container image instance ID from the <strong>InstanceId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,9 +103,9 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The namespace of the cluster.</p>
+     * <p>The cluster namespace.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~GetOpaClusterNamespaceList~~">GetOpaClusterNamespaceList</a> operation to query the namespaces of clusters.</p>
+     * <p>You can call the <a href="~~GetOpaClusterNamespaceList~~">GetOpaClusterNamespaceList</a> operation to query this value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,11 +115,11 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+     * <p>The priority levels of vulnerabilities to query. Separate multiple levels with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>asap</strong>: high</li>
      * <li><strong>later</strong>: medium</li>
-     * <li><strong>nntf</strong>: low</li>
+     * <li><strong>nntf</strong>: low.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +129,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -137,7 +138,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the container group.</p>
+     * <p>The name of the pod.</p>
      * 
      * <strong>example:</strong>
      * <p>22222-7xsqq</p>
@@ -153,13 +154,13 @@ public class DescribeCanFixVulListRequest extends TeaModel {
      * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
      * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
      * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>cn-hongkong</strong>: Hong Kong (China)</li>
      * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
      * <li><strong>us-east-1</strong>: US (Virginia)</li>
      * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
      * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>eu-west-1</strong>: UK (London)</li>
+     * <li><strong>eu-west-1</strong>: UK (London).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,7 +172,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     /**
      * <p>The ID of the image repository.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry and obtain the ID of the image repository from <strong>RepoId</strong> in the response.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry and obtain the value of the <strong>RepoId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -181,9 +182,9 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The ID of the container image.</p>
+     * <p>The container image instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the ID of the container image from <strong>InstanceId</strong> in the response.</p>
+     * <p>Invoke the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the container image instance ID from the <strong>InstanceId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -195,7 +196,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     /**
      * <p>The name of the image repository.</p>
      * <blockquote>
-     * <p> Fuzzy match is supported.</p>
+     * <p>Fuzzy match is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -205,9 +206,9 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The namespace to which the image repository belongs.</p>
+     * <p>The namespace of the image repository.</p>
      * <blockquote>
-     * <p> Fuzzy match is supported.</p>
+     * <p>Fuzzy match is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -224,13 +225,13 @@ public class DescribeCanFixVulListRequest extends TeaModel {
      * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
      * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
      * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>cn-hongkong</strong>: Hong Kong (China)</li>
      * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
      * <li><strong>us-east-1</strong>: US (Virginia)</li>
      * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
      * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
-     * <li><strong>eu-west-1</strong>: UK (London)</li>
+     * <li><strong>eu-west-1</strong>: UK (London).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -240,21 +241,21 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String repoRegionId;
 
     /**
-     * <p>The type of the asset that you want to scan. Valid values:</p>
+     * <p>The scan scope. Valid values:</p>
      * <ul>
-     * <li><strong>image</strong></li>
-     * <li><strong>container</strong></li>
+     * <li><strong>image</strong>: Image.</li>
+     * <li><strong>container</strong>: Container.</li>
      * </ul>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
     /**
-     * <p>The status of the vulnerability. Valid values:</p>
+     * <p>The fix status of the vulnerability. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The vulnerability is unfixed.</li>
-     * <li><strong>4</strong>: The vulnerability is being fixed.</li>
-     * <li><strong>7</strong>:The vulnerability is fixed.</li>
+     * <li><strong>1</strong>: Unfixed.</li>
+     * <li><strong>4</strong>: Being fixed.</li>
+     * <li><strong>7</strong>: Fixed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -264,7 +265,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String statusList;
 
     /**
-     * <p>The tag to add to the image.</p>
+     * <p>The tag of the container image.</p>
      * 
      * <strong>example:</strong>
      * <p>0.1.0</p>
@@ -273,10 +274,10 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>The type of the vulnerability. Valid values:</p>
+     * <p>The vulnerability type. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: system vulnerability</li>
-     * <li><strong>sca</strong>: application vulnerability</li>
+     * <li><strong>sca</strong>: application vulnerability.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -287,7 +288,7 @@ public class DescribeCanFixVulListRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The UUID of the image. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUIDs of images. Separate multiple UUIDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>d15df12472809c1c3b158606c0f1****</p>

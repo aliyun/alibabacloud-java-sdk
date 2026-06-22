@@ -11,7 +11,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     public DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>97286A-4A6B-4A4-95FA-EC7E3E2451</p>
@@ -20,7 +20,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array consisting of the servers to which a defense rule is applied.</p>
+     * <p>The list of servers on which brute-force attacks defense rules take effect.</p>
      */
     @NameInMap("Rules")
     public java.util.List<DescribeInstanceAntiBruteForceRulesResponseBodyRules> rules;
@@ -56,7 +56,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
 
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of servers returned on the current page.</p>
+         * <p>The number of servers on which brute-force attacks defense rules take effect on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -65,7 +65,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -74,7 +74,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -83,7 +83,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of servers returned.</p>
+         * <p>The total number of servers on which brute-force attacks defense rules take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -132,7 +132,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
 
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The ID of the defense rule.</p>
+         * <p>The ID of the brute-force attacks defense rule.</p>
          * 
          * <strong>example:</strong>
          * <p>215779601</p>
@@ -141,7 +141,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the defense rule.</p>
+         * <p>The name of the brute-force attacks defense rule.</p>
          * 
          * <strong>example:</strong>
          * <p>TestRule</p>
@@ -150,7 +150,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The UUID of the server to which the defense rule is applied.</p>
+         * <p>The UUID of the server on which the brute-force attacks defense rule takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckFixDetailsRequest extends TeaModel {
     /**
-     * <p>The ID of the risk item.</p>
+     * <p>The ID of the check item.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the IDs of risk items.</p>
+     * <p>You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain the check item ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,10 @@ public class DescribeCheckFixDetailsRequest extends TeaModel {
     public String checkIds;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeCheckFixDetailsRequest extends TeaModel {
     /**
      * <p>The ID of the baseline.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to obtain the baseline ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

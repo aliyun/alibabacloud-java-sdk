@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetUnknownThreatDetectStatisticResponseBodyData data;
 
@@ -42,6 +45,8 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         public Integer blockEventMachineCount;
 
         /**
+         * <p>The number of servers under control.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -49,6 +54,8 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         public Integer blockMachineCount;
 
         /**
+         * <p>The total number of servers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -56,6 +63,8 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         public Integer machineCount;
 
         /**
+         * <p>The number of servers in warning status.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -63,6 +72,8 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         public Integer monitorMachineCount;
 
         /**
+         * <p>The number of servers with the service enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -70,6 +81,8 @@ public class GetUnknownThreatDetectStatisticResponseBody extends TeaModel {
         public Integer openMachineCount;
 
         /**
+         * <p>The number of servers in learning status.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

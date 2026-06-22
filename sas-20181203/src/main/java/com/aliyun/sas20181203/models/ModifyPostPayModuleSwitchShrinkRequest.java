@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     /**
-     * <p>Automatic binding switch for new assets in host and container protection. Values:</p>
+     * <p>Specifies whether to automatically bind newly added assets for host and container protection. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Off</li>
-     * <li><strong>1</strong>: On</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public Integer postPaidHostAutoBind;
 
     /**
-     * <p>Version for automatic binding of new assets in host and container protection. Values:</p>
+     * <p>The version to which newly added assets are automatically bound for host and container protection. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Free Edition </li>
-     * <li><strong>3</strong>: Enterprise Edition</li>
-     * <li><strong>5</strong>: Advanced Edition</li>
-     * <li><strong>6</strong>: Antivirus Edition    </li>
-     * <li><strong>7</strong>: Flagship Edition</li>
+     * <li><strong>1</strong>: Free Edition. </li>
+     * <li><strong>3</strong>: Enterprise Edition.</li>
+     * <li><strong>5</strong>: Advanced Edition.</li>
+     * <li><strong>6</strong>: Anti-virus Edition.    </li>
+     * <li><strong>7</strong>: Ultimate Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,9 +34,9 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public Integer postPaidHostAutoBindVersion;
 
     /**
-     * <p>Pay-as-you-go instance ID, which must be filled in.</p>
+     * <p>The pay-as-you-go instance ID. This parameter is required.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> interface to obtain this parameter.</p>
+     * <p>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,27 +46,27 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public String postPayInstanceId;
 
     /**
-     * <p>Status of the pay-as-you-go module switch, in JsonString format. Values:</p>
+     * <p>The switch status of pay-as-you-go modules in JSON string format. Valid values:</p>
      * <ul>
      * <li>Key:<ul>
-     * <li><strong>VUL</strong>: Vulnerability Repair Module</li>
-     * <li><strong>CSPM</strong>: Cloud Security Posture Management Module</li>
-     * <li><strong>AGENTLESS</strong>: Agentless Detection Module</li>
-     * <li><strong>SERVERLESS</strong>: Serverless Security Module</li>
-     * <li><strong>CTDR</strong>: Threat Analysis and Response Module</li>
-     * <li><strong>POST_HOST</strong>: Host and Container Security Module</li>
-     * <li><strong>SDK</strong>: Malicious File Detection SDK Module</li>
-     * <li><strong>RASP</strong>: Application Protection Module</li>
-     * <li><strong>CTDR_STORAGE</strong>: Log Management Module</li>
-     * <li><strong>ANTI_RANSOMWARE</strong>: Anti-Ransomware Management</li>
+     * <li><strong>VUL</strong>: vulnerability fix module</li>
+     * <li><strong>CSPM</strong>: Cloud Security Posture Management (CSPM) module</li>
+     * <li><strong>AGENTLESS</strong>: agentless detection module</li>
+     * <li><strong>SERVERLESS</strong>: serverless security module</li>
+     * <li><strong>CTDR</strong>: threat detection and response module</li>
+     * <li><strong>POST_HOST</strong>: host and container security module</li>
+     * <li><strong>SDK</strong>: malicious file detection SDK module</li>
+     * <li><strong>RASP</strong>: application protection module</li>
+     * <li><strong>CTDR_STORAGE</strong>: log management module</li>
+     * <li><strong>ANTI_RANSOMWARE</strong>: anti-ransomware management</li>
      * </ul>
      * </li>
-     * <li>Value: 0 means off, 1 means on</li>
+     * <li>Value: 0 indicates disabled. 1 indicates enabled.</li>
      * </ul>
      * <blockquote>
-     * <p>The values of modules not passed will not change.</p>
+     * <p>Modules for which no value is specified remain unchanged.</p>
      * </blockquote>
-     * <p><notice>The meaning is the same as the PostPayModuleSwitchObj field. When both exist, the value of PostPayModuleSwitch takes precedence.</p>
+     * <p><notice>This parameter has the same meaning as PostPayModuleSwitchObj. If both parameters are specified, the value of PostPayModuleSwitch takes precedence..</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</p>
@@ -75,9 +75,9 @@ public class ModifyPostPayModuleSwitchShrinkRequest extends TeaModel {
     public String postPayModuleSwitch;
 
     /**
-     * <p>Pay-as-you-go module switch.</p>
+     * <p>The pay-as-you-go module switch.</p>
      * <blockquote>
-     * <p>Notice:  The meaning is the same as the PostPayModuleSwitch field. When both exist, the value of PostPayModuleSwitch takes precedence.</p>
+     * <p>Notice: This parameter has the same meaning as PostPayModuleSwitch. If both parameters are specified, the value of PostPayModuleSwitch takes precedence..</p>
      * </blockquote>
      */
     @NameInMap("PostPayModuleSwitchObj")

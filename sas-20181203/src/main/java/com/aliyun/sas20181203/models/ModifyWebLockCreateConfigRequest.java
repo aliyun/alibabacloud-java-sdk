@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockCreateConfigRequest extends TeaModel {
     /**
-     * <p>The prevention mode. Valid values:</p>
+     * <p>The defense mode. Valid values:</p>
      * <ul>
-     * <li><strong>block</strong>: Interception Mode</li>
-     * <li><strong>audit</strong>: Alert Mode</li>
+     * <li><strong>block</strong>: Block mode.</li>
+     * <li><strong>audit</strong>: Alert mode.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String defenceMode;
 
     /**
-     * <p>The directory that you want to protect.</p>
+     * <p>The protected directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String dir;
 
     /**
-     * <p>The directory for which you want to disable web tamper proofing.</p>
+     * <p>The folder to exclude from web tamper proofing protection.</p>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>blacklist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>blacklist</strong> pattern.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,9 +41,9 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String exclusiveDir;
 
     /**
-     * <p>The file for which you want to disable web tamper proofing.</p>
+     * <p>The file to exclude from web tamper proofing protection.</p>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>blacklist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>blacklist</strong> pattern.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String exclusiveFile;
 
     /**
-     * <p>The type of file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</p>
+     * <p>The file types to exclude from web tamper proofing protection. Separate multiple file types with semicolons (;). Valid values:</p>
      * <ul>
      * <li>php</li>
      * <li>jsp</li>
@@ -71,7 +71,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
      * <li>png</li>
      * </ul>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>blacklist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>blacklist</strong> pattern.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,9 +81,9 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String exclusiveFileType;
 
     /**
-     * <p>The file for which you want to enable web tamper proofing.</p>
+     * <p>The file to protect.</p>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>whitelist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>whitelist</strong> pattern.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String inclusiveFile;
 
     /**
-     * <p>The type of file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</p>
+     * <p>The file types to protect with web tamper proofing. Separate multiple file types with semicolons (;). Valid values:</p>
      * <ul>
      * <li>php</li>
      * <li>jsp</li>
@@ -111,7 +111,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
      * <li>png</li>
      * </ul>
      * <blockquote>
-     * <p>If you set <strong>Mode</strong> to <strong>whitelist</strong>, you must specify this parameter.</p>
+     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>whitelist</strong> pattern.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,10 +121,10 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String inclusiveFileType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language type of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The local path to the backup files of the protected directory.</p>
+     * <p>The local backup path used for secure backup of the protected directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -144,10 +144,10 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String localBackupDir;
 
     /**
-     * <p>The protection mode of web tamper proofing. Valid values:</p>
+     * <p>The protection directory mode. Valid values:</p>
      * <ul>
-     * <li><strong>whitelist</strong>: In this mode, web tamper proofing is enabled for the specified directories and file types.</li>
-     * <li><strong>blacklist</strong>: In this mode, web tamper proofing is enabled for the unspecified sub-directories, file types, and files in the protected directories.</li>
+     * <li><strong>whitelist</strong>: whitelist mode. Protects only the specified directories and file types.</li>
+     * <li><strong>blacklist</strong>: blacklist mode. Protects all subdirectories, file types, and specified files under the protected directory that are not excluded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>39.170.XX.XX</p>
@@ -166,9 +166,9 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The UUID of the server for which you want to add a directory to protect.</p>
+     * <p>The UUID of the server for which you want to add a protected directory.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

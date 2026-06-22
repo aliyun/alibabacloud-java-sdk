@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListFileProtectEventResponseBody extends TeaModel {
     /**
-     * <p>The events.</p>
+     * <p>The list of events.</p>
      */
     @NameInMap("EventList")
     public java.util.List<ListFileProtectEventResponseBodyEventList> eventList;
 
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination information of the query result.</p>
      */
     @NameInMap("PageInfo")
     public ListFileProtectEventResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>23AD0BD2-8771-5647-819E-6BA51E212F80</p>
@@ -56,12 +56,16 @@ public class ListFileProtectEventResponseBody extends TeaModel {
 
     public static class ListFileProtectEventResponseBodyEventList extends TeaModel {
         /**
-         * <p>The severity of the alert. Valid values:</p>
+         * <p>The alert notification level. Valid values:</p>
          * <ul>
-         * <li>0: no alerts</li>
-         * <li>1: reminder</li>
-         * <li>2: suspicious</li>
-         * <li>3: high-risk</li>
+         * <li><p>0: no alert</p>
+         * </li>
+         * <li><p>1: reminder</p>
+         * </li>
+         * <li><p>2: suspicious</p>
+         * </li>
+         * <li><p>3: high-risk.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -80,7 +84,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String cmdLine;
 
         /**
-         * <p>The path to the file that is managed by the process.</p>
+         * <p>The file path on which the process operates.</p>
          * 
          * <strong>example:</strong>
          * <p>/etc/pam.d/su</p>
@@ -98,7 +102,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public Long handleTime;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>161757</p>
@@ -107,7 +111,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The instance name of the server.</p>
+         * <p>The name of the server instance.</p>
          * 
          * <strong>example:</strong>
          * <p>kyy-admin-01</p>
@@ -119,22 +123,22 @@ public class ListFileProtectEventResponseBody extends TeaModel {
          * <p>The public IP address of the server.</p>
          * 
          * <strong>example:</strong>
-         * <p>121.40.211.194</p>
+         * <p>121.40.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The private IP address of the server.</p>
+         * <p>The private IP address of the asset.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.22.5.36</p>
+         * <p>172.22.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The time when the event last occurred.</p>
+         * <p>The most recent time when the event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -152,10 +156,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String operation;
 
         /**
-         * <p>The type of the operating system. Valid values:</p>
+         * <p>The operating system type. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong>: Windows</li>
-         * <li><strong>linux</strong>: Linux</li>
+         * <li><strong>linux</strong>: Linux.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +169,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The path to the process.</p>
+         * <p>The process path.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/bin/sshpass</p>
@@ -174,7 +178,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String procPath;
 
         /**
-         * <p>The permissions required to start the process.</p>
+         * <p>The process permission.</p>
          * 
          * <strong>example:</strong>
          * <p>rwxr-xr-x</p>
@@ -183,7 +187,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String procPermission;
 
         /**
-         * <p>The ID of the process.</p>
+         * <p>The process ID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>52636</p>
@@ -192,7 +196,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>The description.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -201,7 +205,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-rule-1</p>
@@ -210,12 +214,12 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The status of the event. Valid values:</p>
+         * <p>The event status. Valid values:</p>
          * <ul>
-         * <li>0: unhandled</li>
-         * <li>1: handled</li>
-         * <li>2: added to the whitelist</li>
-         * <li>3: ignored</li>
+         * <li>0: Unhandled. </li>
+         * <li>1: Manually handled.</li>
+         * <li>2: Whitelisted.</li>
+         * <li>3: Ignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,10 +229,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The UUID of the server that is associated with the process.</p>
+         * <p>The UUID of the server associated with the process.</p>
          * 
          * <strong>example:</strong>
-         * <p>94b44720-d982-4d20-a4e1-80a1a57b5a8e</p>
+         * <p>94b44720-d982-4d20-a4e1-80a1a57b****</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -386,7 +390,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
 
     public static class ListFileProtectEventResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -395,7 +399,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries returned per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -404,7 +408,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>149</p>
