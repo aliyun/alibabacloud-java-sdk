@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EncodeBlindWatermarkRequest extends TeaModel {
     /**
      * <p>The text content of watermarks. It can be up to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Copyright Alibaba Cloud</p>
      */
     @NameInMap("Content")
     public String content;

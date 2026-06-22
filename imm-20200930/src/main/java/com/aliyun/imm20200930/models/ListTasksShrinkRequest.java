@@ -40,7 +40,7 @@ public class ListTasksShrinkRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ASC</p>
+     * <p>asc</p>
      */
     @NameInMap("Order")
     public String order;

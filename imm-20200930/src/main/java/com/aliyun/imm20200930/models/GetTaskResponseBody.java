@@ -14,7 +14,7 @@ public class GetTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The end time of the task.</p>
+     * <p>The time when the task ended. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-24T03:01:49.480109219Z</p>
@@ -41,9 +41,12 @@ public class GetTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The task progress. Valid values: 0 to 100. Unit: %.</p>
+     * <p>The task progress. Valid values: 0 to 100. Unit: percent (%).</p>
      * <blockquote>
-     * <p> This parameter is valid only if the task is in the <code>Running</code> state.``</p>
+     * <ul>
+     * <li>The GetTask operation does not support this parameter.</li>
+     * <li>This parameter is meaningful only when the task status <code>State</code> is <code>Running</code>.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +59,7 @@ public class GetTaskResponseBody extends TeaModel {
      * <p>The project name.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -71,7 +74,7 @@ public class GetTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the task.</p>
+     * <p>The time when the task started. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-24T03:01:41.662060377Z</p>
@@ -80,11 +83,14 @@ public class GetTaskResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The running status of the task. Valid values:</p>
      * <ul>
-     * <li>RUNNING: The task is running.</li>
-     * <li>Succeeded: The task is successful.</li>
-     * <li>Failed: The task failed.</li>
+     * <li><p>Running: The task is running.</p>
+     * </li>
+     * <li><p>Succeeded: The task is completed.</p>
+     * </li>
+     * <li><p>Failed: The task failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +100,7 @@ public class GetTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags. This parameter is returned only if you specified Tags when you created the task.</p>
+     * <p>The task tags. These are the tags that the user passed in when creating the task.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
@@ -112,7 +118,7 @@ public class GetTaskResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The initial request parameters used to create the task.</p>
+     * <p>The original request parameters used to create the task.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -126,16 +132,16 @@ public class GetTaskResponseBody extends TeaModel {
     public String taskRequestDefinition;
 
     /**
-     * <p>The type of the task. For more information, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task types</a>.</p>
+     * <p>The type of the task. For valid values, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task type list</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>VideoLabelClassification</p>
+     * <p>FileCompression</p>
      */
     @NameInMap("TaskType")
     public String taskType;
 
     /**
-     * <p>The user data of the task.</p>
+     * <p>The custom information specified by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

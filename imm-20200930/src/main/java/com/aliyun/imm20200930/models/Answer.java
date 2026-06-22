@@ -8,7 +8,7 @@ public class Answer extends TeaModel {
      * <p>The answer.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello</p>
+     * <p>你好</p>
      */
     @NameInMap("Content")
     public String content;

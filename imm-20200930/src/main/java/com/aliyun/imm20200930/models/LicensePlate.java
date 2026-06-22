@@ -21,6 +21,9 @@ public class LicensePlate extends TeaModel {
 
     /**
      * <p>The license plate number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>鲁A8***8</p>
      */
     @NameInMap("Content")
     public String content;

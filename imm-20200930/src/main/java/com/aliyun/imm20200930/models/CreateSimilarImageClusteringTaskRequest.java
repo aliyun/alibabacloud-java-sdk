@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSimilarImageClusteringTaskRequest extends TeaModel {
     /**
-     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+     * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class CreateSimilarImageClusteringTaskRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The configuration of the notification message. For more information, click Notification. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification messages</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreateSimilarImageClusteringTaskRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * <p>The custom tags that are used to search for and filter asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -42,7 +42,7 @@ public class CreateSimilarImageClusteringTaskRequest extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * <p>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your system. The value can be up to 2,048 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test-data</p>

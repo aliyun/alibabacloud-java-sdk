@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DocumentParseNarratorOption extends TeaModel {
+    /**
+     * <p>The summary of the document.</p>
+     */
     @NameInMap("Narrate")
     public Boolean narrate;
 

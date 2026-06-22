@@ -6,19 +6,19 @@ import com.aliyun.tea.*;
 public class CreateImageToPDFTaskShrinkRequest extends TeaModel {
     /**
      * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p>The chained authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,14 +28,14 @@ public class CreateImageToPDFTaskShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The list of images. The sequence of image URIs in the list determines the order in which they are converted.</p>
+     * <p>A list of input images. The images are converted in the order of their URIs in this list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Sources")
     public String sourcesShrink;
 
     /**
-     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * <p>Custom tags used to search for and filter asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -46,8 +46,8 @@ public class CreateImageToPDFTaskShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The OSS URI of the output file.</p>
-     * <p>Specify the OSS URI in the oss://${bucketname}/${objectname} format, where ${bucketname} is the name of the bucket in the same region as the current project and ${objectname} is the path of the object with the extension included.</p>
+     * <p>The OSS address where the output PDF file is stored.</p>
+     * <p>The address must be in the \<code>oss\\://${bucketname}/${objectname}\\</code> format. \<code>${bucketname}\\</code> must be an OSS bucket in the same region as the project. \<code>${objectname}\\</code> must be the path of the file, including the file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreateImageToPDFTaskShrinkRequest extends TeaModel {
     public String targetURI;
 
     /**
-     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * <p>Custom user information that is returned in the asynchronous notification message. This helps you associate the notification message with your system. The maximum length is 2048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>test-data</p>

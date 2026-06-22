@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTriggerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the trigger.</p>
+     * <p>The data ingestion ID.</p>
      * 
      * <strong>example:</strong>
      * <p>trigger-9f72636a-0f0c-4baf-ae78-38b27b******</p>

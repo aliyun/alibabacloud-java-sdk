@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RegionType extends TeaModel {
     /**
      * <p>The name of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>华北2（北京）</p>
      */
     @NameInMap("LocalName")
     public String localName;

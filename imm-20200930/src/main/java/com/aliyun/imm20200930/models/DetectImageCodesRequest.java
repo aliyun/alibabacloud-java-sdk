@@ -16,7 +16,7 @@ public class DetectImageCodesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -27,7 +27,7 @@ public class DetectImageCodesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://bucketname/objectname</p>
+     * <p>oss://test-bucket/test-object.jpg</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;

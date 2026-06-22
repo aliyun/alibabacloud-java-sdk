@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStoryResponseBody extends TeaModel {
     /**
-     * <p>The event ID.</p>
+     * <p>The ID of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>392-1CqzvESGTEeNZ2OWFbRKIM****</p>
@@ -14,7 +14,7 @@ public class CreateStoryResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
@@ -23,7 +23,7 @@ public class CreateStoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateStory-4ef6ff43-edf3-4612-9cc4-0c7f9e19****</p>

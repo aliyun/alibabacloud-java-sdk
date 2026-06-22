@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateWebofficeTokenResponseBody extends TeaModel {
     /**
-     * <p>Weboffice access token.</p>
+     * <p>The Weboffice access credential.</p>
      * 
      * <strong>example:</strong>
      * <p>2d73dd5d87524c5e8a194c3eb5********</p>
@@ -14,7 +14,7 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
     public String accessToken;
 
     /**
-     * <p>Expiration time of the access token. The expiration time is 30 minutes.</p>
+     * <p>The expiration time of the access credential. The credential expires in 30 minutes. Format: YYYY-MM-DDTHH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-08-30T13:13:11.347146982Z</p>
@@ -23,7 +23,7 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
     public String accessTokenExpiredTime;
 
     /**
-     * <p>Weboffice refresh token.</p>
+     * <p>The Weboffice refresh credential.</p>
      * 
      * <strong>example:</strong>
      * <p>e374995ec532432bb678074d36********</p>
@@ -32,7 +32,7 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
     public String refreshToken;
 
     /**
-     * <p>Expiration time of the refresh token. The expiration time is 1 day.</p>
+     * <p>The expiration time of the refresh credential. The credential expires in 1 day. Format: YYYY-MM-DDTHH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-08-31T12:43:11.347146982Z</p>
@@ -41,7 +41,7 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
     public String refreshTokenExpiredTime;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1759315A-CB33-0A75-A72B-62D7********</p>
@@ -50,9 +50,9 @@ public class GenerateWebofficeTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Weboffice entry URL. Used for online preview or editing of documents.</p>
+     * <p>The Weboffice entry URL for previewing or editing documents online.</p>
      * <blockquote>
-     * <p>Cannot be opened directly in a browser; it needs to be used with the Weboffice JS-SDK and access token (AccessToken) to preview or edit documents. For more information, see <a href="https://help.aliyun.com/document_detail/468066.html">Getting Started</a>.</p>
+     * <p>This URL cannot be opened directly in a browser. You must use it together with the Weboffice JS-SDK and the access credential (AccessToken) to preview or edit documents. For more information, see <a href="https://help.aliyun.com/document_detail/468066.html">Getting Started</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RocketMQ extends TeaModel {
     /**
-     * <p>The ID of the ApsaraMQ for RocketMQ instance. If you want to use ApsaraMQ for RocketMQ for notifications, you must specify this parameter.</p>
+     * <p>The RocketMQ instance ID. Required for RocketMQ message notifications.</p>
      * 
      * <strong>example:</strong>
      * <p>MQ_INST_11111111111_BYcNy2Nc</p>
@@ -14,7 +14,7 @@ public class RocketMQ extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the topic in ApsaraMQ for RocketMQ. If you want to use ApsaraMQ for RocketMQ for notifications, you must specify this parameter.</p>
+     * <p>The name of the RocketMQ topic. Required for RocketMQ message notifications.</p>
      * 
      * <strong>example:</strong>
      * <p>topic1</p>

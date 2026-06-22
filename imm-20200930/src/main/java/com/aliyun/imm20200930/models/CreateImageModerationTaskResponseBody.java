@@ -14,7 +14,7 @@ public class CreateImageModerationTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>

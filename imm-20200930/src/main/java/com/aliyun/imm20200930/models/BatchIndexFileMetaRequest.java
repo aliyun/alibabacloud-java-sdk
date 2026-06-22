@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchIndexFileMetaRequest extends TeaModel {
     /**
-     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+     * <p>The dataset name. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,20 +15,20 @@ public class BatchIndexFileMetaRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The objects in Object Storage Service (OSS). Specify OSS objects by using a JSON array. You can specify up to 100 objects in an array.</p>
+     * <p>A list of OSS files. This is an array in JSON format that can contain up to 100 files.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Files")
     public java.util.List<InputFile> files;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see the metadata indexing section in <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message formats</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class BatchIndexFileMetaRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The user-defined data that you want to return in asynchronous messages. This parameter takes effect only when you specify the MNS settings in the Notification parameter. The maximum information length is 2,048 bytes.</p>
+     * <p>Custom user data. This parameter takes effect only when you specify an MNS configuration for the Notification parameter. The data is returned in the asynchronous notification message, which you can use to associate the message with your services. The maximum length is 2048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{

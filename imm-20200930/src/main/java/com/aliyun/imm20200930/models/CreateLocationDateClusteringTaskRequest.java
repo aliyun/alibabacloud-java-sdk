@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     /**
-     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+     * <p>The dataset name. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The date configurations for clustering.</p>
+     * <p>The date clustering settings.</p>
      * <blockquote>
-     * <p> Adjusting these configurations affects existing spatiotemporal clusters for the dataset.</p>
+     * <p>Notice: Modifying this setting also affects existing spatio-temporal clusters in your <code>Dataset</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -25,9 +25,9 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     public CreateLocationDateClusteringTaskRequestDateOptions dateOptions;
 
     /**
-     * <p>The geolocation configurations for clustering.</p>
+     * <p>The location clustering settings.</p>
      * <blockquote>
-     * <p> Adjusting these configurations affects existing spatiotemporal clusters for the dataset.</p>
+     * <p>Notice: Modifying this setting also affects existing spatio-temporal clusters in your <code>Dataset</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -35,13 +35,13 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     public CreateLocationDateClusteringTaskRequestLocationOptions locationOptions;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For more information, see Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * <p>Custom tags used to search for and filter asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -62,7 +62,7 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * <p>Custom information that is returned in the asynchronous notification message. This helps you associate the notification message with your system. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>test-data</p>
@@ -133,9 +133,9 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
 
     public static class CreateLocationDateClusteringTaskRequestDateOptions extends TeaModel {
         /**
-         * <p>The maximum number of days allowed in a gap for a single spatiotemporal cluster. Valid values: 0 to 99999.</p>
-         * <p>For example, if travel photos were produced on March 4, 5, and 7, 2024, but not on Marh 6, 2024, and you set the parameter to 1, IMM considers the travel spanning the date range from March 4, 2024 to March 7, 2024 and includes photos within the data range in the same cluster.````</p>
-         * <p>We recommend that you set the parameter to a value within the range from 0 to 3.</p>
+         * <p>The maximum number of gap days allowed in a single spatio-temporal group. The value must be in the range of 0 to 99,999.</p>
+         * <p>For example, a user has photos from March 4–5 and March 7, but not from March 6. If you assume that the photos from March 4–7 belong to the same trip, set this parameter to <code>1 day</code>. This allows the gap of <code>1 day</code> on March 6 to be included in the same spatio-temporal cluster.</p>
+         * <p>Set this parameter to a value from 0 to 3.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,8 +145,8 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
         public Long gapDays;
 
         /**
-         * <p>The maximum number of days that a single spatiotemporal cluster can span. Valid values: 1 to 99999. IMM does not create a cluster that spans more than the maximum number of days.</p>
-         * <p>For example, if you want to create travel photo clusters, you may want to exclude photos that were taken within 15 consecutive days in the same city, because it is likely that these photos were not taken during a travel. In this case, you can set the parameter to 15 to exclude this time range and location from the clustering task.</p>
+         * <p>The maximum number of days in a single spatio-temporal group. The value must be in the range of 1 to 99,999. Clusters with more days than this value are not detected or stored.</p>
+         * <p>For example, if a user takes photos in the same location for more than 15 consecutive days, this location might be their residence rather than a travel destination. If you want to exclude this time period and location from the spatio-temporal clusters, set this parameter to 15.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,8 +156,8 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
         public Long maxDays;
 
         /**
-         * <p>The minimum number of days that a single spatiotemporal cluster can span. Valid values: 1 to 99999. IMM does not create a cluster that spans less than the minimum number of days.</p>
-         * <p>For example, if you do not want a one-day tour cluster, you can set the parameter to 2.</p>
+         * <p>The minimum number of days in a single spatio-temporal group. The value must be in the range of 1 to 99,999. Clusters with fewer days than this value are not detected or stored.</p>
+         * <p>For example, if you do not want to include one-day trips in the generated groups, set this parameter to 2.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,12 +199,15 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
 
     public static class CreateLocationDateClusteringTaskRequestLocationOptions extends TeaModel {
         /**
-         * <p>The administrative division levels. You can specify multiple administrative division levels.</p>
-         * <p>For example, you uploaded photos that were taken from March 3, 2024 to March 5, 2024 in Hangzhou and photos that were taken from March 6, 2024 to March 8, 2024 in Jiaxing. When you call the operation and set the parameter to <code>[&quot;city&quot;, &quot;province&quot;]</code>, the following spatiotemporal clusters are created from these photos:</p>
+         * <p>A list of administrative levels for grouping. You can select multiple levels.</p>
+         * <p>For example, a user uploads photos taken in Hangzhou from March 3 to March 5 and photos taken in Jiaxing from March 6 to March 8. If you set this parameter to <code>[&quot;city&quot;, &quot;province&quot;]</code>, the following spatio-temporal clusters are generated:</p>
          * <ul>
-         * <li>March 3, 2024 to March 5, 2024, Hangzhou</li>
-         * <li>March 6, 2024 to March 8, 2024, Jiaxing</li>
-         * <li>March 3, 2024 to March 8, 2024, Zhejiang</li>
+         * <li><p>March 3 to March 5, Hangzhou</p>
+         * </li>
+         * <li><p>March 6 to March 8, Jiaxing</p>
+         * </li>
+         * <li><p>March 3 to March 8, Zhejiang</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          */

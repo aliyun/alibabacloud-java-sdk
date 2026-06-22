@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMediaConvertTaskResponseBody extends TeaModel {
     /**
-     * <p>Event ID.</p>
+     * <p>The ID of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>0ED-1Bz8z71k5TtsUejT4UJ16Es****</p>
@@ -14,7 +14,7 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CA995EFD-083D-4F40-BE8A-BDF75FFFE0B6</p>
@@ -23,7 +23,7 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>MediaConvert-adb1ee28-c4c9-42a7-9f54-3b8eadcb****</p>

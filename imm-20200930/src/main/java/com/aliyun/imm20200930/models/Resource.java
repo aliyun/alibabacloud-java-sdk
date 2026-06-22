@@ -26,7 +26,7 @@ public class Resource extends TeaModel {
      * <p>The GPU.</p>
      * 
      * <strong>example:</strong>
-     * <p>string	NVIDIA_P4</p>
+     * <p>NVIDIA_P4</p>
      */
     @NameInMap("GPUModel")
     public String GPUModel;
@@ -44,7 +44,7 @@ public class Resource extends TeaModel {
      * <p>The displayed name of the resource.</p>
      * 
      * <strong>example:</strong>
-     * <p>string	ecs.gn5i-c2g1.large-2vCPU-8GB-1*NVIDIA_P4</p>
+     * <p>ecs.gn5i-c2g1.large-2vCPU-8GB-1*NVIDIA_P4</p>
      */
     @NameInMap("Name")
     public String name;

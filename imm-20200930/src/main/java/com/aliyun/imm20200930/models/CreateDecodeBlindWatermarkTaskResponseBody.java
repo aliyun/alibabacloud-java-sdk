@@ -14,7 +14,7 @@ public class CreateDecodeBlindWatermarkTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4A7A2D0E-D8B8-4DA0-8127-EB32C6600ADE</p>

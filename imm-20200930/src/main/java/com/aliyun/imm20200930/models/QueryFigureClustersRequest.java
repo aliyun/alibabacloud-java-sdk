@@ -42,7 +42,7 @@ public class QueryFigureClustersRequest extends TeaModel {
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>CAESEgoQCg4KCkltYWdlQ291bnQQARgBIr0ECgkABAAAAAAAAAAKrwQDKgIAADFTMzEzMDMyMzMzMjMxMzAzMDMyMzQzNjM3MzczOTMzMzQzYTY5NmQ2ZDJkNjk2ZDYxNjc2NTJkNzQ2NTczNzQyZDY4N2E2NDY1NzYyZDMyMzUzMjM0MzIzOTMzMzczMTJkMzY1NDZhNzk3MzU2Njk3MjM0M2E2OTZkNmQyZDc0NjU3Mzc0MmQ3MzY1NzQyZDYzMzYzNjY0MzY2NjYxMzQyZDM1MzMzODM3MmQzMTMxNjU2NjJkNjI2NTM5MzYyZDM5MzgzMDMzMzk2MjMwMzE2NDYzNjMzMjNhNjY2OTY3NzU3MjY1MmQ2MzZjNzU3Mzc0NjU3MjNhNDM2Yzc1NzM3NDY1NzIyZDYxNjUzOTY0MzQzMzMxNjEyZDM3MzQ2NTY2MmQzNDM5Mzc2MjJkMzg2MjMxMzUyZDM0MzUzOTM1MzYzNzYxMzQ2NDM2MzE2Ni5TMzEzMDMyMzMzMjMxMzAzMDMyMzQzNjM3MzczOTMzMzQzYTY5NmQ2ZDJkNjk2ZDYxNjc2NTJkNzQ2NTczNzQyZDY4N2E2NDY1NzYyZDMyMzUzMjM0MzIzOTMzMzczMTJkMzY1NDZhNzk3MzU2Njk3MjM0M2E2OTZkNmQyZDc0NjU3Mzc0MmQ3MzY1NzQyZDYzMzYzNjY0MzY2NjYxMzQyZDM1MzMzODM3MmQzMTMxNjU2NjJkNjI2NTM5MzYyZDM5MzgzMDMzMzk2MjMwMzE2NDYzNjM*****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -51,8 +51,10 @@ public class QueryFigureClustersRequest extends TeaModel {
      * <p>The sort order. Default value: asc.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>asc: ascending order.</li>
-     * <li>desc: descending order.</li>
+     * <li><p>asc: ascending order.</p>
+     * </li>
+     * <li><p>desc: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,15 +77,24 @@ public class QueryFigureClustersRequest extends TeaModel {
      * <p>The sort field. If you leave this parameter empty, the group ID is used as the sort field.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ImageCount: the number of images.</li>
-     * <li>VideoCount: the number of videos.</li>
-     * <li>ProjectName: the name of the project.</li>
-     * <li>DatasetName: the name of the dataset.</li>
-     * <li>CreateTime: the point in time when the group is created.</li>
-     * <li>UpdateTime: the most recent point in time when the group is updated.</li>
-     * <li>Gender: the gender.</li>
-     * <li>FaceCount: the number of faces.</li>
-     * <li>GroupName: the name of the group.</li>
+     * <li><p>ImageCount: the number of images.</p>
+     * </li>
+     * <li><p>VideoCount: the number of videos.</p>
+     * </li>
+     * <li><p>ProjectName: the name of the project.</p>
+     * </li>
+     * <li><p>DatasetName: the name of the dataset.</p>
+     * </li>
+     * <li><p>CreateTime: the point in time when the group is created.</p>
+     * </li>
+     * <li><p>UpdateTime: the most recent point in time when the group is updated.</p>
+     * </li>
+     * <li><p>Gender: the gender.</p>
+     * </li>
+     * <li><p>FaceCount: the number of faces.</p>
+     * </li>
+     * <li><p>GroupName: the name of the group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

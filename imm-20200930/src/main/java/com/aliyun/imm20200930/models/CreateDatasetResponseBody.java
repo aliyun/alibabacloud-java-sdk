@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetResponseBody extends TeaModel {
     /**
-     * <p>Dataset information.</p>
+     * <p>The dataset information.</p>
      */
     @NameInMap("Dataset")
     public Dataset dataset;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6D74B3A9-5AC0-49F9-914D-E01589D3****</p>

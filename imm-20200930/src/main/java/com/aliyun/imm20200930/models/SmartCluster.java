@@ -8,7 +8,7 @@ public class SmartCluster extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The time when the cluster was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-14T10:17:18.102700407+08:00</p>
@@ -17,7 +17,7 @@ public class SmartCluster extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The name of the dataset.</p>
+     * <p>The dataset name.</p>
      * 
      * <strong>example:</strong>
      * <p>MyDataset</p>
@@ -26,13 +26,13 @@ public class SmartCluster extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The description of the cluster.</p>
+     * <p>The group description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The group name.</p>
      * 
      * <strong>example:</strong>
      * <p>MySmartCluster1</p>
@@ -41,7 +41,7 @@ public class SmartCluster extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The smart cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>SmartCluster-12cd1645-deae-4b5e-9434-613747b75f6d</p>
@@ -50,7 +50,7 @@ public class SmartCluster extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The status of the cluster.</p>
+     * <p>The group status. Valid values are <code>Succeeded</code>, <code>Failed</code>, and <code>Running</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
@@ -59,7 +59,7 @@ public class SmartCluster extends TeaModel {
     public String objectStatus;
 
     /**
-     * <p>The type of the cluster.</p>
+     * <p>The group type. The value is always <code>smart-cluster</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>smart-cluster</p>
@@ -77,7 +77,7 @@ public class SmartCluster extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>The project name.</p>
      * 
      * <strong>example:</strong>
      * <p>MyProject</p>
@@ -98,7 +98,7 @@ public class SmartCluster extends TeaModel {
     public java.util.List<SmartClusterRule> rules;
 
     /**
-     * <p>The time when the cluster was updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-14T10:17:18.102700407+08:00</p>

@@ -5,28 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateBatchRequest extends TeaModel {
     /**
-     * <p>The templates.</p>
+     * <p>A list of processing templates.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Actions")
     public java.util.List<CreateBatchRequestActions> actions;
 
     /**
-     * <p>The data source configurations.</p>
+     * <p>The input data source configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public Input input;
 
     /**
-     * <p>The notification settings. The operation supports multiple messaging middleware options. For more information about notification messages, see Asynchronous message examples. You can use one of the following methods to receive notification messages:</p>
-     * <p>In the region in which the IMM project is located, use EventBridge to receive task notifications. For more information, see IMM events. In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task notifications.</p>
+     * <p>The notification recipient. Multiple middleware services are supported. For details about the message format, see Asynchronous notification message. Select one of the following methods to receive messages:</p>
+     * <p>Activate and access EventBridge in the same region as Intelligent Media Management (IMM) to promptly receive task notifications. For more information, see IMM events.
+     * Activate MNS in the same region as IMM and configure a subscription.</p>
      */
     @NameInMap("Notification")
     public CreateBatchRequestNotification notification;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,18 +37,18 @@ public class CreateBatchRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The service role. IMM assumes the service role so that it can access resources in other cloud services, such as OSS. Default value: AliyunIMMBatchTriggerRole.</p>
-     * <p>You can also create a custom service role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
+     * <p>The service role that grants IMM the permissions to access other cloud resources, such as OSS. The default value is AliyunIMMBatchTriggerRole.</p>
+     * <p>To use a custom service role, create a service role and grant permissions to the role in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>AliyunIMMDefaultRole</p>
+     * <p>AliyunIMMBatchTriggerRole</p>
      */
     @NameInMap("ServiceRole")
     public String serviceRole;
 
     /**
-     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * <p>Custom tags used to search and filter asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;: &quot;val&quot;}</p>
@@ -110,13 +111,13 @@ public class CreateBatchRequest extends TeaModel {
 
     public static class CreateBatchRequestActions extends TeaModel {
         /**
-         * <p>The policy configurations for handling failures.</p>
+         * <p>The fast-fail policy configuration.</p>
          */
         @NameInMap("FastFailPolicy")
         public FastFailPolicy fastFailPolicy;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +127,7 @@ public class CreateBatchRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The template parameters.</p>
+         * <p>A list of template parameters.</p>
          */
         @NameInMap("Parameters")
         public java.util.List<String> parameters;
@@ -164,7 +165,7 @@ public class CreateBatchRequest extends TeaModel {
 
     public static class CreateBatchRequestNotification extends TeaModel {
         /**
-         * <p>The SMQ notification settings.</p>
+         * <p>The parameters for MNS notifications.</p>
          */
         @NameInMap("MNS")
         public MNS MNS;

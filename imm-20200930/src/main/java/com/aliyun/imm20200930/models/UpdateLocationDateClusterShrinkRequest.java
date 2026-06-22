@@ -56,6 +56,9 @@ public class UpdateLocationDateClusterShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the cluster. The name can be used to search for the cluster. The value can be up to 1,024 bytes in size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>One-day trip in Hangzhou</p>
      */
     @NameInMap("Title")
     public String title;

@@ -38,7 +38,7 @@ public class DetectImageBodiesShrinkRequest extends TeaModel {
      * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the file that has an extension.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://test-bucket/test-object</p>
+     * <p>oss://test-bucket/test-object.jpg</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;

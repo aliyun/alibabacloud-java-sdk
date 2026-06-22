@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     /**
-     * <p>When performing media concatenation, the index of the primary media file (which provides the default transcoding parameters for <code>Video</code> and <code>Audio</code>, including resolution, frame rate, etc.) in the concatenation list. The default value is 0 (aligning with the first media file in the concatenation list).</p>
+     * <p>When concatenating media files, this specifies the index of the primary file in the Sources list. The default transcoding parameters (such as resolution and frame rate from the <code>Video</code> and <code>Audio</code> objects) are taken from this primary file. The default index is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,20 +14,20 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     public Integer alignmentIndex;
 
     /**
-     * <p><strong>If there are no special requirements, please leave this blank.</strong></p>
-     * <p>Chain authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Using Chain Authorization to Access Other Entity Resources</a>.</p>
+     * <p><strong>You can leave this parameter empty if you do not have special requirements.</strong></p>
+     * <p>The chained authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
-     * <p>Notification configuration. For details, click Notification. The format of asynchronous notification messages can be found in <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous Notification Message Format</a>.</p>
+     * <p>The message notification settings. For more information, click Notification. For information about the format of asynchronous notifications, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification format</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
-     * <p>The name of the project. For how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Creating a Project</a>.</p>
+     * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,14 +37,14 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>A list of media files. If the list contains more than one element, it indicates that the Concat (concatenation) function is enabled. The Concat order follows the sequence of the input video file URIs.</p>
+     * <p>A list of media files. If you provide more than one file, they are concatenated in the order of their URIs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Sources")
     public String sourcesShrink;
 
     /**
-     * <p>Custom tags used for searching and filtering asynchronous tasks.</p>
+     * <p>Custom tags for searching and filtering asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
@@ -52,17 +52,20 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>A list of media packaging tasks to convert and package the input media into HLS outputs. Each TargetGroup corresponds to one HLS master playlist.</p>
+     */
     @NameInMap("TargetGroups")
     public String targetGroupsShrink;
 
     /**
-     * <p>List of media processing tasks, supporting multiple task configurations.</p>
+     * <p>A list of media processing tasks.</p>
      */
     @NameInMap("Targets")
     public String targetsShrink;
 
     /**
-     * <p>User-defined information that will be returned in asynchronous message notifications, used for convenient association and processing within your system. The maximum length is 2048 bytes.</p>
+     * <p>The custom user data. This data is returned in the asynchronous notification, allowing you to associate the notification with your internal system. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>

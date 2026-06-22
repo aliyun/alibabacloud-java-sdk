@@ -4,7 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class InsightsConfig extends TeaModel {
+    @NameInMap("Image")
+    public ImageInsightsConfig image;
+
     /**
+     * <p>The language of the source content.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-Hans</p>
      */
@@ -17,6 +22,14 @@ public class InsightsConfig extends TeaModel {
     public static InsightsConfig build(java.util.Map<String, ?> map) throws Exception {
         InsightsConfig self = new InsightsConfig();
         return TeaModel.build(map, self);
+    }
+
+    public InsightsConfig setImage(ImageInsightsConfig image) {
+        this.image = image;
+        return this;
+    }
+    public ImageInsightsConfig getImage() {
+        return this.image;
     }
 
     public InsightsConfig setLanguage(String language) {

@@ -4,9 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DatasetConfig extends TeaModel {
+    /**
+     * <p>The content awareness configuration.</p>
+     */
     @NameInMap("Insights")
     public InsightsConfig insights;
 
+    @NameInMap("ReverseImage")
+    public ReverseImageConfig reverseImage;
+
+    /**
+     * <p>The intelligent clustering configuration.</p>
+     */
     @NameInMap("SmartCluster")
     public SmartClusterConfig smartCluster;
 
@@ -21,6 +30,14 @@ public class DatasetConfig extends TeaModel {
     }
     public InsightsConfig getInsights() {
         return this.insights;
+    }
+
+    public DatasetConfig setReverseImage(ReverseImageConfig reverseImage) {
+        this.reverseImage = reverseImage;
+        return this;
+    }
+    public ReverseImageConfig getReverseImage() {
+        return this.reverseImage;
     }
 
     public DatasetConfig setSmartCluster(SmartClusterConfig smartCluster) {

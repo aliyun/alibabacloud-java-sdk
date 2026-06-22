@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateVideoLabelClassificationTaskRequest extends TeaModel {
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For more information, click Notification. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <p>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,18 +28,18 @@ public class CreateVideoLabelClassificationTaskRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The OSS URI of the video file.</p>
-     * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+     * <p>The Object Storage Service (OSS) URI of the video.</p>
+     * <p>The OSS URI must follow the format oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file, including the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://bucket1/object</p>
+     * <p>oss://bucket1/object.mp4</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     /**
-     * <p>The custom tags, which can be used to search for and filter asynchronous tasks.</p>
+     * <p>Custom tags that you can use to search for and filter asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
@@ -48,10 +48,14 @@ public class CreateVideoLabelClassificationTaskRequest extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The custom data, which is returned in an asynchronous notification and facilitates notification management. The maximum length is 2,048 bytes.</p>
+     * <p>Custom information. This information is returned in the asynchronous notification message. You can use this information to associate the notification message with your services. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     * <p>{
+     *       &quot;ID&quot;: &quot;testuid&quot;,
+     *       &quot;Name&quot;: &quot;test-user&quot;,
+     *       &quot;Avatar&quot;: &quot;<a href="http://test.com/testuid">http://test.com/testuid</a>&quot;
+     * }</p>
      */
     @NameInMap("UserData")
     public String userData;

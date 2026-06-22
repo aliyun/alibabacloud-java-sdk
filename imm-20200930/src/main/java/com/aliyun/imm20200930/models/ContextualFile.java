@@ -14,7 +14,7 @@ public class ContextualFile extends TeaModel {
     public String contentType;
 
     /**
-     * <p>Name of the dataset</p>
+     * <p>The dataset name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-dataset</p>
@@ -23,22 +23,13 @@ public class ContextualFile extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>Elements</p>
+     * <p>Elements.</p>
      */
     @NameInMap("Elements")
     public java.util.List<Element> elements;
 
     /**
-     * <p>Media type of the current file</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>image</li>
-     * <li>other</li>
-     * <li>document</li>
-     * <li>archive</li>
-     * <li>audio</li>
-     * <li>video</li>
-     * </ul>
+     * <p>The media type of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>document</p>
@@ -47,7 +38,7 @@ public class ContextualFile extends TeaModel {
     public String mediaType;
 
     /**
-     * <p>The URI of the OSS object. This parameter is available only if the value of the URI parameter is the URI of a file in Photo and Drive Service.</p>
+     * <p>The URI path of the OSS file. This parameter is used only when the URI is a PDS address.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-bucket/test-object.jpg</p>
@@ -56,7 +47,7 @@ public class ContextualFile extends TeaModel {
     public String OSSURI;
 
     /**
-     * <p>The identifier of the corresponding file that exists in the dataset.</p>
+     * <p>The identifier of the file in the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>0939d7ed-73fa-4009-bbe6-fbbe07b92b2e</p>
@@ -65,7 +56,7 @@ public class ContextualFile extends TeaModel {
     public String objectId;
 
     /**
-     * <p>User ID</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1482910009923706</p>
@@ -74,7 +65,7 @@ public class ContextualFile extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Name of the project</p>
+     * <p>The project name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-project</p>
@@ -83,7 +74,9 @@ public class ContextualFile extends TeaModel {
     public String projectName;
 
     /**
-     * <p>URI of the file. Specify the OSS URI in the oss://${bucketname}/${objectname} format, where ${bucketname} is the name of the bucket in the same region as the current project and ${objectname} is the path of the object. The URI of a file in Photo and Drive Service follows the pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision} format.</p>
+     * <p>The URI of the file.
+     * The format of an OSS URI is oss\://${bucketname}/${objectname}. ${bucketname} is the name of an OSS bucket in the same region as the current project. ${objectname} is the file path.
+     * The format of a PDS URI is pds\://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-bucket</p>

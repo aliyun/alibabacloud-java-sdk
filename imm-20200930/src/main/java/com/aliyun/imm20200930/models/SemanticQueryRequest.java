@@ -9,7 +9,7 @@ public class SemanticQueryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immDatatest</p>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -18,7 +18,7 @@ public class SemanticQueryRequest extends TeaModel {
      * <p>The maximum number of entries to return. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -34,7 +34,7 @@ public class SemanticQueryRequest extends TeaModel {
      * <p>This parameter is no longer available.</p>
      * 
      * <strong>example:</strong>
-     * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
+     * <p>Reserved. Not supported yet.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -44,7 +44,7 @@ public class SemanticQueryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -63,7 +63,7 @@ public class SemanticQueryRequest extends TeaModel {
      * <p>Either this parameter or the Query parameter must be specified. This parameter is valid only for image searches on datasets configured with a search-by-image workflow.</p>
      * </blockquote>
      * <p>URI of the source data for retrieval.
-     * The URI must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</p>
+     * The URI must be in the oss\://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</p>
      * <p>Contact us if you need to configure a workflow template.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class SemanticQueryRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> Either this parameter or the SourceURI parameter must be specified.</p>
+     * <p>Either this parameter or the SourceURI parameter must be specified.</p>
      * </blockquote>
      * <p>The content of the query that you input.</p>
      */

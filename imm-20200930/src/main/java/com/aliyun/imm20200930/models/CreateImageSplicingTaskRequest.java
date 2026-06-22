@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateImageSplicingTaskRequest extends TeaModel {
     /**
-     * <p>The width or height with which the input images must align. Valid values: 1 to 4096. Unit: px.</p>
+     * <p>The alignment value, in pixels, for the width or height of the images to be stitched. The value can range from 1 to 4096.</p>
      * <ul>
-     * <li>If you set <strong>Direction</strong> to <code>vertical</code>, this parameter specifies the width with which the input images must align.</li>
-     * <li>If you set <strong>Direction</strong> to <code>horizontal</code>, this parameter specifies the height with which the input images must align.</li>
+     * <li><p>If you set <strong>Direction</strong> to <code>vertical</code>, this parameter specifies the width alignment.</p>
+     * </li>
+     * <li><p>If you set <strong>Direction</strong> to <code>horizontal</code>, this parameter specifies the height alignment.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the width or height of the first input image is used.</p>
+     * <p>If you do not specify this parameter, the width or height of the first image is used for alignment by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public Long align;
 
     /**
-     * <p>The padding color of the spaces specified by <code>Padding</code> and <code>Margin</code>. Colors encoded in the <code>#FFFFFF</code> format and colors that are related to preset keywords such as <code>red</code> and <code>alpha</code> are supported.</p>
+     * <p>The fill color for the areas specified by <code>Padding</code> and <code>Margin</code>. The value can be in the <code>#FFFFFF</code> format or a keyword such as <code>red</code> or <code>alpha</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>red</p>
@@ -30,16 +32,18 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public String backgroundColor;
 
     /**
-     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p>The chained authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
     /**
-     * <p>The splicing method. Valid values:</p>
+     * <p>The image stitching method. Valid values:</p>
      * <ul>
-     * <li>vertical (default): All input images are vertically aligned and have the same width.</li>
-     * <li>horizontal: All input images are horizontally aligned and have the same height.</li>
+     * <li><p>vertical (default): Stitches images vertically. The widths of all images must be the same.</p>
+     * </li>
+     * <li><p>horizontal: Stitches images horizontally. The heights of all images must be the same.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,9 +55,12 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     /**
      * <p>The compression format of the output image. Valid values:</p>
      * <ul>
-     * <li>jpg (default)</li>
-     * <li>png</li>
-     * <li>webp</li>
+     * <li><p>jpg (default)</p>
+     * </li>
+     * <li><p>png</p>
+     * </li>
+     * <li><p>webp</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +70,7 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public String imageFormat;
 
     /**
-     * <p>The empty space or border around the edges of the output image. Default value: 0. Unit: px.</p>
+     * <p>The blank margin, in pixels, of the stitched image. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -72,13 +79,13 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public Long margin;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The space between component images in the output image. Default value: 0. Unit: px.</p>
+     * <p>The space, in pixels, between sub-images in the stitched image. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -87,7 +94,7 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public Long padding;
 
     /**
-     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+     * <p>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +104,7 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The compression quality of the output image. This parameter takes effect only for JPG and WebP images. Valid values: 0 to 100. Default value: 80.</p>
+     * <p>The compression quality of the output image. This parameter is valid only for JPG and WebP images. The value range is 0 to 100. The default value is 80.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -106,12 +113,12 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public Long quality;
 
     /**
-     * <p>The scaling mode of the input images that are vertically or horizontally aligned. Valid values:</p>
+     * <p>The scaling method used when the width or height of an image is aligned. Valid values:</p>
      * <ul>
-     * <li>fit (default): Input images are scaled proportionally, and black edges are not retained.</li>
-     * <li>stretch: Input images are stretched to fill the space.</li>
-     * <li>horizon: Input images are horizontally stretched.</li>
-     * <li>vertical: Input images are vertically stretched.</li>
+     * <li><p>fit (default): Scales the image without adding black bars. Only proportional scaling is supported.</p>
+     * </li>
+     * <li><p>stretch: Stretches the image to fill the space.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,14 +128,14 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public String scaleType;
 
     /**
-     * <p>The input images. The images are sliced in the order of the input image URIs.</p>
+     * <p>The list of input images. The images are stitched in the order of their URIs in the list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Sources")
     public java.util.List<CreateImageSplicingTaskRequestSources> sources;
 
     /**
-     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * <p>Custom tags used to search for and filter asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -139,8 +146,8 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The OSS bucket in which you want to store the output image.</p>
-     * <p>Specify the value in the oss://${bucketname}/${objectname} format. ${bucketname} specifies the name of the OSS bucket that resides in the same region as the current project. ${objectname} specifies the path to the output image.</p>
+     * <p>The OSS URI where the output image is stored.</p>
+     * <p>The URI must be in the oss\://${bucketname}/${objectname} format. ${bucketname} is the name of the OSS bucket that is in the same region as the project. ${objectname} is the path of the file, including the file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -150,7 +157,7 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     public String targetURI;
 
     /**
-     * <p>The user data, which is returned as asynchronous notifications to help manage notifications within your system. The maximum length of the user data is 2,048 bytes.</p>
+     * <p>The custom information. This information is returned in the asynchronous notification message. Use this information to associate the notification message with your system. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>test-data</p>
@@ -285,12 +292,16 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
 
     public static class CreateImageSplicingTaskRequestSources extends TeaModel {
         /**
-         * <p>The rotation angle. Valid values:</p>
+         * <p>The rotation angle of the image. Valid values:</p>
          * <ul>
-         * <li>0 (default)</li>
-         * <li>90</li>
-         * <li>180</li>
-         * <li>270</li>
+         * <li><p>0 (default)</p>
+         * </li>
+         * <li><p>90</p>
+         * </li>
+         * <li><p>180</p>
+         * </li>
+         * <li><p>270</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,9 +311,9 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
         public Long rotate;
 
         /**
-         * <p>The Object Storage Service (OSS) bucket in which you store the input images.</p>
-         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the input images that have an extension.</p>
-         * <p>The following image formats are supported: jpg and png.</p>
+         * <p>The OSS URI of the source image.</p>
+         * <p>The URI must be in the oss\://${Bucket}/${Object} format. <code>${Bucket}</code> is the name of the OSS bucket that is in the same region as the project. <code>${Object}</code> is the full path of the file, including the file name extension.</p>
+         * <p>Supported image formats: JPG and PNG.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -65,8 +65,10 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>asc: in ascending order.</li>
-     * <li>desc: in descending order.</li>
+     * <li><p>asc: in ascending order.</p>
+     * </li>
+     * <li><p>desc: in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,10 +90,14 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     /**
      * <p>The sort field. Valid values:</p>
      * <ul>
-     * <li>CreateTime: sorts by story creation time.</li>
-     * <li>StoryName: sorts by story name.</li>
-     * <li>StoryStartTime: sorts by story start time.</li>
-     * <li>StoryEndTime: sorts by story end time.</li>
+     * <li><p>CreateTime: sorts by story creation time.</p>
+     * </li>
+     * <li><p>StoryName: sorts by story name.</p>
+     * </li>
+     * <li><p>StoryStartTime: sorts by story start time.</p>
+     * </li>
+     * <li><p>StoryEndTime: sorts by story end time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,8 +148,10 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to return empty stories. Valid values:</p>
      * <ul>
-     * <li>true (The default value)</li>
-     * <li>false</li>
+     * <li><p>true (The default value)</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

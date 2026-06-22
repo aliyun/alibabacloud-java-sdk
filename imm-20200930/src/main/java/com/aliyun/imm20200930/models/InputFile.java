@@ -174,7 +174,7 @@ public class InputFile extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>oss://examplebucket/sampleobject.jpg</p>
+     * <p>oss://test-bucket/test-object</p>
      */
     @NameInMap("URI")
     public String URI;

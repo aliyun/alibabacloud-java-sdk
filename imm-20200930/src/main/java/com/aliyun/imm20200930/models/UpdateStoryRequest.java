@@ -134,7 +134,7 @@ public class UpdateStoryRequest extends TeaModel {
          * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://bucket1/object</p>
+         * <p>oss://test-bucket/test-object</p>
          */
         @NameInMap("URI")
         public String URI;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOSSBucketAttachmentResponseBody extends TeaModel {
     /**
-     * <p>The time when the dataset was created.</p>
+     * <p>The time when the dataset was created. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;2023-12-19T17:29:34.790931971+08:00&quot;</p>
@@ -14,16 +14,16 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The description of the dataset.</p>
+     * <p>The dataset description.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;Dataset&quot;</p>
+     * <p>&quot;数据集&quot;</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>The name of the bound project.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -41,7 +41,7 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the dataset was last updated.</p>
+     * <p>The time when the dataset was last updated. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;2023-12-19T17:29:34.790931971+08:00&quot;</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The format of the output file.</p>
+     * <p>The compression format for file packaging.</p>
      * <blockquote>
-     * <p>Only the ZIP format is supported.</p>
+     * <p>Currently, only the zip format is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,33 +17,40 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     public String compressedFormat;
 
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For more information, see the Notification data type. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
+     * <blockquote>
+     * <p>IMM API callbacks do not currently support specifying a webhook address. Use MNS instead.</p>
+     * </blockquote>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The OSS URI of the inventory object that contains the objects to compress. The inventory object stores the objects to compress by using the same data structure of the Sources parameter in the JSON format. This parameter is suitable for specifying a large number of objects to compress.</p>
+     * <p>The address where the file manifest is stored. The file manifest stores the \<code>Sources\\</code> structure in JSON format on OSS. This is suitable for scenarios with many files to package.</p>
      * <blockquote>
-     * <p> You must specify this parameter or the <code>Sources</code> parameter. The <code>URI</code> parameter is required and the <code>Alias</code> parameter is optional. You can specify up to 80,000 compression rule by using SourceManifestURI in one single call to the operation. The following line provides an example of the content within an inventory object.</p>
+     * <p>Specify either this parameter or <code>Sources</code>. In the manifest file, the <code>URI</code> parameter is required and the <code>Alias</code> parameter is optional. \<code>SourceManifestURI\\</code> supports up to 80,000 packaging rules.</p>
+     * <blockquote>
+     * <p>Warning: When you save the content to OSS, specify the OSS address of the file for this parameter.</p>
      * </blockquote>
+     * </blockquote>
+     * <p>The following is an example of the file structure:</p>
      * <pre><code>[{&quot;URI&quot;:&quot;oss://&lt;bucket&gt;/&lt;object&gt;&quot;, &quot;Alias&quot;:&quot;/new-dir/new-name&quot;}]
      * </code></pre>
      * 
@@ -54,17 +61,20 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     public String sourceManifestURI;
 
     /**
-     * <p>The objects to be packed and packing rules.</p>
+     * <p>A list of files to package and their packaging rules.</p>
      * <blockquote>
-     * <p> You must specify this parameter or the SourceManifestURI parameter. The Sources parameter can hold up to 100 packing rules. If you want to include more than 100 packing rules, use the SourceManifestURI parameter.</p>
+     * <p>Specify either this parameter or \<code>SourceManifestURI\\</code>. \<code>Sources\\</code> supports a maximum of 100 packaging rules.</p>
+     * <blockquote>
+     * <p>Warning: If you have more than 100 packaging rules, use the \<code>SourceManifestURI\\</code> parameter.</p>
+     * </blockquote>
      * </blockquote>
      */
     @NameInMap("Sources")
     public String sourcesShrink;
 
     /**
-     * <p>The OSS URI of the package. The object name part in the URI is used as the name of the package. Example: <code>name.zip</code>.</p>
-     * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+     * <p>The OSS address of the output file. The compressed file is named after the file name in this path, such as <code>name.zip</code>.</p>
+     * <p>The OSS address must be in the \<code>oss\\://${Bucket}/${Object}\\</code> format. \<code>${Bucket}\\</code> is the name of the OSS bucket that is in the same region as the current project. \<code>${Object}\\</code> is the full path of the file, including the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,10 +84,10 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     public String targetURI;
 
     /**
-     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * <p>Custom user data. This data is returned in the asynchronous notification message, which helps you associate the notification with your internal system. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
+     * <p>test-data</p>
      */
     @NameInMap("UserData")
     public String userData;

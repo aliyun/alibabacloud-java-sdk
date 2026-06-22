@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class File extends TeaModel {
     /**
-     * <p>The origin allowed in cross-origin requests.</p>
+     * <p>The allowed origins for cross-origin requests.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
@@ -14,7 +14,7 @@ public class File extends TeaModel {
     public String accessControlAllowOrigin;
 
     /**
-     * <p>The method to be used in the actual cross-origin request.</p>
+     * <p>The allowed methods for the cross-origin request.</p>
      * 
      * <strong>example:</strong>
      * <p>PUT</p>
@@ -23,7 +23,7 @@ public class File extends TeaModel {
     public String accessControlRequestMethod;
 
     /**
-     * <p>The addresses.</p>
+     * <p>The address information.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<Address> addresses;
@@ -38,7 +38,7 @@ public class File extends TeaModel {
     public String album;
 
     /**
-     * <p>The singer.</p>
+     * <p>The album artist.</p>
      * 
      * <strong>example:</strong>
      * <p>Jane</p>
@@ -56,19 +56,19 @@ public class File extends TeaModel {
     public String artist;
 
     /**
-     * <p>The audio covers.</p>
+     * <p>The cover images for the audio.</p>
      */
     @NameInMap("AudioCovers")
     public java.util.List<Image> audioCovers;
 
     /**
-     * <p>The list of audio streams.</p>
+     * <p>A list of audio streams.</p>
      */
     @NameInMap("AudioStreams")
     public java.util.List<AudioStream> audioStreams;
 
     /**
-     * <p>The bitrate. Unit: bit/s.</p>
+     * <p>The bitrate, in bit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>13091201</p>
@@ -77,8 +77,8 @@ public class File extends TeaModel {
     public Long bitrate;
 
     /**
-     * <p>The caching behavior of the web page when the object is downloaded.</p>
-     * <p>This parameter corresponds to the Cache-Control HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+     * <p>The web cache behavior that the browser should use when the object is downloaded.</p>
+     * <p>This parameter is returned only if the Cache-Control HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>no-cache</p>
@@ -96,8 +96,8 @@ public class File extends TeaModel {
     public String composer;
 
     /**
-     * <p>The name of the object during the download.</p>
-     * <p>This parameter corresponds to the Content-Disposition HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+     * <p>The name of the object when it is downloaded.</p>
+     * <p>This parameter is returned only if the Content-Disposition HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>attachment; filename =test.jpg</p>
@@ -106,8 +106,8 @@ public class File extends TeaModel {
     public String contentDisposition;
 
     /**
-     * <p>The content encoding format of the object when the object is downloaded.</p>
-     * <p>This parameter corresponds to the Content-Encoding HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+     * <p>The content encoding format of the object when it is downloaded.</p>
+     * <p>This parameter is returned only if the Content-Encoding HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>UTF-8</p>
@@ -117,7 +117,7 @@ public class File extends TeaModel {
 
     /**
      * <p>The language of the object content.</p>
-     * <p>This parameter corresponds to the Content-Language HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+     * <p>This parameter is returned only if the Content-Language HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -126,7 +126,7 @@ public class File extends TeaModel {
     public String contentLanguage;
 
     /**
-     * <p>The MD5 value.</p>
+     * <p>The MD5 hash of the object content.</p>
      * 
      * <strong>example:</strong>
      * <p>HZwoCnxPZ/fvhz4oRJ2+Fw==</p>
@@ -135,7 +135,7 @@ public class File extends TeaModel {
     public String contentMd5;
 
     /**
-     * <p>The Multipurpose Internet Mail Extensions (MIME) type of the file.</p>
+     * <p>The content type of the file (MIME type).</p>
      * 
      * <strong>example:</strong>
      * <p>image/jpeg</p>
@@ -144,7 +144,7 @@ public class File extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The RFC3339Nano timestamp when the metadata was created.</p>
+     * <p>The time when the metadata was created. The time is in the RFC3339Nano format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
@@ -155,14 +155,14 @@ public class File extends TeaModel {
     /**
      * <p>The cropping suggestions for the image.</p>
      * <blockquote>
-     * <p>Not supported.</p>
+     * <p>This feature is not supported.</p>
      * </blockquote>
      */
     @NameInMap("CroppingSuggestions")
     public java.util.List<CroppingSuggestion> croppingSuggestions;
 
     /**
-     * <p>The custom ID of the file. When the cluster is indexed into the dataset, the custom ID is stored as the data attribute. You can map the custom ID to other data in your business system. Configure this parameter based on your business requirements. For example, you can associate a URI with an ID in your system. We recommend that you set this parameter to a globally unique value.</p>
+     * <p>The custom ID of the file, which you can use to associate the file with an ID in your business system. When the file is indexed into a dataset, this ID is stored as a metadata attribute. We recommend using a globally unique value.</p>
      * 
      * <strong>example:</strong>
      * <p>member-image-id-0001</p>
@@ -171,7 +171,7 @@ public class File extends TeaModel {
     public String customId;
 
     /**
-     * <p>The custom labels of the file. This parameter is optional. The parameter stores custom key-value labels, which can be used to filter data.</p>
+     * <p>Custom key-value labels for the file. This parameter is optional and can be used to store business-specific data and to filter queries.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -184,7 +184,7 @@ public class File extends TeaModel {
     public java.util.Map<String, ?> customLabels;
 
     /**
-     * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
+     * <p>The dataset name. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>test-dataset</p>
@@ -193,7 +193,7 @@ public class File extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The total duration of the video. Unit: seconds.</p>
+     * <p>The total duration of the video, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>15.263000</p>
@@ -202,7 +202,7 @@ public class File extends TeaModel {
     public Double duration;
 
     /**
-     * <p>The ETag of the object. ETags are used to identify the content of objects.</p>
+     * <p>An ETag is generated when an object is created. The ETag identifies the content of an object.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;1D9C280A7C4F67F7EF873E28449****&quot;</p>
@@ -211,7 +211,7 @@ public class File extends TeaModel {
     public String ETag;
 
     /**
-     * <p>The original EXIF information about the image. The EXIF information is stored in the serialized JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/44975.html">Query image information</a>.</p>
+     * <p>The original EXIF information of the image, stored as a serialized JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/44975.html">Obtain image information</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Compression&quot;:{&quot;value&quot;:&quot;6&quot;},&quot;DateTime&quot;:{&quot;value&quot;:&quot;2020:08:19 17:11:11&quot;}}</p>
@@ -220,13 +220,13 @@ public class File extends TeaModel {
     public String EXIF;
 
     /**
-     * <p>The document elements that match the current query content when you call the SemanticQuery operation for semantic search.</p>
+     * <p>A list of document fragments that match the current search content when you use the SemanticQuery API to perform a semantic search.</p>
      */
     @NameInMap("Elements")
     public java.util.List<Element> elements;
 
     /**
-     * <p>The number of persons.</p>
+     * <p>The number of figures.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -235,13 +235,13 @@ public class File extends TeaModel {
     public Long figureCount;
 
     /**
-     * <p>The list of persons. The persons are detected via AI models.</p>
+     * <p>A list of figures detected by the AI model.</p>
      */
     @NameInMap("Figures")
     public java.util.List<Figure> figures;
 
     /**
-     * <p>The RFC3339Nano timestamp when the file was accessed.</p>
+     * <p>The time when the file was last accessed. The time is in the RFC3339Nano format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
@@ -250,7 +250,7 @@ public class File extends TeaModel {
     public String fileAccessTime;
 
     /**
-     * <p>The RFC3339Nano timestamp when the file was created.</p>
+     * <p>The time when the file was created. The time is in the RFC3339Nano format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
@@ -259,7 +259,7 @@ public class File extends TeaModel {
     public String fileCreateTime;
 
     /**
-     * <p>The hash value of the file.</p>
+     * <p>The hash of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>1d9c280a7c4f67f7ef873e28449dbe17</p>
@@ -268,7 +268,7 @@ public class File extends TeaModel {
     public String fileHash;
 
     /**
-     * <p>The RFC3339Nano timestamp when the file was last modified.</p>
+     * <p>The time when the file was last modified. The time is in the RFC3339Nano format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
@@ -277,7 +277,7 @@ public class File extends TeaModel {
     public String fileModifiedTime;
 
     /**
-     * <p>The name of the object. For an OSS object, the value of this parameter is the object name.</p>
+     * <p>The name of the file. For an OSS object, this parameter is the ObjectKey.</p>
      * 
      * <strong>example:</strong>
      * <p>sampleobject.jpg</p>
@@ -304,7 +304,7 @@ public class File extends TeaModel {
     public String formatName;
 
     /**
-     * <p>The height of the image. Unit: pixels.</p>
+     * <p>The height of the image, in pixels (px).</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -313,13 +313,13 @@ public class File extends TeaModel {
     public Long imageHeight;
 
     /**
-     * <p>The score of the image. The score is calculated by using AI models.</p>
+     * <p>The image score information, detected by an AI model.</p>
      */
     @NameInMap("ImageScore")
     public ImageScore imageScore;
 
     /**
-     * <p>The width of the image. Unit: pixels.</p>
+     * <p>The width of the image, in pixels (px).</p>
      * 
      * <strong>example:</strong>
      * <p>270</p>
@@ -330,7 +330,7 @@ public class File extends TeaModel {
     /**
      * <p>Summary and description of the file.</p>
      * <blockquote>
-     * <p>Not supported.</p>
+     * <p>Currently not supported</p>
      * </blockquote>
      * 
      * <strong>if can be null:</strong>
@@ -340,13 +340,13 @@ public class File extends TeaModel {
     public Insights insights;
 
     /**
-     * <p>The labels of the file. The labels are detected via AI models.</p>
+     * <p>A list of AI-detected labels for the file.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The language specified by using a BCP 47 language tag.</p>
+     * <p>The language in BCP 47 format.</p>
      * 
      * <strong>example:</strong>
      * <p>eng</p>
@@ -355,7 +355,7 @@ public class File extends TeaModel {
     public String language;
 
     /**
-     * <p>The latitude and longitude.</p>
+     * <p>The GPS latitude and longitude.</p>
      * 
      * <strong>example:</strong>
      * <p>30.134390,120.074997</p>
@@ -365,15 +365,6 @@ public class File extends TeaModel {
 
     /**
      * <p>The media type of the file.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>image</li>
-     * <li>other</li>
-     * <li>document</li>
-     * <li>archive</li>
-     * <li>audio</li>
-     * <li>video</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -382,9 +373,9 @@ public class File extends TeaModel {
     public String mediaType;
 
     /**
-     * <p>The Optical Character Recognition (OCR) results.</p>
+     * <p>The OCR results.</p>
      * <blockquote>
-     * <p>Not supported.</p>
+     * <p>This feature is not supported.</p>
      * </blockquote>
      */
     @NameInMap("OCRContents")
@@ -394,13 +385,13 @@ public class File extends TeaModel {
      * <p>The text detected in the image.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba Cloud IMM</p>
+     * <p>阿里云IMM</p>
      */
     @NameInMap("OCRTexts")
     public String OCRTexts;
 
     /**
-     * <p>The CRC64 value.</p>
+     * <p>The CRC-64 value of the object.</p>
      * 
      * <strong>example:</strong>
      * <p>559890638950338001</p>
@@ -409,7 +400,7 @@ public class File extends TeaModel {
     public String OSSCRC64;
 
     /**
-     * <p>The delete marker of the object.</p>
+     * <p>The OSS delete marker.</p>
      * 
      * <strong>example:</strong>
      * <p>CAEQMhiBgIDXiaaB0BYiIGQzYmRkZGUxMTM1ZDRjOTZhNjk4YjRjMTAyZjhl****</p>
@@ -419,7 +410,7 @@ public class File extends TeaModel {
 
     /**
      * <p>The expiration time of the OSS object.</p>
-     * <p>This parameter corresponds to the Expires HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+     * <p>This parameter is returned only if the Expires HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2120-01-01T12:00:00.000Z</p>
@@ -428,7 +419,7 @@ public class File extends TeaModel {
     public String OSSExpiration;
 
     /**
-     * <p>The type of the OSS object. Set the value to <code>Normal</code>.</p>
+     * <p>The type of the OSS object. A common value is <code>Normal</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -437,7 +428,7 @@ public class File extends TeaModel {
     public String OSSObjectType;
 
     /**
-     * <p>The storage class of the OSS bucket.</p>
+     * <p>The storage class of the OSS object.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -446,8 +437,8 @@ public class File extends TeaModel {
     public String OSSStorageClass;
 
     /**
-     * <p>The tag of the object.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Add tags to an object</a>.</p>
+     * <p>The tags of the OSS object.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Object tagging</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;: &quot;val&quot;}</p>
@@ -456,8 +447,8 @@ public class File extends TeaModel {
     public java.util.Map<String, ?> OSSTagging;
 
     /**
-     * <p>The number of OSS object tags.</p>
-     * <p>This parameter is available only if tags are added to the corresponding OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Add tags to an object</a>.</p>
+     * <p>The number of tags on the OSS object.</p>
+     * <p>This parameter is returned only if tags are set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Object tagging</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -466,7 +457,7 @@ public class File extends TeaModel {
     public Long OSSTaggingCount;
 
     /**
-     * <p>The URI of the OSS object. This parameter is available only if the value of the URI parameter is the URI of a file in Photo and Drive Service.</p>
+     * <p>The URI of the OSS file. This parameter is returned only if the URI is a PDS address.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://examplebucket/sampleobject.jpg</p>
@@ -475,8 +466,8 @@ public class File extends TeaModel {
     public String OSSURI;
 
     /**
-     * <p>The user metadata of the OSS object.</p>
-     * <p>This parameter is available only if user metadata is configured for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+     * <p>The user-defined metadata of the OSS object.</p>
+     * <p>This parameter is returned only if user-defined metadata is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;: &quot;val&quot;}</p>
@@ -485,8 +476,8 @@ public class File extends TeaModel {
     public java.util.Map<String, ?> OSSUserMeta;
 
     /**
-     * <p>The version of the object.</p>
-     * <p>This parameter is available only if versioning is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/109695.html">Overview</a>.</p>
+     * <p>The version ID of the OSS object.</p>
+     * <p>This parameter is returned only if versioning is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/109695.html">Overview of versioning</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CAEQNhiBgMDJgZCA0BYiIDc4MGZjZGI2OTBjOTRmNTE5NmU5NmFhZjhjYmY0****</p>
@@ -513,7 +504,7 @@ public class File extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The status of the object.</p>
+     * <p>File index status.</p>
      * 
      * <strong>example:</strong>
      * <p>Indexed</p>
@@ -522,7 +513,7 @@ public class File extends TeaModel {
     public String objectStatus;
 
     /**
-     * <p>The type of the object. Set the value to <strong>file</strong>.</p>
+     * <p>The type of the object. The value is always <strong>file</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>file</p>
@@ -531,8 +522,8 @@ public class File extends TeaModel {
     public String objectType;
 
     /**
-     * <p>The image rotation angle. You can obtain the value from the exchangeable image file format (EXIF).</p>
-     * <p>If the EXIF metadata does not contain the image rotation angle, this parameter is not included in the response.</p>
+     * <p>The rotation value of the image, read from its EXIF data.</p>
+     * <p>This parameter is returned only if this value is available in the EXIF data.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -552,7 +543,7 @@ public class File extends TeaModel {
     /**
      * <p>The number of pages.</p>
      * <blockquote>
-     * <p>Not supported.</p>
+     * <p>This feature is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -571,7 +562,7 @@ public class File extends TeaModel {
     public String performer;
 
     /**
-     * <p>The time when the image was taken.</p>
+     * <p>The time when the photo was taken.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
@@ -589,7 +580,7 @@ public class File extends TeaModel {
     public Long programCount;
 
     /**
-     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+     * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>test-project</p>
@@ -598,7 +589,7 @@ public class File extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The reason why the file failed to run the index.</p>
+     * <p>The reason the file failed to be indexed.</p>
      * 
      * <strong>example:</strong>
      * <p>[InternalError] The request has been failed due to some unknown error. status: 500, requestId: CC5ACFBD-BB7A-496D-A9D6-****</p>
@@ -607,20 +598,20 @@ public class File extends TeaModel {
     public String reason;
 
     /**
-     * <p>The elements in the video segment, which are scene elements that you can extract from the video by using an AI model.</p>
+     * <p>A list of scene elements extracted from the video by the AI model during analysis.</p>
      */
     @NameInMap("SceneElements")
     public java.util.List<SceneElement> sceneElements;
 
     /**
-     * <p>The reasons for which the current file is included in the search results when you call the SemanticQuery operation for semantic search.</p>
+     * <p>Indicates why this file was returned when you use the SemanticQuery API to perform a semantic search.</p>
      */
     @NameInMap("SemanticTypes")
     public java.util.List<String> semanticTypes;
 
     /**
-     * <p>The encryption method of the object.</p>
-     * <p>This parameter is available only if server encryption is configured for the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
+     * <p>The encryption algorithm of the object.</p>
+     * <p>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>SM4</p>
@@ -629,8 +620,8 @@ public class File extends TeaModel {
     public String serverSideDataEncryption;
 
     /**
-     * <p>The encryption method on the server side.</p>
-     * <p>This parameter is available only if server encryption is configured for the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
+     * <p>The server-side encryption method.</p>
+     * <p>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>AES256</p>
@@ -639,7 +630,7 @@ public class File extends TeaModel {
     public String serverSideEncryption;
 
     /**
-     * <p>The algorithm that is used to encrypt the file on the server side.</p>
+     * <p>The encryption algorithm used for server-side encryption with customer-provided keys.</p>
      * 
      * <strong>example:</strong>
      * <p>SM4</p>
@@ -648,8 +639,8 @@ public class File extends TeaModel {
     public String serverSideEncryptionCustomerAlgorithm;
 
     /**
-     * <p>The ID of the customer master key (CMK) managed by Key Management Service (KMS).</p>
-     * <p>This parameter is available only if server encryption is configured for the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
+     * <p>The ID of the customer master key (CMK) that is managed by KMS.</p>
+     * <p>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>9468da86-3509-4f8d-a61e-6eab1eac****</p>
@@ -658,7 +649,7 @@ public class File extends TeaModel {
     public String serverSideEncryptionKeyId;
 
     /**
-     * <p>The size of the object. Unit: bytes.</p>
+     * <p>The size of the file, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -667,7 +658,7 @@ public class File extends TeaModel {
     public Long size;
 
     /**
-     * <p>The time of the first frame. Unit: seconds.</p>
+     * <p>The start time of the first frame, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>0.000000</p>
@@ -685,15 +676,15 @@ public class File extends TeaModel {
     public Long streamCount;
 
     /**
-     * <p>The list of subtitle streams.</p>
+     * <p>A list of subtitle streams.</p>
      */
     @NameInMap("Subtitles")
     public java.util.List<SubtitleStream> subtitles;
 
     /**
-     * <p>The time zone.</p>
+     * <p>The timezone.</p>
      * <blockquote>
-     * <p> Not supported.</p>
+     * <p>This feature is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -714,7 +705,7 @@ public class File extends TeaModel {
     /**
      * <p>A reserved parameter.</p>
      * <blockquote>
-     * <p>Not supported.</p>
+     * <p>This feature is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -726,18 +717,18 @@ public class File extends TeaModel {
     public String travelClusterId;
 
     /**
-     * <p>The URI of the file.</p>
-     * <p>The URI of an OSS object follows the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
-     * <p>The URI of a file in Photo and Drive Service follows the pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision} format.</p>
+     * <p>The address of the file.</p>
+     * <p>An OSS URI must be in the <code>oss://${Bucket}/${Object}</code> format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the full path to the object, including the file extension.</p>
+     * <p>A PDS URI must be in the <code>pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}</code> format.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://examplebucket/sampleobject.jpg</p>
+     * <p>oss://test-bucket/test-object.jpg</p>
      */
     @NameInMap("URI")
     public String URI;
 
     /**
-     * <p>The RFC3339Nano timestamp when the metadata was modified.</p>
+     * <p>The time when the metadata was last updated. The time is in the RFC3339Nano format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
@@ -746,7 +737,7 @@ public class File extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The height of the video. Unit: pixels.</p>
+     * <p>The height of the video, in pixels (px).</p>
      * 
      * <strong>example:</strong>
      * <p>1920</p>
@@ -755,13 +746,13 @@ public class File extends TeaModel {
     public Long videoHeight;
 
     /**
-     * <p>The list of video streams.</p>
+     * <p>A list of video streams.</p>
      */
     @NameInMap("VideoStreams")
     public java.util.List<VideoStream> videoStreams;
 
     /**
-     * <p>The width of the video. Unit: pixels.</p>
+     * <p>The width of the video, in pixels (px).</p>
      * 
      * <strong>example:</strong>
      * <p>1080</p>

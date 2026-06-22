@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
     /**
-     * <p>The error code of the task.</p>
+     * <p>The task error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ResourceNotFound</p>
@@ -14,7 +14,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The end time of the task.</p>
+     * <p>The time when the task ended. The time is in the ISO 8601 UTC timestamp format with millisecond-level precision.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-24T03:00:42.134971294Z</p>
@@ -32,13 +32,13 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The labels.</p>
+     * <p>The list of labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The error message of the task.</p>
+     * <p>The task error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified resource project is not found.</p>
@@ -65,7 +65,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the task.</p>
+     * <p>The time when the task started. The time is in the ISO 8601 UTC timestamp format with millisecond-level precision.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-24T03:00:38.892462383Z</p>
@@ -92,7 +92,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>VideoLabelClassification</p>
@@ -101,7 +101,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The custom information.</p>
+     * <p>The user-defined information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

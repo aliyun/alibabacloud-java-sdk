@@ -23,7 +23,7 @@ public class CroppingSuggestion extends TeaModel {
      * <p>The confidence score. Valid values: 0 to 1. A higher score indicates greater confidence in the result.</p>
      * 
      * <strong>example:</strong>
-     * <p>0.7079545259475708</p>
+     * <p>0.742</p>
      */
     @NameInMap("Confidence")
     public Float confidence;

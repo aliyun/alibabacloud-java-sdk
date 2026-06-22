@@ -4,9 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DocumentParseSummaryOption extends TeaModel {
+    /**
+     * <p>Document chapter summary</p>
+     */
     @NameInMap("ChapterSummarize")
     public Boolean chapterSummarize;
 
+    /**
+     * <p>Article summary</p>
+     */
     @NameInMap("Summarize")
     public Boolean summarize;
 

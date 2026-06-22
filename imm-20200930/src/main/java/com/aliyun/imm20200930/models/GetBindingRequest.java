@@ -8,7 +8,7 @@ public class GetBindingRequest extends TeaModel {
      * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>dataset001</p>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -18,17 +18,17 @@ public class GetBindingRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The URI of the OSS bucket to which you bind the dataset.</p>
-     * <p>Specify the value in the oss://${Bucket} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project.</p>
+     * <p>Specify the value in the oss\://${Bucket} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://examplebucket</p>
+     * <p>oss://test-bucket</p>
      */
     @NameInMap("URI")
     public String URI;

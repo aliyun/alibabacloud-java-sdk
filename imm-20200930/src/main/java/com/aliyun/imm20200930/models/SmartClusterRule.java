@@ -8,7 +8,7 @@ public class SmartClusterRule extends TeaModel {
     public java.util.List<String> baseURIs;
 
     /**
-     * <p>Keywords</p>
+     * <p>An array of keywords for clustering.</p>
      */
     @NameInMap("Keywords")
     public java.util.List<String> keywords;
@@ -17,7 +17,7 @@ public class SmartClusterRule extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>Sensitivity</p>
+     * <p>The sensitivity for clustering, ranging from 0.0 to 1.0.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>

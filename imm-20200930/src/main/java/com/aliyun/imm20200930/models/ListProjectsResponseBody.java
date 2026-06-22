@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The credential for querying subsequent pages when the total number of expected projects exceeds the specified MaxResults value. This parameter has a value only when not all projects are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg6aW1tdGVzdDAx</p>
@@ -14,7 +14,7 @@ public class ListProjectsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The projects.</p>
+     * <p>The array of projects. Returns information about the projects.</p>
      */
     @NameInMap("Projects")
     public java.util.List<Project> projects;

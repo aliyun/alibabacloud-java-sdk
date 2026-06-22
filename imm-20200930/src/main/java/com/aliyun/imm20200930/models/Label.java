@@ -5,46 +5,58 @@ import com.aliyun.tea.*;
 
 public class Label extends TeaModel {
     /**
-     * <p>The central value of the label. This value indicates the confidence that the label is the majority component of the image. Valid values: 0 to 1. A higher value indicates greater confidence.</p>
+     * <p>The centric score of the tag. This indicates whether the tag is the main subject in the image. The value ranges from 0 to 1. A higher value indicates higher confidence that the tag is the main subject of the image.</p>
      * 
      * <strong>example:</strong>
-     * <p>0.7319999933242798</p>
+     * <p>0.877</p>
      */
     @NameInMap("CentricScore")
     public Float centricScore;
 
+    /**
+     * <p>Event clips.</p>
+     */
     @NameInMap("Clips")
     public java.util.List<Clip> clips;
 
+    /**
+     * <p>The tag alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>座椅</p>
+     */
     @NameInMap("LabelAlias")
     public String labelAlias;
 
     /**
-     * <p>The confidence level of the label. Valid values: 0 to 1. A higher value indicates greater confidence.</p>
+     * <p>The tag confidence level. The value ranges from 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
-     * <p>0.9891784601980591</p>
+     * <p>0.95</p>
      */
     @NameInMap("LabelConfidence")
     public Float labelConfidence;
 
     /**
-     * <p>The label level. Valid values: 1, 2, and 3.</p>
+     * <p>The tag level. Valid values are 1, 2, and 3, representing first-level, second-level, and third-level tags, respectively.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("LabelLevel")
     public Long labelLevel;
 
     /**
-     * <p>The label name.</p>
+     * <p>The tag name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>椅子</p>
      */
     @NameInMap("LabelName")
     public String labelName;
 
     /**
-     * <p>The label language, which is represented as a BCP 47 language tag.</p>
+     * <p>The tag language, in BCP 47 format.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-Hans</p>
@@ -53,7 +65,10 @@ public class Label extends TeaModel {
     public String language;
 
     /**
-     * <p>The name of the parent label.</p>
+     * <p>The parent tag name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>家具</p>
      */
     @NameInMap("ParentLabelName")
     public String parentLabelName;

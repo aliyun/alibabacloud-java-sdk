@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateStoryRequest extends TeaModel {
     /**
-     * <p>The address of the story. IMM filters candidate photos to generate a story based on the value of this parameter. This parameter takes effect only if you set StoryType to TravelMemory.</p>
+     * <p>The address information for the story. IMM filters photos whose shooting locations match the specified address to generate the story. This parameter takes effect only when StoryType is set to TravelMemory.</p>
      * <blockquote>
-     * <p> If the caller of the operation is located in Hong Kong (China), Macao (China), Taiwan (China), or another region outside the Chinese mainland, the system cannot convert the GPS information in the Chinese mainland into the textual address version.</p>
+     * <p>Due to regulatory requirements, parsing GPS information into addresses is not supported in Hong Kong (China), Macao (China), Taiwan (China), or regions outside of mainland China.</p>
      * </blockquote>
      */
     @NameInMap("Address")
     public AddressForStory address;
 
     /**
-     * <p>The custom ID. A custom ID of a generated story may differ from the value of ObjectID and can be utilized for subsequent retrieval and sorting of stories.</p>
+     * <p>A custom identifier for the story. This ID can be different from ObjectId. You can use this ID to retrieve or sort stories.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class CreateStoryRequest extends TeaModel {
     public String customId;
 
     /**
-     * <p>The custom labels. Labels specify the custom information of the story. This enables retrieval based on your business requirements.</p>
+     * <p>The custom labels. These labels contain custom information about the story and can be used for retrieval.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
@@ -32,7 +32,7 @@ public class CreateStoryRequest extends TeaModel {
     public java.util.Map<String, ?> customLabels;
 
     /**
-     * <p>The name of the dataset. For information about how to obtain the name of a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+     * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateStoryRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The maximum number of photo files in the story. The actual number of photo files ranges from the value of MinFileCount to the value of MaxFileCount. The value of this parameter must be an integer greater than the value of MinFileCount. To provide the desired effect, the algorithm limits the maximum number of photo files to 1,500. If you set MaxFileCount to a value greater than 1,500, this parameter does not take effect.</p>
+     * <p>The maximum number of photos in the generated story. The actual number of photos is between the values of MinFileCount and MaxFileCount. The value must be an integer greater than the value of MinFileCount. To ensure the quality of the generated story, the internal algorithm limits the maximum number of photos to 1,500. If you set MaxFileCount to a value greater than 1,500, the setting does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -51,7 +51,7 @@ public class CreateStoryRequest extends TeaModel {
     public Long maxFileCount;
 
     /**
-     * <p>The minimum number of photo files in the story. The actual number of photo files ranges from the value of MinFileCount to the value of MaxFileCount. The value of this parameter must be an integer greater than 1. If the actual number of candidate photos is less than the value of this parameter, a null story is returned.</p>
+     * <p>The minimum number of photos in the generated story. The actual number of photos is between the values of MinFileCount and MaxFileCount. The value must be an integer greater than 1. If the number of available candidate photos is less than this value, an empty story is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,13 +60,13 @@ public class CreateStoryRequest extends TeaModel {
     public Long minFileCount;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The notification configuration. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The topic name of the asynchronous reverse notification.</p>
+     * <p>The name of the topic for asynchronous notifications.</p>
      * 
      * <strong>example:</strong>
      * <p>test-topic</p>
@@ -75,7 +75,7 @@ public class CreateStoryRequest extends TeaModel {
     public String notifyTopicName;
 
     /**
-     * <p>The ID of the story. This parameter is optional. If you leave this parameter empty, IMM assigns a unique identifier to the story. You can query and update a story based on its ID. You can also manually create an ID for a story. After you create an ID for a story, you must specify this parameter to pass the ID into the system. This way, IMM can record the ID as the unique identifier of the story. If you pass an existing ID into the system, IMM updates the story that corresponds to the ID.</p>
+     * <p>The ID for the story object. This parameter is optional. If you do not specify an ID, IMM generates one. You can use the story ID to query or update the story. If you specify an ID that already exists, the corresponding story is updated.</p>
      * 
      * <strong>example:</strong>
      * <p>id1</p>
@@ -84,7 +84,7 @@ public class CreateStoryRequest extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class CreateStoryRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The end time of the photo collection for which you want to create the story. StoryStartTime and StoryEndTime form a time interval based on which IMM filters candidate photos to generate a story. The value must be a string in the RFC3339 format.</p>
+     * <p>The end time of the photo collection for the story. This parameter and StoryStartTime define a time range. IMM filters candidate photos within this time range to generate the story. The value must be a string in the RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-30T16:00:00Z</p>
@@ -112,7 +112,7 @@ public class CreateStoryRequest extends TeaModel {
     public String storyName;
 
     /**
-     * <p>The start time of the photo collection for which you want to create the story. StoryStartTime and StoryEndTime form a time interval based on which IMM filters candidate photos to generate a story. The value must be a string in the RFC3339 format.</p>
+     * <p>The start time of the photo collection for the story. This parameter and StoryEndTime define a time range. IMM filters candidate photos within this time range to generate the story. The value must be a string in the RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2016-12-30T16:00:00Z</p>
@@ -121,7 +121,7 @@ public class CreateStoryRequest extends TeaModel {
     public String storyStartTime;
 
     /**
-     * <p>The subtype of the story. For information about valid subtypes, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
+     * <p>The subtype of the story to generate. For more information about story subtypes and their valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Solo</p>
@@ -130,7 +130,7 @@ public class CreateStoryRequest extends TeaModel {
     public String storySubType;
 
     /**
-     * <p>The type of the story. For information about valid types, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
+     * <p>The type of the story to generate. For more information about story types and their valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,11 +140,14 @@ public class CreateStoryRequest extends TeaModel {
     public String storyType;
 
     /**
-     * <p>The tags. You can specify this parameter in one of the following scenarios:</p>
+     * <p>This parameter provides a tagging mechanism that can be used in the following scenarios:</p>
      * <ul>
-     * <li>Specify tags as custom data, which is returned in messages provided by Simple Message Queue.</li>
-     * <li>Search for tasks by tag.</li>
-     * <li>Specify tags as variables in destination URIs.</li>
+     * <li><p>Set custom data that is returned in MNS messages.</p>
+     * </li>
+     * <li><p>Use as a search condition to search for tasks.</p>
+     * </li>
+     * <li><p>Use as a variable in TargetURI.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class CreateStoryRequest extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The custom information, which is returned as asynchronous notifications to facilitate notification management in your system. The maximum information length is 2,048 bytes.</p>
+     * <p>The custom information that is returned in an asynchronous notification message. You can use this information to associate the notification message with your services. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>

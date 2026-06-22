@@ -51,6 +51,9 @@ public class SubtitleStream extends TeaModel {
 
     /**
      * <p>The subtitle content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>欢迎</p>
      */
     @NameInMap("Content")
     public String content;

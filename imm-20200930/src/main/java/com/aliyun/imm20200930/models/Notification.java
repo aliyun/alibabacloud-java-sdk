@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class Notification extends TeaModel {
     /**
-     * <p>The Object Storage Service (OSS) URI of the object that stores task notifications. Task information is written to the object in the JSON format. In most cases, you can receive notifications only by using <a href="https://help.aliyun.com/document_detail/161886.html">EventBridge</a>, <a href="https://help.aliyun.com/document_detail/27412.html">Simple Message Queue</a>, or <a href="https://help.aliyun.com/document_detail/29530.html">ApsaraMQ for RocketMQ</a>. For tasks that have a large amount of task information, such as archive file inspection tasks and decompression tasks, you can use an OSS object to store detailed task information.</p>
-     * <p>The OSS URI follows the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+     * <p>Use an Object Storage Service (OSS) file to receive task notifications. If you provide the URI of this file, detailed task execution information is written to the file in a JSON structure. Normally, you receive notifications through <a href="https://help.aliyun.com/document_detail/161886.html">EventBridge</a>, <a href="https://help.aliyun.com/document_detail/27412.html">MNS</a>, or <a href="https://help.aliyun.com/document_detail/29530.html">RocketMQ</a>. However, some tasks generate large amounts of information, such as archive previews or decompression tasks. For these tasks, provide this file to get the complete execution results.</p>
+     * <p>The OSS URI format is oss\://${Bucket}/${Object}. <code>${Bucket}</code> is the name of an OSS bucket in the same region as the current project. <code>${Object}</code> is the full path of the file, including the file name extension.</p>
      * <blockquote>
-     * <p> The object is not a messaging method. It serves only as a container for detailed task information. Task status information is sent as a message, whereas the object stores detailed task information.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This file is not a notification method. It only serves as a medium to receive detailed task execution information. Task status is sent through standard message notifications. This file contains only the detailed execution information.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-bucket/test-object.json</p>
@@ -18,13 +19,13 @@ public class Notification extends TeaModel {
     public String extendedMessageURI;
 
     /**
-     * <p>The SMQ notification settings.</p>
+     * <p>The MNS notification parameter object.</p>
      */
     @NameInMap("MNS")
     public MNS MNS;
 
     /**
-     * <p>The ApsaraMQ for RocketMQ notification settings.</p>
+     * <p>The RocketMQ notification parameter object.</p>
      */
     @NameInMap("RocketMQ")
     public RocketMQ rocketMQ;

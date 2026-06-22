@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectShrinkRequest extends TeaModel {
+    @NameInMap("DatasetConfig")
+    public String datasetConfigShrink;
+
     /**
      * <p>The maximum number of bindings for each dataset. Valid values: 1 to 10.</p>
      * 
@@ -16,7 +19,7 @@ public class UpdateProjectShrinkRequest extends TeaModel {
     /**
      * <p>The maximum number of metadata entities in each dataset.</p>
      * <blockquote>
-     * <p> This is a precautionary setting that does not impose practical limitations.</p>
+     * <p>This is a reserved parameter and is not enforced during use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,9 +38,9 @@ public class UpdateProjectShrinkRequest extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
-     * <p>The maximum number of metadata relationships in a dataset.</p>
+     * <p>The maximum number of metadata relationships in each dataset.</p>
      * <blockquote>
-     * <p> This is a precautionary setting that does not impose practical limitations.</p>
+     * <p>This is a reserved parameter and is not enforced during use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +50,7 @@ public class UpdateProjectShrinkRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>The maximum size of files in each dataset. If the maximum size is exceeded, indexes can no longer be added. Unit: bytes.</p>
+     * <p>The maximum total file size in each dataset. After the limit is exceeded, no more indexes can be added. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -56,7 +59,7 @@ public class UpdateProjectShrinkRequest extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
-     * <p>The description of the project. The description must be 1 to 256 characters in length.</p>
+     * <p>The project description. The description must be 1 to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -74,7 +77,7 @@ public class UpdateProjectShrinkRequest extends TeaModel {
     public Long projectMaxDatasetCount;
 
     /**
-     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+     * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,8 +87,8 @@ public class UpdateProjectShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The name of the Resource Access Management (RAM) role. You must grant the RAM role to Intelligent Media Management (IMM) before IMM can access other cloud resources such as Object Storage Service (OSS).</p>
-     * <p>You can also create a custom service role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
+     * <p>The service role that grants Intelligent Media Management (IMM) permissions to access other cloud resources such as Object Storage Service (OSS).</p>
+     * <p>To customize a service role, create a regular service role in the Resource Access Management (RAM) console and grant permissions to the role. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunIMMDefaultRole</p>
@@ -94,16 +97,16 @@ public class UpdateProjectShrinkRequest extends TeaModel {
     public String serviceRole;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;
 
     /**
-     * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
+     * <p>The workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>AliyunIMMDefaultRole</p>
+     * <p>Official:ImageManagement</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -111,6 +114,14 @@ public class UpdateProjectShrinkRequest extends TeaModel {
     public static UpdateProjectShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectShrinkRequest self = new UpdateProjectShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateProjectShrinkRequest setDatasetConfigShrink(String datasetConfigShrink) {
+        this.datasetConfigShrink = datasetConfigShrink;
+        return this;
+    }
+    public String getDatasetConfigShrink() {
+        return this.datasetConfigShrink;
     }
 
     public UpdateProjectShrinkRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {

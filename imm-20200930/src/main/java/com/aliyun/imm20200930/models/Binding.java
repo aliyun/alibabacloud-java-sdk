@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Binding extends TeaModel {
     /**
-     * <p>The RFC3339Nano timestamp when the OSS bucket was bound to the dataset.</p>
+     * <p>The timestamp when the binding between the dataset and the OSS bucket was created. The format is RFC3339Nano.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
@@ -23,10 +23,12 @@ public class Binding extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The type of the scan. Valid values:</p>
+     * <p>The scan type. Valid values:</p>
      * <ul>
-     * <li>FullScanning</li>
-     * <li>IncrementalScanning</li>
+     * <li><p>FullScanning: A full scan is in progress.</p>
+     * </li>
+     * <li><p>IncrementalScanning: An incremental scan is in progress.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,19 +48,28 @@ public class Binding extends TeaModel {
 
     /**
      * <p>Reason</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pause usage</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The status of the binding between the dataset and the OSS bucket. Valid values:</p>
+     * <p>The state of the binding between the dataset and the OSS bucket. Valid values:</p>
      * <ul>
-     * <li>Ready: IMM is ready to create the binding.</li>
-     * <li>Stopped: The binding creation is suspended.</li>
-     * <li>Running: The binding is running.</li>
-     * <li>Retrying: IMM is retrying the binding.</li>
-     * <li>Failed: The binding failed.</li>
-     * <li>Deleted: The binding is deleted.</li>
+     * <li><p>Ready: The binding is being prepared after it is created.</p>
+     * </li>
+     * <li><p>Stopped: The binding is paused.</p>
+     * </li>
+     * <li><p>Running: The binding is running.</p>
+     * </li>
+     * <li><p>Retrying: The binding is being retried after it is created.</p>
+     * </li>
+     * <li><p>Failed: The binding failed to be created.</p>
+     * </li>
+     * <li><p>Deleted: The binding is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,8 +79,8 @@ public class Binding extends TeaModel {
     public String state;
 
     /**
-     * <p>The URI of the OSS bucket to which the dataset is bound.</p>
-     * <p>The URI is in the <code>oss://${bucketname}</code> format, where <code>bucketname</code> is the name of the OSS bucket.</p>
+     * <p>The URI of the Object Storage Service (OSS) bucket attached to the dataset.</p>
+     * <p>The format of an OSS bucket URI is <code>oss://${bucketname}</code>. The <code>bucketname</code> is the name of an OSS bucket that is in the same region as the current project.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://examplebucket</p>
@@ -78,9 +89,9 @@ public class Binding extends TeaModel {
     public String URI;
 
     /**
-     * <p>The RFC3339Nano timestamp when the binding was modified.</p>
+     * <p>The timestamp when the binding between the dataset and the OSS bucket was last modified. The format is RFC3339Nano.</p>
      * <blockquote>
-     * <p> If you never suspend or retry the binding between the dataset and the OSS bucket after you complete the binding, the value of UpdateTime is the same as that of CreateTime.</p>
+     * <p>After a binding is created, if the binding has not been paused or restarted, this timestamp is the same as the creation timestamp.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class CreateLocationDateClusteringTaskResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B121940C-9794-4EE3-8D6E-F8EC525F****</p>

@@ -8,7 +8,7 @@ public class KdtreeOption extends TeaModel {
      * <p>The compression level. Valid values: 0 to 10. A greater value specifies a higher compression ratio and ensures better detail effects.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>5</p>
      */
     @NameInMap("CompressionLevel")
     public Integer compressionLevel;
@@ -26,7 +26,7 @@ public class KdtreeOption extends TeaModel {
      * <p>The number of bits for quantization. Valid values: 0 to 31. A greater value ensures that more details are retained. A value of 0 specifies that vertex compression is not performed.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>10</p>
      */
     @NameInMap("QuantizationBits")
     public Integer quantizationBits;

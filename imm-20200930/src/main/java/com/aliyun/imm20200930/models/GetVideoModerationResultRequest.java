@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoModerationResultRequest extends TeaModel {
     /**
-     * <p>The project name.<a href="~~478153~~"></a></p>
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

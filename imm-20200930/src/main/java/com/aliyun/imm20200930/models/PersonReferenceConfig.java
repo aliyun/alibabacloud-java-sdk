@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class PersonReferenceConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to enable person referencing. Set to <code>true</code> to enable this feature. The default value is <code>false</code>.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 

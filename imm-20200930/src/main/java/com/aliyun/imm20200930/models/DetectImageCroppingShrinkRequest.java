@@ -5,18 +5,17 @@ import com.aliyun.tea.*;
 
 public class DetectImageCroppingShrinkRequest extends TeaModel {
     /**
-     * <p>The cropping ratios. You can specify up to five cropping ratios. Take note of the following requirements:</p>
+     * <p>The list of cropping aspect ratios. You can specify up to 5 ratios. Each ratio must meet the following requirements:</p>
      * <ul>
-     * <li>The ratio must be an integer between 0 and 20.</li>
-     * <li>The ratio must range from 0.5 to 2.</li>
-     * <li>If you leave this parameter empty, the default processing logic is <code>[&quot;auto&quot;]</code>.</li>
+     * <li><p>The ratio must consist of integers in the range of (0, 20).</p>
+     * </li>
+     * <li><p>The ratio value must be in the range of [0.5, 2].</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the default value <code>[&quot;auto&quot;]</code> is used.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Errors are reported in one of the following cases:\
-     * You specify more than five cropping ratios.\
-     * You pass an empty list to the system.\
-     * You specify a ratio that is not an integer, such as <code>4.1:3</code>.\
-     * The ratio is beyond the range of 0.5 to 2.</p>
+     * <p>The following cases cause an error:<br>- More than 5 ratios are specified.<br>- An empty list is passed.<br>- The ratio contains non-integer values, such as <code>4.1:3</code>.<br>- The ratio value is less than 0.5 or greater than 2.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,17 +25,31 @@ public class DetectImageCroppingShrinkRequest extends TeaModel {
     public String aspectRatios;
 
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>Leave this parameter empty unless otherwise required.</strong></p>
+     * <p>The China authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    /**
+     * <p>The list of semantic text descriptions for objects that you want the cropping result to include. Each element is free-form text, such as &quot;signboard&quot; or &quot;dish&quot;.</p>
+     * <blockquote>
+     * <p>Usage limits of the InclusionHints parameter:
+     * <br>- You can pass in up to 1 hint in the array to specify the type of object to include in the cropping result, such as &quot;signboard&quot;.
+     * <br>- The algorithm detects all objects in the image that match the hint and generates cropping regions that include as many matched objects as possible.
+     * <br>- Each cropping region includes up to 10 matched objects. If more than 10 objects match in the image, the cropping region includes up to 10 of them.
+     * <br>- You can use the MatchedInclusionHints response field to determine whether the hint was successfully matched.
+     * <br>- This parameter is supported only in regions in the Chinese mainland.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;sign&quot;]</p>
+     */
     @NameInMap("InclusionHints")
     public String inclusionHintsShrink;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,8 +59,8 @@ public class DetectImageCroppingShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The URI of the Object Storage Service (OSS) bucket in which you store the image.</p>
-     * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the image file that has an extension.</p>
+     * <p>The OSS URI of the image.</p>
+     * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where <code>${Bucket}</code> is the name of an OSS bucket in the same region as the current project, and <code>${Object}</code> is the full path of the file including the file name extension.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://imm-test/testcases/facetest.jpg</p>

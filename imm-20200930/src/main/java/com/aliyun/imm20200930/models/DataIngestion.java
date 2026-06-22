@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataIngestion extends TeaModel {
     /**
-     * <p>The templates.</p>
+     * <p>A list of processing templates.</p>
      */
     @NameInMap("Actions")
     public java.util.List<DataIngestionActions> actions;
@@ -38,13 +38,13 @@ public class DataIngestion extends TeaModel {
     public String id;
 
     /**
-     * <p>The information about the data source.</p>
+     * <p>The data source information.</p>
      */
     @NameInMap("Input")
     public Input input;
 
     /**
-     * <p>The task execution location.</p>
+     * <p>The task execution position.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</p>
@@ -68,7 +68,7 @@ public class DataIngestion extends TeaModel {
     public String phase;
 
     /**
-     * <p>The service-linked role.</p>
+     * <p>The service authorization role.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunIMMBatchTriggerRole</p>
@@ -77,13 +77,18 @@ public class DataIngestion extends TeaModel {
     public String serviceRole;
 
     /**
-     * <p>The status of the batch processing task.</p>
+     * <p>The state of the batch processing task:</p>
      * <ul>
-     * <li>Ready: The task is created.</li>
-     * <li>Running: The task is running.</li>
-     * <li>Failed: The task fails and cannot be automatically recovered.</li>
-     * <li>Suspended: The task is suspended.</li>
-     * <li>Succeeded: The task is successful.</li>
+     * <li><p>Ready: The task is ready. A newly created task is in the Ready state.</p>
+     * </li>
+     * <li><p>Running: The task is running. This is the state of a task that is executing normally.</p>
+     * </li>
+     * <li><p>Failed: The task failed. An error occurred during task execution, and the task cannot be automatically recovered.</p>
+     * </li>
+     * <li><p>Suspended: The task is paused.</p>
+     * </li>
+     * <li><p>Succeeded: The task is complete.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +98,7 @@ public class DataIngestion extends TeaModel {
     public String state;
 
     /**
-     * <p>The statistical information.</p>
+     * <p>The statistics information.</p>
      */
     @NameInMap("Statistic")
     public DataIngestionStatistic statistic;
@@ -105,7 +110,7 @@ public class DataIngestion extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The time when the task was updated.</p>
+     * <p>The time when the task was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-18T07:40:29Z</p>
@@ -224,13 +229,13 @@ public class DataIngestion extends TeaModel {
 
     public static class DataIngestionActions extends TeaModel {
         /**
-         * <p>The on-error policy that is used to quickly troubleshoot an error.</p>
+         * <p>The configuration of the fast-fail policy for data processing.</p>
          */
         @NameInMap("FastFailPolicy")
         public FastFailPolicy fastFailPolicy;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>doc/convert</p>
@@ -277,7 +282,7 @@ public class DataIngestion extends TeaModel {
 
     public static class DataIngestionNotification extends TeaModel {
         /**
-         * <p>The Simple Message Queue (SMQ) endpoint.</p>
+         * <p>The MNS Endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://1111111111.mns.cn-hangzhou.aliyuncs.com">http://1111111111.mns.cn-hangzhou.aliyuncs.com</a></p>
@@ -298,7 +303,7 @@ public class DataIngestion extends TeaModel {
         public RocketMQ rocketMQ;
 
         /**
-         * <p>The SMQ topic.</p>
+         * <p>The MNS topic.</p>
          * 
          * <strong>example:</strong>
          * <p>topic1</p>
@@ -347,7 +352,7 @@ public class DataIngestion extends TeaModel {
 
     public static class DataIngestionStatistic extends TeaModel {
         /**
-         * <p>The number of files that are skipped.</p>
+         * <p>The number of skipped files.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -356,7 +361,7 @@ public class DataIngestion extends TeaModel {
         public Long skipFiles;
 
         /**
-         * <p>The number of files that fail to be submitted.</p>
+         * <p>The number of failed submissions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -365,7 +370,7 @@ public class DataIngestion extends TeaModel {
         public Long submitFailure;
 
         /**
-         * <p>The number of files that are submitted.</p>
+         * <p>The number of successful submissions.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DocumentParseQuestionOption extends TeaModel {
     /**
+     * <p>Number of questions (range: 0 to 10)</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>Whether to extract</p>
+     */
     @NameInMap("Extract")
     public Boolean extract;
 

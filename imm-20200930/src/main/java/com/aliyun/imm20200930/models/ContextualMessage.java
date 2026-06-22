@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ContextualMessage extends TeaModel {
     /**
      * <p>The message content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你好</p>
      */
     @NameInMap("Content")
     public String content;

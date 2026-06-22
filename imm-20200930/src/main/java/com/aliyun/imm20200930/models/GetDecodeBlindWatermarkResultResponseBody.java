@@ -15,6 +15,9 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
 
     /**
      * <p>The watermark content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Copyright Alibaba Cloud</p>
      */
     @NameInMap("Content")
     public String content;

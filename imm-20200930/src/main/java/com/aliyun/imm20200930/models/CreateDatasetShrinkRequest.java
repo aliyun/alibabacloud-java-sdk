@@ -4,11 +4,14 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetShrinkRequest extends TeaModel {
+    /**
+     * <p>The dataset configuration.</p>
+     */
     @NameInMap("DatasetConfig")
     public String datasetConfigShrink;
 
     /**
-     * <p>The maximum number of bindings per dataset. The range is 1~10, with a default value of 10.</p>
+     * <p>The maximum number of bindings for each dataset. Valid values: 1 to 10. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +20,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public Long datasetMaxBindCount;
 
     /**
-     * <p>The maximum number of metadata entities in each dataset. The default value is 10000000000.</p>
+     * <p>The maximum number of metadata entities in each dataset. The default value is 10,000,000,000.</p>
      * 
      * <strong>example:</strong>
      * <p>10000000000</p>
@@ -26,7 +29,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public Long datasetMaxEntityCount;
 
     /**
-     * <p>The maximum number of files in each dataset. The range is 1~100000000, with a default value of 100000000.</p>
+     * <p>The maximum number of files in each dataset. Valid values: 1 to 100,000,000. The default value is 100,000,000.</p>
      * 
      * <strong>example:</strong>
      * <p>100000000</p>
@@ -35,7 +38,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
-     * <p>The maximum number of metadata relationships in each dataset. The default value is 100000000000.</p>
+     * <p>The maximum number of metadata relationships in each dataset. The default value is 100,000,000,000.</p>
      * 
      * <strong>example:</strong>
      * <p>100000000000</p>
@@ -44,7 +47,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>The maximum total size of files in each dataset. Once the limit is exceeded, no more indexes can be added. The default value is 90000000000000000, in bytes.</p>
+     * <p>The maximum total size of files in each dataset. You cannot add more indexes after exceeding this limit. The default value is 90,000,000,000,000,000 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -53,11 +56,14 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
-     * <p>The name of the dataset, which must be unique under the same Project. Naming rules are as follows:</p>
+     * <p>The dataset name. It must be unique within the same project. Naming conventions are as follows:</p>
      * <ul>
-     * <li>Length should be 1~128 characters.</li>
-     * <li>Can only contain English letters, numbers, hyphens (-), and underscores (_).</li>
-     * <li>Must start with an English letter or underscore (_).</li>
+     * <li><p>Length: 1 to 128 characters.</p>
+     * </li>
+     * <li><p>Only English letters, digits, hyphens (-), and underscores (_) are allowed.</p>
+     * </li>
+     * <li><p>Must start with an English letter or an underscore (_).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -68,7 +74,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>Description of the dataset. The length should be 1~256 English or Chinese characters, with a default value of empty.</p>
+     * <p>The description of the dataset. Length: 1 to 256 English or Chinese characters. The default value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -77,7 +83,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the project. For more information on how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</p>
+     * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +93,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>Workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow Templates and Operators</a>. The default value is empty.</p>
+     * <p>The workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow Templates and Operators</a>. The default value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Official:ImageManagement</p>

@@ -21,6 +21,9 @@ public class OCRContents extends TeaModel {
 
     /**
      * <p>The content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>欢迎使用智能媒体管理</p>
      */
     @NameInMap("Contents")
     public String contents;

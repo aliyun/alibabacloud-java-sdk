@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFacesSearchingTaskRequest extends TeaModel {
     /**
-     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+     * <p>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The number of the most similar faces that you want to return. Valid values: 1 to 100. Default value: 5.</p>
+     * <p>The number of most similar faces to return. Valid values: 0 to 100. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -24,13 +24,13 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     public Long maxResult;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The notification configuration. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,13 +40,13 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The images.</p>
+     * <p>A list of images.</p>
      */
     @NameInMap("Sources")
     public java.util.List<CreateFacesSearchingTaskRequestSources> sources;
 
     /**
-     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * <p>Custom user information. This information is returned in the asynchronous notification message to help you associate the message with your system. The maximum length is 2048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
@@ -110,7 +110,7 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     public static class CreateFacesSearchingTaskRequestSources extends TeaModel {
         /**
          * <p>The OSS URI of the image.</p>
-         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>The OSS URI must follow the format oss\://${Bucket}/${Object}. <code>${Bucket}</code> is the name of the OSS bucket in the same region as the current project. <code>${Object}</code> is the full path of the file, including the file name extension.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/test-object</p>

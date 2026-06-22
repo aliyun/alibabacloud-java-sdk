@@ -5,36 +5,38 @@ import com.aliyun.tea.*;
 
 public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
-     * <p>The OSS path of the master playlist.</p>
-     * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that is suffixed with .m3u8.</p>
+     * <p>The OSS URI of the Master Playlist.</p>
+     * <p>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file with the .m3u8 file name extension.</p>
      * <blockquote>
-     * <p> If a playlist contains subtitles or multiple outputs, the MasterURI parameter is required and the URI of subtitle files or outputs must be in the directory specified by the MasterURI parameter or its subdirectory.</p>
+     * <p>If the playlist has subtitle inputs or multiple target outputs, MasterURI is required. The subtitle URI or target URI must be in the same directory as or a subdirectory of the directory specified by MasterURI.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>oss://bucket/object/master.m3u8</p>
+     * <p>oss://test-bucket/test-object/master.m3u8</p>
      */
     @NameInMap("MasterURI")
     public String masterURI;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For more information, click Notification. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
-     * <p>The overwrite policy when the media playlist exists. Valid values:</p>
+     * <p>The policy to overwrite an existing Media Playlist. Valid values:</p>
      * <ul>
-     * <li>overwrite (default): overwrites an existing media playlist.</li>
-     * <li>skip-existing: skips generation and retains the existing media playlist.</li>
+     * <li><p>overwrite (default): Overwrites the existing Media Playlist.</p>
+     * </li>
+     * <li><p>skip-existing: Skips the generation and retains the existing Media Playlist.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String overwritePolicy;
 
     /**
-     * <p>The project name.<a href="~~478153~~"></a></p>
+     * <p>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,13 +56,15 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The period of time during which the playlist is generated. Unit: seconds.</p>
+     * <p>The duration for which the playlist is generated. Unit: seconds (s). Valid values:</p>
      * <ul>
-     * <li>If you set this parameter to 0 (default) or leave this parameter empty, a playlist is generated until the end time of the source video.</li>
-     * <li>If you set this parameter to a value greater than 0, a playlist is generated for the specified period of time from the start time that you specify.</li>
+     * <li><p>0 (default) or empty: continues to the end of the source video.</p>
+     * </li>
+     * <li><p>Greater than 0: lasts for the specified duration from the start time.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter to a value that exceeds the end time of a source video, use the default value.</p>
+     * <p>If the specified duration extends beyond the end of the source video, the default value is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,13 +74,15 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public Float sourceDuration;
 
     /**
-     * <p>The time when the playlist starts to generate. Unit: seconds.</p>
+     * <p>The start time for generating the playlist. Unit: seconds (s). Valid values:</p>
      * <ul>
-     * <li>If you set this parameter to 0 (default) or leave this parameter empty, the start time of the source video is used as the time when a playlist starts to generate.</li>
-     * <li>If you set this parameter to a value greater than 0, the time when a playlist starts to generate is the specified point in time.</li>
+     * <li><p>0 (default) or empty: starts from the beginning of the source video.</p>
+     * </li>
+     * <li><p>Greater than 0: starts from the specified time point in the source video.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you use this parameter together with the <strong>SourceDuration</strong> parameter, a playlist can be generated based on the partial content of a source video.</p>
+     * <p>You can set this parameter together with the <strong>SourceDuration</strong> parameter to generate a playlist for a specific part of the source video.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,27 +92,27 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public Float sourceStartTime;
 
     /**
-     * <p>The subtitle files. By default, this parameter is left empty. Up to two subtitle files are supported.</p>
+     * <p>The list of subtitles to add. The default value is empty. You can add up to two subtitles.</p>
      */
     @NameInMap("SourceSubtitles")
     public String sourceSubtitlesShrink;
 
     /**
-     * <p>The OSS path of the video file.</p>
-     * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</p>
+     * <p>The OSS URI of the video.</p>
+     * <p>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file, including the file name extension.</p>
      * <blockquote>
-     * <p> Only OSS buckets of the Standard storage class are supported. OSS buckets for which hotlink protection whitelists are configured are not supported.</p>
+     * <p>Only OSS Standard storage buckets are supported. Buckets with hotlink protection whitelists are not supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://imm-test/testcases/video.mp4</p>
+     * <p>oss://test-bucket/test-source-object/video.mp4</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> that you want to add to a TS file in OSS. You can use tags to manage the lifecycles of TS files in OSS.</p>
+     * <p>Adds OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to the generated TS files. You can use tags to control the lifecycle of OSS files.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
@@ -115,9 +121,9 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The array of live transcoding playlists. The maximum length of the array is 6. Each element corresponds to at most one video media playlist and one or more subtitle media playlists.</p>
+     * <p>An array of live transcoding playlists. The maximum array length is 6. Each target corresponds to a maximum of one video Media Playlist and one or more subtitle Media Playlists.</p>
      * <blockquote>
-     * <p> If the array contains more than one element, the <strong>MasterURI</strong> parameter cannot be left empty.</p>
+     * <p>If you configure more than one target, the <strong>MasterURI</strong> parameter must not be empty.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -125,7 +131,7 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String targetsShrink;
 
     /**
-     * <p>The custom user information, which is returned in asynchronous notifications to help you handle the notifications in the system. The maximum length of a notification is 2048 bytes.</p>
+     * <p>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your services. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

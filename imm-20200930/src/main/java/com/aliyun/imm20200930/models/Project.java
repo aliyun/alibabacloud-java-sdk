@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class Project extends TeaModel {
     /**
-     * <p>The timestamp when the project was created. The timestamp is in the RFC3339Nano format.</p>
+     * <p>The timestamp when the project was created, in RFC3339Nano format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
+
+    @NameInMap("DatasetConfig")
+    public DatasetConfig datasetConfig;
 
     /**
      * <p>The current number of datasets in the project.</p>
@@ -23,7 +26,7 @@ public class Project extends TeaModel {
     public Long datasetCount;
 
     /**
-     * <p>The maximum number of bindings that a dataset can have. Valid values: 1 to 10. Default value: 10.</p>
+     * <p>The maximum number of bindings per dataset. Valid values: 1 to 10. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,9 +35,9 @@ public class Project extends TeaModel {
     public Long datasetMaxBindCount;
 
     /**
-     * <p>The maximum number of metadata entities in a dataset. Default value: 10000000000.</p>
+     * <p>The maximum number of metadata entities per dataset. Default value: 10000000000.</p>
      * <blockquote>
-     * <p> This parameter is reserved and does not actually apply a limit.</p>
+     * <p>This field is reserved for future use and is not enforced.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class Project extends TeaModel {
     public Long datasetMaxEntityCount;
 
     /**
-     * <p>The maximum number of files in a dataset. Valid values: 1 to 100000000. Default value: 100000000.</p>
+     * <p>The maximum number of files per dataset. Valid values: 1 to 100000000. Default value: 100000000.</p>
      * 
      * <strong>example:</strong>
      * <p>100000000</p>
@@ -53,9 +56,9 @@ public class Project extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
-     * <p>The maximum number of metadata relationships in a dataset. Default value: 100000000000.</p>
+     * <p>The maximum number of metadata relationships per dataset. Default value: 100000000000.</p>
      * <blockquote>
-     * <p> This parameter is reserved and does not actually apply a limit.</p>
+     * <p>This field is reserved for future use and is not enforced.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +68,7 @@ public class Project extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>The maximum total file size for a dataset. If the total file size exceeds this limit, indexes can no longer be added. Default value: 90000000000000000. Unit: bytes.</p>
+     * <p>The maximum total file size per dataset, in bytes. After this limit is exceeded, no more indexes can be added. Default value: 90000000000000000.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -75,15 +78,20 @@ public class Project extends TeaModel {
 
     /**
      * <p>The project description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test project</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The maximum number of tasks that the project can process per second. This corresponds to the maximum number of operators that can run in parallel in the project. Default value: 100.</p>
+     * <p>The maximum number of tasks that the project can process per second. This specifies the maximum number of operators that can run in parallel at the same time across the project. Default value: 100.</p>
      * <ul>
-     * <li>If the number of synchronous tasks that run in parallel exceeds this limit, the task execution time will be extended until a timeout occurs.</li>
-     * <li>If the number of asynchronous tasks that run in parallel exceeds this limit, the tasks will be queued. This causes delayed task completion. If a task remains in the queue for longer than the specified time limit (usually dozens of seconds), the task will fail.</li>
+     * <li><p>Synchronous tasks: if the number of concurrent tasks exceeds this limit, task execution time increases until a timeout occurs.</p>
+     * </li>
+     * <li><p>Asynchronous tasks: if the number of concurrent tasks exceeds this limit, tasks are queued for a period of time, which delays task completion. If the queuing time also exceeds the limit (typically tens of minutes), the task returns a failure.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +110,7 @@ public class Project extends TeaModel {
     public Long fileCount;
 
     /**
-     * <p>The maximum number of datasets that a project can contain. Valid values: 1 to 1000000000. Default value: 1000000000.</p>
+     * <p>The maximum number of datasets in the project. Valid values: 1 to 1000000000. Default value: 1000000000.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000000</p>
@@ -111,7 +119,7 @@ public class Project extends TeaModel {
     public Long projectMaxDatasetCount;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>The project name.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -120,7 +128,7 @@ public class Project extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The maximum number of requests that can be processed by the project per second. This corresponds to the maximum number of API operations that can be called in the project per second. Default value: 100.</p>
+     * <p>The maximum number of requests that the project can process per second. This specifies the maximum number of API calls allowed per second for all APIs in the project. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -138,22 +146,22 @@ public class Project extends TeaModel {
     public String serviceRole;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ProjectTags> tags;
 
     /**
-     * <p>The ID of the workflow template.</p>
+     * <p>The workflow template ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>DefaultId</p>
+     * <p>Official:ImageManagement</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>The current total size of files in the project. Unit: bytes.</p>
+     * <p>The current total file size in the project, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -162,9 +170,9 @@ public class Project extends TeaModel {
     public Long totalFileSize;
 
     /**
-     * <p>The timestamp when the project was last modified. The timestamp is in the RFC3339Nano format.</p>
+     * <p>The timestamp when the project was last modified, in RFC3339Nano format.</p>
      * <blockquote>
-     * <p> If a project is not modified after it is created, the timestamp when the project was created is the same as the timestamp when the project was last modified.</p>
+     * <p>If the project has not been updated since creation, this timestamp is the same as the creation timestamp.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -184,6 +192,14 @@ public class Project extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public Project setDatasetConfig(DatasetConfig datasetConfig) {
+        this.datasetConfig = datasetConfig;
+        return this;
+    }
+    public DatasetConfig getDatasetConfig() {
+        return this.datasetConfig;
     }
 
     public Project setDatasetCount(Long datasetCount) {
@@ -324,7 +340,7 @@ public class Project extends TeaModel {
 
     public static class ProjectTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>标签键。</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -333,7 +349,7 @@ public class Project extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>标签值。</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

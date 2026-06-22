@@ -15,7 +15,9 @@ public class CreateCustomizedStoryShrinkRequest extends TeaModel {
      * <p>The custom labels. You can specify labels to help you identify and retrieve the story.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
+     * <p>{
+     *       &quot;MyStoryLabel&quot;: &quot;HolidayStory&quot;
+     * }</p>
      */
     @NameInMap("CustomLabels")
     public String customLabelsShrink;

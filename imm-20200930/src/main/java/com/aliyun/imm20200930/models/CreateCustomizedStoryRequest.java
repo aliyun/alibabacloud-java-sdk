@@ -15,7 +15,9 @@ public class CreateCustomizedStoryRequest extends TeaModel {
      * <p>The custom labels. You can specify labels to help you identify and retrieve the story.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
+     * <p>{
+     *       &quot;MyStoryLabel&quot;: &quot;HolidayStory&quot;
+     * }</p>
      */
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
@@ -152,7 +154,7 @@ public class CreateCustomizedStoryRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://bucket1/cover</p>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         @NameInMap("URI")
         public String URI;
@@ -178,7 +180,14 @@ public class CreateCustomizedStoryRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;URI&quot;:&quot;oss://bucket1/file1&quot;}]</p>
+         * <p>[
+         *       {
+         *             &quot;URI&quot;: &quot;oss://test-bucket/test-object_1.jpg&quot;
+         *       },
+         * {
+         *             &quot;URI&quot;: &quot;oss://test-bucket/test-object_2.jpg&quot;
+         *       }
+         * ]</p>
          */
         @NameInMap("URI")
         public String URI;

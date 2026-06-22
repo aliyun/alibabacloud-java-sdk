@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return. Valid values: 0 to 200. Default value: 100.</p>
+     * <p>The maximum number of projects to return. Valid values: 0 to 200. If you do not set this parameter or set it to 0, the default value 100 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListProjectsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. The operation returns the projects in lexicographical order starting from the location specified by NextToken.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Project information is returned in alphabetical order starting from the NextToken position. Leave this parameter empty for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg6aW1tdGVzdDAx</p>
@@ -23,7 +23,7 @@ public class ListProjectsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The prefix used by the projects that you want to query. The prefix must be up to 128 characters in length.</p>
+     * <p>The prefix used to list projects. The value can be 0 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -32,7 +32,7 @@ public class ListProjectsRequest extends TeaModel {
     public String prefix;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListProjectsRequestTag> tag;

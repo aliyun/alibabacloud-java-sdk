@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
+    @NameInMap("DatasetConfig")
+    public DatasetConfig datasetConfig;
+
     /**
      * <p>The maximum number of bindings for each dataset. Valid values: 1 to 10. Default value: 10.</p>
      * 
@@ -16,7 +19,7 @@ public class CreateProjectRequest extends TeaModel {
     /**
      * <p>The maximum number of metadata entities in each dataset. Default value: 10000000000.</p>
      * <blockquote>
-     * <p> This is a precautionary setting that does not impose practical limitations.</p>
+     * <p>This parameter is reserved for future use and is not enforced.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +40,7 @@ public class CreateProjectRequest extends TeaModel {
     /**
      * <p>The maximum number of metadata relationships in each dataset. Default value: 100000000000.</p>
      * <blockquote>
-     * <p> This is a precautionary setting that does not impose practical limitations.</p>
+     * <p>This parameter is reserved for future use and is not enforced.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +50,7 @@ public class CreateProjectRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>The maximum size of files in each dataset. If the maximum size is exceeded, no indexes can be added. Unit: bytes. Default value: 90000000000000000.</p>
+     * <p>The maximum total file size in each dataset. After the limit is exceeded, no more indexes can be added. Unit: bytes. Default value: 90000000000000000.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -56,7 +59,7 @@ public class CreateProjectRequest extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
-     * <p>The description of the project. The description must be 1 to 256 characters in length. You can leave this parameter empty.</p>
+     * <p>The project description. The description can be 1 to 256 characters in length. Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -74,11 +77,14 @@ public class CreateProjectRequest extends TeaModel {
     public Long projectMaxDatasetCount;
 
     /**
-     * <p>The name of the project. The name must meet the following requirements:</p>
+     * <p>The project name. The naming rules are as follows:</p>
      * <ul>
-     * <li>The name must be 1 to 128 characters in length</li>
-     * <li>and can contain only letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must start with a letter or an underscores (_).</li>
+     * <li><p>The name must be 1 to 128 characters in length.</p>
+     * </li>
+     * <li><p>The name can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>The name must start with a letter or an underscore (_).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -89,8 +95,8 @@ public class CreateProjectRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The name of the Resource Access Management (RAM) role. You must attach the RAM role to IMM to allow IMM to access other cloud resources, such as Object Storage Service (OSS). Default value: <code>AliyunIMMDefaultRole</code>.</p>
-     * <p>You can also create a custom role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/477257.html">Grant permissions to a RAM user</a>.</p>
+     * <p>The service role that grants IMM permissions to access other Alibaba Cloud resources such as Object Storage Service (OSS). Default value: <code>AliyunIMMDefaultRole</code>.</p>
+     * <p>To customize a service role, create a regular service role in the Resource Access Management (RAM) console and grant permissions to the role. For more information, see <a href="https://help.aliyun.com/document_detail/477258.html">Grant permissions to a role</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunIMMDefaultRole</p>
@@ -99,16 +105,16 @@ public class CreateProjectRequest extends TeaModel {
     public String serviceRole;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateProjectRequestTag> tag;
 
     /**
-     * <p>The ID of the workflow template. You can leave this parameter empty. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
+     * <p>The workflow template ID. Default value: empty. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Official:AllFunction</p>
+     * <p>Official:ImageManagement</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -116,6 +122,14 @@ public class CreateProjectRequest extends TeaModel {
     public static CreateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectRequest self = new CreateProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateProjectRequest setDatasetConfig(DatasetConfig datasetConfig) {
+        this.datasetConfig = datasetConfig;
+        return this;
+    }
+    public DatasetConfig getDatasetConfig() {
+        return this.datasetConfig;
     }
 
     public CreateProjectRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {

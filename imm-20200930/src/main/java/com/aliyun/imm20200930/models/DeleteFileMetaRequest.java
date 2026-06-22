@@ -31,7 +31,7 @@ public class DeleteFileMetaRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://examplebucket/exampleobject.txt</p>
+     * <p>oss://test-bucket/test-object</p>
      */
     @NameInMap("URI")
     public String URI;

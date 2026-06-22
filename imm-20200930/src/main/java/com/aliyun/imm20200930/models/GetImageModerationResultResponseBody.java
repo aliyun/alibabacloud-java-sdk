@@ -14,7 +14,7 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The end time of the task.</p>
+     * <p>The end time of the task. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-03T09:44:32Z</p>
@@ -41,13 +41,13 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The result of the image compliance detection task.</p>
+     * <p>The content moderation result.</p>
      */
     @NameInMap("ModerationResult")
     public GetImageModerationResultResponseBodyModerationResult moderationResult;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>The project name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-project</p>
@@ -65,7 +65,7 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the task.</p>
+     * <p>The start time of the task. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-03T09:44:31.029Z</p>
@@ -74,11 +74,11 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The task status. Valid values:</p>
+     * <p>The running status of the task. Valid values:</p>
      * <ul>
-     * <li>Running</li>
-     * <li>Succeeded</li>
-     * <li>Failed</li>
+     * <li>Running: The task is running.</li>
+     * <li>Succeeded: The task is completed successfully.</li>
+     * <li>Failed: The task failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>ImageModeration</p>
@@ -106,7 +106,7 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The custom information.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -280,13 +280,13 @@ public class GetImageModerationResultResponseBody extends TeaModel {
 
     public static class GetImageModerationResultResponseBodyModerationResultFrames extends TeaModel {
         /**
-         * <p>The violated frames.</p>
+         * <p>The frames that violate content policies.</p>
          */
         @NameInMap("BlockFrames")
         public java.util.List<GetImageModerationResultResponseBodyModerationResultFramesBlockFrames> blockFrames;
 
         /**
-         * <p>The total number of detected frames.</p>
+         * <p>The total number of frames that were moderated.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -319,23 +319,26 @@ public class GetImageModerationResultResponseBody extends TeaModel {
 
     public static class GetImageModerationResultResponseBodyModerationResult extends TeaModel {
         /**
-         * <p>List of categories.</p>
+         * <p>The list of categories.</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
         /**
-         * <p>The information about video and motion detection frames.</p>
+         * <p>The frame information for video or animated image moderation.</p>
          */
         @NameInMap("Frames")
         public GetImageModerationResultResponseBodyModerationResultFrames frames;
 
         /**
-         * <p>The recommended operation. Valid values:</p>
+         * <p>The recommended action. Valid values:</p>
          * <ul>
-         * <li>pass: The image has passed the check. No action is required.</li>
-         * <li>review: The image contains suspected violations and requires human review.</li>
-         * <li>block: The image contains violations. Further actions, such as deleting or blocking the image, are recommended.</li>
+         * <li><p>pass: The image is normal. No further action is required.</p>
+         * </li>
+         * <li><p>review: The moderation result is uncertain. Manual review is required.</p>
+         * </li>
+         * <li><p>block: The image violates content policies. Further action is recommended, such as deleting or restricting the image.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,7 +348,7 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
-         * <p>The OSS URI of the file. The URI follows the oss://${bucketname}/${objectname} format. bucketname indicates the name of an OSS bucket that is in the same region as the current project, and objectname is the file path.</p>
+         * <p>The storage location of the OSS file. The address follows the format oss://${bucketname}/${objectname}, where bucketname is the name of an OSS bucket in the same region as the current project, and objectname is the file path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/test-object</p>

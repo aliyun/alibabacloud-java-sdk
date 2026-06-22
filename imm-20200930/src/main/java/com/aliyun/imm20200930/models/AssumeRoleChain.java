@@ -14,7 +14,16 @@ public class AssumeRoleChain extends TeaModel {
      * <p>The policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>{
+     *   &quot;Statement&quot;: [
+     *     {
+     *       &quot;Action&quot;: &quot;oss:<em>&quot;,
+     *       &quot;Effect&quot;: &quot;Allow&quot;,
+     *       &quot;Resource&quot;: &quot;</em>&quot;
+     *     }
+     *   ],
+     *   &quot;Version&quot;: &quot;1&quot;
+     * }</p>
      */
     @NameInMap("Policy")
     public String policy;

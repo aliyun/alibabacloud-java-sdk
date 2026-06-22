@@ -122,6 +122,9 @@ public class QueryLocationDateClustersShrinkRequest extends TeaModel {
 
     /**
      * <p>The characters that are included in the titles of spatiotemporal clusters to be queried. Matches are found by using fuzzy matching.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hangzhou</p>
      */
     @NameInMap("Title")
     public String title;

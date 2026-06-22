@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class TargetImage extends TeaModel {
     /**
-     * <p>The animated images.</p>
+     * <p>Animations</p>
      */
     @NameInMap("Animations")
     public java.util.List<TargetImageAnimations> animations;
 
     /**
-     * <p>The frames.</p>
+     * <p>Snapshots</p>
      */
     @NameInMap("Snapshots")
     public java.util.List<TargetImageSnapshots> snapshots;
 
     /**
-     * <p>The sprites.</p>
+     * <p>Sprites</p>
      */
     @NameInMap("Sprites")
     public java.util.List<TargetImageSprites> sprites;
@@ -53,11 +53,7 @@ public class TargetImage extends TeaModel {
 
     public static class TargetImageAnimations extends TeaModel {
         /**
-         * <p>The format of the animated image. Valid values:</p>
-         * <ul>
-         * <li>gif</li>
-         * <li>webp</li>
-         * </ul>
+         * <p>Format</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,7 +63,7 @@ public class TargetImage extends TeaModel {
         public String format;
 
         /**
-         * <p>The frame rate of the animated image. You can use this parameter together with the Interval parameter to slow down the animation.</p>
+         * <p>Animation frame rate, in frames per second</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -76,11 +72,7 @@ public class TargetImage extends TeaModel {
         public Double frameRate;
 
         /**
-         * <p>The height of the animated image. By default, the animated image has the same height as the source video. The value of the parameter can be an integer or a decimal.</p>
-         * <ul>
-         * <li>An integer: the number of pixels. Valid values: [1,4096].</li>
-         * <li>A decimal: the ratio relative to the height of the target image resolution. Valid values: (0,1).</li>
-         * </ul>
+         * <p>Height</p>
          * 
          * <strong>example:</strong>
          * <p>960</p>
@@ -89,7 +81,7 @@ public class TargetImage extends TeaModel {
         public Double height;
 
         /**
-         * <p>The time interval for extracting frames. Unit: seconds.</p>
+         * <p>Time interval between animation frames, in seconds</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -98,7 +90,7 @@ public class TargetImage extends TeaModel {
         public Double interval;
 
         /**
-         * <p>The number of extracted frames. The default value is 0, which indicates that frames are extracted until the end of the video.</p>
+         * <p>Total number of animation frames to generate</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -107,13 +99,7 @@ public class TargetImage extends TeaModel {
         public Integer number;
 
         /**
-         * <p>The resizing mode. Valid values:</p>
-         * <ul>
-         * <li>stretch: stretches the image to fill the entire space. This is the default value.</li>
-         * <li>crop: resizes and crops the image.</li>
-         * <li>fill: resizes the image and keeps the black border.</li>
-         * <li>fit: resizes the image and removes the black border.</li>
-         * </ul>
+         * <p>Scaling method</p>
          * 
          * <strong>example:</strong>
          * <p>crop</p>
@@ -122,7 +108,7 @@ public class TargetImage extends TeaModel {
         public String scaleType;
 
         /**
-         * <p>The start time for extracting frames. Unit: seconds. Default value: 0.</p>
+         * <p>StartTime</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -131,8 +117,7 @@ public class TargetImage extends TeaModel {
         public Double startTime;
 
         /**
-         * <p>The URI of the animated image.</p>
-         * <p>The OSS URI follows the oss://bucket/object format, where bucket is the name of the bucket in the same region as the current project and object is the path of the object with the extension included.</p>
+         * <p>The URI of the animation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,11 +127,7 @@ public class TargetImage extends TeaModel {
         public String URI;
 
         /**
-         * <p>The width of the animated image. By default, the animated image has the same width as the source video. The value of the parameter can be an integer or a decimal.</p>
-         * <ul>
-         * <li>An integer: the number of pixels. Valid values: [1,4096].</li>
-         * <li>A decimal: the ratio relative to the width of the target image resolution. Valid values: (0,1).</li>
-         * </ul>
+         * <p>Output width, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -235,11 +216,7 @@ public class TargetImage extends TeaModel {
 
     public static class TargetImageSnapshots extends TeaModel {
         /**
-         * <p>The format of the frame. Valid values:</p>
-         * <ul>
-         * <li>jpg</li>
-         * <li>png</li>
-         * </ul>
+         * <p>Image format</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,11 +226,7 @@ public class TargetImage extends TeaModel {
         public String format;
 
         /**
-         * <p>The height of the frame image. By default, the image has the same height as the source video. The value of the parameter can be an integer or a decimal.</p>
-         * <ul>
-         * <li>An integer: the number of pixels. Valid values: [1,4096].</li>
-         * <li>A decimal: the ratio relative to the height of the target image resolution. Valid values: (0,1).</li>
-         * </ul>
+         * <p>Output height, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>960</p>
@@ -262,7 +235,7 @@ public class TargetImage extends TeaModel {
         public Double height;
 
         /**
-         * <p>The time interval of frame capturing in seconds.</p>
+         * <p>Time interval between snapshots, in seconds</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -278,7 +251,7 @@ public class TargetImage extends TeaModel {
         public String mode;
 
         /**
-         * <p>The number of frames. The default value is 0, which indicates that frames are captured until the end of the video.</p>
+         * <p>The sequence number of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -287,13 +260,7 @@ public class TargetImage extends TeaModel {
         public Integer number;
 
         /**
-         * <p>The resizing mode. Valid values:</p>
-         * <ul>
-         * <li>stretch: stretches the image to fill the entire space. This is the default value.</li>
-         * <li>crop: resizes and crops the image.</li>
-         * <li>fill: resizes the image and keeps the black border.</li>
-         * <li>fit: resizes the image and removes the black border.</li>
-         * </ul>
+         * <p>Scaling method</p>
          * 
          * <strong>example:</strong>
          * <p>crop</p>
@@ -302,7 +269,7 @@ public class TargetImage extends TeaModel {
         public String scaleType;
 
         /**
-         * <p>The time in seconds at which frame capturing starts. The default value is 0, which indicates that frame capturing starts at the beginning of the video.</p>
+         * <p>The start time of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -318,8 +285,7 @@ public class TargetImage extends TeaModel {
         public Integer threshold;
 
         /**
-         * <p>The OSS URI of the frame.</p>
-         * <p>The OSS URI follows the oss://bucket/object format, where bucket is the name of the bucket in the same region as the current project and object is the path of the object with the extension included.</p>
+         * <p>OSS URI where snapshots are stored</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,11 +295,7 @@ public class TargetImage extends TeaModel {
         public String URI;
 
         /**
-         * <p>The width of the frame image. By default, the image has the same width as the source video. The value of the parameter can be an integer or a decimal.</p>
-         * <ul>
-         * <li>An integer: the number of pixels. Valid values: [1,4096].</li>
-         * <li>A decimal: the ratio relative to the width of the target image resolution. Valid values: (0,1).</li>
-         * </ul>
+         * <p>The width of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -430,11 +392,7 @@ public class TargetImage extends TeaModel {
 
     public static class TargetImageSprites extends TeaModel {
         /**
-         * <p>The format of the sprite. Valid values:</p>
-         * <ul>
-         * <li>jpg</li>
-         * <li>png</li>
-         * </ul>
+         * <p>Image format</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -444,7 +402,7 @@ public class TargetImage extends TeaModel {
         public String format;
 
         /**
-         * <p>The time interval of frame capturing in seconds.</p>
+         * <p>Time interval between sprites, in seconds</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -453,7 +411,7 @@ public class TargetImage extends TeaModel {
         public Double interval;
 
         /**
-         * <p>The margin between the small images and the edges of the sprite. Default value: 2.</p>
+         * <p>Margin around the sprite grid, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -469,7 +427,7 @@ public class TargetImage extends TeaModel {
         public String mode;
 
         /**
-         * <p>The number of small images in the sprite. The default value is 0, which indicates that frames are captured until the end of the video.</p>
+         * <p>Total number of sprites to generate</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -478,7 +436,7 @@ public class TargetImage extends TeaModel {
         public Integer number;
 
         /**
-         * <p>The padding between small images. Default value: 2.</p>
+         * <p>Padding between sprite tiles, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -487,11 +445,7 @@ public class TargetImage extends TeaModel {
         public Integer pad;
 
         /**
-         * <p>The height of individual small images. The default value is 1. The value can be an integer or a decimal.</p>
-         * <ul>
-         * <li>An integer: the number of pixels. Valid values: (1,4096).</li>
-         * <li>A decimal: the ratio relative to the height of the target video resolution. Valid values: (0,1].</li>
-         * </ul>
+         * <p>Output height after scaling, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>960</p>
@@ -500,13 +454,7 @@ public class TargetImage extends TeaModel {
         public Float scaleHeight;
 
         /**
-         * <p>The resizing mode. Valid values:</p>
-         * <ul>
-         * <li>stretch: stretches the image to fill the entire space. This is the default value.</li>
-         * <li>crop: resizes and crops the image.</li>
-         * <li>fill: resizes the image and keeps the black border.</li>
-         * <li>fit: resizes the image and removes the black border.</li>
-         * </ul>
+         * <p>Scaling method</p>
          * 
          * <strong>example:</strong>
          * <p>crop</p>
@@ -515,11 +463,7 @@ public class TargetImage extends TeaModel {
         public String scaleType;
 
         /**
-         * <p>The width of individual small images. The default value is 1. The value can be an integer or a decimal.</p>
-         * <ul>
-         * <li>An integer: the number of pixels. Valid values: (1,4096).</li>
-         * <li>A decimal: the ratio relative to the width of the target video resolution. Valid values: (0,1].</li>
-         * </ul>
+         * <p>Output width after scaling, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -528,7 +472,7 @@ public class TargetImage extends TeaModel {
         public Float scaleWidth;
 
         /**
-         * <p>The time in seconds at which frame capturing starts. The default value is 0, which indicates that frame capturing starts at the beginning of the video.</p>
+         * <p>StartTime</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -544,7 +488,7 @@ public class TargetImage extends TeaModel {
         public Integer threshold;
 
         /**
-         * <p>The number of small images in each column. Default value: 6.</p>
+         * <p>Height of each sprite tile, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -553,7 +497,7 @@ public class TargetImage extends TeaModel {
         public Integer tileHeight;
 
         /**
-         * <p>The number of small images in each row. Default value: 6.</p>
+         * <p>Width of each sprite tile, in pixels</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -562,8 +506,7 @@ public class TargetImage extends TeaModel {
         public Integer tileWidth;
 
         /**
-         * <p>The URI of the sprite in Object Storage Service (OSS).</p>
-         * <p>The OSS URI follows the oss://bucket/object format, where bucket is the name of the bucket in the same region as the current project and object is the path of the object with the extension included.</p>
+         * <p>URI</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

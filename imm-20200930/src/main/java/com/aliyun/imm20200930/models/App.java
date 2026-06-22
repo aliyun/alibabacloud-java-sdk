@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class App extends TeaModel {
     /**
      * <p>AppDescription</p>
+     * 
+     * <strong>example:</strong>
+     * <p>中国最大的电商购物商城</p>
      */
     @NameInMap("AppDescription")
     public String appDescription;
@@ -30,6 +33,9 @@ public class App extends TeaModel {
 
     /**
      * <p>AppName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>淘宝</p>
      */
     @NameInMap("AppName")
     public String appName;

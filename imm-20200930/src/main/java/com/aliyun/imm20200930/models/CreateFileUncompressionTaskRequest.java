@@ -5,23 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateFileUncompressionTaskRequest extends TeaModel {
     /**
-     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>Leave this parameter empty unless you have specific requirements.</strong></p>
+     * <p>The chained authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access other entity resources</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For details, click Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      * <blockquote>
-     * <p> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</p>
+     * <p>Intelligent Media Management API callbacks do not support custom webhook addresses. Use MNS instead.</p>
      * </blockquote>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The password that protects the package.</p>
+     * <p>The password for the encrypted compressed package.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -30,35 +30,35 @@ public class CreateFileUncompressionTaskRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The files to extract. If you do not specify this parameter, the entire package is decompressed.</p>
+     * <p>The list of files to decompress. If this parameter is empty, the entire compressed package is decompressed. The default value is empty.</p>
      */
     @NameInMap("SelectedFiles")
     public java.util.List<String> selectedFiles;
 
     /**
-     * <p>The OSS URI of the package.</p>
-     * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+     * <p>The Object Storage Service (OSS) address where the compressed file is stored.</p>
+     * <p>The OSS address must be in the \<code>oss\\://${Bucket}/${Object}\\</code> format. \<code>${Bucket}\\</code> is the name of the OSS bucket in the same region as the current project. \<code>${Object}\\</code> is the full path of the file, including the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://imm-apitest-fxf2/name.zip</p>
+     * <p>oss://test-bucket/test-object.zip</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     /**
-     * <p>The OSS URI to which you want to extract files from the package or decompress the entire package.</p>
-     * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+     * <p>The destination OSS address for the decompressed files. The selected files or the entire compressed package are decompressed to this address.</p>
+     * <p>The OSS address must be in the \<code>oss\\://${Bucket}/${Object}\\</code> format. \<code>${Bucket}\\</code> is the name of the OSS bucket in the same region as the current project. \<code>${Object}\\</code> is the full path of the file, including the file name extension.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-bucket/test-dir/</p>
@@ -67,10 +67,10 @@ public class CreateFileUncompressionTaskRequest extends TeaModel {
     public String targetURI;
 
     /**
-     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * <p>Custom user information. It is returned in the asynchronous notification message to help you associate the notification with your system. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     * <p>test-data</p>
      */
     @NameInMap("UserData")
     public String userData;

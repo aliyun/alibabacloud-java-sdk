@@ -10,6 +10,9 @@ public class ImageInsight extends TeaModel {
      * <p> Not supported.</p>
      * </blockquote>
      * 
+     * <strong>example:</strong>
+     * <p>无。</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -18,6 +21,9 @@ public class ImageInsight extends TeaModel {
 
     /**
      * <p>The description of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图片中有一人，穿着深色西装外套，内搭白色衬衫。背景为渐变的浅蓝色至灰色。</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

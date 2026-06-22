@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Input extends TeaModel {
     /**
-     * <p>The input data source from Object Storage Service (OSS).</p>
+     * <p>The OSS data source.</p>
      */
     @NameInMap("OSS")
     public InputOSS OSS;

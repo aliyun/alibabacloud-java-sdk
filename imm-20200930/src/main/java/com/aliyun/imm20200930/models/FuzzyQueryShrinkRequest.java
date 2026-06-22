@@ -38,8 +38,10 @@ public class FuzzyQueryShrinkRequest extends TeaModel {
     /**
      * <p>The sorting method. Valid values:</p>
      * <ul>
-     * <li>asc: ascending order.</li>
-     * <li>desc (default): descending order.</li>
+     * <li><p>asc: ascending order.</p>
+     * </li>
+     * <li><p>desc (default): descending order.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * </blockquote>
@@ -71,6 +73,9 @@ public class FuzzyQueryShrinkRequest extends TeaModel {
     /**
      * <p>The query content. The value can be up to 1 MB in size.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里云</p>
      */
     @NameInMap("Query")
     public String query;
@@ -78,9 +83,12 @@ public class FuzzyQueryShrinkRequest extends TeaModel {
     /**
      * <p>The sort fields. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</p>
      * <ul>
-     * <li>Separate multiple sort fields with commas (,). Example: <code>Size,Filename</code>.</li>
-     * <li>You can specify up to five sort fields.</li>
-     * <li>The priority order of sorting is determined based on the order of the sort fields.</li>
+     * <li><p>Separate multiple sort fields with commas (,). Example: <code>Size,Filename</code>.</p>
+     * </li>
+     * <li><p>You can specify up to five sort fields.</p>
+     * </li>
+     * <li><p>The priority order of sorting is determined based on the order of the sort fields.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

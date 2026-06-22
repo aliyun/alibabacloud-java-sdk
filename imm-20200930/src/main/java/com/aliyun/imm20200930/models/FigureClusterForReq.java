@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FigureClusterForReq extends TeaModel {
     /**
-     * <p>The cover image.</p>
+     * <p>The cover of the cluster.</p>
      */
     @NameInMap("Cover")
     public FigureClusterForReqCover cover;
@@ -20,7 +20,7 @@ public class FigureClusterForReq extends TeaModel {
     public String customId;
 
     /**
-     * <p>The custom labels. You can search for the cluster by label.</p>
+     * <p>A key-value map of custom labels that can be used to search for the figure cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
@@ -29,7 +29,7 @@ public class FigureClusterForReq extends TeaModel {
     public java.util.Map<String, ?> customLabels;
 
     /**
-     * <p>The version of the metadata lock. A metadata lock version can be obtained by using a get or list operation. If you include the MetaLockVersion parameter in a request to update the cluster, the server checks consistency between the MetaLockVersion parameter value sent in the request and the one on the server side and updates the cluster only when they are consistent. This parameter is used to prevent update conflicts in concurrent scenarios. The initial version is 0. The version is automatically increased by 1 after each successful update.</p>
+     * <p>The metadata lock version. This parameter enables optimistic locking to prevent conflicting updates during high concurrency. To ensure data consistency, pass the current MetaLockVersion value when updating a figure cluster. You can retrieve this value from a Get or List operation. The service proceeds with the update only if the provided version matches the system\&quot;s current version. The initial value is 0 and is incremented by 1 after each successful update.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class FigureClusterForReq extends TeaModel {
     public Long metaLockVersion;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -47,7 +47,7 @@ public class FigureClusterForReq extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the face cluster.</p>
+     * <p>The object ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>Cluster-99b1c333-86dc-45da-8c6****</p>
@@ -110,7 +110,7 @@ public class FigureClusterForReq extends TeaModel {
 
     public static class FigureClusterForReqCoverFigures extends TeaModel {
         /**
-         * <p>The person ID.</p>
+         * <p>The figure ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2cb3c51e-b406-4b0c-af1b-897d88e1****</p>
@@ -135,7 +135,7 @@ public class FigureClusterForReq extends TeaModel {
 
     public static class FigureClusterForReqCover extends TeaModel {
         /**
-         * <p>The persons.</p>
+         * <p>The figure list.</p>
          */
         @NameInMap("Figures")
         public java.util.List<FigureClusterForReqCoverFigures> figures;

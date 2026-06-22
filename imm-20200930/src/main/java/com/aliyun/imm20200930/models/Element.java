@@ -20,7 +20,7 @@ public class Element extends TeaModel {
      * <p>The element type.</p>
      * 
      * <strong>example:</strong>
-     * <p>title; image; table; narrative-text</p>
+     * <p>title - 标题； image - 图片 ； table - 表格 ； narrative-text - 正文</p>
      */
     @NameInMap("ElementType")
     public String elementType;

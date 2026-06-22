@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageModerationResultRequest extends TeaModel {
     /**
-     * <p>The name of the project.</p>
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetImageModerationResultRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The task type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

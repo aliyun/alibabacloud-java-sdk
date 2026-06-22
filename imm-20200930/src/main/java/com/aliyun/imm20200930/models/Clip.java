@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Clip extends TeaModel {
+    /**
+     * <p>The time range of the event clip</p>
+     */
     @NameInMap("TimeRange")
     public java.util.List<Long> timeRange;
 

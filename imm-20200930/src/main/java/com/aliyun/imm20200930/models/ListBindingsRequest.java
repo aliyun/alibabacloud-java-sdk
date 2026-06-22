@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBindingsRequest extends TeaModel {
     /**
-     * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+     * <p>The dataset name. For information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>test-dataset</p>
@@ -16,16 +16,18 @@ public class ListBindingsRequest extends TeaModel {
     /**
      * <ul>
      * <li>The maximum number of bindings to return. Valid values: 0 to 200.</li>
-     * <li>If you do not specify this parameter or set the parameter to 0, the default value of 100 is used.</li>
+     * <li>If this parameter is not set or is set to 0, the default value 100 is used.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
+     * <p>The name of the binding task.</p>
+     * 
      * <strong>example:</strong>
      * <p>imm</p>
      */
@@ -34,9 +36,9 @@ public class ListBindingsRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>The pagination token that is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</li>
-     * <li>The next call to the operation returns results lexicographically after the NextToken parameter value.</li>
-     * <li>You do not need to specify this parameter in your initial request.</li>
+     * <li>The pagination token that is used when the total number of bindings exceeds the MaxResults value.</li>
+     * <li>Binding information is returned in alphabetical order starting from the NextToken value.</li>
+     * <li>Leave this parameter empty for the first request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +48,7 @@ public class ListBindingsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -27,8 +27,10 @@ public class GetDatasetRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable real-time retrieval of file statistics. Default value: false.</p>
      * <ul>
-     * <li>If you set the value to true, FileCount and TotalFileSize in the response return true and valid values.</li>
-     * <li>If you set the value to false, FileCount and TotalFileSize in the response return invalid values or 0.</li>
+     * <li><p>If you set the value to true, FileCount and TotalFileSize in the response return true and valid values.</p>
+     * </li>
+     * <li><p>If you set the value to false, FileCount and TotalFileSize in the response return invalid values or 0.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

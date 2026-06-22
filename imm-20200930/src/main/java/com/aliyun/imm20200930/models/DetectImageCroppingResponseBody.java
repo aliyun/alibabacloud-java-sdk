@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DetectImageCroppingResponseBody extends TeaModel {
     /**
-     * <p>The image cropping suggestions.</p>
+     * <p>The array of image cropping information.</p>
      */
     @NameInMap("Croppings")
     public java.util.List<CroppingSuggestion> croppings;
 
+    /**
+     * <p>The list of objects included in the cropping region, corresponding to the InclusionHints input parameter. This field is empty if no objects are included.</p>
+     */
     @NameInMap("MatchedInclusionHints")
     public java.util.List<String> matchedInclusionHints;
 

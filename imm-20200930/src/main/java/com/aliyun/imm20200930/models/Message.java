@@ -17,7 +17,7 @@ public class Message extends TeaModel {
      * <p>The content of the question.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello, which park is closest to me?</p>
+     * <p>你好，哪个公园距离我最近？</p>
      */
     @NameInMap("Content")
     public String content;
@@ -62,7 +62,7 @@ public class Message extends TeaModel {
      * <p>The answer.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello, I\&quot;m your assistant.</p>
+     * <p>你好，我是你的助手</p>
      */
     @NameInMap("Reply")
     public String reply;
@@ -107,7 +107,7 @@ public class Message extends TeaModel {
      * <p>The topic in the question.</p>
      * 
      * <strong>example:</strong>
-     * <p>The value varies based on the value of the AssistantType parameter.</p>
+     * <p>根据 AssistantType 不同具体含义不同。</p>
      */
     @NameInMap("Topic")
     public String topic;

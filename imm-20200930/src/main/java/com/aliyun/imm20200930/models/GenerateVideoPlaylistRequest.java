@@ -5,36 +5,38 @@ import com.aliyun.tea.*;
 
 public class GenerateVideoPlaylistRequest extends TeaModel {
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
     /**
-     * <p>The OSS path of the master playlist.</p>
-     * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that is suffixed with .m3u8.</p>
+     * <p>The OSS URI of the Master Playlist.</p>
+     * <p>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file with the .m3u8 file name extension.</p>
      * <blockquote>
-     * <p> If a playlist contains subtitles or multiple outputs, the MasterURI parameter is required and the URI of subtitle files or outputs must be in the directory specified by the MasterURI parameter or its subdirectory.</p>
+     * <p>If the playlist has subtitle inputs or multiple target outputs, MasterURI is required. The subtitle URI or target URI must be in the same directory as or a subdirectory of the directory specified by MasterURI.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>oss://bucket/object/master.m3u8</p>
+     * <p>oss://test-bucket/test-object/master.m3u8</p>
      */
     @NameInMap("MasterURI")
     public String masterURI;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For more information, click Notification. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The overwrite policy when the media playlist exists. Valid values:</p>
+     * <p>The policy to overwrite an existing Media Playlist. Valid values:</p>
      * <ul>
-     * <li>overwrite (default): overwrites an existing media playlist.</li>
-     * <li>skip-existing: skips generation and retains the existing media playlist.</li>
+     * <li><p>overwrite (default): Overwrites the existing Media Playlist.</p>
+     * </li>
+     * <li><p>skip-existing: Skips the generation and retains the existing Media Playlist.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     public String overwritePolicy;
 
     /**
-     * <p>The project name.<a href="~~478153~~"></a></p>
+     * <p>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,13 +56,15 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The period of time during which the playlist is generated. Unit: seconds.</p>
+     * <p>The duration for which the playlist is generated. Unit: seconds (s). Valid values:</p>
      * <ul>
-     * <li>If you set this parameter to 0 (default) or leave this parameter empty, a playlist is generated until the end time of the source video.</li>
-     * <li>If you set this parameter to a value greater than 0, a playlist is generated for the specified period of time from the start time that you specify.</li>
+     * <li><p>0 (default) or empty: continues to the end of the source video.</p>
+     * </li>
+     * <li><p>Greater than 0: lasts for the specified duration from the start time.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter to a value that exceeds the end time of a source video, use the default value.</p>
+     * <p>If the specified duration extends beyond the end of the source video, the default value is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,13 +74,15 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     public Float sourceDuration;
 
     /**
-     * <p>The time when the playlist starts to generate. Unit: seconds.</p>
+     * <p>The start time for generating the playlist. Unit: seconds (s). Valid values:</p>
      * <ul>
-     * <li>If you set this parameter to 0 (default) or leave this parameter empty, the start time of the source video is used as the time when a playlist starts to generate.</li>
-     * <li>If you set this parameter to a value greater than 0, the time when a playlist starts to generate is the specified point in time.</li>
+     * <li><p>0 (default) or empty: starts from the beginning of the source video.</p>
+     * </li>
+     * <li><p>Greater than 0: starts from the specified time point in the source video.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you use this parameter together with the <strong>SourceDuration</strong> parameter, a playlist can be generated based on the partial content of a source video.</p>
+     * <p>You can set this parameter together with the <strong>SourceDuration</strong> parameter to generate a playlist for a specific part of the source video.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,27 +92,27 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     public Float sourceStartTime;
 
     /**
-     * <p>The subtitle files. By default, this parameter is left empty. Up to two subtitle files are supported.</p>
+     * <p>The list of subtitles to add. The default value is empty. You can add up to two subtitles.</p>
      */
     @NameInMap("SourceSubtitles")
     public java.util.List<GenerateVideoPlaylistRequestSourceSubtitles> sourceSubtitles;
 
     /**
-     * <p>The OSS path of the video file.</p>
-     * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</p>
+     * <p>The OSS URI of the video.</p>
+     * <p>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file, including the file name extension.</p>
      * <blockquote>
-     * <p> Only OSS buckets of the Standard storage class are supported. OSS buckets for which hotlink protection whitelists are configured are not supported.</p>
+     * <p>Only OSS Standard storage buckets are supported. Buckets with hotlink protection whitelists are not supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://imm-test/testcases/video.mp4</p>
+     * <p>oss://test-bucket/test-source-object/video.mp4</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> that you want to add to a TS file in OSS. You can use tags to manage the lifecycles of TS files in OSS.</p>
+     * <p>Adds OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to the generated TS files. You can use tags to control the lifecycle of OSS files.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
@@ -115,9 +121,9 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>The array of live transcoding playlists. The maximum length of the array is 6. Each element corresponds to at most one video media playlist and one or more subtitle media playlists.</p>
+     * <p>An array of live transcoding playlists. The maximum array length is 6. Each target corresponds to a maximum of one video Media Playlist and one or more subtitle Media Playlists.</p>
      * <blockquote>
-     * <p> If the array contains more than one element, the <strong>MasterURI</strong> parameter cannot be left empty.</p>
+     * <p>If you configure more than one target, the <strong>MasterURI</strong> parameter must not be empty.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -125,7 +131,7 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     public java.util.List<GenerateVideoPlaylistRequestTargets> targets;
 
     /**
-     * <p>The custom user information, which is returned in asynchronous notifications to help you handle the notifications in the system. The maximum length of a notification is 2048 bytes.</p>
+     * <p>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your services. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
@@ -236,7 +242,7 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
 
     public static class GenerateVideoPlaylistRequestSourceSubtitles extends TeaModel {
         /**
-         * <p>The subtitle language. If you configure this parameter, the value must comply with the ISO 639-2 standard. By default, this parameter is left empty.</p>
+         * <p>The language of the subtitle. The value must comply with the ISO 639-2 standard. The default value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>eng</p>
@@ -245,10 +251,10 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
         public String language;
 
         /**
-         * <p>The OSS path of the subtitle file.</p>
-         * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file.</p>
+         * <p>The OSS URI of the subtitle file to embed.</p>
+         * <p>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file.</p>
          * <blockquote>
-         * <p> The <strong>MasterURI</strong> parameter cannot be left empty, and the OSS path <code>oss://${Bucket}/${Object}</code> of a subtitle file must be in the directory specified by the <strong>MasterURI</strong> parameter or its subdirectory.</p>
+         * <p>The <strong>MasterURI</strong> parameter must not be empty. The OSS URI of the subtitle file to embed, <code>oss://${Bucket}/${Object}</code>, must be in the same directory as or a subdirectory of the directory specified by <strong>MasterURI</strong>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -283,96 +289,99 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
 
     public static class GenerateVideoPlaylistRequestTargets extends TeaModel {
         /**
-         * <p>The audio processing configuration. If you set this parameter to null (default), audio processing is disabled. The generated TS files do not contain audio streams.</p>
+         * <p>The parameter settings for audio processing. An empty value (default) disables audio processing. The output TS file will not contain an audio stream.</p>
          * <blockquote>
-         * <p> The Audio and Subtitle parameters in the same element are mutually exclusive. If the Audio parameter is configured, the Subtitle parameter is ignored. The Audio and Video parameters can be configured at the same time. You can also configure only the Audio parameter to generate only audio.</p>
+         * <p>The Audio and Subtitle fields within the same target are mutually exclusive. If the Audio field is set, the Subtitle field is ignored. You can set both Audio and Video. Audio specifies the audio information in the output video. You can also set only Audio to generate only audio information.</p>
          * </blockquote>
          */
         @NameInMap("Audio")
         public TargetAudio audio;
 
         /**
-         * <p>The playback duration of a single TS file. Unit: seconds. Default value: 10. Valid values: 5 to 15.</p>
+         * <p>The playback duration of a single TS file. Unit: seconds (s). Default value: 10. Value range: [5, 15].</p>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>10</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The array of the durations of the pre-transcoded TS files. The maximum length of the array is 6. By default, this parameter is left empty. This parameter is independent of the <strong>Duration</strong> parameter.</p>
+         * <p>An array of durations for the initial transcoded TS files. The maximum array length is 6. The default value is empty. This parameter is independent of the <strong>Duration</strong> parameter.</p>
          */
         @NameInMap("InitialSegments")
         public java.util.List<Float> initialSegments;
 
         /**
-         * <p>The pre-transcoding duration. Unit: seconds. Default value: 30.</p>
+         * <p>The initial transcoding duration. Unit: seconds (s). Default value: 30.</p>
          * <ul>
-         * <li>If you set this parameter to 0, pre-transcoding is disabled.</li>
-         * <li>If you set this parameter to a value that is less than 0 or greater than the duration of a source video, the entire video is pre-transcoded.</li>
-         * <li>If you set this parameter to a value that is within the middle of the playback duration of a TS file, the transcoding continues until the end of the playback duration.</li>
+         * <li><p>If you set this parameter to 0, pre-transcoding is not performed.</p>
+         * </li>
+         * <li><p>If you set this parameter to a value less than 0 or a value that exceeds the source video length, the entire video is initially transcoded.</p>
+         * </li>
+         * <li><p>If the specified duration ends in the middle of a TS file, transcoding continues to the end of that TS file.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter reduces the time required to start the first playback, which enhances the viewing experience. If you want to use live transcoding in traditional video-on-demand scenarios, you can pre-transcode entire videos.</p>
+         * <p>This parameter is mainly used to reduce the waiting time for the first playback and improve the user experience. To replace a traditional VOD scenario, you can try initially transcoding the entire video.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>30.0</p>
+         * <p>30</p>
          */
         @NameInMap("InitialTranscode")
         public Float initialTranscode;
 
         /**
-         * <p>The subtitle processing configuration.</p>
+         * <p>The parameter settings for subtitle processing.</p>
          * <blockquote>
-         * <p> The Subtitle and Video or Audio parameters in the same element are mutually exclusive. You must configure the Subtitle parameter independently to generate subtitles.</p>
+         * <p>The Subtitle field is mutually exclusive with the Video and Audio fields within the same target. Subtitles can be generated only when the Subtitle field is set independently.</p>
          * </blockquote>
          */
         @NameInMap("Subtitle")
         public TargetSubtitle subtitle;
 
         /**
-         * <p>The <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> that you want to add to a TS file in OSS. You can use tags to manage the lifecycles of TS files in OSS.</p>
+         * <p>Adds OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to the generated TS files. You can use OSS tags to control the lifecycle of OSS files.</p>
          * <blockquote>
-         * <p> The combination of the value of the Tags parameter and the value of the Tags parameter in the upper level is used as the tag value of the current output. If the value of the Tags parameter in the current level is the same as the value of the Tags parameter in the upper level, the value of the Tags parameter in the current level is used.</p>
+         * <p>The tags for the current target are the union of the tags defined at this level and the tags defined at the parent level. If a tag has the same name, the value at the current level is used.</p>
          * </blockquote>
          */
         @NameInMap("Tags")
         public java.util.Map<String, String> tags;
 
         /**
-         * <p>The number of TS files that are pre-transcoded when the live transcoding is triggered. By default, a 2-minute video is pre-transcoded.</p>
+         * <p>The number of TS files to transcode ahead when live transcoding is triggered. By default, 2 minutes of video is transcoded ahead.</p>
          * <ul>
-         * <li>Example: If you set the <strong>Duration</strong> parameter to 10, the value of the <strong>TranscodeAhead</strong> parameter is 12 by default. You can configure this parameter to manage the number of pre-transcoded files. Valid values: 10 to 30.</li>
+         * <li>Example: If <strong>Duration</strong> is 10, the default value of <strong>TranscodeAhead</strong> is 12. You can specify this parameter to control the number of asynchronous forward transcodes. The value must be in the range of [10, 30].</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>12</p>
          */
         @NameInMap("TranscodeAhead")
         public Integer transcodeAhead;
 
         /**
-         * <p>The prefix of the OSS path that is used to store the live transcoding files. The live transcoding files include a M3U8 file and multiple TS files.</p>
-         * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the prefix of the full path that does not contain the file name extension.</p>
+         * <p>The OSS URI prefix for the output files of live transcoding. The output files include M3U8 files and TS files.</p>
+         * <p>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the prefix of the full path of the file, without the file name extension.</p>
          * <ul>
-         * <li>Example: If the URI is oss://test-bucket/test-object/output-video, the output-video.m3u8 file and multiple output-video-${token}-${index}.ts files are generated in the oss://test-bucket/test-object/ directory. ${token} is a unique string generated based on the transcoding parameters. The ${token} parameter is included in the response of the operation. ${index} is the serial number of the generated TS files that are numbered starting from 0.</li>
+         * <li>Example: If URI is oss\://test-bucket/test-object/output-video, one oss\://test-bucket/test-object/output-video.m3u8 file and multiple oss\://test-bucket/test-object/output-video-${token}-${index}.ts files are generated. ${token} is a unique string generated based on the transcoding parameters and is included in the API response. ${index} is the sequence number of the generated TS file, starting from 0.</li>
          * </ul>
          * <blockquote>
-         * <p> If the <strong>MasterURI</strong> parameter is not left empty, the path specified by this parameter must be in the directory specified by the <strong>MasterURI</strong> parameter or its subdirectory.</p>
+         * <p>If the <strong>MasterURI</strong> parameter is not empty, the URI must be in the same directory as or a subdirectory of the directory specified by <strong>MasterURI</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>oss://imm-test/testcases/video</p>
+         * <p>oss://test-bucket/test-object/output-video</p>
          */
         @NameInMap("URI")
         public String URI;
 
         /**
-         * <p>The video processing configuration. If you set this parameter to null (default), video processing is disabled. The generated TS files do not contain video streams.</p>
+         * <p>The parameter settings for video processing. An empty value (default) disables video processing. The output TS file will not contain a video stream.</p>
          * <blockquote>
-         * <p> The Video and Subtitle parameters in the same element are mutually exclusive. If the Video parameter is configured, the Subtitle parameter is ignored.</p>
+         * <p>The Video and Subtitle fields within the same target are mutually exclusive. If the Video field is set, the Subtitle field is ignored.</p>
          * </blockquote>
          */
         @NameInMap("Video")

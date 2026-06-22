@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The compression algorithm. Valid values:</p>
+     * <p>The name of the compression algorithm. Valid values:</p>
      * <ul>
-     * <li>octree</li>
-     * <li>kdtree</li>
+     * <li><p>octree: octree</p>
+     * </li>
+     * <li><p>kdtree: K-d tree</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,38 +21,40 @@ public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     public String compressMethod;
 
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The configurations of authorization chains. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access other entity resources</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
-     * <p>The k-d tree compression options.</p>
+     * <p>The parameters for K-d tree compression.</p>
      */
     @NameInMap("KdtreeOption")
     public String kdtreeOptionShrink;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      * <blockquote>
-     * <p> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</p>
+     * <p>Intelligent Media Management API callbacks do not support specifying a webhook address. Use MNS instead.</p>
      * </blockquote>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
-     * <p>The octree compression options.</p>
+     * <p>The parameters for Octree compression.</p>
      */
     @NameInMap("OctreeOption")
     public String octreeOptionShrink;
 
     /**
-     * <p>The PCD property fields and the compression order in which the data is decompressed after the compression is complete.</p>
+     * <p>The PCD property fields to compress and the compression order. After compression, the data is decompressed in this order.</p>
      * <ul>
-     * <li>If octree of Point Cloud Library (PCL) is used for compression, [&quot;xyz&quot;] is supported.</li>
-     * <li>If Draco k-dimensional (k-d) tree is used for compression, [&quot;xyz&quot;] and [&quot;xyz&quot;, &quot;intensity&quot;] are supported.</li>
+     * <li><p>If you use Octree compression from the Point Cloud Library (PCL), only [&quot;xyz&quot;] is supported.</p>
+     * </li>
+     * <li><p>If you use K-d tree compression from the Draco library, [&quot;xyz&quot;] or [&quot;xyz&quot;, &quot;intensity&quot;] is supported.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      */
@@ -58,7 +62,7 @@ public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     public String pointCloudFieldsShrink;
 
     /**
-     * <p>The file format. Set the value to the default value: pcd.</p>
+     * <p>The format of the point cloud file. Only the PCD format is supported. The default value is pcd.</p>
      * 
      * <strong>example:</strong>
      * <p>pcd</p>
@@ -67,7 +71,7 @@ public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     public String pointCloudFileFormat;
 
     /**
-     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+     * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,8 +81,8 @@ public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The OSS URL of the PCD file.</p>
-     * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+     * <p>The OSS URI of the point cloud file.</p>
+     * <p>The URI must be in the format oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket in the same region as the project. ${Object} is the full path of the file, including the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +92,7 @@ public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     public String sourceURI;
 
     /**
-     * <p>The custom tags, which can be used to search for and filter asynchronous tasks.</p>
+     * <p>Custom tags to search for and filter asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;LabelKey&quot;: &quot;Value&quot;}</p>
@@ -97,8 +101,8 @@ public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The OSS URL of the output file after compression.</p>
-     * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+     * <p>The OSS URI of the output file after compression.</p>
+     * <p>The URI must be in the format oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket in the same region as the project. ${Object} is the full path of the file, including the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +112,7 @@ public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     public String targetURI;
 
     /**
-     * <p>The custom data, which is returned in an asynchronous notification and facilitates notification management. The maximum length is 2,048 bytes.</p>
+     * <p>Custom information that is returned in the asynchronous notification message. You can use this information to associate notification messages in your system. The maximum length is 2048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

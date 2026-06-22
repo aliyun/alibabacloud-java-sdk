@@ -4,32 +4,54 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateHighlightTaskRequest extends TeaModel {
+    /**
+     * <p>The China authorization configuration. <strong>Leave this parameter empty unless you have specific requirements.</strong>.</p>
+     */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <p>The editing configuration.</p>
+     */
     @NameInMap("Edit")
     public CreateHighlightTaskRequestEdit edit;
 
+    /**
+     * <p>The highlight configuration.</p>
+     */
     @NameInMap("Highlight")
     public CreateHighlightTaskRequestHighlight highlight;
 
     /**
+     * <p>The highlight recognition mode. Valid values:</p>
+     * <ul>
+     * <li><p>Scene: scene and frame recognition.</p>
+     * </li>
+     * <li><p>Average (default): average slice recognition.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Average</p>
      */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>The message notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/asynchronous-notification-message-examples">Asynchronous notification message format</a>.</p>
+     */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
+     * <p>The output configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
     public CreateHighlightTaskRequestOutput output;
 
     /**
+     * <p>The project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,12 +61,16 @@ public class CreateHighlightTaskRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The list of media resources to process.
+     * A maximum of 10 videos are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Sources")
     public java.util.List<CreateHighlightTaskRequestSources> sources;
 
     /**
+     * <p>The custom tags used to search for and filter asynchronous tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
      */
@@ -52,6 +78,15 @@ public class CreateHighlightTaskRequest extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
+     * <p>The processing type. Valid values:</p>
+     * <ul>
+     * <li><p>Retrieval: highlight extraction.</p>
+     * </li>
+     * <li><p>Concat: video composition.</p>
+     * </li>
+     * <li><p>Compose: one-click video creation.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +96,8 @@ public class CreateHighlightTaskRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The custom user data, which is returned in asynchronous message notifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
      */
@@ -162,15 +199,18 @@ public class CreateHighlightTaskRequest extends TeaModel {
 
     public static class CreateHighlightTaskRequestEditBackgroundMusics extends TeaModel {
         /**
+         * <p>The URI of the background music (OSS URI). Only audio files are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://test-bucket/test-object</p>
+         * <p>oss://test-bucket/test-object/test.mp3</p>
          */
         @NameInMap("URI")
         public String URI;
 
         /**
+         * <p>The volume intensity of the background music. Valid values: [0, 10]. Default value: 0.2. A value of 1 indicates the original volume.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -202,6 +242,9 @@ public class CreateHighlightTaskRequest extends TeaModel {
 
     public static class CreateHighlightTaskRequestEditTransitions extends TeaModel {
         /**
+         * <p>The transition duration. Unit: seconds. If the transition duration is greater than the clip duration minus 1, the transition effect on that clip does not take effect.
+         * Valid values: [0, 5].</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -209,15 +252,19 @@ public class CreateHighlightTaskRequest extends TeaModel {
         public Double duration;
 
         /**
+         * <p>The transition effect. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/transition-effect">Transition effects</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>directional</p>
+         * <p>fade</p>
          */
         @NameInMap("Transition")
         public String transition;
 
         /**
+         * <p>The transition weight. Valid values: [1, 100]. Default value: 50.
+         * This parameter takes effect when TransitionMode is set to Random.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -257,15 +304,19 @@ public class CreateHighlightTaskRequest extends TeaModel {
 
     public static class CreateHighlightTaskRequestEditVfxEffects extends TeaModel {
         /**
+         * <p>The visual effect. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/effects">Effects</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>open</p>
+         * <p>letterboxed</p>
          */
         @NameInMap("VfxEffect")
         public String vfxEffect;
 
         /**
+         * <p>The effect weight. Valid values: [1, 100]. Default value: 50.
+         * This parameter takes effect when VfxEffectMode is set to Random.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -297,16 +348,34 @@ public class CreateHighlightTaskRequest extends TeaModel {
 
     public static class CreateHighlightTaskRequestEdit extends TeaModel {
         /**
+         * <p>The background music mode. Default value: Closed. Valid values:</p>
+         * <ul>
+         * <li><p>Random: custom background music, randomly selected based on weight.</p>
+         * </li>
+         * <li><p>Sequential: custom background music, applied in order.</p>
+         * </li>
+         * <li><p>Closed: no background music.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Closed</p>
          */
         @NameInMap("BackgroundMusicMode")
         public String backgroundMusicMode;
 
+        /**
+         * <p>The background music tracks. This parameter takes effect when BackgroundMusicMode is set to Random or Sequential.
+         * <strong>The maximum number is 1.</strong>.</p>
+         */
         @NameInMap("BackgroundMusics")
         public java.util.List<CreateHighlightTaskRequestEditBackgroundMusics> backgroundMusics;
 
         /**
+         * <p>The editing mode. Valid values:</p>
+         * <ul>
+         * <li>Sequential: sequential mode.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,22 +385,55 @@ public class CreateHighlightTaskRequest extends TeaModel {
         public String mode;
 
         /**
+         * <p>The transition mode. Default value: Closed. Valid values:</p>
+         * <ul>
+         * <li><p>Auto: automatic transition.</p>
+         * </li>
+         * <li><p>Random: custom transition, randomly selected based on weight.</p>
+         * </li>
+         * <li><p>Sequential: custom transition, applied in order.</p>
+         * </li>
+         * <li><p>Closed: no transition.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Closed</p>
          */
         @NameInMap("TransitionMode")
         public String transitionMode;
 
+        /**
+         * <p>The transition effects.
+         * This parameter takes effect when TransitionMode is set to Random or Sequential.
+         * A maximum of 10 transitions are supported.</p>
+         */
         @NameInMap("Transitions")
         public java.util.List<CreateHighlightTaskRequestEditTransitions> transitions;
 
         /**
+         * <p>The effect mode. Default value: Closed. Valid values:</p>
+         * <ul>
+         * <li><p>Auto: automatic effect.</p>
+         * </li>
+         * <li><p>Random: custom effect, randomly selected based on weight.</p>
+         * </li>
+         * <li><p>Sequential: custom effect, applied in order.</p>
+         * </li>
+         * <li><p>Closed: no effect.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Closed</p>
          */
         @NameInMap("VfxEffectMode")
         public String vfxEffectMode;
 
+        /**
+         * <p>The visual effects. This parameter takes effect when VfxEffectMode is set to Random or Sequential.
+         * A maximum of 10 effects are supported.</p>
+         */
         @NameInMap("VfxEffects")
         public java.util.List<CreateHighlightTaskRequestEditVfxEffects> vfxEffects;
 
@@ -400,6 +502,18 @@ public class CreateHighlightTaskRequest extends TeaModel {
 
     public static class CreateHighlightTaskRequestHighlight extends TeaModel {
         /**
+         * <p>The highlight content. Valid values:</p>
+         * <ul>
+         * <li><p>Pets</p>
+         * </li>
+         * <li><p>People</p>
+         * </li>
+         * <li><p>Sports</p>
+         * </li>
+         * <li><p>Meetings</p>
+         * </li>
+         * </ul>
+         * <p>The value cannot exceed 100 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -425,6 +539,8 @@ public class CreateHighlightTaskRequest extends TeaModel {
 
     public static class CreateHighlightTaskRequestOutputSegment extends TeaModel {
         /**
+         * <p>The segment duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -432,6 +548,14 @@ public class CreateHighlightTaskRequest extends TeaModel {
         public Double duration;
 
         /**
+         * <p>The media segmentation format. Valid values:</p>
+         * <ul>
+         * <li><p>hls</p>
+         * </li>
+         * <li><p>dash.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>hls</p>
          */
@@ -439,6 +563,8 @@ public class CreateHighlightTaskRequest extends TeaModel {
         public String format;
 
         /**
+         * <p>The start number. Only hls is supported. Default value: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -477,10 +603,24 @@ public class CreateHighlightTaskRequest extends TeaModel {
     }
 
     public static class CreateHighlightTaskRequestOutput extends TeaModel {
+        /**
+         * <p>The audio processing parameter settings.</p>
+         * <blockquote>
+         * <p>Notice: If Audio is empty, the first audio stream (if any) is directly copied to the output file.</p>
+         * </blockquote>
+         */
         @NameInMap("Audio")
         public TargetAudio audio;
 
         /**
+         * <p>The media container type. This parameter is required when Type is set to Concat or Compose. Valid values:</p>
+         * <ul>
+         * <li>Audio and video containers: mp4, mkv, mov, asf, avi, mxf, ts, flv</li>
+         * </ul>
+         * <blockquote>
+         * <p>Notice: Container and URI must be specified together..</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>mp4</p>
          */
@@ -488,16 +628,26 @@ public class CreateHighlightTaskRequest extends TeaModel {
         public String container;
 
         /**
+         * <p>The maximum duration of the clipped video. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
         @NameInMap("MaxDuration")
         public Double maxDuration;
 
+        /**
+         * <p>The media segmentation settings. By default, no segmentation is performed.</p>
+         */
         @NameInMap("Segment")
         public CreateHighlightTaskRequestOutputSegment segment;
 
         /**
+         * <p>The playback speed of the media. Valid values: [0.5, 1.0]. Default value: 1.0.</p>
+         * <blockquote>
+         * <p>This value is the ratio of the default playback speed of the transcoded media file to that of the source media file. This is not speed-adjusted transcoding.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -505,6 +655,7 @@ public class CreateHighlightTaskRequest extends TeaModel {
         public Double speed;
 
         /**
+         * <p>The URI of the output file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -513,6 +664,12 @@ public class CreateHighlightTaskRequest extends TeaModel {
         @NameInMap("URI")
         public String URI;
 
+        /**
+         * <p>The video processing parameter settings.</p>
+         * <blockquote>
+         * <p>Notice: If Video is empty, the first video stream (if any) is directly copied to the output file.</p>
+         * </blockquote>
+         */
         @NameInMap("Video")
         public TargetVideo video;
 
@@ -581,6 +738,9 @@ public class CreateHighlightTaskRequest extends TeaModel {
 
     public static class CreateHighlightTaskRequestSources extends TeaModel {
         /**
+         * <p>The duration of the media clip. Unit: seconds. Default value: 0, which indicates the end of the video.
+         * This parameter takes effect only when Type is set to Concat.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -588,6 +748,9 @@ public class CreateHighlightTaskRequest extends TeaModel {
         public Double duration;
 
         /**
+         * <p>The start time of the media resource. Valid values: [0, video duration].
+         * This parameter takes effect only when Type is set to Concat.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -595,6 +758,7 @@ public class CreateHighlightTaskRequest extends TeaModel {
         public Double startTime;
 
         /**
+         * <p>The URI of the media resource (OSS URI). Only videos are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

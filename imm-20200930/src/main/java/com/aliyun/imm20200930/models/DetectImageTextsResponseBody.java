@@ -12,6 +12,9 @@ public class DetectImageTextsResponseBody extends TeaModel {
 
     /**
      * <p>The full Optical Character Recognition (OCR) text, which is spliced by using the content of OCRContents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Intelligent Media Management.</p>
      */
     @NameInMap("OCRTexts")
     public String OCRTexts;

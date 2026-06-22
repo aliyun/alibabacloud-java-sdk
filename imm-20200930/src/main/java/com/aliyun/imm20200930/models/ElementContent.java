@@ -9,7 +9,7 @@ public class ElementContent extends TeaModel {
      * <p>If the value of the Type parameter is image or link, this parameter indicates the placeholder text.</p>
      * 
      * <strong>example:</strong>
-     * <p>Text</p>
+     * <p>文本片段</p>
      */
     @NameInMap("Content")
     public String content;

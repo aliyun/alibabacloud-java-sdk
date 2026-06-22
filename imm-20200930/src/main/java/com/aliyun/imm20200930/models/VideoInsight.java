@@ -7,6 +7,9 @@ public class VideoInsight extends TeaModel {
     /**
      * <p>Video summary.</p>
      * 
+     * <strong>example:</strong>
+     * <p>视频中展示了两个不同场景：一个是静止的白色盘子、黑色瓶子和透明玻璃杯，另一个是手拿着标有“YEZOLU”的洗发水瓶在浴室中缓慢上移。</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -18,6 +21,9 @@ public class VideoInsight extends TeaModel {
      * <blockquote>
      * <p> Not supported.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>无。</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

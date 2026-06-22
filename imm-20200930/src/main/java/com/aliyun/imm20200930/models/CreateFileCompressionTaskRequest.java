@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateFileCompressionTaskRequest extends TeaModel {
     /**
-     * <p>The format of the output file.</p>
+     * <p>The compression format for file packaging.</p>
      * <blockquote>
-     * <p>Only the ZIP format is supported.</p>
+     * <p>Currently, only the zip format is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,33 +17,40 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
     public String compressedFormat;
 
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
     /**
-     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The message notification configuration. For more information, see the Notification data type. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
+     * <blockquote>
+     * <p>IMM API callbacks do not currently support specifying a webhook address. Use MNS instead.</p>
+     * </blockquote>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The name of the project.<a href="~~478153~~"></a></p>
+     * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The OSS URI of the inventory object that contains the objects to compress. The inventory object stores the objects to compress by using the same data structure of the Sources parameter in the JSON format. This parameter is suitable for specifying a large number of objects to compress.</p>
+     * <p>The address where the file manifest is stored. The file manifest stores the \<code>Sources\\</code> structure in JSON format on OSS. This is suitable for scenarios with many files to package.</p>
      * <blockquote>
-     * <p> You must specify this parameter or the <code>Sources</code> parameter. The <code>URI</code> parameter is required and the <code>Alias</code> parameter is optional. You can specify up to 80,000 compression rule by using SourceManifestURI in one single call to the operation. The following line provides an example of the content within an inventory object.</p>
+     * <p>Specify either this parameter or <code>Sources</code>. In the manifest file, the <code>URI</code> parameter is required and the <code>Alias</code> parameter is optional. \<code>SourceManifestURI\\</code> supports up to 80,000 packaging rules.</p>
+     * <blockquote>
+     * <p>Warning: When you save the content to OSS, specify the OSS address of the file for this parameter.</p>
      * </blockquote>
+     * </blockquote>
+     * <p>The following is an example of the file structure:</p>
      * <pre><code>[{&quot;URI&quot;:&quot;oss://&lt;bucket&gt;/&lt;object&gt;&quot;, &quot;Alias&quot;:&quot;/new-dir/new-name&quot;}]
      * </code></pre>
      * 
@@ -54,17 +61,20 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
     public String sourceManifestURI;
 
     /**
-     * <p>The objects to be packed and packing rules.</p>
+     * <p>A list of files to package and their packaging rules.</p>
      * <blockquote>
-     * <p> You must specify this parameter or the SourceManifestURI parameter. The Sources parameter can hold up to 100 packing rules. If you want to include more than 100 packing rules, use the SourceManifestURI parameter.</p>
+     * <p>Specify either this parameter or \<code>SourceManifestURI\\</code>. \<code>Sources\\</code> supports a maximum of 100 packaging rules.</p>
+     * <blockquote>
+     * <p>Warning: If you have more than 100 packaging rules, use the \<code>SourceManifestURI\\</code> parameter.</p>
+     * </blockquote>
      * </blockquote>
      */
     @NameInMap("Sources")
     public java.util.List<CreateFileCompressionTaskRequestSources> sources;
 
     /**
-     * <p>The OSS URI of the package. The object name part in the URI is used as the name of the package. Example: <code>name.zip</code>.</p>
-     * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+     * <p>The OSS address of the output file. The compressed file is named after the file name in this path, such as <code>name.zip</code>.</p>
+     * <p>The OSS address must be in the \<code>oss\\://${Bucket}/${Object}\\</code> format. \<code>${Bucket}\\</code> is the name of the OSS bucket that is in the same region as the current project. \<code>${Object}\\</code> is the full path of the file, including the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,10 +84,10 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
     public String targetURI;
 
     /**
-     * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+     * <p>Custom user data. This data is returned in the asynchronous notification message, which helps you associate the notification with your internal system. The maximum length is 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
+     * <p>test-data</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -153,15 +163,26 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
 
     public static class CreateFileCompressionTaskRequestSources extends TeaModel {
         /**
-         * <p>Specifies the path of the object in the package, or renames the object in the package.</p>
+         * <p>Specifies a new path or name for the source file within the output compressed file.</p>
          * <ul>
-         * <li>Leave this parameter empty to retain the original directory structure of the object in the package. For example, if the object is stored at <code>oss://test-bucket/test-dir/test-object.doc</code> and you do not specify this parameter, the path of the object in the package is <code>/test-dir/test-object.doc</code>.</li>
-         * <li>Rename the object. For example, if the object is stored at <code>oss://test-bucket/test-object.jpg</code> and you set the <strong>Alias</strong> parameter to <code>test-rename-object.jpg</code>, the name of the object in the package is <code>test-rename-object.jpg</code>.</li>
-         * <li>Specify a different path for the object in the package. For example, if the directory to be packed is <code>oss://test-bucket/test-dir/</code> and you set the <strong>Alias</strong> parameter to <code>/new-dir/</code>, all objects in the directory are placed in the <code>/new-dir/</code> path in the package.</li>
-         * <li>Set the parameter to <code>/</code> to remove the original directory structure.</li>
+         * <li><p>If you do not specify this parameter, the source directory structure is preserved. For example, if the source file is at <code>oss://test-bucket/test-dir/test-object.doc</code>, the path of the file in the compressed file is <code>/test-dir/test-object.doc</code>.</p>
+         * </li>
+         * <li><p>Rename the file. For example, if the source file is at <code>oss://test-bucket/test-object.jpg</code> and you set this parameter to <code>/test-rename-object.jpg</code>, the file in the compressed file is named <code>test-rename-object.jpg</code>.</p>
+         * </li>
+         * <li><p>Specify a new path for the source file in the compressed file. For example, if the source directory is <code>oss://test-bucket/test-dir/</code> and you set this parameter to <code>/new-dir/</code>, all files in the source directory are compressed into the <code>/new-dir/</code> path.</p>
+         * </li>
+         * <li><p>Set the value to <code>/</code> to remove the source directory structure. All files are placed directly in the root directory of the compressed file, and the original directory structure is not preserved.</p>
+         * </li>
+         * <li><p>Specify both a path and a file name. The file is renamed and moved to the specified path. For example, if you set this parameter to <code>/new-dir/alias.doc</code>, the file is renamed to <code>alias.doc</code> and placed in the <code>/new-dir/</code> path of the compressed file.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> Duplicate object names may cause a failure in extracting the objects from the package, depending on the packing tool that you use. We recommend that you avoid using duplicate object names when you rename objects in the packing task.</p>
+         * <ul>
+         * <li><p>Avoid creating files with duplicate names during the renaming process. If duplicate names exist, you may not be able to decompress the file in the compressed package. This depends on the decompression program you use.</p>
+         * </li>
+         * <li><p>Format requirement: The value must start with a forward slash (\<code>/\\</code>), such as <code>/new-dir/alias.doc</code>.</p>
+         * </li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -171,10 +192,12 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
         public String alias;
 
         /**
-         * <p>The object matching rule. Valid values: <code>fullname</code> and <code>prefix</code>. Default value: <code>prefix</code></p>
+         * <p>The pattern matching mode for the packaging rule. Valid values include <code>prefix</code> (prefix matching) and <code>fullname</code> (exact matching). The default value is <code>prefix</code>.</p>
          * <ul>
-         * <li><code>prefix</code>: matches objects by object name prefix.</li>
-         * <li><code>fullname</code>: exactly matches one single object by its full object name.</li>
+         * <li><p><code>prefix</code>: In this mode, all files that match the prefix are packaged.</p>
+         * </li>
+         * <li><p><code>fullname</code>: In this mode, only the file that exactly matches the rule is packaged.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,11 +207,13 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The OSS URI of the object or directory.</p>
-         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is a directory or object:</p>
-         * <p>When you pack a directory, <code>${Object}</code> is the path of the directory.</p>
+         * <p>The OSS address of the directory or file to package.</p>
+         * <p>The OSS address must be in the \<code>oss\\://${Bucket}/${Object}\\</code> format. \<code>${Bucket}\\</code> is the name of the OSS bucket that is in the same region as the current project. \<code>${Object}\\</code> is described as follows:</p>
          * <ul>
-         * <li>When you pack an object, <code>${Object}</code> is the path of the object with the extension included.</li>
+         * <li><p>To package a directory, \<code>${Object}\\</code> is the directory name.</p>
+         * </li>
+         * <li><p>To package a file, \<code>${Object}\\</code> is the full path of the file, including the file name extension.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

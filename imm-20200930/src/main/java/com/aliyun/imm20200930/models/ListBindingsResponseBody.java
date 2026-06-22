@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListBindingsResponseBody extends TeaModel {
     /**
-     * <p>The bindings between the dataset and OSS buckets.</p>
+     * <p>The list of binding information between datasets and OSS buckets.</p>
      */
     @NameInMap("Bindings")
     public java.util.List<Binding> bindings;
 
     /**
      * <ul>
-     * <li>The pagination token that is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</li>
-     * <li>The next request returns remaining results starting from the position marked by the NextToken parameter value.</li>
-     * <li>This parameter has a non-empty value only when not all bindings are returned.</li>
+     * <li>The pagination token that is used when the total number of bindings exceeds the MaxResults value.</li>
+     * <li>Use this value as the NextToken in the next request to return the remaining results.</li>
+     * <li>This parameter has a value only when not all bindings are returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -85,6 +85,9 @@ public class LocationDateCluster extends TeaModel {
 
     /**
      * <p>The custom title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州一日游</p>
      */
     @NameInMap("Title")
     public String title;

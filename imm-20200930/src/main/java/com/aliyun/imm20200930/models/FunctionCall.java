@@ -6,6 +6,18 @@ import com.aliyun.tea.*;
 public class FunctionCall extends TeaModel {
     /**
      * <p>The parameters detected by the large language model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *                     &quot;type&quot;: &quot;object&quot;,
+     *                         &quot;name&quot;: {
+     *                             &quot;type&quot;: &quot;string&quot;, 
+     *                             &quot;description&quot;: &quot;需要检索的文件的文件名。可以为空 null&quot;
+     *                         }, 
+     *                     &quot;required&quot;: [
+     *                         &quot;category&quot;
+     *                     ]
+     * }</p>
      */
     @NameInMap("Arguments")
     public String arguments;
