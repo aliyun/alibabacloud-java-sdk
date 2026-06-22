@@ -4,16 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListMarketingFlowResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>2993***</p>
      */
     @NameInMap("Code")
     public String code;
@@ -30,7 +26,7 @@ public class ListMarketingFlowResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>CB6122C9-09B5-5926-**476A96CB0</p>
+     * <p>OK</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -113,56 +109,52 @@ public class ListMarketingFlowResponseBody extends TeaModel {
     public static class ListMarketingFlowResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>3243243***</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("ActivityCode")
         public String activityCode;
 
         /**
          * <strong>example:</strong>
-         * <p>aaa</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("ActivityDesc")
         public String activityDesc;
 
         /**
          * <strong>example:</strong>
-         * <p>aaa</p>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("ActivityName")
         public String activityName;
 
         /**
          * <strong>example:</strong>
-         * <p>active</p>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("ActivityStatus")
         public String activityStatus;
 
         /**
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("BizCode")
         public String bizCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("BizExtend")
         public java.util.Map<String, ?> bizExtend;
 
         /**
          * <strong>example:</strong>
-         * <p>0 0 4 1/1 * ?</p>
+         * <p>示例值</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
 
         /**
          * <strong>example:</strong>
-         * <p>2025-01-01 XX1:11:11</p>
+         * <p>示例值</p>
          */
         @NameInMap("EndDate")
         public String endDate;
@@ -176,14 +168,14 @@ public class ListMarketingFlowResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>2025-XX-01 11:11:11</p>
+         * <p>示例值</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <p>示例值</p>
          */
         @NameInMap("GmtModifier")
         public String gmtModifier;
@@ -202,37 +194,33 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         @NameInMap("ParamFlag")
         public String paramFlag;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{\&quot;CustomerLimit\&quot;:false}</p>
-         */
         @NameInMap("Params")
         public java.util.Map<String, ?> params;
 
         /**
          * <strong>example:</strong>
-         * <p>dsafdsf***</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("RelatedFlowCode")
         public String relatedFlowCode;
 
         /**
          * <strong>example:</strong>
-         * <p>aaa</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("RelatedFlowName")
         public String relatedFlowName;
 
         /**
          * <strong>example:</strong>
-         * <p>54354**</p>
+         * <p>示例值</p>
          */
         @NameInMap("RelatedGroupId")
         public String relatedGroupId;
 
         /**
          * <strong>example:</strong>
-         * <p>AAA</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("RelatedGroupName")
         public String relatedGroupName;
@@ -246,14 +234,14 @@ public class ListMarketingFlowResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>2025-01-XX 11:11:11</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("StartDate")
         public String startDate;
 
         /**
          * <strong>example:</strong>
-         * <p>1111</p>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("TenantCode")
         public String tenantCode;

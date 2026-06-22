@@ -5,30 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the ISV account.</p>
+     * <p>The Space ID or instance ID of the ISV sub-customer. This is the channel ID. View the channel ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493</p>
+     * <p>cams-************</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end of the time range to query. This is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1693407714687</p>
+     * <p>1758902399000</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
-     * <p>The granularity of the metric.</p>
-     * <p>Valid values:</p>
+     * <p>The granularity of the metrics. Valid values:</p>
      * <ul>
-     * <li>DAILY</li>
-     * <li>HALF_HOUR</li>
+     * <li><p>DAILY: Metrics are collected by day.</p>
+     * </li>
+     * <li><p>HALF_HOUR: Metrics are collected every half an hour.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,10 +39,10 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
+     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
-     * <p>skdi3kksloslikdkkdk</p>
+     * <p>skdi3kksloslikd****</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
@@ -50,10 +51,10 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The business phone number.</p>
+     * <p>The business phone number. This is the phone number used to send messages. You can view the phone number in the ChatApp console by choosing &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>861380000</p>
+     * <p>861380000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -65,11 +66,11 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start of the time range to query. This is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1693107714687</p>
+     * <p>1756742399000</p>
      */
     @NameInMap("Start")
     public Long start;

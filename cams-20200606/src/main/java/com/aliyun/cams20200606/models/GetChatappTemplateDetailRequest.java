@@ -16,7 +16,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     /**
      * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
      * <blockquote>
-     * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * <p>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,9 +66,12 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     /**
      * <p>The type of the message template. Valid values:</p>
      * <ul>
-     * <li><strong>WHATSAPP</strong></li>
-     * <li><strong>VIBER</strong></li>
-     * <li>LINE (developing)</li>
+     * <li><p><strong>WHATSAPP</strong></p>
+     * </li>
+     * <li><p><strong>VIBER</strong></p>
+     * </li>
+     * <li><p>LINE (developing)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

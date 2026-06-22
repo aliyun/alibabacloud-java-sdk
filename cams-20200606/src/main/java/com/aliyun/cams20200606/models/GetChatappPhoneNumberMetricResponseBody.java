@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>Details about the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>NONE</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The value OK indicates that the request was successful.</p>
+     * <p>The status code of the request. Valid values:</p>
+     * <ul>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -41,7 +47,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>1612C226-E271-4CFE-9F18-4066D******</p>
+     * <p>608F9CCA-B5EB-3D72-8047-B25D6D75BDEC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -102,7 +108,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         public Integer deliveredCount;
 
         /**
-         * <p>The end of the time range that you queried.</p>
+         * <p>The end time of metric collection. This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1667196043904</p>
@@ -111,12 +117,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         public Long end;
 
         /**
-         * <p>The granularity of the metric.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DAILY</li>
-         * <li>HALF_HOUR</li>
-         * </ul>
+         * <p>The granularity of the metrics.</p>
          * 
          * <strong>example:</strong>
          * <p>DAILY</p>
@@ -128,7 +129,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
          * <p>The business phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>861380000</p>
+         * <p>861380000****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -143,7 +144,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         public Integer sentCount;
 
         /**
-         * <p>The beginning of the time range that you queried.</p>
+         * <p>The start time of metric collection. This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1669619491000</p>

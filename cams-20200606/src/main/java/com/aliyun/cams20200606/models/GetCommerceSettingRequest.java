@@ -9,7 +9,7 @@ public class GetCommerceSettingRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493</p>
+     * <p>29348393884****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

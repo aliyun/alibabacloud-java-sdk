@@ -6,42 +6,38 @@ import com.aliyun.tea.*;
 public class DeleteContactsShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
      * <strong>example:</strong>
-     * <p>1507486****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("ContactDetails")
     public String contactDetails;
 
     /**
      * <strong>example:</strong>
-     * <p>hahaha</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
      * <strong>example:</strong>
-     * <p>China</p>
+     * <p>示例值</p>
      */
     @NameInMap("Country")
     public String country;
 
     /**
      * <strong>example:</strong>
-     * <p>http://****</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("FilePath")
     public String filePath;

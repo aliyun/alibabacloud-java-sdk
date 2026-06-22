@@ -27,9 +27,12 @@ public class GetWhatsappHealthStatusRequest extends TeaModel {
      * <p>The node type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>template: message template</li>
-     * <li>phone: phone number</li>
-     * <li>waba: WhatsApp Business Account (WABA)</li>
+     * <li><p>template: message template</p>
+     * </li>
+     * <li><p>phone: phone number</p>
+     * </li>
+     * <li><p>waba: WhatsApp Business Account (WABA)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

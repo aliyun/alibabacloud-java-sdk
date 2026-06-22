@@ -11,7 +11,7 @@ public class ListFlowNodeGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>85</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
@@ -20,7 +20,7 @@ public class ListFlowNodeGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>84</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

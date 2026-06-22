@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMessageCampaignInsightsResponseBody extends TeaModel {
     /**
+     * <p>Details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,16 +14,29 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code. Valid values:</p>
+     * <ul>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetMessageCampaignInsightsResponseBodyData> data;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +44,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>s39**</p>
      */
@@ -36,6 +53,14 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: successful.</p>
+     * </li>
+     * <li><p>false: failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +122,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
 
     public static class GetMessageCampaignInsightsResponseBodyData extends TeaModel {
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-01</p>
          */
@@ -104,6 +131,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String dateStart;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-29</p>
          */
@@ -111,6 +140,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String dateStop;
 
         /**
+         * <p>The average cost per delivered message.</p>
+         * 
          * <strong>example:</strong>
          * <p>2755</p>
          */
@@ -118,6 +149,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String marketingMessagesCostPerDelivered;
 
         /**
+         * <p>The average cost per message link click. This metric excludes messages sent to Europe, Argentina, Türkiye, South Korea, and Japan.</p>
+         * 
          * <strong>example:</strong>
          * <p>268</p>
          */
@@ -125,6 +158,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String marketingMessagesCostPerLinkBtnClick;
 
         /**
+         * <p>The number of messages that are sent by the business and successfully delivered to users. Some messages may fail to deliver if a user\&quot;s device is unavailable. This metric excludes messages delivered to Europe and Japan. In some cases, this metric is an estimate. The value may differ from the data on your bill due to minor discrepancies during data processing.</p>
+         * 
          * <strong>example:</strong>
          * <p>2755</p>
          */
@@ -132,6 +167,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String marketingMessagesDelivered;
 
         /**
+         * <p>The message delivery rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>79.419238</p>
          */
@@ -139,6 +176,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String marketingMessagesDeliveryRate;
 
         /**
+         * <p>The number of times users click or tap a marketing message that take users to an on-Meta or off-Meta destination, as specified by the advertiser. This metric excludes messages sent to Europe, Argentina, Türkiye, South Korea, and Japan.</p>
+         * 
          * <strong>example:</strong>
          * <p>268</p>
          */
@@ -146,6 +185,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String marketingMessagesLinkBtnClick;
 
         /**
+         * <p>The percentage of delivered messages that received a link click. This metric excludes messages sent to Europe, Argentina, Türkiye, South Korea, and Japan.</p>
+         * 
          * <strong>example:</strong>
          * <p>79.419238</p>
          */
@@ -153,6 +194,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String marketingMessagesLinkBtnClickRate;
 
         /**
+         * <p>The number of read messages divided by the number of delivered messages. The read status of some messages may not be captured if a customer disables read receipts. This metric excludes messages sent to Europe and Japan.</p>
+         * 
          * <strong>example:</strong>
          * <p>79.419238</p>
          */
@@ -160,6 +203,8 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         public String marketingMessagesReadRate;
 
         /**
+         * <p>The total amount spent on a campaign, message group, or message during over its lifetime.</p>
+         * 
          * <strong>example:</strong>
          * <p>38.87</p>
          */

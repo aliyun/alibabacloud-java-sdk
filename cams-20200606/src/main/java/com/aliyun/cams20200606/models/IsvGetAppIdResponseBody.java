@@ -14,19 +14,21 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The message ID.</p>
+     * <p>The app ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>23hr3v</p>
+     * <p>23hr3v****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the configuration item.</p>
+     * <p>The configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>28972951817****</p>
@@ -45,7 +47,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     public String configId;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -54,7 +56,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>744c4b5c79c9432497a075bdfca3***</p>

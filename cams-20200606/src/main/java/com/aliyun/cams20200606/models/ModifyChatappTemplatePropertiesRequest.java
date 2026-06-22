@@ -22,7 +22,7 @@ public class ModifyChatappTemplatePropertiesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cams-idk***</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -31,7 +31,7 @@ public class ModifyChatappTemplatePropertiesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>zh_CN</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Language")
     public String language;
@@ -49,7 +49,7 @@ public class ModifyChatappTemplatePropertiesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>929938***</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
@@ -58,7 +58,7 @@ public class ModifyChatappTemplatePropertiesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>WHATSAPP</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

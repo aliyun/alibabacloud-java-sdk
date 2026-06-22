@@ -9,7 +9,7 @@ public class CreateWhatsappConversionApiResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;

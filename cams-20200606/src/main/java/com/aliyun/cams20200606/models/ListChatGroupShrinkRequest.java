@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatGroupShrinkRequest extends TeaModel {
     /**
+     * <p>The business number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ListChatGroupShrinkRequest extends TeaModel {
     public String businessNumber;
 
     /**
+     * <p>The channel type. Valid value: <strong>WHATSAPP</strong>.</p>
+     * <blockquote>
+     * <p>Only the WhatsApp channel is supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>
      */
@@ -21,6 +27,7 @@ public class ListChatGroupShrinkRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>The instance ID (or SpaceId) of an ISV sub-customer, which also serves as the channel ID. You can find it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +37,31 @@ public class ListChatGroupShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The Telegram group link.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("GroupLink")
     public String groupLink;
 
     /**
+     * <p>The group status. Valid values:</p>
+     * <ul>
+     * <li><p>ACTIVE: In use.</p>
+     * </li>
+     * <li><p>INACTIVE: Not activated.</p>
+     * </li>
+     * <li><p>SUSPENDED: Suspended.</p>
+     * </li>
+     * <li><p>CREATING: Being created.</p>
+     * </li>
+     * <li><p>DELETING: Being deleted.</p>
+     * </li>
+     * <li><p>UPDATING: Being updated.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
      */
@@ -44,8 +69,10 @@ public class ListChatGroupShrinkRequest extends TeaModel {
     public String groupStatus;
 
     /**
+     * <p>The Telegram group type.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>example</p>
      */
     @NameInMap("GroupType")
     public String groupType;
@@ -54,7 +81,11 @@ public class ListChatGroupShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The paging information.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Example value</p>
      */
     @NameInMap("Page")
     public String pageShrink;
@@ -66,6 +97,8 @@ public class ListChatGroupShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The group title.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

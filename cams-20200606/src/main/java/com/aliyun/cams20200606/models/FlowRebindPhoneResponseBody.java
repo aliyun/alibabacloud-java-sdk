@@ -4,18 +4,10 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class FlowRebindPhoneResponseBody extends TeaModel {
-    /**
-     * <p>Access denied details.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>Status code.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -23,8 +15,6 @@ public class FlowRebindPhoneResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error message.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -32,8 +22,6 @@ public class FlowRebindPhoneResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request result data.</p>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -41,8 +29,6 @@ public class FlowRebindPhoneResponseBody extends TeaModel {
     public Boolean model;
 
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -50,8 +36,6 @@ public class FlowRebindPhoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the operation was successful. Values: true: success; false: failure.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

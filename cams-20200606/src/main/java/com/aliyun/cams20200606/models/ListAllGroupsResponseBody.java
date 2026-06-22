@@ -4,16 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListAllGroupsResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,14 +19,14 @@ public class ListAllGroupsResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>608F9CCA-B5EB-3D72-XXXXB25D6D75BDEC</p>
+     * <p>示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -98,21 +94,21 @@ public class ListAllGroupsResponseBody extends TeaModel {
     public static class ListAllGroupsResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>1789000</p>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <strong>example:</strong>
-         * <p>aaa</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <strong>example:</strong>
-         * <p>5435</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Id")
         public String id;

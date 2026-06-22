@@ -8,14 +8,14 @@ public class ListFlowNodePrototypeV2Request extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
     /**
      * <strong>example:</strong>
-     * <p>Core</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("GroupCode")
     public String groupCode;
@@ -34,7 +34,7 @@ public class ListFlowNodePrototypeV2Request extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>6</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
@@ -43,7 +43,7 @@ public class ListFlowNodePrototypeV2Request extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>7</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncMessengerSubscriptionTokenRequest extends TeaModel {
     /**
+     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of the direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SyncMessengerSubscriptionTokenRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The custom audience ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20399***</p>
      */
@@ -24,6 +27,7 @@ public class SyncMessengerSubscriptionTokenRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The Page ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,7 @@ public class SyncMessengerSubscriptionTokenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The token type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,21 +6,17 @@ import com.aliyun.tea.*;
 public class GetDownloadExcelListShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
      * <strong>example:</strong>
-     * <p>aa</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Condition")
     public String condition;
@@ -30,14 +26,14 @@ public class GetDownloadExcelListShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2025-12-01</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <strong>example:</strong>
-     * <p>111</p>
+     * <p>示例值</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -56,7 +52,7 @@ public class GetDownloadExcelListShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2025-11-01</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("StartDate")
     public String startDate;

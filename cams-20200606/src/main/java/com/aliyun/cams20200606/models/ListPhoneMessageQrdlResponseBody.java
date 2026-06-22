@@ -8,7 +8,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -17,16 +17,16 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned data object.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListPhoneMessageQrdlResponseBodyData> data;
 
     /**
-     * <p>Error description information.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("Message")
     public String message;
@@ -87,7 +87,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
 
     public static class ListPhoneMessageQrdlResponseBodyData extends TeaModel {
         /**
-         * <p>The URL of the deep link.</p>
+         * <p>The deep link URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://wa.msg/">https://wa.msg/</a></p>
@@ -96,7 +96,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String deepLinkUrl;
 
         /**
-         * <p>The format of the generated image.</p>
+         * <p>The type of the generated image.</p>
          * 
          * <strong>example:</strong>
          * <p>PNG</p>
@@ -108,7 +108,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
          * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800</p>
+         * <p>86138009****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -132,7 +132,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String qrImageUrl;
 
         /**
-         * <p>The mode of the quick-response (QR) code.</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
          * <p>IUIED999</p>

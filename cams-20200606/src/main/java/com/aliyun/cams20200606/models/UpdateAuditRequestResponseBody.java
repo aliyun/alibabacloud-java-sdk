@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAuditRequestResponseBody extends TeaModel {
     /**
+     * <p>Access denied details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,14 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Request status code.</p>
+     * <ul>
+     * <li><p>OK indicates a successful request.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error Codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +29,8 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Returns the RequestNo.</p>
+     * 
      * <strong>example:</strong>
      * <p>14111561****</p>
      */
@@ -26,6 +38,8 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,15 +47,25 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of this API call request. Alibaba Cloud generates this unique identifier for the request. Use it to troubleshoot and locate issues.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>example</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Values:</p>
+     * <ul>
+     * <li><p>true: Successful.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

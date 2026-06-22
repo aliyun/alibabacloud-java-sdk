@@ -8,7 +8,7 @@ public class ModifyFlowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -87,7 +87,7 @@ public class ModifyFlowResponseBody extends TeaModel {
 
     public static class ModifyFlowResponseBodyData extends TeaModel {
         /**
-         * <p>The categories of the Flow.</p>
+         * <p>The flow categories.</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
@@ -100,19 +100,19 @@ public class ModifyFlowResponseBody extends TeaModel {
         public String endpointUri;
 
         /**
-         * <p>The Flow ID.</p>
+         * <p>The flow ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3939399****</p>
+         * <p>92675332812643****</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
         /**
-         * <p>The Flow name.</p>
+         * <p>The flow name.</p>
          * 
          * <strong>example:</strong>
-         * <p>flow-00203</p>
+         * <p>flow_001</p>
          */
         @NameInMap("FlowName")
         public String flowName;

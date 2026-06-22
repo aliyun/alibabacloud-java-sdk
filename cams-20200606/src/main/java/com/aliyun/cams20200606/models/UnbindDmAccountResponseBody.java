@@ -4,37 +4,33 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UnbindDmAccountResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <strong>example:</strong>
-     * <p>NONE</p>
+     * <p>示例值</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>xx-xx***</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;

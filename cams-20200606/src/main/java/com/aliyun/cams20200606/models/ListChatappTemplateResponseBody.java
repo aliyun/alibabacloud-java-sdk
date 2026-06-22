@@ -8,7 +8,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
      * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,8 +16,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates that the call is successful.</p>
+     * </li>
+     * <li><p>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,12 +53,6 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -137,10 +133,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         /**
          * <p>The review state of the template. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The template is approved.</li>
-         * <li><strong>fail</strong>: The template is rejected.</li>
-         * <li><strong>auditing</strong>: The template is being reviewed.</li>
-         * <li><strong>unaudit</strong>: The review is suspended.</li>
+         * <li><p><strong>pass</strong>: The template is approved.</p>
+         * </li>
+         * <li><p><strong>fail</strong>: The template is rejected.</p>
+         * </li>
+         * <li><p><strong>auditing</strong>: The template is being reviewed.</p>
+         * </li>
+         * <li><p><strong>unaudit</strong>: The review is suspended.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,25 +152,37 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         /**
          * <p>The category of the WhatsApp message template. Valid values:</p>
          * <ul>
-         * <li><strong>UTILITY</strong></li>
-         * <li><strong>MARKETING</strong></li>
-         * <li><strong>AUTHENTICATION</strong></li>
+         * <li><p><strong>UTILITY</strong></p>
+         * </li>
+         * <li><p><strong>MARKETING</strong></p>
+         * </li>
+         * <li><p><strong>AUTHENTICATION</strong></p>
+         * </li>
          * </ul>
          * <p>The category of the Viber template. Valid values:</p>
          * <ul>
-         * <li><strong>text</strong>: template that contains only text</li>
-         * <li><strong>image</strong>: template that contains only images</li>
-         * <li><strong>text_image_button</strong>: template that contains text, images, and buttons</li>
-         * <li><strong>text_button</strong>: template that contains text and buttons</li>
-         * <li><strong>document</strong>: template that contains only documents</li>
-         * <li><strong>video</strong>: template that contains only videos</li>
-         * <li><strong>text_video</strong>: template that contains text and videos</li>
-         * <li><strong>text_video_button</strong>: template that contains text, videos, and buttons</li>
-         * <li><strong>text_image</strong>: template that contains text and images</li>
+         * <li><p><strong>text</strong>: template that contains only text</p>
+         * </li>
+         * <li><p><strong>image</strong>: template that contains only images</p>
+         * </li>
+         * <li><p><strong>text_image_button</strong>: template that contains text, images, and buttons</p>
+         * </li>
+         * <li><p><strong>text_button</strong>: template that contains text and buttons</p>
+         * </li>
+         * <li><p><strong>document</strong>: template that contains only documents</p>
+         * </li>
+         * <li><p><strong>video</strong>: template that contains only videos</p>
+         * </li>
+         * <li><p><strong>text_video</strong>: template that contains text and videos</p>
+         * </li>
+         * <li><p><strong>text_video_button</strong>: template that contains text, videos, and buttons</p>
+         * </li>
+         * <li><p><strong>text_image</strong>: template that contains text and images</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>TRANSACTIONAL</p>
+         * <p>UTILITY</p>
          */
         @NameInMap("Category")
         public String category;

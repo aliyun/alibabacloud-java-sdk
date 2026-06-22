@@ -11,10 +11,6 @@ public class AddContactsRequest extends TeaModel {
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 

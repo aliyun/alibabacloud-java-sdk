@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetPhoneNumberVerificationStatusRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the ISV account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>229393838****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -18,11 +17,10 @@ public class GetPhoneNumberVerificationStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8613900001234</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

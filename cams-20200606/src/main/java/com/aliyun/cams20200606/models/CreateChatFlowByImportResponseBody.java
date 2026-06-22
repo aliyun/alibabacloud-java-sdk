@@ -4,36 +4,20 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatFlowByImportResponseBody extends TeaModel {
-    /**
-     * <p>Access denied details.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>Request status code.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>Returned data object.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>Error message.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -41,8 +25,6 @@ public class CreateChatFlowByImportResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -50,8 +32,6 @@ public class CreateChatFlowByImportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request was successful</p>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -8,7 +8,7 @@ public class CreateFlowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>The response code. A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -87,13 +87,13 @@ public class CreateFlowResponseBody extends TeaModel {
 
     public static class CreateFlowResponseBodyData extends TeaModel {
         /**
-         * <p>The categories of the Flow.</p>
+         * <p>The list of categories.</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
         /**
-         * <p>The Flow ID.</p>
+         * <p>The flow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>333993838***</p>
@@ -102,7 +102,7 @@ public class CreateFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
-         * <p>The name of the Flow.</p>
+         * <p>The name of the flow.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>

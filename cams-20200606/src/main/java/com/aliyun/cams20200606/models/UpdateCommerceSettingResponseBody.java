@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCommerceSettingResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>Details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,10 +14,12 @@ public class UpdateCommerceSettingResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates that the request is successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class UpdateCommerceSettingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The response message. This parameter is returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -45,10 +47,12 @@ public class UpdateCommerceSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

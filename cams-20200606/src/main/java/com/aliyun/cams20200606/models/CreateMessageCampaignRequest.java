@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMessageCampaignRequest extends TeaModel {
     /**
+     * <p>The Meta ad account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateMessageCampaignRequest extends TeaModel {
     public String adAccountId;
 
     /**
+     * <p>The budget, in cents.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateMessageCampaignRequest extends TeaModel {
     public Long budget;
 
     /**
+     * <p>The budget type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CreateMessageCampaignRequest extends TeaModel {
     public String budgetType;
 
     /**
+     * <p>The space ID of an Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,10 +45,11 @@ public class CreateMessageCampaignRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The budget name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example</p>
      */
     @NameInMap("Name")
     public String name;
@@ -53,6 +58,7 @@ public class CreateMessageCampaignRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The Messenger Page ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

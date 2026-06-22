@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
     /**
+     * <p>Details about why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,16 +14,29 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code of the response.</p>
+     * <ul>
+     * <li><p><code>OK</code> indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public UpdateInstanceResponseBodyData data;
 
     /**
+     * <p>The response message. If the request fails, this field contains error details.</p>
+     * 
      * <strong>example:</strong>
      * <p>NULL</p>
      */
@@ -29,13 +44,23 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -97,6 +122,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static class UpdateInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The channel type.</p>
+         * 
          * <strong>example:</strong>
          * <p>VIBER</p>
          */
@@ -104,6 +131,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String channelType;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>des</p>
          */
@@ -111,6 +140,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The instance description.</p>
+         * 
          * <strong>example:</strong>
          * <p>des</p>
          */
@@ -118,6 +149,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>293992992</p>
          */
@@ -125,6 +158,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ins</p>
          */
@@ -132,13 +167,17 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The ID of the region where the instance is located.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("ResourceRegionId")
         public String resourceRegionId;
 
         /**
+         * <p>The time when the instance information was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-01 00:00:00</p>
          */

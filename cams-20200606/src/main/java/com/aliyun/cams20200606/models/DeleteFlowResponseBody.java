@@ -8,7 +8,7 @@ public class DeleteFlowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class DeleteFlowResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("Message")
     public String message;

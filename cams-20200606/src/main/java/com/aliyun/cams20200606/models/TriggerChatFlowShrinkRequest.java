@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TriggerChatFlowShrinkRequest extends TeaModel {
     /**
-     * <p>The declared occurrence time of the event, usually the time when the request was constructed, in milliseconds timestamp.</p>
+     * <p>The time when the event occurs. This is when the flow is triggered and is typically the time when the request is created. This is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1731502129000</p>
@@ -14,16 +14,19 @@ public class TriggerChatFlowShrinkRequest extends TeaModel {
     public Long claimTimeMillis;
 
     /**
-     * <p>Input parameters in Key-Value format. The Key must match the input strategy configured at the start node of your flow.</p>
+     * <p>The input parameters in a key-value format. The keys must match the input parameter policy configured in the start node of the flow. To view the variable names in the start node, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the name of the flow, and open the orchestration canvas.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;my_biz_data_0&quot;: &quot;hi&quot;, &quot;my_biz_data_1&quot;: &quot;1024&quot;}</p>
+     * <p>{
+     *   &quot;my_biz_data_0&quot;: &quot;hi&quot;,
+     *   &quot;my_biz_data_1&quot;: &quot;1024&quot;
+     * }</p>
      */
     @NameInMap("Data")
     public String dataShrink;
 
     /**
-     * <p>The time when the event should be discarded, i.e., the expiration time. If this field is specified, the message will be discarded if it exceeds this time, in milliseconds timestamp.</p>
+     * <p>The time when the event expires. If you specify this parameter, the trigger is canceled if the request is not processed before this time. This is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1731502729000</p>
@@ -32,17 +35,17 @@ public class TriggerChatFlowShrinkRequest extends TeaModel {
     public Long discardTimeMillis;
 
     /**
-     * <p>Flow code.</p>
+     * <p>The code of the flow. View the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>f4912c16943b4dfba44bd6fedacf8c70</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
-     * <p>External system transaction number, used to associate with external business system transactions. You can retrieve this parameter within the flow after triggering.</p>
+     * <p>A custom serial number from an external system. Use this parameter to associate the trigger with an external business process. After the flow is triggered, you can retrieve this parameter from within the flow.</p>
      * 
      * <strong>example:</strong>
      * <p>8d4acf7e-e360-eb83-6d74-fcf9c4538fda</p>
@@ -60,7 +63,7 @@ public class TriggerChatFlowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Unique event ID used for idempotent triggers. Do not include any business semantics; you can retrieve this parameter within the flow after triggering.</p>
+     * <p>A custom unique ID for the event, used to ensure idempotence. Do not include business semantics in the ID. After the flow is triggered, you can retrieve this parameter from within the flow.</p>
      * 
      * <strong>example:</strong>
      * <p>c68622e6-5f0d-c8a4-af41-e949c2a7580e</p>

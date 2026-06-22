@@ -8,7 +8,7 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
      * <p>Access denied for detailed information.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,8 +16,10 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates that the call is successful.</p>
+     * </li>
+     * <li><p>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

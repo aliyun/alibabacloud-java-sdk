@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatGroupRequest extends TeaModel {
     /**
+     * <p>The business phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class DeleteChatGroupRequest extends TeaModel {
     public String businessNumber;
 
     /**
+     * <p>The type. Valid value:</p>
+     * <ul>
+     * <li><strong>WHATSAPP</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>Only the WhatsApp channel is supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>
      */
@@ -21,6 +30,8 @@ public class DeleteChatGroupRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +41,7 @@ public class DeleteChatGroupRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

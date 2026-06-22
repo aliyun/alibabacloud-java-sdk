@@ -8,7 +8,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
     public GetFlowJSONAssestResponseBodyData data;
 
     /**
-     * <p>Error description information.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -90,16 +90,16 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
          * <p>The file path.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://url.com/json.json">https://url.com/json.json</a></p>
+         * <p><a href="https://bucket-*****-ap-southeast-1.aliyuncs.com/9658820125168****.json">https://bucket-*****-ap-southeast-1.aliyuncs.com/9658820125168****.json</a></p>
          */
         @NameInMap("FilePath")
         public String filePath;
 
         /**
-         * <p>The Flow ID.</p>
+         * <p>The flow ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>flow_id_arms</p>
+         * <p>92675332812643****</p>
          */
         @NameInMap("FlowId")
         public String flowId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateChatGroupRequest extends TeaModel {
     /**
+     * <p>The business number. To view the business numbers, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class UpdateChatGroupRequest extends TeaModel {
     public String businessNumber;
 
     /**
+     * <p>The channel type. Valid value:</p>
+     * <ul>
+     * <li><strong>WHATSAPP</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Only the WhatsApp channel is supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>
      */
@@ -21,6 +30,8 @@ public class UpdateChatGroupRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +41,16 @@ public class UpdateChatGroupRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The group description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The group ID. To view the group IDs, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,8 +63,18 @@ public class UpdateChatGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <strong>example:</strong>
-     * <p><a href="https://aliyun.com/img.jpg">https://aliyun.com/img.jpg</a></p>
+     * <p>The group profile picture.</p>
+     * <blockquote>
+     * <p>Image requirements</p>
+     * <ul>
+     * <li><p>Supported MIME type: image/jpeg.</p>
+     * </li>
+     * <li><p>Maximum file size: 5 MB.</p>
+     * </li>
+     * <li><p>The image must be square. Minimum dimensions: 192x192 pixels.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
      */
     @NameInMap("ProfilePictureFile")
     public String profilePictureFile;
@@ -62,8 +86,10 @@ public class UpdateChatGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The group title.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>This is a test title.</p>
      */
     @NameInMap("Subject")
     public String subject;

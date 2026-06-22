@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAudienceRequest extends TeaModel {
     /**
+     * <p>The Meta ad account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateCustomAudienceRequest extends TeaModel {
     public String adAccountId;
 
     /**
+     * <p>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,8 @@ public class CreateCustomAudienceRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -30,6 +35,8 @@ public class CreateCustomAudienceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The file path.</p>
+     * 
      * <strong>example:</strong>
      * <p>bucket/file.xlsx</p>
      */
@@ -37,6 +44,7 @@ public class CreateCustomAudienceRequest extends TeaModel {
     public String filePath;
 
     /**
+     * <p>The name of the custom audience.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +57,7 @@ public class CreateCustomAudienceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The Page ID for Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +73,7 @@ public class CreateCustomAudienceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The upload method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

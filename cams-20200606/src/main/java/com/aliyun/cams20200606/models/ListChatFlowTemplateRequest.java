@@ -5,20 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListChatFlowTemplateRequest extends TeaModel {
     /**
-     * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
     /**
-     * <p>Search keyword.</p>
-     * 
      * <strong>example:</strong>
-     * <p>LLM</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -27,19 +24,15 @@ public class ListChatFlowTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Page number</p>
-     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>75</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
-     * <p>Number of records per page.</p>
-     * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>72</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -51,17 +44,8 @@ public class ListChatFlowTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Trigger type, with the following enum values:</p>
-     * <ul>
-     * <li>TriggeredManually</li>
-     * <li>TriggeredByWhatsApp</li>
-     * <li>TriggeredByInstagram</li>
-     * <li>TriggeredByViber</li>
-     * <li>TriggeredByMessenger</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
-     * <p>TriggeredByWhatsApp</p>
+     * <p>示例值</p>
      */
     @NameInMap("TriggerType")
     public String triggerType;

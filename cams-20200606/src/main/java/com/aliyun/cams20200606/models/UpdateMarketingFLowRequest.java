@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateMarketingFLowRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>115311507XXXX49888</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("ActivityCode")
     public String activityCode;
@@ -20,24 +20,28 @@ public class UpdateMarketingFLowRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>674574575658675XX</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("ActivityId")
     public String activityId;
 
     /**
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("ActivityName")
     public String activityName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("CronExpression")
     public String cronExpression;
 
     /**
      * <strong>example:</strong>
-     * <p>2025-11-26 09:59:00</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("EndDate")
     public String endDate;
@@ -46,7 +50,7 @@ public class UpdateMarketingFLowRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("ExecutionType")
     public String executionType;
@@ -61,30 +65,26 @@ public class UpdateMarketingFLowRequest extends TeaModel {
     @NameInMap("ParamFlag")
     public String paramFlag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{&quot;testEmail&quot;:&quot;wy****<a href="mailto:999@alibaba-inc.com">999@alibaba-inc.com</a>&quot;}</p>
-     */
     @NameInMap("Params")
     public java.util.Map<String, ?> params;
 
     /**
      * <strong>example:</strong>
-     * <p>cf-kr3k31**mfeir8w</p>
+     * <p>示例值</p>
      */
     @NameInMap("RelatedFlowCode")
     public String relatedFlowCode;
 
     /**
      * <strong>example:</strong>
-     * <p>testflow</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("RelatedFlowName")
     public String relatedFlowName;
 
     /**
      * <strong>example:</strong>
-     * <p>114345654645XX</p>
+     * <p>42</p>
      */
     @NameInMap("RelatedGroupId")
     public Long relatedGroupId;
@@ -97,7 +97,7 @@ public class UpdateMarketingFLowRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2025-11-25 09:59:00</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("StartDate")
     public String startDate;

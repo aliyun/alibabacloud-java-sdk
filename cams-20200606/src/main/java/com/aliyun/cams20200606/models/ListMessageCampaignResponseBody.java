@@ -4,20 +4,39 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListMessageCampaignResponseBody extends TeaModel {
+    /**
+     * <p>Details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>A value of OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Example</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListMessageCampaignResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -25,6 +44,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23**</p>
      */
@@ -32,13 +53,23 @@ public class ListMessageCampaignResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: successful.</p>
+     * </li>
+     * <li><p>false: failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>70</p>
      */
@@ -108,6 +139,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
 
     public static class ListMessageCampaignResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the Meta ad account.</p>
+         * 
          * <strong>example:</strong>
          * <p>2339**</p>
          */
@@ -115,6 +148,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String adAccountId;
 
         /**
+         * <p>The budget.</p>
+         * 
          * <strong>example:</strong>
          * <p>62</p>
          */
@@ -122,6 +157,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public Long budget;
 
         /**
+         * <p>The budget type.</p>
+         * 
          * <strong>example:</strong>
          * <p>daily</p>
          */
@@ -129,6 +166,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String budgetType;
 
         /**
+         * <p>The campaign ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>233**</p>
          */
@@ -136,6 +175,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String campaignId;
 
         /**
+         * <p>The name of the campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>campaign-name</p>
          */
@@ -143,6 +184,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String campaignName;
 
         /**
+         * <p>The time when the campaign was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>173029392838</p>
          */
@@ -150,6 +193,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The Page ID for Messenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>238***</p>
          */
@@ -157,6 +202,8 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String pageId;
 
         /**
+         * <p>The status of the campaign.</p>
+         * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
          */

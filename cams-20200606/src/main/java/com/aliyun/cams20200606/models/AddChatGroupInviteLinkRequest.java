@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddChatGroupInviteLinkRequest extends TeaModel {
     /**
+     * <p>The business phone number. To obtain this number, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class AddChatGroupInviteLinkRequest extends TeaModel {
     public String businessNumber;
 
     /**
+     * <p>The type. Valid value:</p>
+     * <ul>
+     * <li><strong>WHATSAPP</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Currently, only the WhatsApp channel type is supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>
      */
@@ -21,6 +30,7 @@ public class AddChatGroupInviteLinkRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID. View the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,7 @@ public class AddChatGroupInviteLinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The group ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

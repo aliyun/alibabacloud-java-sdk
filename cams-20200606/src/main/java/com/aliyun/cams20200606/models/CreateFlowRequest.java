@@ -5,17 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateFlowRequest extends TeaModel {
     /**
-     * <p>The categories of the Flow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Categories")
     public java.util.List<String> categories;
 
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>93994848</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -28,11 +25,10 @@ public class CreateFlowRequest extends TeaModel {
     public String endpointUri;
 
     /**
-     * <p>The name of the Flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>flow_001</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowName")
     public String flowName;

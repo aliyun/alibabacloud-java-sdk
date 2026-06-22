@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMessageCampaignShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the Meta ad account.</p>
+     * 
      * <strong>example:</strong>
      * <p>239**</p>
      */
@@ -12,6 +14,8 @@ public class ListMessageCampaignShrinkRequest extends TeaModel {
     public String adAccountId;
 
     /**
+     * <p>The ID of the budget.</p>
+     * 
      * <strong>example:</strong>
      * <p>233**</p>
      */
@@ -19,6 +23,8 @@ public class ListMessageCampaignShrinkRequest extends TeaModel {
     public String campaignId;
 
     /**
+     * <p>The name of the campaign.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-campaign</p>
      */
@@ -26,6 +32,7 @@ public class ListMessageCampaignShrinkRequest extends TeaModel {
     public String campaignName;
 
     /**
+     * <p>The Space ID of the ISV sub-customer or the instance ID of the direct customer. You can view this ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +45,14 @@ public class ListMessageCampaignShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The pagination parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Page")
     public String pageShrink;
 
     /**
+     * <p>The Page ID for Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +68,8 @@ public class ListMessageCampaignShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The status of the budget.</p>
+     * 
      * <strong>example:</strong>
      * <p>AVAILABLE</p>
      */

@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPhoneMessageQrdlRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>9383883</p>
+     * <p>示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -17,11 +15,10 @@ public class ListPhoneMessageQrdlRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The phone number. Add the country code before the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>861380000</p>
+     * <p>示例值</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

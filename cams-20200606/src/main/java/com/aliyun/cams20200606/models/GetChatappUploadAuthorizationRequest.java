@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetChatappUploadAuthorizationRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493</p>
+     * <p>29348393884****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

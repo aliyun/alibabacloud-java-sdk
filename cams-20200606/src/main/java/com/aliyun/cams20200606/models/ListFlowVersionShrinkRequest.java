@@ -5,28 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListFlowVersionShrinkRequest extends TeaModel {
     /**
-     * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
-     * 
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <p>Business extension information, default is “{}”.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
-     * <p>Flow code.</p>
-     * 
      * <strong>example:</strong>
-     * <p>f4912c16943b4dfba44bd6fedacf****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
@@ -35,19 +25,15 @@ public class ListFlowVersionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Current page number.</p>
-     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>97</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
-     * <p>Page size.</p>
-     * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>97</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -59,10 +45,8 @@ public class ListFlowVersionShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Flow version status.</p>
-     * 
      * <strong>example:</strong>
-     * <p>DRAFT</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Status")
     public String status;

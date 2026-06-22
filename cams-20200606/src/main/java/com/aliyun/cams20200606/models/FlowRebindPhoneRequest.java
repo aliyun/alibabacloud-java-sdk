@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class FlowRebindPhoneRequest extends TeaModel {
     /**
-     * <p>Message channel code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +14,6 @@ public class FlowRebindPhoneRequest extends TeaModel {
     public String channelCode;
 
     /**
-     * <p>Message channel type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +23,6 @@ public class FlowRebindPhoneRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>Flow code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,8 +32,6 @@ public class FlowRebindPhoneRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>Flow version</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */
@@ -46,9 +41,6 @@ public class FlowRebindPhoneRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>Phone numbers or PageIds under the channel instance, etc.</p>
-     */
     @NameInMap("PhoneNumbers")
     public java.util.List<String> phoneNumbers;
 
@@ -59,7 +51,6 @@ public class FlowRebindPhoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>WABA account ID, or PageId for other channel types, etc.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

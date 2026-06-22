@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateChatFlowLogSettingRequest extends TeaModel {
     /**
-     * <p>Flow code.</p>
-     * 
      * <strong>example:</strong>
-     * <p>f4912c16943b4dfba44bd6fedacf****</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
-     * <p>Setting ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>74</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -32,15 +28,8 @@ public class UpdateChatFlowLogSettingRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Log enable status, enum values:</p>
-     * <ul>
-     * <li>ENABLED: Enabled, enables log writing</li>
-     * <li>DISABLED: Create or retain related resources, but do not enable log writing</li>
-     * <li>DELETED: Delete, and decide whether to delete related resources based on options</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
-     * <p>ENABLED</p>
+     * <p>示例值</p>
      */
     @NameInMap("Status")
     public String status;

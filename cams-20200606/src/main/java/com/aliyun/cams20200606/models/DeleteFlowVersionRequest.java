@@ -5,37 +5,25 @@ import com.aliyun.tea.*;
 
 public class DeleteFlowVersionRequest extends TeaModel {
     /**
-     * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
-     * 
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <p>Business extension information, default is “{}”.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
     /**
-     * <p>Flow code.</p>
-     * 
      * <strong>example:</strong>
-     * <p>f4912c16943b4dfba44bd6fedacf****</p>
+     * <p>示例值</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
-     * <p>Flow version</p>
-     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;

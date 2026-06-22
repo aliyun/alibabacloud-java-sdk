@@ -9,7 +9,7 @@ public class CreateMessengerPageResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,7 +23,7 @@ public class CreateMessengerPageResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>39***</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;

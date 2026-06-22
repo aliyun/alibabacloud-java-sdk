@@ -7,10 +7,14 @@ public class ListChatappTemplateRequest extends TeaModel {
     /**
      * <p>The review state of the template. Valid values:</p>
      * <ul>
-     * <li><strong>pass</strong>: The template is approved.</li>
-     * <li><strong>fail</strong>: The template is rejected.</li>
-     * <li><strong>auditing</strong>: The template is being reviewed.</li>
-     * <li><strong>unaudit</strong>: The review is suspended.</li>
+     * <li><p><strong>pass</strong>: The template is approved.</p>
+     * </li>
+     * <li><p><strong>fail</strong>: The template is rejected.</p>
+     * </li>
+     * <li><p><strong>auditing</strong>: The template is being reviewed.</p>
+     * </li>
+     * <li><p><strong>unaudit</strong>: The review is suspended.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +24,6 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String auditStatus;
 
     /**
-     * <p>The category of the message template.</p>
-     * 
      * <strong>example:</strong>
      * <p>AUTHENTICATION</p>
      */
@@ -49,7 +51,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     /**
      * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
      * <blockquote>
-     * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * <p>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,8 +109,10 @@ public class ListChatappTemplateRequest extends TeaModel {
     /**
      * <p>The type of the message template.</p>
      * <ul>
-     * <li><strong>WHATSAPP</strong></li>
-     * <li><strong>VIBER</strong></li>
+     * <li><p><strong>WHATSAPP</strong></p>
+     * </li>
+     * <li><p><strong>VIBER</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

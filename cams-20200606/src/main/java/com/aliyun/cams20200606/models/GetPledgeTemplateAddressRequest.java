@@ -6,14 +6,14 @@ import com.aliyun.tea.*;
 public class GetPledgeTemplateAddressRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>cams-x***</p>
+     * <p>示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <strong>example:</strong>
-     * <p>it</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("IndustryType")
     public String industryType;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMessageCampaignInsightsRequest extends TeaModel {
     /**
+     * <p>The Meta ad account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetMessageCampaignInsightsRequest extends TeaModel {
     public String adAccountId;
 
     /**
+     * <p>The ID of the campaign.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetMessageCampaignInsightsRequest extends TeaModel {
     public String campaignId;
 
     /**
+     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of the direct customers. This is the channel ID. You can find the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +38,7 @@ public class GetMessageCampaignInsightsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The Page ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

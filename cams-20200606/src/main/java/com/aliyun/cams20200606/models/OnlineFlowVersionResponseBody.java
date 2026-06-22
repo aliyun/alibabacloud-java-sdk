@@ -4,18 +4,10 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class OnlineFlowVersionResponseBody extends TeaModel {
-    /**
-     * <p>Details of access denial.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>Status code.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */
@@ -23,8 +15,6 @@ public class OnlineFlowVersionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error message.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -32,26 +22,16 @@ public class OnlineFlowVersionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Content of the returned data.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("Response")
     public java.util.Map<String, ?> response;
 
     /**
-     * <p>Indicates whether the operation was successful. true means success, false means failure.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

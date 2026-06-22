@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncMessageCampaignRequest extends TeaModel {
     /**
+     * <p>The ID of the Meta ad account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class SyncMessageCampaignRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the Messenger page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

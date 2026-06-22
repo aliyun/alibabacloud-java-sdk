@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetChatFlowTemplateRequest extends TeaModel {
     /**
-     * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
     /**
-     * <p>Template ID</p>
-     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

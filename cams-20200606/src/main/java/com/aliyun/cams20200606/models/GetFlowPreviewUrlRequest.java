@@ -5,20 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetFlowPreviewUrlRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>939399383</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The Flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>flow_001</p>
+     * <p>示例值</p>
      */
     @NameInMap("FlowId")
     public String flowId;

@@ -8,7 +8,7 @@ public class ListPageAdAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cams-**</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -20,7 +20,7 @@ public class ListPageAdAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>230***</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PageId")
     public String pageId;

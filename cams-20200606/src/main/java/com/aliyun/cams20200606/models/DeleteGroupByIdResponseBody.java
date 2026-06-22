@@ -4,16 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteGroupByIdResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
@@ -34,7 +30,7 @@ public class DeleteGroupByIdResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>1223-1111</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;

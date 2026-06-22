@@ -8,7 +8,7 @@ public class GeneratePresignedUrlRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>/aaa/111/aa.png</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FilePath")
     public String filePath;

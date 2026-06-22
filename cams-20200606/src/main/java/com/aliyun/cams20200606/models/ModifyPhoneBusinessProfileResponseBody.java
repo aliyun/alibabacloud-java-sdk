@@ -8,7 +8,7 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
      * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -43,8 +43,10 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

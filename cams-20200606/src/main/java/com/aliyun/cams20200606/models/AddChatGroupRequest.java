@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddChatGroupRequest extends TeaModel {
     /**
+     * <p>The phone number associated with the business account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class AddChatGroupRequest extends TeaModel {
     public String businessNumber;
 
     /**
+     * <p>The channel type. Valid value:</p>
+     * <ul>
+     * <li><strong>WHATSAPP</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>Currently, only the WhatsApp channel type is supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>
      */
@@ -21,6 +30,7 @@ public class AddChatGroupRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>The SpaceId or instance ID of the ISV sub-customer, which is the channel ID. Find it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +40,17 @@ public class AddChatGroupRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The group description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>This is a newly created group</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The link to the WhatsApp group.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://t.me/testgroup">https://t.me/testgroup</a></p>
      */
@@ -53,8 +67,10 @@ public class AddChatGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The group title.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>test</p>
      */
     @NameInMap("Subject")
     public String subject;

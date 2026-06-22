@@ -8,7 +8,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -26,7 +26,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
@@ -87,7 +87,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
 
     public static class CreatePhoneMessageQrdlResponseBodyData extends TeaModel {
         /**
-         * <p>The URL of the deep link.</p>
+         * <p>The deep link URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://wa.qrdl/">https://wa.qrdl/</a></p>
@@ -96,7 +96,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         public String deepLinkUrl;
 
         /**
-         * <p>The format of the generated image.</p>
+         * <p>The type of the generated image.</p>
          * 
          * <strong>example:</strong>
          * <p>PNG</p>
@@ -108,7 +108,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
          * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800</p>
+         * <p>86138009****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -132,7 +132,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         public String qrImageUrl;
 
         /**
-         * <p>The mode of the quick-response (QR) code.</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
          * <p>D9II3***</p>

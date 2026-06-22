@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePhoneMessageQrdlRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>883873773</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -17,21 +15,19 @@ public class DeletePhoneMessageQrdlRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The phone number. Add the country code before the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>861380000</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
-     * <p>QR code encoding.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>29338838</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("QrdlCode")
     public String qrdlCode;

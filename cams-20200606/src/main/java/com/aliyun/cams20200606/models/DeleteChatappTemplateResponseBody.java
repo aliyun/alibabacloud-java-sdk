@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatappTemplateResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>Details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,10 +14,12 @@ public class DeleteChatappTemplateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class DeleteChatappTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -45,10 +47,12 @@ public class DeleteChatappTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

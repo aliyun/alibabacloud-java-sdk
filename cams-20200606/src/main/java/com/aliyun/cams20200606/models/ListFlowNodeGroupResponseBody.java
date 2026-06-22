@@ -4,16 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListFlowNodeGroupResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>43</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -23,15 +19,11 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>successful</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -98,14 +90,14 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
     public static class ListFlowNodeGroupResponseBodyDataModel extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("PublicExtend")
         public String publicExtend;

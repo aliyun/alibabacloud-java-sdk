@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryChatappPhoneNumbersRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the ISV account.</p>
+     * <p>The Space ID of the ISV sub-customer.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493</p>
+     * <p>29348393884****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
+     * <p>The verification code of the Independent Software Vendor (ISV). This code is used to verify if the user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
-     * <p>aksik93kdkkxmwol93939</p>
+     * <p>aksik93kdkkxmwol9****</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
@@ -32,7 +32,7 @@ public class QueryChatappPhoneNumbersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The state of the phone number.</p>
+     * <p>The status of the phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>VERIFIED</p>

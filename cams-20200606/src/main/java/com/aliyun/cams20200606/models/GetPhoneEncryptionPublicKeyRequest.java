@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPhoneEncryptionPublicKeyRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>393838848</p>
+     * <p>示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -17,11 +15,10 @@ public class GetPhoneEncryptionPublicKeyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>flow_001</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateChatFlowLogSettingRequest extends TeaModel {
     /**
-     * <p>Process code.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */

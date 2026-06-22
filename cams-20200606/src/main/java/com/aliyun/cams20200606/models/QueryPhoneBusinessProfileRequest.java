@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryPhoneBusinessProfileRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The Space ID of the independent software vendor (ISV) sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2934839388494***</p>
+     * <p>293483938849****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -22,7 +22,7 @@ public class QueryPhoneBusinessProfileRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8613800001234</p>
+     * <p>861380000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

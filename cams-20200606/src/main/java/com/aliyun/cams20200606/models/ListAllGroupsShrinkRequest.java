@@ -6,15 +6,11 @@ import com.aliyun.tea.*;
 public class ListAllGroupsShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 

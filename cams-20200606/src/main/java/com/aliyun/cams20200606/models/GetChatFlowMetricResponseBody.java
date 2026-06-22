@@ -4,54 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatFlowMetricResponseBody extends TeaModel {
-    /**
-     * <p>Details of access denial.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>Status code.</p>
-     * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>Returned data object.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>Error message.</p>
-     * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Unique request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Values: true: success; false: failure.</p>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

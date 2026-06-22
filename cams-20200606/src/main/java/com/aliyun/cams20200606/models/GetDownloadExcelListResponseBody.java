@@ -4,37 +4,33 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetDownloadExcelListResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>示例值</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>39***</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;

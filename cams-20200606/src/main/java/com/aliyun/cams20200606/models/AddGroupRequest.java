@@ -11,10 +11,6 @@ public class AddGroupRequest extends TeaModel {
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
@@ -46,10 +42,6 @@ public class AddGroupRequest extends TeaModel {
     @NameInMap("Email")
     public String email;
 
-    /**
-     * <strong>example:</strong>
-     * <p>src/main/resources/config/promql_node.yaml</p>
-     */
     @NameInMap("FilePath")
     public String filePath;
 

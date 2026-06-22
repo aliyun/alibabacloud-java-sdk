@@ -5,26 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     /**
-     * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <p>Business extension information, default is “{}”.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
-     * <p>Imported flow DSL data</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -35,8 +25,6 @@ public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Flow remarks</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -50,8 +38,6 @@ public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Flow title</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */

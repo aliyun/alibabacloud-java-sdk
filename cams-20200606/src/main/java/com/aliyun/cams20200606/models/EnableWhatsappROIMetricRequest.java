@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class EnableWhatsappROIMetricRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the ISV account.</p>
+     * <p>The Space ID or instance ID of the ISV sub-customer. This is the channel ID. View this ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493</p>
+     * <p>cams-************</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.</p>
+     * <p>The verification code of the Independent Software Vendor (ISV). This code verifies that the user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
-     * <p>skdi3kksloslikdkkdk</p>
+     * <p>skdi3kksloslikd****</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;

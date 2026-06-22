@@ -4,10 +4,24 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class AddChatGroupResponseBody extends TeaModel {
+    /**
+     * <p>Details of the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The response status code. Valid values:</p>
+     * <ul>
+     * <li><p><code>OK</code>: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see the <a href="https://help.aliyun.com/document_detail/196974.html">error code list</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +29,8 @@ public class AddChatGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -22,20 +38,32 @@ public class AddChatGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>399s88-***</p>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates if the API call succeeded. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The API call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The API call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
+     * <p>The unique request code.</p>
+     * 
      * <strong>example:</strong>
      * <p>8938****</p>
      */

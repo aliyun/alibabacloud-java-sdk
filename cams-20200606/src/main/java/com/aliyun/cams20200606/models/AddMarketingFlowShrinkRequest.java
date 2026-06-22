@@ -27,10 +27,6 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
@@ -67,10 +63,6 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
     @NameInMap("ParamFlag")
     public String paramFlag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("Params")
     public String paramsShrink;
 

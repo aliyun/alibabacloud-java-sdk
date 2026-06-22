@@ -9,17 +9,17 @@ public class GetPreValidatePhoneIdRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>861380000</p>
+     * <p>86138****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
-     * <p>The verification code provided when you purchased the pre-registered phone number.</p>
+     * <p>The verification code provided when you purchased the pre-validated phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>208393</p>
+     * <p>2083**</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;

@@ -31,7 +31,7 @@ public class CopyTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12456</p>
+     * <p>示例值</p>
      */
     @NameInMap("SceneTemplateCode")
     public String sceneTemplateCode;

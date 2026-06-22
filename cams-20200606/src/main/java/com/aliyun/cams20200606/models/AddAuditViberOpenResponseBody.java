@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddAuditViberOpenResponseBody extends TeaModel {
     /**
+     * <p>Detailed information about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,14 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The response status code.</p>
+     * <ul>
+     * <li><p><code>OK</code>: The request succeeded.</p>
+     * </li>
+     * <li><p>For other values, see <a href="https://help.aliyun.com/document_detail/196974.html">Error Codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +29,8 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>122</p>
      */
@@ -26,13 +38,17 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>A message describing the result of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2121-112</p>
      */
@@ -40,6 +56,14 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

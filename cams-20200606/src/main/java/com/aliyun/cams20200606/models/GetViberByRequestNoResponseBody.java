@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetViberByRequestNoResponseBody extends TeaModel {
     /**
+     * <p>Access denial details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,16 +14,29 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code of the request.</p>
+     * <ul>
+     * <li><p><code>OK</code>: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetViberByRequestNoResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +44,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID for the request. You can use this Aliyun-generated ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8**9-A94866411B2O</p>
      */
@@ -36,6 +53,14 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -97,6 +122,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
 
     public static class GetViberByRequestNoResponseBodyDataAuditRecordCompanyAddress extends TeaModel {
         /**
+         * <p>The company address.</p>
+         * 
          * <strong>example:</strong>
          * <p>address</p>
          */
@@ -104,6 +131,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String companyAddress;
 
         /**
+         * <p>The title of the company address.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -135,6 +164,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
 
     public static class GetViberByRequestNoResponseBodyDataAuditRecordCompanyTel extends TeaModel {
         /**
+         * <p>The company telephone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>134213213</p>
          */
@@ -142,6 +173,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String companyTelNumber;
 
         /**
+         * <p>The title for the telephone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -173,6 +206,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
 
     public static class GetViberByRequestNoResponseBodyDataAuditRecord extends TeaModel {
         /**
+         * <p>The age restriction.</p>
+         * 
          * <strong>example:</strong>
          * <p>eighteenUp</p>
          */
@@ -180,6 +215,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String ageLimit;
 
         /**
+         * <p>The reason for the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaa</p>
          */
@@ -187,6 +224,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String applyReason;
 
         /**
+         * <p>The name of the business account.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaaa</p>
          */
@@ -194,16 +233,23 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String businessAccountName;
 
         /**
+         * <p>The business license registration number.</p>
+         * 
          * <strong>example:</strong>
          * <p>43645465465</p>
          */
         @NameInMap("BusinessLicenseRegistrationNumber")
         public String businessLicenseRegistrationNumber;
 
+        /**
+         * <p>The company addresses.</p>
+         */
         @NameInMap("CompanyAddress")
         public java.util.List<GetViberByRequestNoResponseBodyDataAuditRecordCompanyAddress> companyAddress;
 
         /**
+         * <p>The English name of the company.</p>
+         * 
          * <strong>example:</strong>
          * <p>english</p>
          */
@@ -211,6 +257,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String companyEnglishName;
 
         /**
+         * <p>The legal name of the company.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxxcompany</p>
          */
@@ -218,6 +266,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String companyLegalName;
 
         /**
+         * <p>The name of the company\&quot;s legal representative.</p>
+         * 
          * <strong>example:</strong>
          * <p>jack</p>
          */
@@ -225,6 +275,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String companyLegalPerson;
 
         /**
+         * <p>The company profile.</p>
+         * 
          * <strong>example:</strong>
          * <p>new</p>
          */
@@ -232,16 +284,23 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String companyProfile;
 
         /**
+         * <p>The country or region where the company is registered.</p>
+         * 
          * <strong>example:</strong>
          * <p>beijing</p>
          */
         @NameInMap("CompanyRegisteredCountry")
         public String companyRegisteredCountry;
 
+        /**
+         * <p>The company telephone numbers.</p>
+         */
         @NameInMap("CompanyTel")
         public java.util.List<GetViberByRequestNoResponseBodyDataAuditRecordCompanyTel> companyTel;
 
         /**
+         * <p>The complete address of the company\&quot;s headquarters.</p>
+         * 
          * <strong>example:</strong>
          * <p>address</p>
          */
@@ -249,6 +308,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String completeAddressOfHeadquarters;
 
         /**
+         * <p>The contact person\&quot;s email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>6944**@gmail.com</p>
          */
@@ -256,13 +317,17 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String contactEmail;
 
         /**
+         * <p>The contact email address.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("ContactMail")
         public String contactMail;
 
         /**
+         * <p>The contact person\&quot;s name.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwq</p>
          */
@@ -270,6 +335,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String contactName;
 
         /**
+         * <p>The contact person\&quot;s phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>861151515***</p>
          */
@@ -277,13 +344,17 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String contactPhone;
 
         /**
+         * <p>The contact person\&quot;s position.</p>
+         * 
          * <strong>example:</strong>
-         * <p>职员</p>
+         * <p>example</p>
          */
         @NameInMap("ContactPosition")
         public String contactPosition;
 
         /**
+         * <p>Indicates whether auto-reply is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -291,6 +362,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String enableAutoReply;
 
         /**
+         * <p>A description of the industry.</p>
+         * 
          * <strong>example:</strong>
          * <p>Description</p>
          */
@@ -298,6 +371,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String industryDescription;
 
         /**
+         * <p>The company\&quot;s industry.</p>
+         * 
          * <strong>example:</strong>
          * <p>cateringServices</p>
          */
@@ -305,22 +380,35 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String industryInvolved;
 
         /**
+         * <p>The URL of the letter of guarantee.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxxxxxx">https://xxxxxxxxxx</a></p>
          */
         @NameInMap("LetterGuarantee")
         public String letterGuarantee;
 
+        /**
+         * <p>The logo URLs.</p>
+         */
         @NameInMap("Logo")
         public java.util.List<String> logo;
 
+        /**
+         * <p>The local destination countries or regions.</p>
+         */
         @NameInMap("MessageDestinationCountry")
         public java.util.List<String> messageDestinationCountry;
 
+        /**
+         * <p>The international destination countries or regions.</p>
+         */
         @NameInMap("MessageDestinationInternationalCountry")
         public java.util.List<String> messageDestinationInternationalCountry;
 
         /**
+         * <p>A brief introduction to the business messaging conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaa</p>
          */
@@ -328,6 +416,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String messageDialogueIntroduction;
 
         /**
+         * <p>The date business messaging is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-05</p>
          */
@@ -335,6 +425,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String messageEnableDate;
 
         /**
+         * <p>The name of the business messaging conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -342,6 +434,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String messageSessionName;
 
         /**
+         * <p>The recovery status.</p>
+         * 
          * <strong>example:</strong>
          * <p>NowRecovery</p>
          */
@@ -349,6 +443,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String nowRecovery;
 
         /**
+         * <p>The URL for supplementary information.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://wwwxxxx">https://wwwxxxx</a></p>
          */
@@ -356,6 +452,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String otherLetterGuarantee;
 
         /**
+         * <p>The date of recovery.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-11</p>
          */
@@ -363,6 +461,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String recoveryDate;
 
         /**
+         * <p>The content of the auto-reply message.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaa</p>
          */
@@ -370,7 +470,7 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String replyContent;
 
         /**
-         * <p>SuspensionDate</p>
+         * <p>The suspension date.</p>
          * 
          * <strong>example:</strong>
          * <p>SuspensionDate</p>
@@ -379,6 +479,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String suspensionDate;
 
         /**
+         * <p>The company website.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxx">https://xxxxxx</a></p>
          */
@@ -657,10 +759,15 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
     }
 
     public static class GetViberByRequestNoResponseBodyData extends TeaModel {
+        /**
+         * <p>The audit record details.</p>
+         */
         @NameInMap("AuditRecord")
         public GetViberByRequestNoResponseBodyDataAuditRecord auditRecord;
 
         /**
+         * <p>The audit result.</p>
+         * 
          * <strong>example:</strong>
          * <p>pass</p>
          */
@@ -668,6 +775,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String auditResult;
 
         /**
+         * <p>The audit time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1785465</p>
          */
@@ -675,6 +784,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String auditTime;
 
         /**
+         * <p>The creator of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -682,6 +793,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753236426000</p>
          */
@@ -689,6 +802,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>17833636</p>
          */
@@ -696,7 +811,7 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String gmtModifier;
 
         /**
-         * <p>ID。</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -705,6 +820,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The Viber service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>735221</p>
          */
@@ -712,6 +829,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String maapServiceNo;
 
         /**
+         * <p>The user who last modified the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -719,6 +838,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The audit comment.</p>
+         * 
          * <strong>example:</strong>
          * <p>aa</p>
          */
@@ -726,6 +847,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>The unique number for the application request.</p>
+         * 
          * <strong>example:</strong>
          * <p>5435435435</p>
          */
@@ -733,6 +856,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String requestNo;
 
         /**
+         * <p>The type of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>viberOpen</p>
          */
@@ -740,6 +865,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String requestType;
 
         /**
+         * <p>The status of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -747,6 +874,8 @@ public class GetViberByRequestNoResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The subscriber code.</p>
+         * 
          * <strong>example:</strong>
          * <p>4534**</p>
          */

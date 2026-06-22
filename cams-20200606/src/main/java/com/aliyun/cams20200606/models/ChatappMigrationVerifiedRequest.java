@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ChatappMigrationVerifiedRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493</p>
+     * <p>29348393884****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -22,7 +22,7 @@ public class ChatappMigrationVerifiedRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>861380001234</p>
+     * <p>86138000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -38,7 +38,7 @@ public class ChatappMigrationVerifiedRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>828798</p>
+     * <p>8287**</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;

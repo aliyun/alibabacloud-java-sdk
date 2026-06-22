@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,16 +14,29 @@ public class ListInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p><code>OK</code> indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see the <a href="https://help.aliyun.com/document_detail/196974.html">Error Code List</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>An array of objects, each representing an instance.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListInstanceResponseBodyData> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>NULL</p>
      */
@@ -29,6 +44,8 @@ public class ListInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2993*****</p>
      */
@@ -36,6 +53,14 @@ public class ListInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +68,8 @@ public class ListInstanceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries that match the specified criteria.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -112,6 +139,8 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The channel type.</p>
+         * 
          * <strong>example:</strong>
          * <p>VIBER</p>
          */
@@ -119,6 +148,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String channelType;
 
         /**
+         * <p>The contact email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>ma**@gmail.com</p>
          */
@@ -126,6 +157,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String contactMail;
 
         /**
+         * <p>The country ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +166,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String countryId;
 
         /**
+         * <p>The customer space ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dad-gf**</p>
          */
@@ -140,6 +175,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String custSpaceId;
 
         /**
+         * <p>The ID of the associated Facebook Business Manager account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -147,6 +184,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String facebookBmId;
 
         /**
+         * <p>The instance description.</p>
+         * 
          * <strong>example:</strong>
          * <p>ins</p>
          */
@@ -154,6 +193,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>29339****</p>
          */
@@ -161,6 +202,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>viber_ins</p>
          */
@@ -168,6 +211,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The ISV terms.</p>
+         * 
          * <strong>example:</strong>
          * <p>aa</p>
          */
@@ -175,13 +220,17 @@ public class ListInstanceResponseBody extends TeaModel {
         public String isvTerms;
 
         /**
+         * <p>The office address.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>example</p>
          */
         @NameInMap("OfficeAddress")
         public String officeAddress;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -189,6 +238,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The ID of the region where the resource is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -196,6 +247,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String resourceRegionId;
 
         /**
+         * <p>The state of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>published</p>
          */
@@ -203,6 +256,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The time when the instance was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-12 00:00:00</p>
          */

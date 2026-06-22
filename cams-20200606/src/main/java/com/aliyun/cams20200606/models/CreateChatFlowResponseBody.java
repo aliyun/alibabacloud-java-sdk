@@ -4,33 +4,20 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatFlowResponseBody extends TeaModel {
-    /**
-     * <p>Access denied details, this field is returned only when RAM verification fails.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>Error code</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>Returned data object.</p>
-     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>Error message.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -38,23 +25,16 @@ public class CreateChatFlowResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Unique request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Response data</p>
-     */
     @NameInMap("Response")
     public java.util.Map<String, ?> response;
 
     /**
-     * <p>Whether the call was successful.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

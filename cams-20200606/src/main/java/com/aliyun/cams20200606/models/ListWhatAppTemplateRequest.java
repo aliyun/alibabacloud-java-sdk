@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWhatAppTemplateRequest extends TeaModel {
     /**
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>2983883892</p>
      */
@@ -12,6 +14,8 @@ public class ListWhatAppTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>This parameter is reserved for internal use.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

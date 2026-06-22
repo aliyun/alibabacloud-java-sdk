@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
+     * <p>The channel type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +15,17 @@ public class CreateInstanceRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>The contact email address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("ContactMail")
     public String contactMail;
 
     /**
+     * <p>The country code.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,7 +33,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String countryId;
 
     /**
-     * <p>FacebookBmId</p>
+     * <p>The ID of the Facebook Business Manager (BM).</p>
      * 
      * <strong>example:</strong>
      * <p>393992929</p>
@@ -37,6 +42,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String facebookBmId;
 
     /**
+     * <p>The description of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ins</p>
      */
@@ -44,6 +51,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceDescription;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +61,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Specifies whether to confirm the audit.</p>
+     * 
      * <strong>example:</strong>
      * <p>Y</p>
      */
@@ -60,6 +70,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String isConfirmAudit;
 
     /**
+     * <p>The URL of the ISV terms file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://a.com/1.pdf">https://a.com/1.pdf</a></p>
      */
@@ -67,15 +79,19 @@ public class CreateInstanceRequest extends TeaModel {
     public String isvTerms;
 
     /**
+     * <p>The office address of the business.</p>
+     * 
      * <strong>example:</strong>
-     * <p>长沙麓谷</p>
+     * <p>example</p>
      */
     @NameInMap("OfficeAddress")
     public String officeAddress;
 
     /**
+     * <p>The ID of the resource group that contains the instance.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>example</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

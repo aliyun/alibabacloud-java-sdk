@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatappBindWabaResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>Details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,10 +14,12 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     public ChatappBindWabaResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -42,7 +44,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -51,10 +53,12 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,19 +122,19 @@ public class ChatappBindWabaResponseBody extends TeaModel {
 
     public static class ChatappBindWabaResponseBodyData extends TeaModel {
         /**
-         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * <p>The customer\&quot;s Space ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>C02029392939939</p>
+         * <p>C0202939293****</p>
          */
         @NameInMap("CustSpaceId")
         public String custSpaceId;
 
         /**
-         * <p>The ID of the WhatsApp Business Account (WABA).</p>
+         * <p>The WABA ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2939828282</p>
+         * <p>293982****</p>
          */
         @NameInMap("WabaId")
         public String wabaId;

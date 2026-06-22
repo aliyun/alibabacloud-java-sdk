@@ -14,10 +14,12 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>An \<code>OK\\</code> response indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://www.alibabacloud.com/help/en/cams/latest/api-error-codes">API error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;templateCode&quot;: &quot;****4b5c79c9432497a075bdfca36bf5&quot;，&quot;templateName&quot;: &quot;hello_whatsapp&quot;}</p>
@@ -36,7 +38,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     public CreateChatappTemplateResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource.</p>
@@ -45,7 +47,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2D</p>
@@ -100,7 +102,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
 
     public static class CreateChatappTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The code of the message template.</p>
+         * <p>The template code.</p>
          * 
          * <strong>example:</strong>
          * <p>SMS_232907****</p>
@@ -109,7 +111,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         public String templateCode;
 
         /**
-         * <p>The name of the message template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>hello_whatsapp</p>

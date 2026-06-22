@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateCommerceSettingRequest extends TeaModel {
     /**
-     * <p>Specifies whether to display the shopping cart button. Valid values:</p>
+     * <p>Specifies whether to enable the shopping cart. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Enable the shopping cart.</p>
+     * </li>
+     * <li><p>false: Disable the shopping cart.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,10 +21,12 @@ public class UpdateCommerceSettingRequest extends TeaModel {
     public Boolean cartEnable;
 
     /**
-     * <p>Specifies whether to display the catalog button. Valid values:</p>
+     * <p>Specifies whether to enable the product catalog. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Enable the product catalog.</p>
+     * </li>
+     * <li><p>false: Disable the product catalog.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,11 +37,11 @@ public class UpdateCommerceSettingRequest extends TeaModel {
     public Boolean catalogVisible;
 
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493</p>
+     * <p>29348393884****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

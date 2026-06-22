@@ -8,7 +8,7 @@ public class GetFlowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -35,7 +35,7 @@ public class GetFlowResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+     * <p>DAC72B08-3327-33EF-BEDC-8EC3E83A6575</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,13 +87,13 @@ public class GetFlowResponseBody extends TeaModel {
 
     public static class GetFlowResponseBodyData extends TeaModel {
         /**
-         * <p>The categories of the Flow.</p>
+         * <p>The list of categories.</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
         /**
-         * <p>The version number of the API.</p>
+         * <p>The API version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.0</p>
@@ -109,19 +109,19 @@ public class GetFlowResponseBody extends TeaModel {
         public String endpointUri;
 
         /**
-         * <p>The Flow ID.</p>
+         * <p>The flow ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>flow_id_arms</p>
+         * <p>92675332812643****</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
         /**
-         * <p>The Flow name.</p>
+         * <p>The flow name.</p>
          * 
          * <strong>example:</strong>
-         * <p>dnjn</p>
+         * <p>flow_001</p>
          */
         @NameInMap("FlowName")
         public String flowName;
@@ -145,7 +145,7 @@ public class GetFlowResponseBody extends TeaModel {
         public String previewUrl;
 
         /**
-         * <p>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The expiration time of the preview URL.</p>
          * 
          * <strong>example:</strong>
          * <p>1700617436633</p>
@@ -154,30 +154,7 @@ public class GetFlowResponseBody extends TeaModel {
         public Long previewUrlExpires;
 
         /**
-         * <p>The state of the Flow.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>PUBLISHED</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DRAFT</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DEPRECATED</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The status of the flow.</p>
          * 
          * <strong>example:</strong>
          * <p>DRAFT</p>

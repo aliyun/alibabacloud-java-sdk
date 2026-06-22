@@ -5,35 +5,41 @@ import com.aliyun.tea.*;
 
 public class WhatsappCallShrinkRequest extends TeaModel {
     /**
+     * <p>The business number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>86138***</p>
      */
     @NameInMap("BusinessNumber")
     public String businessNumber;
 
     /**
+     * <p>The action to perform on the call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>connect</p>
      */
     @NameInMap("CallAction")
     public String callAction;
 
     /**
+     * <p>The call ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>wamid-xx**</p>
      */
     @NameInMap("CallId")
     public String callId;
 
     /**
+     * <p>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>cams-xx**</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -47,12 +53,17 @@ public class WhatsappCallShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The call negotiation information.</p>
+     */
     @NameInMap("Session")
     public String sessionShrink;
 
     /**
+     * <p>The user\&quot;s number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>86131***</p>
      */
     @NameInMap("UserNumber")
     public String userNumber;

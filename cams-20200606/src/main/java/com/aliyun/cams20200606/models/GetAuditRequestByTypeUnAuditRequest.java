@@ -8,7 +8,7 @@ public class GetAuditRequestByTypeUnAuditRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cams-***</p>
+     * <p>示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -20,7 +20,7 @@ public class GetAuditRequestByTypeUnAuditRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>viberOpen</p>
+     * <p>示例值</p>
      */
     @NameInMap("RequestType")
     public String requestType;

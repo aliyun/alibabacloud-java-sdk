@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddChatappPhoneNumberRequest extends TeaModel {
     /**
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The country code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public String cc;
 
     /**
-     * <p>Adds a phone number for a WhatsApp Business account (WABA).</p>
+     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>AddChatappPhoneNumber</p>
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,10 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>cams:ChatappPhoneNumberRegister</p>
+     * <p>The pre-verified phone number.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1020****</p>
@@ -54,7 +57,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Private</p>
+     * <p>The name of the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

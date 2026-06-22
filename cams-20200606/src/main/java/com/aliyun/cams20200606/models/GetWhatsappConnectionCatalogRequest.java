@@ -8,7 +8,7 @@ public class GetWhatsappConnectionCatalogRequest extends TeaModel {
      * <p>The space ID of the user within the ISV account.</p>
      * 
      * <strong>example:</strong>
-     * <p>C2020939922929292</p>
+     * <p>C20209399229****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -27,7 +27,7 @@ public class GetWhatsappConnectionCatalogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>292939399393</p>
+     * <p>29293939****</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

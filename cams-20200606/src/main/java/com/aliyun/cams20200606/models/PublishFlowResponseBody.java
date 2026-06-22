@@ -8,7 +8,7 @@ public class PublishFlowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -26,10 +26,10 @@ public class PublishFlowResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+     * <p>DAC72B08-3327-33EF-BEDC-8EC3E83A6575</p>
      */
     @NameInMap("RequestId")
     public String requestId;

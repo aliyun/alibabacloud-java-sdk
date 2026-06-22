@@ -5,30 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowJSONAssetRequest extends TeaModel {
     /**
-     * <p>SpaceId/instance ID of ISV sub customer.</p>
-     * 
      * <strong>example:</strong>
-     * <p>9399393</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>JSON file generated according to Facebook flow rules.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://aliyun/json.json">https://aliyun/json.json</a></p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("FilePath")
     public String filePath;
 
     /**
-     * <p>The Flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>flow_001</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowId")
     public String flowId;

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteMarketingFlowRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>1111</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("ActivityCode")
     public String activityCode;

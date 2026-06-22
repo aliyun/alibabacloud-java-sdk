@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateAuditRequestShrinkRequest extends TeaModel {
     /**
+     * <p>Viber audit items.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AuditRecord")
     public String auditRecordShrink;
 
     /**
+     * <p>The audit result.</p>
+     * 
      * <strong>example:</strong>
      * <p>unAudit</p>
      */
@@ -18,6 +21,7 @@ public class UpdateAuditRequestShrinkRequest extends TeaModel {
     public String auditResult;
 
     /**
+     * <p>The Space ID of the ISV sub-customer or the instance ID. View it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +38,7 @@ public class UpdateAuditRequestShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The request number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

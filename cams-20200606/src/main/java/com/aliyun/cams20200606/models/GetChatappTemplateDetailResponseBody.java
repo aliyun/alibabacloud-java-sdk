@@ -8,7 +8,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
      * <p>Access denied details.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,8 +16,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <ul>
-     * <li>Example: OK. This value indicates that the request is successful.</li>
-     * <li>Other codes indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>Example: OK. This value indicates that the request is successful.</p>
+     * </li>
+     * <li><p>Other codes indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -307,7 +309,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          * <p>The phone number. This parameter is valid only if the Type sub-parameter of the Buttons parameter is set to <strong>PHONE_NUMBER</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>861398745****</p>
+         * <p>+861398745****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -331,7 +333,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          * <p>The display name of the button.</p>
          * 
          * <strong>example:</strong>
-         * <p>Call</p>
+         * <p>Make a call</p>
          */
         @NameInMap("Text")
         public String text;
@@ -339,11 +341,16 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * <p>The button type. Valid values:</p>
          * <ul>
-         * <li><strong>PHONE_NUMBER</strong>: phone call button</li>
-         * <li><strong>URL</strong>: URL button</li>
-         * <li><strong>QUICK_REPLY</strong>: quick reply button</li>
-         * <li><strong>COPY_CODE</strong>: copy code button</li>
-         * <li><strong>ONE_TAP</strong>: one-tap autofill button if Category is set to AUTHENTICATION</li>
+         * <li><p><strong>PHONE_NUMBER</strong>: phone call button</p>
+         * </li>
+         * <li><p><strong>URL</strong>: URL button</p>
+         * </li>
+         * <li><p><strong>QUICK_REPLY</strong>: quick reply button</p>
+         * </li>
+         * <li><p><strong>COPY_CODE</strong>: copy code button</p>
+         * </li>
+         * <li><p><strong>ONE_TAP</strong>: one-tap autofill button if Category is set to AUTHENTICATION</p>
+         * </li>
          * </ul>
          * <blockquote>
          * </blockquote>
@@ -372,8 +379,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * <p>The URL type. Valid values:</p>
          * <ul>
-         * <li><strong>static</strong></li>
-         * <li><strong>dynamic</strong></li>
+         * <li><p><strong>static</strong></p>
+         * </li>
+         * <li><p><strong>dynamic</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -514,7 +523,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>+86138000</p>
+         * <p>+861380005****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -747,7 +756,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          * <p>The description of the document.</p>
          * 
          * <strong>example:</strong>
-         * <p>The new file has been uploaded.</p>
+         * <p>New file already upload</p>
          */
         @NameInMap("Caption")
         public String caption;
@@ -780,7 +789,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          * <p>The name of the document.</p>
          * 
          * <strong>example:</strong>
-         * <p>Express file</p>
+         * <p>Delivery document</p>
          */
         @NameInMap("FileName")
         public String fileName;
@@ -869,12 +878,18 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * <p>The component type. Valid values:</p>
          * <ul>
-         * <li><strong>BODY</strong></li>
-         * <li><strong>HEADER</strong></li>
-         * <li><strong>FOOTER</strong></li>
-         * <li><strong>BUTTONS</strong></li>
-         * <li><strong>CAROUSEL</strong></li>
-         * <li><strong>LIMITED_TIME_OFFER</strong></li>
+         * <li><p><strong>BODY</strong></p>
+         * </li>
+         * <li><p><strong>HEADER</strong></p>
+         * </li>
+         * <li><p><strong>FOOTER</strong></p>
+         * </li>
+         * <li><p><strong>BUTTONS</strong></p>
+         * </li>
+         * <li><p><strong>CAROUSEL</strong></p>
+         * </li>
+         * <li><p><strong>LIMITED_TIME_OFFER</strong></p>
+         * </li>
          * </ul>
          * <blockquote>
          * </blockquote>
@@ -1077,10 +1092,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * <p>The review status of the message template. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The message template is approved.</li>
-         * <li><strong>fail</strong>: The message template is rejected.</li>
-         * <li><strong>auditing</strong>: The message template is being reviewed.</li>
-         * <li><strong>unaudit</strong>: The review is suspended.</li>
+         * <li><p><strong>pass</strong>: The message template is approved.</p>
+         * </li>
+         * <li><p><strong>fail</strong>: The message template is rejected.</p>
+         * </li>
+         * <li><p><strong>auditing</strong>: The message template is being reviewed.</p>
+         * </li>
+         * <li><p><strong>unaudit</strong>: The review is suspended.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1092,28 +1111,40 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * <p>The category of the template when the returned value of TemplateType is WHATSAPP. Valid values:</p>
          * <ul>
-         * <li><strong>UTILITY</strong>: a transactional template</li>
-         * <li><strong>MARKETING</strong>: a marketing template</li>
-         * <li><strong>AUTHENTICATION</strong>: an identity authentication template</li>
+         * <li><p><strong>UTILITY</strong>: a transactional template</p>
+         * </li>
+         * <li><p><strong>MARKETING</strong>: a marketing template</p>
+         * </li>
+         * <li><p><strong>AUTHENTICATION</strong>: an identity authentication template</p>
+         * </li>
          * </ul>
          * <p>The category of the template when the returned value of the TemplateType parameter is VIBER. Valid values:</p>
          * <ul>
-         * <li><strong>text</strong>: a template that contains only text</li>
-         * <li><strong>image</strong>: a template that contains only images</li>
-         * <li><strong>text_image_button</strong>: a template that contains text, images, and buttons</li>
-         * <li><strong>text_button</strong>: a template that contains text and buttons</li>
-         * <li><strong>document</strong>: a template that contains only files</li>
-         * <li><strong>video</strong>: a template that contains only videos</li>
-         * <li><strong>text_video</strong>: a template that contains text and videos</li>
-         * <li><strong>text_video_button</strong>: a template that contains text, videos, and buttons</li>
-         * <li><strong>text_image</strong>: a template that contains text and images</li>
+         * <li><p><strong>text</strong>: a template that contains only text</p>
+         * </li>
+         * <li><p><strong>image</strong>: a template that contains only images</p>
+         * </li>
+         * <li><p><strong>text_image_button</strong>: a template that contains text, images, and buttons</p>
+         * </li>
+         * <li><p><strong>text_button</strong>: a template that contains text and buttons</p>
+         * </li>
+         * <li><p><strong>document</strong>: a template that contains only files</p>
+         * </li>
+         * <li><p><strong>video</strong>: a template that contains only videos</p>
+         * </li>
+         * <li><p><strong>text_video</strong>: a template that contains text and videos</p>
+         * </li>
+         * <li><p><strong>text_video_button</strong>: a template that contains text, videos, and buttons</p>
+         * </li>
+         * <li><p><strong>text_image</strong>: a template that contains text and images</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>If Category is set to text_video_button, users cannot open a web page by clicking the button. Users can open only the video in the message. In this case, you do not need to specify the Url parameter for the URL button in the template.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>TRANSACTIONAL</p>
+         * <p>UTILITY</p>
          */
         @NameInMap("Category")
         public String category;
@@ -1190,9 +1221,12 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the message template. Valid values:</p>
          * <ul>
-         * <li><strong>WHATSAPP</strong></li>
-         * <li><strong>VIBER</strong></li>
-         * <li>LINE (developing)</li>
+         * <li><p><strong>WHATSAPP</strong></p>
+         * </li>
+         * <li><p><strong>VIBER</strong></p>
+         * </li>
+         * <li><p>LINE (developing)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

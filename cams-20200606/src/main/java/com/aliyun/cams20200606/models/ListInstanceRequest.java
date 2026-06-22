@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
     /**
+     * <p>The channel type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>whatsapp</strong></p>
+     * </li>
+     * <li><p><strong>messenger</strong></p>
+     * </li>
+     * <li><p><strong>instagram</strong></p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><strong>viber</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VIBER</p>
      */
@@ -12,6 +26,8 @@ public class ListInstanceRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>The filter string for the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>aa</p>
      */
@@ -19,6 +35,8 @@ public class ListInstanceRequest extends TeaModel {
     public String filterStr;
 
     /**
+     * <p>The instance ID. Use this parameter for non-Alibaba Cloud hosts only.</p>
+     * 
      * <strong>example:</strong>
      * <p>r-uf6wd7pkyjwxvlxfhk</p>
      */
@@ -26,6 +44,8 @@ public class ListInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>viber_ins</p>
      */
@@ -33,6 +53,8 @@ public class ListInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The page number to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>92</p>
      */
@@ -40,6 +62,8 @@ public class ListInstanceRequest extends TeaModel {
     public Long pageIndex;
 
     /**
+     * <p>The number of items to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>87</p>
      */
@@ -47,6 +71,8 @@ public class ListInstanceRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the resource group that contains the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -54,6 +80,8 @@ public class ListInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The submission time, in <code>YYYY-MM-DD HH:MM:SS</code> format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-12 00:00:00</p>
      */

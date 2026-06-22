@@ -21,10 +21,6 @@ public class ModifyChatappTemplatePropertiesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Model")
     public java.util.Map<String, ?> model;
 

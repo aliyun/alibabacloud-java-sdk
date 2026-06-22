@@ -17,7 +17,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
      * <p>The address.</p>
      * 
      * <strong>example:</strong>
-     * <p>The phone number.</p>
+     * <p>Sichuan</p>
      */
     @NameInMap("Address")
     public String address;
@@ -58,7 +58,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8613800001234</p>
+     * <p>861380000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -81,7 +81,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     /**
      * <p>The industry.</p>
      * <blockquote>
-     * <p> Valid values: OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, and RESTAURANT.</p>
+     * <p>Valid values: OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, and RESTAURANT.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

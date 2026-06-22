@@ -8,11 +8,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
-     * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
-     * </ul>
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -27,7 +23,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     public GetPhoneEncryptionPublicKeyResponseBodyData data;
 
     /**
-     * <p>Error description information.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -39,7 +35,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+     * <p>DAC72B08-3327-33EF-BEDC-8EC3E83A6575</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -94,24 +90,18 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
          * <p>The public key.</p>
          * 
          * <strong>example:</strong>
-         * <p>-----BEGIN PUBLIC KEY-----
-         * AAA
-         * BBB
-         * CCC
-         * DDD
-         * EEE
-         * FFF
-         * GGG
-         * -----END PUBLIC KEY-----</p>
+         * <p>-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt+PMrYw4zUDEk+VeTrp0\n8LZaoVpiVFErX7iuoDjUs4F9vkxMQuIABjcXw\/swzTMEopLORQV28uqN\/2\/x9hjU\****\/Zwa\/Vk5Svp4\niVY4e22FsJCCWUEMvayO8Q+3UGq0eXXQ+8SlUWEMq1VaJ4pwCLsMnmgybA+VmJxi\nkwIDAQAB\n-----END PUBLIC KEY-----&quot;</p>
          */
         @NameInMap("EncryptionPublicKey")
         public String encryptionPublicKey;
 
         /**
-         * <p>The validity state of the public key. Valid values:</p>
+         * <p>The status of the public key. Valid values:</p>
          * <ul>
-         * <li>MISMATCH: The public key is invalid.</li>
-         * <li>VALID: The public key is valid.</li>
+         * <li><p>MISMATCH: The public key is invalid.</p>
+         * </li>
+         * <li><p>VALID: The public key is valid.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +114,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
          * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>86138000**</p>
+         * <p>861526377****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;

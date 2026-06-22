@@ -32,7 +32,6 @@ public class UpdateWabaMmlStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>waba Id。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

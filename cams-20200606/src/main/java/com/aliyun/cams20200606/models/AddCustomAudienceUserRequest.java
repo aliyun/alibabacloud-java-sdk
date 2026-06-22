@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomAudienceUserRequest extends TeaModel {
     /**
+     * <p>The ID of the Meta ad account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AddCustomAudienceUserRequest extends TeaModel {
     public String adAccountId;
 
     /**
+     * <p>Indicates whether this is the last batch of data.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +24,7 @@ public class AddCustomAudienceUserRequest extends TeaModel {
     public Boolean batchLastFlag;
 
     /**
+     * <p>The space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class AddCustomAudienceUserRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The ID of the custom audience.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class AddCustomAudienceUserRequest extends TeaModel {
     public String customAudienceId;
 
     /**
+     * <p>The estimated total number of users.</p>
+     * 
      * <strong>example:</strong>
      * <p>26</p>
      */
@@ -49,6 +56,7 @@ public class AddCustomAudienceUserRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The Page ID for Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +72,7 @@ public class AddCustomAudienceUserRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>A list of users.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")
@@ -156,15 +165,19 @@ public class AddCustomAudienceUserRequest extends TeaModel {
 
     public static class AddCustomAudienceUserRequestUsers extends TeaModel {
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="mailto:a@test.com">a@test.com</a></p>
+         * <p>Example</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
-         * <p>86138***</p>
+         * <p>Example</p>
          */
         @NameInMap("Phone")
         public String phone;

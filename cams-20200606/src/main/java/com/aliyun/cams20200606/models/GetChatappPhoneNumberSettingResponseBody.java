@@ -4,23 +4,19 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberSettingResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Message")
     public String message;
@@ -30,7 +26,7 @@ public class GetChatappPhoneNumberSettingResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>42602478-F7C1-58D2-AFFE-88F7A18***6</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;

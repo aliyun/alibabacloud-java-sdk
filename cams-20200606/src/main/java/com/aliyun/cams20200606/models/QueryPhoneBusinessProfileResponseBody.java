@@ -14,10 +14,12 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>OK indicates that the request is successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +29,13 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public QueryPhoneBusinessProfileResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -42,7 +44,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -51,10 +53,12 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +122,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
 
     public static class QueryPhoneBusinessProfileResponseBodyData extends TeaModel {
         /**
-         * <p>Regarding.</p>
+         * <p>The business profile.</p>
          * 
          * <strong>example:</strong>
          * <p>business profile</p>
@@ -148,7 +152,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
          * <p>The email address.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></p>
+         * <p><a href="mailto:example@aliyun.com">example@aliyun.com</a></p>
          */
         @NameInMap("Email")
         public String email;
@@ -157,7 +161,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
          * <p>The profile picture.</p>
          * 
          * <strong>example:</strong>
-         * <p>https://....img</p>
+         * <p><a href="https://example.img">https://example.img</a></p>
          */
         @NameInMap("ProfilePictureUrl")
         public String profilePictureUrl;
@@ -172,7 +176,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         public String vertical;
 
         /**
-         * <p>The website.</p>
+         * <p>The websites.</p>
          */
         @NameInMap("Websites")
         public java.util.List<String> websites;

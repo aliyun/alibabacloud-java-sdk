@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryInstanceResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason for access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,16 +14,29 @@ public class QueryInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p><code>OK</code> indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error code list</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data object returned on a successful request.</p>
+     */
     @NameInMap("Data")
     public QueryInstanceResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>NULL</p>
      */
@@ -29,6 +44,8 @@ public class QueryInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>29kskkd******</p>
      */
@@ -36,6 +53,14 @@ public class QueryInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +122,8 @@ public class QueryInstanceResponseBody extends TeaModel {
 
     public static class QueryInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The channel type.</p>
+         * 
          * <strong>example:</strong>
          * <p>VIBER</p>
          */
@@ -104,6 +131,8 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String channelType;
 
         /**
+         * <p>The contact email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:1@alibaba.com">1@alibaba.com</a></p>
          */
@@ -111,6 +140,11 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String contactMail;
 
         /**
+         * <p>The country ID.</p>
+         * <blockquote>
+         * <p>For a list of country codes, see <a href="https://help.aliyun.com/document_detail/608210.html">Country codes</a>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -118,6 +152,8 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String countryId;
 
         /**
+         * <p>The customer type.</p>
+         * 
          * <strong>example:</strong>
          * <p>01</p>
          */
@@ -125,15 +161,17 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String custType;
 
         /**
-         * <p>FacebookBmId</p>
+         * <p>The Facebook Business Manager ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>399298882</p>
+         * <p>39929****</p>
          */
         @NameInMap("FacebookBmId")
         public String facebookBmId;
 
         /**
+         * <p>The description of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ins</p>
          */
@@ -141,6 +179,8 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>293939*****</p>
          */
@@ -148,6 +188,8 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>viber_ins</p>
          */
@@ -155,6 +197,8 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The ISV terms.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://alibaba.com/1.pdf">https://alibaba.com/1.pdf</a></p>
          */
@@ -162,13 +206,17 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String isvTerms;
 
         /**
+         * <p>The office address.</p>
+         * 
          * <strong>example:</strong>
-         * <p>长沙麓谷</p>
+         * <p>example</p>
          */
         @NameInMap("OfficeAddress")
         public String officeAddress;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -176,6 +224,8 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -183,6 +233,8 @@ public class QueryInstanceResponseBody extends TeaModel {
         public String resourceRegionId;
 
         /**
+         * <p>The submission time.</p>
+         * 
          * <strong>example:</strong>
          * <p>140092992</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
     /**
+     * <p>Details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,30 +14,53 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code of the request.</p>
+     * <ul>
+     * <li><p><code>OK</code> indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public CheckDirectSendMessageSampleResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID. Use this ID to trace logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>example</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,13 +122,29 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
 
     public static class CheckDirectSendMessageSampleResponseBodyData extends TeaModel {
         /**
+         * <p>The category of the WhatsApp template. Valid values:</p>
+         * <ul>
+         * <li><p><strong>UTILITY</strong>: A template related to a specific, agreed-upon transaction.</p>
+         * </li>
+         * <li><p><strong>MARKETING</strong>: A template for promotional or marketing purposes.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>Whether the validation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The validation succeeded.</p>
+         * </li>
+         * <li><p>false: The validation failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

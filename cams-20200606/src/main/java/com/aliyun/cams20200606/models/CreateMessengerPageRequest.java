@@ -14,7 +14,7 @@ public class CreateMessengerPageRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>EAA****</p>
+     * <p>示例值</p>
      */
     @NameInMap("AuthenticationCode")
     public String authenticationCode;
@@ -23,7 +23,7 @@ public class CreateMessengerPageRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>293***</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("BusinessId")
     public String businessId;
@@ -32,7 +32,7 @@ public class CreateMessengerPageRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cams-s***</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -44,7 +44,7 @@ public class CreateMessengerPageRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>19283***</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("PageId")
     public String pageId;

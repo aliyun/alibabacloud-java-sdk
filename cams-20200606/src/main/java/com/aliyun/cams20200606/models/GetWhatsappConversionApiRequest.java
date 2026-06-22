@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetWhatsappConversionApiRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>chatbot-cn-VBe6QXXX</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -4,21 +4,27 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class AddAuditViberOpenRequest extends TeaModel {
+    /**
+     * <p>The audit record.</p>
+     */
     @NameInMap("AuditRecord")
     public AddAuditViberOpenRequestAuditRecord auditRecord;
 
     /**
+     * <p>The audit result.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>example</p>
      */
     @NameInMap("AuditResult")
     public String auditResult;
 
     /**
+     * <p>The Space ID of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -99,6 +105,8 @@ public class AddAuditViberOpenRequest extends TeaModel {
 
     public static class AddAuditViberOpenRequestAuditRecordCompanyAddress extends TeaModel {
         /**
+         * <p>The company address.</p>
+         * 
          * <strong>example:</strong>
          * <p>address</p>
          */
@@ -106,6 +114,8 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String companyAddress;
 
         /**
+         * <p>The title of the company address.</p>
+         * 
          * <strong>example:</strong>
          * <p>title</p>
          */
@@ -137,6 +147,8 @@ public class AddAuditViberOpenRequest extends TeaModel {
 
     public static class AddAuditViberOpenRequestAuditRecordCompanyTel extends TeaModel {
         /**
+         * <p>The company phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>156********</p>
          */
@@ -144,6 +156,8 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String companyTelNumber;
 
         /**
+         * <p>The title of the company phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>title</p>
          */
@@ -175,30 +189,41 @@ public class AddAuditViberOpenRequest extends TeaModel {
 
     public static class AddAuditViberOpenRequestAuditRecord extends TeaModel {
         /**
+         * <p>The age limit.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("AgeLimit")
         public String ageLimit;
 
         /**
+         * <p>The name of the business account.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("BusinessAccountName")
         public String businessAccountName;
 
         /**
+         * <p>The registration number of the business license.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("BusinessLicenseRegistrationNumber")
         public String businessLicenseRegistrationNumber;
 
+        /**
+         * <p>A list of company addresses.</p>
+         */
         @NameInMap("CompanyAddress")
         public java.util.List<AddAuditViberOpenRequestAuditRecordCompanyAddress> companyAddress;
 
         /**
+         * <p>The English name of the company.</p>
+         * 
          * <strong>example:</strong>
          * <p>7Pj6</p>
          */
@@ -206,13 +231,17 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String companyEnglishName;
 
         /**
+         * <p>The legal name of the company.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>abc</p>
          */
         @NameInMap("CompanyLegalName")
         public String companyLegalName;
 
         /**
+         * <p>The legal representative of the company.</p>
+         * 
          * <strong>example:</strong>
          * <p>jerry</p>
          */
@@ -220,6 +249,8 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String companyLegalPerson;
 
         /**
+         * <p>The company profile.</p>
+         * 
          * <strong>example:</strong>
          * <p>CompanyProfile</p>
          */
@@ -227,23 +258,32 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String companyProfile;
 
         /**
+         * <p>The country where the company is registered.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn</p>
          */
         @NameInMap("CompanyRegisteredCountry")
         public String companyRegisteredCountry;
 
+        /**
+         * <p>A list of company phone number objects.</p>
+         */
         @NameInMap("CompanyTel")
         public java.util.List<AddAuditViberOpenRequestAuditRecordCompanyTel> companyTel;
 
         /**
+         * <p>The complete address of the headquarters.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("CompleteAddressOfHeadquarters")
         public String completeAddressOfHeadquarters;
 
         /**
+         * <p>The email address of the contact person.</p>
+         * 
          * <strong>example:</strong>
          * <p>7151***<a href="mailto:5@qq.com">5@qq.com</a></p>
          */
@@ -251,6 +291,8 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String contactEmail;
 
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@123.com">123@123.com</a></p>
          */
@@ -258,6 +300,8 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String contactMail;
 
         /**
+         * <p>The name of the contact person.</p>
+         * 
          * <strong>example:</strong>
          * <p>mary</p>
          */
@@ -265,6 +309,8 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String contactName;
 
         /**
+         * <p>The phone number of the contact person.</p>
+         * 
          * <strong>example:</strong>
          * <p>8615115**777</p>
          */
@@ -272,27 +318,35 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String contactPhone;
 
         /**
+         * <p>The position of the contact person.</p>
+         * 
          * <strong>example:</strong>
-         * <p>职员</p>
+         * <p>example</p>
          */
         @NameInMap("ContactPosition")
         public String contactPosition;
 
         /**
+         * <p>Specifies whether to enable auto-reply.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>example</p>
          */
         @NameInMap("EnableAutoReply")
         public String enableAutoReply;
 
         /**
+         * <p>A description of the industry.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("IndustryDescription")
         public String industryDescription;
 
         /**
+         * <p>The industry involved.</p>
+         * 
          * <strong>example:</strong>
          * <p>NFUwytiBnm11</p>
          */
@@ -300,36 +354,53 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String industryInvolved;
 
         /**
+         * <p>The letter of guarantee.</p>
+         * 
          * <strong>example:</strong>
          * <p>tiCaYNHR8ttt</p>
          */
         @NameInMap("LetterGuarantee")
         public String letterGuarantee;
 
+        /**
+         * <p>A list of logos.</p>
+         */
         @NameInMap("Logo")
         public java.util.List<String> logo;
 
+        /**
+         * <p>A list of destination countries/regions for messages.</p>
+         */
         @NameInMap("MessageDestinationCountry")
         public java.util.List<String> messageDestinationCountry;
 
+        /**
+         * <p>A list of destination countries/regions for international messages.</p>
+         */
         @NameInMap("MessageDestinationInternationalCountry")
         public java.util.List<String> messageDestinationInternationalCountry;
 
         /**
+         * <p>The introduction in the message dialog box.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("MessageDialogueIntroduction")
         public String messageDialogueIntroduction;
 
         /**
+         * <p>The date when messaging is enabled.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("MessageEnableDate")
         public String messageEnableDate;
 
         /**
+         * <p>The name of the message session.</p>
+         * 
          * <strong>example:</strong>
          * <p>nPHK8uaRo</p>
          */
@@ -337,13 +408,17 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String messageSessionName;
 
         /**
+         * <p>Other letters of guarantee.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("OtherLetterGuarantee")
         public String otherLetterGuarantee;
 
         /**
+         * <p>The content of the reply.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -351,8 +426,10 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String replyContent;
 
         /**
+         * <p>The website address.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("WebAddress")
         public String webAddress;

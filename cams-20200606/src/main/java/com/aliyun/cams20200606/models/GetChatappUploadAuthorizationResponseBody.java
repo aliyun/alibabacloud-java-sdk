@@ -8,7 +8,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
      * <p>Access denied for detailed information.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,8 +16,10 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates that the call is successful.</p>
+     * </li>
+     * <li><p>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
      * <p>The error message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("Message")
     public String message;
@@ -127,7 +129,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
          * <p>The directory to which the file is uploaded in Object Storage Service (OSS).</p>
          * 
          * <strong>example:</strong>
-         * <p>1000102939</p>
+         * <p>100010****</p>
          */
         @NameInMap("Dir")
         public String dir;
@@ -154,7 +156,7 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
          * <p>The security token.</p>
          * 
          * <strong>example:</strong>
-         * <p>dkdieiii**</p>
+         * <p>dkdieiii****</p>
          */
         @NameInMap("SecurityToken")
         public String securityToken;

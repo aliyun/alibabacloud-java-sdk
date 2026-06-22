@@ -17,8 +17,10 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     /**
      * <p>Whether to use HTTP to receive receipts. Value:</p>
      * <ul>
-     * <li>Y: Yes.</li>
-     * <li>N: No.</li>
+     * <li><p>Y: Yes.</p>
+     * </li>
+     * <li><p>N: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +37,7 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8613800001234</p>
+     * <p>861380000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -43,8 +45,10 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     /**
      * <p>Whether to use queue method to receive receipts. Value:</p>
      * <ul>
-     * <li>Y: Yes.</li>
-     * <li>N: No.</li>
+     * <li><p>Y: Yes.</p>
+     * </li>
+     * <li><p>N: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RequestWhatsappConversionApiShrinkRequest extends TeaModel {
     /**
+     * <p>The space ID or instance ID of the customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class RequestWhatsappConversionApiShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The PageId of Meta.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +27,9 @@ public class RequestWhatsappConversionApiShrinkRequest extends TeaModel {
     @NameInMap("PageId")
     public String pageId;
 
+    /**
+     * <p>The request data.</p>
+     */
     @NameInMap("RequestData")
     public String requestDataShrink;
 

@@ -6,14 +6,14 @@ import com.aliyun.tea.*;
 public class PauseMarketingFLowRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>439859845**234</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("ActivityCode")
     public String activityCode;
 
     /**
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("ActivityId")
     public String activityId;

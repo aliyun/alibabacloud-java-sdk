@@ -6,15 +6,11 @@ import com.aliyun.tea.*;
 public class GetGroupExistRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
@@ -22,7 +18,7 @@ public class GetGroupExistRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>aaa</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("GroupName")
     public String groupName;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,14 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>A value of <code>OK</code> means the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see the <a href="https://help.aliyun.com/document_detail/196974.html">Error Code List</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +29,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>NULL</p>
      */
@@ -26,6 +38,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID for the request. Use it for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>3993939******</p>
      */
@@ -33,6 +47,14 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Specifies whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

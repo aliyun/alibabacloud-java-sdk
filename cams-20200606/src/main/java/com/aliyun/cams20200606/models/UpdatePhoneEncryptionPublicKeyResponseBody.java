@@ -8,7 +8,7 @@ public class UpdatePhoneEncryptionPublicKeyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The result returns OK as normal.</p>
+     * <p>The status code of the request. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -17,7 +17,7 @@ public class UpdatePhoneEncryptionPublicKeyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error description information.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -26,7 +26,7 @@ public class UpdatePhoneEncryptionPublicKeyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>

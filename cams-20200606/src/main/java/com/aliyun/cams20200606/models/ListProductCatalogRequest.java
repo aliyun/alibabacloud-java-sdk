@@ -27,7 +27,7 @@ public class ListProductCatalogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>28</p>
+     * <p>105048970863****</p>
      */
     @NameInMap("BusinessId")
     public Long businessId;
@@ -36,14 +36,13 @@ public class ListProductCatalogRequest extends TeaModel {
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493</p>
+     * <p>C29398882929</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The fields. Separate multiple fields with commas (,).
-     * see  <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></p>
+     * <p>The fields. Separate multiple fields with commas (,). see <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></p>
      * 
      * <strong>example:</strong>
      * <p>id,name</p>

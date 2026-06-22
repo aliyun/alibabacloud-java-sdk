@@ -6,15 +6,11 @@ import com.aliyun.tea.*;
 public class MoveContactToGroupShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
@@ -22,21 +18,21 @@ public class MoveContactToGroupShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;id&quot;:1}]</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Contacts")
     public String contacts;
 
     /**
      * <strong>example:</strong>
-     * <p>[{&quot;id&quot;:1}]</p>
+     * <p>示例值</p>
      */
     @NameInMap("LinkExistGroups")
     public String linkExistGroups;
 
     /**
      * <strong>example:</strong>
-     * <p>[{&quot;groupName&quot;:&quot;aaa&quot;}]</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("LinkNewGroups")
     public String linkNewGroups;

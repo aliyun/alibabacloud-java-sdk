@@ -8,7 +8,7 @@ public class ListFlowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -17,7 +17,7 @@ public class ListFlowResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned data object.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListFlowResponseBodyData> data;
@@ -26,7 +26,7 @@ public class ListFlowResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("Message")
     public String message;
@@ -87,22 +87,22 @@ public class ListFlowResponseBody extends TeaModel {
 
     public static class ListFlowResponseBodyData extends TeaModel {
         /**
-         * <p>The categories of the Flows.</p>
+         * <p>The categories.</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
         /**
-         * <p>The Flow ID.</p>
+         * <p>The flow ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3939393***</p>
+         * <p>92675332812643****</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
         /**
-         * <p>The Flow name.</p>
+         * <p>The name of the flow.</p>
          * 
          * <strong>example:</strong>
          * <p>flow-02020</p>

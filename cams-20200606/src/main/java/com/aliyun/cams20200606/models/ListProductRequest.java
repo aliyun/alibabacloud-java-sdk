@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductRequest extends TeaModel {
     /**
-     * <p>The cursor that points to the end of the page of the returned data.</p>
+     * <p>The cursor that points to the start of the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>kdkii48jfjjei3</p>
@@ -14,7 +14,7 @@ public class ListProductRequest extends TeaModel {
     public String after;
 
     /**
-     * <p>The cursor that points to the beginning of the page of the returned data.</p>
+     * <p>The cursor that points to the end of the previous page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>wiidkd939kek93</p>
@@ -23,27 +23,27 @@ public class ListProductRequest extends TeaModel {
     public String before;
 
     /**
-     * <p>The catalog ID.</p>
+     * <p>The catalog ID. You can get it from the Meta platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>29398389292</p>
+     * <p>2939838xxxx</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The Space ID of the ISV sub-customer.</p>
      * 
      * <strong>example:</strong>
-     * <p>C29398388383</p>
+     * <p>C2939838xxxx</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The fields. Separate multiple fields with commas (,).</p>
-     * <p> see <a href="https://help.aliyun.com/document_detail/2579419.html">product fields</a></p>
+     * <p>A list of fields to return. Separate multiple fields with a comma (,).
+     * For more information, see <a href="https://help.aliyun.com/document_detail/2579419.html">Product fields</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>id,name</p>
@@ -52,7 +52,7 @@ public class ListProductRequest extends TeaModel {
     public String fields;
 
     /**
-     * <p>The number of products to be queried. Valid values: 1 to 1000.</p>
+     * <p>The number of items to return. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>73</p>
@@ -70,11 +70,11 @@ public class ListProductRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the WhatsApp Business account (WABA).</p>
+     * <p>The WhatsApp Business Account (WABA) ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>38487474747</p>
+     * <p>3848747xxxx</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

@@ -128,7 +128,7 @@ public class UpdateConversationalAutomationRequest extends TeaModel {
          * <p>The description of the command.</p>
          * 
          * <strong>example:</strong>
-         * <p>Command 1.</p>
+         * <p>Command 1</p>
          */
         @NameInMap("CommandDescription")
         public String commandDescription;

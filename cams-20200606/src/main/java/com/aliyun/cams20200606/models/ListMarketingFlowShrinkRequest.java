@@ -27,15 +27,11 @@ public class ListMarketingFlowShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
@@ -44,14 +40,14 @@ public class ListMarketingFlowShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("PageIndex")
     public String pageIndex;
 
     /**
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

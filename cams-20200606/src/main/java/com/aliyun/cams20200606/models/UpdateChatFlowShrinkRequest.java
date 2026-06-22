@@ -5,28 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateChatFlowShrinkRequest extends TeaModel {
     /**
-     * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
-     * 
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <p>Business extension information, default is “{}”.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
-     * <p>Process code.</p>
-     * 
      * <strong>example:</strong>
-     * <p>f4912c16943b4dfba44bd6fedacf8c70</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
@@ -35,10 +25,8 @@ public class UpdateChatFlowShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Process remarks</p>
-     * 
      * <strong>example:</strong>
-     * <p>This is Customer Service WhatsApp Auto-Reply Flow</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -50,10 +38,8 @@ public class UpdateChatFlowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Process title</p>
-     * 
      * <strong>example:</strong>
-     * <p>Customer Service WhatsApp Auto-Reply Flow</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Title")
     public String title;

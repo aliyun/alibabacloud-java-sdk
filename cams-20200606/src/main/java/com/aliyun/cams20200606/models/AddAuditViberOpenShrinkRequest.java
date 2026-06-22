@@ -4,21 +4,27 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class AddAuditViberOpenShrinkRequest extends TeaModel {
+    /**
+     * <p>The audit record.</p>
+     */
     @NameInMap("AuditRecord")
     public String auditRecordShrink;
 
     /**
+     * <p>The audit result.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>example</p>
      */
     @NameInMap("AuditResult")
     public String auditResult;
 
     /**
+     * <p>The Space ID of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

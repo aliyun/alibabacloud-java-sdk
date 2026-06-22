@@ -5,33 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListChatFlowShrinkRequest extends TeaModel {
     /**
-     * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
-     * 
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <p>Business extension information, default is “{}”.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
-     * <p>Flow trigger type, enum values:</p>
-     * <ul>
-     * <li>TriggeredManually</li>
-     * <li>TriggeredByWhatsApp</li>
-     * <li>TriggeredByInstagram</li>
-     * <li>TriggeredByViber</li>
-     * <li>TriggeredByMessenger</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */
@@ -39,8 +22,6 @@ public class ListChatFlowShrinkRequest extends TeaModel {
     public String flowTriggerType;
 
     /**
-     * <p>Search keyword.</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -51,19 +32,15 @@ public class ListChatFlowShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Page number</p>
-     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>41</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
-     * <p>Page size.</p>
-     * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>42</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -75,8 +52,6 @@ public class ListChatFlowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Whether to return the online status</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,10 +59,8 @@ public class ListChatFlowShrinkRequest extends TeaModel {
     public Boolean returnWithOnlineVersion;
 
     /**
-     * <p>Flow status</p>
-     * 
      * <strong>example:</strong>
-     * <p>NORMAL</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Status")
     public String status;

@@ -8,7 +8,7 @@ public class DeleteGroupByIdRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>112</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("GroupId")
     public String groupId;

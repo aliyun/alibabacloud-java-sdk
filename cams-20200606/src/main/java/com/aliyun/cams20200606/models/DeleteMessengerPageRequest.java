@@ -8,7 +8,7 @@ public class DeleteMessengerPageRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>e01-in-71cc15xxx</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

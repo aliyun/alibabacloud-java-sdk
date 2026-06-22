@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReadChatFlowLogSettingRequest extends TeaModel {
     /**
-     * <p>Process code.</p>
-     * 
      * <strong>example:</strong>
-     * <p>f4912c16943b4dfba44bd6fedacf****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     /**
-     * <p>Message channel type</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -14,7 +12,6 @@ public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>Flow code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +21,6 @@ public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>Flow version</p>
-     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -35,9 +30,6 @@ public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>Phone numbers or PageIds under the channel instance, etc.</p>
-     */
     @NameInMap("PhoneNumbers")
     public String phoneNumbersShrink;
 

@@ -8,7 +8,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The result returns OK as normal.</p>
+     * <p>The response code. A value of OK indicates a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
     public UpdateFlowJSONAssetResponseBodyData data;
 
     /**
-     * <p>Error description information.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -87,10 +87,10 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
 
     public static class UpdateFlowJSONAssetResponseBodyData extends TeaModel {
         /**
-         * <p>The Flow ID.</p>
+         * <p>The flow ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>84848847****</p>
+         * <p>92675332812643****</p>
          */
         @NameInMap("FlowId")
         public String flowId;

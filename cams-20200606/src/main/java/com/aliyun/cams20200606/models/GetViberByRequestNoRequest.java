@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetViberByRequestNoRequest extends TeaModel {
     /**
+     * <p>The Space ID of an ISV sub-customer or the Instance ID of a direct customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
      */
@@ -15,6 +17,7 @@ public class GetViberByRequestNoRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

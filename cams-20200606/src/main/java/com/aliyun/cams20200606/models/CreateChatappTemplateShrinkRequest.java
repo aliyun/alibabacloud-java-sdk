@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateChatappTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow Facebook to automatically change the directory of the template. If you set this parameter to true, the review success rate of the template is improved. This parameter is valid only when TemplateType is set to WHATSAPP.</p>
+     * <p>Indicates whether to allow Facebook to automatically change the category of the template. This can increase the approval rate of the template. This parameter is valid only when TemplateType is set to WHATSAPP.</p>
+     * <blockquote>
+     * <p>Notice: This property is deprecated. WhatsApp no longer supports this property.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -15,28 +18,28 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public Boolean allowCategoryChange;
 
     /**
-     * <p>The category of the template if TemplateType is set to WHATSAPP. Valid values:</p>
+     * <p>WhatsApp template categories:</p>
      * <ul>
-     * <li><strong>UTILITY</strong>: the transaction template</li>
-     * <li><strong>MARKETING</strong>: the marketing template</li>
-     * <li><strong>AUTHENTICATION</strong>: the authentication template</li>
+     * <li><p><strong>UTILITY</strong>: Transactional.</p>
+     * </li>
+     * <li><p><strong>MARKETING</strong>: Marketing.</p>
+     * </li>
+     * <li><p><strong>AUTHENTICATION</strong>: Authentication.</p>
+     * </li>
      * </ul>
-     * <p>The category of the template if TemplateType is set to VIBER. Valid values:</p>
+     * <p>Viber template categories:</p>
      * <ul>
-     * <li><strong>text</strong>: the template that contains only text</li>
-     * <li><strong>image</strong>: the template that contains only images</li>
-     * <li><strong>text_image_button</strong>: the template that contains text, images, and buttons</li>
-     * <li><strong>text_button</strong>: the template that contains text and buttons</li>
-     * <li><strong>document</strong>: the template that contains only documents</li>
-     * <li><strong>video</strong>: the template that contains only videos</li>
-     * <li><strong>text_video</strong>: the template that contains text and videos</li>
-     * <li><strong>text_video_button</strong>: the template that contains text, videos, and buttons</li>
-     * <li><strong>text_image</strong>: the template that contains text and images</li>
+     * <li><p><strong>UTILITY</strong>: Transactional.</p>
+     * </li>
+     * <li><p><strong>MARKETING</strong>: Marketing.</p>
+     * </li>
+     * <li><p><strong>AUTHENTICATION</strong>: Authentication.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The code of the message template.</p>
+     * <p>UTILITY</p>
      */
     @NameInMap("Category")
     public String category;
@@ -45,9 +48,9 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public Boolean categoryChangePaused;
 
     /**
-     * <p>The components of the message template.</p>
+     * <p>The list of message template components.</p>
      * <blockquote>
-     * <p> If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter must be empty.</p>
+     * <p>When Category is set to AUTHENTICATION, the Components array cannot contain a component of the HEADER type. If the component type is BODY or FOOTER, the Text parameter must be empty.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -55,7 +58,7 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public String componentsShrink;
 
     /**
-     * <p>The space ID of the user within the ISV account.</p>
+     * <p>The Space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>293483938849493</p>
@@ -64,9 +67,9 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The WhatsApp Business Account (WABA) ID of the independent software vendor (ISV) customer.</p>
      * <blockquote>
-     * <p>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,13 +80,16 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The examples of variables that are used when you create the message template.</p>
+     * <p>An example of how to create a template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hello_whatsapp</p>
      */
     @NameInMap("Example")
     public String exampleShrink;
 
     /**
-     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The ISV verification code, used to verify whether the RAM user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -92,7 +98,7 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,10 +108,13 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>Validity period of authentication template message sending in WhatsApp</p>
-     * <blockquote>
-     * <p>This attribute requires providing waba in advance to Alibaba operators to open the whitelist, otherwise it will result in template submission failure</p>
-     * </blockquote>
+     * <p>The time-to-live (TTL) of the template message in WhatsApp.</p>
+     * <ul>
+     * <li><p>For AUTHENTICATION templates, the value ranges from 30 to 900.</p>
+     * </li>
+     * <li><p>For UTILITY templates, the value ranges from 30 to 43200.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -114,7 +123,7 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public Integer messageSendTtlSeconds;
 
     /**
-     * <p>The name of the message template.</p>
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,11 +133,12 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the message template.</p>
+     * <p>The template type.</p>
      * <ul>
-     * <li><strong>WHATSAPP</strong></li>
-     * <li><strong>VIBER</strong></li>
-     * <li>LINE: the Line message template. This type of message template will be released later.</li>
+     * <li><p><strong>WHATSAPP</strong></p>
+     * </li>
+     * <li><p><strong>VIBER</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

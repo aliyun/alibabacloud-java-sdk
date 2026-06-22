@@ -14,7 +14,13 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The value OK indicates that the request was successful.</p>
+     * <p>The status code of the request. Valid values:</p>
+     * <ul>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +29,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetChatappTemplateMetricResponseBodyData> data;
@@ -41,7 +47,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+     * <p>608F9CCA-B5EB-3D72-8047-B25D6D75BDEC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,10 +99,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
     public static class GetChatappTemplateMetricResponseBodyDataCliented extends TeaModel {
         /**
-         * <p>The text on the button.</p>
+         * <p>The button text.</p>
          * 
          * <strong>example:</strong>
-         * <p>Open url</p>
+         * <p>reply</p>
          */
         @NameInMap("ButtonContent")
         public String buttonContent;
@@ -111,12 +117,14 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The button type.</p>
-         * <p>Valid values:</p>
+         * <p>The button type. Valid values:</p>
          * <ul>
-         * <li>phone_number_button</li>
-         * <li>url_button</li>
-         * <li>quick_relpy_button</li>
+         * <li><p>phone_number_button: The call button.</p>
+         * </li>
+         * <li><p>url_button: The URL button.</p>
+         * </li>
+         * <li><p>quick_reply_button: The auto-reply button.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +166,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
     public static class GetChatappTemplateMetricResponseBodyData extends TeaModel {
         /**
-         * <p>The statistics on button clicks.</p>
+         * <p>The statistics about button clicks.</p>
          */
         @NameInMap("Cliented")
         public java.util.List<GetChatappTemplateMetricResponseBodyDataCliented> cliented;
@@ -173,7 +181,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         public Integer deliveredCount;
 
         /**
-         * <p>The end of the time range you queried.</p>
+         * <p>The end time for metric collection. This is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1668138331485</p>
@@ -182,7 +190,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         public Long end;
 
         /**
-         * <p>The template language.</p>
+         * <p>The language of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -209,7 +217,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         public Integer sentCount;
 
         /**
-         * <p>The beginning of the time range you queried.</p>
+         * <p>The start time for metric collection. This is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1673919240001</p>
@@ -221,7 +229,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
          * <p>The template code.</p>
          * 
          * <strong>example:</strong>
-         * <p>83837774838*****</p>
+         * <p>1100***************</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;

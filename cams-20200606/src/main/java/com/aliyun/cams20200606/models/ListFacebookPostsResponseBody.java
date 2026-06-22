@@ -4,16 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListFacebookPostsResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,14 +19,14 @@ public class ListFacebookPostsResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>示例值</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A94866***</p>
+     * <p>示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -98,56 +94,56 @@ public class ListFacebookPostsResponseBody extends TeaModel {
     public static class ListFacebookPostsResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>2025-04-08T10:44:48</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("FullPicture")
         public String fullPicture;
 
         /**
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
          * <strong>example:</strong>
-         * <p><a href="https://xxxxxx07">https://xxxxxx07</a></p>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("MediaUrl")
         public String mediaUrl;
 
         /**
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>示例值</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <strong>example:</strong>
-         * <p><a href="https://xxxxxxx">https://xxxxxxx</a></p>
+         * <p>示例值</p>
          */
         @NameInMap("PermalinkUrl")
         public String permalinkUrl;
 
         /**
          * <strong>example:</strong>
-         * <p>453645465***</p>
+         * <p>示例值示例值</p>
          */
         @NameInMap("RequestNo")
         public String requestNo;

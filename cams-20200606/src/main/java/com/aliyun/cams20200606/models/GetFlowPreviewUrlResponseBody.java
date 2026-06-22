@@ -8,7 +8,7 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>If OK is returned, the request was successful.</p>
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -17,7 +17,7 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned data object.</p>
      */
     @NameInMap("Data")
     public GetFlowPreviewUrlResponseBodyData data;
@@ -87,10 +87,10 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
 
     public static class GetFlowPreviewUrlResponseBodyData extends TeaModel {
         /**
-         * <p>The Flow ID.</p>
+         * <p>The flow ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>6dd31e1b7cc940fc99e293d9952b5b79</p>
+         * <p>92675332812643****</p>
          */
         @NameInMap("FlowId")
         public String flowId;
@@ -99,13 +99,13 @@ public class GetFlowPreviewUrlResponseBody extends TeaModel {
          * <p>The temporary preview URL.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://url">https://url</a></p>
+         * <p><a href="https://business.facebook.com/">https://business.facebook.com/</a>****</p>
          */
         @NameInMap("PreviewUrl")
         public String previewUrl;
 
         /**
-         * <p>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The expiration time of the preview URL.</p>
          * 
          * <strong>example:</strong>
          * <p>1700617436633</p>

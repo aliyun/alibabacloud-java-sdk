@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateAccountWebhookRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>293483938849493**</p>
+     * <p>2934839388494****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -17,8 +17,10 @@ public class UpdateAccountWebhookRequest extends TeaModel {
     /**
      * <p>Specifies whether to use HTTP callbacks to receive message receipts. Valid values:</p>
      * <ul>
-     * <li>Y: indicates that HTTP callbacks are used to receive receipts.</li>
-     * <li>N: indicates that HTTP callbacks are not used to receive receipts.</li>
+     * <li><p>Y: indicates that HTTP callbacks are used to receive receipts.</p>
+     * </li>
+     * <li><p>N: indicates that HTTP callbacks are not used to receive receipts.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +35,10 @@ public class UpdateAccountWebhookRequest extends TeaModel {
     /**
      * <p>Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values:</p>
      * <ul>
-     * <li>Y: indicates that MNS queues are used to receive receipts.</li>
-     * <li>N: indicates that MNS queues are not used to receive receipts.</li>
+     * <li><p>Y: indicates that MNS queues are used to receive receipts.</p>
+     * </li>
+     * <li><p>N: indicates that MNS queues are not used to receive receipts.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

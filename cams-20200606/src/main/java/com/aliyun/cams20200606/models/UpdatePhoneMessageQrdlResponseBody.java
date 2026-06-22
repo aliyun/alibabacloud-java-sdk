@@ -8,7 +8,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The result returns OK as normal.</p>
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
     public UpdatePhoneMessageQrdlResponseBodyData data;
 
     /**
-     * <p>Error description information.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -87,7 +87,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
 
     public static class UpdatePhoneMessageQrdlResponseBodyData extends TeaModel {
         /**
-         * <p>Deep link address.</p>
+         * <p>The deep link URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://wa.msg/">https://wa.msg/</a></p>
@@ -96,7 +96,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String deepLinkUrl;
 
         /**
-         * <p>Generate image types.</p>
+         * <p>The type of the generated image.</p>
          * 
          * <strong>example:</strong>
          * <p>PNG</p>
@@ -105,16 +105,16 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String generateQrImage;
 
         /**
-         * <p>Number.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800</p>
+         * <p>86158********</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
-         * <p>Message content.</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello</p>
@@ -123,7 +123,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String prefilledMessage;
 
         /**
-         * <p>QR code address.</p>
+         * <p>The URL of the QR code.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://img.png">https://img.png</a></p>
@@ -132,10 +132,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         public String qrImageUrl;
 
         /**
-         * <p>QR code encoding.</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
-         * <p>DEDEE998</p>
+         * <p>D9AA3***</p>
          */
         @NameInMap("QrdlCode")
         public String qrdlCode;

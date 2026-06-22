@@ -4,20 +4,33 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    /**
+     * <p>Details of the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code. A value of <code>OK</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public CreateInstanceResponseBodyData data;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>NULL</p>
      */
@@ -25,6 +38,8 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2992939*****</p>
      */
@@ -32,6 +47,8 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -93,13 +110,17 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static class CreateInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The channel type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>example</p>
          */
         @NameInMap("ChannelType")
         public String channelType;
 
         /**
+         * <p>The description of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>des</p>
          */
@@ -107,6 +128,8 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>2999292</p>
          */
@@ -114,6 +137,8 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ins</p>
          */
@@ -121,15 +146,19 @@ public class CreateInstanceResponseBody extends TeaModel {
         public Long instanceName;
 
         /**
+         * <p>The ID of the region where the resource is located.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>example</p>
          */
         @NameInMap("ResourceRegionId")
         public String resourceRegionId;
 
         /**
+         * <p>The time when the request was submitted.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>example</p>
          */
         @NameInMap("SubmitTime")
         public String submitTime;

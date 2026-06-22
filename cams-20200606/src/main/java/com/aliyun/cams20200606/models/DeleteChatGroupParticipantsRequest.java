@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatGroupParticipantsRequest extends TeaModel {
     /**
+     * <p>The business number. You can obtain the business number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +15,22 @@ public class DeleteChatGroupParticipantsRequest extends TeaModel {
     public String businessNumber;
 
     /**
+     * <p>The channel type. Valid value:</p>
+     * <ul>
+     * <li><strong>WHATSAPP</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>Currently, only the WhatsApp channel is supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>WHATSAPP。</p>
+     * <p>WHATSAPP</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
 
     /**
+     * <p>The space ID of the ISV sub-customer or the instance ID. This ID is also the channel ID. You can find the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,7 @@ public class DeleteChatGroupParticipantsRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The group ID. You can obtain the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +49,9 @@ public class DeleteChatGroupParticipantsRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>A list of group members to remove.</p>
+     */
     @NameInMap("List")
     public java.util.List<DeleteChatGroupParticipantsRequestList> list;
 
@@ -121,6 +135,8 @@ public class DeleteChatGroupParticipantsRequest extends TeaModel {
 
     public static class DeleteChatGroupParticipantsRequestList extends TeaModel {
         /**
+         * <p>The participant number of the group member. You can obtain the participant numbers of group members by calling the <a href="https://help.aliyun.com/document_detail/2932628.html">ListChatGroupParticipants</a> operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>86138***</p>
          */

@@ -8,7 +8,7 @@ public class DeprecateFlowResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The result returns OK as normal.</p>
+     * <p>OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -17,7 +17,7 @@ public class DeprecateFlowResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error description information.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>

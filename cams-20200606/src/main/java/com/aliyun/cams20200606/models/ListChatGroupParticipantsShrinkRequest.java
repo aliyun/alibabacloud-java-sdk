@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatGroupParticipantsShrinkRequest extends TeaModel {
     /**
+     * <p>The business number. You can call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation to obtain the business number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ListChatGroupParticipantsShrinkRequest extends TeaModel {
     public String businessNumber;
 
     /**
+     * <p>The channel type. Valid value:</p>
+     * <ul>
+     * <li><strong>WHATSAPP</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>This operation supports only the WhatsApp channel.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>
      */
@@ -21,6 +30,7 @@ public class ListChatGroupParticipantsShrinkRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>This is the instance ID for direct customers or the SpaceId for ISV sub-customers. You can find the ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,7 @@ public class ListChatGroupParticipantsShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The group ID. You can call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation to obtain the group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +52,9 @@ public class ListChatGroupParticipantsShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The paging information.</p>
+     */
     @NameInMap("Page")
     public String pageShrink;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomAudienceRequest extends TeaModel {
     /**
+     * <p>The Meta ad account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>339**</p>
      */
@@ -12,6 +14,7 @@ public class ListCustomAudienceRequest extends TeaModel {
     public String adAccountId;
 
     /**
+     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of the direct customers. This is the channel ID. Find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListCustomAudienceRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The ID of the custom audience.</p>
+     * 
      * <strong>example:</strong>
      * <p>239**</p>
      */
@@ -28,6 +33,8 @@ public class ListCustomAudienceRequest extends TeaModel {
     public String customAudienceId;
 
     /**
+     * <p>The name of the custom audience.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -38,12 +45,14 @@ public class ListCustomAudienceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The pagination settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Page")
     public ListCustomAudienceRequestPage page;
 
     /**
+     * <p>The Page ID for Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +68,8 @@ public class ListCustomAudienceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The token type.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -152,6 +163,7 @@ public class ListCustomAudienceRequest extends TeaModel {
 
     public static class ListCustomAudienceRequestPage extends TeaModel {
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +173,7 @@ public class ListCustomAudienceRequest extends TeaModel {
         public Long index;
 
         /**
+         * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatappTemplateRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the ISV account.</p>
+     * <p>The Space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -14,9 +14,9 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <p>The WhatsApp Business Account (WABA) ID of the Independent Software Vendor (ISV) customer.</p>
      * <blockquote>
-     * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -35,7 +35,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The template language.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>zh_CN</p>
@@ -53,7 +53,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The template code.</p>
+     * <p>The code of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>744c4b5c79c9432497a075bdfca3****</p>
@@ -62,7 +62,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The template name.</p>
+     * <p>The name of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -71,7 +71,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The template type. This parameter is required if you delete a template in a language.</p>
+     * <p>The type of the template. This parameter is required when you delete a template for a specific language.</p>
      * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>

@@ -15,16 +15,8 @@ public class IsvGetAppIdRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The permission.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>whatsapp_business_messaging: sending permission on WhatsApp messages</li>
-     * <li>ads_management: management permission on advertisements</li>
-     * <li>catalog_management: management permission on catalogs</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
-     * <p>catalog_management</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Permissions")
     public String permissions;
@@ -36,11 +28,10 @@ public class IsvGetAppIdRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the app. Valid value: WHATSAPP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>WHATSAPP</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Type")
     public String type;

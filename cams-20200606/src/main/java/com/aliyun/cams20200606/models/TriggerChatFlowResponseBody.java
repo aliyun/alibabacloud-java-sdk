@@ -5,55 +5,54 @@ import com.aliyun.tea.*;
 
 public class TriggerChatFlowResponseBody extends TeaModel {
     /**
-     * <p>Details of access denial</p>
+     * <p>Details about the access denied error.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Returned data.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>Error description message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Whether the call was successful.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Call succeeded.</li>
-     * <li><strong>false</strong>: Call failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

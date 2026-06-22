@@ -5,27 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListBindingRelationsForFlowVersionRequest extends TeaModel {
     /**
-     * <p>Channel type. Values:</p>
-     * <ul>
-     * <li>INSTAGRAM</li>
-     * <li>WHATSAPP</li>
-     * <li>MESSENGER</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;- VIBER</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>WHATSAPP</p>
+     * <p>示例值</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
 
     /**
-     * <p>Process code. View the process code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>9ccc41**************************</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;

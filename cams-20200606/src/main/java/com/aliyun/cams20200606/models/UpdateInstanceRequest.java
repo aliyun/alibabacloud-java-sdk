@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
+     * <p>The contact email address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:123@alibaba.com">123@alibaba.com</a></p>
      */
@@ -12,6 +14,11 @@ public class UpdateInstanceRequest extends TeaModel {
     public String contactMail;
 
     /**
+     * <p>The country code.</p>
+     * <blockquote>
+     * <p>For a list of country codes, see <a href="https://help.aliyun.com/document_detail/608210.html">Country Codes</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,15 +26,17 @@ public class UpdateInstanceRequest extends TeaModel {
     public String countryId;
 
     /**
-     * <p>fb bmId</p>
+     * <p>The Facebook Business Manager ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3939982828</p>
+     * <p>393998****</p>
      */
     @NameInMap("FacebookBmId")
     public String facebookBmId;
 
     /**
+     * <p>The description of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ins</p>
      */
@@ -35,6 +44,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceDescription;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +54,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +64,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Specifies whether to enable automatic audit confirmation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Y</p>
      */
@@ -60,6 +73,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public String isConfirmAudit;
 
     /**
+     * <p>The URL of the Independent Software Vendor (ISV) agreement file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://aa.com/a.pdf">https://aa.com/a.pdf</a></p>
      */
@@ -67,8 +82,10 @@ public class UpdateInstanceRequest extends TeaModel {
     public String isvTerms;
 
     /**
+     * <p>The company address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>长沙麓谷</p>
+     * <p>example</p>
      */
     @NameInMap("OfficeAddress")
     public String officeAddress;

@@ -4,34 +4,63 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class WhatsappCallResponseBody extends TeaModel {
+    /**
+     * <p>Details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Model")
     public WhatsappCallResponseBodyModel model;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>xik-x**</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -93,8 +122,10 @@ public class WhatsappCallResponseBody extends TeaModel {
 
     public static class WhatsappCallResponseBodyModel extends TeaModel {
         /**
+         * <p>The unique identifier for each call.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>wamid-xx**</p>
          */
         @NameInMap("CallId")
         public String callId;

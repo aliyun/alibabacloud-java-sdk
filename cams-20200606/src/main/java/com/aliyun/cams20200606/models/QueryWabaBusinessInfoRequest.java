@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryWabaBusinessInfoRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class QueryWabaBusinessInfoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>293848822333</p>
+     * <p>29384882****</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

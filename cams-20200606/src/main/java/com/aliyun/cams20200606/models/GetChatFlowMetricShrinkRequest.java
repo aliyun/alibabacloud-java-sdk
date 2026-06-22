@@ -5,56 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetChatFlowMetricShrinkRequest extends TeaModel {
     /**
-     * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
-     * 
      * <strong>example:</strong>
-     * <p>ALICOM_OPAAS</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
-    /**
-     * <p>Business extension information, default is “{}”.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
-     * <p>Flow code.</p>
-     * 
      * <strong>example:</strong>
-     * <p>f4912c16943b4dfba44bd6fedacf****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
-     * <p>Flow version.</p>
-     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
 
     /**
-     * <p>Start timestamp in seconds.</p>
-     * 
      * <strong>example:</strong>
-     * <p>1751299200</p>
+     * <p>31</p>
      */
     @NameInMap("From")
     public Long from;
 
     /**
-     * <p>Metric name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>nodeUsageStatistics</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("MetricName")
     public String metricName;
@@ -72,10 +57,8 @@ public class GetChatFlowMetricShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>End timestamp in seconds.</p>
-     * 
      * <strong>example:</strong>
-     * <p>1751385599</p>
+     * <p>81</p>
      */
     @NameInMap("To")
     public Long to;

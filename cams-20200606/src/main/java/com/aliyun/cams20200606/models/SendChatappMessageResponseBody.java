@@ -4,14 +4,22 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class SendChatappMessageResponseBody extends TeaModel {
+    /**
+     * <p>Details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates a successful request.</p>
+     * </li>
+     * <li><p>For other status codes, see <a href="https://help.aliyun.com/document_detail/196974.html">error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +29,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource.</p>
@@ -30,7 +38,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the message that was sent.</p>
+     * <p>The ID of the message.</p>
      * 
      * <strong>example:</strong>
      * <p>61851ccb2f1365b16aee****</p>
@@ -42,7 +50,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
+     * <p>90E63D28-E31D-1EB2-8939-A94866******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

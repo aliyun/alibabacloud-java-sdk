@@ -8,7 +8,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
      * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>无</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,8 +16,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
      * <ul>
-     * <li>A value of OK indicates that the call is successful.</li>
-     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * <li><p>A value of OK indicates that the call is successful.</p>
+     * </li>
+     * <li><p>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +32,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
      * <p>The error message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>None.</p>
+     * <p>无</p>
      */
     @NameInMap("Message")
     public String message;
@@ -53,8 +55,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -403,10 +407,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          * <p>The verification state of the phone number.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>REVOKED: The review application is revoked.</li>
-         * <li>MORE_INFORMATION_REQUESTED: More information needs to be provided.</li>
-         * <li>VERIFIED: The phone number passes the verification.</li>
-         * <li>REJECTED: The phone number fails to pass the verification.</li>
+         * <li><p>REVOKED: The review application is revoked.</p>
+         * </li>
+         * <li><p>MORE_INFORMATION_REQUESTED: More information needs to be provided.</p>
+         * </li>
+         * <li><p>VERIFIED: The phone number passes the verification.</p>
+         * </li>
+         * <li><p>REJECTED: The phone number fails to pass the verification.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -416,8 +424,6 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String codeVerificationStatus;
 
         /**
-         * <p>Indicates whether it is a WhatsApp Official Business Account (OBA).</p>
-         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -428,7 +434,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          * <p>The number of phone numbers to which messages can be sent in a day.</p>
          * 
          * <strong>example:</strong>
-         * <p>TIER_10</p>
+         * <p>TIER_10K</p>
          */
         @NameInMap("MessagingLimitTier")
         public String messagingLimitTier;
@@ -455,7 +461,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800001234</p>
+         * <p>861380000****</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -464,9 +470,12 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          * <p>The quality rating of the phone number.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RED</li>
-         * <li>YELLOW</li>
-         * <li>GREEN</li>
+         * <li><p>RED</p>
+         * </li>
+         * <li><p>YELLOW</p>
+         * </li>
+         * <li><p>GREEN</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -479,17 +488,28 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          * <p>The state of the phone number.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>MIGRATED</li>
-         * <li>FLAGGED</li>
-         * <li>DISCONNECTED</li>
-         * <li>UNVERIFIED</li>
-         * <li>BANNED</li>
-         * <li>RATE_LIMITED</li>
-         * <li>PENDING</li>
-         * <li>CONNECTED</li>
-         * <li>UNKNOWN</li>
-         * <li>DELETED</li>
-         * <li>RESTRICTED</li>
+         * <li><p>MIGRATED</p>
+         * </li>
+         * <li><p>FLAGGED</p>
+         * </li>
+         * <li><p>DISCONNECTED</p>
+         * </li>
+         * <li><p>UNVERIFIED</p>
+         * </li>
+         * <li><p>BANNED</p>
+         * </li>
+         * <li><p>RATE_LIMITED</p>
+         * </li>
+         * <li><p>PENDING</p>
+         * </li>
+         * <li><p>CONNECTED</p>
+         * </li>
+         * <li><p>UNKNOWN</p>
+         * </li>
+         * <li><p>DELETED</p>
+         * </li>
+         * <li><p>RESTRICTED</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -511,7 +531,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          * <p>The status report queue.</p>
          * 
          * <strong>example:</strong>
-         * <p>alicom-09399200-queue</p>
+         * <p>alicom-0939****-queue</p>
          */
         @NameInMap("StatusQueue")
         public String statusQueue;
@@ -529,7 +549,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          * <p>The mobile originated (MO) message queue.</p>
          * 
          * <strong>example:</strong>
-         * <p>alicom-09399200-queue</p>
+         * <p>alicom-0939****-queue</p>
          */
         @NameInMap("UpQueue")
         public String upQueue;

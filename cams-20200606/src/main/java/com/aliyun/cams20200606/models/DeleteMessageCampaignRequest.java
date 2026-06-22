@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMessageCampaignRequest extends TeaModel {
     /**
+     * <p>The Meta ad account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteMessageCampaignRequest extends TeaModel {
     public String adAccountId;
 
     /**
+     * <p>The campaign ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteMessageCampaignRequest extends TeaModel {
     public String campaignId;
 
     /**
+     * <p>The space ID of an Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +38,7 @@ public class DeleteMessageCampaignRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The Page ID of Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

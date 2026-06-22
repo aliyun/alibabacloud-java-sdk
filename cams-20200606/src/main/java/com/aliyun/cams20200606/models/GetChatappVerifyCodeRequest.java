@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetChatappVerifyCodeRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the ISV account.</p>
+     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>229393838*****</p>
+     * <p>cams-kei****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The language. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The language. For values, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,16 +25,11 @@ public class GetChatappVerifyCodeRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The verification method.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Voice: sends the verification code via phone call.</li>
-     * <li>sms: sends the verification code via SMS.</li>
-     * </ul>
+     * <p>The method to receive the verification code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>SMS</p>
+     * <p>sms</p>
      */
     @NameInMap("Method")
     public String method;
@@ -47,7 +42,7 @@ public class GetChatappVerifyCodeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8613800001234</p>
+     * <p>861380000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

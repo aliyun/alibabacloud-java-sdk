@@ -4,16 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class MoveContactToGroupResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值</p>
      */
     @NameInMap("Code")
     public String code;

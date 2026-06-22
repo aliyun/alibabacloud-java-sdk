@@ -4,54 +4,21 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatFlowTemplateResponseBody extends TeaModel {
-    /**
-     * <p>Access denied details.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
-    /**
-     * <p>Status code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>Returned data object.</p>
-     */
     @NameInMap("Data")
     public ListChatFlowTemplateResponseBodyData data;
 
-    /**
-     * <p>Error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>无</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the operation was successful. Values: true: success; false: failure.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,12 +76,6 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
     }
 
     public static class ListChatFlowTemplateResponseBodyData extends TeaModel {
-        /**
-         * <p>Content of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>无</p>
-         */
         @NameInMap("Response")
         public java.util.Map<String, ?> response;
 
