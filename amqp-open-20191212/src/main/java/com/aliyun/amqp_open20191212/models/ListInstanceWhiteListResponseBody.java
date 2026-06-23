@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceWhiteListResponseBody extends TeaModel {
     /**
+     * <p>The return code. A value of <code>200</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListInstanceWhiteListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data, which is an array of whitelist entries. Each object in the array contains an <code>id</code> (a sequence number used for deletion) and a <code>value</code> (the actual entry, such as an IP address range or a VPC ID).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Data&quot;: [
      *     {
@@ -24,6 +28,8 @@ public class ListInstanceWhiteListResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>The error message returned on a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx failed,xxxx</p>
      */
@@ -31,6 +37,8 @@ public class ListInstanceWhiteListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>6DC68EC9-0E76-5435-B8C0-FF9492B4****</p>
      */
@@ -38,6 +46,8 @@ public class ListInstanceWhiteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code. A value of <code>200</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -45,6 +55,8 @@ public class ListInstanceWhiteListResponseBody extends TeaModel {
     public String statusCode;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -42,7 +42,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
 
     public static class ListVirtualHostsResponseBodyDataVirtualHosts extends TeaModel {
         /**
-         * <p>The vhost name.</p>
+         * <p>The name of the vhost.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -67,7 +67,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
 
     public static class ListVirtualHostsResponseBodyData extends TeaModel {
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of results returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -76,7 +76,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         * <p>The token that is used to retrieve the next page of results. If this parameter is not returned, all data has been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>caebacccb2be03f84eb48b699f0a****</p>
@@ -85,7 +85,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The vhosts.</p>
+         * <p>The list of vhosts.</p>
          */
         @NameInMap("VirtualHosts")
         public java.util.List<ListVirtualHostsResponseBodyDataVirtualHosts> virtualHosts;

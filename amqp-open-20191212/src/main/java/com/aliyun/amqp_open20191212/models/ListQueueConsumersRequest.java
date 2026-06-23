@@ -9,13 +9,13 @@ public class ListQueueConsumersRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>188077086902***</p>
+     * <p>amqp-cn-5yd3aw******</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     * <p>The token that marks the end of the current page of results. To retrieve the next page, include this token in the next request. If this is your first request or the last page is returned, the value is an empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -24,7 +24,7 @@ public class ListQueueConsumersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of data entries to return. If you do not configure this parameter, the default value 1 is used.</p>
+     * <p>The number of entries to return. If you do not set this parameter, the default value is 1.</p>
      * <p>Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListQueueConsumersRequest extends TeaModel {
     public Integer queryCount;
 
     /**
-     * <p>The name of the queue for which you want to query online consumers.</p>
+     * <p>The queue name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ListQueueConsumersRequest extends TeaModel {
     public String queue;
 
     /**
-     * <p>The virtual host (vhost) name.</p>
+     * <p>The vhost name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

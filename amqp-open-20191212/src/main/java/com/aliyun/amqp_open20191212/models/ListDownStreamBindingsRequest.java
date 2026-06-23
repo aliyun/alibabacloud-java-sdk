@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDownStreamBindingsRequest extends TeaModel {
     /**
-     * <p>The exchange name.</p>
+     * <p>The name of the exchange.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListDownStreamBindingsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +34,7 @@ public class ListDownStreamBindingsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     * <p>The token that is used to retrieve the next page of results. If this is your first call, or if you have retrieved all results, leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>

@@ -42,7 +42,7 @@ public class ListExchangesResponseBody extends TeaModel {
 
     public static class ListExchangesResponseBodyDataExchanges extends TeaModel {
         /**
-         * <p>The attributes. This parameter is unavailable in the current version.</p>
+         * <p>The attributes of the exchange. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -51,7 +51,7 @@ public class ListExchangesResponseBody extends TeaModel {
         public java.util.Map<String, ?> attributes;
 
         /**
-         * <p>Indicates whether the exchange was automatically deleted.</p>
+         * <p>Indicates whether the exchange is an auto-delete exchange.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -60,7 +60,7 @@ public class ListExchangesResponseBody extends TeaModel {
         public Boolean autoDeleteState;
 
         /**
-         * <p>The timestamp that indicates when the exchange was created. Unit: milliseconds.</p>
+         * <p>The time when the exchange was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1580886216000</p>
@@ -69,7 +69,7 @@ public class ListExchangesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The exchange type.</p>
+         * <p>The type of the exchange.</p>
          * 
          * <strong>example:</strong>
          * <p>DIRECT</p>
@@ -77,11 +77,14 @@ public class ListExchangesResponseBody extends TeaModel {
         @NameInMap("ExchangeType")
         public String exchangeType;
 
+        /**
+         * <p>Indicates whether the exchange is an internal exchange.</p>
+         */
         @NameInMap("Internal")
         public Boolean internal;
 
         /**
-         * <p>The exchange name.</p>
+         * <p>The name of the exchange.</p>
          * 
          * <strong>example:</strong>
          * <p>amq.direct</p>
@@ -90,7 +93,7 @@ public class ListExchangesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The vhost name.</p>
+         * <p>The name of the vhost to which the exchange belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -178,10 +181,12 @@ public class ListExchangesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that marks the end of the current returned page.``</p>
+         * <p>The token that marks the start of the next query.</p>
          * <ul>
-         * <li>If the value of this parameter is empty, the next query is not required and the token used to start the next query is unavailable.``</li>
-         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.``</li>
+         * <li><p>If this parameter is empty, no more data is available.</p>
+         * </li>
+         * <li><p>If a value is returned, use the value as the <code>NextToken</code> value in the next call to continue the query.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

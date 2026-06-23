@@ -14,10 +14,12 @@ public class DeleteBindingRequest extends TeaModel {
     public String bindingKey;
 
     /**
-     * <p>The type of the object that you want to unbind from the source exchange. Valid values:</p>
+     * <p>The type of the destination object. Valid values:</p>
      * <ul>
-     * <li><strong>QUEUE</strong></li>
-     * <li><strong>EXCHANGE</strong></li>
+     * <li><p><strong>QUEUE</strong></p>
+     * </li>
+     * <li><p><strong>EXCHANGE</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +30,7 @@ public class DeleteBindingRequest extends TeaModel {
     public String bindingType;
 
     /**
-     * <p>The name of the object that you want to unbind from the source exchange.</p>
+     * <p>The name of the destination object.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

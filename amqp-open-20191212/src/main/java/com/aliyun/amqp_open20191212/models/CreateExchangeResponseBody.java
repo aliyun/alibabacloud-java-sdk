@@ -8,7 +8,7 @@ public class CreateExchangeResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>021788F6-E50C-4BD6-9F80-66B0A19A6***</p>
+     * <p>021788F6-E50C-4BD6-9F80-66B0A19A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

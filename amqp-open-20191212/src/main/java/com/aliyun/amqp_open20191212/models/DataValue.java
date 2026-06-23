@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataValue extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account ID or Resource Access Management (RAM) user to which the AccessKey pair that is used to create the static username and password belongs.</p>
+     * <p>The ID of the Alibaba Cloud account or RAM user that created the static username and password.</p>
      * 
      * <strong>example:</strong>
      * <p>1565************1</p>
@@ -23,7 +23,7 @@ public class DataValue extends TeaModel {
     public String cInstanceId;
 
     /**
-     * <p>The AccessKey ID that is used to create the static username and password.</p>
+     * <p>The AccessKey ID that was used to create the static username and password.</p>
      * 
      * <strong>example:</strong>
      * <p>LTAI****************</p>
@@ -50,16 +50,16 @@ public class DataValue extends TeaModel {
     public String password;
 
     /**
-     * <p>The timestamp that indicates when the static username and password were deleted. Unit: milliseconds.</p>
+     * <p>The UNIX timestamp when the static username and password were deleted. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1671175303522</p>
+     * <p>0</p>
      */
     @NameInMap("deleted")
     public Long deleted;
 
     /**
-     * <p>The timestamp that indicates when the static username and password were created. Unit: milliseconds.</p>
+     * <p>The UNIX timestamp when the static username and password were created. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1671175303522</p>
@@ -68,8 +68,10 @@ public class DataValue extends TeaModel {
     public Long createTimestamp;
 
     /**
+     * <p>The remark.</p>
+     * 
      * <strong>example:</strong>
-     * <p>***环境</p>
+     * <p>*** environment</p>
      */
     @NameInMap("Remark")
     public String remark;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteExchangeRequest extends TeaModel {
     /**
-     * <p>The name of the exchange that you want to delete.</p>
+     * <p>The name of the exchange to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteExchangeRequest extends TeaModel {
     public String exchangeName;
 
     /**
-     * <p>The ID of the ApsaraMQ for RabbitMQ instance whose exchange you want to delete.</p>
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance that contains the exchange.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteExchangeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The vhost to which the exchange that you want to delete belongs.</p>
+     * <p>The name of the vhost that contains the exchange.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

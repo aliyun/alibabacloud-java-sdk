@@ -51,7 +51,7 @@ public class ListQueuesResponseBody extends TeaModel {
         public java.util.Map<String, ?> attributes;
 
         /**
-         * <p>Indicates whether the queue was automatically deleted.</p>
+         * <p>The auto-delete status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -78,7 +78,7 @@ public class ListQueuesResponseBody extends TeaModel {
         public Boolean exclusiveState;
 
         /**
-         * <p>The time when messages in the queue were last consumed.</p>
+         * <p>The last time a message was consumed from the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>1680887085240</p>
@@ -96,10 +96,10 @@ public class ListQueuesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the ApsaraMQ for RabbitMQ instance to which the queue belongs.</p>
+         * <p>The ID of the instance to which the queue belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>1880770869023***</p>
+         * <p>amqp-cn-5yd3aw******</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
@@ -186,7 +186,7 @@ public class ListQueuesResponseBody extends TeaModel {
 
     public static class ListQueuesResponseBodyData extends TeaModel {
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of results returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class ListQueuesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         * <p>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>caebacccb2be03f84eb48b699f0a****</p>

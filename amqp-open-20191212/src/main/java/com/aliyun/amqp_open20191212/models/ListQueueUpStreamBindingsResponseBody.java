@@ -42,12 +42,14 @@ public class ListQueueUpStreamBindingsResponseBody extends TeaModel {
 
     public static class ListQueueUpStreamBindingsResponseBodyDataBindings extends TeaModel {
         /**
-         * <p>The x-match attribute. Valid values:</p>
+         * <p>The x-match property. Valid values:</p>
          * <ul>
-         * <li><strong>all:</strong> A headers exchange routes a message to a queue only if all binding attributes of the queue except for x-match match the headers attributes of the message. This value is the default value.</li>
-         * <li><strong>any:</strong> A headers exchange routes a message to a queue if one or more binding attributes of the queue except for x-match match the headers attributes of the message.</li>
+         * <li><p><strong>all</strong>: This is the default value. All key-value pairs in the message header must match.</p>
+         * </li>
+         * <li><p><strong>any</strong>: At least one key-value pair in the message header must match.</p>
+         * </li>
          * </ul>
-         * <p>This parameter is available for only headers exchanges.</p>
+         * <p>This parameter is valid only for headers exchanges. It is invalid for other types of exchanges.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -58,17 +60,22 @@ public class ListQueueUpStreamBindingsResponseBody extends TeaModel {
         /**
          * <p>The binding key.</p>
          * <ul>
-         * <li><p>If the source exchange is not a topic exchange, the binding key must meet the following conventions:</p>
+         * <li><p>If the source exchange is not a topic exchange:</p>
          * <ul>
-         * <li>The binding key can contain only letters, digits, hyphens (-), underscores (_), periods (.), forward slashes (/), and at signs (@).</li>
-         * <li>The binding key must be 1 to 255 characters in length.</li>
+         * <li><p>The binding key can contain only letters, digits, hyphens (-), underscores (_), periods (.), forward slashes (/), and at signs (@).</p>
+         * </li>
+         * <li><p>The binding key must be 1 to 255 characters in length.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>If the source exchange is a topic exchange, the binding key must meet the following conventions:</p>
+         * <li><p>If the source exchange is a topic exchange:</p>
          * <ul>
-         * <li>The binding key can contain letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).</li>
-         * <li>The binding key cannot start or end with a period (.). If a binding key starts with a number sign (#) or an asterisk (\<em>), the number sign (#) or asterisk (\</em>) must be followed by a period (.). If the binding key ends with a number sign (#) or an asterisk (\<em>), the number sign (#) or asterisk (\</em>) must be preceded by a period (.). If a number sign (#) or an asterisk (\<em>) is used in the middle of a binding key, the number sign (#) or asterisk (\</em>) must be preceded and followed by a period (.).</li>
-         * <li>The binding key must be 1 to 255 characters in length.</li>
+         * <li><p>The binding key can contain letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).</p>
+         * </li>
+         * <li><p>The binding key cannot start or end with a period (.). If a number sign (#) or an asterisk (\*) is at the beginning of the key, it must be followed by a period (.). If it is at the end of the key, it must be preceded by a period (.). If it is in the middle of the key, it must be enclosed by periods (.).</p>
+         * </li>
+         * <li><p>The binding key must be 1 to 255 characters in length.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -80,10 +87,12 @@ public class ListQueueUpStreamBindingsResponseBody extends TeaModel {
         public String bindingKey;
 
         /**
-         * <p>The type of the object to which the source exchange is bound. Valid values:</p>
+         * <p>The type of the destination object. Valid values:</p>
          * <ul>
-         * <li><strong>QUEUE</strong></li>
-         * <li><strong>EXCHANGE</strong></li>
+         * <li><p><strong>QUEUE</strong></p>
+         * </li>
+         * <li><p><strong>EXCHANGE</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +102,7 @@ public class ListQueueUpStreamBindingsResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>The name of the object to which the source exchange is bound.</p>
+         * <p>The name of the destination.</p>
          * 
          * <strong>example:</strong>
          * <p>QueueTest</p>
@@ -165,7 +174,7 @@ public class ListQueueUpStreamBindingsResponseBody extends TeaModel {
         public java.util.List<ListQueueUpStreamBindingsResponseBodyDataBindings> bindings;
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of results returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -174,7 +183,7 @@ public class ListQueueUpStreamBindingsResponseBody extends TeaModel {
         public String maxResults;
 
         /**
-         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         * <p>The token that marks the end of the current results. An empty value indicates that all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>caebacccb2be03f84eb48b699f0a****</p>

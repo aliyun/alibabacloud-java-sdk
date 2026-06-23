@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVirtualHostRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraMQ for RabbitMQ instance to which the vhost you want to delete belongs.</p>
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteVirtualHostRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the vhost that you want to delete.</p>
+     * <p>The name of the vhost to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

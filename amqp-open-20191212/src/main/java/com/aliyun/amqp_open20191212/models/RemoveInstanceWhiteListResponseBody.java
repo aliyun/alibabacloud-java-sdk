@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveInstanceWhiteListResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class RemoveInstanceWhiteListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The data returned for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class RemoveInstanceWhiteListResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>can not find resource: instanceId:amqp-cn-xxx, whiteListItemId:420, whiteListType:1</p>
      */
@@ -26,6 +32,8 @@ public class RemoveInstanceWhiteListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>92385FD2-624A-48C9-8FB5-753F2AFA***</p>
      */
@@ -33,6 +41,8 @@ public class RemoveInstanceWhiteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code. A value of 200 indicates the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +50,8 @@ public class RemoveInstanceWhiteListResponseBody extends TeaModel {
     public String statusCode;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

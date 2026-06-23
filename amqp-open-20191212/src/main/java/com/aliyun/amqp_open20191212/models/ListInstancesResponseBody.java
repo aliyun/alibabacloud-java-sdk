@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListInstancesResponseBodyData data;
@@ -84,7 +84,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataInstances extends TeaModel {
         /**
-         * <p>Indicates whether the instance is automatically renewed.</p>
+         * <p>Indicates whether auto-renewal is enabled for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -93,7 +93,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean autoRenewInstance;
 
         /**
-         * <p>The endpoint that is used to access the instance over the classic network. This parameter is no longer available.</p>
+         * <p>The classic network endpoint. This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>amqp-cn-st21x7kv****.not-support</p>
@@ -101,11 +101,23 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ClassicEndpoint")
         public String classicEndpoint;
 
+        /**
+         * <p>The deployment architecture, which is applicable only to Serverless Edition instances. Valid values:</p>
+         * <ul>
+         * <li><p>shared: A shared architecture, used for reserved, elastic (shared), and pay-as-you-go instances.</p>
+         * </li>
+         * <li><p>dedicated: A dedicated architecture, used for reserved and elastic (dedicated) instances.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>shared</p>
+         */
         @NameInMap("Edition")
         public String edition;
 
         /**
-         * <p>Indicates whether the encryption at rest feature is enabled for the instance.</p>
+         * <p>Indicates whether storage encryption is enabled for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -114,7 +126,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean encryptedInstance;
 
         /**
-         * <p>The timestamp that indicates when the instance expires. Unit: milliseconds.</p>
+         * <p>The expiration timestamp of the instance, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1651507200000</p>
@@ -123,7 +135,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>amqp-cn-st21x7kv****</p>
@@ -141,11 +153,18 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>PROFESSIONAL: Professional Edition</li>
-         * <li>ENTERPRISE: Enterprise Edition</li>
-         * <li>VIP: Enterprise Platinum Edition</li>
+         * <li><p>professional: Professional Edition</p>
+         * </li>
+         * <li><p>enterprise: Enterprise Edition</p>
+         * </li>
+         * <li><p>vip: Platinum Edition</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>serverless: Serverless Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +174,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used for the data disk.</p>
+         * <p>The ID of the KMS key used for data disk encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>key-bjj66c2a893vmhawtq5fd</p>
@@ -164,6 +183,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String kmsKeyId;
 
         /**
+         * <p>The port listener mode of the instance. <code>tcp_and_ssl</code> enables both port <code>5672</code> and port <code>5671</code>, while <code>ssl_only</code> enables only port <code>5671</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp_and_ssl</p>
          */
@@ -171,7 +192,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String listenerMode;
 
         /**
-         * <p>The maximum number of Internet-based transactions per second (TPS) for the instance.</p>
+         * <p>The peak transactions per second (TPS) of the instance over the public network.</p>
          * 
          * <strong>example:</strong>
          * <p>24832</p>
@@ -180,7 +201,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer maxEipTps;
 
         /**
-         * <p>The maximum number of queues on the instance.</p>
+         * <p>The maximum number of queues for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -189,7 +210,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer maxQueue;
 
         /**
-         * <p>The maximum number of VPC-based TPS for the instance.</p>
+         * <p>The peak transactions per second (TPS) of the instance over the private network.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -198,7 +219,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer maxTps;
 
         /**
-         * <p>The maximum number of vhosts on the instance.</p>
+         * <p>The maximum number of vhosts for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -207,7 +228,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer maxVhost;
 
         /**
-         * <p>The timestamp that indicates when the order was created. Unit: milliseconds.</p>
+         * <p>The creation timestamp of the order, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572441939000</p>
@@ -218,8 +239,10 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PrePaid: the subscription billing method.</li>
-         * <li>POST_PAID: the pay-as-you-go billing method.</li>
+         * <li><p>PRE_PAID: The instance uses the subscription billing method.</p>
+         * </li>
+         * <li><p>POST_PAID: The instance uses the pay-as-you-go billing method.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,7 +252,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String orderType;
 
         /**
-         * <p>The virtual private cloud (VPC) endpoint of the instance.</p>
+         * <p>The VPC endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>amqp-cn-st21x7kv****.mq-amqp.cn-hangzhou-a.aliyuncs.com</p>
@@ -237,6 +260,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("PrivateEndpoint")
         public String privateEndpoint;
 
+        /**
+         * <p>The reserved TPS capacity for reserved and elastic instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("ProvisionedCapacity")
         public Integer provisionedCapacity;
 
@@ -250,7 +279,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String publicEndpoint;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek3axfj2w4czrq</p>
@@ -259,6 +288,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The ID of the security group to which the instance belongs. This security group is used for PrivateLink endpoint creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxx</p>
          */
@@ -271,10 +302,14 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li>DEPLOYING: The instance is being deployed.</li>
-         * <li>EXPIRED: The instance is expired.</li>
-         * <li>SERVING: The instance is running.</li>
-         * <li>RELEASED: The instance is released.</li>
+         * <li><p>DEPLOYING: The instance is being deployed.</p>
+         * </li>
+         * <li><p>EXPIRED: The instance has expired.</p>
+         * </li>
+         * <li><p>SERVING: The instance is running.</p>
+         * </li>
+         * <li><p>RELEASED: The instance is released.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,9 +319,9 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The disk size. Unit: GB.</p>
+         * <p>The storage capacity of the disk. Unit: GB.</p>
          * <blockquote>
-         * <p> For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and \<em>\</em>-1\<em>\</em> is returned.</p>
+         * <p>This parameter returns a value of <strong>-1</strong> for Professional Edition and Enterprise Edition instances, to which it does not apply.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -296,7 +331,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer storageSize;
 
         /**
-         * <p>Indicates whether the instance supports elastic IP addresses (EIPs).</p>
+         * <p>Indicates whether the instance supports EIPs.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -305,18 +340,23 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean supportEIP;
 
         /**
-         * <p>The tags that are added to the instance.</p>
+         * <p>The tags attached to the instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyDataInstancesTags> tags;
 
         /**
+         * <p>The ID of the VPC in which the instance resides. This VPC is used for PrivateLink endpoint creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The IDs of the VSwitches to which the instance is connected. These VSwitches are used for PrivateLink endpoint creation.</p>
+         */
         @NameInMap("VswitchIds")
         public java.util.List<String> vswitchIds;
 
@@ -553,13 +593,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The instances.</p>
+         * <p>A list of instances.</p>
          */
         @NameInMap("Instances")
         public java.util.List<ListInstancesResponseBodyDataInstances> instances;
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -568,7 +608,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         * <p>The token for the next page of results. If this field is empty, it means all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>caebacccb2be03f84eb48b699f0a****</p>

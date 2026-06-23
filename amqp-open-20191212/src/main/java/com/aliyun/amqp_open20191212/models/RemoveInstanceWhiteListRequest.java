@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveInstanceWhiteListRequest extends TeaModel {
     /**
+     * <p>The ID of the instance from which to remove a whitelist entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveInstanceWhiteListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Call the ListInstanceWhiteList operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class RemoveInstanceWhiteListRequest extends TeaModel {
     public Long whiteListItemId;
 
     /**
+     * <p>The type of the whitelist item. Specify 2 for an IP address or 1 for a VPC ID.</p>
+     * <p>A VPC whitelist only applies to instances with the anytunnel VPC endpoint type. Newer instances use PrivateLink for their VPC endpoints and do not support VPC whitelists.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,11 +15,14 @@ public class CreateVirtualHostRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the vhost that you want to create. Valid values:</p>
+     * <p>The name of the vhost to create. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slash (/), and at signs (@).</li>
-     * <li>The name must be 1 to 255 characters in length.</li>
-     * <li>After the vhost is created, you cannot change its name. If you want to change the name of a vhost, delete the vhost and create another vhost.</li>
+     * <li><p>The name can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).</p>
+     * </li>
+     * <li><p>The name must be 1 to 255 characters in length.</p>
+     * </li>
+     * <li><p>The vhost name cannot be changed after creation. To use a different name, delete the vhost and create a new one.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

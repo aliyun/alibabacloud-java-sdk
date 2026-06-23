@@ -12,22 +12,24 @@ public class CreateInstanceRequest extends TeaModel {
     public String authModel;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <p>The renewal method. Valid values:</p>
      * <ul>
-     * <li>true: enables auto-renewal.</li>
-     * <li>false: disables auto-renewal. If you select this value, you must manually renew the instance.</li>
+     * <li><p><code>true</code>: Enables auto-renewal.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables auto-renewal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>AutoRenewal</p>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period. The unit of the auto-renewal period is specified by RenewalDurationUnit. Default value: Month.</p>
+     * <p>The auto-renewal duration. The <code>RenewalDurationUnit</code> parameter specifies the unit, which defaults to month.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set AutoRenew to true. Default value: 1.</p>
+     * <p>This parameter is required if you set <code>AutoRenew</code> to <code>true</code>. The default value is 1.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +39,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token.</p>
+     * <p>The client token used to ensure request idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>c2c5d1274axxxxxxxx</p>
@@ -45,11 +47,23 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The deployment architecture for the serverless instance. Valid values:</p>
+     * <ul>
+     * <li><p><code>shared</code>: The shared architecture, which is applicable to reserved and elastic (shared) instances and pay-as-you-go instances.</p>
+     * </li>
+     * <li><p><code>dedicated</code>: The dedicated architecture, which is applicable to reserved and elastic (dedicated) instances.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>shared</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
     /**
-     * <p>Specifies whether to enable storage encryption for the instance. This parameter is available only for exclusive instances.</p>
+     * <p>This parameter is applicable only to dedicated instances. Specifies whether to enable data-at-rest encryption for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -58,7 +72,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean encryptedInstance;
 
     /**
-     * <p>The name of the instance. We recommend that you specify a name that does not exceed 64 characters in length.</p>
+     * <p>The name of the instance. The name can be up to 64 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>amqp-xxxxx</p>
@@ -67,13 +81,17 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance edition. Valid values if you create a subscription instance:</p>
+     * <p>The instance type.
+     * This parameter is required for subscription instances. Valid values:</p>
      * <ul>
-     * <li>professional: Professional Edition.</li>
-     * <li>enterprise: Enterprise Edition</li>
-     * <li>vip: Enterprise Platinum Edition</li>
+     * <li><p><code>professional</code>: Professional Edition</p>
+     * </li>
+     * <li><p><code>enterprise</code>: Enterprise Edition</p>
+     * </li>
+     * <li><p><code>vip</code>: Platinum Edition</p>
+     * </li>
      * </ul>
-     * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
+     * <p>You do not need to specify this parameter for serverless instances.</p>
      * 
      * <strong>example:</strong>
      * <p>professional</p>
@@ -82,13 +100,18 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The ID of the Key Management Service (KMS)-managed key used for storage encryption. This parameter is available only for exclusive instances and required only if you set EncryptedInstance to true. The key must meet the following conditions:</p>
+     * <p>This parameter applies only to dedicated instances and is required if <code>EncryptedInstance</code> is set to <code>true</code>. It specifies the ID of the KMS key used for data-at-rest encryption. The key must meet the following requirements:</p>
      * <ul>
-     * <li>The key cannot be a service key.</li>
-     * <li>The key must be in the Enabled state.</li>
-     * <li>The key must be a symmetric key.</li>
-     * <li>The key must be used for encryption and decryption.</li>
-     * <li>After the key is expired or deleted, you cannot read or write data and exceptions can occur in the ApsaraMQ for RabbitMQ instance.</li>
+     * <li><p>The key cannot be a service key.</p>
+     * </li>
+     * <li><p>The key must be in the Enabled state.</p>
+     * </li>
+     * <li><p>The key must be a symmetric key, not an asymmetric key.</p>
+     * </li>
+     * <li><p>The key usage must be for encryption and decryption.</p>
+     * </li>
+     * <li><p>If the KMS key expires or is deleted, data reads and writes will become unavailable, and the ApsaraMQ for RabbitMQ instance may become inoperable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,6 +121,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
+     * <p>Specifies whether to enable only the TLS-encrypted port. This parameter applies only to reserved and elastic (dedicated) instances, and Platinum Edition instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>tcp_and_ssl</p>
      */
@@ -105,8 +130,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String listenerMode;
 
     /**
-     * <p>The maximum number of connections that can be established to the instance.</p>
-     * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * <p>The maximum number of connections.</p>
+     * <p>For information about the valid values, see the instance specifications on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RabbitMQ</a> product page.</p>
      * 
      * <strong>example:</strong>
      * <p>50000</p>
@@ -115,8 +140,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer maxConnections;
 
     /**
-     * <p>The maximum number of Internet-based TPS on the instance.</p>
-     * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * <p>The peak transactions per second (TPS) of the instance over the public network.</p>
+     * <p>For information about the valid values, see the instance specifications on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RabbitMQ</a> product page.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -125,8 +150,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Long maxEipTps;
 
     /**
-     * <p>The maximum number of virtual private cloud (VPC)-based transactions per second (TPS) on the instance.</p>
-     * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * <p>The peak transactions per second (TPS) of the instance over a private network.</p>
+     * <p>For information about the valid values, see the instance specifications on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RabbitMQ</a> product page.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -137,8 +162,10 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li>Subscription: subscription instance</li>
-     * <li>PayAsYouGo: serverless instance</li>
+     * <li><p><code>Subscription</code>: The subscription-based billing method.</p>
+     * </li>
+     * <li><p><code>PayAsYouGo</code>: The pay-as-you-go method for serverless instances.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -149,9 +176,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The subscription period. The unit of the subscription period is specified by periodCycle.</p>
+     * <p>The subscription duration. The <code>PeriodCycle</code> parameter specifies the unit.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if you set PaymentType to Subscription. Default value: 1.</p>
+     * <p>This parameter is required if you set <code>PaymentType</code> to <code>Subscription</code>. The default value is 1.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -161,12 +188,14 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription period. Valid values:</p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p><code>Month</code>: month</p>
+     * </li>
+     * <li><p><code>Year</code>: year</p>
+     * </li>
      * </ul>
-     * <p>This parameter is valid only if you set PaymentType to Subscription. Default value: Month.</p>
+     * <p>This parameter is required if you set <code>PaymentType</code> to <code>Subscription</code>. The default value is <code>Month</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -174,12 +203,18 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("PeriodCycle")
     public String periodCycle;
 
+    /**
+     * <p>The provisioned TPS capacity for a reserved and elastic instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("ProvisionedCapacity")
     public Integer provisionedCapacity;
 
     /**
-     * <p>The number of queues on the instance.</p>
-     * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * <p>The queue capacity of the instance.</p>
+     * <p>For information about the valid values, see the instance specifications on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RabbitMQ</a> product page.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -188,12 +223,12 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer queueCapacity;
 
     /**
-     * <p>The renewal status. This parameter is the same as AutoRenew. You can configure one of these parameters. Valid value:</p>
+     * <p>The renewal status. This parameter is equivalent to <code>AutoRenew</code>. Valid value:</p>
      * <ul>
-     * <li>AutoRenewal</li>
+     * <li><code>AutoRenewal</code>: Enables auto-renewal.</li>
      * </ul>
      * <blockquote>
-     * <p> If you configure both this parameter and AutoRenew, the value of this parameter is used.</p>
+     * <p>Both <code>AutoRenew</code> and <code>RenewStatus</code> specify the renewal method. If you specify both parameters, the value of <code>RenewStatus</code> takes precedence.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -203,10 +238,12 @@ public class CreateInstanceRequest extends TeaModel {
     public String renewStatus;
 
     /**
-     * <p>The unit of the auto-renewal period. Valid values:</p>
+     * <p>The unit of the auto-renewal duration. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p><code>Month</code>: month</p>
+     * </li>
+     * <li><p><code>Year</code>: year</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -225,6 +262,15 @@ public class CreateInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The ID of the security group. This security group is used for the PrivateLink-based endpoint. The security group must meet the following requirements:</p>
+     * <ol>
+     * <li><p>Add an inbound rule to allow traffic on TCP ports 5672 and 5671.</p>
+     * </li>
+     * <li><p>Managed security groups are not supported.</p>
+     * </li>
+     * <li><p>The security group must belong to the specified VPC.</p>
+     * </li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -234,9 +280,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The billing method of the serverless instance. Valid value:</p>
+     * <p>The billing type of the serverless instance. Valid value:</p>
      * <ul>
-     * <li>onDemand: You are charged based on your actual usage.</li>
+     * <li><code>onDemand</code>: pay-as-you-go</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -249,15 +295,15 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean serverlessSwitch;
 
     /**
-     * <p>The storage capacity. Unit: GB. Valid values:</p>
+     * <p>The message storage space. Unit: GB. Valid values:</p>
      * <ul>
-     * <li>Professional Edition and Enterprise Edition instances: Set the value to 0.</li>
+     * <li>Professional Edition and Enterprise Edition instances: The value is fixed at 0.</li>
      * </ul>
      * <blockquote>
-     * <p> The value 0 specifies that storage space is available for Professional Edition and Enterprise Edition instances, but no storage fees are generated.</p>
+     * <p>A value of 0 means storage is not charged for Professional Edition and Enterprise Edition instances; it does not mean the instances lack storage space.</p>
      * </blockquote>
      * <ul>
-     * <li>Enterprise Platinum Edition instances: Set the value to m × 100, where m is an integer that ranges from 7 to 28.</li>
+     * <li>Platinum Edition instances: m × 100, where m is an integer from 7 to 28.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -267,10 +313,12 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer storageSize;
 
     /**
-     * <p>Specifies whether elastic IP addresses (EIPs) are supported. Valid values:</p>
+     * <p>Specifies whether to enable access over the public network. Valid values:</p>
      * <ul>
-     * <li>True</li>
-     * <li>False</li>
+     * <li><p><code>true</code>: Enables access over the public network.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables access over the public network.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -282,16 +330,18 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the message trace feature. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: Enables the message trace feature.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables the message trace feature.</p>
+     * </li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>The message trace feature is included for 15 days at no charge on Platinum Edition instances. For these instances, you must enable this feature and set the retention period to 15 days.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>Enterprise Platinum Edition instances allow you to retain message traces for 15 days free of charge. If you create an Enterprise Platinum Edition instance, you can set this parameter only to true and TracingStorageTime only to 15.</p>
-     * </li>
-     * <li><p>For instances of other editions, you can set this parameter to true or false.</p>
-     * </li>
+     * <li>For other instance types, you can enable or disable this feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -300,17 +350,23 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("SupportTracing")
     public Boolean supportTracing;
 
+    /**
+     * <p>The resource tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateInstanceRequestTags> tags;
 
     /**
-     * <p>The retention period of messages. Unit: days. Valid values:</p>
+     * <p>The retention period of message traces. Unit: days. Valid values:</p>
      * <ul>
-     * <li>3</li>
-     * <li>7</li>
-     * <li>15</li>
+     * <li><p><code>3</code></p>
+     * </li>
+     * <li><p><code>7</code></p>
+     * </li>
+     * <li><p><code>15</code></p>
+     * </li>
      * </ul>
-     * <p>This parameter is valid only if you set SupportTracing to true.</p>
+     * <p>This parameter is required if you set <code>SupportTracing</code> to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -319,6 +375,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer tracingStorageTime;
 
     /**
+     * <p>The ID of the VPC. This parameter is used to create a PrivateLink-based endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -328,6 +385,19 @@ public class CreateInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The vSwitch IDs used to create a PrivateLink-based endpoint when you create the instance. The vSwitches must meet the following requirements:</p>
+     * <ol>
+     * <li><p>You must specify two vSwitches that reside in different availability zones, except for regions that have only a single availability zone.</p>
+     * </li>
+     * <li><p>The vSwitches must belong to the specified VPC.</p>
+     * </li>
+     * <li><p>The vSwitches must be in the Available state.</p>
+     * </li>
+     * <li><p>Each vSwitch must have at least 20 available IP addresses.</p>
+     * </li>
+     * <li><p>The availability zones for the specified vSwitches must support NLB instance creation.</p>
+     * </li>
+     * </ol>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VswitchIds")
@@ -588,6 +658,8 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -595,6 +667,8 @@ public class CreateInstanceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */

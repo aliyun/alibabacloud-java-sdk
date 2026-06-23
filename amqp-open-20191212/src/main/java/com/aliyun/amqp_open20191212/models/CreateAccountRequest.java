@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
     /**
+     * <p>The remarks on the static user.</p>
+     * 
      * <strong>example:</strong>
-     * <p>***环境</p>
+     * <p>*** environment</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The AccessKey ID of your Alibaba Cloud account or RAM user. For information about how to obtain an AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</p>
+     * <p>The AccessKey ID of your Alibaba Cloud account or RAM user. For more information about how to obtain an AccessKey ID, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey</a>.</p>
      * <blockquote>
-     * <p> If you use the pair of static username and password that is created by using the Accesskey pair of a RAM user to access ApsaraMQ for RabbitMQ to send and receive messages, make sure that the RAM user is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/146559.html">RAM policies</a>.</p>
+     * <p>If you use the AccessKey of a RAM user to create a static username and password to access ApsaraMQ for RabbitMQ and to send and receive messages, make sure that the RAM user is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/146559.html">RAM access policies</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,9 +27,9 @@ public class CreateAccountRequest extends TeaModel {
     public String accountAccessKey;
 
     /**
-     * <p>The timestamp that indicates when the password is created. Unit: milliseconds.</p>
+     * <p>The timestamp that indicates when the username and password are created. Unit: milliseconds.</p>
      * <blockquote>
-     * <p> This timestamp is specified by you and is used to generate a static password. The timestamp is not the timestamp that indicates when the system generates the password.</p>
+     * <p>This timestamp is used to calculate the static password. You can customize this value. This is not the timestamp that the system generates when the username and password are created.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +40,7 @@ public class CreateAccountRequest extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The ID of the instance for which you want to create a pair of static username and password.</p>
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance. This specifies the instance for which you want to create a static username and password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,8 +50,8 @@ public class CreateAccountRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The AccessKey secret signature. The system generates a static password based on the signature in the request, the AccessKey secret signature, and the username.</p>
-     * <p>The system uses the HMAC-SHA1 algorithm to generate the AccessKey secret signature based on the timestamp that indicates when the username is created and the AccessKey ID. For more information, see the <strong>&quot;Sample code on how to generate a signature&quot;</strong> section of this topic.</p>
+     * <p>The signature of the AccessKey secret. The system calculates the static password based on the signature, the AccessKey secret signature, and the username.</p>
+     * <p>The AccessKey secret signature is calculated using the HmacSHA1 algorithm on the creation timestamp of the specified username and the AccessKey ID. For more information about how to calculate the signature, see the <strong>Signature algorithm sample code</strong> section in this topic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,8 +61,8 @@ public class CreateAccountRequest extends TeaModel {
     public String secretSign;
 
     /**
-     * <p>The signature. The system generates a static password based on the signature in the request, the AccessKey secret signature, and the username.</p>
-     * <p>The system uses the HMAC-SHA1 algorithm to generate the signature based on the timestamp that indicates when the username is created and the AccessKey ID. For more information, see the <strong>&quot;Sample code on how to generate a signature&quot;</strong> section of this topic.</p>
+     * <p>The signature. The system calculates the static password based on the signature, the AccessKey secret signature, and the username.</p>
+     * <p>The signature is calculated using the HmacSHA1 algorithm on the creation timestamp of the specified username and the AccessKey ID. For more information about how to calculate the signature, see the <strong>Signature algorithm sample code</strong> section in this topic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +73,7 @@ public class CreateAccountRequest extends TeaModel {
 
     /**
      * <p>The static username that you want to create.</p>
-     * <p>The value of this parameter is a Base64-encoded string that is generated based on the instance ID and AccessKey ID. For more information, see the &quot;<strong>Sample code on how to generate a username</strong>&quot; section of this topic.</p>
+     * <p>The value of this parameter is a Base64-encoded string that is constructed from the instance ID and the AccessKey ID. For more information about how to calculate the value, see the <strong>Username calculation sample code</strong> section in this topic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

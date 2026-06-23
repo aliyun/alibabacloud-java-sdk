@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+     * <p>The return code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>A message providing additional details about the response.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx failed,xxxx</p>
@@ -32,7 +32,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</p>
+     * <p>The unique ID of the request. This is a common parameter used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>CCBB1225-C392-480E-8C7F-D09AB2CD2***</p>
@@ -41,7 +41,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

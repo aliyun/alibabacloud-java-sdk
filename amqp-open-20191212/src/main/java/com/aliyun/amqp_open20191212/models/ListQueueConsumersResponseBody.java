@@ -67,13 +67,13 @@ public class ListQueueConsumersResponseBody extends TeaModel {
 
     public static class ListQueueConsumersResponseBodyData extends TeaModel {
         /**
-         * <p>The consumers.</p>
+         * <p>The consumer information.</p>
          */
         @NameInMap("Consumers")
         public java.util.List<ListQueueConsumersResponseBodyDataConsumers> consumers;
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -82,7 +82,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         * <p>The token to retrieve the next page of results. An empty value indicates that all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>caebacccb2be03f84eb48b699f0a****</p>

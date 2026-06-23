@@ -4,10 +4,15 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetInstanceResponseBodyData data;
 
     /**
+     * <p>The unique ID generated for the request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>92385FD2-624A-48C9-8FB5-753F2AFA***</p>
      */
@@ -36,9 +41,21 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag value</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -67,6 +84,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether auto-renewal is enabled for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -74,19 +93,44 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean autoRenewInstance;
 
         /**
+         * <p>The classic network endpoint. This parameter is deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>amqp-cn-st21x7kv****.not-support</p>
          */
         @NameInMap("ClassicEndpoint")
         public String classicEndpoint;
 
+        /**
+         * <p>The deployment architecture. Valid values:</p>
+         * <ul>
+         * <li><p>shared: shared architecture, which is suitable for reserved and elastic (shared) instances and pay-as-you-go instances.</p>
+         * </li>
+         * <li><p>dedicated: dedicated architecture, which is suitable for reserved and elastic (dedicated) instances.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>shared</p>
+         */
         @NameInMap("Edition")
         public String edition;
 
+        /**
+         * <p>Indicates whether storage encryption is enabled for the instance data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EncryptedInstance")
         public Boolean encryptedInstance;
 
         /**
+         * <p>The timestamp that indicates when the instance expires, in milliseconds.</p>
+         * <blockquote>
+         * <p>The value is a long integer. Handle it with care in certain programming languages to prevent precision loss.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1651507200000</p>
          */
@@ -94,6 +138,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>amqp-cn-*********</p>
          */
@@ -101,6 +147,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the instance. A length of 64 characters or less is recommended.</p>
+         * 
          * <strong>example:</strong>
          * <p>yunQi-instance</p>
          */
@@ -108,16 +156,36 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The instance type.</p>
+         * <ul>
+         * <li><p>PROFESSIONAL: Professional Edition</p>
+         * </li>
+         * <li><p>ENTERPRISE: Enterprise Edition</p>
+         * </li>
+         * <li><p>VIP: Platinum Edition</p>
+         * </li>
+         * <li><p>SERVERLESS: Serverless Edition</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enterprise</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The KMS key ID of the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-hzz6566e86byam3lg5rw4</p>
+         */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
         /**
+         * <p>The listener mode. A value of tcp_and_ssl enables both port 5672 and 5671, while ssl_only enables only port 5671.</p>
+         * 
          * <strong>example:</strong>
          * <p>tcp_and_ssl</p>
          */
@@ -125,6 +193,9 @@ public class GetInstanceResponseBody extends TeaModel {
         public String listenerMode;
 
         /**
+         * <p>The maximum number of connections.</p>
+         * <p>For valid values, see the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RabbitMQ purchase page</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1500</p>
          */
@@ -132,6 +203,9 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer maxConnections;
 
         /**
+         * <p>The peak public TPS.</p>
+         * <p>For valid values, see the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RabbitMQ purchase page</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -139,6 +213,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer maxEipTps;
 
         /**
+         * <p>The maximum number of queues for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -146,6 +222,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer maxQueue;
 
         /**
+         * <p>The peak private TPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -153,6 +231,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer maxTps;
 
         /**
+         * <p>The maximum number of vhosts for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -160,6 +240,11 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer maxVhost;
 
         /**
+         * <p>The timestamp that indicates when the order was created, in milliseconds.</p>
+         * <blockquote>
+         * <p>The value is a long integer. Handle it with care in certain programming languages to prevent precision loss.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1651507200000</p>
          */
@@ -167,6 +252,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public Long orderCreateTime;
 
         /**
+         * <p>The billing method.</p>
+         * <ul>
+         * <li><p>PRE_PAID: subscription</p>
+         * </li>
+         * <li><p>POST_PAID: pay-as-you-go</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PRE_PAID</p>
          */
@@ -174,26 +267,44 @@ public class GetInstanceResponseBody extends TeaModel {
         public String orderType;
 
         /**
+         * <p>The VPC endpoint of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>amqp-cn-st21x7kv****.mq-amqp.cn-hangzhou-a.aliyuncs.com</p>
          */
         @NameInMap("PrivateEndpoint")
         public String privateEndpoint;
 
+        /**
+         * <p>The reserved TPS capacity for reserved and elastic instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("ProvisionedCapacity")
         public Integer provisionedCapacity;
 
         /**
+         * <p>The public endpoint of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.cn-hangzhou.xxx.net.mq.amqp.aliyuncs.com</p>
          */
         @NameInMap("PublicEndpoint")
         public String publicEndpoint;
 
+        /**
+         * <p>The ID of the resource group for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2vn6jkayvfy</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
+         * <p>The security group ID used to create a PrivateLink endpoint for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxx</p>
          */
@@ -204,6 +315,18 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean serverlessSwitch;
 
         /**
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><p>DEPLOYING: The instance is being deployed.</p>
+         * </li>
+         * <li><p>EXPIRED: The instance has expired.</p>
+         * </li>
+         * <li><p>SERVING: The instance is in service.</p>
+         * </li>
+         * <li><p>RELEASED: The instance has been released.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SERVING</p>
          */
@@ -211,6 +334,11 @@ public class GetInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The disk capacity. Unit: GB.</p>
+         * <blockquote>
+         * <p>For Professional and Enterprise Edition instances, this parameter returns <strong>-1</strong>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -218,6 +346,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer storageSize;
 
         /**
+         * <p>Indicates whether the instance supports EIPs.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -225,16 +355,32 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean supportEIP;
 
         /**
+         * <p>Indicates whether the message trace feature is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
         @NameInMap("SupportTracing")
         public Boolean supportTracing;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetInstanceResponseBodyDataTags> tags;
 
         /**
+         * <p>The retention period of message traces. Unit: days. Valid values:</p>
+         * <ul>
+         * <li><p>3: 3 days</p>
+         * </li>
+         * <li><p>7: 7 days</p>
+         * </li>
+         * <li><p>15: 15 days</p>
+         * </li>
+         * </ul>
+         * <p>This parameter applies only when <code>SupportTracing</code> is set to true.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -242,12 +388,17 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer tracingStorageTime;
 
         /**
+         * <p>The VPC ID used to create a PrivateLink endpoint for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The VSwitch IDs used to create a PrivateLink endpoint for the instance.</p>
+         */
         @NameInMap("VswitchIds")
         public java.util.List<String> vswitchIds;
 

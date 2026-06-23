@@ -42,7 +42,7 @@ public class GetMetadataAmountResponseBody extends TeaModel {
 
     public static class GetMetadataAmountResponseBodyData extends TeaModel {
         /**
-         * <p>The number of created exchanges on the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The number of existing exchanges.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -51,7 +51,7 @@ public class GetMetadataAmountResponseBody extends TeaModel {
         public Integer currentExchanges;
 
         /**
-         * <p>The number of created queues on the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The number of existing queues.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class GetMetadataAmountResponseBody extends TeaModel {
         public Integer currentQueues;
 
         /**
-         * <p>The number of created vhosts on the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The number of existing vhosts.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -69,7 +69,7 @@ public class GetMetadataAmountResponseBody extends TeaModel {
         public Integer currentVirtualHosts;
 
         /**
-         * <p>The maximum number of exchanges that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The maximum number of exchanges that you can create.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -78,7 +78,7 @@ public class GetMetadataAmountResponseBody extends TeaModel {
         public Integer maxExchanges;
 
         /**
-         * <p>The maximum number of queues that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The maximum number of queues that you can create.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -87,7 +87,7 @@ public class GetMetadataAmountResponseBody extends TeaModel {
         public Integer maxQueues;
 
         /**
-         * <p>The maximum number of vhosts that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>The maximum number of vhosts that you can create.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

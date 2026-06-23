@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+     * <p>The return code. A value of 200 indicates that the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -35,13 +35,13 @@ public class DeleteAccountResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>021788F6-E50C-4BD6-9F80-66B0A19A6***</p>
+     * <p>021788F6-E50C-4BD6-9F80-66B0A1******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

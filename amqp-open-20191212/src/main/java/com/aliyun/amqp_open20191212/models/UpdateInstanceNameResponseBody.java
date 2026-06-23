@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNameResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message that is returned when an error occurs during the update of the instance name.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceNotExist</p>
@@ -41,7 +41,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned message that indicates the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -15,7 +15,7 @@ public class ListExchangesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: <strong>1 to 100</strong></p>
+     * <p>The maximum number of results to return. Valid values: <strong>1 to 100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,10 +24,12 @@ public class ListExchangesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for retrieving the next page of results. Set this parameter to the token value returned from the previous call.</p>
      * <ul>
-     * <li>If you call this operation for the first time or a next query is not required, leave this parameter empty.</li>
-     * <li>If a next query is to be sent, set the value to the value of <code>NextToken</code> that is returned from the previous request.</li>
+     * <li><p>Omit this parameter on your first call.</p>
+     * </li>
+     * <li><p>If a subsequent call is required, set this parameter to the <code>NextToken</code> value returned from the previous call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +39,7 @@ public class ListExchangesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The vhost name.</p>
+     * <p>The name of the vhost.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

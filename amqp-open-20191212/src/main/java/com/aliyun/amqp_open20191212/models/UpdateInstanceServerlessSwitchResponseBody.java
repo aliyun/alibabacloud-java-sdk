@@ -3,9 +3,9 @@ package com.aliyun.amqp_open20191212.models;
 
 import com.aliyun.tea.*;
 
-public class ListAccountsResponseBody extends TeaModel {
+public class UpdateInstanceServerlessSwitchResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates that the request was successful.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class ListAccountsResponseBody extends TeaModel {
      * <p>The returned data.</p>
      */
     @NameInMap("Data")
-    public java.util.Map<String, java.util.List<DataValue>> data;
+    public Boolean data;
 
     /**
      * <p>The returned message.</p>
@@ -29,29 +29,29 @@ public class ListAccountsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>549A5A97-FE61-5A23-8126-3A1192*****</p>
+     * <p>CCBB1225-C392-480E-8C7F-D09AB2CD2***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static ListAccountsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListAccountsResponseBody self = new ListAccountsResponseBody();
+    public static UpdateInstanceServerlessSwitchResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateInstanceServerlessSwitchResponseBody self = new UpdateInstanceServerlessSwitchResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListAccountsResponseBody setCode(Integer code) {
+    public UpdateInstanceServerlessSwitchResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -59,15 +59,15 @@ public class ListAccountsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListAccountsResponseBody setData(java.util.Map<String, java.util.List<DataValue>> data) {
+    public UpdateInstanceServerlessSwitchResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
-    public java.util.Map<String, java.util.List<DataValue>> getData() {
+    public Boolean getData() {
         return this.data;
     }
 
-    public ListAccountsResponseBody setMessage(String message) {
+    public UpdateInstanceServerlessSwitchResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -75,7 +75,7 @@ public class ListAccountsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListAccountsResponseBody setRequestId(String requestId) {
+    public UpdateInstanceServerlessSwitchResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -83,7 +83,7 @@ public class ListAccountsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAccountsResponseBody setSuccess(Boolean success) {
+    public UpdateInstanceServerlessSwitchResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

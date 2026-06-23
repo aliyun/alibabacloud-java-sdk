@@ -13,11 +13,29 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The deployment architecture of the Serverless instance. Valid values:</p>
+     * <ul>
+     * <li><p>shared: A shared architecture. This applies to reserved plus elastic (shared) and pay-as-you-go instances.</p>
+     * </li>
+     * <li><p>dedicated: A dedicated architecture. This applies to reserved plus elastic (dedicated) instances.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>shared</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
     /**
-     * <p>实例是否开通数据存储加密功能</p>
+     * <p>This feature is for dedicated instances only. Specifies whether to enable data encryption.</p>
+     * <ul>
+     * <li><p>You cannot change the EncryptedInstance and KmsKeyId properties of a dedicated instance. This includes changing its encryption status or downgrading it to a shared instance. Do not include the EncryptedInstance and KmsKeyId parameters when you call UpdateInstance to upgrade or downgrade a dedicated instance.</p>
+     * </li>
+     * <li><p>The EncryptedInstance and KmsKeyId parameters are used only when you upgrade a shared instance to an encrypted dedicated instance.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -36,13 +54,16 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance edition. Valid values for subscription instances:</p>
+     * <p>The instance type. This parameter is required for subscription instances. Valid values:</p>
      * <ul>
-     * <li>professional: Professional Edition</li>
-     * <li>enterprise: Enterprise Edition</li>
-     * <li>vip: Enterprise Platinum Edition.</li>
+     * <li><p>professional: Professional Edition</p>
+     * </li>
+     * <li><p>enterprise: Enterprise Edition</p>
+     * </li>
+     * <li><p>vip: Platinum Edition</p>
+     * </li>
      * </ul>
-     * <p>If your instance is a pay-as-you-go instance, you do not need to configure this parameter.</p>
+     * <p>You do not need to specify this parameter for pay-as-you-go instances.</p>
      * 
      * <strong>example:</strong>
      * <p>professional</p>
@@ -51,7 +72,23 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>使用同地域下KMS密钥ID</p>
+     * <p>This feature is for dedicated instances only. This parameter is required if EncryptedInstance is set to true.
+     * It specifies the ID of the KMS key used for data encryption.
+     * The key must meet the following requirements:</p>
+     * <ul>
+     * <li><p>The KMS key must be in the same region as the ApsaraMQ for RabbitMQ instance.</p>
+     * </li>
+     * <li><p>The key cannot be a service key.</p>
+     * </li>
+     * <li><p>The key must be active.</p>
+     * </li>
+     * <li><p>The key must be a symmetric key.</p>
+     * </li>
+     * <li><p>The key must be used for encryption and decryption.</p>
+     * </li>
+     * <li><p>If the KMS key expires or is deleted, data reads and writes will fail, and the ApsaraMQ for RabbitMQ instance will become unavailable.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>key-bjj66c2a893vmhawtq5fd</p>
@@ -60,7 +97,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>The maximum number of connections that can be created on the instance.</p>
+     * <p>The maximum number of connections.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -69,7 +106,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public Integer maxConnections;
 
     /**
-     * <p>The peak TPS for accessing the instance over the Internet.</p>
+     * <p>The peak TPS for public network traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -78,7 +115,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public Long maxEipTps;
 
     /**
-     * <p>The peak transactions per second (TPS) for accessing the instance in a virtual private cloud (VPC).</p>
+     * <p>The peak transactions per second (TPS) for private network traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -87,10 +124,12 @@ public class UpdateInstanceRequest extends TeaModel {
     public Long maxPrivateTps;
 
     /**
-     * <p>The type of the configuration change. Valid values:</p>
+     * <p>The type of specification change. Valid values:</p>
      * <ul>
-     * <li>UPGRADE</li>
-     * <li>DOWNGRADE</li>
+     * <li><p>UPGRADE: Upgrade</p>
+     * </li>
+     * <li><p>DOWNGRADE: Downgrade</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -100,11 +139,17 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <p>The provisioned TPS capacity for a reserved plus elastic instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("ProvisionedCapacity")
     public Integer provisionedCapacity;
 
     /**
-     * <p>The maximum number of queues that can be created on the instance.</p>
+     * <p>The maximum number of queues.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -113,9 +158,9 @@ public class UpdateInstanceRequest extends TeaModel {
     public Integer queueCapacity;
 
     /**
-     * <p>The billing method of the serverless instance. Valid values:</p>
+     * <p>The billing method of the pay-as-you-go (Serverless) instance. Valid value:</p>
      * <ul>
-     * <li>onDemand: You are charged based on your actual usage.</li>
+     * <li>onDemand: Pay-as-you-go</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,7 +170,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String serverlessChargeType;
 
     /**
-     * <p>The size of the storage space that can be used to store messages.</p>
+     * <p>The message storage capacity. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -134,7 +179,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public Integer storageSize;
 
     /**
-     * <p>Specifies whether elastic IP addresses (EIPs) are supported.</p>
+     * <p>Specifies whether to enable Internet access.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -152,13 +197,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public Boolean supportTracing;
 
     /**
-     * <p>The retention period of message traces.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>3</li>
-     * <li>7</li>
-     * <li>15</li>
-     * </ul>
+     * <p>The retention period for message traces. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

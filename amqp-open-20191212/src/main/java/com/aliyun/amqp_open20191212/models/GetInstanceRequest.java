@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the Message Queue for RabbitMQ instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -9,6 +9,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "amqp-open.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "amqp-open.us-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "amqp-open.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "amqp-open.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "amqp-open.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "amqp-open.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "amqp-open.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "amqp-open.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "amqp-open.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "amqp-open.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "amqp-open.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "amqp-open.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "amqp-open.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "amqp-open.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "amqp-open.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "amqp-open.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "amqp-open.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "amqp-open.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "amqp-open.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "amqp-open.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "amqp-open.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "amqp-open.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "amqp-open.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "amqp-open.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("amqp-open", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加实例白名单</p>
+     * <p>Adds an entry to the whitelist of an instance.</p>
      * 
      * @param tmpReq AddInstanceWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -74,7 +100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加实例白名单</p>
+     * <p>Adds an entry to the whitelist of an instance.</p>
      * 
      * @param request AddInstanceWhiteListRequest
      * @return AddInstanceWhiteListResponse
@@ -86,7 +112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a pair of static username and password. If you access an ApsaraMQ for RabbitMQ broker from an open source RabbitMQ client, you must use a pair of username and password for authentication. You can access the ApsaraMQ for RabbitMQ broker only after the authentication is passed. ApsaraMQ for RabbitMQ allows you to generate usernames and passwords by using AccessKey pairs provided by Alibaba Cloud Resource Access Management (RAM).</p>
+     * <p>When an open-source client accesses an ApsaraMQ for RabbitMQ server, it must provide a username and password for authentication. ApsaraMQ for RabbitMQ lets you generate a username and password from an AccessKey ID and AccessKey secret provided by Resource Access Management (RAM).</p>
      * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -142,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a pair of static username and password. If you access an ApsaraMQ for RabbitMQ broker from an open source RabbitMQ client, you must use a pair of username and password for authentication. You can access the ApsaraMQ for RabbitMQ broker only after the authentication is passed. ApsaraMQ for RabbitMQ allows you to generate usernames and passwords by using AccessKey pairs provided by Alibaba Cloud Resource Access Management (RAM).</p>
+     * <p>When an open-source client accesses an ApsaraMQ for RabbitMQ server, it must provide a username and password for authentication. ApsaraMQ for RabbitMQ lets you generate a username and password from an AccessKey ID and AccessKey secret provided by Resource Access Management (RAM).</p>
      * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
@@ -154,7 +180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a binding. In ApsaraMQ for RabbitMQ, after a producer sends a message to an exchange, the exchange routes the message to a queue or another exchange based on the binding relationship and the routing rule.</p>
+     * <p>A producer sends a message to an exchange, which then routes the message to a specified queue or another exchange based on the binding and routing rules.</p>
      * 
      * @param request CreateBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -210,7 +236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a binding. In ApsaraMQ for RabbitMQ, after a producer sends a message to an exchange, the exchange routes the message to a queue or another exchange based on the binding relationship and the routing rule.</p>
+     * <p>A producer sends a message to an exchange, which then routes the message to a specified queue or another exchange based on the binding and routing rules.</p>
      * 
      * @param request CreateBindingRequest
      * @return CreateBindingResponse
@@ -222,7 +248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an exchange. In ApsaraMQ for RabbitMQ, an exchange is used to route a message that is received from a producer to one or more queues or to discard the message. An exchange routes a message to queues by using the routing key and binding keys.</p>
+     * <p>A producer sends a message to an exchange. The exchange then routes the message to one or more queues based on the routing key and the binding key, or discards the message.</p>
      * 
      * @param request CreateExchangeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -282,7 +308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an exchange. In ApsaraMQ for RabbitMQ, an exchange is used to route a message that is received from a producer to one or more queues or to discard the message. An exchange routes a message to queues by using the routing key and binding keys.</p>
+     * <p>A producer sends a message to an exchange. The exchange then routes the message to one or more queues based on the routing key and the binding key, or discards the message.</p>
      * 
      * @param request CreateExchangeRequest
      * @return CreateExchangeResponse
@@ -293,9 +319,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</p>
-     * 
      * <b>summary</b> : 
      * <p>Creates an ApsaraMQ for RabbitMQ instance.</p>
      * 
@@ -458,9 +481,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</p>
-     * 
      * <b>summary</b> : 
      * <p>Creates an ApsaraMQ for RabbitMQ instance.</p>
      * 
@@ -474,7 +494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a queue. In ApsaraMQ for RabbitMQ, a queue is a message queue. All messages in ApsaraMQ for RabbitMQ are sent to a specific exchange and then routed to a bound queue by the exchange.</p>
+     * <p>A queue is a buffer that stores messages. In ApsaraMQ for RabbitMQ, messages are sent to a specified exchange and then routed to a bound queue.</p>
      * 
      * @param request CreateQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -546,7 +566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a queue. In ApsaraMQ for RabbitMQ, a queue is a message queue. All messages in ApsaraMQ for RabbitMQ are sent to a specific exchange and then routed to a bound queue by the exchange.</p>
+     * <p>A queue is a buffer that stores messages. In ApsaraMQ for RabbitMQ, messages are sent to a specified exchange and then routed to a bound queue.</p>
      * 
      * @param request CreateQueueRequest
      * @return CreateQueueResponse
@@ -606,7 +626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a pair of username and password.</p>
+     * <p>Deletes a static username and password.</p>
      * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -642,7 +662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a pair of username and password.</p>
+     * <p>Deletes a static username and password.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -654,7 +674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a binding to unbind a queue or an exchange from a source exchange.</p>
+     * <p>The DeleteBinding operation detaches a source exchange from a target queue or another exchange.</p>
      * 
      * @param request DeleteBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -706,7 +726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a binding to unbind a queue or an exchange from a source exchange.</p>
+     * <p>The DeleteBinding operation detaches a source exchange from a target queue or another exchange.</p>
      * 
      * @param request DeleteBindingRequest
      * @return DeleteBindingResponse
@@ -718,10 +738,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>You cannot delete exchanges of the <strong>headers</strong> and <strong>x-jms-topic</strong> types.</li>
-     * <li>You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.</li>
+     * <li>You cannot delete exchanges with the type <strong>headers</strong>.</li>
+     * <li>You cannot delete the three built-in exchanges in a vhost: amq.direct, amq.topic, or amq.fanout.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -765,10 +785,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>You cannot delete exchanges of the <strong>headers</strong> and <strong>x-jms-topic</strong> types.</li>
-     * <li>You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.</li>
+     * <li>You cannot delete exchanges with the type <strong>headers</strong>.</li>
+     * <li>You cannot delete the three built-in exchanges in a vhost: amq.direct, amq.topic, or amq.fanout.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -836,7 +856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.</p>
+     * <p>Before you delete a vhost, you must delete all exchanges and queues in it.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a virtual host (vhost).</p>
@@ -875,7 +895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.</p>
+     * <p>Before you delete a vhost, you must delete all exchanges and queues in it.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a virtual host (vhost).</p>
@@ -890,7 +910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of an ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request GetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -918,7 +938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of an ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -930,7 +950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the maximum number of vhosts, exchanges, and queues that you can create and the number of created vhosts, exchanges, and queues on an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Queries the current and maximum numbers of vhosts, exchanges, and queues for a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request GetMetadataAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -958,7 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the maximum number of vhosts, exchanges, and queues that you can create and the number of created vhosts, exchanges, and queues on an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Queries the current and maximum numbers of vhosts, exchanges, and queues for a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request GetMetadataAmountRequest
      * @return GetMetadataAmountResponse
@@ -970,7 +990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the static username and password of an ApsaraMQ for RabbitMQ.</p>
+     * <p>Lists the usernames and passwords for a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request ListAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1002,7 +1022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the static username and password of an ApsaraMQ for RabbitMQ.</p>
+     * <p>Lists the usernames and passwords for a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request ListAccountsRequest
      * @return ListAccountsResponse
@@ -1014,7 +1034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all bindings of a virtual host (vhost) on an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Queries all bindings that are created in a vhost of a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request ListBindingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1042,7 +1062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all bindings of a virtual host (vhost) on an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Queries all bindings that are created in a vhost of a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request ListBindingsRequest
      * @return ListBindingsResponse
@@ -1054,7 +1074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all exchanges or queues to which an exchange is bound.</p>
+     * <p>Queries the exchanges or queues that are bound to a specified exchange.</p>
      * 
      * @param request ListDownStreamBindingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1082,7 +1102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all exchanges or queues to which an exchange is bound.</p>
+     * <p>Queries the exchanges or queues that are bound to a specified exchange.</p>
      * 
      * @param request ListDownStreamBindingsRequest
      * @return ListDownStreamBindingsResponse
@@ -1094,7 +1114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all queues or exchanges that are bound to an exchange.</p>
+     * <p>Queries the queues or other exchanges that are bound to a specified exchange.</p>
      * 
      * @param request ListExchangeUpStreamBindingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1122,7 +1142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all queues or exchanges that are bound to an exchange.</p>
+     * <p>Queries the queues or other exchanges that are bound to a specified exchange.</p>
      * 
      * @param request ListExchangeUpStreamBindingsRequest
      * @return ListExchangeUpStreamBindingsResponse
@@ -1134,7 +1154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all exchanges that are created in a virtual host (vhost).</p>
+     * <p>Lists all exchanges in a specified vhost of an instance.</p>
      * 
      * @param request ListExchangesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1162,7 +1182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all exchanges that are created in a virtual host (vhost).</p>
+     * <p>Lists all exchanges in a specified vhost of an instance.</p>
      * 
      * @param request ListExchangesRequest
      * @return ListExchangesResponse
@@ -1174,7 +1194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例ip/vpc白名单</p>
+     * <p>Queries the IP or VPC whitelist for an instance.</p>
      * 
      * @param request ListInstanceWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1210,7 +1230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例ip/vpc白名单</p>
+     * <p>Queries the IP or VPC whitelist for an instance.</p>
      * 
      * @param request ListInstanceWhiteListRequest
      * @return ListInstanceWhiteListResponse
@@ -1222,7 +1242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all AparaMQ for RabbitMQ instances in a region. The returned data includes the basic information, endpoint, and specification limits of each instance.</p>
+     * <p>Queries a list of ApsaraMQ for RabbitMQ instances in a specified region and returns basic information about each instance, such as its endpoints and specification limits.</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1250,7 +1270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all AparaMQ for RabbitMQ instances in a region. The returned data includes the basic information, endpoint, and specification limits of each instance.</p>
+     * <p>Queries a list of ApsaraMQ for RabbitMQ instances in a specified region and returns basic information about each instance, such as its endpoints and specification limits.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -1262,10 +1282,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraMQ for RabbitMQ allows you to query only online consumers.</p>
+     * <p>ApsaraMQ for RabbitMQ lets you query only online consumer clients. You cannot query offline consumer clients.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the online consumers of a queue.</p>
+     * <p>Queries the online consumer clients of a specified queue.</p>
      * 
      * @param request ListQueueConsumersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1293,10 +1313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraMQ for RabbitMQ allows you to query only online consumers.</p>
+     * <p>ApsaraMQ for RabbitMQ lets you query only online consumer clients. You cannot query offline consumer clients.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the online consumers of a queue.</p>
+     * <p>Queries the online consumer clients of a specified queue.</p>
      * 
      * @param request ListQueueConsumersRequest
      * @return ListQueueConsumersResponse
@@ -1308,7 +1328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the exchanges that are bound to a queue.</p>
+     * <p>Queries the exchanges that are bound to a specified queue.</p>
      * 
      * @param request ListQueueUpStreamBindingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1336,7 +1356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the exchanges that are bound to a queue.</p>
+     * <p>Queries the exchanges that are bound to a specified queue.</p>
      * 
      * @param request ListQueueUpStreamBindingsRequest
      * @return ListQueueUpStreamBindingsResponse
@@ -1348,7 +1368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all queues in a vhost of an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Queries information about all queues in a vhost on a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request ListQueuesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1376,7 +1396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all queues in a vhost of an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Queries information about all queues in a vhost on a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request ListQueuesRequest
      * @return ListQueuesResponse
@@ -1388,7 +1408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all virtual hosts (vhosts) on an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Lists all vhosts in a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request ListVirtualHostsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1416,7 +1436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all virtual hosts (vhosts) on an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Lists all vhosts in a specified ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request ListVirtualHostsRequest
      * @return ListVirtualHostsResponse
@@ -1428,7 +1448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例ip/vpc白名单</p>
+     * <p>Removes an IP address or a VPC from an instance\&quot;s whitelist.</p>
      * 
      * @param request RemoveInstanceWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1468,7 +1488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例ip/vpc白名单</p>
+     * <p>Removes an IP address or a VPC from an instance\&quot;s whitelist.</p>
      * 
      * @param request RemoveInstanceWhiteListRequest
      * @return RemoveInstanceWhiteListResponse
@@ -1480,7 +1500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Upgrades or downgrades the specifications of an ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1576,7 +1596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</p>
+     * <p>Upgrades or downgrades the specifications of an ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
@@ -1588,7 +1608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name of an ApsaraMQ for RabbitMQ instance. After an ApsaraMQ for RabbitMQ instance is created, the ID of the instance is used as its name by default. You can specify a custom name for an instance to facilitate instance identification.</p>
+     * <p>An ApsaraMQ for RabbitMQ instance is named after its instance ID by default. You can change the name for easier identification.</p>
      * 
      * @param request UpdateInstanceNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1624,7 +1644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name of an ApsaraMQ for RabbitMQ instance. After an ApsaraMQ for RabbitMQ instance is created, the ID of the instance is used as its name by default. You can specify a custom name for an instance to facilitate instance identification.</p>
+     * <p>An ApsaraMQ for RabbitMQ instance is named after its instance ID by default. You can change the name for easier identification.</p>
      * 
      * @param request UpdateInstanceNameRequest
      * @return UpdateInstanceNameResponse
@@ -1632,5 +1652,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateInstanceNameResponse updateInstanceName(UpdateInstanceNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceNameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the elastic scaling switch of a serverless instance.</p>
+     * 
+     * @param request UpdateInstanceServerlessSwitchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceServerlessSwitchResponse
+     */
+    public UpdateInstanceServerlessSwitchResponse updateInstanceServerlessSwitchWithOptions(UpdateInstanceServerlessSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverlessSwitch)) {
+            query.put("ServerlessSwitch", request.serverlessSwitch);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInstanceServerlessSwitch"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceServerlessSwitchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the elastic scaling switch of a serverless instance.</p>
+     * 
+     * @param request UpdateInstanceServerlessSwitchRequest
+     * @return UpdateInstanceServerlessSwitchResponse
+     */
+    public UpdateInstanceServerlessSwitchResponse updateInstanceServerlessSwitch(UpdateInstanceServerlessSwitchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateInstanceServerlessSwitchWithOptions(request, runtime);
     }
 }

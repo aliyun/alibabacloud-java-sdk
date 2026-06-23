@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddInstanceWhiteListResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of <code>200</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AddInstanceWhiteListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Data returned by the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class AddInstanceWhiteListResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>The message returned with the response. This is typically an error message if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified parameter \&quot;[\&quot;vpc-xxx\&quot;]\&quot; is not valid</p>
      */
@@ -26,7 +32,7 @@ public class AddInstanceWhiteListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8BFB1C9D-08A2-4859-A47C-403C9EFA2***</p>
@@ -35,6 +41,8 @@ public class AddInstanceWhiteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code for the response. A value of <code>200</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -42,6 +50,8 @@ public class AddInstanceWhiteListResponseBody extends TeaModel {
     public String statusCode;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

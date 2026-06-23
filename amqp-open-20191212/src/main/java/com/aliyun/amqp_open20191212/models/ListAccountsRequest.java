@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccountsRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraMQ for RabbitMQ instance for which you want to query the static username and password.</p>
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance whose static usernames and passwords you want to list.</p>
      * 
      * <strong>example:</strong>
      * <p>amqp-cn-20p****04</p>

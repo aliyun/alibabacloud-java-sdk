@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNameRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraMQ for RabbitMQ instance for which you want to update the name.</p>
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class UpdateInstanceNameRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new name of the instance. No limits are imposed on the value. We recommend that you set this parameter to a maximum of 64 characters in length.</p>
+     * <p>The new name of the instance. The name can be any string of up to 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>amqp-cn-ZVp2ajsj****</p>
+     * <p>amqp_test</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;

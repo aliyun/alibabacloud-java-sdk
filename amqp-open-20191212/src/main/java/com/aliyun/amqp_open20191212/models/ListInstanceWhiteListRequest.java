@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceWhiteListRequest extends TeaModel {
     /**
+     * <p>The ID of the instance whose whitelist to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListInstanceWhiteListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The type of whitelist to query.</p>
+     * <p>VPC whitelists apply only to instances whose VPC endpoint is of the <code>anytunnel</code> type. The latest instance versions use a <code>PrivateLink</code> VPC endpoint and do not support VPC whitelists.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

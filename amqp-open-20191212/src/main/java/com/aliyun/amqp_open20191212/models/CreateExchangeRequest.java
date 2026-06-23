@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExchangeRequest extends TeaModel {
     /**
-     * <p>The alternate exchange. An alternate exchange is used to receive messages that fail to be routed to queues from the current exchange.</p>
+     * <p>The alternate exchange. Configure an alternate exchange to receive messages that fail to be routed.</p>
      * 
      * <strong>example:</strong>
      * <p>DemoAE</p>
@@ -16,8 +16,10 @@ public class CreateExchangeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically delete the exchange. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: If the last queue that is bound to the exchange is unbound, the exchange is automatically deleted.</li>
-     * <li><strong>false</strong>: If the last queue that is bound to the exchange is unbound, the exchange is not automatically deleted.</li>
+     * <li><p><strong>true</strong>: Yes. The exchange is automatically deleted after the last queue is unbound from it.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No. The exchange is not automatically deleted after the last queue is unbound from it.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,10 +30,12 @@ public class CreateExchangeRequest extends TeaModel {
     public Boolean autoDeleteState;
 
     /**
-     * <p>The name of the exchange that you want to create. The exchange name must meet the following conventions:</p>
+     * <p>The name of the exchange. Note:</p>
      * <ul>
-     * <li>The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).</li>
-     * <li>After the exchange is created, you cannot change its name. If you want to change its name, delete the exchange and create another exchange.</li>
+     * <li><p>The name can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@). The name must be 1 to 255 characters in length.</p>
+     * </li>
+     * <li><p>The name of an exchange cannot be changed after the exchange is created. To change the name, delete the exchange and create a new one.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,13 +46,16 @@ public class CreateExchangeRequest extends TeaModel {
     public String exchangeName;
 
     /**
-     * <p>The exchange type. Valid values:</p>
+     * <p>The type of the exchange. Valid values:</p>
      * <ul>
-     * <li><strong>DIRECT</strong>: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.</li>
-     * <li><strong>TOPIC</strong>: This type of exchange is similar to direct exchanges. An exchange of this type routes a message to one or more queues based on the results of the fuzzy match or multi-condition match between the routing key of the message and the binding keys of the current exchange.</li>
-     * <li><strong>FANOUT</strong>: An exchange of this type routes all received messages to all queues bound to this exchange. You can use a fanout exchange to broadcast messages.</li>
-     * <li><strong>HEADERS</strong>: This type of exchange is similar to direct exchanges. The only difference is that a headers exchange routes messages based on the headers attributes instead of routing keys. When you bind a headers exchange to a queue, you must configure binding attributes in the key-value format for the binding. When you send a message to a headers exchange, you must configure the headers attributes in the key-value format for the message. After a headers exchange receives a message, the exchange routes the message based on the matching results between the headers attributes of the message and the binding attributes of the bound queues.</li>
-     * <li><strong>X-CONSISTENT-HASH</strong>: An exchange of this type allows you to perform hash calculations on routing keys or header values and use consistent hashing to route a message to different queues.</li>
+     * <li><p><strong>DIRECT</strong>: This routing rule type routes messages to a queue whose binding key exactly matches the routing key of the message.</p>
+     * </li>
+     * <li><p><strong>TOPIC</strong>: This type is similar to the DIRECT type. It routes messages to bound queues using routing key pattern matching and string comparison.</p>
+     * </li>
+     * <li><p><strong>FANOUT</strong>: This routing rule type is simple. It routes all messages sent to the exchange to all queues that are bound to the exchange. This works like a broadcast feature.</p>
+     * </li>
+     * <li><p><strong>HEADERS</strong>: This type is similar to the DIRECT type. It uses header properties instead of a routing key for routing. When a queue is bound to a headers exchange, key-value pairs are defined for the binding. When a message is sent to the exchange, key-value pairs are defined in the message header. The exchange routes the message by comparing the key-value pairs in the header with the key-value pairs of the binding.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -59,7 +66,7 @@ public class CreateExchangeRequest extends TeaModel {
     public String exchangeType;
 
     /**
-     * <p>The ID of the ApsaraMQ for RabbitMQ for which you want to create an exchange.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,8 +78,10 @@ public class CreateExchangeRequest extends TeaModel {
     /**
      * <p>Specifies whether the exchange is an internal exchange. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong>: No</p>
+     * </li>
+     * <li><p><strong>true</strong>: Yes</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,7 +92,7 @@ public class CreateExchangeRequest extends TeaModel {
     public Boolean internal;
 
     /**
-     * <p>The name of the vhost to which the exchange that you want to create belongs.</p>
+     * <p>The name of the vhost to which the exchange belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,6 +101,24 @@ public class CreateExchangeRequest extends TeaModel {
     @NameInMap("VirtualHost")
     public String virtualHost;
 
+    /**
+     * <p>An x-delayed-message exchange lets you use the x-delay header property to specify a delivery delay for a message in milliseconds. The routing rule for the delayed message is determined by the exchange type that you specify for the XDelayedType parameter. This parameter sets the actual exchange type to which the message is delivered after the delay. Valid values:</p>
+     * <ul>
+     * <li><p><strong>DIRECT</strong>: Delivers the delayed message to the specified queue that is bound to a DIRECT exchange.</p>
+     * </li>
+     * <li><p><strong>TOPIC</strong>: Delivers the delayed message to queues that are bound to a TOPIC exchange.</p>
+     * </li>
+     * <li><p><strong>FANOUT</strong>: Delivers the delayed message to queues that are bound to a FANOUT exchange.</p>
+     * </li>
+     * <li><p><strong>HEADERS</strong>: Delivers the delayed message to queues that are bound to a HEADERS exchange.</p>
+     * </li>
+     * <li><p><strong>X-JMS-TOPIC</strong>: Delivers the delayed message to queues that are bound to an X-JMS-TOPIC exchange.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DIRECT</p>
+     */
     @NameInMap("XDelayedType")
     public String XDelayedType;
 
