@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The O\&amp;M task IDs. Separate multiple IDs with a comma (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

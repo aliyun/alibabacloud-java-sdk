@@ -7,8 +7,10 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     /**
      * <p>The description of the database account.</p>
      * <ul>
-     * <li>The description cannot start with http:// or https://.</li>
-     * <li>The description must be 0 to 256 characters in length.</li>
+     * <li><p>Cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>Must be 0 to 256 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +20,16 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The database account.</p>
+     * <p>The name of the database account.</p>
      * <ul>
-     * <li>The name must be unique within the cluster.</li>
-     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
-     * <li>The name must be 2 to 64 characters in length.</li>
+     * <li><p>Must be unique within the cluster.</p>
+     * </li>
+     * <li><p>Can contain only lowercase letters, digits, and underscores (_).</p>
+     * </li>
+     * <li><p>Must start with a lowercase letter and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>Must be 2 to 64 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,15 +40,16 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of your database account.</p>
+     * <p>The password for the database account.</p>
      * <blockquote>
+     * <ul>
+     * <li>Must contain characters from at least three of the following types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>The password contains at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <li><p>The supported special characters are <code>!@#$%^&amp;*()_+-=</code>.</p>
      * </li>
-     * <li><p>The password can contain the following special characters: ! @ # $ % ^ &amp; \* ( ) _ + - =</p>
-     * </li>
-     * <li><p>The password must be 8 to 32 characters in length.</p>
+     * <li><p>Must be 8 to 32 characters in length.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -54,7 +61,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The databases to which you want to grant permissions. Separate databases with commas (,).</p>
+     * <p>The databases to which the account has permissions. Separate multiple database names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +71,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String allowDatabases;
 
     /**
-     * <p>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</p>
+     * <p>The dictionaries to which the account has permissions. Separate multiple dictionary names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,10 +91,12 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to grant the DDL permissions to the database account. Valid values:</p>
+     * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: DDL operations are allowed.</p>
+     * </li>
+     * <li><p><strong>false</strong>: DDL operations are denied.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -98,10 +107,12 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public Boolean ddlAuthority;
 
     /**
-     * <p>Specifies whether to grant DML permissions to the database account. Valid values:</p>
+     * <p>Specifies the DML permissions for the database account. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong></li>
-     * <li><strong>readOnly,modify</strong></li>
+     * <li><p><strong>all</strong>: read, write, and settings permissions.</p>
+     * </li>
+     * <li><p><strong>readOnly,modify</strong>: read and settings permissions.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -118,7 +129,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -133,7 +144,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>All databases. Separate databases with commas (,).</p>
+     * <p>All databases in the cluster. Separate multiple database names with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>db1,db2</p>
@@ -142,7 +153,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String totalDatabases;
 
     /**
-     * <p>All dictionaries. Separate dictionaries with commas (,).</p>
+     * <p>All dictionaries in the cluster. Separate multiple dictionary names with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>dt1,dt2</p>

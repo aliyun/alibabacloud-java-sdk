@@ -21,7 +21,7 @@ public class DescribeDBClusterConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the available region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

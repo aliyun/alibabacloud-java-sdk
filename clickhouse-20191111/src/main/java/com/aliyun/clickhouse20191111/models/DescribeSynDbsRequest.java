@@ -21,7 +21,7 @@ public class DescribeSynDbsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +30,7 @@ public class DescribeSynDbsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

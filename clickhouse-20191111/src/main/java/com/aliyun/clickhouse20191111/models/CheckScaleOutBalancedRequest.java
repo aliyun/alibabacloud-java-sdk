@@ -21,7 +21,7 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of pages to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,11 +30,11 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong></li>
+     * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><strong>100</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +58,9 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("ScalingType")
+    public String scalingType;
 
     public static CheckScaleOutBalancedRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckScaleOutBalancedRequest self = new CheckScaleOutBalancedRequest();
@@ -126,6 +129,14 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CheckScaleOutBalancedRequest setScalingType(String scalingType) {
+        this.scalingType = scalingType;
+        return this;
+    }
+    public String getScalingType() {
+        return this.scalingType;
     }
 
 }

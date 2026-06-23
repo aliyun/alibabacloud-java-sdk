@@ -11,9 +11,9 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,6 +24,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -36,16 +37,17 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>CLUSTER</strong>.</p>
+     * <p>The resource type. The value must be <strong>DBCLUSTER</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CLUSTER</p>
+     * <p>DBCLUSTER</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -122,7 +124,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag to add to the resource. You can add N tag keys. N is an integer. Valid values of N: <strong>1 to 20</strong>.</p>
+         * <p>The tag key. You can add up to <strong>20</strong> tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>testkey1</p>
@@ -131,7 +133,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag to add to the resource. You can add N tag values. N is an integer. Valid values of N: <strong>1 to 20</strong>.</p>
+         * <p>The value of the tag key. You can add up to <strong>20</strong> tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>testvalue1</p>

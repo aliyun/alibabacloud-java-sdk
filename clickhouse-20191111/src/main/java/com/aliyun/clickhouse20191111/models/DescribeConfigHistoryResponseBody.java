@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigHistoryResponseBody extends TeaModel {
     /**
-     * <p>The change records of the configuration parameters.</p>
+     * <p>The change history of the configuration parameters.</p>
      */
     @NameInMap("ConfigHistoryItems")
     public java.util.List<DescribeConfigHistoryResponseBodyConfigHistoryItems> configHistoryItems;
@@ -51,7 +51,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String changeId;
 
         /**
-         * <p>The user ID (UID) of the Alibaba Cloud account.</p>
+         * <p>The UID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>253460731706911258</p>
@@ -60,7 +60,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The reason for the setting modification of the configuration parameters.</p>
+         * <p>The reason for the parameter change.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -69,10 +69,12 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>Indicates whether the setting modification of the configuration parameters took effect. Valid values:</p>
+         * <p>Indicates whether the parameter change took effect. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The change took effect.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The change did not take effect.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The time when the values of the configuration parameters were changed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the change was made. Use the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-22T10:00:00Z</p>

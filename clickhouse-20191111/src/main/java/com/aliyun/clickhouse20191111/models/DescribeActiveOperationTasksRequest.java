@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>Specifies whether the task can be canceled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: The task cannot be canceled.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The task can be canceled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -12,6 +20,14 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowCancel;
 
     /**
+     * <p>Specifies whether the time can be changed. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: The time cannot be changed.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The time can be changed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -19,6 +35,16 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowChange;
 
     /**
+     * <p>The task level. Valid values:</p>
+     * <ul>
+     * <li><p><strong>all</strong> (Default): All levels.</p>
+     * </li>
+     * <li><p><strong>S0</strong>: Returns tasks for fixing exceptions.</p>
+     * </li>
+     * <li><p><strong>S1</strong>: Returns tasks for system O\&amp;M.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -26,6 +52,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String changeLevel;
 
     /**
+     * <p>The database type.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */
@@ -33,6 +61,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String dbType;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc-bp191w*******</p>
      */
@@ -46,6 +76,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -53,6 +85,16 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -60,6 +102,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The product ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
      */
@@ -67,6 +111,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -83,6 +129,22 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The task status. This parameter is used to filter tasks.</p>
+     * <ul>
+     * <li><p><strong>-1:</strong> All tasks.</p>
+     * </li>
+     * <li><p><strong>3:</strong> Tasks to be processed.</p>
+     * </li>
+     * <li><p><strong>4:</strong> Tasks in progress.</p>
+     * </li>
+     * <li><p><strong>5:</strong> Successfully completed tasks.</p>
+     * </li>
+     * <li><p><strong>6:</strong> Failed tasks.</p>
+     * </li>
+     * <li><p><strong>7:</strong> Canceled tasks.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -90,6 +152,14 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The task type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>rds_apsaradb_upgrade</strong>: Minor version upgrade.</p>
+     * </li>
+     * <li><p><strong>all</strong>: All task types.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */

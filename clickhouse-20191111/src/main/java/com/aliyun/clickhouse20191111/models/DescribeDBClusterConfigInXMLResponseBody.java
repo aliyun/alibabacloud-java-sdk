@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigInXMLResponseBody extends TeaModel {
     /**
-     * <p>The values of the configuration parameters.</p>
+     * <p>The configuration parameters.</p>
      * 
      * <strong>example:</strong>
      * <?xml version="1.0"?>

@@ -7,8 +7,8 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     /**
      * <p>The check result. Valid values:</p>
      * <ul>
-     * <li><strong>400</strong>: The cluster failed the check.</li>
-     * <li><strong>200</strong>: The cluster passed the check.</li>
+     * <li><strong>400</strong>: The check failed.</li>
+     * <li><strong>200</strong>: The check succeeded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     public String checkCode;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,11 +27,11 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
      * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><strong>100</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     public CheckScaleOutBalancedResponseBodyTableDetails tableDetails;
 
     /**
-     * <p>The amount of time that is required for the migration and scale-out. Unit: minutes.</p>
+     * <p>The time required for the migration scale-out. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>21</p>
@@ -62,7 +62,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     public String timeDuration;
 
     /**
-     * <p>The total number of entries that are returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

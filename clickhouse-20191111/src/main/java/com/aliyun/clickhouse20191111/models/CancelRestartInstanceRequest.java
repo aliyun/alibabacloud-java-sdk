@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelRestartInstanceRequest extends TeaModel {
     /**
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in a specific region. The information includes the cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +21,7 @@ public class CancelRestartInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of pages.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,11 +30,14 @@ public class CancelRestartInstanceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
      * <ul>
-     * <li>30</li>
-     * <li>50</li>
-     * <li>100</li>
+     * <li><p>30 (default)</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,6 +47,8 @@ public class CancelRestartInstanceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -55,6 +61,12 @@ public class CancelRestartInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The scheduled restart time. The time must be in the \<code>yyyy-MM-ddTHH:mmZ\\</code> format and in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-03-22T00:00:50Z</p>
+     */
     @NameInMap("RestartTime")
     public String restartTime;
 

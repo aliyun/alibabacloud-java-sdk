@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProcessListResponseBody extends TeaModel {
     /**
-     * <p>The queries.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("ProcessList")
     public DescribeProcessListResponseBodyProcessList processList;
@@ -135,7 +135,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     public static class DescribeProcessListResponseBodyProcessListStatistics extends TeaModel {
         /**
-         * <p>The size of the data that was scanned. Unit: bytes.</p>
+         * <p>The size of the scanned data, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>9141300000</p>
@@ -144,7 +144,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public Integer bytesRead;
 
         /**
-         * <p>The average response time.</p>
+         * <p>The elapsed time.</p>
          * 
          * <strong>example:</strong>
          * <p>4156</p>
@@ -153,7 +153,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public Float elapsedTime;
 
         /**
-         * <p>The number of scanned rows.</p>
+         * <p>The number of rows scanned.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -255,7 +255,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String rows;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page size in rows.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -264,7 +264,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String rowsBeforeLimitAtLeast;
 
         /**
-         * <p>The statistics of the results.</p>
+         * <p>The statistics of the query result.</p>
          */
         @NameInMap("Statistics")
         public DescribeProcessListResponseBodyProcessListStatistics statistics;

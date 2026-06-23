@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7D3ECB0E-98CA-5E08-A9CA-F70C5A1E9BDF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result set of the slow SQL queries.</p>
+     */
     @NameInMap("SlowLogTrend")
     public DescribeSlowLogTrendResponseBodySlowLogTrend slowLogTrend;
 
@@ -119,6 +124,8 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
 
     public static class DescribeSlowLogTrendResponseBodySlowLogTrendStatistics extends TeaModel {
         /**
+         * <p>The amount of data read. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>697899</p>
          */
@@ -126,6 +133,8 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public Integer bytesRead;
 
         /**
+         * <p>The query execution duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.001703578</p>
          */
@@ -133,6 +142,8 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public Float elapsedTime;
 
         /**
+         * <p>The number of rows read.</p>
+         * 
          * <strong>example:</strong>
          * <p>14721</p>
          */
@@ -224,6 +235,8 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public DescribeSlowLogTrendResponseBodySlowLogTrendData data;
 
         /**
+         * <p>The number of rows in the result set.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -231,12 +244,17 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public String rows;
 
         /**
+         * <p>The minimum number of rows that are returned before the \<code>LIMIT\\</code> clause is applied.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RowsBeforeLimitAtLeast")
         public String rowsBeforeLimitAtLeast;
 
+        /**
+         * <p>The statistics of the query results.</p>
+         */
         @NameInMap("Statistics")
         public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics statistics;
 

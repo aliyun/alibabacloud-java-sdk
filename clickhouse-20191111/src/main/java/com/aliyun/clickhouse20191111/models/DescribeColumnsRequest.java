@@ -27,7 +27,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The database name. You can call the <a href="https://help.aliyun.com/document_detail/350931.html">DescribeSchemas</a> operation to query database names.</p>
+     * <p>The name of the database. You can call the <a href="https://help.aliyun.com/document_detail/350931.html">DescribeSchemas</a> operation to query database names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>The table name. You can call the <a href="https://help.aliyun.com/document_detail/350932.html">DescribeTables</a> operation to query table names.</p>
+     * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/350932.html">DescribeTables</a> operation to query table names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

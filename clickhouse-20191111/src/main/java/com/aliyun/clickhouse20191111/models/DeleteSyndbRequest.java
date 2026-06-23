@@ -27,7 +27,7 @@ public class DeleteSyndbRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.</p>
+     * <p>The ApsaraDB RDS for MySQL database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

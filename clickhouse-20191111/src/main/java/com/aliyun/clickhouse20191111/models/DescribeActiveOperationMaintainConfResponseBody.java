@@ -4,10 +4,21 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
+    /**
+     * <p>The active O\&amp;M configuration items.</p>
+     */
     @NameInMap("Config")
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
+     * <p>Indicates whether a configuration is set.</p>
+     * <ul>
+     * <li><p>1: A configuration is set.</p>
+     * </li>
+     * <li><p>0: No configuration is set.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +26,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     public Integer hasConfig;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A23C87D-87DF-4DA0-A50E-CB13F4F7923D</p>
      */
@@ -52,6 +65,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
         /**
+         * <p>The time when the configuration was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-18T06:51:11+08:00</p>
          */
@@ -59,6 +74,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The day of the cycle.</p>
+         * <ul>
+         * <li><p>If CycleType is Month, this parameter returns one or more numbers from 1 to 28 that indicate the day of the month. Multiple numbers are separated by commas (,).</p>
+         * </li>
+         * <li><p>If CycleType is Week, this parameter returns one or more numbers from 1 to 7 that indicate the day of the week. Multiple numbers are separated by commas (,).</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -66,6 +89,14 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleTime;
 
         /**
+         * <p>The cycle type.</p>
+         * <ul>
+         * <li><p>Month</p>
+         * </li>
+         * <li><p>Week</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Week</p>
          */
@@ -73,6 +104,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleType;
 
         /**
+         * <p>The end time of the maintenance window.</p>
+         * 
          * <strong>example:</strong>
          * <p>22:00Z</p>
          */
@@ -80,6 +113,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
+         * <p>The start time of the maintenance window.</p>
+         * 
          * <strong>example:</strong>
          * <p>18:00Z</p>
          */
@@ -87,6 +122,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
+         * <p>The time when the configuration was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-27T07:12:53Z</p>
          */
@@ -94,6 +131,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The status of the configuration. A value of 1 indicates that the configuration is enabled. A value of 2 indicates that the configuration is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

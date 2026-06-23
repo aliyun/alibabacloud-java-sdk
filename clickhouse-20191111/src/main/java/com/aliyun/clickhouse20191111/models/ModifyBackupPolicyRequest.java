@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The retention period for the backup data. Valid values: 7 to 730. Unit: days.</p>
+     * <p>The number of days to retain data backups. Valid values: 7 to 730.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -30,15 +30,22 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The day of a week when the system regularly backs up data. If you specify multiple days of a week, separate them with commas (,). Valid values:</p>
+     * <p>The backup cycle. If you specify multiple values, separate them with commas. Valid values:</p>
      * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
+     * <li><p><strong>Monday</strong></p>
+     * </li>
+     * <li><p><strong>Tuesday</strong></p>
+     * </li>
+     * <li><p><strong>Wednesday</strong></p>
+     * </li>
+     * <li><p><strong>Thursday</strong></p>
+     * </li>
+     * <li><p><strong>Friday</strong></p>
+     * </li>
+     * <li><p><strong>Saturday</strong></p>
+     * </li>
+     * <li><p><strong>Sunday</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,8 +56,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The backup window. Specify the time in the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
-     * <p>For example, if you set the backup window to 00:00Z-01:00Z, the data of the cluster can be backed up from 08:00 (UTC+8) to 09:00 (UTC+8).</p>
+     * <p>The backup time in UTC. The format is HH:mmZ-HH:mmZ.</p>
+     * <p>Example: 00:00Z-01:00Z. This means that data backup can be performed from 00:00 to 01:00 UTC. This corresponds to 08:00 to 09:00 UTC+8.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

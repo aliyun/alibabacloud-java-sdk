@@ -14,7 +14,7 @@ public class DescribeSynDbTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried tables.</p>
+     * <p>The tables.</p>
      */
     @NameInMap("Tables")
     public java.util.List<String> tables;

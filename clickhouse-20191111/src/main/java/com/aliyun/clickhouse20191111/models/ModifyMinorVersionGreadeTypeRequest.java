@@ -15,7 +15,7 @@ public class ModifyMinorVersionGreadeTypeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The update type. If you set the parameter to <strong>false</strong>, you perform the manual update.</p>
+     * <p>The upgrade type. Set this parameter to <strong>false</strong> for manual upgrades.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

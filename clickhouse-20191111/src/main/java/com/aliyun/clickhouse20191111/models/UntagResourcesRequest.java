@@ -7,11 +7,13 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the cluster. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong> (default)</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is valid only when <strong>TagKey.N</strong> is left empty.</p>
+     * <p>This parameter is valid only when the <strong>TagKey.N</strong> parameter is empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,6 +42,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -52,15 +55,18 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>CLUSTER</strong>.</p>
+     * <p>The resource type. Set the value to <strong>DBCLUSTER</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CLUSTER</p>
+     * <p>DBCLUSTER</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag key.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

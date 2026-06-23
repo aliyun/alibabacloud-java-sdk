@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyDBConfigRequest extends TeaModel {
     /**
-     * <p>The dictionary configuration.</p>
+     * <p>The dictionary configuration items.</p>
+     * <blockquote>
+     * <p>The value of the Config parameter overwrites the existing configuration. To delete a dictionary configuration, remove it from the request.</p>
+     * </blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2360627.html">DescribeDBConfig</a> operation to query the dictionary configuration of the target instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;name&quot;:&quot;test&quot;}</p>
+     * <p><dictionaries><dictionary><name>test_dictionary</name><source><clickhouse><host>10.0.0.0</host><port>3003</port><user>TestUser</user><password>testPassword</password><db>default</db><table>dictTestTable01</table><where>active=1</where><invalidate_query>SELECT max(value) FROM dictTestTable01</invalidate_query></clickhouse></source><lifetime><min>200</min><max>600</max></lifetime><layout><flat></flat></layout><structure><id><name>id</name><type>UInt64</type></id><attribute><name>value</name><type>String</type><null_value></null_value></attribute></structure></dictionary></dictionaries></p>
      */
     @NameInMap("Config")
     public String config;
@@ -30,7 +34,7 @@ public class ModifyDBConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the IDs of available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

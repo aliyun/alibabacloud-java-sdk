@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClustersRequest extends TeaModel {
     /**
-     * <p>The description of the cluster.</p>
+     * <p>The cluster description.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-bp108z124a8o7****</p>
@@ -16,7 +16,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the information about all clusters is queried.</p>
+     * <p>If you do not specify this parameter, information about all clusters is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,11 +28,16 @@ public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The state of the cluster. Valid values:</p>
      * <ul>
-     * <li><strong>Preparing</strong>: The cluster is being prepared.</li>
-     * <li><strong>Creating</strong>: The cluster is being created.</li>
-     * <li><strong>Running</strong>: The cluster is running.</li>
-     * <li><strong>Deleting</strong>: The cluster is being deleted.</li>
-     * <li><strong>SCALING_OUT</strong>: The storage capacity of the cluster is being expanded.</li>
+     * <li><p><strong>Preparing</strong>: The cluster is being prepared.</p>
+     * </li>
+     * <li><p><strong>Creating</strong>: The cluster is being created.</p>
+     * </li>
+     * <li><p><strong>Running</strong>: The cluster is running.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The cluster is being deleted.</p>
+     * </li>
+     * <li><p><strong>SCALING_OUT</strong>: The cluster is being scaled out.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,11 +62,14 @@ public class DescribeDBClustersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default)</li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +79,7 @@ public class DescribeDBClustersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -204,7 +212,7 @@ public class DescribeDBClustersRequest extends TeaModel {
 
     public static class DescribeDBClustersRequestTag extends TeaModel {
         /**
-         * <p>The tag name.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>department</p>
@@ -213,7 +221,7 @@ public class DescribeDBClustersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>it</p>

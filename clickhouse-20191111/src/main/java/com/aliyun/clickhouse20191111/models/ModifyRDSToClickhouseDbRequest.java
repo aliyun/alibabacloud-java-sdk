@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     /**
-     * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     * <p>The password of the ApsaraDB for ClickHouse database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public String ckPassword;
 
     /**
-     * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     * <p>The database account of the ApsaraDB for ClickHouse cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public String dbClusterId;
 
     /**
-     * <p>The maximum number of rows that can be synchronized per second.</p>
+     * <p>The maximum number of rows to sync per second.</p>
      * 
      * <strong>example:</strong>
      * <p>50000</p>
@@ -59,7 +59,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The instance ID of the ApsaraDB RDS for MySQL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public String rdsId;
 
     /**
-     * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The password of the ApsaraDB RDS for MySQL database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public String rdsSynDb;
 
     /**
-     * <p>The table in the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The tables in the ApsaraDB RDS for MySQL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public String rdsSynTables;
 
     /**
-     * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The database account of the ApsaraDB RDS for MySQL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public String rdsUserName;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.</p>
+     * <p>The VPC ID of the ApsaraDB RDS for MySQL instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1v9dtwmqqjhwwg****</p>
@@ -135,8 +135,10 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     /**
      * <p>Specifies whether to ignore databases that do not support synchronization. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Ignore the databases.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not ignore the databases.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

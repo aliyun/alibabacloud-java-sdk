@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
+    /**
+     * <p>The list of KMS keys.</p>
+     */
     @NameInMap("KmsKeys")
     public java.util.List<DescribeUserEncryptionKeyListResponseBodyKmsKeys> kmsKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
      */
@@ -37,6 +42,8 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     public static class DescribeUserEncryptionKeyListResponseBodyKmsKeys extends TeaModel {
         /**
+         * <p>The key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0275bd3f-fdbb-4d8c-846b-71b211******</p>
          */

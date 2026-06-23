@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckClickhouseToRDSRequest extends TeaModel {
     /**
-     * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     * <p>The password for the ApsaraDB for ClickHouse database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public String ckPassword;
 
     /**
-     * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     * <p>The database account for the ApsaraDB for ClickHouse cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public Long clickhousePort;
 
     /**
-     * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+     * <p>The ID of the community-compatible ApsaraDB for ClickHouse cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The ID of the ApsaraDB RDS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public String rdsId;
 
     /**
-     * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The password for the ApsaraDB RDS database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public String rdsPassword;
 
     /**
-     * <p>The port number of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The port number of the ApsaraDB RDS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -79,7 +79,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public Long rdsPort;
 
     /**
-     * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The database account for the ApsaraDB RDS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public String rdsUserName;
 
     /**
-     * <p>The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.</p>
+     * <p>The VPC ID of the ApsaraDB RDS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public String rdsVpcId;
 
     /**
-     * <p>The internal endpoint of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The internal endpoint of the ApsaraDB RDS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

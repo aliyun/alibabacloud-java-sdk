@@ -53,7 +53,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("me-east-1", "clickhouse.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "clickhouse.aliyuncs.com"),
             new TeaPair("us-east-1", "clickhouse.aliyuncs.com"),
-            new TeaPair("us-west-1", "clickhouse.aliyuncs.com")
+            new TeaPair("us-west-1", "clickhouse.aliyuncs.com"),
+            new TeaPair("me-central-1", "clickhouse.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "clickhouse.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "clickhouse.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "clickhouse.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "clickhouse.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("clickhouse", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -74,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a public endpoint for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Allocates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request AllocateClusterPublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -126,7 +138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a public endpoint for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Allocates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request AllocateClusterPublicConnectionRequest
      * @return AllocateClusterPublicConnectionResponse
@@ -138,7 +150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消运维事件任务</p>
+     * <p>Cancels tasks for O&amp;M events.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -190,7 +202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消运维事件任务</p>
+     * <p>Cancels tasks for O&amp;M events.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
@@ -202,7 +214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消预约Zookeeper切主</p>
+     * <p>Cancels a scheduled ZooKeeper leader switchover on a community-compatible ClickHouse instance.</p>
      * 
      * @param request CancelAppointmentElectZookeeperLeaderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -262,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消预约Zookeeper切主</p>
+     * <p>Cancels a scheduled ZooKeeper leader switchover on a community-compatible ClickHouse instance.</p>
      * 
      * @param request CancelAppointmentElectZookeeperLeaderRequest
      * @return CancelAppointmentElectZookeeperLeaderResponse
@@ -274,7 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消预约重启节点列表</p>
+     * <p>Cancels the scheduled restart on the specified ClickHouse nodes.</p>
      * 
      * @param request CancelAppointmentRestartInstanceNodeListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -334,7 +346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消预约重启节点列表</p>
+     * <p>Cancels the scheduled restart on the specified ClickHouse nodes.</p>
      * 
      * @param request CancelAppointmentRestartInstanceNodeListRequest
      * @return CancelAppointmentRestartInstanceNodeListResponse
@@ -346,7 +358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the scheduled restart time of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Cancels a scheduled restart for a specific community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CancelRestartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -410,7 +422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the scheduled restart time of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Cancels a scheduled restart for a specific community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CancelRestartInstanceRequest
      * @return CancelRestartInstanceResponse
@@ -422,7 +434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Changes the resource group of a community-edition compatible ClickHouse cluster.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -462,7 +474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Changes the resource group of a community-edition compatible ClickHouse cluster.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -474,7 +486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the connectivity between an ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</p>
+     * <p>Call the CheckClickhouseToRDS operation to verify the connectivity between a community-compatible ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request CheckClickhouseToRDSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -558,7 +570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the connectivity between an ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</p>
+     * <p>Call the CheckClickhouseToRDS operation to verify the connectivity between a community-compatible ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request CheckClickhouseToRDSRequest
      * @return CheckClickhouseToRDSResponse
@@ -571,11 +583,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>该接口仅支持 2021 年 12 月 01 日之后创建的社区兼容版集群。</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether an ApsaraDB for ClickHouse cluster needs to be restarted after you change the values of the configuration parameters in XML mode.</p>
+     * <p>Queries whether changing the configuration parameters of an ApsaraDB for ClickHouse community-compatible cluster in XML mode requires a restart.</p>
      * 
      * @param request CheckModifyConfigNeedRestartRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -612,11 +624,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>该接口仅支持 2021 年 12 月 01 日之后创建的社区兼容版集群。</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether an ApsaraDB for ClickHouse cluster needs to be restarted after you change the values of the configuration parameters in XML mode.</p>
+     * <p>Queries whether changing the configuration parameters of an ApsaraDB for ClickHouse community-compatible cluster in XML mode requires a restart.</p>
      * 
      * @param request CheckModifyConfigNeedRestartRequest
      * @return CheckModifyConfigNeedRestartResponse
@@ -627,8 +639,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation applies only to community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Checks whether the monitoring and alerting feature that is provided by Application Real-Time Monitoring Service (ARMS) is enabled for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Call the CheckMonitorAlert operation to check whether the alert monitoring feature of Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CheckMonitorAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -679,8 +696,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation applies only to community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Checks whether the monitoring and alerting feature that is provided by Application Real-Time Monitoring Service (ARMS) is enabled for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Call the CheckMonitorAlert operation to check whether the alert monitoring feature of Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CheckMonitorAlertRequest
      * @return CheckMonitorAlertResponse
@@ -692,7 +714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs migration and scale-out detection on an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Performs a migration scale-out check on a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CheckScaleOutBalancedRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -733,6 +755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingType)) {
+            query.put("ScalingType", request.scalingType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -752,7 +778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs migration and scale-out detection on an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Performs a migration scale-out check on a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CheckScaleOutBalancedRequest
      * @return CheckScaleOutBalancedResponse
@@ -764,7 +790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the service-linked role of ApsaraDB for ClickHouse.</p>
+     * <p>Queries the service-linked role for ApsaraDB for ClickHouse.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -808,7 +834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the service-linked role of ApsaraDB for ClickHouse.</p>
+     * <p>Queries the service-linked role for ApsaraDB for ClickHouse.</p>
      * 
      * @param request CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
@@ -891,8 +917,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is available only for cluster versions 21.8 and earlier. For newer versions, use a high-privilege account and SQL statements to modify user permissions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an account and grants permissions to the account.</p>
+     * <p>Creates a database account and grants permissions.</p>
      * 
      * @param request CreateAccountAndAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -979,8 +1008,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is available only for cluster versions 21.8 and earlier. For newer versions, use a high-privilege account and SQL statements to modify user permissions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an account and grants permissions to the account.</p>
+     * <p>Creates a database account and grants permissions.</p>
      * 
      * @param request CreateAccountAndAuthorityRequest
      * @return CreateAccountAndAuthorityResponse
@@ -993,7 +1025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>ApsaraDB for ClickHouse supports data backup for clusters that run version 20.3, 20.8, or 21.8.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1062,7 +1094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>ApsaraDB for ClickHouse supports data backup for clusters that run version 20.3, 20.8, or 21.8.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1078,10 +1110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * <p>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">price</a> of ApsaraDB for ClickHouse.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Create an Alibaba Cloud ClickHouse cluster.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1233,10 +1265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * <p>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">price</a> of ApsaraDB for ClickHouse.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Create an Alibaba Cloud ClickHouse cluster.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -1248,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a monitoring data report for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Creates a monitoring data report.</p>
      * 
      * @param request CreateMonitorDataReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1300,7 +1332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a monitoring data report for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Creates a monitoring data report.</p>
      * 
      * @param request CreateMonitorDataReportRequest
      * @return CreateMonitorDataReportResponse
@@ -1312,10 +1344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see <a href="https://help.aliyun.com/document_detail/276926.html">Migrate data between ApsaraDB for ClickHouse clusters</a>.</p>
+     * <p>The tiered storage of hot and cold data feature is supported only by community-compatible clusters that run version 20.8 or later. For clusters that run an earlier version, you must migrate data to a cluster that runs version 20.8 or later before you can configure tiered storage. For more information about data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse instances</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a storage task for cold data.</p>
+     * <p>Creates a cold storage space.</p>
      * 
      * @param request CreateOSSStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1367,10 +1399,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see <a href="https://help.aliyun.com/document_detail/276926.html">Migrate data between ApsaraDB for ClickHouse clusters</a>.</p>
+     * <p>The tiered storage of hot and cold data feature is supported only by community-compatible clusters that run version 20.8 or later. For clusters that run an earlier version, you must migrate data to a cluster that runs version 20.8 or later before you can configure tiered storage. For more information about data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse instances</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a storage task for cold data.</p>
+     * <p>Creates a cold storage space.</p>
      * 
      * @param request CreateOSSStorageRequest
      * @return CreateOSSStorageResponse
@@ -1383,11 +1415,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.</p>
+     * <p>You must manually enable the MySQL port for community-compatible clusters of version 20.8 or later that were created before December 1, 2021. For clusters created on or after this date, the MySQL port is enabled automatically.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Enables the MySQL port for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Enables the MySQL or HTTPS port for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CreatePortsForClickHouseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1444,11 +1476,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.</p>
+     * <p>You must manually enable the MySQL port for community-compatible clusters of version 20.8 or later that were created before December 1, 2021. For clusters created on or after this date, the MySQL port is enabled automatically.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Enables the MySQL port for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Enables the MySQL or HTTPS port for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CreatePortsForClickHouseRequest
      * @return CreatePortsForClickHouseResponse
@@ -1461,11 +1493,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is only applicable to ApsaraDB for ClickHouse clusters.</p>
+     * <p>This operation applies only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task to synchronize data from an ApsaraDB RDS for MySQL instance to an ApsaraDB for ClickHouse cluster.</p>
+     * <p>You can call the CreateRDSToClickhouseDb operation to create a sync task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</p>
      * 
      * @param request CreateRDSToClickhouseDbRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1562,11 +1594,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is only applicable to ApsaraDB for ClickHouse clusters.</p>
+     * <p>This operation applies only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task to synchronize data from an ApsaraDB RDS for MySQL instance to an ApsaraDB for ClickHouse cluster.</p>
+     * <p>You can call the CreateRDSToClickhouseDb operation to create a sync task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</p>
      * 
      * @param request CreateRDSToClickhouseDbRequest
      * @return CreateRDSToClickhouseDbResponse
@@ -1578,11 +1610,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Description</h2>
-     * <p>An ApsaraDB for ClickHouse cluster is dependent on an SLB instance at the network layer. You can bind a domain name to the IP address of an ApsaraDB for ClickHouse node to provide external connectivity service and provide failover capabilities. The SLB instance forwards requests to the nodes in the ApsaraDB for ClickHouse cluster and balances the request traffic among the nodes. The SLB instance checks the availability of backend nodes. If the SLB instance detects that a node is unavailable by checking the health status of all nodes, the SLB instance automatically isolates the unavailable node. This ensures that the request traffic is balanced among available nodes.</p>
+     * <h2>Usage notes</h2>
+     * <p>An SLB instance is a network-layer dependency that provides services for external connections and supports failover. It attaches a domain name to the IP addresses of ClickHouse nodes. The SLB instance balances and forwards cluster requests to internal nodes to distribute traffic in a multi-node deployment. It also performs health checks on backend nodes. If a node becomes unavailable, the SLB instance checks its health status and automatically isolates it. This ensures that request traffic is distributed to active nodes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Mounts a Server Load Balancer (SLB) instance to an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Calls the CreateSLB operation to attach a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-Compatible Edition cluster.</p>
      * 
      * @param request CreateSLBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1622,11 +1654,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Description</h2>
-     * <p>An ApsaraDB for ClickHouse cluster is dependent on an SLB instance at the network layer. You can bind a domain name to the IP address of an ApsaraDB for ClickHouse node to provide external connectivity service and provide failover capabilities. The SLB instance forwards requests to the nodes in the ApsaraDB for ClickHouse cluster and balances the request traffic among the nodes. The SLB instance checks the availability of backend nodes. If the SLB instance detects that a node is unavailable by checking the health status of all nodes, the SLB instance automatically isolates the unavailable node. This ensures that the request traffic is balanced among available nodes.</p>
+     * <h2>Usage notes</h2>
+     * <p>An SLB instance is a network-layer dependency that provides services for external connections and supports failover. It attaches a domain name to the IP addresses of ClickHouse nodes. The SLB instance balances and forwards cluster requests to internal nodes to distribute traffic in a multi-node deployment. It also performs health checks on backend nodes. If a node becomes unavailable, the SLB instance checks its health status and automatically isolates it. This ensures that request traffic is distributed to active nodes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Mounts a Server Load Balancer (SLB) instance to an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Calls the CreateSLB operation to attach a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-Compatible Edition cluster.</p>
      * 
      * @param request CreateSLBRequest
      * @return CreateSLBResponse
@@ -1639,11 +1671,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,</p>
+     * <p>This operation applies only to community-compatible clusters that run version 20.8 or later and were created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a privileged account or a standard account for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Call the CreateSQLAccount operation to create a privileged or standard account for an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CreateSQLAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1708,11 +1740,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,</p>
+     * <p>This operation applies only to community-compatible clusters that run version 20.8 or later and were created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a privileged account or a standard account for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Call the CreateSQLAccount operation to create a privileged or standard account for an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request CreateSQLAccountRequest
      * @return CreateSQLAccountResponse
@@ -1781,11 +1813,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.</p>
+     * <p>After a database account is deleted, you cannot use it to connect to ApsaraDB for ClickHouse. Proceed with caution.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a database account of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Deletes a database account from an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1838,11 +1870,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.</p>
+     * <p>After a database account is deleted, you cannot use it to connect to ApsaraDB for ClickHouse. Proceed with caution.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a database account of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Deletes a database account from an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -1853,8 +1885,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The data backup feature is available only for ApsaraDB for ClickHouse clusters running version 21.8 or later.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除备份策略</p>
+     * <p>Deletes the backup policy for a community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1901,8 +1938,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The data backup feature is available only for ApsaraDB for ClickHouse clusters running version 21.8 or later.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除备份策略</p>
+     * <p>Deletes the backup policy for a community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @return DeleteBackupPolicyResponse
@@ -1914,10 +1956,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Warning</em>* After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.</p>
+     * <blockquote>
+     * <p>Warning: 
+     * After a cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Releases a pay-as-you-go ApsaraDB for ClickHouse cluster.</p>
+     * <p>Deletes a specified pay-as-you-go ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1965,10 +2010,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Warning</em>* After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.</p>
+     * <blockquote>
+     * <p>Warning: 
+     * After a cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Releases a pay-as-you-go ApsaraDB for ClickHouse cluster.</p>
+     * <p>Deletes a specified pay-as-you-go ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteDBClusterRequest
      * @return DeleteDBClusterResponse
@@ -1980,11 +2028,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Description</h2>
-     * <p>After an SLB instance is released, simple load balancing is performed on inbound traffic based on the domain name. The health status of all nodes is no longer checked. As a result, unavailable nodes may fail to be detected, and normal requests may be routed to the unavailable nodes. This causes the failures of some read and write requests.</p>
+     * <h2>Usage notes</h2>
+     * <p>After you release the SLB instance, the system performs simple load balancing based on the domain name. Health checks are no longer performed on nodes at the request routing layer. This may cause normal requests to be routed to unavailable nodes, which can result in read and write failures.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a Server Load Balancer (SLB) instance from an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Releases a Server Load Balancer (SLB) instance for a specified ApsaraDB for ClickHouse Community-Compatible cluster.</p>
      * 
      * @param request DeleteSLBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2020,11 +2068,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Description</h2>
-     * <p>After an SLB instance is released, simple load balancing is performed on inbound traffic based on the domain name. The health status of all nodes is no longer checked. As a result, unavailable nodes may fail to be detected, and normal requests may be routed to the unavailable nodes. This causes the failures of some read and write requests.</p>
+     * <h2>Usage notes</h2>
+     * <p>After you release the SLB instance, the system performs simple load balancing based on the domain name. Health checks are no longer performed on nodes at the request routing layer. This may cause normal requests to be routed to unavailable nodes, which can result in read and write failures.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a Server Load Balancer (SLB) instance from an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Releases a Server Load Balancer (SLB) instance for a specified ApsaraDB for ClickHouse Community-Compatible cluster.</p>
      * 
      * @param request DeleteSLBRequest
      * @return DeleteSLBResponse
@@ -2036,7 +2084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a database used for data synchronization.</p>
+     * <p>Deletes a database synchronization task.</p>
      * 
      * @param request DeleteSyndbRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2088,7 +2136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a database used for data synchronization.</p>
+     * <p>Deletes a database synchronization task.</p>
      * 
      * @param request DeleteSyndbRequest
      * @return DeleteSyndbResponse
@@ -2099,8 +2147,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API applies only to clusters of v21.8 or earlier. For clusters running a later version, you must use a privileged account and execute SQL statements to modify the permissions of a regular user.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the permissions of an account.</p>
+     * <p>Queries the permissions of a database account.</p>
      * 
      * @param request DescribeAccountAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2155,8 +2206,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API applies only to clusters of v21.8 or earlier. For clusters running a later version, you must use a privileged account and execute SQL statements to modify the permissions of a regular user.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the permissions of an account.</p>
+     * <p>Queries the permissions of a database account.</p>
      * 
      * @param request DescribeAccountAuthorityRequest
      * @return DescribeAccountAuthorityResponse
@@ -2168,7 +2222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the database accounts of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Describes the database accounts of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2228,7 +2282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the database accounts of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Describes the database accounts of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -2240,7 +2294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>主动运维</p>
+     * <p>Queries the active Operations and Maintenance (O&amp;M) configuration of a ClickHouse instance.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2288,7 +2342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>主动运维</p>
+     * <p>Queries the active Operations and Maintenance (O&amp;M) configuration of a ClickHouse instance.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @return DescribeActiveOperationMaintainConfResponse
@@ -2299,6 +2353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the active operation tasks of a ClickHouse instance.</p>
+     * 
      * @param request DescribeActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeActiveOperationTasksResponse
@@ -2388,6 +2445,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the active operation tasks of a ClickHouse instance.</p>
+     * 
      * @param request DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
      */
@@ -2398,7 +2458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of databases, tables, and columns in an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Describes all databases, tables, and columns in an instance.</p>
      * 
      * @param request DescribeAllDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2454,7 +2514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of databases, tables, and columns in an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Describes all databases, tables, and columns in an instance.</p>
      * 
      * @param request DescribeAllDataSourceRequest
      * @return DescribeAllDataSourceResponse
@@ -2466,7 +2526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data sources of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the details of all data sources.</p>
      * 
      * @param request DescribeAllDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2522,7 +2582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data sources of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the details of all data sources.</p>
      * 
      * @param request DescribeAllDataSourcesRequest
      * @return DescribeAllDataSourcesResponse
@@ -2533,6 +2593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the auto-renewal status of a ClickHouse Community-Compatible cluster.</p>
+     * 
      * @param request DescribeAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAutoRenewAttributeResponse
@@ -2590,6 +2653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the auto-renewal status of a ClickHouse Community-Compatible cluster.</p>
+     * 
      * @param request DescribeAutoRenewAttributeRequest
      * @return DescribeAutoRenewAttributeResponse
      */
@@ -2601,11 +2667,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>Data backup is supported for ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the backup settings for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2654,11 +2720,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>Data backup is supported for ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the backup settings for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
@@ -2671,11 +2737,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for ApsaraDB for ClickHouse clusters of version 21.8 and later.</p>
+     * <p>The data backup feature is available only on ApsaraDB for ClickHouse clusters running version 21.8 or later.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup sets of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the backup sets of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2744,11 +2810,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for ApsaraDB for ClickHouse clusters of version 21.8 and later.</p>
+     * <p>The data backup feature is available only on ApsaraDB for ClickHouse clusters running version 21.8 or later.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup sets of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the backup sets of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -2760,7 +2826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about columns.</p>
+     * <p>You can view columns.</p>
      * 
      * @param request DescribeColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2816,7 +2882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about columns.</p>
+     * <p>You can view columns.</p>
      * 
      * @param request DescribeColumnsRequest
      * @return DescribeColumnsResponse
@@ -2829,11 +2895,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation supports only community-compatible clusters that are created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the change records of the configuration parameters of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Call the DescribeConfigHistory operation to view the configuration parameter change history of a community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeConfigHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2862,11 +2928,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation supports only community-compatible clusters that are created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the change records of the configuration parameters of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Call the DescribeConfigHistory operation to view the configuration parameter change history of a community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeConfigHistoryRequest
      * @return DescribeConfigHistoryResponse
@@ -2879,11 +2945,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation applies only to community-compatible clusters that were created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the values of the configuration parameters of an ApsaraDB for ClickHouse cluster before and after the values of the configuration parameters are changed.</p>
+     * <p>Call the DescribeConfigVersionDifference operation to compare the parameter values of an ApsaraDB for ClickHouse community-compatible cluster before and after a configuration change.</p>
      * 
      * @param request DescribeConfigVersionDifferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2912,11 +2978,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation applies only to community-compatible clusters that were created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the values of the configuration parameters of an ApsaraDB for ClickHouse cluster before and after the values of the configuration parameters are changed.</p>
+     * <p>Call the DescribeConfigVersionDifference operation to compare the parameter values of an ApsaraDB for ClickHouse community-compatible cluster before and after a configuration change.</p>
      * 
      * @param request DescribeConfigVersionDifferenceRequest
      * @return DescribeConfigVersionDifferenceResponse
@@ -2928,7 +2994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP address whitelist of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the IP address whitelist of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeDBClusterAccessWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2976,7 +3042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP address whitelist of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the IP address whitelist of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeDBClusterAccessWhiteListRequest
      * @return DescribeDBClusterAccessWhiteListResponse
@@ -2988,7 +3054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Retrieves details for a specific ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeDBClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3036,7 +3102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Retrieves details for a specific ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeDBClusterAttributeRequest
      * @return DescribeDBClusterAttributeResponse
@@ -3048,7 +3114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the parameter settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>The DescribeDBClusterConfig operation queries the parameter configuration of a community-compatible ClickHouse cluster.</p>
      * 
      * @param request DescribeDBClusterConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3100,7 +3166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the parameter settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>The DescribeDBClusterConfig operation queries the parameter configuration of a community-compatible ClickHouse cluster.</p>
      * 
      * @param request DescribeDBClusterConfigRequest
      * @return DescribeDBClusterConfigResponse
@@ -3113,11 +3179,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation supports only Community-Compatible Edition clusters that are created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the values of the configuration parameters in the config.xml file of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>You can call the DescribeDBClusterConfigInXML operation to query the configuration parameters of an ApsaraDB for ClickHouse Community-Compatible Edition cluster in XML format.</p>
      * 
      * @param request DescribeDBClusterConfigInXMLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3154,11 +3220,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation supports only Community-Compatible Edition clusters that are created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the values of the configuration parameters in the config.xml file of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>You can call the DescribeDBClusterConfigInXML operation to query the configuration parameters of an ApsaraDB for ClickHouse Community-Compatible Edition cluster in XML format.</p>
      * 
      * @param request DescribeDBClusterConfigInXMLRequest
      * @return DescribeDBClusterConfigInXMLResponse
@@ -3170,7 +3236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network information about an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the network information for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeDBClusterNetInfoItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3218,7 +3284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network information about an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the network information for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeDBClusterNetInfoItemsRequest
      * @return DescribeDBClusterNetInfoItemsResponse
@@ -3230,7 +3296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例节点信息</p>
+     * <p>Queries node information for a ClickHouse Community-Compatible instance.</p>
      * 
      * @param request DescribeDBClusterNodeInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3290,7 +3356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例节点信息</p>
+     * <p>Queries node information for a ClickHouse Community-Compatible instance.</p>
      * 
      * @param request DescribeDBClusterNodeInfosRequest
      * @return DescribeDBClusterNodeInfosResponse
@@ -3302,13 +3368,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.</p>
+     * <p>You can view the performance monitoring data for a specified cluster within a time range based on performance metrics. The data is collected every 30 seconds.</p>
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.</p>
+     * <p>This operation supports only ApsaraDB for ClickHouse Community-Compatible Edition clusters that were created before December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries performance data about an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Views the performance data of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</p>
      * 
      * @param request DescribeDBClusterPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3368,13 +3434,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.</p>
+     * <p>You can view the performance monitoring data for a specified cluster within a time range based on performance metrics. The data is collected every 30 seconds.</p>
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.</p>
+     * <p>This operation supports only ApsaraDB for ClickHouse Community-Compatible Edition clusters that were created before December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries performance data about an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Views the performance data of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</p>
      * 
      * @param request DescribeDBClusterPerformanceRequest
      * @return DescribeDBClusterPerformanceResponse
@@ -3385,6 +3451,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>This operation queries the status set of a ClickHouse Community-Compatible Edition cluster.</p>
+     * 
      * @param request DescribeDBClusterStatusSetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterStatusSetResponse
@@ -3430,6 +3499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>This operation queries the status set of a ClickHouse Community-Compatible Edition cluster.</p>
+     * 
      * @param request DescribeDBClusterStatusSetRequest
      * @return DescribeDBClusterStatusSetResponse
      */
@@ -3440,7 +3512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about ApsaraDB for ClickHouse clusters in a region.</p>
+     * <p>Describes ApsaraDB for ClickHouse clusters in a specified region.</p>
      * 
      * @param request DescribeDBClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3516,7 +3588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about ApsaraDB for ClickHouse clusters in a region.</p>
+     * <p>Describes ApsaraDB for ClickHouse clusters in a specified region.</p>
      * 
      * @param request DescribeDBClustersRequest
      * @return DescribeDBClustersResponse
@@ -3528,7 +3600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries configuration information about an ApsaraDB for ClickHouse cluster.</p>
+     * <p>The DescribeDBConfig operation queries the configuration of a community-compatible cluster.</p>
      * 
      * @param request DescribeDBConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3580,7 +3652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries configuration information about an ApsaraDB for ClickHouse cluster.</p>
+     * <p>The DescribeDBConfig operation queries the configuration of a community-compatible cluster.</p>
      * 
      * @param request DescribeDBConfigRequest
      * @return DescribeDBConfigResponse
@@ -3592,7 +3664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeEventMetaInfo</p>
+     * <p>Queries the metadata of Operations and Maintenance (O&amp;M) events for a ClickHouse-compatible cluster.</p>
      * 
      * @param request DescribeEventMetaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3632,7 +3704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeEventMetaInfo</p>
+     * <p>Queries the metadata of Operations and Maintenance (O&amp;M) events for a ClickHouse-compatible cluster.</p>
      * 
      * @param request DescribeEventMetaInfoRequest
      * @return DescribeEventMetaInfoResponse
@@ -3644,7 +3716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage of cold data.</p>
+     * <p>Queries cold storage information.</p>
      * 
      * @param request DescribeOSSStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3696,7 +3768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage of cold data.</p>
+     * <p>Queries cold storage information.</p>
      * 
      * @param request DescribeOSSStorageRequest
      * @return DescribeOSSStorageResponse
@@ -3708,7 +3780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of queries that are being executed in an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Call the DescribeProcessList operation to retrieve running queries on an ApsaraDB for ClickHouse Community-Compatible cluster.</p>
      * 
      * @param request DescribeProcessListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3788,7 +3860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of queries that are being executed in an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Call the DescribeProcessList operation to retrieve running queries on an ApsaraDB for ClickHouse Community-Compatible cluster.</p>
      * 
      * @param request DescribeProcessListRequest
      * @return DescribeProcessListResponse
@@ -3800,7 +3872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all regions and zones of ApsaraDB for ClickHouse clusters.</p>
+     * <p>Queries the available regions and zones for ApsaraDB for ClickHouse.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3844,7 +3916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about all regions and zones of ApsaraDB for ClickHouse clusters.</p>
+     * <p>Queries the available regions and zones for ApsaraDB for ClickHouse.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -3856,7 +3928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of all databases in an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries all databases in an instance.</p>
      * 
      * @param request DescribeSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3904,7 +3976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of all databases in an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries all databases in an instance.</p>
      * 
      * @param request DescribeSchemasRequest
      * @return DescribeSchemasResponse
@@ -3916,7 +3988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about slow query logs.</p>
+     * <p>Queries the details of slow query logs.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3988,7 +4060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about slow query logs.</p>
+     * <p>Queries the details of slow query logs.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -4000,7 +4072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trend of slow query logs for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries statistics about the slow log trends for a cluster.</p>
      * 
      * @param request DescribeSlowLogTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4064,7 +4136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trend of slow query logs for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries statistics about the slow log trends for a cluster.</p>
      * 
      * @param request DescribeSlowLogTrendRequest
      * @return DescribeSlowLogTrendResponse
@@ -4076,7 +4148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about tables that are synchronized from an ApsaraDB RDS for MySQL instance to an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries synchronized databases and tables.</p>
      * 
      * @param request DescribeSynDbTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4128,7 +4200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about tables that are synchronized from an ApsaraDB RDS for MySQL instance to an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries synchronized databases and tables.</p>
      * 
      * @param request DescribeSynDbTablesRequest
      * @return DescribeSynDbTablesResponse
@@ -4140,7 +4212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about data synchronization between an ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</p>
+     * <p>Queries information about synchronized databases.</p>
      * 
      * @param request DescribeSynDbsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4196,7 +4268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about data synchronization between an ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</p>
+     * <p>Queries information about synchronized databases.</p>
      * 
      * @param request DescribeSynDbsRequest
      * @return DescribeSynDbsResponse
@@ -4208,7 +4280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about tables in a database of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>You can call the DescribeTables operation to query tables in a community-compatible cluster.</p>
      * 
      * @param request DescribeTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4260,7 +4332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about tables in a database of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>You can call the DescribeTables operation to query tables in a community-compatible cluster.</p>
      * 
      * @param request DescribeTablesRequest
      * @return DescribeTablesResponse
@@ -4273,11 +4345,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.</p>
+     * <p>This API operation is used only to query data migrations between Alibaba Cloud ClickHouse clusters during version upgrades.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version</p>
+     * <p>View migration history.</p>
      * 
      * @param request DescribeTransferHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4326,11 +4398,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.</p>
+     * <p>This API operation is used only to query data migrations between Alibaba Cloud ClickHouse clusters during version upgrades.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version</p>
+     * <p>View migration history.</p>
      * 
      * @param request DescribeTransferHistoryRequest
      * @return DescribeTransferHistoryResponse
@@ -4341,6 +4413,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of your KMS keys.</p>
+     * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserEncryptionKeyListResponse
@@ -4378,6 +4453,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of your KMS keys.</p>
+     * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @return DescribeUserEncryptionKeyListResponse
      */
@@ -4388,7 +4466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Zookeeper主动切主</p>
+     * <p>Switches the ZooKeeper leader for a community-compatible ClickHouse instance.</p>
      * 
      * @param request ElectZookeeperLeaderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4456,7 +4534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Zookeeper主动切主</p>
+     * <p>Switches the ZooKeeper leader for a community-compatible ClickHouse instance.</p>
      * 
      * @param request ElectZookeeperLeaderRequest
      * @return ElectZookeeperLeaderResponse
@@ -4468,7 +4546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminates an ongoing task.</p>
+     * <p>Stops ongoing tasks.</p>
      * 
      * @param request KillProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4524,7 +4602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminates an ongoing task.</p>
+     * <p>Stops ongoing tasks.</p>
      * 
      * @param request KillProcessRequest
      * @return KillProcessResponse
@@ -4536,7 +4614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are added to ApsaraDB for ClickHouse clusters.</p>
+     * <p>Lists the tags that are attached to ApsaraDB for ClickHouse clusters.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4600,7 +4678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are added to ApsaraDB for ClickHouse clusters.</p>
+     * <p>Lists the tags that are attached to ApsaraDB for ClickHouse clusters.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -4611,8 +4689,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation applies only to cluster versions 21.8 and earlier. For cluster versions later than 21.8, you must use a high-privilege account to run SQL statements to modify the permissions of standard users.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the permissions of an account.</p>
+     * <p>Modifies the permissions of a database account.</p>
      * 
      * @param request ModifyAccountAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4691,8 +4772,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation applies only to cluster versions 21.8 and earlier. For cluster versions later than 21.8, you must use a high-privilege account to run SQL statements to modify the permissions of standard users.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the permissions of an account.</p>
+     * <p>Modifies the permissions of a database account.</p>
      * 
      * @param request ModifyAccountAuthorityRequest
      * @return ModifyAccountAuthorityResponse
@@ -4704,7 +4788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a database account of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the description of a database account in an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyAccountDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4760,7 +4844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a database account of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the description of a database account in an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
@@ -4772,7 +4856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改主动运维设置</p>
+     * <p>Modifies the configuration of active O&amp;M tasks on a community-compatible ClickHouse cluster.</p>
      * 
      * @param request ModifyActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4840,7 +4924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改主动运维设置</p>
+     * <p>Modifies the configuration of active O&amp;M tasks on a community-compatible ClickHouse cluster.</p>
      * 
      * @param request ModifyActiveOperationMaintainConfRequest
      * @return ModifyActiveOperationMaintainConfResponse
@@ -4851,6 +4935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the switch time for operations and maintenance (O&amp;M) events on a ClickHouse Community-compatible cluster.</p>
+     * 
      * @param request ModifyActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyActiveOperationTasksResponse
@@ -4908,6 +4995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the switch time for operations and maintenance (O&amp;M) events on a ClickHouse Community-compatible cluster.</p>
+     * 
      * @param request ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse
      */
@@ -4917,6 +5007,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the auto-renewal status of a ClickHouse Community-Compatible cluster.</p>
+     * 
      * @param request ModifyAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAutoRenewAttributeResponse
@@ -4978,6 +5071,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the auto-renewal status of a ClickHouse Community-Compatible cluster.</p>
+     * 
      * @param request ModifyAutoRenewAttributeRequest
      * @return ModifyAutoRenewAttributeResponse
      */
@@ -4989,11 +5085,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>Data backup is supported for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the backup settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the backup settings of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5054,11 +5150,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.</p>
+     * <p>Data backup is supported for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the backup settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the backup settings of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
@@ -5070,7 +5166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades or downgrades an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the specifications of a cluster.</p>
      * 
      * @param request ModifyDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5142,7 +5238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades or downgrades an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the specifications of a cluster.</p>
      * 
      * @param request ModifyDBClusterRequest
      * @return ModifyDBClusterResponse
@@ -5154,7 +5250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the IP address whitelist of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the IP address whitelist for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBClusterAccessWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5218,7 +5314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the IP address whitelist of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the IP address whitelist for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBClusterAccessWhiteListRequest
      * @return ModifyDBClusterAccessWhiteListResponse
@@ -5230,7 +5326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the configuration of a cluster.</p>
      * 
      * @param request ModifyDBClusterConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5290,7 +5386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the configuration of a cluster.</p>
      * 
      * @param request ModifyDBClusterConfigRequest
      * @return ModifyDBClusterConfigResponse
@@ -5303,11 +5399,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation supports only community-compatible clusters created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configuration parameters of an ApsaraDB for ClickHouse cluster that runs Community-compatible Edition.</p>
+     * <p>Modifies the configuration parameters of a specified community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBClusterConfigInXMLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5352,11 +5448,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.</p>
+     * <p>This operation supports only community-compatible clusters created after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configuration parameters of an ApsaraDB for ClickHouse cluster that runs Community-compatible Edition.</p>
+     * <p>Modifies the configuration parameters of a specified community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBClusterConfigInXMLRequest
      * @return ModifyDBClusterConfigInXMLResponse
@@ -5368,7 +5464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the name of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Changes the description of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBClusterDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5420,7 +5516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the name of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Changes the description of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBClusterDescriptionRequest
      * @return ModifyDBClusterDescriptionResponse
@@ -5432,7 +5528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the maintenance window of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the maintenance window for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBClusterMaintainTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5484,7 +5580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the maintenance window of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the maintenance window for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBClusterMaintainTimeRequest
      * @return ModifyDBClusterMaintainTimeResponse
@@ -5495,8 +5591,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API applies only to clusters with a kernel version of 20.8 or earlier.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the dictionary configuration of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>The ModifyDBConfig operation modifies the dictionary configuration of a community-compatible cluster.</p>
      * 
      * @param request ModifyDBConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5551,8 +5653,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API applies only to clusters with a kernel version of 20.8 or earlier.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the dictionary configuration of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>The ModifyDBConfig operation modifies the dictionary configuration of a community-compatible cluster.</p>
      * 
      * @param request ModifyDBConfigRequest
      * @return ModifyDBConfigResponse
@@ -5564,7 +5672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the type of a minor version update in ApsaraDB for ClickHouse.</p>
+     * <p>Modifies the upgrade type for a ClickHouse minor version to automatic or manual.</p>
      * 
      * @param request ModifyMinorVersionGreadeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5616,7 +5724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the type of a minor version update in ApsaraDB for ClickHouse.</p>
+     * <p>Modifies the upgrade type for a ClickHouse minor version to automatic or manual.</p>
      * 
      * @param request ModifyMinorVersionGreadeTypeRequest
      * @return ModifyMinorVersionGreadeTypeResponse
@@ -5629,11 +5737,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters.</p>
+     * <p>This operation applies only to community-compatible ApsaraDB for ClickHouse clusters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the synchronization task of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the sync task of a community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyRDSToClickhouseDbRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5730,11 +5838,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters.</p>
+     * <p>This operation applies only to community-compatible ApsaraDB for ClickHouse clusters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the synchronization task of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the sync task of a community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyRDSToClickhouseDbRequest
      * @return ModifyRDSToClickhouseDbResponse
@@ -5746,7 +5854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases the public endpoint of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Releases the public endpoint of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ReleaseClusterPublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5794,7 +5902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases the public endpoint of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Releases the public endpoint of a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ReleaseClusterPublicConnectionRequest
      * @return ReleaseClusterPublicConnectionResponse
@@ -5806,7 +5914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the password of a database account for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Resets the password of a database account in a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5862,7 +5970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the password of a database account for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Resets the password of a database account in a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
@@ -5874,7 +5982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Restarts a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request RestartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5938,7 +6046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Restarts a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request RestartInstanceRequest
      * @return RestartInstanceResponse
@@ -5950,7 +6058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量重启实例节点</p>
+     * <p>Batch restart nodes of a ClickHouse Community-compatible Edition instance.</p>
      * 
      * @param tmpReq RestartInstanceNodeListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6024,7 +6132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量重启实例节点</p>
+     * <p>Batch restart nodes of a ClickHouse Community-compatible Edition instance.</p>
      * 
      * @param request RestartInstanceNodeListRequest
      * @return RestartInstanceNodeListResponse
@@ -6036,7 +6144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates tags for ApsaraDB for ClickHouse clusters and adds the tags to the ApsaraDB for ClickHouse clusters.</p>
+     * <p>Creates and attaches tags to one or more ApsaraDB for ClickHouse clusters.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6096,7 +6204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates tags for ApsaraDB for ClickHouse clusters and adds the tags to the ApsaraDB for ClickHouse clusters.</p>
+     * <p>Creates and attaches tags to one or more ApsaraDB for ClickHouse clusters.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -6108,17 +6216,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Prerequisites</h2>
+     * <h2>Prerequisites</h2>
      * <ul>
-     * <li>The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.</li>
-     * <li>The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.<blockquote>
-     * <p> You can execute the <code>select * from system.clusters;</code> statement to query the IP address of an ApsaraDB for ClickHouse cluster.</p>
+     * <li>Add the IP addresses of the source cluster to the whitelist of the destination cluster.</li>
+     * <li>Add the IP addresses of the destination cluster to the whitelist of the source cluster.<blockquote>
+     * <p>You can execute the <code>select * from system.clusters;</code> statement to retrieve the IP addresses of an ApsaraDB for ClickHouse cluster.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates the data of a source ApsaraDB for ClickHouse cluster to a destination ApsaraDB for ClickHouse cluster.</p>
+     * <p>Migration between versions.</p>
      * 
      * @param request TransferVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6210,17 +6318,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Prerequisites</h2>
+     * <h2>Prerequisites</h2>
      * <ul>
-     * <li>The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.</li>
-     * <li>The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.<blockquote>
-     * <p> You can execute the <code>select * from system.clusters;</code> statement to query the IP address of an ApsaraDB for ClickHouse cluster.</p>
+     * <li>Add the IP addresses of the source cluster to the whitelist of the destination cluster.</li>
+     * <li>Add the IP addresses of the destination cluster to the whitelist of the source cluster.<blockquote>
+     * <p>You can execute the <code>select * from system.clusters;</code> statement to retrieve the IP addresses of an ApsaraDB for ClickHouse cluster.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates the data of a source ApsaraDB for ClickHouse cluster to a destination ApsaraDB for ClickHouse cluster.</p>
+     * <p>Migration between versions.</p>
      * 
      * @param request TransferVersionRequest
      * @return TransferVersionResponse
@@ -6309,11 +6417,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.</p>
+     * <p>Minor engine version upgrades are supported only for community-compatible clusters that are purchased after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates the minor engine version of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>The UpgradeMinorVersion operation upgrades the minor engine version of a specified community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request UpgradeMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6374,11 +6482,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.</p>
+     * <p>Minor engine version upgrades are supported only for community-compatible clusters that are purchased after December 1, 2021.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates the minor engine version of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>The UpgradeMinorVersion operation upgrades the minor engine version of a specified community-compatible ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request UpgradeMinorVersionRequest
      * @return UpgradeMinorVersionResponse

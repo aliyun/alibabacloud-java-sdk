@@ -8,7 +8,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public DescribeDBClustersResponseBodyDBClusters DBClusters;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -19,9 +19,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default)</li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +43,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that are returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

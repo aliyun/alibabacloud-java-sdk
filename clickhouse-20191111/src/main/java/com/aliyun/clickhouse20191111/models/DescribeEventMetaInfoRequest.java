@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventMetaInfoRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class DescribeEventMetaInfoRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The codes of O\&amp;M event types. Separate multiple codes with commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>Event.EventCode</p>
      */

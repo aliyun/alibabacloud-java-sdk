@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
+    /**
+     * <p>The information about the ClickHouse nodes.</p>
+     */
     @NameInMap("NodeInfos")
     public java.util.List<DescribeDBClusterNodeInfosResponseBodyNodeInfos> nodeInfos;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,16 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong> (default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +37,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>746CD303-0B82-5E8D-886D-93A9FAF3A876</p>
      */
@@ -29,12 +46,17 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalNodeCount")
     public Integer totalNodeCount;
 
+    /**
+     * <p>The information about the ZooKeeper nodes.</p>
+     */
     @NameInMap("ZkNodeInfos")
     public java.util.List<DescribeDBClusterNodeInfosResponseBodyZkNodeInfos> zkNodeInfos;
 
@@ -93,6 +115,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
 
     public static class DescribeDBClusterNodeInfosResponseBodyNodeInfos extends TeaModel {
         /**
+         * <p>Indicates whether a disaster recovery test is in progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -100,6 +124,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         public Boolean failoverTesting;
 
         /**
+         * <p>The IP address of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.168.0.1</p>
          */
@@ -107,6 +133,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         public String nodeIp;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ck-bp108z124a8****</p>
          */
@@ -114,6 +142,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -121,6 +151,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         public String replicaId;
 
         /**
+         * <p>The shard ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -176,6 +208,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
 
     public static class DescribeDBClusterNodeInfosResponseBodyZkNodeInfos extends TeaModel {
         /**
+         * <p>Indicates whether a disaster recovery test is in progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -183,6 +217,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         public Boolean failoverTesting;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ck-bp108z124a8****</p>
          */
@@ -190,6 +226,8 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The ZooKeeper node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

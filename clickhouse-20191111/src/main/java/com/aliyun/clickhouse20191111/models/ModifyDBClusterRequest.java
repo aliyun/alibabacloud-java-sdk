@@ -5,31 +5,41 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
     /**
-     * <p>The specifications of the cluster.</p>
+     * <p>The cluster specifications.</p>
      * <ul>
-     * <li><p>Valid values when the cluster is of Single-replica Edition:</p>
+     * <li><p>For single-replica editions, valid values are:</p>
      * <ul>
-     * <li><strong>S8</strong></li>
-     * <li><strong>S16</strong></li>
-     * <li><strong>S32</strong></li>
-     * <li><strong>S64</strong></li>
-     * <li><strong>S104</strong></li>
+     * <li><p><strong>S8</strong></p>
+     * </li>
+     * <li><p><strong>S16</strong></p>
+     * </li>
+     * <li><p><strong>S32</strong></p>
+     * </li>
+     * <li><p><strong>S64</strong></p>
+     * </li>
+     * <li><p><strong>S104</strong></p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Valid values when the cluster is of Double-replica Edition:</p>
+     * <li><p>For dual-replica editions, valid values are:</p>
      * <ul>
-     * <li><strong>C8</strong></li>
-     * <li><strong>C16</strong></li>
-     * <li><strong>C32</strong></li>
-     * <li><strong>C64</strong></li>
-     * <li><strong>C104</strong></li>
+     * <li><p><strong>C8</strong></p>
+     * </li>
+     * <li><p><strong>C16</strong></p>
+     * </li>
+     * <li><p><strong>C32</strong></p>
+     * </li>
+     * <li><p><strong>C64</strong></p>
+     * </li>
+     * <li><p><strong>C104</strong></p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>S4-NEW</p>
+     * <p>S8</p>
      */
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
@@ -44,10 +54,12 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The number of nodes in the cluster.</p>
+     * <p>The number of nodes.</p>
      * <ul>
-     * <li>If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.</li>
-     * <li>If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.</li>
+     * <li><p>For single-replica editions, the valid values are integers from 1 to 48.</p>
+     * </li>
+     * <li><p>For dual-replica editions, the valid values are integers from 1 to 24.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,10 +70,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBNodeGroupCount;
 
     /**
-     * <p>The storage capacity of a single node of the cluster. Unit: GB.</p>
+     * <p>The storage space of a single node. Unit: GB.</p>
      * <p>Valid values: 100 to 32000.</p>
      * <blockquote>
-     * <p> This value is a multiple of 100.</p>
+     * <p>The step size is 100 GB.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -72,13 +84,18 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBNodeStorage;
 
     /**
-     * <p>The storage type of the cluster. Valid values:</p>
+     * <p>The storage class. Valid values:</p>
      * <ul>
-     * <li><strong>CloudESSD</strong>: The cluster uses an Enterprise SSD (ESSD) of performance level 1 (PL1).</li>
-     * <li><strong>CloudESSD_PL2</strong>: The cluster uses an ESSD of PL2.</li>
-     * <li><strong>CloudESSD_PL3</strong>: The cluster uses an ESSD of PL3.</li>
-     * <li><strong>CloudEfficiency</strong>: The cluster uses an ultra disk.</li>
-     * <li><strong>CloudSSD</strong>: The cluster uses a standard SSD.</li>
+     * <li><p><strong>CloudESSD</strong>: ESSD PL1 disk.</p>
+     * </li>
+     * <li><p><strong>CloudESSD_PL2</strong>: ESSD PL2 disk.</p>
+     * </li>
+     * <li><p><strong>CloudESSD_PL3</strong>: ESSD PL3 disk.</p>
+     * </li>
+     * <li><p><strong>CloudEfficiency</strong>: ultra disk.</p>
+     * </li>
+     * <li><p><strong>CloudSSD</strong>: standard SSD.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +105,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String dbNodeStorageType;
 
     /**
-     * <p>The time window during which write operations are stopped. Separate the start time and end time with commas (,). Specify the time in the ISO 8601 standard.</p>
+     * <p>The write-inaccessible window. Separate the start time and the end time with a comma. Use the ISO 8601 format for the time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-07-09T20:00:00+08:00,2024-07-09T21:00:00+08:00</p>
@@ -103,7 +120,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

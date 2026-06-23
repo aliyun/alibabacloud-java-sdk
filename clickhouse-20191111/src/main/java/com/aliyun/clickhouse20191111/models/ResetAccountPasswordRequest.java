@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,12 @@ public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The new password for the database account.</p>
      * <blockquote>
+     * <ul>
+     * <li>The password must contain characters from at least three of the following types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>The password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * </li>
-     * <li><p>The password can contain the following special characters: ! @ # $ % ^ &amp; \* ( ) _ + - =</p>
+     * <li><p>The special characters are !@#$%^&amp;\*()_+-=</p>
      * </li>
      * <li><p>The password must be 8 to 32 characters in length.</p>
      * </li>

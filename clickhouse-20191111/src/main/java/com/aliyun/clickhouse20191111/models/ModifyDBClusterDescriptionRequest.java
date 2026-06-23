@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterDescriptionRequest extends TeaModel {
     /**
-     * <p>The cluster name. When you set the cluster name, take note of the following rules:</p>
+     * <p>The cluster description. The description must meet the following requirements:</p>
      * <ul>
-     * <li>The cluster name cannot start with http:// or https://.</li>
-     * <li>The cluster name must be 2 to 256 characters in length.</li>
+     * <li><p>It cannot start with http\:// or https\://.</p>
+     * </li>
+     * <li><p>It must be 2 to 256 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

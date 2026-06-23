@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterStatusSetResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DE309AA1-BD83-5E1F-9945-8A4D336E0829</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The set of instance statuses.</p>
+     */
     @NameInMap("StatusSet")
     public java.util.List<String> statusSet;
 

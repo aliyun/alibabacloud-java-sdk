@@ -15,8 +15,10 @@ public class DeleteSyndbResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value <strong>true</strong> is returned for the <strong>Status</strong> parameter, the system does not return the ErrorMsg parameter.</li>
-     * <li>If the value <strong>false</strong> is returned for the <strong>Status</strong> parameter, the system returns the deletion failure cause for the ErrorMsg parameter.</li>
+     * <li><p>This parameter is not returned if <strong>Status</strong> is <strong>true</strong>.</p>
+     * </li>
+     * <li><p>If <strong>Status</strong> is <strong>false</strong>, this parameter indicates the reason for the failure.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,10 +37,12 @@ public class DeleteSyndbResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the database used for data synchronization was deleted. Valid values:</p>
+     * <p>Indicates whether the deletion was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The deletion was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The deletion failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

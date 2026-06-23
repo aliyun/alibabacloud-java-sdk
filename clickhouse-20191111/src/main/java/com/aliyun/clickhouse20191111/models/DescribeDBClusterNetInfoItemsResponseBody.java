@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     /**
-     * <p>The network type of the cluster. Only VPC is supported.</p>
+     * <p>The network type. Only VPC is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -14,10 +14,12 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     public String clusterNetworkType;
 
     /**
-     * <p>Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:</p>
+     * <p>Indicates whether Server Load Balancer (SLB) is enabled in the VPC. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: enabled.</p>
+     * </li>
+     * <li><p>false: disabled.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

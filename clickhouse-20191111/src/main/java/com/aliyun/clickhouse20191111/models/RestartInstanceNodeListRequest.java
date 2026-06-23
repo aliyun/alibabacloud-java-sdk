@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceNodeListRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class RestartInstanceNodeListRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The list of nodes to restart.</p>
+     */
     @NameInMap("NodeList")
     public java.util.List<String> nodeList;
 
@@ -23,6 +27,8 @@ public class RestartInstanceNodeListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +36,16 @@ public class RestartInstanceNodeListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>30</strong> (default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -37,6 +53,8 @@ public class RestartInstanceNodeListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -50,6 +68,11 @@ public class RestartInstanceNodeListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The scheduled restart time. The time is in the yyyy-MM-ddTHH:mmZ format and is in UTC.</p>
+     * <blockquote>
+     * <p>If this parameter is left empty or set to a time earlier than the current time, the cluster restarts immediately.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-22T00:00:50Z</p>
      */

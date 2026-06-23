@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     /**
+     * <p>The day of the recurrence cycle.</p>
+     * <ul>
+     * <li><p>If CycleType is set to Month, this parameter specifies the day of the month. Valid values are 1 to 28. Use a comma (,) to separate multiple days.</p>
+     * </li>
+     * <li><p>If CycleType is set to Week, this parameter specifies the day of the week. Valid values are 1 to 7. Use a comma (,) to separate multiple days.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +20,14 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleTime;
 
     /**
+     * <p>The recurrence cycle. Valid values:</p>
+     * <ul>
+     * <li><p>Month: monthly</p>
+     * </li>
+     * <li><p>Week: weekly</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Week</p>
      */
@@ -19,6 +35,8 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleType;
 
     /**
+     * <p>The end time of the maintenance window. Use the HH:mmZ format. The time is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>20:00Z</p>
      */
@@ -26,6 +44,8 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
+     * <p>The start time of the maintenance window. Use the HH:mmZ format. The time is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>07:00Z</p>
      */
@@ -48,6 +68,14 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>Specifies whether the configuration is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

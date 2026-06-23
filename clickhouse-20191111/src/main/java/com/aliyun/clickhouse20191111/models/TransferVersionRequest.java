@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the source ApsaraDB for ClickHouse cluster.</p>
+     * <p>The ID of the source cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class TransferVersionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The time window during which write operations are stopped.</p>
+     * <p>The time windows during which writes are disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
@@ -39,11 +39,14 @@ public class TransferVersionRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default)</li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +56,7 @@ public class TransferVersionRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +72,7 @@ public class TransferVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+     * <p>The source account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +82,8 @@ public class TransferVersionRequest extends TeaModel {
     public String sourceAccount;
 
     /**
-     * <p>The name of the self-managed ClickHouse cluster. You can execute the <code>SELECT * FROM system.clusters</code> statement to query the cluster name.</p>
+     * <p>The name of the self-managed ClickHouse cluster.
+     * To obtain the name, execute <code>SELECT * FROM system.clusters</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -88,7 +92,7 @@ public class TransferVersionRequest extends TeaModel {
     public String sourceClusterName;
 
     /**
-     * <p>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+     * <p>The password of the source account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +102,7 @@ public class TransferVersionRequest extends TeaModel {
     public String sourcePassword;
 
     /**
-     * <p>The endpoint and TCP port of the self-managed ClickHouse cluster.</p>
+     * <p>The addresses and TCP ports of the shards in the self-managed ClickHouse cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.4:9000,192.168.0.5:9000,192.168.0.6:9000</p>
@@ -107,7 +111,7 @@ public class TransferVersionRequest extends TeaModel {
     public String sourceShards;
 
     /**
-     * <p>The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+     * <p>The destination account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +121,7 @@ public class TransferVersionRequest extends TeaModel {
     public String targetAccount;
 
     /**
-     * <p>The ID of the destination ApsaraDB for ClickHouse cluster.</p>
+     * <p>The ID of the destination cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -127,7 +131,7 @@ public class TransferVersionRequest extends TeaModel {
     public String targetDbClusterId;
 
     /**
-     * <p>The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+     * <p>The password of the destination account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether a service-linked role is created for ApsaraDB for ClickHouse.</p>
+     * <p>Indicates whether the service-linked role exists.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>true</p>
      */
     @NameInMap("HasServiceLinkedRole")
     public Boolean hasServiceLinkedRole;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>66428721-xxxx-xxxx-xxxx-3BD1B67837E0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

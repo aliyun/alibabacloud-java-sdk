@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelAppointmentElectZookeeperLeaderResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1F488A93-83FD-540F-9B67-0333AF64E6A0</p>
      */

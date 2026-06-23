@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProcessListRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to find information about all clusters in the destination region, including the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the query statement.</p>
+     * <p>The ID of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>6c69d508-f05f-4c74-857c-d982b7e7e79f</p>
@@ -24,7 +24,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public String initialQueryId;
 
     /**
-     * <p>The account that is used to log on to the database.</p>
+     * <p>The database account.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -33,7 +33,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public String initialUser;
 
     /**
-     * <p>The keyword that is used to query.</p>
+     * <p>The keyword for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>join</p>
@@ -42,12 +42,16 @@ public class DescribeProcessListRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Sorting by the specified column name. Valid values:</p>
+     * <p>The column to use for sorting. Valid values:</p>
      * <ul>
-     * <li>elapsed: the cumulative execution time</li>
-     * <li>written_rows: the number of written rows</li>
-     * <li>read_rows: the number of read rows</li>
-     * <li>memory_usage: the memory usage</li>
+     * <li><p>elapsed: The total running time.</p>
+     * </li>
+     * <li><p>written_rows: The number of rows written.</p>
+     * </li>
+     * <li><p>read_rows: The number of rows read.</p>
+     * </li>
+     * <li><p>memory_usage: The amount of memory used.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +67,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -72,11 +76,14 @@ public class DescribeProcessListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong></li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +93,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The minimum query duration. The minimum value is <strong>1000</strong>, and the default value is <strong>1000</strong>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</p>
+     * <p>The shortest query duration. The minimum value is <strong>1000</strong>. The default value is <strong>1000</strong>. The unit is milliseconds. The response returns queries that run longer than this duration.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -95,7 +102,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public Integer queryDurationMs;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to find the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

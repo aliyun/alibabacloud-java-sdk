@@ -7,12 +7,14 @@ public class CreateSQLAccountRequest extends TeaModel {
     /**
      * <p>The description of the database account.</p>
      * <ul>
-     * <li>The description cannot start with http:// or https://.</li>
-     * <li>The description can be up to 256 characters in length or be an empty string.</li>
+     * <li><p>It cannot start with http\:// or https\://.</p>
+     * </li>
+     * <li><p>It can be 0 to 256 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Used for test</p>
+     * <p>For testing</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
@@ -20,10 +22,14 @@ public class CreateSQLAccountRequest extends TeaModel {
     /**
      * <p>The name of the database account.</p>
      * <ul>
-     * <li>The name must be unique in the cluster.</li>
-     * <li>The name can contain lowercase letters, digits, or underscores (_).</li>
-     * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
-     * <li>The name must be 2 to 64 characters in length.</li>
+     * <li><p>The name must be unique.</p>
+     * </li>
+     * <li><p>It must consist of lowercase letters, digits, or underscores (_).</p>
+     * </li>
+     * <li><p>It must start with a lowercase letter and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>It must be 2 to 64 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,11 +40,14 @@ public class CreateSQLAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the database account.</p>
+     * <p>The password for the database account.</p>
      * <ul>
-     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>Special characters include ! @ # $ % ^ &amp; \* ( ) _ + - =</li>
-     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * </li>
+     * <li><p>The following characters are special characters: !@#$%^&amp;\*()_+-=</p>
+     * </li>
+     * <li><p>It must be 8 to 32 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,8 +60,10 @@ public class CreateSQLAccountRequest extends TeaModel {
     /**
      * <p>The type of the database account. Valid values:</p>
      * <ul>
-     * <li><strong>Super</strong>: privileged account.</li>
-     * <li><strong>Normal</strong>: standard account.</li>
+     * <li><p><strong>Super</strong>: a privileged account.</p>
+     * </li>
+     * <li><p><strong>Normal</strong>: a standard account.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

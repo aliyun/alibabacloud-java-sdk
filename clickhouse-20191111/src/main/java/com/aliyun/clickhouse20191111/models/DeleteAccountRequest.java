@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the slow query logs.</p>
+     * <p>The details of the slow query logs.</p>
      */
     @NameInMap("SlowLogRecords")
     public DescribeSlowLogRecordsResponseBodySlowLogRecords slowLogRecords;
@@ -190,7 +190,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics extends TeaModel {
         /**
-         * <p>The total size of data that were read. Unit: bytes.</p>
+         * <p>The amount of data read, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -199,7 +199,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Integer bytesRead;
 
         /**
-         * <p>The time consumed by the slow query. Unit: milliseconds.</p>
+         * <p>The time elapsed for the slow query, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>21.35</p>
@@ -208,7 +208,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Float elapsedTime;
 
         /**
-         * <p>The total number of rows that were read.</p>
+         * <p>The number of rows read.</p>
          * 
          * <strong>example:</strong>
          * <p>2016722</p>
@@ -310,7 +310,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String rows;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -319,7 +319,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String rowsBeforeLimitAtLeast;
 
         /**
-         * <p>The statistics of the results.</p>
+         * <p>The statistics of the query results.</p>
          */
         @NameInMap("Statistics")
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics statistics;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first query. If a query does not return all results, a NextToken value is returned. You can use this token in a subsequent query to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707ec21345</p>
@@ -22,7 +22,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,6 +32,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource ID.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -42,15 +45,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>CLUSTER</strong>.</p>
+     * <p>The resource type. Set the value to <strong>DBCLUSTER</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CLUSTER</p>
+     * <p>DBCLUSTER</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -133,9 +139,9 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the resource. You can specify N tag keys at a time. N is an integer. Valid values of N: <strong>1 to 20</strong>.</p>
+         * <p>The tag key. You can specify from 1 to <strong>20</strong> tag keys.</p>
          * <blockquote>
-         * <p> If you specify <strong>ResourceId.N</strong>, this parameter can be left empty.</p>
+         * <p>If you specify the <strong>ResourceId.N</strong> parameter, you can leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -145,9 +151,9 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the resource. You can specify N tag values at a time. N is an integer. Valid values of N: <strong>1 to 20</strong>.</p>
+         * <p>The value of the tag. You can specify from 1 to <strong>20</strong> tag values.</p>
          * <blockquote>
-         * <p> This parameter can be left empty.</p>
+         * <p>You can leave this parameter empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

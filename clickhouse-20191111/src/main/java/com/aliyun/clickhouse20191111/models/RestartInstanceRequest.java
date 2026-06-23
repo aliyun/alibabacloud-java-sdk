@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <p>The cluster ID. Call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class RestartInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of pages to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,11 +30,14 @@ public class RestartInstanceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li>30</li>
-     * <li>50</li>
-     * <li>100</li>
+     * <li><p>30 (default)</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class RestartInstanceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,9 +63,9 @@ public class RestartInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scheduled restart time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <p>The scheduled restart time. The time must be in the yyyy-MM-ddTHH:mmZ format and in UTC.</p>
      * <blockquote>
-     * <p> If this parameter is left empty or the time specified by this parameter is earlier than the current time, the cluster is immediately restarted.</p>
+     * <p>If this parameter is empty or specifies a time earlier than the current time, the cluster is restarted immediately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

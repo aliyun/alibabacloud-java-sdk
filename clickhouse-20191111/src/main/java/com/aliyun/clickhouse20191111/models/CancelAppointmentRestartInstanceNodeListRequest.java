@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelAppointmentRestartInstanceNodeListRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,8 @@ public class CancelAppointmentRestartInstanceNodeListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -27,6 +30,16 @@ public class CancelAppointmentRestartInstanceNodeListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><p>30 (default)</p>
+     * </li>
+     * <li><p>50</p>
+     * </li>
+     * <li><p>100</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -34,6 +47,8 @@ public class CancelAppointmentRestartInstanceNodeListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CheckClickhouseToRDSResponseBody extends TeaModel {
     /**
      * <ul>
-     * <li>When the value <strong>true</strong> is returned for the <strong>Status</strong> parameter, the system does not return the ErrorCode parameter.</li>
-     * <li>When the value <strong>false</strong> is returned for the <strong>Status</strong> parameter, the system returns for the ErrorCode parameter the reason why the ApsaraDB for ClickHouse cluster cannot be connected to the ApsaraDB RDS for MySQL instance.</li>
+     * <li><p>This parameter is returned only if the connection fails (<strong>Status</strong> is <strong>false</strong>).</p>
+     * </li>
+     * <li><p>It indicates the reason for the connection failure.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,10 +28,12 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the ApsaraDB for ClickHouse cluster can be connected to the ApsaraDB RDS for MySQL instance.</p>
+     * <p>Indicates whether a connection can be established. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The ApsaraDB for ClickHouse cluster can be connected to the ApsaraDB RDS for MySQL instance.</li>
-     * <li><strong>false</strong>: The ApsaraDB for ClickHouse cluster cannot be connected to the ApsaraDB RDS for MySQL instance.</li>
+     * <li><p><strong>true</strong>: A connection can be established.</p>
+     * </li>
+     * <li><p><strong>false</strong>: A connection cannot be established.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

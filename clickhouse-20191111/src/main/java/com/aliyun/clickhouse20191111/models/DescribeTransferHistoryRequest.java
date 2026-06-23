@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTransferHistoryRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

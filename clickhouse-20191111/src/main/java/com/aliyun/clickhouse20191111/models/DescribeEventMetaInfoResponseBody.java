@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventMetaInfoResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of O\&amp;M tasks.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeEventMetaInfoResponseBodyItems> items;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94F92113-FF63-5E57-8401-6FE123AD11DD</p>
      */
@@ -15,6 +20,8 @@ public class DescribeEventMetaInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,8 @@ public class DescribeEventMetaInfoResponseBody extends TeaModel {
 
     public static class DescribeEventMetaInfoResponseBodyItems extends TeaModel {
         /**
+         * <p>The code of the O\&amp;M task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -59,6 +68,8 @@ public class DescribeEventMetaInfoResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The type of the O\&amp;M task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Task.TaskStatus</p>
          */

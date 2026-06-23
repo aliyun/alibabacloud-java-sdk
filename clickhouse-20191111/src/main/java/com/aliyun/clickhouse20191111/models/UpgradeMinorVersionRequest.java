@@ -27,13 +27,15 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to update the minor engine version of the ApsaraDB for ClickHouse cluster immediately. Valid values:</p>
+     * <p>Specifies whether to upgrade the minor engine version immediately. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: updates the minor engine version of the ApsaraDB for ClickHouse cluster immediately.</li>
-     * <li><strong>false</strong>: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.</li>
+     * <li><p><strong>true</strong>: The minor engine version is upgraded immediately.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The minor engine version is upgraded at a specified time or within the maintenance window.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, <strong>UpgradeTime</strong> is required.</p>
+     * <p>The <strong>UpgradeTime</strong> parameter is required if you want to upgrade the minor engine version at a specified time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,9 +46,9 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public Boolean upgradeImmediately;
 
     /**
-     * <p>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <p>The time to perform the upgrade. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the minor engine version of an ApsaraDB for ClickHouse cluster is updated within the specified maintenance window.</p>
+     * <p>If you do not specify this parameter, the ApsaraDB for ClickHouse cluster is upgraded within the maintenance window.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,9 +58,9 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public String upgradeTime;
 
     /**
-     * <p>The minor engine version to which you want to update.</p>
+     * <p>The minor engine version to which you want to upgrade.</p>
      * <blockquote>
-     * <p> By default, UpgradeVersion is not set and the minor engine version of the ApsaraDB for ClickHouse cluster is updated to the latest version.</p>
+     * <p>If you do not specify this parameter, the cluster is upgraded to the latest minor engine version.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

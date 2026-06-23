@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoRenewAttributeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B94AB34-6875-56D2-92B4-0C2******</p>
      */

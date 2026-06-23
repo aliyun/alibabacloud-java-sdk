@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
     /**
-     * <p>If the value of the <strong>Status</strong> parameter is -1, the cause of the creation failure is returned.</p>
+     * <p>The reason for the creation failure. This parameter is returned only if the value of the Status parameter is <strong>-1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>ClickHouse exception, code: 49, host: 100.100.79.102, port: 14540; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</p>
@@ -14,7 +14,7 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Duplicate tables in the synchronization task.</p>
+     * <p>The duplicate tables in the sync task.</p>
      */
     @NameInMap("RepeatedDbs")
     public java.util.List<String> repeatedDbs;
@@ -29,11 +29,14 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the synchronization task was created. Valid values:</p>
+     * <p>Indicates whether the task was created. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Created.</li>
-     * <li><strong>0</strong>: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the <strong>RepeatedDbs</strong> parameter.</li>
-     * <li><strong>-1</strong>: Creation failed. The cause why the creation failed is returned for the <strong>ErrorMsg</strong> parameter.</li>
+     * <li><p><strong>1</strong>: The task was created.</p>
+     * </li>
+     * <li><p><strong>0</strong>: The task failed to be created because of duplicate tables. The duplicate tables are returned in the <strong>RepeatedDbs</strong> parameter.</p>
+     * </li>
+     * <li><p><strong>-1</strong>: The task failed to be created. The error message is returned in the <strong>ErrorMsg</strong> parameter.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -21,7 +21,7 @@ public class CreatePortsForClickHouseRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port type. Set the value to mysql_port.</p>
+     * <p>The port type. The value must be \<code>mysql_port\\</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreatePortsForClickHouseRequest extends TeaModel {
     public String portType;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the available region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

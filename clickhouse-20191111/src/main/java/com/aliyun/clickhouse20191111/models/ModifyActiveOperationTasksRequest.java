@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The O\&amp;M task IDs. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String ids;
 
     /**
+     * <p>Specifies whether to immediately execute the O\&amp;M task. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Execute immediately.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Execute at the specified time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -36,6 +45,7 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The time to initiate the switch operation. The time is in UTC and the format is YYYY-MM-DDTHH:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

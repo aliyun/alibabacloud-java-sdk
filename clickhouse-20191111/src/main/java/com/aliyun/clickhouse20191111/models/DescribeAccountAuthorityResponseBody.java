@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The database account name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,22 +14,24 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     public String accountName;
 
     /**
-     * <p>Databases to which permissions have been granted.</p>
+     * <p>The list of authorized databases.</p>
      */
     @NameInMap("AllowDatabases")
     public java.util.List<String> allowDatabases;
 
     /**
-     * <p>Dictionaries to which permissions have been granted.</p>
+     * <p>The list of authorized dictionaries.</p>
      */
     @NameInMap("AllowDictionaries")
     public java.util.List<String> allowDictionaries;
 
     /**
-     * <p>Indicates whether the database account has DDL permissions. Valid values:</p>
+     * <p>Indicates whether the account has DDL permissions. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: has DDL permissions.</li>
-     * <li><strong>false</strong>: does not have DDL permissions.</li>
+     * <li><p><strong>true</strong>: DDL permissions are granted.</p>
+     * </li>
+     * <li><p><strong>false</strong>: DDL permissions are denied.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,10 +41,12 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     public Boolean ddlAuthority;
 
     /**
-     * <p>Indicates whether the database account has DML permissions. Valid values:</p>
+     * <p>The DML permission level for the account. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong></li>
-     * <li><strong>readOnly,modify</strong></li>
+     * <li><p><strong>all</strong>: read, write, and settings permissions.</p>
+     * </li>
+     * <li><p><strong>readOnly,modify</strong>: read and settings permissions.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,13 +65,13 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>All databases.</p>
+     * <p>A list of all databases in the cluster.</p>
      */
     @NameInMap("TotalDatabases")
     public java.util.List<String> totalDatabases;
 
     /**
-     * <p>All dictionaries.</p>
+     * <p>A list of all dictionaries in the cluster.</p>
      */
     @NameInMap("TotalDictionaries")
     public java.util.List<String> totalDictionaries;
