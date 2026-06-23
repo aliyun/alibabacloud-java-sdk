@@ -10,9 +10,6 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeClusterEventsResponseBodyEvents> events;
 
-    /**
-     * <p>The token used to retrieve the next page of results. If this parameter is empty, there are no more results to return.</p>
-     */
     @NameInMap("next_token")
     public String nextToken;
 
@@ -53,7 +50,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
 
     public static class DescribeClusterEventsResponseBodyEventsData extends TeaModel {
         /**
-         * <p>The severity level of the event.</p>
+         * <p>The event level.</p>
          * 
          * <strong>example:</strong>
          * <p>info</p>
@@ -62,7 +59,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The event message.</p>
+         * <p>The event details.</p>
          * 
          * <strong>example:</strong>
          * <p>Start to upgrade NodePool nodePool/npdd89dc2b76c04f14b06774883b******</p>
@@ -121,7 +118,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The event data.</p>
+         * <p>The event description.</p>
          */
         @NameInMap("data")
         public DescribeClusterEventsResponseBodyEventsData data;
@@ -154,7 +151,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String subject;
 
         /**
-         * <p>The time the event occurred.</p>
+         * <p>The time when the event started.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-14T10:00:56+08:00</p>
@@ -165,38 +162,22 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         /**
          * <p>The event type. Valid values:</p>
          * <ul>
-         * <li><p><code>cluster_create</code>: Cluster creation.</p>
-         * </li>
-         * <li><p><code>cluster_scaleout</code>: Cluster scale-out.</p>
-         * </li>
-         * <li><p><code>cluster_attach</code>: Attaching existing nodes to a cluster.</p>
-         * </li>
-         * <li><p><code>cluster_delete</code>: Cluster deletion.</p>
-         * </li>
-         * <li><p><code>cluster_upgrade</code>: Cluster upgrade.</p>
-         * </li>
-         * <li><p><code>cluster_migrate</code>: Cluster migration.</p>
-         * </li>
-         * <li><p><code>cluster_node_delete</code>: Node removal.</p>
-         * </li>
-         * <li><p><code>cluster_node_drain</code>: Node drain.</p>
-         * </li>
-         * <li><p><code>cluster_modify</code>: Cluster modification.</p>
-         * </li>
-         * <li><p><code>cluster_configuration_modify</code>: Control plane configuration modification.</p>
-         * </li>
-         * <li><p><code>cluster_addon_install</code>: Add-on installation.</p>
-         * </li>
-         * <li><p><code>cluster_addon_upgrade</code>: Add-on upgrade.</p>
-         * </li>
-         * <li><p><code>cluster_addon_uninstall</code>: Add-on uninstallation.</p>
-         * </li>
-         * <li><p><code>runtime_upgrade</code>: Container runtime upgrade.</p>
-         * </li>
-         * <li><p><code>nodepool_upgrade</code>: Node pool upgrade.</p>
-         * </li>
-         * <li><p><code>nodepool_update</code>: Node pool update.</p>
-         * </li>
+         * <li>cluster_create: creates a cluster.</li>
+         * <li>cluster_scaleout: scales out a cluster.</li>
+         * <li>cluster_attach: adds existing nodes.</li>
+         * <li>cluster_delete: deletes a cluster.</li>
+         * <li>cluster_upgrade: upgrades a cluster.</li>
+         * <li>cluster_migrate: migrates a cluster.</li>
+         * <li>cluster_node_delete: removes nodes.</li>
+         * <li>cluster_node_drain: drains nodes.</li>
+         * <li>cluster_modify: modifies a cluster.</li>
+         * <li>cluster_configuration_modify: modifies cluster management configurations.</li>
+         * <li>cluster_addon_install: installs a component.</li>
+         * <li>cluster_addon_upgrade: upgrades a component.</li>
+         * <li>cluster_addon_uninstall: uninstalls a component.</li>
+         * <li>runtime_upgrade: upgrades the runtime.</li>
+         * <li>nodepool_upgrade: upgrades a node pool.</li>
+         * <li>nodepool_update: updates a node pool.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,7 +260,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The maximum number of results returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -288,7 +269,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries that match the query.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>126</p>

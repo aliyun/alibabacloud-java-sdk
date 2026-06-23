@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallClusterAddonsResponseBody extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c82e6987e2961451182edacd74faf****</p>
@@ -14,7 +14,7 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
@@ -23,7 +23,7 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>任务ID。</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>T-5a54309c80282e39ea0****</p>

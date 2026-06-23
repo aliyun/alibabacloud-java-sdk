@@ -6,7 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeExternalAgentRequest extends TeaModel {
     /**
      * <p>The permission mode of the agent. Valid values:</p>
-     * <p>admin: the admin mode, which provides full permissions. restricted: the restricted mode, which provides partial permissions. Default value: admin.</p>
+     * <p>admin: administrator mode with full permissions.
+     * restricted: restricted mode with limited permissions.
+     * Default value: admin.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>
@@ -15,10 +17,10 @@ public class DescribeExternalAgentRequest extends TeaModel {
     public String agentMode;
 
     /**
-     * <p>Specifies whether to obtain the credentials that are used to access the cluster over the internal network.</p>
+     * <p>Specifies whether to obtain internal network access credentials.</p>
      * <ul>
-     * <li><code>true</code>: obtains the credentials that are used to access the cluster over the internal network.</li>
-     * <li><code>false</code>: obtains the credentials that are used to access the cluster over the Internet.</li>
+     * <li><code>true</code>: obtains only internal network connection credentials.</li>
+     * <li><code>false</code>: obtains only public network connection credentials.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 

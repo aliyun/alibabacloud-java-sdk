@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic instance restart.</p>
-     * <p>**</p>
-     * <p><strong>Warning</strong> This parameter is deprecated. Any configured values will be ignored.</p>
+     * <p>[This field is deprecated] Specifies whether to allow instance restart.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -17,13 +15,13 @@ public class RepairClusterNodePoolRequest extends TeaModel {
     public Boolean autoRestart;
 
     /**
-     * <p>The list of nodes. If not specified, all nodes in the node pool are selected.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
     /**
-     * <p>The list of repair operations to execute. If not specified, all repair operations are executed. Typically, you do not need to specify this parameter.</p>
+     * <p>The repair operations to perform. If not specified, all repair operations are performed by default. In most scenarios, you do not need to specify this parameter.</p>
      */
     @NameInMap("operations")
     public java.util.List<RepairClusterNodePoolRequestOperations> operations;
@@ -60,13 +58,23 @@ public class RepairClusterNodePoolRequest extends TeaModel {
 
     public static class RepairClusterNodePoolRequestOperations extends TeaModel {
         /**
-         * <p>The parameters of a repair operation.</p>
+         * <p>The list of repair operation parameters.</p>
          */
         @NameInMap("args")
         public java.util.List<String> args;
 
         /**
-         * <p>The ID of a repair operation.</p>
+         * <p>The repair operation ID. Valid values:</p>
+         * <ul>
+         * <li>restart.kubelet: restart kubelet.</li>
+         * <li>restart.docker: restart Docker.</li>
+         * <li>restart.containerd: restart Containerd.</li>
+         * <li>restart.ntp: restart ntpd or chronyd.</li>
+         * <li>remove.containerdContainerInSandbox: delete a specified sandbox container under Containerd.</li>
+         * <li>remove.dockerContainerInSandbox: delete a specified sandbox container under Docker.</li>
+         * <li>remove.containerdContainer: delete a specified container under Containerd.</li>
+         * <li>remove.dockerContainer: delete a specified container under Docker.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>remove.containerdContainer</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     /**
-     * <p>The number of policy instances that are deployed in the cluster at different severity levels.</p>
+     * <p>The number of policy instances deployed in the cluster at different governance levels.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</p>
@@ -14,7 +14,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     public java.util.Map<String, ?> instancesSeverityCount;
 
     /**
-     * <p>The number of policy instances of each policy type.</p>
+     * <p>The list of policy instance counts for different policy types.</p>
      */
     @NameInMap("policy_instances")
     public java.util.List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> policyInstances;
@@ -42,7 +42,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     public static class DescribePolicyInstancesStatusResponseBodyPolicyInstances extends TeaModel {
         /**
-         * <p>The type of the policy. For more information about different types of policies and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
+         * <p>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rule library</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>compliance</p>
@@ -51,7 +51,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         public String policyCategory;
 
         /**
-         * <p>The description of the policy.</p>
+         * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
          * <p>Restricts use of the cluster-admin role.</p>
@@ -60,7 +60,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         public String policyDescription;
 
         /**
-         * <p>The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.</p>
+         * <p>The number of deployed policy instances. If this field is empty, no policy instances of this type are deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -69,7 +69,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         public Long policyInstancesCount;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKRestrictRoleBindings</p>
@@ -78,7 +78,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The severity level of the policy.</p>
+         * <p>The governance level of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>

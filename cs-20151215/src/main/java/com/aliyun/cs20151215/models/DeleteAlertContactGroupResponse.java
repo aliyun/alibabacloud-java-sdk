@@ -44,10 +44,10 @@ public class DeleteAlertContactGroupResponse extends TeaModel {
 
     public static class DeleteAlertContactGroupResponseBody extends TeaModel {
         /**
-         * <p>The deletion status.</p>
+         * <p>Deletion status.</p>
          * <ul>
-         * <li>true: The alert contact group was deleted.</li>
-         * <li>false: The alert contact group failed to be deleted.</li>
+         * <li>true: Deletion successful.</li>
+         * <li>false: Deletion failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DeleteAlertContactGroupResponse extends TeaModel {
         public Boolean status;
 
         /**
-         * <p>The error message returned if the call fails.</p>
+         * <p>The message returned when execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Delete contact group resource failed.</p>
@@ -66,7 +66,7 @@ public class DeleteAlertContactGroupResponse extends TeaModel {
         public String msg;
 
         /**
-         * <p>The alert contact group ID.</p>
+         * <p>Alert contact group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>

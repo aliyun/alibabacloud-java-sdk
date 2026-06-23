@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeNodePoolVulsRequest extends TeaModel {
     /**
-     * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+     * <p>The vulnerability fix urgency levels to query. Separate multiple levels with commas (,). Valid values:</p>
      * <ul>
      * <li><code>asap</code>: high</li>
      * <li><code>later</code>: medium</li>
-     * <li><code>nntf</code>: low</li>
+     * <li><code>nntf</code>: low.</li>
      * </ul>
      * 
      * <strong>example:</strong>

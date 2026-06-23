@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateNodePoolComponentRequest extends TeaModel {
     /**
-     * <p>The configuration details for the component update.</p>
+     * <p>The node component configuration.</p>
      */
     @NameInMap("config")
     public UpdateNodePoolComponentRequestConfig config;
 
     /**
-     * <p>Specifies whether to disable rolling updates. Default: false. If set to false, nodes will be rolled automatically to apply the new configuration.</p>
+     * <p>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</p>
      */
     @NameInMap("disableRolling")
     public Boolean disableRolling;
@@ -26,7 +26,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>A list of specific nodes to be rolled. If not specified, all nodes in the node pool will be updated.</p>
+     * <p>The list of nodes to be included in the rolling update. By default, all nodes are included.</p>
      */
     @NameInMap("nodeNames")
     public java.util.List<String> nodeNames;
@@ -38,7 +38,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
     public UpdateNodePoolComponentRequestRollingPolicy rollingPolicy;
 
     /**
-     * <p>The version of the node component to be updated to.</p>
+     * <p>The version of the node component.</p>
      * 
      * <strong>example:</strong>
      * <p>1.28.9-aliyun.1</p>
@@ -101,7 +101,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentRequestConfig extends TeaModel {
         /**
-         * <p>Custom configuration parameters for the component.</p>
+         * <p>The custom configuration of the component.</p>
          */
         @NameInMap("customConfig")
         public java.util.Map<String, String> customConfig;
@@ -123,7 +123,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The time interval between update batches, in seconds.</p>
+         * <p>The interval between batches during the upgrade. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -132,7 +132,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         public Long batchInterval;
 
         /**
-         * <p>The maximum number of nodes that can be updated concurrently. Default: 1.</p>
+         * <p>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
-         * <p>The automatic pause strategy during the update process. Valid values: NotPause, FirstBatchPause, EveryBatchPause.</p>
+         * <p>The automatic pause policy during node upgrades.</p>
          * 
          * <strong>example:</strong>
          * <p>NotPause</p>

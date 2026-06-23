@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeResourcesDeleteProtectionRequest extends TeaModel {
     /**
-     * <p>The namespace in which the resources that you want to query reside.</p>
-     * <p>This parameter is required when you set resource_type to services. Default value: default.</p>
+     * <p>The namespace of the resource to query.</p>
+     * <p>This parameter is required when resource_type is set to services. If this parameter is not specified, the namespace defaults to default.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -15,10 +15,12 @@ public class DescribeResourcesDeleteProtectionRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The names of the resources that you want to query. Separate multiple resource names with commas (,).</p>
+     * <p>The name of the resource to query. Separate multiple resources with commas (,).</p>
      * <ul>
-     * <li>When you set resource_type to namespaces, you must specify namespace names. If you leave this parameter empty, all namespaces in the cluster are queried.</li>
-     * <li>If you set resource_type to services, you must specify Service names.</li>
+     * <li><p>If resource_type is set to namespaces, set this parameter to namespace names. If this parameter is not specified, the deletion protection status of all namespaces in the cluster is queried.</p>
+     * </li>
+     * <li><p>If resource_type is set to services, this parameter is required. Set this parameter to service names.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

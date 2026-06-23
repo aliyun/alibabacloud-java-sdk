@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachInstancesResponseBody extends TeaModel {
     /**
-     * <p>The details of the added nodes.</p>
+     * <p>The list of node addition information.</p>
      */
     @NameInMap("list")
     public java.util.List<AttachInstancesResponseBodyList> list;
@@ -42,7 +42,7 @@ public class AttachInstancesResponseBody extends TeaModel {
 
     public static class AttachInstancesResponseBodyList extends TeaModel {
         /**
-         * <p>The code that indicates the task result.</p>
+         * <p>The status code of the node addition result.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -51,7 +51,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The ECS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2ze0lgm3y6iylcbt****</p>
@@ -60,7 +60,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether the ECS instance is successfully added to the ACK cluster.</p>
+         * <p>The description of the node addition result.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>

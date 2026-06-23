@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyInstanceRequest extends TeaModel {
     /**
-     * <p>The action of the policy. Valid values:</p>
+     * <p>The governance action of the rule. Valid values:</p>
      * <ul>
-     * <li><code>deny</code>: Deployments that match the policy are denied.</li>
-     * <li><code>warn</code>: Alerts are generated for deployments that match the policy.</li>
+     * <li><code>deny</code>: Blocks non-compliant deployments.</li>
+     * <li><code>warn</code>: Generates an alert.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyPolicyInstanceRequest extends TeaModel {
     public String action;
 
     /**
-     * <p>The ID of the policy instance.</p>
+     * <p>The instance ID of the policy rule.</p>
      * 
      * <strong>example:</strong>
      * <p>allowed-repos-cbhhb</p>
@@ -27,13 +27,13 @@ public class ModifyPolicyInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The namespaces to which the policy is applied. The policy is applied to all namespaces if this parameter is left empty.</p>
+     * <p>The namespaces to which the policy applies. If this parameter is empty, the policy applies to all namespaces.</p>
      */
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
     /**
-     * <p>The parameters of the policy instance. For more information, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
+     * <p>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>

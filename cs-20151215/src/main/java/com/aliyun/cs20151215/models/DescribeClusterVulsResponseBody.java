@@ -25,18 +25,17 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
 
     public static class DescribeClusterVulsResponseBodyVulRecords extends TeaModel {
         /**
-         * <p>The CVE list.</p>
+         * <p>The list of CVEs.</p>
          */
         @NameInMap("cve_list")
         public java.util.List<String> cveList;
 
         /**
-         * <p>The severity level of the vulnerability.</p>
-         * <p>Valid values:</p>
+         * <p>The severity level of the vulnerability. Valid values:</p>
          * <ul>
          * <li>nntf: low</li>
-         * <li>later: medium     </li>
-         * <li>asap: high</li>
+         * <li>later: medium</li>
+         * <li>asap: high.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -46,7 +45,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         public String necessity;
 
         /**
-         * <p>The number of nodes that have the vulnerability.</p>
+         * <p>The number of nodes that have this vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -91,15 +90,14 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         public String vulName;
 
         /**
-         * <p>The type of vulnerability.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the vulnerability. Valid values:</p>
          * <ul>
-         * <li>app: application vulnerabilities</li>
-         * <li>sca: application vulnerabilities (software component analysis)</li>
-         * <li>cve: Linux vulnerabilities</li>
-         * <li>cms: Web-CMS vulnerabilities</li>
-         * <li>sys: Windows vulnerabilities</li>
-         * <li>emg:  emergency vulnerabilities</li>
+         * <li>app: application vulnerability</li>
+         * <li>sca: application vulnerability (Software Composition Analysis)</li>
+         * <li>cve: Linux vulnerability</li>
+         * <li>cms: WebCMS vulnerability</li>
+         * <li>sys: Windows vulnerability</li>
+         * <li>emg: emergency vulnerability.</li>
          * </ul>
          * 
          * <strong>example:</strong>

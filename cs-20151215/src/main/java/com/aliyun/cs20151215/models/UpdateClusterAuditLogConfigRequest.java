@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     /**
-     * <p>Enable or disable audit logging.</p>
+     * <p>Specifies whether to disable the cluster audit log feature. Valid values:</p>
      * <ul>
-     * <li>false: enables audit logging or updates the audit logging configurations.</li>
-     * <li>true: disables audit logging.</li>
+     * <li><p>false: enables the audit log feature or updates the audit log configuration.</p>
+     * </li>
+     * <li><p>true: disables the audit log feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +20,14 @@ public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     public Boolean disable;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">Simple Log Service project</a> to which the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> storing the cluster audit logs belongs.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS Project</a> that contains the <a href="https://help.aliyun.com/document_detail/48874.html">Logstore</a> for cluster audit logs.</p>
      * <ul>
-     * <li>Default value: k8s-log-{clusterid}.</li>
-     * <li>After the cluster audit log feature is enabled, a Logstore is created in the specified Simple Log Service project to store cluster audit logs.</li>
-     * <li>If you want to change the project after audit logging is enabled for the cluster, you can use this parameter to specify another project. You can perform this operation only in ACK managed clusters.</li>
+     * <li><p>Default value: k8s-log-{clusterid}.</p>
+     * </li>
+     * <li><p>After you enable the cluster audit log feature, a Logstore for cluster audit logs is created in the specified SLS Project.</p>
+     * </li>
+     * <li><p>If you need to change the SLS Project after enabling the cluster audit log feature, use this parameter to specify a new SLS Project. Only ACK managed clusters support changing the SLS Project.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

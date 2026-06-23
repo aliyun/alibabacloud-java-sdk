@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunClusterCheckResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster check task.</p>
+     * <p>The check ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1697100584236******-ce0da5a1d627e4e9e9f96cae8ad******-clustercheck-lboto</p>
@@ -14,7 +14,7 @@ public class RunClusterCheckResponseBody extends TeaModel {
     public String checkId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F04DF81D-5C12-1524-B36A-86E025******</p>

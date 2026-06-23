@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyInstanceResponseBody extends TeaModel {
     /**
-     * <p>The list of policy instances that are updated.</p>
+     * <p>The list of updated instances.</p>
      */
     @NameInMap("instances")
     public java.util.List<String> instances;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNodesResponseBody extends TeaModel {
     /**
-     * <p>The details of the nodes in the cluster.</p>
+     * <p>The list of node details.</p>
      */
     @NameInMap("nodes")
     public java.util.List<DescribeClusterNodesResponseBodyNodes> nodes;
@@ -57,7 +57,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The expiration date of the node.</p>
+         * <p>The time when the node expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2099-12-31T15:59:00Z</p>
@@ -66,7 +66,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The name of the host.</p>
+         * <p>The hostname of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>iZ2vcckdmxp7u0urj2k****</p>
@@ -75,7 +75,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String hostName;
 
         /**
-         * <p>The ID of the system image that is used by the node.</p>
+         * <p>The ID of the system image used by the node.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20241218.vhd</p>
@@ -86,8 +86,8 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the node. Valid values:</p>
          * <ul>
-         * <li><code>PrePaid</code>: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
-         * <li><code>PostPaid</code>: the pay-as-you-go billing method.</li>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2vcckdmxp7u0urj2****</p>
@@ -106,7 +106,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the instance on which the node is deployed.</p>
+         * <p>The name of the node in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>worker-k8s-for-cs-c5cdf7e3938bc4f8eb0e44b21a80f****</p>
@@ -115,10 +115,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The role of the node. Valid values:</p>
+         * <p>The role type of the node. Valid values:</p>
          * <ul>
-         * <li>Master: master node</li>
-         * <li>Worker: worker node</li>
+         * <li>Master: a master node of the cluster.</li>
+         * <li>Worker: a worker node of the cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,14 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceRole;
 
         /**
-         * <p>The status of the node.</p>
+         * <p>The ECS status of the node. Valid values:</p>
+         * <ul>
+         * <li><code>Pending</code>: being created.</li>
+         * <li><code>Running</code>: running.</li>
+         * <li><code>Starting</code>: being started.</li>
+         * <li><code>Stopping</code>: being stopped.</li>
+         * <li><code>Stopped</code>: stopped.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -137,7 +144,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>The type of the node.</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c5.xlarge</p>
@@ -146,7 +153,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The ECS instance family of the node.</p>
+         * <p>The name of the ECS instance family to which the node belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c5</p>
@@ -155,16 +162,18 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceTypeFamily;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The IP addresses of the node.</p>
          */
         @NameInMap("ip_address")
         public java.util.List<String> ipAddress;
 
         /**
-         * <p>Indicates whether the instance on which the node is deployed is provided by Alibaba Cloud. Valid values:</p>
+         * <p>Indicates whether the node is an Alibaba Cloud instance. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The instance is provided by Alibaba Cloud.</li>
-         * <li><code>false</code>: The instance is not provided by Alibaba Cloud.</li>
+         * <li><p><code>true</code>: The node is an Alibaba Cloud instance.</p>
+         * </li>
+         * <li><p><code>false</code>: The node is not an Alibaba Cloud instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +183,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public Boolean isAliyunNode;
 
         /**
-         * <p>The name of the node. This name is the identifier of the node in the cluster.</p>
+         * <p>The node name, which is the identifier of the node in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chengdu.192.168xx.xx</p>
@@ -185,10 +194,14 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the node is ready. Valid values:</p>
          * <ul>
-         * <li><code>Ready</code>: The node is ready.</li>
-         * <li><code>NotReady</code>: The node is not ready.</li>
-         * <li><code>Unknown</code>: The status of the node is unknown.</li>
-         * <li><code>Offline</code>: The node is offline.</li>
+         * <li><p><code>Ready</code>: The node is ready.</p>
+         * </li>
+         * <li><p><code>NotReady</code>: The node is not ready.</p>
+         * </li>
+         * <li><p><code>Unknown</code>: The node status is unknown.</p>
+         * </li>
+         * <li><p><code>Offline</code>: The node is offline.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +220,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String nodepoolId;
 
         /**
-         * <p>Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).</p>
+         * <p>The method used to initialize the node, such as manual creation or Resource Orchestration Service (ROS) creation.</p>
          * 
          * <strong>example:</strong>
          * <p>ess</p>
@@ -216,11 +229,11 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The type of preemptible instance. Valid values:</p>
+         * <p>The spot instance type. Valid values:</p>
          * <ul>
-         * <li>NoSpot: a non-preemptible instance.</li>
-         * <li>SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</li>
-         * <li>SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.</li>
+         * <li>NoSpot: a non-spot instance.</li>
+         * <li>SpotWithPriceLimit: a spot instance with a price limit.</li>
+         * <li>SpotAsPriceGo: a spot instance priced at the market price at the time of purchase.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,13 +243,18 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>The status of the node. Valid values:</p>
+         * <p>The running status of the node. Valid values:</p>
          * <ul>
-         * <li><code>pending</code>: The node is being created.</li>
-         * <li><code>running</code>: The node is running.</li>
-         * <li><code>starting</code>: The node is being started.</li>
-         * <li><code>stopping</code>: The node is being stopped.</li>
-         * <li><code>stopped</code>: The node is stopped.</li>
+         * <li><p><code>pending</code>: being created.</p>
+         * </li>
+         * <li><p><code>running</code>: running.</p>
+         * </li>
+         * <li><p><code>starting</code>: being started.</p>
+         * </li>
+         * <li><p><code>stopping</code>: being stopped.</p>
+         * </li>
+         * <li><p><code>stopped</code>: stopped.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,7 +432,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
 
     public static class DescribeClusterNodesResponseBodyPage extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -423,7 +441,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of records that can be displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -432,7 +450,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

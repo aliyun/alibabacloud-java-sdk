@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePolicyInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the policy instance.</p>
+     * <p>The instance ID of the policy rule.</p>
      * 
      * <strong>example:</strong>
      * <p>allowed-repos-mqdsf</p>

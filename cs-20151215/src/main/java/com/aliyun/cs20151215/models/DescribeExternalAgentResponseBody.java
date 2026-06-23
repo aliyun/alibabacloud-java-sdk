@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExternalAgentResponseBody extends TeaModel {
     /**
-     * <p>The agent configurations in the YAML format.</p>
+     * <p>The agent configuration in YAML format.</p>
      * 
      * <strong>example:</strong>
      * <p>apiVersion: v1****</p>

@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterUserKubeconfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. You can obtain the terminal ID by calling one of the following operations:</p>
+     * <p>Specifies whether to obtain the internal network connection configuration. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: obtains the kubeconfig file that is used to connect to the master instance over the internal network.</li>
-     * <li><code>false</code>: obtains the kubeconfig file that is used to connect to the master instance over the Internet.</li>
+     * <li><code>true</code>: Obtains only the internal network connection credential.</li>
+     * <li><code>false</code>: Obtains only the public network connection credential.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,9 +19,10 @@ public class DescribeClusterUserKubeconfigRequest extends TeaModel {
     public Boolean privateIpAddress;
 
     /**
-     * <p>The validity period of the temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320 (3 days).</p>
-     * <p>**</p>
-     * <p><strong>Usage notes</strong> If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the <code>expiration</code> parameter.</p>
+     * <p>The validity period of the temporary KubeConfig. Unit: minutes. Valid values: 15 (15 minutes) to 4320 (3 days).</p>
+     * <blockquote>
+     * <p>If you do not set this parameter, the system automatically determines a longer validity period. The specific expiration time is determined by the value of the <code>expiration</code> field in the response.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>15</p>

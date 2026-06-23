@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersForRegionResponseBody extends TeaModel {
     /**
-     * <p>A list of clusters.</p>
+     * <p>The list of cluster details.</p>
      */
     @NameInMap("clusters")
     public java.util.List<DescribeClustersForRegionResponseBodyClusters> clusters;
@@ -39,7 +39,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
 
     public static class DescribeClustersForRegionResponseBodyClusters extends TeaModel {
         /**
-         * <p>The cluster domain.</p>
+         * <p>The local domain name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster.local</p>
@@ -59,19 +59,14 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         /**
          * <p>The specification of the cluster. Valid values:</p>
          * <ul>
-         * <li><p><code>ack.standard</code>: Basic Edition</p>
-         * </li>
-         * <li><p><code>ack.pro.small</code>: Pro Edition</p>
-         * </li>
-         * <li><p><code>ack.pro.xlarge</code>: Pro XL</p>
-         * </li>
-         * <li><p><code>ack.pro.2xlarge</code>: Pro 2XL</p>
-         * </li>
-         * <li><p><code>ack.pro.4xlarge</code>: Pro 4XL. This specification is available only to allowlisted users.</p>
-         * </li>
+         * <li><code>ack.standard</code>: Basic</li>
+         * <li><code>ack.pro.small</code>: Pro</li>
+         * <li><code>ack.pro.xlarge</code>: Pro XL</li>
+         * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
+         * <li><code>ack.pro.4xlarge</code>: Pro 4XL (contact customer service to add your account to the whitelist)</li>
          * </ul>
-         * <p>Pro XL, Pro 2XL, and Pro 4XL are three specifications available for the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. These specifications ensure a high and deterministic level of API concurrency and Pod scheduling capabilities by pre-allocating and dedicating control plane resources. They are suitable for AI training and inference, large-scale clusters, and mission-critical workloads.</p>
-         * <p>For information about the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">cluster management fee</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">cluster management fee</a> for Pro Edition and ACK Pro provisioned control plane specifications, see the linked topic.</p>
+         * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and Pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+         * <p>For information about cluster management fees for Pro and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.standard</p>
@@ -80,14 +75,11 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String clusterSpec;
 
         /**
-         * <p>The type of the cluster. Valid values:</p>
+         * <p>The cluster type. Valid values:</p>
          * <ul>
-         * <li><p><code>Kubernetes</code>: an ACK dedicated cluster.</p>
-         * </li>
-         * <li><p><code>ManagedKubernetes</code>: an ACK managed cluster. This type includes ACK managed clusters (Pro and Basic editions), ACK Serverless clusters (Pro and Basic editions), ACK Edge clusters (Pro and Basic editions), and ACK Lingjun clusters (Pro edition).</p>
-         * </li>
-         * <li><p><code>ExternalKubernetes</code>: a registered cluster.</p>
-         * </li>
+         * <li>Kubernetes: ACK dedicated cluster.</li>
+         * <li>ManagedKubernetes: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</li>
+         * <li>ExternalKubernetes: registered cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,7 +89,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The CIDR block for Pods in the cluster.</p>
+         * <p>The pod CIDR block of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>172.20.0.0/16</p>
@@ -106,7 +98,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String containerCidr;
 
         /**
-         * <p>The time the cluster was created.</p>
+         * <p>The time when the cluster was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-01T20:40:40+08:00</p>
@@ -124,12 +116,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
-         * <p>Specifies whether deletion protection is enabled for the cluster. If enabled, you cannot delete the cluster from the console or by an API call. Valid values:</p>
+         * <p>Indicates whether deletion protection is enabled for the cluster. Deletion protection prevents the cluster from being accidentally deleted in the console or by calling API operations. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Deletion protection is enabled.</p>
-         * </li>
-         * <li><p><code>false</code>: Deletion protection is disabled.</p>
-         * </li>
+         * <li>true: Deletion protection is enabled. The cluster cannot be deleted in the console or by calling API operations.</li>
+         * <li>false: Deletion protection is not enabled. The cluster can be deleted in the console or by calling API operations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +138,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String initVersion;
 
         /**
-         * <p>The IP stack of the cluster.</p>
+         * <p>The IP protocol stack of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -166,7 +156,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The available upgrade version.</p>
+         * <p>The version to which the cluster can be upgraded.</p>
          * 
          * <strong>example:</strong>
          * <p>1.18.8-aliyun.1</p>
@@ -175,16 +165,12 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String nextVersion;
 
         /**
-         * <p>The subtype of the cluster. Valid values:</p>
+         * <p>The cluster subtype. Valid values:</p>
          * <ul>
-         * <li><p><code>Default</code>: An ACK managed cluster (Pro and Basic editions).</p>
-         * </li>
-         * <li><p><code>Edge</code>: An ACK Edge cluster (Pro and Basic editions).</p>
-         * </li>
-         * <li><p><code>Serverless</code>: An ACK Serverless cluster (Pro and Basic editions).</p>
-         * </li>
-         * <li><p><code>LingJun</code>: An ACK Lingjun cluster (Pro edition).</p>
-         * </li>
+         * <li>Default: ACK managed cluster, including ACK Pro and ACK Basic.</li>
+         * <li>Edge: ACK Edge cluster, including ACK Edge Pro and ACK Edge Basic.</li>
+         * <li>Serverless: ACK Serverless cluster, including ACK Serverless Pro and ACK Serverless Basic.</li>
+         * <li>LingJun: ACK Lingjun cluster, available in Pro.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +180,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The kube-proxy proxy mode of the cluster.</p>
+         * <p>The kube-proxy mode of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ipvs</p>
@@ -212,7 +198,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the cluster belongs.</p>
+         * <p>The resource group ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyvw3wjm****</p>
@@ -230,7 +216,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The CIDR block for the service network.</p>
+         * <p>The service CIDR block.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,38 +235,23 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The state of the cluster. Valid values:</p>
+         * <p>The running state of the cluster. Valid values:</p>
          * <ul>
-         * <li><p><code>initial</code>: The cluster is being created.</p>
-         * </li>
-         * <li><p><code>failed</code>: Cluster creation failed.</p>
-         * </li>
-         * <li><p><code>running</code>: The cluster is running.</p>
-         * </li>
-         * <li><p><code>updating</code>: The cluster is being updated.</p>
-         * </li>
-         * <li><p><code>upgrading</code>: The cluster is being upgraded.</p>
-         * </li>
-         * <li><p><code>removing</code>: Nodes are being removed from the cluster.</p>
-         * </li>
-         * <li><p><code>draining</code>: Node draining is in progress.</p>
-         * </li>
-         * <li><p><code>scaling</code>: The cluster is being scaled.</p>
-         * </li>
-         * <li><p><code>inactive</code>: The cluster is inactive.</p>
-         * </li>
-         * <li><p><code>unavailable</code>: The cluster is unavailable.</p>
-         * </li>
-         * <li><p><code>deleting</code>: The cluster is being deleted.</p>
-         * </li>
-         * <li><p><code>deleted</code>: The cluster is deleted.</p>
-         * </li>
-         * <li><p><code>delete_failed</code>: Cluster deletion failed.</p>
-         * </li>
-         * <li><p><code>waiting</code>: The cluster is waiting for a connection.</p>
-         * </li>
-         * <li><p><code>disconnected</code>: The cluster is disconnected.</p>
-         * </li>
+         * <li><code>initial</code>: The cluster is being created.</li>
+         * <li><code>failed</code>: The cluster failed to be created.</li>
+         * <li><code>running</code>: The cluster is running.</li>
+         * <li><code>updating</code>: The cluster is being updated.</li>
+         * <li><code>upgrading</code>: The cluster is being upgraded.</li>
+         * <li><code>removing</code>: Nodes are being removed.</li>
+         * <li><code>draining</code>: Nodes are being drained.</li>
+         * <li><code>scaling</code>: The cluster is being scaled.</li>
+         * <li><code>inactive</code>: The cluster is inactive.</li>
+         * <li><code>unavailable</code>: The cluster is unavailable.</li>
+         * <li><code>deleting</code>: The cluster is being deleted.</li>
+         * <li><code>deleted</code>: The cluster has been deleted.</li>
+         * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
+         * <li><code>waiting</code>: The cluster is in the accessed state, waiting to be connected.</li>
+         * <li><code>disconnected</code>: The cluster is disconnected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,13 +261,13 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The tags attached to the cluster.</p>
+         * <p>The list of cluster tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The time zone of the cluster.</p>
+         * <p>The time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -305,7 +276,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The time the cluster was last updated.</p>
+         * <p>The time when the cluster was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-08T15:37:00+08:00</p>
@@ -323,7 +294,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The IDs of the vSwitches for the control plane.</p>
+         * <p>The list of vSwitches for the cluster control plane.</p>
          */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
@@ -537,7 +508,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
 
     public static class DescribeClustersForRegionResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The returned page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -546,7 +517,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -555,7 +526,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries that match the query.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

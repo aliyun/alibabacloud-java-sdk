@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the region in which the resource resides.</p>
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,15 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resource IDs.</p>
+     * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The type of resources that you want to label. Set the value to <code>CLUSTER</code>.</p>
+     * <p>The resource type.</p>
+     * <p>CLUSTER: cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,11 +33,11 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags that you want to add to the resources in key-value pairs. You can add up to 20 key-value pairs. Note:</p>
+     * <p>The tag key-value pairs of the resource. You can specify up to 20 tag key-value pairs. Note:</p>
      * <ul>
-     * <li>The values cannot be empty strings. A value must be 1 to 128 characters in length.</li>
-     * <li>A key or value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-     * <li>A key or value cannot contain <code>http://</code> or <code>https://</code>.</li>
+     * <li>If you specify this parameter, the value cannot be an empty string and can contain up to 128 characters.</li>
+     * <li>The value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+     * <li>The value cannot contain <code>http://</code> or <code>https://</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      */

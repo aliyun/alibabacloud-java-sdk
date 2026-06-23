@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
     /**
-     * <p>The check item.</p>
+     * <p>The check items.</p>
      */
     @NameInMap("check_items")
     public java.util.List<GetClusterDiagnosisCheckItemsResponseBodyCheckItems> checkItems;
@@ -94,7 +94,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         public String display;
 
         /**
-         * <p>The name of the group to which the check item belongs.</p>
+         * <p>The check item group.</p>
          * 
          * <strong>example:</strong>
          * <p>Node</p>
@@ -103,13 +103,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The severity level of the check result.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>normal</li>
-         * <li>warning</li>
-         * <li>error</li>
-         * </ul>
+         * <p>The assessment result of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -118,7 +112,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The check result.</p>
+         * <p>The check result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -127,7 +121,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The name of the check item.</p>
+         * <p>The check item name.</p>
          * 
          * <strong>example:</strong>
          * <p>HostDNS</p>
@@ -145,7 +139,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         public String refer;
 
         /**
-         * <p>The value of the check item.</p>
+         * <p>The check item value.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

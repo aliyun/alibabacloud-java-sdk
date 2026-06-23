@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallClusterAddonsRequest extends TeaModel {
     /**
-     * <p>请求体参数。</p>
+     * <p>The request body parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>ags-metrics-collector</p>
@@ -28,7 +28,7 @@ public class InstallClusterAddonsRequest extends TeaModel {
 
     public static class InstallClusterAddonsRequestBody extends TeaModel {
         /**
-         * <p>组件自定义参数，使用JSON字符串编码。</p>
+         * <p>The custom parameters of the component, encoded as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;,\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}</p>
@@ -37,7 +37,7 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public String config;
 
         /**
-         * <p>组件名称。您可以通过<a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a>接口查询可用组件的信息，包括组件名称及版本等。</p>
+         * <p>The component name. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query information about available components, including component names and versions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>组件版本。您可以通过<a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a>接口查询可用组件的信息，包括组件名称及版本等。</p>
+         * <p>The component version. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query information about available components, including component names and versions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

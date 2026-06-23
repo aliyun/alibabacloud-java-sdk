@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
     /**
-     * <p>The description of the template.</p>
+     * <p>The description of the deployment template.</p>
      * 
      * <strong>example:</strong>
      * <p>web server cluster</p>
@@ -14,7 +14,7 @@ public class UpdateTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The name of the deployment template.</p>
      * 
      * <strong>example:</strong>
      * <p>webserver01</p>
@@ -23,7 +23,7 @@ public class UpdateTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The label of the template.</p>
+     * <p>The tags of the deployment template.</p>
      * 
      * <strong>example:</strong>
      * <p>web</p>
@@ -32,7 +32,7 @@ public class UpdateTemplateRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The YAML content of the template.</p>
+     * <p>The template content in YAML format.</p>
      * 
      * <strong>example:</strong>
      * <p>apiVersion: apps/v1\\nkind: Deployment\\nmetadata:\\n  name: nginx-deployment-basic\\n  labels:\\n    app: nginx\\nspec:\\n  replicas: 2\\n  selector:\\n    matchLabels:\\n      app: nginx\\n  template:\\n    metadata:\\n      labels:\\n        app: nginx\\n    spec:\\n      containers:\\n      - name: nginx\\n        image: busybox:latest\\n        ports:\\n        - containerPort: 8080</p>
@@ -41,11 +41,14 @@ public class UpdateTemplateRequest extends TeaModel {
     public String template;
 
     /**
-     * <p>The type of template. This parameter can be set to a custom value.</p>
+     * <p>The templatetype.</p>
      * <ul>
-     * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
-     * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</li>
+     * <li><p>If you set this parameter to <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
+     * </li>
+     * <li><p>If you leave this parameter empty or set it to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+     * </li>
      * </ul>
+     * <p>Settings this parameter to <code>kubernetes</code> is recommended.</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes</p>

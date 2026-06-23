@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
     /**
-     * <p>The description of the template.</p>
+     * <p>The description of the orchestration template.</p>
      * 
      * <strong>example:</strong>
      * <p>this is test</p>
@@ -14,8 +14,8 @@ public class CreateTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the orchestration template.</p>
-     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+     * <p>The name of the template.</p>
+     * <p>Naming rules: The name must be 1 to 63 characters in length and can contain digits, Chinese characters, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The label of the template.</p>
+     * <p>The tags of the orchestration template.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The template content in the YAML format.</p>
+     * <p>The template content in YAML format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,12 +44,14 @@ public class CreateTemplateRequest extends TeaModel {
     public String template;
 
     /**
-     * <p>The template type.</p>
+     * <p>The templatetype.</p>
      * <ul>
-     * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
-     * <li>If this parameter is not specified or the value is set to another value, the template is not displayed on the Orchestration Template page in the console.</li>
+     * <li><p>If you set this parameter to <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
+     * </li>
+     * <li><p>If you leave this parameter empty or set it to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+     * </li>
      * </ul>
-     * <p>We recommend that you set the parameter to <code>kubernetes</code>.</p>
+     * <p>Settings this parameter to <code>kubernetes</code> is recommended.</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes</p>

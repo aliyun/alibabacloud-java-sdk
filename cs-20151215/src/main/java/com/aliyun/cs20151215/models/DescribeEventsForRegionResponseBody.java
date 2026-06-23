@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsForRegionResponseBody extends TeaModel {
     /**
-     * <p>A list of events.</p>
+     * <p>The list of events.</p>
      */
     @NameInMap("events")
     public java.util.List<DescribeEventsForRegionResponseBodyEvents> events;
 
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</p>
-     */
     @NameInMap("next_token")
     public String nextToken;
 
@@ -62,7 +59,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The event message.</p>
+         * <p>The event details.</p>
          * 
          * <strong>example:</strong>
          * <p>Start to upgrade NodePool nodePool/nodePool-A</p>
@@ -71,7 +68,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The reason for the event.</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>Started</p>
@@ -121,7 +118,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The event data.</p>
+         * <p>The event description.</p>
          */
         @NameInMap("data")
         public DescribeEventsForRegionResponseBodyEventsData data;
@@ -145,7 +142,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The event subject.</p>
+         * <p>The object associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>npdd89dc2b76c04f14b06774883b******</p>
@@ -245,7 +242,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The maximum number of results displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -254,7 +251,7 @@ public class DescribeEventsForRegionResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

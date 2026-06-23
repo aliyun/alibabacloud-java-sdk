@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationPlansForRegionRequest extends TeaModel {
     /**
-     * <p>Filter by cluster ID.</p>
+     * <p>Filters results by cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c02b3e03be10643e8a644a843ffcb****</p>
@@ -14,7 +14,7 @@ public class ListOperationPlansForRegionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Filter by execution plan status.</p>
+     * <p>Filters results by execution plan state.</p>
      * 
      * <strong>example:</strong>
      * <p>Scheduled</p>
@@ -23,7 +23,7 @@ public class ListOperationPlansForRegionRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>Filter by execution plan type.</p>
+     * <p>Filters results by execution plan type.</p>
      * 
      * <strong>example:</strong>
      * <p>CLUSTER_UPGRADE_MASTER</p>

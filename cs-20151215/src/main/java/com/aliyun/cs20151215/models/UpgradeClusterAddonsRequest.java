@@ -25,7 +25,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
 
     public static class UpgradeClusterAddonsRequestBody extends TeaModel {
         /**
-         * <p>The name of the component.</p>
+         * <p>The component name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String componentName;
 
         /**
-         * <p>The custom component settings that you want to use. The value is a JSON string.</p>
+         * <p>The custom parameters of the component, encoded as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>
@@ -44,7 +44,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String config;
 
         /**
-         * <p>The version to which the component can be updated. You can call the <code>DescribeClusterAddonsVersion</code> operation to query the version to which the component can be updated.</p>
+         * <p>The target version to which you want to upgrade. You can call the <code>DescribeAddon</code> operation to query the versions to which the component can be upgraded.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,10 +54,10 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String nextVersion;
 
         /**
-         * <p>The update policy. Valid values:</p>
+         * <p>The component upgrade policy. Valid values:</p>
          * <ul>
-         * <li>overwrite</li>
-         * <li>canary</li>
+         * <li>overwrite: overwrites the existing version.</li>
+         * <li>canary: performs a canary upgrade.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The current version of the component.</p>
+         * <p>The current component version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.11.3.2-f57ea7ed6-aliyun</p>

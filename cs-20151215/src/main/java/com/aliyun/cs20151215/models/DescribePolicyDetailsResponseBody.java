@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyDetailsResponseBody extends TeaModel {
     /**
-     * <p>The action of the policy. Valid values:</p>
+     * <p>The governance action of the rule. Valid values:</p>
      * <ul>
-     * <li><code>enforce</code>: blocks deployments that match the policy.</li>
-     * <li><code>inform</code>: generates alerts for deployments that match the policy.</li>
+     * <li><code>enforce</code>: blocks non-compliant deployments.</li>
+     * <li><code>inform</code>: generates alerts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String action;
 
     /**
-     * <p>The type of the policy.</p>
+     * <p>The rule templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-general</p>
@@ -27,7 +27,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String category;
 
     /**
-     * <p>The description of the policy.</p>
+     * <p>The description of the rule template.</p>
      * 
      * <strong>example:</strong>
      * <p>Requires container images to begin with a repo string from a specified list</p>
@@ -36,10 +36,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether the policy is deleted. Valid values:</p>
+     * <p>Indicates whether the rule is deleted. Valid values:</p>
      * <ul>
-     * <li>0: The policy is not deleted.</li>
-     * <li>1: The policy is deleted.</li>
+     * <li>0: The rule is not deleted.</li>
+     * <li>1: The rule is deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public Integer isDeleted;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The name of the policy governance rule.</p>
      * 
      * <strong>example:</strong>
      * <p>ACKAllowedRepos</p>
@@ -58,10 +58,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Indicates whether parameters are required. Valid values:</p>
+     * <p>Indicates whether policy configuration is required. Valid values: </p>
      * <ul>
-     * <li>0: Parameters are required.</li>
-     * <li>1: Parameters are optional.</li>
+     * <li>0: Parameter settings are required.</li>
+     * <li>1: No parameter settings are required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,11 +71,11 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public Integer noConfig;
 
     /**
-     * <p>The severity level of the policy. Valid values:</p>
+     * <p>The governance severity level of the rule. Valid values:</p>
      * <ul>
-     * <li><code>high</code></li>
-     * <li><code>medium</code></li>
-     * <li><code>low</code></li>
+     * <li><code>high</code>: high risk.</li>
+     * <li><code>medium</code>: medium risk.</li>
+     * <li><code>low</code>: low risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String severity;
 
     /**
-     * <p>The content of the policy.</p>
+     * <p>The details of the rule template.</p>
      * 
      * <strong>example:</strong>
      * <p>详情请参见请求示例</p>

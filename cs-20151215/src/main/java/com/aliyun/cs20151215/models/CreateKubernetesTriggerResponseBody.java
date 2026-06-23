@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKubernetesTriggerResponseBody extends TeaModel {
     /**
-     * <p>The action that the trigger performs. For example, a value of <code>redeploy</code> indicates that the trigger redeploys the application.</p>
+     * <p>The trigger action. For example, <code>redeploy</code>: redeploy.</p>
      * 
      * <strong>example:</strong>
      * <p>redeploy</p>
@@ -14,7 +14,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
     public String action;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
@@ -23,7 +23,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the trigger.</p>
+     * <p>The trigger ID.</p>
      * 
      * <strong>example:</strong>
      * <p>111</p>
@@ -32,7 +32,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the trigger project.</p>
+     * <p>The trigger project name.</p>
      * 
      * <strong>example:</strong>
      * <p>default/test-app</p>
@@ -41,11 +41,13 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The type of trigger.</p>
+     * <p>The trigger type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>deployment</code>: performs actions on Deployments.</li>
-     * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+     * <li><p><code>deployment</code>: a trigger for stateless applications. </p>
+     * </li>
+     * <li><p><code>application</code>: a trigger for Application Center applications.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

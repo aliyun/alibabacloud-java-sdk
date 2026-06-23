@@ -14,7 +14,7 @@ public class ScanClusterVulsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>T-xascadasd*****</p>

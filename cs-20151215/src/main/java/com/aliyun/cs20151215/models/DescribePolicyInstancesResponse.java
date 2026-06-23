@@ -44,7 +44,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
 
     public static class DescribePolicyInstancesResponseBody extends TeaModel {
         /**
-         * <p>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</p>
+         * <p>策略实例实施者UID。</p>
          * 
          * <strong>example:</strong>
          * <p>16298168****</p>
@@ -53,7 +53,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>目标集群ID。</p>
          * 
          * <strong>example:</strong>
          * <p>c8155823d057948c69a****</p>
@@ -62,7 +62,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the policy instance.</p>
+         * <p>规则实例名称。</p>
          * 
          * <strong>example:</strong>
          * <p>no-env-var-secrets-****</p>
@@ -71,7 +71,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>策略治理规则名称。</p>
          * 
          * <strong>example:</strong>
          * <p>ACKPSPCapabilities</p>
@@ -80,7 +80,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The type of the policy.</p>
+         * <p>策略类型名称。</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-general</p>
@@ -89,7 +89,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policyCategory;
 
         /**
-         * <p>The description of the policy template.</p>
+         * <p>规则模板描述。</p>
          * 
          * <strong>example:</strong>
          * <p>Restricts secrets used in pod envs</p>
@@ -98,7 +98,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policyDescription;
 
         /**
-         * <p>The parameters of the policy instance.</p>
+         * <p>当前规则实例的配置参数。</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>
@@ -107,7 +107,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policyParameters;
 
         /**
-         * <p>The severity level of the policy instance.</p>
+         * <p>规则实例治理等级。</p>
          * 
          * <strong>example:</strong>
          * <p>low</p>
@@ -116,9 +116,9 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policySeverity;
 
         /**
-         * <p>The applicable scope of the policy instance.</p>
-         * <p>A value of \* indicates all namespaces in the cluster. This is the default value.</p>
-         * <p>Multiple namespaces are separated by commas (,).</p>
+         * <p>策略实例实施范围：</p>
+         * <p>默认&quot;*&quot;代表集群所有命名空间。</p>
+         * <p>否则返回作用Namespaces名称，多个Namespaces以逗号（,）分隔。</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -129,10 +129,12 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policyScope;
 
         /**
-         * <p>The action of the policy. Valid values:</p>
+         * <p>规则治理动作，取值：</p>
          * <ul>
-         * <li><code>deny</code>: Deployments that match the policy are denied.</li>
-         * <li><code>warn</code>: Alerts are generated for deployments that match the policy.</li>
+         * <li><p><code>deny</code>：拦截违规部署。</p>
+         * </li>
+         * <li><p><code>warn</code>：告警。</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +144,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policyAction;
 
         /**
-         * <p>The creation time of the instance. This parameter is deprecated.</p>
+         * <p>创建时间（已废弃，请勿使用）。</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-29T18:09:12+08:00</p>
@@ -152,7 +154,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String created;
 
         /**
-         * <p>The update time of the instance. This parameter is deprecated.</p>
+         * <p>更新时间（已废弃，请勿使用）。</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-29T18:09:12+08:00</p>
@@ -162,7 +164,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String updated;
 
         /**
-         * <p>The ID of the resource. This parameter is deprecated.</p>
+         * <p>资源ID（已废弃，请勿使用）。</p>
          * 
          * <strong>example:</strong>
          * <p>123456***</p>
@@ -172,7 +174,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The number of violations processed in the cluster. This parameter is deprecated.</p>
+         * <p>集群中处理违规计数（已废弃，请勿使用）。</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -182,7 +184,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public Long totalViolations;
 
         /**
-         * <p>The status of the deletion. This parameter is deprecated.</p>
+         * <p>删除状态（已废弃，请勿使用）。</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

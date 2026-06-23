@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterInspectReportsRequest extends TeaModel {
     /**
-     * <p>The maximum number of returned results. Maximum value: 50.</p>
+     * <p>The maximum number of results to return. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

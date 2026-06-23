@@ -25,13 +25,15 @@ public class DescribeTriggerRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The type of trigger. Valid values:</p>
+     * <p>The trigger type. Valid values:</p>
      * <ul>
-     * <li><code>deployment</code>: performs actions on Deployments.</li>
-     * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+     * <li><p><code>deployment</code>: a trigger for a stateless application. </p>
+     * </li>
+     * <li><p><code>application</code>: a trigger for an application in Open Applications.</p>
+     * </li>
      * </ul>
      * <p>Default value: <code>deployment</code>.</p>
-     * <p>If you do not set this parameter, triggers are not filtered by type.</p>
+     * <p>If you do not specify a trigger type, the query results are not filtered by trigger type.</p>
      * 
      * <strong>example:</strong>
      * <p>deployment</p>
@@ -40,9 +42,9 @@ public class DescribeTriggerRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The action that the trigger performs. Set the value to redeploy.</p>
-     * <p><code>redeploy</code>: redeploys the resources specified by <code>project_id</code>.</p>
-     * <p>If you do not specify this parameter, triggers are not filtered by action.</p>
+     * <p>The trigger action. Valid values:</p>
+     * <p><code>redeploy</code>: redeploys the application.</p>
+     * <p>If you do not specify a trigger action, the query results are not filtered by trigger action.</p>
      * 
      * <strong>example:</strong>
      * <p>redeploy</p>

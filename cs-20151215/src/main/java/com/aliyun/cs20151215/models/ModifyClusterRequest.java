@@ -5,26 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterRequest extends TeaModel {
     /**
-     * <p>The access control list for the API server SLB of registered clusters.</p>
+     * <p>Access control list for the registered cluster API Server SLB.</p>
      */
     @NameInMap("access_control_list")
     @Deprecated
     public java.util.List<String> accessControlList;
 
     /**
-     * <p>This parameter adds custom IP addresses or domain names to the SAN field of the API server certificate to control client access.</p>
+     * <p>Custom API Server certificate SAN (Subject Alternative Name).
+     * Used to add custom IPs or domain names to the SAN field of the cluster API Server server certificate for client access control.</p>
      * <p>Only managed clusters support this parameter.</p>
      */
     @NameInMap("api_server_custom_cert_sans")
     public ModifyClusterRequestApiServerCustomCertSans apiServerCustomCertSans;
 
     /**
-     * <p>Specifies whether to bind an EIP to the cluster for public network access to the API server. Valid values:</p>
+     * <p>Whether to associate an EIP with the cluster for public access to API Server. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Binds an EIP to the cluster.</p>
-     * </li>
-     * <li><p><code>false</code>: Does not bind an EIP to the cluster.</p>
-     * </li>
+     * <li><code>true</code>: Associate an EIP with the cluster.</li>
+     * <li><code>false</code>: Do not associate an EIP with the cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +33,7 @@ public class ModifyClusterRequest extends TeaModel {
     public Boolean apiServerEip;
 
     /**
-     * <p>The EIP instance ID bound to the cluster API server. This parameter takes effect only when <code>api_server_eip</code> is set to <code>true</code>.</p>
+     * <p>The ID of the EIP instance associated with the cluster API Server. This parameter takes effect only when <code>api_server_eip</code> is set to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>eip-wz9fnasl6dsfhmvci****</p>
@@ -43,7 +42,7 @@ public class ModifyClusterRequest extends TeaModel {
     public String apiServerEipId;
 
     /**
-     * <p>The custom cluster name. The name can contain digits, letters, Chinese characters, and hyphens (-). It must be 1 to 63 characters in length and cannot start with a hyphen (-).</p>
+     * <p>Custom cluster name. The name can contain digits, Chinese characters, English characters, or hyphens (-), must be 1 to 63 characters in length, and cannot start with a hyphen (-).</p>
      * 
      * <strong>example:</strong>
      * <p>cluster-new-name</p>
@@ -52,19 +51,15 @@ public class ModifyClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The cluster specification when you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure <code>profile</code>. Valid values:</p>
+     * <p>When <code>cluster_type</code> is set to <code>ManagedKubernetes</code> and <code>profile</code> is configured, specifies the cluster specification. Valid values:</p>
      * <ul>
-     * <li><p><code>ack.pro.small</code>: Pro</p>
-     * </li>
-     * <li><p><code>ack.pro.xlarge</code>: Pro XL</p>
-     * </li>
-     * <li><p><code>ack.pro.2xlarge</code>: Pro 2XL</p>
-     * </li>
-     * <li><p><code>ack.pro.4xlarge</code>: Pro 4XL (requires approval from customer service to enable)</p>
-     * </li>
+     * <li><code>ack.pro.small</code>: Pro Edition</li>
+     * <li><code>ack.pro.xlarge</code>: Pro XL</li>
+     * <li><code>ack.pro.2xlarge</code>: Pro 2XL</li>
+     * <li><code>ack.pro.4xlarge</code>: Pro 4XL (requires contacting customer service to enable allowlisting)</li>
      * </ul>
-     * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. These tiers pre-allocate and dedicate control plane resources to ensure consistent high performance for API concurrency and pod scheduling. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
-     * <p>For cluster management fees for Pro and provisioned control plane clusters, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
+     * <p>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and fixing control plane resources, it ensures that API concurrency and Pod scheduling capabilities are always at a determined high level, suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+     * <p>For cluster management fees for Pro Edition and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster Management Fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster Management Fees</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ack.pro.small</p>
@@ -73,7 +68,7 @@ public class ModifyClusterRequest extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>Control plane configuration for dedicated clusters.</p>
+     * <p>Dedicated cluster control plane configuration.</p>
      */
     @NameInMap("control_plane_config")
     public ModifyClusterRequestControlPlaneConfig controlPlaneConfig;
@@ -85,12 +80,10 @@ public class ModifyClusterRequest extends TeaModel {
     public ModifyClusterRequestControlPlaneEndpointsConfig controlPlaneEndpointsConfig;
 
     /**
-     * <p>Enables or disables cluster deletion protection to prevent accidental cluster deletion from the console or using APIs. Valid values:</p>
+     * <p>Cluster deletion protection, which prevents accidental deletion of the cluster through the console or API. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enables cluster deletion protection. You cannot delete the cluster from the console or using APIs.</p>
-     * </li>
-     * <li><p><code>false</code>: Disables cluster deletion protection. You can delete the cluster from the console or using APIs.</p>
-     * </li>
+     * <li><code>true</code>: Enable cluster deletion protection. The cluster cannot be deleted through the console or API.</li>
+     * <li><code>false</code>: Disable cluster deletion protection. The cluster can be deleted through the console or API.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -101,12 +94,10 @@ public class ModifyClusterRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>Enables or disables the RRSA feature. Only managed clusters support this parameter. Valid values:</p>
+     * <p>Enable or disable the RRSA feature (only managed clusters support this parameter). Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enables RRSA.</p>
-     * </li>
-     * <li><p><code>false</code>: Disables RRSA.</p>
-     * </li>
+     * <li><code>true</code>: Enable.</li>
+     * <li><code>false</code>: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,12 +107,10 @@ public class ModifyClusterRequest extends TeaModel {
     public Boolean enableRrsa;
 
     /**
-     * <p>Specifies whether to rebind the cluster test domain name. Valid values:</p>
+     * <p>Rebind the cluster test domain. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Rebinds the cluster test domain name.</p>
-     * </li>
-     * <li><p><code>false</code>: Does not rebind the cluster test domain name.</p>
-     * </li>
+     * <li><code>true</code>: Rebind the cluster test domain.</li>
+     * <li><code>false</code>: Do not rebind the cluster test domain.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -133,7 +122,7 @@ public class ModifyClusterRequest extends TeaModel {
     public Boolean ingressDomainRebinding;
 
     /**
-     * <p>The SLB instance ID of the cluster to be modified.</p>
+     * <p>SLB instance ID of the cluster to be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-wz97kes8tnndkpodw****</p>
@@ -143,12 +132,10 @@ public class ModifyClusterRequest extends TeaModel {
     public String ingressLoadbalancerId;
 
     /**
-     * <p>Enables or disables instance deletion protection to prevent accidental release of nodes from the console or using APIs. Valid values:</p>
+     * <p>Instance deletion protection to prevent accidental deletion and release of nodes through the console or API. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Prevents accidental node deletion from the console or using APIs.</p>
-     * </li>
-     * <li><p><code>false</code>: Allows accidental node deletion from the console or using APIs.</p>
-     * </li>
+     * <li><code>true</code>: Nodes cannot be accidentally deleted through the console or API.</li>
+     * <li><code>false</code>: Nodes can be deleted through the console or API.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -160,19 +147,19 @@ public class ModifyClusterRequest extends TeaModel {
     public Boolean instanceDeletionProtection;
 
     /**
-     * <p>The maintenance window of the cluster. This feature is available only for ACK managed clusters Pro.</p>
+     * <p>Cluster maintenance window. This feature only takes effect for ACK Pro managed clusters.</p>
      */
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
 
     /**
-     * <p>Automatic O\&amp;M policy for the cluster.</p>
+     * <p>Cluster automatic O&amp;M policy.</p>
      */
     @NameInMap("operation_policy")
     public ModifyClusterRequestOperationPolicy operationPolicy;
 
     /**
-     * <p>The resource group ID of the cluster.</p>
+     * <p>Cluster resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyvw3wjm****</p>
@@ -181,14 +168,11 @@ public class ModifyClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The security group ID for the control plane.</p>
+     * <p>Control plane security group ID.</p>
      * <ul>
-     * <li><p>If you configure blocking rules in the security group, ensure that the security group rules allow the protocols and ports required by the cluster. For recommended security group rules, see <a href="https://help.aliyun.com/document_detail/353191.html">Configure and manage cluster security groups</a>.</p>
-     * </li>
-     * <li><p>For non-dedicated ACK clusters, the control plane and installed managed components (such as terway-controlplane) restart briefly during the update. Perform this operation during off-peak hours. After you change the control plane security group, the ENIs used by the control plane and managed components are automatically added to the new security group.</p>
-     * </li>
-     * <li><p>For ACK dedicated clusters, newly scaled-out master nodes automatically apply the new control plane security group. Existing control plane nodes are unaffected.</p>
-     * </li>
+     * <li>If you have configured blocking rules in the security group, ensure that the security group rules allow the protocols and ports required by the cluster. For recommended security group rules, see <a href="https://help.aliyun.com/document_detail/353191.html">Configure and Manage Cluster Security Groups</a>.</li>
+     * <li>For non-ACK dedicated clusters, during the change process, the cluster control plane and installed managed components (such as terway-controlplane) will briefly restart. We recommend performing this operation during off-peak hours. After the control plane security group is changed, the ENIs used by the cluster control plane and installed managed components will be automatically added to the new security group.</li>
+     * <li>For ACK dedicated clusters, after the control plane security group is changed, newly scaled-out Master nodes will automatically use the new control plane security group. Existing control plane nodes are not affected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -198,19 +182,19 @@ public class ModifyClusterRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>System event logging configuration.</p>
+     * <p>System event storage configuration.</p>
      */
     @NameInMap("system_events_logging")
     public ModifyClusterRequestSystemEventsLogging systemEventsLogging;
 
     /**
-     * <p>The cluster time zone. For more information, see <a href="https://help.aliyun.com/document_detail/354879.html">Supported time zones</a>.</p>
+     * <p>Cluster timezone. See <a href="https://help.aliyun.com/document_detail/354879.html">Supported Timezones</a>.</p>
      * <ul>
-     * <li><p>After you change the time zone, cluster inspection configurations use the new time zone.</p>
+     * <li><p>After changing the timezone, cluster inspection configurations will use the new timezone settings.</p>
      * </li>
-     * <li><p>For managed clusters, the control plane and installed managed components (such as terway-controlplane) restart briefly during the update. Perform this operation during off-peak hours. Newly scaled-out nodes automatically apply the new time zone. Existing nodes are unaffected. You can reset nodes in node pools to apply the new time zone to existing nodes.</p>
+     * <li><p>For managed clusters, during the change process, the cluster control plane and installed managed components (such as terway-controlplane) will briefly restart. We recommend performing this operation during off-peak hours. After changing the timezone, newly scaled-out nodes will automatically use the new timezone settings. Existing nodes are not affected. You can use the node pool node reset feature to apply the new settings to existing nodes.</p>
      * </li>
-     * <li><p>For dedicated clusters, newly scaled-out nodes (including control plane nodes) automatically apply the new time zone. Existing nodes (including control plane nodes) are unaffected. You can reset nodes in node pools to apply the new time zone to existing nodes. For control plane nodes, scale out and then scale in to apply the new time zone to all control plane nodes.</p>
+     * <li><p>For dedicated clusters, after changing the timezone, newly scaled-out nodes (including control plane nodes) will automatically use the new timezone settings. Existing nodes (including control plane nodes) are not affected. You can use the node pool node reset feature to apply the new settings to existing nodes. For control plane nodes, you need to scale out first and then scale in to apply the settings to all control plane nodes.</p>
      * </li>
      * </ul>
      * 
@@ -221,16 +205,12 @@ public class ModifyClusterRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The vSwitches for the cluster control plane. For dedicated clusters, the change applies only to newly scaled-out control plane nodes. When you change the control plane vSwitches for managed clusters, note the following:</p>
+     * <p>Cluster control plane vSwitches. For dedicated clusters, this takes effect on newly scaled-out control plane nodes. When modifying control plane vSwitches for managed clusters, note the following:</p>
      * <ul>
-     * <li><p>This parameter performs an overwrite update. You must specify the complete target vSwitch list.</p>
-     * </li>
-     * <li><p>Control plane components restart briefly during the update. Proceed with caution.</p>
-     * </li>
-     * <li><p>Ensure that all security groups (including those for the control plane, all node pools, and container networking) allow inbound and outbound traffic for the IP CIDR blocks of the new vSwitches. Otherwise, nodes and containers cannot connect to the API server.</p>
-     * </li>
-     * <li><p>If the new control plane vSwitches have ACL rules configured, ensure that these rules allow communication between the vSwitches and the IP CIDR blocks of cluster nodes and container networks.</p>
-     * </li>
+     * <li>This parameter performs a full overwrite update. You must specify the complete list of target vSwitches.</li>
+     * <li>During the change, control plane components will briefly restart. Proceed with caution.</li>
+     * <li>Ensure that all security groups of the cluster (including the control plane security group, all node pool security groups, and container network security groups) allow inbound and outbound traffic for the IP ranges of the new vSwitches to prevent nodes and containers from being unable to connect to the API Server.</li>
+     * <li>If the new control plane vSwitches have ACL rules configured, ensure that the ACL rules allow communication with the cluster nodes, container network, and other IP ranges.</li>
      * </ul>
      */
     @NameInMap("vswitch_ids")
@@ -407,12 +387,10 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestApiServerCustomCertSans extends TeaModel {
         /**
-         * <p>Specifies whether to overwrite or append the SAN configuration. Valid values:</p>
+         * <p>Overwrite or append SAN configuration. Valid values:</p>
          * <ul>
-         * <li><p>overwrite: Overwrites the existing configuration.</p>
-         * </li>
-         * <li><p>append: Appends to the existing configuration.</p>
-         * </li>
+         * <li>overwrite: Overwrite.</li>
+         * <li>append: Append.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,7 +400,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String action;
 
         /**
-         * <p>The list of SANs.</p>
+         * <p>SAN list.</p>
          */
         @NameInMap("subject_alternative_names")
         public java.util.List<String> subjectAlternativeNames;
@@ -452,12 +430,10 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestControlPlaneConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal for control plane node instances. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <p>Whether to enable automatic renewal for control plane node instances. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Enables auto-renewal.</p>
-         * </li>
-         * <li><p><code>false</code>: Disables auto-renewal.</p>
-         * </li>
+         * <li><code>true</code>: Enable automatic renewal.</li>
+         * <li><code>false</code>: Disable automatic renewal.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -468,7 +444,7 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal duration for each renewal of control plane node instances.</p>
+         * <p>Duration for each automatic renewal of control plane node instances.</p>
          * <p>Valid values: {1, 2, 3, 6, 12}. Unit: months.</p>
          * <p>Default value: 1.</p>
          * 
@@ -479,12 +455,10 @@ public class ModifyClusterRequest extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>The billing method for control plane node instances. Valid values:</p>
+         * <p>Control plane node instance billing method. Valid values:</p>
          * <ul>
-         * <li><p><code>PrePaid</code>: Subscription.</p>
-         * </li>
-         * <li><p><code>PostPaid</code>: Pay-as-you-go.</p>
-         * </li>
+         * <li><code>PrePaid</code>: Subscription.</li>
+         * <li><code>PostPaid</code>: Pay-as-you-go.</li>
          * </ul>
          * <p>Default value: <code>PostPaid</code>.</p>
          * 
@@ -495,12 +469,10 @@ public class ModifyClusterRequest extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>Specifies whether to install the CloudMonitor agent on control plane nodes. Valid values:</p>
+         * <p>Whether to install the Cloud Monitor agent on control plane nodes. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Installs the CloudMonitor agent.</p>
-         * </li>
-         * <li><p><code>false</code>: Does not install the CloudMonitor agent.</p>
-         * </li>
+         * <li><code>true</code>: Install the Cloud Monitor agent.</li>
+         * <li><code>false</code>: Do not install the Cloud Monitor agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -510,12 +482,10 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean cloudMonitorFlags;
 
         /**
-         * <p>The CPU management policy for nodes. Clusters of version 1.12.6 or later support the following policies:</p>
+         * <p>Node CPU management policy. When the cluster version is 1.12.6 or later, the following two policies are supported:</p>
          * <ul>
-         * <li><p><code>static</code>: Enhances CPU affinity and exclusivity for pods with specific resource characteristics on nodes.</p>
-         * </li>
-         * <li><p><code>none</code>: Uses the default CPU affinity scheme.</p>
-         * </li>
+         * <li><code>static</code>: Allows enhanced CPU affinity and exclusivity for Pods with certain resource characteristics on the node.</li>
+         * <li><code>none</code>: Uses the existing default CPU affinity scheme.</li>
          * </ul>
          * <p>Default value: <code>none</code>.</p>
          * 
@@ -526,7 +496,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String cpuPolicy;
 
         /**
-         * <p>The deployment set ID.</p>
+         * <p>Deployment set ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-bp10b35imuam5amw****</p>
@@ -535,7 +505,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String deploymentsetId;
 
         /**
-         * <p>The custom image ID. Specify this parameter when you use a custom image.</p>
+         * <p>Custom image ID. Specified when using a custom image.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
@@ -544,12 +514,10 @@ public class ModifyClusterRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The operating system image type. Valid values:</p>
+         * <p>Operating system image type. Valid values:</p>
          * <ul>
-         * <li><p><code>AliyunLinux3</code>: Alinux3 image.</p>
-         * </li>
-         * <li><p><code>Custom</code>: Custom image.</p>
-         * </li>
+         * <li><code>AliyunLinux3</code>: Alinux3 image.</li>
+         * <li><code>Custom</code>: Custom image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -559,13 +527,13 @@ public class ModifyClusterRequest extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * <p>Instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance Family</a>.</p>
          */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
         /**
-         * <p>The key pair name. Specify either this parameter or <code>login_password</code>.</p>
+         * <p>Key pair name. Mutually exclusive with <code>login_password</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ack</p>
@@ -574,7 +542,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String keyPair;
 
         /**
-         * <p>The SSH logon password. Specify either this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. To use password-based logon, specify this parameter during scale-out.</p>
+         * <p>SSH login password. Mutually exclusive with <code>key_pair</code>. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. If you want to use password login, specify this parameter during scale-out.</p>
          * 
          * <strong>example:</strong>
          * <p>Ack@2000.</p>
@@ -583,7 +551,8 @@ public class ModifyClusterRequest extends TeaModel {
         public String loginPassword;
 
         /**
-         * <p>Valid port range: [30000,65535].</p>
+         * <p>Node service port range.
+         * Available port range: [30000, 65535].</p>
          * <p>Default value: 30000-32767.</p>
          * 
          * <strong>example:</strong>
@@ -593,8 +562,8 @@ public class ModifyClusterRequest extends TeaModel {
         public String nodePortRange;
 
         /**
-         * <p>The subscription duration for control plane node instances. This parameter is required and takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>.</p>
-         * <p>When <code>period_unit=Month</code>, valid values are {1, 2, 3, 6, 12, 24, 36, 48, 60}.</p>
+         * <p>Control plane node instance subscription duration. This parameter takes effect and is required only when <code>charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>When <code>period_unit=Month</code>, valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -603,8 +572,8 @@ public class ModifyClusterRequest extends TeaModel {
         public Long period;
 
         /**
-         * <p>The billing cycle for control plane node instances. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>.</p>
-         * <p><code>Month</code>: Billing by month. Only monthly billing is supported.</p>
+         * <p>Control plane node instance billing period. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p><code>Month</code>: Billed on a monthly basis. Currently, only monthly billing is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -613,7 +582,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The container runtime. Valid values:</p>
+         * <p>Container runtime name. Valid values:</p>
          * <ul>
          * <li><code>containerd</code>: Recommended. Supported by all cluster versions.</li>
          * </ul>
@@ -628,10 +597,8 @@ public class ModifyClusterRequest extends TeaModel {
         /**
          * <p>Alibaba Cloud OS security hardening. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Enables Alibaba Cloud OS security hardening.</p>
-         * </li>
-         * <li><p><code>false</code>: Disables Alibaba Cloud OS security hardening.</p>
-         * </li>
+         * <li><code>true</code>: Enable Alibaba Cloud OS security hardening.</li>
+         * <li><code>false</code>: Disable Alibaba Cloud OS security hardening.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -642,7 +609,7 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean securityHardeningOs;
 
         /**
-         * <p>The number of control plane nodes. To scale out the control plane of a dedicated cluster, set this parameter to the target number of control plane nodes, which must be greater than the current number.</p>
+         * <p>Number of control plane nodes. To scale out the dedicated cluster control plane, this parameter specifies the target number of control plane nodes and must be greater than the current number of control plane nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -651,13 +618,11 @@ public class ModifyClusterRequest extends TeaModel {
         public Long size;
 
         /**
-         * <p>MLPS 2.0 security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">Use MLPS 2.0 security hardening for ACK</a>.</p>
+         * <p>Security hardening for compliance. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK Security Hardening for Compliance</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Enables MLPS 2.0 security hardening.</p>
-         * </li>
-         * <li><p><code>false</code>: Disables MLPS 2.0 security hardening.</p>
-         * </li>
+         * <li><code>true</code>: Enable security hardening for compliance.</li>
+         * <li><code>false</code>: Disable security hardening for compliance.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -668,14 +633,12 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean socEnabled;
 
         /**
-         * <p>Specifies whether to enable performance burst for node system disks. Valid values:</p>
+         * <p>Whether to enable burst (performance bursting) for the node system disk. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Enables performance burst.</p>
-         * </li>
-         * <li><p><code>false</code>: Disables performance burst.</p>
-         * </li>
+         * <li><code>true</code>: Enable.</li>
+         * <li><code>false</code>: Disable.</li>
          * </ul>
-         * <p>You can set this parameter only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL</a>.</p>
+         * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -684,18 +647,13 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The system disk category for nodes. Valid values:</p>
+         * <p>Node system disk type. Valid values:</p>
          * <ul>
-         * <li><p><code>cloud_efficiency</code>: Ultra disk.</p>
-         * </li>
-         * <li><p><code>cloud_ssd</code>: Standard SSD.</p>
-         * </li>
-         * <li><p><code>cloud_essd</code>: ESSD.</p>
-         * </li>
-         * <li><p><code>cloud_auto</code>: ESSD AutoPL.</p>
-         * </li>
-         * <li><p><code>cloud_essd_entry</code>: ESSD Entry.</p>
-         * </li>
+         * <li><code>cloud_efficiency</code>: Ultra disk.</li>
+         * <li><code>cloud_ssd</code>: SSD disk.</li>
+         * <li><code>cloud_essd</code>: ESSD disk.</li>
+         * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -705,7 +663,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The performance level of node system disks. This parameter applies only to ESSDs. The performance level depends on the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
+         * <p>Node system disk performance level. Only applicable to ESSD disks. The performance level is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -714,8 +672,8 @@ public class ModifyClusterRequest extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS for node system disks. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50,000}.</p>
-         * <p>You can set this parameter only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL</a>.</p>
+         * <p>Provisioned read/write IOPS for the node system disk. Valid values: 0 to min{50,000, 1000<em>capacity - baseline performance}. Baseline performance = min{1,800 + 50</em>capacity, 50,000}.</p>
+         * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -724,7 +682,7 @@ public class ModifyClusterRequest extends TeaModel {
         public Long systemDiskProvisionedIops;
 
         /**
-         * <p>The system disk size for nodes. Valid values: [40,500]. Unit: GiB.</p>
+         * <p>Node system disk size. Valid values: [40, 500]. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -733,7 +691,7 @@ public class ModifyClusterRequest extends TeaModel {
         public Long systemDiskSize;
 
         /**
-         * <p>The automatic snapshot policy ID for node system disks.</p>
+         * <p>Automatic snapshot policy ID for the node system disk.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-2zej1nogjvovnz4z****</p>
@@ -942,15 +900,15 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig extends TeaModel {
         /**
-         * <p>The VPCs where cluster internal domain name resolution takes effect.</p>
+         * <p>VPCs where the cluster internal domain name record resolution takes effect.</p>
          */
         @NameInMap("bind_vpcs")
         public java.util.List<String> bindVpcs;
 
         /**
-         * <p>Specifies whether to enable cluster internal domain name access. Valid values:</p>
+         * <p>Whether to enable cluster internal domain name access. Valid values:</p>
          * <ul>
-         * <li>true: Enables cluster internal domain name access. Node-side components (kubelet, kube-proxy) access the API server through the cluster internal domain name.</li>
+         * <li>true: Enable cluster internal domain name access. Node-side components (kubelet, kube-proxy) will access the API Server through the cluster internal domain name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -984,7 +942,7 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestControlPlaneEndpointsConfig extends TeaModel {
         /**
-         * <p>Internal domain name configuration for the cluster. This feature is available for ACK managed clusters. Cluster internal domain names allow node-side system components such as kubelet and kube-proxy to access the API server. If this feature is disabled, node-side system components access the API server through the CLB IP address.</p>
+         * <p>Cluster internal domain name configuration. Applicable to ACK managed clusters. The cluster internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API Server. When the cluster internal domain name access is not enabled, node-side system components access via the CLB IP.</p>
          */
         @NameInMap("internal_dns_config")
         public ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig internalDnsConfig;
@@ -1006,15 +964,12 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
-         * <p>The frequency of automatic cluster upgrades. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade frequency</a>.</p>
+         * <p>Cluster automatic upgrade frequency. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade Frequency</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>patch: Latest patch version.</p>
-         * </li>
-         * <li><p>stable: Second latest minor version.</p>
-         * </li>
-         * <li><p>rapid: Latest minor version.</p>
-         * </li>
+         * <li>patch: Latest patch version.</li>
+         * <li>stable: Second latest minor version.</li>
+         * <li>rapid: Latest minor version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1024,11 +979,11 @@ public class ModifyClusterRequest extends TeaModel {
         public String channel;
 
         /**
-         * <p>Specifies whether to enable automatic cluster upgrades.</p>
+         * <p>Whether to enable cluster automatic upgrade.</p>
          * <ul>
-         * <li><p>true: Enables automatic upgrades.</p>
+         * <li><p>true: Enable automatic upgrade.</p>
          * </li>
-         * <li><p>false: Disables automatic upgrades.</p>
+         * <li><p>false: Disable automatic upgrade.</p>
          * </li>
          * </ul>
          * 
@@ -1063,7 +1018,7 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestOperationPolicy extends TeaModel {
         /**
-         * <p>Automatic cluster upgrade.</p>
+         * <p>Cluster automatic upgrade.</p>
          */
         @NameInMap("cluster_auto_upgrade")
         public ModifyClusterRequestOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
@@ -1085,11 +1040,11 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestSystemEventsLogging extends TeaModel {
         /**
-         * <p>Specifies whether to enable system event logging.</p>
+         * <p>Whether to enable system event storage.</p>
          * <ul>
-         * <li><p>true: Enables system event logging.</p>
+         * <li><p>true: Enable system event storage.</p>
          * </li>
-         * <li><p>false: Disables system event logging.</p>
+         * <li><p>false: Disable system event storage.</p>
          * </li>
          * </ul>
          * 
@@ -1100,7 +1055,7 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The LogProject name for system event logging.</p>
+         * <p>LogProject name for system event storage.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-cb95aa626a47740afbf6aa099b65****</p>

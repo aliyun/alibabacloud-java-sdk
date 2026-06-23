@@ -44,7 +44,7 @@ public class DescribeTriggerResponse extends TeaModel {
 
     public static class DescribeTriggerResponseBody extends TeaModel {
         /**
-         * <p>The ID of the trigger.</p>
+         * <p>触发器ID。</p>
          * 
          * <strong>example:</strong>
          * <p>75973497486******</p>
@@ -53,7 +53,7 @@ public class DescribeTriggerResponse extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the trigger.</p>
+         * <p>触发器名称。</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -62,7 +62,7 @@ public class DescribeTriggerResponse extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the associated cluster.</p>
+         * <p>集群ID。</p>
          * 
          * <strong>example:</strong>
          * <p>c259f563386444ebb8d7****</p>
@@ -71,8 +71,8 @@ public class DescribeTriggerResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the project.</p>
-         * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is <code>${namespace}/${name}</code>. Example: default/test-app.</p>
+         * <p>触发器项目名称。</p>
+         * <p>由应用所在命名空间及应用名称组成，格式为<code>${namespace}/${name}</code>，取值示例：default/test-app。</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>
@@ -81,13 +81,14 @@ public class DescribeTriggerResponse extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The type of trigger.</p>
-         * <p>Valid values:</p>
+         * <p>触发器类型。</p>
+         * <p>取值：</p>
          * <ul>
-         * <li><code>deployment</code>: performs actions on Deployments.</li>
-         * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+         * <li><p><code>deployment</code>：针对无状态应用的触发器。 </p>
+         * </li>
+         * <li><p><code>application</code>：针对应用中心应用的触发器。</p>
+         * </li>
          * </ul>
-         * <p>Default value: <code>deployment</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>deployment</p>
@@ -96,8 +97,8 @@ public class DescribeTriggerResponse extends TeaModel {
         public String type;
 
         /**
-         * <p>The action that the trigger performs. The value is set to redeploy.</p>
-         * <p><code>redeploy</code>: redeploys the resource specified by project_id.</p>
+         * <p>触发器行为，取值：</p>
+         * <p><code>redeploy</code>: 重新部署应用。</p>
          * 
          * <strong>example:</strong>
          * <p>redeploy</p>
@@ -106,7 +107,7 @@ public class DescribeTriggerResponse extends TeaModel {
         public String action;
 
         /**
-         * <p>The token information.</p>
+         * <p>Token信息。</p>
          * 
          * <strong>example:</strong>
          * <p>eyJhbGci***</p>

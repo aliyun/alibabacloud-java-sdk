@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListClusterKubeconfigStatesRequest extends TeaModel {
     /**
-     * <p>Whether to query the KubeConfig list of service roles for cloud products within the cluster.  </p>
+     * <p>Specifies whether to query the KubeConfig list of cloud service roles in the cluster. Valid values:</p>
      * <ul>
-     * <li>true: Query the KubeConfig list of service roles for cloud products within the cluster.  </li>
-     * <li>false: Query the KubeConfig list of Resource Access Management (RAM) users or roles within the cluster.</li>
+     * <li>true: queries the KubeConfig list of cloud service roles in the cluster.</li>
+     * <li>false: queries the KubeConfig list of Resource Access Management (RAM) users or roles in the cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,10 @@ public class ListClusterKubeconfigStatesRequest extends TeaModel {
     /**
      * <p>The page number.</p>
      * <ul>
-     * <li>Valid values: ≥ 1.</li>
-     * <li>Default value: 1.</li>
+     * <li><p>Valid values: 1 or greater.</p>
+     * </li>
+     * <li><p>Default value: 1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +33,12 @@ public class ListClusterKubeconfigStatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * <ul>
-     * <li>Valid values: 10 to 50.</li>
-     * <li>Default value: 10</li>
+     * <li><p>Valid values: 1 to 50.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

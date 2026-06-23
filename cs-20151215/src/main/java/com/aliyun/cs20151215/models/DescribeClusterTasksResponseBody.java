@@ -23,7 +23,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tasks.</p>
+     * <p>The task array.</p>
      */
     @NameInMap("tasks")
     public java.util.List<DescribeClusterTasksResponseBodyTasks> tasks;
@@ -76,7 +76,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -85,7 +85,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -168,7 +168,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
     public static class DescribeClusterTasksResponseBodyTasks extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-03T10:11:33+08:00</p>
@@ -177,13 +177,13 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The error message.</p>
+         * <p>The node fault error message.</p>
          */
         @NameInMap("error")
         public DescribeClusterTasksResponseBodyTasksError error;
 
         /**
-         * <p>The task state.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The time when the task was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-03T10:12:03.482+08:00</p>

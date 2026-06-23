@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSubaccountK8sClusterUserConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to obtain the kubeconfig file used to connect to the cluster over the internal network. Valid values:</p>
+     * <p>Specifies whether to obtain the internal network connection configuration. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Obtain the kubeconfig file used to connect to the cluster over the internal network.</li>
-     * <li><code>false</code>: Obtain the kubeconfig file used to connect to the cluster over the Internet.</li>
+     * <li><code>true</code>: Obtains only the KubeConfig credentials for internal network connections.</li>
+     * <li><code>false</code>: Obtains only the KubeConfig credentials for public network connections.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -19,10 +19,10 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends TeaModel {
     public Boolean privateIpAddress;
 
     /**
-     * <p>The validity period of the temporary kubeconfig file. Unit: minutes.</p>
-     * <p>Valid values: 15 to 4320 (three days).</p>
+     * <p>The validity period of the temporary KubeConfig. Unit: minutes.</p>
+     * <p>Valid values: [15, 4320], which is up to 3 days.</p>
      * <blockquote>
-     * <p>If you leave this parameter empty, the system sets a longer validity period and returns the value in the expiration parameter of the response.</p>
+     * <p>If this parameter is not set, the system automatically determines a longer validity period. The specific expiration time is indicated by the value of the expiration field in the response.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

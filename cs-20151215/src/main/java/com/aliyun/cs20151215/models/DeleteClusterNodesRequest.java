@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterNodesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all pods from the nodes you want to remove. Valid values:</p>
+     * <p>Whether to automatically drain Pods on the node. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: removes all pods automatically.</li>
-     * <li><code>false</code>: skips removing pods.</li>
+     * <li><code>true</code>: Automatically drain Pods on the node.</li>
+     * <li><code>false</code>: Do not automatically drain Pods on the node.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
+     * <p>Default value: <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,21 +19,22 @@ public class DeleteClusterNodesRequest extends TeaModel {
     public Boolean drainNode;
 
     /**
-     * <p>The list of nodes to remove. You must specify the node names used in the cluster, for example, <code>cn-hangzhou.192.168.xx.xx</code>.</p>
+     * <p>List of nodes to remove. The node names must be the names of the nodes in the cluster, for example: <code>cn-hangzhou.192.168.xx.xx</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
     /**
-     * <p>Specifies whether to release the ECS instances. Valid values:</p>
+     * <p>Whether to simultaneously remove ECS instances. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: releases the ECS instances.</li>
-     * <li><code>false</code>: retains the ECS instances.</li>
+     * <li><code>true</code>: Simultaneously remove ECS instances.</li>
+     * <li><code>false</code>: Retain ECS instances.</li>
      * </ul>
-     * <p>Default value: <code>false</code></p>
-     * <p>**</p>
-     * <p><strong>Notes</strong> Unsupported for subscription ECS instances.</p>
+     * <p>Default value: <code>false</code>.</p>
+     * <blockquote>
+     * <p>Simultaneous removal of ECS instances is not supported when the nodes are subscription instances.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListUserKubeConfigStatesRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * <ul>
-     * <li>Valid values: ≥ 1.</li>
-     * <li>Default value: 1.</li>
+     * <li><p>Valid values: greater than or equal to 1.</p>
+     * </li>
+     * <li><p>Default value: 1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class ListUserKubeConfigStatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of results returned per page.</p>
      * <ul>
-     * <li>Value values: 1 to 100.</li>
-     * <li>Default value: 50.</li>
+     * <li><p>Valid values: 1 to 100.</p>
+     * </li>
+     * <li><p>Default value: 50.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

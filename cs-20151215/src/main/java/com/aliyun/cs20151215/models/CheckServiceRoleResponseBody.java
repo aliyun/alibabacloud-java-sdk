@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckServiceRoleResponseBody extends TeaModel {
     /**
-     * <p>The check results.</p>
+     * <p>The service role check results.</p>
      */
     @NameInMap("roles")
     public java.util.List<CheckServiceRoleResponseBodyRoles> roles;
@@ -25,12 +25,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
 
     public static class CheckServiceRoleResponseBodyRoles extends TeaModel {
         /**
-         * <p>Indicates whether the service role is assigned to ACK.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true: The role is assigned to ACK.</li>
-         * <li>false: The role is not assigned to ACK.</li>
-         * </ul>
+         * <p>Indicates whether the service role has been granted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -39,7 +34,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         public Boolean granted;
 
         /**
-         * <p>The message that is displayed for a role that is not assigned to ACK.</p>
+         * <p>The prompt message returned when the service role is not granted.</p>
          * 
          * <strong>example:</strong>
          * <p>The role does not exist: AliyunCSManagedAutoScalerRole</p>
@@ -48,7 +43,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The name of the service role.</p>
+         * <p>The service role name.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunCSManagedAutoScalerRole</p>

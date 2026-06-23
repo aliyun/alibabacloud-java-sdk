@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContactGroupForAlertResponseBody extends TeaModel {
     /**
-     * <p>The error message returned if the call fails.</p>
+     * <p>The message returned when the operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>contact group illegal.</p>
@@ -14,10 +14,10 @@ public class UpdateContactGroupForAlertResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The update status.</p>
+     * <p>The status of the update result. Valid values:</p>
      * <ul>
-     * <li>true: The update is successful.</li>
-     * <li>false: The update failed.</li>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

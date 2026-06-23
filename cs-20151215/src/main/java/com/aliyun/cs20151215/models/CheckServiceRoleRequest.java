@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckServiceRoleRequest extends TeaModel {
     /**
-     * <p>The list of service roles you want to check.</p>
+     * <p>The list of service roles to check.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("roles")
@@ -26,7 +26,7 @@ public class CheckServiceRoleRequest extends TeaModel {
 
     public static class CheckServiceRoleRequestRoles extends TeaModel {
         /**
-         * <p>The server role name. For more information about the service roles and their permissions in ACK, see <a href="https://help.aliyun.com/document_detail/86483.html">ACK roles</a>.</p>
+         * <p>Container service role name. For information about container service roles and permission scopes included in ACK, see <a href="https://help.aliyun.com/document_detail/86483.html">ACK service roles</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

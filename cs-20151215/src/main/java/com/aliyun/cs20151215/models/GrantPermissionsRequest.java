@@ -25,9 +25,9 @@ public class GrantPermissionsRequest extends TeaModel {
 
     public static class GrantPermissionsRequestBody extends TeaModel {
         /**
-         * <p>The ID of the target cluster.</p>
+         * <p>The ID of the cluster to be authorized.</p>
          * <ul>
-         * <li>If you set the <code>role_type</code> parameter to <code>all-clusters</code>, set this parameter to an empty string.</li>
+         * <li>If the value of the <code>role_type</code> parameter is <code>all-clusters</code>, set this parameter to an empty string.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -38,7 +38,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public String cluster;
 
         /**
-         * <p>Set to true if <code>role_name</code> specifies a custom ClusterRole.</p>
+         * <p>Specifies whether the authorization is a custom authorization, which means <code>role_name</code> uses a custom ClusterRole name.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -47,7 +47,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public Boolean isCustom;
 
         /**
-         * <p>Set to true if you are granting permissions to a RAM role.</p>
+         * <p>Specifies whether the authorization is for a RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -56,7 +56,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public Boolean isRamRole;
 
         /**
-         * <p>The name of the namespace. This parameter is required only when <code>role_type</code> is set to <code>namespace</code>.</p>
+         * <p>The namespace name. This parameter is empty by default for cluster-level authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -65,29 +65,22 @@ public class GrantPermissionsRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the role to grant. Valid values:</p>
+         * <p>The name of the preset role. Valid values:</p>
          * <ul>
-         * <li><p><code>admin</code>: The administrator role.</p>
-         * </li>
-         * <li><p><code>admin-view</code>: The read-only administrator role.</p>
-         * </li>
-         * <li><p><code>ops</code>: The operations role.</p>
-         * </li>
-         * <li><p><code>dev</code>: The developer role.</p>
-         * </li>
-         * <li><p><code>restricted</code>: The restricted role.</p>
-         * </li>
-         * <li><p>The name of a custom ClusterRole.</p>
-         * </li>
+         * <li><code>admin</code>: administrator.</li>
+         * <li><code>admin-view</code>: read-only administrator.</li>
+         * <li><code>ops</code>: O&amp;M engineer.</li>
+         * <li><code>dev</code>: developer.</li>
+         * <li><code>restricted</code>: restricted user.</li>
+         * <li>Custom ClusterRole name.</li>
          * </ul>
          * <blockquote>
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li><p>The <code>admin</code>, <code>admin-view</code>, and <code>ops</code> roles cannot be granted at the namespace scope.</p>
-         * </li>
-         * <li><p>The <code>admin-view</code> role is not currently supported for the all-clusters scope.</p>
-         * </li>
+         * <li><code>admin</code>, <code>admin-view</code>, <code>ops</code>: cannot be granted at the namespace level.</li>
+         * <li><code>admin-view</code>: cannot be granted at the all-clusters level.
+         * .</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -98,14 +91,11 @@ public class GrantPermissionsRequest extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The authorization scope. Valid values:</p>
+         * <p>The authorization type. Valid values:</p>
          * <ul>
-         * <li><p><code>cluster</code>: Grants permissions at the cluster scope.</p>
-         * </li>
-         * <li><p><code>namespace</code>: Grants permissions at the namespace scope.</p>
-         * </li>
-         * <li><p><code>all-clusters</code>: Grants permissions at the all-clusters scope.</p>
-         * </li>
+         * <li><code>cluster</code>: cluster level.</li>
+         * <li><code>namespace</code>: namespace level.</li>
+         * <li><code>all-clusters</code>: all-clusters level.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

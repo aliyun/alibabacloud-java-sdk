@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>162981*****</p>
@@ -14,14 +14,14 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
     public String aliuid;
 
     /**
-     * <p>The control plane components for which log collection is enabled.</p>
+     * <p>The list of components for which control plane logging is enabled.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("components")
     public java.util.List<String> components;
 
     /**
-     * <p>The name of the Simple Log Service project that you want to use to store the logs of control plane components.</p>
+     * <p>The name of the Simple Log Service (SLS) project that stores the control plane component logs.</p>
      * <p>Default value: k8s-log-$Cluster ID.</p>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
     public String logProject;
 
     /**
-     * <p>The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.</p>
-     * <p>Default value: 30.</p>
+     * <p>The data retention period of logs in the SLS Logstore. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

@@ -5,13 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNodesRequest extends TeaModel {
     /**
-     * <p>The IDs of the nodes that you want to query. Separate multiple node IDs with commas (,).</p>
+     * <p>The instance IDs of nodes. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;i-bp11xjhwkj8k966u****,i-bp1dmhc2bu5igkyq****&quot;</p>
      */
     @NameInMap("instanceIds")
     public String instanceIds;
+
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.0.1</p>
+     */
+    @NameInMap("nodeIps")
+    public String nodeIps;
+
+    /**
+     * <strong>example:</strong>
+     * <p>nodeLabels=app=nginx,env=prod</p>
+     */
+    @NameInMap("nodeLabels")
+    public String nodeLabels;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou.192.168.0.1</p>
+     */
+    @NameInMap("nodeNames")
+    public String nodeNames;
 
     /**
      * <p>The node pool ID.</p>
@@ -23,7 +44,7 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current query.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +54,7 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The maximum number of records that can be displayed on each page. Valid values: [1, 100].</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -43,13 +64,13 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The node state that you want to use to filter nodes. Valid values:</p>
+     * <p>The status of cluster nodes. Used to filter by node running status. Valid values:</p>
      * <ul>
-     * <li><code>all</code>: query nodes in the following four states.</li>
-     * <li><code>running</code>: query nodes in the running state.</li>
-     * <li><code>removing</code>: query nodes that are being removed.</li>
-     * <li><code>initial</code>: query nodes that are being initialized.</li>
-     * <li><code>failed</code>: query nodes that fail to be created.</li>
+     * <li><code>all</code>: does not filter by running status. All nodes are returned.</li>
+     * <li><code>running</code>: running nodes.</li>
+     * <li><code>removing</code>: nodes that are being removed.</li>
+     * <li><code>initial</code>: nodes that are being initialized.</li>
+     * <li><code>failed</code>: nodes that failed to be created.</li>
      * </ul>
      * <p>Default value: <code>all</code>.</p>
      * 
@@ -70,6 +91,30 @@ public class DescribeClusterNodesRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public DescribeClusterNodesRequest setNodeIps(String nodeIps) {
+        this.nodeIps = nodeIps;
+        return this;
+    }
+    public String getNodeIps() {
+        return this.nodeIps;
+    }
+
+    public DescribeClusterNodesRequest setNodeLabels(String nodeLabels) {
+        this.nodeLabels = nodeLabels;
+        return this;
+    }
+    public String getNodeLabels() {
+        return this.nodeLabels;
+    }
+
+    public DescribeClusterNodesRequest setNodeNames(String nodeNames) {
+        this.nodeNames = nodeNames;
+        return this;
+    }
+    public String getNodeNames() {
+        return this.nodeNames;
     }
 
     public DescribeClusterNodesRequest setNodepoolId(String nodepoolId) {

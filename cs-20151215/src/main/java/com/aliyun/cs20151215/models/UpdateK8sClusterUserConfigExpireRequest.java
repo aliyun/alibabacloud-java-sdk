@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateK8sClusterUserConfigExpireRequest extends TeaModel {
     /**
-     * <p>Specifies the expiration time of the kubeconfig file. Unit: hours.</p>
-     * <p>Valid values: [1, 1876000]. The maximum value is 100 years.</p>
+     * <p>The custom expiration time. Unit: hours.</p>
+     * <p>Valid values: [1, 876000]. The maximum value is equivalent to 100 years.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends TeaModel {
     public Long expireHour;
 
     /**
-     * <p>The RAM user ID.</p>
+     * <p>The Resource Access Management (RAM) user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

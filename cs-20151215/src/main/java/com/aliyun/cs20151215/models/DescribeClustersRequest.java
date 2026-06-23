@@ -14,7 +14,7 @@ public class DescribeClustersRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The cluster name based on which the system performs fuzzy searches among the clusters that belong to the current Alibaba Cloud account.</p>
+     * <p>Perform a fuzzy match query based on the cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterInspectReportDetailResponseBody extends TeaModel {
     /**
-     * <p>The results.</p>
+     * <p>The list of results.</p>
      */
     @NameInMap("checkItemResults")
     public java.util.List<GetClusterInspectReportDetailResponseBodyCheckItemResults> checkItemResults;
@@ -20,7 +20,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The token that is used to display the returned tags on multiple pages.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>AK8uQQrxgFK8sbARvnCj6w9R3kPme4I3</p>
@@ -29,7 +29,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the inspection report.</p>
+     * <p>The inspection report ID.</p>
      * 
      * <strong>example:</strong>
      * <p>782df89346054a0000562063a****</p>
@@ -56,10 +56,10 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the inspection report. Valid values:</p>
+     * <p>The generation status of the inspection report. Valid values:</p>
      * <ul>
-     * <li>completed: The inspection report is generated.</li>
-     * <li>running: The inspection report is generating.</li>
+     * <li>completed: Completed.</li>
+     * <li>running: In progress.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Overview of inspection reports.</p>
+     * <p>The inspection report summary.</p>
      */
     @NameInMap("summary")
     public GetClusterInspectReportDetailResponseBodySummary summary;
@@ -147,11 +147,11 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         /**
          * <p>The category of the inspection item. Valid values:</p>
          * <ul>
-         * <li>security: Security compliance</li>
-         * <li>performance: Performance efficiency</li>
-         * <li>stability: Business stability</li>
-         * <li>limitation: Service limits</li>
-         * <li>cost: Cost optimization</li>
+         * <li>security: security and compliance</li>
+         * <li>performance: performance and efficiency </li>
+         * <li>stability: business stability</li>
+         * <li>limitation: service limits </li>
+         * <li>cost: cost optimization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public String checkItemUid;
 
         /**
-         * <p>The description of the inspection item.</p>
+         * <p>The description of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>集群API Server负载均衡实例异常会影响集群可用性，请检查负载均衡实例状态是否正常。</p>
@@ -179,7 +179,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The fixing suggestion.</p>
+         * <p>The fix suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>请提交工单处理。</p>
@@ -190,10 +190,10 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         /**
          * <p>The level of the inspection item. Valid values:</p>
          * <ul>
-         * <li>advice: Suggestions</li>
-         * <li>warning: Low severity</li>
-         * <li>error: Medium severity</li>
-         * <li>critical: High severity</li>
+         * <li>advice: suggestion</li>
+         * <li>warning: low-risk</li>
+         * <li>error: medium-risk</li>
+         * <li>critical: high-risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The name of the inspection item.</p>
+         * <p>The name of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>API Server CLB 实例状态异常</p>
@@ -212,11 +212,11 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The inspection results. Valid values:</p>
+         * <p>The check result. Valid values:</p>
          * <ul>
-         * <li>true: The inspection item is abnormal.</li>
-         * <li>false: The inspection item is normal.</li>
-         * <li>disable: The inspection item is not enabled.</li>
+         * <li>true: The check item is abnormal.</li>
+         * <li>false: The check item is normal.</li>
+         * <li>disable: The check item is not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The resource type of the inspection object.</p>
+         * <p>The resource type of the check target.</p>
          * 
          * <strong>example:</strong>
          * <p>CLB</p>
@@ -235,7 +235,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The inspection objects.</p>
+         * <p>The list of check targets.</p>
          */
         @NameInMap("targets")
         public java.util.List<String> targets;
@@ -321,7 +321,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
 
     public static class GetClusterInspectReportDetailResponseBodySummary extends TeaModel {
         /**
-         * <p>The number of check items whose inspection result is advice.</p>
+         * <p>The number of check items with a result of advice.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -330,7 +330,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public Integer adviceCount;
 
         /**
-         * <p>Check the status code of the inspection task.</p>
+         * <p>The status code of the check task result.</p>
          * 
          * <strong>example:</strong>
          * <p>warning</p>
@@ -339,7 +339,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The number of check items whose inspection result is error.</p>
+         * <p>The number of check items with a result of error.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -348,7 +348,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public Integer errorCount;
 
         /**
-         * <p>The number of check items whose inspection result is normal.</p>
+         * <p>The number of check items with a result of normal.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -357,7 +357,7 @@ public class GetClusterInspectReportDetailResponseBody extends TeaModel {
         public Integer normalCount;
 
         /**
-         * <p>The number of check items whose inspection result is warning.</p>
+         * <p>The number of check items with a result of warning.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

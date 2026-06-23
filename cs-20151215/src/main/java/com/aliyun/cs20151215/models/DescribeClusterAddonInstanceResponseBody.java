@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
     /**
-     * <p>The configuration of the component.</p>
+     * <p>The component configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NetworkPolicy&quot;:&quot;true&quot;}</p>
@@ -14,7 +14,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The name of the component.</p>
+     * <p>The component name.</p>
      * 
      * <strong>example:</strong>
      * <p>terway-eniip</p>
@@ -23,15 +23,15 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The status of the component. Valid values:</p>
+     * <p>The component status. Valid values:</p>
      * <ul>
-     * <li>initial: The component is being installed.</li>
-     * <li>active: The component has been installed.</li>
-     * <li>unhealthy: The component is in an abnormal state.</li>
-     * <li>upgrading: The component is undergoing an upgrade.</li>
-     * <li>updating: Component configuration changes are being applied.</li>
-     * <li>deleting: The component is being uninstalled.</li>
-     * <li>deleted: The component has been deleted.</li>
+     * <li>initial: installing</li>
+     * <li>active: installed</li>
+     * <li>unhealthy: abnormal</li>
+     * <li>upgrading: upgrading</li>
+     * <li>updating: updating</li>
+     * <li>deleting: uninstalling</li>
+     * <li>deleted: deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The version of the component.</p>
+     * <p>The component version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1.4.3</p>

@@ -11,25 +11,25 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public ContainerdConfig containerdConfig;
 
     /**
-     * <p>The kubelet configurations.</p>
+     * <p>The kubelet parameter configuration.</p>
      */
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
 
     /**
-     * <p>List of nodes to upgrade.</p>
+     * <p>The list of specified nodes to upgrade.</p>
      */
     @NameInMap("node_names")
     public java.util.List<String> nodeNames;
 
     /**
-     * <p>The OS configuration.</p>
+     * <p>The operating system parameter configuration.</p>
      */
     @NameInMap("os_config")
     public ModifyNodePoolNodeConfigRequestOsConfig osConfig;
 
     /**
-     * <p>The rolling policy configuration.</p>
+     * <p>The rolling update configuration.</p>
      */
     @NameInMap("rolling_policy")
     public ModifyNodePoolNodeConfigRequestRollingPolicy rollingPolicy;
@@ -81,13 +81,13 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
 
     public static class ModifyNodePoolNodeConfigRequestOsConfig extends TeaModel {
         /**
-         * <p>Hugepage configuration.</p>
+         * <p>The Hugepage configuration.</p>
          */
         @NameInMap("hugepage")
         public Hugepage hugepage;
 
         /**
-         * <p>The sysctl configuration.</p>
+         * <p>The custom sysctl parameter configuration.</p>
          */
         @NameInMap("sysctl")
         public java.util.Map<String, ?> sysctl;
@@ -117,7 +117,9 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
 
     public static class ModifyNodePoolNodeConfigRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The maximum number of unavailable nodes.</p>
+         * <p>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</p>
+         * <p>Valid values: [1,10].</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

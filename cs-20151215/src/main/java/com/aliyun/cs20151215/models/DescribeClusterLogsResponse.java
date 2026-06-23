@@ -44,7 +44,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
 
     public static class DescribeClusterLogsResponseBody extends TeaModel {
         /**
-         * <p>The ID of the log entry.</p>
+         * <p>日志ID。</p>
          * 
          * <strong>example:</strong>
          * <p>73117232145******</p>
@@ -53,7 +53,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
         public Long ID;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>集群ID。</p>
          * 
          * <strong>example:</strong>
          * <p>c23421cfa74454bc8b37163fd19af***</p>
@@ -62,7 +62,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The log content.</p>
+         * <p>日志内容。</p>
          * 
          * <strong>example:</strong>
          * <p>start to update cluster status to CREATE_COMPLETE</p>
@@ -71,7 +71,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
         public String clusterLog;
 
         /**
-         * <p>The time when the log entry was generated.</p>
+         * <p>日志产生时间。</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-10T17:54:26+08:00</p>
@@ -80,7 +80,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
         public String created;
 
         /**
-         * <p>The time when the log entry was updated.</p>
+         * <p>日志更新时间。</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-10T17:54:26+08:00</p>

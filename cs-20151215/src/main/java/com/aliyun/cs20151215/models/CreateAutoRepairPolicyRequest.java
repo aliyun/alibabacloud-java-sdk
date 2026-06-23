@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAutoRepairPolicyRequest extends TeaModel {
     /**
-     * <p>The name of the auto repair policy.</p>
+     * <p>The name of the self-healing rule.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The resource subtype to which the auto repair policy applies.</p>
+     * <p>The resource subtype that the self-healing rule can be bound to.</p>
      * 
      * <strong>example:</strong>
      * <p>ess</p>
@@ -23,7 +23,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
     public String resourceSubType;
 
     /**
-     * <p>The resource type to which the auto repair policy applies.</p>
+     * <p>The resource type that the self-healing rule can be bound to.</p>
      * 
      * <strong>example:</strong>
      * <p>nodepool</p>
@@ -32,7 +32,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The sub-rules for the auto repair policy.</p>
+     * <p>The list of self-healing sub-rules.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;np-xxx&quot;]</p>
@@ -79,7 +79,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
 
     public static class CreateAutoRepairPolicyRequestRulesIncidents extends TeaModel {
         /**
-         * <p>The incident name.</p>
+         * <p>The name of the fault.</p>
          * 
          * <strong>example:</strong>
          * <p>Node.FaultNeedReboot.HOST</p>
@@ -88,7 +88,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The incident type.</p>
+         * <p>The type of the fault.</p>
          * 
          * <strong>example:</strong>
          * <p>system</p>
@@ -121,7 +121,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
 
     public static class CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s.aliyun.com/incident</p>
@@ -130,7 +130,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The label value.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>approved</p>
@@ -163,7 +163,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
 
     public static class CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s.aliyun.com/incident</p>
@@ -172,7 +172,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The label value.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>inquiring</p>
@@ -205,7 +205,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
 
     public static class CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention extends TeaModel {
         /**
-         * <p>The label that grants authorization for the repair step. To approve the step, add this label to the node. After the action is complete, ACK automatically removes both the inquiry and approval labels for this step. If this label is not added promptly, the repair procedure halts and the node remains impaired.</p>
+         * <p>The label configuration for authorization confirmation. When you add the following label to the node, you authorize ACK to execute the action in this stage. After completing the action in this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels for this stage. If you do not add the following label to authorize the action promptly, ACK does not execute the action in this stage or subsequent actions, and the node may remain in a damaged state.</p>
          */
         @NameInMap("approved_label")
         public CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel approvedLabel;
@@ -220,13 +220,13 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The label used to request authorization for the repair step. When this step begins, ACK applies this label to the node and waits for approval before performing the action.</p>
+         * <p>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following label to your node and waits for you to authorize the execution of the action in this stage.</p>
          */
         @NameInMap("inquiring_label")
         public CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel inquiringLabel;
 
         /**
-         * <p>The manual approval type.</p>
+         * <p>The type of manual approval.</p>
          * 
          * <strong>example:</strong>
          * <p>label</p>
@@ -275,19 +275,19 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
 
     public static class CreateAutoRepairPolicyRequestRulesRepairProcedure extends TeaModel {
         /**
-         * <p>Configuration parameters for the repair step.</p>
+         * <p>The configuration parameters of the repair procedure.</p>
          */
         @NameInMap("config")
         public java.util.Map<String, ?> config;
 
         /**
-         * <p>Settings for manual intervention.</p>
+         * <p>The configuration for manual intervention in the procedure.</p>
          */
         @NameInMap("intervention")
         public CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention intervention;
 
         /**
-         * <p>The name of the repair step.</p>
+         * <p>The name of the procedure.</p>
          * 
          * <strong>example:</strong>
          * <p>Drain</p>
@@ -328,7 +328,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
 
     public static class CreateAutoRepairPolicyRequestRules extends TeaModel {
         /**
-         * <p>The incidents that the rule detects.</p>
+         * <p>The list of identified faults.</p>
          */
         @NameInMap("incidents")
         public java.util.List<CreateAutoRepairPolicyRequestRulesIncidents> incidents;

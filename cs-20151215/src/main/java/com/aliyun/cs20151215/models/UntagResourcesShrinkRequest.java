@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all custom labels. This parameter takes effect only when <code>tag_keys</code> is left empty. Valid values:</p>
+     * <p>Specifies whether to delete all custom tags. This parameter takes effect only when <code>tag_keys</code> is empty. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Remove all custom labels.</li>
-     * <li><code>false</code>: Do not remove all custom labels.</li>
+     * <li><code>true</code>: Delete all tags.</li>
+     * <li><code>false</code>: Do not delete all tags.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The region ID of the resources.</p>
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,14 +28,15 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resource IDs.</p>
+     * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resource_ids")
     public String resourceIdsShrink;
 
     /**
-     * <p>The type of resource. Set the value to <code>CLUSTER</code>.</p>
+     * <p>The resource type.</p>
+     * <p>CLUSTER: cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +46,7 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of keys of the labels that you want to remove.</p>
+     * <p>The list of tag keys for the resource. You can specify up to 20 tag keys.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("tag_keys")

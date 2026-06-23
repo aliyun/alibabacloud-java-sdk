@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</p>
+     * <p>Specifies whether to enable deletion protection for the resource. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enables deletion protection. After deletion protection is enabled, you must manually disable deletion protection before you can delete the specified resource.</p>
+     * </li>
+     * <li><p>false: Disables deletion protection.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +21,8 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The namespace to which the resource belongs.</p>
+     * <p>The namespace of the resource.</p>
+     * <p>Default value: default.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -26,7 +34,13 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.</p>
+     * <p>The type of resource to update. Valid values:</p>
+     * <ul>
+     * <li><p>namespaces: namespace.</p>
+     * </li>
+     * <li><p>services: service.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>services</p>
@@ -35,7 +49,7 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The resources list.</p>
+     * <p>The list of target resources.</p>
      */
     @NameInMap("resources")
     public java.util.List<String> resources;

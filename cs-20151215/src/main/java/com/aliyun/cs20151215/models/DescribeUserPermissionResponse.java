@@ -44,11 +44,11 @@ public class DescribeUserPermissionResponse extends TeaModel {
 
     public static class DescribeUserPermissionResponseBody extends TeaModel {
         /**
-         * <p>The authorization setting. Valid values:</p>
+         * <p>集群访问配置，格式为：</p>
          * <ul>
-         * <li><code>{cluster_id}</code> is returned if the permissions are scoped to a cluster.</li>
-         * <li><code>{cluster_id}/{namespace}</code> is returned if the permissions are scoped to a namespace of a cluster.</li>
-         * <li><code>all-clusters</code> is returned if the permissions are scoped to all clusters.</li>
+         * <li>当是集群维度授权时，格式为：<code>{cluster_id}</code>。</li>
+         * <li>当是命名空间维度授权时，格式为：<code>{cluster_id}/{namespace}</code>。</li>
+         * <li>当是所有集群授权时，值固定为：<code>all-clusters</code>。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -58,11 +58,11 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The authorization type. Valid values:</p>
+         * <p>授权类型，取值：</p>
          * <ul>
-         * <li><code>cluster</code>: indicates that the permissions are scoped to a cluster.</li>
-         * <li><code>namespace</code>: indicates that the permissions are scoped to a namespace of a cluster.</li>
-         * <li><code>console</code>: indicates that the permissions are scoped to all clusters.</li>
+         * <li><code>cluster</code>：集群维度。</li>
+         * <li><code>namespace</code>：命名空间维度。</li>
+         * <li><code>console</code>：所有集群维度的授权。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.</p>
+         * <p>自定义角色名称，当授权自定义角色时，该字段为指定的自定义集群管理角色名称。</p>
          * 
          * <strong>example:</strong>
          * <p>terway-pod-reader</p>
@@ -81,13 +81,13 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The type of predefined role. Valid values:</p>
+         * <p>预置的角色类型，取值：</p>
          * <ul>
-         * <li><code>admin</code>: administrator</li>
-         * <li><code>ops</code>: O\&amp;M engineer</li>
-         * <li><code>dev</code>: developer</li>
-         * <li><code>restricted</code>: restricted user</li>
-         * <li><code>custom</code>: custom role</li>
+         * <li><code>admin</code>：管理员。</li>
+         * <li><code>ops</code>：运维人员。</li>
+         * <li><code>dev</code>：开发人员。</li>
+         * <li><code>restricted</code>：受限用户。</li>
+         * <li><code>custom</code>：使用自定义的集群管理角色。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,10 +97,10 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public String roleType;
 
         /**
-         * <p>Indicates whether the permissions are granted to the cluster owner.</p>
+         * <p>是否为集群创建者的授权，取值：</p>
          * <ul>
-         * <li><code>0</code>: indicates that the permissions are not granted to the cluster owner.</li>
-         * <li><code>1</code>: indicates that the permissions are granted to the cluster owner. The cluster owner is the administrator.</li>
+         * <li><code>0</code>：代表不是集群创建者的授权记录。</li>
+         * <li><code>1</code>：代表该授权记录为集群创建者的管理员权限。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,10 +110,10 @@ public class DescribeUserPermissionResponse extends TeaModel {
         public Long isOwner;
 
         /**
-         * <p>Indicates whether the permissions are granted to the RAM role. Valid values:</p>
+         * <p>是否为RAM角色授权，取值：</p>
          * <ul>
-         * <li><code>0</code>: indicates that the permissions are not granted to the RAM role.</li>
-         * <li><code>1</code>: indicates that the permissions are granted to the RAM role.</li>
+         * <li><code>0</code>：代表当前记录不是RAM角色授权。</li>
+         * <li><code>1</code>：代表当前记录是RAM角色授权。</li>
          * </ul>
          * 
          * <strong>example:</strong>

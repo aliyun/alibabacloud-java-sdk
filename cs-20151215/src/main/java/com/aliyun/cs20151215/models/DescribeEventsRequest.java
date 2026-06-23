@@ -14,7 +14,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The maximum number of results to return.</p>
+     * <p>The maximum number of results returned per request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned by the previous API call.</p>
+     * <p>The query token. Set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>5c0a1c0f91c14c6****</p>
@@ -32,7 +32,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number for the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,9 +41,9 @@ public class DescribeEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>The maximum number of results to return per page.</p>
      * <p>Valid values: [1,100].</p>
-     * <p>Default: 50.</p>
+     * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -52,40 +52,24 @@ public class DescribeEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The event type. If you do not specify this parameter, events of all types are returned. Valid values:</p>
+     * <p>The event type. If you do not set this parameter, all types of events are queried. Valid values:</p>
      * <ul>
-     * <li><p><code>cluster_create</code>: Create a cluster.</p>
-     * </li>
-     * <li><p><code>cluster_scaleout</code>: Scale out a cluster.</p>
-     * </li>
-     * <li><p><code>cluster_attach</code>: Attach an existing node.</p>
-     * </li>
-     * <li><p><code>cluster_delete</code>: Delete a cluster.</p>
-     * </li>
-     * <li><p><code>cluster_upgrade</code>: Upgrade a cluster.</p>
-     * </li>
-     * <li><p><code>cluster_migrate</code>: Migrate a cluster.</p>
-     * </li>
-     * <li><p><code>cluster_node_delete</code>: Remove a node.</p>
-     * </li>
-     * <li><p><code>cluster_node_drain</code>: Drain a node.</p>
-     * </li>
-     * <li><p><code>cluster_modify</code>: Modify a cluster.</p>
-     * </li>
-     * <li><p><code>cluster_configuration_modify</code>: Modify the control plane configuration of a cluster.</p>
-     * </li>
-     * <li><p><code>cluster_addon_install</code>: Install an add-on.</p>
-     * </li>
-     * <li><p><code>cluster_addon_upgrade</code>: Upgrade an add-on.</p>
-     * </li>
-     * <li><p><code>cluster_addon_uninstall</code>: Uninstall an add-on.</p>
-     * </li>
-     * <li><p><code>runtime_upgrade</code>: Upgrade the runtime.</p>
-     * </li>
-     * <li><p><code>nodepool_upgrade</code>: Upgrade a node pool.</p>
-     * </li>
-     * <li><p><code>nodepool_update</code>: Update a node pool.</p>
-     * </li>
+     * <li><code>cluster_create</code>: creates a cluster.</li>
+     * <li><code>cluster_scaleout</code>: scales out a cluster.</li>
+     * <li><code>cluster_attach</code>: adds existing nodes.</li>
+     * <li><code>cluster_delete</code>: deletes a cluster.</li>
+     * <li><code>cluster_upgrade</code>: upgrades a cluster.</li>
+     * <li><code>cluster_migrate</code>: migrates a cluster.</li>
+     * <li><code>cluster_node_delete</code>: removes nodes.</li>
+     * <li><code>cluster_node_drain</code>: drains nodes.</li>
+     * <li><code>cluster_modify</code>: modifies a cluster.</li>
+     * <li><code>cluster_configuration_modify</code>: modifies cluster management configurations.</li>
+     * <li><code>cluster_addon_install</code>: installs a component.</li>
+     * <li><code>cluster_addon_upgrade</code>: upgrades a component.</li>
+     * <li><code>cluster_addon_uninstall</code>: uninstalls a component.</li>
+     * <li><code>runtime_upgrade</code>: upgrades the runtime.</li>
+     * <li><code>nodepool_upgrade</code>: upgrades a node pool.</li>
+     * <li><code>nodepool_update</code>: updates a node pool.</li>
      * </ul>
      * 
      * <strong>example:</strong>

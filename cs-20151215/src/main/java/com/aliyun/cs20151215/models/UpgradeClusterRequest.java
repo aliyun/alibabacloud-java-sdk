@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated. No need to pass values.</p>
+     * <p>[This parameter is deprecated] No value is required.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -15,10 +15,10 @@ public class UpgradeClusterRequest extends TeaModel {
     public String componentName;
 
     /**
-     * <p>Specifies whether to upgrade only master nodes. Valid values:</p>
+     * <p>Specifies whether to upgrade only the control plane. Valid values:</p>
      * <ul>
-     * <li>true: upgrades master nodes only.</li>
-     * <li>false: upgrades both master and worker nodes.</li>
+     * <li>true: upgrades only the control plane.</li>
+     * <li>false: upgrades both the control plane and worker nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public Boolean masterOnly;
 
     /**
-     * <p>The target Kubernetes version for cluster upgrade.</p>
+     * <p>The target version to which the cluster is upgraded.</p>
      * 
      * <strong>example:</strong>
      * <p>1.32.1-aliyun.1</p>
@@ -37,14 +37,14 @@ public class UpgradeClusterRequest extends TeaModel {
     public String nextVersion;
 
     /**
-     * <p>The rolling update configuration.</p>
+     * <p>The rolling upgrade configuration.</p>
      */
     @NameInMap("rolling_policy")
     @Deprecated
     public UpgradeClusterRequestRollingPolicy rollingPolicy;
 
     /**
-     * <p>This parameter is deprecated. Use next_version to specify the upgrade target Kubernetes version.</p>
+     * <p>[This parameter is deprecated] Use the <code>next_version</code> parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -103,7 +103,8 @@ public class UpgradeClusterRequest extends TeaModel {
 
     public static class UpgradeClusterRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The maximum number of nodes concurrently upgraded per batch.</p>
+         * <p>The maximum number of worker nodes that can be upgraded in parallel per batch.</p>
+         * <p>During the worker node upgrade, nodes are upgraded in batches based on the specified maximum parallelism. The number of nodes upgraded in each batch increases as follows: 1, 2, 4, 8, and so on until the maximum parallelism is reached. After the maximum parallelism is reached, each subsequent batch upgrades the maximum number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

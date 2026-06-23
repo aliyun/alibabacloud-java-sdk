@@ -14,7 +14,7 @@ public class ListOperationPlansRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The operation plan type.</p>
+     * <p>The execution plan type.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster_upgrade</p>

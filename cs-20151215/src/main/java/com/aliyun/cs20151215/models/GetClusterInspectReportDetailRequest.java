@@ -7,11 +7,11 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     /**
      * <p>The category of the inspection item. Valid values:</p>
      * <ul>
-     * <li>security: Security compliance</li>
-     * <li>performance: Performance efficiency</li>
-     * <li>stability: Business stability</li>
-     * <li>limitation: Service limits</li>
-     * <li>cost: Cost optimization</li>
+     * <li>security: security and compliance</li>
+     * <li>performance: performance and efficiency </li>
+     * <li>stability: business stability</li>
+     * <li>limitation: service limits </li>
+     * <li>cost: cost optimization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>Inspection results filtering. If this parameter is set to true, only abnormal inspection items are returned.</p>
+     * <p>Specifies whether to filter check items. If set to true, only abnormal check items with result=true are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -30,10 +30,10 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     public Boolean enableFilter;
 
     /**
-     * <p>The query language.</p>
+     * <p>The query language. Valid values:</p>
      * <ul>
      * <li>zh_CN</li>
-     * <li>en_US</li>
+     * <li>en_US.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,10 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     /**
      * <p>The level of the inspection item. Valid values:</p>
      * <ul>
-     * <li>advice: Suggestions</li>
-     * <li>warning: Low severity</li>
-     * <li>error: Medium severity</li>
-     * <li>critical: High severity</li>
+     * <li>advice: suggestion</li>
+     * <li>warning: low-risk</li>
+     * <li>error: medium-risk</li>
+     * <li>critical: high-risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to display the returned tags on multiple pages.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>bb41e2bcb47b747389dce6c0d2</p>
@@ -76,7 +76,7 @@ public class GetClusterInspectReportDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The type of the inspection object. Only items that meet the targetType parameter are returned.</p>
+     * <p>The object type of the inspection target. Only check items that match the specified targetType are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>NodePool</p>

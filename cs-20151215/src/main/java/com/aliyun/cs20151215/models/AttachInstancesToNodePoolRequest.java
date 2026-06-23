@@ -5,20 +5,22 @@ import com.aliyun.tea.*;
 
 public class AttachInstancesToNodePoolRequest extends TeaModel {
     /**
-     * <p>Specifies whether to store container data and images on data disks. Valid values:</p>
+     * <p>Specifies whether to store container data and images on a data cloud disk. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: stores container data and images on data disks.</li>
-     * <li><code>false</code>: does not store container data or images on data disks.</li>
+     * <li><p><code>true</code>: Stores container data and images on a data cloud disk.</p>
+     * </li>
+     * <li><p><code>false</code>: Does not store container data and images on a data cloud disk.</p>
+     * </li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
-     * <p>How to mount a data disk:</p>
+     * <p>Data cloud disk mounting rules:</p>
      * <ul>
-     * <li>If the ECS instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.</li>
-     * <li>If no data disk is attached to the ECS instances, the system does not purchase a new data disk.</li>
-     * </ul>
-     * <blockquote>
-     * <p>If you choose to store container data and images on a data disk and the data disk is already mounted to the ECS instance, the existing data on the data disk will be cleared. You can back up the disk to avoid data loss.</p>
+     * <li>If the ECS instance has data cloud disks attached and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk as EXT4 to store /var/lib/docker and /var/lib/kubelet.</li>
+     * <li>If the ECS instance has no data cloud disks attached, no new data cloud disk is mounted.<blockquote>
+     * <p>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, existing data on the data cloud disk is lost. Back up your data in advance.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,16 +29,18 @@ public class AttachInstancesToNodePoolRequest extends TeaModel {
     public Boolean formatDisk;
 
     /**
-     * <p>The IDs of the instances to be added.</p>
+     * <p>The list of ECS instances to be added.</p>
      */
     @NameInMap("instances")
     public java.util.List<String> instances;
 
     /**
-     * <p>Specifies whether to retain the instance name. Valid values:</p>
+     * <p>Specifies whether to retain the original instance name. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: retains the instance name.</li>
-     * <li><code>false</code>: does not retain the instance name.</li>
+     * <li><p><code>true</code>: Retains the instance name.</p>
+     * </li>
+     * <li><p><code>false</code>: Does not retain the instance name.</p>
+     * </li>
      * </ul>
      * <p>Default value: <code>true</code>.</p>
      * 
@@ -47,7 +51,7 @@ public class AttachInstancesToNodePoolRequest extends TeaModel {
     public Boolean keepInstanceName;
 
     /**
-     * <p>The SSH password that is used to log on to the instance.</p>
+     * <p>The SSH logon password of the instances to be added.</p>
      * 
      * <strong>example:</strong>
      * <hr>

@@ -11,7 +11,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
     public ListClusterKubeconfigStatesResponseBodyPage page;
 
     /**
-     * <p>The status list of the kubeconfig files associated with the cluster.</p>
+     * <p>The list of KubeConfig states associated with the cluster.</p>
      */
     @NameInMap("states")
     public java.util.List<ListClusterKubeconfigStatesResponseBodyStates> states;
@@ -48,7 +48,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -57,7 +57,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -98,17 +98,17 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
 
     public static class ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles extends TeaModel {
         /**
-         * <p>Indicates whether the content matches the default cluster role template.  </p>
+         * <p>Indicates whether the content matches the default cluster role template. Valid values:</p>
          * <ul>
-         * <li>true: Matches  </li>
-         * <li>false: Does not match</li>
+         * <li>true: The content matches the default template.</li>
+         * <li>false: The content does not match the default template.</li>
          * </ul>
          */
         @NameInMap("is_default_template")
         public Boolean isDefaultTemplate;
 
         /**
-         * <p>Name of the cluster role associated with the cluster cloud product service role.</p>
+         * <p>The name of the cluster role associated with the cloud service role.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster-admin</p>
@@ -117,7 +117,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>Namespace of the cluster role associated with the cluster cloud product service role.</p>
+         * <p>The namespace of the cluster role associated with the cloud service role.</p>
          * 
          * <strong>example:</strong>
          * <p>kube-system</p>
@@ -126,7 +126,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String roleNamespace;
 
         /**
-         * <p>The type of the cluster role associated with the cloud service role of the cluster.</p>
+         * <p>The type of the cluster role associated with the cloud service role.</p>
          * 
          * <strong>example:</strong>
          * <p>ClusterRole</p>
@@ -175,7 +175,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
 
     public static class ListClusterKubeconfigStatesResponseBodyStates extends TeaModel {
         /**
-         * <p>The displayed name or role name of the RAM user.</p>
+         * <p>The display name of the Resource Access Management (RAM) user or the role name.</p>
          * 
          * <strong>example:</strong>
          * <p>tom</p>
@@ -184,7 +184,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountDisplayName;
 
         /**
-         * <p>The ID of an Alibaba Cloud account, RAM user, or RAM role.</p>
+         * <p>The Alibaba Cloud account, Resource Access Management (RAM) user, or role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>22855*****************</p>
@@ -193,7 +193,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The logon name or role name of the RAM user.</p>
+         * <p>The logon name of the Resource Access Management (RAM) user or the role name.</p>
          * 
          * <strong>example:</strong>
          * <p>tom</p>
@@ -202,11 +202,14 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The status of the account.</p>
+         * <p>The account status. Valid values:</p>
          * <ul>
-         * <li>Active: The account is active.</li>
-         * <li>InActive: The account is locked.</li>
-         * <li>Deleted: The account is deleted.</li>
+         * <li><p>Active: The account is active.</p>
+         * </li>
+         * <li><p>InActive: The account is frozen.</p>
+         * </li>
+         * <li><p>Deleted: The account is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,10 +219,10 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountState;
 
         /**
-         * <p>The type of the account.</p>
+         * <p>The account type. Valid values:</p>
          * <ul>
          * <li>RootAccount: Alibaba Cloud account.</li>
-         * <li>RamUser: RAM user.</li>
+         * <li>RamUser: Resource Access Management (RAM) user.</li>
          * <li>RamRole: RAM role.</li>
          * </ul>
          * 
@@ -230,7 +233,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The expiration time of the client certificate for the kubeconfig file.</p>
+         * <p>The expiration time of the KubeConfig client certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2027-07-15T01:32:20Z</p>
@@ -239,11 +242,14 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String certExpireTime;
 
         /**
-         * <p>The status of the client certificate for the kubeconfig file.</p>
+         * <p>The status of the KubeConfig client certificate. Valid values:</p>
          * <ul>
-         * <li>Unexpired: The certificate is not expired.</li>
-         * <li>Expired: The certificate is expired.</li>
-         * <li>Unknown: The status of the certificate is unknown.</li>
+         * <li><p>Unexpired: The certificate has not expired.</p>
+         * </li>
+         * <li><p>Expired: The certificate has expired.</p>
+         * </li>
+         * <li><p>Unknown: The certificate status is unknown (abnormal state).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +259,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String certState;
 
         /**
-         * <p>Cloud service name.</p>
+         * <p>The name of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>cs/ecs/sls</p>
@@ -262,13 +268,13 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String cloudServiceName;
 
         /**
-         * <p>List of cluster roles associated with the cluster cloud product service roles.</p>
+         * <p>The list of cluster roles associated with the cloud service role.</p>
          */
         @NameInMap("cloud_service_roles")
         public java.util.List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> cloudServiceRoles;
 
         /**
-         * <p>Indicates whether the client certificate for the kubeconfig file can be revoked.</p>
+         * <p>Indicates whether the KubeConfig client certificate can be revoked.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

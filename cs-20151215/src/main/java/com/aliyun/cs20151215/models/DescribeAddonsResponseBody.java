@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonsResponseBody extends TeaModel {
     /**
-     * <p>The list of the returned components.</p>
+     * <p>The list of component groups.</p>
      */
     @NameInMap("ComponentGroups")
     public java.util.List<DescribeAddonsResponseBodyComponentGroups> componentGroups;
 
     /**
-     * <p>Standard components.</p>
+     * <p>The standard components.</p>
      */
     @NameInMap("StandardComponents")
     public java.util.Map<String, StandardComponentsValue> standardComponents;
@@ -39,7 +39,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
 
     public static class DescribeAddonsResponseBodyComponentGroupsItems extends TeaModel {
         /**
-         * <p>The name of the component.</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>flexvolume</p>
@@ -73,7 +73,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The names of the components in the component group.</p>
+         * <p>The component names included in this group.</p>
          */
         @NameInMap("items")
         public java.util.List<DescribeAddonsResponseBodyComponentGroupsItems> items;

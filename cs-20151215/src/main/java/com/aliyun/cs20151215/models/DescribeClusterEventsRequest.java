@@ -20,8 +20,8 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The maximum number of results to return per page.</p>
+     * <p>Valid values: [1,100].</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The task ID. If specified, only events associated with this task are returned.</p>
+     * <p>The ID of the task to query.</p>
      * 
      * <strong>example:</strong>
      * <p>T-6823f946ffadbb0106****</p>

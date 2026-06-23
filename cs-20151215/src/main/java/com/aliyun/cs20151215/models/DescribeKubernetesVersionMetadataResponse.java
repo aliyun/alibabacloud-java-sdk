@@ -44,7 +44,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
 
     public static class DescribeKubernetesVersionMetadataResponseBodyImages extends TeaModel {
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20241218.vhd</p>
@@ -62,7 +62,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The OS platform. You can obtain the terminal ID by calling one of the following operations:</p>
+         * <p>The operating system platform. Valid values:</p>
          * <ul>
          * <li><code>AliyunLinux</code></li>
          * <li><code>CentOS</code></li>
@@ -77,7 +77,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String platform;
 
         /**
-         * <p>The version of the image.</p>
+         * <p>The image version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.2104</p>
@@ -86,7 +86,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String osVersion;
 
         /**
-         * <p>The type of operating system distribution that you want to use. We recommend that you use this parameter to specify the node operating system. You can obtain the terminal ID by calling one of the following operations:</p>
+         * <p>The type of the operating system distribution. We recommend that you use this field to specify the node operating system. Valid values:</p>
          * <ul>
          * <li><code>CentOS</code></li>
          * <li><code>AliyunLinux</code></li>
@@ -106,7 +106,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The type of OS. Examples:</p>
+         * <p>The operating system type. Examples:</p>
          * <ul>
          * <li><code>Windows</code></li>
          * <li><code>Linux</code></li>
@@ -119,12 +119,12 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String osType;
 
         /**
-         * <p>The type of image. Valid values:</p>
+         * <p>The image category. Partial valid values:</p>
          * <ul>
-         * <li><code>system</code>: public image</li>
-         * <li><code>self</code>: custom image</li>
-         * <li><code>others</code>: shared image from other Alibaba Cloud accounts</li>
-         * <li><code>marketplace</code>: image from the marketplace</li>
+         * <li><code>system</code>: public image.</li>
+         * <li><code>self</code>: custom image.</li>
+         * <li><code>others</code>: shared image from other users.</li>
+         * <li><code>marketplace</code>: Alibaba Cloud Marketplace image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageCategory;
 
         /**
-         * <p>The architecture of the image.</p>
+         * <p>The image architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>x86_64</p>
@@ -215,7 +215,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
 
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
         /**
-         * <p>Features of the queried Kubernetes version.</p>
+         * <p>The feature capabilities of the Kubernetes version.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -227,7 +227,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.Map<String, ?> capabilities;
 
         /**
-         * <p>The OS images that are returned.</p>
+         * <p>The list of system images.</p>
          */
         @NameInMap("images")
         public java.util.List<DescribeKubernetesVersionMetadataResponseBodyImages> images;
@@ -252,7 +252,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.List<Runtime> runtimes;
 
         /**
-         * <p>The Kubernetes version supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+         * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.31.1-aliyun.1</p>
@@ -279,7 +279,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String expirationDate;
 
         /**
-         * <p>Indicates whether you can create clusters that run the Kubernetes version.</p>
+         * <p>Indicates whether the Kubernetes version can be used to create clusters.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -288,7 +288,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public Boolean creatable;
 
         /**
-         * <p>The list of available Kubernetes versions for updates.</p>
+         * <p>The list of upgradable versions.</p>
          */
         @NameInMap("upgradable_versions")
         public java.util.List<String> upgradableVersions;

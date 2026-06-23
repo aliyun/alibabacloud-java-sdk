@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuotasValue extends TeaModel {
     /**
-     * <p>The value of the quota. If the quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+     * <p>The quota value. To request a quota increase beyond the current value, submit a request on the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class OpenAckServiceRequest extends TeaModel {
     /**
-     * <p>The type of service that you want to activate. Valid values:</p>
+     * <p>The type of service to activate. Valid values:</p>
      * <ul>
-     * <li><code>propayasgo</code>: ACK clusters (including ACK managed clusters and ACK dedicated clusters), ACK Serverless clusters, and registered clusters.</li>
-     * <li><code>edgepayasgo</code>: ACK Edge clusters.</li>
+     * <li><code>propayasgo</code>: Container Service for Kubernetes (including ACK managed clusters and ACK dedicated clusters), Container Service Serverless, and registered clusters.</li>
+     * <li><code>edgepayasgo</code>: Container Service Edge.</li>
      * </ul>
      * 
      * <strong>example:</strong>

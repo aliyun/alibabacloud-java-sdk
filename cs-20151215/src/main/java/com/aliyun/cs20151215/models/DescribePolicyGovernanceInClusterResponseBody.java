@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     /**
-     * <p>A summary of policy violations, grouped by severity.</p>
+     * <p>The policy violation information aggregated by severity level.</p>
      */
     @NameInMap("Violation")
     public DescribePolicyGovernanceInClusterResponseBodyViolation violation;
 
     /**
-     * <p>The audit log for policy governance in the cluster.</p>
+     * <p>The policy governance audit logs of the current cluster.</p>
      */
     @NameInMap("admit_log")
     public DescribePolicyGovernanceInClusterResponseBodyAdmitLog admitLog;
 
     /**
-     * <p>The statistics for enabled policies in the cluster, categorized by severity.</p>
+     * <p>The count of enabled policies at different severity levels in the current cluster.</p>
      */
     @NameInMap("on_state")
     public java.util.List<DescribePolicyGovernanceInClusterResponseBodyOnState> onState;
@@ -53,7 +53,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny extends TeaModel {
         /**
-         * <p>The severity level. Valid values: <code>low</code>, <code>medium</code>, and <code>high</code>.</p>
+         * <p>The severity level. Valid values: low, medium, and high.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -95,7 +95,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn extends TeaModel {
         /**
-         * <p>The severity level. Valid values: <code>low</code>, <code>medium</code>, and <code>high</code>.</p>
+         * <p>The summary of severity levels.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -104,7 +104,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The number of violations.</p>
+         * <p>The total number of violations.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -137,13 +137,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations extends TeaModel {
         /**
-         * <p>A summary of deny actions.</p>
+         * <p>The summary of block records.</p>
          */
         @NameInMap("deny")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny> deny;
 
         /**
-         * <p>A summary of warn actions.</p>
+         * <p>The summary of alert records.</p>
          */
         @NameInMap("warn")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn> warn;
@@ -313,13 +313,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationViolations extends TeaModel {
         /**
-         * <p>A summary of deny actions.</p>
+         * <p>The summary of block records.</p>
          */
         @NameInMap("deny")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny> deny;
 
         /**
-         * <p>A summary of warn actions.</p>
+         * <p>The summary of alert information.</p>
          */
         @NameInMap("warn")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn> warn;
@@ -349,13 +349,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolation extends TeaModel {
         /**
-         * <p>A summary of all policy violations.</p>
+         * <p>The summary information.</p>
          */
         @NameInMap("totalViolations")
         public DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations totalViolations;
 
         /**
-         * <p>A summary of violations, grouped by policy name.</p>
+         * <p>The violation records aggregated by policy name.</p>
          */
         @NameInMap("violations")
         public DescribePolicyGovernanceInClusterResponseBodyViolationViolations violations;
@@ -394,12 +394,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The enforcement action of the policy. Valid values:</p>
+         * <p>The action taken by the policy, including alert (warn) and block (deny). Valid values:</p>
          * <ul>
-         * <li><p><code>warn</code>: Logs a warning for the violating request but allows it to proceed.</p>
-         * </li>
-         * <li><p>deny: Deny requests that violate the policy.</p>
-         * </li>
+         * <li>warn: Only alerts on behaviors that violate the policy without actually blocking the request.</li>
+         * <li>deny: Blocks requests that violate the policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -436,7 +434,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String constraintGroup;
 
         /**
-         * <p>The kind of the policy constraint.</p>
+         * <p>The policy name in policy management.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKNamespacesDeleteProtection</p>
@@ -445,7 +443,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String constraintKind;
 
         /**
-         * <p>The name of the policy instance.</p>
+         * <p>The policy instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-delete-protection-jpjwv</p>
@@ -454,7 +452,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String constraintName;
 
         /**
-         * <p>The message generated by the policy enforcement.</p>
+         * <p>The detailed information about the policy action.</p>
          * 
          * <strong>example:</strong>
          * <p>Admission webhook \&quot;validation.gatekeeper.sh\&quot; denied request, Resource Namespace: , Constraint: namespace-delete-protection-jpjwv, Message: not allow to delete protection namespace test.</p>
@@ -463,7 +461,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String eventMsg;
 
         /**
-         * <p>The type of the logged event, such as <code>violation</code>.</p>
+         * <p>The type of event triggered by the policy, such as violation.</p>
          * 
          * <strong>example:</strong>
          * <p>violation</p>
@@ -481,7 +479,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String requestUid;
 
         /**
-         * <p>Information about the user who made the request that violated the policy.</p>
+         * <p>The information about the user whose request violated the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>account id</p>
@@ -490,7 +488,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String requestUserinfo;
 
         /**
-         * <p>The name of the user who made the request that violated the policy.</p>
+         * <p>The name of the user whose request violated the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>account user name</p>
@@ -499,7 +497,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String requestUsername;
 
         /**
-         * <p>The type of the violating resource. For example, if a request to operate on a namespace is denied, the value is <code>Namespace</code>.</p>
+         * <p>The type of resource that violated the policy. For example, if a request to operate on a Namespace is rejected, this field is set to Namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>Namespace</p>
@@ -508,7 +506,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String resourceKind;
 
         /**
-         * <p>The name of the violating resource.</p>
+         * <p>The name of the resource that violated the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -663,7 +661,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The log project that stores policy enforcement information.</p>
+         * <p>The log project that stores policy action information.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-clusterid</p>
@@ -672,7 +670,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String logProject;
 
         /**
-         * <p>The log store that stores policy enforcement information.</p>
+         * <p>The Logstore that stores policy action information.</p>
          * 
          * <strong>example:</strong>
          * <p>policyadmit-clusterid</p>
@@ -687,12 +685,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs> logs;
 
         /**
-         * <p>The status of the query. Valid values:</p>
+         * <p>The status of the query result. Valid values:</p>
          * <ul>
-         * <li><p><code>Complete</code>: All query results are returned.</p>
-         * </li>
-         * <li><p><code>Incomplete</code>: The query returned a partial result set. Send the request again to retrieve the remaining results.</p>
-         * </li>
+         * <li><code>Complete</code>: The query is complete and the returned result is the complete result.</li>
+         * <li><code>Incomplete</code>: The query is complete but the returned result is incomplete. Repeat the request to obtain the complete result.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -759,7 +755,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public Integer enabledCount;
 
         /**
-         * <p>The severity level of the policy.</p>
+         * <p>The policy governance severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -768,7 +764,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The total number of policy types for this severity.</p>
+         * <p>The total number of policy types at this severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

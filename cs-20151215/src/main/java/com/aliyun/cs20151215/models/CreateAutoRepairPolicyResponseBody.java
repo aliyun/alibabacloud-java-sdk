@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAutoRepairPolicyResponseBody extends TeaModel {
     /**
-     * <p>The auto-repair policy ID.</p>
+     * <p>The self-healing rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-xxxxxxx</p>

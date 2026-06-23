@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
     /**
-     * <p>Information about the Helm release instance corresponding to the add-on.</p>
+     * <p>The Helm release instance information of the component.</p>
      */
     @NameInMap("helm_release")
     public ListClusterAddonInstanceResourcesResponseBodyHelmRelease helmRelease;
 
     /**
-     * <p>A list of Kubernetes objects associated with the add-on.</p>
+     * <p>The list of Kubernetes objects contained in the component.</p>
      */
     @NameInMap("kubernetes_objects")
     public java.util.List<ListClusterAddonInstanceResourcesResponseBodyKubernetesObjects> kubernetesObjects;
@@ -39,7 +39,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
 
     public static class ListClusterAddonInstanceResourcesResponseBodyHelmRelease extends TeaModel {
         /**
-         * <p>The name of the Helm chart.</p>
+         * <p>The Helm chart name of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>ack-node-problem-detector</p>
@@ -48,7 +48,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         public String chartName;
 
         /**
-         * <p>The version of the Helm chart.</p>
+         * <p>The Helm chart version of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.28</p>
@@ -57,7 +57,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         public String chartVersion;
 
         /**
-         * <p>The namespace where the Helm release is located.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>kube-system</p>
@@ -124,7 +124,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The Kubernetes API type to which the object belongs.</p>
+         * <p>The Kubernetes API kind of the object.</p>
          * 
          * <strong>example:</strong>
          * <p>ClusterRole</p>
@@ -133,7 +133,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         public String kind;
 
         /**
-         * <p>The name of the Kubernetes object.</p>
+         * <p>The name of the object.</p>
          * 
          * <strong>example:</strong>
          * <p>terway-pod-reader</p>

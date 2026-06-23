@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterRequest extends TeaModel {
     /**
-     * <p>The options for deleting the resources that are associated with the cluster.</p>
+     * <p>The deletion options for cluster-associated resources.</p>
      */
     @NameInMap("delete_options")
     public java.util.List<DeleteClusterRequestDeleteOptions> deleteOptions;
 
     /**
-     * <p>Whether to retain SLB resources. Valid values:</p>
+     * <p>Specifies whether to retain SLB resources. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Retains the SLB resources that are created for the cluster.</p>
-     * </li>
-     * <li><p><code>false</code>: Does not retain the SLB resources that are created for the cluster.</p>
-     * </li>
+     * <li><code>true</code>: retains the created SLB resources.</li>
+     * <li><code>false</code>: does not retain the created SLB resources.</li>
      * </ul>
      * <p>Default value: <code>false</code>.
-     * Use the <code>delete_options</code> parameter to manage <code>SLB</code> resources instead.</p>
+     * Use <code>SLB</code> in <code>delete_options</code> to manage this setting.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -29,12 +27,10 @@ public class DeleteClusterRequest extends TeaModel {
     public Boolean keepSlb;
 
     /**
-     * <p>Whether to retain all associated resources. If you set this parameter to <code>true</code>, the <code>retain_resources</code> parameter is ignored, and all cloud resources that are created with the cluster and can be queried by calling <code>DescribeClusterResources</code> are retained. If you set this parameter to <code>false</code>, note that resources that are configured to be retained by default in the <code>delete_options</code> parameter are still retained. To delete these resources, you must explicitly set the <code>delete_mode</code> parameter to <code>delete</code> for them in <code>delete_options</code>.</p>
+     * <p>Specifies whether to retain all resources. If this parameter is set to <code>true</code>, <code>retain_resources</code> is ignored, and cloud resources created through the cluster that are queried by the <code>DescribeClusterResources</code> operation are retained. If this parameter is set to <code>false</code>, resources that are retained by default in <code>delete_options</code> are still retained. To delete these resources, set <code>delete_mode</code> to <code>delete</code> in <code>delete_options</code>.</p>
      * <ul>
-     * <li><p><code>true</code>: Retains all associated cloud resources that are created with the cluster.</p>
-     * </li>
-     * <li><p><code>false</code>: Does not retain all associated cloud resources. Resources that are configured to be retained by default in the <code>delete_options</code> parameter, such as <code>ALB</code>, are still retained when this parameter is set to <code>false</code>.</p>
-     * </li>
+     * <li><code>true</code>: retains all resources, including all cloud resources created through the cluster.</li>
+     * <li><code>false</code>: does not retain all resources, except resources defined as retained by default in <code>delete_options</code>. For example, <code>ALB</code> resources are still retained when this parameter is set to <code>false</code>.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -45,7 +41,7 @@ public class DeleteClusterRequest extends TeaModel {
     public Boolean retainAllResources;
 
     /**
-     * <p>The IDs of resources to retain when the cluster is deleted.</p>
+     * <p>The resource list. To retain resources when you delete a cluster, specify the IDs of the resources to retain.</p>
      */
     @NameInMap("retain_resources")
     public java.util.List<String> retainResources;
@@ -90,12 +86,10 @@ public class DeleteClusterRequest extends TeaModel {
 
     public static class DeleteClusterRequestDeleteOptions extends TeaModel {
         /**
-         * <p>The deletion policy for the specified resource type. Valid values:</p>
+         * <p>The deletion policy for this resource type. Valid values:</p>
          * <ul>
-         * <li><p>delete: Deletes the resources.</p>
-         * </li>
-         * <li><p>retain: Retains the resources.</p>
-         * </li>
+         * <li>delete: deletes resources of this type.</li>
+         * <li>retain: retains resources of this type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,18 +99,13 @@ public class DeleteClusterRequest extends TeaModel {
         public String deleteMode;
 
         /**
-         * <p>The type of resource. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><p>SLB: the SLB resources created for Services. These resources are deleted by default, but you can choose to retain them.</p>
-         * </li>
-         * <li><p>ALB: the ALB resources created by the ALB Ingress controller. These resources are retained by default, but you can choose to delete them.</p>
-         * </li>
-         * <li><p>SLS_Data: the SLS project used for cluster logs. This resource is retained by default, but you can choose to delete it.</p>
-         * </li>
-         * <li><p>SLS_ControlPlane: the SLS project used for control plane logs in a managed cluster. This resource is retained by default, but you can choose to delete it.</p>
-         * </li>
-         * <li><p>PrivateZone: the PrivateZone resource created by an ACK Serverless cluster. This resource is retained by default, but you can choose to delete it.</p>
-         * </li>
+         * <li>SLB: SLB resources created through services. Deleted by default. You can choose to retain them.</li>
+         * <li>ALB: ALB resources created by ALB Ingress Controller. Retained by default. You can choose to delete them.</li>
+         * <li>SLS_Data: the SLS project used by the cluster logging feature. Retained by default. You can choose to delete it.</li>
+         * <li>SLS_ControlPlane: the SLS project used by the control plane logs of managed clusters. Retained by default. You can choose to delete it.</li>
+         * <li>PrivateZone: PrivateZone resources created by ACK Serverless clusters. Retained by default. You can choose to delete them.</li>
          * </ul>
          * 
          * <strong>example:</strong>

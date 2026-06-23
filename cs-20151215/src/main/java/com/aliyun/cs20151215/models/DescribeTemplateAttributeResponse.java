@@ -44,7 +44,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
 
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
         /**
-         * <p>The ID of the template. When you update a template, a new template ID is generated.</p>
+         * <p>编排模板ID，每次变更都会有一个模板ID。</p>
          * 
          * <strong>example:</strong>
          * <p>72d20cf8-a533-4ea9-a10d-e7630d3d****</p>
@@ -53,7 +53,12 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String id;
 
         /**
-         * <p>The access control policy of the template.</p>
+         * <p>编排模板的访问权限，取值：</p>
+         * <ul>
+         * <li><code>private</code>：私有。</li>
+         * <li><code>public</code>：公共。</li>
+         * <li><code>shared</code>：可共享。</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>private</p>
@@ -62,7 +67,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String acl;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>编排模板名称。</p>
          * 
          * <strong>example:</strong>
          * <p>web</p>
@@ -71,7 +76,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String name;
 
         /**
-         * <p>The template content in the YAML format.</p>
+         * <p>编排模板YAML内容。</p>
          * 
          * <strong>example:</strong>
          * <p>apiVersion: V1\n***</p>
@@ -80,13 +85,13 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String template;
 
         /**
-         * <p>The type of template. The value can be a custom value.</p>
+         * <p>模板类型。</p>
          * <ul>
-         * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
-         * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</li>
-         * <li>If the value of the parameter is not <code>kubernetes</code>, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to <code>kubernetes</code>.</li>
+         * <li><p>当取值为kubernetes时将在控制台的编排模板页面展示该模板。</p>
+         * </li>
+         * <li><p>该参数不填写或者取值为其他值时，控制台的编排模板页面将不会展示该模板。</p>
+         * </li>
          * </ul>
-         * <p>Default value: <code>kubernetes</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>kubernetes</p>
@@ -95,7 +100,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String templateType;
 
         /**
-         * <p>The description of the template.</p>
+         * <p>编排模板描述信息。</p>
          * 
          * <strong>example:</strong>
          * <p>test template</p>
@@ -104,7 +109,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String description;
 
         /**
-         * <p>The label of the template.</p>
+         * <p>部署模板的标签。</p>
          * 
          * <strong>example:</strong>
          * <p>sa</p>
@@ -113,7 +118,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String tags;
 
         /**
-         * <p>The unique ID of the template. The value remains unchanged after the template is updated.</p>
+         * <p>编排模板唯一ID，不随模板更新而改变。</p>
          * 
          * <strong>example:</strong>
          * <p>874ec485-e7e6-4373-8a3b-47bde8ae****</p>
@@ -122,7 +127,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String templateWithHistId;
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>编排模板创建时间。</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T16:56:33+08:00</p>
@@ -131,7 +136,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String created;
 
         /**
-         * <p>The time when the template was updated.</p>
+         * <p>编排模板更新时间。</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T16:56:33+08:00</p>

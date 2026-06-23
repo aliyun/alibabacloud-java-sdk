@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonResponseBody extends TeaModel {
     /**
-     * <p>The CPU architecture supported by the component.</p>
+     * <p>CPU architectures supported by the component.</p>
      */
     @NameInMap("architecture")
     public java.util.List<String> architecture;
 
     /**
-     * <p>The category of the component.</p>
+     * <p>Component category.</p>
      * 
      * <strong>example:</strong>
      * <p>network</p>
@@ -20,7 +20,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     public String category;
 
     /**
-     * <p>The custom parameter schema of the component.</p>
+     * <p>Custom parameter schema of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -29,7 +29,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     public String configSchema;
 
     /**
-     * <p>Indicates whether the component is automatically installed by default.</p>
+     * <p>Whether it is installed by default.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +38,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     public Boolean installByDefault;
 
     /**
-     * <p>Indicates whether the component is fully managed.</p>
+     * <p>Whether it is a managed component.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,7 +47,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     public Boolean managed;
 
     /**
-     * <p>The name of the component.</p>
+     * <p>Component name.</p>
      * 
      * <strong>example:</strong>
      * <p>coredns</p>
@@ -56,19 +56,19 @@ public class DescribeAddonResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The latest version information of the component.</p>
+     * <p>Information about the latest component versions.</p>
      */
     @NameInMap("newer_versions")
     public java.util.List<DescribeAddonResponseBodyNewerVersions> newerVersions;
 
     /**
-     * <p>The operations supported by the component.</p>
+     * <p>Operations supported by the component.</p>
      */
     @NameInMap("supported_actions")
     public java.util.List<String> supportedActions;
 
     /**
-     * <p>The version of the component.</p>
+     * <p>Component version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1.9.3.6-32932850-aliyun</p>
@@ -155,7 +155,7 @@ public class DescribeAddonResponseBody extends TeaModel {
 
     public static class DescribeAddonResponseBodyNewerVersions extends TeaModel {
         /**
-         * <p>The minimum cluster version required by the component version.</p>
+         * <p>The minimum cluster version required by this component version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.20.4</p>
@@ -164,10 +164,12 @@ public class DescribeAddonResponseBody extends TeaModel {
         public String minimumClusterVersion;
 
         /**
-         * <p>Indicates whether the component can be updated to the version.</p>
+         * <p>Whether the component can be upgraded to this version.</p>
          * <ul>
-         * <li>true: yes</li>
-         * <li>false: no</li>
+         * <li><p>true: Upgrade is supported.</p>
+         * </li>
+         * <li><p>false: Upgrade is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

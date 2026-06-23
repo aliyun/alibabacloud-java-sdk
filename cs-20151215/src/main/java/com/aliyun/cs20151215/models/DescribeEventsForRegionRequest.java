@@ -29,8 +29,8 @@ public class DescribeEventsForRegionRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The maximum number of results to return on each page.</p>
+     * <p>Valid values: [1,100].</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
