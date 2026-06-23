@@ -4,33 +4,15 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplateResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("Msg")
     public String msg;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

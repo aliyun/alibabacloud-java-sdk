@@ -4,34 +4,18 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>146552</p>
-     */
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CGAKLRCS</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

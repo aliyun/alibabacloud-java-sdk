@@ -4,38 +4,18 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatePageRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBC6E8EC1271137</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CBIGWCFH</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

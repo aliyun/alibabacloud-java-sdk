@@ -4,40 +4,18 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>null</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("Msg")
     public String msg;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0CC8A9CB-9BA3-13FD-A404-6E2E7461881A</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

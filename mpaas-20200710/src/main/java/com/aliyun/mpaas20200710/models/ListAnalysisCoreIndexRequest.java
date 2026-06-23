@@ -4,66 +4,30 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class ListAnalysisCoreIndexRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>miui</p>
-     */
     @NameInMap("Channel")
     public String channel;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1756051200000</p>
-     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Android</p>
-     */
     @NameInMap("Platform")
     public String platform;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1756051200000</p>
-     */
     @NameInMap("StartTime")
     public Long startTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>546797740032</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CGAKLRCS</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("Type")
     public String type;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dev</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

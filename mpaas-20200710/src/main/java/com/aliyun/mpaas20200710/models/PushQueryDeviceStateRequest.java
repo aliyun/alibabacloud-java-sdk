@@ -4,38 +4,18 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class PushQueryDeviceStateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUB9A63274111812</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>8985d1b78d135e10dc26703379369879</p>
-     */
     @NameInMap("Target")
     public String target;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("TargetType")
     public Integer targetType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>BJUVXFNW</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,36 +4,18 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetTemplateResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Msg")
     public String msg;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,10 +65,6 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTemplateResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Action")
         public String action;
 
@@ -96,72 +74,36 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("DescInfo")
         public String descInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1740479834</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1745337419999</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>/</p>
-         */
         @NameInMap("IconUrls")
         public String iconUrls;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>/</p>
-         */
         @NameInMap("ImageUrls")
         public String imageUrls;
 
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PushStyle")
         public String pushStyle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ShowStyle")
         public String showStyle;
 
         @NameInMap("Title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>/</p>
-         */
         @NameInMap("Uri")
         public String uri;
 
-        /**
-         * <strong>example:</strong>
-         * <p>title,content</p>
-         */
         @NameInMap("Variables")
         public String variables;
 

@@ -4,57 +4,27 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatePageResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Data")
     public java.util.List<ListTemplatePageResponseBodyData> data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("Msg")
     public String msg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("TotalSize")
     public Integer totalSize;
 
@@ -128,10 +98,6 @@ public class ListTemplatePageResponseBody extends TeaModel {
     }
 
     public static class ListTemplatePageResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Action")
         public String action;
 
@@ -141,72 +107,36 @@ public class ListTemplatePageResponseBody extends TeaModel {
         @NameInMap("DescInfo")
         public String descInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1740479834</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1722564835000</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>/</p>
-         */
         @NameInMap("IconUrls")
         public String iconUrls;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10029984</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>/</p>
-         */
         @NameInMap("ImageUrls")
         public String imageUrls;
 
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PushStyle")
         public String pushStyle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ShowStyle")
         public String showStyle;
 
         @NameInMap("Title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>/</p>
-         */
         @NameInMap("Uri")
         public String uri;
 
-        /**
-         * <strong>example:</strong>
-         * <p>title,content</p>
-         */
         @NameInMap("Variables")
         public String variables;
 

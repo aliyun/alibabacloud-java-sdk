@@ -4,93 +4,45 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUB9A63274111812</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>hh</p>
-     */
     @NameInMap("Content")
     public String content;
 
     @NameInMap("DescInfo")
     public String descInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{&quot;defaultUrl&quot;: &quot;<a href="http://111%22%7D">http://111&quot;}</a></p>
-     */
     @NameInMap("IconUrls")
     public String iconUrls;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{&quot;defaultUrl&quot;: &quot;<a href="http://111%22%7D">http://111&quot;}</a></p>
-     */
     @NameInMap("ImageUrls")
     public String imageUrls;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("JumpAction")
     public Integer jumpAction;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("PushStyle")
     public Integer pushStyle;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("ShowStyle")
     public Long showStyle;
 
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>NPHTGKNR</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OKOK</p>
-     */
     @NameInMap("Title")
     public String title;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://jsonplaceholder.typicode.com/nonexistent">https://jsonplaceholder.typicode.com/nonexistent</a></p>
-     */
     @NameInMap("Uri")
     public String uri;
 
-    /**
-     * <strong>example:</strong>
-     * <p>title,content</p>
-     */
     @NameInMap("Variables")
     public String variables;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

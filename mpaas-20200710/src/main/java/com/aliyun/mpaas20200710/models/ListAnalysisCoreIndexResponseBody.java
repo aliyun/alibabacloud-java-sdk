@@ -4,34 +4,18 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class ListAnalysisCoreIndexResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public ListAnalysisCoreIndexResponseBodyResultContent resultContent;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -81,59 +65,27 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
     }
 
     public static class ListAnalysisCoreIndexResponseBodyResultContentData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ArrivalNum")
         public String arrivalNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ArrivalRate")
         public String arrivalRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("IgnoreNum")
         public String ignoreNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("IgnoreRate")
         public String ignoreRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OpenNum")
         public String openNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("OpenRate")
         public String openRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PushNum")
         public String pushNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PushTotalNum")
         public String pushTotalNum;
 
@@ -212,17 +164,9 @@ public class ListAnalysisCoreIndexResponseBody extends TeaModel {
         @NameInMap("Data")
         public ListAnalysisCoreIndexResponseBodyResultContentData data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>“”</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
