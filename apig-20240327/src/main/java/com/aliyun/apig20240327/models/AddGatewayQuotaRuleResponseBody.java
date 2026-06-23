@@ -70,6 +70,12 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
     }
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
+        @NameInMap("conflictPeriodType")
+        public String conflictPeriodType;
+
+        @NameInMap("conflictType")
+        public String conflictType;
+
         /**
          * <strong>example:</strong>
          * <p>cs-xxxxxx</p>
@@ -87,6 +93,22 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public static AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems build(java.util.Map<String, ?> map) throws Exception {
             AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems self = new AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems();
             return TeaModel.build(map, self);
+        }
+
+        public AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems setConflictPeriodType(String conflictPeriodType) {
+            this.conflictPeriodType = conflictPeriodType;
+            return this;
+        }
+        public String getConflictPeriodType() {
+            return this.conflictPeriodType;
+        }
+
+        public AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems setConflictType(String conflictType) {
+            this.conflictType = conflictType;
+            return this;
+        }
+        public String getConflictType() {
+            return this.conflictType;
         }
 
         public AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems setConsumerId(String consumerId) {
@@ -162,7 +184,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
          * <p>true</p>
          */
         @NameInMap("accepted")
-        public String accepted;
+        public Boolean accepted;
 
         @NameInMap("conflictPreview")
         public AddGatewayQuotaRuleResponseBodyDataConflictPreview conflictPreview;
@@ -186,11 +208,11 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public AddGatewayQuotaRuleResponseBodyData setAccepted(String accepted) {
+        public AddGatewayQuotaRuleResponseBodyData setAccepted(Boolean accepted) {
             this.accepted = accepted;
             return this;
         }
-        public String getAccepted() {
+        public Boolean getAccepted() {
             return this.accepted;
         }
 

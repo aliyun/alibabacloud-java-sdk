@@ -111,6 +111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("overwrite", request.overwrite);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.periodMultiplier)) {
+            body.put("periodMultiplier", request.periodMultiplier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.periodType)) {
             body.put("periodType", request.periodType);
         }
@@ -5404,6 +5408,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("overwrite", request.overwrite);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.periodMultiplier)) {
+            body.put("periodMultiplier", request.periodMultiplier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.periodType)) {
             body.put("periodType", request.periodType);
         }
@@ -5414,6 +5422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
             body.put("timezone", request.timezone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.windowAlignment)) {
+            body.put("windowAlignment", request.windowAlignment);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

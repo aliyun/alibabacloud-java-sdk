@@ -69,6 +69,36 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetGatewayQuotaRuleResponseBodyDataConsumers extends TeaModel {
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("name")
+        public String name;
+
+        public static GetGatewayQuotaRuleResponseBodyDataConsumers build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayQuotaRuleResponseBodyDataConsumers self = new GetGatewayQuotaRuleResponseBodyDataConsumers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayQuotaRuleResponseBodyDataConsumers setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public GetGatewayQuotaRuleResponseBodyDataConsumers setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -83,6 +113,9 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
          */
         @NameInMap("consumerCount")
         public Long consumerCount;
+
+        @NameInMap("consumers")
+        public java.util.List<GetGatewayQuotaRuleResponseBodyDataConsumers> consumers;
 
         /**
          * <strong>example:</strong>
@@ -159,6 +192,14 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         }
         public Long getConsumerCount() {
             return this.consumerCount;
+        }
+
+        public GetGatewayQuotaRuleResponseBodyData setConsumers(java.util.List<GetGatewayQuotaRuleResponseBodyDataConsumers> consumers) {
+            this.consumers = consumers;
+            return this;
+        }
+        public java.util.List<GetGatewayQuotaRuleResponseBodyDataConsumers> getConsumers() {
+            return this.consumers;
         }
 
         public GetGatewayQuotaRuleResponseBodyData setPeriodType(String periodType) {

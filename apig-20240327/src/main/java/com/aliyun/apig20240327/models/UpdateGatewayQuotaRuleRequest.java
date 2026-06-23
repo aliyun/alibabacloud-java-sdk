@@ -23,6 +23,7 @@ public class UpdateGatewayQuotaRuleRequest extends TeaModel {
      * <p>group1,group2</p>
      */
     @NameInMap("consumerGroupIds")
+    @Deprecated
     public java.util.List<String> consumerGroupIds;
 
     /**
@@ -36,8 +37,6 @@ public class UpdateGatewayQuotaRuleRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -52,8 +51,6 @@ public class UpdateGatewayQuotaRuleRequest extends TeaModel {
     public java.util.List<String> removeIds;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>team-rule</p>
      */
@@ -81,6 +78,7 @@ public class UpdateGatewayQuotaRuleRequest extends TeaModel {
         return this.conflictHash;
     }
 
+    @Deprecated
     public UpdateGatewayQuotaRuleRequest setConsumerGroupIds(java.util.List<String> consumerGroupIds) {
         this.consumerGroupIds = consumerGroupIds;
         return this;

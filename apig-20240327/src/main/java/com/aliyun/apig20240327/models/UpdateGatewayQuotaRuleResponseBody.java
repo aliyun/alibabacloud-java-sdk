@@ -70,6 +70,12 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
+        @NameInMap("conflictPeriodType")
+        public String conflictPeriodType;
+
+        @NameInMap("conflictType")
+        public String conflictType;
+
         /**
          * <strong>example:</strong>
          * <p>cs-d82n1g6m1hkm375xxxxx</p>
@@ -87,6 +93,22 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         public static UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems build(java.util.Map<String, ?> map) throws Exception {
             UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems self = new UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems setConflictPeriodType(String conflictPeriodType) {
+            this.conflictPeriodType = conflictPeriodType;
+            return this;
+        }
+        public String getConflictPeriodType() {
+            return this.conflictPeriodType;
+        }
+
+        public UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems setConflictType(String conflictType) {
+            this.conflictType = conflictType;
+            return this;
+        }
+        public String getConflictType() {
+            return this.conflictType;
         }
 
         public UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems setConsumerId(String consumerId) {

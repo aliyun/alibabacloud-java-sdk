@@ -16,6 +16,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
      * <p>group1,group2</p>
      */
     @NameInMap("consumerGroupIds")
+    @Deprecated
     public java.util.List<String> consumerGroupIds;
 
     /**
@@ -38,6 +39,13 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
      */
     @NameInMap("overwrite")
     public Boolean overwrite;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("periodMultiplier")
+    public Long periodMultiplier;
 
     /**
      * <p>This parameter is required.</p>
@@ -102,6 +110,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
         return this.conflictHash;
     }
 
+    @Deprecated
     public AddGatewayQuotaRuleRequest setConsumerGroupIds(java.util.List<String> consumerGroupIds) {
         this.consumerGroupIds = consumerGroupIds;
         return this;
@@ -132,6 +141,14 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public AddGatewayQuotaRuleRequest setPeriodMultiplier(Long periodMultiplier) {
+        this.periodMultiplier = periodMultiplier;
+        return this;
+    }
+    public Long getPeriodMultiplier() {
+        return this.periodMultiplier;
     }
 
     public AddGatewayQuotaRuleRequest setPeriodType(String periodType) {

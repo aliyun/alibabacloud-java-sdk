@@ -9,6 +9,7 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("consumerPageNumber")
+    @Deprecated
     public String consumerPageNumber;
 
     /**
@@ -16,6 +17,7 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
      * <p>10</p>
      */
     @NameInMap("consumerPageSize")
+    @Deprecated
     public String consumerPageSize;
 
     @NameInMap("withConsumers")
@@ -26,6 +28,7 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public GetGatewayQuotaRuleRequest setConsumerPageNumber(String consumerPageNumber) {
         this.consumerPageNumber = consumerPageNumber;
         return this;
@@ -34,6 +37,7 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
         return this.consumerPageNumber;
     }
 
+    @Deprecated
     public GetGatewayQuotaRuleRequest setConsumerPageSize(String consumerPageSize) {
         this.consumerPageSize = consumerPageSize;
         return this;

@@ -21,6 +21,9 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     @NameInMap("overwrite")
     public Boolean overwrite;
 
+    @NameInMap("periodMultiplier")
+    public Long periodMultiplier;
+
     /**
      * <strong>example:</strong>
      * <p>week</p>
@@ -29,8 +32,6 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -43,6 +44,9 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
      */
     @NameInMap("timezone")
     public String timezone;
+
+    @NameInMap("windowAlignment")
+    public String windowAlignment;
 
     public static ResetGatewayQuotaRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetGatewayQuotaRuleRequest self = new ResetGatewayQuotaRuleRequest();
@@ -73,6 +77,14 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
         return this.overwrite;
     }
 
+    public ResetGatewayQuotaRuleRequest setPeriodMultiplier(Long periodMultiplier) {
+        this.periodMultiplier = periodMultiplier;
+        return this;
+    }
+    public Long getPeriodMultiplier() {
+        return this.periodMultiplier;
+    }
+
     public ResetGatewayQuotaRuleRequest setPeriodType(String periodType) {
         this.periodType = periodType;
         return this;
@@ -95,6 +107,14 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     }
     public String getTimezone() {
         return this.timezone;
+    }
+
+    public ResetGatewayQuotaRuleRequest setWindowAlignment(String windowAlignment) {
+        this.windowAlignment = windowAlignment;
+        return this;
+    }
+    public String getWindowAlignment() {
+        return this.windowAlignment;
     }
 
 }
