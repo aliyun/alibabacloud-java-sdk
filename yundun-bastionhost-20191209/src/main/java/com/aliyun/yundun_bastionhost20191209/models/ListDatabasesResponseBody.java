@@ -61,8 +61,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * <p>The address type of the database. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong></li>
-         * <li><strong>Private</strong></li>
+         * <li><p><strong>Public</strong></p>
+         * </li>
+         * <li><p><strong>Private</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,10 +130,14 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>Oracle</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>SQLServer</strong></li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>SQLServer</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,9 +158,12 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * <p>The type of the database. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong>: on-premises database.</li>
-         * <li><strong>Rds</strong>: ApsaraDB for RDS instance.</li>
-         * <li><strong>PolarDB</strong>: PolarDB cluster</li>
+         * <li><p><strong>Local</strong>: on-premises database.</p>
+         * </li>
+         * <li><p><strong>Rds</strong>: ApsaraDB for RDS instance.</p>
+         * </li>
+         * <li><p><strong>PolarDB</strong>: PolarDB cluster</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,8 +196,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * <p>The status of the database. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>Release</strong></li>
+         * <li><p><strong>Normal</strong></p>
+         * </li>
+         * <li><p><strong>Release</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -62,8 +62,10 @@ public class GetHostResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used to connect to the host. Valid values:</p>
          * <ul>
-         * <li><strong>SSH</strong></li>
-         * <li><strong>RDP</strong></li>
+         * <li><p><strong>SSH</strong></p>
+         * </li>
+         * <li><p><strong>RDP</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,8 +109,10 @@ public class GetHostResponseBody extends TeaModel {
         /**
          * <p>The address type of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong>: a public address</li>
-         * <li><strong>Private</strong>: a private address</li>
+         * <li><p><strong>Public</strong>: a public address</p>
+         * </li>
+         * <li><p><strong>Private</strong>: a private address</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,8 +178,10 @@ public class GetHostResponseBody extends TeaModel {
         /**
          * <p>The operating system of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Linux</strong></li>
-         * <li><strong>Windows</strong></li>
+         * <li><p><strong>Linux</strong></p>
+         * </li>
+         * <li><p><strong>Windows</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,10 +193,14 @@ public class GetHostResponseBody extends TeaModel {
         /**
          * <p>The preferred key exchange algorithm of the host. The value of this parameter is returned if OSType is set to Linux. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong></li>
-         * <li><strong>diffie-hellman-group1-sha1</strong></li>
-         * <li><strong>diffie-hellman-group14-sha1</strong></li>
-         * <li><strong>diffie-hellman-group-exchange-sha1</strong></li>
+         * <li><p><strong>default</strong></p>
+         * </li>
+         * <li><p><strong>diffie-hellman-group1-sha1</strong></p>
+         * </li>
+         * <li><p><strong>diffie-hellman-group14-sha1</strong></p>
+         * </li>
+         * <li><p><strong>diffie-hellman-group-exchange-sha1</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,9 +218,12 @@ public class GetHostResponseBody extends TeaModel {
         /**
          * <p>The source of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong>: a host in a data center</li>
-         * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
-         * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+         * <li><p><strong>Local</strong>: a host in a data center</p>
+         * </li>
+         * <li><p><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</p>
+         * </li>
+         * <li><p><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +235,7 @@ public class GetHostResponseBody extends TeaModel {
         /**
          * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
          * <blockquote>
-         * <p> If <strong>Local</strong> is returned for the <strong>Source</strong> parameter, no value is returned for this parameter.</p>
+         * <p>If <strong>Local</strong> is returned for the <strong>Source</strong> parameter, no value is returned for this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -234,8 +247,10 @@ public class GetHostResponseBody extends TeaModel {
         /**
          * <p>The status of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: normal</li>
-         * <li><strong>Release</strong>: released</li>
+         * <li><p><strong>Normal</strong>: normal</p>
+         * </li>
+         * <li><p><strong>Release</strong>: released</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

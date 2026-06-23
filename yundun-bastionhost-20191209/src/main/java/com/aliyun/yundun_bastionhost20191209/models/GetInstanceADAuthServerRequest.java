@@ -7,7 +7,7 @@ public class GetInstanceADAuthServerRequest extends TeaModel {
     /**
      * <p>The bastion host ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

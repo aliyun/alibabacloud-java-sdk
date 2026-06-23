@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNetworkDomainsResponseBody extends TeaModel {
     /**
-     * <p>The network domains that are returned.</p>
+     * <p>The list of network domains.</p>
      */
     @NameInMap("NetworkDomains")
     public java.util.List<ListNetworkDomainsResponseBodyNetworkDomains> networkDomains;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -20,7 +20,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of network domains that are returned.</p>
+     * <p>The total number of network domains.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -61,8 +61,10 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         /**
          * <p>The node type of the proxy server. Valid values:</p>
          * <ul>
-         * <li><strong>Master</strong>: primary proxy server.</li>
-         * <li><strong>Slave</strong>: secondary proxy server.</li>
+         * <li><p><strong>Master</strong>: the master proxy server</p>
+         * </li>
+         * <li><p><strong>Slave</strong>: the slave proxy server</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,10 +74,12 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The status of the proxy server.</p>
+         * <p>The status of the proxy server. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Unavailable</strong></li>
+         * <li><p><strong>Available</strong></p>
+         * </li>
+         * <li><p><strong>Unavailable</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
 
     public static class ListNetworkDomainsResponseBodyNetworkDomains extends TeaModel {
         /**
-         * <p>The remarks of the network domain.</p>
+         * <p>The comments on the network domain.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -118,10 +122,12 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>Indicates whether the network domain is built-in.</p>
+         * <p>Indicates whether the network domain is a built-in domain.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +137,7 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         public Boolean _default;
 
         /**
-         * <p>The network domain ID.</p>
+         * <p>The ID of the network domain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -149,10 +155,12 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         public String networkDomainName;
 
         /**
-         * <p>The connection mode of the network domain. Valid values:</p>
+         * <p>The type of the network domain. Valid values:</p>
          * <ul>
-         * <li><strong>Direct</strong></li>
-         * <li><strong>Proxy</strong></li>
+         * <li><p><strong>Direct</strong>: direct connection</p>
+         * </li>
+         * <li><p><strong>Proxy</strong>: proxy connection</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,6 +169,9 @@ public class ListNetworkDomainsResponseBody extends TeaModel {
         @NameInMap("NetworkDomainType")
         public String networkDomainType;
 
+        /**
+         * <p>The information about the proxy servers.</p>
+         */
         @NameInMap("ProxiesState")
         public java.util.List<ListNetworkDomainsResponseBodyNetworkDomainsProxiesState> proxiesState;
 

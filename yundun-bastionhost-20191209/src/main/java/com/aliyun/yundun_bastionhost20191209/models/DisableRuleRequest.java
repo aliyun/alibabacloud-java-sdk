@@ -20,7 +20,7 @@ public class DisableRuleRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DisableRuleRequest extends TeaModel {
     /**
      * <p>The ID of the authorization rule to be disabled.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758868.html">ListRules</a> operation to query the authorization rule ID to be disabled.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758868.html">ListRules</a> operation to query the authorization rule ID to be disabled.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

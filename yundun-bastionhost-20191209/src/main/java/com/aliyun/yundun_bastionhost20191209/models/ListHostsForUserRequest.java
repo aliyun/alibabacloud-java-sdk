@@ -38,8 +38,10 @@ public class ListHostsForUserRequest extends TeaModel {
     /**
      * <p>Specifies the category of the hosts that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>Authorized</strong>: queries the hosts that the user is authorized to manage. This is the default value.</li>
-     * <li><strong>Unauthorized</strong>: queries the hosts that the user is not authorized to manage.</li>
+     * <li><p><strong>Authorized</strong>: queries the hosts that the user is authorized to manage. This is the default value.</p>
+     * </li>
+     * <li><p><strong>Unauthorized</strong>: queries the hosts that the user is not authorized to manage.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,8 +53,10 @@ public class ListHostsForUserRequest extends TeaModel {
     /**
      * <p>The operating system of the host that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>Linux</strong></li>
-     * <li><strong>Windows</strong></li>
+     * <li><p><strong>Linux</strong></p>
+     * </li>
+     * <li><p><strong>Windows</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +75,7 @@ public class ListHostsForUserRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
+     * <p>The number of entries per page.<br>
      * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
      * <blockquote>
      * <p>We recommend that you do not leave this parameter empty.</p>

@@ -72,7 +72,7 @@ public class GetHostShareKeyResponseBody extends TeaModel {
          * <p>The fingerprint of the private key.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>aa:10:f5:21:7f:8b:3e:86:b0:8b:f0:******</p>
          */
         @NameInMap("PrivateKeyFingerPrint")
         public String privateKeyFingerPrint;

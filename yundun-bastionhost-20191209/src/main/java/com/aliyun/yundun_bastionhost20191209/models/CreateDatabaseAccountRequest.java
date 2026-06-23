@@ -17,7 +17,7 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     /**
      * <p>The ID of the database for which you want to create a database account.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,8 +52,10 @@ public class CreateDatabaseAccountRequest extends TeaModel {
     /**
      * <p>The logon attribute. This parameter is required for Oracle databases. Valid values:</p>
      * <ul>
-     * <li>SERVICENAME</li>
-     * <li>SID</li>
+     * <li><p>SERVICENAME</p>
+     * </li>
+     * <li><p>SID</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

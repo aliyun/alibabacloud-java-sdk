@@ -7,7 +7,7 @@ public class DeleteUserPublicKeyRequest extends TeaModel {
     /**
      * <p>The ID of the Bastionhost instance to which the users to be queried belong.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the Bastionhost instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the Bastionhost instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class DeleteUserPublicKeyRequest extends TeaModel {
     /**
      * <p>The public key ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/477555.html">ListUserPublicKeys</a> operation to query the public key ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/477555.html">ListUserPublicKeys</a> operation to query the public key ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

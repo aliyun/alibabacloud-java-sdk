@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetExportConfigJobResponseBody extends TeaModel {
     /**
+     * <p>The download link of the configuration backup file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://bastionhost-cn-hangzhou-164***.oss-cn-hangzhou.aliyuncs.com/bastionhost-cn-2">https://bastionhost-cn-hangzhou-164***.oss-cn-hangzhou.aliyuncs.com/bastionhost-cn-2</a>******</p>
      */
@@ -12,6 +14,8 @@ public class GetExportConfigJobResponseBody extends TeaModel {
     public String downloadUrl;
 
     /**
+     * <p>The expiration time of the configuration backup download link. (In seconds, UNIX timestamp format)</p>
+     * 
      * <strong>example:</strong>
      * <p>1679393152</p>
      */
@@ -19,6 +23,8 @@ public class GetExportConfigJobResponseBody extends TeaModel {
     public Long expireTime;
 
     /**
+     * <p>The ID of the configuration backup export job.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,6 +32,8 @@ public class GetExportConfigJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -33,6 +41,8 @@ public class GetExportConfigJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier that Alibaba Cloud generates for this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>98DBE5C2-7D7A-5393-9E5A-71074336D33B</p>
      */
@@ -40,6 +50,8 @@ public class GetExportConfigJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the configuration backup export job.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */

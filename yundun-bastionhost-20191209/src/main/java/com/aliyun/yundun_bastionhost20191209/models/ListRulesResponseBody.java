@@ -106,8 +106,10 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * <p>The state of the authorization rule.</p>
          * <ul>
-         * <li><strong>Enabled</strong></li>
-         * <li><strong>Disabled</strong></li>
+         * <li><p><strong>Enabled</strong></p>
+         * </li>
+         * <li><p><strong>Disabled</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

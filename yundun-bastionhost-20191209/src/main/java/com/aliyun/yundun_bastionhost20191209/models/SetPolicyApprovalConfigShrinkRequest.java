@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetPolicyApprovalConfigShrinkRequest extends TeaModel {
     /**
-     * <p>The O&amp;M approval setting in the control policy.</p>
+     * <p>The O\&amp;M approval setting in the control policy.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApprovalConfig")
@@ -14,7 +14,7 @@ public class SetPolicyApprovalConfigShrinkRequest extends TeaModel {
     /**
      * <p>The bastion host ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class SetPolicyApprovalConfigShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the control policy that you want to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class SetPolicyApprovalConfigShrinkRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

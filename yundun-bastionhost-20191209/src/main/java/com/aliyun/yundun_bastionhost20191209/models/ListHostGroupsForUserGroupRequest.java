@@ -29,8 +29,10 @@ public class ListHostGroupsForUserGroupRequest extends TeaModel {
     /**
      * <p>Specifies the category of the host group that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>Authorized</strong>: queries the host groups that the user group is authorized to manage. This is the default value.</li>
-     * <li><strong>Unauthorized</strong>: queries the host groups that the user group is not authorized to manage.</li>
+     * <li><p><strong>Authorized</strong>: queries the host groups that the user group is authorized to manage. This is the default value.</p>
+     * </li>
+     * <li><p><strong>Unauthorized</strong>: queries the host groups that the user group is not authorized to manage.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +51,7 @@ public class ListHostGroupsForUserGroupRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.\
+     * <p>The number of entries to return on each page.<br>
      * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
      * <p>We recommend that you do not leave this parameter empty.</p>

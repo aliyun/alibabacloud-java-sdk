@@ -44,11 +44,16 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
         /**
          * <p>The return code that indicates whether the user was authorized to manage the host accounts. Valid values:</p>
          * <ul>
-         * <li><strong>OK</strong>: The call was successful.</li>
-         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
-         * <li><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</li>
-         * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
-         * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+         * <li><p><strong>OK</strong>: The call was successful.</p>
+         * </li>
+         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
+         * </li>
+         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
+         * </li>
+         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
+         * </li>
+         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -68,6 +73,9 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;
@@ -150,6 +158,9 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

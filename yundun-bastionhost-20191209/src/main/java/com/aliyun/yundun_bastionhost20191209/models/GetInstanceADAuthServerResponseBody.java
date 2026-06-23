@@ -89,8 +89,10 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         /**
          * <p>Indicates whether passwords are required. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>:</li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>:</p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,8 +104,10 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         /**
          * <p>Indicates whether SSL is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

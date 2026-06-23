@@ -44,8 +44,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         /**
          * <p>The address type of the database. Valid values:</p>
          * <ul>
-         * <li>Public</li>
-         * <li>Private</li>
+         * <li><p>Public</p>
+         * </li>
+         * <li><p>Private</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,10 +113,14 @@ public class GetDatabaseResponseBody extends TeaModel {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>mysql</strong></li>
-         * <li><strong>sqlserver</strong></li>
-         * <li><strong>postgresql</strong></li>
-         * <li><strong>oracle</strong></li>
+         * <li><p><strong>mysql</strong></p>
+         * </li>
+         * <li><p><strong>sqlserver</strong></p>
+         * </li>
+         * <li><p><strong>postgresql</strong></p>
+         * </li>
+         * <li><p><strong>oracle</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,9 +141,12 @@ public class GetDatabaseResponseBody extends TeaModel {
         /**
          * <p>The database type. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong>: on-premises database.</li>
-         * <li><strong>Rds</strong>: ApsaraDB RDS instance.</li>
-         * <li><strong>PolarDB</strong>: PolarDB cluster.</li>
+         * <li><p><strong>Local</strong>: on-premises database.</p>
+         * </li>
+         * <li><p><strong>Rds</strong>: ApsaraDB RDS instance.</p>
+         * </li>
+         * <li><p><strong>PolarDB</strong>: PolarDB cluster.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,8 +179,10 @@ public class GetDatabaseResponseBody extends TeaModel {
         /**
          * <p>The status of the database. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>Release</strong></li>
+         * <li><p><strong>Normal</strong></p>
+         * </li>
+         * <li><p><strong>Release</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

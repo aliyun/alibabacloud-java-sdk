@@ -50,8 +50,10 @@ public class ListHostsRequest extends TeaModel {
     /**
      * <p>The operating system of the host that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>Linux</strong></li>
-     * <li><strong>Windows</strong></li>
+     * <li><p><strong>Linux</strong></p>
+     * </li>
+     * <li><p><strong>Windows</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,9 +98,12 @@ public class ListHostsRequest extends TeaModel {
     /**
      * <p>The source of the host that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>Local</strong>: a host in a data center</li>
-     * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
-     * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+     * <li><p><strong>Local</strong>: a host in a data center</p>
+     * </li>
+     * <li><p><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</p>
+     * </li>
+     * <li><p><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,8 +124,10 @@ public class ListHostsRequest extends TeaModel {
     /**
      * <p>The status of the host that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: normal</li>
-     * <li><strong>Release</strong>: released</li>
+     * <li><p><strong>Normal</strong>: normal</p>
+     * </li>
+     * <li><p><strong>Release</strong>: released</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

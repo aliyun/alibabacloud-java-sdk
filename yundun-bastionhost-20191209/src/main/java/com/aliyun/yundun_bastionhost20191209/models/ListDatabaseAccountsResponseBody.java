@@ -97,8 +97,10 @@ public class ListDatabaseAccountsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the database account has a password. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

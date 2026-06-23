@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token for starting the next query.</p>
+     * <p>The token to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
@@ -23,8 +23,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about Bastionhost instances and the tags bound to Bastionhost instances.</p>
-     * <p>The following information is included: instance ID, resource type, tag key, and tag value.</p>
+     * <p>A list of Bastionhost instances and their tags.</p>
+     * <p>This list includes the instance ID, resource type, tag key, and tag value.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -60,7 +60,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bastionhost-cn-78v1gc****</p>
@@ -69,8 +69,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
-         * <p>The returned value is INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
+         * <p>The resource type.</p>
+         * <p>The only valid value is INSTANCE, which indicates a Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
@@ -79,7 +79,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -88,7 +88,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>testapi</p>

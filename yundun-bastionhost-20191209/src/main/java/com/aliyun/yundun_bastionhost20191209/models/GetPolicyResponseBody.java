@@ -42,13 +42,13 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyAccessTimeRangeConfigEffectiveTime extends TeaModel {
         /**
-         * <p>The days of a week on which logons are allowed.</p>
+         * <p>The days of the week when access is allowed.</p>
          */
         @NameInMap("Days")
         public java.util.List<String> days;
 
         /**
-         * <p>The time periods during which logons are allowed.</p>
+         * <p>The hours of the day when access is allowed.</p>
          */
         @NameInMap("Hours")
         public java.util.List<String> hours;
@@ -78,7 +78,7 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyAccessTimeRangeConfig extends TeaModel {
         /**
-         * <p>The details of the periods during which logons are allowed.</p>
+         * <p>The allowed access time slots.</p>
          */
         @NameInMap("EffectiveTime")
         public java.util.List<GetPolicyResponseBodyPolicyAccessTimeRangeConfigEffectiveTime> effectiveTime;
@@ -100,10 +100,12 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyApprovalConfig extends TeaModel {
         /**
-         * <p>Indicates whether O\&amp;M approval is enabled in the control policy. Valid values:</p>
+         * <p>Indicates whether O\&amp;M approval is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>On</strong>: O\&amp;M approval is enabled.</li>
-         * <li><strong>Off</strong>: O\&amp;M approval is disabled.</li>
+         * <li><p><strong>On</strong>: O\&amp;M approval is enabled.</p>
+         * </li>
+         * <li><p><strong>Off</strong>: O\&amp;M approval is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +131,7 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyCommandConfigApproval extends TeaModel {
         /**
-         * <p>An array of commands that can be run only after approval.</p>
+         * <p>The commands that require approval.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
@@ -151,10 +153,12 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyCommandConfigDeny extends TeaModel {
         /**
-         * <p>The type of command control. Valid values:</p>
+         * <p>The command control mode. Valid values:</p>
          * <ul>
-         * <li>white: whitelist mode.</li>
-         * <li>black: blacklist mode.</li>
+         * <li><p><code>white</code>: allowlist.</p>
+         * </li>
+         * <li><p><code>black</code>: denylist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +168,7 @@ public class GetPolicyResponseBody extends TeaModel {
         public String aclType;
 
         /**
-         * <p>An array of controlled commands.</p>
+         * <p>The commands in the list.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
@@ -194,13 +198,13 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyCommandConfig extends TeaModel {
         /**
-         * <p>The details of the command approval settings.</p>
+         * <p>The command approval settings.</p>
          */
         @NameInMap("Approval")
         public GetPolicyResponseBodyPolicyCommandConfigApproval approval;
 
         /**
-         * <p>The details of the command control setting.</p>
+         * <p>The command control settings.</p>
          */
         @NameInMap("Deny")
         public GetPolicyResponseBodyPolicyCommandConfigDeny deny;
@@ -230,10 +234,12 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyIPAclConfig extends TeaModel {
         /**
-         * <p>The mode of access control on source IP addresses. Valid values:</p>
+         * <p>The source IP address-based access control mode. Valid values:</p>
          * <ul>
-         * <li>white: whitelist mode.</li>
-         * <li>black: blacklist mode.</li>
+         * <li><p><code>white</code>: allowlist.</p>
+         * </li>
+         * <li><p><code>black</code>: denylist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,7 +249,7 @@ public class GetPolicyResponseBody extends TeaModel {
         public String aclType;
 
         /**
-         * <p>The IP addresses from which logons are not allowed.</p>
+         * <p>The IP addresses in the ACL.</p>
          */
         @NameInMap("IPs")
         public java.util.List<String> IPs;
@@ -273,10 +279,12 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyProtocolConfigRDP extends TeaModel {
         /**
-         * <p>Indicates whether downloading from the clipboard is enabled. Valid values:</p>
+         * <p>Indicates whether clipboard download is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,10 +294,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String clipboardDownload;
 
         /**
-         * <p>Indicates whether file uploading from the clipboard is enabled. Valid values:</p>
+         * <p>Indicates whether clipboard upload is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -299,10 +309,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String clipboardUpload;
 
         /**
-         * <p>Indicates whether driver mapping is enabled. Valid values:</p>
+         * <p>Indicates whether drive redirection and printer mapping are enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,8 +340,10 @@ public class GetPolicyResponseBody extends TeaModel {
         /**
          * <p>Indicates whether keyboard recording is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -411,8 +425,10 @@ public class GetPolicyResponseBody extends TeaModel {
         /**
          * <p>Indicates whether remote command execution is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,10 +438,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String execCommand;
 
         /**
-         * <p>Indicates whether the SFTP channel option is enabled. Valid values:</p>
+         * <p>Indicates whether the SFTP channel is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -435,10 +453,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String SFTPChannel;
 
         /**
-         * <p>Indicates whether file downloading is enabled in SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Indicates whether file downloads over SFTP are enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,10 +468,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String SFTPDownloadFile;
 
         /**
-         * <p>Indicates whether folder creation is enabled in SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Indicates whether directory creation over SFTP is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -461,10 +483,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String SFTPMkdir;
 
         /**
-         * <p>Indicates whether file deletion is enabled in SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Indicates whether file deletion over SFTP is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -474,10 +498,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String SFTPRemoveFile;
 
         /**
-         * <p>Indicates whether file renaming is enabled in SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Indicates whether file renaming over SFTP is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,10 +513,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String SFTPRenameFile;
 
         /**
-         * <p>Indicates whether folder deletion is enabled in SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Indicates whether directory deletion over SFTP is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -500,10 +528,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String SFTPRmdir;
 
         /**
-         * <p>Indicates whether file uploading is enabled in SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Indicates whether file uploads over SFTP are enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -513,10 +543,12 @@ public class GetPolicyResponseBody extends TeaModel {
         public String SFTPUploadFile;
 
         /**
-         * <p>Indicates whether the SSH channel option is enabled. Valid values:</p>
+         * <p>Indicates whether the SSH channel is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -535,8 +567,10 @@ public class GetPolicyResponseBody extends TeaModel {
         /**
          * <p>Indicates whether X11 forwarding is enabled. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p><code>Enable</code></p>
+         * </li>
+         * <li><p><code>Disable</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -658,13 +692,13 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicyProtocolConfig extends TeaModel {
         /**
-         * <p>The configuration details of Remote Desktop Protocol (RDP) options.</p>
+         * <p>The RDP security settings.</p>
          */
         @NameInMap("RDP")
         public GetPolicyResponseBodyPolicyProtocolConfigRDP RDP;
 
         /**
-         * <p>The configuration details of SSH and SSH File Transfer Protocol (SFTP) options.</p>
+         * <p>The SSH and SFTP security settings.</p>
          */
         @NameInMap("SSH")
         public GetPolicyResponseBodyPolicyProtocolConfigSSH SSH;
@@ -694,25 +728,25 @@ public class GetPolicyResponseBody extends TeaModel {
 
     public static class GetPolicyResponseBodyPolicy extends TeaModel {
         /**
-         * <p>The details of the logon period restrictions.</p>
+         * <p>The time-based access control settings.</p>
          */
         @NameInMap("AccessTimeRangeConfig")
         public GetPolicyResponseBodyPolicyAccessTimeRangeConfig accessTimeRangeConfig;
 
         /**
-         * <p>The O\&amp;M approval setting.</p>
+         * <p>The O\&amp;M approval settings.</p>
          */
         @NameInMap("ApprovalConfig")
         public GetPolicyResponseBodyPolicyApprovalConfig approvalConfig;
 
         /**
-         * <p>The details of the command policy.</p>
+         * <p>The command control policy.</p>
          */
         @NameInMap("CommandConfig")
         public GetPolicyResponseBodyPolicyCommandConfig commandConfig;
 
         /**
-         * <p>The description of the control policy.</p>
+         * <p>The remarks on the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -721,7 +755,7 @@ public class GetPolicyResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The access control settings on source IP addresses.</p>
+         * <p>The source IP address-based access control settings.</p>
          */
         @NameInMap("IPAclConfig")
         public GetPolicyResponseBodyPolicyIPAclConfig IPAclConfig;
@@ -754,7 +788,7 @@ public class GetPolicyResponseBody extends TeaModel {
         public Long priority;
 
         /**
-         * <p>The details of protocol control.</p>
+         * <p>The protocol control settings.</p>
          */
         @NameInMap("ProtocolConfig")
         public GetPolicyResponseBodyPolicyProtocolConfig protocolConfig;

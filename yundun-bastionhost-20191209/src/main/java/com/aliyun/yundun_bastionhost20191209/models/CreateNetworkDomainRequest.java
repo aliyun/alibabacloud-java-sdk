@@ -29,6 +29,9 @@ public class CreateNetworkDomainRequest extends TeaModel {
     /**
      * <p>The name of the network domain that you want to create. The name can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SSH Proxy</p>
      */
     @NameInMap("NetworkDomainName")
     public String networkDomainName;
@@ -36,8 +39,10 @@ public class CreateNetworkDomainRequest extends TeaModel {
     /**
      * <p>The connection mode of the network domain to be created. Valid values:</p>
      * <ul>
-     * <li>Direct</li>
-     * <li>Proxy</li>
+     * <li><p>Direct</p>
+     * </li>
+     * <li><p>Proxy</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -131,8 +136,10 @@ public class CreateNetworkDomainRequest extends TeaModel {
         /**
          * <p>The node type of the proxy server. Valid values:</p>
          * <ul>
-         * <li><strong>Master</strong>: primary proxy server.</li>
-         * <li><strong>Slave</strong>: secondary proxy server.</li>
+         * <li><p><strong>Master</strong>: primary proxy server.</p>
+         * </li>
+         * <li><p><strong>Slave</strong>: secondary proxy server.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +152,7 @@ public class CreateNetworkDomainRequest extends TeaModel {
          * <p>The Base64-encoded password of the proxy server.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>UWdi******Ng==</p>
          */
         @NameInMap("Password")
         public String password;
@@ -162,9 +169,12 @@ public class CreateNetworkDomainRequest extends TeaModel {
         /**
          * <p>The proxy type. Valid values:</p>
          * <ul>
-         * <li><strong>SSHProxy</strong></li>
-         * <li><strong>HTTPProxy</strong></li>
-         * <li><strong>Socks5Proxy</strong></li>
+         * <li><p><strong>SSHProxy</strong></p>
+         * </li>
+         * <li><p><strong>HTTPProxy</strong></p>
+         * </li>
+         * <li><p><strong>Socks5Proxy</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

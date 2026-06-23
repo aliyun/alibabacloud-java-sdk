@@ -74,7 +74,7 @@ public class RemoveUsersFromGroupResponseBody extends TeaModel {
          * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

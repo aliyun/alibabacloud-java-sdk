@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the bastion host is moved.</p>
+     * <p>The ID of the destination resource group.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the resource group ID of the bastion host.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the resource group ID of the Bastionhost instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,9 +28,9 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the bastion host for which you want to change the resource group.</p>
+     * <p>The ID of the Bastionhost instance whose resource group you want to change.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the ID of the Bastionhost instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +41,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>INSTANCE</strong>, which indicates that the resource is a bastion host.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>, which indicates that the resource is a Bastionhost instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

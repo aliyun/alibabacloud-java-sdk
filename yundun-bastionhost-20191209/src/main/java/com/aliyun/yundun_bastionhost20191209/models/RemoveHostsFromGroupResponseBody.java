@@ -90,7 +90,7 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
          * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

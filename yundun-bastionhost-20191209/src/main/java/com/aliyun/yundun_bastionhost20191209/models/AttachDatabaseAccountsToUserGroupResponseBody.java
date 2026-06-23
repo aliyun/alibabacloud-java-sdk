@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5D0EB759-CB0A-537D-A2CC-13A9854FA08D</p>
@@ -14,7 +14,7 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the call.</p>
+     * <p>The results of the call.</p>
      */
     @NameInMap("Results")
     public java.util.List<AttachDatabaseAccountsToUserGroupResponseBodyResults> results;
@@ -42,7 +42,7 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
 
     public static class AttachDatabaseAccountsToUserGroupResponseBodyResultsDatabaseAccounts extends TeaModel {
         /**
-         * <p>The error code returned. If OK is returned, the authorization was successful. If another error code is returned, the authorization failed.</p>
+         * <p>The error code. If the value is \<code>OK\\</code>, the authorization was successful. Other values indicate that the authorization failed.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -51,7 +51,7 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The database account ID.</p>
+         * <p>The ID of the database account.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -60,7 +60,10 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
         public String databaseAccountId;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         @NameInMap("Message")
         public String message;
@@ -98,7 +101,7 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
 
     public static class AttachDatabaseAccountsToUserGroupResponseBodyResults extends TeaModel {
         /**
-         * <p>The error code returned. If OK is returned, the authorization was successful. If another error code is returned, the authorization failed.</p>
+         * <p>The error code. If the value is \<code>OK\\</code>, the authorization was successful. Other values indicate that the authorization failed.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -107,13 +110,13 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>A list that shows the authorization results of the database accounts.</p>
+         * <p>A list of database account information.</p>
          */
         @NameInMap("DatabaseAccounts")
         public java.util.List<AttachDatabaseAccountsToUserGroupResponseBodyResultsDatabaseAccounts> databaseAccounts;
 
         /**
-         * <p>The database ID.</p>
+         * <p>The ID of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -122,13 +125,16 @@ public class AttachDatabaseAccountsToUserGroupResponseBody extends TeaModel {
         public String databaseId;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The user group ID.</p>
+         * <p>The ID of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

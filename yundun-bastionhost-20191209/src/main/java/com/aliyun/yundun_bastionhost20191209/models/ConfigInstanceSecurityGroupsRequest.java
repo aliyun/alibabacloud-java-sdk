@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigInstanceSecurityGroupsRequest extends TeaModel {
     /**
-     * <p>An array that consists of the IDs of authorized security groups.</p>
+     * <p>A list of authorized security group IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ConfigInstanceSecurityGroupsRequest extends TeaModel {
     public java.util.List<String> authorizedSecurityGroups;
 
     /**
-     * <p>The ID of the bastion host.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,10 +28,12 @@ public class ConfigInstanceSecurityGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +43,7 @@ public class ConfigInstanceSecurityGroupsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -61,8 +61,10 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         /**
          * <p>The address type of the database. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong></li>
-         * <li><strong>Private</strong></li>
+         * <li><p><strong>Public</strong></p>
+         * </li>
+         * <li><p><strong>Private</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,7 +113,7 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
          * <p>The internal endpoint of the database. The value is a domain name or an IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-wz97******</p>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("DatabasePrivateAddress")
         public String databasePrivateAddress;
@@ -120,7 +122,7 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
          * <p>The public endpoint of the database. The value is a domain name or an IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf65******</p>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("DatabasePublicAddress")
         public String databasePublicAddress;
@@ -128,10 +130,14 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>Oracle</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>SQLServer</strong></li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>SQLServer</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,9 +158,12 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         /**
          * <p>The database type. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong>: on-premises database.</li>
-         * <li><strong>Rds</strong>: ApsaraDB RDS instance.</li>
-         * <li><strong>PolarDB</strong>: PolarDB cluster.</li>
+         * <li><p><strong>Local</strong>: on-premises database.</p>
+         * </li>
+         * <li><p><strong>Rds</strong>: ApsaraDB RDS instance.</p>
+         * </li>
+         * <li><p><strong>PolarDB</strong>: PolarDB cluster.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,11 +175,11 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         /**
          * <p>The ID of the ApsaraDB RDS instance or PolarDB cluster.</p>
          * <blockquote>
-         * <p> No value is returned for this parameter if <strong>Source</strong> is set to <strong>Local</strong>.</p>
+         * <p>No value is returned for this parameter if <strong>Source</strong> is set to <strong>Local</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>i-wz9fv2hwux78x9h1pmje</p>
+         * <p>i-wz9fv2hwux78x9******</p>
          */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;

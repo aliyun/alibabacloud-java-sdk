@@ -32,7 +32,7 @@ public class GetRuleRequest extends TeaModel {
     /**
      * <p>The ID of the authorization rule to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758868.html">ListRules</a> operation to query the authorization rule ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758868.html">ListRules</a> operation to query the authorization rule ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

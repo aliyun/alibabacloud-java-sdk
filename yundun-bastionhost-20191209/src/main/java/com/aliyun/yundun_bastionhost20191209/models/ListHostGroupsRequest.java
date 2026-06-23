@@ -8,7 +8,7 @@ public class ListHostGroupsRequest extends TeaModel {
      * <p>The name of the host group that you want to query. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>Host group 1</p>
+     * <p>HostGroup1</p>
      */
     @NameInMap("HostGroupName")
     public String hostGroupName;
@@ -16,7 +16,7 @@ public class ListHostGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class ListHostGroupsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you do not leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

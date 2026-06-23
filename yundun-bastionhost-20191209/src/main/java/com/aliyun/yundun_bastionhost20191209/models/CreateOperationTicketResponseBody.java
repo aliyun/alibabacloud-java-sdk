@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOperationTicketResponseBody extends TeaModel {
     /**
+     * <p>The ID of the O\&amp;M ticket.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class CreateOperationTicketResponseBody extends TeaModel {
     public String operationTicketId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0ECCC399-4D35-48A7-8379-5C6180E66235</p>
      */

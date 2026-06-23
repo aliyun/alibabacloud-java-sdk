@@ -33,7 +33,7 @@ public class GetPolicyUserScopeRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host to which the control policy to query belongs.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

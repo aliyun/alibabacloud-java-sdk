@@ -49,11 +49,11 @@ public class UnlockUsersResponseBody extends TeaModel {
          * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
          * </li>
          * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
-         * <p>**</p>
+         * <p>\<em>\</em></p>
          * <p><strong>Note</strong>Make sure that the request parameters are valid and call the operation again.</p>
          * </li>
          * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
-         * <p>**</p>
+         * <p>\<em>\</em></p>
          * <p><strong>Note</strong>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
          * </li>
          * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
@@ -70,7 +70,7 @@ public class UnlockUsersResponseBody extends TeaModel {
          * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

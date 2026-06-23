@@ -7,7 +7,7 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The new remarks of the user. The remarks can be up to 500 characters in length.</p>
      * <blockquote>
-     * <p> Leave this parameter empty if you do not want to change the remarks of the user.</p>
+     * <p>Leave this parameter empty if you do not want to change the remarks of the user.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The new display name of the user. The display name can be up to 128 characters in length.</p>
      * <blockquote>
-     * <p> Leave this parameter empty if you do not want to change the display name of the user.</p>
+     * <p>Leave this parameter empty if you do not want to change the display name of the user.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The end time of the validity period of the user. Specify a UNIX timestamp. Unit: seconds.</p>
      * <blockquote>
-     * <p> Leave this parameter empty if you do not want to change the end time of the validity period.</p>
+     * <p>Leave this parameter empty if you do not want to change the end time of the validity period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The start time of the validity period of the user. Specify a UNIX timestamp. Unit: seconds.</p>
      * <blockquote>
-     * <p> Leave this parameter empty if you do not want to change the start time of the validity period.</p>
+     * <p>Leave this parameter empty if you do not want to change the start time of the validity period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host on which you want to modify the information about the user.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -87,8 +87,10 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>This parameter is required if LanguageStatus is set to Custom.</p>
      * <ul>
-     * <li><strong>zh-cn</strong>: simplified Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh-cn</strong>: simplified Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,11 +102,13 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>Specifies whether to send notifications in the language specified in the global settings or a custom language.</p>
      * <ul>
-     * <li><strong>Global</strong></li>
-     * <li><strong>Custom</strong></li>
+     * <li><p><strong>Global</strong></p>
+     * </li>
+     * <li><p><strong>Custom</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Leave this parameter empty if you do not want to change the natural language used to notify the user.</p>
+     * <p>Leave this parameter empty if you do not want to change the natural language used to notify the user.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -135,26 +139,46 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The country where the new mobile number of the user is registered. Valid values:</p>
      * <ul>
-     * <li><strong>CN:</strong> the Chinese mainland, whose country calling code is +86</li>
-     * <li><strong>HK:</strong> Hong Kong (China), whose country calling code is +852</li>
-     * <li><strong>MO:</strong> Macao (China), whose country calling code is +853</li>
-     * <li><strong>TW:</strong> Taiwan (China), whose country calling code is +886</li>
-     * <li><strong>RU:</strong> Russia, whose country calling code is +7</li>
-     * <li><strong>SG:</strong> Singapore, whose country calling code is +65</li>
-     * <li><strong>MY:</strong> Malaysia, whose country calling code is +60</li>
-     * <li><strong>ID:</strong> Indonesia, whose country calling code is +62</li>
-     * <li><strong>DE:</strong> Germany, whose country calling code is +49</li>
-     * <li><strong>AU:</strong> Australia, whose country calling code is +61</li>
-     * <li><strong>US:</strong> US, whose country calling code is +1</li>
-     * <li><strong>AE:</strong> United Arab Emirates, whose country calling code is +971</li>
-     * <li><strong>JP:</strong> Japan, whose country calling code is +81</li>
-     * <li><strong>GB:</strong> UK, whose country calling code is +44</li>
-     * <li><strong>IN:</strong> India, whose country calling code is +91</li>
-     * <li><strong>KR:</strong> Republic of Korea, whose country calling code is +82</li>
-     * <li><strong>PH:</strong> Philippines, whose country calling code is +63</li>
-     * <li><strong>CH:</strong> Switzerland, whose country calling code is +41</li>
-     * <li><strong>SE:</strong> Sweden, whose country calling code is +46</li>
-     * <li><strong>SA:</strong> Saudi Arabia, whose country calling code is +966</li>
+     * <li><p><strong>CN:</strong> the Chinese mainland, whose country calling code is +86</p>
+     * </li>
+     * <li><p><strong>HK:</strong> Hong Kong (China), whose country calling code is +852</p>
+     * </li>
+     * <li><p><strong>MO:</strong> Macao (China), whose country calling code is +853</p>
+     * </li>
+     * <li><p><strong>TW:</strong> Taiwan (China), whose country calling code is +886</p>
+     * </li>
+     * <li><p><strong>RU:</strong> Russia, whose country calling code is +7</p>
+     * </li>
+     * <li><p><strong>SG:</strong> Singapore, whose country calling code is +65</p>
+     * </li>
+     * <li><p><strong>MY:</strong> Malaysia, whose country calling code is +60</p>
+     * </li>
+     * <li><p><strong>ID:</strong> Indonesia, whose country calling code is +62</p>
+     * </li>
+     * <li><p><strong>DE:</strong> Germany, whose country calling code is +49</p>
+     * </li>
+     * <li><p><strong>AU:</strong> Australia, whose country calling code is +61</p>
+     * </li>
+     * <li><p><strong>US:</strong> US, whose country calling code is +1</p>
+     * </li>
+     * <li><p><strong>AE:</strong> United Arab Emirates, whose country calling code is +971</p>
+     * </li>
+     * <li><p><strong>JP:</strong> Japan, whose country calling code is +81</p>
+     * </li>
+     * <li><p><strong>GB:</strong> UK, whose country calling code is +44</p>
+     * </li>
+     * <li><p><strong>IN:</strong> India, whose country calling code is +91</p>
+     * </li>
+     * <li><p><strong>KR:</strong> Republic of Korea, whose country calling code is +82</p>
+     * </li>
+     * <li><p><strong>PH:</strong> Philippines, whose country calling code is +63</p>
+     * </li>
+     * <li><p><strong>CH:</strong> Switzerland, whose country calling code is +41</p>
+     * </li>
+     * <li><p><strong>SE:</strong> Sweden, whose country calling code is +46</p>
+     * </li>
+     * <li><p><strong>SA:</strong> Saudi Arabia, whose country calling code is +966</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,11 +190,13 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>Specifies whether password reset is required upon the next logon. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Leave this parameter empty if you do not want to change the password reset settings for the user.</p>
+     * <p>Leave this parameter empty if you do not want to change the password reset settings for the user.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -194,7 +220,7 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host on which you want to modify the information about the user.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -206,17 +232,23 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The two-factor authentication method. You can select only one method. Valid values:</p>
      * <ul>
-     * <li><strong>sms</strong>: text message-based two-factor authentication.</li>
-     * <li><strong>email</strong>: email-based two-factor authentication.</li>
-     * <li><strong>dingtalk</strong>: DingTalk-based two-factor authentication.</li>
-     * <li><strong>totp OTP:</strong> one-time password (OTP) token-based two-factor authentication.</li>
+     * <li><p><strong>sms</strong>: text message-based two-factor authentication.</p>
+     * </li>
+     * <li><p><strong>email</strong>: email-based two-factor authentication.</p>
+     * </li>
+     * <li><p><strong>dingtalk</strong>: DingTalk-based two-factor authentication.</p>
+     * </li>
+     * <li><p><strong>totp OTP:</strong> one-time password (OTP) token-based two-factor authentication.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If TwoFactorStatus is set to Enable, you must specify one of the valid values as TwoFactorMethods.</p>
+     * <p>If TwoFactorStatus is set to Enable, you must specify one of the valid values as TwoFactorMethods.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>sms</p>
+     * <p>[
+     *       &quot;sms&quot;
+     * ]</p>
      */
     @NameInMap("TwoFactorMethods")
     public String twoFactorMethods;
@@ -224,12 +256,15 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>Specifies whether two-factor authentication is enabled for the user. Valid values:</p>
      * <ul>
-     * <li><strong>Global</strong>: The global settings apply.</li>
-     * <li><strong>Disable</strong>: Two-factor authentication is disabled.</li>
-     * <li><strong>Enable</strong>: Two-factor authentication is enabled and user-specific settings apply.</li>
+     * <li><p><strong>Global</strong>: The global settings apply.</p>
+     * </li>
+     * <li><p><strong>Disable</strong>: Two-factor authentication is disabled.</p>
+     * </li>
+     * <li><p><strong>Enable</strong>: Two-factor authentication is enabled and user-specific settings apply.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Leave this parameter empty if you do not want to change the two-factory authentication settings for the user.</p>
+     * <p>Leave this parameter empty if you do not want to change the two-factory authentication settings for the user.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -241,7 +276,7 @@ public class ModifyUserRequest extends TeaModel {
     /**
      * <p>The ID of the user whose information you want to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

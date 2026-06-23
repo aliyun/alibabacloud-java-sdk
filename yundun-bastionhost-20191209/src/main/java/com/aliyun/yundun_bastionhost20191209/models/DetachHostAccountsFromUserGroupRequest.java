@@ -8,7 +8,7 @@ public class DetachHostAccountsFromUserGroupRequest extends TeaModel {
      * <p>The IDs of the host and host account on which you want to revoke permissions from the user group.</p>
      * <p>You can specify up to 10 host IDs and up to 10 host account IDs for each host. You can specify only host IDs. In this case, the permissions on both the specified hosts and all host accounts of the hosts are revoked from the user group. For more information about this parameter, see the &quot;Description of the Hosts parameter&quot; section of this topic.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host and the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host and the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +21,7 @@ public class DetachHostAccountsFromUserGroupRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host in which you want to revoke permissions on the specified hosts and host accounts from the user group.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +34,7 @@ public class DetachHostAccountsFromUserGroupRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host in which you want to revoke permissions on the specified hosts and host accounts from the user group.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DetachHostAccountsFromUserGroupRequest extends TeaModel {
     /**
      * <p>The ID of the user group from which you want to revoke permissions on the specified hosts and host accounts.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

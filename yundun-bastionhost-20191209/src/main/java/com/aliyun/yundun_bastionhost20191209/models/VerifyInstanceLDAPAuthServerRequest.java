@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     /**
+     * <p>The account of the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String account;
 
     /**
+     * <p>The Base DN.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String baseDN;
 
     /**
+     * <p>The filter condition for users.</p>
+     * 
      * <strong>example:</strong>
      * <p>(objectClass=top)</p>
      */
@@ -30,6 +34,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,14 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether SSL is supported. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: supported</p>
+     * </li>
+     * <li><p><strong>false</strong>: not supported</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -46,6 +59,8 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String isSSL;
 
     /**
+     * <p>The password of the server account.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -53,6 +68,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The port used to access the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +78,8 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String port;
 
     /**
+     * <p>The region ID of the Bastionhost instance. For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -69,6 +87,7 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The address of the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +97,8 @@ public class VerifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String server;
 
     /**
+     * <p>The address of the standby server.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
      */

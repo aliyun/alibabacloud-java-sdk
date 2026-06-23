@@ -48,8 +48,10 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     /**
      * <p>The new connection mode of the network domain. Valid values:</p>
      * <ul>
-     * <li><strong>Direct</strong></li>
-     * <li><strong>Proxy</strong></li>
+     * <li><p><strong>Direct</strong></p>
+     * </li>
+     * <li><p><strong>Proxy</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -150,8 +152,10 @@ public class ModifyNetworkDomainRequest extends TeaModel {
         /**
          * <p>The node type of the proxy server to modify. Valid values:</p>
          * <ul>
-         * <li><strong>Master</strong>: primary proxy server.</li>
-         * <li><strong>Slave</strong>: secondary proxy server.</li>
+         * <li><p><strong>Master</strong>: primary proxy server.</p>
+         * </li>
+         * <li><p><strong>Slave</strong>: secondary proxy server.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,9 +185,12 @@ public class ModifyNetworkDomainRequest extends TeaModel {
         /**
          * <p>The new proxy mode. Valid values:</p>
          * <ul>
-         * <li><strong>SSHProxy</strong></li>
-         * <li><strong>HTTPProxy</strong></li>
-         * <li><strong>Socks5Proxy</strong></li>
+         * <li><p><strong>SSHProxy</strong></p>
+         * </li>
+         * <li><p><strong>HTTPProxy</strong></p>
+         * </li>
+         * <li><p><strong>Socks5Proxy</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

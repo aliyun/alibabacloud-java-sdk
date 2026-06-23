@@ -60,6 +60,9 @@ public class ListPoliciesResponseBody extends TeaModel {
     public static class ListPoliciesResponseBodyPolicies extends TeaModel {
         /**
          * <p>The remarks of the control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Comment</p>
          */
         @NameInMap("Comment")
         public String comment;

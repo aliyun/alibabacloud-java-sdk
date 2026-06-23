@@ -7,7 +7,7 @@ public class SetPolicyUserScopeRequest extends TeaModel {
     /**
      * <p>The bastion host ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class SetPolicyUserScopeRequest extends TeaModel {
     /**
      * <p>The ID of the control policy that you want to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,9 +45,12 @@ public class SetPolicyUserScopeRequest extends TeaModel {
     /**
      * <p>The scope of users to whom the control policy applies. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: The control policy applies to all users.</li>
-     * <li><strong>User</strong>: The control policy applies to specified users.</li>
-     * <li><strong>UserGroup</strong>: The control policy applies to specified user groups.</li>
+     * <li><p><strong>All</strong>: The control policy applies to all users.</p>
+     * </li>
+     * <li><p><strong>User</strong>: The control policy applies to specified users.</p>
+     * </li>
+     * <li><p><strong>UserGroup</strong>: The control policy applies to specified user groups.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

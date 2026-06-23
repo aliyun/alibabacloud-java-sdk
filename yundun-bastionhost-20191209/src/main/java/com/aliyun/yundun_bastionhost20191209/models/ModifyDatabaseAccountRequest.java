@@ -7,7 +7,7 @@ public class ModifyDatabaseAccountRequest extends TeaModel {
     /**
      * <p>The ID of the database account to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -60,7 +60,7 @@ public class ModifyDatabaseAccountRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host that manages the database account to modify.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -16,7 +16,7 @@ public class ModifyHostGroupRequest extends TeaModel {
     /**
      * <p>The ID of the asset group that you want to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -51,7 +51,7 @@ public class ModifyHostGroupRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host whose asset group you want to modify.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

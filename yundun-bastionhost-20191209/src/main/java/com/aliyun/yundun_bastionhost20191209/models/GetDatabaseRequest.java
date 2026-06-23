@@ -7,7 +7,7 @@ public class GetDatabaseRequest extends TeaModel {
     /**
      * <p>The ID of the database to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query the database ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query the database ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

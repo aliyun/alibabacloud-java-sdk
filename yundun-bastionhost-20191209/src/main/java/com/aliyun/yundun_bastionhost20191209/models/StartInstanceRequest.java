@@ -4,14 +4,23 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
+    /**
+     * <p>The IDs of the security groups for the endpoint that is used to access the bastion host over a private network.</p>
+     */
     @NameInMap("ClientSecurityGroupIds")
     public java.util.List<String> clientSecurityGroupIds;
 
+    /**
+     * <p>Specifies whether to enable the O\&amp;M portal of the bastion host to be accessed over a private network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnablePortalPrivateAccess")
     public Boolean enablePortalPrivateAccess;
 
     /**
-     * <p>The ID of the bastion host that you want to enable.</p>
+     * <p>The ID of the bastion host to start.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
      * </blockquote>
@@ -33,7 +42,7 @@ public class StartInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>An array consisting of the IDs of security groups to which the bastion host is added.</p>
+     * <p>The IDs of the security groups to which the bastion host is bound.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,11 +51,17 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    /**
+     * <p>The ID of the secondary vSwitch to which the bastion host is bound.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-9dpspfku7gita****</p>
+     */
     @NameInMap("SlaveVswitchId")
     public String slaveVswitchId;
 
     /**
-     * <p>The ID of the vSwitch to which the bastion host belongs.</p>
+     * <p>The ID of the vSwitch to which the bastion host is bound.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1xfwzzfti0kjbf****</p>

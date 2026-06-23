@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHostResponseBody extends TeaModel {
     /**
-     * <p>The ID of the host.</p>
+     * <p>The ID of the new host.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

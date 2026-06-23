@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateOperationTicketRequest extends TeaModel {
     /**
+     * <p>The comments on the ticket.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Comment</p>
      */
     @NameInMap("ApproveComment")
     public String approveComment;
 
     /**
+     * <p>The logon name of the asset account for the O\&amp;M request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,10 @@ public class CreateOperationTicketRequest extends TeaModel {
     public String assetAccountName;
 
     /**
+     * <p>The ID of the asset for which to request O\&amp;M.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2758856.html">ListOperationDatabases</a> and <a href="https://help.aliyun.com/document_detail/2758857.html">ListOperationHosts</a> operations to obtain this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +38,11 @@ public class CreateOperationTicketRequest extends TeaModel {
     public String assetId;
 
     /**
+     * <p>The end time of the validity period for the logon request. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1679393152</p>
      */
@@ -36,6 +50,8 @@ public class CreateOperationTicketRequest extends TeaModel {
     public Long effectEndTime;
 
     /**
+     * <p>The start time of the validity period for the logon request. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1685600242</p>
      */
@@ -43,6 +59,10 @@ public class CreateOperationTicketRequest extends TeaModel {
     public Long effectStartTime;
 
     /**
+     * <p>The ID of the Bastionhost instance.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +72,14 @@ public class CreateOperationTicketRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether the ticket is valid for a single logon. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The ticket is valid for a single logon.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The ticket is valid for multiple logons within the validity period.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -59,6 +87,21 @@ public class CreateOperationTicketRequest extends TeaModel {
     public Boolean isOneTimeEffect;
 
     /**
+     * <p>The name of the protocol for the O\&amp;M request. Valid values:</p>
+     * <ul>
+     * <li><p>SSH</p>
+     * </li>
+     * <li><p>RDP</p>
+     * </li>
+     * <li><p>MySQL</p>
+     * </li>
+     * <li><p>PostgreSQL</p>
+     * </li>
+     * <li><p>Oracle</p>
+     * </li>
+     * <li><p>SQLServer</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +111,11 @@ public class CreateOperationTicketRequest extends TeaModel {
     public String protocolName;
 
     /**
+     * <p>The region ID of the Bastionhost instance.</p>
+     * <blockquote>
+     * <p>For more information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

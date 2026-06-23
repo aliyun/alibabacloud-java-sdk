@@ -81,9 +81,7 @@ public class ModifyHostsPortResponseBody extends TeaModel {
          * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

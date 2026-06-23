@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetNetworkDomainResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about the network domain.</p>
+     * <p>The details of the network domain.</p>
      */
     @NameInMap("NetworkDomain")
     public GetNetworkDomainResponseBodyNetworkDomain networkDomain;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>05F59944-2E24-595C-B21A-8C9955E60FAF</p>
@@ -42,7 +42,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
 
     public static class GetNetworkDomainResponseBodyNetworkDomainProxies extends TeaModel {
         /**
-         * <p>The IP address of the proxy server.</p>
+         * <p>The address of the proxy server.</p>
          * 
          * <strong>example:</strong>
          * <p><code>47.102.**.**</code></p>
@@ -51,10 +51,12 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>Indicates whether the proxy server has a password. Valid values:</p>
+         * <p>Specifies whether a password is set for the proxy server. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: A password is set.</p>
+         * </li>
+         * <li><p><strong>false</strong>: No password is set.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,8 +68,10 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         /**
          * <p>The node type of the proxy server. Valid values:</p>
          * <ul>
-         * <li><strong>Master</strong>: primary proxy server.</li>
-         * <li><strong>Slave</strong>: secondary proxy server.</li>
+         * <li><p>Master: primary proxy server</p>
+         * </li>
+         * <li><p>Slave: secondary proxy server</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -86,10 +90,12 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The status of the proxy server.</p>
+         * <p>The status of the proxy server. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Unavailable</strong></li>
+         * <li><p><strong>Available</strong>: available</p>
+         * </li>
+         * <li><p><strong>Unavailable</strong>: unavailable</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,12 +105,16 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         public String proxyState;
 
         /**
-         * <p>The error code that indicates the status of the proxy server.</p>
+         * <p>The error code that is returned if the proxy server is unavailable. Valid values:</p>
          * <ul>
-         * <li><strong>CHECK_PWD_FAILED</strong>: The password is invalid.</li>
-         * <li><strong>CHECK_PWD_TIMEOUT</strong>: The password verification session timed out.</li>
-         * <li><strong>CHECK_PWD_NETWORK_ERR</strong>: A network error occurred.</li>
-         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+         * <li><p><strong>CHECK_PWD_FAILED</strong>: Incorrect password.</p>
+         * </li>
+         * <li><p><strong>CHECK_PWD_TIMEOUT</strong>: Password verification timeout.</p>
+         * </li>
+         * <li><p><strong>CHECK_PWD_NETWORK_ERR</strong>: Network error.</p>
+         * </li>
+         * <li><p><strong>UNEXPECTED</strong>: Unknown error.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,11 +124,14 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         public String proxyStateErrorCode;
 
         /**
-         * <p>The proxy type. Valid values:</p>
+         * <p>The proxy method. Valid values:</p>
          * <ul>
-         * <li><strong>SSHProxy</strong></li>
-         * <li><strong>HTTPProxy</strong></li>
-         * <li><strong>Socks5Proxy</strong></li>
+         * <li><p>SSHProxy: SSH proxy</p>
+         * </li>
+         * <li><p>HTTPProxy: HTTP proxy</p>
+         * </li>
+         * <li><p>Socks5Proxy: SOCKS5 proxy</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +222,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
 
     public static class GetNetworkDomainResponseBodyNetworkDomain extends TeaModel {
         /**
-         * <p>The remarks of the network domain.</p>
+         * <p>The comment for the network domain.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -218,10 +231,12 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>Indicates whether the network domain is a built-in network domain.</p>
+         * <p>Specifies whether the network domain is built-in. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: No</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +246,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         public Boolean _default;
 
         /**
-         * <p>The network domain ID.</p>
+         * <p>The ID of the network domain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -249,10 +264,12 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         public String networkDomainName;
 
         /**
-         * <p>The connection mode of the network domain. Valid values:</p>
+         * <p>The type of the network domain. Valid values:</p>
          * <ul>
-         * <li>Direct</li>
-         * <li>Proxy</li>
+         * <li><p>Direct: direct connection</p>
+         * </li>
+         * <li><p>Proxy: proxy</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +279,7 @@ public class GetNetworkDomainResponseBody extends TeaModel {
         public String networkDomainType;
 
         /**
-         * <p>The information about the proxy servers.</p>
+         * <p>A list of proxy servers.</p>
          */
         @NameInMap("Proxies")
         public java.util.List<GetNetworkDomainResponseBodyNetworkDomainProxies> proxies;

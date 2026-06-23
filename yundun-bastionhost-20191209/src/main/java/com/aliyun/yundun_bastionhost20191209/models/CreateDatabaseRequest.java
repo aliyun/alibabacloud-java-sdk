@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseRequest extends TeaModel {
     /**
-     * <p>The address type of the database to add. Valid values:</p>
+     * <p>The address type of the new database. Valid values:</p>
      * <ul>
-     * <li>Public</li>
-     * <li>Private</li>
+     * <li><p>Public: a public endpoint</p>
+     * </li>
+     * <li><p>Private: a private endpoint</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class CreateDatabaseRequest extends TeaModel {
     public String activeAddressType;
 
     /**
-     * <p>The remarks of the database to add. The remarks can be up to 500 characters in length.</p>
+     * <p>The comments on the new database. The comments can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>cpp</p>
@@ -28,16 +30,16 @@ public class CreateDatabaseRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The name of the database to add. This parameter is required if Source is set to <strong>Local</strong>.</p>
+     * <p>The name of the new database instance. This parameter is required if you set Source to <strong>Local</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Oracle</p>
+     * <p>Test01</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The port of the database. This parameter is required if Source is set to <strong>Local</strong>.</p>
+     * <p>The port used to connect to the database. This parameter is required if you set Source to <strong>Local</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5433</p>
@@ -46,36 +48,40 @@ public class CreateDatabaseRequest extends TeaModel {
     public Integer databasePort;
 
     /**
-     * <p>The internal IP address of the database. Specify an IPv4 address or a domain name.</p>
+     * <p>The private endpoint of the database. You can use an IPv4 address or a domain name.</p>
      * <blockquote>
-     * <p> This parameter is required if ActiveAddressType is set to Private.</p>
+     * <p>This parameter is required if you set ActiveAddressType to Private.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>pgm-uf6o******</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("DatabasePrivateAddress")
     public String databasePrivateAddress;
 
     /**
-     * <p>The public IP address of the database. Specify an IPv4 address or a domain name.</p>
+     * <p>The public endpoint of the database. You can use an IPv4 address or a domain name.</p>
      * <blockquote>
-     * <p> This parameter is required if ActiveAddressType is set to Public.</p>
+     * <p>This parameter is required if you set ActiveAddressType to Public.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rm-uf65251k51******</p>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("DatabasePublicAddress")
     public String databasePublicAddress;
 
     /**
-     * <p>The type of the database engine. Valid values:</p>
+     * <p>The type of the database. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>Oracle</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>SQLServer</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>SQLServer</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -86,9 +92,9 @@ public class CreateDatabaseRequest extends TeaModel {
     public String databaseType;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -99,16 +105,18 @@ public class CreateDatabaseRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the new RDS or PolarDB database instance belongs.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>1605494xxxx</p>
      */
     @NameInMap("InstanceMemberId")
     public Long instanceMemberId;
 
     /**
-     * <p>The ID of the network domain to which the database to add belongs.</p>
+     * <p>The ID of the network domain for the new database.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -118,10 +126,12 @@ public class CreateDatabaseRequest extends TeaModel {
     public String networkDomainId;
 
     /**
-     * <p>The endpoint type of the PolarDB database. This parameter is required if Source is set to PolarDB. Valid values:</p>
+     * <p>This parameter is required if you set Source to PolarDB. This parameter specifies the endpoint type of the PolarDB database. Valid values:</p>
      * <ul>
-     * <li>Cluster</li>
-     * <li>Primary</li>
+     * <li><p>Cluster: a cluster endpoint</p>
+     * </li>
+     * <li><p>Primary: a primary endpoint</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,9 +141,9 @@ public class CreateDatabaseRequest extends TeaModel {
     public String polarDBEndpointType;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For a list of region IDs and their corresponding region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -143,11 +153,14 @@ public class CreateDatabaseRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the database to add. Valid values:</p>
+     * <p>The source of the new database. Valid values:</p>
      * <ul>
-     * <li>Local: on-premises database.</li>
-     * <li>Rds: ApsaraDB RDS instance.</li>
-     * <li>PolarDB: PolarDB cluster.</li>
+     * <li><p>Local: a local database instance</p>
+     * </li>
+     * <li><p>Rds: an RDS database instance</p>
+     * </li>
+     * <li><p>PolarDB: a PolarDB database instance</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -158,9 +171,9 @@ public class CreateDatabaseRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The instance ID of the database to add.</p>
+     * <p>The ID of the database instance.</p>
      * <blockquote>
-     * <p>This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
+     * <p>This parameter is required if you set <strong>Source</strong> to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -170,9 +183,9 @@ public class CreateDatabaseRequest extends TeaModel {
     public String sourceInstanceId;
 
     /**
-     * <p>The region ID of the database to add.</p>
+     * <p>The region ID of the database instance.</p>
      * <blockquote>
-     * <p> This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
+     * <p>This parameter is required if <strong>Source</strong> is set to <strong>Rds</strong> or <strong>PolarDB</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

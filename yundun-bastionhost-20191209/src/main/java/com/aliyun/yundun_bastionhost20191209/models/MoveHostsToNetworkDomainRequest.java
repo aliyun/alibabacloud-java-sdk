@@ -27,7 +27,7 @@ public class MoveHostsToNetworkDomainRequest extends TeaModel {
     /**
      * <p>The ID of the network domain to which you want to add hosts.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

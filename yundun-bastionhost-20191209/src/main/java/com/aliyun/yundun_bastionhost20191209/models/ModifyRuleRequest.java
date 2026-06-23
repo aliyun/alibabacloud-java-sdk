@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyRuleRequest extends TeaModel {
     /**
      * <p>The new remarks of the authorization rule. It can be up to 500 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -214,11 +217,7 @@ public class ModifyRuleRequest extends TeaModel {
          * <p>The database ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>[
-         *     {
-         *         &quot;DatabaseId&quot;: &quot;1&quot;
-         *     }
-         * ]</p>
+         * <p>2</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
@@ -257,7 +256,7 @@ public class ModifyRuleRequest extends TeaModel {
          * <p>The asset group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;HostGroupId&quot;:&quot;1&quot;}]</p>
+         * <p>1</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
@@ -296,7 +295,7 @@ public class ModifyRuleRequest extends TeaModel {
          * <p>The host ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;HostId&quot;:&quot;1&quot;}]</p>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;

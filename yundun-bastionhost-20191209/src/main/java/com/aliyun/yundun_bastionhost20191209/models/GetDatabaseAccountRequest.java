@@ -7,7 +7,7 @@ public class GetDatabaseAccountRequest extends TeaModel {
     /**
      * <p>The ID of the database account to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758839.html">ListDatabaseAccounts</a> operation to query the database account ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

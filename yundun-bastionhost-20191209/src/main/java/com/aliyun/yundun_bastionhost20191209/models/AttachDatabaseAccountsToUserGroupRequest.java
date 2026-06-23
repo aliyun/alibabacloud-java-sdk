@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class AttachDatabaseAccountsToUserGroupRequest extends TeaModel {
     /**
-     * <p>An array that consists of the database objects.</p>
+     * <p>An array of database objects.</p>
      * <blockquote>
-     * <p> You can specify up to 10 databases and 10 database accounts. The database accounts are not required. If you do not specify a database account, the user group is authorized to manage only the databases.</p>
+     * <p>You can specify up to 10 databases and 10 database accounts. If you do not specify any database accounts, permissions are granted on the entire database.</p>
      * </blockquote>
      */
     @NameInMap("Databases")
     public java.util.List<AttachDatabaseAccountsToUserGroupRequestDatabases> databases;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class AttachDatabaseAccountsToUserGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,6 +39,7 @@ public class AttachDatabaseAccountsToUserGroupRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the user group to which to grant the permissions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,13 +87,13 @@ public class AttachDatabaseAccountsToUserGroupRequest extends TeaModel {
 
     public static class AttachDatabaseAccountsToUserGroupRequestDatabases extends TeaModel {
         /**
-         * <p>An array that consists of database account IDs.</p>
+         * <p>An array of database account IDs.</p>
          */
         @NameInMap("DatabaseAccountIds")
         public java.util.List<String> databaseAccountIds;
 
         /**
-         * <p>The ID of the database that you want to authorize the user group to manage.</p>
+         * <p>The ID of the database instance on which you want to grant permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>58</p>

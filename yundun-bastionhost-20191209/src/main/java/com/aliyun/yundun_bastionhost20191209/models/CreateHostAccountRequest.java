@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateHostAccountRequest extends TeaModel {
     /**
-     * <p>The name of the host account. The name can be up to 128 characters in length.</p>
+     * <p>The name of the new host account. The name can be up to 128 characters long.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>abc</p>
+     * <p>accountname</p>
      */
     @NameInMap("HostAccountName")
     public String hostAccountName;
 
     /**
-     * <p>The ID of the host to which you want to add a host account.</p>
+     * <p>The ID of the host for which you want to create a host account.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class CreateHostAccountRequest extends TeaModel {
     public String hostId;
 
     /**
-     * <p>The ID of the shared key.</p>
+     * <p>The ID of the shared key for the host.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,9 +37,9 @@ public class CreateHostAccountRequest extends TeaModel {
     public String hostShareKeyId;
 
     /**
-     * <p>The ID of the bastion host in which you want to add a host account to the host.</p>
+     * <p>The ID of the Bastionhost instance where you want to create the host account.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -50,47 +50,63 @@ public class CreateHostAccountRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The passphrase for the private key of the host account.</p>
+     * <p>The passphrase for the private key of the new host account.</p>
      * <blockquote>
-     * <p>You can configure this parameter only if ProtocolName is set to SSH. You do not need to configure this parameter if ProtocolName is set to RDP.</p>
+     * <p>You can set this parameter only when ProtocolName is set to SSH. You do not need to set this parameter if ProtocolName is set to RDP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>123456</p>
      */
     @NameInMap("PassPhrase")
     public String passPhrase;
 
     /**
-     * <p>The password of the host account.</p>
+     * <p>The password of the new host account.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>123456</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The private key of the host account. Specify a Base64-encoded string.</p>
+     * <p>The private key of the new host account. The value is a Base64-encoded string.</p>
      * <blockquote>
-     * <p>This parameter is valid only if ProtocolName is set to SSH. You do not need to configure this parameter if ProtocolName is set to RDP. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key for logon.</p>
+     * <p>This parameter is used only when ProtocolName is set to SSH. You do not need to set this parameter if ProtocolName is set to RDP. You can set both a password and a private key for the host account. When connecting to the asset, Bastionhost prioritizes the private key for the connection.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>LS0tLS1******RCBSU0tLQ==</p>
      */
     @NameInMap("PrivateKey")
     public String privateKey;
 
+    /**
+     * <p>The permission type of the account. If you do not set this parameter, the default value is Normal.</p>
+     * <ul>
+     * <li><p><strong>Privileged</strong>: privileged account</p>
+     * </li>
+     * <li><p><strong>Normal</strong>: normal account</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is supported only in Bastionhost V3.2.47 and later.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("PrivilegeType")
     public String privilegeType;
 
     /**
-     * <p>The protocol of the host to which you want to add a host account.</p>
-     * <p>Valid values:</p>
+     * <p>The protocol of the new host account. <br>Valid values:<br></p>
      * <ul>
-     * <li>SSH</li>
-     * <li>RDP</li>
+     * <li><p>SSH</p>
+     * </li>
+     * <li><p>RDP</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -101,9 +117,9 @@ public class CreateHostAccountRequest extends TeaModel {
     public String protocolName;
 
     /**
-     * <p>The region ID of the bastion host in which you want to add a host account to the host.</p>
+     * <p>The region ID of the Bastionhost instance where you want to create the host account.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,6 +128,21 @@ public class CreateHostAccountRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The password change mode for the account. If you do not set this parameter, the default value is Self.</p>
+     * <ul>
+     * <li><p><strong>Privileged</strong>: Use a privileged account to change the password.</p>
+     * </li>
+     * <li><p><strong>Self</strong>: Do not use a privileged account to change the password.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is supported only in Bastionhost V3.2.47 and later.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Self</p>
+     */
     @NameInMap("RotationMode")
     public String rotationMode;
 

@@ -16,7 +16,7 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The display name of the user that you want to add. The display name can be up to 128 characters in length.</p>
      * <blockquote>
-     * <p> If you leave this parameter empty, the logon name is used as the display name.</p>
+     * <p>If you leave this parameter empty, the logon name is used as the display name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,8 +76,10 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>This parameter is required if LanguageStatus is set to Custom. Valid values:</p>
      * <ul>
-     * <li><strong>zh-cn</strong>: simplified Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><p><strong>zh-cn</strong>: simplified Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,11 +91,13 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>Specifies whether to send notifications in the language specified in the global settings or a custom language.</p>
      * <ul>
-     * <li><strong>Global</strong></li>
-     * <li><strong>Custom</strong></li>
+     * <li><p><strong>Global</strong></p>
+     * </li>
+     * <li><p><strong>Custom</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you leave this parameter empty, the default value Global is used.</p>
+     * <p>If you leave this parameter empty, the default value Global is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,26 +126,46 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The location where the mobile phone number of the user is registered. Default value: CN. Valid values:</p>
      * <ul>
-     * <li><strong>CN</strong>: the Chinese mainland, whose international dialing code is +86.</li>
-     * <li><strong>HK</strong>: Hong Kong (China), whose international dialing code is +852.</li>
-     * <li><strong>MO</strong>: Macao (China), whose international dialing code is +853.</li>
-     * <li><strong>TW</strong>: Taiwan (China), whose international dialing code is +886.</li>
-     * <li><strong>RU</strong>: Russia, whose international dialing code is +7.</li>
-     * <li><strong>SG</strong>: Singapore, whose international dialing code is +65.</li>
-     * <li><strong>MY</strong>: Malaysia, whose international dialing code is +60.</li>
-     * <li><strong>ID</strong>: Indonesia, whose international dialing code is +62.</li>
-     * <li><strong>DE</strong>: Germany, whose international dialing code is +49.</li>
-     * <li><strong>AU</strong>: Australia, whose international dialing code is +61.</li>
-     * <li><strong>US</strong>: US, whose international dialing code is +1.</li>
-     * <li><strong>AE</strong>: United Arab Emirates, whose international dialing code is +971.</li>
-     * <li><strong>JP</strong>: Japan, whose international dialing code is +81.</li>
-     * <li><strong>GB</strong>: UK, whose international dialing code is +44.</li>
-     * <li><strong>IN</strong>: India, whose international dialing code is +91.</li>
-     * <li><strong>KR</strong>: Republic of Korea, whose international dialing code is +82.</li>
-     * <li><strong>PH</strong>: Philippines, whose international dialing code is +63.</li>
-     * <li><strong>CH</strong>: Switzerland, whose international dialing code is +41.</li>
-     * <li><strong>SE:</strong> Sweden, whose international dialing code is +46.</li>
-     * <li><strong>SA:</strong> Saudi Arabia, whose international dialing code is +966.</li>
+     * <li><p><strong>CN</strong>: the Chinese mainland, whose international dialing code is +86.</p>
+     * </li>
+     * <li><p><strong>HK</strong>: Hong Kong (China), whose international dialing code is +852.</p>
+     * </li>
+     * <li><p><strong>MO</strong>: Macao (China), whose international dialing code is +853.</p>
+     * </li>
+     * <li><p><strong>TW</strong>: Taiwan (China), whose international dialing code is +886.</p>
+     * </li>
+     * <li><p><strong>RU</strong>: Russia, whose international dialing code is +7.</p>
+     * </li>
+     * <li><p><strong>SG</strong>: Singapore, whose international dialing code is +65.</p>
+     * </li>
+     * <li><p><strong>MY</strong>: Malaysia, whose international dialing code is +60.</p>
+     * </li>
+     * <li><p><strong>ID</strong>: Indonesia, whose international dialing code is +62.</p>
+     * </li>
+     * <li><p><strong>DE</strong>: Germany, whose international dialing code is +49.</p>
+     * </li>
+     * <li><p><strong>AU</strong>: Australia, whose international dialing code is +61.</p>
+     * </li>
+     * <li><p><strong>US</strong>: US, whose international dialing code is +1.</p>
+     * </li>
+     * <li><p><strong>AE</strong>: United Arab Emirates, whose international dialing code is +971.</p>
+     * </li>
+     * <li><p><strong>JP</strong>: Japan, whose international dialing code is +81.</p>
+     * </li>
+     * <li><p><strong>GB</strong>: UK, whose international dialing code is +44.</p>
+     * </li>
+     * <li><p><strong>IN</strong>: India, whose international dialing code is +91.</p>
+     * </li>
+     * <li><p><strong>KR</strong>: Republic of Korea, whose international dialing code is +82.</p>
+     * </li>
+     * <li><p><strong>PH</strong>: Philippines, whose international dialing code is +63.</p>
+     * </li>
+     * <li><p><strong>CH</strong>: Switzerland, whose international dialing code is +41.</p>
+     * </li>
+     * <li><p><strong>SE:</strong> Sweden, whose international dialing code is +46.</p>
+     * </li>
+     * <li><p><strong>SA:</strong> Saudi Arabia, whose international dialing code is +966.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,11 +177,13 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>Specifies whether password reset is required upon the next logon. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you leave this parameter empty, the default value false is used.</p>
+     * <p>If you leave this parameter empty, the default value false is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -193,15 +219,19 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The type of the user that you want to add. Valid values:</p>
      * <ul>
-     * <li><strong>Local</strong>: a local user.</li>
-     * <li><strong>Ram</strong>: a RAM user.</li>
-     * <li><strong>AD</strong>: an AD-authenticated user.</li>
-     * <li><strong>LDAP</strong>: an LDAP-authenticated user.</li>
+     * <li><p><strong>Local</strong>: a local user.</p>
+     * </li>
+     * <li><p><strong>Ram</strong>: a RAM user.</p>
+     * </li>
+     * <li><p><strong>AD</strong>: an AD-authenticated user.</p>
+     * </li>
+     * <li><p><strong>LDAP</strong>: an LDAP-authenticated user.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>local</p>
+     * <p>Local</p>
      */
     @NameInMap("Source")
     public String source;
@@ -226,13 +256,17 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The two-factor authentication method. You can select only one method. Valid values:</p>
      * <ul>
-     * <li><strong>sms</strong>: text message-based two-factor authentication.</li>
-     * <li><strong>email</strong>: email-based two-factor authentication.</li>
-     * <li><strong>dingtalk</strong>: DingTalk-based two-factor authentication.</li>
-     * <li><strong>totp OTP</strong>: one-time password (OTP) token-based two-factor authentication.</li>
+     * <li><p><strong>sms</strong>: text message-based two-factor authentication.</p>
+     * </li>
+     * <li><p><strong>email</strong>: email-based two-factor authentication.</p>
+     * </li>
+     * <li><p><strong>dingtalk</strong>: DingTalk-based two-factor authentication.</p>
+     * </li>
+     * <li><p><strong>totp OTP</strong>: one-time password (OTP) token-based two-factor authentication.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If TwoFactorStatus is set to Enable, you must select one of the preceding values for TwoFactorMethods.</p>
+     * <p>If TwoFactorStatus is set to Enable, you must select one of the preceding values for TwoFactorMethods.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -244,12 +278,15 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>Specifies whether two-factor authentication is enabled for the user. Valid values:</p>
      * <ul>
-     * <li><strong>Global</strong>: The global settings apply.</li>
-     * <li><strong>Disable</strong>: Two-factor authentication is disabled.</li>
-     * <li><strong>Enable</strong>: Two-factor authentication is enabled and user-specific settings apply.</li>
+     * <li><p><strong>Global</strong>: The global settings apply.</p>
+     * </li>
+     * <li><p><strong>Disable</strong>: Two-factor authentication is disabled.</p>
+     * </li>
+     * <li><p><strong>Enable</strong>: Two-factor authentication is enabled and user-specific settings apply.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you leave this parameter empty, the default value Global is used.</p>
+     * <p>If you leave this parameter empty, the default value Global is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

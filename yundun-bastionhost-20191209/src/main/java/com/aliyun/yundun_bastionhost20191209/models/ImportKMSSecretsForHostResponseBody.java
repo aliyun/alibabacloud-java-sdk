@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKMSSecretsForHostResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -13,10 +13,15 @@ public class ImportKMSSecretsForHostResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The import result for each secret.</p>
+     */
     @NameInMap("Results")
     public java.util.List<ImportKMSSecretsForHostResponseBodyResults> results;
 
     /**
+     * <p>The number of secrets that were successfully imported.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +59,8 @@ public class ImportKMSSecretsForHostResponseBody extends TeaModel {
 
     public static class ImportKMSSecretsForHostResponseBodyResults extends TeaModel {
         /**
+         * <p>The status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -61,6 +68,8 @@ public class ImportKMSSecretsForHostResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The result message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -68,6 +77,8 @@ public class ImportKMSSecretsForHostResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The name of the secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */

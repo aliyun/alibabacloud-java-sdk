@@ -8,7 +8,7 @@ public class AcceptOperationTicketRequest extends TeaModel {
      * <p>The review description.</p>
      * 
      * <strong>example:</strong>
-     * <p>O\&amp;M allowed</p>
+     * <p>Comment</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -16,13 +16,17 @@ public class AcceptOperationTicketRequest extends TeaModel {
     /**
      * <p>The maximum number of logons allowed. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</li>
-     * <li><strong>1</strong>: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</li>
+     * <li><p><strong>0</strong>: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can set this parameter only to 0 if you review an O\&amp;M application on a database.</li>
-     * <li>If you do not specify this parameter, the default value 0 is used.</li>
+     * <li><p>You can set this parameter only to 0 if you review an O\&amp;M application on a database.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the default value 0 is used.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -76,7 +80,7 @@ public class AcceptOperationTicketRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -61,8 +61,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
         /**
          * <p>The endpoint type of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong>: public endpoint</li>
-         * <li><strong>Private</strong>: internal endpoint</li>
+         * <li><p><strong>Public</strong>: public endpoint</p>
+         * </li>
+         * <li><p><strong>Private</strong>: internal endpoint</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,8 +121,10 @@ public class ListHostsForUserResponseBody extends TeaModel {
         /**
          * <p>The operating system of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Linux</strong></li>
-         * <li><strong>Windows</strong></li>
+         * <li><p><strong>Linux</strong></p>
+         * </li>
+         * <li><p><strong>Windows</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

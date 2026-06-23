@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the control policy that you want to modify.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain the policy ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,14 +31,14 @@ public class SetPolicyProtocolConfigShrinkRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The protocol control settings.</p>
+     * <p>The protocol control configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolConfig")
     public String protocolConfigShrink;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The ID of the region where the Bastionhost instance resides.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>

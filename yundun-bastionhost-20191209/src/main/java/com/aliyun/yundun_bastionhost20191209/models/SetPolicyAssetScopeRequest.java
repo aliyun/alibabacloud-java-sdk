@@ -7,7 +7,7 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
     /**
      * <p>The databases to which the control policy applies.</p>
      * <blockquote>
-     * <p> This parameter is required if ScopeType is set to Database. You can specify up to 500 databases.</p>
+     * <p>This parameter is required if ScopeType is set to Database. You can specify up to 500 databases.</p>
      * </blockquote>
      */
     @NameInMap("Databases")
@@ -47,7 +47,7 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
     /**
      * <p>The ID of the control policy that you want to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -72,10 +72,14 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
     /**
      * <p>The scope of assets to which the control policy applies. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: The control policy applies to all assets.</li>
-     * <li><strong>Host</strong>: The control policy applies to specified hosts.</li>
-     * <li><strong>Database</strong>: The control policy applies to specified databases.</li>
-     * <li><strong>HostGroup</strong>: The control policy applies to specified asset groups.</li>
+     * <li><p><strong>All</strong>: The control policy applies to all assets.</p>
+     * </li>
+     * <li><p><strong>Host</strong>: The control policy applies to specified hosts.</p>
+     * </li>
+     * <li><p><strong>Database</strong>: The control policy applies to specified databases.</p>
+     * </li>
+     * <li><p><strong>HostGroup</strong>: The control policy applies to specified asset groups.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -150,8 +154,10 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         /**
          * <p>The scope of database accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: The control policy applies to all database accounts of the database.</li>
-         * <li><strong>AccountId</strong>: The control policy applies to specified database accounts of the database.</li>
+         * <li><p><strong>All</strong>: The control policy applies to all database accounts of the database.</p>
+         * </li>
+         * <li><p><strong>AccountId</strong>: The control policy applies to specified database accounts of the database.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +169,7 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         /**
          * <p>The database accounts to which the control policy applies.</p>
          * <blockquote>
-         * <p> This parameter is required if AccountScopeType is set to AccountId.</p>
+         * <p>This parameter is required if AccountScopeType is set to AccountId.</p>
          * </blockquote>
          */
         @NameInMap("DatabaseAccountIds")
@@ -222,8 +228,10 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         /**
          * <p>The scope of asset accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: The control policy applies to all accounts in the asset group.</li>
-         * <li><strong>AccountName</strong>: The control policy applies to specified accounts in the asset group.</li>
+         * <li><p><strong>All</strong>: The control policy applies to all accounts in the asset group.</p>
+         * </li>
+         * <li><p><strong>AccountName</strong>: The control policy applies to specified accounts in the asset group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,8 +284,10 @@ public class SetPolicyAssetScopeRequest extends TeaModel {
         /**
          * <p>The scope of host accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: The control policy applies to all accounts of the host.</li>
-         * <li><strong>AccountId</strong>: The control policy applies specified accounts of the host.</li>
+         * <li><p><strong>All</strong>: The control policy applies to all accounts of the host.</p>
+         * </li>
+         * <li><p><strong>AccountId</strong>: The control policy applies specified accounts of the host.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

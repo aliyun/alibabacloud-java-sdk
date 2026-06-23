@@ -4,13 +4,25 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetNetworkDomainRequest extends TeaModel {
+    /**
+     * <p>Indicates whether to immediately recheck the status of the proxy server. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Immediately rechecks the status of the proxy server and returns the latest ProxyState and ProxyStateErrorCode.</p>
+     * </li>
+     * <li><p><strong>false</strong>: (Default) Returns the currently recorded status without rechecking the proxy server.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CheckProxyState")
     public String checkProxyState;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances </a>operation to query the bastion host ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to get this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -23,7 +35,7 @@ public class GetNetworkDomainRequest extends TeaModel {
     /**
      * <p>The ID of the network domain to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains </a>operation to query the network domain ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to get this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,9 +46,9 @@ public class GetNetworkDomainRequest extends TeaModel {
     public String networkDomainId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

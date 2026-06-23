@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostsForUserGroupRequest extends TeaModel {
     /**
-     * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+     * <p>The address of the host. You can set this parameter to a domain name or an IP address. Exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -14,7 +14,7 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String hostAddress;
 
     /**
-     * <p>The name of the host that you want to query. Only exact match is supported.</p>
+     * <p>The name of the host. Exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -23,9 +23,9 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the bastion host on which you want to query the hosts that the user group is authorized or not authorized to manage.</p>
+     * <p>The ID of the bastion host instance that contains the user group.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,10 +36,12 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies the category of the hosts that you want to query. Valid values:</p>
+     * <p>Specifies whether to query for authorized or unauthorized hosts. Valid values:</p>
      * <ul>
-     * <li><strong>Authorized</strong>: queries the hosts that the user group is authorized to manage. This is the default value.</li>
-     * <li><strong>Unauthorized</strong>: queries the hosts that the user group is not authorized to manage.</li>
+     * <li><p><strong>Authorized</strong> (default)</p>
+     * </li>
+     * <li><p><strong>Unauthorized</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,10 +51,12 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The operating system of the host that you want to query. Valid values:</p>
+     * <p>The operating system of the host. Valid values:</p>
      * <ul>
-     * <li><strong>Linux</strong></li>
-     * <li><strong>Windows</strong></li>
+     * <li><p><strong>Linux</strong></p>
+     * </li>
+     * <li><p><strong>Windows</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +66,7 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>The number of the page. Default value: 1.</p>
+     * <p>The page number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -71,10 +75,9 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
-     * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+     * <p>The number of entries to return on each page.<br>Maximum value: 100. Default value: 20.<br></p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,9 +87,9 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the bastion host on which you want to query the hosts that the user group is authorized or not authorized to manage.</p>
+     * <p>The ID of the region where the bastion host instance is located.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about regions and their corresponding IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">regions and availability zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,9 +99,9 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the user group for which you want to query hosts.</p>
+     * <p>The ID of the user group whose hosts you want to list.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain the user group ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationTicketsRequest extends TeaModel {
     /**
-     * <p>The IP address of the asset that is contained in the O\&amp;M application to be reviewed.</p>
+     * <p>The address of the asset for which the O\&amp;M request is pending approval. This parameter supports exact match searches.</p>
      * 
      * <strong>example:</strong>
      * <p>10.167.XX.XX</p>
@@ -14,9 +14,9 @@ public class ListOperationTicketsRequest extends TeaModel {
     public String assetAddress;
 
     /**
-     * <p>The ID of the bastion host.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class ListOperationTicketsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page. Default value: <strong>1</strong>.</p>
+     * <p>The page number for a paged query. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,10 +36,9 @@ public class ListOperationTicketsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
-     * Maximum value: 1000. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return on each page of a paged query.<br> The maximum value for the PageSize parameter is 1000. The default value is 20. If you leave this parameter empty, 20 entries are returned.<br><br></p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,9 +48,9 @@ public class ListOperationTicketsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

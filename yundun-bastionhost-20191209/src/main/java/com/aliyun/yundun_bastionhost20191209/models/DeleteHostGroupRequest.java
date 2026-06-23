@@ -12,7 +12,7 @@ public class DeleteHostGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("HostGroupId")
     public String hostGroupId;

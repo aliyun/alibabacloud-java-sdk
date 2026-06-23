@@ -61,8 +61,10 @@ public class ListHostsResponseBody extends TeaModel {
         /**
          * <p>The address type of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong>: a public address</li>
-         * <li><strong>Private</strong>: a private address</li>
+         * <li><p><strong>Public</strong>: a public address</p>
+         * </li>
+         * <li><p><strong>Private</strong>: a private address</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,8 +130,10 @@ public class ListHostsResponseBody extends TeaModel {
         /**
          * <p>The operating system of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Linux</strong></li>
-         * <li><strong>Windows</strong></li>
+         * <li><p><strong>Linux</strong></p>
+         * </li>
+         * <li><p><strong>Windows</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,9 +145,12 @@ public class ListHostsResponseBody extends TeaModel {
         /**
          * <p>The source of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong>: a host in a data center</li>
-         * <li><strong>Ecs</strong>: an ECS instance</li>
-         * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+         * <li><p><strong>Local</strong>: a host in a data center</p>
+         * </li>
+         * <li><p><strong>Ecs</strong>: an ECS instance</p>
+         * </li>
+         * <li><p><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,8 +174,10 @@ public class ListHostsResponseBody extends TeaModel {
         /**
          * <p>The status of the host. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: normal</li>
-         * <li><strong>Release</strong>: released</li>
+         * <li><p><strong>Normal</strong>: normal</p>
+         * </li>
+         * <li><p><strong>Release</strong>: released</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

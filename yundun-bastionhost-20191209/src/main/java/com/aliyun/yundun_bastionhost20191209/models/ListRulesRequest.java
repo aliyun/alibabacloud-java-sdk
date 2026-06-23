@@ -27,7 +27,7 @@ public class ListRulesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
+     * <p>The number of entries per page.<br>
      * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
      * <p>We recommend that you do not leave this parameter empty.</p>
@@ -42,7 +42,7 @@ public class ListRulesRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,8 +63,10 @@ public class ListRulesRequest extends TeaModel {
     /**
      * <p>The state of the authorization rule to query.</p>
      * <ul>
-     * <li><strong>Enabled</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><p><strong>Enabled</strong></p>
+     * </li>
+     * <li><p><strong>Disabled</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -62,7 +62,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
          * <p>The remarks of the asset group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>Comment</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -80,7 +80,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
          * <p>The name of the asset group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Host group 1</p>
+         * <p>HostGroup1</p>
          */
         @NameInMap("HostGroupName")
         public String hostGroupName;

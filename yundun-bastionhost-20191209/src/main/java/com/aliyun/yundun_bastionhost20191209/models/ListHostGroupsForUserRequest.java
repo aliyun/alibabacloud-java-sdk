@@ -16,7 +16,7 @@ public class ListHostGroupsForUserRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host whose user you want to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,8 +29,10 @@ public class ListHostGroupsForUserRequest extends TeaModel {
     /**
      * <p>The category of the host groups to query. Valid values:</p>
      * <ul>
-     * <li><strong>Authorized</strong> (default): queries the host groups that the user is authorized to manage.</li>
-     * <li><strong>Unauthorized</strong>: queries the host groups that the user is not authorized to manage.</li>
+     * <li><p><strong>Authorized</strong> (default): queries the host groups that the user is authorized to manage.</p>
+     * </li>
+     * <li><p><strong>Unauthorized</strong>: queries the host groups that the user is not authorized to manage.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,10 +51,9 @@ public class ListHostGroupsForUserRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
-     * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The number of entries per page.<br> Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you do not leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,7 +65,7 @@ public class ListHostGroupsForUserRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host whose user you want to query.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +77,7 @@ public class ListHostGroupsForUserRequest extends TeaModel {
     /**
      * <p>The user ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

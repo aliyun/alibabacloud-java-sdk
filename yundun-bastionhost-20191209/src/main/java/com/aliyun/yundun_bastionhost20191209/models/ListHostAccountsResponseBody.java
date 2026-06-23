@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the queried host accounts.</p>
+     * <p>The list of the returned host accounts.</p>
      */
     @NameInMap("HostAccounts")
     public java.util.List<ListHostAccountsResponseBodyHostAccounts> hostAccounts;
@@ -20,7 +20,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of host accounts that are queried.</p>
+     * <p>The total number of returned host accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,11 +59,12 @@ public class ListHostAccountsResponseBody extends TeaModel {
 
     public static class ListHostAccountsResponseBodyHostAccounts extends TeaModel {
         /**
-         * <p>Indicates whether a password is configured for the host account.</p>
-         * <p>Valid values:</p>
+         * <p>Indicates whether a password is set for the host account.<br> Valid values:</p>
          * <ul>
-         * <li>true: A password is configured for the host account.</li>
-         * <li>false: No passwords are configured for the host account.</li>
+         * <li><p><strong>true</strong>: A password is set.</p>
+         * </li>
+         * <li><p><strong>false</strong>: No password is set.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>The ID of the shared key.</p>
+         * <p>The ID of the shared key of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +110,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         public String hostShareKeyId;
 
         /**
-         * <p>The name of the shared key.</p>
+         * <p>The name of the shared key of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -118,7 +119,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         public String hostShareKeyName;
 
         /**
-         * <p>The fingerprint of the private key for the host account.</p>
+         * <p>The fingerprint of the private key of the host account.</p>
          * 
          * <strong>example:</strong>
          * <p>fe:ca:37:42:30:00:9d:95:e6:73:e5:b0:32:0a:<strong>:</strong></p>
@@ -126,15 +127,31 @@ public class ListHostAccountsResponseBody extends TeaModel {
         @NameInMap("PrivateKeyFingerprint")
         public String privateKeyFingerprint;
 
+        /**
+         * <p>The permission type of the account.</p>
+         * <ul>
+         * <li><p><strong>Privileged</strong>: privileged account</p>
+         * </li>
+         * <li><p><strong>Normal</strong>: regular account</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only for Bastionhost instances of V3.2.47 or later.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("PrivilegeType")
         public String privilegeType;
 
         /**
-         * <p>The protocol that is used by the host.</p>
-         * <p>Valid values:</p>
+         * <p>The protocol of the host account.<br> Valid values:</p>
          * <ul>
-         * <li>SSH</li>
-         * <li>RDP</li>
+         * <li><p>SSH</p>
+         * </li>
+         * <li><p>RDP</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,6 +160,21 @@ public class ListHostAccountsResponseBody extends TeaModel {
         @NameInMap("ProtocolName")
         public String protocolName;
 
+        /**
+         * <p>The password change mode of the account.</p>
+         * <ul>
+         * <li><p><strong>Privileged</strong>: The password is changed using a privileged account.</p>
+         * </li>
+         * <li><p><strong>Self</strong>: The password is changed without using a privileged account.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only for Bastionhost instances of V3.2.47 or later.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Privileged</p>
+         */
         @NameInMap("RotationMode")
         public String rotationMode;
 

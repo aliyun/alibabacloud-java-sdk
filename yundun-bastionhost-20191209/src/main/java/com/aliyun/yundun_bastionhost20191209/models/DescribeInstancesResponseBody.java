@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the bastion hosts returned.</p>
+     * <p>An array of Bastionhost instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for troubleshooting purposes.</p>
      * 
      * <strong>example:</strong>
      * <p>61D36C55-AAFC-4678-8FAD-34FEF9E7182E</p>
@@ -20,7 +20,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of bastion hosts that are queried.</p>
+     * <p>The total number of Bastionhost instances returned.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -58,11 +58,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <p>The default bandwidth of the instance, in Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60M</p>
+         */
         @NameInMap("BandWidth")
         public Long bandWidth;
 
         /**
-         * <p>The remarks of the bastion host.</p>
+         * <p>The custom description of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Test API</p>
@@ -71,7 +77,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The timestamp when the bastion host expires. Unit: milliseconds.</p>
+         * <p>The expiration time of the Bastionhost instance, specified as a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578326400000</p>
@@ -80,16 +86,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The image version of the bastion host.</p>
+         * <p>The image version of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>3.0.0</p>
+         * <p>3.2.41</p>
          */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
         /**
-         * <p>The bastion host ID.</p>
+         * <p>The ID of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
          * <p>bastionhost-cn-78v1gh****</p>
@@ -98,15 +104,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status of the bastion host. Valid values:</p>
+         * <p>The status of the Bastionhost instance. Valid values:</p>
          * <ul>
-         * <li><strong>PENDING</strong>: The bastion host is not initialized.</li>
-         * <li><strong>CREATING</strong>: The bastion host is being created.</li>
-         * <li><strong>RUNNING</strong>: The bastion host is running.</li>
-         * <li><strong>EXPIRED</strong>: The bastion host expired.</li>
-         * <li><strong>CREATE_FAILED</strong>: The bastion host fails to be created.</li>
-         * <li><strong>UPGRADING</strong>: The configurations of the bastion host are being changed.</li>
-         * <li><strong>UPGRADE_FAILED</strong>: The configurations of the bastion host fail to be changed.</li>
+         * <li><p><strong>PENDING</strong>: Not initialized</p>
+         * </li>
+         * <li><p><strong>CREATING</strong>: The instance is being created.</p>
+         * </li>
+         * <li><p><strong>RUNNING</strong>: The instance is running.</p>
+         * </li>
+         * <li><p><strong>EXPIRED</strong>: The instance has expired.</p>
+         * </li>
+         * <li><p><strong>CREATE_FAILED</strong>: Instance creation failed.</p>
+         * </li>
+         * <li><p><strong>UPGRADING</strong>: The instance is being upgraded.</p>
+         * </li>
+         * <li><p><strong>UPGRADE_FAILED</strong>: Instance upgrade failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,28 +129,30 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>The public O\&amp;M address of the bastion host.</p>
+         * <p>The public domain name of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>drawvxalwb-public.bastionhost.aliyuncs.com</p>
+         * <p>******lwb-public.bastionhost.aliyuncs.com</p>
          */
         @NameInMap("InternetEndpoint")
         public String internetEndpoint;
 
         /**
-         * <p>The private O\&amp;M address of the bastion host.</p>
+         * <p>The private domain name of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>drawvxalwb.bastionhost.aliyuncs.com</p>
+         * <p>******lwb.bastionhost.aliyuncs.com</p>
          */
         @NameInMap("IntranetEndpoint")
         public String intranetEndpoint;
 
         /**
-         * <p>Indicates whether the bastion host runs an earlier version. Valid values:</p>
+         * <p>Indicates whether the Bastionhost instance is a legacy instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The bastion host runs V2 or V3.1.</li>
-         * <li><strong>false</strong>: The bastion host runs V3.2.</li>
+         * <li><p><strong>true</strong>: The instance is of the V2 or V3.1 series.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The instance is of the V3.2 series.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +162,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean legacy;
 
         /**
-         * <p>The license code of the bastion host.</p>
+         * <p>The license code of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
          * <p>bhah_ent_50_asset</p>
@@ -156,10 +171,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String licenseCode;
 
         /**
-         * <p>The edition of the bastion host. Valid values:</p>
+         * <p>The edition of the Bastionhost instance. Valid values:</p>
          * <ul>
-         * <li><strong>cloudbastion</strong>: Basic Edition.</li>
-         * <li><strong>cloudbastion_ha</strong>: Enterprise Edition.</li>
+         * <li><p><strong>cloudbastion</strong>: Basic Edition</p>
+         * </li>
+         * <li><p><strong>cloudbastion_ha</strong>: Enterprise Edition</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,10 +186,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String planCode;
 
         /**
-         * <p>Indicates whether the bastion host can be accessed from the Internet. Valid values:</p>
+         * <p>Indicates whether the Bastionhost instance is accessible over the Internet. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The instance is accessible over the Internet.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The instance is not accessible over the Internet.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +201,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean publicNetworkAccess;
 
         /**
-         * <p>The region ID of the bastion host.</p>
+         * <p>The region ID of the Bastionhost instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -191,7 +210,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the bastion host belongs.</p>
+         * <p>The ID of the resource group to which the Bastionhost instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>g-acfm26ougi****</p>
@@ -199,11 +218,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the standby vSwitch to which the Bastionhost instance is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6j0u49poi8qr****</p>
+         */
         @NameInMap("SlaveVswitchId")
         public String slaveVswitchId;
 
         /**
-         * <p>The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.</p>
+         * <p>The purchase or renewal time of the Bastionhost instance, specified as a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1577681345000</p>
@@ -212,7 +237,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the bastion host belongs.</p>
+         * <p>The ID of the VPC to which the Bastionhost instance is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1c85tzgqu1bf5b****</p>
@@ -221,7 +246,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The ID of the vSwitch to which the bastion host belongs.</p>
+         * <p>The ID of the vSwitch to which the Bastionhost instance is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1xfwzzfti0kjbf****</p>

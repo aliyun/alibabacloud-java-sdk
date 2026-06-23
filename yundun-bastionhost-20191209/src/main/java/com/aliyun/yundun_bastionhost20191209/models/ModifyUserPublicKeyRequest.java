@@ -16,12 +16,12 @@ public class ModifyUserPublicKeyRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host on which you want to modify the public key of a user.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>bastionhost-cn-nif236pmc1u</p>
+     * <p>bastionhost-cn-nif23******</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -29,7 +29,7 @@ public class ModifyUserPublicKeyRequest extends TeaModel {
     /**
      * <p>The new public key.</p>
      * <blockquote>
-     * <p> Specify a Base64-encoded string.</p>
+     * <p>Specify a Base64-encoded string.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ModifyUserPublicKeyRequest extends TeaModel {
     /**
      * <p>The ID of the public key that you want to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/477555.html">ListUserPublicKeys</a> operation to query the public key ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/477555.html">ListUserPublicKeys</a> operation to query the public key ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

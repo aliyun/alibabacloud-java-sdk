@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ImportKMSSecretsForHostRequest extends TeaModel {
     /**
+     * <p>The ID of the host to import the KMS secrets to.</p>
+     * <blockquote>
+     * <p>Only ECS hosts can import KMS secrets. You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,11 @@ public class ImportKMSSecretsForHostRequest extends TeaModel {
     public Integer hostId;
 
     /**
+     * <p>The ID of the Bastionhost instance.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>bastionhost-cn-st220aw****</p>
      */
@@ -21,12 +30,20 @@ public class ImportKMSSecretsForHostRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID of the Bastionhost instance.</p>
+     * <blockquote>
+     * <p>For more information about region IDs and names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and availability zones</a>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The KMS secrets to import.</p>
+     */
     @NameInMap("Secrets")
     public java.util.List<ImportKMSSecretsForHostRequestSecrets> secrets;
 
@@ -69,6 +86,8 @@ public class ImportKMSSecretsForHostRequest extends TeaModel {
 
     public static class ImportKMSSecretsForHostRequestSecrets extends TeaModel {
         /**
+         * <p>The name of the KMS secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>secret</p>
          */
@@ -76,6 +95,11 @@ public class ImportKMSSecretsForHostRequest extends TeaModel {
         public String secretName;
 
         /**
+         * <p>The type of the KMS secret. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS</strong>: an ECS credential.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ECS</p>
          */

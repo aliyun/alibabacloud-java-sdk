@@ -7,8 +7,10 @@ public class ModifyInstanceTwoFactorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable two-factor authentication. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: yes</p>
+     * </li>
+     * <li><p><strong>false</strong>: no</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,11 +56,16 @@ public class ModifyInstanceTwoFactorRequest extends TeaModel {
     /**
      * <p>The method used to send a verification code for two-factor authentication. If EnableTwoFactor is set to true, you must specify at least one method. Valid values:</p>
      * <ul>
-     * <li><strong>sms:</strong> text message.</li>
-     * <li><strong>email</strong>: email.</li>
-     * <li><strong>dingtalk</strong>: notice in DingTalk.</li>
-     * <li><strong>totp</strong>: one-time password (OTP) token.</li>
-     * <li><strong>gmusbkey</strong>: SM-based USB key.</li>
+     * <li><p><strong>sms:</strong> text message.</p>
+     * </li>
+     * <li><p><strong>email</strong>: email.</p>
+     * </li>
+     * <li><p><strong>dingtalk</strong>: notice in DingTalk.</p>
+     * </li>
+     * <li><p><strong>totp</strong>: one-time password (OTP) token.</p>
+     * </li>
+     * <li><p><strong>gmusbkey</strong>: SM-based USB key.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

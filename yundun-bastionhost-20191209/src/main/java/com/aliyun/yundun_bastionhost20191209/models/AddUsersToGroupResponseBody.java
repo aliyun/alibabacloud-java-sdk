@@ -72,6 +72,9 @@ public class AddUsersToGroupResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

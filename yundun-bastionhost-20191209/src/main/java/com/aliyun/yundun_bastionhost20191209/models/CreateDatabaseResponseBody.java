@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseResponseBody extends TeaModel {
     /**
-     * <p>The database ID.</p>
+     * <p>The ID of the database instance.</p>
      * 
      * <strong>example:</strong>
      * <p>334</p>
@@ -14,7 +14,7 @@ public class CreateDatabaseResponseBody extends TeaModel {
     public String databaseId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>98EDD923-236C-5A88-88E7-4979A91B9325</p>

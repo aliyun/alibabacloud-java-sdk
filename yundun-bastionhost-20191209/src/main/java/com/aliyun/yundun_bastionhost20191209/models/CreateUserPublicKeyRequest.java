@@ -41,7 +41,7 @@ public class CreateUserPublicKeyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Public key of a user</p>
+     * <p>KeyName</p>
      */
     @NameInMap("PublicKeyName")
     public String publicKeyName;
@@ -61,7 +61,7 @@ public class CreateUserPublicKeyRequest extends TeaModel {
     /**
      * <p>The ID of the user for whom you want to create a public key.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -52,7 +52,7 @@ public class CreateRuleRequest extends TeaModel {
     /**
      * <p>The bastion host ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -200,11 +200,7 @@ public class CreateRuleRequest extends TeaModel {
          * <p>The database ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>[
-         *     {
-         *         &quot;DatabaseId&quot;: &quot;1&quot;
-         *     }
-         * ]</p>
+         * <p>2</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
@@ -243,7 +239,7 @@ public class CreateRuleRequest extends TeaModel {
          * <p>The asset group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;HostGroupId&quot;:&quot;1&quot;}]</p>
+         * <p>3</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
@@ -282,7 +278,7 @@ public class CreateRuleRequest extends TeaModel {
          * <p>The host ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;HostId&quot;:&quot;1&quot;}]</p>
+         * <p>1</p>
          */
         @NameInMap("HostId")
         public String hostId;

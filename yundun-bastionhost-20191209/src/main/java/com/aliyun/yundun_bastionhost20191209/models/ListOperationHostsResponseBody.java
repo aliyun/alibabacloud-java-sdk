@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListOperationHostsResponseBody extends TeaModel {
     /**
-     * <p>The hosts returned.</p>
+     * <p>A list of the hosts.</p>
      */
     @NameInMap("Hosts")
     public java.util.List<ListOperationHostsResponseBodyHosts> hosts;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4F6C075F-FC86-476E-943B-097BD4E12948</p>
@@ -20,7 +20,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of hosts returned.</p>
+     * <p>The total number of hosts.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -59,10 +59,12 @@ public class ListOperationHostsResponseBody extends TeaModel {
 
     public static class ListOperationHostsResponseBodyHosts extends TeaModel {
         /**
-         * <p>The address type of the host. Valid values:</p>
+         * <p>The address type of the host.</p>
          * <ul>
-         * <li><strong>Public</strong></li>
-         * <li><strong>Private</strong></li>
+         * <li><p><strong>Public</strong>: The public endpoint is used.</p>
+         * </li>
+         * <li><p><strong>Private</strong>: The private endpoint is used.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String activeAddressType;
 
         /**
-         * <p>The remarks of the host.</p>
+         * <p>The comments on the host.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -81,7 +83,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The host ID.</p>
+         * <p>The ID of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -90,7 +92,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>The host name.</p>
+         * <p>The name of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>host1</p>
@@ -99,7 +101,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String hostName;
 
         /**
-         * <p>The private IP address of the host.</p>
+         * <p>The private address of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -108,7 +110,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String hostPrivateAddress;
 
         /**
-         * <p>The public IP address of the host.</p>
+         * <p>The public address of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>10.158.XX.XX</p>
@@ -117,10 +119,12 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String hostPublicAddress;
 
         /**
-         * <p>The host OS.</p>
+         * <p>The operating system of the host.</p>
          * <ul>
-         * <li><strong>Linux</strong></li>
-         * <li><strong>Windows</strong></li>
+         * <li><p><strong>Linux</strong></p>
+         * </li>
+         * <li><p><strong>Windows</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,10 +134,12 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String OSType;
 
         /**
-         * <p>The host type. Valid values:</p>
+         * <p>The source of the host.</p>
          * <ul>
-         * <li><strong>Local</strong>: on-premises host.</li>
-         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance.</li>
+         * <li><p><strong>Local</strong>: a local host</p>
+         * </li>
+         * <li><p><strong>Ecs</strong>: an ECS instance</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +149,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The ECS instance ID.</p>
+         * <p>The ID of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp19ienyt0yax748****</p>
@@ -152,10 +158,12 @@ public class ListOperationHostsResponseBody extends TeaModel {
         public String sourceInstanceId;
 
         /**
-         * <p>The host status. Valid values:</p>
+         * <p>The state of the host.</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>Release</strong></li>
+         * <li><p><strong>Normal</strong>: The host is running.</p>
+         * </li>
+         * <li><p><strong>Release</strong>: The host is released.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

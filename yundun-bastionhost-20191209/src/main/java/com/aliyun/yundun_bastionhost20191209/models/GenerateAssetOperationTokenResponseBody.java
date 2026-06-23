@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GenerateAssetOperationTokenResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The asset operation token.</p>
      */
     @NameInMap("AssetOperationToken")
     public GenerateAssetOperationTokenResponseBodyAssetOperationToken assetOperationToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -42,7 +42,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
 
     public static class GenerateAssetOperationTokenResponseBodyAssetOperationToken extends TeaModel {
         /**
-         * <p>The remaining number of times that you can use the O\&amp;M token.</p>
+         * <p>The number of remaining uses for the token.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public Long countLeft;
 
         /**
-         * <p>The time when the O\&amp;M token expires. The value is a UNIX timestamp.</p>
+         * <p>The expiration time of the token. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1709110797</p>
@@ -60,7 +60,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>Indicates whether the number of times that you can use the O\&amp;M token is limited.</p>
+         * <p>Indicates whether the token has a use limit.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public Boolean hasCountLimit;
 
         /**
-         * <p>The maximum number of renewals. A value of 0 indicates that renewal is not supported.</p>
+         * <p>The maximum number of times the token can be renewed. A value of 0 indicates that the token cannot be renewed.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -78,7 +78,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public Long maxRenewCount;
 
         /**
-         * <p>The number of times the O\&amp;M token is renewed.</p>
+         * <p>The number of times the token has been renewed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -96,7 +96,7 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         public String ssoUrl;
 
         /**
-         * <p>The O\&amp;M token that you apply for.</p>
+         * <p>The O\&amp;M token that is requested.</p>
          * 
          * <strong>example:</strong>
          * <p>NmYyMmEzNmMwYzljNGY******</p>

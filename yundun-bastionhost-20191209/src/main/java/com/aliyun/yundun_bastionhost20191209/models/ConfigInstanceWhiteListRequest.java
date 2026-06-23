@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ConfigInstanceWhiteListRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host for which you want to configure a whitelist of public IP addresses.</p>
+     * <p>The ID of the Bastionhost instance to configure.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ConfigInstanceWhiteListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class ConfigInstanceWhiteListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IP address whitelist that you want to configure.</p>
+     * <p>The list of IP addresses to add to the whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>10.162.XX.XX</p>
@@ -35,6 +35,9 @@ public class ConfigInstanceWhiteListRequest extends TeaModel {
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;
 
+    /**
+     * <p>The policies for the public IP address whitelist.</p>
+     */
     @NameInMap("WhiteListPolicies")
     public java.util.List<ConfigInstanceWhiteListRequestWhiteListPolicies> whiteListPolicies;
 
@@ -76,9 +79,18 @@ public class ConfigInstanceWhiteListRequest extends TeaModel {
     }
 
     public static class ConfigInstanceWhiteListRequestWhiteListPolicies extends TeaModel {
+        /**
+         * <p>The description of this whitelist rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The IP addresses to add to the whitelist. You can specify up to 50 IP addresses, separated by a comma.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.162.XX.XX,192.168.XX.XX</p>
+         */
         @NameInMap("Entry")
         public String entry;
 

@@ -74,7 +74,7 @@ public class LockUsersResponseBody extends TeaModel {
          * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

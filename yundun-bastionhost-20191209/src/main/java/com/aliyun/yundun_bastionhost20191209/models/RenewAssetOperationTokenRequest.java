@@ -7,7 +7,7 @@ public class RenewAssetOperationTokenRequest extends TeaModel {
     /**
      * <p>The bastion host ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +32,7 @@ public class RenewAssetOperationTokenRequest extends TeaModel {
     /**
      * <p>The ID of the O\&amp;M token that you want to renew.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758861.html">GenerateAssetOperationToken</a> operation to query the O\&amp;M token ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758861.html">GenerateAssetOperationToken</a> operation to query the O\&amp;M token ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

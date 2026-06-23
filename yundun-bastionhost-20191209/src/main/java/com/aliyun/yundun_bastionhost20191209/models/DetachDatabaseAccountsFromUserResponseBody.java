@@ -61,6 +61,9 @@ public class DetachDatabaseAccountsFromUserResponseBody extends TeaModel {
 
         /**
          * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;
@@ -123,6 +126,9 @@ public class DetachDatabaseAccountsFromUserResponseBody extends TeaModel {
 
         /**
          * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

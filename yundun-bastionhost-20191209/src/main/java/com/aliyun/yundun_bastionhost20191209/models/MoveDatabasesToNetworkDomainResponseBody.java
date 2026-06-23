@@ -66,7 +66,7 @@ public class MoveDatabasesToNetworkDomainResponseBody extends TeaModel {
          * <p>The error message that is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <p>None</p>
          */
         @NameInMap("Message")
         public String message;

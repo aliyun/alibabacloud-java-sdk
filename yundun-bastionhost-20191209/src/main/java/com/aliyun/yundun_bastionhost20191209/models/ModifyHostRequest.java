@@ -81,8 +81,10 @@ public class ModifyHostRequest extends TeaModel {
     /**
      * <p>The new operating system of the host. Valid values:</p>
      * <ul>
-     * <li><strong>Linux</strong></li>
-     * <li><strong>Windows</strong></li>
+     * <li><p><strong>Linux</strong></p>
+     * </li>
+     * <li><p><strong>Windows</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,10 +96,14 @@ public class ModifyHostRequest extends TeaModel {
     /**
      * <p>The preferred key exchange algorithm of the host. If you set OSType to Linux, you can modify this parameter. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong></li>
-     * <li><strong>diffie-hellman-group1-sha1</strong></li>
-     * <li><strong>diffie-hellman-group14-sha1</strong></li>
-     * <li><strong>diffie-hellman-group-exchange-sha1</strong></li>
+     * <li><p><strong>default</strong></p>
+     * </li>
+     * <li><p><strong>diffie-hellman-group1-sha1</strong></p>
+     * </li>
+     * <li><p><strong>diffie-hellman-group14-sha1</strong></p>
+     * </li>
+     * <li><p><strong>diffie-hellman-group-exchange-sha1</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

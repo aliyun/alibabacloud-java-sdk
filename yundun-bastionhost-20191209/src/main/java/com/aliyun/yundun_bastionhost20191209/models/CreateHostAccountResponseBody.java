@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHostAccountResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>CreateHostAccount</strong>.</p>
+     * <p>The ID of the host account.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -7,7 +7,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     /**
      * <p>The host account IDs.</p>
      * <blockquote>
-     * <p> You must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/462937.html">ListHostAccounts</a> operation to query the host account IDs.</p>
+     * <p>You must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/462937.html">ListHostAccounts</a> operation to query the host account IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     /**
      * <p>The shared key ID.</p>
      * <blockquote>
-     * <p> You must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
+     * <p>You must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

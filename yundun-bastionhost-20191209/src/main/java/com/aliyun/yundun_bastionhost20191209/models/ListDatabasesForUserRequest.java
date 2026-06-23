@@ -25,10 +25,14 @@ public class ListDatabasesForUserRequest extends TeaModel {
     /**
      * <p>The engine of the database to query. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>Oracle</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>SQLServer</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>SQLServer</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +73,7 @@ public class ListDatabasesForUserRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
+     * <p>The number of entries per page.<br>
      * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
      * <p>We recommend that you do not leave this parameter empty.</p>

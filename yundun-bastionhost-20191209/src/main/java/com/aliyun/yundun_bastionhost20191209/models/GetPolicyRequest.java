@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host to which the control policy to query belongs.</p>
+     * <p>The ID of the bastion host instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to get this ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class GetPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the control policy that you want to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to get this ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,9 @@ public class GetPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The region ID of the bastion host to which the control policy to query belongs.</p>
+     * <p>The region ID of the bastion host instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

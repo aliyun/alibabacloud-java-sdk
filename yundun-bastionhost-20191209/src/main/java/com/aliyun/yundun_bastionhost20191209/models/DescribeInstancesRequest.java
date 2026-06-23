@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
-     * <p>An array that consists of the IDs of the bastion hosts.</p>
+     * <p>The IDs of the bastion host instances.</p>
      * 
      * <strong>example:</strong>
      * <p>bastionhost-cn-78v1ghxxxxx</p>
@@ -14,15 +14,22 @@ public class DescribeInstancesRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The status of the bastion host. Valid values:</p>
+     * <p>The status of the bastion host instance. Valid values:</p>
      * <ul>
-     * <li><strong>PENDING</strong>: The bastion host is not initialized.</li>
-     * <li><strong>CREATING</strong>: The bastion host is being created.</li>
-     * <li><strong>RUNNING</strong>: The bastion host is running.</li>
-     * <li><strong>EXPIRED</strong>: The bastion host expired.</li>
-     * <li><strong>CREATE_FAILED</strong>: The bastion host fails to be created.</li>
-     * <li><strong>UPGRADING</strong>: The configurations of the bastion host are being changed.</li>
-     * <li><strong>UPGRADE_FAILED</strong>: The configurations of the bastion host fail to be changed.</li>
+     * <li><p><strong>PENDING</strong>: The instance is not initialized.</p>
+     * </li>
+     * <li><p><strong>CREATING</strong>: The instance is being created.</p>
+     * </li>
+     * <li><p><strong>RUNNING</strong>: The instance is running.</p>
+     * </li>
+     * <li><p><strong>EXPIRED</strong>: The instance is expired.</p>
+     * </li>
+     * <li><p><strong>CREATE_FAILED</strong>: The instance creation failed.</p>
+     * </li>
+     * <li><p><strong>UPGRADING</strong>: The instance is being upgraded.</p>
+     * </li>
+     * <li><p><strong>UPGRADE_FAILED</strong>: The instance upgrade failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +39,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +48,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of bastion host instances to return on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +57,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The ID of the region in which the bastion host instances reside.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -59,7 +66,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the bastion host belongs.</p>
+     * <p>The ID of the resource group to which the bastion host instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm26ougi****</p>
@@ -68,7 +75,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>An array consisting of the tags that are added to the bastion hosts.</p>
+     * <p>The tags attached to the bastion host instances.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;

@@ -88,8 +88,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the user is authorized to manage the host account. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,8 +103,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used by the host. Valid values:</p>
          * <ul>
-         * <li><strong>SSH</strong></li>
-         * <li><strong>RDP</strong></li>
+         * <li><p><strong>SSH</strong></p>
+         * </li>
+         * <li><p><strong>RDP</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

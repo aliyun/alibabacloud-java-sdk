@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveInstanceRdMemberResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */

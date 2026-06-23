@@ -44,8 +44,10 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         /**
          * <p>The scope of database accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: The control policy applies to all database accounts of the database.</li>
-         * <li><strong>AccountId</strong>: The control policy applies to specified database accounts of the database.</li>
+         * <li><p><strong>All</strong>: The control policy applies to all database accounts of the database.</p>
+         * </li>
+         * <li><p><strong>AccountId</strong>: The control policy applies to specified database accounts of the database.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,8 +112,10 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         /**
          * <p>The scope of asset accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: The control policy applies to all accounts in the asset group.</li>
-         * <li><strong>AccountName</strong>: The control policy applies to specified accounts in the asset group.</li>
+         * <li><p><strong>All</strong>: The control policy applies to all accounts in the asset group.</p>
+         * </li>
+         * <li><p><strong>AccountName</strong>: The control policy applies to specified accounts in the asset group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,8 +168,10 @@ public class GetPolicyAssetScopeResponseBody extends TeaModel {
         /**
          * <p>The scope of host accounts to which the control policy applies. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: The control policy applies to all accounts of the host.</li>
-         * <li><strong>AccountId</strong>: The control policy applies to specified accounts of the host.</li>
+         * <li><p><strong>All</strong>: The control policy applies to all accounts of the host.</p>
+         * </li>
+         * <li><p><strong>AccountId</strong>: The control policy applies to specified accounts of the host.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

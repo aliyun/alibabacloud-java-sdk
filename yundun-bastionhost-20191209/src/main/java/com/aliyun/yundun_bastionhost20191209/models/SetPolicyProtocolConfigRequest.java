@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetPolicyProtocolConfigRequest extends TeaModel {
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
     /**
      * <p>The ID of the control policy that you want to modify.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain the policy ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,14 +31,14 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The protocol control settings.</p>
+     * <p>The protocol control configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolConfig")
     public SetPolicyProtocolConfigRequestProtocolConfig protocolConfig;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The ID of the region where the Bastionhost instance resides.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -88,13 +88,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
 
     public static class SetPolicyProtocolConfigRequestProtocolConfigRDP extends TeaModel {
         /**
-         * <p>Specifies whether to enable downloading from the clipboard. Valid values:</p>
+         * <p>Specifies whether to allow clipboard content to be downloaded. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -104,13 +106,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String clipboardDownload;
 
         /**
-         * <p>Specifies whether to enable uploading from the clipboard. Valid values:</p>
+         * <p>Specifies whether to allow clipboard content to be uploaded. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,13 +124,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String clipboardUpload;
 
         /**
-         * <p>Specifies whether to enable driver mapping. Valid values:</p>
+         * <p>Specifies whether to enable drive and printer mapping. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,13 +156,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String diskRedirectionUpload;
 
         /**
-         * <p>Specifies whether to enable keyboard operation recording. Valid values:</p>
+         * <p>Specifies whether to record keyboard input. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,13 +244,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String allowTcpForwarding;
 
         /**
-         * <p>Specifies whether to enable remote command execution. Valid values:</p>
+         * <p>Specifies whether to allow remote command execution. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -252,21 +262,23 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String execCommand;
 
         /**
-         * <p>Specifies whether to enable SFTP channels. Valid values:</p>
+         * <p>Specifies whether to enable the SFTP channel. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <li><p>The default value is Disable.</p>
          * </li>
-         * <li><p>You must set at least one of the following parameters to Enable: SSHChannel and SFTPChannel.</p>
+         * <li><p>At least one of the SSH channel and the SFTP channel must be enabled.</p>
          * </li>
-         * <li><p>If you select Enable Only SFTP Permission for a host account, do not set SSHChannel and SFTPChannel to Disable for the account. Otherwise, users of the bastion host cannot use the account to access the host.</p>
+         * <li><p>If you grant only SFTP permissions to a host account, do not disable the SSH and SFTP channels for that account in the control policy. Otherwise, you cannot use the host account to access the target server through Bastionhost.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -275,13 +287,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String SFTPChannel;
 
         /**
-         * <p>Specifies whether to enable file downloading during SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Specifies whether to allow file downloads over SFTP. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -291,13 +305,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String SFTPDownloadFile;
 
         /**
-         * <p>Specifies whether to enable folder creation during SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Specifies whether to allow folder creation over SFTP. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -307,13 +323,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String SFTPMkdir;
 
         /**
-         * <p>Specifies whether to enable file deletion during SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Specifies whether to allow file deletions over SFTP. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -323,13 +341,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String SFTPRemoveFile;
 
         /**
-         * <p>Specifies whether to enable file renaming during SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Specifies whether to allow file renames over SFTP. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -339,13 +359,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String SFTPRenameFile;
 
         /**
-         * <p>Specifies whether to enable folder deletion during SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Specifies whether to allow folder deletion over SFTP. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -355,13 +377,15 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String SFTPRmdir;
 
         /**
-         * <p>Specifies whether to enable file uploading during SFTP-based O\&amp;M. Valid values:</p>
+         * <p>Specifies whether to allow file uploads over SFTP. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -371,21 +395,23 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         public String SFTPUploadFile;
 
         /**
-         * <p>Specifies whether to enable SSH channels. Valid values:</p>
+         * <p>Specifies whether to enable the SSH channel. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <li><p>The default value is Disable.</p>
          * </li>
-         * <li><p>You must set at least one of the following parameters to Enable: SSHChannel and SFTPChannel. If you set SSHChannel to Disable, SSH-based logon is disabled for the asset account. Proceed with caution.</p>
+         * <li><p>At least one of the SSH channel and the SFTP channel must be enabled. If you disable the SSH channel, you cannot use SSH permissions to log on to the asset account. Configure this parameter with caution.</p>
          * </li>
-         * <li><p>If you select Enable Only SFTP Permission for a host account, do not set SSHChannel and SFTPChannel to Disable for the account. Otherwise, users of the bastion host cannot use the account to access the host.</p>
+         * <li><p>If you grant only SFTP permissions to a host account, do not disable the SSH and SFTP channels for that account in the control policy. Otherwise, you cannot use the host account to access the target server through Bastionhost.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -403,11 +429,13 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable X11 forwarding. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li><p>Enable</p>
+         * </li>
+         * <li><p>Disable</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, the default value Disable is used.</p>
+         * <p>The default value is Disable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -529,13 +557,13 @@ public class SetPolicyProtocolConfigRequest extends TeaModel {
 
     public static class SetPolicyProtocolConfigRequestProtocolConfig extends TeaModel {
         /**
-         * <p>The settings of the Remote Desktop Protocol (RDP) options.</p>
+         * <p>The RDP options.</p>
          */
         @NameInMap("RDP")
         public SetPolicyProtocolConfigRequestProtocolConfigRDP RDP;
 
         /**
-         * <p>The settings of the SSH and SSH Fine Transfer Protocol (SFTP) options.</p>
+         * <p>The SSH and SFTP options.</p>
          */
         @NameInMap("SSH")
         public SetPolicyProtocolConfigRequestProtocolConfigSSH SSH;

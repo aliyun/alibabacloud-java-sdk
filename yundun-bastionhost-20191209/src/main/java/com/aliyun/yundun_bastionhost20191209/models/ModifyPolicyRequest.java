@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyPolicyRequest extends TeaModel {
     /**
      * <p>The new remarks of the control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;

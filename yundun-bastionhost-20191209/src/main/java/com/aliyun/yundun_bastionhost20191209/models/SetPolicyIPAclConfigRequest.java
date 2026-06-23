@@ -27,7 +27,7 @@ public class SetPolicyIPAclConfigRequest extends TeaModel {
     /**
      * <p>The ID of the control policy that you want to modify.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -90,8 +90,10 @@ public class SetPolicyIPAclConfigRequest extends TeaModel {
         /**
          * <p>The mode of access control on source IP addresses. Valid values:</p>
          * <ul>
-         * <li><strong>black</strong>: blacklist mode.</li>
-         * <li><strong>white</strong>: whitelist mode.</li>
+         * <li><p><strong>black</strong>: blacklist mode.</p>
+         * </li>
+         * <li><p><strong>white</strong>: whitelist mode.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

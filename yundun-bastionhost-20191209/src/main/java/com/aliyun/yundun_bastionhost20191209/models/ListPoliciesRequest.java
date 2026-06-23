@@ -27,7 +27,7 @@ public class ListPoliciesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
+     * <p>The number of entries per page.<br>
      * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
      * <p>We recommend that you do not leave this parameter empty.</p>

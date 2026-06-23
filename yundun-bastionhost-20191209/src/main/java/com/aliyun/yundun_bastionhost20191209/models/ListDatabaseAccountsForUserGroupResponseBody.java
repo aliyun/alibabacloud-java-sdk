@@ -88,8 +88,10 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the user group is authorized to manage the database account. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,10 +103,14 @@ public class ListDatabaseAccountsForUserGroupResponseBody extends TeaModel {
         /**
          * <p>The protocol used by the database account. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>Oracle</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>SQLServer</strong></li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>SQLServer</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

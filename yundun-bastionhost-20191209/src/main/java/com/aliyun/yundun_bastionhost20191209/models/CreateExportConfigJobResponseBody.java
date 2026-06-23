@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateExportConfigJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the configuration backup export task.</p>
+     * <blockquote>
+     * <p>You can call the GetExportConfigJob operation to obtain the details of this task. Make sure to record the task ID.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +17,8 @@ public class CreateExportConfigJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
      */

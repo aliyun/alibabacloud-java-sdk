@@ -17,7 +17,7 @@ public class SetPolicyCommandConfigRequest extends TeaModel {
     /**
      * <p>The bastion host ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +43,7 @@ public class SetPolicyCommandConfigRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -115,8 +115,10 @@ public class SetPolicyCommandConfigRequest extends TeaModel {
         /**
          * <p>The type of command control. Valid values:</p>
          * <ul>
-         * <li><strong>black</strong>: blacklist mode.</li>
-         * <li><strong>white</strong>: whitelist mode.</li>
+         * <li><p><strong>black</strong>: blacklist mode.</p>
+         * </li>
+         * <li><p><strong>white</strong>: whitelist mode.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

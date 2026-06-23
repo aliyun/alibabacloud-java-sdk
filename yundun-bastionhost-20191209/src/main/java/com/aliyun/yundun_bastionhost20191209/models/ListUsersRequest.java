@@ -8,7 +8,7 @@ public class ListUsersRequest extends TeaModel {
      * <p>The display name of the user that you want to query. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>abc</p>
+     * <p>testuser</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
@@ -16,7 +16,7 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host whose users you want to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,10 +45,10 @@ public class ListUsersRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
+     * <p>The number of entries per page.<br>
      * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>We recommend that you do not leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host whose users you want to query.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,10 +72,14 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The type of the user that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>Local</strong>: a local user.</li>
-     * <li><strong>Ram</strong>: a Resource Access Management (RAM) user.</li>
-     * <li><strong>AD</strong>: an Active Directory (AD)-authenticated user.</li>
-     * <li><strong>LDAP</strong>: a Lightweight Directory Access Protocol (LDAP)-authenticated user.</li>
+     * <li><p><strong>Local</strong>: a local user.</p>
+     * </li>
+     * <li><p><strong>Ram</strong>: a Resource Access Management (RAM) user.</p>
+     * </li>
+     * <li><p><strong>AD</strong>: an Active Directory (AD)-authenticated user.</p>
+     * </li>
+     * <li><p><strong>LDAP</strong>: a Lightweight Directory Access Protocol (LDAP)-authenticated user.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +91,7 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The unique ID of the user that you want to query. Only exact match is supported.</p>
      * <blockquote>
-     * <p> This parameter uniquely identifies a RAM user of the bastion host. This parameter is valid if <strong>Source</strong> is set to <strong>Ram</strong>. You can call the <a href="https://help.aliyun.com/document_detail/28684.html">ListUsers</a> operation in RAM to obtain the unique ID of the user from the <strong>UserId</strong> response parameter.</p>
+     * <p>This parameter uniquely identifies a RAM user of the bastion host. This parameter is valid if <strong>Source</strong> is set to <strong>Ram</strong>. You can call the <a href="https://help.aliyun.com/document_detail/28684.html">ListUsers</a> operation in RAM to obtain the unique ID of the user from the <strong>UserId</strong> response parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -99,7 +103,7 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The ID of the user group to which the user you want to query belongs.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the user group ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the user group ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -120,9 +124,12 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The state of the user that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: The user is in normal state.</li>
-     * <li><strong>Frozen</strong>: The user is locked.</li>
-     * <li><strong>Expired</strong>: The user has expired.</li>
+     * <li><p><strong>Normal</strong>: The user is in normal state.</p>
+     * </li>
+     * <li><p><strong>Frozen</strong>: The user is locked.</p>
+     * </li>
+     * <li><p><strong>Expired</strong>: The user has expired.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

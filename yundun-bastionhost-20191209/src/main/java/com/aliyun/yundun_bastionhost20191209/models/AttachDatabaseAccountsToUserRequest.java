@@ -7,7 +7,7 @@ public class AttachDatabaseAccountsToUserRequest extends TeaModel {
     /**
      * <p>An array that consists of database objects.</p>
      * <blockquote>
-     * <p> You can specify up to 10 databases and 10 database accounts. The database accounts are not required. If you do not specify a database account, the user is authorized to manage only the databases.</p>
+     * <p>You can specify up to 10 databases and 10 database accounts. The database accounts are not required. If you do not specify a database account, the user is authorized to manage only the databases.</p>
      * </blockquote>
      */
     @NameInMap("Databases")
@@ -16,7 +16,7 @@ public class AttachDatabaseAccountsToUserRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host whose user you want to grant permissions.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class AttachDatabaseAccountsToUserRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class AttachDatabaseAccountsToUserRequest extends TeaModel {
     /**
      * <p>The ID of the user to be authorized.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

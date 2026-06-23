@@ -71,7 +71,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
          * <p>The number of users in the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>6</p>
          */
         @NameInMap("MemberCount")
         public Integer memberCount;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTagKeysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListTagKeysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ListTagKeysRequest extends TeaModel {
 
     /**
      * <p>The type of the resource.</p>
-     * <p>Set the value to INSTANCE, which indicates that the resource is a bastion host.</p>
+     * <p>The only valid value is INSTANCE, which represents a Bastionhost instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

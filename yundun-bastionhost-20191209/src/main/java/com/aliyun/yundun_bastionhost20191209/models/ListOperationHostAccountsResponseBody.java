@@ -97,8 +97,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a password is configured for the host account.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,8 +157,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used by the host account.</p>
          * <ul>
-         * <li><strong>SSH</strong></li>
-         * <li><strong>RDP</strong></li>
+         * <li><p><strong>SSH</strong></p>
+         * </li>
+         * <li><p><strong>RDP</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

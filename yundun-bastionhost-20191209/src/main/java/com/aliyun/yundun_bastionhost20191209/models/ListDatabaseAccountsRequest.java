@@ -16,7 +16,7 @@ public class ListDatabaseAccountsRequest extends TeaModel {
     /**
      * <p>The ID of the database whose database accounts you want to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query the database ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758822.html">ListDatabases</a> operation to query the database ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ListDatabaseAccountsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.\
+     * <p>The number of entries per page.<br>
      * Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
      * <p>We recommend that you do not leave this parameter empty.</p>

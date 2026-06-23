@@ -7,8 +7,10 @@ public class ModifyDatabaseRequest extends TeaModel {
     /**
      * <p>The new address type of the database. Valid values:</p>
      * <ul>
-     * <li><strong>Public</strong></li>
-     * <li><strong>Private</strong></li>
+     * <li><p><strong>Public</strong></p>
+     * </li>
+     * <li><p><strong>Private</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +60,7 @@ public class ModifyDatabaseRequest extends TeaModel {
      * <p>The new internal address of the database. Specify an IPv4 address or a domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>pc-bp169******</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("DatabasePrivateAddress")
     public String databasePrivateAddress;
@@ -67,7 +69,7 @@ public class ModifyDatabaseRequest extends TeaModel {
      * <p>The new public address of the database. Specify an IPv4 address or a domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>pgm-uf6c******</p>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("DatabasePublicAddress")
     public String databasePublicAddress;
@@ -88,7 +90,7 @@ public class ModifyDatabaseRequest extends TeaModel {
     /**
      * <p>The ID of the new network domain for the database.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

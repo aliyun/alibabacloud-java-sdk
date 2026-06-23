@@ -72,8 +72,10 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
          * <p>Indicates whether the database account has a password.
          * Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,8 +87,10 @@ public class GetDatabaseAccountResponseBody extends TeaModel {
         /**
          * <p>The logon attribute. A value is returned for this parameter if the database engine is Oracle. Valid values:</p>
          * <ul>
-         * <li>SERVICENAME</li>
-         * <li>SID</li>
+         * <li><p>SERVICENAME</p>
+         * </li>
+         * <li><p>SID</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

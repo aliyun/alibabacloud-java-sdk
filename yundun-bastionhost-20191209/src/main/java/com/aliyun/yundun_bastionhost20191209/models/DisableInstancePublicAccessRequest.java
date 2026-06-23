@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DisableInstancePublicAccessRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host whose Internet access you want to disable.</p>
+     * <p>The ID of the Bastionhost instance for which you want to disable public network access.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the ID of the Bastionhost instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DisableInstancePublicAccessRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

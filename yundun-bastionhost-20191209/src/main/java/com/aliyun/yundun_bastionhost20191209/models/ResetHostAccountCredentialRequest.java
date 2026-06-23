@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ResetHostAccountCredentialRequest extends TeaModel {
     /**
-     * <p>The type of the logon credential that you want to delete. Valid values:</p>
+     * <p>The type of logon credential to clear. Valid values:</p>
      * <ul>
-     * <li><strong>Password</strong></li>
-     * <li><strong>PrivateKey</strong></li>
+     * <li><p><strong>Password</strong>: The password.</p>
+     * </li>
+     * <li><p><strong>PrivateKey</strong>: The SSH private key.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,9 +21,9 @@ public class ResetHostAccountCredentialRequest extends TeaModel {
     public String credentialType;
 
     /**
-     * <p>The ID of the host account for which the logon credential is to be deleted.</p>
+     * <p>The ID of the host account. The logon credential of this account will be cleared.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,22 +34,22 @@ public class ResetHostAccountCredentialRequest extends TeaModel {
     public String hostAccountId;
 
     /**
-     * <p>The ID of the bastion host from which you want to delete the logon credential for the host account.</p>
+     * <p>The ID of the Bastionhost instance. The instance contains the host account.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>bastionhost-cn-st220aw****</p>
+     * <p>bastionhost-cn-rp640dg****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host from which you want to delete the logon credential for the host account.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For information about region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

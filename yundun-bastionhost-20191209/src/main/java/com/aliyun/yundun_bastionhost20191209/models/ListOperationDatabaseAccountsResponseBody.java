@@ -106,8 +106,10 @@ public class ListOperationDatabaseAccountsResponseBody extends TeaModel {
         /**
          * <p>The logon attribute. One of the following values is returned if the database engine is Oracle:</p>
          * <ul>
-         * <li><strong>SERVICENAME</strong></li>
-         * <li><strong>SID</strong></li>
+         * <li><p><strong>SERVICENAME</strong></p>
+         * </li>
+         * <li><p><strong>SID</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateHostRequest extends TeaModel {
     /**
-     * <p>The endpoint type of the host that you want to create. Valid values:</p>
+     * <p>The address type of the host. Valid values:</p>
      * <ul>
-     * <li><strong>Public</strong>: public endpoint</li>
-     * <li><strong>Private</strong>: internal endpoint</li>
+     * <li><p><strong>Public</strong>: a public address</p>
+     * </li>
+     * <li><p><strong>Private</strong>: a private address</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class CreateHostRequest extends TeaModel {
     public String activeAddressType;
 
     /**
-     * <p>The description of the host that you want to create. The value can be up to 500 characters in length.</p>
+     * <p>The comment for the host. The comment can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Local Host</p>
@@ -28,7 +30,7 @@ public class CreateHostRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The name of the host that you want to create. The name can be up to 128 characters in length.</p>
+     * <p>The name of the host. The name can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,9 +40,9 @@ public class CreateHostRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The internal endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</p>
+     * <p>The private address of the host. You can use a domain name or an IP address.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>ActiveAddressType</strong> parameter is set to <strong>Private</strong>.</p>
+     * <p>This parameter is required when <strong>ActiveAddressType</strong> is set to <strong>Private</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,9 +52,9 @@ public class CreateHostRequest extends TeaModel {
     public String hostPrivateAddress;
 
     /**
-     * <p>The public endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</p>
+     * <p>The public address of the host. You can use a domain name or an IP address.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>ActiveAddressType</strong> parameter is set to <strong>Public</strong>.</p>
+     * <p>This parameter is required when <strong>ActiveAddressType</strong> is set to <strong>Public</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,9 +64,9 @@ public class CreateHostRequest extends TeaModel {
     public String hostPublicAddress;
 
     /**
-     * <p>The ID of the bastion host in which you want to create the host.</p>
+     * <p>The ID of the Bastionhost instance where you want to create the host.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -75,16 +77,18 @@ public class CreateHostRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the ECS instance belongs.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>1605494xxxx</p>
      */
     @NameInMap("InstanceMemberId")
     public Long instanceMemberId;
 
     /**
-     * <p>The ID of the region to which the ECS instance or the host in an ApsaraDB MyBase dedicated cluster belongs.</p>
+     * <p>The region ID of the ECS instance or the host in the dedicated cluster.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>Source</strong> parameter is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
+     * <p>This parameter is required when <strong>Source</strong> is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -94,9 +98,9 @@ public class CreateHostRequest extends TeaModel {
     public String instanceRegionId;
 
     /**
-     * <p>The ID of the network domain to which the host to be imported belongs.</p>
+     * <p>The ID of the network domain to which the host belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains </a>operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,10 +110,12 @@ public class CreateHostRequest extends TeaModel {
     public String networkDomainId;
 
     /**
-     * <p>The operating system of the host that you want to create. Valid values:</p>
+     * <p>The operating system of the host. Valid values:</p>
      * <ul>
-     * <li><strong>Linux</strong></li>
-     * <li><strong>Windows</strong></li>
+     * <li><p><strong>Linux</strong></p>
+     * </li>
+     * <li><p><strong>Windows</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -120,9 +126,9 @@ public class CreateHostRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>The region ID of the bastion host to which you want to import the host.</p>
+     * <p>The region ID of the Bastionhost instance where you want to create the host.</p>
      * <blockquote>
-     * <p>For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,11 +138,14 @@ public class CreateHostRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The source of the host that you want to create. Valid values:</p>
+     * <p>The source of the host. Valid values:</p>
      * <ul>
-     * <li><strong>Local</strong>: a host in a data center</li>
-     * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
-     * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+     * <li><p><strong>Local</strong>: a local host</p>
+     * </li>
+     * <li><p><strong>Ecs</strong>: an ECS instance</p>
+     * </li>
+     * <li><p><strong>Rds</strong>: a host in an ApsaraDB RDS dedicated cluster</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -147,9 +156,9 @@ public class CreateHostRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
+     * <p>The ID of the ECS instance or the host in the dedicated cluster.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>Source</strong> parameter is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
+     * <p>This parameter is required when <strong>Source</strong> is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
