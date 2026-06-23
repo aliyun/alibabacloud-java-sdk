@@ -4,27 +4,15 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class ListMdsCubeTasksResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public ListMdsCubeTasksResponseBodyResultContent resultContent;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,115 +54,51 @@ public class ListMdsCubeTasksResponseBody extends TeaModel {
     }
 
     public static class ListMdsCubeTasksResponseBodyResultContentDataContent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>570DA89281533-default</p>
-         */
         @NameInMap("AppCode")
         public String appCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-10-24 15:17:15</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-10-24 15:17:15</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("GreyConfigInfo")
         public String greyConfigInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-10-24 15:17:15</p>
-         */
         @NameInMap("GreyEndtimeData")
         public String greyEndtimeData;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("GreyNum")
         public Integer greyNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("PublishMode")
         public Integer publishMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("PublishType")
         public Integer publishType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0.0.1</p>
-         */
         @NameInMap("ResourceVersion")
         public String resourceVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TEST</p>
-         */
         @NameInMap("TaskDesc")
         public String taskDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TemplateResourceId")
         public Long templateResourceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TEST</p>
-         */
         @NameInMap("WhitelistIds")
         public String whitelistIds;
 
@@ -317,31 +241,15 @@ public class ListMdsCubeTasksResponseBody extends TeaModel {
         @NameInMap("Content")
         public java.util.List<ListMdsCubeTasksResponseBodyResultContentDataContent> content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NONE</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -396,10 +304,6 @@ public class ListMdsCubeTasksResponseBody extends TeaModel {
         @NameInMap("Data")
         public ListMdsCubeTasksResponseBodyResultContentData data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 

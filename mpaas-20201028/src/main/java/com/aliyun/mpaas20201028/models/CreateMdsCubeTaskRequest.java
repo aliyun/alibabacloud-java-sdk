@@ -4,80 +4,36 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateMdsCubeTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
-     */
     @NameInMap("GreyConfigInfo")
     public String greyConfigInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
-     */
     @NameInMap("GreyEndtimeData")
     public String greyEndtimeData;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("GreyNum")
     public Integer greyNum;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("PublishMode")
     public Integer publishMode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>3</p>
-     */
     @NameInMap("PublishType")
     public Integer publishType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>task_test</p>
-     */
     @NameInMap("TaskDesc")
     public String taskDesc;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TemplateResourceId")
     public Long templateResourceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ-zh_CN</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test1,test2</p>
-     */
     @NameInMap("WhitelistIds")
     public String whitelistIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dev</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

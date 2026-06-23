@@ -6,36 +6,24 @@ import com.aliyun.tea.*;
 public class QueryMcubeHotpatchTaskDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6071959</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>default</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

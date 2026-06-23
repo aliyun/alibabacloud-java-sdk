@@ -7,24 +7,12 @@ public class ListMcubeHotpatchResourcesResponseBody extends TeaModel {
     @NameInMap("ListHotpatchResourceResult")
     public ListMcubeHotpatchResourcesResponseBodyListHotpatchResourceResult listHotpatchResourceResult;
 
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,125 +54,57 @@ public class ListMcubeHotpatchResourcesResponseBody extends TeaModel {
     }
 
     public static class ListMcubeHotpatchResourcesResponseBodyListHotpatchResourceResultHotpatchResourceInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ALIPUBE5C3F6D091419-default</p>
-         */
         @NameInMap("AppCode")
         public String appCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://xxxxx.jar">https://xxxxx.jar</a></p>
-         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>528</p>
-         */
         @NameInMap("FileSize")
         public String fileSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1745892911000</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1574261514000</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>81c90a2cafdc6dfc54201e70845b5708</p>
-         */
         @NameInMap("HotpatchVersion")
         public String hotpatchVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1358</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>E268154063D1256B4E60FE82B48E0811</p>
-         */
         @NameInMap("Md5")
         public String md5;
 
         @NameInMap("Memo")
         public String memo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>modifier</p>
-         */
         @NameInMap("Modifier")
         public String modifier;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PackageId")
         public Long packageId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>iOS,Android</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ALIPUBE5C3F6D091419_Android-default</p>
-         */
         @NameInMap("ProductId")
         public String productId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1.0.0</p>
-         */
         @NameInMap("ProductVersion")
         public String productVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("PublishPeriod")
         public Long publishPeriod;
 
-        /**
-         * <strong>example:</strong>
-         * <p>81c90a2cafdc6dfc54201e70845b5708</p>
-         */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>mpaas.jar</p>
-         */
         @NameInMap("SourceName")
         public String sourceName;
 
@@ -340,62 +260,30 @@ public class ListMcubeHotpatchResourcesResponseBody extends TeaModel {
     }
 
     public static class ListMcubeHotpatchResourcesResponseBodyListHotpatchResourceResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>False</p>
-         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
         @NameInMap("HotpatchResourceInfo")
         public java.util.List<ListMcubeHotpatchResourcesResponseBodyListHotpatchResourceResultHotpatchResourceInfo> hotpatchResourceInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1C23E812-217E-5065-B778-D34586E2105E</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
-        /**
-         * <strong>example:</strong>
-         * <p>71</p>
-         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

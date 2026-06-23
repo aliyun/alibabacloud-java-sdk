@@ -4,27 +4,15 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class ListMdsCubeResourcesResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public ListMdsCubeResourcesResponseBodyResultContent resultContent;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,171 +54,75 @@ public class ListMdsCubeResourcesResponseBody extends TeaModel {
     }
 
     public static class ListMdsCubeResourcesResponseBodyResultContentDataContentList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0.0.0.1</p>
-         */
         @NameInMap("AndroidMaxVersion")
         public String androidMaxVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0.0.1</p>
-         */
         @NameInMap("AndroidMinVersion")
         public String androidMinVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>570DA89281533-default</p>
-         */
         @NameInMap("AppCode")
         public String appCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1fbfd6c422762c7083f3bb01c638e48e</p>
-         */
         @NameInMap("BinFileMd5")
         public String binFileMd5;
 
-        /**
-         * <strong>example:</strong>
-         * <p>url</p>
-         */
         @NameInMap("BinPrivateFileUrl")
         public String binPrivateFileUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>url</p>
-         */
         @NameInMap("BinPublicFileUrl")
         public String binPublicFileUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-10-24 16:42:45</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-10-24 16:42:45</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0.0.1</p>
-         */
         @NameInMap("IosMaxVersion")
         public String iosMaxVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0.0.1</p>
-         */
         @NameInMap("IosMinVersion")
         public String iosMinVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>url</p>
-         */
         @NameInMap("JsonPrivateFileUrl")
         public String jsonPrivateFileUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>url</p>
-         */
         @NameInMap("JsonPublicFileUrl")
         public String jsonPublicFileUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
         @NameInMap("MinCubeSdkVersion")
         public String minCubeSdkVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>url</p>
-         */
         @NameInMap("MockDataDownloadUrl")
         public String mockDataDownloadUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Android</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <strong>example:</strong>
-         * <p>url</p>
-         */
         @NameInMap("PreviewPictureUrl")
         public String previewPictureUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("ResourceStatus")
         public Long resourceStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test_template</p>
-         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>resource desc</p>
-         */
         @NameInMap("TemplateResourceDesc")
         public String templateResourceDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0.0.1</p>
-         */
         @NameInMap("TemplateResourceVersion")
         public String templateResourceVersion;
 
@@ -434,76 +326,36 @@ public class ListMdsCubeResourcesResponseBody extends TeaModel {
     }
 
     public static class ListMdsCubeResourcesResponseBodyResultContentDataContent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0.0.0.1</p>
-         */
         @NameInMap("CurrentMaxAndroidVersion")
         public String currentMaxAndroidVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0.0.1</p>
-         */
         @NameInMap("CurrentMaxIosVersion")
         public String currentMaxIosVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("FirstPage")
         public Boolean firstPage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("FirstResult")
         public Long firstResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("LastPage")
         public Boolean lastPage;
 
         @NameInMap("List")
         public java.util.List<ListMdsCubeResourcesResponseBodyResultContentDataContentList> list;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("NextPage")
         public Long nextPage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PrePage")
         public Long prePage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -606,31 +458,15 @@ public class ListMdsCubeResourcesResponseBody extends TeaModel {
         @NameInMap("Content")
         public ListMdsCubeResourcesResponseBodyResultContentDataContent content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NONE</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -685,10 +521,6 @@ public class ListMdsCubeResourcesResponseBody extends TeaModel {
         @NameInMap("Data")
         public ListMdsCubeResourcesResponseBodyResultContentData data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 

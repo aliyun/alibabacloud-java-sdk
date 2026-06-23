@@ -4,27 +4,15 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class ListCubecardAppsResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public ListCubecardAppsResponseBodyResultContent resultContent;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,17 +54,9 @@ public class ListCubecardAppsResponseBody extends TeaModel {
     }
 
     public static class ListCubecardAppsResponseBodyResultContentDataContent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ALIPUB97DB9F1011141</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>app name</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
@@ -107,31 +87,15 @@ public class ListCubecardAppsResponseBody extends TeaModel {
         @NameInMap("Content")
         public java.util.List<ListCubecardAppsResponseBodyResultContentDataContent> content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NONE</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -186,10 +150,6 @@ public class ListCubecardAppsResponseBody extends TeaModel {
         @NameInMap("Data")
         public ListCubecardAppsResponseBodyResultContentData data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 

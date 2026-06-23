@@ -4,31 +4,15 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class SaveOrderRelationInfoToMsenceRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("Amount")
     public Integer amount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>3929520</p>
-     */
     @NameInMap("BizOrderId")
     public String bizOrderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("BizOrderStatus")
     public Integer bizOrderStatus;
 
@@ -38,45 +22,27 @@ public class SaveOrderRelationInfoToMsenceRequest extends TeaModel {
     @NameInMap("CpExtra")
     public String cpExtra;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test_custom_id</p>
-     */
     @NameInMap("CustomId")
     public String customId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123321</p>
-     */
+    @NameInMap("ItemId")
+    public String itemId;
+
+    @NameInMap("ItemTitle")
+    public String itemTitle;
+
     @NameInMap("MiniProgramId")
     public String miniProgramId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("OpenUid")
     public String openUid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>mPaaS_Goosefish</p>
-     */
     @NameInMap("PlatformId")
     public String platformId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>NPHTGKNR</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -139,6 +105,22 @@ public class SaveOrderRelationInfoToMsenceRequest extends TeaModel {
     }
     public String getCustomId() {
         return this.customId;
+    }
+
+    public SaveOrderRelationInfoToMsenceRequest setItemId(String itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    public String getItemId() {
+        return this.itemId;
+    }
+
+    public SaveOrderRelationInfoToMsenceRequest setItemTitle(String itemTitle) {
+        this.itemTitle = itemTitle;
+        return this;
+    }
+    public String getItemTitle() {
+        return this.itemTitle;
     }
 
     public SaveOrderRelationInfoToMsenceRequest setMiniProgramId(String miniProgramId) {

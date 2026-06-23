@@ -4,33 +4,18 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class QueryCubecardFiletokenRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("OnexFlag")
     public Boolean onexFlag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ-zh_CN</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dev</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

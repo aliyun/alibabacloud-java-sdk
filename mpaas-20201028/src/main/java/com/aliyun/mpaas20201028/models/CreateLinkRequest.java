@@ -6,48 +6,27 @@ import com.aliyun.tea.*;
 public class CreateLinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>BB5953C300957</p>
      */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("Cors")
     public Boolean cors;
 
-    /**
-     * <strong>example:</strong>
-     * <p>x519.cn</p>
-     */
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <strong>example:</strong>
-     * <p>txt</p>
-     */
     @NameInMap("Dynamicfield")
     public String dynamicfield;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>https://********</p>
      */
     @NameInMap("TargetUrl")
     public String targetUrl;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>default</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

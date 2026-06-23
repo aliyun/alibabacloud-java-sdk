@@ -4,36 +4,18 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class PushQueryDeviceStateResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public PushQueryDeviceStateResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,52 +65,24 @@ public class PushQueryDeviceStateResponseBody extends TeaModel {
     }
 
     public static class PushQueryDeviceStateResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ad-000f18w8vmqtzhvbopge-854</p>
-         */
         @NameInMap("DeliveryToken")
         public String deliveryToken;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ad-000f18w8vmqtzhvbopge-854</p>
-         */
         @NameInMap("DeviceId")
         public String deviceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>miui</p>
-         */
         @NameInMap("Manufacturer")
         public String manufacturer;
 
-        /**
-         * <strong>example:</strong>
-         * <p>android</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ONLINE</p>
-         */
         @NameInMap("Statue")
         public String statue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>IQAAAACy0f7tAABYiMwLEENtr0TKYJEsv7wyu4Ubt9XXwTJAlknnCb1LAzB3wJvoZIcT_nJdaMhEoXJaqQrObAGHLGoU1GOexlTcLWzja-0HfGHKBw</p>
-         */
         @NameInMap("ThirdToken")
         public String thirdToken;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test_user</p>
-         */
         @NameInMap("UserId")
         public String userId;
 

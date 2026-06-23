@@ -4,45 +4,21 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class QueryPayOrderToMsenceRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test_custom_id</p>
-     */
     @NameInMap("CustomId")
     public String customId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123321</p>
-     */
     @NameInMap("MiniProgramId")
     public String miniProgramId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>mPaaS_Goosefish</p>
-     */
     @NameInMap("PlatformId")
     public String platformId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CBIGWCFH</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

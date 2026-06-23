@@ -7,31 +7,15 @@ public class QueryUserInfoToMsenceResponseBody extends TeaModel {
     @NameInMap("MpaasUserInfoShareResponse")
     public QueryUserInfoToMsenceResponseBodyMpaasUserInfoShareResponse mpaasUserInfoShareResponse;
 
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("ResultMsg")
     public String resultMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -81,28 +65,12 @@ public class QueryUserInfoToMsenceResponseBody extends TeaModel {
     }
 
     public static class QueryUserInfoToMsenceResponseBodyMpaasUserInfoShareResponse extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("Avatar")
         public String avatar;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Gender")
         public String gender;
 
-        /**
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("NickName")
         public String nickName;
 

@@ -6,48 +6,27 @@ import com.aliyun.tea.*;
 public class CreateMcubeHotpatchRollbackTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1653905</p>
      */
     @NameInMap("Id")
     public Long id;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419_Android-default</p>
-     */
     @NameInMap("ProductId")
     public String productId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1.0.0</p>
-     */
     @NameInMap("ProductVersion")
     public String productVersion;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>default</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

@@ -4,29 +4,15 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class UpdateLinkResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public UpdateLinkResponseBodyResultContent resultContent;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -68,24 +54,12 @@ public class UpdateLinkResponseBody extends TeaModel {
     }
 
     public static class UpdateLinkResponseBodyResultContent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://xxx/xxx">https://xxx/xxx</a></p>
-         */
         @NameInMap("Data")
         public String data;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://xxx/xxx/xxx">https://xxx/xxx/xxx</a></p>
-         */
         @NameInMap("Target")
         public String target;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Version")
         public String version;
 

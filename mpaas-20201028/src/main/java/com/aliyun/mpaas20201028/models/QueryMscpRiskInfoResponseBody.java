@@ -4,48 +4,18 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class QueryMscpRiskInfoResponseBody extends TeaModel {
-    /**
-     * <p>Code</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Code</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>Data</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Data</p>
-     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
-    /**
-     * <p>Msg</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Msg</p>
-     */
     @NameInMap("Msg")
     public String msg;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>RequestId</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Success</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

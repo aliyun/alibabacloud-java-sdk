@@ -7704,6 +7704,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CustomId", request.customId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.itemId)) {
+            body.put("ItemId", request.itemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemTitle)) {
+            body.put("ItemTitle", request.itemTitle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.miniProgramId)) {
             body.put("MiniProgramId", request.miniProgramId);
         }

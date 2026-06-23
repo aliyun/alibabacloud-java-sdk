@@ -4,27 +4,15 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class UpdateMdsCubeResourceResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public UpdateMdsCubeResourceResponseBodyResultContent resultContent;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,38 +54,18 @@ public class UpdateMdsCubeResourceResponseBody extends TeaModel {
     }
 
     public static class UpdateMdsCubeResourceResponseBodyResultContentData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NONE</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -152,10 +120,6 @@ public class UpdateMdsCubeResourceResponseBody extends TeaModel {
         @NameInMap("Data")
         public UpdateMdsCubeResourceResponseBodyResultContentData data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 

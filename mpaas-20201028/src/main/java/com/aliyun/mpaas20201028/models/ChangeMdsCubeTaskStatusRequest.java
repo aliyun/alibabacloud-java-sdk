@@ -4,45 +4,21 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class ChangeMdsCubeTaskStatusRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TaskStatus")
     public Integer taskStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TemplateResourceId")
     public Long templateResourceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TemplateTaskId")
     public Long templateTaskId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ-zh_CN</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dev</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

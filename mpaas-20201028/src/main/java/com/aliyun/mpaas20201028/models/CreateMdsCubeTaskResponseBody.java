@@ -4,27 +4,15 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateMdsCubeTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0CC8A9CB-9BA3-13FD-A404-6E2E7461881A</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public CreateMdsCubeTaskResponseBodyResultContent resultContent;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,38 +54,18 @@ public class CreateMdsCubeTaskResponseBody extends TeaModel {
     }
 
     public static class CreateMdsCubeTaskResponseBodyResultContentData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1010</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NONE</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0CC8A9CB-9BA3-13FD-A404-6E2E7461881A</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -152,10 +120,6 @@ public class CreateMdsCubeTaskResponseBody extends TeaModel {
         @NameInMap("Data")
         public CreateMdsCubeTaskResponseBodyResultContentData data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0CC8A9CB-9BA3-13FD-A404-6E2E7461881A</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 

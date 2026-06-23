@@ -4,24 +4,12 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class UpdateMcubeHotpatchTaskStatusResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,40 +54,18 @@ public class UpdateMcubeHotpatchTaskStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateMcubeHotpatchTaskStatusResponseBodyUpdateHotpatchTaskStatusResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DD6844B5-279D-5FFD-BD5A-2E1F9BEC39EE</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("Result")
         public String result;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

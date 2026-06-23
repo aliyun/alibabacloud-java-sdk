@@ -7,24 +7,12 @@ public class CreateMcubeHotpatchResourceResponseBody extends TeaModel {
     @NameInMap("CreateHotpatchResourceResult")
     public CreateMcubeHotpatchResourceResponseBodyCreateHotpatchResourceResult createHotpatchResourceResult;
 
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,38 +54,18 @@ public class CreateMcubeHotpatchResourceResponseBody extends TeaModel {
     }
 
     public static class CreateMcubeHotpatchResourceResponseBodyCreateHotpatchResourceResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1768</p>
-         */
         @NameInMap("HotpatchResourceId")
         public String hotpatchResourceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>EA606F90-F758-5EDC-A70F-939F089CA496</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

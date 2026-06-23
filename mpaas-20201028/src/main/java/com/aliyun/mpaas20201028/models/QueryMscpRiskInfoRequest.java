@@ -4,48 +4,18 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class QueryMscpRiskInfoRequest extends TeaModel {
-    /**
-     * <p>ApdidToken</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ApdidToken</p>
-     */
     @NameInMap("ApdidToken")
     public String apdidToken;
 
-    /**
-     * <p>AppId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>AppId</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <p>TenantId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>TenantId</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <p>TerminalType</p>
-     * 
-     * <strong>example:</strong>
-     * <p>TerminalType</p>
-     */
     @NameInMap("TerminalType")
     public String terminalType;
 
-    /**
-     * <p>WorkspaceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>WorkspaceId</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

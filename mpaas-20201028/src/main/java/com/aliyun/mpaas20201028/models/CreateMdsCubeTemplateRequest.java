@@ -4,45 +4,21 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateMdsCubeTemplateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test_card</p>
-     */
     @NameInMap("TemplateDesc")
     public String templateDesc;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test12435</p>
-     */
     @NameInMap("TemplateId")
     public String templateId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test_card</p>
-     */
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ-zh_CN</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dev</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,10 +4,6 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
@@ -17,72 +13,36 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("DescInfo")
     public String descInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>/</p>
-     */
     @NameInMap("IconUrls")
     public String iconUrls;
 
-    /**
-     * <strong>example:</strong>
-     * <p>/</p>
-     */
     @NameInMap("ImageUrls")
     public String imageUrls;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("JumpAction")
     public Integer jumpAction;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("PushStyle")
     public Integer pushStyle;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("ShowStyle")
     public Long showStyle;
 
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>GKDDZPFH</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
     @NameInMap("Title")
     public String title;
 
-    /**
-     * <strong>example:</strong>
-     * <p>/</p>
-     */
     @NameInMap("Uri")
     public String uri;
 
-    /**
-     * <strong>example:</strong>
-     * <p>title,content</p>
-     */
     @NameInMap("Variables")
     public String variables;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

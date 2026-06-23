@@ -7,24 +7,12 @@ public class ListMcubeHotpatchTasksResponseBody extends TeaModel {
     @NameInMap("ListHotpatchTasksResult")
     public ListMcubeHotpatchTasksResponseBodyListHotpatchTasksResult listHotpatchTasksResult;
 
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,145 +54,69 @@ public class ListMcubeHotpatchTasksResponseBody extends TeaModel {
     }
 
     public static class ListMcubeHotpatchTasksResponseBodyListHotpatchTasksResultHotpatchTaskInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ALIPUB40DB571101207-default</p>
-         */
         @NameInMap("AppCode")
         public String appCode;
 
-        /**
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1751594649000</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-29 18:01:32</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-29 18:01:32</p>
-         */
         @NameInMap("GmtModifiedStr")
         public String gmtModifiedStr;
 
         @NameInMap("GreyConfigInfo")
         public String greyConfigInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-03-18 20:12:26</p>
-         */
         @NameInMap("GreyEndtime")
         public String greyEndtime;
 
         @NameInMap("GreyEndtimeData")
         public String greyEndtimeData;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("GreyNum")
         public Long greyNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1486</p>
-         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("Memo")
         public String memo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxxx</p>
-         */
         @NameInMap("Modifier")
         public String modifier;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1664552</p>
-         */
         @NameInMap("PackageId")
         public Long packageId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>iOS</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ALIPUB40DB571101207_ANDROID-default</p>
-         */
         @NameInMap("ProductId")
         public String productId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1.0.0</p>
-         */
         @NameInMap("ProductVersion")
         public String productVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PublishMode")
         public Long publishMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("PublishType")
         public Long publishType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>81c90a2cafdc6dfc54201e70845b5708</p>
-         */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1786</p>
-         */
         @NameInMap("ResIds")
         public String resIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TaskStatus")
         public Long taskStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>825827</p>
-         */
         @NameInMap("WhitelistIds")
         public String whitelistIds;
 
@@ -392,34 +304,18 @@ public class ListMcubeHotpatchTasksResponseBody extends TeaModel {
     }
 
     public static class ListMcubeHotpatchTasksResponseBodyListHotpatchTasksResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         @NameInMap("HotpatchTaskInfo")
         public java.util.List<ListMcubeHotpatchTasksResponseBodyListHotpatchTasksResultHotpatchTaskInfo> hotpatchTaskInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6BD4C876-47B4-56CF-84C5-57389EE1EDFE</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

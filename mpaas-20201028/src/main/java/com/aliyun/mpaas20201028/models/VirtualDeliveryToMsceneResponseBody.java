@@ -7,33 +7,15 @@ public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
     @NameInMap("MpaasUserGamecenterPaymentVirtualdeliveryResponse")
     public VirtualDeliveryToMsceneResponseBodyMpaasUserGamecenterPaymentVirtualdeliveryResponse mpaasUserGamecenterPaymentVirtualdeliveryResponse;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ac1f0083177615939018778261913</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("ResultMsg")
     public String resultMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,10 +65,6 @@ public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
     }
 
     public static class VirtualDeliveryToMsceneResponseBodyMpaasUserGamecenterPaymentVirtualdeliveryResponse extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

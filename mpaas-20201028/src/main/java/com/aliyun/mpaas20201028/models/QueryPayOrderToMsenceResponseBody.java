@@ -7,33 +7,15 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
     @NameInMap("MpaasUserGamecenterPaymentQuerystatusResponse")
     public QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse mpaasUserGamecenterPaymentQuerystatusResponse;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("ResultMsg")
     public String resultMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -86,10 +68,6 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
         @NameInMap("CpExtra")
         public String cpExtra;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("OrderStatus")
         public String orderStatus;
 

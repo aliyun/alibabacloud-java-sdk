@@ -7,33 +7,15 @@ public class CheckUserAuthToMsceneResponseBody extends TeaModel {
     @NameInMap("MpaasUserAuthCheckResponse")
     public CheckUserAuthToMsceneResponseBodyMpaasUserAuthCheckResponse mpaasUserAuthCheckResponse;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("ResultMsg")
     public String resultMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,10 +65,6 @@ public class CheckUserAuthToMsceneResponseBody extends TeaModel {
     }
 
     public static class CheckUserAuthToMsceneResponseBodyMpaasUserAuthCheckResponse extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Matched")
         public Boolean matched;
 

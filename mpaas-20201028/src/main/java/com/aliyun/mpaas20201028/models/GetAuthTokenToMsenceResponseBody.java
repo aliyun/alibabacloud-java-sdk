@@ -7,33 +7,15 @@ public class GetAuthTokenToMsenceResponseBody extends TeaModel {
     @NameInMap("MpaasSystemOauthTokenResponse")
     public GetAuthTokenToMsenceResponseBodyMpaasSystemOauthTokenResponse mpaasSystemOauthTokenResponse;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("ResultMsg")
     public String resultMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,40 +65,18 @@ public class GetAuthTokenToMsenceResponseBody extends TeaModel {
     }
 
     public static class GetAuthTokenToMsenceResponseBodyMpaasSystemOauthTokenResponse extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>NPHTGKNR</p>
-         */
         @NameInMap("AuthToken")
         public String authToken;
 
-        /**
-         * <strong>example:</strong>
-         * <p>300</p>
-         */
         @NameInMap("ExpiresIn")
         public String expiresIn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("OpenId")
         public String openId;
 
-        /**
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <strong>example:</strong>
-         * <p>userid001</p>
-         */
         @NameInMap("UserId")
         public String userId;
 

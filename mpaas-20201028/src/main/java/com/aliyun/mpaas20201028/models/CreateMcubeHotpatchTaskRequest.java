@@ -4,10 +4,6 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateMcubeHotpatchTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
@@ -17,10 +13,6 @@ public class CreateMcubeHotpatchTaskRequest extends TeaModel {
     @NameInMap("GreyEndtimeData")
     public String greyEndtimeData;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("GreyNum")
     public Long greyNum;
 
@@ -29,59 +21,28 @@ public class CreateMcubeHotpatchTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1662218</p>
      */
     @NameInMap("PackageId")
     public Long packageId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>iOS</p>
-     */
     @NameInMap("Platform")
     public String platform;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("PublishMode")
     public Long publishMode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>3</p>
-     */
     @NameInMap("PublishType")
     public Long publishType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("SyncMode")
     public String syncMode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>825827</p>
-     */
     @NameInMap("WhitelistIds")
     public String whitelistIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dev</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,115 +4,51 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateMdsCubeResourceRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0.0.0.1</p>
-     */
     @NameInMap("AndroidMaxVersion")
     public String androidMaxVersion;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0.0.0.1</p>
-     */
     @NameInMap("AndroidMinVersion")
     public String androidMinVersion;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("ExtendInfo")
     public String extendInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>url</p>
-     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0.0.0.1</p>
-     */
     @NameInMap("IosMaxVersion")
     public String iosMaxVersion;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0.0.0.1</p>
-     */
     @NameInMap("IosMinVersion")
     public String iosMinVersion;
 
-    /**
-     * <strong>example:</strong>
-     * <p>url</p>
-     */
     @NameInMap("MockDataUrl")
     public String mockDataUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("OnexFlag")
     public Boolean onexFlag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Android,iOS</p>
-     */
     @NameInMap("Platform")
     public String platform;
 
-    /**
-     * <strong>example:</strong>
-     * <p>url</p>
-     */
     @NameInMap("PreviewPictureUrl")
     public String previewPictureUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>tempalte_test</p>
-     */
     @NameInMap("TemplateId")
     public String templateId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>resource desc</p>
-     */
     @NameInMap("TemplateResourceDesc")
     public String templateResourceDesc;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0.0.0.1</p>
-     */
     @NameInMap("TemplateResourceVersion")
     public String templateResourceVersion;
 
-    /**
-     * <strong>example:</strong>
-     * <p>LZFPEFIM-zh_CN</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dev</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class CreateMcubeHotpatchResourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="https://mcube-prod.oss-cn-hangzhou.aliyuncs.com/cubecard/tempFileForOnex/ONEXE99ED22171502/preProd/TPHWQYXG/8a6177ce-d7c3-434e-8c62-676a54db9667/main.zip">https://mcube-prod.oss-cn-hangzhou.aliyuncs.com/cubecard/tempFileForOnex/ONEXE99ED22171502/preProd/TPHWQYXG/8a6177ce-d7c3-434e-8c62-676a54db9667/main.zip</a></p>
      */
     @NameInMap("FileUrl")
     public String fileUrl;
@@ -27,43 +21,27 @@ public class CreateMcubeHotpatchResourceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("OnexFlag")
     public Boolean onexFlag;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iOS,Android</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1.0.0</p>
      */
     @NameInMap("ProductVersion")
     public String productVersion;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>default</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

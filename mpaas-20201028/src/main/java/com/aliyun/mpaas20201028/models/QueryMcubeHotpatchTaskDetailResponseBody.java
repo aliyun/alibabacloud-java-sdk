@@ -7,24 +7,12 @@ public class QueryMcubeHotpatchTaskDetailResponseBody extends TeaModel {
     @NameInMap("QueryHotpatchTaskDetailResult")
     public QueryMcubeHotpatchTaskDetailResponseBodyQueryHotpatchTaskDetailResult queryHotpatchTaskDetailResult;
 
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,31 +54,15 @@ public class QueryMcubeHotpatchTaskDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMcubeHotpatchTaskDetailResponseBodyQueryHotpatchTaskDetailResultHotpatchTaskDetailRuleJsonList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>and</p>
-         */
         @NameInMap("Operation")
         public String operation;
 
-        /**
-         * <strong>example:</strong>
-         * <p>city</p>
-         */
         @NameInMap("RuleElement")
         public String ruleElement;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("RuleType")
         public String ruleType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>smtp.qiye.aliyun.com</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -134,66 +106,30 @@ public class QueryMcubeHotpatchTaskDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMcubeHotpatchTaskDetailResponseBodyQueryHotpatchTaskDetailResultHotpatchTaskDetailWhitelist extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ONEXPRE40DB571151920-default</p>
-         */
         @NameInMap("AppCode")
         public String appCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>business</p>
-         */
         @NameInMap("Business")
         public String business;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1760754049000</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>9952804</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>userId</p>
-         */
         @NameInMap("IdType")
         public String idType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>iOS</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Status")
         public Long status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("WhiteListCount")
         public Long whiteListCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>whitelistName</p>
-         */
         @NameInMap("WhiteListName")
         public String whiteListName;
 
@@ -277,214 +213,102 @@ public class QueryMcubeHotpatchTaskDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMcubeHotpatchTaskDetailResponseBodyQueryHotpatchTaskDetailResultHotpatchTaskDetail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ONEXPRE22BA951112038-default</p>
-         */
         @NameInMap("AppCode")
         public String appCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ALIPUB9A63274111812</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("BaseInfoId")
         public Long baseInfoId;
 
         @NameInMap("Bundles")
         public java.util.List<String> bundles;
 
-        /**
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("Creator")
         public String creator;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://xxxxx">https://xxxxx</a></p>
-         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>117</p>
-         */
         @NameInMap("FileSize")
         public String fileSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1766111313000</p>
-         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-01-09 10:14:46</p>
-         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-01-09 10:14:46</p>
-         */
         @NameInMap("GmtModifiedStr")
         public String gmtModifiedStr;
 
         @NameInMap("GreyConfigInfo")
         public String greyConfigInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-01-01 12:00:00</p>
-         */
         @NameInMap("GreyEndtimeData")
         public String greyEndtimeData;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("GreyNum")
         public Long greyNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>14332</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>15cf3772223630be907c7aaefe8d51c6</p>
-         */
         @NameInMap("Md5")
         public String md5;
 
         @NameInMap("Memo")
         public String memo;
 
-        /**
-         * <strong>example:</strong>
-         * <hr>
-         */
         @NameInMap("Modifier")
         public String modifier;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1664552</p>
-         */
         @NameInMap("PackageId")
         public Long packageId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>iOS</p>
-         */
         @NameInMap("Platform")
         public String platform;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ONEXPRE22BA951112038_ANDROID-default</p>
-         */
         @NameInMap("ProductId")
         public String productId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1.0.0</p>
-         */
         @NameInMap("ProductVersion")
         public String productVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PublishMode")
         public Long publishMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("PublishPeriod")
         public Long publishPeriod;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("PublishType")
         public Long publishType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("QuickRollback")
         public Long quickRollback;
 
-        /**
-         * <strong>example:</strong>
-         * <p>81c90a2cafdc6dfc54201e70845b5708</p>
-         */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
 
         @NameInMap("RuleJsonList")
         public java.util.List<QueryMcubeHotpatchTaskDetailResponseBodyQueryHotpatchTaskDetailResultHotpatchTaskDetailRuleJsonList> ruleJsonList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>mpaas.jar</p>
-         */
         @NameInMap("SourceName")
         public String sourceName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("TaskStatus")
         public Long taskStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1770442895017</p>
-         */
         @NameInMap("TaskVersion")
         public Long taskVersion;
 
         @NameInMap("Whitelist")
         public java.util.List<QueryMcubeHotpatchTaskDetailResponseBodyQueryHotpatchTaskDetailResultHotpatchTaskDetailWhitelist> whitelist;
 
-        /**
-         * <strong>example:</strong>
-         * <p>825827</p>
-         */
         @NameInMap("WhitelistIds")
         public String whitelistIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
@@ -760,36 +584,18 @@ public class QueryMcubeHotpatchTaskDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMcubeHotpatchTaskDetailResponseBodyQueryHotpatchTaskDetailResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         @NameInMap("HotpatchTaskDetail")
         public QueryMcubeHotpatchTaskDetailResponseBodyQueryHotpatchTaskDetailResultHotpatchTaskDetail hotpatchTaskDetail;
 
-        /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>61B9F63C-4E6F-5D8E-A694-899450987B48</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

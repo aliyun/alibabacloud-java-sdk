@@ -13,9 +13,6 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("Msg")
     public String msg;
 
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

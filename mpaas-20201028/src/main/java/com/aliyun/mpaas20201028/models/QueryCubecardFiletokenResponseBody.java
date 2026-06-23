@@ -4,27 +4,15 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class QueryCubecardFiletokenResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public QueryCubecardFiletokenResponseBodyResultContent resultContent;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -66,45 +54,21 @@ public class QueryCubecardFiletokenResponseBody extends TeaModel {
     }
 
     public static class QueryCubecardFiletokenResponseBodyResultContentDataContent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>LTAI5tFgfNzJFDn4Y4BhoRnc</p>
-         */
         @NameInMap("Accessid")
         public String accessid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>/home/ecs-assist-user/proof/alert</p>
-         */
         @NameInMap("Dir")
         public String dir;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1760583447</p>
-         */
         @NameInMap("Expire")
         public String expire;
 
-        /**
-         * <strong>example:</strong>
-         * <p>172.23.129.55</p>
-         */
         @NameInMap("Host")
         public String host;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Permit</p>
-         */
         @NameInMap("Policy")
         public String policy;
 
-        /**
-         * <strong>example:</strong>
-         * <p>yKplu9LQwgKBTDhxp0YozAeCy9c=</p>
-         */
         @NameInMap("Signature")
         public String signature;
 
@@ -167,24 +131,12 @@ public class QueryCubecardFiletokenResponseBody extends TeaModel {
         @NameInMap("Content")
         public QueryCubecardFiletokenResponseBodyResultContentDataContent content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NONE</p>
-         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -231,10 +183,6 @@ public class QueryCubecardFiletokenResponseBody extends TeaModel {
         @NameInMap("Data")
         public QueryCubecardFiletokenResponseBodyResultContentData data;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
-         */
         @NameInMap("RequestId")
         public String requestId;
 

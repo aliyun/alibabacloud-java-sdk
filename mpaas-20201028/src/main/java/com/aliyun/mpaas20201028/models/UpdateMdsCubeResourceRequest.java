@@ -6,54 +6,36 @@ import com.aliyun.tea.*;
 public class UpdateMdsCubeResourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>url</p>
      */
     @NameInMap("MockDataUrl")
     public String mockDataUrl;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("OnexFlag")
     public Boolean onexFlag;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("TemplateResourceId")
     public Long templateResourceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ZXCXMAHQ-zh_CN</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dev</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

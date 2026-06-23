@@ -4,34 +4,18 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ALIPUBE5C3F6D091419</p>
-     */
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1587</p>
-     */
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>GHLGRTLG</p>
-     */
     @NameInMap("TenantId")
     public String tenantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
