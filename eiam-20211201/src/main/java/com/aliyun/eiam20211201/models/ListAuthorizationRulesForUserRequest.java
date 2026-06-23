@@ -15,11 +15,11 @@ public class ListAuthorizationRulesForUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return on a single page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <ul>
-     * <li><p>The default value is 20.</p>
+     * <li><p>Default value: 20.</p>
      * </li>
-     * <li><p>The maximum value is 100.</p>
+     * <li><p>Maximum value: 100.</p>
      * </li>
      * </ul>
      * 
@@ -30,9 +30,9 @@ public class ListAuthorizationRulesForUserRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the start of the next page for a paged query.</p>
+     * <p>The pagination token that indicates the start position of the next page.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the query starts from the first page.</li>
+     * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBrandRequest extends TeaModel {
     /**
-     * <p>The brand ID.</p>
+     * <p>Brand ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetBrandRequest extends TeaModel {
     public String brandId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

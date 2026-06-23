@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaModel {
     /**
-     * <p>The collection of applications for the network access endpoint.</p>
+     * <p>The collection of applications under the network access endpoint.</p>
      */
     @NameInMap("ApplicationsForNetworkAccessEndpoint")
     public java.util.List<ListApplicationsForNetworkAccessEndpointResponseBodyApplicationsForNetworkAccessEndpoint> applicationsForNetworkAccessEndpoint;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

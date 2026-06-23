@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConditionalAccessPolicyRequest extends TeaModel {
     /**
-     * <p>Idempotent token.</p>
+     * <p>Idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -14,7 +14,7 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Conditional access policy name</p>
+     * <p>Conditional access policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,8 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
     public String conditionalAccessPolicyName;
 
     /**
-     * <p>Type of the conditional access policy, with the following options:</p>
-     * <p>arn:alibaba:idaas:authn:access:policy:system: System policy.</p>
+     * <p>Conditional access policy type. Valid values:</p>
+     * <p>arn:alibaba:idaas:authn:access:policy:system: system policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,20 +35,20 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
     public String conditionalAccessPolicyType;
 
     /**
-     * <p>Condition content configuration for the conditional access policy</p>
+     * <p>Conditional access policy condition configuration.</p>
      */
     @NameInMap("ConditionsConfig")
     public CreateConditionalAccessPolicyRequestConditionsConfig conditionsConfig;
 
     /**
-     * <p>Action configuration for the conditional access policy</p>
+     * <p>Conditional access policy action configuration.</p>
      */
     @NameInMap("DecisionConfig")
     public CreateConditionalAccessPolicyRequestDecisionConfig decisionConfig;
 
     /**
-     * <p>Execution type of the conditional access policy, with the following options:</p>
-     * <p>enforcement: Enforce the policy.</p>
+     * <p>Conditional access policy execution type. Valid values:</p>
+     * <p>enforcement: enforcement policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
     public String decisionType;
 
     /**
-     * <p>Description of the conditional access policy</p>
+     * <p>Conditional access policy description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test description</p>
@@ -67,9 +67,9 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Execution point of the conditional access policy, with the following options:</p>
+     * <p>Conditional access policy evaluation point. Valid values:</p>
      * <ul>
-     * <li>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1: Allow.</li>
+     * <li>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1: allow.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -90,7 +90,9 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Priority of the conditional access policy, lower values indicate higher priority Minimum value: 1 Maximum value: 100</p>
+     * <p>Conditional access policy priority. A smaller value indicates a higher priority.
+     * Minimum value: 1.
+     * Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -185,13 +187,13 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class CreateConditionalAccessPolicyRequestConditionsConfigApplications extends TeaModel {
         /**
-         * <p>Excluded applications</p>
+         * <p>Excluded applications.</p>
          */
         @NameInMap("ExcludeApplications")
         public java.util.List<String> excludeApplications;
 
         /**
-         * <p>Included applications</p>
+         * <p>Included applications.</p>
          */
         @NameInMap("IncludeApplications")
         public java.util.List<String> includeApplications;
@@ -221,13 +223,13 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class CreateConditionalAccessPolicyRequestConditionsConfigNetworkZones extends TeaModel {
         /**
-         * <p>Excluded network zones</p>
+         * <p>Excluded network zones.</p>
          */
         @NameInMap("ExcludeNetworkZones")
         public java.util.List<String> excludeNetworkZones;
 
         /**
-         * <p>Included network zones</p>
+         * <p>Included network zones.</p>
          */
         @NameInMap("IncludeNetworkZones")
         public java.util.List<String> includeNetworkZones;
@@ -257,37 +259,37 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class CreateConditionalAccessPolicyRequestConditionsConfigUsers extends TeaModel {
         /**
-         * <p>Excluded user groups</p>
+         * <p>Excluded user groups.</p>
          */
         @NameInMap("ExcludeGroups")
         public java.util.List<String> excludeGroups;
 
         /**
-         * <p>Excluded organizations</p>
+         * <p>Excluded organizational units.</p>
          */
         @NameInMap("ExcludeOrganizationalUnits")
         public java.util.List<String> excludeOrganizationalUnits;
 
         /**
-         * <p>Excluded users</p>
+         * <p>Excluded users.</p>
          */
         @NameInMap("ExcludeUsers")
         public java.util.List<String> excludeUsers;
 
         /**
-         * <p>Included user groups</p>
+         * <p>Included user groups.</p>
          */
         @NameInMap("IncludeGroups")
         public java.util.List<String> includeGroups;
 
         /**
-         * <p>Included organizations</p>
+         * <p>Included organizational units.</p>
          */
         @NameInMap("IncludeOrganizationalUnits")
         public java.util.List<String> includeOrganizationalUnits;
 
         /**
-         * <p>Selected user</p>
+         * <p>Included users.</p>
          */
         @NameInMap("IncludeUsers")
         public java.util.List<String> includeUsers;
@@ -349,19 +351,19 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class CreateConditionalAccessPolicyRequestConditionsConfig extends TeaModel {
         /**
-         * <p>Target applications for the conditional access policy</p>
+         * <p>Conditional access policy target applications.</p>
          */
         @NameInMap("Applications")
         public CreateConditionalAccessPolicyRequestConditionsConfigApplications applications;
 
         /**
-         * <p>Network zones for conditional access policy</p>
+         * <p>Conditional access policy network zones.</p>
          */
         @NameInMap("NetworkZones")
         public CreateConditionalAccessPolicyRequestConditionsConfigNetworkZones networkZones;
 
         /**
-         * <p>Target users of the conditional access policy</p>
+         * <p>Conditional access policy target users.</p>
          */
         @NameInMap("Users")
         public CreateConditionalAccessPolicyRequestConditionsConfigUsers users;
@@ -399,7 +401,7 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
 
     public static class CreateConditionalAccessPolicyRequestDecisionConfig extends TeaModel {
         /**
-         * <p>Whether to enable session reuse</p>
+         * <p>Specifies whether to enable session reuse.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -408,12 +410,10 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
         public String activeSessionReuseStatus;
 
         /**
-         * <p>Decision action for the conditional access policy, with the following options:</p>
+         * <p>Conditional access policy decision action. Valid values:</p>
          * <ul>
-         * <li><p>allow: Allow.</p>
-         * </li>
-         * <li><p>deny: Deny.</p>
-         * </li>
+         * <li>allow: allow.</li>
+         * <li>deny: deny.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -423,12 +423,10 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
         public String effect;
 
         /**
-         * <p>Re-authentication interval (in seconds) for the conditional access policy</p>
+         * <p>Conditional access policy re-authentication interval (seconds).</p>
          * <ul>
-         * <li><p>Maximum MFA re-authentication interval: 86400</p>
-         * </li>
-         * <li><p>Minimum MFA re-authentication interval: 300</p>
-         * </li>
+         * <li>Maximum MFA authentication interval: 86400.</li>
+         * <li>Minimum MFA authentication interval: 300.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -438,28 +436,22 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
         public Long mfaAuthenticationIntervalSeconds;
 
         /**
-         * <p>Allowed MFA types for the conditional access policy, with the following options:</p>
+         * <p>MFA types allowed by the conditional access policy. Valid values:</p>
          * <ul>
-         * <li><p>ia_otp_sms: SMS verification code</p>
-         * </li>
-         * <li><p>ia_otp_email: Email verification code</p>
-         * </li>
-         * <li><p>ia_totp: OTP dynamic password</p>
-         * </li>
-         * <li><p>ia_webauthn: WebAuthn</p>
-         * </li>
+         * <li>ia_otp_sms: SMS verification code.</li>
+         * <li>ia_otp_email: email verification code.</li>
+         * <li>ia_totp: OTP dynamic password.</li>
+         * <li>ia_webauthn: WebAuthn.</li>
          * </ul>
          */
         @NameInMap("MfaAuthenticationMethods")
         public java.util.List<String> mfaAuthenticationMethods;
 
         /**
-         * <p>MFA type for the conditional access policy, with the following options:</p>
+         * <p>Conditional access policy MFA type. Valid values:</p>
          * <ul>
-         * <li><p>directly_access: Direct access</p>
-         * </li>
-         * <li><p>mfa_required: MFA required</p>
-         * </li>
+         * <li>directly_access: direct access.</li>
+         * <li>mfa_required: MFA required.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEiamInstancesResponseBody extends TeaModel {
     /**
-     * <p>The instance list.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListEiamInstancesResponseBodyInstances> instances;
@@ -42,7 +42,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
 
     public static class ListEiamInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The instance description.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Production environment</p>
@@ -51,7 +51,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The private domain name of the instance Developer API.</p>
+         * <p>The private domain name of the developer API for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-developerapi-cn.vpc-proxy.aliyuncs.com</p>
@@ -60,7 +60,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String developerAPIPrivateDomain;
 
         /**
-         * <p>The public domain of the instance Developer API.</p>
+         * <p>The public domain name of the developer API for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-developerapi.cn-hangzhou.aliyuncs.com</p>
@@ -88,13 +88,6 @@ public class ListEiamInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The instance version.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>EIAM 2.0</p>
-         * </li>
-         * <li><p>EIAM 1.0</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>EIAM 2.0</p>
@@ -103,7 +96,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String instanceVersion;
 
         /**
-         * <p>The private domain of the instance OpenAPI.</p>
+         * <p>The private domain name of the OpenAPI for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-cn.vpc-proxy.aliyuncs.com</p>
@@ -112,7 +105,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String openAPIPrivateDomain;
 
         /**
-         * <p>The public domain of the instance OpenAPI.</p>
+         * <p>The public domain name of the OpenAPI for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam.cn-hangzhou.aliyuncs.com</p>
@@ -121,7 +114,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String openAPIPublicDomain;
 
         /**
-         * <p>The single sign-on (SSO) domain of the instance.</p>
+         * <p>The SSO domain name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx.aliyunidaas.com</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAuthorizationResourceRequest extends TeaModel {
     /**
-     * <p>The authorization resource ID.</p>
+     * <p>The authorized resource ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
     /**
-     * <p>The language and time zone configuration for the instance.</p>
+     * <p>The language and time zone configuration of the instance.</p>
      */
     @NameInMap("GlobalizationConfig")
     public GetInstanceGlobalizationConfigResponseBodyGlobalizationConfig globalizationConfig;

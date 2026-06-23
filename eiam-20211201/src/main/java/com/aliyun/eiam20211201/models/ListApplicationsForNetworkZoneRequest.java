@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForNetworkZoneRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListApplicationsForNetworkZoneRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,7 +24,7 @@ public class ListApplicationsForNetworkZoneRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The ID of the network domain associated with the application.</p>
+     * <p>The ID of the network zone associated with the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListApplicationsForNetworkZoneRequest extends TeaModel {
     public String networkZoneId;
 
     /**
-     * <p>The token used for the next query.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -43,7 +43,7 @@ public class ListApplicationsForNetworkZoneRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token used to query the previous page.</p>
+     * <p>The pagination token for the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

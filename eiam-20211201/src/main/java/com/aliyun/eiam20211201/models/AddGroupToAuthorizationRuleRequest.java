@@ -15,7 +15,7 @@ public class AddGroupToAuthorizationRuleRequest extends TeaModel {
     public String authorizationRuleId;
 
     /**
-     * <p>A client token that you generate to ensure the idempotence of the request. Make sure that the value of this parameter is unique across different requests. The client token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,12 +51,10 @@ public class AddGroupToAuthorizationRuleRequest extends TeaModel {
     public AddGroupToAuthorizationRuleRequestValidityPeriod validityPeriod;
 
     /**
-     * <p>The type of the validity period. Valid values:</p>
+     * <p>The validity type of the relationship. Valid values:</p>
      * <ul>
-     * <li><p>permanent: The relationship is permanent.</p>
-     * </li>
-     * <li><p>time_bound: The relationship is valid for a custom time range.</p>
-     * </li>
+     * <li>permanent: permanent</li>
+     * <li>time_bound: custom time range.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -121,7 +119,7 @@ public class AddGroupToAuthorizationRuleRequest extends TeaModel {
 
     public static class AddGroupToAuthorizationRuleRequestValidityPeriod extends TeaModel {
         /**
-         * <p>The end time of the validity period. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end time of the validity period. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704062061000</p>
@@ -130,7 +128,7 @@ public class AddGroupToAuthorizationRuleRequest extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The start time of the validity period. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The start time of the validity period. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704042061000</p>

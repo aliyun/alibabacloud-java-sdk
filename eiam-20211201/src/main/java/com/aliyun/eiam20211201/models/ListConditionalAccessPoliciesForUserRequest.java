@@ -15,7 +15,7 @@ public class ListConditionalAccessPoliciesForUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the user associated with the conditional access policy.</p>
+     * <p>The user ID associated with the conditional access policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

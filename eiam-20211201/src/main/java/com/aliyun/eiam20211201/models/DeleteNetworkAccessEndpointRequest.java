@@ -15,7 +15,7 @@ public class DeleteNetworkAccessEndpointRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Network Access Endpoint ID.</p>
+     * <p>The ID of the dedicated network access endpoint. Only network access endpoints whose NetworkEndpointType is private can be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

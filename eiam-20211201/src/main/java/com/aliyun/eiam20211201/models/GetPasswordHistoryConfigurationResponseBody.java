@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The password history configurations.</p>
+     * <p>The password history check configuration.</p>
      */
     @NameInMap("PasswordHistoryConfiguration")
     public GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration passwordHistoryConfiguration;
@@ -42,7 +42,7 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
 
     public static class GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration extends TeaModel {
         /**
-         * <p>The maximum number of recent passwords that are retained.</p>
+         * <p>The maximum number of recent password records to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -51,10 +51,10 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
         public Integer passwordHistoryMaxRetention;
 
         /**
-         * <p>Indicates whether the password history feature is enabled. Valid values:</p>
+         * <p>The status of the password history configuration. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

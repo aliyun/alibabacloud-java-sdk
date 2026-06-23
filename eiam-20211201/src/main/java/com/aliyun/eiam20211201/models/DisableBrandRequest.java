@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableBrandRequest extends TeaModel {
     /**
-     * <p>The branding ID.</p>
+     * <p>The brand ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

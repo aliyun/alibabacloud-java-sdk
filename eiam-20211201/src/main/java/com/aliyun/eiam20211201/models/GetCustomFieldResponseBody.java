@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomFieldResponseBody extends TeaModel {
     /**
-     * <p>Custom field information.</p>
+     * <p>The custom field information.</p>
      */
     @NameInMap("CustomField")
     public GetCustomFieldResponseBodyCustomField customField;
@@ -101,7 +101,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
 
     public static class GetCustomFieldResponseBodyCustomFieldFieldDataConfig extends TeaModel {
         /**
-         * <p>A list of field configuration items.</p>
+         * <p>The list of field configuration items.</p>
          */
         @NameInMap("Items")
         public java.util.List<GetCustomFieldResponseBodyCustomFieldFieldDataConfigItems> items;
@@ -123,7 +123,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
 
     public static class GetCustomFieldResponseBodyCustomField extends TeaModel {
         /**
-         * <p>The creation time of the custom field, in UNIX timestamp format in milliseconds.</p>
+         * <p>The time when the extended field was created, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>17642960730</p>
@@ -141,7 +141,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>The description of the custom field.</p>
+         * <p>The description of the extended field.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -168,7 +168,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>Field value configuration items.</p>
+         * <p>The field value configuration items.</p>
          */
         @NameInMap("FieldDataConfig")
         public GetCustomFieldResponseBodyCustomFieldFieldDataConfig fieldDataConfig;
@@ -237,7 +237,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public Boolean required;
 
         /**
-         * <p>The status of the custom field.</p>
+         * <p>The status of the extended field.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -255,7 +255,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public Boolean unique;
 
         /**
-         * <p>The last update time of the custom field, in UNIX timestamp format in milliseconds.</p>
+         * <p>The time when the extended field was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>17642960730</p>
@@ -264,7 +264,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>User-side (portal) permissions.</p>
+         * <p>The user-side (portal-side) permission.</p>
          * 
          * <strong>example:</strong>
          * <p>read_only</p>

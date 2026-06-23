@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainRequest extends TeaModel {
     /**
-     * <p>The ID of the domain name.</p>
+     * <p>The domain name ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

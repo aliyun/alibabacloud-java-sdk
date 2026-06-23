@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPasswordInitializationConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The password initialization configurations.</p>
+     * <p>The password initialization configuration.</p>
      */
     @NameInMap("PasswordInitializationConfiguration")
     public GetPasswordInitializationConfigurationResponseBodyPasswordInitializationConfiguration passwordInitializationConfiguration;
@@ -42,10 +42,10 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
 
     public static class GetPasswordInitializationConfigurationResponseBodyPasswordInitializationConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether forcible password change upon first logon is enabled. Valid values:</p>
+         * <p>The status of forced password update. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         public String passwordForcedUpdateStatus;
 
         /**
-         * <p>The methods for receiving password initialization notifications.</p>
+         * <p>The list of password initialization notification channels.</p>
          * 
          * <strong>example:</strong>
          * <p>email</p>
@@ -64,10 +64,10 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         public java.util.List<String> passwordInitializationNotificationChannels;
 
         /**
-         * <p>Indicates whether the password initialization feature is enabled. Valid values:</p>
+         * <p>The status of the password initialization configuration. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -77,9 +77,9 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         public String passwordInitializationStatus;
 
         /**
-         * <p>The password initialization method. Set the value to random.</p>
+         * <p>The password initialization method. Valid values:</p>
          * <ul>
-         * <li>random: A randomly generated password is used.</li>
+         * <li>random: Random.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableInitDomainAutoRedirectRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

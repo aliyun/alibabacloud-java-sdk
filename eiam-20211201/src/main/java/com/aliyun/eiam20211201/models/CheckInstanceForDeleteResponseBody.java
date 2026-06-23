@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceForDeleteResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The check result.</p>
      */
     @NameInMap("CheckInstanceResult")
     public CheckInstanceForDeleteResponseBodyCheckInstanceResult checkInstanceResult;
@@ -42,7 +42,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
 
     public static class CheckInstanceForDeleteResponseBodyCheckInstanceResultRestrictScenarios extends TeaModel {
         /**
-         * <p>The URL of a helpful console page.</p>
+         * <p>The console URL that provides helpful information.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://console-rpa.aliyun.com/">https://console-rpa.aliyun.com/</a></p>
@@ -60,7 +60,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The reason for the restriction.</p>
+         * <p>The restriction reason.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_product_dependency</p>
@@ -110,7 +110,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
         public Boolean deletable;
 
         /**
-         * <p>The restriction information that prevents deletion.</p>
+         * <p>The restriction information for instances that cannot be deleted.</p>
          */
         @NameInMap("RestrictScenarios")
         public java.util.List<CheckInstanceForDeleteResponseBodyCheckInstanceResultRestrictScenarios> restrictScenarios;

@@ -7,10 +7,8 @@ public class CreateAuthorizationRuleRequest extends TeaModel {
     /**
      * <p>The scope of authorized resources. Valid values:</p>
      * <ul>
-     * <li><p>global: all resources within the project.</p>
-     * </li>
-     * <li><p>custom: specified resources within the project.</p>
-     * </li>
+     * <li>global: all resources under the project.</li>
+     * <li>custom: specified resources under the project.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class CreateAuthorizationRuleRequest extends TeaModel {
     public String authorizationResourceScope;
 
     /**
-     * <p>The name of the authorization rule. The name can be up to 64 characters long.</p>
+     * <p>The name of the authorization rule. The name can be up to 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +28,7 @@ public class CreateAuthorizationRuleRequest extends TeaModel {
     public String authorizationRuleName;
 
     /**
-     * <p>A unique identifier that you provide to ensure the idempotence of the request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +38,7 @@ public class CreateAuthorizationRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the authorization rule. The description can be up to 128 characters long.</p>
+     * <p>The description of the authorization rule. The description can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test rule</p>
@@ -59,7 +57,7 @@ public class CreateAuthorizationRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the project to associate with the authorization rule. If you are unsure which project to use, you can associate the rule with the default project, iprj_system_default.</p>
+     * <p>The ID of the project associated with the authorization rule. If you are unsure which project to associate, you can associate the default project. The default project ID is iprj_system_default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

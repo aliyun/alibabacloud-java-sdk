@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetLoginRedirectApplicationForBrandRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>Application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SetLoginRedirectApplicationForBrandRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The brand ID.</p>
+     * <p>Brand ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class SetLoginRedirectApplicationForBrandRequest extends TeaModel {
     public String brandId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

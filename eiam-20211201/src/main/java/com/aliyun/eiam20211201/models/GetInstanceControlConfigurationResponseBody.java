@@ -42,7 +42,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig extends TeaModel {
         /**
-         * <p>The human verification type.</p>
+         * <p>The CAPTCHA type.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:humanverification:alibaba-cloud-jigsaw-verification</p>
@@ -67,7 +67,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements extends TeaModel {
         /**
-         * <p>The element name.</p>
+         * <p>The name of the instance control item.</p>
          * 
          * <strong>example:</strong>
          * <p>human_verification</p>
@@ -76,13 +76,13 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
         public String elementName;
 
         /**
-         * <p>The human verification configuration.</p>
+         * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authenticate configuration.</p>
          */
         @NameInMap("HumanVerificationConfig")
         public GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig humanVerificationConfig;
 
         /**
-         * <p>The status of the control element.</p>
+         * <p>The status of the instance control item.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -123,7 +123,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration extends TeaModel {
         /**
-         * <p>The list of control elements.</p>
+         * <p>The instance control configuration.</p>
          */
         @NameInMap("ControlElements")
         public java.util.List<GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements> controlElements;

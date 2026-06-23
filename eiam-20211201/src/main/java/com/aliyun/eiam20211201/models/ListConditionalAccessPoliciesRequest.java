@@ -15,7 +15,7 @@ public class ListConditionalAccessPoliciesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Number of items per page in a paginated query.</p>
+     * <p>Number of rows per page in paginated queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,7 +24,7 @@ public class ListConditionalAccessPoliciesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>Token for the next page query.</p>
+     * <p>Next page query token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -33,7 +33,7 @@ public class ListConditionalAccessPoliciesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Token for the previous page query.</p>
+     * <p>Previous page query token.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

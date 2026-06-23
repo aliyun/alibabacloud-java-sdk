@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetBrandResponseBody extends TeaModel {
     /**
-     * <p>The brand.</p>
+     * <p>Brand.</p>
      */
     @NameInMap("Brand")
     public GetBrandResponseBodyBrand brand;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,7 +42,7 @@ public class GetBrandResponseBody extends TeaModel {
 
     public static class GetBrandResponseBodyBrand extends TeaModel {
         /**
-         * <p>The brand ID.</p>
+         * <p>Brand ID.</p>
          * 
          * <strong>example:</strong>
          * <p>brand_xxxx</p>
@@ -51,7 +51,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandId;
 
         /**
-         * <p>The brand name.</p>
+         * <p>Brand name.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Brand</p>
@@ -60,7 +60,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandName;
 
         /**
-         * <p>The brand type.</p>
+         * <p>Brand type.</p>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -69,7 +69,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String brandType;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -78,7 +78,7 @@ public class GetBrandResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The brand status.</p>
+         * <p>Brand status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

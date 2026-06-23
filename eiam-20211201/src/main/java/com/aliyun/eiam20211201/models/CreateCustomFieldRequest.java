@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCustomFieldRequest extends TeaModel {
     /**
-     * <p>The default value of the field. If the field has configuration items, the default value must be one of the enabled configuration items. The default value can be up to 1024 characters in length.</p>
+     * <p>The default value of the field.
+     * If configuration items exist for the type, the default value must be one of the configuration items and must be in the enabled state. Maximum length: 1024 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>string</p>
@@ -14,7 +15,8 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String defaultValue;
 
     /**
-     * <p>The description of the field. The description can be up to 512 characters in length.</p>
+     * <p>The field description.
+     * Maximum length: 512 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Field test</p>
@@ -23,7 +25,8 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether to encrypt the field value. If you set this parameter to true, the system encrypts the data value before storing it.</p>
+     * <p>Specifies whether to encrypt the field.
+     * If this parameter is set to true, the data value is encrypted at the storage layer.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,9 +35,9 @@ public class CreateCustomFieldRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The entity to which the field belongs. Valid value:</p>
+     * <p>The entity to which the field belongs. Valid values:</p>
      * <ul>
-     * <li>user: an account.</li>
+     * <li>user: account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +48,7 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The configuration items of the field value.</p>
+     * <p>The field value configuration items.</p>
      */
     @NameInMap("FieldDataConfig")
     public CreateCustomFieldRequestFieldDataConfig fieldDataConfig;
@@ -53,12 +56,9 @@ public class CreateCustomFieldRequest extends TeaModel {
     /**
      * <p>The data type of the field. Valid values:</p>
      * <ul>
-     * <li><p>string: a string.</p>
-     * </li>
-     * <li><p>number: a number. The number can be up to 32 digits in length and can be a positive integer or a decimal.</p>
-     * </li>
-     * <li><p>boolean: a Boolean value.</p>
-     * </li>
+     * <li>string: string.</li>
+     * <li>number: number. Maximum length: 32 characters. Positive integers and decimals are supported.</li>
+     * <li>boolean: Boolean.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,7 +69,8 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String fieldDataType;
 
     /**
-     * <p>The display name of the field. The display name can be up to 64 characters in length.</p>
+     * <p>The field display name.
+     * Maximum length: 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,14 +80,11 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String fieldDisplayName;
 
     /**
-     * <p>The display type of the field. Valid values:</p>
+     * <p>The field display type. Valid values:</p>
      * <ul>
-     * <li><p>input: a text box. This display type supports the string and number data types.</p>
-     * </li>
-     * <li><p>select: a drop-down list. This display type supports the string and Boolean data types.</p>
-     * </li>
-     * <li><p>checkbox: a check box. This display type supports the string data type.</p>
-     * </li>
+     * <li>input: text input box. Supported data types: string and number.</li>
+     * <li>select: drop-down list. Supported data types: string and boolean.</li>
+     * <li>checkbox: multi-select box. Supported data types: string.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -97,7 +95,8 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String fieldDisplayType;
 
     /**
-     * <p>The name of the field. The name can be up to 40 characters in length and can contain lowercase letters and underscores (<em>). It cannot start with an underscore (</em>).</p>
+     * <p>The field identifier.
+     * Maximum length: 40 characters. The value can contain lowercase letters and underscores, and cannot start with an underscore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +116,7 @@ public class CreateCustomFieldRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Indicates whether the field is required.</p>
+     * <p>Specifies whether the field is required.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -126,7 +125,8 @@ public class CreateCustomFieldRequest extends TeaModel {
     public Boolean required;
 
     /**
-     * <p>Indicates whether the field value is unique. If you set this parameter to true, the value of this field must be unique for the specified entity type.</p>
+     * <p>Specifies whether the field value is unique.
+     * If this parameter is set to true, the field value must be unique within the corresponding entity type and cannot be duplicated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -135,14 +135,11 @@ public class CreateCustomFieldRequest extends TeaModel {
     public Boolean unique;
 
     /**
-     * <p>The permission on the field in the portal. Valid values:</p>
+     * <p>The field permission on the portal side. Valid values:</p>
      * <ul>
-     * <li><p>hide: The field is not visible in the portal.</p>
-     * </li>
-     * <li><p>read_only: The field is visible but cannot be modified in the portal.</p>
-     * </li>
-     * <li><p>read_write: The field is visible and can be modified in the portal.</p>
-     * </li>
+     * <li>hide: Not visible on the portal side.</li>
+     * <li>read_only: Visible on the portal side but cannot be edited or updated.</li>
+     * <li>read_write: Visible and editable on the portal side.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -262,7 +259,8 @@ public class CreateCustomFieldRequest extends TeaModel {
 
     public static class CreateCustomFieldRequestFieldDataConfigItems extends TeaModel {
         /**
-         * <p>The display name of the configuration item. The display name can be up to 128 characters in length.</p>
+         * <p>The display name of the configuration item.
+         * Maximum length: 128 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -273,12 +271,10 @@ public class CreateCustomFieldRequest extends TeaModel {
         /**
          * <p>The status of the configuration item. Valid values:</p>
          * <ul>
-         * <li><p>enabled: The configuration item is enabled.</p>
-         * </li>
-         * <li><p>disabled: The configuration item is disabled.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
-         * <p>If a configuration item is disabled, it is unavailable when you create or update the field value for an entity.</p>
+         * <p>If a configuration item is disabled, it cannot be used when creating or updating entity field values.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -287,7 +283,8 @@ public class CreateCustomFieldRequest extends TeaModel {
         public String status;
 
         /**
-         * <p>The value of the configuration item. The value can be up to 64 characters in length.</p>
+         * <p>The display value of the configuration item.
+         * Maximum length: 64 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -328,7 +325,7 @@ public class CreateCustomFieldRequest extends TeaModel {
 
     public static class CreateCustomFieldRequestFieldDataConfig extends TeaModel {
         /**
-         * <p>A list of field configuration items. The list can contain up to 100 items.</p>
+         * <p>The list of field configuration items. Maximum number of items: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>

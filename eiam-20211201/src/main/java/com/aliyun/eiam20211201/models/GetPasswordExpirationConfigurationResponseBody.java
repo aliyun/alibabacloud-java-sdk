@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The password expiration configurations.</p>
+     * <p>The password expiration configuration.</p>
      */
     @NameInMap("PasswordExpirationConfiguration")
     public GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration passwordExpirationConfiguration;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,12 +42,14 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
 
     public static class GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration extends TeaModel {
         /**
-         * <p>The list of valid authentication IDs. The default is all [&quot;ia_all&quot;]</p>
-         * <p>ia_all: All. If you fill in this value, you cannot fill in other values</p>
-         * <p>ia_password: Account password login</p>
-         * <p>ia_otp_sms: SMS verification code login method</p>
-         * <p>ia_webauthn: WebAuthn authenticator login method</p>
-         * <p>idp_xxx: Specific identity provider authentication method</p>
+         * <p>The list of effective authentication source IDs. Default value: [&quot;ia_all&quot;].</p>
+         * <ul>
+         * <li>ia_all: All authentication sources. If this value is specified, no other values can be specified.</li>
+         * <li>ia_password: Account password logon.</li>
+         * <li>ia_otp_sms: SMS verification code logon.</li>
+         * <li>ia_webauthn: WebAuthn authenticator logon.</li>
+         * <li>idp_xxx: Authentication method of a specific identity provider.</li>
+         * </ul>
          */
         @NameInMap("EffectiveAuthenticationSourceIds")
         public java.util.List<String> effectiveAuthenticationSourceIds;
@@ -55,9 +57,9 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         /**
          * <p>The action to take when a password expires. Valid values:</p>
          * <ul>
-         * <li>forbid_login: Prohibit the user from using the password to log on to IDaaS.</li>
-         * <li>force_update_password: Force the user to change the password.</li>
-         * <li>remind_update_password: Remind the user to change the password.</li>
+         * <li>forbid_login: Forbid logon.</li>
+         * <li>force_update_password: Force password change.</li>
+         * <li>remind_update_password: Remind password change.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,7 +69,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         public String passwordExpirationAction;
 
         /**
-         * <p>The methods for receiving password expiration notifications.</p>
+         * <p>The list of password expiration notification channels.</p>
          * 
          * <strong>example:</strong>
          * <p>login</p>
@@ -76,7 +78,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         public java.util.List<String> passwordExpirationNotificationChannels;
 
         /**
-         * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day.</p>
+         * <p>The advance notice period before password expiration. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -85,10 +87,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         public Integer passwordExpirationNotificationDuration;
 
         /**
-         * <p>Indicates whether the password expiration notification feature is enabled. Valid values:</p>
+         * <p>The status of password expiration notification. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -98,10 +100,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         public String passwordExpirationNotificationStatus;
 
         /**
-         * <p>Indicates whether the password expiration feature is enabled. Valid values:</p>
+         * <p>The status of the password expiration configuration. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,7 +113,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         public String passwordExpirationStatus;
 
         /**
-         * <p>The number of days before which users must change the password to prevent password expiration. Unit: day.</p>
+         * <p>The grace period for forced password change after expiration. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -120,7 +122,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         public Integer passwordForcedUpdateDuration;
 
         /**
-         * <p>The validity period of a password. Unit: day.</p>
+         * <p>The maximum validity period of a password. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>

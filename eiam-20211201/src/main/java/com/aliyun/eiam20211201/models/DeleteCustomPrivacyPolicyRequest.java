@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomPrivacyPolicyRequest extends TeaModel {
     /**
-     * <p>The custom privacy policy ID.</p>
+     * <p>The custom clause ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

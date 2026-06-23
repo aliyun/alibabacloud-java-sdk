@@ -11,7 +11,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public java.util.List<ListApplicationsForNetworkZoneResponseBodyApplications> applications;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned for the next query.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token returned for the previous query.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -38,7 +38,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public String previousToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -47,7 +47,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -110,7 +110,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
 
     public static class ListApplicationsForNetworkZoneResponseBodyApplications extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -119,7 +119,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloudSSO</p>
@@ -128,7 +128,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The ID of the IDaaS EIAM instance.</p>
+         * <p>The IDaaS EIAM instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>

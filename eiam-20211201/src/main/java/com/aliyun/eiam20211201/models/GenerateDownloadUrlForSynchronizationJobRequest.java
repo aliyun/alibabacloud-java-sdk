@@ -15,7 +15,7 @@ public class GenerateDownloadUrlForSynchronizationJobRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the sync task.</p>
+     * <p>The synchronization task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

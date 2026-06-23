@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveCustomPrivacyPoliciesFromBrandRequest extends TeaModel {
     /**
-     * <p>The branding ID.</p>
+     * <p>The brand ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RemoveCustomPrivacyPoliciesFromBrandRequest extends TeaModel {
     public String brandId;
 
     /**
-     * <p>A list of policy IDs.</p>
+     * <p>The list of term IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CustomPrivacyPolicyIds")

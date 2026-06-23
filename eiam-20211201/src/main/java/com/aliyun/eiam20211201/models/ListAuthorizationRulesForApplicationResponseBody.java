@@ -11,7 +11,7 @@ public class ListAuthorizationRulesForApplicationResponseBody extends TeaModel {
     public java.util.List<ListAuthorizationRulesForApplicationResponseBodyAuthorizationRules> authorizationRules;
 
     /**
-     * <p>The number of entries on each page of a paged query.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListAuthorizationRulesForApplicationResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to use for the next paged query.</p>
+     * <p>The pagination token returned in this call. Use this token to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -38,7 +38,7 @@ public class ListAuthorizationRulesForApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class ListAuthorizationRulesForApplicationResponseBody extends TeaModel {
 
     public static class ListAuthorizationRulesForApplicationResponseBodyAuthorizationRulesValidityPeriod extends TeaModel {
         /**
-         * <p>The end time of the validity period. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the validity period, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704042061000</p>
@@ -102,7 +102,7 @@ public class ListAuthorizationRulesForApplicationResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The start time of the validity period. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the validity period, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704042061000</p>
@@ -153,18 +153,16 @@ public class ListAuthorizationRulesForApplicationResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time range of the validity period. This parameter is returned only when <strong>ValidityType</strong> is set to <strong>time_bound</strong>.</p>
+         * <p>The time range of the validity period. This parameter takes effect only when ValidityType is set to time_bound.</p>
          */
         @NameInMap("ValidityPeriod")
         public ListAuthorizationRulesForApplicationResponseBodyAuthorizationRulesValidityPeriod validityPeriod;
 
         /**
-         * <p>The type of the validity period for the relationship. Valid values:</p>
+         * <p>The validity type of the relationship. Valid values:</p>
          * <ul>
-         * <li><p>permanent: The relationship is permanent.</p>
-         * </li>
-         * <li><p>time_bound: The relationship is valid within a custom time range.</p>
-         * </li>
+         * <li>permanent: permanent</li>
+         * <li>time_bound: custom time range.</li>
          * </ul>
          * 
          * <strong>example:</strong>

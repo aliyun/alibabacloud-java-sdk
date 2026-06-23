@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConditionalAccessPolicyResponseBody extends TeaModel {
     /**
-     * <p>Conditional Access Policy ID</p>
+     * <p>Conditional access policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cp_xxxxx</p>

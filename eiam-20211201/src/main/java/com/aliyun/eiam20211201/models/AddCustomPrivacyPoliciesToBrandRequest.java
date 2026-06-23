@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomPrivacyPoliciesToBrandRequest extends TeaModel {
     /**
-     * <p>The ID of the brand.</p>
+     * <p>The brand ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class AddCustomPrivacyPoliciesToBrandRequest extends TeaModel {
     public String brandId;
 
     /**
-     * <p>A list of custom privacy policy IDs.</p>
+     * <p>The list of term IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CustomPrivacyPolicyIds")
     public java.util.List<String> customPrivacyPolicyIds;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

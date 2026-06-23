@@ -42,7 +42,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
 
     public static class GetAuthorizationResourceResponseBodyAuthorizationResource extends TeaModel {
         /**
-         * <p>The ID of the resource entity that is associated with the authorized resource.</p>
+         * <p>The ID of the resource entity associated with the authorized resource.</p>
          * 
          * <strong>example:</strong>
          * <p>carole_01kmek49aqxxxx</p>
@@ -51,9 +51,9 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public String authorizationResourceEntityId;
 
         /**
-         * <p>The type of the resource entity that is associated with the authorized resource. Valid value:</p>
+         * <p>The type of the resource entity associated with the authorized resource. Valid values:</p>
          * <ul>
-         * <li>cloud_account_role: a cloud role</li>
+         * <li>cloud_account_role: cloud role.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         public String authorizationRuleId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource entity that is associated with the authorized resource belongs.</p>
+         * <p>The ID of the cloud account to which the resource entity associated with the authorized resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>

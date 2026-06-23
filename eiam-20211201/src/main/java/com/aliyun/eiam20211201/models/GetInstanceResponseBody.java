@@ -42,7 +42,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstanceDefaultEndpoint extends TeaModel {
         /**
-         * <p>The endpoint address of the instance.</p>
+         * <p>The domain name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>example-xxx.aliyunidaas.com</p>
@@ -51,7 +51,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The status of the instance endpoint. Valid values:</p>
+         * <p>The status of the instance domain name. Valid values:</p>
          * <ul>
          * <li>resolved: Resolved.</li>
          * <li>unresolved: Not resolved.</li>
@@ -88,7 +88,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstanceDomainConfig extends TeaModel {
         /**
-         * <p>The default domain of the instance.</p>
+         * <p>The default domain name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>login.example.com</p>
@@ -97,7 +97,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String defaultDomain;
 
         /**
-         * <p>The initialization domain of the instance.</p>
+         * <p>The initialization domain name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rx72nxxx.example.com</p>
@@ -106,7 +106,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String initDomain;
 
         /**
-         * <p>The auto-redirect status of the initialization domain. Valid values:</p>
+         * <p>The automatic redirect status of the initialization domain name. Valid values:</p>
          * <ul>
          * <li><p>enabled: Enabled.</p>
          * </li>
@@ -236,7 +236,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstance extends TeaModel {
         /**
-         * <p>The time when the instance was created, in Unix timestamp format, measured in milliseconds.</p>
+         * <p>The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1550115455000</p>
@@ -259,7 +259,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String crossRegionReplicationRole;
 
         /**
-         * <p>The default endpoint of the instance. This field is no longer maintained. Use the DomainConfig related fields or refer to the domain list query API instead.</p>
+         * <p>The default domain name of the instance. This field is no longer maintained. Use the DomainConfig fields or refer to the query domain name list operation instead.</p>
          */
         @NameInMap("DefaultEndpoint")
         public GetInstanceResponseBodyInstanceDefaultEndpoint defaultEndpoint;
@@ -274,13 +274,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The domain-related configuration of the instance.</p>
+         * <p>The domain name configuration of the instance.</p>
          */
         @NameInMap("DomainConfig")
         public GetInstanceResponseBodyInstanceDomainConfig domainConfig;
 
         /**
-         * <p>The egress public IP address ranges of the instance. For example, during AD account synchronization, the EIAM instance accesses your AD service through these public IP address ranges.</p>
+         * <p>The public egress CIDR blocks of the instance. For example, during Active Directory (AD) account synchronization, the EIAM instance accesses your AD server through these public CIDR blocks.</p>
          */
         @NameInMap("EgressAddresses")
         public java.util.List<String> egressAddresses;
@@ -302,7 +302,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The service code of the cloud service that manages the instance.</p>
+         * <p>The ServiceCode of the Alibaba Cloud service that manages the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sase</p>
@@ -317,7 +317,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public GetInstanceResponseBodyInstanceReplicationConfiguration replicationConfiguration;
 
         /**
-         * <p>Indicates whether the instance is managed by a cloud service.</p>
+         * <p>Indicates whether the instance is managed by an Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

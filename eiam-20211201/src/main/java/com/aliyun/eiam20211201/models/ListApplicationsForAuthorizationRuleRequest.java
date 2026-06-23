@@ -31,11 +31,11 @@ public class ListApplicationsForAuthorizationRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of records to return in a paged query.</p>
+     * <p>The maximum number of entries per page.</p>
      * <ul>
-     * <li><p>The default value is 20.</p>
+     * <li><p>Default value: 20.</p>
      * </li>
-     * <li><p>The maximum value cannot exceed 100.</p>
+     * <li><p>Maximum value: 100.</p>
      * </li>
      * </ul>
      * 
@@ -46,9 +46,9 @@ public class ListApplicationsForAuthorizationRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to mark the start of the next page for a paged query.</p>
+     * <p>The pagination token that indicates the start position of the next page.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the query starts from the first page.</li>
+     * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,9 +104,9 @@ public class ListApplicationsForAuthorizationRuleRequest extends TeaModel {
 
     public static class ListApplicationsForAuthorizationRuleRequestFilter extends TeaModel {
         /**
-         * <p>The name of the field to filter. Valid values:</p>
+         * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li>ApplicationId: The application ID.</li>
+         * <li>ApplicationId: the application ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ListApplicationsForAuthorizationRuleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of values for the filter field.</p>
+         * <p>The values of the filter field.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

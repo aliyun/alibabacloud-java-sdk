@@ -42,7 +42,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
 
     public static class GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration extends TeaModel {
         /**
-         * <p>The list of authentication channels for the forgot password feature. This parameter is required when ForgetPasswordStatus is set to enabled. Valid values: email, sms, totp (one-time password), and web_authn (WebAuthn).</p>
+         * <p>The list of authentication channels for forgot password. This parameter is required when ForgetPasswordStatus is set to enabled. Valid values: email, sms (SMS), totp (OTP), and web_authn (WebAuthn).</p>
          */
         @NameInMap("AuthenticationChannels")
         public java.util.List<String> authenticationChannels;
@@ -57,7 +57,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>Indicates whether email is enabled as an authentication method for the forgot password feature. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</p>
+         * <p>Indicates whether email is enabled as an authentication method for forgot password. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -66,7 +66,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         public Boolean enableEmail;
 
         /**
-         * <p>Indicates whether SMS is enabled as an authentication method for the forgot password feature. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</p>
+         * <p>Indicates whether SMS is enabled as an authentication method for forgot password. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

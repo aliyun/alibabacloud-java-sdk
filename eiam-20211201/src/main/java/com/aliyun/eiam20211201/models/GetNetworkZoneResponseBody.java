@@ -42,7 +42,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
 
     public static class GetNetworkZoneResponseBodyNetworkZone extends TeaModel {
         /**
-         * <p>The description of the network zone.</p>
+         * <p>The network zone description.</p>
          * 
          * <strong>example:</strong>
          * <p>test_description</p>
@@ -60,13 +60,13 @@ public class GetNetworkZoneResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The IPv4 CIDR blocks.</p>
+         * <p>The IPv4 CIDR blocks of the network zone.</p>
          */
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
 
         /**
-         * <p>The IPv6 CIDR blocks.</p>
+         * <p>The IPv6 CIDR blocks of the network zone.</p>
          */
         @NameInMap("Ipv6Cidrs")
         public java.util.List<String> ipv6Cidrs;
@@ -81,7 +81,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
         public String networkZoneId;
 
         /**
-         * <p>The name of the network zone.</p>
+         * <p>The network zone name.</p>
          * 
          * <strong>example:</strong>
          * <p>test4_name</p>
@@ -90,7 +90,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
         public String networkZoneName;
 
         /**
-         * <p>The type of the network zone.</p>
+         * <p>The network zone type.</p>
          * 
          * <strong>example:</strong>
          * <p>arn:alibaba:idaas:network:zone:classic</p>

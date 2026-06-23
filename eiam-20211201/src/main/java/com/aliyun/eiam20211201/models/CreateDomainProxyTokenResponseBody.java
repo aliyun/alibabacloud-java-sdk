@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDomainProxyTokenResponseBody extends TeaModel {
     /**
-     * <p>The ID of the proxy token of the domain name.</p>
+     * <p>The domain proxy token ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pt_mtohn73423stghoivjmi4jwxxx</p>

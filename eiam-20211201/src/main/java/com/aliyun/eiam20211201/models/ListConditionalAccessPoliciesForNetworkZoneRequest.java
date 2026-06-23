@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConditionalAccessPoliciesForNetworkZoneRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListConditionalAccessPoliciesForNetworkZoneRequest extends TeaModel
     public String instanceId;
 
     /**
-     * <p>Application ID associated with the conditional access policy</p>
+     * <p>The network zone ID associated with the conditional access policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

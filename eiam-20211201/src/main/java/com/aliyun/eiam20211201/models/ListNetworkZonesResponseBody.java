@@ -11,7 +11,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
     public java.util.List<ListNetworkZonesResponseBodyNetworkZones> networkZones;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -20,7 +20,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token that is used to retrieve the previous page of results.</p>
+     * <p>The pagination token for the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>
@@ -38,7 +38,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
 
     public static class ListNetworkZonesResponseBodyNetworkZones extends TeaModel {
         /**
-         * <p>The description of the network zone.</p>
+         * <p>The network zone description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -111,13 +111,13 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The IPv4 CIDR blocks.</p>
+         * <p>The IPv4 CIDR blocks of the network zone.</p>
          */
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
 
         /**
-         * <p>The IPv6 CIDR blocks.</p>
+         * <p>The IPv6 CIDR blocks of the network zone.</p>
          */
         @NameInMap("Ipv6Cidrs")
         public java.util.List<String> ipv6Cidrs;
@@ -141,7 +141,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         public String networkZoneName;
 
         /**
-         * <p>The type of the network zone.</p>
+         * <p>The network zone type.</p>
          * 
          * <strong>example:</strong>
          * <p>arn:alibaba:idaas:network:zone:classic</p>

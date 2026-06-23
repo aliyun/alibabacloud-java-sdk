@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLoginRedirectApplicationForBrandResponseBody extends TeaModel {
     /**
-     * <p>The information about the post-logon redirect application for the brand.</p>
+     * <p>The brand logon redirect application information.</p>
      */
     @NameInMap("BrandLoginRedirectApplication")
     public GetLoginRedirectApplicationForBrandResponseBodyBrandLoginRedirectApplication brandLoginRedirectApplication;

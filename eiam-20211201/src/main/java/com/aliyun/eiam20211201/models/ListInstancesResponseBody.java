@@ -11,7 +11,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -188,7 +188,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The creation time of the instance, in Unix timestamp format, in milliseconds.</p>
+         * <p>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1550115455000</p>
@@ -233,7 +233,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceFailoverStatus;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_eypq6ljgyeuwmlw672sulxxxxx</p>
@@ -242,7 +242,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The service code of the cloud service that manages the instance.</p>
+         * <p>The service code of the Alibaba Cloud service that manages the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sase</p>
@@ -254,7 +254,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public ListInstancesResponseBodyInstancesReplicationConfiguration replicationConfiguration;
 
         /**
-         * <p>Indicates whether the instance is managed by a cloud service.</p>
+         * <p>Indicates whether the instance is managed by an Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -263,7 +263,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>Instance status. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
          * <li>creating: Being created.</li>
          * <li>running: Running.</li>

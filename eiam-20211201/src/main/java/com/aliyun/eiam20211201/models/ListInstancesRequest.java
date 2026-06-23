@@ -12,13 +12,13 @@ public class ListInstancesRequest extends TeaModel {
     public String crossRegionReplication;
 
     /**
-     * <p>The edition of the license. Valid values:</p>
+     * <p>The license edition. Valid values:</p>
      * <ul>
-     * <li>free: Free edition.</li>
-     * <li>trial: Trial edition.</li>
-     * <li>scalability: Scalability edition.</li>
-     * <li>standard: Standard edition.</li>
-     * <li>enterprise: Enterprise edition.</li>
+     * <li>free: Free Edition.</li>
+     * <li>trial: Trial Edition.</li>
+     * <li>scalability: Capability Expansion Edition.</li>
+     * <li>standard: Standard Edition.</li>
+     * <li>enterprise: Enterprise Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,13 +28,13 @@ public class ListInstancesRequest extends TeaModel {
     public String edition;
 
     /**
-     * <p>Instance ID list.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class ListInstancesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -52,7 +52,7 @@ public class ListInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Instance status. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
      * <li>creating: Being created.</li>
      * <li>running: Running.</li>

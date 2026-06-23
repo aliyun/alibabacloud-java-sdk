@@ -15,7 +15,7 @@ public class ListBrandsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -24,7 +24,7 @@ public class ListBrandsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -33,7 +33,7 @@ public class ListBrandsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token that is used to retrieve the previous page of results.</p>
+     * <p>The pagination token for the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceModuleStatusRequest extends TeaModel {
     /**
-     * <p>The identifier for the secondary module.</p>
+     * <p>The secondary module identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:license:module:ud:customField</p>
@@ -24,7 +24,7 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The identifier for the primary module.</p>
+     * <p>The primary module identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     public String moduleKey;
 
     /**
-     * <p>The identifier for the tertiary module.</p>
+     * <p>The tertiary module identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:license:module:idp:alibaba:dingtalk:pull:advanced_configuration</p>

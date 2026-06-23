@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainIcpNumberRequest extends TeaModel {
     /**
-     * <p>The domain name ID.</p>
+     * <p>Domain ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateDomainIcpNumberRequest extends TeaModel {
     public String domainId;
 
     /**
-     * <p>The ICP filing number associated with the domain name.</p>
+     * <p>The ICP filing number associated with the domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateDomainIcpNumberRequest extends TeaModel {
     public String icpNumber;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

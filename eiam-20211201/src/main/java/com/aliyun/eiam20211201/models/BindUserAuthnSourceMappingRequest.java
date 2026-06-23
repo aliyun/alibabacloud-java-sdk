@@ -25,7 +25,7 @@ public class BindUserAuthnSourceMappingRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The external mapping ID.</p>
+     * <p>The external association ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

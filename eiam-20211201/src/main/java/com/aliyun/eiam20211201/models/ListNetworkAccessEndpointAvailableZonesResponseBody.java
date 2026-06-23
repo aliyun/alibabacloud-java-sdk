@@ -42,7 +42,7 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
 
     public static class ListNetworkAccessEndpointAvailableZonesResponseBodyZones extends TeaModel {
         /**
-         * <p>The name of the zone.</p>
+         * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
          * <p>China (Hangzhou) Zone J</p>

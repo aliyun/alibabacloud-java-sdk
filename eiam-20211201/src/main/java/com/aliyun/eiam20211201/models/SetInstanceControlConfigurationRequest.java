@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetInstanceControlConfigurationRequest extends TeaModel {
     /**
-     * <p>The control items for the instance.</p>
+     * <p>The instance control elements.</p>
      */
     @NameInMap("ControlElements")
     public java.util.List<SetInstanceControlConfigurationRequestControlElements> controlElements;
@@ -68,7 +68,7 @@ public class SetInstanceControlConfigurationRequest extends TeaModel {
 
     public static class SetInstanceControlConfigurationRequestControlElements extends TeaModel {
         /**
-         * <p>The name of the control item.</p>
+         * <p>The name of the instance control element.</p>
          * 
          * <strong>example:</strong>
          * <p>human_verification</p>
@@ -77,13 +77,13 @@ public class SetInstanceControlConfigurationRequest extends TeaModel {
         public String elementName;
 
         /**
-         * <p>The CAPTCHA configuration.</p>
+         * <p>The CAPTCHA authenticate configuration.</p>
          */
         @NameInMap("HumanVerificationConfig")
         public SetInstanceControlConfigurationRequestControlElementsHumanVerificationConfig humanVerificationConfig;
 
         /**
-         * <p>The status of the control item.</p>
+         * <p>The status of the instance control element.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

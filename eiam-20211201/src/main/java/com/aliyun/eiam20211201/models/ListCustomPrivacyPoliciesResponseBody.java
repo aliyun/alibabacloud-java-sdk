@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     /**
-     * <p>A list of custom privacy policies.</p>
+     * <p>The list of custom terms.</p>
      */
     @NameInMap("CustomPrivacyPolicies")
     public java.util.List<ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies> customPrivacyPolicies;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token that is used to retrieve the previous page of results.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -47,7 +47,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -110,7 +110,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
 
     public static class ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies extends TeaModel {
         /**
-         * <p>The ID of the custom privacy policy.</p>
+         * <p>The custom term ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pp_xxxxx</p>
@@ -119,7 +119,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String customPrivacyPolicyId;
 
         /**
-         * <p>The name of the custom privacy policy.</p>
+         * <p>The custom term name.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Privacy Policy Name</p>
@@ -128,7 +128,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String customPrivacyPolicyName;
 
         /**
-         * <p>The default language of the policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
+         * <p>The default language term entry. The value is obtained from the LanguageCode field returned by the ListLanguages operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>
@@ -146,7 +146,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status of the custom privacy policy.</p>
+         * <p>The custom term status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -155,7 +155,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The user consent type for the policy.</p>
+         * <p>The consent type of the custom term.</p>
          * 
          * <strong>example:</strong>
          * <p>implied_consent</p>

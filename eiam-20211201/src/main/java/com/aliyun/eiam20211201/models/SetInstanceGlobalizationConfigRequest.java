@@ -15,7 +15,7 @@ public class SetInstanceGlobalizationConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language.</p>
+     * <p>The language type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

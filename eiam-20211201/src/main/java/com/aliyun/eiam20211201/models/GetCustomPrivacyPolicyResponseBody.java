@@ -51,7 +51,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
         public String customPrivacyPolicyItemName;
 
         /**
-         * <p>The URL of the custom privacy policy item. The URL must start with https\://.</p>
+         * <p>The URL of the custom privacy policy item. The URL must start with https://.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -84,13 +84,13 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
 
     public static class GetCustomPrivacyPolicyResponseBodyCustomPrivacyPolicyCustomPrivacyPolicyContents extends TeaModel {
         /**
-         * <p>The items of the custom privacy policy.</p>
+         * <p>The custom privacy policy items.</p>
          */
         @NameInMap("CustomPrivacyPolicyItems")
         public java.util.List<GetCustomPrivacyPolicyResponseBodyCustomPrivacyPolicyCustomPrivacyPolicyContentsCustomPrivacyPolicyItems> customPrivacyPolicyItems;
 
         /**
-         * <p>The prompt for the custom privacy policy content.</p>
+         * <p>The tip for the custom privacy policy content.</p>
          * 
          * <strong>example:</strong>
          * <p>Please read and agree：</p>
@@ -99,7 +99,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
         public String customPrivacyPolicyTip;
 
         /**
-         * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
+         * <p>The language of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>
@@ -140,13 +140,13 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
 
     public static class GetCustomPrivacyPolicyResponseBodyCustomPrivacyPolicy extends TeaModel {
         /**
-         * <p>The details of the custom privacy policy content.</p>
+         * <p>The content details of the custom privacy policy.</p>
          */
         @NameInMap("CustomPrivacyPolicyContents")
         public java.util.List<GetCustomPrivacyPolicyResponseBodyCustomPrivacyPolicyCustomPrivacyPolicyContents> customPrivacyPolicyContents;
 
         /**
-         * <p>The ID of the custom privacy policy.</p>
+         * <p>The custom privacy policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pp_xxxxx</p>
@@ -155,7 +155,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
         public String customPrivacyPolicyId;
 
         /**
-         * <p>The name of the custom privacy policy.</p>
+         * <p>The custom privacy policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Privacy Policy Name</p>
@@ -164,7 +164,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
         public String customPrivacyPolicyName;
 
         /**
-         * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
+         * <p>The language of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>
@@ -182,12 +182,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The valid values for the account status are:</p>
+         * <p>The status of the custom privacy policy. Valid values:</p>
          * <ul>
-         * <li><p>enabled: Enabled.</p>
-         * </li>
-         * <li><p>disabled: Disabled.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +195,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Agreement Type.</p>
+         * <p>The user consent type.</p>
          * 
          * <strong>example:</strong>
          * <p>implied_consent</p>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class SetForgetPasswordConfigurationRequest extends TeaModel {
     /**
-     * <p>The authentication channels. Valid values: email and sms.</p>
+     * <p>The list of authentication channels. Valid values:</p>
+     * <ul>
+     * <li>email: email.</li>
+     * <li>sms: text message.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>email</p>
@@ -14,7 +18,11 @@ public class SetForgetPasswordConfigurationRequest extends TeaModel {
     public java.util.List<String> authenticationChannels;
 
     /**
-     * <p>The status of the forgot password feature. Valid values: enabled and disabled.</p>
+     * <p>The forgot password configuration status. Valid values:</p>
+     * <ul>
+     * <li>enabled: enabled.</li>
+     * <li>disabled: disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class GetNetworkAccessEndpointRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The unique identifier of the network access endpoint.</p>
+     * <p>The dedicated network access endpoint ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

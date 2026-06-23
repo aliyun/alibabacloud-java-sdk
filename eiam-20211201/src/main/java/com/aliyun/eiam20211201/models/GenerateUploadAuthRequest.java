@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateUploadAuthRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GenerateUploadAuthRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The purpose of the file.</p>
+     * <p>File purpose.</p>
      * 
      * <strong>example:</strong>
      * <p>user_import</p>
@@ -24,7 +24,7 @@ public class GenerateUploadAuthRequest extends TeaModel {
     public String purpose;
 
     /**
-     * <p>The file type.</p>
+     * <p>File type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>

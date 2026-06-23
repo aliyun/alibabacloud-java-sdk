@@ -14,7 +14,7 @@ public class UpdateInstanceDescriptionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the instance whose description you want to modify.</p>
+     * <p>The instance ID of the instance whose description you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

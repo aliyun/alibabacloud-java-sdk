@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableConditionalAccessPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the conditional access policy.</p>
+     * <p>The conditional access policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
