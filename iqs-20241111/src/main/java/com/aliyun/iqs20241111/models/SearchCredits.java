@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class SearchCredits extends TeaModel {
     /**
+     * <p>The number of basic edition text search requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("genericTextSearch")
     public Integer genericTextSearch;
 
+    /**
+     * <p>The number of LiteAdvanced search requests.</p>
+     */
     @NameInMap("liteAdvancedTextSearch")
     public Integer liteAdvancedTextSearch;
 

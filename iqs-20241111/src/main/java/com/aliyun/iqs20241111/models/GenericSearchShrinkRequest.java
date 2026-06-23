@@ -10,10 +10,15 @@ public class GenericSearchShrinkRequest extends TeaModel {
     @NameInMap("enableRerank")
     public Boolean enableRerank;
 
+    /**
+     * <p>The industry. After you specify an industry, only site content related to the specified industry is recalled. Separate multiple industries with commas.</p>
+     */
     @NameInMap("industry")
     public String industry;
 
     /**
+     * <p>The page number. Pages start from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,7 +26,11 @@ public class GenericSearchShrinkRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The search keyword.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>苹果手机</p>
      */
     @NameInMap("query")
     public String query;
@@ -38,10 +47,22 @@ public class GenericSearchShrinkRequest extends TeaModel {
     @NameInMap("returnSummary")
     public Boolean returnSummary;
 
+    /**
+     * <p>The session ID for multi-turn interaction.</p>
+     */
     @NameInMap("sessionId")
     public String sessionId;
 
     /**
+     * <p>The time range for filtering results. Valid values:</p>
+     * <ul>
+     * <li>OneDay: last day</li>
+     * <li>OneWeek: last week</li>
+     * <li>OneMonth: last month</li>
+     * <li>OneYear: last year</li>
+     * <li>NoLimit: no limit.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OneWeek</p>
      */

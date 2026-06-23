@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedSearchRequest extends TeaModel {
+    /**
+     * <p>The search request parameters.</p>
+     */
     @NameInMap("body")
     public UnifiedSearchInput body;
 

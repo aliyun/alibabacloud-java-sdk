@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class UnifiedQueryContext extends TeaModel {
     /**
+     * <p>The search engine used.</p>
+     * 
      * <strong>example:</strong>
      * <p>Generic</p>
      */
     @NameInMap("engineType")
     public String engineType;
 
+    /**
+     * <p>The initial request.</p>
+     */
     @NameInMap("originalQuery")
     public UnifiedOriginalQuery originalQuery;
 
+    /**
+     * <p>The rewritten result.</p>
+     */
     @NameInMap("rewrite")
     public UnifiedRewrite rewrite;
 

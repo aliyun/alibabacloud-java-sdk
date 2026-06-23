@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GlobalSearchRequest extends TeaModel {
     /**
+     * <p>Page number, starting from 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GlobalSearchRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Number of items per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,12 +23,18 @@ public class GlobalSearchRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Search query content</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>特朗普最新关税消息</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
+     * <p>Web page publish time range</p>
+     * 
      * <strong>example:</strong>
      * <p>OneWeek</p>
      */

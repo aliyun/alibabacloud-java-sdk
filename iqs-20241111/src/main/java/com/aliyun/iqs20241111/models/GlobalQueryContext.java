@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class GlobalQueryContext extends TeaModel {
+    /**
+     * <p>The initial query condition.</p>
+     */
     @NameInMap("originalQuery")
     public GlobalQueryContextOriginalQuery originalQuery;
 
@@ -22,16 +25,26 @@ public class GlobalQueryContext extends TeaModel {
 
     public static class GlobalQueryContextOriginalQuery extends TeaModel {
         /**
+         * <p>页码</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("page")
         public String page;
 
+        /**
+         * <p>查询关键字</p>
+         * 
+         * <strong>example:</strong>
+         * <p>特朗普关税最新消息</p>
+         */
         @NameInMap("query")
         public String query;
 
         /**
+         * <p>时间范围</p>
+         * 
          * <strong>example:</strong>
          * <p>NoLimit</p>
          */

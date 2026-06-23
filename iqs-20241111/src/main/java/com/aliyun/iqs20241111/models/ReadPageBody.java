@@ -4,13 +4,36 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class ReadPageBody extends TeaModel {
+    /**
+     * <p>The format of the parsing result.</p>
+     * <ul>
+     * <li>rawHtml: the HTML of the target website.</li>
+     * <li>html: the page content processed based on readabilityMode.</li>
+     * <li>markdown: the Markdown content converted from HTML.</li>
+     * <li>text: the text content extracted from HTML.</li>
+     * </ul>
+     */
     @NameInMap("formats")
     public java.util.List<String> formats;
 
+    /**
+     * <p>You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("location")
     public String location;
 
     /**
+     * <p>The maximum cache validity period. Unit: seconds. Default value: 1296000.</p>
+     * <ul>
+     * <li><p>If the cache duration is less than the value of maxAge, cached content is returned.</p>
+     * </li>
+     * <li><p>If the value of maxAge is 0, caching is not used.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1296000</p>
      */
@@ -18,16 +41,26 @@ public class ReadPageBody extends TeaModel {
     public Integer maxAge;
 
     /**
+     * <p>The URL read timeout period. The value of pageTimeout must be less than the value of timeout.</p>
+     * <p>Default value: 10000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
     @NameInMap("pageTimeout")
     public Integer pageTimeout;
 
+    /**
+     * <p>The readability configuration for the parsing result.</p>
+     */
     @NameInMap("readability")
     public ReadPageBodyReadability readability;
 
     /**
+     * <p>The end-to-end processing timeout period. Unit: ms.</p>
+     * <p>Valid values: [0, 180000].</p>
+     * <p>Default value: 60000.</p>
+     * 
      * <strong>example:</strong>
      * <p>60000</p>
      */
@@ -35,6 +68,7 @@ public class ReadPageBody extends TeaModel {
     public Integer timeout;
 
     /**
+     * <p>The target URL to parse. The value must start with http:// or https://.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,6 +140,9 @@ public class ReadPageBody extends TeaModel {
 
     public static class ReadPageBodyReadability extends TeaModel {
         /**
+         * <p>Specifies whether to exclude all images.</p>
+         * <p>Default value: false.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -113,16 +150,32 @@ public class ReadPageBody extends TeaModel {
         public Boolean excludeAllImages;
 
         /**
+         * <p>Specifies whether to exclude all links.</p>
+         * <p>Default value: false.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("excludeAllLinks")
         public Boolean excludeAllLinks;
 
+        /**
+         * <p>The tags to exclude.</p>
+         */
         @NameInMap("excludedTags")
         public java.util.List<String> excludedTags;
 
         /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>none: does not remove any information. Default value: none.</p>
+         * </li>
+         * <li><p>normal: removes irrelevant information from the target page, such as headers, footers, and navigation elements, based on a proprietary algorithm.</p>
+         * </li>
+         * <li><p>article: extracts the main body content of the website based on a proprietary algorithm. This mode is suitable for blogs and news websites, but not for directory or navigation pages.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */

@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class MedicalKnowledgeRequest extends TeaModel {
+    /**
+     * <p>Health Graph query conditions</p>
+     */
     @NameInMap("body")
     public MedicalKnowInput body;
 

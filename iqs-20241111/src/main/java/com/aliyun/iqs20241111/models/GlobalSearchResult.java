@@ -4,14 +4,20 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class GlobalSearchResult extends TeaModel {
+    /**
+     * <p>The list of web page content.</p>
+     */
     @NameInMap("pageItems")
     public java.util.List<GlobalPageItem> pageItems;
 
+    /**
+     * <p>The query context.</p>
+     */
     @NameInMap("queryContext")
     public GlobalQueryContext queryContext;
 
     /**
-     * <p>requestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -19,9 +25,15 @@ public class GlobalSearchResult extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The scenario-specific vertical API recall results.</p>
+     */
     @NameInMap("sceneItems")
     public java.util.List<GlobalSceneItem> sceneItems;
 
+    /**
+     * <p>The search information.</p>
+     */
     @NameInMap("searchInformation")
     public GlobalSearchInformation searchInformation;
 

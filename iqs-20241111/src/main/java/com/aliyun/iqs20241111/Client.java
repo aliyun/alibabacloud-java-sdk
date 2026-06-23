@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-zhangjiakou", "iqs.cn-zhangjiakou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("iqs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +30,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Provides streaming results in two stages, common_search and post_retrieval, for on-demand use.
+     * General search results (common_search): The raw search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publication time. Post-retrieval processing (post_retrieval): Uses a rerank model to rerank and filter the common_search results from the previous stage. The mAP metric for context relevancy improves by approximately 5%, with an additional latency of approximately 110 ms.</p>
+     * 
      * <b>summary</b> : 
-     * <p>AI搜索流式接口(废弃)</p>
+     * <p>This topic describes the method to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK, including parameter descriptions.</p>
      * 
      * @param request AiSearchRequest
      * @param headers map
@@ -77,8 +84,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Provides streaming results in two stages, common_search and post_retrieval, for on-demand use.
+     * General search results (common_search): The raw search results. Covers key fields such as web page title, dynamic summary, body text, source website, and publication time. Post-retrieval processing (post_retrieval): Uses a rerank model to rerank and filter the common_search results from the previous stage. The mAP metric for context relevancy improves by approximately 5%, with an additional latency of approximately 110 ms.</p>
+     * 
      * <b>summary</b> : 
-     * <p>AI搜索流式接口(废弃)</p>
+     * <p>This topic describes the method to invoke the multi-stage streaming API V3 for general search by using the Alibaba Cloud OpenAPI SDK, including parameter descriptions.</p>
      * 
      * @param request AiSearchRequest
      * @return AiSearchResponse
@@ -90,6 +101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>自然语言搜索通用接口</p>
+     * 
      * <b>summary</b> : 
      * <p>自然语言通用查询</p>
      * 
@@ -119,6 +133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>自然语言搜索通用接口</p>
+     * 
      * <b>summary</b> : 
      * <p>自然语言通用查询</p>
      * 
@@ -132,8 +149,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>GenericAdvancedSearch is currently in the testing phase. New specifications will be available for purchase in the future.</p>
+     * 
      * <b>summary</b> : 
-     * <p>增强版通用搜索</p>
+     * <p>This topic describes how to invoke the enhanced search operation (GenericAdvancedSearch) by using the Alibaba Cloud OpenAPI SDK, including the method and metric description. Compared with GenericSearch, GenericAdvancedSearch provides better recall of authoritative websites, with a maximum recall count of 40, delivering improved authoritativeness and data diversity. The response parameters and format of the enhanced operation are consistent with those of GenericAdvancedSearch.</p>
      * 
      * @param request GenericAdvancedSearchRequest
      * @param headers map
@@ -178,8 +198,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>GenericAdvancedSearch is currently in the testing phase. New specifications will be available for purchase in the future.</p>
+     * 
      * <b>summary</b> : 
-     * <p>增强版通用搜索</p>
+     * <p>This topic describes how to invoke the enhanced search operation (GenericAdvancedSearch) by using the Alibaba Cloud OpenAPI SDK, including the method and metric description. Compared with GenericSearch, GenericAdvancedSearch provides better recall of authoritative websites, with a maximum recall count of 40, delivering improved authoritativeness and data diversity. The response parameters and format of the enhanced operation are consistent with those of GenericAdvancedSearch.</p>
      * 
      * @param request GenericAdvancedSearchRequest
      * @return GenericAdvancedSearchResponse
@@ -192,7 +215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用搜索</p>
+     * <p>Performs a general-purpose search.</p>
      * 
      * @param tmpReq GenericSearchRequest
      * @param headers map
@@ -272,7 +295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用搜索</p>
+     * <p>Performs a general-purpose search.</p>
      * 
      * @param request GenericSearchRequest
      * @return GenericSearchResponse
@@ -285,7 +308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>信息查询服务接口日维度使用量查询</p>
+     * <p>Query daily usage by dimension for the Information Query Service API</p>
      * 
      * @param request GetIqsUsageRequest
      * @param headers map
@@ -327,7 +350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>信息查询服务接口日维度使用量查询</p>
+     * <p>Query daily usage by dimension for the Information Query Service API</p>
      * 
      * @param request GetIqsUsageRequest
      * @return GetIqsUsageResponse
@@ -339,8 +362,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This document describes the usage and parameter specifications of GlobalSearch, the global edition of IQS Search.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通晓搜索-出海版(全球信息搜索)</p>
+     * <p>IQS Search - Global Edition (Global Information Search)</p>
      * 
      * @param request GlobalSearchRequest
      * @param headers map
@@ -385,8 +411,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This document describes the usage and parameter specifications of GlobalSearch, the global edition of IQS Search.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通晓搜索-出海版(全球信息搜索)</p>
+     * <p>IQS Search - Global Edition (Global Information Search)</p>
      * 
      * @param request GlobalSearchRequest
      * @return GlobalSearchResponse
@@ -399,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>医疗问答</p>
+     * <p>Medical Q&amp;A</p>
      * 
      * @param request MedicalAnswerRequest
      * @param headers map
@@ -428,7 +457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>医疗问答</p>
+     * <p>Medical Q&amp;A</p>
      * 
      * @param request MedicalAnswerRequest
      * @return MedicalAnswerResponse
@@ -441,7 +470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>医疗图谱</p>
+     * <p>Health Graph</p>
      * 
      * @param request MedicalKnowledgeRequest
      * @param headers map
@@ -470,7 +499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>医疗图谱</p>
+     * <p>Health Graph</p>
      * 
      * @param request MedicalKnowledgeRequest
      * @return MedicalKnowledgeResponse
@@ -483,7 +512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>多模态搜索</p>
+     * <p>Multimodal search</p>
      * 
      * @param request MultimodalSearchRequest
      * @param headers map
@@ -512,7 +541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>多模态搜索</p>
+     * <p>Multimodal search</p>
      * 
      * @param request MultimodalSearchRequest
      * @return MultimodalSearchResponse
@@ -525,7 +554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用问答</p>
+     * <p>This topic describes the intelligent search Q&amp;A streaming API (SearchStream). Based on retrieval-augmented generation (RAG) and large language model technologies, this API accepts natural language questions from users and automatically performs intent recognition, query rewrite, multi-source retrieval, and content generation. The API returns data using the Server-Sent Events (SSE) streaming protocol, supporting real-time output of inference status, reference sources, and token-by-token generated answers. It is suitable for AI chat and search scenarios that require low latency and high interpretability.</p>
      * 
      * @param request OmniAnswerRequest
      * @param headers map
@@ -554,7 +583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用问答</p>
+     * <p>This topic describes the intelligent search Q&amp;A streaming API (SearchStream). Based on retrieval-augmented generation (RAG) and large language model technologies, this API accepts natural language questions from users and automatically performs intent recognition, query rewrite, multi-source retrieval, and content generation. The API returns data using the Server-Sent Events (SSE) streaming protocol, supporting real-time output of inference status, reference sources, and token-by-token generated answers. It is suitable for AI chat and search scenarios that require low latency and high interpretability.</p>
      * 
      * @param request OmniAnswerRequest
      * @return OmniAnswerResponse
@@ -566,8 +595,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>When the HTTP status code (httpcode) of the target address is less than 500, it is counted as one valid request.  </li>
+     * <li>If the content type (Content-Type) in the response header of the target address is application/pdf, the system automatically triggers PDF parsing (PDF file size must not exceed 20 MB). This operation is counted as an additional valid request.  </li>
+     * <li>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>页面读取</p>
+     * <p>Quickly retrieve HTML and parse static web page content.</p>
      * 
      * @param request ReadPageBasicRequest
      * @param headers map
@@ -595,8 +631,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>When the HTTP status code (httpcode) of the target address is less than 500, it is counted as one valid request.  </li>
+     * <li>If the content type (Content-Type) in the response header of the target address is application/pdf, the system automatically triggers PDF parsing (PDF file size must not exceed 20 MB). This operation is counted as an additional valid request.  </li>
+     * <li>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>页面读取</p>
+     * <p>Quickly retrieve HTML and parse static web page content.</p>
      * 
      * @param request ReadPageBasicRequest
      * @return ReadPageBasicResponse
@@ -608,8 +651,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>A request is counted as valid when the HTTP status code (httpcode) of the target URL is less than 500.  </li>
+     * <li>If the content type (Content-Type) in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (PDF files up to 20 MB are supported). This operation is counted as an additional valid request.  </li>
+     * <li>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>动态页面解析</p>
+     * <ol>
+     * <li>Read HTML and parse web page content through the browser sandbox environment.  </li>
+     * <li>The API starts parsing after all resources on the target page are fully loaded (the maximum waiting duration can be adjusted via the pageTimeout parameter). The overall Duration of the API call is significantly affected by the resource loading performance of the target site.</li>
+     * </ol>
      * 
      * @param request ReadPageScrapeRequest
      * @param headers map
@@ -637,8 +690,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>A request is counted as valid when the HTTP status code (httpcode) of the target URL is less than 500.  </li>
+     * <li>If the content type (Content-Type) in the response header of the target URL is application/pdf, the system automatically triggers PDF parsing (PDF files up to 20 MB are supported). This operation is counted as an additional valid request.  </li>
+     * <li>Trial terms: During the trial period, the API is limited to 5 queries per second (QPS); the trial quota is 1,000 requests per 30 days.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>动态页面解析</p>
+     * <ol>
+     * <li>Read HTML and parse web page content through the browser sandbox environment.  </li>
+     * <li>The API starts parsing after all resources on the target page are fully loaded (the maximum waiting duration can be adjusted via the pageTimeout parameter). The overall Duration of the API call is significantly affected by the resource loading performance of the target site.</li>
+     * </ol>
      * 
      * @param request ReadPageScrapeRequest
      * @return ReadPageScrapeResponse
@@ -693,7 +756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通晓统一搜索API</p>
+     * <p>Provides access to the Tongxiao unified search API, enabling quick and easy integration of web-wide general search capabilities.</p>
      * 
      * @param request UnifiedSearchRequest
      * @param headers map
@@ -722,7 +785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通晓统一搜索API</p>
+     * <p>Provides access to the Tongxiao unified search API, enabling quick and easy integration of web-wide general search capabilities.</p>
      * 
      * @param request UnifiedSearchRequest
      * @return UnifiedSearchResponse

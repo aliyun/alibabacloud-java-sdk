@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GlobalSearchInformation extends TeaModel {
     /**
+     * <p>The search time, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1200</p>
      */
@@ -12,6 +14,8 @@ public class GlobalSearchInformation extends TeaModel {
     public Long searchTime;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>10339</p>
      */

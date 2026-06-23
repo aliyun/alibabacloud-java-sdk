@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScanFileInput extends TeaModel {
     /**
+     * <p>The Base64 encoding of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>wrwqr</p>
      */
@@ -12,12 +14,17 @@ public class ScanFileInput extends TeaModel {
     public String imageBase64;
 
     /**
+     * <p>The URL of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://www.1241.png">https://www.1241.png</a></p>
      */
     @NameInMap("imageUrl")
     public String imageUrl;
 
+    /**
+     * <p>The scan parameters.</p>
+     */
     @NameInMap("scanFileInputConfig")
     public ScanFileInputConfig scanFileInputConfig;
 

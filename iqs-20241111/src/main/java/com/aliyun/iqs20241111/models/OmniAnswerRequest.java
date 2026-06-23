@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class OmniAnswerRequest extends TeaModel {
+    /**
+     * <p>Search information</p>
+     */
     @NameInMap("body")
     public OmniSearchQuery body;
 

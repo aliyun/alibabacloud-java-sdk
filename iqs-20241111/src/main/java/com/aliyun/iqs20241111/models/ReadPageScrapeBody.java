@@ -4,10 +4,22 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class ReadPageScrapeBody extends TeaModel {
+    /**
+     * <p>The format of the parsing result.</p>
+     * <ul>
+     * <li>rawHtml: the HTML of the target site.</li>
+     * <li>html: the page content processed based on readabilityMode.</li>
+     * <li>markdown: the Markdown content converted from the HTML.</li>
+     * <li>text: the text content extracted from the HTML.</li>
+     * <li>screenshot: a screenshot of the target site.</li>
+     * </ul>
+     */
     @NameInMap("formats")
     public java.util.List<String> formats;
 
     /**
+     * <p>This parameter does not need to be specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +27,12 @@ public class ReadPageScrapeBody extends TeaModel {
     public String location;
 
     /**
+     * <p>The maximum cache validity period. Unit: seconds. Default value: 1296000.</p>
+     * <ol>
+     * <li>If the cache duration is less than the value of maxAge, cached content is returned.</li>
+     * <li>If maxAge is set to 0, caching is not used.</li>
+     * </ol>
+     * 
      * <strong>example:</strong>
      * <p>1296000</p>
      */
@@ -22,16 +40,26 @@ public class ReadPageScrapeBody extends TeaModel {
     public Integer maxAge;
 
     /**
+     * <p>The timeout period for waiting for the target site resources to fully load. The value of pageTimeout must be less than the value of timeout.</p>
+     * <p>Default value: 15000.</p>
+     * 
      * <strong>example:</strong>
      * <p>15000</p>
      */
     @NameInMap("pageTimeout")
     public Integer pageTimeout;
 
+    /**
+     * <p>The readability configuration for the parsing result.</p>
+     */
     @NameInMap("readability")
     public ReadPageScrapeBodyReadability readability;
 
     /**
+     * <p>The end-to-end processing timeout period. Unit: ms.</p>
+     * <p>Valid values: [0, 180000].</p>
+     * <p>Default value: 60000.</p>
+     * 
      * <strong>example:</strong>
      * <p>60000</p>
      */
@@ -39,6 +67,7 @@ public class ReadPageScrapeBody extends TeaModel {
     public Integer timeout;
 
     /**
+     * <p>The target URL to parse. The URL must start with http:// or https://.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,6 +139,9 @@ public class ReadPageScrapeBody extends TeaModel {
 
     public static class ReadPageScrapeBodyReadability extends TeaModel {
         /**
+         * <p>是否剔除所有图片</p>
+         * <p>默认值：false</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -117,16 +149,26 @@ public class ReadPageScrapeBody extends TeaModel {
         public Boolean excludeAllImages;
 
         /**
+         * <p>是否剔除所有链接</p>
+         * <p>默认值：false</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("excludeAllLinks")
         public Boolean excludeAllLinks;
 
+        /**
+         * <p>指定排除的标签</p>
+         */
         @NameInMap("excludedTags")
         public java.util.List<String> excludedTags;
 
         /**
+         * <p>none：不删除信息，默认为 none</p>
+         * <p>normal: 基于自研算法，剔除目标页面无关信息（页头/页脚，导航等）</p>
+         * <p>article: 基于自研算法，获取站点主要正文内容(适用于博客、新闻站点，不适用于目录页、导航页)</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */

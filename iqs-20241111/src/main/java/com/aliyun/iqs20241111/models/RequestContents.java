@@ -4,18 +4,30 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class RequestContents extends TeaModel {
+    /**
+     * <p>Specifies whether to return the main text. Default value: false.</p>
+     */
     @NameInMap("mainText")
     public Boolean mainText;
 
+    /**
+     * <p>Specifies whether to return markdown. Default value: false.</p>
+     */
     @NameInMap("markdownText")
     public Boolean markdownText;
 
+    /**
+     * <p>Specifies whether to enable Rerank and return the RerankScore. Default value: true.</p>
+     */
     @NameInMap("rerankScore")
     public Boolean rerankScore;
 
     @NameInMap("richMainBody")
     public Boolean richMainBody;
 
+    /**
+     * <p>Specifies whether to return an enhanced summary. Default value: false. The summary feature is billed separately.</p>
+     */
     @NameInMap("summary")
     public Boolean summary;
 

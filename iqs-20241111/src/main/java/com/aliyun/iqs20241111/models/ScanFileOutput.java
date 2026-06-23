@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class ScanFileOutput extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECB2144C-E277-5434-80E6-12D26678D364</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of scan result objects.</p>
+     */
     @NameInMap("scanFileInfoList")
     public java.util.List<ScanFileInfo> scanFileInfoList;
 
+    /**
+     * <p>The search execution information.</p>
+     */
     @NameInMap("searchInformation")
     public UnifiedSearchInformation searchInformation;
 

@@ -4,9 +4,15 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedCostCredits extends TeaModel {
+    /**
+     * <p>The basic search service metering.</p>
+     */
     @NameInMap("search")
     public SearchCredits search;
 
+    /**
+     * <p>The value-added service metering.</p>
+     */
     @NameInMap("valueAdded")
     public ValueAddedCredits valueAdded;
 

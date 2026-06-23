@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ValueAddedCredits extends TeaModel {
     /**
+     * <p>The value-added package - enhanced search.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class ValueAddedCredits extends TeaModel {
     public Integer advanced;
 
     /**
+     * <p>The value-added package - enhanced summary.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

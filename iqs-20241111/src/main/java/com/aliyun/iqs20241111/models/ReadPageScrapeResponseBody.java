@@ -4,10 +4,15 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class ReadPageScrapeResponseBody extends TeaModel {
+    /**
+     * <p>Parsing result of the target URL</p>
+     */
     @NameInMap("data")
     public ReadPageItem data;
 
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class ReadPageScrapeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ReadPageScrapeResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Request ID. Provide this information when troubleshooting issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>7cd43c86-731a-4d4c-8385-d070cfc509a4</p>
      */

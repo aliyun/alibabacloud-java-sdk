@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class MultimodalSearchRequest extends TeaModel {
+    /**
+     * <p>Query parameters and site blocking parameters</p>
+     */
     @NameInMap("body")
     public MultimodalSearchBody body;
 

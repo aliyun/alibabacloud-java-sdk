@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class MedicalAnswerRequest extends TeaModel {
+    /**
+     * <p>Search information</p>
+     */
     @NameInMap("body")
     public MedicalAnswerInput body;
 

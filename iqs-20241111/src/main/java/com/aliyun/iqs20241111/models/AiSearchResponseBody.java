@@ -4,10 +4,15 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class AiSearchResponseBody extends TeaModel {
+    /**
+     * <p>The header of the response.</p>
+     */
     @NameInMap("header")
     public AiSearchResponseBodyHeader header;
 
     /**
+     * <p>The payload of the response. The value is a JSON structure that varies by event type.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;header&quot;:{&quot;eventId&quot;:&quot;6f617de0-204f-406f-a9be-34779c06d498&quot;,&quot;event&quot;:&quot;on_common_search_start&quot;,&quot;responseTime&quot;:120},&quot;payload&quot;:&quot;&quot;,&quot;requestId&quot;:&quot;715d01a0-de7e-42c3-abca-b901fcd79b39&quot;}</p>
      */
@@ -53,15 +58,27 @@ public class AiSearchResponseBody extends TeaModel {
     }
 
     public static class AiSearchResponseBodyHeaderQueryContextOriginalQuery extends TeaModel {
+        /**
+         * <p>The industry.</p>
+         */
         @NameInMap("industry")
         public String industry;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <p>The query condition.</p>
+         */
         @NameInMap("query")
         public String query;
 
+        /**
+         * <p>The time range.</p>
+         */
         @NameInMap("timeRange")
         public String timeRange;
 
@@ -105,9 +122,15 @@ public class AiSearchResponseBody extends TeaModel {
     }
 
     public static class AiSearchResponseBodyHeaderQueryContextRewrite extends TeaModel {
+        /**
+         * <p>Indicates whether query rewriting is enabled.</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The rewritten time range.</p>
+         */
         @NameInMap("timeRange")
         public String timeRange;
 
@@ -135,9 +158,15 @@ public class AiSearchResponseBody extends TeaModel {
     }
 
     public static class AiSearchResponseBodyHeaderQueryContext extends TeaModel {
+        /**
+         * <p>The original query.</p>
+         */
         @NameInMap("originalQuery")
         public AiSearchResponseBodyHeaderQueryContextOriginalQuery originalQuery;
 
+        /**
+         * <p>The rewritten query.</p>
+         */
         @NameInMap("rewrite")
         public AiSearchResponseBodyHeaderQueryContextRewrite rewrite;
 
@@ -166,6 +195,8 @@ public class AiSearchResponseBody extends TeaModel {
 
     public static class AiSearchResponseBodyHeader extends TeaModel {
         /**
+         * <p>The event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>on_common_search_end</p>
          */
@@ -173,16 +204,23 @@ public class AiSearchResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The event ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>988021f0-951a-43d0-ba4d-785359e7e7be</p>
          */
         @NameInMap("eventId")
         public String eventId;
 
+        /**
+         * <p>The query context.</p>
+         */
         @NameInMap("queryContext")
         public AiSearchResponseBodyHeaderQueryContext queryContext;
 
         /**
+         * <p>The response time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1293</p>
          */

@@ -4,6 +4,12 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedSearchInformation extends TeaModel {
+    /**
+     * <p>The search duration, in ms.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1028</p>
+     */
     @NameInMap("searchTime")
     public Long searchTime;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnifiedImageItem extends TeaModel {
     /**
+     * <p>Height</p>
+     * 
      * <strong>example:</strong>
      * <p>1330</p>
      */
@@ -12,6 +14,8 @@ public class UnifiedImageItem extends TeaModel {
     public Integer height;
 
     /**
+     * <p>URL of the web page to which the image belongs</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4541580238898912926">http://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4541580238898912926</a></p>
      */
@@ -19,6 +23,8 @@ public class UnifiedImageItem extends TeaModel {
     public String hostPageUrl;
 
     /**
+     * <p>Image URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://pic.rmb.bdstatic.com/bjh/bb87f566c0c/241218/f7936f25837b20211e5ef88d7980c143.jpeg">http://pic.rmb.bdstatic.com/bjh/bb87f566c0c/241218/f7936f25837b20211e5ef88d7980c143.jpeg</a></p>
      */
@@ -26,16 +32,26 @@ public class UnifiedImageItem extends TeaModel {
     public String imageUrl;
 
     /**
+     * <p>Web page published time, in ISO time format</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-07-05T00:54:42+08:00</p>
      */
     @NameInMap("publishedTime")
     public String publishedTime;
 
+    /**
+     * <p>Image title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里巴巴现在以主业上为主,以电商为主,以能够盈利的业务为主</p>
+     */
     @NameInMap("title")
     public String title;
 
     /**
+     * <p>Image width</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

@@ -8,6 +8,8 @@ public class GetIqsUsageRequest extends TeaModel {
     public String callerId;
 
     /**
+     * <p>End Date.</p>
+     * 
      * <strong>example:</strong>
      * <p>20241017</p>
      */
@@ -15,6 +17,8 @@ public class GetIqsUsageRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Start Date.</p>
+     * 
      * <strong>example:</strong>
      * <p>20241011</p>
      */

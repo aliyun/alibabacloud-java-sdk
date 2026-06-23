@@ -4,19 +4,30 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class MultimodalSearchOutput extends TeaModel {
+    /**
+     * <p>Image List</p>
+     */
     @NameInMap("imageItems")
     public java.util.List<UnifiedImageItem> imageItems;
 
+    /**
+     * <p>Query context information</p>
+     */
     @NameInMap("queryContext")
     public MultimodalQueryContext queryContext;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>sdfsd234-2vxcg345-345vc</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Search basic information</p>
+     */
     @NameInMap("searchInformation")
     public SearchInformation searchInformation;
 

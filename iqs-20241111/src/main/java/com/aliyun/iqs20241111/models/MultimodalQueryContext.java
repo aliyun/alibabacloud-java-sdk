@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class MultimodalQueryContext extends TeaModel {
+    /**
+     * <p>Alibaba</p>
+     */
     @NameInMap("originalQuery")
     public MultimodalOriginalQuery originalQuery;
 

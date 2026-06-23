@@ -4,10 +4,18 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedOriginalQuery extends TeaModel {
+    /**
+     * <p>The request query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州美食</p>
+     */
     @NameInMap("query")
     public String query;
 
     /**
+     * <p>The publish time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoLimit</p>
      */

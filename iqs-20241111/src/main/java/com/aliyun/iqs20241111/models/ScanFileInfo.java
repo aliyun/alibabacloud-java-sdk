@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScanFileInfo extends TeaModel {
     /**
+     * <p>The image rotation angle.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ScanFileInfo extends TeaModel {
     public Integer angle;
 
     /**
+     * <p>The image height.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class ScanFileInfo extends TeaModel {
     public Integer height;
 
     /**
+     * <p>The Base64 encoding of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>erwre</p>
      */
@@ -26,6 +32,8 @@ public class ScanFileInfo extends TeaModel {
     public String imageBase64;
 
     /**
+     * <p>The image width.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
