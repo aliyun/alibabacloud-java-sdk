@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePredefinedDocumentResponseBody extends TeaModel {
     /**
+     * <p>The time consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class CreatePredefinedDocumentResponseBody extends TeaModel {
     public Long cost;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>1782981430906818562</p>
      */
@@ -19,6 +23,8 @@ public class CreatePredefinedDocumentResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class CreatePredefinedDocumentResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class CreatePredefinedDocumentResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -40,6 +50,8 @@ public class CreatePredefinedDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a06dfe617018288881568684e2937</p>
      */
@@ -47,6 +59,8 @@ public class CreatePredefinedDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class CreatePredefinedDocumentResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class PreviewDocumentResponseBody extends TeaModel {
     /**
+     * <p>Time consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public PreviewDocumentResponseBodyData data;
 
     /**
+     * <p>Data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ff551395-1c8a-4f30-8ffd-ef7e87c70b4c</p>
      */
@@ -43,6 +56,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -127,6 +144,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
 
     public static class PreviewDocumentResponseBodyData extends TeaModel {
         /**
+         * <p>Preview type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -134,6 +153,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
         public String previewType;
 
         /**
+         * <p>Document title.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -141,6 +162,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Upload time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -148,6 +171,8 @@ public class PreviewDocumentResponseBody extends TeaModel {
         public String uploadTime;
 
         /**
+         * <p>Document URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://agi.alicdn.com/user/d0o/d3c1f50d-a6c2-49b3-b0c8-3e613c3f20ee_16872_3236784461.png">https://agi.alicdn.com/user/d0o/d3c1f50d-a6c2-49b3-b0c8-3e613c3f20ee_16872_3236784461.png</a></p>
          */

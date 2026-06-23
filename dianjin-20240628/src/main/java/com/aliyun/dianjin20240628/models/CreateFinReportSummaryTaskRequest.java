@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFinReportSummaryTaskRequest extends TeaModel {
     /**
+     * <p>Document ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateFinReportSummaryTaskRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>Enable table</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,16 +25,25 @@ public class CreateFinReportSummaryTaskRequest extends TeaModel {
     public Boolean enableTable;
 
     /**
+     * <p>End page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("endPage")
     public Integer endPage;
 
+    /**
+     * <p>Instruction</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请帮我总结一下。</p>
+     */
     @NameInMap("instruction")
     public String instruction;
 
     /**
+     * <p>Document library ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +53,7 @@ public class CreateFinReportSummaryTaskRequest extends TeaModel {
     public String libraryId;
 
     /**
+     * <p>Model ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +63,8 @@ public class CreateFinReportSummaryTaskRequest extends TeaModel {
     public String modelId;
 
     /**
+     * <p>Start page</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -58,6 +72,8 @@ public class CreateFinReportSummaryTaskRequest extends TeaModel {
     public Integer startPage;
 
     /**
+     * <p>Task type. Optional. Defaults to finance_report. If you set this to custom, provide an instruction.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */

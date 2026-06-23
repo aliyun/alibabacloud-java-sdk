@@ -6,14 +6,14 @@ import com.aliyun.tea.*;
 public class GetUsageRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>1001</p>
+     * <p>1</p>
      */
     @NameInMap("externalUserId")
     public String externalUserId;
 
     /**
      * <strong>example:</strong>
-     * <p>R123456789</p>
+     * <p>1</p>
      */
     @NameInMap("redemptionOrderNo")
     public String redemptionOrderNo;

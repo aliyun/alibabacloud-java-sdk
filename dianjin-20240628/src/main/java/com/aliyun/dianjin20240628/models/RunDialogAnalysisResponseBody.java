@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RunDialogAnalysisResponseBody extends TeaModel {
     /**
+     * <p>The time consumed, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public RunDialogAnalysisResponseBodyData data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>02CD4454-3F2C-57D0-9060-68DEAA1F6993</p>
      */
@@ -43,6 +56,8 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -126,9 +143,21 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunDialogAnalysisResponseBodyDataDialogAnalysisRespListAnalysisRespDialogLabels extends TeaModel {
+        /**
+         * <p>The label name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>二级标签</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>协商还款</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -156,21 +185,52 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunDialogAnalysisResponseBodyDataDialogAnalysisRespListAnalysisResp extends TeaModel {
+        /**
+         * <p>The session execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <ol>
+         * <li>核实客户账户信息，确认还款情况。\\n2. 若未收到还款，联系财务部门确认是否到账延迟。\\n3. 若已还款，更新客户记录并致歉。\\n4. 跟进客户，确保问题解决。</li>
+         * </ol>
+         */
         @NameInMap("dialogExecPlan")
         public String dialogExecPlan;
 
+        /**
+         * <p>The list of session labels.</p>
+         */
         @NameInMap("dialogLabels")
         public java.util.List<RunDialogAnalysisResponseBodyDataDialogAnalysisRespListAnalysisRespDialogLabels> dialogLabels;
 
+        /**
+         * <p>The session open analysis.</p>
+         */
         @NameInMap("dialogOpenAnalysis")
         public java.util.Map<String, ?> dialogOpenAnalysis;
 
+        /**
+         * <p>The session process analysis.</p>
+         */
         @NameInMap("dialogProcessAnalysis")
         public java.util.Map<String, ?> dialogProcessAnalysis;
 
+        /**
+         * <p>The session SOP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销</p>
+         */
         @NameInMap("dialogSop")
         public String dialogSop;
 
+        /**
+         * <p>The session summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>是否有资金需求：否\\n- 是否有意向：否，客户认为自己已经解决，对当前状态表示不解\\n- 是否可营销：否，对话中未表现出对营销信息的兴趣或接受度\\n- 待满足需求：客户希望在三天内解决问题</li>
+         * </ul>
+         */
         @NameInMap("dialogSummary")
         public String dialogSummary;
 
@@ -230,13 +290,21 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunDialogAnalysisResponseBodyDataDialogAnalysisRespList extends TeaModel {
+        /**
+         * <p>The result of the session analysis.</p>
+         */
         @NameInMap("analysisResp")
         public RunDialogAnalysisResponseBodyDataDialogAnalysisRespListAnalysisResp analysisResp;
 
+        /**
+         * <p>The list of failed nodes.</p>
+         */
         @NameInMap("failNode")
         public java.util.List<String> failNode;
 
         /**
+         * <p>The time when the session was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-24 11:54:34</p>
          */
@@ -244,6 +312,8 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1759457905S001vejpvd6vej</p>
          */
@@ -251,6 +321,8 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The execution status of the session analysis task.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -305,6 +377,9 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunDialogAnalysisResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of session analysis results.</p>
+         */
         @NameInMap("dialogAnalysisRespList")
         public java.util.List<RunDialogAnalysisResponseBodyDataDialogAnalysisRespList> dialogAnalysisRespList;
 

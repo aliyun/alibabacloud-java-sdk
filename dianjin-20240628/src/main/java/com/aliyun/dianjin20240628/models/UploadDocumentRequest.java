@@ -4,10 +4,17 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class UploadDocumentRequest extends TeaModel {
+    /**
+     * <p>File metadata. You can use this to filter results during retrieval.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;cateogry\&quot;: \&quot;报告\&quot;}</p>
+     */
     @NameInMap("data")
     public String data;
 
     /**
+     * <p>The full file name, including the extension. Supported formats are PDF, DOC, DOCX, Markdown, PPT, and PPTX. File size must not exceed 100 MB. PDF, DOC, DOCX, PPT, and PPTX files must not exceed 500 pages.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,8 @@ public class UploadDocumentRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The OSS URL of the file. If the file is not publicly readable, include a signature in the URL.</p>
+     * <p>If you use the SDK to upload files, upload the file directly. You do not need to provide an OSS URL. For more information, see the SDK documentation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +35,7 @@ public class UploadDocumentRequest extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>The document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,10 +4,15 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class RunLibraryChatGenerationRequest extends TeaModel {
+    /**
+     * <p>A list of document IDs.</p>
+     */
     @NameInMap("docIdList")
     public java.util.List<String> docIdList;
 
     /**
+     * <p>Specifies whether to enable multi-turn enhancement.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -15,6 +20,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public Boolean enableFollowUp;
 
     /**
+     * <p>Specifies whether to enable query splitting.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +29,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public Boolean enableMultiQuery;
 
     /**
+     * <p>Specifies whether to enable openQA.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -29,6 +38,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public Boolean enableOpenQa;
 
     /**
+     * <p>The Large Language Model (LLM) used for multi-turn query enhancement.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-max</p>
      */
@@ -36,6 +47,7 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public String followUpLlm;
 
     /**
+     * <p>The ID of the document library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +57,7 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public String libraryId;
 
     /**
+     * <p>The type of the LLM.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +67,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public String llmType;
 
     /**
+     * <p>The LLM used for query splitting.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-max</p>
      */
@@ -61,15 +76,24 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public String multiQueryLlm;
 
     /**
+     * <p>The query entered by the user.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这两天北京气候怎么样</p>
      */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>The property filter.</p>
+     */
     @NameInMap("queryCriteria")
     public RunLibraryChatGenerationRequestQueryCriteria queryCriteria;
 
     /**
+     * <p>The type of the sort policy. Valid values: \<code>linear\\</code> and \<code>model\\</code>. \<code>linear\\</code>: rule-based sorting. \<code>model\\</code>: model-based sorting (LLM).</p>
+     * 
      * <strong>example:</strong>
      * <p>linear</p>
      */
@@ -77,7 +101,7 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public String rerankType;
 
     /**
-     * <p>sessionId</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -86,29 +110,44 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Specifies whether to use streaming or non-streaming mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("stream")
     public Boolean stream;
 
+    /**
+     * <p>A list of subqueries.</p>
+     */
     @NameInMap("subQueryList")
     public java.util.List<String> subQueryList;
 
+    /**
+     * <p>Search engine parameters: text search parameters.</p>
+     */
     @NameInMap("textSearchParameter")
     public RunLibraryChatGenerationRequestTextSearchParameter textSearchParameter;
 
     /**
+     * <p>The final number of retrieved corpus entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("topK")
     public Integer topK;
 
+    /**
+     * <p>Search engine parameters: vector search parameters.</p>
+     */
     @NameInMap("vectorSearchParameter")
     public RunLibraryChatGenerationRequestVectorSearchParameter vectorSearchParameter;
 
     /**
+     * <p>Specifies whether to return document references.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -266,6 +305,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
 
     public static class RunLibraryChatGenerationRequestQueryCriteriaAnd extends TeaModel {
         /**
+         * <p>The weight of the tag. A value less than 1 decreases the weight of the corresponding keyword. A value greater than 1 increases the weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -273,6 +314,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
         public Float boost;
 
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>city</p>
          */
@@ -280,12 +323,32 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The operator for the tag. It specifies the relationship between the metadata key\&quot;s stored value and your input value.</p>
+         * <ul>
+         * <li><p>eq: Equal to.</p>
+         * </li>
+         * <li><p>lte: Less than or equal to.</p>
+         * </li>
+         * <li><p>gte: Greater than or equal to.</p>
+         * </li>
+         * <li><p>lt: Less than.</p>
+         * </li>
+         * <li><p>gt: Greater than.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>eq</p>
          */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -330,6 +393,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
 
     public static class RunLibraryChatGenerationRequestQueryCriteriaOr extends TeaModel {
         /**
+         * <p>The weight of the tag. A value less than 1 decreases the weight of the corresponding keyword. A value greater than 1 increases the weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -337,6 +402,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
         public Float boost;
 
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>city</p>
          */
@@ -344,12 +411,32 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The operator for the tag. It specifies the relationship between the metadata key\&quot;s stored value and your input value.</p>
+         * <ul>
+         * <li><p>eq: Equal to.</p>
+         * </li>
+         * <li><p>lte: Less than or equal to.</p>
+         * </li>
+         * <li><p>gte: Greater than or equal to.</p>
+         * </li>
+         * <li><p>lt: Less than.</p>
+         * </li>
+         * <li><p>gt: Greater than.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>eq</p>
          */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -393,9 +480,15 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
     }
 
     public static class RunLibraryChatGenerationRequestQueryCriteria extends TeaModel {
+        /**
+         * <p>The \<code>and\\</code> expression, used to filter documents or document chunks.</p>
+         */
         @NameInMap("and")
         public java.util.List<RunLibraryChatGenerationRequestQueryCriteriaAnd> and;
 
+        /**
+         * <p>The \<code>or\\</code> expression, used to filter documents or document chunks.</p>
+         */
         @NameInMap("or")
         public java.util.List<RunLibraryChatGenerationRequestQueryCriteriaOr> or;
 
@@ -424,6 +517,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
 
     public static class RunLibraryChatGenerationRequestTextSearchParameter extends TeaModel {
         /**
+         * <p>The number of rows to return.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -431,6 +526,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
         public Integer limit;
 
         /**
+         * <p>The search tokenizer. Valid values: \<code>Standard\\</code>, \<code>IkMaxWord\\</code>, and \<code>IkSmart\\</code>. Configure this parameter as needed. If left empty, the tokenizer attached to the document library is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>IkMaxWord</p>
          */
@@ -462,6 +559,8 @@ public class RunLibraryChatGenerationRequest extends TeaModel {
 
     public static class RunLibraryChatGenerationRequestVectorSearchParameter extends TeaModel {
         /**
+         * <p>The number of rows to return.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

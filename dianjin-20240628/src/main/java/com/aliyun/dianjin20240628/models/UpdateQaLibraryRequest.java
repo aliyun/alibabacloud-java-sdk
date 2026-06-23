@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateQaLibraryRequest extends TeaModel {
     /**
+     * <p>A list of parsed Q\&amp;A pair results.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("parseQaResults")
     public java.util.List<UpdateQaLibraryRequestParseQaResults> parseQaResults;
 
     /**
+     * <p>The ID of the Q\&amp;A library.</p>
+     * 
      * <strong>example:</strong>
      * <p>6jh378d</p>
      */
@@ -18,6 +21,7 @@ public class UpdateQaLibraryRequest extends TeaModel {
     public String qaLibraryId;
 
     /**
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,13 +61,21 @@ public class UpdateQaLibraryRequest extends TeaModel {
 
     public static class UpdateQaLibraryRequestParseQaResults extends TeaModel {
         /**
+         * <p>The answer.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这款**糯米大烧麦的净含量是900g。</p>
          */
         @NameInMap("answer")
         public String answer;
 
         /**
+         * <p>The question.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这款**糯米大烧麦的净含量是多少？</p>
          */
         @NameInMap("question")
         public String question;

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateDocumentChunkRequest extends TeaModel {
     /**
+     * <p>List of document chunks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("chunks")
     public java.util.List<UpdateDocumentChunkRequestChunks> chunks;
 
     /**
+     * <p>Library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class UpdateDocumentChunkRequest extends TeaModel {
 
     public static class UpdateDocumentChunkRequestChunks extends TeaModel {
         /**
+         * <p>Document chunk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,7 +54,11 @@ public class UpdateDocumentChunkRequest extends TeaModel {
         public String chunkId;
 
         /**
+         * <p>Document chunk text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一段测试文本</p>
          */
         @NameInMap("chunkText")
         public String chunkText;

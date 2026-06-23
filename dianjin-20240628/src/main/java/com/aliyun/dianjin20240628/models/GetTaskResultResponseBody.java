@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTaskResultResponseBody extends TeaModel {
     /**
+     * <p>The time consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,14 @@ public class GetTaskResultResponseBody extends TeaModel {
     public Long cost;
 
     /**
+     * <p>The result of the asynchronous task.</p>
+     * <h2>PDF translation task</h2>
+     * <p>The returned file_url is a downloadable file address.</p>
+     * <pre><code>{
+     *   &quot;file_url&quot;: &quot;https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf&quot;
+     * }
+     * </code></pre>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;file_url&quot;: &quot;<a href="https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf">https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf</a>&quot;
@@ -21,6 +31,8 @@ public class GetTaskResultResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -28,6 +40,8 @@ public class GetTaskResultResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -35,6 +49,8 @@ public class GetTaskResultResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -42,6 +58,8 @@ public class GetTaskResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9D5D6BB5-BEAE-53C8-A70A-7275CC1F856C</p>
      */
@@ -49,6 +67,8 @@ public class GetTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +76,8 @@ public class GetTaskResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */

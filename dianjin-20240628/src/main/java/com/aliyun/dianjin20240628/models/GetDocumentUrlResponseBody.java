@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDocumentUrlResponseBody extends TeaModel {
     /**
+     * <p>The time spent, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class GetDocumentUrlResponseBody extends TeaModel {
     public Long cost;
 
     /**
+     * <p>The download URL for the document. The URL expires in 1 hour.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://path_to_file">https://path_to_file</a></p>
      */
@@ -19,6 +23,8 @@ public class GetDocumentUrlResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class GetDocumentUrlResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class GetDocumentUrlResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -40,6 +50,8 @@ public class GetDocumentUrlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>66249B43-8C2B-5EE7-AE78-B382306621C6</p>
      */
@@ -47,6 +59,8 @@ public class GetDocumentUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class GetDocumentUrlResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 00:00:00</p>
      */

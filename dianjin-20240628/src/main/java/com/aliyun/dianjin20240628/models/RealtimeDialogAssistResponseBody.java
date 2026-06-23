@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RealtimeDialogAssistResponseBody extends TeaModel {
     /**
+     * <p>Time consumed</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("data")
     public RealtimeDialogAssistResponseBodyData data;
 
     /**
+     * <p>Data type</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID. This is the system-recorded request ID. If issues arise, provide this ID to the Model Studio DianJin R\&amp;D team for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>67C7021A-D268-553D-8C15-A087B9604028</p>
      */
@@ -43,6 +56,8 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -126,26 +143,48 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
     }
 
     public static class RealtimeDialogAssistResponseBodyDataAssistScripts extends TeaModel {
+        /**
+         * <p>Recommended utterance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>可按照SOP流程回应。</p>
+         */
         @NameInMap("assistScript")
         public String assistScript;
 
         /**
+         * <p>Intent encoding</p>
+         * 
          * <strong>example:</strong>
-         * <p>1920005488515465216</p>
+         * <p>&quot;1920005488515465216&quot;</p>
          */
         @NameInMap("intentCode")
         public String intentCode;
 
         /**
+         * <p>Intent labels</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
         @NameInMap("intentLabels")
         public String intentLabels;
 
+        /**
+         * <p>Intent name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>礼貌问答</p>
+         */
         @NameInMap("intentName")
         public String intentName;
 
+        /**
+         * <p>Whether intent escaped</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isDefault")
         public Boolean isDefault;
 
@@ -198,6 +237,8 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
 
     public static class RealtimeDialogAssistResponseBodyDataAssistSop extends TeaModel {
         /**
+         * <p>Recommended flow</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */
@@ -205,6 +246,8 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         public String assistSop;
 
         /**
+         * <p>Intent encoding</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */
@@ -212,12 +255,20 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         public String intentCode;
 
         /**
+         * <p>Intent name</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */
         @NameInMap("intentName")
         public String intentName;
 
+        /**
+         * <p>Indicates whether the intent is to escape.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isDefault")
         public Boolean isDefault;
 
@@ -261,38 +312,54 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
     }
 
     public static class RealtimeDialogAssistResponseBodyDataConversationModel extends TeaModel {
+        /**
+         * <p>Specific content of the dialog</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>Unique identity of the dialog role</p>
+         * 
          * <strong>example:</strong>
-         * <p>98457834685635</p>
+         * <p>&quot;98457834685635&quot;</p>
          */
         @NameInMap("customerId")
         public String customerId;
 
         /**
+         * <p>Customer service ID</p>
+         * 
          * <strong>example:</strong>
-         * <p>1374683645635</p>
+         * <p>&quot;1374683645635&quot;</p>
          */
         @NameInMap("customerServiceId")
         public String customerServiceId;
 
         /**
+         * <p>Agent type. 0: Robot, 1: Human.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>&quot;0&quot;</p>
          */
         @NameInMap("customerServiceType")
         public String customerServiceType;
 
         /**
+         * <p>Role. 0 indicates customer, 1 indicates agent.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>&quot;0&quot;</p>
          */
         @NameInMap("role")
         public String role;
 
         /**
+         * <p>Type of dialog content</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -355,22 +422,45 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
     }
 
     public static class RealtimeDialogAssistResponseBodyData extends TeaModel {
+        /**
+         * <p>Analysis process</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户回答的内容与提供的意图列表描述均不匹配，没有表达出对账单、还款、天气或其他服务的具体需求或问题。</p>
+         */
         @NameInMap("analysisProcess")
         public String analysisProcess;
 
+        /**
+         * <p>List of dialog assist results</p>
+         */
         @NameInMap("assistScripts")
         public java.util.List<RealtimeDialogAssistResponseBodyDataAssistScripts> assistScripts;
 
+        /**
+         * <p>List of flow assist results</p>
+         */
         @NameInMap("assistSop")
         public java.util.List<RealtimeDialogAssistResponseBodyDataAssistSop> assistSop;
 
+        /**
+         * <p>Current dialog content</p>
+         */
         @NameInMap("conversationModel")
         public java.util.List<RealtimeDialogAssistResponseBodyDataConversationModel> conversationModel;
 
+        /**
+         * <p>Whether interrupted</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("interrupt")
         public Boolean interrupt;
 
         /**
+         * <p>Unique request ID. This request ID matches the request ID in the input parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>0FC6636E-380A-5369-AE01-D1C15BB9B254</p>
          */
@@ -378,8 +468,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
-         * <p>1915593248420413441</p>
+         * <p>&quot;1915593248420413441&quot;</p>
          */
         @NameInMap("sessionId")
         public String sessionId;

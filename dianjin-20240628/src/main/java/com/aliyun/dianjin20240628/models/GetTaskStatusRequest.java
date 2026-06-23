@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetTaskStatusRequest extends TeaModel {
     /**
+     * <p>Task ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17071319</p>
      */
     @NameInMap("taskId")
     public String taskId;

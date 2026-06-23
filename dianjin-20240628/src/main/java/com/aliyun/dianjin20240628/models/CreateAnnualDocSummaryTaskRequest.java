@@ -5,28 +5,44 @@ import com.aliyun.tea.*;
 
 public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
     /**
+     * <p>List of years to analyze</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("anaYears")
     public java.util.List<Integer> anaYears;
 
     /**
+     * <p>List of document information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("docInfos")
     public java.util.List<CreateAnnualDocSummaryTaskRequestDocInfos> docInfos;
 
     /**
+     * <p>Enable table extraction. Default is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enableTable")
     public Boolean enableTable;
 
+    /**
+     * <p>Instruction</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你是资深的证券研究员，对xx年上市公司进行业绩分析。根据参考信息从如下方面详细分析：</p>
+     * <ol>
+     * <li>整体业绩变化情况，包括营收，利润等详细指标变化情况</li>
+     * <li>业绩变化情况具体原因，包括各个业务变化情况
+     * 严格只输出xx年情况。</li>
+     * </ol>
+     */
     @NameInMap("instruction")
     public String instruction;
 
     /**
+     * <p>Model ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +98,7 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
 
     public static class CreateAnnualDocSummaryTaskRequestDocInfos extends TeaModel {
         /**
+         * <p>Document ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +108,7 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
         public String docId;
 
         /**
+         * <p>Document year</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,6 +118,8 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
         public Integer docYear;
 
         /**
+         * <p>End page number</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -107,6 +127,7 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
         public Integer endPage;
 
         /**
+         * <p>Document library ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +137,8 @@ public class CreateAnnualDocSummaryTaskRequest extends TeaModel {
         public String libraryId;
 
         /**
+         * <p>Start page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocumentUrlRequest extends TeaModel {
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

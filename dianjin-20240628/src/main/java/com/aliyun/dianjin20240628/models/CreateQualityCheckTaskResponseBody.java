@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateQualityCheckTaskResponseBody extends TeaModel {
     /**
+     * <p>The time consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreateQualityCheckTaskResponseBodyData data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class CreateQualityCheckTaskResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class CreateQualityCheckTaskResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class CreateQualityCheckTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EF4B5C9B-3BC8-5171-A47B-4C5CF3DC3258</p>
      */
@@ -43,6 +56,8 @@ public class CreateQualityCheckTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class CreateQualityCheckTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -127,7 +144,7 @@ public class CreateQualityCheckTaskResponseBody extends TeaModel {
 
     public static class CreateQualityCheckTaskResponseBodyData extends TeaModel {
         /**
-         * <p>taskId</p>
+         * <p>The taskId.</p>
          * 
          * <strong>example:</strong>
          * <p>172373500521</p>

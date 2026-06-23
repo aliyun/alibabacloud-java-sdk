@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDocumentChunkListResponseBody extends TeaModel {
     /**
+     * <p>Time consumed</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("data")
     public GetDocumentChunkListResponseBodyData data;
 
     /**
+     * <p>Data type</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2B8F6DC9-6FAF-576F-9095-CCD90FB2BDDF</p>
      */
@@ -43,6 +56,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success status</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -126,16 +143,24 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
     }
 
     public static class GetDocumentChunkListResponseBodyDataRecordsPos extends TeaModel {
+        /**
+         * <p>Coordinate</p>
+         */
         @NameInMap("axisArray")
         public java.util.List<Double> axisArray;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <p>Text highlight area, used for highlighting text-type files</p>
+         */
         @NameInMap("textHighlightArea")
         public java.util.List<Integer> textHighlightArea;
 
@@ -172,6 +197,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
 
     public static class GetDocumentChunkListResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>Document chunk ID</p>
+         * 
          * <strong>example:</strong>
          * <p>28377468263482764</p>
          */
@@ -179,6 +206,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public String chunkId;
 
         /**
+         * <p>Document chunk metadata</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;1&quot;}</p>
          */
@@ -186,16 +215,26 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public java.util.Map<String, ?> chunkMeta;
 
         /**
+         * <p>Document chunk OSS address</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-xxxx-hangzhou.com/test.pdf</p>
          */
         @NameInMap("chunkOssUrl")
         public String chunkOssUrl;
 
+        /**
+         * <p>Document chunk text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一段测试文本</p>
+         */
         @NameInMap("chunkText")
         public String chunkText;
 
         /**
+         * <p>Document chunk type</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -203,6 +242,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public String chunkType;
 
         /**
+         * <p>Document ID</p>
+         * 
          * <strong>example:</strong>
          * <p>8947387648356</p>
          */
@@ -210,6 +251,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Document type</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -217,26 +260,41 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>Library ID</p>
+         * 
          * <strong>example:</strong>
          * <p>jhsdvne</p>
          */
         @NameInMap("libraryId")
         public String libraryId;
 
+        /**
+         * <p>Library name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档库</p>
+         */
         @NameInMap("libraryName")
         public String libraryName;
 
         /**
+         * <p>Next document chunk ID</p>
+         * 
          * <strong>example:</strong>
          * <p>947538465</p>
          */
         @NameInMap("nextChunkId")
         public String nextChunkId;
 
+        /**
+         * <p>Document chunk position</p>
+         */
         @NameInMap("pos")
         public java.util.List<GetDocumentChunkListResponseBodyDataRecordsPos> pos;
 
         /**
+         * <p>Previous document chunk ID</p>
+         * 
          * <strong>example:</strong>
          * <p>9848346548365</p>
          */
@@ -244,6 +302,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public String preChunkId;
 
         /**
+         * <p>Document chunk score</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -251,6 +311,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>Document title</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -378,6 +440,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
 
     public static class GetDocumentChunkListResponseBodyData extends TeaModel {
         /**
+         * <p>Current page</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -385,16 +449,23 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public Long currentPage;
 
         /**
+         * <p>Records per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
+        /**
+         * <p>Records</p>
+         */
         @NameInMap("records")
         public java.util.List<GetDocumentChunkListResponseBodyDataRecords> records;
 
         /**
+         * <p>Total pages</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -402,6 +473,8 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public Long totalPages;
 
         /**
+         * <p>Total records</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

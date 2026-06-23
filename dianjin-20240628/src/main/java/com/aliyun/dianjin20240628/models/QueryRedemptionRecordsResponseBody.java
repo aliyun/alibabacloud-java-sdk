@@ -16,22 +16,14 @@ public class QueryRedemptionRecordsResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("retryAble")
     public Boolean retryAble;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -93,7 +85,7 @@ public class QueryRedemptionRecordsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>2024-01-31T23:59:59Z</p>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         @NameInMap("expireAt")
         public String expireAt;
@@ -114,21 +106,21 @@ public class QueryRedemptionRecordsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>a1b2c3d4e5f6...</p>
+         * <p>1</p>
          */
         @NameInMap("keyHash")
         public String keyHash;
 
         /**
          * <strong>example:</strong>
-         * <p>AR123233333</p>
+         * <p>1</p>
          */
         @NameInMap("outBizNo")
         public String outBizNo;
 
         /**
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>100</p>
          */
         @NameInMap("quotaBalance")
         public Long quotaBalance;
@@ -142,7 +134,7 @@ public class QueryRedemptionRecordsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>ORD20240101000001</p>
+         * <p>1</p>
          */
         @NameInMap("redemptionOrderNo")
         public String redemptionOrderNo;
@@ -156,14 +148,14 @@ public class QueryRedemptionRecordsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>37624</p>
+         * <p>1</p>
          */
         @NameInMap("templateId")
         public Long templateId;
 
         /**
          * <strong>example:</strong>
-         * <p>10001</p>
+         * <p>1</p>
          */
         @NameInMap("tenantId")
         public Long tenantId;
@@ -299,7 +291,7 @@ public class QueryRedemptionRecordsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>100</p>
          */
         @NameInMap("total")
         public Long total;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunAgentRequest extends TeaModel {
     /**
+     * <p>Agent ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RunAgentRequest extends TeaModel {
     public String botId;
 
     /**
+     * <p>Model ID. Optional. If empty, the agent uses the model from its configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -21,6 +24,8 @@ public class RunAgentRequest extends TeaModel {
     public String modelId;
 
     /**
+     * <p>Enable streaming. Default is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,8 @@ public class RunAgentRequest extends TeaModel {
     public Boolean stream;
 
     /**
+     * <p>Thread ID. Optional. If empty, a new thread starts.</p>
+     * 
      * <strong>example:</strong>
      * <p>4vlag5ken3</p>
      */
@@ -35,6 +42,8 @@ public class RunAgentRequest extends TeaModel {
     public String threadId;
 
     /**
+     * <p>Use the draft version. Drafts are unpublished versions in the editor. They are unstable. Default is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -42,15 +51,27 @@ public class RunAgentRequest extends TeaModel {
     public Boolean useDraft;
 
     /**
+     * <p>User input</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你是谁</p>
      */
     @NameInMap("userContent")
     public String userContent;
 
+    /**
+     * <p>More complex user-defined input parameters</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;: &quot;zhangsan&quot;}</p>
+     */
     @NameInMap("userInputs")
     public java.util.Map<String, ?> userInputs;
 
     /**
+     * <p>Version ID to run</p>
+     * 
      * <strong>example:</strong>
      * <p>w4paqoezm2</p>
      */

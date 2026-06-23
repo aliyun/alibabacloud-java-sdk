@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GenDocQaResultResponseBody extends TeaModel {
     /**
+     * <p>The time consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GenDocQaResultResponseBodyData data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GenDocQaResultResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class GenDocQaResultResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class GenDocQaResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>44BD277A-87F9-5310-8D63-3E6645F1DA85</p>
      */
@@ -43,6 +56,8 @@ public class GenDocQaResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GenDocQaResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -126,9 +143,21 @@ public class GenDocQaResultResponseBody extends TeaModel {
     }
 
     public static class GenDocQaResultResponseBodyDataParseQaResults extends TeaModel {
+        /**
+         * <p>The answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>今天的天气不错，多云转晴。</p>
+         */
         @NameInMap("answer")
         public String answer;
 
+        /**
+         * <p>The question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>今天的天气怎么样？</p>
+         */
         @NameInMap("question")
         public String question;
 
@@ -157,6 +186,8 @@ public class GenDocQaResultResponseBody extends TeaModel {
 
     public static class GenDocQaResultResponseBodyData extends TeaModel {
         /**
+         * <p>The current status. Valid values: \<code>INIT\\</code>, \<code>PROCESSING\\</code>, \<code>COMPLETED\\</code>, and \<code>FAIL\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROCESSING</p>
          */
@@ -164,6 +195,8 @@ public class GenDocQaResultResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
+         * <p>The document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>873648346573245</p>
          */
@@ -171,12 +204,17 @@ public class GenDocQaResultResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>The document library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7wxwrjpabj</p>
          */
         @NameInMap("libraryId")
         public String libraryId;
 
+        /**
+         * <p>The results of the Q\&amp;A pair parsing.</p>
+         */
         @NameInMap("parseQaResults")
         public java.util.List<GenDocQaResultResponseBodyDataParseQaResults> parseQaResults;
 

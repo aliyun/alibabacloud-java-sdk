@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateQaLibraryResponseBody extends TeaModel {
     /**
+     * <p>The time consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public UpdateQaLibraryResponseBodyData data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EF4B5C9B-3BC8-5171-A47B-4C5CF3DC3258</p>
      */
@@ -43,6 +56,8 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -127,6 +144,8 @@ public class UpdateQaLibraryResponseBody extends TeaModel {
 
     public static class UpdateQaLibraryResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the Q\&amp;A library.</p>
+         * 
          * <strong>example:</strong>
          * <p>6jh378d</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDocumentResponseBody extends TeaModel {
     /**
+     * <p>Time consumed</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public Long cost;
 
     /**
+     * <p>Response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +23,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -40,6 +50,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>eb2b6139-ddf1-91a0-a47f-df7617ae9032</p>
      */
@@ -47,6 +59,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success status.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class RealTimeDialogResponseBody extends TeaModel {
+    /**
+     * <p>An array of generated content. It can contain one or more choice objects.</p>
+     */
     @NameInMap("choices")
     public java.util.List<RealTimeDialogResponseBodyChoices> choices;
 
     /**
+     * <p>The timestamp when this request was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1735139569523</p>
      */
@@ -15,6 +20,8 @@ public class RealTimeDialogResponseBody extends TeaModel {
     public String created;
 
     /**
+     * <p>The unique identifier for this call. Each chunk object has the same ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>eb2b6139-ddf1-91a0-a47f-df7617ae9032</p>
      */
@@ -22,6 +29,8 @@ public class RealTimeDialogResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5E3FBAF1-17AF-53B7-AF0A-CDCEEB6DE658</p>
      */
@@ -29,6 +38,8 @@ public class RealTimeDialogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class RealTimeDialogResponseBody extends TeaModel {
 
     public static class RealTimeDialogResponseBodyChoicesDelta extends TeaModel {
         /**
+         * <p>The analysis process.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -89,7 +102,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public String analysisProcess;
 
         /**
-         * <p>time</p>
+         * <p>The time.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -98,6 +111,8 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public String callTime;
 
         /**
+         * <p>Hangs up the dialog.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -105,22 +120,44 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public Boolean hangUpDialog;
 
         /**
+         * <p>The intent code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1853360771162058752</p>
          */
         @NameInMap("intentionCode")
         public String intentionCode;
 
+        /**
+         * <p>The intent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>其他</p>
+         */
         @NameInMap("intentionName")
         public String intentionName;
 
+        /**
+         * <p>The intent script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉，我没有明白您的意思，或者您可以拨打我们的客服热线，请客服人员为您解答。</p>
+         */
         @NameInMap("intentionScript")
         public String intentionScript;
 
+        /**
+         * <p>Specifies whether the conversation was interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("interrupt")
         public Boolean interrupt;
 
         /**
+         * <p>The recommended intent.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -128,18 +165,38 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public String recommendIntention;
 
         /**
+         * <p>The recommended script.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
         @NameInMap("recommendScript")
         public String recommendScript;
 
+        /**
+         * <p>The script for the Q\&amp;A pair. This is incremental data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>话题</p>
+         */
         @NameInMap("selfDirectedScript")
         public String selfDirectedScript;
 
+        /**
+         * <p>The script for the Q\&amp;A pair. This is the full data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>关于宇宙的大小，这是一个非常深奥的科学话题</p>
+         */
         @NameInMap("selfDirectedScriptFullContent")
         public String selfDirectedScriptFullContent;
 
+        /**
+         * <p>Specifies whether to skip the current recognition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("skipCurrentRecognize")
         public Boolean skipCurrentRecognize;
 
@@ -248,6 +305,8 @@ public class RealTimeDialogResponseBody extends TeaModel {
 
     public static class RealTimeDialogResponseBodyChoicesMessage extends TeaModel {
         /**
+         * <p>The analysis process.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -255,7 +314,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public String analysisProcess;
 
         /**
-         * <p>time</p>
+         * <p>The time.</p>
          * 
          * <strong>example:</strong>
          * <p>1735139569523</p>
@@ -264,6 +323,8 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public String callTime;
 
         /**
+         * <p>Hang up the dialog.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -271,22 +332,44 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public Boolean hangUpDialog;
 
         /**
+         * <p>The intent code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1853360771162058752</p>
          */
         @NameInMap("intentionCode")
         public String intentionCode;
 
+        /**
+         * <p>The intent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>其它</p>
+         */
         @NameInMap("intentionName")
         public String intentionName;
 
+        /**
+         * <p>The intent script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉，我没有明白您的意思，或者您可以拨打我们的客服热线，请客服人员为您解答。</p>
+         */
         @NameInMap("intentionScript")
         public String intentionScript;
 
+        /**
+         * <p>Specifies whether the conversation was interrupted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("interrupt")
         public Boolean interrupt;
 
         /**
+         * <p>The recommended intent.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -294,6 +377,8 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public String recommendIntention;
 
         /**
+         * <p>The recommended script.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -301,15 +386,26 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public String recommendScript;
 
         /**
+         * <p>The script for the Q\&amp;A pair. This is incremental data. This is empty for streaming responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
         @NameInMap("selfDirectedScript")
         public String selfDirectedScript;
 
+        /**
+         * <p>The script for the Q\&amp;A pair. This is the full data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>关于宇宙的大小，这是一个非常深奥的科学话题</p>
+         */
         @NameInMap("selfDirectedScriptFullContent")
         public String selfDirectedScriptFullContent;
 
+        /**
+         * <p>Specifies whether to skip the current recognition.</p>
+         */
         @NameInMap("skipCurrentRecognize")
         public Boolean skipCurrentRecognize;
 
@@ -417,10 +513,15 @@ public class RealTimeDialogResponseBody extends TeaModel {
     }
 
     public static class RealTimeDialogResponseBodyChoices extends TeaModel {
+        /**
+         * <p>The incremental result returned for streaming responses. This is empty for non-streaming responses.</p>
+         */
         @NameInMap("delta")
         public RealTimeDialogResponseBodyChoicesDelta delta;
 
         /**
+         * <p>The value is \<code>stop\\</code> if the session ends. The value is \<code>null\\</code> if the session is in progress. If \<code>success\\</code> is \<code>false\\</code>, this parameter returns an error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>stop</p>
          */
@@ -428,12 +529,17 @@ public class RealTimeDialogResponseBody extends TeaModel {
         public String finishReason;
 
         /**
+         * <p>The sequence number in the choices list.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("index")
         public Integer index;
 
+        /**
+         * <p>The full result returned for non-streaming responses. This is empty for streaming responses.</p>
+         */
         @NameInMap("message")
         public RealTimeDialogResponseBodyChoicesMessage message;
 

@@ -4,10 +4,26 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class InvokePluginRequest extends TeaModel {
+    /**
+     * <p>Request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *         &quot;query&quot;: &quot;介绍一下贵金属业务&quot;,
+     *         &quot;filters&quot;: [
+     *             {
+     *                 &quot;libraryId&quot;: &quot;9xznrxw&quot;
+     *             }
+     *         ],
+     *         &quot;topK&quot;: 1
+     *     }</p>
+     */
     @NameInMap("params")
     public java.util.Map<String, ?> params;
 
     /**
+     * <p>The plugin ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3mj87da7zr</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLibraryListRequest extends TeaModel {
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,12 +14,20 @@ public class GetLibraryListRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Number of records per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Search keywords. Supports document library names and descriptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试文档库</p>
+     */
     @NameInMap("query")
     public String query;
 

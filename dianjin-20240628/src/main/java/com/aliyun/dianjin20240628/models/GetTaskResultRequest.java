@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskResultRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

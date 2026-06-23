@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDialogResponseBody extends TeaModel {
     /**
+     * <p>The time consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreateDialogResponseBodyData data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class CreateDialogResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class CreateDialogResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class CreateDialogResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>003D019A-1BB3-53EC-A0D2-CE76DA5D73B1</p>
      */
@@ -43,6 +56,8 @@ public class CreateDialogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class CreateDialogResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 00:00:00</p>
      */
@@ -126,10 +143,18 @@ public class CreateDialogResponseBody extends TeaModel {
     }
 
     public static class CreateDialogResponseBodyData extends TeaModel {
+        /**
+         * <p>The opening remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好，我是XX客服人员。</p>
+         */
         @NameInMap("openingRemarks")
         public String openingRemarks;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1728545917713234</p>
          */

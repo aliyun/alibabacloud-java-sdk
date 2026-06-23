@@ -7,6 +7,9 @@ public class DashscopeAsyncTaskFinishEventHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>Indicates whether the request is part of a stress test</p>
+     */
     @NameInMap("X-Load-Test")
     public Boolean xLoadTest;
 

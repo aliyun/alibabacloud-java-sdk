@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDialogRequest extends TeaModel {
     /**
+     * <p>The channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,18 @@ public class CreateDialogRequest extends TeaModel {
     @NameInMap("channel")
     public String channel;
 
+    /**
+     * <p>Specifies whether to enable the intent library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enableLibrary")
     public Boolean enableLibrary;
 
     /**
+     * <p>Other information.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -24,6 +33,7 @@ public class CreateDialogRequest extends TeaModel {
     public java.util.Map<String, ?> metaData;
 
     /**
+     * <p>The playbook code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +42,14 @@ public class CreateDialogRequest extends TeaModel {
     @NameInMap("playCode")
     public String playCode;
 
+    /**
+     * <p>A list of Q\&amp;A library IDs.</p>
+     */
     @NameInMap("qaLibraryList")
     public java.util.List<String> qaLibraryList;
 
     /**
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +58,12 @@ public class CreateDialogRequest extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Specifies whether to enable autonomous Q\&amp;A.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("selfDirected")
     public Boolean selfDirected;
 

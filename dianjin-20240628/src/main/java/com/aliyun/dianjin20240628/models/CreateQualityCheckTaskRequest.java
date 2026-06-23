@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateQualityCheckTaskRequest extends TeaModel {
     /**
+     * <p>The conversation content. If associated with a quality check scenario, pass multiple conversations. Otherwise, pass only one.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("conversationList")
     public CreateQualityCheckTaskRequestConversationList conversationList;
 
     /**
+     * <p>The business occurrence time. The system uses this to record submission time, make task scheduling priority decisions, and so on.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,13 +21,20 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
     @NameInMap("gmtService")
     public String gmtService;
 
+    /**
+     * <p>The metadata. These are properties related to business that rules consume during execution. The business system passes these in real-time when initiating a quality check.</p>
+     */
     @NameInMap("metaData")
     public java.util.Map<String, String> metaData;
 
+    /**
+     * <p>The quality check rule group.</p>
+     */
     @NameInMap("qualityGroup")
     public java.util.List<String> qualityGroup;
 
     /**
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +43,17 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The scenario code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>o9c8u8</p>
+     */
     @NameInMap("sceneCode")
     public String sceneCode;
 
     /**
+     * <p>Quality check type:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,6 +125,8 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
 
     public static class CreateQualityCheckTaskRequestConversationListDialogueList extends TeaModel {
         /**
+         * <p>The start time of this sentence. This is the offset time in milliseconds from the start of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -116,6 +134,8 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
         public Integer begin;
 
         /**
+         * <p>The start time of this sentence.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-23 14:57:50</p>
          */
@@ -123,12 +143,18 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
         public String beginTime;
 
         /**
+         * <p>The specific content of the dialogue.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好，我是2001，很高兴为您服务！</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>The unique identifier of the dialogue role.</p>
+         * 
          * <strong>example:</strong>
          * <p>2348234</p>
          */
@@ -136,6 +162,8 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
         public String customerId;
 
         /**
+         * <p>The customer service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>23874627346</p>
          */
@@ -143,6 +171,8 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
         public String customerServiceId;
 
         /**
+         * <p>Agent type:</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -150,6 +180,8 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
         public String customerServiceType;
 
         /**
+         * <p>The end time of this sentence. This is the offset time in milliseconds from the start of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -157,6 +189,7 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
         public Integer end;
 
         /**
+         * <p>Role:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +199,7 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
         public String role;
 
         /**
+         * <p>Dialogue content type:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,6 +289,8 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
 
     public static class CreateQualityCheckTaskRequestConversationList extends TeaModel {
         /**
+         * <p>Call type:</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -262,32 +298,51 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
         public String callType;
 
         /**
+         * <p>The Customer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("customerId")
         public String customerId;
 
+        /**
+         * <p>The customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("customerName")
         public String customerName;
 
         /**
+         * <p>The customer service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("customerServiceId")
         public String customerServiceId;
 
+        /**
+         * <p>The customer service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>李四</p>
+         */
         @NameInMap("customerServiceName")
         public String customerServiceName;
 
         /**
+         * <p>The list of dialogue details.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("dialogueList")
         public java.util.List<CreateQualityCheckTaskRequestConversationListDialogueList> dialogueList;
 
         /**
+         * <p>The conversation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-27 11:23:20</p>
          */

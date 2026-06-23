@@ -16,22 +16,14 @@ public class ExchangeEntitlementResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("retryAble")
     public Boolean retryAble;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -86,7 +78,7 @@ public class ExchangeEntitlementResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>100000</p>
          */
         @NameInMap("quotaLimit")
         public Long quotaLimit;
@@ -190,7 +182,7 @@ public class ExchangeEntitlementResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>a1b2c3d4e5f6...</p>
+         * <p>a1b2c3d4e5f6</p>
          */
         @NameInMap("keyHash")
         public String keyHash;
@@ -202,10 +194,6 @@ public class ExchangeEntitlementResponseBody extends TeaModel {
         @NameInMap("redemptionOrderNo")
         public String redemptionOrderNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("reused")
         public Boolean reused;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunChatResultGenerationRequest extends TeaModel {
     /**
+     * <p>Hyperparameters used for inference.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;topP&quot;: 0.8}</p>
      */
@@ -12,12 +14,14 @@ public class RunChatResultGenerationRequest extends TeaModel {
     public java.util.Map<String, ?> inferenceParameters;
 
     /**
+     * <p>Messages to input into the model.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("messages")
     public java.util.List<RunChatResultGenerationRequestMessages> messages;
 
     /**
+     * <p>The model service type. Get this value from the /api/app/config API endpoint in the llmHelperTypeList field.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,8 @@ public class RunChatResultGenerationRequest extends TeaModel {
     public String modelId;
 
     /**
+     * <p>Session ID. Use this to mark a conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>237645726354</p>
      */
@@ -34,12 +40,17 @@ public class RunChatResultGenerationRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Streaming mode. Set to true for streaming responses. Set to false for full responses. Default is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("stream")
     public Boolean stream;
 
+    /**
+     * <p>Tool information. Specify a list of tools the model can call. When multiple tools are provided, the model selects one to generate a response.</p>
+     */
     @NameInMap("tools")
     public java.util.List<RunChatResultGenerationRequestTools> tools;
 
@@ -97,10 +108,18 @@ public class RunChatResultGenerationRequest extends TeaModel {
     }
 
     public static class RunChatResultGenerationRequestMessages extends TeaModel {
+        /**
+         * <p>Message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你是一个信息处理专家</p>
+         */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>Message role.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -132,6 +151,8 @@ public class RunChatResultGenerationRequest extends TeaModel {
 
     public static class RunChatResultGenerationRequestToolsFunctionParameters extends TeaModel {
         /**
+         * <p>Properties.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *                             &quot;location&quot;: {
@@ -151,6 +172,8 @@ public class RunChatResultGenerationRequest extends TeaModel {
         public java.util.Map<String, ?> properties;
 
         /**
+         * <p>Type.</p>
+         * 
          * <strong>example:</strong>
          * <p>object</p>
          */
@@ -181,19 +204,33 @@ public class RunChatResultGenerationRequest extends TeaModel {
     }
 
     public static class RunChatResultGenerationRequestToolsFunction extends TeaModel {
+        /**
+         * <p>A string describing the tool function. This helps the model decide when and how to call it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>工具函数的描述</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>A string representing the tool function name. It must contain only letters, digits, underscores, and hyphens. Maximum length is 64 characters.</p>
+         * 
          * <strong>example:</strong>
          * <p>get_time</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>An object describing the tool parameters. It must be a valid JSON Schema.</p>
+         */
         @NameInMap("parameters")
         public RunChatResultGenerationRequestToolsFunctionParameters parameters;
 
+        /**
+         * <p>List of required parameters.</p>
+         */
         @NameInMap("required")
         public java.util.List<String> required;
 
@@ -237,10 +274,15 @@ public class RunChatResultGenerationRequest extends TeaModel {
     }
 
     public static class RunChatResultGenerationRequestTools extends TeaModel {
+        /**
+         * <p>An object containing name, description, and parameters.</p>
+         */
         @NameInMap("function")
         public RunChatResultGenerationRequestToolsFunction function;
 
         /**
+         * <p>A string indicating the tool type. Currently, only &quot;function&quot; is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>function</p>
          */

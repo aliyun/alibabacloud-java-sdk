@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetParseResultRequest extends TeaModel {
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetParseResultRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>The document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,12 @@ public class GetParseResultRequest extends TeaModel {
     @NameInMap("libraryId")
     public String libraryId;
 
+    /**
+     * <p>Specifies whether to return the result as a URL. If true, the parsing result is in resultUrl, and result is empty. If false, the parsing result is in result, and resultUrl is empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("useUrlResult")
     public Boolean useUrlResult;
 

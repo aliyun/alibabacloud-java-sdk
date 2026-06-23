@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DashscopeAsyncTaskFinishEventRequest extends TeaModel {
     /**
+     * <p>Request body parameters</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

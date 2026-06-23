@@ -4,27 +4,89 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class GetTaskStatusResponseBody extends TeaModel {
+    /**
+     * <p>Execution time, in milliseconds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data. The current status of the task.</p>
+     * <ul>
+     * <li><p>invalid: Parameters or dependent resources are unavailable.</p>
+     * </li>
+     * <li><p>success: The task completed successfully.</p>
+     * </li>
+     * <li><p>evict: The task was canceled.</p>
+     * </li>
+     * <li><p>error: The task failed.</p>
+     * </li>
+     * <li><p>running: The task is running.</p>
+     * </li>
+     * <li><p>pending: The task is queued.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("data")
     public String data;
 
+    /**
+     * <p>Data type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("dataType")
     public String dataType;
 
+    /**
+     * <p>Error code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30F6AD44-F078-540D-B5A5-1E519C8E9E6D</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>Timestamp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-04-24 11:54:34</p>
+     */
     @NameInMap("time")
     public String time;
 

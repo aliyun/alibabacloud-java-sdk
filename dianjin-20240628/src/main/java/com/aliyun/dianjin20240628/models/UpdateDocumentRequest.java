@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDocumentRequest extends TeaModel {
     /**
+     * <p>Document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDocumentRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>Document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class UpdateDocumentRequest extends TeaModel {
     public String libraryId;
 
     /**
+     * <p>Document metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *         &quot;businessId&quot;: &quot;12321&quot;
@@ -32,6 +36,8 @@ public class UpdateDocumentRequest extends TeaModel {
     public java.util.Map<String, ?> meta;
 
     /**
+     * <p>Document title.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

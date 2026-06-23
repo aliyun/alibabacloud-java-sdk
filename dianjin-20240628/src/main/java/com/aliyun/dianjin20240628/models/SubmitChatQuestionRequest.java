@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitChatQuestionRequest extends TeaModel {
     /**
+     * <p>Current time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,18 @@ public class SubmitChatQuestionRequest extends TeaModel {
     public String gmtService;
 
     /**
+     * <p>Live channel script</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我们家的酒全都是老酒，酒厂直售【当前用户问句】，保证正儿八经的自家酿造，地址都能告诉大家，品质实实在在的有保障。我们家这款酒入口非常绵柔顺滑，酱香、粮食香、花果香层层递进，空杯留香能持续48小时，不会有上头的感觉。今天我们是厂家直销，大家平时买酒在烟酒店要经过好几个环节的中间商，每个环节都要加价，今天在这里拍下，只会让你省不少冤枉钱。如果说你拿去存酒的话， 拍蓝瓶的云端系列也可以，越存的话会越香，你拿去托人办事、请人吃饭、商务宴请、搞接待送礼，直接带白瓶云悠系列。</p>
      */
     @NameInMap("liveScriptContent")
     public String liveScriptContent;
 
     /**
+     * <p>Enable small talk. Default is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -27,12 +34,14 @@ public class SubmitChatQuestionRequest extends TeaModel {
     public Boolean openSmallTalk;
 
     /**
+     * <p>Question list</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("questionList")
     public java.util.List<SubmitChatQuestionRequestQuestionList> questionList;
 
     /**
+     * <p>Request ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,7 @@ public class SubmitChatQuestionRequest extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Session ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,12 +115,17 @@ public class SubmitChatQuestionRequest extends TeaModel {
 
     public static class SubmitChatQuestionRequestQuestionList extends TeaModel {
         /**
+         * <p>Question content</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是多大的体积</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>Original question time</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,10 +134,17 @@ public class SubmitChatQuestionRequest extends TeaModel {
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>Reply content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是三升的。</p>
+         */
         @NameInMap("reply")
         public String reply;
 
         /**
+         * <p>Session ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +154,8 @@ public class SubmitChatQuestionRequest extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Question type: PRODUCT_QA (audio submission), GOSSIP (operation submission), UNKNOWN (unknown)</p>
+         * 
          * <strong>example:</strong>
          * <p>PRODUCT_QA</p>
          */
@@ -139,6 +163,7 @@ public class SubmitChatQuestionRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>Unique ID of the user asking questions in the live channel</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +173,11 @@ public class SubmitChatQuestionRequest extends TeaModel {
         public String userId;
 
         /**
+         * <p>Name of the user asking questions in the live channel</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张**</p>
          */
         @NameInMap("userName")
         public String userName;

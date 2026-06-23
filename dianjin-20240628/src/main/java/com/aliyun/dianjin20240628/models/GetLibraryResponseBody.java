@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetLibraryResponseBody extends TeaModel {
     /**
+     * <p>Response time in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>The response data object.</p>
+     */
     @NameInMap("data")
     public GetLibraryResponseBodyData data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetLibraryResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class GetLibraryResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Fault type</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class GetLibraryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>44BD277A-87F9-5310-8D63-3E6645F1DA85</p>
      */
@@ -43,6 +56,8 @@ public class GetLibraryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GetLibraryResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>UNIX timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 00:00:00</p>
      */
@@ -127,6 +144,8 @@ public class GetLibraryResponseBody extends TeaModel {
 
     public static class GetLibraryResponseBodyDataIndexSettingChunkStrategy extends TeaModel {
         /**
+         * <p>Enable layout-based splitting.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,6 +153,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean docTreeSplit;
 
         /**
+         * <p>The layout-based splitting size.</p>
+         * 
          * <strong>example:</strong>
          * <p>160</p>
          */
@@ -141,6 +162,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Integer docTreeSplitSize;
 
         /**
+         * <p>Enhance images.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -148,6 +171,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enhanceGraph;
 
         /**
+         * <p>Enhance tables.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -155,6 +180,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enhanceTable;
 
         /**
+         * <p>The overlap length between chunks.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -162,6 +189,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Integer overlap;
 
         /**
+         * <p>Split by sentence.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -169,6 +198,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean sentenceSplit;
 
         /**
+         * <p>The sentence-based splitting size.</p>
+         * 
          * <strong>example:</strong>
          * <p>160</p>
          */
@@ -176,6 +207,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Integer sentenceSplitSize;
 
         /**
+         * <p>The chunk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>256</p>
          */
@@ -183,6 +216,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>Enable chunking.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -270,6 +305,8 @@ public class GetLibraryResponseBody extends TeaModel {
 
     public static class GetLibraryResponseBodyDataIndexSettingModelConfig extends TeaModel {
         /**
+         * <p>temperature</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -310,6 +347,8 @@ public class GetLibraryResponseBody extends TeaModel {
 
     public static class GetLibraryResponseBodyDataIndexSettingQueryEnhancer extends TeaModel {
         /**
+         * <p>Enable multi-turn query enhancement.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -317,6 +356,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enableFollowUp;
 
         /**
+         * <p>Use Large Language Model (LLM) knowledge to decompose queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -324,6 +365,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enableMultiQuery;
 
         /**
+         * <p>Use Large Language Model (LLM) knowledge to answer questions.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -331,6 +374,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enableOpenQa;
 
         /**
+         * <p>Rewrite queries using domain-specific knowledge.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -338,6 +383,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enableQueryRewrite;
 
         /**
+         * <p>Record session history.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -345,6 +392,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enableSession;
 
         /**
+         * <p>The document library ID used for knowledge rewriting.</p>
+         * 
          * <strong>example:</strong>
          * <p>2836482634</p>
          */
@@ -352,6 +401,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public String localKnowledgeId;
 
         /**
+         * <p>Include document references in responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -423,6 +474,8 @@ public class GetLibraryResponseBody extends TeaModel {
 
     public static class GetLibraryResponseBodyDataIndexSettingRecallStrategy extends TeaModel {
         /**
+         * <p>The merge and sort policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
@@ -430,6 +483,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public String documentRankType;
 
         /**
+         * <p>The number of results returned after merging two recall paths.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -461,6 +516,8 @@ public class GetLibraryResponseBody extends TeaModel {
 
     public static class GetLibraryResponseBodyDataIndexSettingTextIndexSetting extends TeaModel {
         /**
+         * <p>The text index type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ElasticSearch</p>
          */
@@ -468,6 +525,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Enable text indexing.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -475,6 +534,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The text index analyzer: Standard, IkMaxWord, or IkSmart.</p>
+         * 
          * <strong>example:</strong>
          * <p>IkMaxWord</p>
          */
@@ -482,6 +543,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public String indexAnalyzer;
 
         /**
+         * <p>The ranking threshold for text indexing.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -489,6 +552,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Double rankThreshold;
 
         /**
+         * <p>The text index search analyzer: Standard, IkMaxWord, or IkSmart.</p>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
@@ -496,6 +561,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public String searchAnalyzer;
 
         /**
+         * <p>The number of final summary results from text indexing.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -559,6 +626,8 @@ public class GetLibraryResponseBody extends TeaModel {
 
     public static class GetLibraryResponseBodyDataIndexSettingVectorIndexSetting extends TeaModel {
         /**
+         * <p>The vector index source. We recommend ADB.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADB</p>
          */
@@ -566,6 +635,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The text embedding model for the vector index.</p>
+         * 
          * <strong>example:</strong>
          * <p>DashScope</p>
          */
@@ -573,6 +644,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public String embeddingType;
 
         /**
+         * <p>Enable vector indexing.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -580,6 +653,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The ranking threshold for vector indexing.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -587,6 +662,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Double rankThreshold;
 
         /**
+         * <p>Number of final results returned by the vector index.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -641,24 +718,48 @@ public class GetLibraryResponseBody extends TeaModel {
     }
 
     public static class GetLibraryResponseBodyDataIndexSetting extends TeaModel {
+        /**
+         * <p>The chunking strategy.</p>
+         */
         @NameInMap("chunkStrategy")
         public GetLibraryResponseBodyDataIndexSettingChunkStrategy chunkStrategy;
 
+        /**
+         * <p>Model configuration.</p>
+         */
         @NameInMap("modelConfig")
         public GetLibraryResponseBodyDataIndexSettingModelConfig modelConfig;
 
+        /**
+         * <p>The prompt role style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你是一个信息处理专家。</p>
+         */
         @NameInMap("promptRoleStyle")
         public String promptRoleStyle;
 
+        /**
+         * <p>Query enhancement settings.</p>
+         */
         @NameInMap("queryEnhancer")
         public GetLibraryResponseBodyDataIndexSettingQueryEnhancer queryEnhancer;
 
+        /**
+         * <p>The recall strategy.</p>
+         */
         @NameInMap("recallStrategy")
         public GetLibraryResponseBodyDataIndexSettingRecallStrategy recallStrategy;
 
+        /**
+         * <p>Text index settings.</p>
+         */
         @NameInMap("textIndexSetting")
         public GetLibraryResponseBodyDataIndexSettingTextIndexSetting textIndexSetting;
 
+        /**
+         * <p>Vector index settings.</p>
+         */
         @NameInMap("vectorIndexSetting")
         public GetLibraryResponseBodyDataIndexSettingVectorIndexSetting vectorIndexSetting;
 
@@ -726,10 +827,18 @@ public class GetLibraryResponseBody extends TeaModel {
     }
 
     public static class GetLibraryResponseBodyData extends TeaModel {
+        /**
+         * <p>The document library description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档库的描述</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The number of documents in the library.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -737,6 +846,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public Long documentCount;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -744,6 +855,8 @@ public class GetLibraryResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time in YYYY-MM-DD HH:MM:SS format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -751,15 +864,26 @@ public class GetLibraryResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The document library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>19386728376</p>
          */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The document library index settings.</p>
+         */
         @NameInMap("indexSetting")
         public GetLibraryResponseBodyDataIndexSetting indexSetting;
 
+        /**
+         * <p>The document library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档库</p>
+         */
         @NameInMap("libraryName")
         public String libraryName;
 

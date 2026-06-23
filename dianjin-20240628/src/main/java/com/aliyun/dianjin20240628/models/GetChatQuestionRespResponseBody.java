@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetChatQuestionRespResponseBody extends TeaModel {
     /**
+     * <p>Time consumed</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("data")
     public GetChatQuestionRespResponseBodyData data;
 
     /**
+     * <p>Data type</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>44BD277A-87F9-5310-8D63-3E6645F1DA85</p>
      */
@@ -43,6 +56,8 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 00:00:00</p>
      */
@@ -126,23 +143,45 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
     }
 
     public static class GetChatQuestionRespResponseBodyDataQuestionList extends TeaModel {
+        /**
+         * <p>Question content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>今天天气怎么样</p>
+         */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>Original question time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-17 10:05:00</p>
          */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>Original question</p>
+         * 
+         * <strong>example:</strong>
+         * <p>今天天气怎么样</p>
+         */
         @NameInMap("oriContent")
         public String oriContent;
 
+        /**
+         * <p>Reply content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>感谢您的支持！</p>
+         */
         @NameInMap("reply")
         public String reply;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1732846760323001</p>
          */
@@ -150,6 +189,8 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Question type [PRODUCT_QA (Audio submission), GOSSIP (Operation submission), UNKNOWN (Unknown)]</p>
+         * 
          * <strong>example:</strong>
          * <p>PRODUCT_QA</p>
          */
@@ -157,12 +198,20 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Unique ID of the user who asked the question in the live channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>39847834568436</p>
          */
         @NameInMap("userId")
         public String userId;
 
+        /**
+         * <p>Name of the user who asked the question in the live channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张*</p>
+         */
         @NameInMap("userName")
         public String userName;
 
@@ -239,12 +288,17 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
 
     public static class GetChatQuestionRespResponseBodyData extends TeaModel {
         /**
+         * <p>Current state [INIT (Initialization), PROCESSING (Processing), COMPLETED (Completed)]</p>
+         * 
          * <strong>example:</strong>
          * <p>PROCESSING</p>
          */
         @NameInMap("currentState")
         public String currentState;
 
+        /**
+         * <p>Question list</p>
+         */
         @NameInMap("questionList")
         public java.util.List<GetChatQuestionRespResponseBodyDataQuestionList> questionList;
 

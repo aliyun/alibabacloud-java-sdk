@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RecognizeIntentionResponseBody extends TeaModel {
     /**
+     * <p>Processing time in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public RecognizeIntentionResponseBodyData data;
 
     /**
+     * <p>Data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class RecognizeIntentionResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class RecognizeIntentionResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class RecognizeIntentionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>003D019A-1BB3-53EC-A0D2-CE76DA5D73B1</p>
      */
@@ -43,6 +56,8 @@ public class RecognizeIntentionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class RecognizeIntentionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -126,25 +143,57 @@ public class RecognizeIntentionResponseBody extends TeaModel {
     }
 
     public static class RecognizeIntentionResponseBodyData extends TeaModel {
+        /**
+         * <p>Analysis process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户回答的内容与提供的意图列表描述均不匹配，没有表达出对账单、还款、天气或其他服务的具体需求或问题。</p>
+         */
         @NameInMap("analysisProcess")
         public String analysisProcess;
 
         /**
+         * <p>Intent code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>-1</p>
          */
         @NameInMap("intentionCode")
         public String intentionCode;
 
+        /**
+         * <p>Intent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>其它</p>
+         */
         @NameInMap("intentionName")
         public String intentionName;
 
+        /**
+         * <p>Intent script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>朱先生，理解您可能对天气感兴趣，但更重要的是您的账户情况。请让我们专注于您未偿还的款项，这对您的信用健康至关重要。</p>
+         */
         @NameInMap("intentionScript")
         public String intentionScript;
 
+        /**
+         * <p>Recommended intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户试图回避谈论逾期还款的话题</p>
+         */
         @NameInMap("recommendIntention")
         public String recommendIntention;
 
+        /**
+         * <p>Recommended script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>朱先生，理解您可能对天气感兴趣，但更重要的是您的账户情况。请让我们专注于您未偿还的款项，这对您的信用健康至关重要。</p>
+         */
         @NameInMap("recommendScript")
         public String recommendScript;
 

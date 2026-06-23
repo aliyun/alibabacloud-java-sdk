@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RecognizeIntentionRequest extends TeaModel {
     /**
+     * <p>Enable analysis.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class RecognizeIntentionRequest extends TeaModel {
     public Boolean analysis;
 
     /**
+     * <p>Business type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,24 +24,45 @@ public class RecognizeIntentionRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Conversation text.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>##客服##：您好，请问是朱杰先生吗？这里是诚信财务的周莉。我们发现您有一项款项昨天是账单日，但您还没还款，这很可能是一个小小的疏忽。来电是提醒您尽快完成还款，避免影响您的信用记录。\n ##客户##：今天天气怎么样呢？</p>
      */
     @NameInMap("conversation")
     public String conversation;
 
+    /**
+     * <p>Global intent list. Required when opType is hierarchical.</p>
+     */
     @NameInMap("globalIntentionList")
     public java.util.List<RecognizeIntentionRequestGlobalIntentionList> globalIntentionList;
 
+    /**
+     * <p>Hierarchical intent list. Required when opType is hierarchical.</p>
+     */
     @NameInMap("hierarchicalIntentionList")
     public java.util.List<RecognizeIntentionRequestHierarchicalIntentionList> hierarchicalIntentionList;
 
+    /**
+     * <p>Intent library: Local intent library code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>collection</p>
+     */
     @NameInMap("intentionDomainCode")
     public String intentionDomainCode;
 
+    /**
+     * <p>Intent list. Required when bizType is not attitude.</p>
+     */
     @NameInMap("intentionList")
     public java.util.List<RecognizeIntentionRequestIntentionList> intentionList;
 
     /**
+     * <p>Operation type.</p>
+     * 
      * <strong>example:</strong>
      * <p>common</p>
      */
@@ -46,6 +70,8 @@ public class RecognizeIntentionRequest extends TeaModel {
     public String opType;
 
     /**
+     * <p>Recommend intent.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -130,19 +156,39 @@ public class RecognizeIntentionRequest extends TeaModel {
     }
 
     public static class RecognizeIntentionRequestGlobalIntentionList extends TeaModel {
+        /**
+         * <p>Intent description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>正常付款3</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Intent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>正常付款3</p>
+         */
         @NameInMap("intention")
         public String intention;
 
         /**
+         * <p>Intent code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1810566978021232640</p>
          */
         @NameInMap("intentionCode")
         public String intentionCode;
 
+        /**
+         * <p>Intent script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>好的，那先不打扰您了，祝您生活愉快！再见！</p>
+         */
         @NameInMap("intentionScript")
         public String intentionScript;
 
@@ -186,19 +232,39 @@ public class RecognizeIntentionRequest extends TeaModel {
     }
 
     public static class RecognizeIntentionRequestHierarchicalIntentionList extends TeaModel {
+        /**
+         * <p>Intent description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>询问股票价格</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Intent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>询问股票价格</p>
+         */
         @NameInMap("intention")
         public String intention;
 
         /**
+         * <p>Intent code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1810929291010150400</p>
          */
         @NameInMap("intentionCode")
         public String intentionCode;
 
+        /**
+         * <p>Intent script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>好的，那先不打扰您了，祝您生活愉快！再见！</p>
+         */
         @NameInMap("intentionScript")
         public String intentionScript;
 
@@ -242,19 +308,39 @@ public class RecognizeIntentionRequest extends TeaModel {
     }
 
     public static class RecognizeIntentionRequestIntentionList extends TeaModel {
+        /**
+         * <p>Intent description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户表示忘记还款</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Intent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户表示忘记还款</p>
+         */
         @NameInMap("intention")
         public String intention;
 
         /**
+         * <p>Intent code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1808766224000262144</p>
          */
         @NameInMap("intentionCode")
         public String intentionCode;
 
+        /**
+         * <p>Intent script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>好的，那先不打扰您了，祝您生活愉快！再见！</p>
+         */
         @NameInMap("intentionScript")
         public String intentionScript;
 

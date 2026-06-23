@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocumentListRequest extends TeaModel {
     /**
+     * <p>The document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetDocumentListRequest extends TeaModel {
     public String libraryId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,12 +24,20 @@ public class GetDocumentListRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The document status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>即将可用</p>
+     */
     @NameInMap("status")
     public String status;
 

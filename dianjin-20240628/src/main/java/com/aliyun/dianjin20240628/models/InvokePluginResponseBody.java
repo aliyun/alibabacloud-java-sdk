@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InvokePluginResponseBody extends TeaModel {
     /**
+     * <p>Response time in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class InvokePluginResponseBody extends TeaModel {
     public Long cost;
 
     /**
+     * <p>Response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;jobWaiting\&quot;: [0, 0], \&quot;timestamps\&quot;: [1713383820, 1713383880], \&quot;jobUsage\&quot;: [0, 0], \&quot;quotaUsage\&quot;: [123, 32]}</p>
      */
@@ -19,6 +23,8 @@ public class InvokePluginResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>Data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class InvokePluginResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class InvokePluginResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -40,6 +50,8 @@ public class InvokePluginResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>915AAAB9-4908-5224-9E53-9E9D7D0AA94B</p>
      */
@@ -47,6 +59,8 @@ public class InvokePluginResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class InvokePluginResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp in YYYY-MM-DD HH:MM:SS format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */

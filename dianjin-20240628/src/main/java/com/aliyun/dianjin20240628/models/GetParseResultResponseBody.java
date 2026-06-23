@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetParseResultResponseBody extends TeaModel {
     /**
+     * <p>The time consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetParseResultResponseBodyData data;
 
     /**
+     * <p>The data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetParseResultResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class GetParseResultResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class GetParseResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0abb793617204049360065953ec6dd</p>
      */
@@ -43,6 +56,8 @@ public class GetParseResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GetParseResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -127,6 +144,8 @@ public class GetParseResultResponseBody extends TeaModel {
 
     public static class GetParseResultResponseBodyData extends TeaModel {
         /**
+         * <p>The file type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -134,6 +153,8 @@ public class GetParseResultResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The provider type.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -141,6 +162,8 @@ public class GetParseResultResponseBody extends TeaModel {
         public String providerType;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b0a202e2-5031-4589-a6d7-39185f0d8d01</p>
          */
@@ -148,6 +171,8 @@ public class GetParseResultResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The parsing result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *           &quot;Status&quot;: &quot;Success&quot;,
@@ -159,10 +184,18 @@ public class GetParseResultResponseBody extends TeaModel {
         @NameInMap("result")
         public java.util.Map<String, ?> result;
 
+        /**
+         * <p>The parsing result returned as a URL. You can download it directly. Note: Only PDF, DOC, DOCX, PPT, and PPTX file types have parsing results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.oss-cn-beijing.aliyuncs.com/library/3mjeoywx7z/1826661605606129665.json">https://xxx.oss-cn-beijing.aliyuncs.com/library/3mjeoywx7z/1826661605606129665.json</a></p>
+         */
         @NameInMap("resultUrl")
         public String resultUrl;
 
         /**
+         * <p>The document parsing status.</p>
+         * 
          * <strong>example:</strong>
          * <p>WaitRefresh</p>
          */

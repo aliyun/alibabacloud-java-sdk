@@ -21,17 +21,9 @@ public class QueryApiKeysResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("retryAble")
     public Boolean retryAble;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -83,7 +75,7 @@ public class QueryApiKeysResponseBody extends TeaModel {
     public static class QueryApiKeysResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>2024-12-31T23:59:59Z</p>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         @NameInMap("expiresAt")
         public String expiresAt;
@@ -104,30 +96,28 @@ public class QueryApiKeysResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>a1b2c3d4e5f6...</p>
+         * <p>1</p>
          */
         @NameInMap("keyHash")
         public String keyHash;
 
         /**
-         * <p><strong>API Key ID</strong></p>
-         * 
          * <strong>example:</strong>
-         * <p>key_001</p>
+         * <p>1</p>
          */
         @NameInMap("keyId")
         public String keyId;
 
         /**
          * <strong>example:</strong>
-         * <p>ACTIVE</p>
+         * <p>success</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>1</p>
          */
         @NameInMap("tenantId")
         public String tenantId;

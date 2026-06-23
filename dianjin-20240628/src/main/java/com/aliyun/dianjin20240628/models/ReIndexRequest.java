@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReIndexRequest extends TeaModel {
     /**
+     * <p>The ID of the document.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RecallDocumentResponseBody extends TeaModel {
     /**
+     * <p>Time elapsed.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public RecallDocumentResponseBodyData data;
 
     /**
+     * <p>Data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class RecallDocumentResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class RecallDocumentResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class RecallDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc13a9517168617617186457e401f</p>
      */
@@ -43,6 +56,8 @@ public class RecallDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class RecallDocumentResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -126,16 +143,24 @@ public class RecallDocumentResponseBody extends TeaModel {
     }
 
     public static class RecallDocumentResponseBodyDataChunkListPos extends TeaModel {
+        /**
+         * <p>Coordinates.</p>
+         */
         @NameInMap("axisArray")
         public java.util.List<Double> axisArray;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <p>Text highlight area, used for text-type file highlighting.</p>
+         */
         @NameInMap("textHighlightArea")
         public java.util.List<Integer> textHighlightArea;
 
@@ -172,6 +197,8 @@ public class RecallDocumentResponseBody extends TeaModel {
 
     public static class RecallDocumentResponseBodyDataChunkList extends TeaModel {
         /**
+         * <p>Document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>823746762354</p>
          */
@@ -179,6 +206,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String chunkId;
 
         /**
+         * <p>Document chunk metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;1&quot;}</p>
          */
@@ -186,16 +215,26 @@ public class RecallDocumentResponseBody extends TeaModel {
         public java.util.Map<String, ?> chunkMeta;
 
         /**
+         * <p>Document chunk OSS address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://oss-xxx-hangzhou.com/xxx">http://oss-xxx-hangzhou.com/xxx</a></p>
          */
         @NameInMap("chunkOssUrl")
         public String chunkOssUrl;
 
+        /**
+         * <p>Document chunk text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档块</p>
+         */
         @NameInMap("chunkText")
         public String chunkText;
 
         /**
+         * <p>Document chunk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -203,6 +242,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String chunkType;
 
         /**
+         * <p>Document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>839468263472</p>
          */
@@ -210,6 +251,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -217,26 +260,41 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>Document library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dscsbdsk</p>
          */
         @NameInMap("libraryId")
         public String libraryId;
 
+        /**
+         * <p>Document library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档库</p>
+         */
         @NameInMap("libraryName")
         public String libraryName;
 
         /**
+         * <p>Next document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>982374872364</p>
          */
         @NameInMap("nextChunkId")
         public String nextChunkId;
 
+        /**
+         * <p>Document chunk position.</p>
+         */
         @NameInMap("pos")
         public java.util.List<RecallDocumentResponseBodyDataChunkListPos> pos;
 
         /**
+         * <p>Previous document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>827364827364832</p>
          */
@@ -244,6 +302,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String preChunkId;
 
         /**
+         * <p>Document chunk score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -251,6 +311,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>Document title.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -377,16 +439,24 @@ public class RecallDocumentResponseBody extends TeaModel {
     }
 
     public static class RecallDocumentResponseBodyDataChunkPartListPos extends TeaModel {
+        /**
+         * <p>Coordinates.</p>
+         */
         @NameInMap("axisArray")
         public java.util.List<Double> axisArray;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <p>Text highlight area, used for text-type file highlighting.</p>
+         */
         @NameInMap("textHighlightArea")
         public java.util.List<Integer> textHighlightArea;
 
@@ -423,6 +493,8 @@ public class RecallDocumentResponseBody extends TeaModel {
 
     public static class RecallDocumentResponseBodyDataChunkPartList extends TeaModel {
         /**
+         * <p>Document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>98327482364</p>
          */
@@ -430,6 +502,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String chunkId;
 
         /**
+         * <p>Document chunk metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;1&quot;}</p>
          */
@@ -437,16 +511,26 @@ public class RecallDocumentResponseBody extends TeaModel {
         public java.util.Map<String, ?> chunkMeta;
 
         /**
+         * <p>Document chunk OSS address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://oss-xxx-hangzhou.com/xxx">http://oss-xxx-hangzhou.com/xxx</a></p>
          */
         @NameInMap("chunkOssUrl")
         public String chunkOssUrl;
 
+        /**
+         * <p>Document chunk text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档块</p>
+         */
         @NameInMap("chunkText")
         public String chunkText;
 
         /**
+         * <p>Document chunk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -454,6 +538,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String chunkType;
 
         /**
+         * <p>Document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>92837482364</p>
          */
@@ -461,6 +547,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -468,26 +556,41 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>Document library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sjdhgjsd</p>
          */
         @NameInMap("libraryId")
         public String libraryId;
 
+        /**
+         * <p>Document library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档库</p>
+         */
         @NameInMap("libraryName")
         public String libraryName;
 
         /**
+         * <p>Next document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2387648263542</p>
          */
         @NameInMap("nextChunkId")
         public String nextChunkId;
 
+        /**
+         * <p>Document chunk position.</p>
+         */
         @NameInMap("pos")
         public java.util.List<RecallDocumentResponseBodyDataChunkPartListPos> pos;
 
         /**
+         * <p>Previous document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>32874682764</p>
          */
@@ -495,12 +598,20 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String preChunkId;
 
         /**
+         * <p>Document chunk score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
         @NameInMap("score")
         public Float score;
 
+        /**
+         * <p>Document title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档标题</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -625,6 +736,8 @@ public class RecallDocumentResponseBody extends TeaModel {
 
     public static class RecallDocumentResponseBodyDataDocuments extends TeaModel {
         /**
+         * <p>Document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>92837482364</p>
          */
@@ -632,6 +745,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Document metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;1&quot;}</p>
          */
@@ -639,6 +754,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public java.util.Map<String, ?> documentMeta;
 
         /**
+         * <p>Document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -646,6 +763,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -653,6 +772,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Document library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sjdhgjsd</p>
          */
@@ -660,6 +781,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String libraryId;
 
         /**
+         * <p>Document title.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -667,6 +790,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Document link.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://oss-xxx-hangzhou.com/test.pdf">http://oss-xxx-hangzhou.com/test.pdf</a></p>
          */
@@ -737,16 +862,24 @@ public class RecallDocumentResponseBody extends TeaModel {
     }
 
     public static class RecallDocumentResponseBodyDataTextChunkListPos extends TeaModel {
+        /**
+         * <p>Coordinates.</p>
+         */
         @NameInMap("axisArray")
         public java.util.List<Double> axisArray;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <p>Text highlight area, used for text-type file highlighting.</p>
+         */
         @NameInMap("textHighlightArea")
         public java.util.List<Integer> textHighlightArea;
 
@@ -783,6 +916,8 @@ public class RecallDocumentResponseBody extends TeaModel {
 
     public static class RecallDocumentResponseBodyDataTextChunkList extends TeaModel {
         /**
+         * <p>Document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>32874682364</p>
          */
@@ -790,6 +925,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String chunkId;
 
         /**
+         * <p>Document chunk metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;1&quot;}</p>
          */
@@ -797,16 +934,26 @@ public class RecallDocumentResponseBody extends TeaModel {
         public java.util.Map<String, ?> chunkMeta;
 
         /**
+         * <p>Document chunk OSS address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://oss-xxx-hangzhou.com/xxx">http://oss-xxx-hangzhou.com/xxx</a></p>
          */
         @NameInMap("chunkOssUrl")
         public String chunkOssUrl;
 
+        /**
+         * <p>Document chunk text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一段测试文档块</p>
+         */
         @NameInMap("chunkText")
         public String chunkText;
 
         /**
+         * <p>Document chunk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -814,6 +961,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String chunkType;
 
         /**
+         * <p>Document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8372467263542</p>
          */
@@ -821,6 +970,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -828,26 +979,41 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>Document library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>djsgfsjd</p>
          */
         @NameInMap("libraryId")
         public String libraryId;
 
+        /**
+         * <p>Document library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档库</p>
+         */
         @NameInMap("libraryName")
         public String libraryName;
 
         /**
+         * <p>Next document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>23874682432</p>
          */
         @NameInMap("nextChunkId")
         public String nextChunkId;
 
+        /**
+         * <p>Document chunk position.</p>
+         */
         @NameInMap("pos")
         public java.util.List<RecallDocumentResponseBodyDataTextChunkListPos> pos;
 
         /**
+         * <p>Previous document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>89473868346</p>
          */
@@ -855,12 +1021,20 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String preChunkId;
 
         /**
+         * <p>Document chunk score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
         @NameInMap("score")
         public Float score;
 
+        /**
+         * <p>Document title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档标题</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -984,16 +1158,24 @@ public class RecallDocumentResponseBody extends TeaModel {
     }
 
     public static class RecallDocumentResponseBodyDataVectorChunkListPos extends TeaModel {
+        /**
+         * <p>Coordinates.</p>
+         */
         @NameInMap("axisArray")
         public java.util.List<Double> axisArray;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <p>Text highlight area, used for text-type file highlighting.</p>
+         */
         @NameInMap("textHighlightArea")
         public java.util.List<Integer> textHighlightArea;
 
@@ -1030,6 +1212,8 @@ public class RecallDocumentResponseBody extends TeaModel {
 
     public static class RecallDocumentResponseBodyDataVectorChunkList extends TeaModel {
         /**
+         * <p>Document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8723642345276</p>
          */
@@ -1037,6 +1221,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String chunkId;
 
         /**
+         * <p>Document chunk metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;1&quot;}</p>
          */
@@ -1044,16 +1230,26 @@ public class RecallDocumentResponseBody extends TeaModel {
         public java.util.Map<String, ?> chunkMeta;
 
         /**
+         * <p>Document chunk OSS address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://oss-xxxx-hangzhou.com/test.pdf">https://oss-xxxx-hangzhou.com/test.pdf</a></p>
          */
         @NameInMap("chunkOssUrl")
         public String chunkOssUrl;
 
+        /**
+         * <p>Document chunk text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一段测试文本</p>
+         */
         @NameInMap("chunkText")
         public String chunkText;
 
         /**
+         * <p>Document chunk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -1061,6 +1257,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String chunkType;
 
         /**
+         * <p>Document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>78326476235675372</p>
          */
@@ -1068,6 +1266,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -1075,26 +1275,41 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>Document library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>djsgfsjd</p>
          */
         @NameInMap("libraryId")
         public String libraryId;
 
+        /**
+         * <p>Document library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档库</p>
+         */
         @NameInMap("libraryName")
         public String libraryName;
 
         /**
+         * <p>Next document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>293846872343</p>
          */
         @NameInMap("nextChunkId")
         public String nextChunkId;
 
+        /**
+         * <p>Document chunk position.</p>
+         */
         @NameInMap("pos")
         public java.util.List<RecallDocumentResponseBodyDataVectorChunkListPos> pos;
 
         /**
+         * <p>Previous document chunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>873647326542</p>
          */
@@ -1102,6 +1317,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public String preChunkId;
 
         /**
+         * <p>Document chunk score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -1109,6 +1326,8 @@ public class RecallDocumentResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>Document title.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -1235,29 +1454,48 @@ public class RecallDocumentResponseBody extends TeaModel {
     }
 
     public static class RecallDocumentResponseBodyData extends TeaModel {
+        /**
+         * <p>Chunk list.</p>
+         */
         @NameInMap("chunkList")
         public java.util.List<RecallDocumentResponseBodyDataChunkList> chunkList;
 
+        /**
+         * <p>Chunk part (layout recognition result) list.</p>
+         */
         @NameInMap("chunkPartList")
         public java.util.List<RecallDocumentResponseBodyDataChunkPartList> chunkPartList;
 
+        /**
+         * <p>Chunk text list.</p>
+         */
         @NameInMap("chunkTextList")
         public java.util.List<String> chunkTextList;
 
+        /**
+         * <p>Document list.</p>
+         */
         @NameInMap("documents")
         public java.util.List<RecallDocumentResponseBodyDataDocuments> documents;
 
         /**
+         * <p>Vector computation time elapsed.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("embeddingElapsedMs")
         public Long embeddingElapsedMs;
 
+        /**
+         * <p>List of chunks retrieved from the text index.</p>
+         */
         @NameInMap("textChunkList")
         public java.util.List<RecallDocumentResponseBodyDataTextChunkList> textChunkList;
 
         /**
+         * <p>Text search time elapsed.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -1265,16 +1503,23 @@ public class RecallDocumentResponseBody extends TeaModel {
         public Long textSearchElapsedMs;
 
         /**
+         * <p>Total time elapsed, including vector computation time, vector search time, and text search time (depending on retrieval parameters).</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
         @NameInMap("totalElapsedMs")
         public Long totalElapsedMs;
 
+        /**
+         * <p>List of chunks retrieved from the vector index.</p>
+         */
         @NameInMap("vectorChunkList")
         public java.util.List<RecallDocumentResponseBodyDataVectorChunkList> vectorChunkList;
 
         /**
+         * <p>Vector search time elapsed.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

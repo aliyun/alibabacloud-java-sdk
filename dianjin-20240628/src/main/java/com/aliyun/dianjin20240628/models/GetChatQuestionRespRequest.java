@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatQuestionRespRequest extends TeaModel {
     /**
+     * <p>Question batch ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetChatQuestionRespRequest extends TeaModel {
     public String batchId;
 
     /**
+     * <p>Session ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

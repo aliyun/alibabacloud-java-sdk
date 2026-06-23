@@ -8,14 +8,14 @@ public class ExchangeEntitlementRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>your_user_id_001</p>
+     * <p>1</p>
      */
     @NameInMap("externalUserId")
     public String externalUserId;
 
     /**
      * <strong>example:</strong>
-     * <p>a1b2c3d4e5f6...</p>
+     * <p>sbyusgdfjsg</p>
      */
     @NameInMap("keyHash")
     public String keyHash;
@@ -33,7 +33,7 @@ public class ExchangeEntitlementRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10001</p>
+     * <p>1</p>
      */
     @NameInMap("templateId")
     public Long templateId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenDocQaResultRequest extends TeaModel {
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GenDocQaResultRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>The document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GenDocQaResultRequest extends TeaModel {
     public String libraryId;
 
     /**
+     * <p>The request ID. This ID uniquely identifies the request. The first request with this ID starts the Q\&amp;A pair parsing. Subsequent requests with the same ID query the parsing status and results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

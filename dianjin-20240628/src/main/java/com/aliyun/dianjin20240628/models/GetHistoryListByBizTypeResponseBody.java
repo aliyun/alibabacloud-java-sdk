@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHistoryListByBizTypeResponseBody extends TeaModel {
     /**
+     * <p>Response time in milliseconds</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("data")
     public GetHistoryListByBizTypeResponseBodyData data;
 
     /**
+     * <p>Data type</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>9DF9B3F3-9FFE-52CB-A8DC-F7BD5F842F0E</p>
      */
@@ -43,6 +56,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 00:00:00</p>
      */
@@ -127,6 +144,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
 
     public static class GetHistoryListByBizTypeResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>Business ID</p>
+         * 
          * <strong>example:</strong>
          * <p>GysYBsxx</p>
          */
@@ -134,6 +153,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>Business type</p>
+         * 
          * <strong>example:</strong>
          * <p>LibraryChat</p>
          */
@@ -141,6 +162,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         public String bizType;
 
         /**
+         * <p>Extension information</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -148,6 +171,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         public Object extraMessage;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -155,6 +180,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Last modified time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -162,19 +189,35 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>History record ID</p>
+         * 
          * <strong>example:</strong>
          * <p>210</p>
          */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Large Language Model (LLM) response</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好。</p>
+         */
         @NameInMap("llmAnswer")
         public String llmAnswer;
 
+        /**
+         * <p>Prompt for the Large Language Model (LLM)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请使用以下上下文来回答最后的问题。\n以下是上下文内容：</p>
+         */
         @NameInMap("llmPrompt")
         public String llmPrompt;
 
         /**
+         * <p>Large Language Model (LLM) type</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
          */
@@ -182,12 +225,20 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         public String llmType;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
         @NameInMap("sessionId")
         public String sessionId;
 
+        /**
+         * <p>User query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你是谁</p>
+         */
         @NameInMap("userQuery")
         public String userQuery;
 
@@ -288,6 +339,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
 
     public static class GetHistoryListByBizTypeResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -295,16 +348,23 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         public Long currentPage;
 
         /**
+         * <p>Number of records per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
+        /**
+         * <p>Records</p>
+         */
         @NameInMap("records")
         public java.util.List<GetHistoryListByBizTypeResponseBodyDataRecords> records;
 
         /**
+         * <p>Total number of pages</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -312,6 +372,8 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         public Long totalPages;
 
         /**
+         * <p>Total number of records</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

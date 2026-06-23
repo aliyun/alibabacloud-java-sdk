@@ -16,22 +16,14 @@ public class GetUsageResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>ok</p>
      */
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("retryAble")
     public Boolean retryAble;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -86,7 +78,7 @@ public class GetUsageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>238746</p>
+         * <p>1</p>
          */
         @NameInMap("bindingId")
         public Long bindingId;
@@ -100,42 +92,42 @@ public class GetUsageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>2024-01-31T00:00:00Z</p>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         @NameInMap("expireAt")
         public String expireAt;
 
         /**
          * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>1</p>
          */
         @NameInMap("quotaInitial")
         public Long quotaInitial;
 
         /**
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>1</p>
          */
         @NameInMap("quotaRemaining")
         public Long quotaRemaining;
 
         /**
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>1</p>
          */
         @NameInMap("quotaUsed")
         public Long quotaUsed;
 
         /**
          * <strong>example:</strong>
-         * <p>ACTIVE</p>
+         * <p>success</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <strong>example:</strong>
-         * <p>893724</p>
+         * <p>1</p>
          */
         @NameInMap("templateId")
         public Long templateId;
@@ -237,21 +229,21 @@ public class GetUsageResponseBody extends TeaModel {
     public static class GetUsageResponseBodyDataModelStats extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>50</p>
          */
         @NameInMap("inputUsage")
         public Long inputUsage;
 
         /**
          * <strong>example:</strong>
-         * <p>qwen-turbo</p>
+         * <p>qwen-max</p>
          */
         @NameInMap("model")
         public String model;
 
         /**
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>50</p>
          */
         @NameInMap("outputUsage")
         public Long outputUsage;
@@ -265,7 +257,7 @@ public class GetUsageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>1500</p>
+         * <p>100</p>
          */
         @NameInMap("totalUsage")
         public Long totalUsage;
@@ -320,14 +312,14 @@ public class GetUsageResponseBody extends TeaModel {
     public static class GetUsageResponseBodyDataSummary extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>50</p>
          */
         @NameInMap("totalInputUsage")
         public Long totalInputUsage;
 
         /**
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>50</p>
          */
         @NameInMap("totalOutputUsage")
         public Long totalOutputUsage;
@@ -341,7 +333,7 @@ public class GetUsageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>100</p>
          */
         @NameInMap("totalUsage")
         public Long totalUsage;

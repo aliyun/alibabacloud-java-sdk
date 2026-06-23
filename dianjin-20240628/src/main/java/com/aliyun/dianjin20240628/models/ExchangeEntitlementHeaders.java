@@ -7,10 +7,6 @@ public class ExchangeEntitlementHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("X-Load-Test")
     public Boolean xLoadTest;
 

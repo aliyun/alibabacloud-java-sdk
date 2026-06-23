@@ -4,10 +4,14 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class GetDocumentChunkListRequest extends TeaModel {
+    /**
+     * <p>List of document chunk IDs</p>
+     */
     @NameInMap("chunkIdList")
     public java.util.List<String> chunkIdList;
 
     /**
+     * <p>Document ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class GetDocumentChunkListRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>Library ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,8 @@ public class GetDocumentChunkListRequest extends TeaModel {
     public String libraryId;
 
     /**
+     * <p>Sorting method</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -33,6 +40,8 @@ public class GetDocumentChunkListRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>Sort field</p>
+     * 
      * <strong>example:</strong>
      * <p>gmtCreate</p>
      */
@@ -40,6 +49,8 @@ public class GetDocumentChunkListRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +58,8 @@ public class GetDocumentChunkListRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +67,8 @@ public class GetDocumentChunkListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Search query keyword</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

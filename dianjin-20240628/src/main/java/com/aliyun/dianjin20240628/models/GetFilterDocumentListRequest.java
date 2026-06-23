@@ -4,13 +4,20 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class GetFilterDocumentListRequest extends TeaModel {
+    /**
+     * <p>AND expression to filter documents or document chunks.</p>
+     */
     @NameInMap("and")
     public java.util.List<GetFilterDocumentListRequestAnd> and;
 
+    /**
+     * <p>List of document IDs to filter documents or document chunks.</p>
+     */
     @NameInMap("docIdList")
     public java.util.List<String> docIdList;
 
     /**
+     * <p>Document library ID to filter documents or document chunks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,10 +26,15 @@ public class GetFilterDocumentListRequest extends TeaModel {
     @NameInMap("libraryId")
     public String libraryId;
 
+    /**
+     * <p>OR expression to filter documents or document chunks.</p>
+     */
     @NameInMap("or")
     public java.util.List<GetFilterDocumentListRequestOr> or;
 
     /**
+     * <p>Page number for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,12 +42,33 @@ public class GetFilterDocumentListRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Number of records per page for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>List of document statuses to filter documents.</p>
+     * <h3>Document parsing status codes</h3>
+     * <p><em>Status codes: WaitRefresh, InQueue, FetchingData, Embedding, Completed, FormatError, Error</em></p>
+     * <ul>
+     * <li><p>Completed: Active. Document parsing completed.</p>
+     * </li>
+     * <li><p>Error: Inactive. Document parsing failed.</p>
+     * </li>
+     * <li><p>FormatError: File format error. Re-upload the file in the correct format if it is encrypted or incomplete.</p>
+     * </li>
+     * <li><p>InQueue: Pending. Document is waiting for parsing.</p>
+     * </li>
+     * <li><p>Parsed: Parsing completed.</p>
+     * </li>
+     * <li><p>Other statuses are internal system states. For example, WaitRefresh means the task is scheduled. FetchingData means parsing is in progress. Embedding means index building is in progress.</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("status")
     public java.util.List<String> status;
 
@@ -102,6 +135,8 @@ public class GetFilterDocumentListRequest extends TeaModel {
 
     public static class GetFilterDocumentListRequestAnd extends TeaModel {
         /**
+         * <p>Weight of the value in the text retrieval engine. Default is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -109,6 +144,8 @@ public class GetFilterDocumentListRequest extends TeaModel {
         public Float boost;
 
         /**
+         * <p>Metadata key in the document library.</p>
+         * 
          * <strong>example:</strong>
          * <p>company</p>
          */
@@ -116,6 +153,14 @@ public class GetFilterDocumentListRequest extends TeaModel {
         public String key;
 
         /**
+         * <h3>Relationship between the stored metadata value and your input value</h3>
+         * <ul>
+         * <li><p>eq: The stored metadata value equals your input value.</p>
+         * </li>
+         * <li><p>contains: The stored metadata value list contains your input value.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>eq</p>
          */
@@ -123,6 +168,8 @@ public class GetFilterDocumentListRequest extends TeaModel {
         public String operator;
 
         /**
+         * <p>Input metadata value.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba</p>
          */
@@ -170,6 +217,8 @@ public class GetFilterDocumentListRequest extends TeaModel {
 
     public static class GetFilterDocumentListRequestOr extends TeaModel {
         /**
+         * <p>Weight of the value in the text retrieval engine. Default is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -177,6 +226,8 @@ public class GetFilterDocumentListRequest extends TeaModel {
         public Float boost;
 
         /**
+         * <p>Metadata key in the document library.</p>
+         * 
          * <strong>example:</strong>
          * <p>company</p>
          */
@@ -184,6 +235,14 @@ public class GetFilterDocumentListRequest extends TeaModel {
         public String key;
 
         /**
+         * <h3>Relationship between the stored metadata value and your input value</h3>
+         * <ul>
+         * <li><p>eq: The stored metadata value equals your input value.</p>
+         * </li>
+         * <li><p>contains: The stored metadata value list contains your input value.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>contains</p>
          */
@@ -191,6 +250,8 @@ public class GetFilterDocumentListRequest extends TeaModel {
         public String operator;
 
         /**
+         * <p>Input metadata value.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLibraryResponseBody extends TeaModel {
     /**
+     * <p>Processing time in milliseconds</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -12,6 +14,8 @@ public class CreateLibraryResponseBody extends TeaModel {
     public Long cost;
 
     /**
+     * <p>Response data</p>
+     * 
      * <strong>example:</strong>
      * <p>a1b2c3</p>
      */
@@ -19,6 +23,8 @@ public class CreateLibraryResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Data type</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,16 +32,26 @@ public class CreateLibraryResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxx</p>
      */
@@ -43,6 +59,8 @@ public class CreateLibraryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Operation success status</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +68,8 @@ public class CreateLibraryResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */

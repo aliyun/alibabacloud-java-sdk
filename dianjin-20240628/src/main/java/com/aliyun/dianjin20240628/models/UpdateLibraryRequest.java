@@ -4,13 +4,23 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class UpdateLibraryRequest extends TeaModel {
+    /**
+     * <p>Document library description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文档库描述</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Document library index configuration</p>
+     */
     @NameInMap("indexSetting")
     public UpdateLibraryRequestIndexSetting indexSetting;
 
     /**
+     * <p>Document library ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,6 +29,12 @@ public class UpdateLibraryRequest extends TeaModel {
     @NameInMap("libraryId")
     public String libraryId;
 
+    /**
+     * <p>Document library name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试文档库</p>
+     */
     @NameInMap("libraryName")
     public String libraryName;
 
@@ -61,6 +77,8 @@ public class UpdateLibraryRequest extends TeaModel {
 
     public static class UpdateLibraryRequestIndexSettingChunkStrategy extends TeaModel {
         /**
+         * <p>Layout-based chunking</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -68,6 +86,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean docTreeSplit;
 
         /**
+         * <p>Layout-based chunking size</p>
+         * 
          * <strong>example:</strong>
          * <p>160</p>
          */
@@ -75,6 +95,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Integer docTreeSplitSize;
 
         /**
+         * <p>Enhance images</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -82,6 +104,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enhanceGraph;
 
         /**
+         * <p>Enhance tables</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +113,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enhanceTable;
 
         /**
+         * <p>Chunk overlap length</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -96,6 +122,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Integer overlap;
 
         /**
+         * <p>Split by sentence. Default is true</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -103,6 +131,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean sentenceSplit;
 
         /**
+         * <p>Average sentence-based chunking length</p>
+         * 
          * <strong>example:</strong>
          * <p>160</p>
          */
@@ -110,6 +140,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Integer sentenceSplitSize;
 
         /**
+         * <p>Fixed-length chunking size</p>
+         * 
          * <strong>example:</strong>
          * <p>256</p>
          */
@@ -117,6 +149,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Integer size;
 
         /**
+         * <p>Enable chunking</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -204,6 +238,8 @@ public class UpdateLibraryRequest extends TeaModel {
 
     public static class UpdateLibraryRequestIndexSettingModelConfig extends TeaModel {
         /**
+         * <p>Temperature</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -211,7 +247,7 @@ public class UpdateLibraryRequest extends TeaModel {
         public Double temperature;
 
         /**
-         * <p>topP</p>
+         * <p>Top P</p>
          * 
          * <strong>example:</strong>
          * <p>0.8</p>
@@ -244,6 +280,8 @@ public class UpdateLibraryRequest extends TeaModel {
 
     public static class UpdateLibraryRequestIndexSettingQueryEnhancer extends TeaModel {
         /**
+         * <p>Multi-turn enhancement</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -251,6 +289,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enableFollowUp;
 
         /**
+         * <p>Use Large Language Models (LLMs) to decompose queries</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -258,6 +298,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enableMultiQuery;
 
         /**
+         * <p>Use Large Language Models (LLMs) to answer queries</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -265,6 +307,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enableOpenQa;
 
         /**
+         * <p>Rewrite queries using domain knowledge</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -272,6 +316,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enableQueryRewrite;
 
         /**
+         * <p>Record session history</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -279,6 +325,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enableSession;
 
         /**
+         * <p>Document library ID used for query rewriting</p>
+         * 
          * <strong>example:</strong>
          * <p>sjdhgfc</p>
          */
@@ -286,6 +334,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public String localKnowledgeId;
 
         /**
+         * <p>Include document references in responses</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -357,6 +407,8 @@ public class UpdateLibraryRequest extends TeaModel {
 
     public static class UpdateLibraryRequestIndexSettingRecallStrategy extends TeaModel {
         /**
+         * <p>Merge and sort strategy</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
@@ -364,6 +416,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public String documentRankType;
 
         /**
+         * <p>Number of results from two-way merge and summarization</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -395,6 +449,8 @@ public class UpdateLibraryRequest extends TeaModel {
 
     public static class UpdateLibraryRequestIndexSettingTextIndexSetting extends TeaModel {
         /**
+         * <p>Text index type</p>
+         * 
          * <strong>example:</strong>
          * <p>ElasticSearch</p>
          */
@@ -402,6 +458,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>Enable text indexing</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -409,6 +467,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>Text index analyzer: Standard, IkMaxWord, or IkSmart</p>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
@@ -416,6 +476,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public String indexAnalyzer;
 
         /**
+         * <p>Text index ranking threshold</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -423,6 +485,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Double rankThreshold;
 
         /**
+         * <p>Text index search analyzer: Standard, IkMaxWord, or IkSmart</p>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
@@ -430,6 +494,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public String searchAnalyzer;
 
         /**
+         * <p>Number of final summarized results from text indexing</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -493,6 +559,8 @@ public class UpdateLibraryRequest extends TeaModel {
 
     public static class UpdateLibraryRequestIndexSettingVectorIndexSetting extends TeaModel {
         /**
+         * <p>Vector index source. We recommend ADB</p>
+         * 
          * <strong>example:</strong>
          * <p>ADB</p>
          */
@@ -500,6 +568,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>Text embedding model for vector indexing</p>
+         * 
          * <strong>example:</strong>
          * <p>DashScope</p>
          */
@@ -507,6 +577,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public String embeddingType;
 
         /**
+         * <p>Enable vector indexing</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -514,6 +586,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>Vector index ranking threshold</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -521,6 +595,8 @@ public class UpdateLibraryRequest extends TeaModel {
         public Double rankThreshold;
 
         /**
+         * <p>Number of final summarized results from vector indexing</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -575,24 +651,48 @@ public class UpdateLibraryRequest extends TeaModel {
     }
 
     public static class UpdateLibraryRequestIndexSetting extends TeaModel {
+        /**
+         * <p>Chunking strategy</p>
+         */
         @NameInMap("chunkStrategy")
         public UpdateLibraryRequestIndexSettingChunkStrategy chunkStrategy;
 
+        /**
+         * <p>Model configuration</p>
+         */
         @NameInMap("modelConfig")
         public UpdateLibraryRequestIndexSettingModelConfig modelConfig;
 
+        /**
+         * <p>Prompt role style</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你是一位文档分析专家，非常善于从给定的知识中，找到重点，像老师给学生讲课一样把问题回答清晰。你的回答富有逻辑性，遇到复杂问题，你善于一步一步思考。</p>
+         */
         @NameInMap("promptRoleStyle")
         public String promptRoleStyle;
 
+        /**
+         * <p>Query enhancement</p>
+         */
         @NameInMap("queryEnhancer")
         public UpdateLibraryRequestIndexSettingQueryEnhancer queryEnhancer;
 
+        /**
+         * <p>Retrieval strategy</p>
+         */
         @NameInMap("recallStrategy")
         public UpdateLibraryRequestIndexSettingRecallStrategy recallStrategy;
 
+        /**
+         * <p>Text index settings</p>
+         */
         @NameInMap("textIndexSetting")
         public UpdateLibraryRequestIndexSettingTextIndexSetting textIndexSetting;
 
+        /**
+         * <p>Vector index settings</p>
+         */
         @NameInMap("vectorIndexSetting")
         public UpdateLibraryRequestIndexSettingVectorIndexSetting vectorIndexSetting;
 

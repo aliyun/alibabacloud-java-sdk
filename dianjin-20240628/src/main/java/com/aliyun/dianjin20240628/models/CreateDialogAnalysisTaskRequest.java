@@ -4,16 +4,28 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class CreateDialogAnalysisTaskRequest extends TeaModel {
+    /**
+     * <p>A list of analysis nodes. If you leave this parameter empty, all nodes are analyzed. You can specify one or more nodes.</p>
+     */
     @NameInMap("analysisNodes")
     public java.util.List<String> analysisNodes;
 
     /**
+     * <p>The session content. You can specify multiple sessions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("conversationList")
     public java.util.List<CreateDialogAnalysisTaskRequestConversationList> conversationList;
 
     /**
+     * <p>The metadata. This includes business-related properties that are used during session analysis. The business system passes these properties in real time when it initiates the analysis task.</p>
+     * <pre><code>{
+     *   &quot;labels&quot;: &quot;XXX&quot;,  // Tags
+     *   &quot;summaryConstraints&quot;: &quot;XXX&quot;,   // Summary dimensions
+     *   &quot;sopInfo&quot;: &quot;XXX&quot;  // SOP information
+     * }
+     * </code></pre>
+     * 
      * <strong>example:</strong>
      * <p>{
      * &quot;labels&quot;: &quot;XXX&quot;,
@@ -25,6 +37,7 @@ public class CreateDialogAnalysisTaskRequest extends TeaModel {
     public java.util.Map<String, ?> metaData;
 
     /**
+     * <p>The session scenario code, which is associated with the session analysis configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +47,7 @@ public class CreateDialogAnalysisTaskRequest extends TeaModel {
     public String playCode;
 
     /**
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,12 +103,17 @@ public class CreateDialogAnalysisTaskRequest extends TeaModel {
 
     public static class CreateDialogAnalysisTaskRequestConversationListDialogueList extends TeaModel {
         /**
+         * <p>The content of the dialogue.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好，我是2001，很高兴为您服务！</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>The role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +147,7 @@ public class CreateDialogAnalysisTaskRequest extends TeaModel {
 
     public static class CreateDialogAnalysisTaskRequestConversationList extends TeaModel {
         /**
+         * <p>A list of dialogues.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("dialogueList")

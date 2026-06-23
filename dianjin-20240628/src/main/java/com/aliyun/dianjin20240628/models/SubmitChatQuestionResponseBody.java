@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitChatQuestionResponseBody extends TeaModel {
     /**
+     * <p>Time taken</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("data")
     public SubmitChatQuestionResponseBodyData data;
 
     /**
+     * <p>Data type</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>915AAAB9-4908-5224-9E53-9E9D7D0AA94B</p>
      */
@@ -43,6 +56,8 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -127,6 +144,8 @@ public class SubmitChatQuestionResponseBody extends TeaModel {
 
     public static class SubmitChatQuestionResponseBodyData extends TeaModel {
         /**
+         * <p>Batch ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1869307330227937280</p>
          */

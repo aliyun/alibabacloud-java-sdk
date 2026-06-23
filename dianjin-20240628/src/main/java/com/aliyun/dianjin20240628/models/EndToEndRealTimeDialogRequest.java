@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EndToEndRealTimeDialogRequest extends TeaModel {
     /**
+     * <p>The ID of the speech recognition model. The default value is nls-base. Supported models include paraformer-realtime-v2 and paraformer-realtime-8k-v2.</p>
+     * 
      * <strong>example:</strong>
      * <p>nls-base</p>
      */
@@ -12,6 +14,8 @@ public class EndToEndRealTimeDialogRequest extends TeaModel {
     public String asrModelId;
 
     /**
+     * <p>The input audio format. Supported formats are pcm, wav, and mp3.</p>
+     * 
      * <strong>example:</strong>
      * <p>pcm</p>
      */
@@ -19,6 +23,8 @@ public class EndToEndRealTimeDialogRequest extends TeaModel {
     public String inputFormat;
 
     /**
+     * <p>The output audio format.</p>
+     * 
      * <strong>example:</strong>
      * <p>wav</p>
      */
@@ -26,6 +32,11 @@ public class EndToEndRealTimeDialogRequest extends TeaModel {
     public String outputFormat;
 
     /**
+     * <p>The pitch rate.
+     * ● If \<code>ttsModelId\\</code> is \<code>nls-base\\</code>:
+     * The value ranges from -500 to 500. The default is 0.
+     * ● If \<code>ttsModelId\\</code> is \<code>cosyvoice-v2\\</code>: Specifies the pitch of the synthesized audio. The value ranges from 0.5 to 2.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +44,8 @@ public class EndToEndRealTimeDialogRequest extends TeaModel {
     public Integer pitchRate;
 
     /**
+     * <p>The sample rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>SAMPLE_RATE_16K</p>
      */
@@ -40,6 +53,14 @@ public class EndToEndRealTimeDialogRequest extends TeaModel {
     public String sampleRate;
 
     /**
+     * <p>The speech rate.
+     * ● If \<code>ttsModelId\\</code> is \<code>nls-base\\</code>: The value ranges from -500 to 500. The default is 0.
+     * ● If \<code>ttsModelId\\</code> is \<code>cosyvoice-v2\\</code>:
+     * Specifies the speech rate of the synthesized audio. The value ranges from 0.5 to 2.
+     * ○ 0.5: Half the default speed.
+     * ○ 1: The default speed. The default speed is the model\&quot;s standard output speed and may vary slightly by speaker. It is about four characters per second.
+     * ○ 2: Twice the default speed.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -47,6 +68,8 @@ public class EndToEndRealTimeDialogRequest extends TeaModel {
     public Integer speechRate;
 
     /**
+     * <p>The ID of the speech synthesis model. The default value is nls-base. The cosyvoice-v2 model is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>nls-base</p>
      */
@@ -54,6 +77,8 @@ public class EndToEndRealTimeDialogRequest extends TeaModel {
     public String ttsModelId;
 
     /**
+     * <p>The voice parameter. This is available only for models that support word-level or sentence-level timestamps.</p>
+     * 
      * <strong>example:</strong>
      * <p>longxiaochun_v2</p>
      */
@@ -61,6 +86,8 @@ public class EndToEndRealTimeDialogRequest extends TeaModel {
     public String voiceCode;
 
     /**
+     * <p>The volume. The value ranges from 0 to 100. This parameter is optional. The default value is 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetFilterDocumentListResponseBody extends TeaModel {
     /**
+     * <p>Time spent on the request, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public GetFilterDocumentListResponseBodyData data;
 
     /**
+     * <p>Data type.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -36,6 +47,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7ADF010C-FD89-569D-A079-2D4D5247E943</p>
      */
@@ -43,6 +56,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 00:00:00</p>
      */
@@ -127,6 +144,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
 
     public static class GetFilterDocumentListResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>Document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>29368126816</p>
          */
@@ -134,6 +153,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Document metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;: &quot;1&quot;}</p>
          */
@@ -141,6 +162,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         public java.util.Map<String, ?> documentMeta;
 
         /**
+         * <p>File type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -148,6 +171,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -155,6 +180,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -162,6 +189,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Document library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sdfgsjdfg</p>
          */
@@ -169,16 +198,26 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         public String libraryId;
 
         /**
+         * <p>Document status. Valid values: WaitRefresh (waiting for refresh), InQueue (pending), FetchingData (retrieving data), Embedding (processing document), Error (failed), Completed (active), Null (unknown).</p>
+         * 
          * <strong>example:</strong>
          * <p>WaitRefresh</p>
          */
         @NameInMap("statusCode")
         public String statusCode;
 
+        /**
+         * <p>Document title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公司文档</p>
+         */
         @NameInMap("title")
         public String title;
 
         /**
+         * <p>Document URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -266,6 +305,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
 
     public static class GetFilterDocumentListResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -273,16 +314,23 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         public Long currentPage;
 
         /**
+         * <p>Number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
+        /**
+         * <p>Records.</p>
+         */
         @NameInMap("records")
         public java.util.List<GetFilterDocumentListResponseBodyDataRecords> records;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -290,6 +338,8 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         public Long totalPages;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

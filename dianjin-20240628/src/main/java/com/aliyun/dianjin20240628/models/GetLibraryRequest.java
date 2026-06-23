@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLibraryRequest extends TeaModel {
     /**
+     * <p>The document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

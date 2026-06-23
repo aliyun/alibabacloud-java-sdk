@@ -8,7 +8,7 @@ public class QueryApiKeysRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1001</p>
+     * <p>1</p>
      */
     @NameInMap("externalUserId")
     public String externalUserId;

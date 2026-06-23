@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAppConfigResponseBody extends TeaModel {
     /**
+     * <p>Time consumed</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("cost")
     public Long cost;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public GetAppConfigResponseBodyData data;
 
     /**
+     * <p>Data type</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetAppConfigResponseBody extends TeaModel {
     public String dataType;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +38,8 @@ public class GetAppConfigResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -36,6 +47,8 @@ public class GetAppConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>EF4B5C9B-3BC8-5171-A47B-4C5CF3DC3258</p>
      */
@@ -43,6 +56,8 @@ public class GetAppConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -50,6 +65,8 @@ public class GetAppConfigResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Timestamp</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-24 11:54:34</p>
      */
@@ -126,21 +143,39 @@ public class GetAppConfigResponseBody extends TeaModel {
     }
 
     public static class GetAppConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Embedding type list</p>
+         */
         @NameInMap("embeddingTypeList")
         public java.util.List<java.util.Map<String, String>> embeddingTypeList;
 
+        /**
+         * <p>Frontend configuration</p>
+         */
         @NameInMap("frontendConfig")
         public java.util.Map<String, Boolean> frontendConfig;
 
+        /**
+         * <p>Document library status list</p>
+         */
         @NameInMap("libraryDocumentStatusList")
         public java.util.List<java.util.Map<String, String>> libraryDocumentStatusList;
 
+        /**
+         * <p>Large Language Model (LLM) type list</p>
+         */
         @NameInMap("llmHelperTypeList")
         public java.util.List<java.util.Map<String, String>> llmHelperTypeList;
 
+        /**
+         * <p>Text index category list</p>
+         */
         @NameInMap("textIndexCategoryList")
         public java.util.List<String> textIndexCategoryList;
 
+        /**
+         * <p>Vector index category list</p>
+         */
         @NameInMap("vectorIndexCategoryList")
         public java.util.List<String> vectorIndexCategoryList;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DashscopeAsyncTaskFinishEventResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,15 +14,23 @@ public class DashscopeAsyncTaskFinishEventResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>成功</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Indicates whether the operation can be retried</p>
+     */
     @NameInMap("retryAble")
     public Boolean retryAble;
 
+    /**
+     * <p>Indicates whether the operation succeeded</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

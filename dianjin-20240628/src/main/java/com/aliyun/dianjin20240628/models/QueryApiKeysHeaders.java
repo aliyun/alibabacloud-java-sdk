@@ -7,10 +7,6 @@ public class QueryApiKeysHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("X-Load-Test")
     public Boolean xLoadTest;
 

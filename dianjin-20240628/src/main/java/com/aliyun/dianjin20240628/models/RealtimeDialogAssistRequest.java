@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RealtimeDialogAssistRequest extends TeaModel {
     /**
+     * <p>Whether to analyze</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class RealtimeDialogAssistRequest extends TeaModel {
     public Boolean analysis;
 
     /**
+     * <p>Business type. Currently, only dialogAssist is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,12 +24,15 @@ public class RealtimeDialogAssistRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Dialog list</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("conversationModel")
     public java.util.List<RealtimeDialogAssistRequestConversationModel> conversationModel;
 
     /**
+     * <p>Number of historical dialog turns included</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -34,6 +40,8 @@ public class RealtimeDialogAssistRequest extends TeaModel {
     public Integer dialogMemoryTurns;
 
     /**
+     * <p>Hang up the session</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -42,11 +50,19 @@ public class RealtimeDialogAssistRequest extends TeaModel {
 
     /**
      * <p>metaData</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;phoneTailNumber&quot;: &quot;机主尾号：98X1&quot;,
+     *       &quot;preScreeningQuota&quot;: &quot;预审额度：3万&quot;,
+     *       &quot;generalInterest&quot;: &quot;平台一般利息：20.4%&quot;
+     *     }</p>
      */
     @NameInMap("metaData")
     public java.util.Map<String, ?> metaData;
 
     /**
+     * <p>Request ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +72,8 @@ public class RealtimeDialogAssistRequest extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Portion of the previous agent utterance already broadcast</p>
+     * 
      * <strong>example:</strong>
      * <p>你好</p>
      */
@@ -63,6 +81,7 @@ public class RealtimeDialogAssistRequest extends TeaModel {
     public String scriptContentPlayed;
 
     /**
+     * <p>Session ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +90,12 @@ public class RealtimeDialogAssistRequest extends TeaModel {
     @NameInMap("sessionId")
     public String sessionId;
 
+    /**
+     * <p>Whether the user interrupted</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("userVad")
     public Boolean userVad;
 
@@ -161,6 +186,8 @@ public class RealtimeDialogAssistRequest extends TeaModel {
 
     public static class RealtimeDialogAssistRequestConversationModel extends TeaModel {
         /**
+         * <p>Start time of this utterance, offset in milliseconds from the session start.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -168,6 +195,8 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public Integer begin;
 
         /**
+         * <p>Start time of this utterance</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-12 09:00:00</p>
          */
@@ -175,12 +204,18 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public String beginTime;
 
         /**
+         * <p>Specific content of the dialog</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>Unique identity of the dialog role</p>
+         * 
          * <strong>example:</strong>
          * <p>98457834685635</p>
          */
@@ -188,6 +223,8 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public String customerId;
 
         /**
+         * <p>Customer service ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1374683645635</p>
          */
@@ -195,6 +232,8 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public String customerServiceId;
 
         /**
+         * <p>Agent type. 0: Robot, 1: Human.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -202,6 +241,8 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public String customerServiceType;
 
         /**
+         * <p>End time of this utterance, offset in milliseconds from the session start.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -209,6 +250,7 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public Integer end;
 
         /**
+         * <p>Role. 0 indicates customer, 1 indicates agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +260,8 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public Integer role;
 
         /**
+         * <p>Type of dialog content. Currently, only text is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */

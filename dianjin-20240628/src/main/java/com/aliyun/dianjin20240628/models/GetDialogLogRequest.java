@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDialogLogRequest extends TeaModel {
     /**
+     * <p>The \<code>id\\</code> field returned by the real-time conversation API.</p>
+     * 
      * <strong>example:</strong>
      * <p>175600129454077743fb03ac54955a4be72ec08f9c216</p>
      */
@@ -12,6 +14,8 @@ public class GetDialogLogRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1758010668S001w4paq82azm</p>
      */

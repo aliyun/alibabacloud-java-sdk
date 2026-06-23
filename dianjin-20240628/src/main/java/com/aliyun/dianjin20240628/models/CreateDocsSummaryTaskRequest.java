@@ -5,22 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateDocsSummaryTaskRequest extends TeaModel {
     /**
+     * <p>Document information list</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("docInfos")
     public java.util.List<CreateDocsSummaryTaskRequestDocInfos> docInfos;
 
     /**
+     * <p>Enable table parsing. Default is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enableTable")
     public Boolean enableTable;
 
+    /**
+     * <p>Instruction</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你是资深的证券研究员，对xx年上市公司进行业绩分析。根据参考信息从如下方面详细分析：</p>
+     * <ol>
+     * <li>整体业绩变化情况，包括营收，利润等详细指标变化情况</li>
+     * <li>业绩变化情况具体原因，包括各个业务变化情况
+     * 严格只输出xx年情况。</li>
+     * </ol>
+     */
     @NameInMap("instruction")
     public String instruction;
 
     /**
+     * <p>Model ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +83,7 @@ public class CreateDocsSummaryTaskRequest extends TeaModel {
 
     public static class CreateDocsSummaryTaskRequestDocInfos extends TeaModel {
         /**
+         * <p>Document ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -77,6 +93,8 @@ public class CreateDocsSummaryTaskRequest extends TeaModel {
         public String docId;
 
         /**
+         * <p>End page number</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -84,6 +102,7 @@ public class CreateDocsSummaryTaskRequest extends TeaModel {
         public Integer endPage;
 
         /**
+         * <p>Document library ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -93,6 +112,8 @@ public class CreateDocsSummaryTaskRequest extends TeaModel {
         public String libraryId;
 
         /**
+         * <p>Start page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

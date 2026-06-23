@@ -4,10 +4,15 @@ package com.aliyun.dianjin20240628.models;
 import com.aliyun.tea.*;
 
 public class CreatePredefinedDocumentRequest extends TeaModel {
+    /**
+     * <p>A list of document chunks.</p>
+     */
     @NameInMap("chunks")
     public java.util.List<CreatePredefinedDocumentRequestChunks> chunks;
 
     /**
+     * <p>The ID of the document library.</p>
+     * 
      * <strong>example:</strong>
      * <p>a1b2c3</p>
      */
@@ -15,6 +20,8 @@ public class CreatePredefinedDocumentRequest extends TeaModel {
     public String libraryId;
 
     /**
+     * <p>The metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;a&quot;: &quot;1&quot;}</p>
      */
@@ -22,6 +29,8 @@ public class CreatePredefinedDocumentRequest extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
+     * <p>The title of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>测试文档</p>
      */
@@ -67,6 +76,8 @@ public class CreatePredefinedDocumentRequest extends TeaModel {
 
     public static class CreatePredefinedDocumentRequestChunks extends TeaModel {
         /**
+         * <p>The metadata for the document chunk.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;: &quot;1&quot;}</p>
          */
@@ -74,6 +85,8 @@ public class CreatePredefinedDocumentRequest extends TeaModel {
         public java.util.Map<String, ?> chunkMeta;
 
         /**
+         * <p>The order of the chunk. This parameter is optional.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -81,6 +94,8 @@ public class CreatePredefinedDocumentRequest extends TeaModel {
         public Integer chunkOrder;
 
         /**
+         * <p>The text content of the document chunk.</p>
+         * 
          * <strong>example:</strong>
          * <p>这是一段测试文本</p>
          */
@@ -88,6 +103,8 @@ public class CreatePredefinedDocumentRequest extends TeaModel {
         public String chunkText;
 
         /**
+         * <p>The type of the document chunk.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */

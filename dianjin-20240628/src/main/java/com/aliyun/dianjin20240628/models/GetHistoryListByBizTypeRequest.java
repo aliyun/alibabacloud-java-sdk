@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHistoryListByBizTypeRequest extends TeaModel {
     /**
+     * <p>Unique business identifier. When bizType is LibraryChat, bizId is the document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetHistoryListByBizTypeRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Business type. Supported values are LlmChat and LibraryChat.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GetHistoryListByBizTypeRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,8 @@ public class GetHistoryListByBizTypeRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Number of records per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

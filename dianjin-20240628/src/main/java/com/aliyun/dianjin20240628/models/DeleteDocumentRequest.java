@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteDocumentRequest extends TeaModel {
     /**
+     * <p>List of document IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("docIds")
     public java.util.List<String> docIds;
 
     /**
+     * <p>Document library ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class QueryRedemptionRecordsRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>1001</p>
+     * <p>1</p>
      */
     @NameInMap("externalUserId")
     public String externalUserId;
@@ -27,7 +27,7 @@ public class QueryRedemptionRecordsRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>ORD20240101000001</p>
+     * <p>1</p>
      */
     @NameInMap("redemptionOrderNo")
     public String redemptionOrderNo;
