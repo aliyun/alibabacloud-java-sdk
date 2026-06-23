@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateEmailRequest extends TeaModel {
     /**
-     * <p>Specifies whether to check the graylist. The default value is false. The result is sent through an asynchronous notification message from EventBridge.</p>
+     * <p>Specifies whether to check the graylist. Default value: false. Results will be sent as asynchronous notifications through EventBridge.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ValidateEmailRequest extends TeaModel {
     public Boolean checkGraylist;
 
     /**
-     * <p>The email address to validate.</p>
+     * <p>The email address to validate</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,20 @@ public class ValidateEmailRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The timeout period. The default value is 60 seconds.</p>
+     * <p>The detection type:</p>
+     * <ul>
+     * <li>FULL: Enables all detection capabilities, including SMTP probing. Since SMTP probing involves remote connections, the overall latency is higher. This is suitable for scenarios that are not sensitive to response time. Each detection consumes 1 address validation quota.</li>
+     * <li>BASIC_ONLY: Enables all detection capabilities except SMTP probing, with low latency. This is suitable for scenarios sensitive to response time, such as real-time validation during registration to check whether an email address is a disposable email or an abnormal address such as MX forwarding, to defend against mass registration by malicious actors. Each detection consumes 1/3 of an address validation quota.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FULL</p>
+     */
+    @NameInMap("ProbeType")
+    public String probeType;
+
+    /**
+     * <p>Timeout period. Default value: 60 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,6 +64,14 @@ public class ValidateEmailRequest extends TeaModel {
     }
     public String getEmail() {
         return this.email;
+    }
+
+    public ValidateEmailRequest setProbeType(String probeType) {
+        this.probeType = probeType;
+        return this;
+    }
+    public String getProbeType() {
+        return this.probeType;
     }
 
     public ValidateEmailRequest setTimeout(Long timeout) {

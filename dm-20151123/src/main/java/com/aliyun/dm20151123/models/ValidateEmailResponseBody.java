@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateEmailResponseBody extends TeaModel {
     /**
-     * <p>The domain part of the email address parsed from the syntax check. The domain part is converted to lowercase.</p>
+     * <p>The domain part of the email address parsed from syntax validation (lowercased)</p>
      * 
      * <strong>example:</strong>
      * <p>yyy.com</p>
@@ -14,7 +14,7 @@ public class ValidateEmailResponseBody extends TeaModel {
     public String domainPart;
 
     /**
-     * <p>Indicates whether the address is from a free email service.</p>
+     * <p>Indicates whether the address is a free email</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ValidateEmailResponseBody extends TeaModel {
     public Boolean isFreeMail;
 
     /**
-     * <p>The local part of the email address parsed from the syntax check. The local part is converted to lowercase and the content after the plus sign (+) is removed.</p>
+     * <p>The local part of the email address parsed from syntax validation (lowercased with the plus sign portion removed)</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -32,7 +32,7 @@ public class ValidateEmailResponseBody extends TeaModel {
     public String localPart;
 
     /**
-     * <p>The email service provider of the address.</p>
+     * <p>Email provider classification of the address</p>
      * 
      * <strong>example:</strong>
      * <p>Gmail</p>
@@ -41,7 +41,7 @@ public class ValidateEmailResponseBody extends TeaModel {
     public String provider;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxx</p>
@@ -50,7 +50,7 @@ public class ValidateEmailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The validation status of the email address.</p>
+     * <p>The email address status obtained from validation</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ValidateEmailResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The detailed validation status of the email address. This provides more information about the Status.</p>
+     * <p>The email address sub-status obtained from validation, which provides a detailed description of the status</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-east-1", "dm.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "dm.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "dm.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "dm.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dm", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -5043,7 +5049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validates an email address.</p>
+     * <p>Validate an email address.</p>
      * 
      * @param request ValidateEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5058,6 +5064,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.email)) {
             query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.probeType)) {
+            query.put("ProbeType", request.probeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
@@ -5083,7 +5093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validates an email address.</p>
+     * <p>Validate an email address.</p>
      * 
      * @param request ValidateEmailRequest
      * @return ValidateEmailResponse
