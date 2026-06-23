@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateMetaEntitiesShrinkRequest extends TeaModel {
     /**
+     * <p>An entity list. You can create up to five entities in a batch. All entities in the batch must have the same <code>EntityType</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

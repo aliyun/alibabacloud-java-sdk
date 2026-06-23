@@ -241,10 +241,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the resource group. Valid values:</p>
          * <ul>
-         * <li>CommonV2: Serverless resource group.</li>
-         * <li>ExclusiveDataIntegration: Exclusive resource group for Data Integration.</li>
-         * <li>ExclusiveScheduler: Exclusive resource group for scheduling.</li>
-         * <li>ExclusiveDataService: Exclusive resource group for DataService Studio.</li>
+         * <li><p>CommonV2: Serverless resource group.</p>
+         * </li>
+         * <li><p>ExclusiveDataIntegration: Exclusive resource group for Data Integration.</p>
+         * </li>
+         * <li><p>ExclusiveScheduler: Exclusive resource group for scheduling.</p>
+         * </li>
+         * <li><p>ExclusiveDataService: Exclusive resource group for DataService Studio.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,18 +266,30 @@ public class GetResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The status of the resource group. Valid values:</p>
          * <ul>
-         * <li>Normal: The resource group is running or in use.</li>
-         * <li>Stop: The resource group is expired.</li>
-         * <li>Deleted: The resource group is released or destroyed.</li>
-         * <li>Creating: The resource group is being created.</li>
-         * <li>CreateFailed: The resource group fails to be created.</li>
-         * <li>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</li>
-         * <li>UpdateFailed: The resource group fails to be scaled out or upgraded.</li>
-         * <li>Deleting: The resource group is being released or destroyed.</li>
-         * <li>DeleteFailed: The resource group fails to be released or destroyed.</li>
-         * <li>Timeout: The operations that are performed on the resource group time out.</li>
-         * <li>Freezed: The resource group is frozen.</li>
-         * <li>Starting: The resource group is being started.</li>
+         * <li><p>Normal: The resource group is running or in use.</p>
+         * </li>
+         * <li><p>Stop: The resource group is expired.</p>
+         * </li>
+         * <li><p>Deleted: The resource group is released or destroyed.</p>
+         * </li>
+         * <li><p>Creating: The resource group is being created.</p>
+         * </li>
+         * <li><p>CreateFailed: The resource group fails to be created.</p>
+         * </li>
+         * <li><p>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</p>
+         * </li>
+         * <li><p>UpdateFailed: The resource group fails to be scaled out or upgraded.</p>
+         * </li>
+         * <li><p>Deleting: The resource group is being released or destroyed.</p>
+         * </li>
+         * <li><p>DeleteFailed: The resource group fails to be released or destroyed.</p>
+         * </li>
+         * <li><p>Timeout: The operations that are performed on the resource group time out.</p>
+         * </li>
+         * <li><p>Freezed: The resource group is frozen.</p>
+         * </li>
+         * <li><p>Starting: The resource group is being started.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowInstancesResponseBody extends TeaModel {
     /**
-     * <p>Pagination information.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListWorkflowInstancesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -42,7 +42,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
 
     public static class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags extends TeaModel {
         /**
-         * <p>The key of a tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -51,7 +51,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of a tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -84,6 +84,8 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
 
     public static class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances extends TeaModel {
         /**
+         * <p>The business date.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -100,7 +102,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The account ID of the creator.</p>
+         * <p>The account ID of the user who created the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -109,10 +111,12 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The environment of the workspace. Valid values:</p>
+         * <p>The project environment.</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod (production)</p>
+         * </li>
+         * <li><p>Dev (development)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +135,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public Long finishedTime;
 
         /**
-         * <p>The workflow instance ID.</p>
+         * <p>The unique identifier of the workflow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -149,7 +153,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The account ID of the modifier.</p>
+         * <p>The account ID of the user who last modified the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -158,7 +162,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
-         * <p>The name of the workflow instance.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>WorkflowInstance1</p>
@@ -176,7 +180,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -185,7 +189,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The time when the instance started to run.</p>
+         * <p>The time when the instance started running.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -194,16 +198,24 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public Long startedTime;
 
         /**
-         * <p>The status of the workflow instance. Valid values:</p>
+         * <p>The running status of the workflow instance.</p>
          * <ul>
-         * <li>NotRun: The instance is not run.</li>
-         * <li>Running: The instance is running.</li>
-         * <li>WaitTime: The instance is waiting for the scheduling time to arrive.</li>
-         * <li>CheckingCondition: Branch conditions are being checked for the instance.</li>
-         * <li>WaitResource: The instance is waiting for resources.</li>
-         * <li>Failure: The instance fails to be run.</li>
-         * <li>Success: The instance is successfully run.</li>
-         * <li>Checking: Data quality is being checked for the instance.</li>
+         * <li><p>NotRun: Not run</p>
+         * </li>
+         * <li><p>Running: Running</p>
+         * </li>
+         * <li><p>WaitTime: Waiting for TriggerTime</p>
+         * </li>
+         * <li><p>CheckingCondition: Checking branch conditions</p>
+         * </li>
+         * <li><p>WaitResource: Waiting for resources</p>
+         * </li>
+         * <li><p>Failure: Failed</p>
+         * </li>
+         * <li><p>Success: Succeeded</p>
+         * </li>
+         * <li><p>Checking: Submitted for Data Quality check</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,20 +225,26 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task tag.</p>
+         * <p>The task tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags> tags;
 
         /**
-         * <p>The type of the workflow instance. Valid values:</p>
+         * <p>The type of the workflow instance.</p>
          * <ul>
-         * <li>Normal: Scheduled execution</li>
-         * <li>Manual: Manually triggered node</li>
-         * <li>SmokeTest: Smoke test</li>
-         * <li>SupplementData: Data backfill</li>
-         * <li>ManualWorkflow: Manually triggered workflow</li>
-         * <li>TriggerWorkflow: Triggered Workflow</li>
+         * <li><p>Normal: Periodic scheduling</p>
+         * </li>
+         * <li><p>Manual: Manual task</p>
+         * </li>
+         * <li><p>SmokeTest: Testing</p>
+         * </li>
+         * <li><p>SupplementData: Backfill data</p>
+         * </li>
+         * <li><p>ManualWorkflow: Manual workflow</p>
+         * </li>
+         * <li><p>TriggerWorkflow: Trigger-based workflow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,6 +254,8 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The unified workflow instance ID. All workflow instances within the same business date of a single trigger share the same value for this field.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -253,6 +273,12 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The workflow parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>周期工作流：
+         * key1=value1 key2=value2
+         * 手动业务流程：
+         * {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
          */
         @NameInMap("WorkflowParameters")
         public String workflowParameters;
@@ -445,7 +471,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -454,7 +480,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The workflow instances.</p>
+         * <p>The list of workflow instances.</p>
          */
         @NameInMap("WorkflowInstances")
         public java.util.List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances> workflowInstances;

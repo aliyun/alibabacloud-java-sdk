@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The check settings for sample data.</p>
+     * <p>The sample verification settings.</p>
      */
     @NameInMap("CheckingConfig")
     public String checkingConfigShrink;
 
     /**
-     * <p>The description of the rule. The description can be up to 500 characters in length.</p>
+     * <p>The rule description. The maximum length is 500 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a odps _sql task</p>
@@ -20,7 +20,7 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the rule.</p>
+     * <p>Specifies whether the rule is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The operations that you can perform after the rule-based check fails.</p>
+     * <p>The list of issue handlers for data quality rule verification.</p>
      */
     @NameInMap("ErrorHandlers")
     public String errorHandlersShrink;
@@ -45,7 +45,7 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the rule. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
+     * <p>The rule name. The name can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation. The maximum length is 255 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>The table cannot be empty.</p>
@@ -54,7 +54,7 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,13 +64,13 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The sampling settings.</p>
+     * <p>The settings required for sample collection.</p>
      */
     @NameInMap("SamplingConfig")
     public String samplingConfigShrink;
 
     /**
-     * <p>The strength of the rule. Valid values:</p>
+     * <p>The severity level of the rule for the business (corresponding to strong/weak rules on the page). Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -83,10 +83,10 @@ public class UpdateDataQualityRuleShrinkRequest extends TeaModel {
     public String severity;
 
     /**
-     * <p>The ID of the template used by the rule.</p>
+     * <p>The unique identifier of the rule template referenced by the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>system::user_defined</p>
+     * <p>SYSTEM:table:table_count:fixed</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;

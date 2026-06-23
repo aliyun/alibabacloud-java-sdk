@@ -8,7 +8,7 @@ public class UpdateDataAssetTagResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>0bc1ec92159376</p>
+     * <p>0bc1ec921****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

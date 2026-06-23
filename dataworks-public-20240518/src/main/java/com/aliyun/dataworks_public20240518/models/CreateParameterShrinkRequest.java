@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateParameterShrinkRequest extends TeaModel {
     /**
+     * <p>The description of the parameter.</p>
+     * 
      * <strong>example:</strong>
-     * <p>这是一个测试参数</p>
+     * <p>This is a test parameter.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The parameter name. It must be unique within the workspace, be prefixed with <code>workspace.</code>, and not exceed 255 characters. The part of the name after the prefix must start with a letter and can contain only letters, digits, and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateParameterShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The account ID of the owner.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CreateParameterShrinkRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The workspace ID. This parameter is required when <code>Scope</code> is set to <code>Project</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,12 +44,15 @@ public class CreateParameterShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The value configurations for the parameter. A configuration for the production environment is required. If you provide duplicate configurations for an environment, only the first one is used.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Properties")
     public String propertiesShrink;
 
     /**
+     * <p>The scope of the parameter. The default value is <code>Project</code>. No other values are currently supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>Project</p>
      */
@@ -52,6 +60,15 @@ public class CreateParameterShrinkRequest extends TeaModel {
     public String scope;
 
     /**
+     * <p>The type of the parameter.</p>
+     * <ul>
+     * <li><p><code>PlainConstant</code>: plaintext constant.</p>
+     * </li>
+     * <li><p><code>SecretConstant</code>: secret constant.</p>
+     * </li>
+     * <li><p><code>Variable</code>: variable.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

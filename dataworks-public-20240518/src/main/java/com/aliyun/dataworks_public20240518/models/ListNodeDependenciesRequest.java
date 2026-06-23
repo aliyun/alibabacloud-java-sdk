@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListNodeDependenciesRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the Data Studio node.</p>
+     * <p>The ID of the node.</p>
      * <blockquote>
-     * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>The data type of this parameter is Long in SDKs earlier than V8.0.0, and is String in SDKs of V8.0.0 and later versions. <strong>The change does not affect the normal use of the SDKs. The parameter is still returned as the type defined in the SDKs.</strong> When you upgrade an SDK to a version later than V8.0.0, a compilation error may occur due to the type change. In this case, you must manually change the data type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,10 +19,7 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The unique identifier of the Data Studio node.</p>
-     * <blockquote>
-     * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
-     * </blockquote>
+     * <p>The number of the page to return. The value of this parameter must be a positive integer. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +28,7 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -39,8 +37,8 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can go to the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> to obtain the workspace ID.</p>
+     * <p>This parameter is used to specify the DataWorks workspace for the API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

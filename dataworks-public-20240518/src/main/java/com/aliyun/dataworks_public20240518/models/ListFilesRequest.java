@@ -145,12 +145,18 @@ public class ListFilesRequest extends TeaModel {
     /**
      * <p>The functional module to which the file belongs. Valid values:</p>
      * <ul>
-     * <li>NORMAL: Data Studio</li>
-     * <li>MANUAL: Manually triggered node</li>
-     * <li>MANUAL_BIZ: Manually triggered workflow</li>
-     * <li>SKIP: Dry-run scheduling in Data Studio</li>
-     * <li>ADHOCQUERY: Ad hoc query</li>
-     * <li>COMPONENT: Component management</li>
+     * <li><p>NORMAL: Data Studio</p>
+     * </li>
+     * <li><p>MANUAL: Manually triggered node</p>
+     * </li>
+     * <li><p>MANUAL_BIZ: Manually triggered workflow</p>
+     * </li>
+     * <li><p>SKIP: Dry-run scheduling in Data Studio</p>
+     * </li>
+     * <li><p>ADHOCQUERY: Ad hoc query</p>
+     * </li>
+     * <li><p>COMPONENT: Component management</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListAgentsResponseBody extends TeaModel {
+    /**
+     * <p>The response object that conforms to the JSON-RPC specification.</p>
+     */
     @NameInMap("JsonRpcResponse")
     public ListAgentsResponseBodyJsonRpcResponse jsonRpcResponse;
 
@@ -39,6 +42,8 @@ public class ListAgentsResponseBody extends TeaModel {
 
     public static class ListAgentsResponseBodyJsonRpcResponseResultAgents extends TeaModel {
         /**
+         * <p>The agent name.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat_cli_chatbi</p>
          */
@@ -61,10 +66,15 @@ public class ListAgentsResponseBody extends TeaModel {
     }
 
     public static class ListAgentsResponseBodyJsonRpcResponseResult extends TeaModel {
+        /**
+         * <p>The list of agents.</p>
+         */
         @NameInMap("Agents")
         public java.util.List<ListAgentsResponseBodyJsonRpcResponseResultAgents> agents;
 
         /**
+         * <p>The actual number of entries per page that takes effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -72,6 +82,8 @@ public class ListAgentsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token for the next page. The value is null when the current page is the last page or no data is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -79,6 +91,8 @@ public class ListAgentsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of agents that match the filter criteria.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -126,15 +140,26 @@ public class ListAgentsResponseBody extends TeaModel {
 
     public static class ListAgentsResponseBodyJsonRpcResponse extends TeaModel {
         /**
+         * <p>The request ID passed in by the caller. The value is returned as-is in the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>70623e38-a889-4192-930a-752ffdd75f48</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("Jsonrpc")
         public String jsonrpc;
 
+        /**
+         * <p>The paginated query result for agents.</p>
+         */
         @NameInMap("Result")
         public ListAgentsResponseBodyJsonRpcResponseResult result;
 

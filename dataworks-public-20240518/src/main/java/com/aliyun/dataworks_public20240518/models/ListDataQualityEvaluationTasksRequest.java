@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityEvaluationTasksRequest extends TeaModel {
     /**
-     * <p>The name of the data quality monitoring task. Fuzzy match is supported.</p>
+     * <p>The name used to fuzzy match data quality check task names.</p>
      * 
      * <strong>example:</strong>
      * <p>Test</p>
@@ -14,7 +14,7 @@ public class ListDataQualityEvaluationTasksRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number for the paging query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListDataQualityEvaluationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The page size for the paging query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListDataQualityEvaluationTasksRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The ID of the table in Data Map.</p>
+     * <p>The unique ID of the table in Data Map.</p>
      * 
      * <strong>example:</strong>
      * <p>odps.unit_test.tb_unit_test</p>

@@ -55,14 +55,18 @@ public class ListResourcesRequest extends TeaModel {
      * <p>The resource type. This parameter specifies a filter condition.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Python</li>
-     * <li>Jar</li>
-     * <li>Archive</li>
-     * <li>File</li>
+     * <li><p>Python</p>
+     * </li>
+     * <li><p>Jar</p>
+     * </li>
+     * <li><p>Archive</p>
+     * </li>
+     * <li><p>File</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>python</p>
+     * <p>Python</p>
      */
     @NameInMap("Type")
     public String type;

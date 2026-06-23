@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListMetaEntityDefsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListMetaEntityDefsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>RequestId</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ADFASDFASDFA-ADFASDF-ASDFADSDF-AFFADS</p>
@@ -17,6 +20,8 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -53,10 +58,15 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
     }
 
     public static class ListMetaEntityDefsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>A list of custom entity definitions.</p>
+         */
         @NameInMap("MetaEntityDefs")
         public java.util.List<MetaEntityDef> metaEntityDefs;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -64,6 +74,8 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -71,6 +83,8 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

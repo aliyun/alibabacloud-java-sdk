@@ -16,9 +16,12 @@ public class ListDeploymentPackageFilesRequest extends TeaModel {
     /**
      * <p>The change type. Valid values:</p>
      * <ul>
-     * <li>0: addition</li>
-     * <li>1: update</li>
-     * <li>2: deletion</li>
+     * <li><p>0: addition</p>
+     * </li>
+     * <li><p>1: update</p>
+     * </li>
+     * <li><p>2: deletion</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

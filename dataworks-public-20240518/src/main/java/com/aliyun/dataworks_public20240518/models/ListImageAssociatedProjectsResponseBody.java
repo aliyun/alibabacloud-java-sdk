@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListImageAssociatedProjectsResponseBody extends TeaModel {
+    /**
+     * <p>An array of project IDs for the associated workspaces.</p>
+     */
     @NameInMap("Data")
     public java.util.List<Long> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -15,6 +20,8 @@ public class ListImageAssociatedProjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

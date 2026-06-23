@@ -31,8 +31,10 @@ public class UpdateWorkflowRequest extends TeaModel {
     /**
      * <p>The project environment.</p>
      * <ul>
-     * <li>Prod</li>
-     * <li>Dev</li>
+     * <li><p>Prod</p>
+     * </li>
+     * <li><p>Dev</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,8 +56,10 @@ public class UpdateWorkflowRequest extends TeaModel {
     /**
      * <p>The instance generation mode.</p>
      * <ul>
-     * <li>T+1: the next day</li>
-     * <li>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</li>
+     * <li><p>T+1: the next day</p>
+     * </li>
+     * <li><p>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -231,10 +235,14 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>The dependency type. Valid values:</p>
          * <ul>
-         * <li>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</li>
-         * <li>CrossCycleDependsOnSelf: Depends on itself across cycles.</li>
-         * <li>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</li>
-         * <li>Normal: Depends on nodes in the same cycle.</li>
+         * <li><p>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</p>
+         * </li>
+         * <li><p>CrossCycleDependsOnSelf: Depends on itself across cycles.</p>
+         * </li>
+         * <li><p>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</p>
+         * </li>
+         * <li><p>Normal: Depends on nodes in the same cycle.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -412,10 +420,14 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>The dependency type. Valid values:</p>
          * <ul>
-         * <li>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</li>
-         * <li>CrossCycleDependsOnSelf: Depends on itself across cycles.</li>
-         * <li>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</li>
-         * <li>Normal: Depends on nodes in the same cycle.</li>
+         * <li><p>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</p>
+         * </li>
+         * <li><p>CrossCycleDependsOnSelf: Depends on itself across cycles.</p>
+         * </li>
+         * <li><p>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</p>
+         * </li>
+         * <li><p>Normal: Depends on nodes in the same cycle.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -487,10 +499,14 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>Constant: constant value.</li>
-         * <li>PassThrough: node output.</li>
-         * <li>System: variable.</li>
-         * <li>NodeOutput: script output.</li>
+         * <li><p>Constant: constant value.</p>
+         * </li>
+         * <li><p>PassThrough: node output.</p>
+         * </li>
+         * <li><p>System: variable.</p>
+         * </li>
+         * <li><p>NodeOutput: script output.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -600,10 +616,14 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>Constant: constant value.</li>
-         * <li>PassThrough: node output.</li>
-         * <li>System: variable.</li>
-         * <li>NodeOutput: script output.</li>
+         * <li><p>Constant: constant value.</p>
+         * </li>
+         * <li><p>PassThrough: node output.</p>
+         * </li>
+         * <li><p>System: variable.</p>
+         * </li>
+         * <li><p>NodeOutput: script output.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -838,9 +858,12 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -853,8 +876,10 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: periodically triggered</li>
-         * <li>Manual</li>
+         * <li><p>Scheduler: periodically triggered</p>
+         * </li>
+         * <li><p>Manual</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -929,8 +954,10 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>The project environment.</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod</p>
+         * </li>
+         * <li><p>Dev</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -992,9 +1019,12 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>Configuration for whether the task can be rerun.</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun.</li>
-         * <li>FailureAllowed: The task can be rerun only after it fails.</li>
-         * <li>AllAllowed: The task can always be rerun.</li>
+         * <li><p>AllDenied: The task cannot be rerun.</p>
+         * </li>
+         * <li><p>FailureAllowed: The task can be rerun only after it fails.</p>
+         * </li>
+         * <li><p>AllAllowed: The task can always be rerun.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -1256,8 +1286,10 @@ public class UpdateWorkflowRequest extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: periodically triggered</li>
-         * <li>Manual</li>
+         * <li><p>Scheduler: periodically triggered</p>
+         * </li>
+         * <li><p>Manual</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

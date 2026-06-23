@@ -55,16 +55,22 @@ public class ListFunctionsRequest extends TeaModel {
      * <p>The user-defined function (UDF) type. This parameter specifies a filter condition.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Math: mathematical operation function</li>
-     * <li>Aggregate: aggregate function</li>
-     * <li>String: string processing function</li>
-     * <li>Date: date function</li>
-     * <li>Analytic: window function</li>
-     * <li>Other: other functions</li>
+     * <li><p>Math: mathematical operation function</p>
+     * </li>
+     * <li><p>Aggregate: aggregate function</p>
+     * </li>
+     * <li><p>String: string processing function</p>
+     * </li>
+     * <li><p>Date: date function</p>
+     * </li>
+     * <li><p>Analytic: window function</p>
+     * </li>
+     * <li><p>Other: other functions</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>MATH</p>
+     * <p>Math</p>
      */
     @NameInMap("Type")
     public String type;

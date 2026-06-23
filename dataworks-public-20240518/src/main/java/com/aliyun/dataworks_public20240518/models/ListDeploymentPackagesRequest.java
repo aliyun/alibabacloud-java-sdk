@@ -88,10 +88,14 @@ public class ListDeploymentPackagesRequest extends TeaModel {
     /**
      * <p>The status of the deployment package. Valid values:</p>
      * <ul>
-     * <li>0: It is ready.</li>
-     * <li>1: It was successfully deployed.</li>
-     * <li>2: It failed to be deployed.</li>
-     * <li>6: It was rejected.</li>
+     * <li><p>0: It is ready.</p>
+     * </li>
+     * <li><p>1: It was successfully deployed.</p>
+     * </li>
+     * <li><p>2: It failed to be deployed.</p>
+     * </li>
+     * <li><p>6: It was rejected.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

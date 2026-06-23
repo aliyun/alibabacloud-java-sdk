@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateParameterResponseBody extends TeaModel {
     /**
+     * <p>The parameter ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -12,6 +14,8 @@ public class CreateParameterResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */

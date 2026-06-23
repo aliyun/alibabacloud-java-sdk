@@ -189,9 +189,12 @@ public class BatchUpdateTasksRequest extends TeaModel {
         /**
          * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,8 +215,10 @@ public class BatchUpdateTasksRequest extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: periodically triggered</li>
-         * <li>Manual</li>
+         * <li><p>Scheduler: periodically triggered</p>
+         * </li>
+         * <li><p>Manual</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,8 +293,10 @@ public class BatchUpdateTasksRequest extends TeaModel {
         /**
          * <p>The project environment.</p>
          * <ul>
-         * <li>Prod: Production</li>
-         * <li>Dev: Development</li>
+         * <li><p>Prod: Production</p>
+         * </li>
+         * <li><p>Dev: Development</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,9 +345,12 @@ public class BatchUpdateTasksRequest extends TeaModel {
         /**
          * <p>The rerun mode. Valid values:</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun.</li>
-         * <li>FailureAllowed: The task can be rerun only after it fails.</li>
-         * <li>AllAllowed: The task can always be rerun.</li>
+         * <li><p>AllDenied: The task cannot be rerun.</p>
+         * </li>
+         * <li><p>FailureAllowed: The task can be rerun only after it fails.</p>
+         * </li>
+         * <li><p>AllAllowed: The task can always be rerun.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

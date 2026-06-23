@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     /**
-     * <p>The source of the template. This parameter is required. Valid values:</p>
+     * <p>The creation source of the rule template. This parameter is required.</p>
      * <ul>
-     * <li>System</li>
-     * <li>UserDefined</li>
+     * <li>System: system template</li>
+     * <li>UserDefined: user-defined template</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     public String creationSource;
 
     /**
-     * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+     * <p>The category directory in which the custom template is stored. Levels are separated by forward slashes (/). Each level name can be up to 1,024 characters in length and cannot contain whitespace characters or backslashes.</p>
      * 
      * <strong>example:</strong>
      * <p>/ods/order_data</p>
@@ -27,7 +27,7 @@ public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     public String directoryPath;
 
     /**
-     * <p>The name of the template. If you want to query a system template, set this parameter to the name of the system template. Fuzzy match is supported.</p>
+     * <p>The fuzzy match of the template rule name. For a system template, the internationalized name of the system template is fuzzy matched based on the language.</p>
      * 
      * <strong>example:</strong>
      * <p>Table rows</p>
@@ -36,7 +36,7 @@ public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries per page in a paginated query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of a paginated query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

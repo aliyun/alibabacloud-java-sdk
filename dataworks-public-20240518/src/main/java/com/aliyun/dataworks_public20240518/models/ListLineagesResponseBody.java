@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListLineagesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination details.</p>
+     */
     @NameInMap("PagingInfo")
     public ListLineagesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -15,6 +20,8 @@ public class ListLineagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,12 +58,21 @@ public class ListLineagesResponseBody extends TeaModel {
     }
 
     public static class ListLineagesResponseBodyPagingInfoLineages extends TeaModel {
+        /**
+         * <p>The destination entity.</p>
+         */
         @NameInMap("DstEntity")
         public LineageEntity dstEntity;
 
+        /**
+         * <p>A list of lineage relationships.</p>
+         */
         @NameInMap("Relationships")
         public java.util.List<LineageRelationship> relationships;
 
+        /**
+         * <p>The source entity.</p>
+         */
         @NameInMap("SrcEntity")
         public LineageEntity srcEntity;
 
@@ -92,10 +108,15 @@ public class ListLineagesResponseBody extends TeaModel {
     }
 
     public static class ListLineagesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>A list of lineage information.</p>
+         */
         @NameInMap("Lineages")
         public java.util.List<ListLineagesResponseBodyPagingInfoLineages> lineages;
 
         /**
+         * <p>The page number of the returned data.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -103,6 +124,8 @@ public class ListLineagesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries returned on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -110,6 +133,8 @@ public class ListLineagesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */

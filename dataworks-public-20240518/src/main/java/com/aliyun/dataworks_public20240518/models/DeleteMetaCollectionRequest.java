@@ -9,7 +9,7 @@ public class DeleteMetaCollectionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>category.123</p>
+     * <p>as78d756asd</p>
      */
     @NameInMap("Id")
     public String id;

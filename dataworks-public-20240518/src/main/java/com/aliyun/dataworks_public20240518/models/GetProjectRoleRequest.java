@@ -5,18 +5,28 @@ import com.aliyun.tea.*;
 
 public class GetProjectRoleRequest extends TeaModel {
     /**
-     * <p>The code of the role in the DataWorks workspace. Valid values:</p>
+     * <p>The code of the workspace role. Valid values:</p>
      * <ul>
-     * <li>role_project_admin: workspace administrator</li>
-     * <li>role_project_dev: developer</li>
-     * <li>role_project_dg_admin: data governance administrator</li>
-     * <li>role_project_guest: visitor</li>
-     * <li>role_project_security: security administrator</li>
-     * <li>role_project_deploy: deployer</li>
-     * <li>role_project_owner: workspace owner</li>
-     * <li>role_project_data_analyst: data analyst</li>
-     * <li>role_project_pe: O\&amp;M engineer</li>
-     * <li>role_project_erd: model designer</li>
+     * <li><p>role_project_admin: workspace administrator</p>
+     * </li>
+     * <li><p>role_project_dev: developer</p>
+     * </li>
+     * <li><p>role_project_dg_admin: data governance administrator</p>
+     * </li>
+     * <li><p>role_project_guest: guest</p>
+     * </li>
+     * <li><p>role_project_security: security administrator</p>
+     * </li>
+     * <li><p>role_project_deploy: deployer</p>
+     * </li>
+     * <li><p>role_project_owner: workspace owner</p>
+     * </li>
+     * <li><p>role_project_data_analyst: data analyst</p>
+     * </li>
+     * <li><p>role_project_pe: O\&amp;M engineer</p>
+     * </li>
+     * <li><p>role_project_erd: model designer</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +37,7 @@ public class GetProjectRoleRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

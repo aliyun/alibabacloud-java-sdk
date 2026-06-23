@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The list of monitoring rules that are associated with the monitor.</p>
+     * <p>List of data quality rules associated with the data quality monitoring.</p>
      */
     @NameInMap("DataQualityRules")
     public String dataQualityRulesShrink;
 
     /**
-     * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</p>
+     * <p>Data source ID. You can call <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> to obtain the data source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>358750</p>
@@ -20,7 +20,7 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public Long dataSourceId;
 
     /**
-     * <p>The description of the monitor.</p>
+     * <p>Description of the quality monitoring task</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI data quality monitoring test.</p>
@@ -29,13 +29,13 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The hook.</p>
+     * <p>Callback settings</p>
      */
     @NameInMap("Hooks")
     public String hooksShrink;
 
     /**
-     * <p>The ID of the monitor.</p>
+     * <p>Data quality monitoring ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the monitor.</p>
+     * <p>Name of the quality monitoring task</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI data quality monitoring test.</p>
@@ -54,13 +54,13 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configurations of alert notifications.</p>
+     * <p>Notification subscription configuration</p>
      */
     @NameInMap("Notifications")
     public String notificationsShrink;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>Workspace ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,12 +70,10 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The extended configurations in JSON-formatted strings. You can use this parameter only for monitors that are used to monitor the quality of E-MapReduce (EMR) data.</p>
+     * <p>Extended configuration. A JSON-formatted string. Takes effect only for EMR-type data quality monitoring.</p>
      * <ul>
-     * <li><p>queue: The Yarn queue used when a monitor checks the quality of EMR data. By default, the queue configured for the current workspace is used.</p>
-     * </li>
-     * <li><p>sqlEngine: The SQL engine used when a monitor checks the quality of EMR data.</p>
-     * <ul>
+     * <li>queue: The YARN queue used when executing EMR data quality validation. Defaults to the queue configured for the current project.</li>
+     * <li>sqlEngine: The SQL engine used when executing EMR data validation.<ul>
      * <li>HIVE_SQL</li>
      * <li>SPARK_SQL</li>
      * </ul>
@@ -89,13 +87,13 @@ public class UpdateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     public String runtimeConf;
 
     /**
-     * <p>The monitored object of the data quality monitoring task.</p>
+     * <p>Data quality monitoring object</p>
      */
     @NameInMap("Target")
     public String targetShrink;
 
     /**
-     * <p>The trigger configuration of the monitor.</p>
+     * <p>Trigger configuration of the data quality validation task</p>
      */
     @NameInMap("Trigger")
     public String triggerShrink;

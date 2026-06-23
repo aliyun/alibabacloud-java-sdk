@@ -14,7 +14,7 @@ public class GetProjectResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
+     * <p>22C97E95-F023-56B5-8852-B1A77A1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -110,8 +110,10 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the development environment is enabled. Valid values:</p>
          * <ul>
-         * <li>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</li>
-         * <li>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</li>
+         * <li><p>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</p>
+         * </li>
+         * <li><p>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,8 +125,10 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Develop role is disabled. Valid values:</p>
          * <ul>
-         * <li>false</li>
-         * <li>true</li>
+         * <li><p>false</p>
+         * </li>
+         * <li><p>true</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,8 +176,10 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * <p>Indicates whether scheduling of PAI tasks is enabled. Valid values:</p>
          * <ul>
-         * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
-         * <li>false: Scheduling of PAI tasks is disabled.</li>
+         * <li><p>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</p>
+         * </li>
+         * <li><p>false: Scheduling of PAI tasks is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,15 +191,24 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * <p>The status of the workspace. Valid values:</p>
          * <ul>
-         * <li>Available</li>
-         * <li>Initializing</li>
-         * <li>InitFailed</li>
-         * <li>Forbidden</li>
-         * <li>Deleting</li>
-         * <li>DeleteFailed</li>
-         * <li>Frozen</li>
-         * <li>Updating</li>
-         * <li>UpdateFailed</li>
+         * <li><p>Available</p>
+         * </li>
+         * <li><p>Initializing</p>
+         * </li>
+         * <li><p>InitFailed</p>
+         * </li>
+         * <li><p>Forbidden</p>
+         * </li>
+         * <li><p>Deleting</p>
+         * </li>
+         * <li><p>DeleteFailed</p>
+         * </li>
+         * <li><p>Frozen</p>
+         * </li>
+         * <li><p>Updating</p>
+         * </li>
+         * <li><p>UpdateFailed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

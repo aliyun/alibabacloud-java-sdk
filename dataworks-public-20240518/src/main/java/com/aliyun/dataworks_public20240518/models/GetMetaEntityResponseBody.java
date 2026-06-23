@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaEntityResponseBody extends TeaModel {
+    /**
+     * <p>The custom entity object.</p>
+     */
     @NameInMap("MetaEntity")
     public MetaEntity metaEntity;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A04C673-BEFA-5803-94E5-89E2D9F8C567</p>
@@ -17,6 +20,8 @@ public class GetMetaEntityResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

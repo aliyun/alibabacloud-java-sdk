@@ -11,6 +11,8 @@ public class UpdateMetaCollectionShrinkRequest extends TeaModel {
     public String administratorsShrink;
 
     /**
+     * <p>Updated collection description</p>
+     * 
      * <strong>example:</strong>
      * <p>new comment</p>
      */
@@ -22,12 +24,14 @@ public class UpdateMetaCollectionShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>category.123</p>
+     * <p>as78d756asd</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>Updated collection name</p>
+     * 
      * <strong>example:</strong>
      * <p>new_name</p>
      */

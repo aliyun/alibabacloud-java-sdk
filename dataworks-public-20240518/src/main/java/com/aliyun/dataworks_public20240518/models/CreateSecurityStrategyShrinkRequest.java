@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     /**
+     * <p>A client-generated token that ensures request idempotency, preventing duplicate operations if you retry the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
      */
@@ -12,12 +14,14 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The content of the strategy. This value is constrained by the <code>SecurityStrategySchema</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String contentShrink;
 
     /**
+     * <p><strong>The control scope. Valid values: Workspace and Tenant.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,7 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     public String controlDwScope;
 
     /**
+     * <p><strong>Control module</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,22 +41,35 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     public String controlModule;
 
     /**
+     * <p><strong>Control submodule</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>MyCatalog</p>
      */
     @NameInMap("ControlSubModule")
     public String controlSubModule;
 
+    /**
+     * <p><strong>Strategy description</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>控制数据分析模块的查询结果安全行为</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p><strong>Strategy name</strong></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>默认数据分析策略</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p><strong>Schema template name</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +78,9 @@ public class CreateSecurityStrategyShrinkRequest extends TeaModel {
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>A list of associated workspace IDs.</p>
+     */
     @NameInMap("Workspaces")
     public String workspacesShrink;
 

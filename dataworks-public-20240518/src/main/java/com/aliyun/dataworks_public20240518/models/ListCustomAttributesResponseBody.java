@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListCustomAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The paging information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListCustomAttributesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>RequestId</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>54594ACA-7976-5273-958B-02E15E9B867C</p>
@@ -17,6 +20,8 @@ public class ListCustomAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -53,10 +58,15 @@ public class ListCustomAttributesResponseBody extends TeaModel {
     }
 
     public static class ListCustomAttributesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>A list of custom attribute objects.</p>
+         */
         @NameInMap("CustomAttributes")
         public java.util.List<CustomAttribute> customAttributes;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -64,6 +74,8 @@ public class ListCustomAttributesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -71,6 +83,8 @@ public class ListCustomAttributesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -19,7 +19,7 @@ public class GetPartitionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-column:11075xxxx::test_project:test_schema:test_table</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("TableId")
     public String tableId;

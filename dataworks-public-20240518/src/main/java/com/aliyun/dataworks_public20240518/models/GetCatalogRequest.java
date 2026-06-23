@@ -7,21 +7,21 @@ public class GetCatalogRequest extends TeaModel {
     /**
      * <p>The catalog entity ID. Currently supports dlf and starrocks types. You can refer to the results returned by the ListCatalogs operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
      * <ul>
-     * <li>For the DLF type, the format is <code>dlf-catalog::catalog_id</code>.</li>
-     * <li>For the StarRocks type, the format is <code>starrocks-catalog:(instance_id|encoded_jdbc_url):catalog_name</code>.</li>
+     * <li><p>For the DLF type, the format is <code>dlf-catalog::catalog_id</code>.</p>
+     * </li>
+     * <li><p>For the StarRocks type, the format is <code>starrocks-catalog:(instance_id|encoded_jdbc_url):catalog_name</code>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>\
-     * <code>catalog_id</code>: The ID of the DLF catalog.\
-     * <code>instance_id</code>: The instance ID, required if the data source is registered in instance mode.\
-     * <code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. Required if the data source is registered in connection string mode.\
+     * <p><br><code>catalog_id</code>: The ID of the DLF catalog.<br>
+     * <code>instance_id</code>: The instance ID, required if the data source is registered in instance mode.<br>
+     * <code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. Required if the data source is registered in connection string mode.<br>
      * <code>catalog_name</code>: The name of the StarRocks catalog.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dlf-catalog:123456XXX:test_catalog
-     * starrocks-catalog:c-abc123xxx:default_catalog</p>
+     * <p>dlf-catalog::catalog_id</p>
      */
     @NameInMap("Id")
     public String id;

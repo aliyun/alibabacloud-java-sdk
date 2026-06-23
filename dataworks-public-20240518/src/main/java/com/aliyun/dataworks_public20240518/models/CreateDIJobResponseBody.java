@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDIJobResponseBody extends TeaModel {
     /**
-     * <p>This parameter is deprecated and is replaced by the Id parameter.</p>
+     * <p>This field is deprecated. Use the <code>Id</code> field instead.</p>
      * 
      * <strong>example:</strong>
      * <p>11792</p>
@@ -15,7 +15,7 @@ public class CreateDIJobResponseBody extends TeaModel {
     public Long DIJobId;
 
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>The data integration job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>11792</p>
@@ -24,7 +24,7 @@ public class CreateDIJobResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>4F6AB6B3-41FB-5EBB-AFB2-0C98D49DA2BB</p>

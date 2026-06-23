@@ -8,7 +8,7 @@ public class DeleteDIAlarmRuleResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</p>
+     * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -16,8 +16,10 @@ public class DeleteDIAlarmRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

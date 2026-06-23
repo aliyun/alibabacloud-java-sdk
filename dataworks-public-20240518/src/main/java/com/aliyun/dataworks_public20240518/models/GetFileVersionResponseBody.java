@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileVersionResponseBody extends TeaModel {
     /**
-     * <p>The details of the file version.</p>
+     * <p>Version details of the file.</p>
      */
     @NameInMap("Data")
     public GetFileVersionResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetFileVersionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class GetFileVersionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of this request. If an error occurs, you can troubleshoot the issue using this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -47,10 +47,12 @@ public class GetFileVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the API call succeeded.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Succeeded.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +116,7 @@ public class GetFileVersionResponseBody extends TeaModel {
 
     public static class GetFileVersionResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</p>
+         * <p>The change type of this file version, including CREATE, UPDATE, and DELETE.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATE</p>
@@ -123,7 +125,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public String changeType;
 
         /**
-         * <p>The description of the file version.</p>
+         * <p>Description of this file version.</p>
          * 
          * <strong>example:</strong>
          * <p>Second version submission</p>
@@ -132,7 +134,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The time when the file version was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>UNIX timestamp (in milliseconds) when the file version was generated.</p>
          * 
          * <strong>example:</strong>
          * <p>1593881265000</p>
@@ -141,7 +143,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public Long commitTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to generate the file of the current version.</p>
+         * <p>User ID of the Alibaba Cloud user who generated this file version.</p>
          * 
          * <strong>example:</strong>
          * <p>7384234****</p>
@@ -150,7 +152,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public String commitUser;
 
         /**
-         * <p>The code in the file of the current version.</p>
+         * <p>The code of the file for this version.</p>
          * 
          * <strong>example:</strong>
          * <p>SHOW TABLES;</p>
@@ -159,7 +161,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public String fileContent;
 
         /**
-         * <p>The name of the file of the current version.</p>
+         * <p>File name used to generate this file version.</p>
          * 
          * <strong>example:</strong>
          * <p>ods_user_info_d</p>
@@ -168,7 +170,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The basic information about the file of the current version.</p>
+         * <p>Basic information of the file used to generate this file version.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</p>
@@ -177,7 +179,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public String filePropertyContent;
 
         /**
-         * <p>The file version.</p>
+         * <p>The version of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -186,10 +188,12 @@ public class GetFileVersionResponseBody extends TeaModel {
         public Integer fileVersion;
 
         /**
-         * <p>Indicates whether the version is the latest version in the production environment. Valid values:</p>
+         * <p>Indicates whether this file version is the latest version in the current production environment.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: It is the latest version.</p>
+         * </li>
+         * <li><p>false: It is not the latest version.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +203,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public Boolean isCurrentProd;
 
         /**
-         * <p>The scheduling configurations of the node that corresponds to the file of the current version.</p>
+         * <p>The scan configuration at the time this file version was generated.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</p>
@@ -208,7 +212,7 @@ public class GetFileVersionResponseBody extends TeaModel {
         public String nodeContent;
 
         /**
-         * <p>The ID of the node that corresponds to the file version.</p>
+         * <p>The ID of the scheduling task corresponding to the generation of this file version.</p>
          * 
          * <strong>example:</strong>
          * <p>3000001</p>
@@ -217,14 +221,20 @@ public class GetFileVersionResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The status of the file version. Valid values:</p>
+         * <p>Current status of the file version. Valid values:</p>
          * <ul>
-         * <li>COMMITTING</li>
-         * <li>COMMITTED or CHECK_OK</li>
-         * <li>PACKAGED</li>
-         * <li>DEPLOYING</li>
-         * <li>DEPLOYED</li>
-         * <li>CANCELLED</li>
+         * <li><p>COMMITTING (Submitting)</p>
+         * </li>
+         * <li><p>COMMITTED or CHECK_OK (Submitted)</p>
+         * </li>
+         * <li><p>PACKAGED (Preparing for publish)</p>
+         * </li>
+         * <li><p>DEPLOYING (In Publish)</p>
+         * </li>
+         * <li><p>DEPLOYED (Published)</p>
+         * </li>
+         * <li><p>CANCELLED (Publish canceled)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,14 +244,20 @@ public class GetFileVersionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The module to which the file belongs. Valid values:</p>
+         * <p>Function module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>0: NORMAL, which indicates that the file is used for DataStudio.</li>
-         * <li>1: MANUAL, which indicates that the file is used for a manually triggered node.</li>
-         * <li>2: MANUAL_BIZ, which indicates that the file is used for a manually triggered workflow.</li>
-         * <li>3: SKIP, which indicates that the file is used for a dry-run node in DataStudio.</li>
-         * <li>10: ADHOCQUERY, which indicates that the file is used for an ad hoc query.</li>
-         * <li>30: COMPONENT, which indicates that the file is used for a script template.</li>
+         * <li><p>0: NORMAL (Data Development)</p>
+         * </li>
+         * <li><p>1: MANUAL (one-time task)</p>
+         * </li>
+         * <li><p>2: MANUAL_BIZ (manual pipeline)</p>
+         * </li>
+         * <li><p>3: SKIP (Dry-Run scheduling in Data Development)</p>
+         * </li>
+         * <li><p>10: ADHOCQUERY (Ad Hoc Query)</p>
+         * </li>
+         * <li><p>30: COMPONENT (widget Management)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

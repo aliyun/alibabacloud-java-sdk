@@ -8,7 +8,7 @@ public class UpdateWorkflowDefinitionResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>20BF7E80-668A-5620-8AD8-879B8FEAXXXX</p>
+     * <p>20BF7E80-668A-5620-8AD8-879B8FEA****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -16,8 +16,10 @@ public class UpdateWorkflowDefinitionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

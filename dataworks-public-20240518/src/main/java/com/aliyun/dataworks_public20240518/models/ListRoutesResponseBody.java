@@ -68,7 +68,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Route destination CIDR</p>
+         * <p>The destination CIDR block of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -77,7 +77,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
-         * <p>Route ID</p>
+         * <p>The route ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -86,7 +86,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Network Resource ID</p>
+         * <p>The network resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -95,7 +95,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public Long networkId;
 
         /**
-         * <p>Unique identifier of the resource group to which it belongs</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003****</p>
@@ -104,7 +104,7 @@ public class ListRoutesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Unique identifier of network resource</p>
+         * <p>The ID of the network resource.</p>
          * 
          * <strong>example:</strong>
          * <p>ns-679XXXXXX</p>
@@ -187,13 +187,13 @@ public class ListRoutesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The list of network resource routing information obtained.</p>
+         * <p>The routes of the network resource.</p>
          */
         @NameInMap("RouteList")
         public java.util.List<ListRoutesResponseBodyPagingInfoRouteList> routeList;
 
         /**
-         * <p>All data entries</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -44,8 +44,10 @@ public class GetDIJobLogRequest extends TeaModel {
     /**
      * <p>The type of the node. This parameter is applicable only to the tasks that are run on serverless resource groups. Valid values:</p>
      * <ul>
-     * <li><strong>MASTER</strong>: the master node, which is used to query the logs of JobManagers.</li>
-     * <li><strong>WORKER</strong>: the worker node, which is used to query the logs of TaskManagers.</li>
+     * <li><p><strong>MASTER</strong>: the master node, which is used to query the logs of JobManagers.</p>
+     * </li>
+     * <li><p><strong>WORKER</strong>: the worker node, which is used to query the logs of TaskManagers.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

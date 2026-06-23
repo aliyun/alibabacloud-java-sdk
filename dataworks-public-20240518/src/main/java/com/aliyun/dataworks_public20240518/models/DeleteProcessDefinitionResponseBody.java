@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteProcessDefinitionResponseBody extends TeaModel {
     /**
+     * <p><strong>The unique ID of the request.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5df3a17***903790e8e8a</p>
      */

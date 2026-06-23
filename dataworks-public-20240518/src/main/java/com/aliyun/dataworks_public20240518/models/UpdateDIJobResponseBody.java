@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateDIJobResponseBody extends TeaModel {
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The ID of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>AAC30B35-820D-5F3E-A42C-E96BB6379325</p>
+     * <p>AAC30B35-820D-5F3E-A42C-E96BB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -16,8 +16,10 @@ public class UpdateDIJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

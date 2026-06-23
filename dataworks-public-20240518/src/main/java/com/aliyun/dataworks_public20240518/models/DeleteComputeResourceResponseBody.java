@@ -16,8 +16,10 @@ public class DeleteComputeResourceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call succeeded.</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call failed.</li>
+     * <li><p>true: The call is successful.</p>
+     * </li>
+     * <li><p>false: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

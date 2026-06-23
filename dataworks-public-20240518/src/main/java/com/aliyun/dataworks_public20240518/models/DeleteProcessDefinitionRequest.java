@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteProcessDefinitionRequest extends TeaModel {
     /**
+     * <p><strong>The ID of the process definition to delete.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

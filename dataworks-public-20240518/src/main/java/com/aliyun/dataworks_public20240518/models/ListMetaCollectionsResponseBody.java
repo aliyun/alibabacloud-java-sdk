@@ -14,7 +14,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>E25887B7-579C-54A5-9C4F-83A0DE367DDE</p>
+     * <p>E25887B7-XXXX-54A5-9C4F-83A0DE367DDE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,6 +67,9 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
 
         /**
          * <p>The collection description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test category</p>
          */
         @NameInMap("Description")
         public String description;
@@ -75,7 +78,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
          * <p>The collection name.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>7a65sd7aasd</p>
          */
         @NameInMap("Id")
         public String id;
@@ -102,7 +105,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
          * <p>The ID of the parent collection. Can be empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.1</p>
+         * <p>as78d756asd</p>
          */
         @NameInMap("ParentId")
         public String parentId;
@@ -110,9 +113,12 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         /**
          * <p>The collection type. Valid values:</p>
          * <ul>
-         * <li>Category</li>
-         * <li>Album</li>
-         * <li>AlbumCategory: Album subcategory</li>
+         * <li><p>Category</p>
+         * </li>
+         * <li><p>Album</p>
+         * </li>
+         * <li><p>AlbumCategory: Album subcategory</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class UpdateResourceGroupRequest extends TeaModel {
      * <p>The ID of the new Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aek2kqofrgXXXXX</p>
+     * <p>rg-aek2kqofrg****</p>
      */
     @NameInMap("AliyunResourceGroupId")
     public String aliyunResourceGroupId;

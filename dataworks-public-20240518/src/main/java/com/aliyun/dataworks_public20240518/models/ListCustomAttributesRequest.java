@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomAttributesRequest extends TeaModel {
     /**
+     * <p>The comment on the custom attribute. The service performs a fuzzy search based on this parameter\&quot;s value.</p>
+     * 
      * <strong>example:</strong>
      * <p>owner</p>
      */
@@ -12,6 +14,8 @@ public class ListCustomAttributesRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The display name of the custom attribute. The service performs a partial match based on this parameter\&quot;s value.</p>
+     * 
      * <strong>example:</strong>
      * <p>Owner</p>
      */
@@ -19,6 +23,8 @@ public class ListCustomAttributesRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The entity types to which the custom attribute applies. To specify multiple entity types, separate them with commas (,), for example, <code>*-table,*-column</code>. This parameter supports specific entity types, such as <code>hms-table</code> and <code>emr-table</code>, and wildcard types, such as <code>*-table</code> and <code>*-column</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>maxcompute-table</p>
      */
@@ -26,6 +32,8 @@ public class ListCustomAttributesRequest extends TeaModel {
     public String entityTypes;
 
     /**
+     * <p>The sort order. Valid values: Asc and Desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -33,6 +41,8 @@ public class ListCustomAttributesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ListCustomAttributesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class ListCustomAttributesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The field to sort by. Valid values: CreateTime and ModifyTime.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */

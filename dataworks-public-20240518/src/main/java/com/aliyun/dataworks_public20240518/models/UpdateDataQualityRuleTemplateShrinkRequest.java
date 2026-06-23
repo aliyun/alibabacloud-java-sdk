@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The check settings for sample data.</p>
+     * <p>The settings for sample validation.</p>
      */
     @NameInMap("CheckingConfig")
     public String checkingConfigShrink;
 
     /**
-     * <p>The code for the template.</p>
+     * <p>The code of the rule template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+     * <p>The category directory in which the custom template is stored. Levels are separated by forward slashes (/). The name of each level can be up to 1024 characters in length and cannot contain whitespace characters or forward slashes (/).</p>
      * 
      * <strong>example:</strong>
      * <p>/ods/order_data</p>
@@ -30,7 +30,7 @@ public class UpdateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     public String directoryPath;
 
     /**
-     * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
+     * <p>The name of the rule template. The name can contain digits, letters, Chinese characters, and half-width and full-width punctuation marks. The name can be up to 512 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Table row Count Verification</p>
@@ -39,8 +39,8 @@ public class UpdateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace used for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class UpdateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The sampling settings.</p>
+     * <p>The settings required for sample collection.</p>
      */
     @NameInMap("SamplingConfig")
     public String samplingConfigShrink;

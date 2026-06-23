@@ -16,8 +16,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
     /**
      * <p>The environment of the workspace. Valid values:</p>
      * <ul>
-     * <li>Prod: production environment</li>
-     * <li>Dev: development environment</li>
+     * <li><p>Prod: production environment</p>
+     * </li>
+     * <li><p>Dev: development environment</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,7 +182,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
          * <p>The value of the variable. You must configure this parameter in the <code>The ancestor output: The output variable name of the ancestor task</code> format.</p>
          * 
          * <strong>example:</strong>
-         * <p>Value1</p>
+         * <p>upstream_task_output:key1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -268,10 +270,14 @@ public class ExecuteAdhocWorkflowInstanceRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>System</li>
-         * <li>Constant</li>
-         * <li>NodeOutput</li>
-         * <li>PassThrough</li>
+         * <li><p>System</p>
+         * </li>
+         * <li><p>Constant</p>
+         * </li>
+         * <li><p>NodeOutput</p>
+         * </li>
+         * <li><p>PassThrough</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

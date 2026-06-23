@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetFileResponseBody extends TeaModel {
     /**
-     * <p>The details of the file.</p>
+     * <p>Details of the file.</p>
      */
     @NameInMap("Data")
     public GetFileResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>Error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -20,7 +20,7 @@ public class GetFileResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>Error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
@@ -29,7 +29,7 @@ public class GetFileResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class GetFileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID. Used for troubleshooting when a fault occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -47,10 +47,12 @@ public class GetFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the invocation succeeded. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The invocation succeeded.</p>
+     * </li>
+     * <li><p>false: Failed to invoke.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,12 +116,12 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataFile extends TeaModel {
         /**
-         * <p>The advanced configurations of the node.</p>
-         * <p>This parameter is valid for an EMR node. This parameter corresponds to the Advanced Settings tab in the right-side navigation pane on the configuration tab of the node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>Advanced configuration of the job.</p>
+         * <p>This parameter corresponds to &quot;Advanced Settings&quot; in the right-side navigation bar on the editing page of an EMR Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * <blockquote>
-         * <p> You cannot configure advanced parameters for EMR Shell nodes.</p>
+         * <p>Currently, EMR Shell jobs do not support advanced parameters.</p>
          * </blockquote>
-         * <p>For information about the advanced parameters of each type of EMR node, see <a href="https://help.aliyun.com/document_detail/473077.html">Develop EMR tasks</a>.</p>
+         * <p>For details about advanced parameters for different EMR job types, see <a href="https://help.aliyun.com/document_detail/473077.html">EMR Job Development</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;priority\&quot;:\&quot;1\&quot;,\&quot;ENABLE_SPARKSQL_JDBC\&quot;:false,\&quot;FLOW_SKIP_SQL_ANALYZE\&quot;:false,\&quot;queue\&quot;:\&quot;default\&quot;}</p>
@@ -128,12 +130,14 @@ public class GetFileResponseBody extends TeaModel {
         public String advancedSettings;
 
         /**
-         * <p>Indicates whether the automatic parsing feature is enabled for the file. Valid values:</p>
+         * <p>Indicates whether automatic parsing is enabled for the file. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The code in the file is automatically parsed.</p>
+         * </li>
+         * <li><p>false: The code in the file is not automatically parsed.</p>
+         * </li>
          * </ul>
-         * <p>This parameter corresponds to the Automatic Parsing From Code Before Node Committing parameter that is displayed after you select Same Cycle in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the &quot;Code Parsing&quot; option in the DataWorks console (https\://workbench.data.aliyun.com/console) when you select &quot;Same Cycle&quot; under Schedule Configuration &gt; Schedule Dependency for a Data Development job.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -142,7 +146,7 @@ public class GetFileResponseBody extends TeaModel {
         public Boolean autoParsing;
 
         /**
-         * <p>The ID of the workflow to which the file belongs. This parameter is deprecated and replaced by the BusinessId parameter.</p>
+         * <p>The ID of the Business Process to which the file belongs. This field is deprecated. Use the BusinessId field instead.</p>
          * 
          * <strong>example:</strong>
          * <p>1000001</p>
@@ -151,7 +155,7 @@ public class GetFileResponseBody extends TeaModel {
         public Long bizId;
 
         /**
-         * <p>The ID of the workflow to which the file belongs.</p>
+         * <p>The Business Process ID of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>1000001</p>
@@ -160,7 +164,13 @@ public class GetFileResponseBody extends TeaModel {
         public Long businessId;
 
         /**
-         * <p>Indicates whether the latest code in the file is committed. Valid values: 0 and 1. The value 0 indicates that the latest code in the file is not committed. The value 1 indicates that the latest code in the file is committed.</p>
+         * <p>The current commit status of the file. Valid values:</p>
+         * <ul>
+         * <li><p>0: The latest code has not been submitted.</p>
+         * </li>
+         * <li><p>1: The latest code has been submitted.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -169,7 +179,7 @@ public class GetFileResponseBody extends TeaModel {
         public Integer commitStatus;
 
         /**
-         * <p>The name of the data source that is used to run the node that corresponds to the file.</p>
+         * <p>The name of the data source used when executing the job corresponding to the file.</p>
          * 
          * <strong>example:</strong>
          * <p>odps_source</p>
@@ -178,7 +188,7 @@ public class GetFileResponseBody extends TeaModel {
         public String connectionName;
 
         /**
-         * <p>The code in the file.</p>
+         * <p>The code of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>SHOW TABLES;</p>
@@ -187,7 +197,7 @@ public class GetFileResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The time when the file was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>UNIX timestamp when the file was created, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1593879116000</p>
@@ -196,7 +206,7 @@ public class GetFileResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used to create the file.</p>
+         * <p>The Alibaba Cloud User ID of the file creator.</p>
          * 
          * <strong>example:</strong>
          * <p>424732****</p>
@@ -205,7 +215,7 @@ public class GetFileResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The latest version number of the file.</p>
+         * <p>Version number of the latest submitted version of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -214,11 +224,14 @@ public class GetFileResponseBody extends TeaModel {
         public Integer currentVersion;
 
         /**
-         * <p>The status of the file. Valid values:</p>
+         * <p>The deletion status of the file. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The file is not deleted.</li>
-         * <li>RECYCLE_BIN: The file is stored in the recycle bin.</li>
-         * <li>DELETED: The file is deleted.</li>
+         * <li><p>NORMAL: Not deleted.</p>
+         * </li>
+         * <li><p>RECYCLE_BIN: In the recycle bin.</p>
+         * </li>
+         * <li><p>DELETED: Deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,7 +259,7 @@ public class GetFileResponseBody extends TeaModel {
         public String fileFolderId;
 
         /**
-         * <p>The file ID.</p>
+         * <p>The ID of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>100000001</p>
@@ -255,7 +268,7 @@ public class GetFileResponseBody extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>Name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>ods_user_info_d</p>
@@ -264,7 +277,7 @@ public class GetFileResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The type of the code for the file. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+         * <p>The code type of the file. Different file types use different code. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks Edge Zone Collection</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -273,7 +286,8 @@ public class GetFileResponseBody extends TeaModel {
         public Integer fileType;
 
         /**
-         * <p>Indicates whether the resource file needs to be uploaded to MaxCompute. This parameter is returned only if the file is a MaxCompute resource file.</p>
+         * <p>Indicates whether the resource file needs to be uploaded to MaxCompute.
+         * Configure this parameter only when the file is a MaxCompute resource file.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -282,7 +296,7 @@ public class GetFileResponseBody extends TeaModel {
         public Boolean isMaxCompute;
 
         /**
-         * <p>The time when the file was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The UNIX timestamp of the most recent edit to the file, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1593879116000</p>
@@ -291,7 +305,7 @@ public class GetFileResponseBody extends TeaModel {
         public Long lastEditTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used to last modify the file.</p>
+         * <p>The Alibaba Cloud User ID of the user who last edited the file.</p>
          * 
          * <strong>example:</strong>
          * <p>424732****</p>
@@ -300,7 +314,7 @@ public class GetFileResponseBody extends TeaModel {
         public String lastEditUser;
 
         /**
-         * <p>The ID of the auto triggered node that is generated in the scheduling system after the file is committed.</p>
+         * <p>The ID of the scheduling task generated in the CDN mapping system after the file is submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>300001</p>
@@ -309,7 +323,7 @@ public class GetFileResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the file owner.</p>
+         * <p>Alibaba Cloud User ID of the file owner.</p>
          * 
          * <strong>example:</strong>
          * <p>7775674356****</p>
@@ -318,7 +332,7 @@ public class GetFileResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The ID of the node group file to which the current file belongs. This parameter is returned only if the current file is an inner file of the node group file.</p>
+         * <p>If the current file is an internal file of a composite edge zone file, this field identifies the ID of the corresponding composite edge zone file.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -327,14 +341,20 @@ public class GetFileResponseBody extends TeaModel {
         public Long parentId;
 
         /**
-         * <p>The module to which the file belongs. Valid values:</p>
+         * <p>The function module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The file is used for DataStudio.</li>
-         * <li>MANUAL: The file is used for a manually triggered node.</li>
-         * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
-         * <li>SKIP: The file is used for a dry-run node in DataStudio.</li>
-         * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
-         * <li>COMPONENT: The file is used for a script template.</li>
+         * <li><p>NORMAL: Data Development.</p>
+         * </li>
+         * <li><p>MANUAL: One-time task.</p>
+         * </li>
+         * <li><p>MANUAL_BIZ: Manually triggered workflow.</p>
+         * </li>
+         * <li><p>SKIP: Dry-run scheduling in Data Development.</p>
+         * </li>
+         * <li><p>ADHOCQUERY: Ad-hoc query.</p>
+         * </li>
+         * <li><p>COMPONENT: Widget Management.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -536,8 +556,8 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataNodeConfigurationInputList extends TeaModel {
         /**
-         * <p>The output name of the parent file on which the current file depends.</p>
-         * <p>This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes after Same Cycle is selected in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The output name of the upstream file on which this file depends.</p>
+         * <p>This parameter corresponds to &quot;Parent Node Output Name&quot; when &quot;Same Cycle&quot; is selected under &quot;Schedule Configuration &gt; Schedule Dependency&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>project.001_out</p>
@@ -546,10 +566,12 @@ public class GetFileResponseBody extends TeaModel {
         public String input;
 
         /**
-         * <p>The mode of the configuration file dependency. Valid values:</p>
+         * <p>The method for configuring file dependencies. Valid values:</p>
          * <ul>
-         * <li>MANUAL: Scheduling dependencies are manually configured.</li>
-         * <li>AUTO: Scheduling dependencies are automatically parsed.</li>
+         * <li><p>MANUAL: Manually configured.</p>
+         * </li>
+         * <li><p>AUTO: Automatically parsed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -583,8 +605,8 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataNodeConfigurationInputParameters extends TeaModel {
         /**
-         * <p>The name of the input parameter of the node. In the code, you can use the ${...} method to reference the input parameter of the node.</p>
-         * <p>This parameter corresponds to the Parameter Name parameter in the Input Parameters table in the Input and Output Parameters section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The parameter name of the input parameter in the node context. You can reference this parameter in code by using the ${...} syntax.</p>
+         * <p>This parameter corresponds to the &quot;Parameter Name&quot; field under &quot;Schedule Configuration &gt; Node Context &gt; Input Parameters of This Node&quot; in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>input</p>
@@ -593,8 +615,8 @@ public class GetFileResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The value source of the input parameter of the node.</p>
-         * <p>This parameter corresponds to the Value Source parameter in the Input Parameters table in the Input and Output Parameters section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The value source of the input parameter in the node context.</p>
+         * <p>This parameter corresponds to the &quot;Value Source&quot; field under &quot;Schedule Configuration &gt; Node Context &gt; Input Parameters of This Node&quot; in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>project_001.parent_node:outputs</p>
@@ -627,8 +649,8 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataNodeConfigurationOutputList extends TeaModel {
         /**
-         * <p>The output name of the current file.</p>
-         * <p>This parameter corresponds to the Output Name parameter under Output after Same Cycle is selected in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>Output name of the file.</p>
+         * <p>This parameter corresponds to the value in the &quot;Output Name&quot; column when &quot;Same Cycle&quot; is selected under &quot;Scan Configuration &gt; Schedule Dependency&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project.002_out</p>
@@ -637,8 +659,8 @@ public class GetFileResponseBody extends TeaModel {
         public String output;
 
         /**
-         * <p>The output table name of the current file.</p>
-         * <p>This parameter corresponds to the Output Table Name parameter under Output after Same Cycle is selected in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>Output value of the file.</p>
+         * <p>This parameter corresponds to the value in the &quot;Output Table&quot; column when &quot;Same Cycle&quot; is selected under &quot;Scan Configuration &gt; Schedule Dependency&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ods_user_info_d</p>
@@ -671,7 +693,7 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataNodeConfigurationOutputParameters extends TeaModel {
         /**
-         * <p>The description of the output parameter of the node.</p>
+         * <p>The description of the output parameter in the edge zone context.</p>
          * 
          * <strong>example:</strong>
          * <p>It\&quot;s a context output parameter.</p>
@@ -680,8 +702,8 @@ public class GetFileResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the output parameter of the node.</p>
-         * <p>This parameter corresponds to the Parameter Name parameter in the Output Parameters table in the Input and Output Parameters section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The parameter name of the output parameter in the node context.</p>
+         * <p>This parameter corresponds to the &quot;Parameter Name&quot; field under &quot;Schedule Configuration &gt; Node Context &gt; Output Parameters of This Node&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>output</p>
@@ -690,13 +712,16 @@ public class GetFileResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The type of the output parameter of the node. Valid values:</p>
+         * <p>The type of the expression for the edge zone context output parameter. Valid values are as follows:</p>
          * <ul>
-         * <li>1: indicates a constant.</li>
-         * <li>2: indicates a variable.</li>
-         * <li>3: indicates a pass-through variable.</li>
+         * <li><p>1: constant</p>
+         * </li>
+         * <li><p>2: variable</p>
+         * </li>
+         * <li><p>3: pass-through variable from a parameter node</p>
+         * </li>
          * </ul>
-         * <p>This parameter corresponds to the Type parameter in the Output Parameters table in the Input and Output Parameters section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the &quot;Type&quot; field in the &quot;Scan Configuration &gt; Edge Zone Context &gt; Output Parameters of This Node&quot; section for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -705,8 +730,8 @@ public class GetFileResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the output parameter of the node.</p>
-         * <p>This parameter corresponds to the Value parameter in the Output Parameters table in the Input and Output Parameters section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The expression of the output parameter in the edge zone context.</p>
+         * <p>This parameter corresponds to the &quot;Value&quot; field in the &quot;Scan Configuration &gt; Edge Zone Context &gt; Output Parameters of This Node&quot; section for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>${bizdate}</p>
@@ -755,7 +780,7 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataNodeConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether scheduling configurations immediately take effect after the deployment.</p>
+         * <p>Whether to apply the schedule configuration immediately after publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -764,8 +789,9 @@ public class GetFileResponseBody extends TeaModel {
         public String applyScheduleImmediately;
 
         /**
-         * <p>The interval between automatic reruns after an error occurs. Unit: milliseconds.</p>
-         * <p>This parameter corresponds to the Rerun interval parameter that is displayed after the Auto Rerun upon Failure check box is selected in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. The interval that you specify in the DataWorks console is measured in minutes. Pay attention to the conversion between the units of time when you call the operation.</p>
+         * <p>The time interval between automatic reruns after an error, in milliseconds.</p>
+         * <p>This parameter corresponds to the &quot;Rerun Interval&quot; setting under &quot;Schedule Configuration &gt; Time Properties &gt; Auto Rerun on Error&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.<br>
+         * Note that the time unit for &quot;Rerun Interval&quot; in the console is minutes; convert the time accordingly when invoking the API.</p>
          * 
          * <strong>example:</strong>
          * <p>120000</p>
@@ -774,7 +800,7 @@ public class GetFileResponseBody extends TeaModel {
         public Integer autoRerunIntervalMillis;
 
         /**
-         * <p>The number of automatic reruns that are allowed after an error occurs.</p>
+         * <p>The number of automatic reruns after an error.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -783,7 +809,7 @@ public class GetFileResponseBody extends TeaModel {
         public Integer autoRerunTimes;
 
         /**
-         * <p>The cron expression that represents the periodic scheduling policy of the node.</p>
+         * <p>The Cron Expression for timed scheduling of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>00 05 00 * * ?</p>
@@ -792,8 +818,8 @@ public class GetFileResponseBody extends TeaModel {
         public String cronExpress;
 
         /**
-         * <p>The type of the scheduling cycle. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.</p>
-         * <p>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The type of recurrence, including NOT_DAY (minute, hour) and DAY (day, week, month).</p>
+         * <p>This parameter corresponds to &quot;Schedule Configuration &gt; Time Properties &gt; Recurrence&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>DAY</p>
@@ -802,8 +828,8 @@ public class GetFileResponseBody extends TeaModel {
         public String cycleType;
 
         /**
-         * <p>The ID of the node on which the node that corresponds to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).</p>
-         * <p>The value of this parameter is equivalent to the ID of the node that you specified after you select Previous Cycle and set Depend On to Other Nodes in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>When the DependentType parameter is set to USER_DEFINE, this parameter specifies the IDs of the nodes on which the current file depends. Separate multiple node IDs with commas (,).</p>
+         * <p>This parameter corresponds to the configuration when, in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, the &quot;Schedule Configuration &gt; Schedule Dependency&quot; of a Data Development job is set to &quot;Previous Cycle&quot; and the dependency option is set to &quot;Other Nodes&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>5,10,15,20</p>
@@ -812,12 +838,16 @@ public class GetFileResponseBody extends TeaModel {
         public String dependentNodeIdList;
 
         /**
-         * <p>The type of the cross-cycle scheduling dependency of the node. Valid values:</p>
+         * <p>The method of depending on the previous cycle. Valid values:</p>
          * <ul>
-         * <li>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</li>
-         * <li>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</li>
-         * <li>USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.</li>
-         * <li>NONE: No cross-cycle scheduling dependency type is selected for the node.</li>
+         * <li><p>SELF: The dependency is the current node itself.</p>
+         * </li>
+         * <li><p>CHILD: The dependency is direct child nodes.</p>
+         * </li>
+         * <li><p>USER_DEFINE: The dependency is other specified nodes.</p>
+         * </li>
+         * <li><p>NONE: No dependency is selected, meaning the node does not depend on the previous cycle.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -827,8 +857,8 @@ public class GetFileResponseBody extends TeaModel {
         public String dependentType;
 
         /**
-         * <p>The end of the time range for automatic scheduling. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * <p>Configuring this parameter is equivalent to specifying an end time for the Validity Period parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The UNIX timestamp, in milliseconds, when automatic scheduling stops.</p>
+         * <p>This parameter corresponds to the millisecond UNIX timestamp of the end time configured in the &quot;Scan Configuration &gt; Time Properties &gt; Effective Date&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>4155787800000</p>
@@ -837,7 +867,7 @@ public class GetFileResponseBody extends TeaModel {
         public Long endEffectDate;
 
         /**
-         * <p>Indicates whether the dry-run property of the ancestor nodes of the node is skipped. This parameter corresponds to the Skip the dry-run property of the ancestor node parameter that is displayed after you configure the Depend On parameter in the Dependencies section of the Properties tab on the DataStudio page in the DataWorks console.</p>
+         * <p>Schedule Configuration &gt; Previous Cycle &gt; Whether to ignore the upstream dry-run property.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -846,7 +876,7 @@ public class GetFileResponseBody extends TeaModel {
         public String ignoreParentSkipRunningProperty;
 
         /**
-         * <p>The custom image ID.</p>
+         * <p>Custom image ID</p>
          * 
          * <strong>example:</strong>
          * <p>m-bp1h4b5a8ogkbll2f3tr</p>
@@ -855,32 +885,32 @@ public class GetFileResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The output information about the parent files on which the current file depends.</p>
+         * <p>Information about outputs from upstream files on which this file depends.</p>
          */
         @NameInMap("InputList")
         public java.util.List<GetFileResponseBodyDataNodeConfigurationInputList> inputList;
 
         /**
-         * <p>The input parameters of the node.</p>
+         * <p>Return Result.</p>
          */
         @NameInMap("InputParameters")
         public java.util.List<GetFileResponseBodyDataNodeConfigurationInputParameters> inputParameters;
 
         /**
-         * <p>The output information about the current file.</p>
+         * <p>Output information of the file.</p>
          */
         @NameInMap("OutputList")
         public java.util.List<GetFileResponseBodyDataNodeConfigurationOutputList> outputList;
 
         /**
-         * <p>The output parameters of the node.</p>
+         * <p>Return Result.</p>
          */
         @NameInMap("OutputParameters")
         public java.util.List<GetFileResponseBodyDataNodeConfigurationOutputParameters> outputParameters;
 
         /**
-         * <p>The scheduling parameters of the node.</p>
-         * <p>This parameter corresponds to the Scheduling Parameter section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information about the configurations of scheduling parameters, see <a href="https://help.aliyun.com/document_detail/137548.html">Configure scheduling parameters</a>.</p>
+         * <p>Schedule parameter.</p>
+         * <p>This parameter corresponds to the &quot;Scan Configuration &gt; Parameters&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. You can refer to the <a href="https://help.aliyun.com/document_detail/137548.html">Schedule Parameters</a> documentation for configuration details.</p>
          * 
          * <strong>example:</strong>
          * <p>a=x b=y</p>
@@ -889,13 +919,16 @@ public class GetFileResponseBody extends TeaModel {
         public String paraValue;
 
         /**
-         * <p>Indicates whether the node that corresponds to the file can be rerun. Valid values:</p>
+         * <p>Rerun property. Valid values:</p>
          * <ul>
-         * <li>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</li>
-         * <li>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</li>
-         * <li>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li><p>ALL_ALLOWED: The job can be rerun regardless of whether it previously Succeeded or failed.</p>
+         * </li>
+         * <li><p>FAILURE_ALLOWED: The job cannot be rerun if it previously Succeeded, but can be rerun if it previously failed.</p>
+         * </li>
+         * <li><p>ALL_DENIED: The job cannot be rerun regardless of whether it previously Succeeded or failed.</p>
+         * </li>
          * </ul>
-         * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the &quot;Scan Configuration &gt; Time Properties &gt; Rerun Property&quot; setting for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL_ALLOWED</p>
@@ -904,7 +937,7 @@ public class GetFileResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
-         * <p>The ID of the resource group that is used to run the node that corresponds to the file. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the available resource groups in the workspace.</p>
+         * <p>The resource group used when the file is published as a Job and executed. You can call <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> to obtain the list of available resource groups in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>375827434852437</p>
@@ -913,12 +946,16 @@ public class GetFileResponseBody extends TeaModel {
         public Long resourceGroupId;
 
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
+         * <p>The schedule type. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The node is an auto triggered node.</li>
-         * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</li>
-         * <li>PAUSE: The node is a paused node.</li>
-         * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</li>
+         * <li><p>NORMAL: Normal scheduling task.</p>
+         * </li>
+         * <li><p>MANUAL: One-time task, which is not included in regular scheduling and corresponds to a node in a manually triggered workflow.</p>
+         * </li>
+         * <li><p>PAUSE: Paused task.</p>
+         * </li>
+         * <li><p>SKIP: Dry-run task, which is included in regular scheduling but is immediately marked as Succeeded when scheduled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -928,8 +965,8 @@ public class GetFileResponseBody extends TeaModel {
         public String schedulerType;
 
         /**
-         * <p>The beginning of the time range for automatic scheduling. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * <p>Configuring this parameter is equivalent to specifying a start time for the Validity Period parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The UNIX timestamp (in milliseconds) indicating when automatic scheduling starts.</p>
+         * <p>This parameter corresponds to the start time (as a UNIX timestamp in milliseconds) configured under &quot;Schedule Configuration &gt; Time Properties &gt; Effective Date&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>936923400000</p>
@@ -938,8 +975,8 @@ public class GetFileResponseBody extends TeaModel {
         public Long startEffectDate;
 
         /**
-         * <p>Indicates whether a node is immediately run after the node is deployed to the production environment.</p>
-         * <p>This parameter is valid only for an EMR Spark Streaming node or an EMR Streaming SQL node. This parameter corresponds to the Start Method parameter in the Schedule section of the Configure tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>Indicates whether to start immediately after publishing.</p>
+         * <p>This parameter corresponds to the &quot;Start Method&quot; setting under &quot;Configuration &gt; Time Properties&quot; in the right-side navigation bar on the editing page for EMR Spark Streaming and EMR Streaming SQL Data Development jobs in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -948,12 +985,14 @@ public class GetFileResponseBody extends TeaModel {
         public Boolean startImmediately;
 
         /**
-         * <p>Indicates whether the scheduling for the node is suspended Valid values:</p>
+         * <p>Indicates whether to skip execution. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Skip execution.</p>
+         * </li>
+         * <li><p>false: Do not skip execution.</p>
+         * </li>
          * </ul>
-         * <p>This parameter corresponds to the Recurrence parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the setting &quot;Schedule Type&quot; under &quot;Schedule Configuration &gt; Time Properties&quot; for a Data Development job in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, when it is set to &quot;skip execution&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -962,7 +1001,7 @@ public class GetFileResponseBody extends TeaModel {
         public Boolean stop;
 
         /**
-         * <p>The timeout period.</p>
+         * <p>Timeout definition for scheduling configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1155,7 +1194,7 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyDataResourceDownloadLink extends TeaModel {
         /**
-         * <p>The download URL of the resource.</p>
+         * <p>Link for downloading the resource.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xx">http://xx</a></p>
@@ -1180,19 +1219,19 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyData extends TeaModel {
         /**
-         * <p>The basic information about the file.</p>
+         * <p>Basic information about the file.</p>
          */
         @NameInMap("File")
         public GetFileResponseBodyDataFile file;
 
         /**
-         * <p>The scheduling configurations of the file.</p>
+         * <p>The schedule configuration of the file.</p>
          */
         @NameInMap("NodeConfiguration")
         public GetFileResponseBodyDataNodeConfiguration nodeConfiguration;
 
         /**
-         * <p>The download URL of the resource.</p>
+         * <p>Resource download link.</p>
          */
         @NameInMap("ResourceDownloadLink")
         public GetFileResponseBodyDataResourceDownloadLink resourceDownloadLink;

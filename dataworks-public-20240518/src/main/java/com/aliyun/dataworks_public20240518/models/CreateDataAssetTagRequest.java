@@ -32,10 +32,14 @@ public class CreateDataAssetTagRequest extends TeaModel {
     /**
      * <p>The type of the tag value. Valid values:</p>
      * <ul>
-     * <li>Boolean</li>
-     * <li>Int</li>
-     * <li>String</li>
-     * <li>Double</li>
+     * <li><p>Boolean</p>
+     * </li>
+     * <li><p>Int</p>
+     * </li>
+     * <li><p>String</p>
+     * </li>
+     * <li><p>Double</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -33,6 +33,9 @@ public class UpdateComputeResourceRequest extends TeaModel {
 
     /**
      * <p>The description of the computing resource. The maximum length is 3000 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Level description</p>
      */
     @NameInMap("Description")
     public String description;

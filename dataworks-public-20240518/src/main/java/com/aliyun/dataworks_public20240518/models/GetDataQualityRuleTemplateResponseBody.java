@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
     /**
-     * <p>The information about the template.</p>
+     * <p>The details of the rule template.</p>
      */
     @NameInMap("DataQualityRuleTemplate")
     public GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplate dataQualityRuleTemplate;
@@ -14,7 +14,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>691CA452-D37A-4ED0-9441</p>
+     * <p>691CA452-D37A-4E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,7 +42,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
 
     public static class GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplateCheckingConfig extends TeaModel {
         /**
-         * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to indicate the query method of referenced samples.</p>
+         * <p>Some types of thresholds require you to query reference samples and aggregate the values of the reference samples to obtain the threshold for comparison. An expression is used to indicate the query method of reference samples.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -51,7 +51,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         public String referencedSamplesFilter;
 
         /**
-         * <p>The threshold calculation method. Valid values:</p>
+         * <p>The threshold calculation method:</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -92,23 +92,23 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
 
     public static class GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplateSamplingConfig extends TeaModel {
         /**
-         * <p>The metrics used for sampling. Valid values:</p>
+         * <p>The name of the metric to be sampled:</p>
          * <ul>
          * <li>Count: the number of rows in the table.</li>
          * <li>Min: the minimum value of the field.</li>
          * <li>Max: the maximum value of the field.</li>
          * <li>Avg: the average value of the field.</li>
-         * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
-         * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
-         * <li>DuplicatedCount: the number of duplicated values of the field.</li>
-         * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
-         * <li>TableSize: the table size.</li>
-         * <li>NullValueCount: the number of rows in which the field value is null.</li>
-         * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
-         * <li>GroupCount: the field value and the number of rows for each field value.</li>
-         * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
-         * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
-         * <li>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</li>
+         * <li>DistinctCount: the number of distinct values of the field.</li>
+         * <li>DistinctPercent: the ratio of the number of distinct values of the field to the number of data rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values of the field.</li>
+         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the field to the number of data rows.</li>
+         * <li>TableSize: the size of the table.</li>
+         * <li>NullValueCount: the number of rows in which the field is null.</li>
+         * <li>NullValuePercent: the percentage of rows in which the field is null.</li>
+         * <li>GroupCount: the number of data rows corresponding to each value after aggregation by field value.</li>
+         * <li>CountNotIn: the number of rows whose enumerated values do not match.</li>
+         * <li>CountDistinctNotIn: the number of distinct values whose enumerated values do not match.</li>
+         * <li>UserDefinedSql: collects samples by using a custom SQL statement.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         public String metric;
 
         /**
-         * <p>The parameters required for sampling.</p>
+         * <p>The parameters required for sample collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -127,7 +127,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
+         * <p>The runtime parameter setting statements that are inserted and executed before the specific sampling statement is executed. The setting can be a maximum of 1,000 characters in length. Only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 
@@ -169,13 +169,13 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
 
     public static class GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplate extends TeaModel {
         /**
-         * <p>The check settings for sample data.</p>
+         * <p>The sample verification settings.</p>
          */
         @NameInMap("CheckingConfig")
         public GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplateCheckingConfig checkingConfig;
 
         /**
-         * <p>The code for the template.</p>
+         * <p>The code of the rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>USER_DEFINED:123</p>
@@ -184,7 +184,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+         * <p>The category directory in which the custom template is stored. Levels are separated by forward slashes (/). Each level name can be a maximum of 1,024 characters in length and cannot contain whitespace characters or forward slashes (/).</p>
          * 
          * <strong>example:</strong>
          * <p>/ods/order_data</p>
@@ -193,7 +193,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         public String directoryPath;
 
         /**
-         * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
+         * <p>The name of the rule template. The name can be a combination of digits, letters, Chinese characters, and half-width or full-width punctuation marks. The name can be a maximum of 512 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Table row Count Verification</p>
@@ -202,7 +202,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>4020</p>
@@ -211,16 +211,16 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The sampling settings.</p>
+         * <p>The settings required for sample collection.</p>
          */
         @NameInMap("SamplingConfig")
         public GetDataQualityRuleTemplateResponseBodyDataQualityRuleTemplateSamplingConfig samplingConfig;
 
         /**
-         * <p>Available range of templates:</p>
+         * <p>The scope in which the template is available:</p>
          * <ul>
-         * <li>Tenant: all tenants are available</li>
-         * <li>Project: only available in the current Project</li>
+         * <li>Tenant: available to the entire tenant.</li>
+         * <li>Project: available only in the current project.</li>
          * </ul>
          * 
          * <strong>example:</strong>

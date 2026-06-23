@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
+    /**
+     * <p>The image details.</p>
+     */
     @NameInMap("Image")
     public GetImageResponseBodyImage image;
 
     /**
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -15,6 +20,8 @@ public class GetImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageBuildConfigPackageInstallationScripts extends TeaModel {
         /**
+         * <p>The script content. If the content consists of package names, separate them with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>requests</p>
          */
@@ -59,6 +68,8 @@ public class GetImageResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The script type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Python3</p>
          */
@@ -90,12 +101,17 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageBuildConfig extends TeaModel {
         /**
+         * <p>The build type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PackageInstallation</p>
          */
         @NameInMap("BuildType")
         public String buildType;
 
+        /**
+         * <p>The list of pre-installation scripts.</p>
+         */
         @NameInMap("PackageInstallationScripts")
         public java.util.List<GetImageResponseBodyImageBuildConfigPackageInstallationScripts> packageInstallationScripts;
 
@@ -124,12 +140,20 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageSupported extends TeaModel {
         /**
+         * <p>The supported module:</p>
+         * <ul>
+         * <li>Scheduler: Scheduling.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
          */
         @NameInMap("Module")
         public String module;
 
+        /**
+         * <p>The list of supported task types.</p>
+         */
         @NameInMap("TaskTypes")
         public java.util.List<String> taskTypes;
 
@@ -158,6 +182,14 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImage extends TeaModel {
         /**
+         * <p>The image visibility:</p>
+         * <ul>
+         * <li><p>Public: Visible to all users.</p>
+         * </li>
+         * <li><p>Private: Visible only to the creator.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */
@@ -165,6 +197,8 @@ public class GetImageResponseBody extends TeaModel {
         public String accessibility;
 
         /**
+         * <p>The VPC ID associated with the ACR instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
@@ -181,16 +215,23 @@ public class GetImageResponseBody extends TeaModel {
         public String acrEndpoint;
 
         /**
+         * <p>The ACR instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cri-xxx</p>
          */
         @NameInMap("AcrInstanceId")
         public String acrInstanceId;
 
+        /**
+         * <p>The image build configuration.</p>
+         */
         @NameInMap("BuildConfig")
         public GetImageResponseBodyImageBuildConfig buildConfig;
 
         /**
+         * <p>The creation time, represented as a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -198,6 +239,8 @@ public class GetImageResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -205,6 +248,8 @@ public class GetImageResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The image description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test image created by xxx</p>
          */
@@ -212,6 +257,8 @@ public class GetImageResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether synchronization to MaxCompute is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -219,6 +266,8 @@ public class GetImageResponseBody extends TeaModel {
         public Boolean enableSyncMaxCompute;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Custom_image_xxxx_xxxx</p>
          */
@@ -226,6 +275,8 @@ public class GetImageResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The image tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
          */
@@ -233,6 +284,8 @@ public class GetImageResponseBody extends TeaModel {
         public String imageTag;
 
         /**
+         * <p>The image URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/xxx/xxx:tag</p>
          */
@@ -240,6 +293,8 @@ public class GetImageResponseBody extends TeaModel {
         public String imageUri;
 
         /**
+         * <p>The image VPC URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/xxx/xxx:tag</p>
          */
@@ -247,6 +302,8 @@ public class GetImageResponseBody extends TeaModel {
         public String imageVpcUri;
 
         /**
+         * <p>Indicates whether the image is the default image.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -254,6 +311,8 @@ public class GetImageResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The last modification time, represented as a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -261,6 +320,8 @@ public class GetImageResponseBody extends TeaModel {
         public Long lastModifiedTime;
 
         /**
+         * <p>The ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -268,6 +329,8 @@ public class GetImageResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataworks_image</p>
          */
@@ -275,6 +338,8 @@ public class GetImageResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>namespace</p>
          */
@@ -282,6 +347,8 @@ public class GetImageResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>Indicates whether the image is an official image.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -289,6 +356,8 @@ public class GetImageResponseBody extends TeaModel {
         public Boolean official;
 
         /**
+         * <p>The image ID assigned by the provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>acr_image_id</p>
          */
@@ -296,6 +365,14 @@ public class GetImageResponseBody extends TeaModel {
         public String providerImageId;
 
         /**
+         * <p>The image provider type:</p>
+         * <ul>
+         * <li><p>ACR: ACR image repository.</p>
+         * </li>
+         * <li><p>DataWorks: DataWorks official image.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACR</p>
          */
@@ -303,6 +380,36 @@ public class GetImageResponseBody extends TeaModel {
         public String providerType;
 
         /**
+         * <p>The publish stage:</p>
+         * <ul>
+         * <li><p>Untest: Not tested.</p>
+         * </li>
+         * <li><p>Testing: Being tested.</p>
+         * </li>
+         * <li><p>TestFailed: Test failed.</p>
+         * </li>
+         * <li><p>Unpublished: Not published.</p>
+         * </li>
+         * <li><p>Publishing: Being published.</p>
+         * </li>
+         * <li><p>Published: Published.</p>
+         * </li>
+         * <li><p>PublishFailed: Publish failed.</p>
+         * </li>
+         * <li><p>Building: Being built.</p>
+         * </li>
+         * <li><p>BuildSuccess: Build succeeded.</p>
+         * </li>
+         * <li><p>BuildFailed: Build failed.</p>
+         * </li>
+         * <li><p>Accelerating: Being accelerated.</p>
+         * </li>
+         * <li><p>AccelerateSuccess: Acceleration succeeded.</p>
+         * </li>
+         * <li><p>AccelerateFailed: Acceleration failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Published</p>
          */
@@ -310,6 +417,8 @@ public class GetImageResponseBody extends TeaModel {
         public String publishStage;
 
         /**
+         * <p>The repository name.</p>
+         * 
          * <strong>example:</strong>
          * <p>repo_name</p>
          */
@@ -317,6 +426,8 @@ public class GetImageResponseBody extends TeaModel {
         public String repositoryName;
 
         /**
+         * <p>The image size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1GB</p>
          */
@@ -324,16 +435,33 @@ public class GetImageResponseBody extends TeaModel {
         public String size;
 
         /**
+         * <p>The image status:</p>
+         * <ul>
+         * <li><p>Disabled: The image is disabled.</p>
+         * </li>
+         * <li><p>Expired: The image has expired.</p>
+         * </li>
+         * <li><p>Available: The image is available.</p>
+         * </li>
+         * <li><p>ReadOnly: The image is read-only.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The supported modules and task types.</p>
+         */
         @NameInMap("Supported")
         public GetImageResponseBodyImageSupported supported;
 
         /**
+         * <p>The image version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

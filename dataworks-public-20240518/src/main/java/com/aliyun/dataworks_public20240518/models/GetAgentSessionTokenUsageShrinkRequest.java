@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAgentSessionTokenUsageShrinkRequest extends TeaModel {
     /**
+     * <p>The ID provided by the requester, which is echoed in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>1033814166</p>
      */
@@ -12,12 +14,17 @@ public class GetAgentSessionTokenUsageShrinkRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. The value is always 2.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>Business parameters.</p>
+     */
     @NameInMap("Params")
     public String paramsShrink;
 

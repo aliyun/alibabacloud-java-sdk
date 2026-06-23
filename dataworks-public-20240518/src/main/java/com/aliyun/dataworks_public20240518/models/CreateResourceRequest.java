@@ -17,7 +17,7 @@ public class CreateResourceRequest extends TeaModel {
     /**
      * <p>The specific file stream or OSS download link contained in the resource.</p>
      * <blockquote>
-     * <p> This field allows users to provide a file stream or an OSS download link. When providing an OSS download link, ensure that the OSS link is publicly accessible. A presigned URL is recommended.</p>
+     * <p>This field allows users to provide a file stream or an OSS download link. When providing an OSS download link, ensure that the OSS link is publicly accessible. A presigned URL is recommended.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -49,8 +49,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call succeeded. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -188,8 +190,10 @@ public class ListFileVersionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether this file version is the latest version in the production environment.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

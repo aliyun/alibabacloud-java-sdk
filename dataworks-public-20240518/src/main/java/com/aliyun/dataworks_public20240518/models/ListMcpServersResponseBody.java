@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListMcpServersResponseBody extends TeaModel {
+    /**
+     * <p>The paging information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListMcpServersResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
      */
@@ -36,10 +41,18 @@ public class ListMcpServersResponseBody extends TeaModel {
     }
 
     public static class ListMcpServersResponseBodyPagingInfoMcpServersConfig extends TeaModel {
+        /**
+         * <p>The custom headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("CustomHeaders")
         public java.util.Map<String, ?> customHeaders;
 
         /**
+         * <p>The transport protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>SSE</p>
          */
@@ -47,6 +60,8 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String transport;
 
         /**
+         * <p>The service address of the MCP Server.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
          */
@@ -85,13 +100,23 @@ public class ListMcpServersResponseBody extends TeaModel {
     }
 
     public static class ListMcpServersResponseBodyPagingInfoMcpServers extends TeaModel {
+        /**
+         * <p>The connection configuration of the MCP Server.</p>
+         */
         @NameInMap("Config")
         public ListMcpServersResponseBodyPagingInfoMcpServersConfig config;
 
+        /**
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>805298765622151</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
+         * <p>The creation time, as a millisecond timestamp.****</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +126,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The last modified time, as a millisecond timestamp.****</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +136,8 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The ID of the user who last modified the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -117,6 +145,8 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String modifierId;
 
         /**
+         * <p>The name of the MCP Server.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-mcp-server</p>
          */
@@ -124,6 +154,8 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The visibility level.****</p>
+         * 
          * <strong>example:</strong>
          * <p>TENANT</p>
          */
@@ -194,15 +226,36 @@ public class ListMcpServersResponseBody extends TeaModel {
     }
 
     public static class ListMcpServersResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The maximum number of results returned on the current page.****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>A list of MCP Server objects.</p>
+         */
         @NameInMap("McpServers")
         public java.util.List<ListMcpServersResponseBodyPagingInfoMcpServers> mcpServers;
 
+        /**
+         * <p>The token for the next page of results. A null value indicates that all results have been returned.****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total count of entries that match the filter criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

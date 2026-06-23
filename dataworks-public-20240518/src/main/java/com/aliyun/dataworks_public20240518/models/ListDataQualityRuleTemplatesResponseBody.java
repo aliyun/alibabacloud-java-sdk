@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The paginated query result of data quality rule templates.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataQualityRuleTemplatesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>691CA452-D37A-4ED0-9441</p>
+     * <p>691CA452-D37A-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,7 +42,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
 
     public static class ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplatesCheckingConfig extends TeaModel {
         /**
-         * <p>Some types of thresholds need to query some reference samples, and then summarize the values of the reference samples to obtain the threshold for comparison. Here, an expression is used to represent the query method of the reference samples.</p>
+         * <p>Some types of thresholds require reference samples to be queried, and then the values of the reference samples are aggregated to obtain the threshold for comparison. An expression is used here to indicate the query method of the reference samples.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -51,7 +51,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String referencedSamplesFilter;
 
         /**
-         * <p>Threshold Calculation method</p>
+         * <p>The threshold calculation method.</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -92,23 +92,23 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
 
     public static class ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplatesSamplingConfig extends TeaModel {
         /**
-         * <p>The name of the sampled metric.</p>
+         * <p>The name of the sampling metric.</p>
          * <ul>
-         * <li>Count: number of table rows</li>
-         * <li>Min: minimum value of the field</li>
-         * <li>Max: The maximum value of the field.</li>
-         * <li>Avg: field mean</li>
-         * <li>DistinctCount: number of unique field values</li>
-         * <li>DistinctPercent: the ratio of the number of unique field values to the number of data rows.</li>
-         * <li>DuplicatedCount: number of duplicate field values</li>
-         * <li>DuplicatedPercent: the ratio of the number of duplicate field values to the number of data rows.</li>
-         * <li>TableSize: table size</li>
-         * <li>NullValueCount: number of rows with empty fields</li>
-         * <li>NullValuePercent: the proportion of fields that are empty.</li>
-         * <li>GroupCount: aggregate each value by field value and the corresponding number of data rows</li>
-         * <li>CountNotIn: the enumerated value does not match the number of rows.</li>
-         * <li>CountDistinctNotIn: the number of unique values that the enumerated values do not match.</li>
-         * <li>UserDefinedSql: use custom SQL to collect samples</li>
+         * <li>Count: the number of table rows</li>
+         * <li>Min: the minimum value of the field</li>
+         * <li>Max: the maximum value of the field</li>
+         * <li>Avg: the average value of the field</li>
+         * <li>DistinctCount: the number of unique values of the field</li>
+         * <li>DistinctPercent: the ratio of the number of unique values of the field to the number of data rows</li>
+         * <li>DuplicatedCount: the number of duplicate values of the field</li>
+         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the field to the number of data rows</li>
+         * <li>TableSize: the size of the table</li>
+         * <li>NullValueCount: the number of rows in which the field is null</li>
+         * <li>NullValuePercent: the ratio of rows in which the field is null</li>
+         * <li>GroupCount: each value and the corresponding number of data rows after aggregation by field value</li>
+         * <li>CountNotIn: the number of rows in which the enumeration value does not match</li>
+         * <li>CountDistinctNotIn: the number of unique values in which the enumeration value does not match</li>
+         * <li>UserDefinedSql: collect samples by using custom SQL</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String metric;
 
         /**
-         * <p>Parameters required for sample collection</p>
+         * <p>The parameters required for sample collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Sql&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -127,7 +127,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>Before executing the sample statement, insert some runtime parameter setting statements, which can be up to 1000 characters in length. Currently, only MaxCompute are supported.</p>
+         * <p>The runtime parameter setting statements that are inserted and executed before the sampling statement is executed. This parameter can be up to 1,000 characters in length. Currently, only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 
@@ -169,13 +169,13 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
 
     public static class ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplates extends TeaModel {
         /**
-         * <p>Sample verification settings</p>
+         * <p>The sample verification settings.</p>
          */
         @NameInMap("CheckingConfig")
         public ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplatesCheckingConfig checkingConfig;
 
         /**
-         * <p>Rule template Code</p>
+         * <p>The code of the rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>USER_DEFINED:123</p>
@@ -184,7 +184,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+         * <p>The category directory in which the custom template is stored. Levels are separated by forward slashes (/). Each level name can be up to 1,024 characters in length and cannot contain whitespace characters or slashes.</p>
          * 
          * <strong>example:</strong>
          * <p>/ods/order_data</p>
@@ -193,7 +193,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String directoryPath;
 
         /**
-         * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
+         * <p>The name of the rule template. It can be a combination of digits, letters, Chinese characters, and half-width or full-width punctuation marks, and can be up to 512 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Table row Count Verification</p>
@@ -202,7 +202,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>DataWorks workspace ID</p>
+         * <p>The DataWorks workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2043</p>
@@ -211,16 +211,16 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Settings required for sample collection</p>
+         * <p>The settings required for sample collection.</p>
          */
         @NameInMap("SamplingConfig")
         public ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplatesSamplingConfig samplingConfig;
 
         /**
-         * <p>Available range of templates:</p>
+         * <p>The available scope of the template:</p>
          * <ul>
-         * <li>Tenant: all tenants are available</li>
-         * <li>Project: only available in the current Project</li>
+         * <li>Tenant: available to all tenants</li>
+         * <li>Project: available only in the current project</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,13 +294,13 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
 
     public static class ListDataQualityRuleTemplatesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The templates.</p>
+         * <p>The list of rule templates.</p>
          */
         @NameInMap("DataQualityRuleTemplates")
         public java.util.List<ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplates> dataQualityRuleTemplates;
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -309,7 +309,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Page size</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -318,7 +318,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of entries</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>

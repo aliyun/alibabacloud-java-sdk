@@ -53,9 +53,12 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         /**
          * <p>The creation status. Valid values:</p>
          * <ul>
-         * <li>Creating</li>
-         * <li>Created</li>
-         * <li>CreateFailure</li>
+         * <li><p>Creating</p>
+         * </li>
+         * <li><p>Created</p>
+         * </li>
+         * <li><p>CreateFailure</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,6 +67,9 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Unified workflow instance ID. For all task instances triggered under the same data timestamp in a single trigger, the value of this field is identical. This field is returned after successful creation.</p>
+         */
         @NameInMap("UnifiedWorkflowInstanceIds")
         public java.util.List<Long> unifiedWorkflowInstanceIds;
 

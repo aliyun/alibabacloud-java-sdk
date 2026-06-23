@@ -49,8 +49,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call succeeded. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,13 +135,20 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>UNPUBLISHED(0)</li>
-         * <li>SUCCESS(1)</li>
-         * <li>ERROR(2)</li>
-         * <li>CLONED(3)</li>
-         * <li>DEPLOY_ERROR(4)</li>
-         * <li>CLONING(5)</li>
-         * <li>REJECT(6)</li>
+         * <li><p>UNPUBLISHED(0)</p>
+         * </li>
+         * <li><p>SUCCESS(1)</p>
+         * </li>
+         * <li><p>ERROR(2)</p>
+         * </li>
+         * <li><p>CLONED(3)</p>
+         * </li>
+         * <li><p>DEPLOY_ERROR(4)</p>
+         * </li>
+         * <li><p>CLONING(5)</p>
+         * </li>
+         * <li><p>REJECT(6)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,8 +192,10 @@ public class GetDeploymentPackageResponseBody extends TeaModel {
         /**
          * <p>The validation status of nodes in the deployment package. For packages deployed to the development environment (toEnviroment=1), you can only proceed to deploy to production if the package Status is 1 (succeeded) and CheckingStatus is empty (validation complete).</p>
          * <ul>
-         * <li>7: Validation failed</li>
-         * <li>8: Validation in progress</li>
+         * <li><p>7: Validation failed</p>
+         * </li>
+         * <li><p>8: Validation in progress</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

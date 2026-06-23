@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListProcessDefinitionsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListProcessDefinitionsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5df3a17***903790e8e8a</p>
      */
@@ -36,10 +41,18 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
     }
 
     public static class ListProcessDefinitionsResponseBodyPagingInfoProcessDefinitions extends TeaModel {
+        /**
+         * <p>The description of the process definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lwt_ide_simple 项目 MaxCompute 表审批策略</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the process definition is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -47,6 +60,8 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The ID of the process definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>10354346</p>
          */
@@ -54,26 +69,59 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Indicates whether this is a default system policy. System policies have restricted update capabilities.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsSystem")
         public Boolean isSystem;
 
+        /**
+         * <p>The name of the process definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute 表审批</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The priority. A smaller value indicates a higher priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The phases in which the rule is effective. Valid values:</p>
+         * <ul>
+         * <li><p><code>Deployment</code>: The policy is checked when an application is submitted.</p>
+         * </li>
+         * <li><p><code>Running</code>: The policy is checked during process execution to determine if approval can be skipped. (Supported only for the MaxCompute type)</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("Scopes")
         public java.util.List<String> scopes;
 
         /**
+         * <p>The subtype. Valid values:</p>
+         * <ul>
+         * <li><p>Table</p>
+         * </li>
+         * <li><p>Column</p>
+         * </li>
+         * <li><p>Database</p>
+         * </li>
+         * <li><p>Schema</p>
+         * </li>
+         * <li><p>Default</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Table</p>
          */
@@ -81,6 +129,32 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
         public String subType;
 
         /**
+         * <p>The type of the process definition. Valid values:</p>
+         * <ul>
+         * <li><p>MaxCompute</p>
+         * </li>
+         * <li><p>DataService</p>
+         * </li>
+         * <li><p>Extension</p>
+         * </li>
+         * <li><p>Hologres</p>
+         * </li>
+         * <li><p>DlfV1 (You cannot create custom definitions for this type.)</p>
+         * </li>
+         * <li><p>EMR (You cannot create custom definitions for this type.)</p>
+         * </li>
+         * <li><p>DataAssetGovernance (You cannot create custom definitions for this type.)</p>
+         * </li>
+         * <li><p>Lindorm (You cannot create custom definitions for this type.)</p>
+         * </li>
+         * <li><p>StarRocks (You cannot create custom definitions for this type.)</p>
+         * </li>
+         * <li><p>DlfNext (You cannot create custom definitions for this type.)</p>
+         * </li>
+         * <li><p>DataWorks (You cannot create custom definitions for this type.)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -167,10 +241,15 @@ public class ListProcessDefinitionsResponseBody extends TeaModel {
     }
 
     public static class ListProcessDefinitionsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>A list of process definitions. For more information, see the <code>ProcessDefinition</code> object.</p>
+         */
         @NameInMap("ProcessDefinitions")
         public java.util.List<ListProcessDefinitionsResponseBodyPagingInfoProcessDefinitions> processDefinitions;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

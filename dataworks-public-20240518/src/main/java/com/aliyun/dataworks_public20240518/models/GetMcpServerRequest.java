@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMcpServerRequest extends TeaModel {
     /**
+     * <p>The name of the MCP Server to retrieve.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

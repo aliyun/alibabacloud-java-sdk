@@ -11,7 +11,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     public ListPipelineRunsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
@@ -42,7 +42,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
 
     public static class ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages extends TeaModel {
         /**
-         * <p>The code of the stage.</p>
+         * <p>The code of the deployment stage.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV_CHECK</p>
@@ -51,7 +51,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The description of the stage.</p>
+         * <p>The stage description.</p>
          * 
          * <strong>example:</strong>
          * <p>Check before going online to development</p>
@@ -60,13 +60,13 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The additional information about the stage.</p>
+         * <p>Additional information about the deployment stage.</p>
          */
         @NameInMap("Detail")
         public java.util.Map<String, ?> detail;
 
         /**
-         * <p>The error message returned during the stage.</p>
+         * <p>The error message returned if the deployment stage fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Error message</p>
@@ -75,7 +75,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The name of the stage.</p>
+         * <p>The stage name.</p>
          * 
          * <strong>example:</strong>
          * <p>Check before going online to development</p>
@@ -84,15 +84,21 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the stage.</p>
+         * <p>The status of the deployment stage.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Init</li>
-         * <li>Running</li>
-         * <li>Success</li>
-         * <li>Fail</li>
-         * <li>Termination</li>
-         * <li>Cancel</li>
+         * <li><p><code>Init</code>: Initializing</p>
+         * </li>
+         * <li><p><code>Running</code>: Running</p>
+         * </li>
+         * <li><p><code>Success</code>: Succeeded</p>
+         * </li>
+         * <li><p><code>Fail</code>: Failed</p>
+         * </li>
+         * <li><p><code>Termination</code>: Terminated</p>
+         * </li>
+         * <li><p><code>Cancel</code>: Canceled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,7 +108,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The step number of the stage.</p>
+         * <p>The step number of the deployment stage.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,14 +117,19 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public Integer step;
 
         /**
-         * <p>The type of the stage. This parameter indicates the operation type in the stage.</p>
+         * <p>The type of the deployment stage.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Deploy</li>
-         * <li>Check</li>
-         * <li>Offline</li>
-         * <li>Build</li>
-         * <li>Delete</li>
+         * <li><p><code>Deploy</code>: A deploy operation</p>
+         * </li>
+         * <li><p><code>Check</code>: A check operation</p>
+         * </li>
+         * <li><p><code>Offline</code>: An offline operation</p>
+         * </li>
+         * <li><p><code>Build</code>: A build operation</p>
+         * </li>
+         * <li><p><code>Delete</code>: A delete operation</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +211,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
 
     public static class ListPipelineRunsResponseBodyPagingInfoPipelineRuns extends TeaModel {
         /**
-         * <p>The time when the process was created. This value is a UNIX timestamp.</p>
+         * <p>The creation timestamp of the deployment pipeline run.</p>
          * 
          * <strong>example:</strong>
          * <p>1702736654000</p>
@@ -209,7 +220,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The creator of the process.</p>
+         * <p>The creator of the deployment pipeline run.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -218,14 +229,16 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The description of the deployment pipeline run.</p>
+         * 
          * <strong>example:</strong>
-         * <p>发布流程描述信息</p>
+         * <p>Release process description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The process ID.</p>
+         * <p>The ID of the deployment pipeline run.</p>
          * 
          * <strong>example:</strong>
          * <p>097c73fe-ed6e-4fb1-b109-a5d59e46cd58</p>
@@ -234,7 +247,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The error message returned during the stage.</p>
+         * <p>The error message returned if the deployment pipeline run fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Error message</p>
@@ -243,7 +256,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The time when the process was modified. This value is a UNIX timestamp.</p>
+         * <p>The last modification timestamp of the deployment pipeline run.</p>
          * 
          * <strong>example:</strong>
          * <p>1702736654000</p>
@@ -252,7 +265,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>70199</p>
@@ -261,21 +274,27 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The stages of the process.</p>
+         * <p>A list of deployment stages.</p>
          */
         @NameInMap("Stages")
         public java.util.List<ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages> stages;
 
         /**
-         * <p>The status of the process.</p>
+         * <p>The status of the deployment pipeline run.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Init</li>
-         * <li>Running</li>
-         * <li>Success</li>
-         * <li>Fail</li>
-         * <li>Termination</li>
-         * <li>Cancel</li>
+         * <li><p><code>Init</code>: Initializing</p>
+         * </li>
+         * <li><p><code>Running</code>: Running</p>
+         * </li>
+         * <li><p><code>Success</code>: Succeeded</p>
+         * </li>
+         * <li><p><code>Fail</code>: Failed</p>
+         * </li>
+         * <li><p><code>Termination</code>: Terminated</p>
+         * </li>
+         * <li><p><code>Cancel</code>: Canceled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,7 +384,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
 
     public static class ListPipelineRunsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The returned page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -383,13 +402,13 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The processes.</p>
+         * <p>A list of deployment pipeline runs.</p>
          */
         @NameInMap("PipelineRuns")
         public java.util.List<ListPipelineRunsResponseBodyPagingInfoPipelineRuns> pipelineRuns;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that meet the filter criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>2524</p>

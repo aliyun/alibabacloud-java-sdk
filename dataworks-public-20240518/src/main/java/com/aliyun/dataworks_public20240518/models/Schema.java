@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Schema extends TeaModel {
     /**
-     * <p>The comment.</p>
+     * <p>注释。</p>
      * 
      * <strong>example:</strong>
      * <p>test comment</p>
@@ -14,7 +14,7 @@ public class Schema extends TeaModel {
     public String comment;
 
     /**
-     * <p>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>创建时间（毫秒级时间戳）。</p>
      * 
      * <strong>example:</strong>
      * <p>1736852168000</p>
@@ -23,20 +23,10 @@ public class Schema extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The schema ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities.</a>.</p>
-     * <p>The format is <code>${EntityType}:${Instance ID or escaped URL}:${Catalog name}:${Database name}</code>. Use empty strings as placeholders for levels that do not exist.</p>
+     * <p>ID，可参考<a href="https://help.aliyun.com/document_detail/2880092.html">元数据实体相关概念说明</a>。</p>
+     * <p>格式为<code>${EntityType}:${实例ID或转义后的URL}:${数据目录名称}:${数据库名称}:${模式名称}</code>，对于不存在的层级置空。</p>
      * <blockquote>
-     * <p> For the MaxCompute type, the instance ID level is represented by an empty string. The database name is the name of the MaxCompute project, which has enabled the schema feature.</p>
-     * </blockquote>
-     * <p>Examples of common ID formats</p>
-     * <p><code>maxcompute-project:::project_name</code> (For MaxCompute projects schema enabled)</p>
-     * <p><code>holo-schema:instance_id::database_name:schema_name</code></p>
-     * <blockquote>
-     * <p>\
-     * <code>instance_id</code>: The Hologres instance ID\
-     * . <code>database_name</code>: The database name\
-     * . <code>project_name</code>: The MaxCompute project name\
-     * . <code>schema_name</code>: The schema name.</p>
+     * <p>对于MaxCompute类型，此处的实例ID即为主账号ID，数据库名称即为MaxCompute项目名称。</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +37,7 @@ public class Schema extends TeaModel {
     public String id;
 
     /**
-     * <p>The modification time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>更新时间（毫秒级时间戳）。</p>
      * 
      * <strong>example:</strong>
      * <p>1736852168000</p>
@@ -56,7 +46,7 @@ public class Schema extends TeaModel {
     public Long modifyTime;
 
     /**
-     * <p>The name.</p>
+     * <p>名称。</p>
      * 
      * <strong>example:</strong>
      * <p>test_db</p>
@@ -65,19 +55,10 @@ public class Schema extends TeaModel {
     public String name;
 
     /**
-     * <p>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
-     * <p>The format: <code>${EntityType}:${Instance ID or escaped URL}:${Catalog name}:${Database name}</code>. Use empty strings as placeholders for levels that do not exist.</p>
+     * <p>父层级元数据实体ID，父层级实体类型取值参考ListCrawlerTypes接口。</p>
+     * <p>格式为<code>${EntityType}:${实例ID或转义后的URL}:${数据目录名称}:${数据库名称}</code>，对于不存在的层级置空。</p>
      * <blockquote>
-     * <p> For the MaxCompute type, the instance ID level is represented by an empty string. The database name is the name of the MaxCompute project with schema enabled.</p>
-     * </blockquote>
-     * <p>Examples of common ParentMetaEntityId formats</p>
-     * <p><code>maxcompute-project:::project_name</code> (For MaxCompute projects with schema enabled)</p>
-     * <p><code>holo-database:instance_id::database_name</code></p>
-     * <blockquote>
-     * <p>\
-     * <code>instance_id</code>: The Hologres instance ID\
-     * . <code>database_name</code>: The database name\
-     * . <code>project_name</code>: The MaxCompute project name.</p>
+     * <p>对于MaxCompute类型，此处的实例ID即为主账号ID，数据库名称即为MaxCompute项目名称。</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +69,7 @@ public class Schema extends TeaModel {
     public String parentMetaEntityId;
 
     /**
-     * <p>The type.</p>
+     * <p>类型。</p>
      * 
      * <strong>example:</strong>
      * <p>MANAGED</p>

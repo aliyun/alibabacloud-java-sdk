@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomAttributeRequest extends TeaModel {
     /**
+     * <p>The custom attribute ID. The ID must match the regular expression <code>^custom-attribute:[A-Za-z][A-Za-z0-9_]{0,98}$</code>. The part after \&quot;custom-attribute:\&quot; must be less than 100 characters long.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

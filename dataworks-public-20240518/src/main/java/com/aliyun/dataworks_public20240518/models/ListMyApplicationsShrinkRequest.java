@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMyApplicationsShrinkRequest extends TeaModel {
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     public String defSchema;
 
     /**
+     * <p>The end time of the application, specified as a Unix timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>A token that you can use in a subsequent request to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzfQ==</p>
      */
@@ -30,22 +34,29 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The search criteria for the resource.</p>
+     */
     @NameInMap("Resource")
     public String resourceShrink;
 
     /**
+     * <p>The name of the leaf node that specifies the resource type. You can specify multiple resource types. Note that different leaf node names can map to the same business logic.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceTypeShrink;
 
     /**
+     * <p>The start time of the application, specified as a Unix timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +65,25 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The approval statuses for filtering. Valid values:</p>
+     * <ul>
+     * <li><p><code>WaitApproval</code>: Pending approval</p>
+     * </li>
+     * <li><p><code>Confirmed</code>: Pending authorization</p>
+     * </li>
+     * <li><p><code>RejectApproval</code>: Approval rejected</p>
+     * </li>
+     * <li><p><code>AuthorizeSucceed</code>: Authorization succeeded</p>
+     * </li>
+     * <li><p><code>AuthorizeFailed</code>: Authorization failed</p>
+     * </li>
+     * <li><p><code>Deleted</code>: The application was deleted.</p>
+     * </li>
+     * <li><p><code>Canceled</code>: The application was canceled.</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("Statuses")
     public String statusesShrink;
 

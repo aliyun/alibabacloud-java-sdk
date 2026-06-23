@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListProjectRolesRequest extends TeaModel {
     /**
-     * <p>The codes of roles in the DataWorks workspace.</p>
+     * <p>An array of workspace role codes.</p>
      */
     @NameInMap("Codes")
     public java.util.List<String> codes;
 
     /**
-     * <p>The names of roles in the DataWorks workspace.</p>
+     * <p>An array of workspace role names.</p>
      */
     @NameInMap("Names")
     public java.util.List<String> names;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class ListProjectRolesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries to return per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,8 +35,8 @@ public class ListProjectRolesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can find the ID on the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter specifies the DataWorks workspace for which you want to list roles.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,12 @@ public class ListProjectRolesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The type of the role. Valid values:</p>
+     * <p>The type of the workspace role.</p>
      * <ul>
-     * <li>UserCustom: user-defined role</li>
-     * <li>System: system role</li>
+     * <li><p><code>UserCustom</code>: Custom Role</p>
+     * </li>
+     * <li><p><code>System</code>: System Role</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -43,8 +43,10 @@ public class DeleteFolderResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: success.</li>
-     * <li>false: failure.</li>
+     * <li><p>true: success.</p>
+     * </li>
+     * <li><p>false: failure.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

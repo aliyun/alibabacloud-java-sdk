@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteMetaEntitiesRequest extends TeaModel {
     /**
+     * <p>An array of IDs for the meta entities to delete. You can specify up to 10 IDs in a single request. All entities in the batch must have the same EntityType.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")

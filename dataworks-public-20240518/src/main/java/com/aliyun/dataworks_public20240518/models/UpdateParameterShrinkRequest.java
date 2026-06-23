@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateParameterShrinkRequest extends TeaModel {
     /**
+     * <p>The parameter description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>这是一个测试参数</p>
+     * <p>This is a test parameter.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The parameter ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,12 +24,17 @@ public class UpdateParameterShrinkRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The owner\&quot;s account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The parameter value configuration. This parameter is required for the production environment. If you specify the same environment multiple times, only the first configuration is used.</p>
+     */
     @NameInMap("Properties")
     public String propertiesShrink;
 

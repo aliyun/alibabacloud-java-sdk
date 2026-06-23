@@ -24,6 +24,9 @@ public class ListMetaCollectionsRequest extends TeaModel {
 
     /**
      * <p>The collection description. Supports fuzzy matching.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test collection</p>
      */
     @NameInMap("Description")
     public String description;
@@ -40,8 +43,10 @@ public class ListMetaCollectionsRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>Asc (default): Ascending order</li>
-     * <li>Desc</li>
+     * <li><p>Asc (default): Ascending order</p>
+     * </li>
+     * <li><p>Desc</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +77,7 @@ public class ListMetaCollectionsRequest extends TeaModel {
      * <p>The ID of the parent collection.</p>
      * 
      * <strong>example:</strong>
-     * <p>category.123</p>
+     * <p>as78d756asd</p>
      */
     @NameInMap("ParentId")
     public String parentId;
@@ -80,11 +85,16 @@ public class ListMetaCollectionsRequest extends TeaModel {
     /**
      * <p>The sort field. Valid values:</p>
      * <ul>
-     * <li>Id (default)</li>
-     * <li>Name</li>
-     * <li>CreateUser: Creator ID</li>
-     * <li>CreateTime: Creation time</li>
-     * <li>ModifyTime: Modification time</li>
+     * <li><p>Id (default)</p>
+     * </li>
+     * <li><p>Name</p>
+     * </li>
+     * <li><p>CreateUser: Creator ID</p>
+     * </li>
+     * <li><p>CreateTime: Creation time</p>
+     * </li>
+     * <li><p>ModifyTime: Modification time</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,9 +106,12 @@ public class ListMetaCollectionsRequest extends TeaModel {
     /**
      * <p>The collection type. Valid values:</p>
      * <ul>
-     * <li>Category</li>
-     * <li>Album</li>
-     * <li>AlbumCategory: Album subcategory</li>
+     * <li><p>Category</p>
+     * </li>
+     * <li><p>Album</p>
+     * </li>
+     * <li><p>AlbumCategory: Album subcategory</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

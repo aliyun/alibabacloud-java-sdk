@@ -112,23 +112,40 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
         /**
          * <p>The metric name. Valid values:</p>
          * <ul>
-         * <li>CUSpec: Maximum CU capacity of the resource group, in CUs.</li>
-         * <li>CUUsage: CU usage of the resource group, in CUs.</li>
-         * <li>CUUtilization: CU utilization of the resource group, in %.</li>
-         * <li>SlotSpec: Maximum number of concurrent slots for resource group scheduling, in slots.</li>
-         * <li>SlotUsage: Used concurrency for resource group scheduling, in slots.</li>
-         * <li>SchedulerCUMaxSpec: Maximum CU quota for data computing, in CUs.</li>
-         * <li>SchedulerCUUsage: CU usage for data computing, in CUs.</li>
-         * <li>SchedulerCUMinSpec: Minimum guaranteed CUs for data computing, in CUs.</li>
-         * <li>DataIntegrationCUMaxSpec: Maximum CU quota for Data Integration, in CUs.</li>
-         * <li>DataIntegrationCUUsage: CU usage for Data Integration, in CUs.</li>
-         * <li>DataIntegrationCUMinSpec: Minimum guaranteed CUs for Data Integration, in CUs.</li>
-         * <li>DataServiceCUMaxSpec: Maximum CU quota for DataService Studio, in CUs.</li>
-         * <li>DataServiceCUUsage: CU usage for DataService Studio, in CUs.</li>
-         * <li>DataServiceCUMinSpec: Minimum guaranteed CUs for DataService Studio, in CUs.</li>
-         * <li>ServerIdeCUMaxSpec: Maximum CU quota for personal development environment, in CUs.</li>
-         * <li>ServerIdeCUUsage: CU usage for personal development environment, in CUs.</li>
-         * <li>ServerIdeCUMinSpec: Minimum guaranteed CUs for personal development environment, in CUs.</li>
+         * <li><p>CUSpec: Maximum CU capacity of the resource group, in CUs.</p>
+         * </li>
+         * <li><p>CUUsage: CU usage of the resource group, in CUs.</p>
+         * </li>
+         * <li><p>CUUtilization: CU utilization of the resource group, in %.</p>
+         * </li>
+         * <li><p>SlotSpec: Maximum number of concurrent slots for resource group scheduling, in slots.</p>
+         * </li>
+         * <li><p>SlotUsage: Used concurrency for resource group scheduling, in slots.</p>
+         * </li>
+         * <li><p>SchedulerCUMaxSpec: Maximum CU quota for data computing, in CUs.</p>
+         * </li>
+         * <li><p>SchedulerCUUsage: CU usage for data computing, in CUs.</p>
+         * </li>
+         * <li><p>SchedulerCUMinSpec: Minimum guaranteed CUs for data computing, in CUs.</p>
+         * </li>
+         * <li><p>DataIntegrationCUMaxSpec: Maximum CU quota for Data Integration, in CUs.</p>
+         * </li>
+         * <li><p>DataIntegrationCUUsage: CU usage for Data Integration, in CUs.</p>
+         * </li>
+         * <li><p>DataIntegrationCUMinSpec: Minimum guaranteed CUs for Data Integration, in CUs.</p>
+         * </li>
+         * <li><p>DataServiceCUMaxSpec: Maximum CU quota for DataService Studio, in CUs.</p>
+         * </li>
+         * <li><p>DataServiceCUUsage: CU usage for DataService Studio, in CUs.</p>
+         * </li>
+         * <li><p>DataServiceCUMinSpec: Minimum guaranteed CUs for DataService Studio, in CUs.</p>
+         * </li>
+         * <li><p>ServerIdeCUMaxSpec: Maximum CU quota for personal development environment, in CUs.</p>
+         * </li>
+         * <li><p>ServerIdeCUUsage: CU usage for personal development environment, in CUs.</p>
+         * </li>
+         * <li><p>ServerIdeCUMinSpec: Minimum guaranteed CUs for personal development environment, in CUs.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

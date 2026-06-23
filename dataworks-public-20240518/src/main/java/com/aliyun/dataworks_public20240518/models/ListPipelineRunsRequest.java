@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPipelineRunsRequest extends TeaModel {
     /**
-     * <p>The ID of the user who creates the processes. This parameter specifies a filter condition.</p>
+     * <p>Filters the results by the creator of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>110755000425****</p>
@@ -13,11 +13,17 @@ public class ListPipelineRunsRequest extends TeaModel {
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <p>The ID of the artifact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>860438872620113XXXX</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,8 +41,8 @@ public class ListPipelineRunsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can obtain this ID from the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter specifies the DataWorks workspace to use for the API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,15 +52,21 @@ public class ListPipelineRunsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The status of the processes. This parameter specifies a filter condition.</p>
+     * <p>Filters the results by the current status of the pipeline.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Init</li>
-     * <li>Running</li>
-     * <li>Success</li>
-     * <li>Fail</li>
-     * <li>Termination</li>
-     * <li>Cancel</li>
+     * <li><p><code>Init</code>: initializing</p>
+     * </li>
+     * <li><p><code>Running</code>: running</p>
+     * </li>
+     * <li><p><code>Success</code>: succeeded</p>
+     * </li>
+     * <li><p><code>Fail</code>: failed</p>
+     * </li>
+     * <li><p><code>Termination</code>: terminated</p>
+     * </li>
+     * <li><p><code>Cancel</code>: canceled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

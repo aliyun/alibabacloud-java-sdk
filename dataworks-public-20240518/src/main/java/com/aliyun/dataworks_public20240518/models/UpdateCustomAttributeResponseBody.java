@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAttributeResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6B56C4A2-C7F3-52AF-8417-6DFF7447011B</p>
@@ -14,6 +14,8 @@ public class UpdateCustomAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the update operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +23,8 @@ public class UpdateCustomAttributeResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

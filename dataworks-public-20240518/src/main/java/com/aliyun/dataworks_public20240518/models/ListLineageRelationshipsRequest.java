@@ -5,22 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListLineageRelationshipsRequest extends TeaModel {
     /**
-     * <p>The destination entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</p>
+     * <p>The ID of the destination entity. You can get the ID for a table or column from the response of the <code>ListTables</code> or <code>ListColumns</code> operation, or specify the ID of a custom entity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table:123456XXX::test_project::test_tbl
-     * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-     * hms-table:c-abc123xxx::test_db::test_tbl
-     * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-     * custom-api:api123
-     * custom-table:table456</p>
+     * <p>dlf-table::catalog_id:database_name::table_name</p>
      */
     @NameInMap("DstEntityId")
     public String dstEntityId;
 
     /**
-     * <p>The destination entity name. Supports fuzzy matching.</p>
+     * <p>The name of the destination entity. Supports fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>dstName</p>
@@ -29,10 +24,12 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String dstEntityName;
 
     /**
-     * <p>The order in which schemas are sorted. Default value: Asc. Valid values:</p>
+     * <p>The sort order. The default value is <code>Asc</code>. Valid values:</p>
      * <ul>
-     * <li>Asc: ascending.</li>
-     * <li>Desc: descending.</li>
+     * <li><p><code>Asc</code>: ascending order</p>
+     * </li>
+     * <li><p><code>Desc</code>: descending order</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +39,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +48,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The page size. The default value is 10. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,7 +57,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort field. Default value: Name.</p>
+     * <p>The field to sort the results by. The default value is <code>Name</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Name</p>
@@ -69,22 +66,17 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The source entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</p>
+     * <p>The ID of the source entity. You can get the ID for a table or column from the response of the <code>ListTables</code> or <code>ListColumns</code> operation, or specify the ID of a custom entity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table:123456XXX::test_project::test_tbl
-     * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-     * hms-table:c-abc123xxx::test_db::test_tbl
-     * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-     * custom-api:api123
-     * custom-table:table456</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("SrcEntityId")
     public String srcEntityId;
 
     /**
-     * <p>The source entity name. Supports fuzzy matching.</p>
+     * <p>The name of the source entity. Supports fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>srcName</p>

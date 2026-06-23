@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopProcessInstanceRequest extends TeaModel {
     /**
+     * <p>A token to ensure that the request is idempotent. We recommend that you use a universally unique identifier (UUID).</p>
+     * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
      */
@@ -12,6 +14,7 @@ public class StopProcessInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The process instance ID. This operation supports approval forms from both the old and new versions of Security Center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

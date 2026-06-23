@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSkillsRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListSkillsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next page of results. Omit this for the first request. For subsequent requests, set this to the <code>NextToken</code> from the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,12 +23,17 @@ public class ListSkillsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The search keyword for a fuzzy match on Skill names.</p>
+     * 
      * <strong>example:</strong>
      * <p>analysis</p>
      */
     @NameInMap("Q")
     public String q;
 
+    /**
+     * <p>Filters the results by visibility level. You can specify multiple values.</p>
+     */
     @NameInMap("Visibility")
     public java.util.List<String> visibility;
 

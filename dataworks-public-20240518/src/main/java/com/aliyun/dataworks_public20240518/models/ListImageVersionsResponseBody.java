@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListImageVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination details.</p>
+     */
     @NameInMap("PagingInfo")
     public ListImageVersionsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID, used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -15,6 +20,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
 
     public static class ListImageVersionsResponseBodyPagingInfoImageVersionsBuildConfigPackageInstallationScripts extends TeaModel {
         /**
+         * <p>The script content. Separate multiple package names with a comma (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>requests</p>
          */
@@ -59,6 +68,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The script type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Python3</p>
          */
@@ -90,12 +101,17 @@ public class ListImageVersionsResponseBody extends TeaModel {
 
     public static class ListImageVersionsResponseBodyPagingInfoImageVersionsBuildConfig extends TeaModel {
         /**
+         * <p>The build type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PackageInstallation</p>
          */
         @NameInMap("BuildType")
         public String buildType;
 
+        /**
+         * <p>The pre-installation scripts.</p>
+         */
         @NameInMap("PackageInstallationScripts")
         public java.util.List<ListImageVersionsResponseBodyPagingInfoImageVersionsBuildConfigPackageInstallationScripts> packageInstallationScripts;
 
@@ -124,12 +140,20 @@ public class ListImageVersionsResponseBody extends TeaModel {
 
     public static class ListImageVersionsResponseBodyPagingInfoImageVersionsSupported extends TeaModel {
         /**
+         * <p>The supported module. Valid value:</p>
+         * <ul>
+         * <li><code>Scheduler</code>: The scheduler module.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduler</p>
          */
         @NameInMap("Module")
         public String module;
 
+        /**
+         * <p>The supported task types.</p>
+         */
         @NameInMap("TaskTypes")
         public java.util.List<String> taskTypes;
 
@@ -158,6 +182,14 @@ public class ListImageVersionsResponseBody extends TeaModel {
 
     public static class ListImageVersionsResponseBodyPagingInfoImageVersions extends TeaModel {
         /**
+         * <p>The accessibility of the image. Valid values:</p>
+         * <ul>
+         * <li><p><code>Public</code>: The image is visible to all users.</p>
+         * </li>
+         * <li><p><code>Private</code>: The image is visible only to the creator.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */
@@ -165,6 +197,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String accessibility;
 
         /**
+         * <p>The ID of the VPC associated with the ACR instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
@@ -172,7 +206,7 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String acrAssociatedVpcId;
 
         /**
-         * <p>ACR Endpoint</p>
+         * <p>The ACR endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com</p>
@@ -181,16 +215,23 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String acrEndpoint;
 
         /**
+         * <p>The ACR instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cri-xxx</p>
          */
         @NameInMap("AcrInstanceId")
         public String acrInstanceId;
 
+        /**
+         * <p>The image build configuration.</p>
+         */
         @NameInMap("BuildConfig")
         public ListImageVersionsResponseBodyPagingInfoImageVersionsBuildConfig buildConfig;
 
         /**
+         * <p>The time when the image was created, as a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -198,6 +239,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The ID of the user who created the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -205,6 +248,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The image description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test image created by xxx</p>
          */
@@ -212,6 +257,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether MaxCompute synchronization is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -219,6 +266,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public Boolean enableSyncMaxCompute;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Custom_image_xxxx_xxxx</p>
          */
@@ -226,6 +275,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The image tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
          */
@@ -233,6 +284,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String imageTag;
 
         /**
+         * <p>The image URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/xxx/xxx:tag</p>
          */
@@ -240,6 +293,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String imageUri;
 
         /**
+         * <p>The VPC URI of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/xxx/xxx:tag</p>
          */
@@ -247,6 +302,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String imageVpcUri;
 
         /**
+         * <p>Indicates whether the image is the default image.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -254,6 +311,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The time when the image was last modified, as a 64-bit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1727055811000</p>
          */
@@ -261,6 +320,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public Long lastModifiedTime;
 
         /**
+         * <p>The ID of the user who last modified the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -268,6 +329,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataworks_image</p>
          */
@@ -275,6 +338,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>namespace</p>
          */
@@ -282,6 +347,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>Indicates whether the image is an official image.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -289,6 +356,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public Boolean official;
 
         /**
+         * <p>The ID of the image from the provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>acr_image_id</p>
          */
@@ -296,6 +365,14 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String providerImageId;
 
         /**
+         * <p>The type of the image provider. Valid values:</p>
+         * <ul>
+         * <li><p><code>ACR</code>: The image is from an ACR repository.</p>
+         * </li>
+         * <li><p><code>DataWorks</code>: The image is an official image provided by DataWorks.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACR</p>
          */
@@ -303,6 +380,36 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String providerType;
 
         /**
+         * <p>The publishing stage of the image. Valid values:</p>
+         * <ul>
+         * <li><p><code>Untest</code>: Not tested.</p>
+         * </li>
+         * <li><p><code>Testing</code>: Being tested.</p>
+         * </li>
+         * <li><p><code>TestFailed</code>: Test failed.</p>
+         * </li>
+         * <li><p><code>Unpublished</code>: Not published.</p>
+         * </li>
+         * <li><p><code>Publishing</code>: Being published.</p>
+         * </li>
+         * <li><p><code>Published</code>: Published.</p>
+         * </li>
+         * <li><p><code>PublishFailed</code>: Publishing failed.</p>
+         * </li>
+         * <li><p><code>Building</code>: Being built.</p>
+         * </li>
+         * <li><p><code>BuildSuccess</code>: Build succeeded.</p>
+         * </li>
+         * <li><p><code>BuildFailed</code>: Build failed.</p>
+         * </li>
+         * <li><p><code>Accelerating</code>: Being accelerated.</p>
+         * </li>
+         * <li><p><code>AccelerateSuccess</code>: Acceleration succeeded.</p>
+         * </li>
+         * <li><p><code>AccelerateFailed</code>: Acceleration failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Published</p>
          */
@@ -310,6 +417,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String publishStage;
 
         /**
+         * <p>The repository name.</p>
+         * 
          * <strong>example:</strong>
          * <p>repo_name</p>
          */
@@ -317,6 +426,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String repositoryName;
 
         /**
+         * <p>The image size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1GB</p>
          */
@@ -324,16 +435,33 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public String size;
 
         /**
+         * <p>The status of the image. Valid values:</p>
+         * <ul>
+         * <li><p><code>Disabled</code>: The image is disabled.</p>
+         * </li>
+         * <li><p><code>Expired</code>: The image is expired.</p>
+         * </li>
+         * <li><p><code>Available</code>: The image is available.</p>
+         * </li>
+         * <li><p><code>ReadOnly</code>: The image is read-only.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The supported modules and task types.</p>
+         */
         @NameInMap("Supported")
         public ListImageVersionsResponseBodyPagingInfoImageVersionsSupported supported;
 
         /**
+         * <p>The image version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -564,10 +692,15 @@ public class ListImageVersionsResponseBody extends TeaModel {
     }
 
     public static class ListImageVersionsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>A list of image version details.</p>
+         */
         @NameInMap("ImageVersions")
         public java.util.List<ListImageVersionsResponseBodyPagingInfoImageVersions> imageVersions;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -575,6 +708,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -582,6 +717,8 @@ public class ListImageVersionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

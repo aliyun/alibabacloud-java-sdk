@@ -19,7 +19,7 @@ public class ExecPipelineRunStageResponseBody extends TeaModel {
      * <li><p>true</p>
      * </li>
      * <li><p>false</p>
-     * <p>**</p>
+     * <p>\<em>\</em></p>
      * <p><strong>Note:</strong> The value of this parameter indicates only whether the stage is triggered but does not indicate whether the execution of the stage is successful.</p>
      * </li>
      * </ul>

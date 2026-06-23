@@ -13,8 +13,10 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     /**
      * <p>The type of the data asset. Valid values:</p>
      * <ul>
-     * <li>ACS::DataWorks::Table</li>
-     * <li>ACS::DataWorks::Task</li>
+     * <li><p>ACS::DataWorks::Table</p>
+     * </li>
+     * <li><p>ACS::DataWorks::Task</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,8 +28,10 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     /**
      * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
      * <ul>
-     * <li>Dev: development environment</li>
-     * <li>Prod: production environment</li>
+     * <li><p>Dev: development environment</p>
+     * </li>
+     * <li><p>Prod: production environment</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,8 +70,10 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     /**
      * <p>The tags that are added to data assets. This parameter specifies a filter condition.</p>
      * <ul>
-     * <li>You can specify multiple tags, which are in the logical OR relation. For example, you can query the data assets that contain one of the following tags: <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code>.</li>
-     * <li>If you do not configure this parameter, tag-based filtering is not performed.</li>
+     * <li><p>You can specify multiple tags, which are in the logical OR relation. For example, you can query the data assets that contain one of the following tags: <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code>.</p>
+     * </li>
+     * <li><p>If you do not configure this parameter, tag-based filtering is not performed.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      */

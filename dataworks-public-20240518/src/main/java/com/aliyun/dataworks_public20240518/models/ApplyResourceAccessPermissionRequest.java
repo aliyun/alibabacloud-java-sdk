@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ApplyResourceAccessPermissionRequest extends TeaModel {
     /**
+     * <p>A list of permission requests.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyContents")
     public java.util.List<ApplyResourceAccessPermissionRequestApplyContents> applyContents;
 
     /**
+     * <p>The idempotency parameter, which prevents duplicate operations from repeated calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
      */
@@ -18,7 +21,11 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The reason for the request.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>业务发展需要</p>
      */
     @NameInMap("Reason")
     public String reason;
@@ -54,6 +61,15 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
 
     public static class ApplyResourceAccessPermissionRequestApplyContentsGrantee extends TeaModel {
         /**
+         * <p>The ID of the principal. The value of this parameter depends on the <code>PrincipalType</code>:</p>
+         * <ul>
+         * <li><p><code>RamUser</code>: The Dataworks user ID.</p>
+         * </li>
+         * <li><p><code>RamRole</code>: The Dataworks user ID, prefixed with <code>ROLE_</code>.</p>
+         * </li>
+         * <li><p><code>DlfRole</code>: The DlfNext role name.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -63,6 +79,15 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
         public String principalId;
 
         /**
+         * <p>The principal type. Valid values:</p>
+         * <ul>
+         * <li><p>RamRole</p>
+         * </li>
+         * <li><p>RamUser</p>
+         * </li>
+         * <li><p>DlfRole</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +121,7 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
 
     public static class ApplyResourceAccessPermissionRequestApplyContentsResource extends TeaModel {
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,12 +131,17 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
         public String defSchema;
 
         /**
+         * <p>The version of <code>ResourceSchema</code> that is required to parse the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
          */
         @NameInMap("DefVersion")
         public String defVersion;
 
+        /**
+         * <p>The resource metadata. The content is constrained by <code>ResourceSchema</code>.</p>
+         */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
 
@@ -147,12 +178,17 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
 
     public static class ApplyResourceAccessPermissionRequestApplyContents extends TeaModel {
         /**
+         * <p>The requested permissions.</p>
+         * <p>Note: The supported permission types vary by resource level and are constrained by the <code>ResourceSchema</code> of the corresponding resource type.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("AccessTypes")
         public java.util.List<String> accessTypes;
 
         /**
+         * <p>The authorization method.</p>
+         * <p>Note: This parameter is supported only for <code>SEVERLESS_STARROCKS</code> resources. Valid values are <code>ranger</code> and <code>starrocksManager</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ranger</p>
          */
@@ -160,6 +196,8 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
         public String authMethod;
 
         /**
+         * <p>The permission expiration time, as a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1785835708000</p>
          */
@@ -167,11 +205,15 @@ public class ApplyResourceAccessPermissionRequest extends TeaModel {
         public Long expirationTime;
 
         /**
+         * <p>The principal to which permissions are granted.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Grantee")
         public ApplyResourceAccessPermissionRequestApplyContentsGrantee grantee;
 
+        /**
+         * <p>The resource for which permissions are requested.</p>
+         */
         @NameInMap("Resource")
         public ApplyResourceAccessPermissionRequestApplyContentsResource resource;
 

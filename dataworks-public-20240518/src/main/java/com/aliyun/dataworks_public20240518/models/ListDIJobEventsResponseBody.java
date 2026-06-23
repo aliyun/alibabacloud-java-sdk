@@ -14,7 +14,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>645F6D68-9C29-5961-80B1-BDD4B794C22D</p>
+     * <p>645F6D68-9C29-5961-80B1-BDD4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -72,7 +72,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
          * <p>The alert details.</p>
          * 
          * <strong>example:</strong>
-         * <p>aggregator:avg [**] for 5 minutes, service maybe abnormal</p>
+         * <p>Data integration sync task exception: Level: WARNING, DataWorks project name:** [Region: cn-shanghai], Task name:<strong>, Alert rule: Business delay, aggregator:avg [</strong>] for 5 minutes, service maybe abnormal.</p>
          */
         @NameInMap("Detail")
         public String detail;
@@ -154,11 +154,16 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         /**
          * <p>The type of the alert event.</p>
          * <ul>
-         * <li>Heartbeat</li>
-         * <li>Delay</li>
-         * <li>FailoverCount</li>
-         * <li>DdlReport</li>
-         * <li>ResourceUtilization</li>
+         * <li><p>Heartbeat</p>
+         * </li>
+         * <li><p>Delay</p>
+         * </li>
+         * <li><p>FailoverCount</p>
+         * </li>
+         * <li><p>DdlReport</p>
+         * </li>
+         * <li><p>ResourceUtilization</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

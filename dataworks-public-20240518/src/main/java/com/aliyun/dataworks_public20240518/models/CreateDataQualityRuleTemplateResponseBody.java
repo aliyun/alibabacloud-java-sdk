@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleTemplateResponseBody extends TeaModel {
     /**
-     * <p>The Code of the rule template.</p>
+     * <p>The rule template Code.</p>
      * 
      * <strong>example:</strong>
      * <p>UserDefined:3001</p>
@@ -14,7 +14,7 @@ public class CreateDataQualityRuleTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-4ED0-9441</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateProjectFromImageRequest extends TeaModel {
     /**
+     * <p>The ID of the image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DissociateProjectFromImageRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -27,7 +27,7 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
      * <p>The description of the alert rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the alert rule.</p>
+     * <p>Alert rule description.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -53,11 +53,16 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     /**
      * <p>The metric type in the alert rule. Valid values:</p>
      * <ul>
-     * <li>Heartbeat</li>
-     * <li>FailoverCount</li>
-     * <li>Delay</li>
-     * <li>DdlReport</li>
-     * <li>ResourceUtilization</li>
+     * <li><p>Heartbeat</p>
+     * </li>
+     * <li><p>FailoverCount</p>
+     * </li>
+     * <li><p>Delay</p>
+     * </li>
+     * <li><p>DdlReport</p>
+     * </li>
+     * <li><p>ResourceUtilization</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

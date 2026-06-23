@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentSessionArtifactsShrinkRequest extends TeaModel {
     /**
+     * <p>The ID passed by the caller. The value is returned as-is in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>10001</p>
      */
@@ -12,12 +14,17 @@ public class ListAgentSessionArtifactsShrinkRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>The business parameters.</p>
+     */
     @NameInMap("Params")
     public String paramsShrink;
 

@@ -9,7 +9,7 @@ public class DeleteLineageRelationshipRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</p>
+     * <p>4as3dasf654a</p>
      */
     @NameInMap("Id")
     public String id;

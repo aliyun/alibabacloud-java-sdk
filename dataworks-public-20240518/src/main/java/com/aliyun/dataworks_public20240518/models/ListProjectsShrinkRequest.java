@@ -9,7 +9,7 @@ public class ListProjectsShrinkRequest extends TeaModel {
      * <p>This parameter is used to query the information about workspaces that belong to a specific resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmzbn7pti3zff</p>
+     * <p>rg-acfmzbn****</p>
      */
     @NameInMap("AliyunResourceGroupId")
     public String aliyunResourceGroupId;
@@ -23,8 +23,10 @@ public class ListProjectsShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether the development environment is enabled. Valid values:</p>
      * <ul>
-     * <li>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in a workspace.</li>
-     * <li>false: The development environment is disabled. In this case, only the production environment is used in a workspace.</li>
+     * <li><p>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in a workspace.</p>
+     * </li>
+     * <li><p>false: The development environment is disabled. In this case, only the production environment is used in a workspace.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,8 +38,10 @@ public class ListProjectsShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether the Develop role is disabled. Valid values:</p>
      * <ul>
-     * <li>false (default)</li>
-     * <li>true</li>
+     * <li><p>false (default)</p>
+     * </li>
+     * <li><p>true</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,8 +83,10 @@ public class ListProjectsShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether scheduling of Platform for AI (PAI) tasks is enabled. Valid values:</p>
      * <ul>
-     * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
-     * <li>false: Scheduling of PAI tasks is disabled.</li>
+     * <li><p>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</p>
+     * </li>
+     * <li><p>false: Scheduling of PAI tasks is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,15 +98,24 @@ public class ListProjectsShrinkRequest extends TeaModel {
     /**
      * <p>The status of the workspaces. Valid values:</p>
      * <ul>
-     * <li>Available</li>
-     * <li>Initializing</li>
-     * <li>InitFailed</li>
-     * <li>Forbidden</li>
-     * <li>Deleting</li>
-     * <li>DeleteFailed</li>
-     * <li>Frozen</li>
-     * <li>Updating</li>
-     * <li>UpdateFailed</li>
+     * <li><p>Available</p>
+     * </li>
+     * <li><p>Initializing</p>
+     * </li>
+     * <li><p>InitFailed</p>
+     * </li>
+     * <li><p>Forbidden</p>
+     * </li>
+     * <li><p>Deleting</p>
+     * </li>
+     * <li><p>DeleteFailed</p>
+     * </li>
+     * <li><p>Frozen</p>
+     * </li>
+     * <li><p>Updating</p>
+     * </li>
+     * <li><p>UpdateFailed</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

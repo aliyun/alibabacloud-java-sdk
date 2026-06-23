@@ -4,13 +4,21 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListParametersShrinkRequest extends TeaModel {
+    /**
+     * <p>A list of parameter IDs.</p>
+     */
     @NameInMap("Ids")
     public String idsShrink;
 
+    /**
+     * <p>A list of parameter names.</p>
+     */
     @NameInMap("Names")
     public String namesShrink;
 
     /**
+     * <p>The account ID of the owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -18,6 +26,8 @@ public class ListParametersShrinkRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,6 +35,8 @@ public class ListParametersShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -32,6 +44,8 @@ public class ListParametersShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The workspace ID. Call the ListProjects operation to get the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -39,6 +53,8 @@ public class ListParametersShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The scope of the parameter. The default value is Project. Other values are not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>Project</p>
      */
@@ -46,6 +62,16 @@ public class ListParametersShrinkRequest extends TeaModel {
     public String scope;
 
     /**
+     * <p>The field to sort the parameters by. Specify the value in the &quot;FieldName SortOrder&quot; format. The Asc sort order is optional. Supported values are:</p>
+     * <ul>
+     * <li><p>ModifyTime (Desc/Asc)</p>
+     * </li>
+     * <li><p>CreateTime (Desc/Asc)</p>
+     * </li>
+     * <li><p>Name (Desc/Asc)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ModifyTime Desc</p>
      */
@@ -53,6 +79,16 @@ public class ListParametersShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The type of the parameter. Valid values:</p>
+     * <ul>
+     * <li><p>PlainConstant: A plaintext constant.</p>
+     * </li>
+     * <li><p>SecretConstant: A secret constant.</p>
+     * </li>
+     * <li><p>Variable: A variable.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PlainConstant</p>
      */

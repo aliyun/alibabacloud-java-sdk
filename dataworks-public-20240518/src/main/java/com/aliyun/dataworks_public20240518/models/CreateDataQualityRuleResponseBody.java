@@ -14,7 +14,7 @@ public class CreateDataQualityRuleResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the API request.</p>
      * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-4ED0-9441</p>

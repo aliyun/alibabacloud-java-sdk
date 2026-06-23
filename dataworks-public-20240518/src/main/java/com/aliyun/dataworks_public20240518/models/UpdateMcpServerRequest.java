@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMcpServerRequest extends TeaModel {
     /**
+     * <p>The new custom request headers, specified as key-value pairs.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,7 @@ public class UpdateMcpServerRequest extends TeaModel {
     public java.util.Map<String, ?> customHeaders;
 
     /**
+     * <p>The name of the MCP Server to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The new transport protocol.</p>
+     * 
      * <strong>example:</strong>
      * <p>SSE</p>
      */
@@ -28,6 +33,8 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String transport;
 
     /**
+     * <p>The new service address. The address must start with<code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
      */
@@ -35,12 +42,17 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String url;
 
     /**
+     * <p>The new visibility level.</p>
+     * 
      * <strong>example:</strong>
      * <p>TENANT</p>
      */
     @NameInMap("Visibility")
     public String visibility;
 
+    /**
+     * <p>The new visibility scope. The fields in this object depend on the value of the <code>Visibility</code> parameter.</p>
+     */
     @NameInMap("VisibilityScope")
     public UpdateMcpServerRequestVisibilityScope visibilityScope;
 
@@ -98,9 +110,15 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
 
     public static class UpdateMcpServerRequestVisibilityScope extends TeaModel {
+        /**
+         * <p>The list of workspace IDs that can access the MCP Server. This parameter takes effect only when <code>Visibility</code> is set to <code>PROJECT</code>.</p>
+         */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
+        /**
+         * <p>The list of user IDs that can access the MCP Server. This parameter takes effect only when <code>Visibility</code> is set to <code>USER</code>.</p>
+         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 

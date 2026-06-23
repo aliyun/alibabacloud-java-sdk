@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListParameterVersionsRequest extends TeaModel {
     /**
+     * <p>The parameter ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListParameterVersionsRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>Specifies the page number of the results to return. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListParameterVersionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Specifies the number of entries to return per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -28,6 +33,11 @@ public class ListParameterVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies the sort criterion in the format \<sort field> \<sort order>. You can omit Asc for ascending order. The only valid value for the sort field is:</p>
+     * <ul>
+     * <li>Version (Desc/Asc)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Version Desc</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
     /**
-     * <p>The description of the workspace.</p>
+     * <p>An optional description of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>Financial analysis group project data development</p>
@@ -16,9 +16,12 @@ public class UpdateProjectRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the development environment. Valid values:</p>
      * <ul>
-     * <li>true: enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</li>
-     * <li>false: disables the development environment. In this case, only the production environment is used in the workspace.</li>
+     * <li><p><code>true</code>: Enables the development environment for the workspace and isolates it from the production environment.</p>
+     * </li>
+     * <li><p><code>false</code>: Uses only the production environment.</p>
+     * </li>
      * </ul>
+     * <p><strong>Important</strong>: You cannot disable the development environment after you enable it.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -27,12 +30,14 @@ public class UpdateProjectRequest extends TeaModel {
     public Boolean devEnvironmentEnabled;
 
     /**
-     * <p>Specifies whether to disable the Develop role. Valid values:</p>
+     * <p>Specifies whether to disable the development role, which grants permissions for workflow and code editing. Valid values:</p>
      * <ul>
-     * <li>false (default)</li>
-     * <li>true</li>
+     * <li><p><code>false</code>: Enables the development role. This is the default value.</p>
+     * </li>
+     * <li><p><code>true</code>: Disables the development role.</p>
+     * </li>
      * </ul>
-     * <p>Note: If you disable the Develop role, you cannot assume the Develop role to develop nodes in workflows and edit node code. The Develop role cannot be enabled again after it is disabled.</p>
+     * <p><strong>Important</strong>: After you enable the development role (by setting this parameter to <code>false</code>), you cannot disable it.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,8 +55,8 @@ public class UpdateProjectRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-     * <p>This parameter is used to determine the DataWorks workspaces used for this API call.</p>
+     * <p>The ID of the DataWorks workspace. To find the workspace ID, log in to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace Management page.</p>
+     * <p>This parameter specifies the DataWorks workspace to use for the API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,10 +66,12 @@ public class UpdateProjectRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</p>
+     * <p>Specifies whether to enable task scheduling for Machine Learning Platform for AI (PAI). Valid values:</p>
      * <ul>
-     * <li>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
-     * <li>false: disables scheduling of PAI tasks.</li>
+     * <li><p><code>true</code>: You can create PAI nodes in the DataWorks workspace and run them on a schedule.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables task scheduling for PAI.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,10 +81,12 @@ public class UpdateProjectRequest extends TeaModel {
     public Boolean paiTaskEnabled;
 
     /**
-     * <p>Specifies whether to disable or enable the workspace. Valid values:</p>
+     * <p>Specifies whether to enable or disable the workspace. Valid values:</p>
      * <ul>
-     * <li>Available: enables the workspace.</li>
-     * <li>Forbidden: disables the workspace.</li>
+     * <li><p><code>Available</code>: Enables the workspace.</p>
+     * </li>
+     * <li><p><code>Forbidden</code>: Disables the workspace.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

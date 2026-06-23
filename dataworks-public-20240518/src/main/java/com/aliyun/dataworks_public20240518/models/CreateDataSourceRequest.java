@@ -7,8 +7,10 @@ public class CreateDataSourceRequest extends TeaModel {
     /**
      * <p>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</p>
      * <ul>
-     * <li>Dev: development environment</li>
-     * <li>Prod: production environment</li>
+     * <li><p>Dev: development environment</p>
+     * </li>
+     * <li><p>Prod: production environment</p>
+     * </li>
      * </ul>
      * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</p>
      * <p>This parameter is required.</p>
@@ -30,8 +32,10 @@ public class CreateDataSourceRequest extends TeaModel {
     /**
      * <p>The mode in which you want to add the data source. The mode varies based on the data source type. Valid values for MySQL data sources:</p>
      * <ul>
-     * <li>InstanceMode: instance mode</li>
-     * <li>UrlMode: connection string mode</li>
+     * <li><p>InstanceMode: instance mode</p>
+     * </li>
+     * <li><p>UrlMode: connection string mode</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

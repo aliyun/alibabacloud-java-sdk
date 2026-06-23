@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProcessDefinitionResponseBody extends TeaModel {
     /**
+     * <p>The ID of the process definition.</p>
+     * 
      * <strong>example:</strong>
      * <p>1010543619</p>
      */
@@ -12,6 +14,8 @@ public class CreateProcessDefinitionResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5df3a17***903790e8e8a</p>
      */

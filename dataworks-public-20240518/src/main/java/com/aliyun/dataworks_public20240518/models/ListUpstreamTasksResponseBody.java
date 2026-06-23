@@ -147,9 +147,12 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
          * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,8 +183,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
          * <p>The trigger type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li><p>Scheduler: scheduling cycle-based trigger</p>
+         * </li>
+         * <li><p>Manual: manual trigger</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,8 +296,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The environment of the workspace. Valid values:</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod</p>
+         * </li>
+         * <li><p>Dev</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,8 +320,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The instance generation mode. Valid values:</p>
          * <ul>
-         * <li>T+1</li>
-         * <li>Immediately</li>
+         * <li><p>T+1</p>
+         * </li>
+         * <li><p>Immediately</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,8 +381,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
          * <p>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod</p>
+         * </li>
+         * <li><p>Dev</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -405,9 +416,12 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
          * <p>The rerun mode.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</li>
-         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-         * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li><p>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</p>
+         * </li>
+         * <li><p>FailureAllowed: The task can be rerun only after it fails to run.</p>
+         * </li>
+         * <li><p>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,8 +448,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The scheduling dependency type. Valid values:</p>
          * <ul>
-         * <li>Normal: same-cycle scheduling dependency</li>
-         * <li>CrossCycle: cross-cycle scheduling dependency</li>
+         * <li><p>Normal: same-cycle scheduling dependency</p>
+         * </li>
+         * <li><p>CrossCycle: cross-cycle scheduling dependency</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -783,9 +799,12 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -815,8 +834,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li><p>Scheduler: scheduling cycle-based trigger</p>
+         * </li>
+         * <li><p>Manual: manual trigger</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -926,8 +947,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The environment of the workspace. Valid values:</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod</p>
+         * </li>
+         * <li><p>Dev</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -948,8 +971,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The instance generation mode. Valid values:</p>
          * <ul>
-         * <li>T+1</li>
-         * <li>Immediately</li>
+         * <li><p>T+1</p>
+         * </li>
+         * <li><p>Immediately</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1024,9 +1049,12 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The rerun mode. Valid values:</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
-         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-         * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+         * <li><p>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</p>
+         * </li>
+         * <li><p>FailureAllowed: The task can be rerun only after it fails to run.</p>
+         * </li>
+         * <li><p>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1270,8 +1298,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
         /**
          * <p>The scheduling dependency type. Valid values:</p>
          * <ul>
-         * <li>Normal: same-cycle scheduling dependency</li>
-         * <li>CrossCycle: cross-cycle scheduling dependency</li>
+         * <li><p>Normal: same-cycle scheduling dependency</p>
+         * </li>
+         * <li><p>CrossCycle: cross-cycle scheduling dependency</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

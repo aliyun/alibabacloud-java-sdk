@@ -16,8 +16,10 @@ public class DeleteWorkflowRequest extends TeaModel {
     /**
      * <p>The environment of the workspace. Valid values:</p>
      * <ul>
-     * <li>Prod: production environment</li>
-     * <li>Dev: development environment</li>
+     * <li><p>Prod: production environment</p>
+     * </li>
+     * <li><p>Dev: development environment</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

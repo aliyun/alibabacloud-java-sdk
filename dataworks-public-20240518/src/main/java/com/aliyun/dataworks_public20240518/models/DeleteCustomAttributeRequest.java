@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomAttributeRequest extends TeaModel {
     /**
+     * <p>The ID of the custom attribute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

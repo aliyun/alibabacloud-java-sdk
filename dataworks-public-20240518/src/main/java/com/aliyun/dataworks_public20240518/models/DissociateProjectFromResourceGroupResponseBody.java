@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateProjectFromResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>

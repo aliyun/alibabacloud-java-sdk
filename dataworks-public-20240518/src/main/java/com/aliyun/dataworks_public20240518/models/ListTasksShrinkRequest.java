@@ -50,8 +50,10 @@ public class ListTasksShrinkRequest extends TeaModel {
      * <p>The workspace environment.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Prod</li>
-     * <li>Dev</li>
+     * <li><p>Prod</p>
+     * </li>
+     * <li><p>Dev</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,26 +102,46 @@ public class ListTasksShrinkRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <ul>
-     * <li>ODPS_SQL</li>
-     * <li>SPARK</li>
-     * <li>PY_ODPS</li>
-     * <li>PY_ODPS3</li>
-     * <li>ODPS_SCRIPT</li>
-     * <li>ODPS_MR</li>
-     * <li>COMPONENT_SQL</li>
-     * <li>EMR_HIVE</li>
-     * <li>EMR_MR</li>
-     * <li>EMR_SPARK_SQL</li>
-     * <li>EMR_SPARK</li>
-     * <li>EMR_SHELL</li>
-     * <li>EMR_PRESTO</li>
-     * <li>EMR_IMPALA</li>
-     * <li>SPARK_STREAMING</li>
-     * <li>EMR_KYUUBI</li>
-     * <li>EMR_TRINO</li>
-     * <li>HOLOGRES_SQL</li>
-     * <li>HOLOGRES_SYNC_DDL</li>
-     * <li>HOLOGRES_SYNC_DATA</li>
+     * <li><p>ODPS_SQL</p>
+     * </li>
+     * <li><p>SPARK</p>
+     * </li>
+     * <li><p>PY_ODPS</p>
+     * </li>
+     * <li><p>PY_ODPS3</p>
+     * </li>
+     * <li><p>ODPS_SCRIPT</p>
+     * </li>
+     * <li><p>ODPS_MR</p>
+     * </li>
+     * <li><p>COMPONENT_SQL</p>
+     * </li>
+     * <li><p>EMR_HIVE</p>
+     * </li>
+     * <li><p>EMR_MR</p>
+     * </li>
+     * <li><p>EMR_SPARK_SQL</p>
+     * </li>
+     * <li><p>EMR_SPARK</p>
+     * </li>
+     * <li><p>EMR_SHELL</p>
+     * </li>
+     * <li><p>EMR_PRESTO</p>
+     * </li>
+     * <li><p>EMR_IMPALA</p>
+     * </li>
+     * <li><p>SPARK_STREAMING</p>
+     * </li>
+     * <li><p>EMR_KYUUBI</p>
+     * </li>
+     * <li><p>EMR_TRINO</p>
+     * </li>
+     * <li><p>HOLOGRES_SQL</p>
+     * </li>
+     * <li><p>HOLOGRES_SYNC_DDL</p>
+     * </li>
+     * <li><p>HOLOGRES_SYNC_DATA</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,9 +154,12 @@ public class ListTasksShrinkRequest extends TeaModel {
      * <p>The run mode when triggered. Valid only if TriggerType is Scheduler.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Pause</li>
-     * <li>Skip</li>
-     * <li>Normal</li>
+     * <li><p>Pause</p>
+     * </li>
+     * <li><p>Skip</p>
+     * </li>
+     * <li><p>Normal</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,8 +172,10 @@ public class ListTasksShrinkRequest extends TeaModel {
      * <p>The trigger type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Scheduler: Triggered by schedule.</li>
-     * <li>Manual: Triggered manually.</li>
+     * <li><p>Scheduler: Triggered by schedule.</p>
+     * </li>
+     * <li><p>Manual: Triggered manually.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

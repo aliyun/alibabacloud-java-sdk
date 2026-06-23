@@ -4,10 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListPendingApprovalsShrinkRequest extends TeaModel {
+    /**
+     * <p>The access types.</p>
+     */
     @NameInMap("AccessTypes")
     public String accessTypesShrink;
 
     /**
+     * <p>The resource schema type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,16 +21,23 @@ public class ListPendingApprovalsShrinkRequest extends TeaModel {
     public String defSchema;
 
     /**
+     * <p>The end time of the query range, specified as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1779724799999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The grantee object used to filter results.</p>
+     */
     @NameInMap("Grantee")
     public String granteeShrink;
 
     /**
+     * <p>The token used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzfQ==</p>
      */
@@ -34,16 +45,22 @@ public class ListPendingApprovalsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries to return per page. Default: 10. Maximum: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The criteria to filter resources.</p>
+     */
     @NameInMap("Resource")
     public String resourceShrink;
 
     /**
+     * <p>The resource type, which corresponds to a leaf node name. You can specify multiple values. A business context can map to multiple leaf node names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +70,8 @@ public class ListPendingApprovalsShrinkRequest extends TeaModel {
     public String resourceTypeShrink;
 
     /**
+     * <p>The start time of the query range, specified as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1771948800000</p>
      */

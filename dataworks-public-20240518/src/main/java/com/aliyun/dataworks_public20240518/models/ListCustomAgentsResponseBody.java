@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListCustomAgentsResponseBody extends TeaModel {
+    /**
+     * <p>The paging information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListCustomAgentsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
      */
@@ -37,19 +42,34 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyPagingInfoAgents extends TeaModel {
         /**
+         * <p>The ID of the user who created the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>A description of the custom agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据分析助手</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the custom agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的助手</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The time when the agent was created, provided in milliseconds since the Unix epoch.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -59,6 +79,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the agent was last modified, provided in milliseconds since the Unix epoch.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +89,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The ID of the user who last modified the agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -75,6 +98,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String modifierId;
 
         /**
+         * <p>The name of the custom agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-agent</p>
          */
@@ -82,6 +107,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The visibility level of the custom agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>TENANT</p>
          */
@@ -160,10 +187,15 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     }
 
     public static class ListCustomAgentsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The list of custom agents.</p>
+         */
         @NameInMap("Agents")
         public java.util.List<ListCustomAgentsResponseBodyPagingInfoAgents> agents;
 
         /**
+         * <p>The maximum number of entries returned in this response.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -171,6 +203,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token to retrieve the next page of results. This parameter is empty when there are no more results to return.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -178,6 +212,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of entries that meet the filter criteria.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

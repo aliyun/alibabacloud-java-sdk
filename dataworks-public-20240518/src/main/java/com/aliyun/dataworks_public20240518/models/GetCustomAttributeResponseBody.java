@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetCustomAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The custom attribute definition.</p>
+     */
     @NameInMap("CustomAttribute")
     public CustomAttribute customAttribute;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BA51C9E6-0CBC-5BB9-92BD-0C4FE66E1717</p>
@@ -17,6 +20,8 @@ public class GetCustomAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

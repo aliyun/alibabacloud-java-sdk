@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PromptAgentSessionRequest extends TeaModel {
     /**
+     * <p>The ID passed in by the caller. The value is returned as-is in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>1021418411</p>
      */
@@ -12,12 +14,17 @@ public class PromptAgentSessionRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>The business parameters.</p>
+     */
     @NameInMap("Params")
     public PromptAgentSessionRequestParams params;
 
@@ -52,6 +59,8 @@ public class PromptAgentSessionRequest extends TeaModel {
 
     public static class PromptAgentSessionRequestParamsMeta extends TeaModel {
         /**
+         * <p>A Map-type value. In custom agent scenarios, you can use this parameter to replace placeholder parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *    &quot;key1&quot;: &quot;value1&quot;,
@@ -78,6 +87,8 @@ public class PromptAgentSessionRequest extends TeaModel {
 
     public static class PromptAgentSessionRequestParamsPromptMeta extends TeaModel {
         /**
+         * <p>Specifies whether to hide the prompt from the user. For example, if a user asks &quot;Sales amount in the last 7 days&quot; in a chat dialog, the calling system may use RAG to retrieve relevant business domain knowledge and append it to the agent context before calling the API. If you do not want to display this supplemental information to the user, set this parameter to true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true or false</p>
          */
@@ -100,30 +111,81 @@ public class PromptAgentSessionRequest extends TeaModel {
     }
 
     public static class PromptAgentSessionRequestParamsPrompt extends TeaModel {
+        /**
+         * <p>The description of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sales_Order_Details.csv</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The prompt metadata extended by DataWorks.</p>
+         */
         @NameInMap("Meta")
         public PromptAgentSessionRequestParamsPromptMeta meta;
 
+        /**
+         * <p>The MIME type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/csv‌</p>
+         */
         @NameInMap("MimeType")
         public String mimeType;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.csv</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The size of the file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231231</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p><strong>The text content.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sales in the last 7 days</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The title of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sales_Order_Details.csv</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p><strong>The content block type.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The URI of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://${bucket}/${ossKey}</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -207,13 +269,21 @@ public class PromptAgentSessionRequest extends TeaModel {
     }
 
     public static class PromptAgentSessionRequestParams extends TeaModel {
+        /**
+         * <p>The extended metadata.</p>
+         */
         @NameInMap("Meta")
         public PromptAgentSessionRequestParamsMeta meta;
 
+        /**
+         * <p>The array of user message content blocks. For more information, see https\://agentclientprotocol.com/protocol/content</p>
+         */
         @NameInMap("Prompt")
         public java.util.List<PromptAgentSessionRequestParamsPrompt> prompt;
 
         /**
+         * <p>The ID of the target session. If the session does not exist, an SSE error frame is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>
          */

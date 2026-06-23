@@ -8,7 +8,7 @@ public class RemoveEntityFromMetaCollectionRequest extends TeaModel {
      * <p>The entity ID. Currently, entities can only be tables. You can call the ListTables operation to query the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>dlf-table:123456789:test_catalog:test_database::test_table</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("Id")
     public String id;
@@ -17,7 +17,7 @@ public class RemoveEntityFromMetaCollectionRequest extends TeaModel {
      * <p>The collection ID. You can call the ListMetaCollections operation to query the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>category.123</p>
+     * <p>as78d756asd</p>
      */
     @NameInMap("MetaCollectionId")
     public String metaCollectionId;

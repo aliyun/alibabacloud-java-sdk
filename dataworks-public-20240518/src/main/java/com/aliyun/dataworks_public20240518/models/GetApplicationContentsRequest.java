@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationContentsRequest extends TeaModel {
     /**
+     * <p>The ID of the approval process instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

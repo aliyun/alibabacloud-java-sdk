@@ -9,13 +9,13 @@ public class GetWorkflowDefinitionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>860438872620113XXXX</p>
+     * <p>860438872620****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>查询结果是否包含工作流内部节点的脚本内容（对于内容较多的节点，可能存在较长的网络传输延时）。</p>
+     * <p>Specifies whether the query result includes the script content of internal nodes in the workflow definition. For nodes with large content, this may cause high network transmission latency.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

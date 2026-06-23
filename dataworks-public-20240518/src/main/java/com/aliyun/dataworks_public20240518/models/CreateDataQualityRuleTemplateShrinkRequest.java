@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The check settings for sample data.</p>
+     * <p>The sample validation settings.</p>
      */
     @NameInMap("CheckingConfig")
     public String checkingConfigShrink;
 
     /**
-     * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+     * <p>The category directory where the custom template is stored. Hierarchy levels are separated by slashes. Each level name can be up to 1024 characters long and cannot contain whitespace characters or slashes.</p>
      * 
      * <strong>example:</strong>
      * <p>/ods/order_data</p>
@@ -20,7 +20,7 @@ public class CreateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     public String directoryPath;
 
     /**
-     * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
+     * <p>The name of the rule template. It can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The maximum length is 512 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,16 +40,16 @@ public class CreateDataQualityRuleTemplateShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The sampling settings.</p>
+     * <p>The settings required for sample collection.</p>
      */
     @NameInMap("SamplingConfig")
     public String samplingConfigShrink;
 
     /**
-     * <p>The applicable scope of the template. Valid values:</p>
+     * <p>The visibility scope of the template:</p>
      * <ul>
-     * <li>Tenant: The template is available in all workspaces in the current tenant.</li>
-     * <li>Project: The template is available only in the current workspace.</li>
+     * <li>Tenant: available to the entire tenant</li>
+     * <li>Project: available only in the current project</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMetaEntityDefsRequest extends TeaModel {
     /**
+     * <p>A keyword to search for in the description. The system performs a fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -12,6 +14,8 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the type definition. This parameter supports partial matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>CustomReport</p>
      */
@@ -19,6 +23,8 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Filters the results by extension mode. Valid values: <code>NONE</code> and <code>TABLE</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>NONE</p>
      */
@@ -26,6 +32,8 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public String extend;
 
     /**
+     * <p>The sort order. Valid values: <code>Asc</code> and <code>Desc</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -33,6 +41,8 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sort field. Valid values: <code>Name</code>, <code>CreateTime</code>, and <code>ModifyTime</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */

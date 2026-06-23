@@ -46,8 +46,10 @@ public class ListDataQualityAlertRulesRequest extends TeaModel {
     /**
      * <p>The list of sorting fields. Supports fields such as last modified time and creation time. Format: &quot;SortField+SortOrder (Desc/Asc)&quot;, where Asc is the default. Valid values:</p>
      * <ul>
-     * <li>CreateTime (Desc/Asc)</li>
-     * <li>Id (Desc/Asc)</li>
+     * <li><p>CreateTime (Desc/Asc)</p>
+     * </li>
+     * <li><p>Id (Desc/Asc)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

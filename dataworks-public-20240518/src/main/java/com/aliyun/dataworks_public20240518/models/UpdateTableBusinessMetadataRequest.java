@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTableBusinessMetadataRequest extends TeaModel {
     /**
+     * <p>The values of custom attributes. The key specifies the identifier of a custom attribute, and the value is an array that can contain at most one item. To delete the value for an attribute, pass an empty array. To update only custom attributes, omit the <code>Readme</code> parameter to prevent its existing value from being cleared. To leave the custom attributes unchanged, pass an empty object <code>{}</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</p>
      */
@@ -12,20 +14,17 @@ public class UpdateTableBusinessMetadataRequest extends TeaModel {
     public java.util.Map<String, java.util.List<String>> customAttributes;
 
     /**
-     * <p>The table ID. You can refer to the format of the table ID returned by the ListTables operation.</p>
+     * <p>The table ID. For the required format, see the response of the <code>ListTables</code> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table:123456XXX::test_project::test_tbl
-     * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-     * hms-table:c-abc123xxx::test_db::test_tbl
-     * holo-table:h-abc123xxx::test_db:test_schema:test_tbl</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The usage notes. The rich text format is supported.</p>
+     * <p>The Readme of the table, which supports rich text format.</p>
      * 
      * <strong>example:</strong>
      * <h2>introduction</h2>

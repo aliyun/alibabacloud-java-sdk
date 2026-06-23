@@ -37,8 +37,10 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     /**
      * <p>The project environment.</p>
      * <ul>
-     * <li>Prod</li>
-     * <li>Dev</li>
+     * <li><p>Prod</p>
+     * </li>
+     * <li><p>Dev</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,8 +68,10 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     /**
      * <p>The instance generation mode.</p>
      * <ul>
-     * <li>T+1: the next day</li>
-     * <li>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</li>
+     * <li><p>T+1: the next day</p>
+     * </li>
+     * <li><p>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +108,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
      * <p>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</p>
      * 
      * <strong>example:</strong>
-     * <p>60</p>
+     * <p>60000</p>
      */
     @NameInMap("RerunInterval")
     public Integer rerunInterval;
@@ -112,9 +116,12 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     /**
      * <p>The rerun mode. Valid values:</p>
      * <ul>
-     * <li>AllDenied: The task cannot be rerun.</li>
-     * <li>FailureAllowed: The task can be rerun only after it fails.</li>
-     * <li>AllAllowed: The task can always be rerun.</li>
+     * <li><p>AllDenied: The task cannot be rerun.</p>
+     * </li>
+     * <li><p>FailureAllowed: The task can be rerun only after it fails.</p>
+     * </li>
+     * <li><p>AllAllowed: The task can always be rerun.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

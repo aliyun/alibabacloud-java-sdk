@@ -147,9 +147,12 @@ public class ListTasksResponseBody extends TeaModel {
          * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,8 +174,10 @@ public class ListTasksResponseBody extends TeaModel {
          * <p>The trigger type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li><p>Scheduler: scheduling cycle-based trigger</p>
+         * </li>
+         * <li><p>Manual: manual trigger</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,8 +288,10 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * <p>The instance generation mode. Valid values:</p>
          * <ul>
-         * <li>T+1</li>
-         * <li>Immediately</li>
+         * <li><p>T+1</p>
+         * </li>
+         * <li><p>Immediately</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -342,8 +349,10 @@ public class ListTasksResponseBody extends TeaModel {
          * <p>The environment of the workspace.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Prod: production environment</li>
-         * <li>Dev: development environment</li>
+         * <li><p>Prod: production environment</p>
+         * </li>
+         * <li><p>Dev: development environment</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -374,9 +383,12 @@ public class ListTasksResponseBody extends TeaModel {
          * <p>The rerun mode.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
-         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-         * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li><p>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</p>
+         * </li>
+         * <li><p>FailureAllowed: The task can be rerun only after it fails to run.</p>
+         * </li>
+         * <li><p>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

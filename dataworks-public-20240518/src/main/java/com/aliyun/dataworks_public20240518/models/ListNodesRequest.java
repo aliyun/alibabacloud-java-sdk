@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
     /**
-     * <p>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</p>
+     * <p>The ID of the container. If you specify this parameter, only nodes in the specified container are returned. This parameter is independent of the resource group (ResourceGroupId).</p>
      * <blockquote>
-     * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is of the Long type in SDK versions earlier than 8.0.0 and of the String type in SDK 8.0.0 and later. <strong>This change does not affect SDK usage. The parameter is returned in the type defined for your SDK version.</strong> The type change may cause compilation errors only when you upgrade the SDK across version 8.0.0. In this case, you must manually correct the data type.</p>
      * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
@@ -17,7 +18,7 @@ public class ListNodesRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The name of the node. Fuzzy search is supported.</p>
+     * <p>The node name. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -26,7 +27,7 @@ public class ListNodesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number of the data to retrieve, used for pagination.</p>
+     * <p>The page number of the results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +36,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the data to retrieve, used for pagination.</p>
+     * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +45,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. To find this ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,10 +55,15 @@ public class ListNodesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</p>
-     * <blockquote>
-     * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
-     * </blockquote>
+     * <p>Filters nodes by their scheduling type. Valid values:</p>
+     * <ul>
+     * <li><p>Normal: The node runs as scheduled.</p>
+     * </li>
+     * <li><p>Pause: The node is paused and blocks its dependent downstream nodes.</p>
+     * </li>
+     * <li><p>Skip: The node is skipped, and the system immediately returns a success status with a 0-second execution time. This action does not block downstream nodes or consume resources.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -66,11 +72,14 @@ public class ListNodesRequest extends TeaModel {
     public String recurrence;
 
     /**
-     * <p>The rerun property, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. Valid values:</p>
+     * <p>The rerun mode. Valid values:</p>
      * <ul>
-     * <li>Allowed: The nodes can be rerun regardless of whether they are successfully run or fail to run.</li>
-     * <li>FailureAllowed: The nodes can be rerun only after they fail to run.</li>
-     * <li>Denied: The nodes cannot be rerun regardless of whether they are successfully run or fail to run.</li>
+     * <li><p>Allowed: The node can be rerun regardless of whether it succeeded or failed.</p>
+     * </li>
+     * <li><p>FailureAllowed: The node can be rerun only if its previous run failed.</p>
+     * </li>
+     * <li><p>Denied: The node cannot be rerun regardless of whether it succeeded or failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,15 +89,18 @@ public class ListNodesRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The location of the nodes in the left-side navigation pane of the Data Studio page, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. Valid values:</p>
+     * <p>The context for filtering nodes. In data development, this corresponds to the sections in the directory tree on the left. If you omit this parameter, no filtering is applied. Valid values:</p>
      * <ul>
-     * <li>DataworksProject</li>
-     * <li>DataworksManualWorkflow</li>
-     * <li>DataworksManualTask</li>
+     * <li><p>DataworksProject: Nodes in the project directory.</p>
+     * </li>
+     * <li><p>DataworksManualWorkflow: manual workflow</p>
+     * </li>
+     * <li><p>DataworksManualTask: manual task</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>DATAWORKS_PROJECT</p>
+     * <p>DataworksProject</p>
      */
     @NameInMap("Scene")
     public String scene;

@@ -16,8 +16,10 @@ public class ListPartitionsRequest extends TeaModel {
     /**
      * <p>The sort order. Default: Asc. Valid values:</p>
      * <ul>
-     * <li>Asc: Ascending order.</li>
-     * <li>Desc: Descending order.</li>
+     * <li><p>Asc: Ascending order.</p>
+     * </li>
+     * <li><p>Desc: Descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,11 +49,16 @@ public class ListPartitionsRequest extends TeaModel {
     /**
      * <p>The sort field. Default value: CreateTime. Valid values:</p>
      * <ul>
-     * <li>CreateTime: Creation time. Supported only for MaxCompute tables.</li>
-     * <li>ModifyTime: Modification time. Supported only for MaxCompute tables.</li>
-     * <li>Name: Name. Used for HMS-type tables.</li>
-     * <li>RecordCount: Record count. Supported only for MaxCompute tables.</li>
-     * <li>DataSize: Storage size. Supported only for MaxCompute tables.</li>
+     * <li><p>CreateTime: Creation time. Supported only for MaxCompute tables.</p>
+     * </li>
+     * <li><p>ModifyTime: Modification time. Supported only for MaxCompute tables.</p>
+     * </li>
+     * <li><p>Name: Name. Used for HMS-type tables.</p>
+     * </li>
+     * <li><p>RecordCount: Record count. Supported only for MaxCompute tables.</p>
+     * </li>
+     * <li><p>DataSize: Storage size. Supported only for MaxCompute tables.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +72,7 @@ public class ListPartitionsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-column:11075xxxx::test_project:test_schema:test_table</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("TableId")
     public String tableId;

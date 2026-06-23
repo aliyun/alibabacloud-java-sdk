@@ -104,9 +104,12 @@ public class ListWorkflowsResponseBody extends TeaModel {
         /**
          * <p>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,8 +130,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li><p>Scheduler: scheduling cycle-based trigger</p>
+         * </li>
+         * <li><p>Manual: manual trigger</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,8 +229,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
         /**
          * <p>The environment of the workspace. Valid values:</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod</p>
+         * </li>
+         * <li><p>Dev</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

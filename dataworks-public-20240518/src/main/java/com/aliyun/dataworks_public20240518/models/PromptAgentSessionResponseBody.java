@@ -4,10 +4,18 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class PromptAgentSessionResponseBody extends TeaModel {
+    /**
+     * <p>The error information returned in the SSE frame. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;code&quot;: 400, &quot;errorCode&quot;: &quot;0x50000000001&quot;, &quot;message&quot;: &quot;not exist session&quot;, &quot;data&quot;: null}</p>
+     */
     @NameInMap("Error")
     public Object error;
 
     /**
+     * <p>The ID passed in by the caller. The value is returned as-is in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>631478864897630XXXX</p>
      */
@@ -15,15 +23,29 @@ public class PromptAgentSessionResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>The SSE method. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</p>
+     * 
+     * <strong>example:</strong>
+     * <p>session/update</p>
+     */
     @NameInMap("Method")
     public String method;
 
+    /**
+     * <p>The SSE params. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;sessionId&quot;:&quot;af4f5ef8-e8f5-481c-ad1f-94886c6c0aed&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;hello world&quot;}}}</p>
+     */
     @NameInMap("Params")
     public Object params;
 
@@ -37,13 +59,17 @@ public class PromptAgentSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The SSE frame result set. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</p>
+     * 
      * <strong>example:</strong>
-     * <p>end_turn</p>
+     * <p>{&quot;stopReason&quot;:&quot;end_turn&quot;}</p>
      */
     @NameInMap("Result")
     public Object result;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1747447032</p>
      */

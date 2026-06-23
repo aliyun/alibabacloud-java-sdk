@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProcessDefinitionRequest extends TeaModel {
     /**
+     * <p>The ID of the process definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -53,7 +53,7 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
         /**
          * <p>The unique identifier of the deployment.</p>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -101,11 +101,16 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
         /**
          * <p>The deployment status. Valid values:</p>
          * <ul>
-         * <li>Init: Initializing</li>
-         * <li>Running</li>
-         * <li>Success</li>
-         * <li>Fail</li>
-         * <li>Termination</li>
+         * <li><p>Init: Initializing</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Success</p>
+         * </li>
+         * <li><p>Fail</p>
+         * </li>
+         * <li><p>Termination</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,10 +122,14 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
         /**
          * <p>The deployment type. Valid values:</p>
          * <ul>
-         * <li>Node</li>
-         * <li>WorkflowDefinition: Workflow definition.</li>
-         * <li>Resource</li>
-         * <li>Function: The object is a function.</li>
+         * <li><p>Node</p>
+         * </li>
+         * <li><p>WorkflowDefinition: Workflow definition.</p>
+         * </li>
+         * <li><p>Resource</p>
+         * </li>
+         * <li><p>Function: The object is a function.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

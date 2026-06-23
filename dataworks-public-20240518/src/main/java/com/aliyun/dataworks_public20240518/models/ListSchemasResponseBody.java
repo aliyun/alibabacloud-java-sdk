@@ -59,6 +59,8 @@ public class ListSchemasResponseBody extends TeaModel {
 
     public static class ListSchemasResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -81,6 +83,8 @@ public class ListSchemasResponseBody extends TeaModel {
         public java.util.List<Schema> schemas;
 
         /**
+         * <p>Total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

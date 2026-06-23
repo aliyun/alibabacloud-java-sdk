@@ -44,9 +44,12 @@ public class ListRoutesRequest extends TeaModel {
     /**
      * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
      * <ul>
-     * <li>Id (Desc/Asc): the route ID</li>
-     * <li>DestinationCidr (Desc/Asc): the destination CIDR block of the route</li>
-     * <li>CreateTime (Desc/Asc): the time when the route is created</li>
+     * <li><p>Id (Desc/Asc): the route ID</p>
+     * </li>
+     * <li><p>DestinationCidr (Desc/Asc): the destination CIDR block of the route</p>
+     * </li>
+     * <li><p>CreateTime (Desc/Asc): the time when the route is created</p>
+     * </li>
      * </ul>
      * <p>Default value: CreateTime Asc.</p>
      * 

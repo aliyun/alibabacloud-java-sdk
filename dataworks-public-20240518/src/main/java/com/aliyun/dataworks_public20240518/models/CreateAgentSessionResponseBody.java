@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentSessionResponseBody extends TeaModel {
+    /**
+     * <p>The JSON-RPC response.</p>
+     */
     @NameInMap("JsonRpcResponse")
     public CreateAgentSessionResponseBodyJsonRpcResponse jsonRpcResponse;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8A9D5E6C-5817-5837-9715-6E3967EC6123</p>
@@ -39,6 +42,8 @@ public class CreateAgentSessionResponseBody extends TeaModel {
 
     public static class CreateAgentSessionResponseBodyJsonRpcResponseResult extends TeaModel {
         /**
+         * <p>The ID of the created session.</p>
+         * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>
          */
@@ -62,6 +67,8 @@ public class CreateAgentSessionResponseBody extends TeaModel {
 
     public static class CreateAgentSessionResponseBodyJsonRpcResponse extends TeaModel {
         /**
+         * <p>The request ID provided by the client. This ID is returned in the response without modification.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -69,12 +76,17 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The JSON-RPC version. The value is fixed at <code>2.0</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
         @NameInMap("Jsonrpc")
         public String jsonrpc;
 
+        /**
+         * <p>The business data. This field is <code>null</code> if an error occurs.</p>
+         */
         @NameInMap("Result")
         public CreateAgentSessionResponseBodyJsonRpcResponseResult result;
 

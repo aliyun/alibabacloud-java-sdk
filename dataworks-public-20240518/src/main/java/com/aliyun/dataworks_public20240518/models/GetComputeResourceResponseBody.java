@@ -44,8 +44,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
         /**
          * <p>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</p>
          * <ul>
-         * <li>Dev</li>
-         * <li>Prod Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</li>
+         * <li><p>Dev</p>
+         * </li>
+         * <li><p>Prod Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,9 +67,12 @@ public class GetComputeResourceResponseBody extends TeaModel {
         /**
          * <p>The addition category of the computing resource. Different types will have different subtypes, each with corresponding parameter constraints. For instance:</p>
          * <ul>
-         * <li>InstanceMode: Instance mode</li>
-         * <li>UrlMode: Connection String Mode</li>
-         * <li>CdhMode: CDH mode</li>
+         * <li><p>InstanceMode: Instance mode</p>
+         * </li>
+         * <li><p>UrlMode: Connection String Mode</p>
+         * </li>
+         * <li><p>CdhMode: CDH mode</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

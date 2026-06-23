@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelAgentSessionRequest extends TeaModel {
     /**
+     * <p>The ID passed by the requester. The value is returned as-is in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>676303114031776</p>
      */
@@ -12,12 +14,17 @@ public class CancelAgentSessionRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>The business parameters of the request.</p>
+     */
     @NameInMap("Params")
     public CancelAgentSessionRequestParams params;
 
@@ -52,6 +59,8 @@ public class CancelAgentSessionRequest extends TeaModel {
 
     public static class CancelAgentSessionRequestParams extends TeaModel {
         /**
+         * <p>The ID of the session to cancel. This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>
          */

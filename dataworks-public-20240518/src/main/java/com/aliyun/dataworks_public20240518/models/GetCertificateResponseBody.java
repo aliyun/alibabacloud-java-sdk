@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetCertificateResponseBody extends TeaModel {
     /**
-     * <p>The details of the certificate file.</p>
+     * <p>The details of the certificate.</p>
      */
     @NameInMap("Certificate")
     public GetCertificateResponseBodyCertificate certificate;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -42,7 +42,7 @@ public class GetCertificateResponseBody extends TeaModel {
 
     public static class GetCertificateResponseBodyCertificate extends TeaModel {
         /**
-         * <p>The time when the certificate file was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the file was created. This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1730217600000</p>
@@ -69,7 +69,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The size of the certificate file, in bytes.</p>
+         * <p>The file size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>77549</p>
@@ -78,7 +78,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public Long fileSizeInBytes;
 
         /**
-         * <p>The ID of the certificate file.</p>
+         * <p>The unique ID of the certificate file.</p>
          * 
          * <strong>example:</strong>
          * <p>676303114031776</p>
@@ -87,7 +87,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the certificate file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>ca1.crt</p>
@@ -96,7 +96,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the workspace to which the certificate file belongs.</p>
+         * <p>The ID of the project to which the certificate file belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>177161</p>

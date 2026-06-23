@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRoleResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>base_role_dte</p>
      */
@@ -12,6 +14,8 @@ public class CreateProjectRoleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>B313938A-4475-599B-98EB-A0875019FD5B</p>
      */

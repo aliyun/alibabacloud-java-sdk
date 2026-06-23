@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityScanRunsRequest extends TeaModel {
     /**
-     * <p>The earliest time when the data quality monitor starts to run.</p>
+     * <p>The earliest start time of a data quality scan run to include in the results. Specify the time as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -14,7 +14,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long createTimeFrom;
 
     /**
-     * <p>The latest time when the data quality monitor starts to run.</p>
+     * <p>The latest start time of a data quality scan run to include in the results. Specify the time as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -23,7 +23,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long createTimeTo;
 
     /**
-     * <p>The ID of the data quality monitor.</p>
+     * <p>The ID of the data quality scan.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>
@@ -32,21 +32,25 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long dataQualityScanId;
 
     /**
-     * <p>The extended query filter. Supported parameters:</p>
+     * <p>An object with advanced filter conditions. The following parameters are supported:</p>
      * <ul>
-     * <li>TaskInstanceId</li>
+     * <li><p><code>TaskInstanceId</code>: The ID of the task instance.</p>
+     * </li>
+     * <li><p><code>RunNumber</code>: The run number of the instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;TaskInstanceId&quot;: 111L
+     *     &quot;TaskInstanceId&quot;: &quot;111&quot;,
+     *     &quot;RunNumber&quot;: &quot;1&quot;
      * }</p>
      */
     @NameInMap("Filter")
     public java.util.Map<String, ?> filter;
 
     /**
-     * <p>The page number of the results. Default value: 1.</p>
+     * <p>The page number to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +59,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -74,10 +78,12 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The list of sorting fields. Supports fields such as last modified time and creation time. Format: &quot;SortField+SortOrder (Desc/Asc)&quot;, where Asc is the default. Valid values:</p>
+     * <p>The sort field and order for the results. The format is <code>FieldName Order</code>. The default order is ascending (Asc). Supported fields:</p>
      * <ul>
-     * <li>CreateTime (Desc/Asc)</li>
-     * <li>Id (Desc/Asc)</li>
+     * <li><p>CreateTime (Desc/Asc)</p>
+     * </li>
+     * <li><p>Id (Desc/Asc)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,13 +93,18 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The status of the data quality check result.</p>
+     * <p>The status of the data quality scan run. Valid values:</p>
      * <ul>
-     * <li>Pass</li>
-     * <li>Running</li>
-     * <li>Error</li>
-     * <li>Fail</li>
-     * <li>Warn</li>
+     * <li><p>Pass</p>
+     * </li>
+     * <li><p>Running</p>
+     * </li>
+     * <li><p>Error</p>
+     * </li>
+     * <li><p>Fail</p>
+     * </li>
+     * <li><p>Warn</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

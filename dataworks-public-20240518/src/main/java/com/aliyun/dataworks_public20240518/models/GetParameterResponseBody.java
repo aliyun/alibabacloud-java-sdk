@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetParameterResponseBody extends TeaModel {
+    /**
+     * <p>The details of the parameter.</p>
+     */
     @NameInMap("Parameter")
     public GetParameterResponseBodyParameter parameter;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -37,6 +42,14 @@ public class GetParameterResponseBody extends TeaModel {
 
     public static class GetParameterResponseBodyParameterProperties extends TeaModel {
         /**
+         * <p>The project environment. Valid values:</p>
+         * <ul>
+         * <li><p><code>Prod</code>: production.</p>
+         * </li>
+         * <li><p><code>Dev</code>: development.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -44,6 +57,8 @@ public class GetParameterResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>value123</p>
          */
@@ -75,6 +90,8 @@ public class GetParameterResponseBody extends TeaModel {
 
     public static class GetParameterResponseBodyParameter extends TeaModel {
         /**
+         * <p>The time when the parameter was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640000000000</p>
          */
@@ -82,6 +99,8 @@ public class GetParameterResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The creator of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
@@ -89,13 +108,17 @@ public class GetParameterResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The description of the parameter.</p>
+         * 
          * <strong>example:</strong>
-         * <p>这是一个测试参数</p>
+         * <p>This is a test parameter.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -103,6 +126,8 @@ public class GetParameterResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The time when the parameter was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640000000000</p>
          */
@@ -110,6 +135,8 @@ public class GetParameterResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The modifier of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
@@ -117,6 +144,8 @@ public class GetParameterResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace.para</p>
          */
@@ -124,6 +153,8 @@ public class GetParameterResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
@@ -131,16 +162,23 @@ public class GetParameterResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The ID of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The value configurations of the parameter.</p>
+         */
         @NameInMap("Properties")
         public java.util.List<GetParameterResponseBodyParameterProperties> properties;
 
         /**
+         * <p>The scope of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>Project</p>
          */
@@ -148,6 +186,16 @@ public class GetParameterResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>The type of the parameter. Valid values:</p>
+         * <ul>
+         * <li><p><code>PlainConstant</code>: a constant in plaintext.</p>
+         * </li>
+         * <li><p><code>SecretConstant</code>: a constant in ciphertext.</p>
+         * </li>
+         * <li><p><code>Variable</code>: a variable.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PlainConstant</p>
          */
@@ -155,6 +203,8 @@ public class GetParameterResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The version of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

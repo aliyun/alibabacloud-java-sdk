@@ -17,8 +17,10 @@ public class StartDIJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not perform the forcible rerun operation.</p>
      * <ul>
-     * <li>If the system does not perform the forcible rerun operation, only the steps that are not run start to run.</li>
-     * <li>If the system performs the forcible rerun operation, all steps start to rerun.</li>
+     * <li><p>If the system does not perform the forcible rerun operation, only the steps that are not run start to run.</p>
+     * </li>
+     * <li><p>If the system performs the forcible rerun operation, all steps start to rerun.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

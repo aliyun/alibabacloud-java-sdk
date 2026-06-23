@@ -16,7 +16,7 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     /**
      * <p>The IDs of entities to which you want to apply the process.</p>
      * <blockquote>
-     * <p> A process can be applied to only a single entity and its child entities. If you specify multiple entities in the array, the process is applied only to the first entity in the array and its child entities. Make sure that the array in your request contains only one element. Extra elements will be ignored.</p>
+     * <p>A process can be applied to only a single entity and its child entities. If you specify multiple entities in the array, the process is applied only to the first entity in the array and its child entities. Make sure that the array in your request contains only one element. Extra elements will be ignored.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -36,8 +36,10 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to deploy or undeploy the entity. Valid values:</p>
      * <ul>
-     * <li>Online: deploys the entity.</li>
-     * <li>Offline: undeploys the entity.</li>
+     * <li><p>Online: deploys the entity.</p>
+     * </li>
+     * <li><p>Offline: undeploys the entity.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

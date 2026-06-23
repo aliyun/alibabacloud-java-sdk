@@ -9,7 +9,7 @@ public class CreateProjectRequest extends TeaModel {
      * <p>You must configure this parameter to specify an Alibaba Cloud resource group for the workspace that you want to create.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmzbn7pti3zff</p>
+     * <p>rg-acfmzbn7****</p>
      */
     @NameInMap("AliyunResourceGroupId")
     public String aliyunResourceGroupId;
@@ -32,8 +32,10 @@ public class CreateProjectRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the development environment. Valid values:</p>
      * <ul>
-     * <li>true : enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</li>
-     * <li>false: disables the development environment. In this case, only the production environment is used in the workspace.</li>
+     * <li><p>true : enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</p>
+     * </li>
+     * <li><p>false: disables the development environment. In this case, only the production environment is used in the workspace.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +47,10 @@ public class CreateProjectRequest extends TeaModel {
     /**
      * <p>Specifies whether to disable the Develop role. Valid values:</p>
      * <ul>
-     * <li>false (default)</li>
-     * <li>true</li>
+     * <li><p>false (default)</p>
+     * </li>
+     * <li><p>true</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,9 +73,12 @@ public class CreateProjectRequest extends TeaModel {
      * <p>The name of the workspace.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The workspace name must be unqiue in a region.</li>
-     * <li>The workspace name can contain letters, digits, and underscores (_), and must start with a letter.</li>
-     * <li>The workspace name must be 3 to 28 characters in length.</li>
+     * <li><p>The workspace name must be unqiue in a region.</p>
+     * </li>
+     * <li><p>The workspace name can contain letters, digits, and underscores (_), and must start with a letter.</p>
+     * </li>
+     * <li><p>The workspace name must be 3 to 28 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -84,8 +91,10 @@ public class CreateProjectRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</p>
      * <ul>
-     * <li>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
-     * <li>false: disables scheduling of PAI tasks.</li>
+     * <li><p>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</p>
+     * </li>
+     * <li><p>false: disables scheduling of PAI tasks.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

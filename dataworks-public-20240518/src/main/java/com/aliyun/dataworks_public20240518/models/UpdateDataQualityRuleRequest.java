@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDataQualityRuleRequest extends TeaModel {
     /**
-     * <p>The check settings for sample data.</p>
+     * <p>The sample verification settings.</p>
      */
     @NameInMap("CheckingConfig")
     public UpdateDataQualityRuleRequestCheckingConfig checkingConfig;
 
     /**
-     * <p>The description of the rule. The description can be up to 500 characters in length.</p>
+     * <p>The rule description. The maximum length is 500 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a odps _sql task</p>
@@ -20,7 +20,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the rule.</p>
+     * <p>Specifies whether the rule is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The operations that you can perform after the rule-based check fails.</p>
+     * <p>The list of issue handlers for data quality rule verification.</p>
      */
     @NameInMap("ErrorHandlers")
     public java.util.List<UpdateDataQualityRuleRequestErrorHandlers> errorHandlers;
@@ -45,7 +45,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the rule. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
+     * <p>The rule name. The name can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation. The maximum length is 255 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>The table cannot be empty.</p>
@@ -54,7 +54,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,13 +64,13 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The sampling settings.</p>
+     * <p>The settings required for sample collection.</p>
      */
     @NameInMap("SamplingConfig")
     public UpdateDataQualityRuleRequestSamplingConfig samplingConfig;
 
     /**
-     * <p>The strength of the rule. Valid values:</p>
+     * <p>The severity level of the rule for the business (corresponding to strong/weak rules on the page). Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -83,10 +83,10 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public String severity;
 
     /**
-     * <p>The ID of the template used by the rule.</p>
+     * <p>The unique identifier of the rule template referenced by the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>system::user_defined</p>
+     * <p>SYSTEM:table:table_count:fixed</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
@@ -179,13 +179,13 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public static class UpdateDataQualityRuleRequestCheckingConfigThresholdsCritical extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
-         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * <li>Upward fluctuation greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Downward fluctuation greater than 0.01: $checkValue &lt; -0.01</li>
+         * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * <p>Fixed-value rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.05</p>
@@ -194,14 +194,14 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator. Valid values:</p>
+         * <p>The comparison operator.</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
          * <li>&lt;</li>
          * <li>&lt;=</li>
          * <li>!=</li>
-         * <li>\=</li>
+         * <li>=</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,13 +254,13 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public static class UpdateDataQualityRuleRequestCheckingConfigThresholdsExpected extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
-         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * <li>Upward fluctuation greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Downward fluctuation greater than 0.01: $checkValue &lt; -0.01</li>
+         * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * <p>Fixed-value rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &lt;= 0.01</p>
@@ -269,14 +269,14 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator. Valid values:</p>
+         * <p>The comparison operator.</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
          * <li>&lt;</li>
          * <li>&lt;=</li>
          * <li>!=</li>
-         * <li>\=</li>
+         * <li>=</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,13 +329,13 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public static class UpdateDataQualityRuleRequestCheckingConfigThresholdsWarned extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <p>Fluctuation-type rules must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
-         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * <li>Upward fluctuation greater than 0.01: $checkValue &gt; 0.01</li>
+         * <li>Downward fluctuation greater than 0.01: $checkValue &lt; -0.01</li>
+         * <li>Absolute fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * <p>Fixed-value rules can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -344,14 +344,14 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator. Valid values:</p>
+         * <p>The comparison operator.</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
          * <li>&lt;</li>
          * <li>&lt;=</li>
          * <li>!=</li>
-         * <li>\=</li>
+         * <li>=</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -403,19 +403,19 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityRuleRequestCheckingConfigThresholds extends TeaModel {
         /**
-         * <p>The threshold settings for critical alerts.</p>
+         * <p>The threshold settings for critical warnings.</p>
          */
         @NameInMap("Critical")
         public UpdateDataQualityRuleRequestCheckingConfigThresholdsCritical critical;
 
         /**
-         * <p>The expected threshold setting.</p>
+         * <p>The expected threshold settings.</p>
          */
         @NameInMap("Expected")
         public UpdateDataQualityRuleRequestCheckingConfigThresholdsExpected expected;
 
         /**
-         * <p>The threshold settings for normal alerts.</p>
+         * <p>The threshold settings for normal warnings.</p>
          */
         @NameInMap("Warned")
         public UpdateDataQualityRuleRequestCheckingConfigThresholdsWarned warned;
@@ -453,7 +453,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityRuleRequestCheckingConfig extends TeaModel {
         /**
-         * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
+         * <p>Some types of thresholds require querying reference samples and then aggregating the values of those reference samples to derive the threshold used for comparison. An expression is used here to indicate how the reference samples are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -468,7 +468,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         public UpdateDataQualityRuleRequestCheckingConfigThresholds thresholds;
 
         /**
-         * <p>The threshold calculation method. Valid values:</p>
+         * <p>The threshold calculation method. This parameter is not required when a template is used.</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -517,7 +517,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityRuleRequestErrorHandlers extends TeaModel {
         /**
-         * <p>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
+         * <p>For a custom SQL rule, you must specify the SQL used to filter problematic data.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -526,7 +526,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         public String errorDataFilter;
 
         /**
-         * <p>The type of the operation. Valid values:</p>
+         * <p>The handler type.</p>
          * <ul>
          * <li>SaveErrorData</li>
          * </ul>
@@ -562,23 +562,23 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
 
     public static class UpdateDataQualityRuleRequestSamplingConfig extends TeaModel {
         /**
-         * <p>The metrics used for sampling. You can leave this parameter empty if you use a rule template. Valid values:</p>
+         * <p>The name of the metric to sample. This parameter is not required when a template is used.</p>
          * <ul>
          * <li>Count: the number of rows in the table.</li>
          * <li>Min: the minimum value of the field.</li>
          * <li>Max: the maximum value of the field.</li>
          * <li>Avg: the average value of the field.</li>
-         * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
-         * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
-         * <li>DuplicatedCount: the number of duplicated values of the field.</li>
-         * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
-         * <li>TableSize: the table size.</li>
-         * <li>NullValueCount: the number of rows in which the field value is null.</li>
-         * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
-         * <li>GroupCount: the field value and the number of rows for each field value.</li>
-         * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
-         * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
-         * <li>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</li>
+         * <li>DistinctCount: the number of distinct values in the field.</li>
+         * <li>DistinctPercent: the ratio of the number of distinct values in the field to the total number of rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values in the field.</li>
+         * <li>DuplicatedPercent: the ratio of the number of duplicate values in the field to the total number of rows.</li>
+         * <li>TableSize: the size of the table.</li>
+         * <li>NullValueCount: the number of rows in which the field is null.</li>
+         * <li>NullValuePercent: the percentage of rows in which the field is null.</li>
+         * <li>GroupCount: the number of data rows for each value after aggregation by field value.</li>
+         * <li>CountNotIn: the number of rows that do not match the enumerated values.</li>
+         * <li>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</li>
+         * <li>UserDefinedSql: sample collection by using custom SQL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -588,7 +588,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         public String metric;
 
         /**
-         * <p>The parameters required for sampling.</p>
+         * <p>The parameters required for sample collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -597,7 +597,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>The statements that are used to filter unnecessary data during sampling. The statements can be up to 16,777,215 characters in length.</p>
+         * <p>The condition used to apply secondary filtering on data that is not of interest during sampling. The maximum length is 16,777,215 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>id IS NULL</p>
@@ -606,7 +606,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
         public String samplingFilter;
 
         /**
-         * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
+         * <p>The runtime parameter setting statements to be inserted and executed before the actual sampling statements. The maximum length is 1,000 characters. Only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 

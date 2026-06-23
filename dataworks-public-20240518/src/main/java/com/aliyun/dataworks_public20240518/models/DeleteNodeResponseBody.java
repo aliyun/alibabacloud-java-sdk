@@ -15,7 +15,7 @@ public class DeleteNodeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true\
+     * <p>true<br>
      * false</p>
      * 
      * <strong>example:</strong>

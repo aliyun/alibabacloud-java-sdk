@@ -106,11 +106,16 @@ public class GetNetworkResponseBody extends TeaModel {
         /**
          * <p>The status of the network resource. Valid values:</p>
          * <ul>
-         * <li>Pending: The network resource is waiting to be created.</li>
-         * <li>Creating: The network resource is being created.</li>
-         * <li>Running: The network resource is running as expected.</li>
-         * <li>Deleting: The network resource is being deleted.</li>
-         * <li>Deleted: The network resource is deleted.</li>
+         * <li><p>Pending: The network resource is waiting to be created.</p>
+         * </li>
+         * <li><p>Creating: The network resource is being created.</p>
+         * </li>
+         * <li><p>Running: The network resource is running as expected.</p>
+         * </li>
+         * <li><p>Deleting: The network resource is being deleted.</p>
+         * </li>
+         * <li><p>Deleted: The network resource is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

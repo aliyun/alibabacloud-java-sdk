@@ -82,6 +82,10 @@ public class CreateSkillResponseBody extends TeaModel {
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>数据分析技能</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -96,6 +100,9 @@ public class CreateSkillResponseBody extends TeaModel {
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678901</p>
          */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;

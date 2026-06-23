@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSkillResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
      */

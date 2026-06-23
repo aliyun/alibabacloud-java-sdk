@@ -44,9 +44,12 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         /**
          * <p>The change type, which is an integer. Valid values:</p>
          * <ul>
-         * <li>0: addition</li>
-         * <li>1: update</li>
-         * <li>2: deletion</li>
+         * <li><p>0: addition</p>
+         * </li>
+         * <li><p>1: update</p>
+         * </li>
+         * <li><p>2: deletion</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,6 +60,9 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
 
         /**
          * <p>The comment for committing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test submission</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -217,6 +223,9 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
 
         /**
          * <p>The test status in the development environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not tested</p>
          */
         @NameInMap("SmokeTestStatus")
         public String smokeTestStatus;
@@ -224,20 +233,34 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         /**
          * <p>The status of the code file of the current version. Valid values:</p>
          * <ul>
-         * <li>2: Commit check in progress.</li>
-         * <li>3: Commit check passed.</li>
-         * <li>4: Commit check failed.</li>
-         * <li>10: Committing.</li>
-         * <li>11: Committed.</li>
-         * <li>20: Approved.</li>
-         * <li>21: Rejected.</li>
-         * <li>22: Warning detected during checking.</li>
-         * <li>23: Under code review.</li>
-         * <li>24: Code review rejected.</li>
-         * <li>80: Deployment package created.</li>
-         * <li>100: Deploying.</li>
-         * <li>101: Deployed to the production environment.</li>
-         * <li>200: Cancelled.</li>
+         * <li><p>2: Commit check in progress.</p>
+         * </li>
+         * <li><p>3: Commit check passed.</p>
+         * </li>
+         * <li><p>4: Commit check failed.</p>
+         * </li>
+         * <li><p>10: Committing.</p>
+         * </li>
+         * <li><p>11: Committed.</p>
+         * </li>
+         * <li><p>20: Approved.</p>
+         * </li>
+         * <li><p>21: Rejected.</p>
+         * </li>
+         * <li><p>22: Warning detected during checking.</p>
+         * </li>
+         * <li><p>23: Under code review.</p>
+         * </li>
+         * <li><p>24: Code review rejected.</p>
+         * </li>
+         * <li><p>80: Deployment package created.</p>
+         * </li>
+         * <li><p>100: Deploying.</p>
+         * </li>
+         * <li><p>101: Deployed to the production environment.</p>
+         * </li>
+         * <li><p>200: Cancelled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,12 +281,18 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         /**
          * <p>The module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The file is used for DataStudio.</li>
-         * <li>MANUAL: The file is used for a manually triggered node.</li>
-         * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
-         * <li>SKIP: The file is used for a dry-run node in DataStudio.</li>
-         * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
-         * <li>COMPONENT: The file is used for a script template.</li>
+         * <li><p>NORMAL: The file is used for DataStudio.</p>
+         * </li>
+         * <li><p>MANUAL: The file is used for a manually triggered node.</p>
+         * </li>
+         * <li><p>MANUAL_BIZ: The file is used for a manually triggered workflow.</p>
+         * </li>
+         * <li><p>SKIP: The file is used for a dry-run node in DataStudio.</p>
+         * </li>
+         * <li><p>ADHOCQUERY: The file is used for an ad hoc query.</p>
+         * </li>
+         * <li><p>COMPONENT: The file is used for a script template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

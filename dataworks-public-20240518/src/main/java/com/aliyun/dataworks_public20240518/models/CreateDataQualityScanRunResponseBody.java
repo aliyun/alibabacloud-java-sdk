@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityScanRunResponseBody extends TeaModel {
     /**
-     * <p>The RunId that was successfully triggered.</p>
+     * <p>The run ID.</p>
      * 
      * <strong>example:</strong>
      * <p>248840</p>

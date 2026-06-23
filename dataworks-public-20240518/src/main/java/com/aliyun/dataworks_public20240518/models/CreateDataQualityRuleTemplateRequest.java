@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleTemplateRequest extends TeaModel {
     /**
-     * <p>The check settings for sample data.</p>
+     * <p>The sample validation settings.</p>
      */
     @NameInMap("CheckingConfig")
     public CreateDataQualityRuleTemplateRequestCheckingConfig checkingConfig;
 
     /**
-     * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+     * <p>The category directory where the custom template is stored. Hierarchy levels are separated by slashes. Each level name can be up to 1024 characters long and cannot contain whitespace characters or slashes.</p>
      * 
      * <strong>example:</strong>
      * <p>/ods/order_data</p>
@@ -20,7 +20,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
     public String directoryPath;
 
     /**
-     * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
+     * <p>The name of the rule template. It can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The maximum length is 512 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,16 +40,16 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The sampling settings.</p>
+     * <p>The settings required for sample collection.</p>
      */
     @NameInMap("SamplingConfig")
     public CreateDataQualityRuleTemplateRequestSamplingConfig samplingConfig;
 
     /**
-     * <p>The applicable scope of the template. Valid values:</p>
+     * <p>The visibility scope of the template:</p>
      * <ul>
-     * <li>Tenant: The template is available in all workspaces in the current tenant.</li>
-     * <li>Project: The template is available only in the current workspace.</li>
+     * <li>Tenant: available to the entire tenant</li>
+     * <li>Project: available only in the current project</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
 
     public static class CreateDataQualityRuleTemplateRequestCheckingConfig extends TeaModel {
         /**
-         * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
+         * <p>Some threshold types require querying reference samples and then aggregating the values of those reference samples to derive the threshold used for comparison. An expression is used here to describe how the reference samples are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -122,7 +122,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
         public String referencedSamplesFilter;
 
         /**
-         * <p>The threshold calculation method. Valid values:</p>
+         * <p>The threshold calculation method:</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -163,23 +163,23 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
 
     public static class CreateDataQualityRuleTemplateRequestSamplingConfig extends TeaModel {
         /**
-         * <p>The metrics used for sampling. Valid values:</p>
+         * <p>The name of the metric to sample:</p>
          * <ul>
-         * <li>Count: the number of rows in the table.</li>
-         * <li>Min: the minimum value of the field.</li>
-         * <li>Max: the maximum value of the field.</li>
-         * <li>Avg: the average value of the field.</li>
-         * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
-         * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
-         * <li>DuplicatedCount: the number of duplicated values of the field.</li>
-         * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
-         * <li>TableSize: the table size.</li>
-         * <li>NullValueCount: the number of rows in which the field value is null.</li>
-         * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
-         * <li>GroupCount: the field value and the number of rows for each field value.</li>
-         * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
-         * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
-         * <li>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</li>
+         * <li>Count: number of table rows</li>
+         * <li>Min: minimum field value</li>
+         * <li>Max: maximum field value</li>
+         * <li>Avg: average field value</li>
+         * <li>DistinctCount: number of distinct field values</li>
+         * <li>DistinctPercent: ratio of the number of distinct field values to the number of data rows</li>
+         * <li>DuplicatedCount: number of duplicate field values</li>
+         * <li>DuplicatedPercent: ratio of the number of duplicate field values to the number of data rows</li>
+         * <li>TableSize: table size</li>
+         * <li>NullValueCount: number of rows where the field is null</li>
+         * <li>NullValuePercent: ratio of rows where the field is null</li>
+         * <li>GroupCount: each value and the corresponding number of data rows after aggregating by field value</li>
+         * <li>CountNotIn: number of rows whose enum value does not match</li>
+         * <li>CountDistinctNotIn: number of distinct values whose enum value does not match</li>
+         * <li>UserDefinedSql: sample collection via a custom SQL statement</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
         public String metric;
 
         /**
-         * <p>The parameters required for sampling.</p>
+         * <p>The parameters required for sample collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -198,7 +198,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
+         * <p>Runtime parameter setting statements to be inserted and executed before the sampling statement is executed. The maximum length is 1000 characters. Currently only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 

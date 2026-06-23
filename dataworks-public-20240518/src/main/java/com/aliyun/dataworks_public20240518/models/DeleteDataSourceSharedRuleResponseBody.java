@@ -8,15 +8,15 @@ public class DeleteDataSourceSharedRuleResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>64B-587A-8CED-969E1973887FXXX-TT</p>
+     * <p>64B-587A-8CED-969E1973887F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Whether the data source sharing rule is deleted successfully. The value is as follows:
-     * -true: The request is successful.
-     * -false: The request failed.</p>
+     * <p>Indicates whether the sharing rule was deleted. Valid values:
+     * -true: The sharing rule was deleted.
+     * -false: The sharing rule failed to be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -11,6 +11,10 @@ public class CreateSkillRequest extends TeaModel {
     @NameInMap("BundleUrl")
     public String bundleUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>数据分析技能</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -39,6 +43,10 @@ public class CreateSkillRequest extends TeaModel {
     @NameInMap("SkillMdOverride")
     public String skillMdOverride;
 
+    /**
+     * <strong>example:</strong>
+     * <p>初版</p>
+     */
     @NameInMap("VersionNote")
     public String versionNote;
 

@@ -8,7 +8,7 @@ public class DeleteDataSourceResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>B56432E0-2112-5C97-88D0-AA0AE5C75C74</p>
+     * <p>B56432E0-2112-5C97-88D0-AA0AE5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -16,8 +16,10 @@ public class DeleteDataSourceResponseBody extends TeaModel {
     /**
      * <p>Whether the call is successful.</p>
      * <ul>
-     * <li>true: Successful</li>
-     * <li>false: Failed</li>
+     * <li><p>true: Successful</p>
+     * </li>
+     * <li><p>false: Failed</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

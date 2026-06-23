@@ -8,16 +8,16 @@ public class DetachDataQualityRulesFromEvaluationTaskResponseBody extends TeaMod
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
+     * <p>8abcb91f-d266-4073-b907-2ed6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Whether the call is successful. The values are as follows:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: the call failed.</li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

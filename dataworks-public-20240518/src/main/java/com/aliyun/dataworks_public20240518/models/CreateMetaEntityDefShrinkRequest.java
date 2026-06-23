@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMetaEntityDefShrinkRequest extends TeaModel {
     /**
+     * <p>A list of attribute definitions for the pure custom type. Do not specify this parameter if the <code>Extend</code> parameter is set to <code>TABLE</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class CreateMetaEntityDefShrinkRequest extends TeaModel {
     public String attributeDefsShrink;
 
     /**
+     * <p>A description of the entity definition.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -19,6 +23,7 @@ public class CreateMetaEntityDefShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name. The maximum length is 32 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,14 @@ public class CreateMetaEntityDefShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The extension mode. Valid values:</p>
+     * <ul>
+     * <li><p><code>NONE</code>: The default value. Specifies a pure custom type with user-defined attributes.</p>
+     * </li>
+     * <li><p><code>TABLE</code>: Specifies an extended table type that references an existing table type in Data Map. Attribute definitions are not required for this type. You can create corresponding <code>Database</code> and <code>Table</code> objects for it.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NONE</p>
      */
@@ -35,6 +48,7 @@ public class CreateMetaEntityDefShrinkRequest extends TeaModel {
     public String extend;
 
     /**
+     * <p>The type definition name. For a pure custom type, the name must match <code>^[a-z0-9][a-z0-9_]*$</code>. For an extended table type, the name must match <code>^[a-z0-9][a-z0-9_]*-table$</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

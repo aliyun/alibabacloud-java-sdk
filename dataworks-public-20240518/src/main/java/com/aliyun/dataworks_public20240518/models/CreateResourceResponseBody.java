@@ -20,7 +20,7 @@ public class CreateResourceResponseBody extends TeaModel {
      * <p>A5B97987-66EA-5563-9599-A2752292XXXX</p>
      * 
      * <strong>example:</strong>
-     * <p>The ID of the file resource.</p>
+     * <p>A5B97987-66EA-5563-9599-A2752292****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -14,6 +14,8 @@ public class DeleteCustomAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the deletion.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +23,8 @@ public class DeleteCustomAttributeResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

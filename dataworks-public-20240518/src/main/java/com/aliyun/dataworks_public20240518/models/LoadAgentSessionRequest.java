@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LoadAgentSessionRequest extends TeaModel {
     /**
+     * <p>The client-generated request ID, which is returned in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>4as3dasf654a</p>
      */
@@ -12,12 +14,17 @@ public class LoadAgentSessionRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. The value must be <code>2.0</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>Business parameters.</p>
+     */
     @NameInMap("Params")
     public LoadAgentSessionRequestParams params;
 
@@ -51,9 +58,21 @@ public class LoadAgentSessionRequest extends TeaModel {
     }
 
     public static class LoadAgentSessionRequestParamsMeta extends TeaModel {
+        /**
+         * <p>In a resumable transfer scenario, this specifies the offset from which to resume fetching the SSE output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("BeginLogOffset")
         public Long beginLogOffset;
 
+        /**
+         * <p>Specifies whether to use resumable transfer. If the SSE stream is interrupted due to issues like an unstable network connection, you can set this parameter to <code>true</code> to re-fetch the stream data from the point of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true or false</p>
+         */
         @NameInMap("IsReload")
         public Boolean isReload;
 
@@ -81,10 +100,15 @@ public class LoadAgentSessionRequest extends TeaModel {
     }
 
     public static class LoadAgentSessionRequestParams extends TeaModel {
+        /**
+         * <p>DataWorks-specific extended parameters for ACP.</p>
+         */
         @NameInMap("Meta")
         public LoadAgentSessionRequestParamsMeta meta;
 
         /**
+         * <p>The ID of the target session. If the session does not exist, an SSE error frame is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>
          */

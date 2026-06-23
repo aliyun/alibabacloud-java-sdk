@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityRuleTemplateRequest extends TeaModel {
     /**
-     * <p>The code for the template.</p>
+     * <p>The code of the rule template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

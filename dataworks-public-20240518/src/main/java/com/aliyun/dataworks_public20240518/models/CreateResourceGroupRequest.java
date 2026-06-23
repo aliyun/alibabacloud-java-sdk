@@ -14,19 +14,19 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String aliyunResourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of Alibaba Cloud tags.</p>
      */
     @NameInMap("AliyunResourceTags")
     public java.util.List<CreateResourceGroupRequestAliyunResourceTags> aliyunResourceTags;
 
     /**
-     * <p>Specifies whether to enable auto-renewal.</p>
+     * <p>Specifies whether to enable auto-renewal for the subscription.</p>
      */
     @NameInMap("AutoRenewEnabled")
     public Boolean autoRenewEnabled;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A client token to ensure the idempotence of the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the serverless resource group. The name can be a maximum of 128 characters in length and can contain letters, digits, and underscores (_). The name must start with a letter.</p>
+     * <p>The name of the general-purpose resource group. It must be up to 128 characters long, start with a letter, and contain only letters, digits, and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Integer paymentDuration;
 
     /**
-     * <p>The unit of the subscription duration. Valid values: Month and Year.</p>
+     * <p>The unit of the subscription duration. Valid values: <code>Month</code> and <code>Year</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -64,7 +64,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String paymentDurationUnit;
 
     /**
-     * <p>The billing method of the serverless resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
+     * <p>The billing method of the resource group. <code>PrePaid</code> indicates subscription, and <code>PostPaid</code> indicates pay-as-you-go.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The description of the serverless resource group. The description can be a maximum of 128 characters in length and can contain letters, digits, and underscores (_).</p>
+     * <p>The remark for the general-purpose resource group. It can be up to 128 characters long and can contain letters, Chinese characters, digits, and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>Create a serverless resource group for common tasks</p>
@@ -83,7 +83,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The specifications of the serverless resource group. Unit: CU. This parameter is required only if you set the PaymentType parameter to PrePaid.</p>
+     * <p>The specification of the resource group, in CUs. This parameter is required when <code>PaymentType</code> is set to <code>PrePaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -92,21 +92,21 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Integer spec;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) with which the serverless resource group is associated by default.</p>
+     * <p>The ID of the VPC to be bound by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
+     * <p>vpc-m2et4f3oc8m****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the vSwitch with which the serverless resource group is associated by default.</p>
+     * <p>The ID of the vSwitch to be bound by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
+     * <p>vsw-uf8usrhs7hjd9****</p>
      */
     @NameInMap("VswitchId")
     public String vswitchId;

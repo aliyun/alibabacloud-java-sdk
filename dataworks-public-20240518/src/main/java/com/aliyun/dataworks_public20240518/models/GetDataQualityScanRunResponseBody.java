@@ -104,10 +104,14 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
         /**
          * <p>The final comparison result status.</p>
          * <ul>
-         * <li>Pass</li>
-         * <li>Error</li>
-         * <li>Warn</li>
-         * <li>Fail</li>
+         * <li><p>Pass</p>
+         * </li>
+         * <li><p>Error</p>
+         * </li>
+         * <li><p>Warn</p>
+         * </li>
+         * <li><p>Fail</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,11 +196,16 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
         /**
          * <p>The validation result status.</p>
          * <ul>
-         * <li>Pass</li>
-         * <li>Running</li>
-         * <li>Error</li>
-         * <li>Warn</li>
-         * <li>Fail</li>
+         * <li><p>Pass</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Error</p>
+         * </li>
+         * <li><p>Warn</p>
+         * </li>
+         * <li><p>Fail</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,9 +265,12 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
         /**
          * <p>The type of the compute engine. Only EMR compute engines support these settings.</p>
          * <ul>
-         * <li>Hive</li>
-         * <li>Spark</li>
-         * <li>Kyuubi</li>
+         * <li><p>Hive</p>
+         * </li>
+         * <li><p>Spark</p>
+         * </li>
+         * <li><p>Kyuubi</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,8 +332,10 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
         /**
          * <p>The workspace environment to which the compute engine belongs.</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod</p>
+         * </li>
+         * <li><p>Dev</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -535,8 +549,10 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
         /**
          * <p>The trigger method of the data quality monitor.</p>
          * <ul>
-         * <li>ByManual</li>
-         * <li>BySchedule</li>
+         * <li><p>ByManual</p>
+         * </li>
+         * <li><p>BySchedule</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -890,11 +906,16 @@ public class GetDataQualityScanRunResponseBody extends TeaModel {
         /**
          * <p>The current running status.</p>
          * <ul>
-         * <li>Pass</li>
-         * <li>Running</li>
-         * <li>Error</li>
-         * <li>Warn</li>
-         * <li>Fail</li>
+         * <li><p>Pass</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Error</p>
+         * </li>
+         * <li><p>Warn</p>
+         * </li>
+         * <li><p>Fail</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

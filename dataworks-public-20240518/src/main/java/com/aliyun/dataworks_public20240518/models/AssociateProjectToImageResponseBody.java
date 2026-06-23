@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssociateProjectToImageResponseBody extends TeaModel {
     /**
+     * <p>The result of the API request.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class AssociateProjectToImageResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -19,6 +23,8 @@ public class AssociateProjectToImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceFileRequest extends TeaModel {
     /**
-     * <p>The code for the file. The code format varies based on the file type. To view the code format for a specific file type, go to Operation Center, open the directed acyclic graph (DAG) of a node of the file type, right-click the node, and then select View Code.</p>
+     * <p>The code content of the file. The code format varies depending on the code type (fileType). You can locate a job of the corresponding type in the Operation Center, right-click it, and select View Code to check the specific code format.</p>
      * 
      * <strong>example:</strong>
      * <p>SHOW TABLES;</p>
@@ -43,8 +43,9 @@ public class CreateResourceFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The type of the code for the file.</p>
-     * <p>The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</p>
+     * <p>The code type of the file.</p>
+     * <p>Different file types correspond to different code types. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks Node Types</a>.<br>
+     * You can also invoke the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> API to query the code types of files.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +65,7 @@ public class CreateResourceFileRequest extends TeaModel {
     public String originResourceName;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the file owner. If this parameter is not configured, the ID of the Alibaba Cloud account of the user who calls the operation is used by default.</p>
+     * <p>The Alibaba Cloud User ID of the file owner. If this parameter is empty, the Alibaba Cloud User ID of the caller is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000000001</p>
@@ -73,7 +74,7 @@ public class CreateResourceFileRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console, go to the workspace configuration page, and obtain the workspace ID. This parameter is required to identify the DataWorks workspace for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +84,7 @@ public class CreateResourceFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Specifies whether to upload the resource file to a desired compute engine.</p>
+     * <p>Indicates whether to synchronize and upload the resource to the compute engine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +94,7 @@ public class CreateResourceFileRequest extends TeaModel {
     public Boolean registerToCalcEngine;
 
     /**
-     * <p>The URL of the Object Storage Service (OSS) bucket to which you upload the file. The URL is provided by the POP platform.</p>
+     * <p>The OSS URL for file upload provided by POP.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://bucketname1.oss-cn-shanghai.aliyuncs.com/example">http://bucketname1.oss-cn-shanghai.aliyuncs.com/example</a></p>
@@ -102,7 +103,7 @@ public class CreateResourceFileRequest extends TeaModel {
     public String resourceFile;
 
     /**
-     * <p>The storage path of the resource file in a desired compute engine. This parameter takes effect only for E-MapReduce (EMR) and Cloudera\&quot;s Distribution including Apache Hadoop (CDH) compute engines. In an EMR compute engine, this parameter is configured in the [osshdfs]://path/to/object format. In a CDH compute engine, this parameter is set to /user/admin/lib by default.</p>
+     * <p>The Storage Path of the resource file on the compute engine. This field is currently used only by EMR and CDH. The EMR format is [osshdfs]://path/to/object, and for CDH, the default value must be /user/admin/lib.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://oss-cn-shanghai.aliyuncs.com/emr-test</p>
@@ -111,10 +112,12 @@ public class CreateResourceFileRequest extends TeaModel {
     public String storageURL;
 
     /**
-     * <p>The upload mode of MaxCompute file resources. This parameter takes effect only for MaxCompute file resources. Valid values:</p>
+     * <p>The upload mode for the resource file. This parameter currently applies only to File-type files in MaxCompute. Valid values:</p>
      * <ul>
-     * <li>true: indicates the resource upload and download mode.</li>
-     * <li>false: indicates the online editing mode.</li>
+     * <li><p>true: Downloadable resource mode.</p>
+     * </li>
+     * <li><p>false: Online-editable text mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

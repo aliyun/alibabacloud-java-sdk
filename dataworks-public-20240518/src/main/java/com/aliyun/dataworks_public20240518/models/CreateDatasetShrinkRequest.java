@@ -16,13 +16,20 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     /**
      * <p>The data type. Valid values:</p>
      * <ul>
-     * <li>COMMON: Common (Default)</li>
-     * <li>PIC</li>
-     * <li>TEXT</li>
-     * <li>TABLE</li>
-     * <li>VIDEO</li>
-     * <li>AUDIO</li>
-     * <li>INDEX</li>
+     * <li><p>COMMON: Common (Default)</p>
+     * </li>
+     * <li><p>PIC</p>
+     * </li>
+     * <li><p>TEXT</p>
+     * </li>
+     * <li><p>TABLE</p>
+     * </li>
+     * <li><p>VIDEO</p>
+     * </li>
+     * <li><p>AUDIO</p>
+     * </li>
+     * <li><p>INDEX</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,20 +77,31 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     /**
      * <p>The storage type. Currently supported values:</p>
      * <ul>
-     * <li>OSS</li>
-     * <li>NAS: General-purpose NAS file systems</li>
-     * <li>EXTREMENAS: Extreme NAS file systems</li>
-     * <li>DLF_LANCE: Data Lake Formation</li>
+     * <li><p>OSS</p>
+     * </li>
+     * <li><p>NAS: General-purpose NAS file systems</p>
+     * </li>
+     * <li><p>EXTREMENAS: Extreme NAS file systems</p>
+     * </li>
+     * <li><p>DLF_LANCE: Data Lake Formation</p>
+     * </li>
      * </ul>
      * <p>Valid values:</p>
      * <ul>
-     * <li>NAS: General-purpose NAS file systems</li>
-     * <li>MAXCOMPUTE: MaxCompute table</li>
-     * <li>CPFS: Cloud Parallel File Storage</li>
-     * <li>BMCPFS: CPFS for Lingjun</li>
-     * <li>EXTREMENAS: Extreme NAS file systems</li>
-     * <li>OSS: Object Storage Service</li>
-     * <li>DLF_LANCE: Data Lake Formation.</li>
+     * <li><p>NAS: General-purpose NAS file systems</p>
+     * </li>
+     * <li><p>MAXCOMPUTE: MaxCompute table</p>
+     * </li>
+     * <li><p>CPFS: Cloud Parallel File Storage</p>
+     * </li>
+     * <li><p>BMCPFS: CPFS for Lingjun</p>
+     * </li>
+     * <li><p>EXTREMENAS: Extreme NAS file systems</p>
+     * </li>
+     * <li><p>OSS: Object Storage Service</p>
+     * </li>
+     * <li><p>DLF_LANCE: Data Lake Formation.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

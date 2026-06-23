@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class Dataset extends TeaModel {
     /**
      * <p>The description of the dataset. The length cannot exceed 1024 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试数据集</p>
      */
     @NameInMap("Comment")
     public String comment;

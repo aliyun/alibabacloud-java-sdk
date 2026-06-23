@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleRequest extends TeaModel {
     /**
-     * <p>The check settings for sample data.</p>
+     * <p>The sample check settings.</p>
      */
     @NameInMap("CheckingConfig")
     public CreateDataQualityRuleRequestCheckingConfig checkingConfig;
 
     /**
-     * <p>The description of the rule. The description can be up to 500 characters in length.</p>
+     * <p>The description of the rule. The maximum length is 500 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a odps _sql task</p>
@@ -20,7 +20,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the monitoring rule.</p>
+     * <p>Specifies whether to enable the data quality rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The operations that you can perform after the rule-based check fails.</p>
+     * <p>The list of issue handlers for the data quality rule check.</p>
      */
     @NameInMap("ErrorHandlers")
     public java.util.List<CreateDataQualityRuleRequestErrorHandlers> errorHandlers;
@@ -45,7 +45,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,13 +55,13 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The sampling settings.</p>
+     * <p>The settings required for sample collection.</p>
      */
     @NameInMap("SamplingConfig")
     public CreateDataQualityRuleRequestSamplingConfig samplingConfig;
 
     /**
-     * <p>The strength of the rule. Valid values:</p>
+     * <p>The severity of the rule for the business (corresponding to the strong/weak rule on the page). Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -74,16 +74,16 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public String severity;
 
     /**
-     * <p>The monitored object of the rule.</p>
+     * <p>The object monitored by the rule.</p>
      */
     @NameInMap("Target")
     public CreateDataQualityRuleRequestTarget target;
 
     /**
-     * <p>The ID of the template used by the rule.</p>
+     * <p>The unique identifier of the rule template that the rule references.</p>
      * 
      * <strong>example:</strong>
-     * <p>system::user_defined</p>
+     * <p>SYSTEM:table:table_count:fixed</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
@@ -176,13 +176,13 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsCritical extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</p>
+         * <p>For a fluctuation-type rule, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>$checkValue &gt; 0.01</li>
-         * <li>$checkValue &lt; -0.01</li>
-         * <li>abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation drops below -0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of the fluctuation: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
+         * <p>For a fixed-value type rule, you can also use an expression to configure the threshold. If both are configured at the same time, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.05</p>
@@ -191,14 +191,14 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator. Valid values:</p>
+         * <p>The comparison operator:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
-         * <li>&lt;</li>
-         * <li>&lt;=</li>
+         * <li>\&lt;</li>
+         * <li>\&lt;=</li>
          * <li>!=</li>
-         * <li>\=</li>
+         * <li>=</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,13 +251,13 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsExpected extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</p>
+         * <p>For a fluctuation-type rule, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>$checkValue &gt; 0.01</li>
-         * <li>$checkValue &lt; -0.01</li>
-         * <li>abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation drops below -0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of the fluctuation: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
+         * <p>For a fixed-value type rule, you can also use an expression to configure the threshold. If both are configured at the same time, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &lt;= 0.01</p>
@@ -266,14 +266,14 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator. Valid values:</p>
+         * <p>The comparison operator:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
-         * <li>&lt;</li>
-         * <li>&lt;=</li>
+         * <li>\&lt;</li>
+         * <li>\&lt;=</li>
          * <li>!=</li>
-         * <li>\=</li>
+         * <li>=</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,13 +326,13 @@ public class CreateDataQualityRuleRequest extends TeaModel {
     public static class CreateDataQualityRuleRequestCheckingConfigThresholdsWarned extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</p>
+         * <p>For a fluctuation-type rule, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>$checkValue &gt; 0.01</li>
-         * <li>$checkValue &lt; -0.01</li>
-         * <li>abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation rises above 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation drops below -0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of the fluctuation: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
+         * <p>For a fixed-value type rule, you can also use an expression to configure the threshold. If both are configured at the same time, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -341,14 +341,14 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The comparison operator. Valid values:</p>
+         * <p>The comparison operator:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
-         * <li>&lt;</li>
-         * <li>&lt;=</li>
+         * <li>\&lt;</li>
+         * <li>\&lt;=</li>
          * <li>!=</li>
-         * <li>\=</li>
+         * <li>=</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,19 +400,19 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfigThresholds extends TeaModel {
         /**
-         * <p>The threshold settings for critical alerts.</p>
+         * <p>The threshold settings for a critical warning.</p>
          */
         @NameInMap("Critical")
         public CreateDataQualityRuleRequestCheckingConfigThresholdsCritical critical;
 
         /**
-         * <p>The expected threshold setting.</p>
+         * <p>The expected threshold settings.</p>
          */
         @NameInMap("Expected")
         public CreateDataQualityRuleRequestCheckingConfigThresholdsExpected expected;
 
         /**
-         * <p>The threshold settings for normal alerts.</p>
+         * <p>The threshold settings for a normal warning.</p>
          */
         @NameInMap("Warned")
         public CreateDataQualityRuleRequestCheckingConfigThresholdsWarned warned;
@@ -450,7 +450,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestCheckingConfig extends TeaModel {
         /**
-         * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
+         * <p>Some types of thresholds require querying for reference samples and then summarizing the values of the reference samples to derive the threshold to be compared. An expression is used here to represent the query method for the reference samples.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -465,7 +465,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public CreateDataQualityRuleRequestCheckingConfigThresholds thresholds;
 
         /**
-         * <p>The method that is used to calculate a threshold. You can leave this parameter empty if you use a rule template. Valid values:</p>
+         * <p>The threshold calculation method. You do not need to specify this parameter when a template is used.</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -514,7 +514,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestErrorHandlers extends TeaModel {
         /**
-         * <p>The SQL statement that is used to filter failed tasks. If you define the rule by using custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
+         * <p>For a custom SQL rule, you must specify an SQL statement to filter problematic data.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -523,7 +523,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String errorDataFilter;
 
         /**
-         * <p>The type of the operation. Valid values:</p>
+         * <p>The handler type:</p>
          * <ul>
          * <li>SaveErrorData</li>
          * </ul>
@@ -559,23 +559,23 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestSamplingConfig extends TeaModel {
         /**
-         * <p>The metrics used for sampling. You can leave this parameter empty if you use a rule template. Valid values:</p>
+         * <p>The name of the metric to be sampled. You do not need to specify this parameter when a template is used.</p>
          * <ul>
          * <li>Count: the number of rows in the table.</li>
          * <li>Min: the minimum value of the field.</li>
          * <li>Max: the maximum value of the field.</li>
          * <li>Avg: the average value of the field.</li>
-         * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
-         * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
-         * <li>DuplicatedCount: the number of duplicated values of the field.</li>
-         * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
-         * <li>TableSize: the table size.</li>
-         * <li>NullValueCount: the number of rows in which the field value is null.</li>
-         * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
-         * <li>GroupCount: the field value and the number of rows for each field value.</li>
-         * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
-         * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
-         * <li>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</li>
+         * <li>DistinctCount: the number of distinct values of the field.</li>
+         * <li>DistinctPercent: the ratio of the number of distinct values of the field to the number of data rows.</li>
+         * <li>DuplicatedCount: the number of duplicate values of the field.</li>
+         * <li>DuplicatedPercent: the ratio of the number of duplicate values of the field to the number of data rows.</li>
+         * <li>TableSize: the size of the table.</li>
+         * <li>NullValueCount: the number of rows in which the field is null.</li>
+         * <li>NullValuePercent: the ratio of rows in which the field is null.</li>
+         * <li>GroupCount: the values aggregated by field value and the corresponding number of data rows for each value.</li>
+         * <li>CountNotIn: the number of rows whose enum values do not match.</li>
+         * <li>CountDistinctNotIn: the number of distinct values that do not match the enum values.</li>
+         * <li>UserDefinedSql: collects samples by using a custom SQL statement.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -585,7 +585,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String metric;
 
         /**
-         * <p>The parameters required for sampling.</p>
+         * <p>The parameters required during sample collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
@@ -594,7 +594,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>The statements that are used to filter unnecessary data during sampling. The statements can be up to 16,777,215 characters in length.</p>
+         * <p>The condition used to perform a secondary filter on the irrelevant data during sampling. The maximum length is 16777215 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>id IS NULL</p>
@@ -603,7 +603,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String samplingFilter;
 
         /**
-         * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
+         * <p>The runtime parameter setting statements to be inserted and executed before the sampling statement is executed. The maximum length is 1000 characters. Only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s; 
@@ -653,7 +653,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
 
     public static class CreateDataQualityRuleRequestTarget extends TeaModel {
         /**
-         * <p>The type of the database to which the table belongs. Valid values:</p>
+         * <p>For a table-type dataset, the type of database to which the table belongs.</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>emr</li>
@@ -671,7 +671,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>The configuration of the partitioned table.</p>
+         * <p>The partition settings of the partitioned table.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=$[yyyymmdd-1]</p>
@@ -680,7 +680,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String partitionSpec;
 
         /**
-         * <p>The ID of the table that is limited by the rule in Data Map.</p>
+         * <p>The unique ID of the table in Data Map on which the rule operates.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -690,7 +690,7 @@ public class CreateDataQualityRuleRequest extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>The type of the monitored object. Valid values:</p>
+         * <p>The type of the monitored object.</p>
          * <ul>
          * <li>Table</li>
          * </ul>

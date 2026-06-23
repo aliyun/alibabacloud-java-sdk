@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListSkillsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListSkillsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
      */
@@ -37,16 +42,25 @@ public class ListSkillsResponseBody extends TeaModel {
 
     public static class ListSkillsResponseBodyPagingInfoSkills extends TeaModel {
         /**
+         * <p><strong>The creator ID.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p><strong>The Skill description.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据分析技能</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -56,6 +70,8 @@ public class ListSkillsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p><strong>The modifier ID.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -63,6 +79,8 @@ public class ListSkillsResponseBody extends TeaModel {
         public String modifierId;
 
         /**
+         * <p><strong>The Skill name.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>my-skill</p>
          */
@@ -70,6 +88,8 @@ public class ListSkillsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p><strong>The visibility level.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>TENANT</p>
          */
@@ -133,6 +153,8 @@ public class ListSkillsResponseBody extends TeaModel {
 
     public static class ListSkillsResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The maximum number of results returned in this response.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -140,16 +162,23 @@ public class ListSkillsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token for the next page of results. This parameter is null or empty if all results have been returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The list of Skills.</p>
+         */
         @NameInMap("Skills")
         public java.util.List<ListSkillsResponseBodyPagingInfoSkills> skills;
 
         /**
+         * <p>The total number of results that match the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

@@ -7,8 +7,10 @@ public class ListComputeResourcesRequest extends TeaModel {
     /**
      * <p>The environment type of the computing resource. Valid values:</p>
      * <ul>
-     * <li>Dev</li>
-     * <li>Prod</li>
+     * <li><p>Dev</p>
+     * </li>
+     * <li><p>Prod</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +31,10 @@ public class ListComputeResourcesRequest extends TeaModel {
     /**
      * <p>The sort direction of the computing resource list. Valid values:</p>
      * <ul>
-     * <li>Desc: descending order.</li>
-     * <li>Asc: ascending order.</li>
+     * <li><p>Desc: descending order.</p>
+     * </li>
+     * <li><p>Asc: ascending order.</p>
+     * </li>
      * </ul>
      * <p>Default value: Desc</p>
      * 
@@ -71,10 +75,14 @@ public class ListComputeResourcesRequest extends TeaModel {
     /**
      * <p>The field to sort the computing resource list by. Supported fields include name, creation time, and computing resource ID.</p>
      * <ul>
-     * <li>CreateTime: Sorts by creation time</li>
-     * <li>Id: Sorts by computing resource ID</li>
-     * <li>Name: Sorts by computing resource name.</li>
-     * <li>CreateTimeWithDefaultFirst: Sorts based on whether it is the default resource and by creation time, with the default computing resource listed first.</li>
+     * <li><p>CreateTime: Sorts by creation time</p>
+     * </li>
+     * <li><p>Id: Sorts by computing resource ID</p>
+     * </li>
+     * <li><p>Name: Sorts by computing resource name.</p>
+     * </li>
+     * <li><p>CreateTimeWithDefaultFirst: Sorts based on whether it is the default resource and by creation time, with the default computing resource listed first.</p>
+     * </li>
      * </ul>
      * <p>Default value: CreateTime</p>
      * 

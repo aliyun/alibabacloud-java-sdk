@@ -15,6 +15,8 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long bizdate;
 
     /**
+     * <p>The filter. It is in JSON format, and multiple filter conditions are combined with a logical AND. Currently supported fields include: <code>startedTimeStart</code>, <code>startedTimeEnd</code>, <code>finishedTimeStart</code>, <code>finishedTimeEnd</code>, <code>createTimeStart</code>, <code>createTimeEnd</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;startedTimeStart&quot;: &quot;1763481600000&quot;,
@@ -73,8 +75,10 @@ public class ListTaskInstancesRequest extends TeaModel {
     /**
      * <p>The environment of the workspace. Valid values:</p>
      * <ul>
-     * <li>Prod: production environment</li>
-     * <li>Dev: development environment</li>
+     * <li><p>Prod: production environment</p>
+     * </li>
+     * <li><p>Dev: development environment</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -127,12 +131,18 @@ public class ListTaskInstancesRequest extends TeaModel {
     /**
      * <p>The status of the task instance.</p>
      * <ul>
-     * <li><code>NotRun</code>: Not started</li>
-     * <li><code>Running</code></li>
-     * <li><code>Failure</code></li>
-     * <li><code>Success</code></li>
-     * <li><code>WaitTime</code>: Awaiting scheduled time</li>
-     * <li><code>WaitResource</code>: Awaiting resources</li>
+     * <li><p><code>NotRun</code>: Not started</p>
+     * </li>
+     * <li><p><code>Running</code></p>
+     * </li>
+     * <li><p><code>Failure</code></p>
+     * </li>
+     * <li><p><code>Success</code></p>
+     * </li>
+     * <li><p><code>WaitTime</code>: Awaiting scheduled time</p>
+     * </li>
+     * <li><p><code>WaitResource</code>: Awaiting resources</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -177,9 +187,12 @@ public class ListTaskInstancesRequest extends TeaModel {
     /**
      * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
      * <ul>
-     * <li>Pause</li>
-     * <li>Skip</li>
-     * <li>Normal</li>
+     * <li><p>Pause</p>
+     * </li>
+     * <li><p>Skip</p>
+     * </li>
+     * <li><p>Normal</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -191,8 +204,10 @@ public class ListTaskInstancesRequest extends TeaModel {
     /**
      * <p>The trigger type. Valid values:</p>
      * <ul>
-     * <li>Scheduler: scheduling cycle-based trigger</li>
-     * <li>Manual: manual trigger</li>
+     * <li><p>Scheduler: scheduling cycle-based trigger</p>
+     * </li>
+     * <li><p>Manual: manual trigger</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -202,6 +217,8 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String triggerType;
 
     /**
+     * <p>The unified workflow instance ID. For all task instances under a specific data timestamp within a single trigger, this field has the same value.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -229,12 +246,18 @@ public class ListTaskInstancesRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>SmokeTest: Testing</li>
-     * <li>Manual: Manually triggered node</li>
-     * <li>SupplementData: Data backfill</li>
-     * <li>ManualWorkflow: Manually triggered workflow</li>
-     * <li>Normal: Scheduled execution</li>
-     * <li>TriggerWorkflow: Triggered Workflow</li>
+     * <li><p>SmokeTest: Testing</p>
+     * </li>
+     * <li><p>Manual: Manually triggered node</p>
+     * </li>
+     * <li><p>SupplementData: Data backfill</p>
+     * </li>
+     * <li><p>ManualWorkflow: Manually triggered workflow</p>
+     * </li>
+     * <li><p>Normal: Scheduled execution</p>
+     * </li>
+     * <li><p>TriggerWorkflow: Triggered Workflow</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

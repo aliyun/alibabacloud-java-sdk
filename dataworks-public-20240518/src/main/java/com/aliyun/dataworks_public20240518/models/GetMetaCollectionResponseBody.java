@@ -78,7 +78,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
          * <p>The collection ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.123</p>
+         * <p>as78d756asd</p>
          */
         @NameInMap("Id")
         public String id;
@@ -105,7 +105,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
          * <p>The parent collection ID. This parameter can be empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>category.12</p>
+         * <p>4as3dasf654a</p>
          */
         @NameInMap("ParentId")
         public String parentId;
@@ -113,9 +113,12 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         /**
          * <p>The collection type. Valid values:</p>
          * <ul>
-         * <li>Category</li>
-         * <li>Album</li>
-         * <li>AlbumCategory: Album subcategory.</li>
+         * <li><p>Category</p>
+         * </li>
+         * <li><p>Album</p>
+         * </li>
+         * <li><p>AlbumCategory: Album subcategory.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityScanRunShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the data quality monitor.</p>
+     * <p>The data quality scan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20000001</p>
@@ -14,7 +14,7 @@ public class CreateDataQualityScanRunShrinkRequest extends TeaModel {
     public Long dataQualityScanId;
 
     /**
-     * <p>The parameter settings used during the actual run. The <code>triggerTime</code> parameter is required.</p>
+     * <p>The parameters for the run. The <code>triggerTime</code> parameter is required.</p>
      */
     @NameInMap("Parameters")
     public String parametersShrink;
@@ -29,7 +29,7 @@ public class CreateDataQualityScanRunShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The scheduling resource group used when running the data quality monitor. This resource group uses the same data structure as in the scheduling API.</p>
+     * <p>Specifies the scheduling resource group used to run the data quality scan. This object uses the same data structure as the scheduling API.</p>
      */
     @NameInMap("RuntimeResource")
     public String runtimeResourceShrink;

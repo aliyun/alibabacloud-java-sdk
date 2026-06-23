@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateMetaEntitiesResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9E0C8E7A-C6BE-5A73-9562-2A030A80E8C6</p>
@@ -13,10 +13,15 @@ public class BatchCreateMetaEntitiesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of results for the batch creation operation. This list provides the success status and any error messages for each individual entity in the request.</p>
+     */
     @NameInMap("Results")
     public java.util.List<MetaEntityWriteResult> results;
 
     /**
+     * <p>Indicates whether the request was successful. This parameter returns <code>true</code> even if creating some entities fails. To determine the outcome for each entity, check the <code>Success</code> and <code>ErrorMessage</code> fields in the <code>Results</code> array.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

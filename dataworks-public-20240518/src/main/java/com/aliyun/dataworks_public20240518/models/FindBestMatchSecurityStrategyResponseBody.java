@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
+    /**
+     * <p>Data object.</p>
+     */
     @NameInMap("Data")
     public FindBestMatchSecurityStrategyResponseBodyData data;
 
     /**
+     * <p><strong>API request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5df3a17***903790e8e8a</p>
      */
@@ -37,16 +42,23 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
 
     public static class FindBestMatchSecurityStrategyResponseBodyDataSecurityStrategyContentControllers extends TeaModel {
         /**
+         * <p><strong>Basic Edition default value</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("BasicEditionDefaultValue")
         public Object basicEditionDefaultValue;
 
+        /**
+         * <p>Basic Edition valid value range [min, max].</p>
+         */
         @NameInMap("BasicEditionIntervalValue")
         public java.util.List<Integer> basicEditionIntervalValue;
 
         /**
+         * <p>Controller identifier. For values, see the controller list of each Schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>viewCount</p>
          */
@@ -54,16 +66,26 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String controller;
 
         /**
+         * <p><strong>Value type (Boolean/Integer/Long/String)</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>Integer</p>
          */
         @NameInMap("ControllerValueType")
         public String controllerValueType;
 
+        /**
+         * <p>Display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询结果-单次展示记录值上限</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p><strong>English display name</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>Query Results - Single Display Record Limit</p>
          */
@@ -71,6 +93,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String displayNameEn;
 
         /**
+         * <p><strong>Whether this controller is enabled</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -78,36 +102,53 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>Enterprise Edition default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>500000</p>
          */
         @NameInMap("EnterpriseEditionDefaultValue")
         public Object enterpriseEditionDefaultValue;
 
+        /**
+         * <p>Enterprise Edition valid value range [min, max].</p>
+         */
         @NameInMap("EnterpriseEditionIntervalValue")
         public java.util.List<Integer> enterpriseEditionIntervalValue;
 
         /**
+         * <p>Professional Edition default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>200000</p>
          */
         @NameInMap("ProfessionalEditionDefaultValue")
         public Object professionalEditionDefaultValue;
 
+        /**
+         * <p>Professional Edition valid value range [min, max].</p>
+         */
         @NameInMap("ProfessionalEditionIntervalValue")
         public java.util.List<Integer> professionalEditionIntervalValue;
 
         /**
+         * <p><strong>Standard Edition default value</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("StandardEditionDefaultValue")
         public Object standardEditionDefaultValue;
 
+        /**
+         * <p>Standard Edition valid value range [min, max].</p>
+         */
         @NameInMap("StandardEditionIntervalValue")
         public java.util.List<Integer> standardEditionIntervalValue;
 
         /**
+         * <p><strong>User-configured value. The type depends on ControllerValueType.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -235,6 +276,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
 
     public static class FindBestMatchSecurityStrategyResponseBodyDataSecurityStrategyContent extends TeaModel {
         /**
+         * <p><strong>Control scope</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>Tenant</p>
          */
@@ -242,6 +285,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String controlDwScope;
 
         /**
+         * <p><strong>Control module</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>DataQuery</p>
          */
@@ -249,19 +294,33 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String controlModule;
 
         /**
+         * <p><strong>Control sub-module</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>MyCatalog</p>
          */
         @NameInMap("ControlSubModule")
         public String controlSubModule;
 
+        /**
+         * <p>Controller list.</p>
+         * <p>Note: Valid controllers depend on the selected Schema. Refer to the Controller definition and the controller list of each Schema.</p>
+         */
         @NameInMap("Controllers")
         public java.util.List<FindBestMatchSecurityStrategyResponseBodyDataSecurityStrategyContentControllers> controllers;
 
+        /**
+         * <p><strong>Display name</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据分析</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p><strong>English display name</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>Data Query</p>
          */
@@ -269,6 +328,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String displayNameEn;
 
         /**
+         * <p><strong>Schema name</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>DataQuerySecurityStrategySchema</p>
          */
@@ -276,6 +337,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>System policy display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Default system generate data query policy</p>
          */
@@ -283,6 +346,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String systemPolicyDisplayName;
 
         /**
+         * <p>System policy name (when not empty, the system automatically creates a default policy).</p>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM_GENERATE_DEFAULT_DATA_QUERY</p>
          */
@@ -369,10 +434,15 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
     }
 
     public static class FindBestMatchSecurityStrategyResponseBodyDataSecurityStrategy extends TeaModel {
+        /**
+         * <p><strong>Policy content</strong>. Refer to the StrategyContent definition.</p>
+         */
         @NameInMap("Content")
         public FindBestMatchSecurityStrategyResponseBodyDataSecurityStrategyContent content;
 
         /**
+         * <p><strong>Control scope</strong> (Workspace/Tenant).</p>
+         * 
          * <strong>example:</strong>
          * <p>Tenant</p>
          */
@@ -380,6 +450,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String controlDwScope;
 
         /**
+         * <p><strong>Control module</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>DataQuery</p>
          */
@@ -387,6 +459,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String controlModule;
 
         /**
+         * <p><strong>Control sub-module</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>MyCatalog</p>
          */
@@ -394,6 +468,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String controlSubModule;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-25T20:46:19</p>
          */
@@ -401,16 +477,26 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Creator user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>203322746501002787</p>
          */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p><strong>Policy description</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>控制数据分析模块的查询结果安全行为</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p><strong>Whether enabled</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -418,16 +504,26 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p><strong>Policy ID</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p><strong>Policy name</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认数据分析策略</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>System default policy source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -435,6 +531,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public Long originPolicyId;
 
         /**
+         * <p><strong>Schema template name</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>DataQuerySecurityStrategySchema</p>
          */
@@ -442,6 +540,8 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String schemaName;
 
         /**
+         * <p>Update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-25T20:46:19</p>
          */
@@ -449,12 +549,17 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Last updater user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>207947397706614297</p>
          */
         @NameInMap("Updater")
         public String updater;
 
+        /**
+         * <p><strong>Associated workspace ID list</strong></p>
+         */
         @NameInMap("Workspaces")
         public java.util.List<Long> workspaces;
 
@@ -587,15 +692,26 @@ public class FindBestMatchSecurityStrategyResponseBody extends TeaModel {
 
     public static class FindBestMatchSecurityStrategyResponseBodyData extends TeaModel {
         /**
+         * <p>Purchased DataWorks edition.</p>
+         * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
          */
         @NameInMap("Edition")
         public String edition;
 
+        /**
+         * <p>Purchased DataWorks edition name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标准版</p>
+         */
         @NameInMap("EditionDisplayName")
         public String editionDisplayName;
 
+        /**
+         * <p>Security policy.</p>
+         */
         @NameInMap("SecurityStrategy")
         public FindBestMatchSecurityStrategyResponseBodyDataSecurityStrategy securityStrategy;
 

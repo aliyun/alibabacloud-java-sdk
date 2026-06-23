@@ -4,13 +4,23 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRoleRequest extends TeaModel {
+    /**
+     * <p>The client token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>保留字段</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of DataWorks module permissions.</p>
+     */
     @NameInMap("ModulePermissions")
     public java.util.List<CreateProjectRoleRequestModulePermissions> modulePermissions;
 
     /**
+     * <p>The role name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +30,8 @@ public class CreateProjectRoleRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace on which the API operation is performed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +79,46 @@ public class CreateProjectRoleRequest extends TeaModel {
 
     public static class CreateProjectRoleRequestModulePermissions extends TeaModel {
         /**
+         * <p>The DataWorks module ID. Valid values:</p>
+         * <ul>
+         * <li><p>2: HoloStudio</p>
+         * </li>
+         * <li><p>3: StreamStudio</p>
+         * </li>
+         * <li><p>4: Deployment management</p>
+         * </li>
+         * <li><p>6: Data Security Guard</p>
+         * </li>
+         * <li><p>7: Data Map</p>
+         * </li>
+         * <li><p>8: Data Service</p>
+         * </li>
+         * <li><p>9: Data Integration</p>
+         * </li>
+         * <li><p>10: Data Modeling (DataBlau DDM)</p>
+         * </li>
+         * <li><p>11: Data Studio</p>
+         * </li>
+         * <li><p>12: Data Quality</p>
+         * </li>
+         * <li><p>13: Data Governance</p>
+         * </li>
+         * <li><p>14: Operation Center</p>
+         * </li>
+         * <li><p>15: Resource optimization</p>
+         * </li>
+         * <li><p>16: Migration Assistant</p>
+         * </li>
+         * <li><p>17: Data Analysis</p>
+         * </li>
+         * <li><p>18: Approval center</p>
+         * </li>
+         * <li><p>19: Security Center</p>
+         * </li>
+         * <li><p>20: Intelligent Data Modeling</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -74,6 +126,16 @@ public class CreateProjectRoleRequest extends TeaModel {
         public Long moduleId;
 
         /**
+         * <p>The permission type. Valid values:</p>
+         * <ul>
+         * <li><p>Write: Read-only</p>
+         * </li>
+         * <li><p>Read: Edit</p>
+         * </li>
+         * <li><p>NotSet: Not controlled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Write</p>
          */

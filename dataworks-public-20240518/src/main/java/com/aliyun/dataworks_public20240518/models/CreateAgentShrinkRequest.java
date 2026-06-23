@@ -4,22 +4,57 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of sub-Agents that can be called by this Agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("CallableAgents")
     public String callableAgentsShrink;
 
+    /**
+     * <p>The description of the Agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>数据分析助手</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The display name of the Agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我的助手</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>Extended metadata (key-value pairs).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Metadata")
     public String metadataShrink;
 
+    /**
+     * <p>The model configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *           &quot;modelName&quot;: &quot;dataworks-public-bailian/qwen-max&quot;
+     *         }</p>
+     */
     @NameInMap("Model")
     public String modelShrink;
 
     /**
+     * <p>The name of the Agent. It must be unique under the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,22 +63,52 @@ public class CreateAgentShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The list of skills.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("Skills")
     public String skillsShrink;
 
+    /**
+     * <p>The system prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你是一个数据分析助手。</p>
+     */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
+    /**
+     * <p>The list of tools.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("Tools")
     public String toolsShrink;
 
     /**
+     * <p>The visibility level.<br>
+     * <code>TENANT</code>: Visible within the account.<br>
+     * <code>PROJECT</code>: Visible to specified projects.<br>
+     * <code>USER</code>: Visible to specified users.</p>
+     * 
      * <strong>example:</strong>
      * <p>TENANT</p>
      */
     @NameInMap("Visibility")
     public String visibility;
 
+    /**
+     * <p>The visibility scope. The corresponding field is selected based on Visibility.</p>
+     */
     @NameInMap("VisibilityScope")
     public String visibilityScopeShrink;
 

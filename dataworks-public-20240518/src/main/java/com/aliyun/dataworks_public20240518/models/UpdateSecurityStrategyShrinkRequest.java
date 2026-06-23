@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSecurityStrategyShrinkRequest extends TeaModel {
     /**
+     * <p>A client token to ensure request idempotence.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9*****</p>
      */
@@ -12,15 +14,23 @@ public class UpdateSecurityStrategyShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The policy content, which is constrained by the <code>SecurityStrategySchema</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String contentShrink;
 
+    /**
+     * <p><strong>The policy description.</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>控制数据分析模块的查询结果安全行为</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p><strong>The policy ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,9 +39,18 @@ public class UpdateSecurityStrategyShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p><strong>The policy name.</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>默认数据分析策略</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p><strong>A list of associated workspace IDs.</strong></p>
+     */
     @NameInMap("Workspaces")
     public String workspacesShrink;
 

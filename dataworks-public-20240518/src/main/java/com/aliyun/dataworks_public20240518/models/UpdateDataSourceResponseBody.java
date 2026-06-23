@@ -16,8 +16,10 @@ public class UpdateDataSourceResponseBody extends TeaModel {
     /**
      * <p>Whether the data source has been modified:</p>
      * <ul>
-     * <li>true: Yes</li>
-     * <li>false: no</li>
+     * <li><p>true: Yes</p>
+     * </li>
+     * <li><p>false: no</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

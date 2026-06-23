@@ -10,7 +10,7 @@ public class UpdateBusinessRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>300000</p>
+     * <p>300001</p>
      */
     @NameInMap("BusinessId")
     public Long businessId;
@@ -20,7 +20,7 @@ public class UpdateBusinessRequest extends TeaModel {
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the name.</p>
      * 
      * <strong>example:</strong>
-     * <p>MyBusiness</p>
+     * <p>firstBusiness</p>
      */
     @NameInMap("BusinessName")
     public String businessName;
@@ -29,7 +29,7 @@ public class UpdateBusinessRequest extends TeaModel {
      * <p>The description of the workflow.</p>
      * 
      * <strong>example:</strong>
-     * <p>modified from my first business</p>
+     * <p>modified from first business</p>
      */
     @NameInMap("Description")
     public String description;
@@ -39,7 +39,7 @@ public class UpdateBusinessRequest extends TeaModel {
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the owner.</p>
      * 
      * <strong>example:</strong>
-     * <p>348428****</p>
+     * <p>34842****</p>
      */
     @NameInMap("Owner")
     public String owner;
@@ -48,7 +48,7 @@ public class UpdateBusinessRequest extends TeaModel {
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace page to obtain the workspace ID. You must configure either this parameter or the <code>ProjectIdentifier</code> parameter to determine the DataWorks workspace to which the operation is applied.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>10001</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -57,7 +57,7 @@ public class UpdateBusinessRequest extends TeaModel {
      * <p>The name of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace page to obtain the name. You must configure either this parameter or the <code>ProjectId</code> parameter to determine the DataWorks workspace to which the operation is applied.</p>
      * 
      * <strong>example:</strong>
-     * <p>dw_project</p>
+     * <p>project_dw</p>
      */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;

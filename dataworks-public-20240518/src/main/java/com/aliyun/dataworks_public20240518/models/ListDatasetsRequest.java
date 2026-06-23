@@ -16,13 +16,20 @@ public class ListDatasetsRequest extends TeaModel {
     /**
      * <p>The data type. Multiple selections are allowed. Valid values:</p>
      * <ul>
-     * <li>COMMON</li>
-     * <li>PIC</li>
-     * <li>TEXT</li>
-     * <li>TABLE</li>
-     * <li>VIDEO</li>
-     * <li>AUDIO</li>
-     * <li>INDEX</li>
+     * <li><p>COMMON</p>
+     * </li>
+     * <li><p>PIC</p>
+     * </li>
+     * <li><p>TEXT</p>
+     * </li>
+     * <li><p>TABLE</p>
+     * </li>
+     * <li><p>VIDEO</p>
+     * </li>
+     * <li><p>AUDIO</p>
+     * </li>
+     * <li><p>INDEX</p>
+     * </li>
      * </ul>
      */
     @NameInMap("DataTypeList")
@@ -41,8 +48,10 @@ public class ListDatasetsRequest extends TeaModel {
      * <p>The sort order. Default: Desc.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Asc: Ascending.</li>
-     * <li>Desc: Descending.</li>
+     * <li><p>Asc: Ascending.</p>
+     * </li>
+     * <li><p>Desc: Descending.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,8 +63,10 @@ public class ListDatasetsRequest extends TeaModel {
     /**
      * <p>The dataset source. Valid values:</p>
      * <ul>
-     * <li>DataWorks</li>
-     * <li>PAI</li>
+     * <li><p>DataWorks</p>
+     * </li>
+     * <li><p>PAI</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,9 +106,12 @@ public class ListDatasetsRequest extends TeaModel {
      * <p>The sort field. Default: CreateTime.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ModifyTime: Modification time.</li>
-     * <li>CreateTime: Creation time.</li>
-     * <li>Name</li>
+     * <li><p>ModifyTime: Modification time.</p>
+     * </li>
+     * <li><p>CreateTime: Creation time.</p>
+     * </li>
+     * <li><p>Name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,13 +123,20 @@ public class ListDatasetsRequest extends TeaModel {
     /**
      * <p>The storage type. Multiple selections are allowed. Supported values:</p>
      * <ul>
-     * <li>OSS</li>
-     * <li>NAS: General-purpose NAS file systems</li>
-     * <li>EXTREMENAS: Extreme NAS file systems</li>
-     * <li>DLF_LANCE: Data Lake Formation</li>
-     * <li>CPFS: Cloud Parallel File Storage</li>
-     * <li>BMCPFS: CPFS for Lingjun</li>
-     * <li>MAXCOMPUTE: MaxCompute table</li>
+     * <li><p>OSS</p>
+     * </li>
+     * <li><p>NAS: General-purpose NAS file systems</p>
+     * </li>
+     * <li><p>EXTREMENAS: Extreme NAS file systems</p>
+     * </li>
+     * <li><p>DLF_LANCE: Data Lake Formation</p>
+     * </li>
+     * <li><p>CPFS: Cloud Parallel File Storage</p>
+     * </li>
+     * <li><p>BMCPFS: CPFS for Lingjun</p>
+     * </li>
+     * <li><p>MAXCOMPUTE: MaxCompute table</p>
+     * </li>
      * </ul>
      */
     @NameInMap("StorageTypeList")

@@ -165,8 +165,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>The mode of the configuration file dependency. Valid values:</p>
          * <ul>
-         * <li>MANUAL: Scheduling dependencies are manually configured.</li>
-         * <li>AUTO: Scheduling dependencies are automatically parsed.</li>
+         * <li><p>MANUAL: Scheduling dependencies are manually configured.</p>
+         * </li>
+         * <li><p>AUTO: Scheduling dependencies are automatically parsed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,10 +295,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the cross-cycle scheduling dependency of the node. Valid values:</p>
          * <ul>
-         * <li>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</li>
-         * <li>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</li>
-         * <li>USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.</li>
-         * <li>NONE: No cross-cycle scheduling dependency type is selected for the node.</li>
+         * <li><p>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</p>
+         * </li>
+         * <li><p>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</p>
+         * </li>
+         * <li><p>USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.</p>
+         * </li>
+         * <li><p>NONE: No cross-cycle scheduling dependency type is selected for the node.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,9 +336,12 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the node that corresponds to the file can be rerun. Valid values:</p>
          * <ul>
-         * <li>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</li>
-         * <li>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</li>
-         * <li>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li><p>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</p>
+         * </li>
+         * <li><p>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</p>
+         * </li>
+         * <li><p>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</p>
+         * </li>
          * </ul>
          * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
@@ -354,10 +363,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>The scheduling type of the node. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The node is an auto triggered node.</li>
-         * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</li>
-         * <li>PAUSE: The node is a paused node.</li>
-         * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</li>
+         * <li><p>NORMAL: The node is an auto triggered node.</p>
+         * </li>
+         * <li><p>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</p>
+         * </li>
+         * <li><p>PAUSE: The node is a paused node.</p>
+         * </li>
+         * <li><p>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -557,12 +570,18 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>The module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The file is used for DataStudio.</li>
-         * <li>MANUAL: The file is used for a manually triggered node.</li>
-         * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
-         * <li>SKIP: The file is used for a dry-run node in DataStudio.</li>
-         * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
-         * <li>COMPONENT: The file is used for a script template.</li>
+         * <li><p>NORMAL: The file is used for DataStudio.</p>
+         * </li>
+         * <li><p>MANUAL: The file is used for a manually triggered node.</p>
+         * </li>
+         * <li><p>MANUAL_BIZ: The file is used for a manually triggered workflow.</p>
+         * </li>
+         * <li><p>SKIP: The file is used for a dry-run node in DataStudio.</p>
+         * </li>
+         * <li><p>ADHOCQUERY: The file is used for an ad hoc query.</p>
+         * </li>
+         * <li><p>COMPONENT: The file is used for a script template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -769,12 +788,18 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>The module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The file is used for DataStudio.</li>
-         * <li>MANUAL: The file is used for a manually triggered node.</li>
-         * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
-         * <li>SKIP: The file is used for a dry-run node in DataStudio.</li>
-         * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
-         * <li>COMPONENT: The file is used for a script template.</li>
+         * <li><p>NORMAL: The file is used for DataStudio.</p>
+         * </li>
+         * <li><p>MANUAL: The file is used for a manually triggered node.</p>
+         * </li>
+         * <li><p>MANUAL_BIZ: The file is used for a manually triggered workflow.</p>
+         * </li>
+         * <li><p>SKIP: The file is used for a dry-run node in DataStudio.</p>
+         * </li>
+         * <li><p>ADHOCQUERY: The file is used for an ad hoc query.</p>
+         * </li>
+         * <li><p>COMPONENT: The file is used for a script template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -993,8 +1018,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the column is a partition key column. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1070,8 +1097,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * <p>The environment in which the table is used. Valid values:</p>
          * <ul>
-         * <li>DEV</li>
-         * <li>PROD</li>
+         * <li><p>DEV</p>
+         * </li>
+         * <li><p>PROD</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

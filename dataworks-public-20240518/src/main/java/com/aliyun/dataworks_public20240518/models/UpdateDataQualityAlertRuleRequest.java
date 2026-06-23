@@ -101,14 +101,22 @@ public class UpdateDataQualityAlertRuleRequest extends TeaModel {
         /**
          * <p>The type of alert recipients.</p>
          * <ul>
-         * <li>AliUid</li>
-         * <li>WebhookUrl</li>
-         * <li>DingdingUrl</li>
-         * <li>WeixinUrl</li>
-         * <li>FeishuUrl</li>
-         * <li>TaskOwner</li>
-         * <li>DataQualityScanOwner</li>
-         * <li>ShiftSchedule</li>
+         * <li><p>AliUid</p>
+         * </li>
+         * <li><p>WebhookUrl</p>
+         * </li>
+         * <li><p>DingdingUrl</p>
+         * </li>
+         * <li><p>WeixinUrl</p>
+         * </li>
+         * <li><p>FeishuUrl</p>
+         * </li>
+         * <li><p>TaskOwner</p>
+         * </li>
+         * <li><p>DataQualityScanOwner</p>
+         * </li>
+         * <li><p>ShiftSchedule</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -4,10 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListPendingApprovalsRequest extends TeaModel {
+    /**
+     * <p>The access types.</p>
+     */
     @NameInMap("AccessTypes")
     public java.util.List<String> accessTypes;
 
     /**
+     * <p>The resource schema type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,16 +21,23 @@ public class ListPendingApprovalsRequest extends TeaModel {
     public String defSchema;
 
     /**
+     * <p>The end time of the query range, specified as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1779724799999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The grantee object used to filter results.</p>
+     */
     @NameInMap("Grantee")
     public ListPendingApprovalsRequestGrantee grantee;
 
     /**
+     * <p>The token used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzfQ==</p>
      */
@@ -34,16 +45,22 @@ public class ListPendingApprovalsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries to return per page. Default: 10. Maximum: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The criteria to filter resources.</p>
+     */
     @NameInMap("Resource")
     public ListPendingApprovalsRequestResource resource;
 
     /**
+     * <p>The resource type, which corresponds to a leaf node name. You can specify multiple values. A business context can map to multiple leaf node names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +70,8 @@ public class ListPendingApprovalsRequest extends TeaModel {
     public java.util.List<String> resourceType;
 
     /**
+     * <p>The start time of the query range, specified as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1771948800000</p>
      */
@@ -138,6 +157,8 @@ public class ListPendingApprovalsRequest extends TeaModel {
 
     public static class ListPendingApprovalsRequestGrantee extends TeaModel {
         /**
+         * <p>The ID of the principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>ROLE_3133343434</p>
          */
@@ -145,6 +166,8 @@ public class ListPendingApprovalsRequest extends TeaModel {
         public String principalId;
 
         /**
+         * <p>The type of principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>RamRole</p>
          */
@@ -176,6 +199,8 @@ public class ListPendingApprovalsRequest extends TeaModel {
 
     public static class ListPendingApprovalsRequestResource extends TeaModel {
         /**
+         * <p>The <code>name</code> of the <code>ResourceSchema</code> used to parse the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -183,12 +208,17 @@ public class ListPendingApprovalsRequest extends TeaModel {
         public String defSchema;
 
         /**
+         * <p>The <code>version</code> of the <code>ResourceSchema</code> used to parse the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
          */
         @NameInMap("DefVersion")
         public String defVersion;
 
+        /**
+         * <p>The resource metadata. Its content is constrained by the <code>ResourceSchema</code>.</p>
+         */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
 

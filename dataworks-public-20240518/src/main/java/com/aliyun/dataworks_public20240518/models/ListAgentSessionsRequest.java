@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentSessionsRequest extends TeaModel {
     /**
+     * <p>The ID provided by the caller. The value is returned as-is.</p>
+     * 
      * <strong>example:</strong>
      * <p>676303114031776</p>
      */
@@ -12,12 +14,17 @@ public class ListAgentSessionsRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. The value must be <code>2.0</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>Business parameters.</p>
+     */
     @NameInMap("Params")
     public ListAgentSessionsRequestParams params;
 
@@ -52,6 +59,8 @@ public class ListAgentSessionsRequest extends TeaModel {
 
     public static class ListAgentSessionsRequestParams extends TeaModel {
         /**
+         * <p>Filters sessions by the <strong>agent name</strong>. You must specify at least one of this parameter and <code>SessionSourceList</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat_cli_chatbi</p>
          */
@@ -59,6 +68,8 @@ public class ListAgentSessionsRequest extends TeaModel {
         public String agentName;
 
         /**
+         * <p>The maximum number of results to return per page. Default value: 50.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -66,6 +77,8 @@ public class ListAgentSessionsRequest extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token for the next page of results. Set this parameter to <code>1</code> to retrieve the first page of results.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -73,18 +86,32 @@ public class ListAgentSessionsRequest extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>Filters sessions by session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <p>Filters sessions by the <strong>list of session sources</strong>. You must specify at least one of this parameter and <code>AgentName</code>.</p>
+         */
         @NameInMap("SessionSourceList")
         public java.util.List<String> sessionSourceList;
 
+        /**
+         * <p>Filters sessions by session title using a fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sales in the last 30 days</p>
+         */
         @NameInMap("SessionTitle")
         public String sessionTitle;
 
+        /**
+         * <p>Filters sessions by a list of session tag codes.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 

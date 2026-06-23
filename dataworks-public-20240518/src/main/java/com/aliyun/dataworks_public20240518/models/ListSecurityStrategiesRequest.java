@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSecurityStrategiesRequest extends TeaModel {
     /**
+     * <p><strong>The control module.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>DataQuery</p>
      */
@@ -12,6 +14,8 @@ public class ListSecurityStrategiesRequest extends TeaModel {
     public String controlModule;
 
     /**
+     * <p><strong>The control submodule.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>MyCatalog</p>
      */
@@ -19,6 +23,8 @@ public class ListSecurityStrategiesRequest extends TeaModel {
     public String controlSubModule;
 
     /**
+     * <p>The page number. Starts from 1. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListSecurityStrategiesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

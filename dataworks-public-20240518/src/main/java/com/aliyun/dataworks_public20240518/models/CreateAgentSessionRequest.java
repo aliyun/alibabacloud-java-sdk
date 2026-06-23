@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAgentSessionRequest extends TeaModel {
     /**
+     * <p>The request ID provided by the client. This ID is returned in the response without modification.</p>
+     * 
      * <strong>example:</strong>
      * <p>4758330557805415712</p>
      */
@@ -12,12 +14,17 @@ public class CreateAgentSessionRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. The value is fixed at <code>2.0</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>The business parameters.</p>
+     */
     @NameInMap("Params")
     public CreateAgentSessionRequestParams params;
 
@@ -52,6 +59,8 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaAgent extends TeaModel {
         /**
+         * <p>The agent name to bind to the session. This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat_cli_chatbi</p>
          */
@@ -75,6 +84,8 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaConfigSessionTags extends TeaModel {
         /**
+         * <p>The session tag. You can use session tags to filter sessions. For example, if your application calls the API with a fixed RAM sub-account but maintains its own user account system, you can pass a user\&quot;s account ID as a tag. This allows you to filter the session list by your internal account IDs. The tag can be up to 128 characters and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
          * <strong>example:</strong>
          * <p>chatbi</p>
          */
@@ -98,12 +109,17 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaConfig extends TeaModel {
         /**
+         * <p>The identifier for the session source. This allows you to search for sessions by their source. For example, if you use an agent on multiple pages, such as Page A and Page B, you can use this parameter to filter and display only the sessions created on Page A. The identifier can be up to 128 characters and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
          * <strong>example:</strong>
          * <p>openapi_sdk</p>
          */
         @NameInMap("SessionSource")
         public String sessionSource;
 
+        /**
+         * <p>A list of session tags. You can use these tags to search and filter sessions.</p>
+         */
         @NameInMap("SessionTags")
         public java.util.List<CreateAgentSessionRequestParamsMetaConfigSessionTags> sessionTags;
 
@@ -130,12 +146,59 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     }
 
+    public static class CreateAgentSessionRequestParamsMetaInitialConfigOptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>chat，cli</p>
+         */
+        @NameInMap("ExecutionLane")
+        public String executionLane;
+
+        /**
+         * <strong>example:</strong>
+         * <p>yolo</p>
+         */
+        @NameInMap("Mode")
+        public String mode;
+
+        public static CreateAgentSessionRequestParamsMetaInitialConfigOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAgentSessionRequestParamsMetaInitialConfigOptions self = new CreateAgentSessionRequestParamsMetaInitialConfigOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAgentSessionRequestParamsMetaInitialConfigOptions setExecutionLane(String executionLane) {
+            this.executionLane = executionLane;
+            return this;
+        }
+        public String getExecutionLane() {
+            return this.executionLane;
+        }
+
+        public CreateAgentSessionRequestParamsMetaInitialConfigOptions setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+    }
+
     public static class CreateAgentSessionRequestParamsMeta extends TeaModel {
+        /**
+         * <p>The agent configuration for this session. The value must be one of the agents returned by the <code>ListAgents</code> API.</p>
+         */
         @NameInMap("Agent")
         public CreateAgentSessionRequestParamsMetaAgent agent;
 
+        /**
+         * <p>The configuration parameters for the session, such as filters based on session source and session tags.</p>
+         */
         @NameInMap("Config")
         public CreateAgentSessionRequestParamsMetaConfig config;
+
+        @NameInMap("InitialConfigOptions")
+        public CreateAgentSessionRequestParamsMetaInitialConfigOptions initialConfigOptions;
 
         public static CreateAgentSessionRequestParamsMeta build(java.util.Map<String, ?> map) throws Exception {
             CreateAgentSessionRequestParamsMeta self = new CreateAgentSessionRequestParamsMeta();
@@ -158,9 +221,20 @@ public class CreateAgentSessionRequest extends TeaModel {
             return this.config;
         }
 
+        public CreateAgentSessionRequestParamsMeta setInitialConfigOptions(CreateAgentSessionRequestParamsMetaInitialConfigOptions initialConfigOptions) {
+            this.initialConfigOptions = initialConfigOptions;
+            return this;
+        }
+        public CreateAgentSessionRequestParamsMetaInitialConfigOptions getInitialConfigOptions() {
+            return this.initialConfigOptions;
+        }
+
     }
 
     public static class CreateAgentSessionRequestParams extends TeaModel {
+        /**
+         * <p>The extended metadata, which includes information such as agent binding, session source, and session tags.</p>
+         */
         @NameInMap("Meta")
         public CreateAgentSessionRequestParamsMeta meta;
 

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListMyRelatedApprovalsResponseBody extends TeaModel {
+    /**
+     * <p>The paginated results.</p>
+     */
     @NameInMap("Data")
     public ListMyRelatedApprovalsResponseBodyData data;
 
     /**
+     * <p>The request ID, a universally unique identifier (UUID).</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5df3a17****903790e8e8a</p>
      */
@@ -37,6 +42,25 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
 
     public static class ListMyRelatedApprovalsResponseBodyDataDataContentsGrantee extends TeaModel {
         /**
+         * <p>The principal ID.</p>
+         * <p>Note: The format of this ID depends on the PrincipalType:</p>
+         * <ul>
+         * <li><p>RamUser: The user ID.</p>
+         * </li>
+         * <li><p>RamRole: The user ID, prefixed with <code>ROLE_</code>.</p>
+         * </li>
+         * <li><p>DataworksTenantMember: The user ID.</p>
+         * </li>
+         * <li><p>DataworksTenantRole: The role code in the Dataworks tenant.</p>
+         * </li>
+         * <li><p>DataworksProjectRole: The role code in the Dataworks workspace.</p>
+         * </li>
+         * <li><p>DataworksProjectMember: The user ID.</p>
+         * </li>
+         * <li><p>DlfRole: The name of the DlfNext role.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ROLE_3133343434</p>
          */
@@ -44,6 +68,24 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public String principalId;
 
         /**
+         * <p>The principal type. Valid values:</p>
+         * <ul>
+         * <li><p>RamRole</p>
+         * </li>
+         * <li><p>RamUser</p>
+         * </li>
+         * <li><p>DataworksTenantMember</p>
+         * </li>
+         * <li><p>DataworksTenantRole</p>
+         * </li>
+         * <li><p>DataworksProjectMember</p>
+         * </li>
+         * <li><p>DataworksProjectRole</p>
+         * </li>
+         * <li><p>DlfRole</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RamRole</p>
          */
@@ -75,6 +117,8 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
 
     public static class ListMyRelatedApprovalsResponseBodyDataDataContentsResource extends TeaModel {
         /**
+         * <p>The name of the ResourceSchema required to parse the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -82,12 +126,17 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
+         * <p>The version of the ResourceSchema required to parse the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
          */
         @NameInMap("DefVersion")
         public String defVersion;
 
+        /**
+         * <p>The resource metadata. The content is constrained by the ResourceSchema.</p>
+         */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
 
@@ -123,10 +172,15 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
     }
 
     public static class ListMyRelatedApprovalsResponseBodyDataDataContents extends TeaModel {
+        /**
+         * <p>The permissions requested for the resource.</p>
+         */
         @NameInMap("AccessTypes")
         public java.util.List<String> accessTypes;
 
         /**
+         * <p>The authorization method.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -134,6 +188,8 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public String authMethod;
 
         /**
+         * <p>The time when the entry was created, in milliseconds since the Unix epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-11 10:13:21</p>
          */
@@ -141,26 +197,38 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>MAXCOMPUTE</p>
+         * <p>MaxCompute</p>
          */
         @NameInMap("DefSchema")
         public String defSchema;
 
         /**
+         * <p>The permission\&quot;s expiration time, in milliseconds since the Unix epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1779695088000</p>
          */
         @NameInMap("ExpirationTime")
         public Long expirationTime;
 
+        /**
+         * <p>The permissions granted for the resource after the final approval.</p>
+         */
         @NameInMap("FinalAccessTypes")
         public java.util.List<String> finalAccessTypes;
 
+        /**
+         * <p>The grantee.</p>
+         */
         @NameInMap("Grantee")
         public ListMyRelatedApprovalsResponseBodyDataDataContentsGrantee grantee;
 
         /**
+         * <p>The unique ID of the request content.</p>
+         * 
          * <strong>example:</strong>
          * <p>1009516415</p>
          */
@@ -168,16 +236,23 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The ID of the approval process instance for the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>777799223</p>
          */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <p>The resource declaration.</p>
+         */
         @NameInMap("Resource")
         public ListMyRelatedApprovalsResponseBodyDataDataContentsResource resource;
 
         /**
+         * <p>The name of the resource type at the leaf-node level.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -185,13 +260,33 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The approval status. Valid values:</p>
+         * <ul>
+         * <li><p>WaitApproval: Waiting for approval.</p>
+         * </li>
+         * <li><p>Confirmed: Pending authorization.</p>
+         * </li>
+         * <li><p>RejectApproval: Approval rejected.</p>
+         * </li>
+         * <li><p>AuthorizeSucceed: Authorization succeeded.</p>
+         * </li>
+         * <li><p>AuthorizeFailed: Authorization failed.</p>
+         * </li>
+         * <li><p>Deleted: Deleted.</p>
+         * </li>
+         * <li><p>Canceled: Canceled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>WAIT_APPROVAL</p>
+         * <p>Deleted</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>69973837489</p>
          */
@@ -199,6 +294,8 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The time when the entry was last updated, in milliseconds since the Unix epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:24:13</p>
          */
@@ -326,16 +423,23 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
 
     public static class ListMyRelatedApprovalsResponseBodyDataData extends TeaModel {
         /**
+         * <p>The time when the request was submitted, in milliseconds since the Unix epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1779695088000</p>
          */
         @NameInMap("ApplicationTime")
         public Long applicationTime;
 
+        /**
+         * <p>The content of the request.</p>
+         */
         @NameInMap("Contents")
         public java.util.List<ListMyRelatedApprovalsResponseBodyDataDataContents> contents;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -343,18 +447,44 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
+         * <p>The process instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>176906667488145</p>
          */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <p>The reason for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>业务需要</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         /**
+         * <p>The approval status. Valid values:</p>
+         * <ul>
+         * <li><p>WaitApproval: Waiting for approval.</p>
+         * </li>
+         * <li><p>Confirmed: Pending authorization.</p>
+         * </li>
+         * <li><p>RejectApproval: Approval rejected.</p>
+         * </li>
+         * <li><p>AuthorizeSucceed: Authorization succeeded.</p>
+         * </li>
+         * <li><p>AuthorizeFailed: Authorization failed.</p>
+         * </li>
+         * <li><p>Deleted: Deleted.</p>
+         * </li>
+         * <li><p>Canceled: Canceled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>WAIT_APPROVAL</p>
+         * <p>Deleted</p>
          */
         @NameInMap("Status")
         public String status;
@@ -415,10 +545,15 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
     }
 
     public static class ListMyRelatedApprovalsResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the approval requests.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListMyRelatedApprovalsResponseBodyDataData> data;
 
         /**
+         * <p>Indicates whether more results are available.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -426,6 +561,8 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public Boolean hasMore;
 
         /**
+         * <p>The token to use to retrieve the next page of results.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJpZCI6NDU2fQ==</p>
          */
@@ -433,6 +570,8 @@ public class ListMyRelatedApprovalsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The number of entries per page. Default: 10. Maximum: 200.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListColumnsResponseBody extends TeaModel {
     /**
-     * <p>The pagination result.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListColumnsResponseBodyPagingInfo pagingInfo;
@@ -59,7 +59,7 @@ public class ListColumnsResponseBody extends TeaModel {
 
     public static class ListColumnsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The columns in the table.</p>
+         * <p>The table columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<Column> columns;
@@ -83,7 +83,7 @@ public class ListColumnsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -27,8 +27,10 @@ public class UpdateFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic parsing for the file. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>This parameter corresponds to the Analyze Code setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
@@ -79,18 +81,27 @@ public class UpdateFileRequest extends TeaModel {
      * <p>The cron expression for scheduled execution. This parameter corresponds to the Cron Expression setting in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure Scheduling Cycle and Scheduled Time, DataWorks automatically generates a cron expression.</p>
      * <p>Examples:</p>
      * <ul>
-     * <li>Scheduled at 05:30 every day: <code>00 30 05 * * ?</code></li>
-     * <li>Scheduled at the 15th minute of every hour: <code>00 15 * * * ?</code></li>
-     * <li>Scheduled every 10 minutes: <code>00 00/10 * * * ?</code></li>
-     * <li>Scheduled every 10 minutes between 08:00 and 23:00 every day: <code>00 00-59/10 8-23 * * * ?</code></li>
-     * <li>Scheduled at 00:20 on the 1st day of every month: <code>00 20 00 1 * ?</code></li>
-     * <li>Scheduled every 3 months starting from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code></li>
-     * <li>Scheduled at 00:05 on every Tuesday and Friday: <code>00 05 00 * * 2,5</code></li>
+     * <li><p>Scheduled at 05:30 every day: <code>00 30 05 * * ?</code></p>
+     * </li>
+     * <li><p>Scheduled at the 15th minute of every hour: <code>00 15 * * * ?</code></p>
+     * </li>
+     * <li><p>Scheduled every 10 minutes: <code>00 00/10 * * * ?</code></p>
+     * </li>
+     * <li><p>Scheduled every 10 minutes between 08:00 and 23:00 every day: <code>00 00-59/10 8-23 * * * ?</code></p>
+     * </li>
+     * <li><p>Scheduled at 00:20 on the 1st day of every month: <code>00 20 00 1 * ?</code></p>
+     * </li>
+     * <li><p>Scheduled every 3 months starting from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code></p>
+     * </li>
+     * <li><p>Scheduled at 00:05 on every Tuesday and Friday: <code>00 05 00 * * 2,5</code></p>
+     * </li>
      * </ul>
      * <p>Due to the rules of the DataWorks scheduling system, cron expressions have the following restrictions:</p>
      * <ul>
-     * <li>The minimum scheduling interval is 5 minutes.</li>
-     * <li>The earliest scheduling time each day is 00:05.</li>
+     * <li><p>The minimum scheduling interval is 5 minutes.</p>
+     * </li>
+     * <li><p>The earliest scheduling time each day is 00:05.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,10 +133,14 @@ public class UpdateFileRequest extends TeaModel {
     /**
      * <p>The dependency mode on the previous cycle. Valid values:</p>
      * <ul>
-     * <li>SELF: Depends on the current node.</li>
-     * <li>CHILD: Depends on the child nodes.</li>
-     * <li>USER_DEFINE: Depends on other nodes.</li>
-     * <li>NONE: No dependencies. Does not depend on the previous cycle.</li>
+     * <li><p>SELF: Depends on the current node.</p>
+     * </li>
+     * <li><p>CHILD: Depends on the child nodes.</p>
+     * </li>
+     * <li><p>USER_DEFINE: Depends on other nodes.</p>
+     * </li>
+     * <li><p>NONE: No dependencies. Does not depend on the previous cycle.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -283,17 +298,24 @@ public class UpdateFileRequest extends TeaModel {
     /**
      * <p>The rerun policy. Valid values:</p>
      * <ul>
-     * <li>ALL_ALLOWED: Reruns are allowed regardless of whether the task succeeds or fails.</li>
-     * <li>FAILURE_ALLOWED: Reruns are allowed only when the task fails.</li>
-     * <li>ALL_DENIED: Reruns are not allowed regardless of whether the task succeeds or fails.</li>
+     * <li><p>ALL_ALLOWED: Reruns are allowed regardless of whether the task succeeds or fails.</p>
+     * </li>
+     * <li><p>FAILURE_ALLOWED: Reruns are allowed only when the task fails.</p>
+     * </li>
+     * <li><p>ALL_DENIED: Reruns are not allowed regardless of whether the task succeeds or fails.</p>
+     * </li>
      * </ul>
      * <p>This parameter corresponds to the Support for Rerun setting in Scheduling &gt; Scheduling Policies for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ALL_ALLOWD</li>
-     * <li>FAILURE_ALLOWED</li>
-     * <li>ALL_DENIED</li>
-     * <li>ALL_ALLOWED</li>
+     * <li><p>ALL_ALLOWD</p>
+     * </li>
+     * <li><p>FAILURE_ALLOWED</p>
+     * </li>
+     * <li><p>ALL_DENIED</p>
+     * </li>
+     * <li><p>ALL_ALLOWED</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -314,10 +336,14 @@ public class UpdateFileRequest extends TeaModel {
     /**
      * <p>The scheduling type. Valid values:</p>
      * <ul>
-     * <li>NORMAL: Normal scheduled task.</li>
-     * <li>MANUAL: Manually triggered node. Not scheduled for daily execution. Corresponds to nodes in manually triggered workflows.</li>
-     * <li>PAUSE: Paused task.</li>
-     * <li>SKIP: Dry-run task. Scheduled for daily execution but is directly marked as successful when scheduling starts.</li>
+     * <li><p>NORMAL: Normal scheduled task.</p>
+     * </li>
+     * <li><p>MANUAL: Manually triggered node. Not scheduled for daily execution. Corresponds to nodes in manually triggered workflows.</p>
+     * </li>
+     * <li><p>PAUSE: Paused task.</p>
+     * </li>
+     * <li><p>SKIP: Dry-run task. Scheduled for daily execution but is directly marked as successful when scheduling starts.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -339,8 +365,10 @@ public class UpdateFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to start the task immediately after it is published. Valid values:</p>
      * <ul>
-     * <li>true: Start the task immediately after it is published.</li>
-     * <li>false: Do not start the task immediately after it is published.</li>
+     * <li><p>true: Start the task immediately after it is published.</p>
+     * </li>
+     * <li><p>false: Do not start the task immediately after it is published.</p>
+     * </li>
      * </ul>
      * <p>This parameter corresponds to the Start Method setting in Configuration &gt; Scheduling Policies in the right-side navigation pane on the editing page for EMR Spark Streaming and EMR Streaming SQL tasks in Data Studio in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
@@ -353,8 +381,10 @@ public class UpdateFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to skip execution. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>This parameter corresponds to the Skip Execution option in Properties &gt; Schedule &gt; Recurrence for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 

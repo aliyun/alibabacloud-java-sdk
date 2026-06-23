@@ -7,12 +7,12 @@ public class UpdateNodeRequest extends TeaModel {
     /**
      * <p>The unique identifier of the Data Studio node.</p>
      * <blockquote>
-     * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * <p>This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>652567824470354XXXX</p>
+     * <p>860438872620113XXXX</p>
      */
     @NameInMap("Id")
     public String id;
@@ -30,7 +30,7 @@ public class UpdateNodeRequest extends TeaModel {
     /**
      * <p>The unique identifier of the Data Studio node.</p>
      * <blockquote>
-     * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * <p>This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,8 +49,7 @@ public class UpdateNodeRequest extends TeaModel {
      *                 &quot;rerunTimes&quot;: 3,
      *                 &quot;rerunInterval&quot;: 180000,
      *                 &quot;datasource&quot;: {
-     *                     &quot;name&quot;: &quot;odps_test&quot;,
-     *                     &quot;type&quot;: &quot;odps&quot;
+     *                     &quot;name&quot;: &quot;odps_test&quot;
      *                 },
      *                 &quot;script&quot;: {
      *                     &quot;path&quot;: &quot;XX/OpenAPI_Test/odpsSQL_Test&quot;,
@@ -74,7 +73,7 @@ public class UpdateNodeRequest extends TeaModel {
      *                 &quot;inputs&quot;: {
      *                     &quot;nodeOutputs&quot;: [
      *                         {
-     *                             &quot;data&quot;: &quot;lwttest_standard_root&quot;,
+     *                             &quot;data&quot;: &quot;project_root&quot;,
      *                             &quot;artifactType&quot;: &quot;NodeOutput&quot;
      *                         }
      *                     ]

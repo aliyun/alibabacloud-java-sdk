@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetLineageRelationshipRequest extends TeaModel {
     /**
-     * <p>The lineage ID. You can refer to the return result of the ListLineageRelationships operation.</p>
+     * <p>The lineage relationship ID. You can get this ID from the response to the ListLineageRelationships operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</p>
+     * <p>4as3dasf654a</p>
      */
     @NameInMap("Id")
     public String id;

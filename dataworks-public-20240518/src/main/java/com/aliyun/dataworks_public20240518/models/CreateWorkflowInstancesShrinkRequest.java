@@ -31,8 +31,10 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The project environment. Valid values:</p>
      * <ul>
-     * <li>Prod</li>
-     * <li>Dev</li>
+     * <li><p>Prod</p>
+     * </li>
+     * <li><p>Dev</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,8 +72,10 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The tag creation policy. Valid values:</p>
      * <ul>
-     * <li>Append: New tags are added on top of the existing tags of the manual workflow.</li>
-     * <li>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</li>
+     * <li><p>Append: New tags are added on top of the existing tags of the manual workflow.</p>
+     * </li>
+     * <li><p>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,11 +105,16 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</li>
-     * <li>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</li>
-     * <li>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</li>
-     * <li>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</li>
-     * <li>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</li>
+     * <li><p>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</p>
+     * </li>
+     * <li><p>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</p>
+     * </li>
+     * <li><p>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</p>
+     * </li>
+     * <li><p>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</p>
+     * </li>
+     * <li><p>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -129,10 +138,10 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
      * <p>The workflow parameters. This parameter takes effect when a specific workflow is specified (<code>WorkflowId != 1</code>). For scheduled workflows and triggered workflows, the format is key=value, and these parameters have lower priority than task parameters. For manual workflows, the format is JSON, and these parameters have higher priority than task parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>{ 
-     *   &quot;key1&quot;: &quot;value1&quot;, 
-     *   &quot;key2&quot;: &quot;value2&quot; 
-     * }</p>
+     * <p>&quot;key=value&quot; format:
+     * key1=value1 key2=value2
+     * JSON format:
+     * {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
      */
     @NameInMap("WorkflowParameters")
     public String workflowParameters;

@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
+    /**
+     * <p>The JSON-RPC result.</p>
+     */
     @NameInMap("JsonRpcResponse")
     public GetAgentSessionTokenUsageResponseBodyJsonRpcResponse jsonRpcResponse;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B313938A-4475-599B-98EB-A0875019FD5B</p>
@@ -39,6 +42,8 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
 
     public static class GetAgentSessionTokenUsageResponseBodyJsonRpcResponseResult extends TeaModel {
         /**
+         * <p>The cumulative number of cache-hit tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>4000</p>
          */
@@ -46,6 +51,8 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
         public Long cachedTokens;
 
         /**
+         * <p><strong>Cumulative number of completion tokens generated.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -53,6 +60,8 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
         public Long completionTokens;
 
         /**
+         * <p><strong>Cumulative number of prompt tokens consumed.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -60,6 +69,8 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
         public Long promptTokens;
 
         /**
+         * <p>Cumulative number of tokens used for thoughts.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
@@ -67,6 +78,8 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
         public Long thoughtsTokens;
 
         /**
+         * <p>The cumulative number of all tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -122,6 +135,8 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
 
     public static class GetAgentSessionTokenUsageResponseBodyJsonRpcResponse extends TeaModel {
         /**
+         * <p>The ID provided by the requester, which is echoed in the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>8212598228302533855</p>
          */
@@ -129,12 +144,17 @@ public class GetAgentSessionTokenUsageResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The JSON-RPC version. The value is always 2.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
         @NameInMap("Jsonrpc")
         public String jsonrpc;
 
+        /**
+         * <p>Token usage result.</p>
+         */
         @NameInMap("Result")
         public GetAgentSessionTokenUsageResponseBodyJsonRpcResponseResult result;
 

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateLineageRelationshipResponseBody extends TeaModel {
     /**
-     * <p>The lineage ID.</p>
+     * <p>The lineage relationship ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</p>
+     * <p>4as3dasf654a</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The request ID. The unique identifier of a request.</p>
+     * <p>The request ID. A unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</p>

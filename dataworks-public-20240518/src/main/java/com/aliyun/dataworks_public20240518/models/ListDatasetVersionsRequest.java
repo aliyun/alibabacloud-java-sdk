@@ -27,8 +27,10 @@ public class ListDatasetVersionsRequest extends TeaModel {
      * <p>The sort order. Default: Desc.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Asc: Ascending.</li>
-     * <li>Desc: Descending.</li>
+     * <li><p>Asc: Ascending.</p>
+     * </li>
+     * <li><p>Desc: Descending.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,9 +61,12 @@ public class ListDatasetVersionsRequest extends TeaModel {
      * <p>The sort field. Default: VersionNumber.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ModifyTime: Modification time.</li>
-     * <li>CreateTime: Creation time.</li>
-     * <li>VersionNumber: Version number.</li>
+     * <li><p>ModifyTime: Modification time.</p>
+     * </li>
+     * <li><p>CreateTime: Creation time.</p>
+     * </li>
+     * <li><p>VersionNumber: Version number.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class IdentifyCredential extends TeaModel {
     public IdentifyCredentialDataSource dataSource;
 
     /**
-     * <p>The workspace ID (optional).</p>
+     * <p>The project ID. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -20,7 +20,7 @@ public class IdentifyCredential extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The user ID. If it is a role, the ROLE_ prefix must be added.</p>
+     * <p>The user UID. If the <code>UserType</code> is <code>Role</code>, you must prefix this value with <code>ROLE_</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ROLE_300888674340307309</p>
@@ -29,10 +29,14 @@ public class IdentifyCredential extends TeaModel {
     public String userId;
 
     /**
+     * <p>The user type. Supported values are:</p>
      * <ul>
-     * <li>Alibaba Cloud account</li>
-     * <li>RAM user</li>
-     * <li>Role</li>
+     * <li><p>primary account: <code>PrimaryAccount</code></p>
+     * </li>
+     * <li><p>subaccount: <code>SubAccount</code></p>
+     * </li>
+     * <li><p>role: <code>Role</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +84,7 @@ public class IdentifyCredential extends TeaModel {
 
     public static class IdentifyCredentialDataSource extends TeaModel {
         /**
-         * <p>The instance ID of the data source.</p>
+         * <p>The data source instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>710007423244</p>
@@ -89,7 +93,7 @@ public class IdentifyCredential extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance name of the data source.</p>
+         * <p>The data source instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2zez82ho69yex7s7g</p>
@@ -98,7 +102,7 @@ public class IdentifyCredential extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The password for the data source.</p>
+         * <p>The data source password.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -107,15 +111,12 @@ public class IdentifyCredential extends TeaModel {
         public String password;
 
         /**
-         * <p>The user type of the data source.</p>
+         * <p>The user role for the data source. Valid values are:</p>
          * <ul>
-         * <li>Admin</li>
-         * <li>RegularUser</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>RegularUser: Normal user.</li>
-         * <li>Admin: Administrator.</li>
+         * <li><p><code>Admin</code></p>
+         * </li>
+         * <li><p><code>RegularUser</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,11 +126,14 @@ public class IdentifyCredential extends TeaModel {
         public String role;
 
         /**
-         * <p>The type of the data source. Supported types:</p>
+         * <p>The data source type. Supported values are:</p>
          * <ul>
-         * <li>hive</li>
-         * <li>lindorm_for_engine</li>
-         * <li>starrocks</li>
+         * <li><p><code>hive</code></p>
+         * </li>
+         * <li><p><code>lindorm_for_engine</code></p>
+         * </li>
+         * <li><p><code>starrocks</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,7 +143,7 @@ public class IdentifyCredential extends TeaModel {
         public String type;
 
         /**
-         * <p>The username for the data source.</p>
+         * <p>The data source user name.</p>
          * 
          * <strong>example:</strong>
          * <p>tom</p>

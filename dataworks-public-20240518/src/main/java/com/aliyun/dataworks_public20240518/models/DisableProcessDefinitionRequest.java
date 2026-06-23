@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableProcessDefinitionRequest extends TeaModel {
     /**
+     * <p>An idempotence token used to make the request idempotent. A universally unique identifier (UUID) is recommended.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9*****</p>
      */
@@ -12,6 +14,8 @@ public class DisableProcessDefinitionRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The process definition ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>11792</p>
      */

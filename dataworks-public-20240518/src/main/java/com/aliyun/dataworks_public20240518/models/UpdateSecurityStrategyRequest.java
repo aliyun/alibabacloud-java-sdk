@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSecurityStrategyRequest extends TeaModel {
     /**
+     * <p>A client token to ensure request idempotence.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9*****</p>
      */
@@ -12,15 +14,23 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The policy content, which is constrained by the <code>SecurityStrategySchema</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public UpdateSecurityStrategyRequestContent content;
 
+    /**
+     * <p><strong>The policy description.</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>控制数据分析模块的查询结果安全行为</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p><strong>The policy ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,9 +39,18 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p><strong>The policy name.</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>默认数据分析策略</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p><strong>A list of associated workspace IDs.</strong></p>
+     */
     @NameInMap("Workspaces")
     public java.util.List<Long> workspaces;
 
@@ -90,16 +109,23 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
 
     public static class UpdateSecurityStrategyRequestContentControllers extends TeaModel {
         /**
+         * <p>The default value for the Basic edition.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("BasicEditionDefaultValue")
         public Object basicEditionDefaultValue;
 
+        /**
+         * <p>The value range for the Basic edition, specified as <code>[min, max]</code>.</p>
+         */
         @NameInMap("BasicEditionIntervalValue")
         public java.util.List<Integer> basicEditionIntervalValue;
 
         /**
+         * <p>The controller identifier. For valid values, see the list of controllers for each schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>viewCount</p>
          */
@@ -107,16 +133,26 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
         public String controller;
 
         /**
+         * <p>The data type of the controller\&quot;s value. Valid values: <code>Boolean</code>, <code>Integer</code>, <code>Long</code>, and <code>String</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Integer</p>
          */
         @NameInMap("ControllerValueType")
         public String controllerValueType;
 
+        /**
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询结果-单次展示记录值上限</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The English display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Query Results - Single Display Record Limit</p>
          */
@@ -124,6 +160,8 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
         public String displayNameEn;
 
         /**
+         * <p>Indicates whether the controller is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -131,36 +169,53 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The default value for the Enterprise edition.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("EnterpriseEditionDefaultValue")
         public Object enterpriseEditionDefaultValue;
 
+        /**
+         * <p>The value range for the Enterprise edition, specified as <code>[min, max]</code>.</p>
+         */
         @NameInMap("EnterpriseEditionIntervalValue")
         public java.util.List<Integer> enterpriseEditionIntervalValue;
 
         /**
+         * <p>The default value for the Professional edition.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("ProfessionalEditionDefaultValue")
         public Object professionalEditionDefaultValue;
 
+        /**
+         * <p>The value range for the Professional edition, specified as <code>[min, max]</code>.</p>
+         */
         @NameInMap("ProfessionalEditionIntervalValue")
         public java.util.List<Integer> professionalEditionIntervalValue;
 
         /**
+         * <p>The default value for the Standard edition.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
         @NameInMap("StandardEditionDefaultValue")
         public Object standardEditionDefaultValue;
 
+        /**
+         * <p>The value range for the Standard edition, specified as <code>[min, max]</code>.</p>
+         */
         @NameInMap("StandardEditionIntervalValue")
         public java.util.List<Integer> standardEditionIntervalValue;
 
         /**
+         * <p>The user-configured value. The type of this value is determined by the <code>ControllerValueType</code> parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -288,6 +343,8 @@ public class UpdateSecurityStrategyRequest extends TeaModel {
 
     public static class UpdateSecurityStrategyRequestContent extends TeaModel {
         /**
+         * <p>A list of controllers.</p>
+         * <p>Note: The valid controllers depend on the selected schema. For more information, see the controller definition and the list of controllers for each schema.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Controllers")

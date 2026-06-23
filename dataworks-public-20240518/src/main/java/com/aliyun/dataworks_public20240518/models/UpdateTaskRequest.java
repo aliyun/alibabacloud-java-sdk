@@ -37,8 +37,10 @@ public class UpdateTaskRequest extends TeaModel {
     /**
      * <p>The project environment.</p>
      * <ul>
-     * <li>Prod</li>
-     * <li>Dev</li>
+     * <li><p>Prod</p>
+     * </li>
+     * <li><p>Dev</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,8 +68,10 @@ public class UpdateTaskRequest extends TeaModel {
     /**
      * <p>The instance generation mode.</p>
      * <ul>
-     * <li>T+1: the next day</li>
-     * <li>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</li>
+     * <li><p>T+1: the next day</p>
+     * </li>
+     * <li><p>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +108,7 @@ public class UpdateTaskRequest extends TeaModel {
      * <p>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</p>
      * 
      * <strong>example:</strong>
-     * <p>60</p>
+     * <p>60000</p>
      */
     @NameInMap("RerunInterval")
     public Integer rerunInterval;
@@ -112,9 +116,12 @@ public class UpdateTaskRequest extends TeaModel {
     /**
      * <p>The rerun mode. Valid values:</p>
      * <ul>
-     * <li>AllDenied: The task cannot be rerun.</li>
-     * <li>FailureAllowed: The task can be rerun only after it fails.</li>
-     * <li>AllAllowed: The task can always be rerun.</li>
+     * <li><p>AllDenied: The task cannot be rerun.</p>
+     * </li>
+     * <li><p>FailureAllowed: The task can be rerun only after it fails.</p>
+     * </li>
+     * <li><p>AllAllowed: The task can always be rerun.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -351,10 +358,14 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The dependency type. Valid values:</p>
          * <ul>
-         * <li>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</li>
-         * <li>CrossCycleDependsOnSelf: Depends on itself across cycles.</li>
-         * <li>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</li>
-         * <li>Normal: Depends on nodes in the same cycle.</li>
+         * <li><p>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</p>
+         * </li>
+         * <li><p>CrossCycleDependsOnSelf: Depends on itself across cycles.</p>
+         * </li>
+         * <li><p>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</p>
+         * </li>
+         * <li><p>Normal: Depends on nodes in the same cycle.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -426,10 +437,14 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>Constant: constant value.</li>
-         * <li>PassThrough: node output.</li>
-         * <li>System: variable.</li>
-         * <li>NodeOutput: script output.</li>
+         * <li><p>Constant: constant value.</p>
+         * </li>
+         * <li><p>PassThrough: node output.</p>
+         * </li>
+         * <li><p>System: variable.</p>
+         * </li>
+         * <li><p>NodeOutput: script output.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -539,10 +554,14 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>Constant: constant value.</li>
-         * <li>PassThrough: node output.</li>
-         * <li>System: variable.</li>
-         * <li>NodeOutput: script output.</li>
+         * <li><p>Constant: constant value.</p>
+         * </li>
+         * <li><p>PassThrough: node output.</p>
+         * </li>
+         * <li><p>System: variable.</p>
+         * </li>
+         * <li><p>NodeOutput: script output.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -787,8 +806,10 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>Cycle type. This parameter takes effect only when Type is set to Scheduler and the cron expression specifies hourly scheduling. Default value: Daily</p>
          * <ul>
-         * <li>Daily: Schedules jobs on a daily basis.</li>
-         * <li>NotDaily: Schedules jobs on an hourly basis.</li>
+         * <li><p>Daily: Schedules jobs on a daily basis.</p>
+         * </li>
+         * <li><p>NotDaily: Schedules jobs on an hourly basis.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -809,9 +830,12 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -832,8 +856,10 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The triggering type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: periodically triggered</li>
-         * <li>Manual</li>
+         * <li><p>Scheduler: periodically triggered</p>
+         * </li>
+         * <li><p>Manual</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

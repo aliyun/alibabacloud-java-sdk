@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination query result of quality evaluation task instances.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>691CA452-D37A-4ED0-9441</p>
+     * <p>691CA452-D37A-4ED****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,7 +42,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskHooks extends TeaModel {
         /**
-         * <p>The trigger configuration of the callback event.</p>
+         * <p>The trigger condition of the Hook.</p>
          * 
          * <strong>example:</strong>
          * <p>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</p>
@@ -51,9 +51,9 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String condition;
 
         /**
-         * <p>The type of the callback event. Valid values:</p>
+         * <p>The type of the subsequent processing action.</p>
          * <ul>
-         * <li>BlockTaskInstance. The value indicates that an auto triggered node is blocked.</li>
+         * <li>BlockTaskInstance: Blocks the execution of the DataWorks task instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskNotificationsNotificationsNofiticationReceivers extends TeaModel {
         /**
-         * <p>The extended information in the JSON format. For example, the DingTalk chatbot can remind all members in a DingTalk group by using the at sign (@).</p>
+         * <p>The extension information, in JSON format. For example, a DingTalk bot supports at-all.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
@@ -96,13 +96,13 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String extension;
 
         /**
-         * <p>The type of the alert recipient. Valid values:</p>
+         * <p>The type of the alert recipient.</p>
          * <ul>
-         * <li>AliUid: Alibaba Cloud account ID</li>
-         * <li>WebhookUrl: URL of a custom webhook</li>
-         * <li>DingdingUrl: DingTalk chatbot URL</li>
-         * <li>FeishuUrl: Lark chatbot URL</li>
-         * <li>WeixinUrl: WeCom chatbot URL</li>
+         * <li>AliUid - The UID of the Alibaba Cloud account</li>
+         * <li>WebhookUrl - A custom webhook URL</li>
+         * <li>DingdingUrl - The URL of a DingTalk bot</li>
+         * <li>FeishuUrl - The URL of a Lark bot</li>
+         * <li>WeixinUrl - The URL of a WeCom bot</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String receiverType;
 
         /**
-         * <p>The alert recipients.</p>
+         * <p>The alert recipient.</p>
          */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
@@ -150,7 +150,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskNotificationsNotificationsNotificationChannels extends TeaModel {
         /**
-         * <p>The alert notification methods.</p>
+         * <p>The alert method.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
@@ -172,13 +172,13 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskNotificationsNotifications extends TeaModel {
         /**
-         * <p>The alert recipients.</p>
+         * <p>The alert recipient settings.</p>
          */
         @NameInMap("NofiticationReceivers")
         public java.util.List<ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskNotificationsNotificationsNofiticationReceivers> nofiticationReceivers;
 
         /**
-         * <p>The alert notification methods.</p>
+         * <p>The alert method.</p>
          */
         @NameInMap("NotificationChannels")
         public java.util.List<ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskNotificationsNotificationsNotificationChannels> notificationChannels;
@@ -208,7 +208,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskNotifications extends TeaModel {
         /**
-         * <p>The trigger condition of the alert notification.</p>
+         * <p>The trigger condition of the notification.</p>
          * 
          * <strong>example:</strong>
          * <p>${severity} == &quot;High&quot;</p>
@@ -217,7 +217,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String condition;
 
         /**
-         * <p>The configurations for the alert notification.</p>
+         * <p>The notification settings.</p>
          */
         @NameInMap("Notifications")
         public java.util.List<ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskNotificationsNotifications> notifications;
@@ -247,7 +247,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskTarget extends TeaModel {
         /**
-         * <p>The type of the database to which the table belongs. Valid values:</p>
+         * <p>For a dataset of table type, the database type to which the table belongs.</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>emr</li>
@@ -265,7 +265,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String databaseType;
 
         /**
-         * <p>The configuration of the partitioned table.</p>
+         * <p>The partition settings of the partitioned table.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=$[yyyymmdd-1]</p>
@@ -274,7 +274,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String partitionSpec;
 
         /**
-         * <p>The ID of the table in Data Map.</p>
+         * <p>The unique ID of the table in Data Map.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
@@ -283,7 +283,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String tableGuid;
 
         /**
-         * <p>The type of the monitored object. Valid values:</p>
+         * <p>The type of the monitoring object.</p>
          * <ul>
          * <li>Table</li>
          * </ul>
@@ -335,15 +335,15 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskTrigger extends TeaModel {
         /**
-         * <p>The IDs of the auto triggered nodes of which the instances are successfully run.</p>
+         * <p>The IDs of scheduled task nodes.</p>
          */
         @NameInMap("TaskIds")
         public java.util.List<Long> taskIds;
 
         /**
-         * <p>The trigger condition of the task. Valid values:</p>
+         * <p>The type of event that can trigger the execution of the quality evaluation task.</p>
          * <ul>
-         * <li>ByScheduledTaskInstance. The value indicates that the task is triggered when the instance of an auto triggered node is successfully run.</li>
+         * <li>ByScheduledTaskInstance: A scheduled instance runs successfully.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,7 +377,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTask extends TeaModel {
         /**
-         * <p>The description of the task.</p>
+         * <p>The description of the quality monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a daily run data quality evaluation plan.</p>
@@ -386,13 +386,13 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String description;
 
         /**
-         * <p>The callback configurations of the task during the instance lifecycle. Blocking an auto triggered node is a type of callback event. Only this type is supported.</p>
+         * <p>The callback settings in the lifecycle of the data quality evaluation task instance. Currently, only one Hook for blocking scheduled tasks is supported.</p>
          */
         @NameInMap("Hooks")
         public java.util.List<ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskHooks> hooks;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the data quality evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -401,7 +401,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Long id;
 
         /**
-         * <p>The name of the monitor.</p>
+         * <p>The name of the quality monitoring task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -411,13 +411,13 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String name;
 
         /**
-         * <p>The configurations for alert notifications.</p>
+         * <p>The notification subscription configuration.</p>
          */
         @NameInMap("Notifications")
         public ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskNotifications notifications;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the project workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -426,22 +426,22 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Long projectId;
 
         /**
-         * <p>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field can be set to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL. The value default indicates the YARN queue for E-MapReduce (EMR) tasks.</p>
+         * <p>Settings used when accessing data sources. Currently, only specifying the YARN queue of EMR and specifying the SQL engine as SPARK_SQL|KYUUBI|PRESTO_SQL|HIVE_SQL when collecting EMR tables are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK-SQL&quot; }</p>
+         * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>
          */
         @NameInMap("RuntimeConf")
         public String runtimeConf;
 
         /**
-         * <p>The monitored object of the task.</p>
+         * <p>The monitoring object of the data quality evaluation task.</p>
          */
         @NameInMap("Target")
         public ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskTarget target;
 
         /**
-         * <p>The trigger configuration of the task.</p>
+         * <p>The trigger configuration of the data quality evaluation task.</p>
          */
         @NameInMap("Trigger")
         public ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTaskTrigger trigger;
@@ -527,7 +527,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstances extends TeaModel {
         /**
-         * <p>The time at which the instance was generated.</p>
+         * <p>The creation time of the task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -536,7 +536,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Long createTime;
 
         /**
-         * <p>The time at which the instance finished running.</p>
+         * <p>The end time of the task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -545,7 +545,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Long finishTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the quality check task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -554,7 +554,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Long id;
 
         /**
-         * <p>The parameters configured for the instance.</p>
+         * <p>The parameter settings used during the actual runtime.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -566,7 +566,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String parameters;
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks project workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -575,7 +575,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Long projectId;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The current running status.</p>
          * <ul>
          * <li>Running</li>
          * <li>Error</li>
@@ -591,13 +591,13 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public String status;
 
         /**
-         * <p>The snapshot of the configurations for the task when the task starts.</p>
+         * <p>The snapshot of the data quality evaluation task when the evaluation starts.</p>
          */
         @NameInMap("Task")
         public ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstancesTask task;
 
         /**
-         * <p>The information about the trigger module of the instance.</p>
+         * <p>The context information when the instance is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -681,7 +681,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
 
     public static class ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The instances generated by the task.</p>
+         * <p>The successfully triggered TaskInstance.</p>
          */
         @NameInMap("DataQualityEvaluationTaskInstances")
         public java.util.List<ListDataQualityEvaluationTaskInstancesResponseBodyPagingInfoDataQualityEvaluationTaskInstances> dataQualityEvaluationTaskInstances;
@@ -696,7 +696,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -705,7 +705,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>294</p>

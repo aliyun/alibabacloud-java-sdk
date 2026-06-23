@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CancelAgentSessionResponseBody extends TeaModel {
+    /**
+     * <p>The JSON-RPC response.</p>
+     */
     @NameInMap("JsonRpcResponse")
     public CancelAgentSessionResponseBodyJsonRpcResponse jsonRpcResponse;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7CD3D216-5876-5DB1-A34A-396806F4A413</p>
@@ -39,6 +42,8 @@ public class CancelAgentSessionResponseBody extends TeaModel {
 
     public static class CancelAgentSessionResponseBodyJsonRpcResponseResult extends TeaModel {
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>session-d5d549fe4c2c4180a9814fb74190f502</p>
          */
@@ -62,6 +67,8 @@ public class CancelAgentSessionResponseBody extends TeaModel {
 
     public static class CancelAgentSessionResponseBodyJsonRpcResponse extends TeaModel {
         /**
+         * <p>The ID passed by the requester. The value is returned as-is in the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>7675839888324361477</p>
          */
@@ -69,12 +76,17 @@ public class CancelAgentSessionResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
         @NameInMap("Jsonrpc")
         public String jsonrpc;
 
+        /**
+         * <p>The result object of the session cancellation.</p>
+         */
         @NameInMap("Result")
         public CancelAgentSessionResponseBodyJsonRpcResponseResult result;
 

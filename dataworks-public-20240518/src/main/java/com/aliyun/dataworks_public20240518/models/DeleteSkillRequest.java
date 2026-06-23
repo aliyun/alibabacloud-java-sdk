@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSkillRequest extends TeaModel {
     /**
+     * <p>The name of the Skill to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class UpdateResourceResponseBody extends TeaModel {
      * <p>The request ID. You can troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>4CDF7B72-020B-542A-8465-21CFFA81XXXX</p>
+     * <p>4CDF7B72-020B-542A-8465-21CFFA81****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -16,8 +16,10 @@ public class UpdateResourceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

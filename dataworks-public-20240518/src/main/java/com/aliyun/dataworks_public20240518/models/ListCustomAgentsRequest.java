@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentsRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return on a single page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListCustomAgentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Omit this parameter for the first request. For subsequent requests, use the <code>NextToken</code> value from the previous response to retrieve the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -19,6 +23,8 @@ public class ListCustomAgentsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The search keyword for a fuzzy match by agent name.</p>
+     * 
      * <strong>example:</strong>
      * <p>analysis</p>
      */
@@ -26,6 +32,8 @@ public class ListCustomAgentsRequest extends TeaModel {
     public String q;
 
     /**
+     * <p>Filters the results by visibility level. You can specify multiple levels.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>

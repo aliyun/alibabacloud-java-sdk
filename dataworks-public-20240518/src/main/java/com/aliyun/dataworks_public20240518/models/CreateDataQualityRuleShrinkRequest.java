@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The check settings for sample data.</p>
+     * <p>The sample check settings.</p>
      */
     @NameInMap("CheckingConfig")
     public String checkingConfigShrink;
 
     /**
-     * <p>The description of the rule. The description can be up to 500 characters in length.</p>
+     * <p>The description of the rule. The maximum length is 500 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a odps _sql task</p>
@@ -20,7 +20,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the monitoring rule.</p>
+     * <p>Specifies whether to enable the data quality rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The operations that you can perform after the rule-based check fails.</p>
+     * <p>The list of issue handlers for the data quality rule check.</p>
      */
     @NameInMap("ErrorHandlers")
     public String errorHandlersShrink;
@@ -45,7 +45,7 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,13 +55,13 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The sampling settings.</p>
+     * <p>The settings required for sample collection.</p>
      */
     @NameInMap("SamplingConfig")
     public String samplingConfigShrink;
 
     /**
-     * <p>The strength of the rule. Valid values:</p>
+     * <p>The severity of the rule for the business (corresponding to the strong/weak rule on the page). Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>
@@ -74,16 +74,16 @@ public class CreateDataQualityRuleShrinkRequest extends TeaModel {
     public String severity;
 
     /**
-     * <p>The monitored object of the rule.</p>
+     * <p>The object monitored by the rule.</p>
      */
     @NameInMap("Target")
     public String targetShrink;
 
     /**
-     * <p>The ID of the template used by the rule.</p>
+     * <p>The unique identifier of the rule template that the rule references.</p>
      * 
      * <strong>example:</strong>
-     * <p>system::user_defined</p>
+     * <p>SYSTEM:table:table_count:fixed</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;

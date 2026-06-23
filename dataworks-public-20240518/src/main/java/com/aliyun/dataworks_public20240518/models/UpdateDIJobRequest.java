@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDIJobRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
+     * <p>This parameter is deprecated. Use the <code>Id</code> parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>11588</p>
@@ -15,19 +15,206 @@ public class UpdateDIJobRequest extends TeaModel {
     public Long DIJobId;
 
     /**
-     * <p>The task description.</p>
+     * <p>The description of the synchronization job.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the synchronization task.</p>
+     * <p>DI Job Demo</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The job configuration in script mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;resourceSettings&quot;: {
+     *         &quot;realtimeResourceSettings&quot;: {
+     *             &quot;requestedCu&quot;: 2,
+     *             &quot;resourceGroupIdentifier&quot;: &quot;Serverless_res_group_123_456&quot;
+     *         },
+     *         &quot;offlineResourceSettings&quot;: {
+     *             &quot;requestedCu&quot;: 2,
+     *             &quot;resourceGroupIdentifier&quot;: &quot;Serverless_res_group_123_456&quot;
+     *         }
+     *     },
+     *     &quot;tableMappings&quot;: [
+     *         {
+     *             &quot;sourceObjectSelectionRules&quot;: [
+     *                 {
+     *                     &quot;expression&quot;: &quot;autotest_hologres&quot;,
+     *                     &quot;action&quot;: &quot;Include&quot;,
+     *                     &quot;expressionType&quot;: &quot;Exact&quot;,
+     *                     &quot;objectType&quot;: &quot;Datasource&quot;
+     *                 },
+     *                 {
+     *                     &quot;expression&quot;: &quot;auto_holo_2661647&quot;,
+     *                     &quot;action&quot;: &quot;Include&quot;,
+     *                     &quot;expressionType&quot;: &quot;Exact&quot;,
+     *                     &quot;objectType&quot;: &quot;Table&quot;
+     *                 },
+     *                 {
+     *                     &quot;expression&quot;: &quot;public&quot;,
+     *                     &quot;action&quot;: &quot;Include&quot;,
+     *                     &quot;expressionType&quot;: &quot;Exact&quot;,
+     *                     &quot;objectType&quot;: &quot;Schema&quot;
+     *                 }
+     *             ],
+     *             &quot;transformationRules&quot;: [
+     *                 {
+     *                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+     *                     &quot;ruleActionType&quot;: &quot;SourceSchema&quot;,
+     *                     &quot;ruleName&quot;: &quot;SourceSchema_Table_BStf8aXPSCJjOWGe&quot;
+     *                 },
+     *                 {
+     *                     &quot;ruleTargetType&quot;: &quot;Schema&quot;,
+     *                     &quot;ruleActionType&quot;: &quot;Rename&quot;,
+     *                     &quot;ruleName&quot;: &quot;Rename_Schema_3qWNOIsljtInvKJy&quot;
+     *                 },
+     *                 {
+     *                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+     *                     &quot;ruleActionType&quot;: &quot;Rename&quot;,
+     *                     &quot;ruleName&quot;: &quot;Rename_Table_o3PVQq1aIKDGoVVW&quot;
+     *                 },
+     *                 {
+     *                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+     *                     &quot;ruleActionType&quot;: &quot;DefineDstTableSettings&quot;,
+     *                     &quot;ruleName&quot;: &quot;DefineDstTableSettings_Table_BhJltOmOCIc81fzi&quot;
+     *                 },
+     *                 {
+     *                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+     *                     &quot;ruleActionType&quot;: &quot;ColumnMapping&quot;,
+     *                     &quot;ruleName&quot;: &quot;ColumnMapping_Table_nP4hJPX1wh2W3fpo&quot;
+     *                 }
+     *             ]
+     *         }
+     *     ],
+     *     &quot;sourceDataSourceSettings&quot;: [
+     *         {
+     *             &quot;dataSourceProperties&quot;: {
+     *                 &quot;timeZone&quot;: &quot;Asia/Shanghai&quot;
+     *             },
+     *             &quot;dataSourceName&quot;: &quot;autotest_hologres&quot;
+     *         }
+     *     ],
+     *     &quot;jobSettings&quot;: {
+     *         &quot;runtimeSettings&quot;: [</p>
+     * <pre><code>    ],
+     *     &quot;ddlHandlingSettings&quot;: [
+     * 
+     *     ],
+     *     &quot;columnDataTypeSettings&quot;: [
+     * 
+     *     ],
+     *     &quot;cycleScheduleSettings&quot;: {
+     * 
+     *     },
+     *     &quot;channelSettings&quot;: {
+     *         &quot;destinationChannelSettings&quot;: {
+     *             &quot;conflictMode&quot;: &quot;replace&quot;,
+     *             &quot;dynamicColumnAction&quot;: &quot;replay&quot;,
+     *             &quot;writeMode&quot;: &quot;replay&quot;
+     *         },
+     *         &quot;sourceChannelSettings&quot;: {
+     * 
+     *         }
+     *     }
+     * },
+     * &quot;destinationDataSourceType&quot;: &quot;Hologres&quot;,
+     * &quot;transformationRules&quot;: [
+     *     {
+     *         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+     *         &quot;ruleName&quot;: &quot;SourceSchema_Table_BStf8aXPSCJjOWGe&quot;,
+     *         &quot;ruleActionType&quot;: &quot;SourceSchema&quot;,
+     *         &quot;ruleExpression&quot;: {
+     *             &quot;columns&quot;: [
+     *                 {
+     *                     &quot;name&quot;: &quot;id&quot;,
+     *                     &quot;category&quot;: &quot;normal&quot;,
+     *                     &quot;type&quot;: &quot;BIGINT&quot;
+     *                 },
+     *                 {
+     *                     &quot;name&quot;: &quot;decimal&quot;,
+     *                     &quot;category&quot;: &quot;normal&quot;,
+     *                     &quot;type&quot;: &quot;DECIMAL&quot;
+     *                 }
+     *             ]
+     *         }
+     *     },
+     *     {
+     *         &quot;ruleTargetType&quot;: &quot;Schema&quot;,
+     *         &quot;ruleName&quot;: &quot;Rename_Schema_3qWNOIsljtInvKJy&quot;,
+     *         &quot;ruleActionType&quot;: &quot;Rename&quot;,
+     *         &quot;ruleExpression&quot;: {
+     *             &quot;expression&quot;: &quot;public&quot;
+     *         }
+     *     },
+     *     {
+     *         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+     *         &quot;ruleName&quot;: &quot;Rename_Table_o3PVQq1aIKDGoVVW&quot;,
+     *         &quot;ruleActionType&quot;: &quot;Rename&quot;,
+     *         &quot;ruleExpression&quot;: {
+     *             &quot;expression&quot;: &quot;auto_holo_2661647_dst&quot;
+     *         }
+     *     },
+     *     {
+     *         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+     *         &quot;ruleName&quot;: &quot;DefineDstTableSettings_Table_BhJltOmOCIc81fzi&quot;,
+     *         &quot;ruleActionType&quot;: &quot;DefineDstTableSettings&quot;,
+     *         &quot;ruleExpression&quot;: {
+     *             &quot;ddlString&quot;: &quot;BEGIN;
+     * </code></pre>
+     * <p>CREATE TABLE IF NOT EXISTS public.auto_holo_2661647_dst (
+     *    id          BIGINT PRIMARY KEY,
+     *    &quot;decimal&quot;   DECIMAL(38,18)
+     * );
+     * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;time_to_live_in_seconds\&quot;, \&quot;3153600000\&quot;);
+     * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;orientation\&quot;, \&quot;column\&quot;);
+     * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;binlog.level\&quot;, \&quot;replica\&quot;);
+     * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;binlog.ttl\&quot;, \&quot;2592000\&quot;);
+     * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;bitmap_columns\&quot;, \&quot;&quot;text&quot;,&quot;char&quot;,&quot;varchar&quot;\&quot;);
+     * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;dictionary_encoding_columns\&quot;, \&quot;&quot;text&quot;:auto,&quot;bytea&quot;:auto,&quot;char&quot;:auto,&quot;varchar&quot;:auto\&quot;);
+     * CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;distribution_key\&quot;, \&quot;&quot;id&quot;\&quot;);
+     * COMMIT;
+     * &quot;,
+     *                 &quot;ddlType&quot;: &quot;STRUCT&quot;
+     *             }
+     *         },
+     *         {
+     *             &quot;ruleTargetType&quot;: &quot;Table&quot;,
+     *             &quot;ruleName&quot;: &quot;ColumnMapping_Table_nP4hJPX1wh2W3fpo&quot;,
+     *             &quot;ruleActionType&quot;: &quot;ColumnMapping&quot;,
+     *             &quot;ruleExpression&quot;: {
+     *                 &quot;columnMapping&quot;: [
+     *                     {
+     *                         &quot;sourceColName&quot;: &quot;id&quot;,
+     *                         &quot;dstColName&quot;: &quot;id&quot;
+     *                     },
+     *                     {
+     *                         &quot;sourceColName&quot;: &quot;decimal&quot;,
+     *                         &quot;dstColName&quot;: &quot;decimal&quot;
+     *                     }
+     *                 ]
+     *             }
+     *         }
+     *     ],
+     *     &quot;migrationType&quot;: &quot;FullAndRealtimeIncremental&quot;,
+     *     &quot;destinationDataSourceSettings&quot;: [
+     *         {
+     *             &quot;dataSourceProperties&quot;: {</p>
+     * <pre><code>        },
+     *         &quot;dataSourceName&quot;: &quot;autotest_hologres&quot;
+     *     }
+     * ],
+     * &quot;sourceDataSourceType&quot;: &quot;Hologres&quot;
+     * </code></pre>
+     * <p>}</p>
+     */
     @NameInMap("FileSpec")
     public String fileSpec;
 
     /**
-     * <p>The ID of the synchronization task.</p>
+     * <p>The ID of the synchronization job.</p>
      * 
      * <strong>example:</strong>
      * <p>11588</p>
@@ -36,13 +223,13 @@ public class UpdateDIJobRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The task-level settings, including DDL handling policies, column data type mapping between source and destination, and runtime parameters.</p>
+     * <p>The settings for the synchronization job. This includes DDL handling settings, data type mappings for columns between the source and destination, and runtime parameters.</p>
      */
     @NameInMap("JobSettings")
     public UpdateDIJobRequestJobSettings jobSettings;
 
     /**
-     * <p>The task owner.</p>
+     * <p>The owner of the synchronization job.</p>
      * 
      * <strong>example:</strong>
      * <p>95279527</p>
@@ -51,7 +238,7 @@ public class UpdateDIJobRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to get the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -66,18 +253,18 @@ public class UpdateDIJobRequest extends TeaModel {
     public UpdateDIJobRequestResourceSettings resourceSettings;
 
     /**
-     * <p>The list of synchronization object transformation mappings. Each element describes a set of source object selection rules and the transformation rules applied to those objects.</p>
+     * <p>A list of object transformation mappings. Each mapping specifies a set of selection rules for source objects and a list of transformation rules that apply to the selected objects.</p>
      * <blockquote>
-     * <p> [ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</p>
+     * <p>[ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</p>
      * </blockquote>
      */
     @NameInMap("TableMappings")
     public java.util.List<UpdateDIJobRequestTableMappings> tableMappings;
 
     /**
-     * <p>The list of synchronization object transformation rule definitions.</p>
+     * <p>A list of transformation rule definitions.</p>
      * <blockquote>
-     * <p> [ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</p>
+     * <p>[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</p>
      * </blockquote>
      */
     @NameInMap("TransformationRules")
@@ -171,7 +358,7 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestJobSettingsColumnDataTypeSettings extends TeaModel {
         /**
-         * <p>The destination type, such as bigint, boolean, string, text, datetime, timestamp, decimal, or binary. Different data sources may have different types.</p>
+         * <p>The destination data type. Examples: <code>bigint</code>, <code>boolean</code>, <code>string</code>, <code>text</code>, <code>datetime</code>, <code>timestamp</code>, <code>decimal</code>, and <code>binary</code>. The supported data types depend on the destination data source.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -180,7 +367,7 @@ public class UpdateDIJobRequest extends TeaModel {
         public String destinationDataType;
 
         /**
-         * <p>The source type, such as bigint, boolean, string, text, datetime, timestamp, decimal, or binary. Different data sources may have different types.</p>
+         * <p>The source data type. Examples: <code>bigint</code>, <code>boolean</code>, <code>string</code>, <code>text</code>, <code>datetime</code>, <code>timestamp</code>, <code>decimal</code>, and <code>binary</code>. The supported data types depend on the source data source.</p>
          * 
          * <strong>example:</strong>
          * <p>bigint</p>
@@ -238,11 +425,14 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestJobSettingsDdlHandlingSettings extends TeaModel {
         /**
-         * <p>Valid values:</p>
+         * <p>The handling action. Valid values:</p>
          * <ul>
-         * <li>Ignore</li>
-         * <li>Critical: Fail the task</li>
-         * <li>Normal</li>
+         * <li><p><code>Ignore</code>: Ignores the DDL message.</p>
+         * </li>
+         * <li><p><code>Critical</code>: Reports an error and terminates the synchronization job.</p>
+         * </li>
+         * <li><p><code>Normal</code>: Processes the DDL message normally.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,13 +444,20 @@ public class UpdateDIJobRequest extends TeaModel {
         /**
          * <p>The DDL type. Valid values:</p>
          * <ul>
-         * <li>RenameColumn</li>
-         * <li>ModifyColumn</li>
-         * <li>CreateTable</li>
-         * <li>TruncateTable</li>
-         * <li>DropTable</li>
-         * <li>DropColumn</li>
-         * <li>AddColumn</li>
+         * <li><p><code>RenameColumn</code></p>
+         * </li>
+         * <li><p><code>ModifyColumn</code></p>
+         * </li>
+         * <li><p><code>CreateTable</code></p>
+         * </li>
+         * <li><p><code>TruncateTable</code></p>
+         * </li>
+         * <li><p><code>DropTable</code></p>
+         * </li>
+         * <li><p><code>DropColumn</code></p>
+         * </li>
+         * <li><p><code>AddColumn</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,26 +491,34 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestJobSettingsRuntimeSettings extends TeaModel {
         /**
-         * <p>The setting name. Valid values:</p>
+         * <p>The name of the setting. Valid values:</p>
          * <ul>
-         * <li>src.offline.datasource.max.connection: Specifies the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</li>
-         * <li>dst.offline.truncate: Specifies whether to clear the destination table before data writing.</li>
-         * <li>runtime.offline.speed.limit.enable: Specifies whether throttling is enabled for a batch synchronization task.</li>
-         * <li>runtime.offline.concurrent: Specifies the maximum number of parallel threads that are allowed for a batch synchronization task.</li>
-         * <li>runtime.enable.auto.create.schema: Specifies whether schemas are automatically created in the destination of a synchronization task.</li>
-         * <li>runtime.realtime.concurrent: Specifies the maximum number of parallel threads that are allowed for a real-time synchronization task.</li>
-         * <li>runtime.realtime.failover.minute.dataxcdc: Specifies the maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</li>
-         * <li>runtime.realtime.failover.times.dataxcdc: Specifies the maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</li>
+         * <li><p><code>src.offline.datasource.max.connection</code>: The maximum number of concurrent connections to the source for an offline synchronization job.</p>
+         * </li>
+         * <li><p><code>dst.offline.truncate</code>: Specifies whether to truncate the destination table before an offline synchronization job.</p>
+         * </li>
+         * <li><p><code>runtime.offline.speed.limit.enable</code>: Specifies whether to enable speed limiting for an offline synchronization job.</p>
+         * </li>
+         * <li><p><code>runtime.offline.concurrent</code>: The concurrency level for an offline synchronization job.</p>
+         * </li>
+         * <li><p><code>runtime.enable.auto.create.schema</code>: Specifies whether to automatically create a schema at the destination.</p>
+         * </li>
+         * <li><p><code>runtime.realtime.concurrent</code>: The concurrency level for a real-time synchronization job.</p>
+         * </li>
+         * <li><p><code>runtime.realtime.failover.minute.dataxcdc</code>: The number of minutes to wait before a failover retry.</p>
+         * </li>
+         * <li><p><code>runtime.realtime.failover.times.dataxcdc</code>: The number of failover retries.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>runtime.offline.concurrent</p>
+         * <p>src.offline.datasource.max.connection</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The setting value.</p>
+         * <p>The value of the setting.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,50 +551,70 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestJobSettings extends TeaModel {
         /**
-         * <p>The channel-specific settings. You can configure special settings for specific channels. Currently supported: Holo2Holo (Hologres to Hologres) and Holo2Kafka (Hologres to Kafka).</p>
+         * <p>The job settings for specific data synchronization channels. You can apply special configurations to certain channels. Currently, <code>Holo2Holo</code> (synchronization from Hologres to Hologres) and <code>Holo2Kafka</code> (synchronization from Hologres to Kafka) are supported.</p>
          * <ol>
-         * <li>Holo2Kafka</li>
+         * <li><code>Holo2Kafka</code></li>
          * </ol>
          * <ul>
-         * <li>Example: {&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}} kafkaClientProperties: Kafka producer parameters used when writing to Kafka.</li>
-         * <li>keyColumns: The columns to write to Kafka.</li>
-         * <li>writeMode: The Kafka write format. Valid values: json and canal.</li>
+         * <li><p>Example: <code>{&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}}</code>
+         * <code>kafkaClientProperties</code>: The Kafka producer parameters used when writing to Kafka.</p>
+         * </li>
+         * <li><p><code>keyColumns</code>: The columns whose values are written to the key of a Kafka message.</p>
+         * </li>
+         * <li><p><code>writeMode</code>: The format for writing data to Kafka. Valid values: <code>json</code> and <code>canal</code>.</p>
+         * </li>
          * </ul>
          * <ol start="2">
-         * <li>Holo2Holo</li>
+         * <li><code>Holo2Holo</code></li>
          * </ol>
          * <ul>
-         * <li>Example: {&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</li>
-         * <li>conflictMode: The conflict handling policy when writing to Hologres. Valid values: replace (overwrite) and ignore.</li>
-         * <li>writeMode: The write mode for Hologres. Valid values: replay and insert.</li>
-         * <li>dynamicColumnAction: The dynamic column handling mode when writing to Hologres. Valid values: replay, insert, and ignore.</li>
+         * <li><p>Example: <code>{&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</code></p>
+         * </li>
+         * <li><p><code>conflictMode</code>: The conflict handling policy for writing data to Hologres. Valid values: <code>replace</code> (overwrite) and <code>ignore</code> (ignore).</p>
+         * </li>
+         * <li><p><code>writeMode</code>: The method for writing data to Hologres. Valid values: <code>replay</code> and <code>insert</code>.</p>
+         * </li>
+         * <li><p><code>dynamicColumnAction</code>: The action for handling dynamic columns when writing data to Hologres. Valid values: <code>replay</code>, <code>insert</code>, and <code>ignore</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;structInfo&quot;:&quot;MANAGED&quot;,&quot;storageType&quot;:&quot;TEXTFILE&quot;,&quot;writeMode&quot;:&quot;APPEND&quot;,&quot;partitionColumns&quot;:[{&quot;columnName&quot;:&quot;pt&quot;,&quot;columnType&quot;:&quot;STRING&quot;,&quot;comment&quot;:&quot;&quot;}],&quot;fieldDelimiter&quot;:&quot;&quot;}</p>
+         * <p>{
+         *       &quot;structInfo&quot;: &quot;MANAGED&quot;,
+         *       &quot;storageType&quot;: &quot;TEXTFILE&quot;,
+         *       &quot;writeMode&quot;: &quot;APPEND&quot;,
+         *       &quot;partitionColumns&quot;: [
+         *             {
+         *                   &quot;columnName&quot;: &quot;pt&quot;,
+         *                   &quot;columnType&quot;: &quot;STRING&quot;,
+         *                   &quot;comment&quot;: &quot;&quot;
+         *             }
+         *       ],
+         *       &quot;fieldDelimiter&quot;: &quot;&quot;
+         * }</p>
          */
         @NameInMap("ChannelSettings")
         public String channelSettings;
 
         /**
-         * <p>The array of column type mappings.</p>
+         * <p>An array of column data type mappings.</p>
          * <blockquote>
-         * <p> [&quot;ColumnDataTypeSettings&quot;:[ { &quot;SourceDataType&quot;:&quot;Bigint&quot;, &quot;DestinationDataType&quot;:&quot;Text&quot; } ]</p>
+         * <p>[&quot;ColumnDataTypeSettings&quot;:[ { &quot;SourceDataType&quot;:&quot;Bigint&quot;, &quot;DestinationDataType&quot;:&quot;Text&quot; } ]</p>
          * </blockquote>
          */
         @NameInMap("ColumnDataTypeSettings")
         public java.util.List<UpdateDIJobRequestJobSettingsColumnDataTypeSettings> columnDataTypeSettings;
 
         /**
-         * <p>The scheduled task settings.</p>
+         * <p>The settings for periodic scheduling.</p>
          */
         @NameInMap("CycleScheduleSettings")
         public UpdateDIJobRequestJobSettingsCycleScheduleSettings cycleScheduleSettings;
 
         /**
-         * <p>The array of DDL handling settings.</p>
+         * <p>An array of DDL handling settings.</p>
          * <blockquote>
-         * <p> [&quot;DDLHandlingSettings&quot;:[ { &quot;Type&quot;:&quot;Insert&quot;, &quot;Action&quot;:&quot;Normal&quot; } ]</p>
+         * <p>[&quot;DDLHandlingSettings&quot;:[ { &quot;Type&quot;:&quot;Insert&quot;, &quot;Action&quot;:&quot;Normal&quot; } ]</p>
          * </blockquote>
          */
         @NameInMap("DdlHandlingSettings")
@@ -450,16 +675,16 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestResourceSettingsOfflineResourceSettings extends TeaModel {
         /**
-         * <p>The CUs of the resource group for Data Integration used for batch synchronization.</p>
+         * <p>The number of CUs for the Data Integration resource group used by the offline synchronization job.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.0</p>
+         * <p>2</p>
          */
         @NameInMap("RequestedCu")
         public Double requestedCu;
 
         /**
-         * <p>The name of the resource group for Data Integration that are used for batch synchronization.</p>
+         * <p>The name of the Data Integration resource group used by the offline synchronization job.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_111_222</p>
@@ -492,16 +717,16 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestResourceSettingsRealtimeResourceSettings extends TeaModel {
         /**
-         * <p>The CUs of the resource group for Data Integration that are used for real-time synchronization.</p>
+         * <p>The number of CUs for the Data Integration resource group used by the real-time synchronization job.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.0</p>
+         * <p>2</p>
          */
         @NameInMap("RequestedCu")
         public Double requestedCu;
 
         /**
-         * <p>The name of the resource group for Data Integration that are used for real-time synchronization.</p>
+         * <p>The name of the Data Integration resource group used by the real-time synchronization job.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_111_222</p>
@@ -534,19 +759,19 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestResourceSettingsScheduleResourceSettings extends TeaModel {
         /**
-         * <p>The CUs of the scheduling resource group for batch synchronization tasks.</p>
+         * <p>The number of CUs for the scheduling resource group used by the offline synchronization job.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.0</p>
+         * <p>2</p>
          */
         @NameInMap("RequestedCu")
         public Double requestedCu;
 
         /**
-         * <p>The name of the scheduling resource group used for batch synchronization tasks.</p>
+         * <p>The name of the scheduling resource group used by the offline synchronization job.</p>
          * 
          * <strong>example:</strong>
-         * <p>S_res_group_235454102432001_1721021993437</p>
+         * <p>S_res_group_222_333</p>
          */
         @NameInMap("ResourceGroupIdentifier")
         public String resourceGroupIdentifier;
@@ -576,19 +801,19 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestResourceSettings extends TeaModel {
         /**
-         * <p>The batch synchronization resources.</p>
+         * <p>The resource settings for the offline synchronization job.</p>
          */
         @NameInMap("OfflineResourceSettings")
         public UpdateDIJobRequestResourceSettingsOfflineResourceSettings offlineResourceSettings;
 
         /**
-         * <p>The real-time synchronization resources.</p>
+         * <p>The resource settings for the real-time synchronization job.</p>
          */
         @NameInMap("RealtimeResourceSettings")
         public UpdateDIJobRequestResourceSettingsRealtimeResourceSettings realtimeResourceSettings;
 
         /**
-         * <p>The resource used for scheduling.</p>
+         * <p>The scheduling resource settings.</p>
          */
         @NameInMap("ScheduleResourceSettings")
         public UpdateDIJobRequestResourceSettingsScheduleResourceSettings scheduleResourceSettings;
@@ -626,7 +851,7 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestTableMappingsSourceObjectSelectionRules extends TeaModel {
         /**
-         * <p>Valid values: Include and Exclude.</p>
+         * <p>The selection action. Valid values: <code>Include</code> and <code>Exclude</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Include</p>
@@ -644,7 +869,7 @@ public class UpdateDIJobRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The expression type. Valid values: Exact and Regex.</p>
+         * <p>The type of the expression. Valid values: <code>Exact</code> and <code>Regex</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Exact</p>
@@ -655,9 +880,12 @@ public class UpdateDIJobRequest extends TeaModel {
         /**
          * <p>The object type. Valid values:</p>
          * <ul>
-         * <li>Table</li>
-         * <li>Schema</li>
-         * <li>Database</li>
+         * <li><p><code>Table</code> (table)</p>
+         * </li>
+         * <li><p><code>Schema</code> (schema)</p>
+         * </li>
+         * <li><p><code>Database</code> (database)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -707,12 +935,16 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestTableMappingsTransformationRules extends TeaModel {
         /**
-         * <p>Valid values:</p>
+         * <p>The type of the action. Valid values:</p>
          * <ul>
-         * <li>DefinePrimaryKey</li>
-         * <li>Rename</li>
-         * <li>AddColumn</li>
-         * <li>HandleDml</li>
+         * <li><p><code>DefinePrimaryKey</code>: Defines a primary key.</p>
+         * </li>
+         * <li><p><code>Rename</code>: Renames an object.</p>
+         * </li>
+         * <li><p><code>AddColumn</code>: Adds a column.</p>
+         * </li>
+         * <li><p><code>HandleDml</code>: Handles DML operations.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -722,7 +954,7 @@ public class UpdateDIJobRequest extends TeaModel {
         public String ruleActionType;
 
         /**
-         * <p>The rule name. The rule name must be unique for a given combination of action type and target type. The name cannot exceed 50 characters.</p>
+         * <p>The name of the transformation rule. The name must be unique for a specific combination of <code>RuleActionType</code> and <code>RuleTargetType</code> and can be up to 50 characters long.</p>
          * 
          * <strong>example:</strong>
          * <p>rename_rule_1</p>
@@ -731,11 +963,14 @@ public class UpdateDIJobRequest extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Valid values:</p>
+         * <p>The type of the target object. Valid values:</p>
          * <ul>
-         * <li>Table</li>
-         * <li>Schema</li>
-         * <li>Database</li>
+         * <li><p><code>Table</code> (table)</p>
+         * </li>
+         * <li><p><code>Schema</code> (schema)</p>
+         * </li>
+         * <li><p><code>Database</code> (database)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -777,13 +1012,13 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestTableMappings extends TeaModel {
         /**
-         * <p>Each rule can select different object types from the source, such as source databases and source tables.</p>
+         * <p>The rules for selecting source objects. Each rule can select a different type of source object to synchronize, such as a source database or table.</p>
          */
         @NameInMap("SourceObjectSelectionRules")
         public java.util.List<UpdateDIJobRequestTableMappingsSourceObjectSelectionRules> sourceObjectSelectionRules;
 
         /**
-         * <p>The transformation rules applied to source objects.</p>
+         * <p>The transformation rules for the source objects.</p>
          */
         @NameInMap("TransformationRules")
         public java.util.List<UpdateDIJobRequestTableMappingsTransformationRules> transformationRules;
@@ -813,15 +1048,22 @@ public class UpdateDIJobRequest extends TeaModel {
 
     public static class UpdateDIJobRequestTransformationRules extends TeaModel {
         /**
-         * <p>Valid values:</p>
+         * <p>The type of the action. Valid values:</p>
          * <ul>
-         * <li>DefinePrimaryKey</li>
-         * <li>Rename</li>
-         * <li>AddColumn</li>
-         * <li>HandleDml</li>
-         * <li>DefineIncrementalCondition</li>
-         * <li>DefineCycleScheduleSettings</li>
-         * <li>DefinePartitionKey</li>
+         * <li><p><code>DefinePrimaryKey</code>: Defines a primary key.</p>
+         * </li>
+         * <li><p><code>Rename</code>: Renames an object.</p>
+         * </li>
+         * <li><p><code>AddColumn</code>: Adds a column.</p>
+         * </li>
+         * <li><p><code>HandleDml</code>: Handles DML operations.</p>
+         * </li>
+         * <li><p><code>DefineIncrementalCondition</code>: Defines an incremental condition.</p>
+         * </li>
+         * <li><p><code>DefineCycleScheduleSettings</code>: Defines periodic scheduling settings.</p>
+         * </li>
+         * <li><p><code>DefinePartitionKey</code>: Defines a partition key.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -831,63 +1073,85 @@ public class UpdateDIJobRequest extends TeaModel {
         public String ruleActionType;
 
         /**
-         * <p>The rule expression in JSON string format.</p>
+         * <p>The rule expression, specified as a JSON string.</p>
          * <ol>
-         * <li>Rename rule</li>
+         * <li>Rename rule (<code>Rename</code>)</li>
          * </ol>
          * <ul>
-         * <li>Example: {&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot; }</li>
-         * <li>expression: The rename transformation expression. Supported variables include: ${srcDatasourceName} (source data source name), ${srcDatabaseName} (source database name), and ${srcTableName} (source table name).</li>
+         * <li><p>Example: <code>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;}</code></p>
+         * </li>
+         * <li><p><code>expression</code>: The expression for the rename transformation rule. The expression supports variables, including <code>${srcDatasourceName}</code> (source data source name), <code>${srcDatabaseName}</code> (source database name), and <code>${srcTableName}</code> (source table name).</p>
+         * </li>
          * </ul>
          * <ol start="2">
-         * <li>AddColumn rule</li>
+         * <li>Add column rule (<code>AddColumn</code>)</li>
          * </ol>
          * <ul>
-         * <li>Example: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</li>
-         * <li>If not specified, the default behavior is to not add columns.</li>
-         * <li>columnName: The name of the column to add.</li>
-         * <li>columnValueType: The value type of the column to add. Valid values: Constant and Variable.</li>
-         * <li>columnValue: The value of the column to add. When columnValueType is set to Constant, the value is a custom constant of the string type. When columnValueType is set to Variable, the value is a built-in variable. Built-in variables include: EXECUTE_TIME (execution time, long type), DB_NAME_SRC (source database name, string type), DATASOURCE_NAME_SRC (source data source name, string type), TABLE_NAME_SRC (source table name, string type), DB_NAME_DEST (destination database name, string type), DATASOURCE_NAME_DEST (destination data source name, string type), TABLE_NAME_DEST (destination table name, string type), and DB_NAME_SRC_TRANSED (transformed source database name, string type).</li>
+         * <li><p>Example: <code>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</code></p>
+         * </li>
+         * <li><p>If this rule is not specified, no columns are added.</p>
+         * </li>
+         * <li><p><code>columnName</code>: The name of the column to add.</p>
+         * </li>
+         * <li><p><code>columnValueType</code>: The value type of the added column. Valid values: <code>Constant</code> and <code>Variable</code>.</p>
+         * </li>
+         * <li><p><code>columnValue</code>: The value of the added column. If <code>columnValueType</code> is <code>Constant</code>, the value is a custom constant of the string type. If <code>columnValueType</code> is <code>Variable</code>, the value is a built-in variable. Valid built-in variables: <code>EXECUTE_TIME</code> (execution time, Long type), <code>DB_NAME_SRC</code> (source database name, String type), <code>DATASOURCE_NAME_SRC</code> (source data source name, String type), <code>TABLE_NAME_SRC</code> (source table name, String type), <code>DB_NAME_DEST</code> (destination database name, String type), <code>DATASOURCE_NAME_DEST</code> (destination data source name, String type), <code>TABLE_NAME_DEST</code> (destination table name, String type), and <code>DB_NAME_SRC_TRANSED</code> (transformed database name, String type).</p>
+         * </li>
          * </ul>
          * <ol start="3">
-         * <li>DefinePrimaryKey</li>
+         * <li>Define primary key rule (<code>DefinePrimaryKey</code>)</li>
          * </ol>
          * <ul>
-         * <li>Example: {&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</li>
-         * <li>If not specified, the source primary key columns are used by default.</li>
-         * <li>When the destination table already exists: Data Integration does not modify the destination table structure. If the specified primary key columns are not in the destination table, the task fails to start.</li>
-         * <li>When the destination table is auto-created: Data Integration automatically creates the destination table structure with the defined primary key columns. If the specified primary key columns are not in the destination table, the task fails to start.</li>
+         * <li><p>Example: <code>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</code></p>
+         * </li>
+         * <li><p>If this rule is not specified, the primary key of the source is used by default.</p>
+         * </li>
+         * <li><p>Data Integration does not modify the structure of an existing destination table. If a specified primary key column does not exist in the table, the synchronization job fails.</p>
+         * </li>
+         * <li><p>When a destination table is automatically created, Data Integration includes the defined primary key columns in the structure. If a specified primary key column is not in the destination column set, the synchronization job fails.</p>
+         * </li>
          * </ul>
          * <ol start="4">
-         * <li>HandleDml rule</li>
+         * <li>DML handling rule (<code>HandleDml</code>)</li>
          * </ol>
          * <ul>
-         * <li>Example of a rule used to process DML messages: {&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}.</li>
-         * <li>If not specified, the default rule is Normal for Insert, Update, and Delete.</li>
-         * <li>dmlType: The DML operation type. Valid values: Insert, Update, Delete.</li>
-         * <li>dmlAction: The DML handling policy. Valid values: Normal, Ignore, Filter (conditional processing, used when dmlType is Update or Delete), and LogicalDelete.</li>
-         * <li>filterCondition: The DML filter condition. This parameter is used when dmlAction is set to Filter.</li>
+         * <li><p>Example: <code>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</code></p>
+         * </li>
+         * <li><p>If this rule is not specified, the default action for <code>Insert</code>, <code>Update</code>, and <code>Delete</code> operations is <code>Normal</code>.</p>
+         * </li>
+         * <li><p><code>dmlType</code>: The DML operation type. Valid values: <code>Insert</code>, <code>Update</code>, and <code>Delete</code>.</p>
+         * </li>
+         * <li><p><code>dmlAction</code>: The DML handling policy. Valid values: <code>Normal</code> (process the operation), <code>Ignore</code> (ignore the operation), <code>Filter</code> (conditionally process the operation, used when <code>dmlType</code> is <code>Update</code> or <code>Delete</code>), and <code>LogicalDelete</code> (perform a logical delete).</p>
+         * </li>
+         * <li><p><code>filterCondition</code>: The DML filter condition, used when <code>dmlAction</code> is <code>Filter</code>.</p>
+         * </li>
          * </ul>
          * <ol start="5">
-         * <li>DefineIncrementalCondition</li>
+         * <li>Incremental condition rule (<code>DefineIncrementalCondition</code>)</li>
          * </ol>
          * <ul>
-         * <li>Example: {&quot;where&quot;:&quot;id &gt; 0&quot;}</li>
-         * <li>Specifies the incremental filter condition.</li>
+         * <li><p>Example: <code>{&quot;where&quot;:&quot;id &gt; 0&quot;}</code></p>
+         * </li>
+         * <li><p>The <code>WHERE</code> clause for the incremental condition.</p>
+         * </li>
          * </ul>
          * <ol start="6">
-         * <li>DefineCycleScheduleSettings</li>
+         * <li>Periodic scheduling rule (<code>DefineCycleScheduleSettings</code>)</li>
          * </ol>
          * <ul>
-         * <li>Example: {&quot;cronExpress&quot;:&quot; \* \* \* \* \* \*&quot;, &quot;cycleType&quot;:&quot;1&quot;}</li>
-         * <li>Specifies the scheduled task parameters.</li>
+         * <li><p>Example: <code>{&quot;cronExpress&quot;:&quot; * * * * * *&quot;, &quot;cycleType&quot;:&quot;1&quot;}</code></p>
+         * </li>
+         * <li><p>Specifies the scheduling parameters for a periodic job.</p>
+         * </li>
          * </ul>
          * <ol start="7">
-         * <li>DefinePartitionKey</li>
+         * <li>Define partition key rule (<code>DefinePartitionKey</code>)</li>
          * </ol>
          * <ul>
-         * <li>Example: {&quot;columns&quot;:[&quot;id&quot;]}</li>
-         * <li>Specifies the partition key.</li>
+         * <li><p>Example: <code>{&quot;columns&quot;:[&quot;id&quot;]}</code></p>
+         * </li>
+         * <li><p>Specifies the partition key.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -897,7 +1161,7 @@ public class UpdateDIJobRequest extends TeaModel {
         public String ruleExpression;
 
         /**
-         * <p>The rule name. When the action type and target type are the same, the rule name must be unique. The name cannot exceed 50 characters.</p>
+         * <p>The name of the transformation rule. The name must be unique for a specific combination of <code>RuleActionType</code> and <code>RuleTargetType</code> and can be up to 50 characters long.</p>
          * 
          * <strong>example:</strong>
          * <p>rename_rule_1</p>
@@ -906,11 +1170,14 @@ public class UpdateDIJobRequest extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The target type for the action. Valid values:</p>
+         * <p>The type of the target object. Valid values:</p>
          * <ul>
-         * <li>Table</li>
-         * <li>Schema</li>
-         * <li>Database</li>
+         * <li><p><code>Table</code> (table)</p>
+         * </li>
+         * <li><p><code>Schema</code> (schema)</p>
+         * </li>
+         * <li><p><code>Database</code> (database)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

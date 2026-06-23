@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityScanRunRequest extends TeaModel {
     /**
-     * <p>The ID of the data quality monitor.</p>
+     * <p>The data quality scan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20000001</p>
@@ -14,7 +14,7 @@ public class CreateDataQualityScanRunRequest extends TeaModel {
     public Long dataQualityScanId;
 
     /**
-     * <p>The parameter settings used during the actual run. The <code>triggerTime</code> parameter is required.</p>
+     * <p>The parameters for the run. The <code>triggerTime</code> parameter is required.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<CreateDataQualityScanRunRequestParameters> parameters;
@@ -29,7 +29,7 @@ public class CreateDataQualityScanRunRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The scheduling resource group used when running the data quality monitor. This resource group uses the same data structure as in the scheduling API.</p>
+     * <p>Specifies the scheduling resource group used to run the data quality scan. This object uses the same data structure as the scheduling API.</p>
      */
     @NameInMap("RuntimeResource")
     public CreateDataQualityScanRunRequestRuntimeResource runtimeResource;
@@ -73,19 +73,26 @@ public class CreateDataQualityScanRunRequest extends TeaModel {
 
     public static class CreateDataQualityScanRunRequestParameters extends TeaModel {
         /**
-         * <p>The parameter name.</p>
+         * <p>The name of the parameter. The only supported value is:</p>
+         * <ul>
+         * <li>triggerTime</li>
+         * </ul>
+         * <p>No other scheduling parameters are currently supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>regiondt</p>
+         * <p>triggerTime</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The parameter value. You can use a scheduling time expression.</p>
+         * <p>The parameter value.</p>
+         * <ul>
+         * <li>If the parameter name is triggerTime, this value must be the trigger time as a timestamp.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cn-shanghai$[yyyy-mm-dd-1]</p>
+         * <p>1775812636</p>
          */
         @NameInMap("Value")
         public String value;
@@ -115,7 +122,7 @@ public class CreateDataQualityScanRunRequest extends TeaModel {
 
     public static class CreateDataQualityScanRunRequestRuntimeResource extends TeaModel {
         /**
-         * <p>The Compute Resources (CUs) reserved for running the data quality monitor in the resource group.</p>
+         * <p>The number of compute units (CUs) to reserve from the resource group for the data quality scan.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -133,7 +140,7 @@ public class CreateDataQualityScanRunRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The image settings used when running the data quality monitor in the resource group.</p>
+         * <p>The image configuration for running the data quality scan on the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>

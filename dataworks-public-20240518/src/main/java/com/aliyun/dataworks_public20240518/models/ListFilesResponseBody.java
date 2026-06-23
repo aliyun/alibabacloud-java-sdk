@@ -49,8 +49,10 @@ public class ListFilesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call succeeded. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,8 +127,10 @@ public class ListFilesResponseBody extends TeaModel {
         /**
          * <p>Specifies whether automatic parsing is enabled for the file. Valid values:</p>
          * <ul>
-         * <li>true: The file automatically parses code.</li>
-         * <li>false: The file does not automatically parse code.</li>
+         * <li><p>true: The file automatically parses code.</p>
+         * </li>
+         * <li><p>false: The file does not automatically parse code.</p>
+         * </li>
          * </ul>
          * <p>This parameter corresponds to Analyze Code when you set Dependencies to Same Cycle in the scheduling configuration of a Data Studio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
@@ -311,12 +315,18 @@ public class ListFilesResponseBody extends TeaModel {
         /**
          * <p>The functional module to which the file belongs. Valid values:</p>
          * <ul>
-         * <li>NORMAL: Data Studio</li>
-         * <li>MANUAL: Manually triggered node</li>
-         * <li>MANUAL_BIZ: Manually triggered workflow</li>
-         * <li>SKIP: Dry-run scheduling in Data Studio</li>
-         * <li>ADHOCQUERY: Ad hoc query</li>
-         * <li>COMPONENT: Component management</li>
+         * <li><p>NORMAL: Data Studio</p>
+         * </li>
+         * <li><p>MANUAL: Manually triggered node</p>
+         * </li>
+         * <li><p>MANUAL_BIZ: Manually triggered workflow</p>
+         * </li>
+         * <li><p>SKIP: Dry-run scheduling in Data Studio</p>
+         * </li>
+         * <li><p>ADHOCQUERY: Ad hoc query</p>
+         * </li>
+         * <li><p>COMPONENT: Component management</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

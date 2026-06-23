@@ -7,8 +7,10 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     /**
      * <p>The environment of the workspace. Valid values:</p>
      * <ul>
-     * <li>Prod: production environment</li>
-     * <li>Dev: development environment</li>
+     * <li><p>Prod: production environment</p>
+     * </li>
+     * <li><p>Dev: development environment</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,9 +74,12 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     /**
      * <p>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
      * <ul>
-     * <li>ModifyTime (Desc/Asc)</li>
-     * <li>CreateTime (Desc/Asc)</li>
-     * <li>Id (Desc/Asc)</li>
+     * <li><p>ModifyTime (Desc/Asc)</p>
+     * </li>
+     * <li><p>CreateTime (Desc/Asc)</p>
+     * </li>
+     * <li><p>Id (Desc/Asc)</p>
+     * </li>
      * </ul>
      * <p>Default value: Id Desc.</p>
      * 
@@ -84,15 +89,21 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>List of tags. A result is returned if it matches any one of the specified tags.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
      * <p>The trigger type.</p>
      * <ul>
-     * <li>Scheduler</li>
-     * <li>Manual</li>
-     * <li>TriggerWorkflow</li>
+     * <li><p>Scheduler</p>
+     * </li>
+     * <li><p>Manual</p>
+     * </li>
+     * <li><p>TriggerWorkflow</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

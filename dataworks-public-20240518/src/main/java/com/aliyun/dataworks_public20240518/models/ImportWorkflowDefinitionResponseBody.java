@@ -89,7 +89,7 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         /**
          * <p>The response.</p>
          * <blockquote>
-         * <p> The workflow ID is returned.</p>
+         * <p>The workflow ID is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,10 +102,14 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
          * <p>The status of the asynchronous task.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Running: The asynchronous task is running.</li>
-         * <li>Success: The asynchronous task is complete.</li>
-         * <li>Fail: The asynchronous task fails.</li>
-         * <li>Cancel: The asynchronous task is canceled.</li>
+         * <li><p>Running: The asynchronous task is running.</p>
+         * </li>
+         * <li><p>Success: The asynchronous task is complete.</p>
+         * </li>
+         * <li><p>Fail: The asynchronous task fails.</p>
+         * </li>
+         * <li><p>Cancel: The asynchronous task is canceled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,8 +122,10 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
          * <p>The type of the asynchronous task.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Create: The asynchronous task is used to create an object.</li>
-         * <li>Cancel: The asynchronous task is used to cancel an operation.</li>
+         * <li><p>Create: The asynchronous task is used to create an object.</p>
+         * </li>
+         * <li><p>Cancel: The asynchronous task is used to cancel an operation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

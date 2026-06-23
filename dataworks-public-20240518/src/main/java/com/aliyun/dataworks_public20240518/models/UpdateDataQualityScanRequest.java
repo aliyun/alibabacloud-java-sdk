@@ -210,9 +210,12 @@ public class UpdateDataQualityScanRequest extends TeaModel {
         /**
          * <p>The engine type. These settings are only supported for the EMR compute engine.This setting? Valid values:</p>
          * <ul>
-         * <li>Hive: Hive SQL</li>
-         * <li>Spark: Spark SQL</li>
-         * <li>Kyuubi</li>
+         * <li><p>Hive: Hive SQL</p>
+         * </li>
+         * <li><p>Spark: Spark SQL</p>
+         * </li>
+         * <li><p>Kyuubi</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,8 +277,10 @@ public class UpdateDataQualityScanRequest extends TeaModel {
         /**
          * <p>Workspace environment of the compute engine. Valid values:</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod</p>
+         * </li>
+         * <li><p>Dev</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,8 +492,10 @@ public class UpdateDataQualityScanRequest extends TeaModel {
         /**
          * <p>The trigger mode of the data quality monitor. Valid values:</p>
          * <ul>
-         * <li>ByManual: Manually triggered. Default setting.</li>
-         * <li>BySchedule: Triggered by a scheduled task instance.</li>
+         * <li><p>ByManual: Manually triggered. Default setting.</p>
+         * </li>
+         * <li><p>BySchedule: Triggered by a scheduled task instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

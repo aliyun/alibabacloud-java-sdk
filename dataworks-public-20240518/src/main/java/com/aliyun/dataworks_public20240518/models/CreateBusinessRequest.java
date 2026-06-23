@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBusinessRequest extends TeaModel {
     /**
+     * <p>Name of the Business Process.<br>
+     * The name must be unique within the same project space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,8 @@ public class CreateBusinessRequest extends TeaModel {
     public String businessName;
 
     /**
+     * <p>Description of the Business Process.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +25,9 @@ public class CreateBusinessRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The Alibaba Cloud account ID of the owner responsible for the Business Process.<br>
+     * You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, move the mouse pointer over the profile picture in the upper-right corner of the menu bar, and view the Account ID. If this parameter is empty, the Alibaba Cloud account ID of the invoker is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000000001</p>
      */
@@ -28,6 +35,9 @@ public class CreateBusinessRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The ID of the DataWorks workspace.<br>
+     * You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the Workspace Management page, and view the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -35,6 +45,8 @@ public class CreateBusinessRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed when you switch workspaces at the top of the Data Development page. You must specify either this parameter or the projectid parameter to identify the DataWorks project for this API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>dw_project</p>
      */
@@ -42,6 +54,14 @@ public class CreateBusinessRequest extends TeaModel {
     public String projectIdentifier;
 
     /**
+     * <p>Function module to which the Business Process belongs. Valid values:</p>
+     * <ul>
+     * <li><p>NORMAL (Data Development)</p>
+     * </li>
+     * <li><p>MANUAL_BIZ (manually triggered workflow)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */

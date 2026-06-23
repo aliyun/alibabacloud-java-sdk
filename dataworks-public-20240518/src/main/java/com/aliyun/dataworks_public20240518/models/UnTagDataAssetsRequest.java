@@ -14,8 +14,10 @@ public class UnTagDataAssetsRequest extends TeaModel {
     /**
      * <p>The type of the data asset. Valid values:</p>
      * <ul>
-     * <li>ACS::DataWorks::Table</li>
-     * <li>ACS::DataWorks::Task</li>
+     * <li><p>ACS::DataWorks::Table</p>
+     * </li>
+     * <li><p>ACS::DataWorks::Task</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,8 +30,10 @@ public class UnTagDataAssetsRequest extends TeaModel {
     /**
      * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
      * <ul>
-     * <li>Dev: development environment</li>
-     * <li>Prod: production environment</li>
+     * <li><p>Dev: development environment</p>
+     * </li>
+     * <li><p>Prod: production environment</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

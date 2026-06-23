@@ -65,9 +65,12 @@ public class UpdateUdfFileRequest extends TeaModel {
      * <p>The function parameter description, corresponding to the parameter description field in the Create Function form.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ALL_ALLOWD</li>
-     * <li>FAILURE_ALLOWED</li>
-     * <li>ALL_DENIED</li>
+     * <li><p>ALL_ALLOWD</p>
+     * </li>
+     * <li><p>FAILURE_ALLOWED</p>
+     * </li>
+     * <li><p>ALL_DENIED</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

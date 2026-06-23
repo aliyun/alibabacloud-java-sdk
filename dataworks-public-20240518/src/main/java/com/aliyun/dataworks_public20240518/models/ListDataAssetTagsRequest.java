@@ -7,8 +7,10 @@ public class ListDataAssetTagsRequest extends TeaModel {
     /**
      * <p>The type of the tag. Valid values:</p>
      * <ul>
-     * <li>Normal</li>
-     * <li>System</li>
+     * <li><p>Normal</p>
+     * </li>
+     * <li><p>System</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

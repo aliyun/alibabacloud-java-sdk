@@ -50,8 +50,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The severity level. Valid values:</p>
          * <ul>
-         * <li>Warning</li>
-         * <li>Critical</li>
+         * <li><p>Warning</p>
+         * </li>
+         * <li><p>Critical</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,8 +98,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The recipient.</p>
          * <ul>
-         * <li>If the value of the ReceiverType parameter is AliyunUid, the value of this parameter is the Alibaba Cloud account ID of a user.</li>
-         * <li>If the value of the ReceiverType parameter is DingToken, the value of this parameter is the token of a DingTalk chatbot.</li>
+         * <li><p>If the value of the ReceiverType parameter is AliyunUid, the value of this parameter is the Alibaba Cloud account ID of a user.</p>
+         * </li>
+         * <li><p>If the value of the ReceiverType parameter is DingToken, the value of this parameter is the token of a DingTalk chatbot.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("ReceiverValues")
@@ -224,8 +228,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The severity level. Valid values:</p>
          * <ul>
-         * <li>Warning</li>
-         * <li>Critical</li>
+         * <li><p>Warning</p>
+         * </li>
+         * <li><p>Critical</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,9 +243,12 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The alert threshold.</p>
          * <ul>
-         * <li>If the alert rule is for task status, no threshold is used.</li>
-         * <li>If the alert rule is for failovers, the threshold is the number of failovers.</li>
-         * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+         * <li><p>If the alert rule is for task status, no threshold is used.</p>
+         * </li>
+         * <li><p>If the alert rule is for failovers, the threshold is the number of failovers.</p>
+         * </li>
+         * <li><p>If the alert rule is for latency, the threshold is the latency duration, in seconds.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,11 +355,16 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The metric type in the alert rule. Valid values:</p>
          * <ul>
-         * <li>Heartbeat</li>
-         * <li>FailoverCount</li>
-         * <li>Delay</li>
-         * <li>DdlReport</li>
-         * <li>ResourceUtilization</li>
+         * <li><p>Heartbeat</p>
+         * </li>
+         * <li><p>FailoverCount</p>
+         * </li>
+         * <li><p>Delay</p>
+         * </li>
+         * <li><p>DdlReport</p>
+         * </li>
+         * <li><p>ResourceUtilization</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

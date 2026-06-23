@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetProcessInstanceResponseBody extends TeaModel {
+    /**
+     * <p>Details of the approval process instance.</p>
+     */
     @NameInMap("ProcessInstance")
     public GetProcessInstanceResponseBodyProcessInstance processInstance;
 
     /**
+     * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5df3a17****903790e8e8a</p>
      */
@@ -37,16 +42,62 @@ public class GetProcessInstanceResponseBody extends TeaModel {
 
     public static class GetProcessInstanceResponseBodyProcessInstanceApprovalProcessDefinitionApprovalNodes extends TeaModel {
         /**
+         * <p>The type of the approver for the node. Valid values:</p>
+         * <ul>
+         * <li><p><code>DataWorksProjectRole</code>: A workspace role</p>
+         * </li>
+         * <li><p><code>DataWorksProjectMember</code>: A workspace member</p>
+         * </li>
+         * <li><p><code>TableAdministrator</code>: A table administrator</p>
+         * </li>
+         * <li><p><code>TableOrProjectAdministrator</code>: A table or workspace administrator</p>
+         * </li>
+         * <li><p><code>AliyunResourceOwner</code>: An Alibaba Cloud account</p>
+         * </li>
+         * <li><p><code>MaxComputeRole</code>: A MaxCompute role</p>
+         * </li>
+         * <li><p><code>DLFAdmin</code>: A DlfLegacy administrator</p>
+         * </li>
+         * <li><p><code>DLFNextAdmin</code>: A DLFNext administrator</p>
+         * </li>
+         * <li><p><code>TenantRole</code>: A tenant role</p>
+         * </li>
+         * <li><p><code>EmrAdministrator</code>: An Emr administrator</p>
+         * </li>
+         * <li><p><code>LindormAdministrator</code>: A Lindorm administrator</p>
+         * </li>
+         * <li><p><code>AliyunRamUser</code>: A RAM user</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DataWorksProjectRole</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The specified approvers.</p>
+         * <p>The contents of this parameter depend on the <code>AccountType</code> value:</p>
+         * <ul>
+         * <li><p>If <code>AccountType</code> is <code>DataWorksProjectMember</code>, this parameter contains the user IDs of workspace members.</p>
+         * </li>
+         * <li><p>If <code>AccountType</code> is <code>DataWorksProjectRole</code>, this parameter contains the codes of workspace roles.</p>
+         * </li>
+         * <li><p>If <code>AccountType</code> is <code>MaxComputeRole</code>, this parameter contains the MaxCompute roles.</p>
+         * </li>
+         * <li><p>If <code>AccountType</code> is <code>TenantRole</code>, this parameter contains the codes of tenant roles.</p>
+         * </li>
+         * <li><p>If <code>AccountType</code> is <code>AliyunRamUser</code>, this parameter contains the user IDs of RAM users.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("Assignees")
         public java.util.List<String> assignees;
 
         /**
+         * <p>The extended description of the approval node.</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
@@ -54,6 +105,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String extensionProperties;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7a809b6a-2a62-4c6c-9c23-c2a145e3877d</p>
          */
@@ -61,6 +114,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>default-name</p>
          */
@@ -116,6 +171,18 @@ public class GetProcessInstanceResponseBody extends TeaModel {
 
     public static class GetProcessInstanceResponseBodyProcessInstanceApprovalProcessDefinitionNotificationServices extends TeaModel {
         /**
+         * <p>The notification channel. Valid values:</p>
+         * <ul>
+         * <li><p><code>Mail</code></p>
+         * </li>
+         * <li><p><code>Sms</code></p>
+         * </li>
+         * <li><p><code>DingRobot</code></p>
+         * </li>
+         * <li><p><code>Weixin</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Mail</p>
          */
@@ -123,6 +190,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String channel;
 
         /**
+         * <p>Additional information in JSON format. For example, <code>{&quot;atAll&quot;:&quot;true&quot;}</code> indicates whether to @all members.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
          */
@@ -130,6 +199,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>If <code>Channel</code> is set to <code>DingRobot</code> or <code>Weixin</code>, the value of this parameter must be the webhook URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dingtalk">https://dingtalk</a></p>
          */
@@ -169,6 +240,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
 
     public static class GetProcessInstanceResponseBodyProcessInstanceApprovalProcessDefinitionRuleConditions extends TeaModel {
         /**
+         * <p>The expression of the rule condition. Format: <code>((#type==\\&quot;typeValue\\&quot;))</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;))</p>
          */
@@ -176,6 +249,14 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <p>The rule scope. Valid values:</p>
+         * <ul>
+         * <li><p><code>Deployment</code>: Determines whether the policy applies when a request is submitted.</p>
+         * </li>
+         * <li><p><code>Running</code>: Determines whether to skip approval while the process instance runs. This value is supported only for MaxCompute approval policies.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Deployment</p>
          */
@@ -183,6 +264,20 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>The type of the rule condition. Valid values:</p>
+         * <ul>
+         * <li><p><code>odpsProject</code>: Applies to a specific MaxCompute project.</p>
+         * </li>
+         * <li><p><code>hologresInstanceId</code>: Applies to a specific Hologres instance.</p>
+         * </li>
+         * <li><p><code>sensibleLevel</code>: Applies to a specific security level.</p>
+         * </li>
+         * <li><p><code>tableGuid</code>: Applies to a specific table.</p>
+         * </li>
+         * <li><p><code>projectId</code>: Applies to a specific workspace.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>odpsProject</p>
          */
@@ -221,13 +316,24 @@ public class GetProcessInstanceResponseBody extends TeaModel {
     }
 
     public static class GetProcessInstanceResponseBodyProcessInstanceApprovalProcessDefinition extends TeaModel {
+        /**
+         * <p>The approval nodes.</p>
+         */
         @NameInMap("ApprovalNodes")
         public java.util.List<GetProcessInstanceResponseBodyProcessInstanceApprovalProcessDefinitionApprovalNodes> approvalNodes;
 
+        /**
+         * <p>The description of the approval policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>流程定义描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the policy is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -235,6 +341,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The approval policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323861511451222099</p>
          */
@@ -242,19 +350,41 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the approval policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM_GENERATE_DEFAULT</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The notification services.</p>
+         */
         @NameInMap("NotificationServices")
         public java.util.List<GetProcessInstanceResponseBodyProcessInstanceApprovalProcessDefinitionNotificationServices> notificationServices;
 
+        /**
+         * <p>The rules that determine when the approval policy takes effect.</p>
+         */
         @NameInMap("RuleConditions")
         public java.util.List<GetProcessInstanceResponseBodyProcessInstanceApprovalProcessDefinitionRuleConditions> ruleConditions;
 
         /**
+         * <p>The subtype of the approval policy. Valid values:</p>
+         * <ul>
+         * <li><p><code>Table</code></p>
+         * </li>
+         * <li><p><code>Column</code></p>
+         * </li>
+         * <li><p><code>Database</code></p>
+         * </li>
+         * <li><p><code>Schema</code></p>
+         * </li>
+         * <li><p><code>Default</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Table</p>
          */
@@ -262,6 +392,32 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String subType;
 
         /**
+         * <p>The type of the approval policy. Valid values:</p>
+         * <ul>
+         * <li><p><code>MaxCompute</code></p>
+         * </li>
+         * <li><p><code>DataService</code></p>
+         * </li>
+         * <li><p><code>DlfV1</code> (Custom creation is not supported)</p>
+         * </li>
+         * <li><p><code>Extension</code></p>
+         * </li>
+         * <li><p><code>Hologres</code></p>
+         * </li>
+         * <li><p><code>Emr</code> (Custom creation is not supported)</p>
+         * </li>
+         * <li><p><code>DataAssetGovernance</code> (Custom creation is not supported)</p>
+         * </li>
+         * <li><p><code>Lindorm</code> (Custom creation is not supported)</p>
+         * </li>
+         * <li><p><code>StarRocks</code> (Custom creation is not supported)</p>
+         * </li>
+         * <li><p><code>DlfNext</code> (Custom creation is not supported)</p>
+         * </li>
+         * <li><p><code>DataWorks</code> (Custom creation is not supported)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -349,16 +505,62 @@ public class GetProcessInstanceResponseBody extends TeaModel {
 
     public static class GetProcessInstanceResponseBodyProcessInstanceApprovalTasksApprovalNode extends TeaModel {
         /**
+         * <p>The type of the approver for the node. Valid values:</p>
+         * <ul>
+         * <li><p><code>DataWorksProjectRole</code>: A workspace role</p>
+         * </li>
+         * <li><p><code>DataWorksProjectMember</code>: A workspace member</p>
+         * </li>
+         * <li><p><code>TableAdministrator</code>: A table administrator</p>
+         * </li>
+         * <li><p><code>TableOrProjectAdministrator</code>: A table or workspace administrator</p>
+         * </li>
+         * <li><p><code>AliyunResourceOwner</code>: An Alibaba Cloud account</p>
+         * </li>
+         * <li><p><code>MaxComputeRole</code>: A MaxCompute role</p>
+         * </li>
+         * <li><p><code>DLFAdmin</code>: A DlfLegacy administrator</p>
+         * </li>
+         * <li><p><code>DLFNextAdmin</code>: A DLFNext administrator</p>
+         * </li>
+         * <li><p><code>TenantRole</code>: A tenant role</p>
+         * </li>
+         * <li><p><code>EmrAdministrator</code>: An Emr administrator</p>
+         * </li>
+         * <li><p><code>LindormAdministrator</code>: A Lindorm administrator</p>
+         * </li>
+         * <li><p><code>AliyunRamUser</code>: A RAM user</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DataWorksProjectRole</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The specified approvers.</p>
+         * <p>The contents of this parameter depend on the <code>AccountType</code> value:</p>
+         * <ul>
+         * <li><p>If <code>AccountType</code> is <code>DataWorksProjectMember</code>, this parameter contains the user IDs of workspace members.</p>
+         * </li>
+         * <li><p>If <code>AccountType</code> is <code>DataWorksProjectRole</code>, this parameter contains the codes of workspace roles.</p>
+         * </li>
+         * <li><p>If <code>AccountType</code> is <code>MaxComputeRole</code>, this parameter contains the MaxCompute roles.</p>
+         * </li>
+         * <li><p>If <code>AccountType</code> is <code>TenantRole</code>, this parameter contains the codes of tenant roles.</p>
+         * </li>
+         * <li><p>If <code>AccountType</code> is <code>AliyunRamUser</code>, this parameter contains the user IDs of RAM users.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("Assignees")
         public java.util.List<String> assignees;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7a809b6a-2a62-4c6c-9c23-c2a145e3877d</p>
          */
@@ -366,6 +568,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>default-name</p>
          */
@@ -412,10 +616,18 @@ public class GetProcessInstanceResponseBody extends TeaModel {
     }
 
     public static class GetProcessInstanceResponseBodyProcessInstanceApprovalTasksTaskCandidates extends TeaModel {
+        /**
+         * <p>The name of the approver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>李四</p>
+         */
         @NameInMap("MemberName")
         public String memberName;
 
         /**
+         * <p>The user ID of the approver.</p>
+         * 
          * <strong>example:</strong>
          * <p>207947397776614297</p>
          */
@@ -446,30 +658,57 @@ public class GetProcessInstanceResponseBody extends TeaModel {
     }
 
     public static class GetProcessInstanceResponseBodyProcessInstanceApprovalTasks extends TeaModel {
+        /**
+         * <p>The approval comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同意</p>
+         */
         @NameInMap("ApprovalComment")
         public String approvalComment;
 
         /**
+         * <p>The approval decision. Valid values:</p>
+         * <ul>
+         * <li><p><code>Agree</code></p>
+         * </li>
+         * <li><p><code>Deny</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>deny</p>
+         * <p>Deny</p>
          */
         @NameInMap("ApprovalDecision")
         public String approvalDecision;
 
+        /**
+         * <p>The approval node from the corresponding approval policy.</p>
+         */
         @NameInMap("ApprovalNode")
         public GetProcessInstanceResponseBodyProcessInstanceApprovalTasksApprovalNode approvalNode;
 
         /**
+         * <p>The user ID of the actual approver.</p>
+         * 
          * <strong>example:</strong>
          * <p>207947399706614297</p>
          */
         @NameInMap("Assignee")
         public String assignee;
 
+        /**
+         * <p>The name of the actual approver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>李四</p>
+         */
         @NameInMap("AssigneeName")
         public String assigneeName;
 
         /**
+         * <p>The time when the task was completed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715590800000</p>
          */
@@ -477,6 +716,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public Long completeTime;
 
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715587200000</p>
          */
@@ -484,6 +725,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The approval task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>task_001</p>
          */
@@ -491,12 +734,25 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><p><code>Completed</code>: The task is complete.</p>
+         * </li>
+         * <li><p><code>Pending</code>: The task is pending.</p>
+         * </li>
+         * <li><p><code>Aborted</code>: The task is aborted.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Aborted</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The candidate approvers for the task.</p>
+         */
         @NameInMap("TaskCandidates")
         public java.util.List<GetProcessInstanceResponseBodyProcessInstanceApprovalTasksTaskCandidates> taskCandidates;
 
@@ -589,6 +845,8 @@ public class GetProcessInstanceResponseBody extends TeaModel {
 
     public static class GetProcessInstanceResponseBodyProcessInstance extends TeaModel {
         /**
+         * <p>The user ID of the applicant.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107558004253538</p>
          */
@@ -596,19 +854,30 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String applicator;
 
         /**
+         * <p>The username of the applicant\&quot;s Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_account</p>
          */
         @NameInMap("ApplicatorName")
         public String applicatorName;
 
+        /**
+         * <p>The approval policy applied to this process instance.</p>
+         */
         @NameInMap("ApprovalProcessDefinition")
         public GetProcessInstanceResponseBodyProcessInstanceApprovalProcessDefinition approvalProcessDefinition;
 
+        /**
+         * <p>The approval tasks.</p>
+         */
         @NameInMap("ApprovalTasks")
         public java.util.List<GetProcessInstanceResponseBodyProcessInstanceApprovalTasks> approvalTasks;
 
         /**
+         * <p>The authorization failure message.</p>
+         * <p><strong>Note</strong>: This parameter is returned only if the authorization fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>S-400007:ODPS acl auth failed. odps table acl auth failed</p>
          */
@@ -616,16 +885,26 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public String authErrorMessage;
 
         /**
+         * <p>The process instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>332066440109224007</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The reason for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>业务需要</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         /**
+         * <p>The time when the approval process started.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-25 10:20:18 CST</p>
          */
@@ -633,12 +912,28 @@ public class GetProcessInstanceResponseBody extends TeaModel {
         public Object startTime;
 
         /**
+         * <p>The status of the process instance. Valid values:</p>
+         * <ul>
+         * <li><p><code>Completed</code>: The request is approved.</p>
+         * </li>
+         * <li><p><code>Running</code>: The request is in the approval process.</p>
+         * </li>
+         * <li><p><code>Aborted</code>: The request is withdrawn.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>completed</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the process instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute表权限申请</p>
+         */
         @NameInMap("Title")
         public String title;
 

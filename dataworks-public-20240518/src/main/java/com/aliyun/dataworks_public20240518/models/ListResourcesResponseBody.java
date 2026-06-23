@@ -111,7 +111,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * <p>The ID of the script.</p>
          * <blockquote>
-         * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * <p>The unique identifier of the file resource.</p>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -249,12 +249,14 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>The source storage type of the file resource.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Local</li>
-         * <li>OSS</li>
+         * <li><p>Local</p>
+         * </li>
+         * <li><p>OSS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>local</p>
+         * <p>Local</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -272,13 +274,16 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>The destination storage type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Gateway</li>
-         * <li>OSS</li>
-         * <li>HDFS</li>
+         * <li><p>Gateway</p>
+         * </li>
+         * <li><p>OSS</p>
+         * </li>
+         * <li><p>HDFS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>oss</p>
+         * <p>Oss</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -287,14 +292,18 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>The resource type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Python</li>
-         * <li>Jar</li>
-         * <li>Archive</li>
-         * <li>File</li>
+         * <li><p>Python</p>
+         * </li>
+         * <li><p>Jar</p>
+         * </li>
+         * <li><p>Archive</p>
+         * </li>
+         * <li><p>File</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>jar</p>
+         * <p>Jar</p>
          */
         @NameInMap("Type")
         public String type;

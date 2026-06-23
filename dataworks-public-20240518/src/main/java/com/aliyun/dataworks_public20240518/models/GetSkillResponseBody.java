@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetSkillResponseBody extends TeaModel {
     /**
+     * <p>The unique ID for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned Skill object.</p>
+     */
     @NameInMap("Skill")
     public GetSkillResponseBodySkill skill;
 
@@ -36,9 +41,15 @@ public class GetSkillResponseBody extends TeaModel {
     }
 
     public static class GetSkillResponseBodySkillVisibilityScope extends TeaModel {
+        /**
+         * <p><strong>A list of project IDs that can access the Skill.</strong></p>
+         */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
+        /**
+         * <p>A list of user IDs that can access the Skill.</p>
+         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 
@@ -66,10 +77,18 @@ public class GetSkillResponseBody extends TeaModel {
     }
 
     public static class GetSkillResponseBodySkill extends TeaModel {
+        /**
+         * <p><strong>The content of the SKILL.md file.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>把大象装冰箱需要3步，把冰箱门打开，把大象放进去，把冰箱门关上。</p>
+         */
         @NameInMap("Body")
         public String body;
 
         /**
+         * <p>A temporary download link for <code>bundle.zip</code>, which does not require authentication and will expire.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/xxx.zip?Expires=...&Signature=">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/xxx.zip?Expires=...&amp;Signature=</a>...</p>
          */
@@ -77,16 +96,25 @@ public class GetSkillResponseBody extends TeaModel {
         public String bundleUrl;
 
         /**
+         * <p>The ID of the user who created the Skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p><strong>The Skill description.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据分析技能</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The time the Skill was created, provided as a UNIX timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +124,7 @@ public class GetSkillResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time the Skill was last modified, provided as a UNIX timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +134,8 @@ public class GetSkillResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The ID of the user who last modified the Skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -112,6 +143,8 @@ public class GetSkillResponseBody extends TeaModel {
         public String modifierId;
 
         /**
+         * <p><strong>The name of the Skill.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>my-skill</p>
          */
@@ -119,12 +152,17 @@ public class GetSkillResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p><strong>The visibility level.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>TENANT</p>
          */
         @NameInMap("Visibility")
         public String visibility;
 
+        /**
+         * <p><strong>The visibility scope.</strong></p>
+         */
         @NameInMap("VisibilityScope")
         public GetSkillResponseBodySkillVisibilityScope visibilityScope;
 

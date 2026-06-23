@@ -4,38 +4,71 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class MetaEntityDef extends TeaModel {
+    /**
+     * <p>A list of entity attribute definition objects.</p>
+     */
     @NameInMap("AttributeDefs")
     public java.util.List<MetaEntityAttributeDef> attributeDefs;
 
+    /**
+     * <p>The time when the definition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1780553640613</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>业务API</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The entity type.</p>
+     * 
      * <strong>example:</strong>
-     * <p>custom_entity-customer_api</p>
+     * <p>custom_entity-biz_api</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
+     * <p>The extension mode. Valid values: NONE and TABLE. NONE indicates a custom type. TABLE indicates that the type extends a table type.</p>
+     * 
      * <strong>example:</strong>
      * <p>NONE</p>
      */
     @NameInMap("Extend")
     public String extend;
 
+    /**
+     * <p>The time when the definition was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1780553640613</p>
+     */
     @NameInMap("ModifyTime")
     public Long modifyTime;
 
     /**
+     * <p>The name of the type definition.</p>
+     * 
      * <strong>example:</strong>
-     * <p>customer_api</p>
+     * <p>biz_api</p>
      */
     @NameInMap("Name")
     public String name;

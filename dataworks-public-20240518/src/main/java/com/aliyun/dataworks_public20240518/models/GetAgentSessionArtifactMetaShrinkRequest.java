@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAgentSessionArtifactMetaShrinkRequest extends TeaModel {
     /**
+     * <p>A client-provided ID that is echoed in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>900335678024</p>
      */
@@ -12,12 +14,17 @@ public class GetAgentSessionArtifactMetaShrinkRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. The value is <code>2.0</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>The container for business parameters.</p>
+     */
     @NameInMap("Params")
     public String paramsShrink;
 

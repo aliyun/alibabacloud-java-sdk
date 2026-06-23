@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageRequest extends TeaModel {
     /**
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetImageRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The image version. If you do not specify this parameter, the latest version is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

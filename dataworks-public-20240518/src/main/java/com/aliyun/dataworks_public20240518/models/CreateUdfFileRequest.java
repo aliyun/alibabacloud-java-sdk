@@ -26,8 +26,10 @@ public class CreateUdfFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically create the directory if the specified path (FileFolderPath) does not exist. Valid values:</p>
      * <ul>
-     * <li>true: Automatically creates the directory if it does not exist.</li>
-     * <li>false: The call fails if the directory does not exist.</li>
+     * <li><p>true: Automatically creates the directory if it does not exist.</p>
+     * </li>
+     * <li><p>false: The call fails if the directory does not exist.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

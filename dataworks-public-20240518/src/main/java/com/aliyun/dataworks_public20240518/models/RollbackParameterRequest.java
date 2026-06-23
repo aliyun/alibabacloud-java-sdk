@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackParameterRequest extends TeaModel {
     /**
+     * <p>The parameter ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RollbackParameterRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The rollback version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

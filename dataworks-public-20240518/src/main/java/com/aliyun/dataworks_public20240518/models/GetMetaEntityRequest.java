@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaEntityRequest extends TeaModel {
     /**
+     * <p>The entity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectRoleResponseBody extends TeaModel {
     /**
-     * <p>The role in the DataWorks workspace.</p>
+     * <p>The details of the workspace role.</p>
      */
     @NameInMap("ProjectRole")
     public GetProjectRoleResponseBodyProjectRole projectRole;
@@ -42,6 +42,8 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
     public static class GetProjectRoleResponseBodyProjectRoleModulePermissions extends TeaModel {
         /**
+         * <p>The module ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -49,6 +51,8 @@ public class GetProjectRoleResponseBody extends TeaModel {
         public Long moduleId;
 
         /**
+         * <p>The module name.</p>
+         * 
          * <strong>example:</strong>
          * <p>HoloStudio</p>
          */
@@ -56,6 +60,8 @@ public class GetProjectRoleResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>The permission type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Read</p>
          */
@@ -95,7 +101,7 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
     public static class GetProjectRoleResponseBodyProjectRole extends TeaModel {
         /**
-         * <p>The code of the role in the DataWorks workspace.</p>
+         * <p>The code of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>role_project_guest</p>
@@ -103,11 +109,14 @@ public class GetProjectRoleResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The permissions for the modules in the workspace.</p>
+         */
         @NameInMap("ModulePermissions")
         public java.util.List<GetProjectRoleResponseBodyProjectRoleModulePermissions> modulePermissions;
 
         /**
-         * <p>The name of the role in the DataWorks workspace.</p>
+         * <p>The name of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>Visitors</p>
@@ -116,7 +125,8 @@ public class GetProjectRoleResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
+         * <p>Note: A fixed value of -1 is returned for a system role.</p>
          * 
          * <strong>example:</strong>
          * <p>10002</p>
@@ -125,10 +135,12 @@ public class GetProjectRoleResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The type of the role in the DataWorks workspace. Valid values:</p>
+         * <p>The type of the workspace role. Valid values:</p>
          * <ul>
-         * <li>UserCustom: user-defined role</li>
-         * <li>System: system role</li>
+         * <li><p>UserCustom: a custom role</p>
+         * </li>
+         * <li><p>System: a system role</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

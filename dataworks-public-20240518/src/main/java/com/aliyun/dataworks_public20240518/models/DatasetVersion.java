@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DatasetVersion extends TeaModel {
     /**
      * <p>The dataset version description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>初始版本</p>
      */
     @NameInMap("Comment")
     public String comment;

@@ -7,9 +7,12 @@ public class UpdateIDEEventResultRequest extends TeaModel {
     /**
      * <p>The check status of the extension for this extension point event. Valid values:</p>
      * <ul>
-     * <li>OK: The extension passed the check for this event.</li>
-     * <li>FAIL: The extension failed the check for this event. You need to review and resolve the error promptly to avoid affecting subsequent program execution.</li>
-     * <li>WARN: The extension passed the check for this event, but with warnings.</li>
+     * <li><p>OK: The extension passed the check for this event.</p>
+     * </li>
+     * <li><p>FAIL: The extension failed the check for this event. You need to review and resolve the error promptly to avoid affecting subsequent program execution.</p>
+     * </li>
+     * <li><p>WARN: The extension passed the check for this event, but with warnings.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

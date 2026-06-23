@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListColumnsRequest extends TeaModel {
     /**
-     * <p>The comment. Fuzzy match is supported.</p>
+     * <p>The column comment. Supports fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>test comment</p>
@@ -14,7 +14,7 @@ public class ListColumnsRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The name. Fuzzy match is supported.</p>
+     * <p>The column name. Supports fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>test_table</p>
@@ -23,10 +23,12 @@ public class ListColumnsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order. Default value: Asc. Valid values:</p>
+     * <p>The sort order. Default: Asc. Valid values:</p>
      * <ul>
-     * <li>Asc</li>
-     * <li>Desc</li>
+     * <li><p>Asc</p>
+     * </li>
+     * <li><p>Desc</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListColumnsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. Default: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +47,7 @@ public class ListColumnsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The page size. Default: 10. Maximum: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,10 +56,12 @@ public class ListColumnsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort field. Default value: Position. Valid values:</p>
+     * <p>The sort field. Default: Position. Valid values:</p>
      * <ul>
-     * <li>Name</li>
-     * <li>Position</li>
+     * <li><p>Name</p>
+     * </li>
+     * <li><p>Position</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,11 +71,11 @@ public class ListColumnsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The table ID. You can refer to the return result of the ListTables operation. and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+     * <p>The table ID. Call the ListTables operation or refer to <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a> to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-column:11075xxxx::test_project:test_schema:test_table</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("TableId")
     public String tableId;

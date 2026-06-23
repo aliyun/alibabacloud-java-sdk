@@ -7,7 +7,7 @@ public class DeleteWorkflowDefinitionRequest extends TeaModel {
     /**
      * <p>The unique identifier of the Data Studio workflow.</p>
      * <blockquote>
-     * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * <p>This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

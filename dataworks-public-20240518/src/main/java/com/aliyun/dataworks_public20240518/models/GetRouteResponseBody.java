@@ -98,7 +98,7 @@ public class GetRouteResponseBody extends TeaModel {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
+         * <p>Serverless_res_group_524257424564736_6831777****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

@@ -221,8 +221,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The environment of the workspace. Valid values:</p>
          * <ul>
-         * <li>Prod</li>
-         * <li>Dev</li>
+         * <li><p>Prod</p>
+         * </li>
+         * <li><p>Dev</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,8 +299,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The environment of the workspace. Valid values:</p>
          * <ul>
-         * <li>Prod: production environment</li>
-         * <li>Dev: development environment</li>
+         * <li><p>Prod: production environment</p>
+         * </li>
+         * <li><p>Dev: development environment</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,9 +324,12 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The rerun mode. Valid values:</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
-         * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-         * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+         * <li><p>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</p>
+         * </li>
+         * <li><p>FailureAllowed: The task can be rerun only after it fails to run.</p>
+         * </li>
+         * <li><p>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,14 +371,22 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li>NotRun: The instance is not run.</li>
-         * <li>Running: The instance is running.</li>
-         * <li>WaitTime: The instance is waiting for the scheduling time to arrive.</li>
-         * <li>CheckingCondition: Branch conditions are being checked for the instance.</li>
-         * <li>WaitResource: The instance is waiting for resources.</li>
-         * <li>Failure: The instance fails to be run.</li>
-         * <li>Success: The instance is successfully run.</li>
-         * <li>Checking: Data quality is being checked for the instance.</li>
+         * <li><p>NotRun: The instance is not run.</p>
+         * </li>
+         * <li><p>Running: The instance is running.</p>
+         * </li>
+         * <li><p>WaitTime: The instance is waiting for the scheduling time to arrive.</p>
+         * </li>
+         * <li><p>CheckingCondition: Branch conditions are being checked for the instance.</p>
+         * </li>
+         * <li><p>WaitResource: The instance is waiting for resources.</p>
+         * </li>
+         * <li><p>Failure: The instance fails to be run.</p>
+         * </li>
+         * <li><p>Success: The instance is successfully run.</p>
+         * </li>
+         * <li><p>Checking: Data quality is being checked for the instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,8 +398,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The scheduling dependency type. Valid values:</p>
          * <ul>
-         * <li>Normal: same-cycle scheduling dependency</li>
-         * <li>CrossCycle: cross-cycle scheduling dependency</li>
+         * <li><p>Normal: same-cycle scheduling dependency</p>
+         * </li>
+         * <li><p>CrossCycle: cross-cycle scheduling dependency</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,7 +441,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
          * <p>The timeout period of task running. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>3600</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
@@ -432,9 +449,12 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -455,8 +475,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li><p>Scheduler: scheduling cycle-based trigger</p>
+         * </li>
+         * <li><p>Manual: manual trigger</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -486,12 +508,18 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
-         * <li>SmokeTest</li>
-         * <li>SupplementData</li>
-         * <li>Manual</li>
-         * <li>ManualWorkflow</li>
-         * <li>Normal</li>
-         * <li>ManualFlow</li>
+         * <li><p>SmokeTest</p>
+         * </li>
+         * <li><p>SupplementData</p>
+         * </li>
+         * <li><p>Manual</p>
+         * </li>
+         * <li><p>ManualWorkflow</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
+         * <li><p>ManualFlow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -970,8 +998,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The environment in which the data source is used. Valid values:</p>
          * <ul>
-         * <li>Dev</li>
-         * <li>Prod</li>
+         * <li><p>Dev</p>
+         * </li>
+         * <li><p>Prod</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1094,15 +1124,24 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li>NotRun: The instance is not run.</li>
-         * <li>Running: The instance is running.</li>
-         * <li>WaitTime: The instance is waiting for the scheduling time to arrive.</li>
-         * <li>CheckingCondition: Branch conditions are being checked for the instance.</li>
-         * <li>WaitResource: The instance is waiting for resources.</li>
-         * <li>Failure: The instance fails to be run.</li>
-         * <li>Success: The instance is successfully run.</li>
-         * <li>Checking: Data quality is being checked for the instance.</li>
-         * <li>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</li>
+         * <li><p>NotRun: The instance is not run.</p>
+         * </li>
+         * <li><p>Running: The instance is running.</p>
+         * </li>
+         * <li><p>WaitTime: The instance is waiting for the scheduling time to arrive.</p>
+         * </li>
+         * <li><p>CheckingCondition: Branch conditions are being checked for the instance.</p>
+         * </li>
+         * <li><p>WaitResource: The instance is waiting for resources.</p>
+         * </li>
+         * <li><p>Failure: The instance fails to be run.</p>
+         * </li>
+         * <li><p>Success: The instance is successfully run.</p>
+         * </li>
+         * <li><p>Checking: Data quality is being checked for the instance.</p>
+         * </li>
+         * <li><p>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1151,9 +1190,12 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
          * <ul>
-         * <li>Pause</li>
-         * <li>Skip</li>
-         * <li>Normal</li>
+         * <li><p>Pause</p>
+         * </li>
+         * <li><p>Skip</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1174,8 +1216,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li><p>Scheduler: scheduling cycle-based trigger</p>
+         * </li>
+         * <li><p>Manual: manual trigger</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1205,11 +1249,16 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
-         * <li>Normal</li>
-         * <li>Manual</li>
-         * <li>SmokeTest</li>
-         * <li>SupplementData</li>
-         * <li>ManualWorkflow</li>
+         * <li><p>Normal</p>
+         * </li>
+         * <li><p>Manual</p>
+         * </li>
+         * <li><p>SmokeTest</p>
+         * </li>
+         * <li><p>SupplementData</p>
+         * </li>
+         * <li><p>ManualWorkflow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1494,8 +1543,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The scheduling dependency type. Valid values:</p>
          * <ul>
-         * <li>Normal</li>
-         * <li>CrossCycle</li>
+         * <li><p>Normal</p>
+         * </li>
+         * <li><p>CrossCycle</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

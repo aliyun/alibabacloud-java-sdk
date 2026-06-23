@@ -8,7 +8,7 @@ public class StopTaskInstancesResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
+     * <p>22C97E95-F023-56B5-8852-B1A77A17****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

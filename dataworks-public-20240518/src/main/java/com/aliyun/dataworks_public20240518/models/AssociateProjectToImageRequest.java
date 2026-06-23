@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateProjectToImageRequest extends TeaModel {
     /**
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AssociateProjectToImageRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

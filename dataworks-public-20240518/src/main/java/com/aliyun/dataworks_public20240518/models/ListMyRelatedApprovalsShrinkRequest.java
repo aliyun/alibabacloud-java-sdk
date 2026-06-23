@@ -4,10 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
+    /**
+     * <p>The permissions.</p>
+     */
     @NameInMap("AccessTypes")
     public String accessTypesShrink;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,16 +21,23 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public String defSchema;
 
     /**
+     * <p>The end of the application time range, specified as a millisecond timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1779724799999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>Filters approvals by the specified principal.</p>
+     */
     @NameInMap("Grantee")
     public String granteeShrink;
 
     /**
+     * <p>The pagination token that acts as a cursor to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzfQ==</p>
      */
@@ -34,16 +45,22 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The resource declaration.</p>
+     */
     @NameInMap("Resource")
     public String resourceShrink;
 
     /**
+     * <p>The resource type, specified as a leaf node name. Multiple values are supported because a single business semantic can be mapped to multiple leaf node names.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +70,8 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public String resourceTypeShrink;
 
     /**
+     * <p>The start of the application time range, specified as a millisecond timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1771948800000</p>
      */
@@ -60,6 +79,24 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Filters the results by approval status. Valid values:</p>
+     * <ul>
+     * <li><p><code>WaitApproval</code>: Pending approval</p>
+     * </li>
+     * <li><p><code>Confirmed</code>: Pending authorization</p>
+     * </li>
+     * <li><p><code>RejectApproval</code>: Approval rejected</p>
+     * </li>
+     * <li><p><code>AuthorizeSucceed</code>: Authorization succeeded</p>
+     * </li>
+     * <li><p><code>AuthorizeFailed</code>: Authorization failed</p>
+     * </li>
+     * <li><p><code>Deleted</code>: Deleted</p>
+     * </li>
+     * <li><p><code>Canceled</code>: Withdrawn</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>WAIT_APPROVAL</p>
      */

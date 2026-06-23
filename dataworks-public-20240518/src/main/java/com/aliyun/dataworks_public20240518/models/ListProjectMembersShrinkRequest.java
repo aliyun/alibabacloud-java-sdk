@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersShrinkRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,8 +23,8 @@ public class ListProjectMembersShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. To obtain this ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks Console</a> and go to the Workspace Management page.</p>
+     * <p>This parameter specifies the DataWorks workspace for the API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,13 +34,13 @@ public class ListProjectMembersShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
+     * <p>A list of role codes for the workspace to filter the results. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to obtain the role codes.</p>
      */
     @NameInMap("RoleCodes")
     public String roleCodesShrink;
 
     /**
-     * <p>The IDs of the accounts used by the members in the workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the IDs of the accounts used by the members in the workspace.</p>
+     * <p>A list of DataWorks user IDs to filter the results. You can find these IDs on the <a href="https://dataworks.console.aliyun.com/product/ms_menu">Tenant Members and Roles</a> page in the Management Center.</p>
      */
     @NameInMap("UserIds")
     public String userIdsShrink;

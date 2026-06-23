@@ -35,7 +35,7 @@ public class CreateAlertRuleShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>279114181716147735</p>
+     * <p>279114181****</p>
      */
     @NameInMap("Owner")
     public String owner;

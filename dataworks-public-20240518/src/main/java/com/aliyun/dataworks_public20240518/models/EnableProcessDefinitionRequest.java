@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableProcessDefinitionRequest extends TeaModel {
     /**
+     * <p>The idempotence token. A UUID is recommended.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9****</p>
      */
@@ -12,6 +14,8 @@ public class EnableProcessDefinitionRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p><strong>process definition ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>f0d6d578-a305-40ac-ba1e-0a09f64cbc69</p>
      */

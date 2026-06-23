@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListPendingApprovalsResponseBody extends TeaModel {
+    /**
+     * <p>The paginated results.</p>
+     */
     @NameInMap("Data")
     public ListPendingApprovalsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5df3a17****903790e8e8a</p>
      */
@@ -37,6 +42,25 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
 
     public static class ListPendingApprovalsResponseBodyDataDataContentsGrantee extends TeaModel {
         /**
+         * <p>The principal ID.</p>
+         * <p>Note: The meaning of this ID varies based on the <code>principalType</code>.</p>
+         * <ul>
+         * <li><p>If the <code>principalType</code> is <code>RamUser</code>, this is the DataWorks user ID.</p>
+         * </li>
+         * <li><p>If the <code>principalType</code> is <code>RamRole</code>, this is the DataWorks user ID, prefixed with &quot;ROLE_&quot;.</p>
+         * </li>
+         * <li><p>If the <code>principalType</code> is <code>DataWorksTenantMember</code>, this is the DataWorks user ID.</p>
+         * </li>
+         * <li><p>If the <code>principalType</code> is <code>DataWorksTenantRole</code>, this is the DataWorks tenant role code.</p>
+         * </li>
+         * <li><p>If the <code>principalType</code> is <code>DataWorksProjectRole</code>, this is the DataWorks workspace role code.</p>
+         * </li>
+         * <li><p>If the <code>principalType</code> is <code>DataWorksProjectMember</code>, this is the DataWorks user ID.</p>
+         * </li>
+         * <li><p>If the <code>principalType</code> is <code>DlfRole</code>, this is the DLF role name.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>213463068144525171</p>
          */
@@ -44,8 +68,26 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String principalId;
 
         /**
+         * <p>The principal type. Valid values:</p>
+         * <ul>
+         * <li><p><code>RamRole</code>: A RAM role.</p>
+         * </li>
+         * <li><p><code>RamUser</code>: A RAM user.</p>
+         * </li>
+         * <li><p><code>DataWorksTenantMember</code>: A DataWorks tenant member.</p>
+         * </li>
+         * <li><p><code>DataWorksTenantRole</code>: A DataWorks tenant role.</p>
+         * </li>
+         * <li><p><code>DataWorksProjectMember</code>: A DataWorks workspace member.</p>
+         * </li>
+         * <li><p><code>DataWorksProjectRole</code>: A DataWorks workspace role.</p>
+         * </li>
+         * <li><p><code>DlfRole</code>: A DLF role.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>User</p>
+         * <p>RamUser</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;
@@ -75,6 +117,8 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
 
     public static class ListPendingApprovalsResponseBodyDataDataContentsResource extends TeaModel {
         /**
+         * <p>The name of the <code>ResourceSchema</code> used to parse the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -82,12 +126,17 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
+         * <p>The version of the <code>ResourceSchema</code> used to parse the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
          */
         @NameInMap("DefVersion")
         public String defVersion;
 
+        /**
+         * <p>The resource metadata. The content is constrained by the DefSchema.</p>
+         */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
 
@@ -123,10 +172,15 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
     }
 
     public static class ListPendingApprovalsResponseBodyDataDataContents extends TeaModel {
+        /**
+         * <p>The permissions requested for the resource.</p>
+         */
         @NameInMap("AccessTypes")
         public java.util.List<String> accessTypes;
 
         /**
+         * <p>The authorization method.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -134,6 +188,8 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String authMethod;
 
         /**
+         * <p>The creation time of the entry.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-11 10:13:21</p>
          */
@@ -141,6 +197,8 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -148,19 +206,29 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
+         * <p>The permission expiration time, in milliseconds since the Unix epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1782354014507</p>
          */
         @NameInMap("ExpirationTime")
         public Long expirationTime;
 
+        /**
+         * <p>The final permissions granted after approval.</p>
+         */
         @NameInMap("FinalAccessTypes")
         public java.util.List<String> finalAccessTypes;
 
+        /**
+         * <p>Information about the grantee.</p>
+         */
         @NameInMap("Grantee")
         public ListPendingApprovalsResponseBodyDataDataContentsGrantee grantee;
 
         /**
+         * <p>The unique identifier of the requested item.</p>
+         * 
          * <strong>example:</strong>
          * <p>210001918826</p>
          */
@@ -168,16 +236,23 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p><strong>The process instance ID.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>176906667488145</p>
          */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <p>The resource declaration.</p>
+         */
         @NameInMap("Resource")
         public ListPendingApprovalsResponseBodyDataDataContentsResource resource;
 
         /**
+         * <p>The type of the resource, such as a table or function.</p>
+         * 
          * <strong>example:</strong>
          * <p>table</p>
          */
@@ -185,13 +260,33 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The approval status. Valid values:</p>
+         * <ul>
+         * <li><p><code>WaitApproval</code>: Pending approval</p>
+         * </li>
+         * <li><p><code>Confirmed</code>: Pending authorization</p>
+         * </li>
+         * <li><p><code>RejectApproval</code>: Rejected</p>
+         * </li>
+         * <li><p><code>AuthorizeSucceed</code>: Authorization successful</p>
+         * </li>
+         * <li><p><code>AuthorizeFailed</code>: Authorization failed</p>
+         * </li>
+         * <li><p><code>Deleted</code>: Deleted</p>
+         * </li>
+         * <li><p><code>Canceled</code>: Canceled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>WAIT_APPROVAL</p>
+         * <p>Deleted</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>69973837489</p>
          */
@@ -199,6 +294,8 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The time the entry was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-06 19:13:05</p>
          */
@@ -325,13 +422,24 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
     }
 
     public static class ListPendingApprovalsResponseBodyDataData extends TeaModel {
+        /**
+         * <p>The submission time of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>申请时间</p>
+         */
         @NameInMap("ApplicationTime")
         public Long applicationTime;
 
+        /**
+         * <p>The content of the request.</p>
+         */
         @NameInMap("Contents")
         public java.util.List<ListPendingApprovalsResponseBodyDataDataContents> contents;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
@@ -339,18 +447,44 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
+         * <p>The process instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>176906667488145</p>
          */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <p>The reason for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>业务需要</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         /**
+         * <p>The approval status. Valid values:</p>
+         * <ul>
+         * <li><p><code>WaitApproval</code>: Pending approval</p>
+         * </li>
+         * <li><p><code>Confirmed</code>: Pending authorization</p>
+         * </li>
+         * <li><p><code>RejectApproval</code>: Rejected</p>
+         * </li>
+         * <li><p><code>AuthorizeSucceed</code>: Authorization successful</p>
+         * </li>
+         * <li><p><code>AuthorizeFailed</code>: Authorization failed</p>
+         * </li>
+         * <li><p><code>Deleted</code>: Deleted</p>
+         * </li>
+         * <li><p><code>Canceled</code>: Canceled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>WAIT_APPROVAL</p>
+         * <p>Deleted</p>
          */
         @NameInMap("Status")
         public String status;
@@ -411,10 +545,15 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
     }
 
     public static class ListPendingApprovalsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of pending approvals.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListPendingApprovalsResponseBodyDataData> data;
 
         /**
+         * <p>Indicates whether more data is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -422,6 +561,8 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public Boolean hasMore;
 
         /**
+         * <p>A token to retrieve the next page of results.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJpZCI6MTIzfQ==</p>
          */
@@ -429,6 +570,8 @@ public class ListPendingApprovalsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The page size. Default: 10. Maximum: 200.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentsRequest extends TeaModel {
     /**
+     * <p>The request ID passed in by the caller. The value is returned as-is in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>4as3dasf654a</p>
      */
@@ -12,12 +14,17 @@ public class ListAgentsRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>The parameters for this request.</p>
+     */
     @NameInMap("Params")
     public ListAgentsRequestParams params;
 
@@ -52,6 +59,8 @@ public class ListAgentsRequest extends TeaModel {
 
     public static class ListAgentsRequestParams extends TeaModel {
         /**
+         * <p>The exact agent name to filter by. If not specified, all agents are returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat_cli_chatbi</p>
          */
@@ -59,6 +68,8 @@ public class ListAgentsRequest extends TeaModel {
         public String agentName;
 
         /**
+         * <p>The number of entries per page. Default value: 50.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -66,6 +77,8 @@ public class ListAgentsRequest extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token for the next page, following the Alibaba Cloud OpenAPI convention. Do not specify this parameter for the first page. For subsequent pages, pass in the nextToken value returned in the previous response.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

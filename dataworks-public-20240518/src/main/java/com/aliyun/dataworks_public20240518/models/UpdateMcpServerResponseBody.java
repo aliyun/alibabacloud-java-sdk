@@ -4,10 +4,17 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class UpdateMcpServerResponseBody extends TeaModel {
+    /**
+     * <ul>
+     * <li>The details of the updated MCP Server.</li>
+     * </ul>
+     */
     @NameInMap("McpServer")
     public UpdateMcpServerResponseBodyMcpServer mcpServer;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
      */
@@ -37,6 +44,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
 
     public static class UpdateMcpServerResponseBodyMcpServer extends TeaModel {
         /**
+         * <p>The creation time. This value is a millisecond timestamp.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -46,6 +54,7 @@ public class UpdateMcpServerResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p><strong>The last modification time. This value is a millisecond timestamp.</strong></p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -55,6 +64,8 @@ public class UpdateMcpServerResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p><strong>The name of the MCP Server.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>my-mcp-server</p>
          */

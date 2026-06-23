@@ -44,8 +44,10 @@ public class SubmitFileRequest extends TeaModel {
     /**
      * <p>Whether to skip the pre-deployment check after the file is submitted:</p>
      * <ul>
-     * <li>false: Do not skip. After the file is submitted, the system automatically triggers the pre-deployment check. The file becomes available for deployment only after the check is passed.</li>
-     * <li>true: Skip. After the file is submitted, the system does not trigger the pre-deployment check. The file can proceed directly to deployment.</li>
+     * <li><p>false: Do not skip. After the file is submitted, the system automatically triggers the pre-deployment check. The file becomes available for deployment only after the check is passed.</p>
+     * </li>
+     * <li><p>true: Skip. After the file is submitted, the system does not trigger the pre-deployment check. The file can proceed directly to deployment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

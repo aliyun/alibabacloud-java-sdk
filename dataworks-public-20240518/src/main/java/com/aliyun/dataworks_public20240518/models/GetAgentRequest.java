@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentRequest extends TeaModel {
     /**
+     * <p>The name of the skill to retrieve.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

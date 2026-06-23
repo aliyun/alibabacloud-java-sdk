@@ -136,7 +136,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * <p>The ID of the script.</p>
          * <blockquote>
-         * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <p>The database name. This parameter is used only when the function type is EMR Function.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>EMR_lake</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
@@ -265,11 +265,16 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <p>The nested code type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Python2</li>
-         * <li>Python3</li>
-         * <li>Java8</li>
-         * <li>Java11</li>
-         * <li>Java17</li>
+         * <li><p>Python2</p>
+         * </li>
+         * <li><p>Python3</p>
+         * </li>
+         * <li><p>Java8</p>
+         * </li>
+         * <li><p>Java11</p>
+         * </li>
+         * <li><p>Java17</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,8 +287,10 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <p>The nested resource type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>File: General resource file.</li>
-         * <li>Embedded: Embedded resource.</li>
+         * <li><p>File: General resource file.</p>
+         * </li>
+         * <li><p>Embedded: Embedded resource.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,7 +321,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * <p>The unique identifier of the UDF.</p>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -394,16 +401,22 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <p>The UDF type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Math: Mathematical operation functions</li>
-         * <li>Aggregate: Aggregation functions</li>
-         * <li>String: String processing functions</li>
-         * <li>Date: Date functions</li>
-         * <li>Analytic: Window functions</li>
-         * <li>Other: Other functions</li>
+         * <li><p>Math: Mathematical operation functions</p>
+         * </li>
+         * <li><p>Aggregate: Aggregation functions</p>
+         * </li>
+         * <li><p>String: String processing functions</p>
+         * </li>
+         * <li><p>Date: Date functions</p>
+         * </li>
+         * <li><p>Analytic: Window functions</p>
+         * </li>
+         * <li><p>Other: Other functions</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>MATH</p>
+         * <p>Math</p>
          */
         @NameInMap("Type")
         public String type;

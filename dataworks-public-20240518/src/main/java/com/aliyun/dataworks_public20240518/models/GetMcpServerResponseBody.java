@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetMcpServerResponseBody extends TeaModel {
+    /**
+     * <p>The MCP Server configuration.</p>
+     */
     @NameInMap("McpServer")
     public GetMcpServerResponseBodyMcpServer mcpServer;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</p>
      */
@@ -36,10 +41,18 @@ public class GetMcpServerResponseBody extends TeaModel {
     }
 
     public static class GetMcpServerResponseBodyMcpServerConfig extends TeaModel {
+        /**
+         * <p>The custom headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("CustomHeaders")
         public java.util.Map<String, ?> customHeaders;
 
         /**
+         * <p>The transport protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>SSE</p>
          */
@@ -47,6 +60,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String transport;
 
         /**
+         * <p>The service address of the MCP Server.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp/sse">https://example.com/mcp/sse</a></p>
          */
@@ -85,10 +100,15 @@ public class GetMcpServerResponseBody extends TeaModel {
     }
 
     public static class GetMcpServerResponseBodyMcpServer extends TeaModel {
+        /**
+         * <p>The connection configuration for the MCP Server.</p>
+         */
         @NameInMap("Config")
         public GetMcpServerResponseBodyMcpServerConfig config;
 
         /**
+         * <p>The creator ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -96,6 +116,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String creatorId;
 
         /**
+         * <p>The creation time, provided as a timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +126,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The modification time, provided as a timestamp in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +136,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The modifier ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -121,12 +145,20 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String modifierId;
 
         /**
+         * <p>The MCP Server name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-mcp-server</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The visibility level. Valid values: TENANT (visible within the account), PROJECT (visible to specified projects), and USER (visible to specified users).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TENANT</p>
+         */
         @NameInMap("Visibility")
         public String visibility;
 

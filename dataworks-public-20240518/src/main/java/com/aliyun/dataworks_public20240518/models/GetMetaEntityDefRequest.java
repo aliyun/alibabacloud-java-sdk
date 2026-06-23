@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaEntityDefRequest extends TeaModel {
     /**
+     * <p>The entity type. The value must match the regular expression <code>^custom_(?:entity-[A-Za-z0-9_]+|[A-Za-z0-9_]+-(?:database|table|column))$</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -19,7 +19,7 @@ public class CreateNetworkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
+     * <p>Serverless_res_group_524257424564736_6831777003****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

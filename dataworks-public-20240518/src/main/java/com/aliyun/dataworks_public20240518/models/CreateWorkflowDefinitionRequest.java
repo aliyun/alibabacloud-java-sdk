@@ -50,7 +50,6 @@ public class CreateWorkflowDefinitionRequest extends TeaModel {
      *                     &quot;failureStrategy&quot;: &quot;Break&quot;
      *                 },
      *                 &quot;name&quot;: &quot;OpenAPITestWorkflowDemo&quot;,
-     *                 &quot;inputs&quot;: {},
      *                 &quot;outputs&quot;: {
      *                     &quot;nodeOutputs&quot;: [
      *                         {
@@ -60,7 +59,6 @@ public class CreateWorkflowDefinitionRequest extends TeaModel {
      *                         }
      *                     ]
      *                 },
-     *                 &quot;nodes&quot;: [],
      *                 &quot;dependencies&quot;: []
      *             }
      *         ]

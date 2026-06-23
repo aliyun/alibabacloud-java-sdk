@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListParametersResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListParametersResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -37,6 +42,14 @@ public class ListParametersResponseBody extends TeaModel {
 
     public static class ListParametersResponseBodyPagingInfoParametersProperties extends TeaModel {
         /**
+         * <p>The environment type. Valid values:</p>
+         * <ul>
+         * <li><p><code>Prod</code>: production environment</p>
+         * </li>
+         * <li><p><code>Dev</code>: development environment</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Prod</p>
          */
@@ -44,6 +57,8 @@ public class ListParametersResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value123</p>
          */
@@ -75,6 +90,8 @@ public class ListParametersResponseBody extends TeaModel {
 
     public static class ListParametersResponseBodyPagingInfoParameters extends TeaModel {
         /**
+         * <p>The time when the parameter was created. This value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640000000000</p>
          */
@@ -82,6 +99,8 @@ public class ListParametersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The Alibaba Cloud account ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
@@ -89,13 +108,17 @@ public class ListParametersResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The parameter description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>这是一个测试参数</p>
+         * <p>This is a test parameter.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The parameter ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -103,6 +126,8 @@ public class ListParametersResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The time when the parameter was last modified. This value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640000000000</p>
          */
@@ -110,6 +135,8 @@ public class ListParametersResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The Alibaba Cloud account ID of the user who last modified the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
@@ -117,6 +144,8 @@ public class ListParametersResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace.para</p>
          */
@@ -124,6 +153,8 @@ public class ListParametersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Alibaba Cloud account ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
@@ -131,16 +162,23 @@ public class ListParametersResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The environment-specific values for the parameter.</p>
+         */
         @NameInMap("Properties")
         public java.util.List<ListParametersResponseBodyPagingInfoParametersProperties> properties;
 
         /**
+         * <p>The parameter scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>Project</p>
          */
@@ -148,6 +186,16 @@ public class ListParametersResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>The parameter type. Valid values:</p>
+         * <ul>
+         * <li><p><code>PlainConstant</code>: a plaintext constant</p>
+         * </li>
+         * <li><p><code>SecretConstant</code>: an encrypted constant</p>
+         * </li>
+         * <li><p><code>Variable</code>: a variable</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PlainConstant</p>
          */
@@ -155,6 +203,8 @@ public class ListParametersResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -274,6 +324,8 @@ public class ListParametersResponseBody extends TeaModel {
 
     public static class ListParametersResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -281,16 +333,23 @@ public class ListParametersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>A list of parameters.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<ListParametersResponseBodyPagingInfoParameters> parameters;
 
         /**
+         * <p>The total number of parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

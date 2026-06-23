@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityEvaluationTaskInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the data quality monitoring task.</p>
+     * <p>The ID of the data quality evaluation task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>200001</p>
+     * <p>2000011</p>
      */
     @NameInMap("DataQualityEvaluationTaskId")
     public Long dataQualityEvaluationTaskId;
 
     /**
-     * <p>Data quality verification execution parameters in JSON format. The available keys are as follows:</p>
+     * <p>The execution parameters of the data quality evaluation in the JSON format. The following keys are available:</p>
      * <ul>
-     * <li>triggerTime: the millisecond timestamp of the trigger time. The baseline time of the $[yyyymmdd] expression in the data range of data quality monitoring. Required.</li>
+     * <li>triggerTime: the millisecond timestamp of the trigger time. This is the base time for the $[yyyymmdd] expression in the data range of data quality monitoring. This key is required.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,8 +28,8 @@ public class CreateDataQualityEvaluationTaskInstanceShrinkRequest extends TeaMod
     public String parameters;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-     * <p>This parameter is used to determine the DataWorks workspaces used for this API call.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace in which this API operation is performed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateDataQualityEvaluationTaskInstanceShrinkRequest extends TeaMod
     public Long projectId;
 
     /**
-     * <p>Resource Group information, which must be filled in when running non-MaxCompute data quality verification.</p>
+     * <p>The resource group information. This parameter is required when you run a data quality evaluation on a non-MaxCompute data source.</p>
      */
     @NameInMap("RuntimeResource")
     public String runtimeResourceShrink;

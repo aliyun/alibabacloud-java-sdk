@@ -31,8 +31,10 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     /**
      * <p>The project environment.</p>
      * <ul>
-     * <li>Prod</li>
-     * <li>Dev</li>
+     * <li><p>Prod</p>
+     * </li>
+     * <li><p>Dev</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,8 +56,10 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     /**
      * <p>The instance generation mode.</p>
      * <ul>
-     * <li>T+1: the next day</li>
-     * <li>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</li>
+     * <li><p>T+1: the next day</p>
+     * </li>
+     * <li><p>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

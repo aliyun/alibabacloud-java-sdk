@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetParameterRequest extends TeaModel {
     /**
+     * <p>The ID of the parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

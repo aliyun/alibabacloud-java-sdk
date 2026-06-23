@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
+    /**
+     * <p>The JSON-RPC response object.</p>
+     */
     @NameInMap("JsonRpcResponse")
     public GetAgentSessionArtifactMetaResponseBodyJsonRpcResponse jsonRpcResponse;
 
     /**
+     * <p>The ID of the request. You can use it to trace the request in logs.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE70C54F-A3BD-5C19-88EF-2A7D3451C449</p>
      */
@@ -36,10 +41,18 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
     }
 
     public static class GetAgentSessionArtifactMetaResponseBodyJsonRpcResponseResult extends TeaModel {
+        /**
+         * <p>The content of the artifact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is md content</p>
+         */
         @NameInMap("ArtifactContent")
         public String artifactContent;
 
         /**
+         * <p>The name of the artifact.</p>
+         * 
          * <strong>example:</strong>
          * <p>mock_report.md</p>
          */
@@ -47,6 +60,8 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
         public String artifactName;
 
         /**
+         * <p>The path of the artifact.</p>
+         * 
          * <strong>example:</strong>
          * <p>mock/mock_report.md</p>
          */
@@ -86,6 +101,8 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
 
     public static class GetAgentSessionArtifactMetaResponseBodyJsonRpcResponse extends TeaModel {
         /**
+         * <p>The ID from the original request.</p>
+         * 
          * <strong>example:</strong>
          * <p>300010555</p>
          */
@@ -93,12 +110,17 @@ public class GetAgentSessionArtifactMetaResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The JSON-RPC version. The value is <code>2.0</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
         @NameInMap("Jsonrpc")
         public String jsonrpc;
 
+        /**
+         * <p>Contains the metadata and content of the artifact.</p>
+         */
         @NameInMap("Result")
         public GetAgentSessionArtifactMetaResponseBodyJsonRpcResponseResult result;
 

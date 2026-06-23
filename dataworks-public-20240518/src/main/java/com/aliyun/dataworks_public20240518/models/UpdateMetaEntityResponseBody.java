@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMetaEntityResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</p>
@@ -13,10 +13,15 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the update operation.</p>
+     */
     @NameInMap("Result")
     public UpdateMetaEntityResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +59,8 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
 
     public static class UpdateMetaEntityResponseBodyResult extends TeaModel {
         /**
+         * <p>The ID of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom_entity-customer_api:api_001</p>
          */
@@ -61,6 +68,8 @@ public class UpdateMetaEntityResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Indicates whether the update was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

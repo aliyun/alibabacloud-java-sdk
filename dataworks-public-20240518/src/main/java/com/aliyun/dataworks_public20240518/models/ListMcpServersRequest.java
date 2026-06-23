@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMcpServersRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListMcpServersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The next page token from a previous response. Use this token to retrieve the next page of results. Leave this parameter empty for the first request.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -19,6 +23,8 @@ public class ListMcpServersRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The search keyword for a fuzzy search on MCP Server names.</p>
+     * 
      * <strong>example:</strong>
      * <p>mcp</p>
      */
@@ -26,6 +32,8 @@ public class ListMcpServersRequest extends TeaModel {
     public String q;
 
     /**
+     * <p>The visibility level for filtering the results.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>

@@ -80,9 +80,12 @@ public class GetJobStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the asynchronous task. Valid values:</p>
          * <ul>
-         * <li><strong>Create</strong>: The asynchronous task is used to create an object.</li>
-         * <li><strong>Update</strong>: The asynchronous task is used to update an object.</li>
-         * <li><strong>Cancel</strong>: The asynchronous task is used to cancel an operation.</li>
+         * <li><p><strong>Create</strong>: The asynchronous task is used to create an object.</p>
+         * </li>
+         * <li><p><strong>Update</strong>: The asynchronous task is used to update an object.</p>
+         * </li>
+         * <li><p><strong>Cancel</strong>: The asynchronous task is used to cancel an operation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,10 +97,14 @@ public class GetJobStatusResponseBody extends TeaModel {
         /**
          * <p>The status of the asynchronous task. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong></li>
-         * <li><strong>Fail</strong></li>
-         * <li><strong>Cancel</strong></li>
-         * <li><strong>Running</strong></li>
+         * <li><p><strong>Success</strong></p>
+         * </li>
+         * <li><p><strong>Fail</strong></p>
+         * </li>
+         * <li><p><strong>Cancel</strong></p>
+         * </li>
+         * <li><p><strong>Running</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

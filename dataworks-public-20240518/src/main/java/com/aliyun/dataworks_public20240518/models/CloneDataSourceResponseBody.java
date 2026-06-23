@@ -14,7 +14,7 @@ public class CloneDataSourceResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>FCD583B9-346B-5E75-82C1-4A7C192C48DB</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApproveProcessInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5df3a17***903790e8e8a</p>
      */

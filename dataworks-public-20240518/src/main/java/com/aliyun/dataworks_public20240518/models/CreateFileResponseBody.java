@@ -52,8 +52,10 @@ public class CreateFileResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call succeeded. Valid values:</p>
      * <ul>
-     * <li>true: The call succeeded.</li>
-     * <li>false: The call failed.</li>
+     * <li><p>true: The call succeeded.</p>
+     * </li>
+     * <li><p>false: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

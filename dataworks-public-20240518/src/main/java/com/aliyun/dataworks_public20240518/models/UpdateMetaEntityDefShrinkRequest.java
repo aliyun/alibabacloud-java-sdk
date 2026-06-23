@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMetaEntityDefShrinkRequest extends TeaModel {
     /**
+     * <p>The new description.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMetaEntityDefShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The new display name. The maximum length is 32 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>Business API</p>
      */
@@ -19,6 +23,7 @@ public class UpdateMetaEntityDefShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The entity type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class UpdateMetaEntityDefShrinkRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <p>The new attribute definitions. New attributes must be optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -35,6 +42,8 @@ public class UpdateMetaEntityDefShrinkRequest extends TeaModel {
     public String newAttributeDefsShrink;
 
     /**
+     * <p>The updates to existing attribute definitions. You can modify only the display name and description. You can also add enumerated values for attributes of the ENUM type.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */

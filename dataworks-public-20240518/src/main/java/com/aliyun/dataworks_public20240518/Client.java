@@ -72,7 +72,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("me-east-1", "dataworks.me-east-1.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "dataworks.aliyuncs.com"),
             new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com")
+            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "dataworks.me-central-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "dataworks.ap-northeast-2.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dataworks-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -193,7 +195,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation may not be available in earlier versions of the SDK. In this case, use the AbolishDeployment operation. The parameters for AbolishDeployment are the same as those described in this topic.</p>
+     * <p>Notice: 
+     * This API may not be available in earlier versions of the SDK. In that case, use the AbolishDeployment API, which accepts the same parameters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -234,7 +237,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation may not be available in earlier versions of the SDK. In this case, use the AbolishDeployment operation. The parameters for AbolishDeployment are the same as those described in this topic.</p>
+     * <p>Notice: 
+     * This API may not be available in earlier versions of the SDK. In that case, use the AbolishDeployment API, which accepts the same parameters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -249,6 +253,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Adds an entity to a collection in Data Map. Collections include categories and data albums. Entities can be only tables. If you want to add an entity to a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
@@ -289,6 +298,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Adds an entity to a collection in Data Map. Collections include categories and data albums. Entities can be only tables. If you want to add an entity to a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
@@ -301,8 +315,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request details</h2>
+     * <ul>
+     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: A list of permission requests. Each request includes a resource (Resource), a principal (Grantee), the requested permission types (AccessTypes), and the permission expiration time (ExpirationTime). A single request can contain a maximum of 400 items.</li>
+     * <li><strong>Resource</strong>: The resource for which permissions are requested. You must specify the <code>name</code> and <code>version</code> of the <code>ResourceSchema</code> required for parsing, along with the resource metadata (<code>MetaData</code>).</li>
+     * <li><strong>Grantee</strong>: The principal to which permissions are granted. You must specify the principal type (<code>PrincipalType</code>) and principal ID (<code>PrincipalId</code>).</li>
+     * <li><strong>AccessTypes</strong>: A list of permission types.</li>
+     * <li><strong>ExpirationTime</strong>: The permission expiration time, specified as a Unix timestamp in milliseconds.</li>
+     * <li><strong>AuthMethod</strong>: The authorization method. This parameter is optional. If not specified, the system\&quot;s default authorization method is used.</li>
+     * <li><strong>ClientToken</strong>: A client token to ensure request idempotency. This parameter is optional.
+     * Ensure that all required fields are correctly filled out and meet their respective constraints. For example, the <code>DefVersion</code> and <code>MetaData</code> in the <code>Resource</code> object must match the selected <code>DefSchema</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发起资源访问权限申请</p>
+     * <p>Submits a request for permissions on specific resources.</p>
      * 
      * @param tmpReq ApplyResourceAccessPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -347,8 +375,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request details</h2>
+     * <ul>
+     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: A list of permission requests. Each request includes a resource (Resource), a principal (Grantee), the requested permission types (AccessTypes), and the permission expiration time (ExpirationTime). A single request can contain a maximum of 400 items.</li>
+     * <li><strong>Resource</strong>: The resource for which permissions are requested. You must specify the <code>name</code> and <code>version</code> of the <code>ResourceSchema</code> required for parsing, along with the resource metadata (<code>MetaData</code>).</li>
+     * <li><strong>Grantee</strong>: The principal to which permissions are granted. You must specify the principal type (<code>PrincipalType</code>) and principal ID (<code>PrincipalId</code>).</li>
+     * <li><strong>AccessTypes</strong>: A list of permission types.</li>
+     * <li><strong>ExpirationTime</strong>: The permission expiration time, specified as a Unix timestamp in milliseconds.</li>
+     * <li><strong>AuthMethod</strong>: The authorization method. This parameter is optional. If not specified, the system\&quot;s default authorization method is used.</li>
+     * <li><strong>ClientToken</strong>: A client token to ensure request idempotency. This parameter is optional.
+     * Ensure that all required fields are correctly filled out and meet their respective constraints. For example, the <code>DefVersion</code> and <code>MetaData</code> in the <code>Resource</code> object must match the selected <code>DefSchema</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发起资源访问权限申请</p>
+     * <p>Submits a request for permissions on specific resources.</p>
      * 
      * @param request ApplyResourceAccessPermissionRequest
      * @return ApplyResourceAccessPermissionResponse
@@ -359,8 +401,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation allows you to approve or reject a specified approval process instance by passing in the ProcessInstanceId and approval information (including ApprovalComment and ApprovalAction).</li>
+     * <li>ApprovalAction can be Agree or Deny, indicating approval or rejection respectively.</li>
+     * <li>ApprovalComment is required and records the specific approval opinion.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>审批权限申请流程实例</p>
+     * <p>Approves or rejects a specified approval process instance.</p>
      * 
      * @param request ApproveProcessInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -379,6 +429,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newExpiration)) {
+            body.put("NewExpiration", request.newExpiration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.processInstanceId)) {
@@ -403,8 +457,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation allows you to approve or reject a specified approval process instance by passing in the ProcessInstanceId and approval information (including ApprovalComment and ApprovalAction).</li>
+     * <li>ApprovalAction can be Agree or Deny, indicating approval or rejection respectively.</li>
+     * <li>ApprovalComment is required and records the specific approval opinion.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>审批权限申请流程实例</p>
+     * <p>Approves or rejects a specified approval process instance.</p>
      * 
      * @param request ApproveProcessInstanceRequest
      * @return ApproveProcessInstanceResponse
@@ -415,8 +477,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or later to use this operation.</li>
+     * <li><strong>Ensure the AliyunServiceRoleForDataWorks service-linked role is created before you call this operation.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Adds a custom image to a workspace.</p>
+     * <p>Associates an image with a workspace.</p>
      * 
      * @param request AssociateProjectToImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -451,8 +519,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or later to use this operation.</li>
+     * <li><strong>Ensure the AliyunServiceRoleForDataWorks service-linked role is created before you call this operation.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Adds a custom image to a workspace.</p>
+     * <p>Associates an image with a workspace.</p>
      * 
      * @param request AssociateProjectToImageRequest
      * @return AssociateProjectToImageResponse
@@ -465,15 +539,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * <li>This operation requires DataWorks Basic Edition or a more advanced edition.</li>
+     * <li>You must have one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * <li>tenant owner, workspace administrator, project owner, or operator</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Bind a resource group to a workspace.</p>
+     * <p>Associates a resource group with a workspace.</p>
      * 
      * @param request AssociateProjectToResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -510,15 +584,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * <li>This operation requires DataWorks Basic Edition or a more advanced edition.</li>
+     * <li>You must have one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * <li>tenant owner, workspace administrator, project owner, or operator</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Bind a resource group to a workspace.</p>
+     * <p>Associates a resource group with a workspace.</p>
      * 
      * @param request AssociateProjectToResourceGroupRequest
      * @return AssociateProjectToResourceGroupResponse
@@ -529,8 +603,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Associates monitoring rules with a data quality monitoring task.</p>
+     * <p>Associates data quality rules with a data quality monitoring task.</p>
      * 
      * @deprecated OpenAPI AttachDataQualityRulesToEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
      * 
@@ -579,8 +656,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Associates monitoring rules with a data quality monitoring task.</p>
+     * <p>Associates data quality rules with a data quality monitoring task.</p>
      * 
      * @deprecated OpenAPI AttachDataQualityRulesToEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
      * 
@@ -595,8 +675,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Professional Edition or a higher edition to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create multiple metadata entities at a time. The metadata entities in a batch must be of the same type. Only the pure custom type and the extended table type (corresponding to Database/Table) are supported.</p>
+     * <p>Creates metadata entities in a batch. All entities within a batch must have the same entity type. This operation currently supports only custom types and extended table types, which represent databases and tables.</p>
      * 
      * @param tmpReq BatchCreateMetaEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -633,8 +716,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Professional Edition or a higher edition to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create multiple metadata entities at a time. The metadata entities in a batch must be of the same type. Only the pure custom type and the extended table type (corresponding to Database/Table) are supported.</p>
+     * <p>Creates metadata entities in a batch. All entities within a batch must have the same entity type. This operation currently supports only custom types and extended table types, which represent databases and tables.</p>
      * 
      * @param request BatchCreateMetaEntitiesRequest
      * @return BatchCreateMetaEntitiesResponse
@@ -645,8 +731,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation requires DataWorks Professional Edition or higher.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes metadata entity objects in batches. You can delete custom entities and extended table type objects (Database/Table). You cannot delete columns separately. To delete associated column objects, delete the table.</p>
+     * <p>Deletes multiple meta entities in a batch. This operation deletes custom meta entities and extended table-based objects, such as databases and tables. You cannot delete a column individually. Instead, you must delete the entire table to remove its associated columns.</p>
      * 
      * @param tmpReq BatchDeleteMetaEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -683,8 +772,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation requires DataWorks Professional Edition or higher.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes metadata entity objects in batches. You can delete custom entities and extended table type objects (Database/Table). You cannot delete columns separately. To delete associated column objects, delete the table.</p>
+     * <p>Deletes multiple meta entities in a batch. This operation deletes custom meta entities and extended table-based objects, such as databases and tables. You cannot delete a column individually. Instead, you must delete the entire table to remove its associated columns.</p>
      * 
      * @param request BatchDeleteMetaEntitiesRequest
      * @return BatchDeleteMetaEntitiesResponse
@@ -696,7 +788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Performs incremental updates on multiple tasks at a time.</p>
@@ -741,7 +833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Performs incremental updates on multiple tasks at a time.</p>
@@ -755,8 +847,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation is used to actively interrupt an ongoing session, especially when the session is generating a streaming response.</li>
+     * <li><code>sessionId</code> is a required parameter that identifies the specific session to cancel.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Interrupts an agent call for a specified session. Streaming response interruption is supported.</p>
+     * <p>Cancels an agent call in a specified session. This operation also supports interrupting an ongoing streaming response.</p>
      * 
      * @param tmpReq CancelAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -801,8 +900,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation is used to actively interrupt an ongoing session, especially when the session is generating a streaming response.</li>
+     * <li><code>sessionId</code> is a required parameter that identifies the specific session to cancel.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Interrupts an agent call for a specified session. Streaming response interruption is supported.</p>
+     * <p>Cancels an agent call in a specified session. This operation also supports interrupting an ongoing streaming response.</p>
      * 
      * @param request CancelAgentSessionRequest
      * @return CancelAgentSessionResponse
@@ -815,15 +921,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Clones an existing data source.</p>
+     * <p>Clones a data source to create a new data source with the same configurations.</p>
      * 
      * @param request CloneDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -860,15 +966,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Clones an existing data source.</p>
+     * <p>Clones a data source to create a new data source with the same configurations.</p>
      * 
      * @param request CloneDataSourceRequest
      * @return CloneDataSourceResponse
@@ -879,8 +985,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li><strong>Agent Name</strong>: Must be unique under the current account.</li>
+     * <li><strong>Model Configuration</strong>: An optional parameter used to specify the model used by the Agent and its related settings.</li>
+     * <li><strong>Visibility Level</strong>: Defines who can access the Agent. Supports visibility within the account, to specified projects, or to specific users.</li>
+     * <li><strong>Visibility Scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, the specific project ID or user ID list must be further specified.</li>
+     * <li><strong>Other Parameters</strong>: Items such as display name and description are optional and can be filled in based on actual needs.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建 Agent</p>
+     * <p>Create Agent</p>
      * 
      * @param tmpReq CreateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -977,8 +1093,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li><strong>Agent Name</strong>: Must be unique under the current account.</li>
+     * <li><strong>Model Configuration</strong>: An optional parameter used to specify the model used by the Agent and its related settings.</li>
+     * <li><strong>Visibility Level</strong>: Defines who can access the Agent. Supports visibility within the account, to specified projects, or to specific users.</li>
+     * <li><strong>Visibility Scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, the specific project ID or user ID list must be further specified.</li>
+     * <li><strong>Other Parameters</strong>: Items such as display name and description are optional and can be filled in based on actual needs.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建 Agent</p>
+     * <p>Create Agent</p>
      * 
      * @param request CreateAgentRequest
      * @return CreateAgentResponse
@@ -989,8 +1115,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API creates a new agent session.</li>
+     * <li>You must specify the agent name to bind to the session using the <code>_meta.agent.agentName</code> parameter.</li>
+     * <li>You can specify a session source identifier in the <code>_meta.config.sessionSource</code> parameter. This allows you to search for sessions by source later.</li>
+     * <li>You can add session tags using the <code>_meta.config.sessionTags[].sessionTagCode</code> parameter.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a new Agent session and returns the session ID.</p>
+     * <p>Creates a new agent session and returns a session ID.</p>
      * 
      * @param tmpReq CreateAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1035,8 +1170,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API creates a new agent session.</li>
+     * <li>You must specify the agent name to bind to the session using the <code>_meta.agent.agentName</code> parameter.</li>
+     * <li>You can specify a session source identifier in the <code>_meta.config.sessionSource</code> parameter. This allows you to search for sessions by source later.</li>
+     * <li>You can add session tags using the <code>_meta.config.sessionTags[].sessionTagCode</code> parameter.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a new Agent session and returns the session ID.</p>
+     * <p>Creates a new agent session and returns a session ID.</p>
      * 
      * @param request CreateAgentSessionRequest
      * @return CreateAgentSessionResponse
@@ -1181,6 +1325,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Creates components.</p>
      * 
@@ -1221,6 +1371,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Creates components.</p>
      * 
@@ -1233,6 +1389,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or a more advanced edition is required.
+     * You must have at least one of the following roles in the DataWorks workspace:
+     * Tenant Owner, Workspace Administrator, Project Owner, O\&amp;M</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a computing resource in the specified workspace. The resource can be for a development environment or a production environment.</p>
      * 
@@ -1285,6 +1446,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or a more advanced edition is required.
+     * You must have at least one of the following roles in the DataWorks workspace:
+     * Tenant Owner, Workspace Administrator, Project Owner, O\&amp;M</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a computing resource in the specified workspace. The resource can be for a development environment or a production environment.</p>
      * 
@@ -1298,7 +1464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom attribute</p>
+     * <p>Creates a custom attribute definition.</p>
      * 
      * @param tmpReq CreateCustomAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1368,7 +1534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom attribute</p>
+     * <p>Creates a custom attribute definition.</p>
      * 
      * @param request CreateCustomAttributeRequest
      * @return CreateCustomAttributeResponse
@@ -1430,13 +1596,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation is available for all DataWorks editions.</p>
      * <ul>
-     * <li>You can call this API operation to create a synchronization task. When you call this API operation, you must configure parameters such as SourceDataSourceSettings, DestinationDataSourceSettings, MigrationType, TransformationRules, TableMappings, and JobSettings. The SourceDataSourceSettings parameter defines the settings related to the source. The DestinationDataSourceSettings parameter defines the settings related to the destination. The MigrationType parameter defines the synchronization task type. The TransformationRules parameter defines the transformation rules for objects involved in the synchronization task. The TableMappings parameter defines the mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. The JobSettings parameter defines the settings for the dimension of the synchronization task, including policies for data type mappings between source fields and destination fields and settings for periodic scheduling.</li>
+     * <li>This API requires DataWorks Basic Edition or a higher edition.</li>
+     * <li>This API creates a data integration synchronization task. Key parameters include <code>SourceDataSourceSettings</code>, <code>DestinationDataSourceSettings</code>, and <code>MigrationType</code>. The <code>TransformationRules</code> parameter defines transformation rules for synchronized tables, such as adding columns or replacing table names. The <code>TableMappings</code> parameter specifies which tables to synchronize and their mapping rules. The <code>JobSettings</code> parameter configures task settings, including column mapping and scheduling.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new-version synchronization task.</p>
+     * <p>Create a new version of a data integration task.</p>
      * 
      * @param tmpReq CreateDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1556,13 +1722,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation is available for all DataWorks editions.</p>
      * <ul>
-     * <li>You can call this API operation to create a synchronization task. When you call this API operation, you must configure parameters such as SourceDataSourceSettings, DestinationDataSourceSettings, MigrationType, TransformationRules, TableMappings, and JobSettings. The SourceDataSourceSettings parameter defines the settings related to the source. The DestinationDataSourceSettings parameter defines the settings related to the destination. The MigrationType parameter defines the synchronization task type. The TransformationRules parameter defines the transformation rules for objects involved in the synchronization task. The TableMappings parameter defines the mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. The JobSettings parameter defines the settings for the dimension of the synchronization task, including policies for data type mappings between source fields and destination fields and settings for periodic scheduling.</li>
+     * <li>This API requires DataWorks Basic Edition or a higher edition.</li>
+     * <li>This API creates a data integration synchronization task. Key parameters include <code>SourceDataSourceSettings</code>, <code>DestinationDataSourceSettings</code>, and <code>MigrationType</code>. The <code>TransformationRules</code> parameter defines transformation rules for synchronized tables, such as adding columns or replacing table names. The <code>TableMappings</code> parameter specifies which tables to synchronize and their mapping rules. The <code>JobSettings</code> parameter configures task settings, including column mapping and scheduling.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new-version synchronization task.</p>
+     * <p>Create a new version of a data integration task.</p>
      * 
      * @param request CreateDIJobRequest
      * @return CreateDIJobResponse
@@ -1650,7 +1816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality monitoring alert rule in a project.</p>
@@ -1707,7 +1873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality monitoring alert rule in a project.</p>
@@ -1722,10 +1888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is supported in all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a monitor in DataWorks Data Quality.</p>
+     * <p>Creates a DataWorks data quality monitor.</p>
      * 
      * @deprecated OpenAPI CreateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
      * 
@@ -1819,10 +1985,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is supported in all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a monitor in DataWorks Data Quality.</p>
+     * <p>Creates a DataWorks data quality monitor.</p>
      * 
      * @deprecated OpenAPI CreateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
      * 
@@ -1837,8 +2003,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a monitor instance.</p>
+     * <p>Creates a data quality evaluation task instance.</p>
      * 
      * @deprecated OpenAPI CreateDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScanRun instead.
      * 
@@ -1891,8 +2060,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a monitor instance.</p>
+     * <p>Creates a data quality evaluation task instance.</p>
      * 
      * @deprecated OpenAPI CreateDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScanRun instead.
      * 
@@ -1907,8 +2079,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a data quality monitoring rule.</p>
+     * <p>Creates a data quality rule.</p>
      * 
      * @deprecated OpenAPI CreateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
      * 
@@ -1997,8 +2172,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a data quality monitoring rule.</p>
+     * <p>Creates a data quality rule.</p>
      * 
      * @deprecated OpenAPI CreateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
      * 
@@ -2013,8 +2191,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a data quality monitoring rule template.</p>
+     * <p>Creates a rule template.</p>
      * 
      * @deprecated OpenAPI CreateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityTemplate instead.
      * 
@@ -2079,8 +2260,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a data quality monitoring rule template.</p>
+     * <p>Creates a rule template.</p>
      * 
      * @deprecated OpenAPI CreateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityTemplate instead.
      * 
@@ -2096,7 +2280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality monitor.</p>
@@ -2193,7 +2377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality monitor.</p>
@@ -2208,10 +2392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This operation is available only in DataWorks Basic Edition and later versions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Triggers a data quality monitoring task and returns the run instance ID.</p>
+     * <p>Triggers the specified data quality scan and returns the run ID.</p>
      * 
      * @param tmpReq CreateDataQualityScanRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2265,10 +2449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This operation is available only in DataWorks Basic Edition and later versions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Triggers a data quality monitoring task and returns the run instance ID.</p>
+     * <p>Triggers the specified data quality scan and returns the run ID.</p>
      * 
      * @param request CreateDataQualityScanRunRequest
      * @return CreateDataQualityScanRunResponse
@@ -2280,7 +2464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality template.</p>
@@ -2323,7 +2507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality template.</p>
@@ -2337,15 +2521,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
-     * </ol>
-     * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>Adds a data source to the development environment or production environment of a workspace.</p>
      * 
@@ -2398,15 +2573,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
-     * </ol>
-     * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>Adds a data source to the development environment or production environment of a workspace.</p>
      * 
@@ -2421,15 +2587,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To share a data source from Workspace A to Workspace B, you must have the data source sharing permissions in both workspaces. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a rule for sharing a data source to other workspaces or RAM users.</p>
+     * <p>Creates a sharing rule for a data source to share it with other workspaces or RAM users.</p>
      * 
      * @param request CreateDataSourceSharedRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2474,15 +2640,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To share a data source from Workspace A to Workspace B, you must have the data source sharing permissions in both workspaces. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a rule for sharing a data source to other workspaces or RAM users.</p>
+     * <p>Creates a sharing rule for a data source to share it with other workspaces or RAM users.</p>
      * 
      * @param request CreateDataSourceSharedRuleRequest
      * @return CreateDataSourceSharedRuleResponse
@@ -2863,7 +3029,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</p>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one UDF in the FlowSpec, all UDFs except the first one are ignored.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2904,7 +3071,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</p>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one UDF in the FlowSpec, all UDFs except the first one are ignored.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2921,7 +3089,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation does not support batch processing. If multiple publishing entities are specified in the parameters, only the first one will be processed; the others will be ignored.</p>
+     * <p>Notice: 
+     * This operation does not support batch processing. If you specify multiple entities in the request parameters, only the first entity is processed and the rest are ignored.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2964,7 +3133,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation does not support batch processing. If multiple publishing entities are specified in the parameters, only the first one will be processed; the others will be ignored.</p>
+     * <p>Notice: 
+     * This operation does not support batch processing. If you specify multiple entities in the request parameters, only the first entity is processed and the rest are ignored.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2979,8 +3149,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Registers lineage relationships in Data Map. At least one end of the relationship must be a custom object. This interface allows you to connect custom objects (such as external reports or third-party system tables) with metadata entities managed by DataWorks.</p>
+     * <p>Registers a data lineage relationship in DataWorks Data Map. You can use this operation to establish lineage relationships between metadata entities managed by DataWorks, including table-to-table, column-to-column, table-to-column, and dataset-to-table scenarios. You can also establish lineage relationships between managed entities and custom entity objects registered by users. This operation is compatible with non-managed custom objects, but this approach is no longer recommended. Before calling this operation, make sure that the managed entities involved in the lineage registration already exist on the DataWorks platform.</p>
      * 
      * @param tmpReq CreateLineageRelationshipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3033,8 +3208,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Registers lineage relationships in Data Map. At least one end of the relationship must be a custom object. This interface allows you to connect custom objects (such as external reports or third-party system tables) with metadata entities managed by DataWorks.</p>
+     * <p>Registers a data lineage relationship in DataWorks Data Map. You can use this operation to establish lineage relationships between metadata entities managed by DataWorks, including table-to-table, column-to-column, table-to-column, and dataset-to-table scenarios. You can also establish lineage relationships between managed entities and custom entity objects registered by users. This operation is compatible with non-managed custom objects, but this approach is no longer recommended. Before calling this operation, make sure that the managed entities involved in the lineage registration already exist on the DataWorks platform.</p>
      * 
      * @param request CreateLineageRelationshipRequest
      * @return CreateLineageRelationshipResponse
@@ -3045,8 +3225,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>When you submit a request, the system verifies the availability of the MCP Server based on the connection configuration.</li>
+     * <li>If the MCP Server connection is unavailable, the API returns an error message.</li>
+     * <li>The <code>Name</code> must be unique at the tenant level, start with a lowercase letter, and contain only lowercase letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>The <code>Visibility</code> parameter specifies the visibility level of the MCP Server. Valid values are <code>TENANT</code> (visible within the tenant), <code>PROJECT</code> (visible to specified projects), and <code>USER</code> (visible to specified users). You must also provide the <code>VisibilityScope</code> parameter to define the scope based on the selected visibility level.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>登记 MCP Server</p>
+     * <p>Creates an MCP Server.</p>
      * 
      * @param tmpReq CreateMcpServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3099,8 +3288,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>When you submit a request, the system verifies the availability of the MCP Server based on the connection configuration.</li>
+     * <li>If the MCP Server connection is unavailable, the API returns an error message.</li>
+     * <li>The <code>Name</code> must be unique at the tenant level, start with a lowercase letter, and contain only lowercase letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>The <code>Visibility</code> parameter specifies the visibility level of the MCP Server. Valid values are <code>TENANT</code> (visible within the tenant), <code>PROJECT</code> (visible to specified projects), and <code>USER</code> (visible to specified users). You must also provide the <code>VisibilityScope</code> parameter to define the scope based on the selected visibility level.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>登记 MCP Server</p>
+     * <p>Creates an MCP Server.</p>
      * 
      * @param request CreateMcpServerRequest
      * @return CreateMcpServerResponse
@@ -3111,6 +3309,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Creates a collection in Data Map. Collections include categories, subcategories, data albums, and categories that are created in the data albums.</p>
      * 
@@ -3155,6 +3358,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Creates a collection in Data Map. Collections include categories, subcategories, data albums, and categories that are created in the data albums.</p>
      * 
@@ -3167,8 +3375,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation requires DataWorks Professional Edition or a higher edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates metadata entity definitions (including pure custom types and extended table types)</p>
+     * <p>Creates a metadata entity definition. The definition can be for a pure custom type or an extended table type.</p>
      * 
      * @param tmpReq CreateMetaEntityDefRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3221,8 +3432,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation requires DataWorks Professional Edition or a higher edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates metadata entity definitions (including pure custom types and extended table types)</p>
+     * <p>Creates a metadata entity definition. The definition can be for a pure custom type or an extended table type.</p>
      * 
      * @param request CreateMetaEntityDefRequest
      * @return CreateMetaEntityDefResponse
@@ -3297,7 +3511,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create multiple nodes at a time. If you specify multiple nodes by using FlowSpec, the system creates only the first specified node.</p>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one node in the FlowSpec, all nodes except the first one are ignored.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3346,7 +3561,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create multiple nodes at a time. If you specify multiple nodes by using FlowSpec, the system creates only the first specified node.</p>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one node in the FlowSpec, all nodes except the first one are ignored.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3361,6 +3577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation requires DataWorks Professional Edition or a later edition.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a parameter.</p>
      * 
@@ -3423,6 +3642,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation requires DataWorks Professional Edition or a later edition.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a parameter.</p>
      * 
@@ -3437,8 +3659,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Batch operations are not currently supported. If you specify multiple entities in the parameters, only the first entity takes effect, and the rest are ignored.
-     *  This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters for CreateDeployment are the same as those described in this topic.</p>
+     * <p>Notice: This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.
+     * Notice: This API may not be available in earlier versions of the SDK. In that case, use the CreateDeployment API, which accepts the same parameters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3493,8 +3715,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Batch operations are not currently supported. If you specify multiple entities in the parameters, only the first entity takes effect, and the rest are ignored.
-     *  This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters for CreateDeployment are the same as those described in this topic.</p>
+     * <p>Notice: This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.
+     * Notice: This API may not be available in earlier versions of the SDK. In that case, use the CreateDeployment API, which accepts the same parameters.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3509,8 +3731,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</li>
+     * <li>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</li>
+     * <li>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</li>
+     * <li>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</li>
+     * <li>You can choose whether to immediately enable the newly created approval process definition.</li>
+     * <li>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建审批流程定义</p>
+     * <p>Creates a new approval process definition, supporting custom configuration of approval rules and notification services.</p>
      * 
      * @param tmpReq CreateProcessDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3587,8 +3820,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</li>
+     * <li>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</li>
+     * <li>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</li>
+     * <li>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</li>
+     * <li>You can choose whether to immediately enable the newly created approval process definition.</li>
+     * <li>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建审批流程定义</p>
+     * <p>Creates a new approval process definition, supporting custom configuration of approval rules and notification services.</p>
      * 
      * @param request CreateProcessDefinitionRequest
      * @return CreateProcessDefinitionResponse
@@ -3742,7 +3986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a workspace custom role</p>
+     * <p>Creates a custom role for a workspace.</p>
      * 
      * @param tmpReq CreateProjectRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3794,7 +4038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a workspace custom role</p>
+     * <p>Creates a custom role for a workspace.</p>
      * 
      * @param request CreateProjectRoleRequest
      * @return CreateProjectRoleResponse
@@ -3806,10 +4050,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Private</p>
+     * <blockquote>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one resource file in the FlowSpec, all resource files except the first one are ignored.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>\&gt;  You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
+     * <p>\\&gt; You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
      * 
      * @param request CreateResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3849,10 +4096,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Private</p>
+     * <blockquote>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one resource file in the FlowSpec, all resource files except the first one are ignored.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>\&gt;  You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
+     * <p>\\&gt; You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
      * 
      * @param request CreateResourceRequest
      * @return CreateResourceResponse
@@ -3952,7 +4202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a resource file in DataStudio. The following types are supported: JAR, Archive, File, and Python.</p>
+     * <p>Supports users in specifying their own files (such as JAR, PY, archive, or file) to create Data Development resource files.</p>
      * 
      * @param request CreateResourceFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4028,7 +4278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a resource file in DataStudio. The following types are supported: JAR, Archive, File, and Python.</p>
+     * <p>Supports users in specifying their own files (such as JAR, PY, archive, or file) to create Data Development resource files.</p>
      * 
      * @param request CreateResourceFileRequest
      * @return CreateResourceFileResponse
@@ -4129,12 +4379,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
+     * <li>You must purchase DataWorks Basic Edition or higher to use this operation.</li>
+     * <li><strong>Before you call this operation, make sure that you understand how general-purpose resource groups in DataWorks are billed and review the <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a>.</strong></li>
+     * <li><strong>Before you call this operation, make sure that you have created the AliyunServiceRoleForDataWorks service-linked role.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Creates a serverless resource group.</p>
+     * <p>Creates a resource group.</p>
      * 
      * @param tmpReq CreateResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4217,12 +4468,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
+     * <li>You must purchase DataWorks Basic Edition or higher to use this operation.</li>
+     * <li><strong>Before you call this operation, make sure that you understand how general-purpose resource groups in DataWorks are billed and review the <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a>.</strong></li>
+     * <li><strong>Before you call this operation, make sure that you have created the AliyunServiceRoleForDataWorks service-linked role.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Creates a serverless resource group.</p>
+     * <p>Creates a resource group.</p>
      * 
      * @param request CreateResourceGroupRequest
      * @return CreateResourceGroupResponse
@@ -4291,8 +4543,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><strong>SchemaName</strong>: Select a schema that fits your business needs.</li>
+     * <li><strong>ControlModule</strong> and <strong>ControlSubModule</strong>: Specify the module and submodule for the policy, ensuring they match the selected schema.</li>
+     * <li><strong>ControlDwScope</strong>: Set the policy scope to either the tenant or workspace level.</li>
+     * <li><strong>Workspaces</strong>: If <code>ControlDwScope</code> is set to <code>Workspace</code>, provide the corresponding workspace IDs.</li>
+     * <li><strong>Content.Controllers</strong>: The controllers must match the definitions in the selected schema.</li>
+     * <li>This operation cannot create system default policies.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建安全管控策略</p>
+     * <p>Creates a new security control policy to configure various modules and submodules. Requires both DataWorks tenant administrator and security administrator permissions.</p>
      * 
      * @param tmpReq CreateSecurityStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4365,8 +4628,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><strong>SchemaName</strong>: Select a schema that fits your business needs.</li>
+     * <li><strong>ControlModule</strong> and <strong>ControlSubModule</strong>: Specify the module and submodule for the policy, ensuring they match the selected schema.</li>
+     * <li><strong>ControlDwScope</strong>: Set the policy scope to either the tenant or workspace level.</li>
+     * <li><strong>Workspaces</strong>: If <code>ControlDwScope</code> is set to <code>Workspace</code>, provide the corresponding workspace IDs.</li>
+     * <li><strong>Content.Controllers</strong>: The controllers must match the definitions in the selected schema.</li>
+     * <li>This operation cannot create system default policies.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建安全管控策略</p>
+     * <p>Creates a new security control policy to configure various modules and submodules. Requires both DataWorks tenant administrator and security administrator permissions.</p>
      * 
      * @param request CreateSecurityStrategyRequest
      * @return CreateSecurityStrategyResponse
@@ -4377,6 +4651,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>SkillMdOverride</code> 与 <code>BundleUrl</code> 参数二选一，必须提供其中之一。</li>
+     * <li><code>Visibility</code> 可设置为 <code>TENANT</code>、<code>PROJECT</code> 或 <code>USER</code>，分别表示账号内可见、指定项目可见或指定用户可见。</li>
+     * <li>当 <code>Visibility</code> 设置为 <code>PROJECT</code> 时，需要通过 <code>VisibilityScope.ProjectIds</code> 指定可见的项目 ID 列表；当设置为 <code>USER</code> 时，则需通过 <code>VisibilityScope.UserIds</code> 指定可见的用户 ID 列表。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>创建 Skill</p>
      * 
@@ -4447,6 +4729,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>SkillMdOverride</code> 与 <code>BundleUrl</code> 参数二选一，必须提供其中之一。</li>
+     * <li><code>Visibility</code> 可设置为 <code>TENANT</code>、<code>PROJECT</code> 或 <code>USER</code>，分别表示账号内可见、指定项目可见或指定用户可见。</li>
+     * <li>当 <code>Visibility</code> 设置为 <code>PROJECT</code> 时，需要通过 <code>VisibilityScope.ProjectIds</code> 指定可见的项目 ID 列表；当设置为 <code>USER</code> 时，则需通过 <code>VisibilityScope.UserIds</code> 指定可见的用户 ID 列表。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>创建 Skill</p>
      * 
@@ -4553,7 +4843,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</p>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored. In addition, nodes defined within the workflow definition are also ignored. Call the CreateNode API to create internal nodes one by one.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4594,7 +4885,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</p>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored. In addition, nodes defined within the workflow definition are also ignored. Call the CreateNode API to create internal nodes one by one.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4609,6 +4901,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or higher is required.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</p>
      * 
@@ -4703,6 +4998,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or higher is required.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</p>
      * 
@@ -4715,6 +5013,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该 API 用于从 DataWorks 中删除指定名称的 Agent。调用此接口时，必须提供要删除的 Agent 的名称。</p>
+     * 
      * <b>summary</b> : 
      * <p>删除 Agent</p>
      * 
@@ -4747,6 +5049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该 API 用于从 DataWorks 中删除指定名称的 Agent。调用此接口时，必须提供要删除的 Agent 的名称。</p>
+     * 
      * <b>summary</b> : 
      * <p>删除 Agent</p>
      * 
@@ -4857,8 +5163,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * <li>This operation requires DataWorks Basic Edition or a later version.</li>
+     * <li>This operation requires one of the following roles in the DataWorks workspace: Tenant Owner, Workspace Administrator, Project Owner, or O\&amp;M.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -4899,8 +5205,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * <li>This operation requires DataWorks Basic Edition or a later version.</li>
+     * <li>This operation requires one of the following roles in the DataWorks workspace: Tenant Owner, Workspace Administrator, Project Owner, or O\&amp;M.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -4917,7 +5223,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</p>
+     * <p>Notice: 
+     * After a UDF is published, it cannot be deleted. You must unpublish the UDF before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4958,7 +5265,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</p>
+     * <p>Notice: 
+     * After a UDF is published, it cannot be deleted. You must unpublish the UDF before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4975,9 +5283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * <li>DataWorks Basic Edition or a more advanced edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * <li>Tenant Owner, Workspace Administrator, Project Owner, O\&amp;M</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5018,9 +5326,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * <li>DataWorks Basic Edition or a more advanced edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * <li>Tenant Owner, Workspace Administrator, Project Owner, O\&amp;M</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5036,7 +5344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Custom Attribute</p>
+     * <p>Deletes a custom attribute definition.</p>
      * 
      * @param request DeleteCustomAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5068,7 +5376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Custom Attribute</p>
+     * <p>Deletes a custom attribute definition.</p>
      * 
      * @param request DeleteCustomAttributeRequest
      * @return DeleteCustomAttributeResponse
@@ -5226,7 +5534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Subscribe to DataWorks Basic Edition or a higher version to use this API.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a data quality alert rule by ID.</p>
@@ -5261,7 +5569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Subscribe to DataWorks Basic Edition or a higher version to use this API.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a data quality alert rule by ID.</p>
@@ -5275,6 +5583,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a data quality monitoring task.</p>
      * 
@@ -5315,6 +5626,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a data quality monitoring task.</p>
      * 
@@ -5379,8 +5693,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a data quality monitoring rule template.</p>
+     * <p>Deletes a custom data quality rule template.</p>
      * 
      * @deprecated OpenAPI DeleteDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityTemplate instead.
      * 
@@ -5419,8 +5736,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a data quality monitoring rule template.</p>
+     * <p>Deletes a custom data quality rule template.</p>
      * 
      * @deprecated OpenAPI DeleteDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityTemplate instead.
      * 
@@ -5436,7 +5756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a data quality monitor.</p>
@@ -5475,7 +5795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a data quality monitor.</p>
@@ -5490,11 +5810,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Id</strong>: the unique identifier of the user-defined rule template, in the format <code>USER_DEFINED:&lt;template_id&gt;</code>.</li>
-     * <li><strong>ProjectId</strong>: The ID of the DataWorks project to which the rule template belongs.
-     * This API is used to remove data quality rule templates that are no longer needed from the system. Make sure the provided <code>Id</code> and <code>ProjectId</code> are correct when calling this API operation; otherwise, the deletion may fail or lead to unexpected data loss. Use this function with caution and verify the exact information of the template before performing the operation.</li>
+     * <li><strong>Id</strong>: The unique identifier of a custom rule template, in the format of <code>USER_DEFINED:&lt;template_id&gt;</code>.</li>
+     * <li><strong>ProjectId</strong>: The ID of the DataWorks workspace to which the rule template belongs.
+     * This operation removes a data quality rule template that is no longer needed. Make sure that the <code>Id</code> and <code>ProjectId</code> values are correct. Otherwise, the deletion may fail or cause unexpected data loss. Exercise caution when performing this operation and verify the template information before proceeding.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5530,11 +5850,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Id</strong>: the unique identifier of the user-defined rule template, in the format <code>USER_DEFINED:&lt;template_id&gt;</code>.</li>
-     * <li><strong>ProjectId</strong>: The ID of the DataWorks project to which the rule template belongs.
-     * This API is used to remove data quality rule templates that are no longer needed from the system. Make sure the provided <code>Id</code> and <code>ProjectId</code> are correct when calling this API operation; otherwise, the deletion may fail or lead to unexpected data loss. Use this function with caution and verify the exact information of the template before performing the operation.</li>
+     * <li><strong>Id</strong>: The unique identifier of a custom rule template, in the format of <code>USER_DEFINED:&lt;template_id&gt;</code>.</li>
+     * <li><strong>ProjectId</strong>: The ID of the DataWorks workspace to which the rule template belongs.
+     * This operation removes a data quality rule template that is no longer needed. Make sure that the <code>Id</code> and <code>ProjectId</code> values are correct. Otherwise, the deletion may fail or cause unexpected data loss. Exercise caution when performing this operation and verify the template information before proceeding.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5551,15 +5871,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all Dataworks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes a data source by ID.</p>
+     * <p>Deletes a data source by data source ID.</p>
      * 
      * @param request DeleteDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5588,15 +5908,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all Dataworks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes a data source by ID.</p>
+     * <p>Deletes a data source by data source ID.</p>
      * 
      * @param request DeleteDataSourceRequest
      * @return DeleteDataSourceResponse
@@ -5609,15 +5929,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To delete a sharing rule of a data source from Workspace A to Workspace B, you must have the data source sharing permissions in Workspace A or Workspace B. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a sharing rule of a data source by ID.</p>
+     * <p>Deletes a data source sharing rule by rule ID.</p>
      * 
      * @param request DeleteDataSourceSharedRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5650,15 +5970,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To delete a sharing rule of a data source from Workspace A to Workspace B, you must have the data source sharing permissions in Workspace A or Workspace B. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a sharing rule of a data source by ID.</p>
+     * <p>Deletes a data source sharing rule by rule ID.</p>
      * 
      * @param request DeleteDataSourceSharedRuleRequest
      * @return DeleteDataSourceSharedRuleResponse
@@ -5809,6 +6129,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke DeleteFolder to delete a folder on the Data Development page.</p>
+     * 
      * @param request DeleteFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteFolderResponse
@@ -5846,6 +6169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke DeleteFolder to delete a folder on the Data Development page.</p>
+     * 
      * @param request DeleteFolderRequest
      * @return DeleteFolderResponse
      */
@@ -5857,7 +6183,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</p>
+     * <p>Notice: 
+     * After a UDF is published, it cannot be deleted. You must unpublish the UDF before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5898,7 +6225,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</p>
+     * <p>Notice: 
+     * After a UDF is published, it cannot be deleted. You must unpublish the UDF before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5913,6 +6241,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a lineage in Data Map.</p>
      * 
@@ -5945,6 +6278,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a lineage in Data Map.</p>
      * 
@@ -5957,8 +6295,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This API allows you to delete the corresponding MCP Server instance based on the provided MCP Server name. Make sure you have the appropriate permissions and verify that the MCP Server name to be deleted is correct before calling.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>The deletion operation is irreversible. Proceed with caution.</li>
+     * <li>Ensure that you have sufficient permissions (<code>dataworks:DeleteMcpServer</code>) to perform this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除 MCP Server</p>
+     * <p>Delete MCP Server</p>
      * 
      * @param request DeleteMcpServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5989,8 +6336,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This API allows you to delete the corresponding MCP Server instance based on the provided MCP Server name. Make sure you have the appropriate permissions and verify that the MCP Server name to be deleted is correct before calling.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>The deletion operation is irreversible. Proceed with caution.</li>
+     * <li>Ensure that you have sufficient permissions (<code>dataworks:DeleteMcpServer</code>) to perform this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除 MCP Server</p>
+     * <p>Delete MCP Server</p>
      * 
      * @param request DeleteMcpServerRequest
      * @return DeleteMcpServerResponse
@@ -6001,8 +6357,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a collection in Data Map. Collections include categories and data albums. If you want to delete a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
+     * <p>Delete a collection object in the specified Data Map, including Data Map categories and data albums.
+     * When deleting a data album, the caller must have the AliyunDataWorksFullAccess permission or be the creator or administrator of the album.</p>
      * 
      * @param request DeleteMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6033,8 +6395,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a collection in Data Map. Collections include categories and data albums. If you want to delete a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
+     * <p>Delete a collection object in the specified Data Map, including Data Map categories and data albums.
+     * When deleting a data album, the caller must have the AliyunDataWorksFullAccess permission or be the creator or administrator of the album.</p>
      * 
      * @param request DeleteMetaCollectionRequest
      * @return DeleteMetaCollectionResponse
@@ -6045,8 +6413,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>需要购买 DataWorks 专业版及以上版本才能使用。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Delete metadata entity definitions (including pure custom types and extended table types)</p>
+     * <p>删除自定义实体定义</p>
      * 
      * @param request DeleteMetaEntityDefRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6081,8 +6452,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>需要购买 DataWorks 专业版及以上版本才能使用。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Delete metadata entity definitions (including pure custom types and extended table types)</p>
+     * <p>删除自定义实体定义</p>
      * 
      * @param request DeleteMetaEntityDefRequest
      * @return DeleteMetaEntityDefResponse
@@ -6145,7 +6519,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A node that is deployed cannot be deleted. If you want to delete such a node, you must first undeploy the node.</p>
+     * <p>Notice: 
+     * After a node is published, it cannot be deleted. You must unpublish the node before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6186,7 +6561,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A node that is deployed cannot be deleted. If you want to delete such a node, you must first undeploy the node.</p>
+     * <p>Notice: 
+     * After a node is published, it cannot be deleted. You must unpublish the node before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6201,8 +6577,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only in DataWorks professional edition and later versions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Remove specified parameters.</p>
+     * <p>Deletes a specified parameter.</p>
      * 
      * @param request DeleteParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6233,8 +6612,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only in DataWorks professional edition and later versions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Remove specified parameters.</p>
+     * <p>Deletes a specified parameter.</p>
      * 
      * @param request DeleteParameterRequest
      * @return DeleteParameterResponse
@@ -6245,8 +6627,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API deletes a process definition by its ID.</li>
+     * <li>This operation is irreversible. Proceed with caution.</li>
+     * <li>Before calling this API, back up relevant data or confirm that the process definition is no longer required.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除审批流程定义</p>
+     * <p>Deletes a process definition by the specified ID.</p>
      * 
      * @param request DeleteProcessDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6277,8 +6667,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API deletes a process definition by its ID.</li>
+     * <li>This operation is irreversible. Proceed with caution.</li>
+     * <li>Before calling this API, back up relevant data or confirm that the process definition is no longer required.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除审批流程定义</p>
+     * <p>Deletes a process definition by the specified ID.</p>
      * 
      * @param request DeleteProcessDefinitionRequest
      * @return DeleteProcessDefinitionResponse
@@ -6290,7 +6688,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>To call this API, you must purchase DataWorks Basic Edition or a higher edition.
+     * Note: When you delete a workspace, the system moves it to the Recycle Bin. After a 14-day retention period, the system permanently purges the workspace. During this time, you cannot create a new workspace with the same name. You can find the deleted workspace in the Recycle Bin on the Workspace page in the console.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a DataWorks workspace.</p>
@@ -6325,7 +6724,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>To call this API, you must purchase DataWorks Basic Edition or a higher edition.
+     * Note: When you delete a workspace, the system moves it to the Recycle Bin. After a 14-day retention period, the system permanently purges the workspace. During this time, you cannot create a new workspace with the same name. You can find the deleted workspace in the Recycle Bin on the Workspace page in the console.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a DataWorks workspace.</p>
@@ -6394,7 +6794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a workspace custom role</p>
+     * <p>Deletes a custom role from a workspace.</p>
      * 
      * @param request DeleteProjectRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6430,7 +6830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a workspace custom role</p>
+     * <p>Deletes a custom role from a workspace.</p>
      * 
      * @param request DeleteProjectRoleRequest
      * @return DeleteProjectRoleResponse
@@ -6443,7 +6843,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</p>
+     * <p>Notice: 
+     * After a file resource is published, it cannot be deleted. You must unpublish the file resource before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6484,7 +6885,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</p>
+     * <p>Notice: 
+     * After a file resource is published, it cannot be deleted. You must unpublish the file resource before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6501,12 +6903,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
+     * <li>This operation requires DataWorks Basic Edition or a later version.</li>
+     * <li><strong>Before you use this operation, ensure you understand the billing method and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> for DataWorks resource groups.</strong></li>
+     * <li><strong>Before you use this operation, ensure you have created the Service-Linked Role AliyunServiceRoleForDataWorks.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a serverless resource group.</p>
+     * <p>Deletes a resource group.</p>
      * 
      * @param request DeleteResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6539,12 +6942,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
+     * <li>This operation requires DataWorks Basic Edition or a later version.</li>
+     * <li><strong>Before you use this operation, ensure you understand the billing method and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> for DataWorks resource groups.</strong></li>
+     * <li><strong>Before you use this operation, ensure you have created the Service-Linked Role AliyunServiceRoleForDataWorks.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a serverless resource group.</p>
+     * <p>Deletes a resource group.</p>
      * 
      * @param request DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse
@@ -6605,8 +7009,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>You can delete a security strategy by providing its ID.</li>
+     * <li>You cannot delete a system strategy.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除安全管控策略</p>
+     * <p>Deletes a security strategy by its ID. To call this operation, you must have DataWorks tenant administrator and security administrator permissions.</p>
      * 
      * @param request DeleteSecurityStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6637,8 +7048,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>You can delete a security strategy by providing its ID.</li>
+     * <li>You cannot delete a system strategy.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除安全管控策略</p>
+     * <p>Deletes a security strategy by its ID. To call this operation, you must have DataWorks tenant administrator and security administrator permissions.</p>
      * 
      * @param request DeleteSecurityStrategyRequest
      * @return DeleteSecurityStrategyResponse
@@ -6649,8 +7067,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a Skill with the specified name from DataWorks. The exact name of the Skill to delete must be provided when invoking this API.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>Ensure that you have sufficient permissions to perform the delete operation.</li>
+     * <li>The delete operation is irreversible. Use it with caution.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除 Skill</p>
+     * <p>Delete Skill</p>
      * 
      * @param request DeleteSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6681,8 +7108,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a Skill with the specified name from DataWorks. The exact name of the Skill to delete must be provided when invoking this API.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>Ensure that you have sufficient permissions to perform the delete operation.</li>
+     * <li>The delete operation is irreversible. Use it with caution.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除 Skill</p>
+     * <p>Delete Skill</p>
      * 
      * @param request DeleteSkillRequest
      * @return DeleteSkillResponse
@@ -6809,7 +7245,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</p>
+     * <p>Notice: 
+     * After a workflow definition is published, it cannot be deleted. You must unpublish the workflow definition before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6850,7 +7287,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</p>
+     * <p>Notice: 
+     * After a workflow definition is published, it cannot be deleted. You must unpublish the workflow definition before you can delete it.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6865,6 +7303,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Publish a file to the production environment.</p>
+     * 
      * @param request DeployFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeployFileResponse
@@ -6910,6 +7351,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Publish a file to the production environment.</p>
+     * 
      * @param request DeployFileRequest
      * @return DeployFileResponse
      */
@@ -6919,8 +7363,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Disassociates monitoring rules from a data quality monitoring task.</p>
+     * <p>Removes the association between a data quality rule and a data quality monitoring task.</p>
      * 
      * @deprecated OpenAPI DetachDataQualityRulesFromEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
      * 
@@ -6969,8 +7416,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Disassociates monitoring rules from a data quality monitoring task.</p>
+     * <p>Removes the association between a data quality rule and a data quality monitoring task.</p>
      * 
      * @deprecated OpenAPI DetachDataQualityRulesFromEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
      * 
@@ -6985,8 +7435,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API disables the specified approval process definition.</li>
+     * <li>A disabled approval process definition remains inactive until it is re-enabled.</li>
+     * <li>You must provide a valid process definition ID as a path parameter.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>停用审批流程定义</p>
+     * <p>Disables the specified approval process definition.</p>
      * 
      * @param request DisableProcessDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7021,8 +7479,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API disables the specified approval process definition.</li>
+     * <li>A disabled approval process definition remains inactive until it is re-enabled.</li>
+     * <li>You must provide a valid process definition ID as a path parameter.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>停用审批流程定义</p>
+     * <p>Disables the specified approval process definition.</p>
      * 
      * @param request DisableProcessDefinitionRequest
      * @return DisableProcessDefinitionResponse
@@ -7033,6 +7499,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation requires DataWorks Basic Edition or a later version.</li>
+     * <li><strong>Before calling this operation, ensure you have created the AliyunServiceRoleForDataWorks service-linked role.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Disassociates an image from a workspace.</p>
      * 
@@ -7069,6 +7541,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation requires DataWorks Basic Edition or a later version.</li>
+     * <li><strong>Before calling this operation, ensure you have created the AliyunServiceRoleForDataWorks service-linked role.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Disassociates an image from a workspace.</p>
      * 
@@ -7083,11 +7561,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * <li>This operation requires a subscription to DataWorks Basic Edition or a higher edition.</li>
+     * <li>You must have one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * <li>tenant owner, workspace administrator, project owner, or operator</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7128,11 +7606,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>Your account must be assigned one of the following roles of the desired workspace:</li>
+     * <li>This operation requires a subscription to DataWorks Basic Edition or a higher edition.</li>
+     * <li>You must have one of the following roles in the DataWorks workspace:</li>
      * </ol>
      * <ul>
-     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
+     * <li>tenant owner, workspace administrator, project owner, or operator</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7147,8 +7625,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API enables an existing process definition. You must provide the process definition ID as a path parameter.</p>
+     * 
      * <b>summary</b> : 
-     * <p>启用审批流程定义</p>
+     * <p>Enables a process definition with the specified ID.</p>
      * 
      * @param request EnableProcessDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7183,8 +7665,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API enables an existing process definition. You must provide the process definition ID as a path parameter.</p>
+     * 
      * <b>summary</b> : 
-     * <p>启用审批流程定义</p>
+     * <p>Enables a process definition with the specified ID.</p>
      * 
      * @param request EnableProcessDefinitionRequest
      * @return EnableProcessDefinitionResponse
@@ -7257,8 +7743,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
-     *  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</p>
+     * <p>The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
+     * The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -7305,8 +7791,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
-     *  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</p>
+     * <p>The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
+     * The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -7397,8 +7883,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</p>
+     * 
      * <b>summary</b> : 
-     * <p>匹配最佳安全管控策略</p>
+     * <p>Find the security policy that best matches the given conditions.</p>
      * 
      * @param request FindBestMatchSecurityStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7437,8 +7927,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</p>
+     * 
      * <b>summary</b> : 
-     * <p>匹配最佳安全管控策略</p>
+     * <p>Find the security policy that best matches the given conditions.</p>
      * 
      * @param request FindBestMatchSecurityStrategyRequest
      * @return FindBestMatchSecurityStrategyResponse
@@ -7449,8 +7943,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API uses an agent\&quot;s name, provided as a parameter, to retrieve its detailed configuration, including the model configuration, system prompt, and tool list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>读取 Agent 详情</p>
+     * <p>Retrieves agent details by name.</p>
      * 
      * @param request GetAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7481,8 +7979,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API uses an agent\&quot;s name, provided as a parameter, to retrieve its detailed configuration, including the model configuration, system prompt, and tool list.</p>
+     * 
      * <b>summary</b> : 
-     * <p>读取 Agent 详情</p>
+     * <p>Retrieves agent details by name.</p>
      * 
      * @param request GetAgentRequest
      * @return GetAgentResponse
@@ -7493,8 +7995,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation retrieves the metadata and content of a single artifact based on <code>SessionId</code> and <code>ArtifactPath</code>.</li>
+     * <li><code>SessionId</code> and <code>ArtifactPath</code> are required.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains the metadata and body content of an Artifact based on the session ID and file path.</p>
+     * <p>Retrieves the metadata and content of an artifact based on a session ID and artifact path.</p>
      * 
      * @param tmpReq GetAgentSessionArtifactMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7539,8 +8048,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation retrieves the metadata and content of a single artifact based on <code>SessionId</code> and <code>ArtifactPath</code>.</li>
+     * <li><code>SessionId</code> and <code>ArtifactPath</code> are required.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains the metadata and body content of an Artifact based on the session ID and file path.</p>
+     * <p>Retrieves the metadata and content of an artifact based on a session ID and artifact path.</p>
      * 
      * @param request GetAgentSessionArtifactMetaRequest
      * @return GetAgentSessionArtifactMetaResponse
@@ -7551,8 +8067,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation retrieves usage statistics for AI tokens in a specified session. It provides a breakdown of tokens for prompts, completions, and thoughts, as well as the total token count and the number of cache-hit tokens.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the cumulative AI token usage of a session aggregated by session ID.</p>
+     * <p>Retrieves the cumulative AI token usage for a specified session.</p>
      * 
      * @param tmpReq GetAgentSessionTokenUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7597,8 +8119,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation retrieves usage statistics for AI tokens in a specified session. It provides a breakdown of tokens for prompts, completions, and thoughts, as well as the total token count and the number of cache-hit tokens.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the cumulative AI token usage of a session aggregated by session ID.</p>
+     * <p>Retrieves the cumulative AI token usage for a specified session.</p>
      * 
      * @param request GetAgentSessionTokenUsageRequest
      * @return GetAgentSessionTokenUsageResponse
@@ -7649,8 +8177,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves details for a resource permission request using the specified <code>ProcessInstanceId</code>.</li>
+     * <li>A valid <code>ProcessInstanceId</code> is required.</li>
+     * <li>The response includes basic request information, status, and a list of requested items.</li>
+     * <li>Each requested item includes detailed resource information, the principal, and the requested operation permissions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询数据访问权限申请单</p>
+     * <p>Retrieves a resource permission request by its process instance ID.</p>
      * 
      * @param request GetApplicationContentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7681,8 +8218,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves details for a resource permission request using the specified <code>ProcessInstanceId</code>.</li>
+     * <li>A valid <code>ProcessInstanceId</code> is required.</li>
+     * <li>The response includes basic request information, status, and a list of requested items.</li>
+     * <li>Each requested item includes detailed resource information, the principal, and the requested operation permissions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询数据访问权限申请单</p>
+     * <p>Retrieves a resource permission request by its process instance ID.</p>
      * 
      * @param request GetApplicationContentsRequest
      * @return GetApplicationContentsResponse
@@ -7745,6 +8291,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a catalog in Data Map. Only catalogs of the Data Lake Formation (DLF) and StarRocks metadata crawlers are supported.</p>
      * 
@@ -7773,6 +8324,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a catalog in Data Map. Only catalogs of the Data Lake Formation (DLF) and StarRocks metadata crawlers are supported.</p>
      * 
@@ -7787,12 +8343,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M.</li>
+     * <li>This feature is available only in DataWorks Basic Edition and later versions.</li>
+     * <li>You must have at least one of the following roles in the DataWorks project: Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O\&amp;M.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>View certificate details.</p>
+     * <p>You can view authentication files.</p>
      * 
      * @param request GetCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7821,12 +8377,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M.</li>
+     * <li>This feature is available only in DataWorks Basic Edition and later versions.</li>
+     * <li>You must have at least one of the following roles in the DataWorks project: Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O\&amp;M.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>View certificate details.</p>
+     * <p>You can view authentication files.</p>
      * 
      * @param request GetCertificateRequest
      * @return GetCertificateResponse
@@ -7837,6 +8393,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a specific field of a table in Data Map.</p>
      * 
@@ -7865,6 +8426,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a specific field of a table in Data Map.</p>
      * 
@@ -7879,7 +8445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -7920,7 +8486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -7935,6 +8501,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a more advanced edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Deploy, Developer, Project Owner, O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Queries the specified computing resource based on the computing resource ID.</p>
      * 
@@ -7971,6 +8546,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a more advanced edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * </ol>
+     * <ul>
+     * <li>Tenant Owner, Workspace Administrator, Deploy, Developer, Project Owner, O\&amp;M</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Queries the specified computing resource based on the computing resource ID.</p>
      * 
@@ -7984,7 +8568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the result of asynchronously creating a workflow instance.</p>
@@ -8015,7 +8599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the result of asynchronously creating a workflow instance.</p>
@@ -8030,7 +8614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain custom property definition details</p>
+     * <p>Retrieves a custom attribute definition.</p>
      * 
      * @param request GetCustomAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8062,7 +8646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain custom property definition details</p>
+     * <p>Retrieves a custom attribute definition.</p>
      * 
      * @param request GetCustomAttributeRequest
      * @return GetCustomAttributeResponse
@@ -8074,10 +8658,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This operation requires DataWorks Basic Edition or later.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a synchronization task.</p>
+     * <p>View data integration tasks.</p>
      * 
      * @param request GetDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8105,10 +8689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This operation requires DataWorks Basic Edition or later.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a synchronization task.</p>
+     * <p>View data integration tasks.</p>
      * 
      * @param request GetDIJobRequest
      * @return GetDIJobResponse
@@ -8166,10 +8750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a data quality monitoring and alerting rule by alert rule ID.</p>
+     * <p>Retrieves the details of a data quality alert rule by rule ID.</p>
      * 
      * @param request GetDataQualityAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8201,10 +8785,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a data quality monitoring and alerting rule by alert rule ID.</p>
+     * <p>Retrieves the details of a data quality alert rule by rule ID.</p>
      * 
      * @param request GetDataQualityAlertRuleRequest
      * @return GetDataQualityAlertRuleResponse
@@ -8215,8 +8799,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Available only with DataWorks Basic Edition or higher.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a monitor.</p>
+     * <p>Query the details of a data quality validation task.</p>
      * 
      * @deprecated OpenAPI GetDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
      * 
@@ -8247,8 +8834,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Available only with DataWorks Basic Edition or higher.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a monitor.</p>
+     * <p>Query the details of a data quality validation task.</p>
      * 
      * @deprecated OpenAPI GetDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
      * 
@@ -8263,8 +8853,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or a higher edition is required to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a monitor instance.</p>
+     * <p>Retrieves the details of a data quality check task instance.</p>
      * 
      * @deprecated OpenAPI GetDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScanRun instead.
      * 
@@ -8295,8 +8888,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or a higher edition is required to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a monitor instance.</p>
+     * <p>Retrieves the details of a data quality check task instance.</p>
      * 
      * @deprecated OpenAPI GetDataQualityEvaluationTaskInstance is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScanRun instead.
      * 
@@ -8312,10 +8908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a data quality monitoring rule.</p>
+     * <p>Queries the details of a data quality rule.</p>
      * 
      * @deprecated OpenAPI GetDataQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
      * 
@@ -8347,10 +8943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a data quality monitoring rule.</p>
+     * <p>Queries the details of a data quality rule.</p>
      * 
      * @deprecated OpenAPI GetDataQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
      * 
@@ -8366,10 +8962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You can call this operation only if you have purchased DataWorks Basic Edition or a more advanced edition.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a data quality monitoring rule template.</p>
+     * <p>Queries the details of a data quality rule template.</p>
      * 
      * @deprecated OpenAPI GetDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::GetDataQualityTemplate instead.
      * 
@@ -8401,10 +8997,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You can call this operation only if you have purchased DataWorks Basic Edition or a more advanced edition.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a data quality monitoring rule template.</p>
+     * <p>Queries the details of a data quality rule template.</p>
      * 
      * @deprecated OpenAPI GetDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::GetDataQualityTemplate instead.
      * 
@@ -8420,7 +9016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Gets data quality monitoring details.</p>
@@ -8455,7 +9051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Gets data quality monitoring details.</p>
@@ -8470,7 +9066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality monitoring run instance.</p>
@@ -8505,7 +9101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality monitoring run instance.</p>
@@ -8520,7 +9116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the log of a specific task instance that monitors data quality.</p>
@@ -8559,7 +9155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the log of a specific task instance that monitors data quality.</p>
@@ -8574,10 +9170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a data quality rule template by ID.</p>
+     * <p>Retrieves the details of a data quality rule template by template ID.</p>
      * 
      * @param request GetDataQualityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8609,10 +9205,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a data quality rule template by ID.</p>
+     * <p>Retrieves the details of a data quality rule template by template ID.</p>
      * 
      * @param request GetDataQualityTemplateRequest
      * @return GetDataQualityTemplateResponse
@@ -8625,15 +9221,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a data source by ID.</p>
+     * <p>Retrieves the details of a data source by data source ID.</p>
      * 
      * @param request GetDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8662,15 +9258,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a data source by ID.</p>
+     * <p>Retrieves the details of a data source by data source ID.</p>
      * 
      * @param request GetDataSourceRequest
      * @return GetDataSourceResponse
@@ -8681,6 +9277,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a specific database in Data Map.</p>
      * 
@@ -8709,6 +9310,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a specific database in Data Map.</p>
      * 
@@ -8862,7 +9468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a file.</p>
+     * <p>Retrieves the details of a file.</p>
      * 
      * @param request GetFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8906,7 +9512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a file.</p>
+     * <p>Retrieves the details of a file.</p>
      * 
      * @param request GetFileRequest
      * @return GetFileResponse
@@ -8918,7 +9524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a file version.</p>
+     * <p>Invoke GetFileVersion to obtain the version details of a file.</p>
      * 
      * @param request GetFileVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8962,7 +9568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a file version.</p>
+     * <p>Invoke GetFileVersion to obtain the version details of a file.</p>
      * 
      * @param request GetFileVersionRequest
      * @return GetFileVersionResponse
@@ -9117,8 +9723,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>A subscription to DataWorks Basic Edition or a higher edition is required.</li>
+     * <li><strong>Make sure that you have created the service-linked role AliyunServiceRoleForDataWorks before you call this operation.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains the details of a specified image by image ID.</p>
+     * <p>Gets the details of an image by its ID.</p>
      * 
      * @param request GetImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9153,8 +9765,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>A subscription to DataWorks Basic Edition or a higher edition is required.</li>
+     * <li><strong>Make sure that you have created the service-linked role AliyunServiceRoleForDataWorks before you call this operation.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains the details of a specified image by image ID.</p>
+     * <p>Gets the details of an image by its ID.</p>
      * 
      * @param request GetImageRequest
      * @return GetImageResponse
@@ -9205,8 +9823,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation is available only for DataWorks Standard Edition or later.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a lineage in Data Map.</p>
+     * <p>Retrieves details for a specific lineage relationship in the data map.</p>
      * 
      * @param request GetLineageRelationshipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9233,8 +9856,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation is available only for DataWorks Standard Edition or later.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a lineage in Data Map.</p>
+     * <p>Retrieves details for a specific lineage relationship in the data map.</p>
      * 
      * @param request GetLineageRelationshipRequest
      * @return GetLineageRelationshipResponse
@@ -9245,8 +9873,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API returns the detailed configuration of a specific MCP Server by name. The response includes the creator ID, modifier ID, service address, and transport protocol. You must provide the exact name of the MCP Server in the request.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>Ensure you have the required permissions to call this API.</li>
+     * <li>The MCP Server name is case-sensitive.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>读取 MCP Server 详情</p>
+     * <p>Returns the details of an MCP Server.</p>
      * 
      * @param request GetMcpServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9277,8 +9914,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API returns the detailed configuration of a specific MCP Server by name. The response includes the creator ID, modifier ID, service address, and transport protocol. You must provide the exact name of the MCP Server in the request.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>Ensure you have the required permissions to call this API.</li>
+     * <li>The MCP Server name is case-sensitive.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>读取 MCP Server 详情</p>
+     * <p>Returns the details of an MCP Server.</p>
      * 
      * @param request GetMcpServerRequest
      * @return GetMcpServerResponse
@@ -9289,6 +9935,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a collection in Data Map. Collections include categories and data albums.</p>
      * 
@@ -9317,6 +9968,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a collection in Data Map. Collections include categories and data albums.</p>
      * 
@@ -9330,7 +9986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a metadata entity. Currently, only pure custom types are supported.</p>
+     * <p>Retrieves the details of a custom entity.</p>
      * 
      * @param request GetMetaEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9362,7 +10018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a metadata entity. Currently, only pure custom types are supported.</p>
+     * <p>Retrieves the details of a custom entity.</p>
      * 
      * @param request GetMetaEntityRequest
      * @return GetMetaEntityResponse
@@ -9374,7 +10030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom entity definition</p>
+     * <p>Retrieves the details of a custom entity definition.</p>
      * 
      * @param request GetMetaEntityDefRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9406,7 +10062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom entity definition</p>
+     * <p>Retrieves the details of a custom entity definition.</p>
      * 
      * @param request GetMetaEntityDefRequest
      * @return GetMetaEntityDefResponse
@@ -9503,8 +10159,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only in DataWorks Professional Edition or later.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains the details of a parameter by parameter ID.</p>
+     * <p>Gets the details of a parameter by its ID.</p>
      * 
      * @param request GetParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9535,8 +10194,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only in DataWorks Professional Edition or later.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains the details of a parameter by parameter ID.</p>
+     * <p>Gets the details of a parameter by its ID.</p>
      * 
      * @param request GetParameterRequest
      * @return GetParameterResponse
@@ -9549,8 +10211,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>This operation supports MaxCompute and HMS (EMR cluster) tables only.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Only MaxCompute and HMS (EMR cluster) table types are supported.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -9583,8 +10245,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>This operation supports MaxCompute and HMS (EMR cluster) tables only.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Only MaxCompute and HMS (EMR cluster) table types are supported.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -9599,8 +10261,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * For earlier SDK versions that do not include this API, use the GetDeployment API with the same parameters described in this document.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a process for deploying or undeploying an entity.</p>
+     * <p>Gets the details of a Deployment Process.</p>
      * 
      * @param request GetPipelineRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9627,8 +10295,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * For earlier SDK versions that do not include this API, use the GetDeployment API with the same parameters described in this document.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a process for deploying or undeploying an entity.</p>
+     * <p>Gets the details of a Deployment Process.</p>
      * 
      * @param request GetPipelineRunRequest
      * @return GetPipelineRunResponse
@@ -9639,8 +10313,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves the details of a specific approval process definition using the <code>ID</code> parameter.</li>
+     * <li>The <code>ID</code> parameter is required and must be a valid process definition ID.</li>
+     * <li>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</li>
+     * <li>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询审批流程定义详情</p>
+     * <p>Retrieves the approval policy for a given process definition ID.</p>
      * 
      * @param request GetProcessDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9671,8 +10354,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves the details of a specific approval process definition using the <code>ID</code> parameter.</li>
+     * <li>The <code>ID</code> parameter is required and must be a valid process definition ID.</li>
+     * <li>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</li>
+     * <li>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询审批流程定义详情</p>
+     * <p>Retrieves the approval policy for a given process definition ID.</p>
      * 
      * @param request GetProcessDefinitionRequest
      * @return GetProcessDefinitionResponse
@@ -9683,8 +10375,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API is used to monitor and manage the status of an approval process. By providing the approval process instance ID, you can query for related information, such as the approval process definition, current approval nodes, and the tasks on each node.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询审批流程实例详情</p>
+     * <p>Retrieves details for a specified approval process instance, including its approval nodes and task list.</p>
      * 
      * @param request GetProcessInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9715,8 +10411,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API is used to monitor and manage the status of an approval process. By providing the approval process instance ID, you can query for related information, such as the approval process definition, current approval nodes, and the tasks on each node.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询审批流程实例详情</p>
+     * <p>Retrieves details for a specified approval process instance, including its approval nodes and task list.</p>
      * 
      * @param request GetProcessInstanceRequest
      * @return GetProcessInstanceResponse
@@ -9774,10 +10474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This operation is available only in DataWorks Basic Edition and later.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about a member in a workspace.</p>
+     * <p>Retrieves the details of a specific member in a Workspace.</p>
      * 
      * @param request GetProjectMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9813,10 +10513,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This operation is available only in DataWorks Basic Edition and later.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about a member in a workspace.</p>
+     * <p>Retrieves the details of a specific member in a Workspace.</p>
      * 
      * @param request GetProjectMemberRequest
      * @return GetProjectMemberResponse
@@ -9828,10 +10528,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You can call this operation only if you have purchased DataWorks Basic Edition or a later edition.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a role in a DataWorks workspace.</p>
+     * <p>Queries the details of a workspace role.</p>
      * 
      * @param request GetProjectRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9867,10 +10567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You can call this operation only if you have purchased DataWorks Basic Edition or a later edition.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a role in a DataWorks workspace.</p>
+     * <p>Queries the details of a workspace role.</p>
      * 
      * @param request GetProjectRoleRequest
      * @return GetProjectRoleResponse
@@ -9882,7 +10582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the result of asynchronous workflow instance reruns.</p>
+     * <p>Query the result of an asynchronous rerun workflow instance</p>
      * 
      * @param request GetRerunWorkflowInstancesResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9914,7 +10614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the result of asynchronous workflow instance reruns.</p>
+     * <p>Query the result of an asynchronous rerun workflow instance</p>
      * 
      * @param request GetRerunWorkflowInstancesResultRequest
      * @return GetRerunWorkflowInstancesResultResponse
@@ -9966,7 +10666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</p>
+     * <p>DataWorks Basic Edition or a more advanced edition is required to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about a resource group based on its ID.</p>
@@ -9997,7 +10697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</p>
+     * <p>DataWorks Basic Edition or a more advanced edition is required to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about a resource group based on its ID.</p>
@@ -10059,12 +10759,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Only MaxCompute and Hologres types are supported.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a schema in Data Map. You can call this API operation to query the information only about MaxCompute and Hologres schemas.</p>
+     * <p>Retrieves the schema details of a specified table in Data Map. Only MaxCompute and Hologres schemas are supported.</p>
      * 
      * @param request GetSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10093,12 +10793,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Only MaxCompute and Hologres types are supported.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a schema in Data Map. You can call this API operation to query the information only about MaxCompute and Hologres schemas.</p>
+     * <p>Retrieves the schema details of a specified table in Data Map. Only MaxCompute and Hologres schemas are supported.</p>
      * 
      * @param request GetSchemaRequest
      * @return GetSchemaResponse
@@ -10109,8 +10809,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves the complete configuration information for a security policy by its ID.</li>
+     * <li>The API returns an error message if the provided <code>Id</code> is invalid or does not exist.</li>
+     * <li>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</li>
+     * <li>Note: Some fields in a system default policy cannot be modified or deleted.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询安全管控策略详情</p>
+     * <p>Retrieves the details of a security policy by its ID. This operation requires both DataWorks tenant administrator and security administrator permissions.</p>
      * 
      * @param request GetSecurityStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10141,8 +10850,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves the complete configuration information for a security policy by its ID.</li>
+     * <li>The API returns an error message if the provided <code>Id</code> is invalid or does not exist.</li>
+     * <li>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</li>
+     * <li>Note: Some fields in a system default policy cannot be modified or deleted.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询安全管控策略详情</p>
+     * <p>Retrieves the details of a security policy by its ID. This operation requires both DataWorks tenant administrator and security administrator permissions.</p>
      * 
      * @param request GetSecurityStrategyRequest
      * @return GetSecurityStrategyResponse
@@ -10153,8 +10871,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Overview</h2>
+     * <ul>
+     * <li><strong>request parameters</strong>: The name of the target Skill.</li>
+     * <li><strong>response parameters</strong>: The details of the Skill, including its name, description, creator ID, modifier ID, visibility level, visibility scope, the body of the SKILL.md file, a temporary download link for bundle.zip (which requires no authentication and will expire), the creation time, and the last modified time.</li>
+     * <li><strong>Note</strong>: The <code>BundleUrl</code> is a temporary download link. Once the link expires, you must call this operation again to get a new one.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>读取 Skill 详情</p>
+     * <p>Retrieves the details of a specified Skill by name, including the body of the SKILL.md file and the bundle\&quot;s download link.</p>
      * 
      * @param request GetSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10185,8 +10911,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Overview</h2>
+     * <ul>
+     * <li><strong>request parameters</strong>: The name of the target Skill.</li>
+     * <li><strong>response parameters</strong>: The details of the Skill, including its name, description, creator ID, modifier ID, visibility level, visibility scope, the body of the SKILL.md file, a temporary download link for bundle.zip (which requires no authentication and will expire), the creation time, and the last modified time.</li>
+     * <li><strong>Note</strong>: The <code>BundleUrl</code> is a temporary download link. Once the link expires, you must call this operation again to get a new one.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>读取 Skill 详情</p>
+     * <p>Retrieves the details of a specified Skill by name, including the body of the SKILL.md file and the bundle\&quot;s download link.</p>
      * 
      * @param request GetSkillRequest
      * @return GetSkillResponse
@@ -10197,6 +10931,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a specific table in Data Map.</p>
      * 
@@ -10225,6 +10964,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the information about a specific table in Data Map.</p>
      * 
@@ -10278,7 +11022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about an instance.</p>
@@ -10309,7 +11053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about an instance.</p>
@@ -10456,7 +11200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about a workflow instance.</p>
@@ -10487,7 +11231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about a workflow instance.</p>
@@ -10565,6 +11309,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This feature requires DataWorks Basic Edition or a later version.</li>
+     * <li>You must be assigned one of the following roles in the DataWorks project: Tenant Owner, Space Administrator, Project Owner, or O\&amp;M.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Imports a certificate file.</p>
      * 
@@ -10609,6 +11359,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This feature requires DataWorks Basic Edition or a later version.</li>
+     * <li>You must be assigned one of the following roles in the DataWorks project: Tenant Owner, Space Administrator, Project Owner, or O\&amp;M.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Imports a certificate file.</p>
      * 
@@ -10711,10 +11467,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
+     * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.</li>
-     * <li>ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</li>
+     * <li>This API does not support importing multiple workflow definitions. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored.</li>
+     * <li>This is an asynchronous API. Calling this API returns an asynchronous task object. You must call the GetJobStatus API to query the execution status of the task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10755,10 +11512,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
+     * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.</li>
-     * <li>ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</li>
+     * <li>This API does not support importing multiple workflow definitions. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored.</li>
+     * <li>This is an asynchronous API. Calling this API returns an asynchronous task object. You must call the GetJobStatus API to query the execution status of the task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10773,8 +11531,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This operation retrieves all artifacts from a specific session. You can use the <code>Params.RequestId</code> parameter to filter for artifacts from a specific request.</li>
+     * <li>The <code>NextToken</code> parameter is a continuation token used to retrieve the next page of results. Do not specify this parameter for the first request.</li>
+     * <li>By default, this operation returns up to 50 artifacts per page. You can use the <code>MaxResults</code> parameter to specify a different limit.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the Artifact files that are produced by a specified session.</p>
+     * <p>Retrieves a list of artifacts from a specified session.</p>
      * 
      * @param tmpReq ListAgentSessionArtifactsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10819,8 +11585,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This operation retrieves all artifacts from a specific session. You can use the <code>Params.RequestId</code> parameter to filter for artifacts from a specific request.</li>
+     * <li>The <code>NextToken</code> parameter is a continuation token used to retrieve the next page of results. Do not specify this parameter for the first request.</li>
+     * <li>By default, this operation returns up to 50 artifacts per page. You can use the <code>MaxResults</code> parameter to specify a different limit.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the Artifact files that are produced by a specified session.</p>
+     * <p>Retrieves a list of artifacts from a specified session.</p>
      * 
      * @param request ListAgentSessionArtifactsRequest
      * @return ListAgentSessionArtifactsResponse
@@ -10831,8 +11605,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Specify at least one of <code>agentName</code> or <code>sessionSourceList</code>.</li>
+     * <li>You can use the <code>tagList</code>, <code>sessionId</code>, and <code>sessionTitle</code> parameters for combined filtering.</li>
+     * <li>The response follows the Alibaba Cloud OpenAPI pagination specification and includes the <code>totalCount</code>, <code>maxResults</code>, <code>nextToken</code>, and <code>sessionList</code> fields.</li>
+     * <li>If you provide an invalid string for <code>nextToken</code>, its value defaults to <code>1</code>.</li>
+     * <li>By default, this operation returns 50 records per page. You can use the <code>maxResults</code> parameter to adjust this number.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Loads the conversation history list of an Agent Session.</p>
+     * <p>Retrieves the conversation history for the agent session.</p>
      * 
      * @param tmpReq ListAgentSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10877,8 +11661,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Specify at least one of <code>agentName</code> or <code>sessionSourceList</code>.</li>
+     * <li>You can use the <code>tagList</code>, <code>sessionId</code>, and <code>sessionTitle</code> parameters for combined filtering.</li>
+     * <li>The response follows the Alibaba Cloud OpenAPI pagination specification and includes the <code>totalCount</code>, <code>maxResults</code>, <code>nextToken</code>, and <code>sessionList</code> fields.</li>
+     * <li>If you provide an invalid string for <code>nextToken</code>, its value defaults to <code>1</code>.</li>
+     * <li>By default, this operation returns 50 records per page. You can use the <code>maxResults</code> parameter to adjust this number.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Loads the conversation history list of an Agent Session.</p>
+     * <p>Retrieves the conversation history for the agent session.</p>
      * 
      * @param request ListAgentSessionsRequest
      * @return ListAgentSessionsResponse
@@ -10889,8 +11683,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation lists all available agents for the current tenant.</li>
+     * <li>You can filter the results by specifying an exact match for the <code>agentName</code> parameter.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of agents available for the current tenant. Supports filtering by name and pagination.</p>
+     * <p>Lists agents for the current tenant and supports filtering by name and pagination.</p>
      * 
      * @param tmpReq ListAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10935,8 +11736,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation lists all available agents for the current tenant.</li>
+     * <li>You can filter the results by specifying an exact match for the <code>agentName</code> parameter.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of agents available for the current tenant. Supports filtering by name and pagination.</p>
+     * <p>Lists agents for the current tenant and supports filtering by name and pagination.</p>
      * 
      * @param request ListAgentsRequest
      * @return ListAgentsResponse
@@ -11085,6 +11893,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of catalogs in Data Map. Only catalogs of the Data Lake Formation (DLF) and StarRocks metadata crawler types are supported. For the DLF metadata crawler type, all supported data catalogs are returned. For the StarRocks metadata crawler type, data catalogs in a specific instance are returned.</p>
      * 
@@ -11119,6 +11932,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of catalogs in Data Map. Only catalogs of the Data Lake Formation (DLF) and StarRocks metadata crawler types are supported. For the DLF metadata crawler type, all supported data catalogs are returned. For the StarRocks metadata crawler type, data catalogs in a specific instance are returned.</p>
      * 
@@ -11138,7 +11956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of certificate files.</p>
+     * <p>Retrieves a list of certificate files.</p>
      * 
      * @param request ListCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11172,7 +11990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of certificate files.</p>
+     * <p>Retrieves a list of certificate files.</p>
      * 
      * @param request ListCertificatesRequest
      * @return ListCertificatesResponse
@@ -11183,8 +12001,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of fields in a data table in Data Map.</p>
+     * <p>Queries the column list of a specified table in Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11211,8 +12034,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of fields in a data table in Data Map.</p>
+     * <p>Queries the column list of a specified table in Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @return ListColumnsResponse
@@ -11224,7 +12052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of components.</p>
@@ -11271,7 +12099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of components.</p>
@@ -11285,6 +12113,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a more advanced edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * <li>Tenant Owner, Workspace Administrator, Deploy, Developer, Visitor, Project Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, Development Platform Administrator, Data Governance Administrator</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the list of computing resources that meet the specified business information.</p>
      * 
@@ -11351,6 +12186,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a more advanced edition is required.</li>
+     * <li>You must have at least one of the following roles in the DataWorks workspace:</li>
+     * <li>Tenant Owner, Workspace Administrator, Deploy, Developer, Visitor, Project Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, Development Platform Administrator, Data Governance Administrator</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the list of computing resources that meet the specified business information.</p>
      * 
@@ -11363,6 +12205,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of metadata crawler types supported in Data Map. The subtypes of the types and the hierarchical relationship between the subtypes are also returned.</p>
      * 
@@ -11386,6 +12233,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of metadata crawler types supported in Data Map. The subtypes of the types and the hierarchical relationship between the subtypes are also returned.</p>
      * @return ListCrawlerTypesResponse
@@ -11396,8 +12248,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><strong>Search keyword</strong>: Use the <code>Q</code> parameter to perform a fuzzy search by agent name.</li>
+     * <li><strong>Visibility level filtering</strong>: Use the <code>Visibility</code> parameter to filter results by visibility level, such as <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>.</li>
+     * <li><strong>Paging information</strong>: Use the <code>MaxResults</code> and <code>NextToken</code> parameters to implement paginated queries. <code>NextToken</code> retrieves the next page of results.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分页列出 自定义 Agent</p>
+     * <p>Retrieves a paginated list of custom agents.</p>
      * 
      * @param tmpReq ListCustomAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11448,8 +12308,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><strong>Search keyword</strong>: Use the <code>Q</code> parameter to perform a fuzzy search by agent name.</li>
+     * <li><strong>Visibility level filtering</strong>: Use the <code>Visibility</code> parameter to filter results by visibility level, such as <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>.</li>
+     * <li><strong>Paging information</strong>: Use the <code>MaxResults</code> and <code>NextToken</code> parameters to implement paginated queries. <code>NextToken</code> retrieves the next page of results.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分页列出 自定义 Agent</p>
+     * <p>Retrieves a paginated list of custom agents.</p>
      * 
      * @param request ListCustomAgentsRequest
      * @return ListCustomAgentsResponse
@@ -11461,7 +12329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying a Custom Attribute Definition List</p>
+     * <p>Retrieves a list of custom attribute definitions.</p>
      * 
      * @param request ListCustomAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11517,7 +12385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying a Custom Attribute Definition List</p>
+     * <p>Retrieves a list of custom attribute definitions.</p>
      * 
      * @param request ListCustomAttributesRequest
      * @return ListCustomAttributesResponse
@@ -11713,10 +12581,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This operation requires DataWorks Basic Edition or a later edition.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of new-version synchronization tasks in Data Integration. A new-version synchronization task can be a real-time synchronization task used to synchronize full or incremental data in a database, a batch synchronization task used to synchronize full or incremental data in a database, or a real-time synchronization task used to synchronize incremental data in a single table.</p>
+     * <p>Lists Data Integration jobs.</p>
      * 
      * @param request ListDIJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11744,10 +12612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This operation requires DataWorks Basic Edition or a later edition.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of new-version synchronization tasks in Data Integration. A new-version synchronization task can be a real-time synchronization task used to synchronize full or incremental data in a database, a batch synchronization task used to synchronize full or incremental data in a database, or a real-time synchronization task used to synchronize incremental data in a single table.</p>
+     * <p>Lists Data Integration jobs.</p>
      * 
      * @param request ListDIJobsRequest
      * @return ListDIJobsResponse
@@ -11861,7 +12729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of data quality alert rules in a project.</p>
@@ -11912,7 +12780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of data quality alert rules in a project.</p>
@@ -11927,10 +12795,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of instances generated by a data quality monitoring task by page.</p>
+     * <p>Performs a paginated query of the quality monitoring task instance list.</p>
      * 
      * @deprecated OpenAPI ListDataQualityEvaluationTaskInstances is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
      * 
@@ -11962,10 +12830,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of instances generated by a data quality monitoring task by page.</p>
+     * <p>Performs a paginated query of the quality monitoring task instance list.</p>
      * 
      * @deprecated OpenAPI ListDataQualityEvaluationTaskInstances is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
      * 
@@ -11981,10 +12849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of data quality monitoring tasks by page.</p>
+     * <p>Lists quality monitoring nodes by paging query.</p>
      * 
      * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
      * 
@@ -12016,10 +12884,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of data quality monitoring tasks by page.</p>
+     * <p>Lists quality monitoring nodes by paging query.</p>
      * 
      * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
      * 
@@ -12035,10 +12903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
      * 
      * <b>summary</b> : 
-     * <p>查询数据质量规则校验结果列表</p>
+     * <p>Queries a list of data quality results by using paging.</p>
      * 
      * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
      * 
@@ -12070,10 +12938,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
      * 
      * <b>summary</b> : 
-     * <p>查询数据质量规则校验结果列表</p>
+     * <p>Queries a list of data quality results by using paging.</p>
      * 
      * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
      * 
@@ -12088,8 +12956,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of data quality monitoring rule templates.</p>
+     * <p>Queries a list of data quality rule templates.</p>
      * 
      * @deprecated OpenAPI ListDataQualityRuleTemplates is deprecated, please use dataworks-public::2024-05-18::ListDataQualityTemplates instead.
      * 
@@ -12120,8 +12991,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of data quality monitoring rule templates.</p>
+     * <p>Queries a list of data quality rule templates.</p>
      * 
      * @deprecated OpenAPI ListDataQualityRuleTemplates is deprecated, please use dataworks-public::2024-05-18::ListDataQualityTemplates instead.
      * 
@@ -12137,10 +13011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>Requires DataWorks Basic Edition or above.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of data quality monitoring rules by page.</p>
+     * <p>Paginated query of data quality monitoring rules.</p>
      * 
      * @deprecated OpenAPI ListDataQualityRules is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
      * 
@@ -12172,10 +13046,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>Requires DataWorks Basic Edition or above.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of data quality monitoring rules by page.</p>
+     * <p>Paginated query of data quality monitoring rules.</p>
      * 
      * @deprecated OpenAPI ListDataQualityRules is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
      * 
@@ -12191,10 +13065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This feature requires DataWorks basic edition or higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution records of data quality scans in a project.</p>
+     * <p>Queries the run history of data quality scans in a specified project.</p>
      * 
      * @param tmpReq ListDataQualityScanRunsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12264,10 +13138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This feature requires DataWorks basic edition or higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution records of data quality scans in a project.</p>
+     * <p>Queries the run history of data quality scans in a specified project.</p>
      * 
      * @param request ListDataQualityScanRunsRequest
      * @return ListDataQualityScanRunsResponse
@@ -12279,7 +13153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of data quality scan tasks in a project.</p>
@@ -12334,7 +13208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of data quality scan tasks in a project.</p>
@@ -12349,7 +13223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of data quality rule templates in a project.</p>
@@ -12400,7 +13274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of data quality rule templates in a project.</p>
@@ -12416,15 +13290,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To query the sharing rules of a data source associated with a workspace, you must have the data source sharing permissions in that workspace. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of sharing rules of a data source.</p>
+     * <p>Retrieves a list of sharing rules for a data source.</p>
      * 
      * @param request ListDataSourceSharedRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12453,15 +13327,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To query the sharing rules of a data source associated with a workspace, you must have the data source sharing permissions in that workspace. You must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of sharing rules of a data source.</p>
+     * <p>Retrieves a list of sharing rules for a data source.</p>
      * 
      * @param request ListDataSourceSharedRulesRequest
      * @return ListDataSourceSharedRulesResponse
@@ -12474,15 +13348,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of data sources based on the business information of data sources.</p>
+     * <p>Retrieves a list of data sources that match the specified filter conditions.</p>
      * 
      * @param tmpReq ListDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12517,15 +13391,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>This operation is available for all DataWorks editions.</li>
+     * <li>To call this operation, you must have one of the following roles in DataWorks:</li>
      * </ol>
      * <ul>
      * <li>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of data sources based on the business information of data sources.</p>
+     * <p>Retrieves a list of data sources that match the specified filter conditions.</p>
      * 
      * @param request ListDataSourcesRequest
      * @return ListDataSourcesResponse
@@ -12536,6 +13410,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>For the StarRocks type, only the Internal catalog is supported.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of databases in an instance, cluster, or data catalog in Data Map. For DLF or StarRocks data sources, you can call this API operation to query databases in a data catalog. For StarRocks data sources, you can call this API operation to query databases in internal catalogs. For other types of data sources, you can call this API operation to query databases in an instance or cluster.</p>
      * 
@@ -12564,6 +13444,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>For the StarRocks type, only the Internal catalog is supported.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of databases in an instance, cluster, or data catalog in Data Map. For DLF or StarRocks data sources, you can call this API operation to query databases in a data catalog. For StarRocks data sources, you can call this API operation to query databases in internal catalogs. For other types of data sources, you can call this API operation to query databases in an instance or cluster.</p>
      * 
@@ -12990,6 +13876,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of entities in a collection in Data Map. Collections include categories and data albums. Entities can only be tables.</p>
      * 
@@ -13018,6 +13909,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of entities in a collection in Data Map. Collections include categories and data albums. Entities can only be tables.</p>
      * 
@@ -13294,8 +14190,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or higher to call this operation.</li>
+     * <li><strong>Before you call this operation, ensure that the AliyunServiceRoleForDataWorks service-linked role is created.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the workspaces associated with an image.</p>
+     * <p>Lists the workspaces associated with an image.</p>
      * 
      * @param request ListImageAssociatedProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13326,8 +14228,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or higher to call this operation.</li>
+     * <li><strong>Before you call this operation, ensure that the AliyunServiceRoleForDataWorks service-linked role is created.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the workspaces associated with an image.</p>
+     * <p>Lists the workspaces associated with an image.</p>
      * 
      * @param request ListImageAssociatedProjectsRequest
      * @return ListImageAssociatedProjectsResponse
@@ -13338,8 +14246,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>To use this API, you must purchase DataWorks Basic Edition or a later edition.</li>
+     * <li><strong>Ensure you create the service-linked role AliyunServiceRoleForDataWorks before you call this API.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified image version.</p>
+     * <p>Gets the details of a specified image version.</p>
      * 
      * @param request ListImageVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13378,8 +14292,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>To use this API, you must purchase DataWorks Basic Edition or a later edition.</li>
+     * <li><strong>Ensure you create the service-linked role AliyunServiceRoleForDataWorks before you call this API.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified image version.</p>
+     * <p>Gets the details of a specified image version.</p>
      * 
      * @param request ListImageVersionsRequest
      * @return ListImageVersionsResponse
@@ -13390,8 +14310,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must have DataWorks Basic Edition or a later version to use this API.</li>
+     * <li><strong>Before you use this API, make sure that the service-linked role AliyunServiceRoleForDataWorks is created.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of images.</p>
+     * <p>Retrieves a list of images.</p>
      * 
      * @param tmpReq ListImagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13496,8 +14422,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must have DataWorks Basic Edition or a later version to use this API.</li>
+     * <li><strong>Before you use this API, make sure that the service-linked role AliyunServiceRoleForDataWorks is created.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of images.</p>
+     * <p>Retrieves a list of images.</p>
      * 
      * @param request ListImagesRequest
      * @return ListImagesResponse
@@ -13508,8 +14440,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation is available in DataWorks Standard Edition and later versions.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the lineage between two entities, such as tables, fields, and Object Storage Service (OSS) files, in Data Map.</p>
+     * <p>Queries the data map for data lineage relationships between specified entities, such as tables, columns, and OSS objects.</p>
      * 
      * @param request ListLineageRelationshipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13536,8 +14473,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation is available in DataWorks Standard Edition and later versions.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the lineage between two entities, such as tables, fields, and Object Storage Service (OSS) files, in Data Map.</p>
+     * <p>Queries the data map for data lineage relationships between specified entities, such as tables, columns, and OSS objects.</p>
      * 
      * @param request ListLineageRelationshipsRequest
      * @return ListLineageRelationshipsResponse
@@ -13548,8 +14490,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>To use this API, you must purchase DataWorks Standard Edition or a later edition.</li>
+     * <li>Use this API to query the upstream and downstream entities of a specific entity and their lineage relationships.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</p>
+     * <p>Queries the upstream and downstream entities for a specified entity in Data Map. You can optionally include detailed lineage relationship information.</p>
      * 
      * @param request ListLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13576,8 +14524,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>To use this API, you must purchase DataWorks Standard Edition or a later edition.</li>
+     * <li>Use this API to query the upstream and downstream entities of a specific entity and their lineage relationships.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</p>
+     * <p>Queries the upstream and downstream entities for a specified entity in Data Map. You can optionally include detailed lineage relationship information.</p>
      * 
      * @param request ListLineagesRequest
      * @return ListLineagesResponse
@@ -13588,8 +14542,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation retrieves a paginated list of all MCP Servers within your account. You can filter the list by search keyword and visibility level, and control pagination by specifying the maximum number of results and a next page token.</p>
+     * <ul>
+     * <li><strong>Q</strong>: Optional. The search keyword for a fuzzy search on MCP Server names.</li>
+     * <li><strong>Visibility</strong>: Optional. The visibility level for filtering the results.</li>
+     * <li><strong>MaxResults</strong>: Optional. The maximum number of results to return per page. By default, no limit is applied.</li>
+     * <li><strong>NextToken</strong>: Optional. The next page token from a previous response. Use this parameter to retrieve the next page of results.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分页列出 MCP Server</p>
+     * <p>Retrieves a paginated list of MCP servers.</p>
      * 
      * @param tmpReq ListMcpServersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13640,8 +14604,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation retrieves a paginated list of all MCP Servers within your account. You can filter the list by search keyword and visibility level, and control pagination by specifying the maximum number of results and a next page token.</p>
+     * <ul>
+     * <li><strong>Q</strong>: Optional. The search keyword for a fuzzy search on MCP Server names.</li>
+     * <li><strong>Visibility</strong>: Optional. The visibility level for filtering the results.</li>
+     * <li><strong>MaxResults</strong>: Optional. The maximum number of results to return per page. By default, no limit is applied.</li>
+     * <li><strong>NextToken</strong>: Optional. The next page token from a previous response. Use this parameter to retrieve the next page of results.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分页列出 MCP Server</p>
+     * <p>Retrieves a paginated list of MCP servers.</p>
      * 
      * @param request ListMcpServersRequest
      * @return ListMcpServersResponse
@@ -13652,6 +14626,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of collections in Data Map. Collections include categories and data albums.</p>
      * 
@@ -13680,6 +14659,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of collections in Data Map. Collections include categories and data albums.</p>
      * 
@@ -13693,7 +14677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of metadata entities. Currently, only custom types are supported.</p>
+     * <p>Lists metadata entities. Support is currently limited to custom types.</p>
      * 
      * @param tmpReq ListMetaEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13767,7 +14751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of metadata entities. Currently, only custom types are supported.</p>
+     * <p>Lists metadata entities. Support is currently limited to custom types.</p>
      * 
      * @param request ListMetaEntitiesRequest
      * @return ListMetaEntitiesResponse
@@ -13779,7 +14763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of custom entity definitions (including custom entity types and extended table types).</p>
+     * <p>Retrieves a list of custom entity definitions, including custom entity types and extended table types.</p>
      * 
      * @param request ListMetaEntityDefsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13835,7 +14819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of custom entity definitions (including custom entity types and extended table types).</p>
+     * <p>Retrieves a list of custom entity definitions, including custom entity types and extended table types.</p>
      * 
      * @param request ListMetaEntityDefsRequest
      * @return ListMetaEntityDefsResponse
@@ -13846,8 +14830,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This operation supports pagination using the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
+     * <li>The required <code>DefSchema</code> parameter specifies the resource type.</li>
+     * <li>Specify multiple resource types in the <code>ResourceType</code> parameter to filter applications more precisely.</li>
+     * <li>Use the <code>StartTime</code> and <code>EndTime</code> parameters to limit the query to a specific time range.</li>
+     * <li>Use the <code>Statuses</code> parameter to filter applications by status, such as pending approval or approved.</li>
+     * <li>To filter by a specific resource or grantee, use the <code>Resource</code> and <code>Grantee</code> parameters.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询我发起的权限申请单</p>
+     * <p>Lists all resource access requests submitted by the current user.</p>
      * 
      * @param tmpReq ListMyApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13920,8 +14915,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This operation supports pagination using the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
+     * <li>The required <code>DefSchema</code> parameter specifies the resource type.</li>
+     * <li>Specify multiple resource types in the <code>ResourceType</code> parameter to filter applications more precisely.</li>
+     * <li>Use the <code>StartTime</code> and <code>EndTime</code> parameters to limit the query to a specific time range.</li>
+     * <li>Use the <code>Statuses</code> parameter to filter applications by status, such as pending approval or approved.</li>
+     * <li>To filter by a specific resource or grantee, use the <code>Resource</code> and <code>Grantee</code> parameters.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询我发起的权限申请单</p>
+     * <p>Lists all resource access requests submitted by the current user.</p>
      * 
      * @param request ListMyApplicationsRequest
      * @return ListMyApplicationsResponse
@@ -13932,8 +14938,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves all pending and approved permission requests where the current user is an approver.</li>
+     * <li>The <code>Statuses</code> parameter filters requests by status.</li>
+     * <li>The <code>NextToken</code> parameter enables pagination. For the first request, omit this parameter or set it to <code>null</code>. For subsequent requests, pass the <code>NextToken</code> value returned in the previous response.</li>
+     * <li>The <code>PageSize</code> parameter defaults to 10, with a maximum value of 200.</li>
+     * <li><code>DefSchema</code> and <code>ResourceType</code> are required parameters. Other parameters are optional.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询与我相关的权限申请单</p>
+     * <p>Lists permission requests where the current user is an approver or stakeholder.</p>
      * 
      * @param tmpReq ListMyRelatedApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14022,8 +15038,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves all pending and approved permission requests where the current user is an approver.</li>
+     * <li>The <code>Statuses</code> parameter filters requests by status.</li>
+     * <li>The <code>NextToken</code> parameter enables pagination. For the first request, omit this parameter or set it to <code>null</code>. For subsequent requests, pass the <code>NextToken</code> value returned in the previous response.</li>
+     * <li>The <code>PageSize</code> parameter defaults to 10, with a maximum value of 200.</li>
+     * <li><code>DefSchema</code> and <code>ResourceType</code> are required parameters. Other parameters are optional.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询与我相关的权限申请单</p>
+     * <p>Lists permission requests where the current user is an approver or stakeholder.</p>
      * 
      * @param request ListMyRelatedApprovalsRequest
      * @return ListMyRelatedApprovalsResponse
@@ -14038,7 +15064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of network resources of a serverless resource group.</p>
+     * <p>Retrieves a list of network resources for a serverless resource group.</p>
      * 
      * @param request ListNetworksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14069,7 +15095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of network resources of a serverless resource group.</p>
+     * <p>Retrieves a list of network resources for a serverless resource group.</p>
      * 
      * @param request ListNetworksRequest
      * @return ListNetworksResponse
@@ -14081,7 +15107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of descendant nodes of a node in DataStudio.</p>
+     * <p>Gets a paginated list of dependent nodes for a specified data development node.</p>
      * 
      * @param request ListNodeDependenciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14109,7 +15135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of descendant nodes of a node in DataStudio.</p>
+     * <p>Gets a paginated list of dependent nodes for a specified data development node.</p>
      * 
      * @param request ListNodeDependenciesRequest
      * @return ListNodeDependenciesResponse
@@ -14121,7 +15147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of nodes in DataStudio. You can also specify filter conditions to query specific nodes.</p>
+     * <p>Retrieves a paginated list of data development nodes that can be filtered by specified criteria.</p>
      * 
      * @param request ListNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14149,7 +15175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of nodes in DataStudio. You can also specify filter conditions to query specific nodes.</p>
+     * <p>Retrieves a paginated list of data development nodes that can be filtered by specified criteria.</p>
      * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
@@ -14160,8 +15186,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This feature is available in DataWorks Professional Edition and higher editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of parameter versions.</p>
+     * <p>Lists parameter versions.</p>
      * 
      * @param request ListParameterVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14204,8 +15233,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This feature is available in DataWorks Professional Edition and higher editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of parameter versions.</p>
+     * <p>Lists parameter versions.</p>
      * 
      * @param request ListParameterVersionsRequest
      * @return ListParameterVersionsResponse
@@ -14216,8 +15248,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This feature is available in DataWorks Professional Edition or higher.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of parameters.</p>
+     * <p>Query parameters.</p>
      * 
      * @param tmpReq ListParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14290,8 +15325,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This feature is available in DataWorks Professional Edition or higher.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of parameters.</p>
+     * <p>Query parameters.</p>
      * 
      * @param request ListParametersRequest
      * @return ListParametersResponse
@@ -14302,6 +15340,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Only maxcompute and hms (EMR cluster) table types are supported.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</p>
      * 
@@ -14330,6 +15374,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Only maxcompute and hms (EMR cluster) table types are supported.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</p>
      * 
@@ -14342,8 +15392,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API queries all pending permission requests that the current user can approve. You can filter the results by criteria such as resource type, time range, and approval status.</p>
+     * <ul>
+     * <li><strong>ResourceType</strong>: The resource type, such as a table. You can specify one or more values.</li>
+     * <li><strong>Resource</strong>: Search criteria for a resource, such as its project, database, or table name.</li>
+     * <li><strong>StartTime and EndTime</strong>: The time range when the permission requests were submitted.</li>
+     * <li><strong>Statuses</strong>: Filters the results by approval status, for example, to retrieve only requests that are pending approval.</li>
+     * <li><strong>Grantee</strong>: Filters the results by the grantee.</li>
+     * <li><strong>AccessTypes</strong>: Filters the results by the access type, such as <code>Read</code> or <code>Update</code>.</li>
+     * <li><strong>PageSize and NextToken</strong>: Enables pagination. <code>PageSize</code> specifies the number of results to return for each request, and <code>NextToken</code> is the cursor used to retrieve the next page of results.
+     * Notes:</li>
+     * <li>If no filters are specified, the API returns all matching records.</li>
+     * <li>For the first request, you can leave the <code>NextToken</code> parameter empty or omit it. To retrieve subsequent pages, you must use the <code>NextToken</code> value returned in the previous response.</li>
+     * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If you specify a value greater than the maximum, the maximum value is used.</li>
+     * <li>If no more data is available, the <code>HasMore</code> field is <code>false</code>, and <code>NextToken</code> is omitted.</li>
+     * </ul>
+     * <h2>Response</h2>
+     * <p>A successful call returns paginated results. Each permission request includes details such as the submission time, resource description, grantee, and requested permissions. The response also contains the approval process status and other relevant metadata.</p>
+     * <ul>
+     * <li><strong>Data</strong>: The paginated result set, containing the page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and a flag indicating if more data is available (<code>HasMore</code>).</li>
+     * <li><strong>ApplicationQueryResponse</strong>: The details of each permission request, including the justification, submission time, status, and a detailed list of requested items.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询待我审批的权限申请单</p>
+     * <p>Retrieves pending permission requests awaiting approval by the current user.</p>
      * 
      * @param tmpReq ListPendingApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14424,8 +15498,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API queries all pending permission requests that the current user can approve. You can filter the results by criteria such as resource type, time range, and approval status.</p>
+     * <ul>
+     * <li><strong>ResourceType</strong>: The resource type, such as a table. You can specify one or more values.</li>
+     * <li><strong>Resource</strong>: Search criteria for a resource, such as its project, database, or table name.</li>
+     * <li><strong>StartTime and EndTime</strong>: The time range when the permission requests were submitted.</li>
+     * <li><strong>Statuses</strong>: Filters the results by approval status, for example, to retrieve only requests that are pending approval.</li>
+     * <li><strong>Grantee</strong>: Filters the results by the grantee.</li>
+     * <li><strong>AccessTypes</strong>: Filters the results by the access type, such as <code>Read</code> or <code>Update</code>.</li>
+     * <li><strong>PageSize and NextToken</strong>: Enables pagination. <code>PageSize</code> specifies the number of results to return for each request, and <code>NextToken</code> is the cursor used to retrieve the next page of results.
+     * Notes:</li>
+     * <li>If no filters are specified, the API returns all matching records.</li>
+     * <li>For the first request, you can leave the <code>NextToken</code> parameter empty or omit it. To retrieve subsequent pages, you must use the <code>NextToken</code> value returned in the previous response.</li>
+     * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If you specify a value greater than the maximum, the maximum value is used.</li>
+     * <li>If no more data is available, the <code>HasMore</code> field is <code>false</code>, and <code>NextToken</code> is omitted.</li>
+     * </ul>
+     * <h2>Response</h2>
+     * <p>A successful call returns paginated results. Each permission request includes details such as the submission time, resource description, grantee, and requested permissions. The response also contains the approval process status and other relevant metadata.</p>
+     * <ul>
+     * <li><strong>Data</strong>: The paginated result set, containing the page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and a flag indicating if more data is available (<code>HasMore</code>).</li>
+     * <li><strong>ApplicationQueryResponse</strong>: The details of each permission request, including the justification, submission time, status, and a detailed list of requested items.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询待我审批的权限申请单</p>
+     * <p>Retrieves pending permission requests awaiting approval by the current user.</p>
      * 
      * @param request ListPendingApprovalsRequest
      * @return ListPendingApprovalsResponse
@@ -14476,8 +15574,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of processes that are used to deploy or undeploy entities in DataStudio. You can also specify filter conditions to query specific processes.</p>
+     * <p>Retrieve a paginated list of deployment processes. You can also filter this list based on specific criteria.</p>
      * 
      * @param request ListPipelineRunsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14504,8 +15608,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of processes that are used to deploy or undeploy entities in DataStudio. You can also specify filter conditions to query specific processes.</p>
+     * <p>Retrieve a paginated list of deployment processes. You can also filter this list based on specific criteria.</p>
      * 
      * @param request ListPipelineRunsRequest
      * @return ListPipelineRunsResponse
@@ -14516,8 +15626,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Queries process definitions of a specified policy type.</li>
+     * <li>This operation supports paginated queries. You can use the<code>PageSize</code> and<code>PageNumber</code> parameters to control the page size and page number.</li>
+     * <li>You can also use the<code>NextToken</code> and<code>MaxResults</code> parameters to page through large result sets.</li>
+     * <li>The response includes the total count, page size, current page number, and a list of process definitions.</li>
+     * <li>Each process definition includes key attributes, such as its ID, enabled status, and priority.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询审批流程定义列表</p>
+     * <p>Queries process definitions of a specified type.</p>
      * 
      * @param request ListProcessDefinitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14548,8 +15668,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Queries process definitions of a specified policy type.</li>
+     * <li>This operation supports paginated queries. You can use the<code>PageSize</code> and<code>PageNumber</code> parameters to control the page size and page number.</li>
+     * <li>You can also use the<code>NextToken</code> and<code>MaxResults</code> parameters to page through large result sets.</li>
+     * <li>The response includes the total count, page size, current page number, and a list of process definitions.</li>
+     * <li>Each process definition includes key attributes, such as its ID, enabled status, and priority.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询审批流程定义列表</p>
+     * <p>Queries process definitions of a specified type.</p>
      * 
      * @param request ListProcessDefinitionsRequest
      * @return ListProcessDefinitionsResponse
@@ -14561,10 +15691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This feature is available in DataWorks Basic Edition and higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries details about members in a workspace.</p>
+     * <p>Gets a paginated list of workspace member details.</p>
      * 
      * @param tmpReq ListProjectMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14622,10 +15752,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This feature is available in DataWorks Basic Edition and higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries details about members in a workspace.</p>
+     * <p>Gets a paginated list of workspace member details.</p>
      * 
      * @param request ListProjectMembersRequest
      * @return ListProjectMembersResponse
@@ -14637,10 +15767,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This feature is available in DataWorks Basic Edition and higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about roles in a DataWorks workspace by page.</p>
+     * <p>Returns a paginated list of roles in a workspace.</p>
      * 
      * @param tmpReq ListProjectRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14702,10 +15832,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This feature is available in DataWorks Basic Edition and higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about roles in a DataWorks workspace by page.</p>
+     * <p>Returns a paginated list of roles in a workspace.</p>
      * 
      * @param request ListProjectRolesRequest
      * @return ListProjectRolesResponse
@@ -14812,12 +15942,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>**Make sure that the AliyunServiceRoleForDataWorks service-linked role is created before you call this operation.</li>
+     * <li>DataWorks Basic Edition or a more advanced edition is required to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * <li>This operation returns only the workspaces that the current caller has access to. Unauthorized workspaces are not included in the response.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Gets the list of workspaces bound to a resource group.</p>
+     * <p>Query the list of workspaces with which a resource group is associated</p>
      * 
      * @param request ListResourceGroupAssociateProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14850,12 +15981,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>**Make sure that the AliyunServiceRoleForDataWorks service-linked role is created before you call this operation.</li>
+     * <li>DataWorks Basic Edition or a more advanced edition is required to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * <li>This operation returns only the workspaces that the current caller has access to. Unauthorized workspaces are not included in the response.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Gets the list of workspaces bound to a resource group.</p>
+     * <p>Query the list of workspaces with which a resource group is associated</p>
      * 
      * @param request ListResourceGroupAssociateProjectsRequest
      * @return ListResourceGroupAssociateProjectsResponse
@@ -14866,6 +15998,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a more advanced edition is required to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * <li>This operation applies only to serverless resource groups.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the metric data of a resource group.</p>
      * 
@@ -14922,6 +16061,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>DataWorks Basic Edition or a more advanced edition is required to use this feature.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * <li>This operation applies only to serverless resource groups.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the metric data of a resource group.</p>
      * 
@@ -14934,8 +16080,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation requires DataWorks Basic Edition or higher.</li>
+     * <li><strong>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of resource groups.</p>
+     * <p>Retrieves a list of resource groups.</p>
      * 
      * @param tmpReq ListResourceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14976,8 +16128,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation requires DataWorks Basic Edition or higher.</li>
+     * <li><strong>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</strong></li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of resource groups.</p>
+     * <p>Retrieves a list of resource groups.</p>
      * 
      * @param request ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
@@ -15032,7 +16190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of routes of a network resource.</p>
+     * <p>Retrieves a list of routes for a network resource.</p>
      * 
      * @param request ListRoutesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15063,7 +16221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of routes of a network resource.</p>
+     * <p>Retrieves a list of routes for a network resource.</p>
      * 
      * @param request ListRoutesRequest
      * @return ListRoutesResponse
@@ -15074,8 +16232,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or higher to use this feature.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of schemas in a database or a MaxCompute project in Data Map. Only schemas of the MaxCompute and Hologres metadata crawler types are supported.</p>
+     * <p>Queries the list of schemas under a specified database or MaxCompute project in Data Map. Currently supports MaxCompute and Holo types.</p>
      * 
      * @param tmpReq ListSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15108,8 +16271,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or higher to use this feature.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of schemas in a database or a MaxCompute project in Data Map. Only schemas of the MaxCompute and Hologres metadata crawler types are supported.</p>
+     * <p>Queries the list of schemas under a specified database or MaxCompute project in Data Map. Currently supports MaxCompute and Holo types.</p>
      * 
      * @param request ListSchemasRequest
      * @return ListSchemasResponse
@@ -15120,8 +16288,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves a paginated list of configured security policies.</li>
+     * <li>The <code>ControlModule</code> and <code>ControlSubModule</code> parameters filter policies by a specific module or submodule.</li>
+     * <li>The <code>PageNum</code> and <code>PageSize</code> parameters control pagination. <code>PageNum</code> specifies the page number to retrieve (default: 1), and <code>PageSize</code> specifies the number of policies to return per page (default: 20).</li>
+     * <li>Use the <code>MaxResults</code> and <code>NextToken</code> private parameters for advanced pagination.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分页检索安全管控策略</p>
+     * <p>Retrieves a paginated list of security policies based on specified conditions. This operation requires DataWorks tenant administrator or security administrator permissions.</p>
      * 
      * @param request ListSecurityStrategiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15164,8 +16341,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves a paginated list of configured security policies.</li>
+     * <li>The <code>ControlModule</code> and <code>ControlSubModule</code> parameters filter policies by a specific module or submodule.</li>
+     * <li>The <code>PageNum</code> and <code>PageSize</code> parameters control pagination. <code>PageNum</code> specifies the page number to retrieve (default: 1), and <code>PageSize</code> specifies the number of policies to return per page (default: 20).</li>
+     * <li>Use the <code>MaxResults</code> and <code>NextToken</code> private parameters for advanced pagination.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分页检索安全管控策略</p>
+     * <p>Retrieves a paginated list of security policies based on specified conditions. This operation requires DataWorks tenant administrator or security administrator permissions.</p>
      * 
      * @param request ListSecurityStrategiesRequest
      * @return ListSecurityStrategiesResponse
@@ -15176,8 +16362,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation lists the Skills in your account. You can filter the results by criteria such as a search keyword and visibility level.</p>
+     * <ul>
+     * <li><strong>Q</strong>: An optional search keyword for a fuzzy match on Skill names.</li>
+     * <li><strong>Visibility</strong>: An optional parameter to filter Skills by their visibility level. You can specify multiple values.</li>
+     * <li><strong>MaxResults</strong>: An optional parameter that specifies the maximum number of results to return per page.</li>
+     * <li><strong>NextToken</strong>: An optional pagination token for retrieving the next page of results. Omit this parameter for the first request. For subsequent requests, pass the <code>NextToken</code> value from the previous response to fetch the next page.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分页列出 Skill</p>
+     * <p>Lists the Skills in your account.</p>
      * 
      * @param tmpReq ListSkillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15228,8 +16424,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation lists the Skills in your account. You can filter the results by criteria such as a search keyword and visibility level.</p>
+     * <ul>
+     * <li><strong>Q</strong>: An optional search keyword for a fuzzy match on Skill names.</li>
+     * <li><strong>Visibility</strong>: An optional parameter to filter Skills by their visibility level. You can specify multiple values.</li>
+     * <li><strong>MaxResults</strong>: An optional parameter that specifies the maximum number of results to return per page.</li>
+     * <li><strong>NextToken</strong>: An optional pagination token for retrieving the next page of results. Omit this parameter for the first request. For subsequent requests, pass the <code>NextToken</code> value from the previous response to fetch the next page.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分页列出 Skill</p>
+     * <p>Lists the Skills in your account.</p>
      * 
      * @param request ListSkillsRequest
      * @return ListSkillsResponse
@@ -15240,8 +16446,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of tables in Data Map. For data source types that do not support schemas, you can call this API operation to query a list of tables in a specific database. For data source types that support schemas, you can call this API operation to query a list of tables in a specific database, MaxCompute project, or schema. Only the basic information about tables is returned. The information about technical metadata and business metadata is not returned.</p>
+     * <p>Queries a list of tables in the data map. For data source types that do not support schemas, this operation queries tables within a specified database. For data source types that support schemas, you can query tables within a specified database, MaxCompute project, or schema. The response includes basic table information, technical metadata, and business metadata.</p>
      * 
      * @param tmpReq ListTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15274,8 +16485,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of tables in Data Map. For data source types that do not support schemas, you can call this API operation to query a list of tables in a specific database. For data source types that support schemas, you can call this API operation to query a list of tables in a specific database, MaxCompute project, or schema. Only the basic information about tables is returned. The information about technical metadata and business metadata is not returned.</p>
+     * <p>Queries a list of tables in the data map. For data source types that do not support schemas, this operation queries tables within a specified database. For data source types that support schemas, you can query tables within a specified database, MaxCompute project, or schema. The response includes basic table information, technical metadata, and business metadata.</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
@@ -15288,10 +16504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.
-     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * Only operation logs generated within the previous 31 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of operation logs of an instance by page.</p>
+     * <p>Retrieves a paginated list of operation logs for a task instance.</p>
      * 
      * @param request ListTaskInstanceOperationLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15320,10 +16536,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.
-     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * Only operation logs generated within the previous 31 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of operation logs of an instance by page.</p>
+     * <p>Retrieves a paginated list of operation logs for a task instance.</p>
      * 
      * @param request ListTaskInstanceOperationLogsRequest
      * @return ListTaskInstanceOperationLogsResponse
@@ -15335,7 +16551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of instances. You can also specify filter conditions to query specific instances.</p>
@@ -15464,7 +16680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of instances. You can also specify filter conditions to query specific instances.</p>
@@ -15480,10 +16696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.
-     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * Only operation logs generated within the previous 31 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of operation logs of a task by page.</p>
+     * <p>Retrieves a paginated list of operation logs for a task.</p>
      * 
      * @param request ListTaskOperationLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15512,10 +16728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.
-     * You can call this operation to query only the operation logs generated within the previous 31 days.</p>
+     * Only operation logs generated within the previous 31 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of operation logs of a task by page.</p>
+     * <p>Retrieves a paginated list of operation logs for a task.</p>
      * 
      * @param request ListTaskOperationLogsRequest
      * @return ListTaskOperationLogsResponse
@@ -15526,6 +16742,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or higher is required.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</p>
      * 
@@ -15612,6 +16831,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DataWorks Basic Edition or higher is required.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</p>
      * 
@@ -15751,10 +16973,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>Available with DataWorks Basic Edition or higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of workflow instances by page. You can also specify filter conditions to query workflow instances.</p>
+     * <p>Returns a paginated list of workflow instances that can be filtered by specific criteria.</p>
      * 
      * @param tmpReq ListWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15848,10 +17070,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>Available with DataWorks Basic Edition or higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of workflow instances by page. You can also specify filter conditions to query workflow instances.</p>
+     * <p>Returns a paginated list of workflow instances that can be filtered by specific criteria.</p>
      * 
      * @param request ListWorkflowInstancesRequest
      * @return ListWorkflowInstancesResponse
@@ -15863,7 +17085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of workflows by page. You can also specify filter conditions to query workflows.</p>
@@ -15944,7 +17166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of workflows by page. You can also specify filter conditions to query workflows.</p>
@@ -15958,8 +17180,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This operation retrieves session details and streams the Agent response using Server-Sent Events (SSE).</li>
+     * <li>If the target session does not exist, the operation returns an error frame with an error code of 400.</li>
+     * <li>The response includes information about the Agent\&quot;s request processing, such as message chunks, thought processes, and tool call status updates.</li>
+     * <li>The <code>stopReason</code> field indicates why the Agent stops the current turn. Possible values include reaching the maximum turn limit or being canceled.</li>
+     * <li>The returned content conforms to the Agent Client Protocol (ACP). For more information, see https\://agentclientprotocol.com.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Loads historical messages of an existing session and returns them in SSE streaming mode. If the session does not exist, a JSONRPCResponse.error with code 400 is output through SSE. Content-Type is text/event-stream. Applicable to scenarios where the session context needs to be restored.</p>
+     * <p>Loads the message history of an existing session and returns it as an SSE stream. If the session does not exist, the server sends a JSONRPCResponse.error with a code of 400 through the SSE stream. The Content-Type is text/event-stream. Use this operation to restore session context.</p>
      * 
      * @param tmpReq LoadAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16004,8 +17236,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This operation retrieves session details and streams the Agent response using Server-Sent Events (SSE).</li>
+     * <li>If the target session does not exist, the operation returns an error frame with an error code of 400.</li>
+     * <li>The response includes information about the Agent\&quot;s request processing, such as message chunks, thought processes, and tool call status updates.</li>
+     * <li>The <code>stopReason</code> field indicates why the Agent stops the current turn. Possible values include reaching the maximum turn limit or being canceled.</li>
+     * <li>The returned content conforms to the Agent Client Protocol (ACP). For more information, see https\://agentclientprotocol.com.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Loads historical messages of an existing session and returns them in SSE streaming mode. If the session does not exist, a JSONRPCResponse.error with code 400 is output through SSE. Content-Type is text/event-stream. Applicable to scenarios where the session context needs to be restored.</p>
+     * <p>Loads the message history of an existing session and returns it as an SSE stream. If the session does not exist, the server sends a JSONRPCResponse.error with a code of 400 through the SSE stream. The Content-Type is text/event-stream. Use this operation to restore session context.</p>
      * 
      * @param request LoadAgentSessionRequest
      * @return LoadAgentSessionResponse
@@ -16268,8 +17510,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API sends a user prompt to a specified session ID and streams the agent\&quot;s response over SSE (Server-Sent Events).</li>
+     * <li>The response may include message chunks, thought process, and tool calling status updates.</li>
+     * <li>If the specified session does not exist, the API returns a 400 error in an SSE error frame.</li>
+     * <li>The <code>stopReason</code> field indicates why the agent ended the turn.</li>
+     * <li>You can use multiple types of content blocks in the prompt, such as text and OSS file download links.</li>
+     * <li>You can provide additional metadata in the <code>Meta</code> parameter to pass more context to the server.</li>
+     * <li>The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com</li>
+     * <li>\<em>\<em>Review the billing methods and pricing for Data Agent before you use this API\</em>\</em>: https\://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Sends a user prompt to an existing session and streams back the agent response.</p>
+     * <p>Sends a prompt to an existing session and streams the agent response.</p>
      * 
      * @param tmpReq PromptAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16314,8 +17569,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API sends a user prompt to a specified session ID and streams the agent\&quot;s response over SSE (Server-Sent Events).</li>
+     * <li>The response may include message chunks, thought process, and tool calling status updates.</li>
+     * <li>If the specified session does not exist, the API returns a 400 error in an SSE error frame.</li>
+     * <li>The <code>stopReason</code> field indicates why the agent ended the turn.</li>
+     * <li>You can use multiple types of content blocks in the prompt, such as text and OSS file download links.</li>
+     * <li>You can provide additional metadata in the <code>Meta</code> parameter to pass more context to the server.</li>
+     * <li>The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com</li>
+     * <li>\<em>\<em>Review the billing methods and pricing for Data Agent before you use this API\</em>\</em>: https\://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Sends a user prompt to an existing session and streams back the agent response.</p>
+     * <p>Sends a prompt to an existing session and streams the agent response.</p>
      * 
      * @param request PromptAgentSessionRequest
      * @return PromptAgentSessionResponse
@@ -16326,8 +17594,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Professional Edition or a higher version to use this feature.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Removes an entity from a collection in Data Map. Collections include categories and data albums. Entities can be only tables. If you want to remove an entity from a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
+     * <p>Remove an entity object from a Data Map collection. The collection supports Data Map categories and data albums, and the entity currently supports only the Data Table type.
+     * When removing an entity from a data album, the caller must have the AliyunDataWorksFullAccess permission or be the creator or administrator of the album.</p>
      * 
      * @param request RemoveEntityFromMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16362,8 +17636,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Professional Edition or a higher version to use this feature.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Removes an entity from a collection in Data Map. Collections include categories and data albums. Entities can be only tables. If you want to remove an entity from a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
+     * <p>Remove an entity object from a Data Map collection. The collection supports Data Map categories and data albums, and the entity currently supports only the Data Table type.
+     * When removing an entity from a data album, the caller must have the AliyunDataWorksFullAccess permission or be the creator or administrator of the album.</p>
      * 
      * @param request RemoveEntityFromMetaCollectionRequest
      * @return RemoveEntityFromMetaCollectionResponse
@@ -16709,7 +17989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns workflow instances.</p>
+     * <p>Rerun a workflow instance</p>
      * 
      * @param tmpReq RerunWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16791,7 +18071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns workflow instances.</p>
+     * <p>Rerun a workflow instance</p>
      * 
      * @param request RerunWorkflowInstancesRequest
      * @return RerunWorkflowInstancesResponse
@@ -16926,8 +18206,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only in DataWorks Professional Edition or a later version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Rolls back the specified parameter.</p>
+     * <p>Rolls back a specified parameter.</p>
      * 
      * @param request RollbackParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16962,8 +18245,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only in DataWorks Professional Edition or a later version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Rolls back the specified parameter.</p>
+     * <p>Rolls back a specified parameter.</p>
      * 
      * @param request RollbackParameterRequest
      * @return RollbackParameterResponse
@@ -17087,10 +18373,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts multiple workflow instances at a time.</p>
+     * <p>Start multiple workflow instances in batch.</p>
      * 
      * @param tmpReq StartWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17132,10 +18418,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts multiple workflow instances at a time.</p>
+     * <p>Start multiple workflow instances in batch.</p>
      * 
      * @param request StartWorkflowInstancesRequest
      * @return StartWorkflowInstancesResponse
@@ -17192,8 +18478,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Requesters can use this operation to withdraw an approval process they initiated.</li>
+     * <li>Only the initiator of the approval process can call this operation.</li>
+     * <li>After a successful call, the operation terminates the approval process and updates its status to withdrawn.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>撤回审批流程实例</p>
+     * <p>Withdraws or terminates a specified process instance.</p>
      * 
      * @param request StopProcessInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17228,8 +18522,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Requesters can use this operation to withdraw an approval process they initiated.</li>
+     * <li>Only the initiator of the approval process can call this operation.</li>
+     * <li>After a successful call, the operation terminates the approval process and updates its status to withdrawn.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>撤回审批流程实例</p>
+     * <p>Withdraws or terminates a specified process instance.</p>
      * 
      * @param request StopProcessInstanceRequest
      * @return StopProcessInstanceResponse
@@ -17562,12 +18864,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>Your account must be assigned one of the following roles of the desired workspace: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must have at least one of the following roles in the DataWorks project space:
+     * Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O\&amp;M.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Tests the connectivity between a data source and a resource group.</p>
+     * <p>Test the connectivity of a data source on a resource group.</p>
      * 
      * @param request TestDataSourceConnectivityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17608,12 +18911,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>Your account must be assigned one of the following roles of the desired workspace: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must have at least one of the following roles in the DataWorks project space:
+     * Tenant Owner, Space Administrator, Deployment, Developer, Project Owner, or O\&amp;M.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Tests the connectivity between a data source and a resource group.</p>
+     * <p>Test the connectivity of a data source on a resource group.</p>
      * 
      * @param request TestDataSourceConnectivityRequest
      * @return TestDataSourceConnectivityResponse
@@ -17898,8 +19202,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation requires DataWorks Basic Edition or a later version.</li>
+     * <li>This operation supports only MaxCompute, hms, and dlf tables.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the business metadata of a column in a table in Data Map. Only the business description of a column can be updated.</p>
+     * <p>Updates the business metadata for a column in a data map. This operation can only update the business description and custom attributes.</p>
      * 
      * @param tmpReq UpdateColumnBusinessMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17944,8 +19254,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This operation requires DataWorks Basic Edition or a later version.</li>
+     * <li>This operation supports only MaxCompute, hms, and dlf tables.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the business metadata of a column in a table in Data Map. Only the business description of a column can be updated.</p>
+     * <p>Updates the business metadata for a column in a data map. This operation can only update the business description and custom attributes.</p>
      * 
      * @param request UpdateColumnBusinessMetadataRequest
      * @return UpdateColumnBusinessMetadataResponse
@@ -17957,7 +19273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is currently in beta. To join the beta testing, please submit a request. You can call this operation after we add you to the beta program.</p>
+     * <p>This API is currently in trial. To use this API, submit an application. After the administrator adds you to the trial list, you can call this API.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates components.</p>
@@ -18002,7 +19318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is currently in beta. To join the beta testing, please submit a request. You can call this operation after we add you to the beta program.</p>
+     * <p>This API is currently in trial. To use this API, submit an application. After the administrator adds you to the trial list, you can call this API.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates components.</p>
@@ -18016,6 +19332,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must have at least one of the following roles in the DataWorks project space:</li>
+     * <li>Tenant Owner, tenant administrator, Space Administrator, Project Owner, or O\&amp;M</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the specified computing resource based on the computing resource ID.</p>
      * 
@@ -18064,6 +19387,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>You must have at least one of the following roles in the DataWorks project space:</li>
+     * <li>Tenant Owner, tenant administrator, Space Administrator, Project Owner, or O\&amp;M</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the specified computing resource based on the computing resource ID.</p>
      * 
@@ -18077,7 +19407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates custom attribute definitions</p>
+     * <p>Updates a custom attribute.</p>
      * 
      * @param tmpReq UpdateCustomAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18143,7 +19473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates custom attribute definitions</p>
+     * <p>Updates a custom attribute.</p>
      * 
      * @param request UpdateCustomAttributeRequest
      * @return UpdateCustomAttributeResponse
@@ -18205,10 +19535,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This feature requires DataWorks Basic Edition or higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a synchronization task.</p>
+     * <p>Update a Data Integration task.</p>
      * 
      * @param tmpReq UpdateDIJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18296,10 +19626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>This feature requires DataWorks Basic Edition or higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a synchronization task.</p>
+     * <p>Update a Data Integration task.</p>
      * 
      * @param request UpdateDIJobRequest
      * @return UpdateDIJobResponse
@@ -18383,7 +19713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a specified data quality monitoring alert rule.</p>
@@ -18444,7 +19774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a specified data quality monitoring alert rule.</p>
@@ -18459,10 +19789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is supported in all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or above must be purchased to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a monitor.</p>
+     * <p>Updates a data quality validation task.</p>
      * 
      * @deprecated OpenAPI UpdateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
      * 
@@ -18560,10 +19890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is supported in all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or above must be purchased to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a monitor.</p>
+     * <p>Updates a data quality validation task.</p>
      * 
      * @deprecated OpenAPI UpdateDataQualityEvaluationTask is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
      * 
@@ -18578,8 +19908,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a data quality monitoring rule.</p>
+     * <p>Updates a data quality rule.</p>
      * 
      * @deprecated OpenAPI UpdateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
      * 
@@ -18666,8 +19999,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or above to use this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a data quality monitoring rule.</p>
+     * <p>Updates a data quality rule.</p>
      * 
      * @deprecated OpenAPI UpdateDataQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
      * 
@@ -18682,8 +20018,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only after you purchase DataWorks Basic Edition or a higher edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a data quality monitoring rule template.</p>
+     * <p>Updates a data quality rule template.</p>
      * 
      * @deprecated OpenAPI UpdateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityTemplate instead.
      * 
@@ -18750,8 +20089,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only after you purchase DataWorks Basic Edition or a higher edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a data quality monitoring rule template.</p>
+     * <p>Updates a data quality rule template.</p>
      * 
      * @deprecated OpenAPI UpdateDataQualityRuleTemplate is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityTemplate instead.
      * 
@@ -18767,7 +20109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a data quality monitor.</p>
@@ -18864,7 +20206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a data quality monitor.</p>
@@ -18879,7 +20221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a data quality rule template in a project</p>
@@ -18928,7 +20270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or a higher edition is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a data quality rule template in a project</p>
@@ -18942,15 +20284,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
-     * </ol>
-     * <ul>
-     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>Modifies a data source by ID.</p>
      * 
@@ -18999,15 +20332,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ol>
-     * <li>This API operation is available for all DataWorks editions.</li>
-     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
-     * </ol>
-     * <ul>
-     * <li>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>Modifies a data source by ID.</p>
      * 
@@ -19296,6 +20620,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke UpdateFolder to update the folder information.</p>
+     * 
      * @param request UpdateFolderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateFolderResponse
@@ -19337,6 +20664,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Invoke UpdateFolder to update the folder information.</p>
+     * 
      * @param request UpdateFolderRequest
      * @return UpdateFolderResponse
      */
@@ -19454,8 +20784,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API updates the configuration of a specified MCP Server. Omitted fields retain their original values.
+     * <strong>Note</strong>: When you modify the<code>Visibility</code> parameter, you must provide either<code>ProjectIds</code> or<code>UserIds</code> in<code>VisibilityScope</code> to apply the correct access control scope.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新 MCP Server</p>
+     * <p>Updates an MCP Server.</p>
      * 
      * @param tmpReq UpdateMcpServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19516,8 +20851,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API updates the configuration of a specified MCP Server. Omitted fields retain their original values.
+     * <strong>Note</strong>: When you modify the<code>Visibility</code> parameter, you must provide either<code>ProjectIds</code> or<code>UserIds</code> in<code>VisibilityScope</code> to apply the correct access control scope.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新 MCP Server</p>
+     * <p>Updates an MCP Server.</p>
      * 
      * @param request UpdateMcpServerRequest
      * @return UpdateMcpServerResponse
@@ -19528,8 +20868,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the information about a collection in Data Map, including the collection name, description, and administrator. Collections include categories and data albums. If you want to update the information about a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
+     * <p>Update Data Map collection objects, including Data Map categories and data albums. You can update the collection name, description, and administrator information.
+     * When updating a data album, the caller must have the AliyunDataWorksFullAccess permission or be the creator or an administrator of the album.</p>
      * 
      * @param tmpReq UpdateMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19578,8 +20924,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the information about a collection in Data Map, including the collection name, description, and administrator. Collections include categories and data albums. If you want to update the information about a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
+     * <p>Update Data Map collection objects, including Data Map categories and data albums. You can update the collection name, description, and administrator information.
+     * When updating a data album, the caller must have the AliyunDataWorksFullAccess permission or be the creator or an administrator of the album.</p>
      * 
      * @param request UpdateMetaCollectionRequest
      * @return UpdateMetaCollectionResponse
@@ -19590,8 +20942,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Professional Edition or a higher edition to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates metadata entities. You can update custom objects or extended table objects (Database, Table, and Column).</p>
+     * <p>Updates a metadata entity. You can update custom entities or objects of the extended table type, such as databases, tables, and columns.</p>
      * 
      * @param tmpReq UpdateMetaEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19644,8 +20999,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Professional Edition or a higher edition to use this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates metadata entities. You can update custom objects or extended table objects (Database, Table, and Column).</p>
+     * <p>Updates a metadata entity. You can update custom entities or objects of the extended table type, such as databases, tables, and columns.</p>
      * 
      * @param request UpdateMetaEntityRequest
      * @return UpdateMetaEntityResponse
@@ -19656,8 +21014,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation requires DataWorks Professional Edition or a later version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates metadata entity definitions (including pure custom types and extended table types)</p>
+     * <p>Updates a meta entity definition. This operation supports both custom and extended table entity types.</p>
      * 
      * @param tmpReq UpdateMetaEntityDefRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19714,8 +21075,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation requires DataWorks Professional Edition or a later version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates metadata entity definitions (including pure custom types and extended table types)</p>
+     * <p>Updates a meta entity definition. This operation supports both custom and extended table entity types.</p>
      * 
      * @param request UpdateMetaEntityDefRequest
      * @return UpdateMetaEntityDefResponse
@@ -19778,8 +21142,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only in DataWorks Professional Edition and later.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a parameter. Incremental modification. Only the specified columns are modified.</p>
+     * <p>Updates a parameter. This operation performs an incremental update and modifies only the specified fields.</p>
      * 
      * @param tmpReq UpdateParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19828,8 +21195,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only in DataWorks Professional Edition and later.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a parameter. Incremental modification. Only the specified columns are modified.</p>
+     * <p>Updates a parameter. This operation performs an incremental update and modifies only the specified fields.</p>
      * 
      * @param request UpdateParameterRequest
      * @return UpdateParameterResponse
@@ -19840,8 +21210,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</li>
+     * <li>The required <code>Id</code> parameter identifies the approval process definition to update.</li>
+     * <li>To overwrite the existing configuration, set the <code>Overwrite</code> parameter to <code>true</code>.</li>
+     * <li>The optional <code>ClientToken</code> parameter ensures request idempotency.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新审批流程定义</p>
+     * <p>Updates an existing approval process definition.</p>
      * 
      * @param tmpReq UpdateProcessDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19910,8 +21289,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</li>
+     * <li>The required <code>Id</code> parameter identifies the approval process definition to update.</li>
+     * <li>To overwrite the existing configuration, set the <code>Overwrite</code> parameter to <code>true</code>.</li>
+     * <li>The optional <code>ClientToken</code> parameter ensures request idempotency.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新审批流程定义</p>
+     * <p>Updates an existing approval process definition.</p>
      * 
      * @param request UpdateProcessDefinitionRequest
      * @return UpdateProcessDefinitionResponse
@@ -19922,8 +21310,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This feature requires DataWorks Basic Edition or a later version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a DataWorks workspace.</p>
+     * <p>This operation updates a DataWorks workspace.</p>
      * 
      * @param request UpdateProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19978,8 +21369,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This feature requires DataWorks Basic Edition or a later version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a DataWorks workspace.</p>
+     * <p>This operation updates a DataWorks workspace.</p>
      * 
      * @param request UpdateProjectRequest
      * @return UpdateProjectResponse
@@ -19991,7 +21385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the permissions of a custom role</p>
+     * <p>Updates the permissions of a custom role in a workspace.</p>
      * 
      * @param tmpReq UpdateProjectRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20043,7 +21437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the permissions of a custom role</p>
+     * <p>Updates the permissions of a custom role in a workspace.</p>
      * 
      * @param request UpdateProjectRoleRequest
      * @return UpdateProjectRoleResponse
@@ -20314,8 +21708,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage</h2>
+     * <ul>
+     * <li>Use this API to update a specified security policy, including its name, description, associated workspace IDs, and policy content.</li>
+     * <li>You cannot modify some properties of default system policies, such as the schema name and control module.</li>
+     * <li>When <code>ControlDwScope</code> is set to <code>Workspace</code>, use the <code>Workspaces</code> parameter to associate the policy with specific workspaces.</li>
+     * <li>When updating the policy content (<code>Content</code>), ensure that the provided controllers (<code>Controllers</code>) conform to the requirements of the selected schema.</li>
+     * <li>The optional <code>ClientToken</code> parameter ensures request idempotence.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>变更安全管控策略</p>
+     * <p>To modify the configuration of an existing security policy, you must be both a DataWorks tenant administrator and a security administrator.</p>
      * 
      * @param tmpReq UpdateSecurityStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20376,8 +21780,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage</h2>
+     * <ul>
+     * <li>Use this API to update a specified security policy, including its name, description, associated workspace IDs, and policy content.</li>
+     * <li>You cannot modify some properties of default system policies, such as the schema name and control module.</li>
+     * <li>When <code>ControlDwScope</code> is set to <code>Workspace</code>, use the <code>Workspaces</code> parameter to associate the policy with specific workspaces.</li>
+     * <li>When updating the policy content (<code>Content</code>), ensure that the provided controllers (<code>Controllers</code>) conform to the requirements of the selected schema.</li>
+     * <li>The optional <code>ClientToken</code> parameter ensures request idempotence.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>变更安全管控策略</p>
+     * <p>To modify the configuration of an existing security policy, you must be both a DataWorks tenant administrator and a security administrator.</p>
      * 
      * @param request UpdateSecurityStrategyRequest
      * @return UpdateSecurityStrategyResponse
@@ -20388,8 +21802,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a later version to use this operation.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</p>
+     * <p>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</p>
      * 
      * @param tmpReq UpdateTableBusinessMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20434,8 +21853,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You must purchase DataWorks Basic Edition or a later version to use this operation.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</p>
+     * <p>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</p>
      * 
      * @param request UpdateTableBusinessMetadataRequest
      * @return UpdateTableBusinessMetadataResponse
@@ -20597,10 +22021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies properties configured for multiple instances at a time. The properties include the priority, resource group for scheduling, and data source.</p>
+     * <p>Modify the properties of multiple task instances in batch, including priority, resource group, data source, and more.</p>
      * 
      * @param tmpReq UpdateTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20642,10 +22066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies properties configured for multiple instances at a time. The properties include the priority, resource group for scheduling, and data source.</p>
+     * <p>Modify the properties of multiple task instances in batch, including priority, resource group, data source, and more.</p>
      * 
      * @param request UpdateTaskInstancesRequest
      * @return UpdateTaskInstancesResponse
@@ -20745,7 +22169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a specified workflow in full update mode.</p>
@@ -20850,7 +22274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a specified workflow in full update mode.</p>
@@ -20866,7 +22290,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows in the FlowSpec filed, only the first workflow is created. Other specified workflows and the nodes in the workflows are ignored. You can call the UpdateNode operation to update a node.</p>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored. In addition, nodes defined within the workflow definition are also ignored. Call the UpdateNode API to update internal nodes one by one.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -20911,7 +22336,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows in the FlowSpec filed, only the first workflow is created. Other specified workflows and the nodes in the workflows are ignored. You can call the UpdateNode operation to update a node.</p>
+     * <p>Notice: 
+     * This API does not support batch operations. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored. In addition, nodes defined within the workflow definition are also ignored. Call the UpdateNode API to update internal nodes one by one.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 

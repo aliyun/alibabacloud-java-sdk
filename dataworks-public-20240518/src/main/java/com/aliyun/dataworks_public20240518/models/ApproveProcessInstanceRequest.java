@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ApproveProcessInstanceRequest extends TeaModel {
     /**
+     * <p>The approval action. Valid values:</p>
+     * <ul>
+     * <li><p>Agree: Approved.</p>
+     * </li>
+     * <li><p>Deny: Rejected.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +21,18 @@ public class ApproveProcessInstanceRequest extends TeaModel {
     public String approvalAction;
 
     /**
+     * <p>The approval comment.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>同意授权</p>
      */
     @NameInMap("ApprovalComment")
     public String approvalComment;
 
     /**
+     * <p>The idempotency token. We recommend that you use a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9*****</p>
      */
@@ -27,6 +40,16 @@ public class ApproveProcessInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The new authorization expiration time. Unit: milliseconds (UNIX timestamp).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1782541464000</p>
+     */
+    @NameInMap("NewExpiration")
+    public Long newExpiration;
+
+    /**
+     * <p>The process instance ID. Both new and legacy Security Center approval forms are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +85,14 @@ public class ApproveProcessInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ApproveProcessInstanceRequest setNewExpiration(Long newExpiration) {
+        this.newExpiration = newExpiration;
+        return this;
+    }
+    public Long getNewExpiration() {
+        return this.newExpiration;
     }
 
     public ApproveProcessInstanceRequest setProcessInstanceId(String processInstanceId) {

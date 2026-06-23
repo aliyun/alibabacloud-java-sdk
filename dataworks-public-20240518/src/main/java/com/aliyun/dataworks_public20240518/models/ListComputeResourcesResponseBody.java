@@ -53,8 +53,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
         /**
          * <p>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</p>
          * <ul>
-         * <li>Dev</li>
-         * <li>Prod Different types of computing resources have different attribute specifications under different configuration modes (ConnectionPropertiesMode).</li>
+         * <li><p>Dev</p>
+         * </li>
+         * <li><p>Prod Different types of computing resources have different attribute specifications under different configuration modes (ConnectionPropertiesMode).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

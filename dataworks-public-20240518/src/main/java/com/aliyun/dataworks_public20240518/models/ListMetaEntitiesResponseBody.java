@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListMetaEntitiesResponseBody extends TeaModel {
+    /**
+     * <p>Pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListMetaEntitiesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ADFASDFASDFA-ADFASDF-ASDFADSDF-AFFADS</p>
@@ -17,6 +20,8 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,16 +59,23 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
 
     public static class ListMetaEntitiesResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The maximum number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>A list of metadata entities.</p>
+         */
         @NameInMap("MetaEntities")
         public java.util.List<MetaEntity> metaEntities;
 
         /**
+         * <p>The token used to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAAAAdEdsXbwG2ZlbWCzN4wTTg6NmTbhyvglcoMCJsiEdngaTov15YaMyduvjIHYeTOIcEeXqCevM1qffZkwCkUTUYc=</p>
          */
@@ -71,6 +83,8 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

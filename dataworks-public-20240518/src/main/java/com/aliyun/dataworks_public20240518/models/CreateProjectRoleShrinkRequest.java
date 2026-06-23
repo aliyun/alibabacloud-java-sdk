@@ -4,13 +4,23 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRoleShrinkRequest extends TeaModel {
+    /**
+     * <p>The client token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>保留字段</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of DataWorks module permissions.</p>
+     */
     @NameInMap("ModulePermissions")
     public String modulePermissionsShrink;
 
     /**
+     * <p>The role name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +30,8 @@ public class CreateProjectRoleShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace on which the API operation is performed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

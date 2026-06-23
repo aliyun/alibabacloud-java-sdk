@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAgentSessionTokenUsageRequest extends TeaModel {
     /**
+     * <p>The ID provided by the requester, which is echoed in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>1033814166</p>
      */
@@ -12,12 +14,17 @@ public class GetAgentSessionTokenUsageRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC version. The value is always 2.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>Business parameters.</p>
+     */
     @NameInMap("Params")
     public GetAgentSessionTokenUsageRequestParams params;
 
@@ -52,6 +59,8 @@ public class GetAgentSessionTokenUsageRequest extends TeaModel {
 
     public static class GetAgentSessionTokenUsageRequestParams extends TeaModel {
         /**
+         * <p>The session ID. Required.</p>
+         * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>
          */

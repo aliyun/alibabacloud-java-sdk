@@ -36,7 +36,7 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>category.123</p>
+     * <p>as78d756asd</p>
      */
     @NameInMap("Id")
     public String id;
@@ -44,8 +44,10 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>Asc (default): ascending order.</li>
-     * <li>Desc</li>
+     * <li><p>Asc (default): ascending order.</p>
+     * </li>
+     * <li><p>Desc</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,8 +77,10 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
     /**
      * <p>The sort field. Valid values:</p>
      * <ul>
-     * <li>Name (default)</li>
-     * <li>CreateTime</li>
+     * <li><p>Name (default)</p>
+     * </li>
+     * <li><p>CreateTime</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

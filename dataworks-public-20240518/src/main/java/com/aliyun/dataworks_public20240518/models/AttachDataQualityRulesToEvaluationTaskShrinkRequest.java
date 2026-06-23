@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachDataQualityRulesToEvaluationTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the data quality monitoring task that is associated with the rule.</p>
+     * <p>The ID of the associated data quality monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,19 @@ public class AttachDataQualityRulesToEvaluationTaskShrinkRequest extends TeaMode
     public Long dataQualityEvaluationTaskId;
 
     /**
-     * <p>The IDs of the monitoring rules.</p>
+     * <p>The list of data quality rule IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DataQualityRuleIds")
     public String dataQualityRuleIdsShrink;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID. You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.
+     * This parameter specifies the DataWorks workspace in which the API operation is performed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>100001</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

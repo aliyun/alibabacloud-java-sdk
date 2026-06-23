@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DissociateProjectFromImageResponseBody extends TeaModel {
     /**
+     * <p>Whether the image was successfully disassociated from the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DissociateProjectFromImageResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -19,6 +23,8 @@ public class DissociateProjectFromImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

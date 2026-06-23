@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMetaEntitiesShrinkRequest extends TeaModel {
     /**
+     * <p>Conditions for filtering entities by entity attributes. The <code>AND</code> operator is used between different filters, and the <code>OR</code> operator is used for multiple values within a single filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ListMetaEntitiesShrinkRequest extends TeaModel {
     public String attributeFiltersShrink;
 
     /**
+     * <p>Filters entities by comment. This is a token-based match.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
@@ -19,6 +23,8 @@ public class ListMetaEntitiesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>Conditions for filtering entities by custom attributes. The <code>AND</code> operator is used between different filters, and the <code>OR</code> operator is used for multiple values within a single filter. This parameter supports only <code>ENUM</code> custom attributes.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -26,6 +32,7 @@ public class ListMetaEntitiesShrinkRequest extends TeaModel {
     public String customAttributeFiltersShrink;
 
     /**
+     * <p>The type of the entity to list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class ListMetaEntitiesShrinkRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <p>The maximum number of results to return per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +51,8 @@ public class ListMetaEntitiesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Filters entities by name. This is a containment match.</p>
+     * 
      * <strong>example:</strong>
      * <p>xm_create_test</p>
      */
@@ -49,6 +60,8 @@ public class ListMetaEntitiesShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The pagination token that specifies the next page of results. To retrieve the first page, do not specify this parameter. To retrieve subsequent pages, set this parameter to the <code>NextToken</code> value from the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAaUpAxoCTD/+sbOf3f+uxvnYyILMeAjoTFQSX64R12GN</p>
      */
@@ -56,6 +69,8 @@ public class ListMetaEntitiesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order. Valid values: <code>Asc</code> and <code>Desc</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -63,6 +78,8 @@ public class ListMetaEntitiesShrinkRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The field to use for sorting the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>Name</p>
      */

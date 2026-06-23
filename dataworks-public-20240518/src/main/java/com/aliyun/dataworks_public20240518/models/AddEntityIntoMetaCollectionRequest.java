@@ -9,7 +9,7 @@ public class AddEntityIntoMetaCollectionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table</p>
+     * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
     @NameInMap("Id")
     public String id;
@@ -19,7 +19,7 @@ public class AddEntityIntoMetaCollectionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>category.123</p>
+     * <p>as78d756asd</p>
      */
     @NameInMap("MetaCollectionId")
     public String metaCollectionId;

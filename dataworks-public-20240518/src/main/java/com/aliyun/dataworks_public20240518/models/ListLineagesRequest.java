@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLineagesRequest extends TeaModel {
     /**
+     * <p>The ID of the destination entity. This can be a table or column ID returned by the <code>ListTables</code> or <code>ListColumns</code> API, or the ID of a custom entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlf-table::catalog_id:database_name::table_name</p>
      */
@@ -12,6 +14,8 @@ public class ListLineagesRequest extends TeaModel {
     public String dstEntityId;
 
     /**
+     * <p>The name of the destination entity. This parameter supports fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>dstName1</p>
      */
@@ -19,6 +23,8 @@ public class ListLineagesRequest extends TeaModel {
     public String dstEntityName;
 
     /**
+     * <p>Specifies whether to include lineage relationships. Default: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +32,14 @@ public class ListLineagesRequest extends TeaModel {
     public Boolean needAttachRelationship;
 
     /**
+     * <p>The sort order. Default: <code>Asc</code>. Valid values:</p>
+     * <ul>
+     * <li><p><code>Asc</code>: ascending</p>
+     * </li>
+     * <li><p><code>Desc</code>: descending</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -33,6 +47,8 @@ public class ListLineagesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number to retrieve. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +56,8 @@ public class ListLineagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +65,8 @@ public class ListLineagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The field to sort the results by. The default is <code>Name</code>, which sorts by entity name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Name</p>
      */
@@ -54,6 +74,8 @@ public class ListLineagesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The ID of the source entity. This can be a table or column ID returned by the <code>ListTables</code> or <code>ListColumns</code> API, or the ID of a custom entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
      */
@@ -61,6 +83,8 @@ public class ListLineagesRequest extends TeaModel {
     public String srcEntityId;
 
     /**
+     * <p>The name of the source entity. This parameter supports fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>srcName1</p>
      */
