@@ -99,7 +99,7 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>TCP</p>
+     * <p>tcp</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;

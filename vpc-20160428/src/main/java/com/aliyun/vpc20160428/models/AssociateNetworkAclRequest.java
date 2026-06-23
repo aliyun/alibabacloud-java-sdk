@@ -21,7 +21,7 @@ public class AssociateNetworkAclRequest extends TeaModel {
      * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;

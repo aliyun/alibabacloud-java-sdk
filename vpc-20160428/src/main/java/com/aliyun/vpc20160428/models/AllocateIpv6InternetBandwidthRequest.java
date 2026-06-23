@@ -6,23 +6,30 @@ import com.aliyun.tea.*;
 public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>The Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If you set <strong>InternetChargeType</strong> to <strong>PayByTraffic</strong>, valid values are <strong>1</strong> to <strong>1000</strong>.</li>
-     * <li>If you set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>, valid values are <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, the valid values are <strong>1</strong> to <strong>1000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, the valid values are <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByOld95</strong>, the valid values are <strong>1</strong> to <strong>2000</strong>.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, the valid values are <strong>1</strong> to <strong>1000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, the valid values are <strong>1</strong> to <strong>2000</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>200</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,10 +39,12 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the API request. After the request passes the check, a 2XX HTTP status code is returned and the route table is associated. This is the default value.</li>
+     * <li><p><strong>true</strong>: performs a dry run without associating a prefix list with a route table. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the prefix list is associated with the route table.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +54,17 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The metering method of the Internet bandwidth for the IPv6 address. Valid values:</p>
+     * <p>The billing method for IPv6 Internet bandwidth. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
-     * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth</li>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer.</li>
+     * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
+     * <li><strong>PayByOld95</strong>: traditional 95th percentile billing. IPv6 Internet bandwidth does not support traditional 95th percentile billing by default. To use this billing method, contact your account manager.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer.</li>
+     * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +99,7 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

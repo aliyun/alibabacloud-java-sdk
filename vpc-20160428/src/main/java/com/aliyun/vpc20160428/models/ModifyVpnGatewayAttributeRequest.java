@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically advertise BGP routes to the virtual private cloud (VPC). Valid values:</p>
+     * <p>Specifies whether to enable routing automatic propagation for the VPN gateway. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: enabled.</p>
+     * <p>  After routing automatic propagation is enabled, the VPN gateway instance performs automatic learning of system routes from the system route table of the VPC-connected instance and automatically propagates routes of the on-premises data center to the system route table of the VPC-connected instance.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disabled.</p>
+     * <p>  Before you disable routing automatic propagation, make sure that the BGP dynamic route feature is disabled for all IPsec-VPN connections under the VPN gateway.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +25,7 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new description of the VPN connection.</p>
+     * <p>The new description of the VPN gateway.  </p>
      * <p>The description must be 1 to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -41,8 +45,8 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The new name of the VPN gateway.</p>
-     * <p>The name must be 2 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>. It must start with a letter and can contain letters, digits, underscores (_), hyphens (-), and periods (.). Other characters are not supported.</p>
+     * <p>The new name of the VPN gateway.  </p>
+     * <p>The name must be 2 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>. It must start with an uppercase or lowercase letter and can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>myvpn</p>
@@ -57,11 +61,11 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-shanghai</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -73,7 +77,7 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The ID of the VPN gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

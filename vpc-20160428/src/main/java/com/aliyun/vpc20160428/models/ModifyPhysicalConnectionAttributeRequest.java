@@ -31,7 +31,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
      * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the Express Connect circuit.</p>
+     * <p>物理专线的描述信息</p>
      */
     @NameInMap("Description")
     public String description;
@@ -58,7 +58,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
      * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Name</p>
+     * <p>物理专线的名称</p>
      */
     @NameInMap("Name")
     public String name;
@@ -73,7 +73,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
      * <p>The geographical location of the data center.</p>
      * 
      * <strong>example:</strong>
-     * <p>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</p>
+     * <p>浙江省杭州市XX区XX街道XX号</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;

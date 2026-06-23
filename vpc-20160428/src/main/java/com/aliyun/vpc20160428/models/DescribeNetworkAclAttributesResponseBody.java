@@ -448,7 +448,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
          * <p>The ID of the Alibaba Cloud account to which the network ACL belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>253460731706911258</p>
+         * <p>2546073170691****</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;

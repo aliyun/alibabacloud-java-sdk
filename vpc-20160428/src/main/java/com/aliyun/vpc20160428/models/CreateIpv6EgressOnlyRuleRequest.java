@@ -27,6 +27,9 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>A dry run of the request without actually executing it.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 

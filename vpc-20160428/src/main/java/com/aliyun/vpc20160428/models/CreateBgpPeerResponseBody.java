@@ -14,7 +14,7 @@ public class CreateBgpPeerResponseBody extends TeaModel {
     public String bgpPeerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D4B7649A-61BB-4C64-A586-1DFF1EDA6A42</p>

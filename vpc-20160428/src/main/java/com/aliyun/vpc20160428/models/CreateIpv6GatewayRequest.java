@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateIpv6GatewayRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 gateway. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +58,7 @@ public class CreateIpv6GatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -72,13 +73,13 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateIpv6GatewayRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC in which you want to create the IPv6 gateway.</p>
+     * <p>The ID of the VPC for which you want to enable IPv6 and create the IPv6 gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -190,8 +191,8 @@ public class CreateIpv6GatewayRequest extends TeaModel {
 
     public static class CreateIpv6GatewayRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -200,8 +201,8 @@ public class CreateIpv6GatewayRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

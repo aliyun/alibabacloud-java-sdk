@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveVpnResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The instance ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class MoveVpnResourceGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the new resource group.</p>
+     * <p>The ID of the new resource group to which the resource belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class MoveVpnResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,15 +48,15 @@ public class MoveVpnResourceGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of resource.</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><strong>VpnGateway</strong>: VPN gateway</p>
-     * <p>After you move a VPN gateway to a new resource group, the following associated resources are also moved to the new resource group: IPsec servers, SSL servers, SSL client certificates, and IPsec-VPN connections.</p>
+     * <li><p><strong>VpnGateway</strong>: VPN gateway instance.</p>
+     * <p>After you change the resource group of a VPN gateway instance, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connections (IPsec-VPN connections associated with the VPN gateway instance) under the VPN gateway instance is also changed.</p>
      * </li>
-     * <li><p><strong>CustomerGateway</strong>: customer gateway</p>
+     * <li><p><strong>CustomerGateway</strong>: customer gateway instance.</p>
      * </li>
-     * <li><p><strong>VpnAttachment</strong>: IPsec-VPN connection</p>
-     * <p>An IPsec-VPN connection associated with a transit router or not associate with a resource.</p>
+     * <li><p><strong>VpnAttachment</strong>: IPsec-VPN connection instance.</p>
+     * <p>This refers to IPsec-VPN connections associated with a transit router instance or IPsec-VPN connections that are not associated with any resource.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

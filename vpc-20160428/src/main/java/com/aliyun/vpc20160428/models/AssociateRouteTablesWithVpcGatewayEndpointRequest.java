@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,12 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends TeaModel 
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the dry run, the DryRunOperation error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: sends a dry run request without associating route tables with the gateway endpoint. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the dry run, a 2xx HTTP status code is returned and the route tables are associated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +32,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends TeaModel 
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the gateway endpoint to be associated with the route table.</p>
+     * <p>The ID of the gateway endpoint instance with which you want to associate route tables.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +48,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends TeaModel 
     public Long ownerId;
 
     /**
-     * <p>The region ID of the gateway endpoint.</p>
+     * <p>The region ID of the gateway endpoint with which you want to associate route tables.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +65,7 @@ public class AssociateRouteTablesWithVpcGatewayEndpointRequest extends TeaModel 
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table. Valid values of <strong>N</strong> are <strong>1</strong> to <strong>20</strong>, which specifies that you can associate a gateway endpoint with at most 20 route tables at a time.</p>
+     * <p>The ID of the route table to associate. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>. You can associate up to 20 route tables at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

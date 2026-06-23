@@ -89,7 +89,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
      * <p>The geographic location where the Express Connect circuit is deployed.</p>
      * 
      * <strong>example:</strong>
-     * <p>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</p>
+     * <p>杭州</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;
@@ -115,7 +115,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>company</p>
+     * <p>阿里</p>
      */
     @NameInMap("Si")
     public String si;
@@ -283,7 +283,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
          * <p>The name of the construction engineer.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhangsan</p>
+         * <p>张三</p>
          */
         @NameInMap("PMName")
         public String PMName;

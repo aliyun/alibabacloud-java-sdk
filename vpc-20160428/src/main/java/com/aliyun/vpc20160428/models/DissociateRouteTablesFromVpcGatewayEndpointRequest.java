@@ -11,7 +11,7 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends TeaModel
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
+     * <p>TF-DissociateRouteTablesFromVpcGatewayEndpoint-1634369235-8f****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,7 +34,7 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends TeaModel
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpce-m5e371h5clm3uadih****</p>
+     * <p>vpce-bp11cwae3p6z7ftbm****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;

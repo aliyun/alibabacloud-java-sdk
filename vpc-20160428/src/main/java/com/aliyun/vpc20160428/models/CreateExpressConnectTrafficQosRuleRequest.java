@@ -24,7 +24,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.0/24</p>
+     * <p><code>1.1.**.**</code>/24</p>
      */
     @NameInMap("DstCidr")
     public String dstCidr;
@@ -36,7 +36,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2001:0db8:1234:5678::/64</p>
+     * <p>2001:0db8:1234:****::/64</p>
      */
     @NameInMap("DstIPv6Cidr")
     public String dstIPv6Cidr;
@@ -126,7 +126,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>qos-2giu0a6vd5x0mv4700</p>
+     * <p>qos-2giu0a6vd5x0mv****</p>
      */
     @NameInMap("QosId")
     public String qosId;
@@ -136,7 +136,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+     * <p>qos-queue-9nyx2u7n71s2rc****</p>
      */
     @NameInMap("QueueId")
     public String queueId;
@@ -191,7 +191,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.0/24</p>
+     * <p><code>1.1.**.**</code>/24</p>
      */
     @NameInMap("SrcCidr")
     public String srcCidr;
@@ -203,7 +203,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2001:0db8:1234:5678::/64</p>
+     * <p>2001:0db8:1234:****::/64</p>
      */
     @NameInMap("SrcIPv6Cidr")
     public String srcIPv6Cidr;

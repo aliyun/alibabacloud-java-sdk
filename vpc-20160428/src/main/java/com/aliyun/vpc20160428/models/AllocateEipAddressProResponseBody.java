@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateEipAddressProResponseBody extends TeaModel {
     /**
-     * <p>The EIP ID.</p>
+     * <p>The ID of the Elastic IP Address (EIP).</p>
      * 
      * <strong>example:</strong>
      * <p>eip-25877c70gddh****</p>
@@ -14,7 +14,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The IP address that is allocated to the EIP. This parameter is returned only when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
+     * <p>The IP address of the EIP. This parameter is returned only when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -23,8 +23,9 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
     public String eipAddress;
 
     /**
-     * <p>The order ID.</p>
-     * <p>This parameter is returned when InstanceChargeType is set to PrePaid. If AutoPay is set to false, you must manually complete the payment in the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a>.</p>
+     * <p>The order ID.
+     * &lt;props=&quot;china&quot;&gt;This parameter is returned when <code>InstanceChargeType</code> is set to <code>PrePaid</code> (subscription). If <code>AutoPay</code> is set to <code>false</code>, go to the <a href="https://usercenter2.aliyun.com/order/list">Order Center</a> to complete the payment.
+     * &lt;props=&quot;intl&quot;&gt;This parameter is returned when <code>InstanceChargeType</code> is set to <code>PrePaid</code> (subscription). If <code>AutoPay</code> is set to <code>false</code>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</p>
      * 
      * <strong>example:</strong>
      * <p>20190000</p>

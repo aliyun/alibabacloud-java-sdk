@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries.</p>
+     * <p>The number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The information about the network instances that are associated with the prefix list.</p>
+     * <p>The association information of the prefix list.</p>
      */
     @NameInMap("PrefixListAssociation")
     public java.util.List<GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation> prefixListAssociation;
@@ -42,7 +42,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -97,7 +97,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
 
     public static class GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation extends TeaModel {
         /**
-         * <p>List of CIDR addresses where the prefix list is effective in the currently associated resources.</p>
+         * <p>The list of CIDR blocks in the prefix list that are effective for the associated resource.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -106,7 +106,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         public String cidrList;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>153460731706****</p>
@@ -115,7 +115,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The prefix list ID.</p>
+         * <p>The instance ID of the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-0b7hwu67****</p>
@@ -124,7 +124,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         public String prefixListId;
 
         /**
-         * <p>The reason why the association failed.</p>
+         * <p>The reason for the association failure.</p>
          * 
          * <strong>example:</strong>
          * <p>failed</p>
@@ -153,8 +153,8 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         /**
          * <p>The type of the associated resource. Valid values:</p>
          * <ul>
-         * <li><strong>vpcRouteTable</strong>: virtual private cloud (VPC) route table.</li>
-         * <li><strong>trRouteTable</strong>: route table of a transit router.</li>
+         * <li><strong>vpcRouteTable</strong>: VPC route table.</li>
+         * <li><strong>trRouteTable</strong>: transit router route table.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource associated with the prefix list belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the resource associated with the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>132193271328****</p>
@@ -173,14 +173,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         public String resourceUid;
 
         /**
-         * <p>The status of the prefix list. Valid values:</p>
+         * <p>The association status of the prefix list. Valid values:</p>
          * <ul>
-         * <li><strong>Created</strong></li>
-         * <li><strong>ModifyFailed</strong></li>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Modifying</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * <li><strong>Deleted</strong></li>
+         * <li><strong>Created</strong>: The association is created.</li>
+         * <li><strong>ModifyFailed</strong>: The association is not updated to the latest version.</li>
+         * <li><strong>Creating</strong>: The association is being created.</li>
+         * <li><strong>Modifying</strong>: The association is being modified.</li>
+         * <li><strong>Deleting</strong>: The association is being deleted.</li>
+         * <li><strong>Deleted</strong>: The association is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

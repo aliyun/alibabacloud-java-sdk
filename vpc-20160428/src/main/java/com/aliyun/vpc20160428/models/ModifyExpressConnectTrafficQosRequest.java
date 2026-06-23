@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     /**
-     * <p>The instances to be added. Ignore this parameter if no instances are to be added.</p>
+     * <p>The list of instances to add in this update. You do not need to specify this parameter if no instances need to be added.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -15,9 +15,9 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,6 +34,7 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
 
     /**
      * <p>The description of the QoS policy.</p>
+     * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-test</p>
@@ -46,13 +47,14 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>qos-2giu0a6vd5x0mv4700</p>
+     * <p>qos-2giu0a6vd5x0mv****</p>
      */
     @NameInMap("QosId")
     public String qosId;
 
     /**
      * <p>The name of the QoS policy.</p>
+     * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-test</p>
@@ -61,8 +63,8 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     public String qosName;
 
     /**
-     * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the QoS policy.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instances to be removed. Ignore this parameter if no instances are to be removed.</p>
+     * <p>The list of instances to remove in this update. You do not need to specify this parameter if no instances need to be removed.</p>
      */
     @NameInMap("RemoveInstanceList")
     public java.util.List<ModifyExpressConnectTrafficQosRequestRemoveInstanceList> removeInstanceList;
@@ -167,7 +169,7 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
 
     public static class ModifyExpressConnectTrafficQosRequestAddInstanceList extends TeaModel {
         /**
-         * <p>The ID of the instance to be associated.</p>
+         * <p>The instance ID of the instance to associate.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp159zj8zujwy3p07****</p>
@@ -176,7 +178,7 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of instance to be associated. Set the value to <strong>PHYSICALCONNECTION</strong>.</p>
+         * <p>The type of the instance to associate. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
          * 
          * <strong>example:</strong>
          * <p>PHYSICALCONNECTION</p>
@@ -209,7 +211,7 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
 
     public static class ModifyExpressConnectTrafficQosRequestRemoveInstanceList extends TeaModel {
         /**
-         * <p>The ID of the associated instance.</p>
+         * <p>The instance ID of the associated instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1j37am632492qzw****</p>
@@ -218,7 +220,7 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of the associated instance. Set the value to <strong>PHYSICALCONNECTION</strong>.</p>
+         * <p>The type of the associated instance. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
          * 
          * <strong>example:</strong>
          * <p>PHYSICALCONNECTION</p>

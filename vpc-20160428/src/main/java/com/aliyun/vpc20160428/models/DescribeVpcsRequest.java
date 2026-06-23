@@ -14,10 +14,12 @@ public class DescribeVpcsRequest extends TeaModel {
     public String dhcpOptionsSetId;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the resource is queried.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,12 +29,10 @@ public class DescribeVpcsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Query for VPCs in the specified region that have enabled IPv6 CIDR blocks. The value is empty by default, which means no filtering based on IPv6 availability is conducted. Valid values:</p>
+     * <p>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is performed based on IPv6 enablement. Valid values:</p>
      * <ul>
-     * <li><p>false: disabled</p>
-     * </li>
-     * <li><p>true: enabled</p>
-     * </li>
+     * <li><strong>false</strong>: IPv6 is not enabled.</li>
+     * <li><strong>true</strong>: IPv6 is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,12 @@ public class DescribeVpcsRequest extends TeaModel {
     public Boolean enableIpv6;
 
     /**
-     * <p>Specifies whether to query the default VPC in the specified region. Valid values:</p>
+     * <p>Specifies whether to query the default VPC in the specified region. Valid values: </p>
      * <ul>
-     * <li><strong>true</strong> (default)</li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong> (default): Queries the default VPC in the specified region.  </p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not query the default VPC.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +75,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -82,8 +84,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the VPC.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPC. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +95,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the VPC to be queried belongs.</p>
+     * <p>The ID of the resource group to which the VPC belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxvfvazb4p****</p>
@@ -114,7 +116,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public java.util.List<DescribeVpcsRequestTag> tag;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The ID of the VPC. </p>
      * <p>You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
@@ -133,7 +135,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public String vpcName;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+     * <p>The Alibaba Cloud account ID of the VPC owner.</p>
      * 
      * <strong>example:</strong>
      * <p>253460731706911258</p>
@@ -276,7 +278,7 @@ public class DescribeVpcsRequest extends TeaModel {
 
     public static class DescribeVpcsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -286,8 +288,8 @@ public class DescribeVpcsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

@@ -244,7 +244,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
      * <p><strong>vpn-not-exist</strong>: The IPsec-VPN connection is not associated with a VPN Gateway.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpn-p0wa1c1018pmeb6cu****</p>
+     * <p>vpn-not-exist</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

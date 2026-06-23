@@ -14,7 +14,7 @@ public class CreateDefaultVSwitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the default vSwitch.</p>
+     * <p>The ID of the default vSwitch that was created.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1a4b5qhmxftjimq****</p>

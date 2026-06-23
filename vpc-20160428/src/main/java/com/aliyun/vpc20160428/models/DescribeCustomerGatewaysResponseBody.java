@@ -8,7 +8,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     public DescribeCustomerGatewaysResponseBodyCustomerGateways customerGateways;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance that is associated with the IPv6 address to which the egress-only rule is applied.</p>
+     * <p>The ID of the IPv6 address for which the IPv6 egress-only rule is configured.</p>
      * 
      * <strong>example:</strong>
-     * <p>ipv6gw-bp1rhhs9zjlxukc5e****</p>
+     * <p>ipv6-bp12uzwhac8tv3xx6****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The type of the instance to which you want to apply the egress-only rule. Valid values:</p>
+     * <p>The type of the instance for which you want to configure an IPv6 egress-only rule. Valid values:</p>
      * <ul>
-     * <li>IPv6Address (default)</li>
-     * <li>IPv6Prefix</li>
+     * <li>IPv6Address (default): The instance is a single IPv6 address.</li>
+     * <li>IPv6Prefix: The instance is an IPv6 CIDR block.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The ID of the egress-only rule that you want to query.</p>
+     * <p>The ID of the IPv6 egress-only rule to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6py-bp1rr7fq1md8pbb3k****</p>
@@ -61,7 +61,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -70,7 +70,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -79,7 +79,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

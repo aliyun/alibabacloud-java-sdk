@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteNatIpRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class DeleteNatIpRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run without deleting the NAT IP address. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a Normal request. After the request passes the check, a 2xx HTTP status code is returned and the NAT IP address is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The IP prefix address to be deleted.</p>
+     * <p>The IP prefix to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/28</p>
@@ -40,7 +42,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public String ipv4Prefix;
 
     /**
-     * <p>The ID of the NAT gateway instance to which the IP prefix to be deleted belongs. Required when deleting an IP prefix.</p>
+     * <p>The instance ID of the NAT gateway to which the IP prefix belongs. This parameter is required when you delete an IP prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-gw8v16wgvtq26vh59****</p>
@@ -49,7 +51,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The ID of the NAT IP address that you want to delete.</p>
+     * <p>The instance ID of the NAT IP address that you want to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcnatip-gw8y7q3cpk3fggs87****</p>
@@ -64,8 +66,8 @@ public class DeleteNatIpRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway to which the NAT IP address that you want to delete belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the NAT gateway to which the NAT IP address belongs.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

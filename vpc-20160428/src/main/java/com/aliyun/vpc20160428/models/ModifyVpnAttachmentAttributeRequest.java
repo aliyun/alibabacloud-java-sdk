@@ -272,7 +272,7 @@ public class ModifyVpnAttachmentAttributeRequest extends TeaModel {
      * <p>The peer CA certificate when a ShangMi (SM) VPN gateway is used to create the IPsec-VPN connection.</p>
      * 
      * <strong>example:</strong>
-     * <p>c20ycDI1NnYxIENBIChURVNUIFN****</p>
+     * <p>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</p>
      */
     @NameInMap("RemoteCaCert")
     public String remoteCaCert;

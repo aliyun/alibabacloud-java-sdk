@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBusinessAccessPointsResponseBody extends TeaModel {
     /**
-     * <p>The list of access points.</p>
+     * <p>A list of access points.</p>
      */
     @NameInMap("BusinessAccessPoints")
     public java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPoints> businessAccessPoints;
@@ -41,9 +41,15 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     }
 
     public static class ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels extends TeaModel {
+        /**
+         * <p>The model of the optical module.</p>
+         */
         @NameInMap("OpticalModuleModel")
         public String opticalModuleModel;
 
+        /**
+         * <p>The port type.</p>
+         */
         @NameInMap("PortType")
         public String portType;
 
@@ -84,15 +90,15 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
          * <p>The name of the access point.</p>
          * 
          * <strong>example:</strong>
-         * <p>hangzhou-xs-B</p>
+         * <p>杭州-萧山-B</p>
          */
         @NameInMap("AccessPointName")
         public String accessPointName;
 
         /**
-         * <p>The ID of the cloud box.</p>
+         * <p>The ID of the Cloud Box instance.</p>
          * <blockquote>
-         * <p> You can query this parameter if the Express Connect circuits and access points are of the cloud box type.</p>
+         * <p>This parameter is returned only for access points that are associated with Cloud Box instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,18 +125,27 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         @NameInMap("Longitude")
         public Double longitude;
 
+        /**
+         * <p>The supported model of the optical module.</p>
+         */
         @NameInMap("OpticalModuleModels")
         public java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> opticalModuleModels;
 
         /**
-         * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+         * <p>The connectivity provider for the Express Connect circuit. Valid values:</p>
          * <ul>
-         * <li><strong>CT</strong>: China Telecom.</li>
-         * <li><strong>CU</strong>: China Unicom.</li>
-         * <li><strong>CM</strong>: China Mobile.</li>
-         * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland.</li>
-         * <li><strong>Equinix</strong>: Equinix.</li>
-         * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</li>
+         * <li><p><strong>CT</strong>: China Telecom.</p>
+         * </li>
+         * <li><p><strong>CU</strong>: China Unicom.</p>
+         * </li>
+         * <li><p><strong>CM</strong>: China Mobile.</p>
+         * </li>
+         * <li><p><strong>CO</strong>: other connectivity providers in the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>Equinix</strong>: Equinix.</p>
+         * </li>
+         * <li><p><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,18 +155,25 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         public String supportLineOperator;
 
         /**
-         * <p>The port type supported by the access point. Valid values:</p>
+         * <p>The port types supported by the access point. Valid values:</p>
          * <ul>
-         * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
-         * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
-         * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
-         * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
-         * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
-         * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
-         * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+         * <li><p><strong>100Base-T</strong>: 100 Mbit/s copper port.</p>
+         * </li>
+         * <li><p><strong>1000Base-T</strong>: 1,000 Mbit/s copper port.</p>
+         * </li>
+         * <li><p><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km).</p>
+         * </li>
+         * <li><p><strong>10GBase-T</strong>: 10,000 Mbit/s copper port.</p>
+         * </li>
+         * <li><p><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km).</p>
+         * </li>
+         * <li><p><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port.</p>
+         * </li>
+         * <li><p><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+         * <p>The 40GBase-LR and 100GBase-LR port types are subject to availability. To use these port types, contact your account manager.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -64,7 +64,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
          * <p>The ID of the failover test.</p>
          * 
          * <strong>example:</strong>
-         * <p>ftj-xxxxxxxxx</p>
+         * <p>ftj-bp1yh6mvi13aq3g8w****</p>
          */
         @NameInMap("JobId")
         public String jobId;

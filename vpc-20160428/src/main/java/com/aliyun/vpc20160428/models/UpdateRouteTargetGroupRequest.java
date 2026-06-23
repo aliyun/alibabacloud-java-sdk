@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRouteTargetGroupRequest extends TeaModel {
     /**
-     * <p>Client Token, used to ensure the idempotence of requests. Generate a unique value for this parameter from your client for each request. ClientToken supports only ASCII characters. Note that if you do not specify this, the system will automatically use the RequestId of the API request as the ClientToken identifier. The RequestId may differ for each API request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value may be different for each API request.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the region to which the route target group instance belongs. You can obtain the region ID by calling the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> interface.</p>
+     * <p>The region ID of the route target group instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,8 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Description of the route target group. </p>
-     * <p>The description length should be between 1 to 256 characters and must not start with http:// or https://.</p>
+     * <p>The description of the route target group. </p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myRouteTargetGroupDescription</p>
@@ -34,7 +34,7 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
     public String routeTargetGroupDescription;
 
     /**
-     * <p>The ID of the route target group instance.</p>
+     * <p>The routing target group instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the route target group.</p>
-     * <p>The name length should be between 1 and 128 characters, and cannot start with http:// or https://.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myRouteTargetGroupName</p>
@@ -54,11 +54,11 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
     public String routeTargetGroupName;
 
     /**
-     * <p>List of members in the route target group.
-     * Under the primary-standby mode, there are the following restrictions on the members of the route target group:</p>
+     * <p>The member list of the route target group.</p>
+     * <p>In active/standby mode, the following limits apply to route target group members:</p>
      * <ol>
-     * <li>The number of members in the route target group must be 2. </li>
-     * <li>The members of the route target group must belong to different availability zones.</li>
+     * <li>The number of route target group members must be 2.</li>
+     * <li>The route target group members must belong to different zones.</li>
      * </ol>
      */
     @NameInMap("RouteTargetMemberList")
@@ -119,7 +119,7 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
 
     public static class UpdateRouteTargetGroupRequestRouteTargetMemberList extends TeaModel {
         /**
-         * <p>ID of the route target group member instance.</p>
+         * <p>The instance ID of the route target group member.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-xxxx</p>
@@ -128,9 +128,12 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The member type of the route target group. </p>
-         * <p>Currently supported types: - <strong>GatewayLoadBalancerEndpoint</strong> </p>
-         * <p>In active-standby mode, all members of the route target group must be of the same type.</p>
+         * <p>The member type of the route target group.</p>
+         * <p>Currently supported type:</p>
+         * <ul>
+         * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
+         * </ul>
+         * <p>In active/standby mode, all members of the route target group must be of the same type.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayLoadBalancerEndpoint</p>
@@ -139,12 +142,12 @@ public class UpdateRouteTargetGroupRequest extends TeaModel {
         public String memberType;
 
         /**
-         * <p>The weight value of the route target group member. Values:</p>
+         * <p>The weight of the route target group member. Valid values:</p>
          * <ul>
-         * <li>100: indicates the member is the primary instance. </li>
-         * <li>0: indicates the member is the backup instance.
-         * The weight value can only be set during creation and cannot be modified.</li>
+         * <li>100: The member is the active instance.</li>
+         * <li>0: The member is the standby instance.</li>
          * </ul>
+         * <p>The weight can only be set during creation and cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

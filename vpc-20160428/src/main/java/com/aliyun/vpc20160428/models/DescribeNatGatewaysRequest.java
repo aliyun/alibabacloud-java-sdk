@@ -10,8 +10,10 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run without querying resource status. The check items include whether the AccessKey pair is valid, whether the RAM user is authorized, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a normal request. After the check succeeds, a 2xx HTTP status code is returned and the resource status is queried directly.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,13 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The billing method of the NAT gateway. Set the value to <strong>PostPaid</strong>, which specifies the pay-as-you-go billing method.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The billing method of the NAT gateway instance to query. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+     * <li><strong>PrePaid</strong>: the legacy subscription billing method. The subscription billing method is no longer available for new purchases.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;The billing method of the NAT gateway instance to query. Valid value: <strong>PostPaid</strong> (pay-as-you-go).</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -30,9 +38,8 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the NAT gateway. </p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>. </p>
-     * <p>If this parameter is not set, the system automatically assigns a name to the NAT gateway.</p>
+     * <p>The name of the NAT gateway to query.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -41,7 +48,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT gateway to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1uewa15k4iy5770****</p>
@@ -50,7 +57,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The type of NAT gateway. Set the value to <strong>Enhanced</strong> (enhanced NAT gateway).</p>
+     * <p>The type of the NAT gateway. Valid value: <strong>Enhanced</strong> (enhanced NAT gateway).</p>
      * 
      * <strong>example:</strong>
      * <p>Enhanced</p>
@@ -59,10 +66,10 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String natType;
 
     /**
-     * <p>The type of the NAT gateway. Valid values:</p>
+     * <p>The type of the NAT gateway to query. Valid values:</p>
      * <ul>
-     * <li><strong>internet</strong>: an Internet NAT gateway</li>
-     * <li><strong>intranet</strong>: a VPC NAT gateway</li>
+     * <li><strong>internet</strong>: Internet NAT gateway.</li>
+     * <li><strong>intranet</strong>: VPC NAT gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +94,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paginated queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,8 +103,8 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the NAT gateways that you want to query.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the NAT gateway to query.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +114,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the NAT gateway belongs.</p>
+     * <p>The ID of the resource group to which the NAT gateway to query belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -122,22 +129,34 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The size of the NAT gateway. Ignore this parameter.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The specification of the Internet NAT gateway. Only when <strong>InstanceChargeType</strong> is <strong>PrePaid</strong> (legacy subscription Internet NAT gateway), creating a NAT gateway by fixed specification is supported. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li><strong>Small</strong> (default): small.</li>
+     * <li><strong>Middle</strong>: medium.</li>
+     * <li><strong>Large</strong>: large.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;The specification of the NAT gateway. Leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>Invalid parameter.</p>
+     * <p>中国站示例值：Small，国际站示例值：无需填写</p>
      */
     @NameInMap("Spec")
     public String spec;
 
     /**
-     * <p>The status of the NAT gateway. Valid values:</p>
+     * <p>The status of the NAT gateway to query. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the <strong>Creating</strong> state until the operation is completed.</li>
-     * <li><strong>Available</strong>: The NAT gateway remains in a stable state after the NAT gateway is created.</li>
-     * <li><strong>Modifying</strong>: After you send a request to modify a NAT gateway, the system modifies the NAT gateway in the background. The NAT gateway remains in the <strong>Modifying</strong> state until the operation is completed.</li>
-     * <li><strong>Deleting</strong>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the <strong>Deleting</strong> state until the operation is completed.</li>
-     * <li><strong>Converting</strong>: After you send a request to upgrade a standard NAT gateway to an enhanced NAT gateway, the system upgrades the NAT gateway in the background. The NAT gateway remains in the <strong>Converting</strong> state until the operation is completed.</li>
+     * <li><p><strong>Creating</strong>: Creating a NAT gateway is an asynchronous operation. The status is <strong>Creating</strong> before the creation is complete.</p>
+     * </li>
+     * <li><p><strong>Available</strong>: The status after the NAT gateway is created. This is a stable status.</p>
+     * </li>
+     * <li><p><strong>Modifying</strong>: Modifying a NAT gateway is an asynchronous operation. The status is <strong>Modifying</strong> during the modification process.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: Deleting a NAT gateway is an asynchronous operation. The status is <strong>Deleting</strong> during the deletion process.</p>
+     * </li>
+     * <li><p><strong>Converting</strong>: Converting a standard NAT gateway to an enhanced NAT gateway is an asynchronous operation. The status is <strong>Converting</strong> during the conversion process.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,13 +166,13 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeNatGatewaysRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC to which the NAT gateway belongs.</p>
+     * <p>The ID of the VPC to which the NAT gateway to query belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp15zckdt37pq72z****</p>
@@ -162,7 +181,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the NAT gateway belongs.</p>
+     * <p>The ID of the zone where the NAT gateway is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>
@@ -337,8 +356,8 @@ public class DescribeNatGatewaysRequest extends TeaModel {
 
     public static class DescribeNatGatewaysRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the NAT gateway. You can specify up to 20 tag keys.</p>
-         * <p>Each tag key cannot exceed 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the NAT gateway instance. You can specify up to 20 tag keys.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyTest</p>
@@ -347,8 +366,8 @@ public class DescribeNatGatewaysRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the NAT gateway. You can specify up to 20 tag values.</p>
-         * <p>The tag value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the NAT gateway instance. You can specify up to 20 tag values.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>valueTest</p>

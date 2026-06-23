@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDefaultVpcRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class CreateDefaultVpcRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <p>Specifies whether to enable the IPv6 CIDR block. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default): does not enable the IPv6 CIDR block.</li>
+     * <li><strong>true</strong>: enables the IPv6 CIDR block.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateDefaultVpcRequest extends TeaModel {
     /**
      * <p>The IPv6 CIDR block of the default VPC.</p>
      * <blockquote>
-     * <p>When <strong>EnableIpv6</strong> is set to <strong>true</strong>, this parameter is required.</p>
+     * <p>This parameter is required when <strong>EnableIpv6</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,8 +49,8 @@ public class CreateDefaultVpcRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the default VPC belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the default VPC.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

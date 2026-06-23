@@ -11,7 +11,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     public CreateNatGatewayResponseBodyFullNatTableIds fullNatTableIds;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The instance ID of the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-112za33e4****</p>

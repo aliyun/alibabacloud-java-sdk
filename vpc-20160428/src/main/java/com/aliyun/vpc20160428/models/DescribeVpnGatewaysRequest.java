@@ -21,6 +21,9 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
      * <p>VPN 网关类型，取值：
      * Traditional：传统型VPN网关，覆盖IPsec功能和SSL功能
      * Enhance.SiteToSite：增强型站点入云VPN，只覆盖IPsec功能</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enhance.SiteToSite</p>
      */
     @NameInMap("GatewayType")
     public String gatewayType;

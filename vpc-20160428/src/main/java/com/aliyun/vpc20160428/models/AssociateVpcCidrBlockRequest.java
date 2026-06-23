@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AssociateVpcCidrBlockRequest extends TeaModel {
     /**
-     * <p>The IPv6 CIDR block that you want to add to the VPC.</p>
+     * <p>The specified IPv6 CIDR block of the VPC.</p>
      * <blockquote>
-     * <p> You can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
+     * <p>You cannot specify both <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,8 +19,8 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The version of the IP address. Valid values:</p>
      * <ul>
-     * <li><strong>IPV4</strong>: the IPv4 address.</li>
-     * <li><strong>IPV6</strong>: the IPv6 address. If you set <strong>IpVersion</strong> to <strong>IPV6</strong> and do not specify <strong>SecondaryCidrBlock</strong>, you can add a secondary IPv6 CIDR block to the VPC.</li>
+     * <li><strong>IPV4</strong>: IPv4 address.</li>
+     * <li><strong>IPV6</strong>: IPv6 address. When <strong>IpVersion</strong> is set to <strong>IPV6</strong> and <strong>SecondaryCidrBlock</strong> is not specified, a secondary IPv6 CIDR block is added to the VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The ID of the IPAM pool.</p>
+     * <p>The instance ID of the IPAM pool.</p>
      * 
      * <strong>example:</strong>
      * <p>ipam-pool-sycmt3p2a9v63i****</p>
@@ -39,9 +39,9 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public String ipamPoolId;
 
     /**
-     * <p>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</p>
+     * <p>The subnet mask used to add an IPv6 CIDR block from an IPAM pool to the VPC.</p>
      * <blockquote>
-     * <p> To add an IPv6 CIDR block to a VPC, specify at least one of the IPv6CidrBlock and Ipv6CidrMask parameters.</p>
+     * <p>When you use an IPAM pool to add a secondary IPv6 CIDR block to the VPC, you must specify at least one of IPv6CidrBlock and Ipv6CidrMask.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,15 +51,15 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public Integer ipv6CidrMask;
 
     /**
-     * <p>The type of the IPv6 CIDR block. Valid values:</p>
+     * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default)</li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaTelecom</strong></li>
+     * <li><strong>BGP</strong> (default): Alibaba Cloud BGP IPv6.</li>
+     * <li><strong>ChinaMobile</strong>: China Mobile (single ISP).</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom (single ISP).</li>
+     * <li><strong>ChinaTelecom</strong>: China Telecom (single ISP).</li>
      * </ul>
      * <blockquote>
-     * <p> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+     * <p>If your account is included in the China single-ISP bandwidth whitelist, you can set this parameter to <strong>ChinaTelecom</strong> (China Telecom), <strong>ChinaUnicom</strong> (China Unicom), or <strong>ChinaMobile</strong> (China Mobile).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,11 +75,11 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VPC to which you want to add a secondary CIDR block.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the VPC to which you want to add a secondary CIDR block. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>ch-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -91,18 +91,20 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IPv4 CIDR block to be added. Take note of the following requirements:</p>
+     * <p>The secondary IPv4 CIDR block to add. The CIDR block must meet the following requirements:</p>
      * <ul>
-     * <li>You can specify one of the following standard IPv4 CIDR blocks or their subnets as the secondary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8.</li>
-     * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the secondary IPv4 CIDR block of the VPC.</li>
+     * <li>Use a private IPv4 address specified in RFC 1918 as the secondary IPv4 CIDR block of the VPC. The subnet mask is recommended to be 16 to 28 bits in length. Examples: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</li>
+     * <li>You can use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the secondary IPv4 CIDR block of the virtual private cloud (VPC).</li>
      * </ul>
-     * <p>The CIDR block must meet the following requirements:</p>
+     * <p>Configuration limits:</p>
      * <ul>
-     * <li>The CIDR block cannot start with 0. The subnet mask must be 8 to 28 bits in length.</li>
-     * <li>The CIDR block cannot overlap with the primary CIDR block or an existing secondary CIDR block of the VPC.</li>
+     * <li><p>The CIDR block cannot start with 0. The subnet mask is recommended to be 16 to 28 bits in length.</p>
+     * </li>
+     * <li><p>The secondary CIDR block cannot overlap with the primary CIDR block or existing secondary CIDR blocks of the VPC.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You must and can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>IPv6CidrBlock</strong>.</p>
+     * <p>If you do not use an IPAM pool to add a secondary CIDR block to the VPC, you must specify either the <strong>SecondaryCidrBlock</strong> parameter or the <strong>Ipv6CidrBlock</strong> parameter, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,9 +114,9 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public String secondaryCidrBlock;
 
     /**
-     * <p>Add an IPv4 CIDR block from the IPAM pool to the VPC by specifying a mask.</p>
+     * <p>The subnet mask used to add a secondary IPv4 CIDR block from an IPAM pool to the VPC.</p>
      * <blockquote>
-     * <p> If you use an IPAM pool, you must specify at least one of SecondaryCidrBlock and SecondaryCidrMask.</p>
+     * <p>When you use an IPAM pool to add a secondary IPv4 CIDR block to the VPC, you must specify at least one of SecondaryCidrBlock and SecondaryCidrMask.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

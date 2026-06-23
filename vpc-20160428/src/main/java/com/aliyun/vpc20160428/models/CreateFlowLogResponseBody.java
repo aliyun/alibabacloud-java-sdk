@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowLogResponseBody extends TeaModel {
     /**
-     * <p>The ID of the flow log.</p>
+     * <p>The flow log ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fl-m5e8vhz2t21sel1nq****</p>
@@ -14,7 +14,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
     public String flowLogId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-08E683A1B457</p>
@@ -32,10 +32,10 @@ public class CreateFlowLogResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

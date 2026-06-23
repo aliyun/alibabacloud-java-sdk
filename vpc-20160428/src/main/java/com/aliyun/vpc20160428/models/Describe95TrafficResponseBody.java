@@ -14,7 +14,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information returned.</p>
+     * <p>The bandwidth statistics for Internet Shared Bandwidth billed by enhanced 95th percentile.</p>
      */
     @NameInMap("Traffic95Summary")
     public Describe95TrafficResponseBodyTraffic95Summary traffic95Summary;
@@ -113,7 +113,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
 
     public static class Describe95TrafficResponseBodyTraffic95Summary extends TeaModel {
         /**
-         * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+         * <p>The peak bandwidth of the Internet Shared Bandwidth instance on the queried date. Unit: Mbps.</p>
          * 
          * <strong>example:</strong>
          * <p>20000.0</p>
@@ -122,8 +122,9 @@ public class Describe95TrafficResponseBody extends TeaModel {
         public Long bandwidth;
 
         /**
-         * <p>The daily peak bandwidth. Unit: Mbit/s.
-         * &lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/89729.html">Daily peak bandwidth</a>.</p>
+         * <p>The daily peak bandwidth. Unit: Mbps.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/89729.html">Daily peak bandwidth</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1064.244837773641</p>
@@ -141,11 +142,14 @@ public class Describe95TrafficResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The metering method of the Internet Shared Bandwidth instance. Valid values:</p>
+         * <p>The billing method of the Internet Shared Bandwidth instance on the queried date. Valid values:</p>
          * <ul>
-         * <li>PayBy95: pay-by-enhanced-95th-percentile</li>
-         * <li>PayByBandwidth: pay-by-bandwidth</li>
-         * <li>PayByDominantTraffic: pay-by-dominant-traffic</li>
+         * <li><p><strong>PayBy95</strong>: pay-by-enhanced-95th-percentile</p>
+         * </li>
+         * <li><p><strong>PayByBandwidth</strong>: pay-by-bandwidth</p>
+         * </li>
+         * <li><p><strong>PayByDominantTraffic</strong>: pay-by-dominant-traffic</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +159,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The guaranteed bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+         * <p>The minimum bandwidth commitment of the Internet Shared Bandwidth instance on the queried date. Unit: Mbps.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>

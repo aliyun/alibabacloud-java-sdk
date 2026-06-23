@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>28DB147D-217B-43E8-9E94-A3F6837DDC8A</p>
@@ -14,7 +14,7 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+     * <p>The ID of the resource group to which the traffic mirror belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -23,7 +23,7 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the filter.</p>
+     * <p>The instance ID of the traffic mirror filter.</p>
      * 
      * <strong>example:</strong>
      * <p>tmf-j6cmls82xnc86vtpe****</p>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest extends TeaMod
     public String clientToken;
 
     /**
-     * <p>The ID of the VPC NAT gateway.</p>
+     * <p>The ID of the VPC NAT gateway to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1uewa15k4iy5770****</p>
@@ -33,8 +33,8 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest extends TeaMod
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VPC NAT gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPC NAT gateway to query.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -49,7 +49,7 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest extends TeaMod
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>132193271328****</p>

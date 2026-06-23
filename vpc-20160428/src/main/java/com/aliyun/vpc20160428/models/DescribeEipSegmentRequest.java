@@ -8,7 +8,7 @@ public class DescribeEipSegmentRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeEipSegmentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class DescribeEipSegmentRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class DescribeEipSegmentRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which the contiguous EIP group belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the contiguous EIP group. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,8 @@ public class DescribeEipSegmentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the contiguous EIP group that you want to query.</p>
+     * <p>The instance ID of the contiguous EIP group to query.</p>
+     * <p>If you do not specify this parameter, information about all contiguous EIP groups in the specified region is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>eipsg-2zett8ba055tbsxme****</p>

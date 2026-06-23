@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteEnhancedVpnGatewayRequest extends TeaModel {
     /**
+     * <p>The client token used to ensure the idempotence of the request.<br> You can generate this token by using your client, but you must ensure that it is unique for each request. The token can contain only ASCII characters and must not exceed 64 characters in length.<br></p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
      */
@@ -18,6 +23,8 @@ public class DeleteEnhancedVpnGatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the enhanced VPN gateway is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,7 @@ public class DeleteEnhancedVpnGatewayRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the enhanced VPN gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

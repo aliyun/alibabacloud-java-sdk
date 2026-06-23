@@ -54,7 +54,7 @@ public class UpdateFailoverTestJobRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ftj-xxxxxxxxx</p>
+     * <p>ftj-bp1yh6mvi13aq3g8w****</p>
      */
     @NameInMap("JobId")
     public String jobId;

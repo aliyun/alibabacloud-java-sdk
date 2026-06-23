@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRouteTargetGroupRequest extends TeaModel {
     /**
-     * <p>Client token used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that it is unique across different requests. ClientToken supports only ASCII characters. Note: If you do not specify this, the system automatically uses the RequestId of the API request as the ClientToken identifier. Each API request has a different RequestId.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value is different for each API request.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe6****</p>
@@ -14,9 +14,9 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The configuration mode of the route target group. Supported modes:</p>
+     * <p>The configuration mode of the route target group. Valid values:</p>
      * <ul>
-     * <li><strong>Active-Standby</strong>: Active-Standby mode.</li>
+     * <li><strong>Active-Standby</strong>: active/standby mode.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
     public String configMode;
 
     /**
-     * <p>The region ID to which the route target group belongs. You can obtain the region ID by calling the DescribeRegions interface.</p>
+     * <p>The region ID of the route target group. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
-     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a Resource Group</a>.</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazffggds****</p>
@@ -47,8 +47,8 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The description of the route target group.</p>
-     * <p>The description length must be between 1 and 256 characters, and cannot start with http:// or https://.</p>
+     * <p>The description of the route target group.
+     * The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myRouteTargetGroupDescription</p>
@@ -58,7 +58,7 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the route target group.</p>
-     * <p>The name length must be between 1 and 128 characters, and cannot start with http:// or https://.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myRouteTargetGroupName</p>
@@ -68,10 +68,10 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
 
     /**
      * <p>The member list of the route target group.</p>
-     * <p>In Active-Standby mode, the following restrictions apply to the members of the route target group:</p>
+     * <p>In active/standby mode, the following limits apply to route target group members:</p>
      * <ol>
      * <li>The number of route target group members must be 2.</li>
-     * <li>The route target group members must belong to different availability zones.</li>
+     * <li>The route target group members must be in different zones.</li>
      * </ol>
      * <p>This parameter is required.</p>
      */
@@ -183,12 +183,12 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The type of the route target group member.</p>
-         * <p>Currently supported types:</p>
+         * <p>The member type of the route target group.</p>
+         * <p>Supported type:</p>
          * <ul>
          * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
          * </ul>
-         * <p>In Active-Standby mode, all members of the route target group must have the same type.</p>
+         * <p>In active/standby mode, all members of the route target group must be of the same type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,12 +198,12 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
         public String memberType;
 
         /**
-         * <p>The weight value of the route target group member. Values:</p>
+         * <p>The weight of the route target group member. Valid values:</p>
          * <ul>
-         * <li><strong>100</strong>: Indicates the member is a primary instance.</li>
-         * <li><strong>0</strong>: Indicates the member is a standby instance.</li>
+         * <li><strong>100</strong>: The member is the active instance.</li>
+         * <li><strong>0</strong>: The member is the standby instance.</li>
          * </ul>
-         * <p>The weight value can only be set during creation and cannot be modified.</p>
+         * <p>The weight can only be set during creation and cannot be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,8 +245,8 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
 
     public static class CreateRouteTargetGroupRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. Up to 20 tag keys are supported. If you need to pass this value, you cannot input an empty string.</p>
-         * <p>A tag key can have up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -255,8 +255,8 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. Up to 20 tag values are supported. If you need to pass this value, you can input an empty string.</p>
-         * <p>A tag value can have up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

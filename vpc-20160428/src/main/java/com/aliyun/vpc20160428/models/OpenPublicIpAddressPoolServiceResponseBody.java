@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenPublicIpAddressPoolServiceResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class OpenPublicIpAddressPoolServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response messages.</p>
+     * <p>The message returned when the IP address pool feature is activated.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

@@ -17,8 +17,10 @@ public class ModifyEipAddressAttributeRequest extends TeaModel {
     /**
      * <p>The new maximum bandwidth of the EIP. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong> to <strong>200</strong> if the metering method is pay-by-data-transfer. Unit: Mbit/s.</li>
-     * <li><strong>1</strong> to <strong>500</strong> if the metering method is pay-by-bandwidth. Unit: Mbit/s.</li>
+     * <li><p><strong>1</strong> to <strong>200</strong> if the metering method is pay-by-data-transfer. Unit: Mbit/s.</p>
+     * </li>
+     * <li><p><strong>1</strong> to <strong>500</strong> if the metering method is pay-by-bandwidth. Unit: Mbit/s.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

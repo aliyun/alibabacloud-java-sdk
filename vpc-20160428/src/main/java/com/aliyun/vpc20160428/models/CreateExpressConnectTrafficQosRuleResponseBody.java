@@ -8,7 +8,7 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
      * <p>The ID of the QoS policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>qos-2giu0a6vd5x0mv4700</p>
+     * <p>qos-2giu0a6vd5x0mv****</p>
      */
     @NameInMap("QosId")
     public String qosId;
@@ -17,7 +17,7 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
      * <p>The ID of the QoS queue.</p>
      * 
      * <strong>example:</strong>
-     * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+     * <p>qos-queue-9nyx2u7n71s2rc****</p>
      */
     @NameInMap("QueueId")
     public String queueId;
@@ -35,7 +35,7 @@ public class CreateExpressConnectTrafficQosRuleResponseBody extends TeaModel {
      * <p>The ID of the QoS rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>qos-rule-iugg0l9x27f2nocouj</p>
+     * <p>qos-rule-iugg0l9x27f2no****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

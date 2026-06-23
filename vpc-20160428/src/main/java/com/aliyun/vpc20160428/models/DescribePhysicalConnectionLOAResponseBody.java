@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
     /**
-     * <p>The LOA information about the Express Connect circuit.</p>
+     * <p>Information about the physical connection\&quot;s LOA.</p>
      */
     @NameInMap("PhysicalConnectionLOAType")
     public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType physicalConnectionLOAType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>318BB676-0A2B-43A0-9AD8-F1D34E93750F</p>
@@ -124,7 +124,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
 
     public static class DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType extends TeaModel {
         /**
-         * <p>The name of the construction company.</p>
+         * <p>The localized name of the company.</p>
          * 
          * <strong>example:</strong>
          * <p>company</p>
@@ -133,7 +133,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String companyLocalizedName;
 
         /**
-         * <p>The name of the organization that requires the Express Connect circuit.</p>
+         * <p>The name of the company that requires the physical connection.</p>
          * 
          * <strong>example:</strong>
          * <p>test1234</p>
@@ -142,7 +142,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String companyName;
 
         /**
-         * <p>The time when construction starts.</p>
+         * <p>The time when construction personnel enter the site.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-26T08:00:00Z</p>
@@ -150,11 +150,14 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @NameInMap("ConstructionTime")
         public String constructionTime;
 
+        /**
+         * <p>The description of the LOA.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the Express Connect circuit.</p>
+         * <p>The instance ID of the physical connection.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1ca4wca27****</p>
@@ -163,7 +166,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The circuit code provided by the connectivity provider.</p>
+         * <p>The line code assigned by the line service provider.</p>
          * 
          * <strong>example:</strong>
          * <p>aaa111</p>
@@ -172,7 +175,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String lineCode;
 
         /**
-         * <p>The label of the cable in the data center.</p>
+         * <p>The line label for the in-building cable at the data center.</p>
          * 
          * <strong>example:</strong>
          * <p>bbb222</p>
@@ -181,7 +184,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String lineLabel;
 
         /**
-         * <p>The contact information about line O\&amp;M.</p>
+         * <p>The contact information of the line O\&amp;M personnel.</p>
          * 
          * <strong>example:</strong>
          * <p>1388888****</p>
@@ -190,27 +193,35 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String lineSPContactInfo;
 
         /**
-         * <p>The ISP. Valid values:</p>
+         * <p>The line service provider. Valid values:</p>
          * <ul>
-         * <li><strong>China Telecom</strong></li>
-         * <li><strong>China Unicom</strong></li>
-         * <li><strong>China Mobile</strong></li>
-         * <li><strong>Other ISPs in China</strong></li>
+         * <li><p><strong>China Telecom</strong></p>
+         * </li>
+         * <li><p><strong>China Unicom</strong></p>
+         * </li>
+         * <li><p><strong>China Mobile</strong></p>
+         * </li>
+         * <li><p><strong>Other</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Other ISPs in China</p>
+         * <p>中国其他</p>
          */
         @NameInMap("LineServiceProvider")
         public String lineServiceProvider;
 
         /**
-         * <p>The type of the Express Connect circuit. Valid values:</p>
+         * <p>The line type of the physical connection. Valid values:</p>
          * <ul>
-         * <li><strong>MSTP</strong></li>
-         * <li><strong>MPLSVPN</strong></li>
-         * <li><strong>FIBRE</strong></li>
-         * <li><strong>Other</strong></li>
+         * <li><p><strong>MSTP</strong></p>
+         * </li>
+         * <li><p><strong>MPLSVPN</strong></p>
+         * </li>
+         * <li><p><strong>FIBRE</strong></p>
+         * </li>
+         * <li><p><strong>Other</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +231,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         public String lineType;
 
         /**
-         * <p>The download URL of the LOA file.</p>
+         * <p>The URL to download the LOA file.</p>
          * 
          * <strong>example:</strong>
          * <p>http://******</p>
@@ -228,11 +239,14 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @NameInMap("LoaUrl")
         public String loaUrl;
 
+        /**
+         * <p>Information about the construction personnel.</p>
+         */
         @NameInMap("PMInfo")
         public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfo PMInfo;
 
         /**
-         * <p>The on-site construction company.</p>
+         * <p>The system integrator (SI).</p>
          * 
          * <strong>example:</strong>
          * <p>ctcu</p>
@@ -243,13 +257,20 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         /**
          * <p>The status of the LOA. Valid values:</p>
          * <ul>
-         * <li><strong>Applying</strong>: The LOA is pending for approval.</li>
-         * <li><strong>Accept</strong>: The LOA is approved.</li>
-         * <li><strong>Available</strong>: The LOA is available.</li>
-         * <li><strong>Rejected</strong>: The LOA is rejected.</li>
-         * <li><strong>Completing</strong>: The Express Connect circuit is under construction.</li>
-         * <li><strong>Complete</strong>: The Express Connect circuit is installed.</li>
-         * <li><strong>Deleted</strong>: The LOA is deleted.</li>
+         * <li><p><strong>Applying</strong>: The LOA application is in progress.</p>
+         * </li>
+         * <li><p><strong>Accept</strong>: The LOA application is approved.</p>
+         * </li>
+         * <li><p><strong>Available</strong>: The LOA is available.</p>
+         * </li>
+         * <li><p><strong>Rejected</strong>: The LOA application is rejected.</p>
+         * </li>
+         * <li><p><strong>Completing</strong>: The construction of the physical connection is in progress.</p>
+         * </li>
+         * <li><p><strong>Complete</strong>: The construction of the physical connection is complete.</p>
+         * </li>
+         * <li><p><strong>Deleted</strong>: The LOA is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

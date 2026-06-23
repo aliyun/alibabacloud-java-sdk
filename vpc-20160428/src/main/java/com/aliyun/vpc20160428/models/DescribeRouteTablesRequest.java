@@ -20,7 +20,7 @@ public class DescribeRouteTablesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page during paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -30,19 +30,19 @@ public class DescribeRouteTablesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which the route table belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>ap-southeast-6</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the route table to be queried belongs.</p>
+     * <p>The ID of the resource group to which the route table belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmxazccb4ph****</p>
+     * <p>rg-acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -54,29 +54,38 @@ public class DescribeRouteTablesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table that you want to query.</p>
+     * <p>The ID of the route table to query.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>rtb-bp12mw1f8k3jgygk9****</p>
+     * <p>vtb-bp145q7glnuzdvzu2****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
     /**
-     * <p>The name of the route table that you want to query.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the route table to query.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <blockquote>
+     * <p>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>RouteTable-1</p>
+     * <p>doctest</p>
      */
     @NameInMap("RouteTableName")
     public String routeTableName;
 
     /**
      * <p>The ID of the router to which the route table belongs.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>vtb-bp1krxxzp0c29fmon****</p>
+     * <p>vrt-bp1lhl0taikrteen8****</p>
      */
     @NameInMap("RouterId")
     public String routerId;
@@ -84,8 +93,8 @@ public class DescribeRouteTablesRequest extends TeaModel {
     /**
      * <p>The type of the router to which the route table belongs. Valid values:</p>
      * <ul>
-     * <li><strong>VRouter</strong> (default)</li>
-     * <li><strong>VBR</strong></li>
+     * <li><strong>VRouter</strong> (default): vRouter.</li>
+     * <li><strong>VBR</strong>: Virtual Border Router.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,25 +104,29 @@ public class DescribeRouteTablesRequest extends TeaModel {
     public String routerType;
 
     /**
-     * <p>The route type. Valid values:</p>
+     * <p>The destination type of the route to query. Valid values:</p>
      * <ul>
-     * <li><strong>Custom</strong></li>
-     * <li><strong>System</strong></li>
-     * <li><strong>BGP</strong></li>
-     * <li><strong>CEN</strong></li>
+     * <li><strong>Custom</strong>: custom route.</li>
+     * <li><strong>System</strong>: system route.</li>
+     * <li><strong>BGP</strong>: BGP route.</li>
+     * <li><strong>CEN</strong>: Cloud Enterprise Network (CEN) route.</li>
+     * <li><strong>ECR</strong>: Express Connect Router (ECR) route.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>custom</p>
+     * <p>Custom</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The ID of the vRouter.</p>
+     * <p>The ID of the vRouter to query.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>vtb-bp1krxxzp0c29fmon****</p>
+     * <p>vrt-bp1lhl0taikrteen****</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;

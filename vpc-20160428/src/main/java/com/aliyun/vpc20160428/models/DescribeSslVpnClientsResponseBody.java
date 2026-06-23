@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSslVpnClientsResponseBody extends TeaModel {
     /**
-     * <p>The list of clients.</p>
+     * <p>The list of client information.</p>
      */
     @NameInMap("ClientInfoList")
     public java.util.List<DescribeSslVpnClientsResponseBodyClientInfoList> clientInfoList;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID of the VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>eu-central-1</p>
@@ -47,7 +47,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +56,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The VPN gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-gw8gfb947ctddabja****</p>
@@ -127,9 +127,9 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
 
     public static class DescribeSslVpnClientsResponseBodyClientInfoList extends TeaModel {
         /**
-         * <p>The SSL client certificate used by the client.</p>
+         * <p>The SSL client certificate used by the client to establish the SSL-VPN connection to Alibaba Cloud.</p>
          * <blockquote>
-         * <p> If the client uses two-factor authentication to establish an SSL-VPN connection to Alibaba Cloud, the return value is the username of the client.</p>
+         * <p>If the client uses two-factor identity authentication to establish the SSL-VPN connection to Alibaba Cloud, the value of this parameter is the username of the client.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,8 +139,8 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The timestamp that indicates when the client connected to Alibaba Cloud through an SSL-VPN connection. Unit: milliseconds.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the client established the SSL-VPN connection to Alibaba Cloud. Unit: milliseconds.</p>
+         * <p>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the SSL-VPN connection was established.</p>
          * 
          * <strong>example:</strong>
          * <p>1670985008000</p>
@@ -149,7 +149,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public Long connectedTime;
 
         /**
-         * <p>The actual public IP address used by the client when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+         * <p>The public IP address that the client used to establish the SSL-VPN connection to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>8.XX.XX.15</p>
@@ -158,7 +158,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The port used by the client when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+         * <p>The port number that the client used to establish the SSL-VPN connection to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>4****</p>
@@ -167,7 +167,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The private IP address allocated to the client by the VPN gateway when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+         * <p>The private IP address that the VPN gateway assigned to the client when the client established an SSL-VPN connection to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>10.10.10.10</p>
@@ -176,7 +176,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public String privateIp;
 
         /**
-         * <p>The amount of data transferred from the client to the VPN gateway through the SSL-VPN connection. Unit: bytes.</p>
+         * <p>The traffic that the VPN gateway received from the client over the SSL-VPN connection. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>60782</p>
@@ -185,7 +185,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public Long receiveBytes;
 
         /**
-         * <p>The amount of data transferred from the VPN gateway to the client through the SSL-VPN connection. Unit: bytes.</p>
+         * <p>The traffic that the VPN gateway sent to the client over the SSL-VPN connection. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>57144</p>
@@ -195,7 +195,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the SSL-VPN connection.</p>
-         * <p>The value is set to <strong>online</strong>, which indicates that the client has connected to Alibaba Cloud through an SSL-VPN connection.</p>
+         * <p>Valid values: <strong>online</strong>, which indicates that the client has successfully established an SSL-VPN connection to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>

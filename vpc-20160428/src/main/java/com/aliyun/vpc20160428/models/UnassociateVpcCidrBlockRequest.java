@@ -30,7 +30,7 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>ch-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

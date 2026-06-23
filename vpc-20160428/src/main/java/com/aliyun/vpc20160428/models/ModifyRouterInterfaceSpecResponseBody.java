@@ -16,18 +16,30 @@ public class ModifyRouterInterfaceSpecResponseBody extends TeaModel {
     /**
      * <p>The specification of the router interface. Valid values:</p>
      * <ul>
-     * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
-     * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
-     * <li><strong>Small.1</strong>: 10 Mbit/s</li>
-     * <li><strong>Small.2</strong>: 20 Mbit/s</li>
-     * <li><strong>Small.5</strong>: 50 Mbit/s</li>
-     * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
-     * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
-     * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
-     * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
-     * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
-     * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
-     * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
+     * <li><p><strong>Mini.2</strong>: 2 Mbps</p>
+     * </li>
+     * <li><p><strong>Mini.5</strong>: 5 Mbps</p>
+     * </li>
+     * <li><p><strong>Small.1</strong>: 10 Mbps</p>
+     * </li>
+     * <li><p><strong>Small.2</strong>: 20 Mbps</p>
+     * </li>
+     * <li><p><strong>Small.5</strong>: 50 Mbps</p>
+     * </li>
+     * <li><p><strong>Middle.1</strong>: 100 Mbps</p>
+     * </li>
+     * <li><p><strong>Middle.2</strong>: 200 Mbps</p>
+     * </li>
+     * <li><p><strong>Middle.5</strong>: 500 Mbps</p>
+     * </li>
+     * <li><p><strong>Large.1</strong>: 1000 Mbps</p>
+     * </li>
+     * <li><p><strong>Large.2</strong>: 2000 Mbps</p>
+     * </li>
+     * <li><p><strong>Large.5</strong>: 5000 Mbps</p>
+     * </li>
+     * <li><p><strong>Xlarge.1</strong>: 10000 Mbps.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

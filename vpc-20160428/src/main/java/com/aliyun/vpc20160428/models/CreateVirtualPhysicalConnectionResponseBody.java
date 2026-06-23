@@ -14,7 +14,7 @@ public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the hosted connection.</p>
+     * <p>The instance ID of the shared Express Connect circuits.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp1mrgfbtmc9brre7****</p>

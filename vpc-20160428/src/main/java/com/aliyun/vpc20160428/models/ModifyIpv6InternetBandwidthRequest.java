@@ -5,24 +5,31 @@ import com.aliyun.tea.*;
 
 public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     /**
-     * <p>The Internet bandwidth value of the IPv6 address. Unit: Mbit/s.</p>
+     * <p>The Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If the billing method is pay-by-data-transfer, valid values are <strong>1</strong> to <strong>1000</strong>.</li>
-     * <li>If the billing method is pay-by-bandwidth, valid values are <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If the billing method is pay-by-data-transfer, the Internet bandwidth ranges from <strong>1</strong> to <strong>1000</strong>.</li>
+     * <li>If the billing method is pay-by-bandwidth, the Internet bandwidth ranges from <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If the billing method is traditional 95th percentile, the Internet bandwidth ranges from <strong>1</strong> to <strong>2000</strong>.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>If the billing method is pay-by-data-transfer, the Internet bandwidth ranges from <strong>1</strong> to <strong>1000</strong>.</li>
+     * <li>If the billing method is pay-by-bandwidth, the Internet bandwidth ranges from <strong>1</strong> to <strong>2000</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>4</p>
+     * <p>200</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,10 +39,10 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: pre-checks the request but does not create the IPv4 gateway. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the API request. After the request passes the check, an HTTP 2xx status code is returned and the IPv4 gateway is created.</li>
+     * <li><strong>true</strong>: performs a dry run without creating an IPv4 gateway. The system checks the required parameters, request syntax, and business limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the IPv4 gateway is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +54,7 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>The ID of the IPv6 address.</p>
      * <blockquote>
-     * <p> You must specify one of <strong>Ipv6AddressId</strong> and <strong>Ipv6InternetBandwidthId</strong>.</p>
+     * <p>You must specify either <strong>Ipv6AddressId</strong> or <strong>Ipv6InternetBandwidthId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +64,7 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     public String ipv6AddressId;
 
     /**
-     * <p>The instance ID of the Internet bandwidth of the IPv6 address.</p>
+     * <p>The Internet bandwidth instance ID of the IPv6 address.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
@@ -72,7 +79,7 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

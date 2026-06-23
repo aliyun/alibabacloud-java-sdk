@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRouteTargetGroupResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>

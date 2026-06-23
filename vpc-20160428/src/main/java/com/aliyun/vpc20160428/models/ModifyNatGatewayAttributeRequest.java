@@ -54,7 +54,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;

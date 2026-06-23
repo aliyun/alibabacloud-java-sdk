@@ -77,7 +77,7 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Other ISPs in China</p>
+     * <p>中国其他</p>
      */
     @NameInMap("LineServiceProvider")
     public String lineServiceProvider;

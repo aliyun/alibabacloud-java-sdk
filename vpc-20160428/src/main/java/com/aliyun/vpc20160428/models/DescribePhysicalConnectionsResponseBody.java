@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionsResponseBody extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

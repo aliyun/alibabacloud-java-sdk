@@ -49,7 +49,7 @@ public class DescribeBgpNetworksRequest extends TeaModel {
      * <p>The ID of the VBR.</p>
      * 
      * <strong>example:</strong>
-     * <p>vrt-bp1lhl0taikrteen8****</p>
+     * <p>vbr-bp1ctxy813985gkuk****</p>
      */
     @NameInMap("RouterId")
     public String routerId;

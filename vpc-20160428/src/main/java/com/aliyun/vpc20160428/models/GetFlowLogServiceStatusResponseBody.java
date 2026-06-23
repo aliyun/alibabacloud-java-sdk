@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetFlowLogServiceStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the flow log feature is enabled. Valid values:</p>
+     * <p>Indicates whether the flow log feature is activated. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to enable the flow log feature.</li>
+     * <li><p><strong>true</strong>: activated.</p>
+     * </li>
+     * <li><p><strong>false</strong>: not activated. You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to activate the flow log feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetFlowLogServiceStatusResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-06F83A1B457</p>

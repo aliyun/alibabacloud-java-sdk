@@ -8,7 +8,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfaces associateNetworkInterfaces;
 
     /**
-     * <p>Number of associated ENIs.</p>
+     * <p>The number of associated ENIs.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,7 +17,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public Integer count;
 
     /**
-     * <p>The number of entries to return per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,7 +26,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public Integer maxResults;
 
     /**
-     * <p>The ID of the VPC NAT gateway.</p>
+     * <p>The instance ID of the VPC NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1uewa15k4iy5770****</p>
@@ -35,10 +35,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public String natGatewayId;
 
     /**
-     * <p>Indicates whether the token for the next query exists. Valid value:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
-     * <li>If the value returned of <strong>NextToken</strong> is not empty, the value indicates the token that is used for the next query.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query exists.</p>
+     * </li>
+     * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public String nextToken;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD****</p>
@@ -57,7 +59,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

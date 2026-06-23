@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
     /**
-     * <p>The zones.</p>
+     * <p>The list of zones.</p>
      */
     @NameInMap("AvailableZoneIdList")
     public java.util.List<DescribeVpnGatewayAvailableZonesResponseBodyAvailableZoneIdList> availableZoneIdList;

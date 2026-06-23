@@ -16,9 +16,9 @@ public class DeleteBgpPeerRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken only supports ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,8 @@ public class DeleteBgpPeerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the BGP group.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the BGP group is located.</p>
+     * <p>You can obtain the region ID by calling the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -11,8 +11,8 @@ public class DescribeVpnConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPsec-VPN connection is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The CIDR block on the Alibaba Cloud side.</p>
+     * <p>Multiple CIDR blocks are separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeVpnConnectionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the IPsec-VPN connection.</p>
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

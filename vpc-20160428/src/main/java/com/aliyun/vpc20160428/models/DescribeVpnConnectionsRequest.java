@@ -20,7 +20,7 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The number of entries per page for paging queries. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,8 +38,8 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the IPsec-VPN connection is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPsec-VPN connection. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,9 +65,8 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag value.</p>
-     * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-     * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</p>
+     * <p>The list of tags bound to the IPsec-VPN connection.</p>
+     * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVpnConnectionsRequestTag> tag;
@@ -82,7 +81,7 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The instance ID of the VPN gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-bp1q8bgx4xnkx****</p>
@@ -193,9 +192,9 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
 
     public static class DescribeVpnConnectionsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key cannot be an empty string.</p>
-         * <p>It can be at most 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * <p>You can specify at most 20 tag keys in each call.</p>
+         * <p>The tag key. If you specify this parameter, the value cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -205,8 +204,8 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

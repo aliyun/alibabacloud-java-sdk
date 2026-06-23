@@ -8,7 +8,7 @@ public class EnablePhysicalConnectionResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
+     * <p>20365164-5b0d-460a-83c2-2189972b3349</p>
      */
     @NameInMap("RequestId")
     public String requestId;

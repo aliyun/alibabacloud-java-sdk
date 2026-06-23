@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Internet bandwidth that you purchased for the IPv6 gateway.</p>
+     * <p>The instance ID of the Internet bandwidth associated with the IPv6 gateway after Internet bandwidth is allocated.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6bw-uf6hcyzu65v98v3du****</p>

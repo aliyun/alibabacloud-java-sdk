@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyRouteEntryRequest extends TeaModel {
     /**
      * <p>The description of the route entry.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>EntryDescription</p>
@@ -15,10 +15,10 @@ public class ModifyRouteEntryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination CIDR block of the route entry, which supports IPv4 CIDR blocks and IPv6 CIDR blocks.</p>
+     * <p>The IPv4 CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</p>
      * <blockquote>
-     * <p>When the <strong>RouteEntryId</strong> parameter is not provided, both the <strong>DestinationCidrBlock</strong> and <strong>RouteTableId</strong> parameters are required.
-     * When modifying a route whose destination CIDR block points to a prefix list, the <strong>RouteEntryId</strong> parameter is required, and the <strong>DestinationCidrBlock</strong> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</p>
+     * <p>If the <strong>RouteEntryId</strong> parameter is not specified, the <strong>DestinationCidrBlock</strong> and <strong>RouteTableId</strong> parameters are required.
+     * To change the IPv4 CIDR block of a route to a <strong>prefix list</strong>, specify the <strong>RouteEntryId</strong> parameter. The <strong>DestinationCidrBlock</strong> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,20 +28,15 @@ public class ModifyRouteEntryRequest extends TeaModel {
     public String destinationCidrBlock;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p><strong>true</strong>: sends the request without modifying the route. The system checks whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * <p><strong>false</strong> (default): sends a Normal request. After the request passes the check, a 2xx HTTP status code is returned and the route is modified.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the new next hop instance.</p>
+     * <p>The new next hop instance ID of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp17y37ytsenqyim****</p>
@@ -50,7 +45,35 @@ public class ModifyRouteEntryRequest extends TeaModel {
     public String newNextHopId;
 
     /**
-     * <p>The new next hop type of the route.</p>
+     * <p>The new next hop type of the route. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Instance</strong>: ECS instance.</p>
+     * </li>
+     * <li><p><strong>HaVip</strong>: high-availability virtual IP address.  </p>
+     * </li>
+     * <li><p><strong>RouterInterface</strong>: vRouter interface.</p>
+     * </li>
+     * <li><p><strong>NetworkInterface</strong>: elastic network interface (ENI).</p>
+     * </li>
+     * <li><p><strong>VpnGateway</strong>: VPN gateway.</p>
+     * </li>
+     * <li><p><strong>IPv6Gateway</strong>: IPv6 gateway.</p>
+     * </li>
+     * <li><p><strong>NatGateway</strong>: NAT gateway.</p>
+     * </li>
+     * <li><p><strong>Attachment</strong>: transit router.</p>
+     * </li>
+     * <li><p><strong>VpcPeer</strong>: VPC peering connection.</p>
+     * </li>
+     * <li><p><strong>Ipv4Gateway</strong>: IPv4 gateway.</p>
+     * </li>
+     * <li><p><strong>GatewayEndpoint</strong>: gateway endpoint.</p>
+     * </li>
+     * <li><p><strong>Ecr</strong>: Express Connect Router (ECR).</p>
+     * </li>
+     * <li><p><strong>GatewayLoadBalancerEndpoint</strong>: Gateway Load Balancer endpoint (GWLBe).</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NetworkInterface</p>
@@ -65,8 +88,8 @@ public class ModifyRouteEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the route belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the route entry.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +115,7 @@ public class ModifyRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The name of the route entry.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>EntryName</p>
@@ -101,7 +124,7 @@ public class ModifyRouteEntryRequest extends TeaModel {
     public String routeEntryName;
 
     /**
-     * <p>The ID of the route table to which the route entry belongs.</p>
+     * <p>The route table ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-bp1nk7zk65du3pni8z9td</p>

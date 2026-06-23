@@ -8,7 +8,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     /**
      * <p>The new destination port range of the inbound or outbound traffic.</p>
      * <blockquote>
-     * <p> If you set <strong>Protocol</strong> to <strong>ICMP</strong>, you cannot change the port range.</p>
+     * <p>If you set <strong>Protocol</strong> to <strong>ICMP</strong>, you cannot change the port range.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,8 +41,10 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: only checks the API request. The configuration of the inbound or outbound rule is not modified. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</li>
+     * <li><p><strong>true</strong>: only checks the API request. The configuration of the inbound or outbound rule is not modified. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong>: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,10 +71,14 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     /**
      * <p>The new protocol that is used by the traffic to be mirrored by the inbound or outbound rule. Valid values:</p>
      * <ul>
-     * <li><strong>ALL</strong>: all protocols</li>
-     * <li><strong>ICMP</strong>: Internet Control Message Protocol (ICMP)</li>
-     * <li><strong>TCP</strong>: TCP</li>
-     * <li><strong>UDP</strong>: User Datagram Protocol (UDP)</li>
+     * <li><p><strong>ALL</strong>: all protocols</p>
+     * </li>
+     * <li><p><strong>ICMP</strong>: Internet Control Message Protocol (ICMP)</p>
+     * </li>
+     * <li><p><strong>TCP</strong>: TCP</p>
+     * </li>
+     * <li><p><strong>UDP</strong>: User Datagram Protocol (UDP)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,8 +107,10 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     /**
      * <p>The new action of the inbound or outbound rule. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: accepts network traffic.</li>
-     * <li><strong>drop</strong>: drops network traffic.</li>
+     * <li><p><strong>accept</strong>: accepts network traffic.</p>
+     * </li>
+     * <li><p><strong>drop</strong>: drops network traffic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +131,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     /**
      * <p>The new source port range of the inbound or outbound traffic.</p>
      * <blockquote>
-     * <p> If you set <strong>Protocol</strong> to <strong>ICMP</strong>, you cannot change the port range.</p>
+     * <p>If you set <strong>Protocol</strong> to <strong>ICMP</strong>, you cannot change the port range.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

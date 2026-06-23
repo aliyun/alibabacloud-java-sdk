@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,8 +55,8 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPN gateway instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public String routeSource;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The ID of the VPN gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The weight of the policy-based route. Valid values:</p>
+     * <p>The weight of the policy-based route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

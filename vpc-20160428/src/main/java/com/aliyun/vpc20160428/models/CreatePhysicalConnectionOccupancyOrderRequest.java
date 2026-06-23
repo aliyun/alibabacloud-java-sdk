@@ -17,9 +17,25 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong> (<strong>default</strong>): disable auto-renewal.</li>
+     * <li><strong>true</strong>: enable auto-renewal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The auto-renewal duration. Unit: months. Valid values: <strong>0</strong> to <strong>2147483647</strong>. Default Value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 

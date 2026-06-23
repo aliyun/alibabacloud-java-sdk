@@ -7,8 +7,10 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>VPC CIDR.</p>
      * <ul>
-     * <li>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</li>
-     * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</li>
+     * <li><p>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</p>
+     * </li>
+     * <li><p>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class CreateVpcRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +45,10 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,8 +60,10 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>Whether to enable the DNS hostname feature. Values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Not enabled. </li>
-     * <li><strong>true</strong>: Enabled.</li>
+     * <li><p><strong>false</strong> (default): Not enabled.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,8 +75,10 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>Indicates whether IPv6 is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): disabled.</li>
-     * <li><strong>true</strong>: enabled.</li>
+     * <li><p><strong>false</strong> (default): disabled.</p>
+     * </li>
+     * <li><p><strong>true</strong>: enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -130,13 +138,17 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default)</li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaTelecom</strong></li>
+     * <li><p><strong>BGP</strong> (default)</p>
+     * </li>
+     * <li><p><strong>ChinaMobile</strong></p>
+     * </li>
+     * <li><p><strong>ChinaUnicom</strong></p>
+     * </li>
+     * <li><p><strong>ChinaTelecom</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you are allowed to use single-ISP bandwidth, you can set the value to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+     * <p>If you are allowed to use single-ISP bandwidth, you can set the value to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -189,7 +201,7 @@ public class CreateVpcRequest extends TeaModel {
      * <p>For more information about user CIDR blocks, see the <code>What is a user CIDR block?</code> section in <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.0/16</p>
+     * <p>192.168.0.0/12</p>
      */
     @NameInMap("UserCidr")
     public String userCidr;

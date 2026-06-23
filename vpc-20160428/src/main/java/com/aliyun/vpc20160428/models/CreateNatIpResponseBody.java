@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNatIpResponseBody extends TeaModel {
     /**
-     * <p>The IPv4Prefix returned by the previous API is obsolete.</p>
+     * <p>The IPv4 prefix returned by the legacy operation. This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -14,7 +14,7 @@ public class CreateNatIpResponseBody extends TeaModel {
     public String ipv4Prefix;
 
     /**
-     * <p>The NAT IP address.</p>
+     * <p>The created NAT IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.34</p>
@@ -23,7 +23,7 @@ public class CreateNatIpResponseBody extends TeaModel {
     public String natIp;
 
     /**
-     * <p>The ID of the NAT IP address.</p>
+     * <p>The instance ID of the created NAT IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcnatip-gw8y7q3cpk3fggs8****</p>
@@ -32,7 +32,7 @@ public class CreateNatIpResponseBody extends TeaModel {
     public String natIpId;
 
     /**
-     * <p>The NatIp parameter that is returned after you create a NatIp. If you use IPv4Prefix to create a NatIp, the information about all NatIp is returned. We recommend that you use this parameter to obtain the information about a NatIp when you create a NatIp.</p>
+     * <p>The NAT IP address information returned after the NAT IP address is created. When you create a NAT IP address by using an IPv4 prefix, all NAT IP address information is returned. When you create a single NAT IP address, we recommend that you use this parameter to obtain the NAT IP address information.</p>
      */
     @NameInMap("NatIps")
     public java.util.List<CreateNatIpResponseBodyNatIps> natIps;
@@ -93,7 +93,7 @@ public class CreateNatIpResponseBody extends TeaModel {
 
     public static class CreateNatIpResponseBodyNatIps extends TeaModel {
         /**
-         * <p>The Ipv4Prefix of the created NatIpList list is returned when Ipv4Preix is created.</p>
+         * <p>The IPv4 prefix in the list of NAT IP addresses created by using an IPv4 prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.128/28</p>
@@ -105,7 +105,7 @@ public class CreateNatIpResponseBody extends TeaModel {
         public String ipv4Prefix;
 
         /**
-         * <p>Returns the NatIp address of the created NatIpList list when Ipv4Preix is created.</p>
+         * <p>The NAT IP address in the list of NAT IP addresses created by using an IPv4 prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.2.128</p>
@@ -114,7 +114,7 @@ public class CreateNatIpResponseBody extends TeaModel {
         public String natIp;
 
         /**
-         * <p>Returns the NatIpId of the created NatIpList list when Ipv4Preix is created.</p>
+         * <p>The NAT IP address ID in the list of NAT IP addresses created by using an IPv4 prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>vpcnatip-xxxxxxxx</p>

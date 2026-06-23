@@ -60,6 +60,9 @@ public class ListBusinessRegionsResponseBody extends TeaModel {
     public static class ListBusinessRegionsResponseBodyGeographicSubRegions extends TeaModel {
         /**
          * <p>The name of the region where circuits are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华东1(杭州)</p>
          */
         @NameInMap("Name")
         public String name;

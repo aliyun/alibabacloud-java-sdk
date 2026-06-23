@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     /**
-     * <p>The destination CIDR block of the route entry in the gateway route table.</p>
+     * <p>The destination CIDR block of the route entry in the gateway route table that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.5</p>
@@ -14,7 +14,7 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     public String destinationCidrBlock;
 
     /**
-     * <p>The ID of the gateway route table that you want to query.</p>
+     * <p>The ID of the gateway route table to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     public String gatewayRouteTableId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,10 +33,10 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</li>
+     * <li>If this is the first query or no subsequent query exists, leave this parameter empty.</li>
+     * <li>If a subsequent query exists, set this parameter to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,8 +52,8 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the gateway route table.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>The region ID of the gateway route table that you want to query.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

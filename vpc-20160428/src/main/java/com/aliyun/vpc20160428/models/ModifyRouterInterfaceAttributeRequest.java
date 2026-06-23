@@ -22,7 +22,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
      * <p>The value must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the router interface.</p>
+     * <p>路由器接口</p>
      */
     @NameInMap("Description")
     public String description;

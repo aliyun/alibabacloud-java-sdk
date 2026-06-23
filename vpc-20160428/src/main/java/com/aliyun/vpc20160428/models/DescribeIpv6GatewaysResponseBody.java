@@ -8,7 +8,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     public DescribeIpv6GatewaysResponseBodyIpv6Gateways ipv6Gateways;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

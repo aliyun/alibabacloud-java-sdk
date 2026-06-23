@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class AssociateHaVipRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> in each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AssociateHaVipRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the HaVip.</p>
+     * <p>The ID of the HaVip to be associated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class AssociateHaVipRequest extends TeaModel {
     public String haVipId;
 
     /**
-     * <p>The ID of the ECS instance to be associated with the HaVip.</p>
+     * <p>The instance ID of the ECS instance to attach to the HaVip.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,12 @@ public class AssociateHaVipRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the instance to be associated with the HaVip. Valid values:</p>
+     * <p>The type of the instance to attach to the HaVip. Valid values:</p>
      * <ul>
-     * <li><strong>EcsInstance</strong>: an ECS instance</li>
-     * <li><strong>NetworkInterface</strong>: an ENI. If you want to associate the HaVip with an ENI, this parameter is required.</li>
+     * <li><p><strong>EcsInstance</strong>: ECS instance.</p>
+     * </li>
+     * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC) instance. If the instance to attach to the HaVip is a network interface controller (NIC), this parameter is required.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +59,7 @@ public class AssociateHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the HaVip belongs.</p>
+     * <p>The region ID of the HaVip.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

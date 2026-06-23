@@ -17,7 +17,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
      * <p>The CIDR block of the vSwitch.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.0/24</p>
+     * <p>192.168.0.1/24</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
@@ -80,7 +80,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
      * <p>The network access control list (ACL) rules.</p>
      * 
      * <strong>example:</strong>
-     * <p>nacl-bp1fg655nh68xyz9****</p>
+     * <p>1</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;

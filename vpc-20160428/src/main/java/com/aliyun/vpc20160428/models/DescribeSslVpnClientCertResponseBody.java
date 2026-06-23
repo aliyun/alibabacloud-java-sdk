@@ -8,7 +8,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
      * <p>The CA certificate.</p>
      * 
      * <strong>example:</strong>
-     * <p>CA certificate</p>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIID****r4w=
+     * -----END CERTIFICATE-----</p>
      */
     @NameInMap("CaCert")
     public String caCert;
@@ -17,7 +19,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
      * <p>The client certificate.</p>
      * 
      * <strong>example:</strong>
-     * <p>Client certificate</p>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIIDR****A==
+     * -----END CERTIFICATE-----</p>
      */
     @NameInMap("ClientCert")
     public String clientCert;
@@ -26,7 +30,20 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
      * <p>The client configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Client configuration</p>
+     * <p>client
+     * dev tun
+     * proto tcp
+     * remote 120.XX.XX.33 1194
+     * resolv-retry infinite
+     * nobind
+     * persist-key
+     * persist-tun
+     * ca ca.crt
+     * cert vsc-bp15t7****.crt
+     * key vsc-bp15t7****.key
+     * cipher AES-128-CBC
+     * ;comp-lzo
+     * verb 4</p>
      */
     @NameInMap("ClientConfig")
     public String clientConfig;
@@ -35,7 +52,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
      * <p>The client key.</p>
      * 
      * <strong>example:</strong>
-     * <p>The key of the client</p>
+     * <p>-----BEGIN RSA PRIVATE KEY-----
+     * MIIEpAI****ZzNFhuM/za==
+     * -----END RSA PRIVATE KEY-----</p>
      */
     @NameInMap("ClientKey")
     public String clientKey;

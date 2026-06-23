@@ -117,7 +117,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
          * <p>The ID of the instance to which the QoS policy is associated.</p>
          * 
          * <strong>example:</strong>
-         * <p>pc-bp159zj8zujwy3p07j83e</p>
+         * <p>pc-bp159zj8zujwy3p07****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -211,7 +211,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
          * <p>The ID of the QoS policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-pksbqfmotl5hzqmhf8</p>
+         * <p>qos-pksbqfmotl5hzq****</p>
          */
         @NameInMap("QosId")
         public String qosId;
@@ -230,7 +230,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
          * <p>The ID of the QoS queue.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+         * <p>qos-queue-9nyx2u7n71s2rc****</p>
          */
         @NameInMap("QueueId")
         public String queueId;

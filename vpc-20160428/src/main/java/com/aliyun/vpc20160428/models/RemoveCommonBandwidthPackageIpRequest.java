@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveCommonBandwidthPackageIpRequest extends TeaModel {
     /**
+     * <p>The ID of the Internet Shared Bandwidth instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class RemoveCommonBandwidthPackageIpRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
+     * <p>A client token used to ensure the idempotence of the request.  </p>
+     * <p>Generate a unique value for this parameter from your client to guarantee uniqueness across different requests. ClientToken supports only ASCII characters.  </p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -24,6 +31,8 @@ public class RemoveCommonBandwidthPackageIpRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The ID of the EIP instance.  </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> API to query the ID of the EIP instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +48,8 @@ public class RemoveCommonBandwidthPackageIpRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the Internet Shared Bandwidth instance.  </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> API to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

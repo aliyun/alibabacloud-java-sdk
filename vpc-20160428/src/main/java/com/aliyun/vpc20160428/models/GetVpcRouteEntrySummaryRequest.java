@@ -39,7 +39,7 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Custom</p>
+     * <p>custom</p>
      */
     @NameInMap("RouteEntryType")
     public String routeEntryType;

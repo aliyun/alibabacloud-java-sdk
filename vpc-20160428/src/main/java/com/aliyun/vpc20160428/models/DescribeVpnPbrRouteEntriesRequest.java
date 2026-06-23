@@ -34,7 +34,7 @@ public class DescribeVpnPbrRouteEntriesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-zhangjiakou</p>
+     * <p>eu-central-1</p>
      */
     @NameInMap("RegionId")
     public String regionId;

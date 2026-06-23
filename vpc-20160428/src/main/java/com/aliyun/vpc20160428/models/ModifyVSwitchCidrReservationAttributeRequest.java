@@ -4,9 +4,29 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
+    /**
+     * <p>A client token used to ensure the idempotence of the request.</p>
+     * <p>Generate a unique value from your client for this parameter to guarantee uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-230e-11e9-8e44-0016e04115b</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Sends a dry run request without creating any resource (performing the API operation). The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are met. If the check fails, an error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 

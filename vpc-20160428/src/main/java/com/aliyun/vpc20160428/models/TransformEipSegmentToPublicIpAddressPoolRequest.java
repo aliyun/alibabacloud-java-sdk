@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class TransformEipSegmentToPublicIpAddressPoolRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the IP address pool.</p>
+     * <p>The description of the IP address pool instance.</p>
      * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the contiguous EIP group to be migrated.</p>
+     * <p>The instance ID of the contiguous EIP group to migrate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the IP address pool.</p>
+     * <p>The name of the IP address pool instance.</p>
      * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the region to which the contiguous EIP group belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the contiguous EIP group. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the address pool belongs.</p>
+     * <p>The resource group ID of the IP address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4pcdvf****</p>

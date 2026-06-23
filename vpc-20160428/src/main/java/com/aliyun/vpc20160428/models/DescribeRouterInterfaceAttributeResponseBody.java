@@ -93,7 +93,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
      * <p>The description of the router interface.</p>
      * 
      * <strong>example:</strong>
-     * <p>Peer interface.</p>
+     * <p>对端接口</p>
      */
     @NameInMap("Description")
     public String description;
@@ -214,7 +214,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
      * <p>The name of the router interface.</p>
      * 
      * <strong>example:</strong>
-     * <p>RouterInterface1</p>
+     * <p>路由器接口1</p>
      */
     @NameInMap("Name")
     public String name;

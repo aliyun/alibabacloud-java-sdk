@@ -5,8 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </p>
+     * <p>&lt;props=&quot;intl&quot;&gt;<ph>Default value range: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>1</strong>.</ph></p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>2</strong> to <strong>20000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-enhanced-95th-percentile, the default value range of <strong>Bandwidth</strong> is <strong>200</strong> to <strong>20000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByDominantTraffic</strong>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the default value range of <strong>Bandwidth</strong> is <strong>1</strong> to <strong>2000</strong>.</li>
+     * </ul>
+     * <p> Default value: <strong>1000</strong>.
+     * .</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,9 +25,9 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,19 +49,19 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default) All regions support BGP (Multi-ISP).</li>
-     * <li><strong>BGP_PRO</strong> BGP (Multi-ISP) Pro lines are available in the China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+     * <li><strong>BGP</strong> (default): BGP (multi-ISP) lines. All regions support BGP (multi-ISP) lines.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) premium lines. Currently, only the Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions support BGP (multi-ISP) premium Internet Shared Bandwidth instances.</li>
      * </ul>
-     * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
+     * <p>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</p>
      * <ul>
-     * <li><strong>ChinaTelecom</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaTelecom_L2</strong></li>
-     * <li><strong>ChinaUnicom_L2</strong></li>
-     * <li><strong>ChinaMobile_L2</strong></li>
+     * <li><strong>ChinaTelecom</strong>: China Telecom</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom</li>
+     * <li><strong>ChinaMobile</strong>: China Mobile</li>
+     * <li><strong>ChinaTelecom_L2</strong>: China Telecom L2</li>
+     * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
+     * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
-     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * <p>If you are a Finance Cloud user in the China (Hangzhou) region, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -62,7 +70,18 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public String ISP;
 
     /**
-     * <p>The billing method of the Internet Shared Bandwidth instance. Set the value to <strong>PayByTraffic</strong>, which specifies the pay-by-data-transfer billing method.</p>
+     * <p>The billable method of the Internet Shared Bandwidth instance. Valid values:
+     * &lt;props=&quot;intl&quot;&gt;<strong>PayByTraffic</strong> (pay-by-data-transfer).</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
+     * <li><strong>PayBy95</strong>: pay-by-enhanced-95th-percentile.</li>
+     * <li><strong>PayByDominantTraffic</strong>: pay-by-dominant-traffic.
+     * .</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>中国站示例值：PayByBandwidth，国际站示例值：PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -84,9 +103,10 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The percentage of the minimum bandwidth commitment. Set the parameter to <strong>20</strong>.</p>
+     * <p>The minimum bandwidth commitment percentage of the Internet Shared Bandwidth instance. Set the value to <strong>20</strong>.</p>
+     * <p> &lt;props=&quot;china&quot;&gt;<ph>This parameter is required when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
      * <blockquote>
-     * <p>This parameter is available only on the Alibaba Cloud China site.</p>
+     * <p>This parameter is supported only on the China site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,7 +127,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazdjdhd****</p>
@@ -122,17 +142,34 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The security protection level.</p>
+     * <ul>
+     * <li><p>If you do not set this parameter, Anti-DDoS Origin Basic is used by default.</p>
+     * </li>
+     * <li><p>If you set this parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Origin Enhanced is used.</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>You can set this parameter when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
+     * <p>You can specify up to 10 security protection levels.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>AntiDDoS_Enhanced</p>
      */
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
 
+    /**
+     * <p>The list of tags for the Internet Shared Bandwidth instance.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateCommonBandwidthPackageRequestTag> tag;
 
     /**
-     * <p>The zone of the Internet Shared Bandwidth instance. This parameter is required if you create an Internet Shared Bandwidth instance for a cloud box.</p>
+     * <p>The zone of the Internet Shared Bandwidth instance.
+     * This parameter is required when you create an Internet Shared Bandwidth instance for a CloudBox.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-southeast-1-lzdvn-cb</p>
@@ -274,9 +311,23 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     }
 
     public static class CreateCommonBandwidthPackageRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
+         */
         @NameInMap("Value")
         public String value;
 

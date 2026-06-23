@@ -8,7 +8,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     public DescribeEipSegmentResponseBodyEipSegments eipSegments;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

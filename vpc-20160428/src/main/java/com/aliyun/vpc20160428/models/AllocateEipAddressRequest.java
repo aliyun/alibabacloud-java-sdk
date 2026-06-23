@@ -16,8 +16,10 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
-     * <li><strong>true</strong>: The automatic payment is enabled. Payments are automatically complete after an order is generated.</li>
+     * <li><p><strong>false</strong> (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
+     * </li>
+     * <li><p><strong>true</strong>: The automatic payment is enabled. Payments are automatically complete after an order is generated.</p>
+     * </li>
      * </ul>
      * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, this parameter is required. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, this parameter is not required.</p>
      * 
@@ -30,9 +32,12 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
      * <ul>
-     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>: <strong>1</strong> to <strong>500</strong>.****</li>
-     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>: <strong>1</strong> to <strong>200</strong>.****</li>
-     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>: <strong>1</strong> to <strong>1000</strong>.****</li>
+     * <li><p>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>: <strong>1</strong> to <strong>500</strong>.\<em>\</em>\<em>\</em></p>
+     * </li>
+     * <li><p>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>: <strong>1</strong> to <strong>200</strong>.\<em>\</em>\<em>\</em></p>
+     * </li>
+     * <li><p>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>: <strong>1</strong> to <strong>1000</strong>.\<em>\</em>\<em>\</em></p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>5</strong>. Unit: Mbit/s.</p>
      * 
@@ -46,7 +51,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The <strong>client token</strong> can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the <strong>client token</strong>. The value of <strong>RequestId</strong> is different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the <strong>client token</strong>. The value of <strong>RequestId</strong> is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +64,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <p>The description of the EIP.</p>
      * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <blockquote>
-     * <p> You cannot specify this parameter if you create a subscription EIP.</p>
+     * <p>You cannot specify this parameter if you create a subscription EIP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,19 +76,27 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
+     * <li><p><strong>BGP</strong> (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.</p>
+     * </li>
+     * <li><p><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</p>
+     * </li>
      * </ul>
      * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the &quot;Line types&quot; section of <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a></p>
      * <ul>
      * <li><p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
      * <ul>
-     * <li><strong>ChinaTelecom</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaTelecom_L2</strong></li>
-     * <li><strong>ChinaUnicom_L2</strong></li>
-     * <li><strong>ChinaMobile_L2</strong></li>
+     * <li><p><strong>ChinaTelecom</strong></p>
+     * </li>
+     * <li><p><strong>ChinaUnicom</strong></p>
+     * </li>
+     * <li><p><strong>ChinaMobile</strong></p>
+     * </li>
+     * <li><p><strong>ChinaTelecom_L2</strong></p>
+     * </li>
+     * <li><p><strong>ChinaUnicom_L2</strong></p>
+     * </li>
+     * <li><p><strong>ChinaMobile_L2</strong></p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
@@ -99,8 +112,10 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The billing method of the EIP. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
-     * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
+     * <li><p><strong>PrePaid</strong>: subscription</p>
+     * </li>
+     * <li><p><strong>PostPaid</strong> (default): pay-as-you-go</p>
+     * </li>
      * </ul>
      * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
      * 
@@ -123,8 +138,10 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The metering method of the EIP. Valid values:</p>
      * <ul>
-     * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth</li>
-     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+     * <li><p><strong>PayByBandwidth</strong> (default): pay-by-bandwidth</p>
+     * </li>
+     * <li><p><strong>PayByTraffic</strong>: pay-by-data-transfer</p>
+     * </li>
      * </ul>
      * <p>When <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>.</p>
      * <p>When <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
@@ -149,7 +166,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <p>The EIP name.</p>
      * <p>The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <blockquote>
-     * <p> You cannot specify this parameter if you create a subscription EIP.</p>
+     * <p>You cannot specify this parameter if you create a subscription EIP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -175,8 +192,8 @@ public class AllocateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The subscription duration of the EIP.</p>
-     * <p>Valid values when <strong>PricingCycle</strong> is set to <strong>Month</strong>: <strong>1</strong> to <strong>9</strong>.****</p>
-     * <p>Valid values when <strong>PricingCycle</strong> is set to <strong>Year</strong>: <strong>1</strong> to <strong>5</strong>.****</p>
+     * <p>Valid values when <strong>PricingCycle</strong> is set to <strong>Month</strong>: <strong>1</strong> to <strong>9</strong>.\<em>\</em>\<em>\</em></p>
+     * <p>Valid values when <strong>PricingCycle</strong> is set to <strong>Year</strong>: <strong>1</strong> to <strong>5</strong>.\<em>\</em>\<em>\</em></p>
      * <p>This parameter must be specified when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. This parameter is optional when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -188,8 +205,10 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The billing cycle of the subscription EIP. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong> (default)</li>
-     * <li><strong>Year</strong></li>
+     * <li><p><strong>Month</strong> (default)</p>
+     * </li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
      * </ul>
      * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, this parameter is required. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, this parameter is not required.</p>
      * 
@@ -239,8 +258,10 @@ public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The editions of Anti-DDoS.</p>
      * <ul>
-     * <li>If you do not specify this parameter, Anti-DDoS Origin Basic is used.</li>
-     * <li>If you set the parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Pro/Premium is used.</li>
+     * <li><p>If you do not specify this parameter, Anti-DDoS Origin Basic is used.</p>
+     * </li>
+     * <li><p>If you set the parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Pro/Premium is used.</p>
+     * </li>
      * </ul>
      * <p>You can specify up to 10 editions of Anti-DDoS.</p>
      * 
@@ -250,6 +271,9 @@ public class AllocateEipAddressRequest extends TeaModel {
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
 
+    /**
+     * <p>The tags of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<AllocateEipAddressRequestTag> tag;
 
@@ -259,7 +283,7 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou-a</p>
+     * <p>ap-southeast-1-lzdvn-cb</p>
      */
     @NameInMap("Zone")
     public String zone;
@@ -462,9 +486,22 @@ public class AllocateEipAddressRequest extends TeaModel {
     }
 
     public static class AllocateEipAddressRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this value, it cannot be an empty string.</p>
+         * <p>A tag key can contain up to 128 characters, must not start with <code>aliyun</code> or <code>acs:</code>, and must not contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. When you invoke the API, use the format Tag.N.Value, where N ranges from 1 to 20. If you specify this value, it cannot be an empty string. It can contain up to 128 characters, must not start with <code>aliyun</code> or <code>acs:</code>, and must not contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
+         */
         @NameInMap("Value")
         public String value;
 

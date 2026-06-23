@@ -18,7 +18,7 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
      * <p>The description of the EIP bandwidth plan. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>描述</p>
      */
     @NameInMap("Description")
     public String description;

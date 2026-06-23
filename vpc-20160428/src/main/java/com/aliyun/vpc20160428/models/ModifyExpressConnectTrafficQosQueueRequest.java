@@ -41,7 +41,7 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>qos-2giu0a6vd5x0mv4700</p>
+     * <p>qos-2giu0a6vd5x0mv****</p>
      */
     @NameInMap("QosId")
     public String qosId;
@@ -61,7 +61,7 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+     * <p>qos-queue-9nyx2u7n71s2rc****</p>
      */
     @NameInMap("QueueId")
     public String queueId;

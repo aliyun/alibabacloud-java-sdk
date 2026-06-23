@@ -38,7 +38,7 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
      * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>ECC</p>
+     * <p>高速上云服务</p>
      */
     @NameInMap("Description")
     public String description;
@@ -82,7 +82,7 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
      * <p>The city where the data center is located.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hangzhou</p>
+     * <p>杭州</p>
      */
     @NameInMap("PeerCity")
     public String peerCity;
@@ -95,7 +95,7 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>\*\<em>city\</em>\<em>district/county\</em>\<em>road\</em>\<em>number\</em>\<em>property or building name\</em>\<em>building\</em>\<em>floor\</em>\<em>room number\</em>\<em>server rack number\</em>\<em>server rack name\</em>\<em>device\</em>\*port</p>
+     * <p><strong>市</strong>区/县<strong>路</strong>号<strong>物业或楼宇名称</strong>座<strong>楼层</strong>房间号<strong>机柜号</strong>机柜名称<strong>设备</strong>端口</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;

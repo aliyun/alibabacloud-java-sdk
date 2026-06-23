@@ -9,7 +9,7 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
      * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>描述信息</p>
      */
     @NameInMap("Description")
     public String description;

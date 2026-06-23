@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class Describe95TrafficRequest extends TeaModel {
     /**
-     * <p>The date in UTC+8. Format: year-month-day.</p>
+     * <p>The date to query, in UTC+8. Format: YYYY-MM-DD.</p>
+     * <blockquote>
+     * <p>You can query only data from last month or earlier.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +35,7 @@ public class Describe95TrafficRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +51,7 @@ public class Describe95TrafficRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to cbwp, which specifies Internet Shared Bandwidth.</p>
+     * <p>The resource type. Only <strong>cbwp</strong> is supported, which represents Internet Shared Bandwidth.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

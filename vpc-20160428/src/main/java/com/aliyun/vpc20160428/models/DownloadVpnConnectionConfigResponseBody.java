@@ -187,7 +187,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
          * <p>The IKE version.</p>
          * 
          * <strong>example:</strong>
-         * <p>ikev1</p>
+         * <p>ikev2</p>
          */
         @NameInMap("IkeVersion")
         public String ikeVersion;
@@ -196,7 +196,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
          * <p>The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.</p>
          * 
          * <strong>example:</strong>
-         * <p>116.62.XX.XX</p>
+         * <p>139.196.XX.XX</p>
          */
         @NameInMap("LocalId")
         public String localId;
@@ -214,7 +214,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
          * <p>The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.</p>
          * 
          * <strong>example:</strong>
-         * <p>139.196.XX.XX</p>
+         * <p>116.62.XX.XX</p>
          */
         @NameInMap("RemoteId")
         public String remoteId;

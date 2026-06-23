@@ -4,11 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsResponseBody extends TeaModel {
+    /**
+     * <p>The list of access points.</p>
+     */
     @NameInMap("AccessPointSet")
     public DescribeAccessPointsResponseBodyAccessPointSet accessPointSet;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +20,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Maximum: <strong>50</strong>. Default: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +38,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

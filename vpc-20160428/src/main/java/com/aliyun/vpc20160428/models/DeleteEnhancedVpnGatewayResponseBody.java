@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEnhancedVpnGatewayResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E9A8AABE-A84B-4AF2-A68A-8E2EA190E7AE</p>
      */

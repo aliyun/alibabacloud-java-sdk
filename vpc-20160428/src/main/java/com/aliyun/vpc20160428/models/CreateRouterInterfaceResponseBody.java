@@ -8,7 +8,7 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
      * <p>The order number. This parameter is returned if InstanceChargeType is set to PrePaid.</p>
      * 
      * <strong>example:</strong>
-     * <p>202008594930117</p>
+     * <p>20210101123456</p>
      */
     @NameInMap("OrderId")
     public Long orderId;

@@ -8,7 +8,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
     public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules ipv6EgressOnlyRules;
 
     /**
-     * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E16671B7-DEA6-48E0-8E9C-41913DAD44DD</p>

@@ -103,9 +103,6 @@ public class CreateSslVpnServerRequest extends TeaModel {
      * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DryRunOperation</code> is returned.</li>
      * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;

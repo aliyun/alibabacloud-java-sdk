@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,10 +23,10 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>none</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -41,10 +41,12 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <p>Indicates whether the modification was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

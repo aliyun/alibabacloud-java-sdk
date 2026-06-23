@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>The filter information. You can specify a filter key and a filter value.</p>
+     * <p>The filter information. You can specify key-value pairs to filter the query results.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeNatGatewayAssociateNetworkInterfacesRequestFilter> filter;
 
     /**
-     * <p>The number of entries to return per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,7 +33,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT gateway to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,10 +43,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
     public String natGatewayId;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid value:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for NetToken, you do not need to specify this parameter.</li>
-     * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * <li><p>If this is the first query or no subsequent query is required, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If a subsequent query is required, set the value to the <strong>NextToken</strong> value returned in the previous API call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,8 +64,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Internet NAT gateway.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
+     * <p>The region ID of the NAT gateway.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +90,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
     public Long resourceOwnerId;
 
     /**
-     * <p>The information about resource tags.</p>
+     * <p>The list of resource tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeNatGatewayAssociateNetworkInterfacesRequestTag> tag;
@@ -196,25 +198,21 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
 
     public static class DescribeNatGatewayAssociateNetworkInterfacesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key.</p>
+         * <p>The key of the filter. Valid values:</p>
          * <ul>
-         * <li>ResourceId</li>
-         * </ul>
-         * <blockquote>
-         * <p> Specify the service resource ID in the Value field.</p>
+         * <li>ResourceId<blockquote>
+         * <p>Set Value to the ID of the EPS resource that you want to query.</p>
          * </blockquote>
-         * <ul>
-         * <li>NetworkInterfaceId</li>
-         * </ul>
-         * <blockquote>
-         * <p> Specify the ENI ID in the Value field.</p>
+         * </li>
+         * <li>NetworkInterfaceId<blockquote>
+         * <p>Set Value to the ID of the elastic network interface (ENI) that you want to query.</p>
          * </blockquote>
-         * <ul>
-         * <li>ResourceOwnerId</li>
-         * </ul>
-         * <blockquote>
-         * <p> Specify the UID of the account to which the service resource belongs.</p>
+         * </li>
+         * <li>ResourceOwnerId<blockquote>
+         * <p>Set Value to the UID of the user to whom the EPS resource belongs for resource ownership query.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ResourceId</p>
@@ -223,7 +221,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
         public String key;
 
         /**
-         * <p>Separate multiple values with commas (,).</p>
+         * <p>The filter value. You can specify multiple values separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>ep-8psre8c8936596cd****</p>
@@ -256,8 +254,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
 
     public static class DescribeNatGatewayAssociateNetworkInterfacesRequestTag extends TeaModel {
         /**
-         * <p>The tag key You can specify at most 20 tag keys. It cannot be an empty string,</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -266,8 +264,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
         public String key;
 
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

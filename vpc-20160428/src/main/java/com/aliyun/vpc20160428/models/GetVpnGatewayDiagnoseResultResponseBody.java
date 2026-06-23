@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     /**
      * <p>The time when the diagnostic started.</p>
-     * <p>The time follows the ISO8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * <p>The time is displayed in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-15T05:28:57Z</p>
@@ -15,7 +15,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String beginTime;
 
     /**
-     * <p>The ID of the diagnostic.</p>
+     * <p>The diagnostic ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpndgn-uf6sgneym02lxyuv4****</p>
@@ -24,14 +24,14 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String diagnoseId;
 
     /**
-     * <p>The information about the diagnostic items.</p>
+     * <p>The list of diagnostic items.</p>
      */
     @NameInMap("DiagnoseResult")
     public java.util.List<GetVpnGatewayDiagnoseResultResponseBodyDiagnoseResult> diagnoseResult;
 
     /**
-     * <p>The timestamp when the system finishes diagnosing the item.</p>
-     * <p>The time follows the ISO8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * <p>The time when the diagnostic ended.</p>
+     * <p>The time is displayed in UTC in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-15T05:29:08Z</p>
@@ -40,7 +40,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String finishTime;
 
     /**
-     * <p>The number of diagnostic items that have been diagnosed.</p>
+     * <p>The number of diagnostic items that have been completed.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -58,7 +58,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource that is diagnosed.</p>
+     * <p>The ID of the diagnosed resource.</p>
      * 
      * <strong>example:</strong>
      * <p>vco-uf6huqsu63azl7mdp****</p>
@@ -67,8 +67,8 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public String resourceInstanceId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>The value is set to <strong>IPsec</strong>, which indicates an IPsec-VPN connection.</p>
+     * <p>The type of the diagnosed resource.</p>
+     * <p>Valid values: <strong>IPsec</strong>, which indicates an IPsec-VPN connection.</p>
      * 
      * <strong>example:</strong>
      * <p>IPsec</p>
@@ -86,7 +86,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The VPN gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-uf6fzwp0ck3frwtbk****</p>
@@ -183,15 +183,15 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         /**
          * <p>The diagnostic item.</p>
          * <ul>
-         * <li><strong>RouteEntryConflict</strong>: route conflicts.</li>
-         * <li><strong>VpnRouteQuota</strong>: the quota of destination-based routes for the VPN gateway.</li>
-         * <li><strong>VpnIPsecQuota</strong>: the quota of IPsec-VPN connections for the VPN gateway.</li>
-         * <li><strong>VpnPbrRouteQuota</strong>: the quota of policy-based routes for the VPN gateway.</li>
-         * <li><strong>VcoConfigConsistency</strong>: the consistency of the IPsec-VPN connection.</li>
-         * <li><strong>VcoUserInternetIpConnectivity</strong>: Internet connectivity of the customer gateway.</li>
+         * <li><strong>RouteEntryConflict</strong>: route conflict.</li>
+         * <li><strong>VpnRouteQuota</strong>: VPN gateway destination route quota.</li>
+         * <li><strong>VpnIPsecQuota</strong>: VPN gateway IPsec-VPN connection quota.</li>
+         * <li><strong>VpnPbrRouteQuota</strong>: VPN gateway policy-based route quota.</li>
+         * <li><strong>VcoConfigConsistency</strong>: IPsec configuration consistency.</li>
+         * <li><strong>VcoUserInternetIpConnectivity</strong>: public connectivity of the customer gateway.</li>
          * <li><strong>VcoPrivateConnectivity</strong>: private network connectivity.</li>
          * </ul>
-         * <p>For more information about the diagnostic items, see <a href="https://help.aliyun.com/document_detail/190330.html">Background information about quick diagnostics</a>.</p>
+         * <p>For more information about each diagnostic item, see <a href="https://help.aliyun.com/document_detail/190330.html">One-click diagnostics background information</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>RouteEntryConflict</p>
@@ -200,53 +200,46 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         public String diagnoseName;
 
         /**
-         * <p>The diagnostic result.</p>
-         * <p>The system returns different results for each diagnostic item.</p>
+         * <p>The diagnostic result of the diagnostic item.</p>
+         * <p>The operation returns different information for each diagnostic item:</p>
          * <ul>
-         * <li><p><strong>RouteEntryConflict</strong>: information about route conflicts.</p>
-         * </li>
-         * <li><p><strong>VpnRouteQuota</strong>:</p>
-         * <ul>
-         * <li><strong>quotaName</strong>: the quota ID of destination-based routes.</li>
-         * <li><strong>quantity</strong>: the quota of destination-based routes for the VPN gateway.</li>
-         * <li><strong>used</strong>: the number of destination-based routes created for the VPN gateway.</li>
+         * <li><strong>RouteEntryConflict</strong>: The system returns information about the route conflict.</li>
+         * <li><strong>VpnRouteQuota</strong>:<ul>
+         * <li><strong>quotaName</strong>: the ID of the destination route quota.</li>
+         * <li><strong>quantity</strong>: the number of destination routes that the current VPN gateway instance supports.</li>
+         * <li><strong>used</strong>: the number of destination routes that have been created for the current VPN gateway instance.</li>
          * </ul>
          * </li>
-         * <li><p><strong>VpnIPsecQuota</strong>:</p>
-         * <ul>
-         * <li><strong>quotaName</strong>: the quota ID of IPsec-VPN connections.</li>
-         * <li><strong>quantity</strong>: the quota of IPsec-VPN connections for the VPN gateway.</li>
-         * <li><strong>used</strong>: the number of IPsec-VPN connections created for the VPN gateway.</li>
+         * <li><strong>VpnIPsecQuota</strong>:<ul>
+         * <li><strong>quotaName</strong>: the ID of the IPsec-VPN connection quota.</li>
+         * <li><strong>quantity</strong>: the number of IPsec-VPN connections that the current VPN gateway instance supports.</li>
+         * <li><strong>used</strong>: the number of IPsec-VPN connections that have been created for the current VPN gateway instance.</li>
          * </ul>
          * </li>
-         * <li><p><strong>VpnPbrRouteQuota</strong>:</p>
-         * <ul>
-         * <li><strong>quotaName</strong>: the quota ID of policy-based routes.</li>
-         * <li><strong>quantity</strong>: the quota of policy-based routes for the VPN gateway.</li>
-         * <li><strong>used</strong>: the number of policy-based routes created for the VPN gateway.</li>
+         * <li><strong>VpnPbrRouteQuota</strong>:<ul>
+         * <li><strong>quotaName</strong>: the ID of the policy-based route quota.</li>
+         * <li><strong>quantity</strong>: the number of policy-based routes that the current VPN gateway instance supports.</li>
+         * <li><strong>used</strong>: the number of policy-based routes that have been created for the current VPN gateway instance.</li>
          * </ul>
          * </li>
-         * <li><p><strong>VcoConfigConsistency</strong>:</p>
-         * <ul>
-         * <li><strong>vcoLackConf</strong>: The system cannot obtain the configuration of the peer of the IPsec-VPN connection.</li>
-         * <li><strong>vcoRunningConf</strong>: the configurations that have been added to the peer of the IPsec-VPN connection.</li>
-         * <li><strong>vcoDiffConf</strong>: the configurations that are inconsistent between the local end and the peer.</li>
-         * <li><strong>vcoConf</strong>: the configurations that have been added to the local end.</li>
+         * <li><strong>VcoConfigConsistency</strong>:<ul>
+         * <li><strong>vcoLackConf</strong>: the system cannot obtain the configuration of the peer end of the IPsec-VPN connection.</li>
+         * <li><strong>vcoRunningConf</strong>: the configuration that has been added to the peer end of the IPsec-VPN connection.</li>
+         * <li><strong>vcoDiffConf</strong>: the list of configurations that are inconsistent between the local end and the peer end of the IPsec-VPN connection.</li>
+         * <li><strong>vcoConf</strong>: the configuration that has been added to the local end of the IPsec-VPN connection.</li>
          * </ul>
          * </li>
-         * <li><p><strong>VcoUserInternetIpConnectivity</strong>:</p>
-         * <ul>
+         * <li><strong>VcoUserInternetIpConnectivity</strong>:<ul>
          * <li><strong>targetIp</strong>: the public IP address of the customer gateway.</li>
-         * <li><strong>rtt</strong>: the latency when the system accesses the public IP address of the customer gateway. Unit: milliseconds.</li>
-         * <li><strong>lossRate</strong>: the packet loss when the system accesses the public IP address of the customer gateway.</li>
+         * <li><strong>rtt</strong>: the latency when the system accesses the public IP address of the customer gateway. Unit: ms.</li>
+         * <li><strong>lossRate</strong>: the packet loss rate when the system accesses the public IP address of the customer gateway.</li>
          * </ul>
          * </li>
-         * <li><p><strong>VcoPrivateConnectivity</strong>:</p>
-         * <ul>
+         * <li><strong>VcoPrivateConnectivity</strong>:<ul>
          * <li><strong>targetIp</strong>: the source IP address.</li>
          * <li><strong>srcIp</strong>: the destination IP address.</li>
-         * <li><strong>rtt</strong>: the latency when the source IP address accesses the destination IP address. Unit: milliseconds.</li>
-         * <li><strong>lossRate</strong>: the packet loss when the source IP address accesses the destination IP address.</li>
+         * <li><strong>rtt</strong>: the latency when the source IP address accesses the destination IP address. Unit: ms.</li>
+         * <li><strong>lossRate</strong>: the packet loss rate when the source IP address accesses the destination IP address.</li>
          * </ul>
          * </li>
          * </ul>
@@ -258,13 +251,13 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
         public String diagnoseResultDescription;
 
         /**
-         * <p>The diagnostic result level.</p>
+         * <p>The diagnostic result level of the diagnostic item.</p>
          * <ul>
-         * <li><strong>normal</strong></li>
-         * <li><strong>warning</strong></li>
-         * <li><strong>error</strong></li>
+         * <li><strong>normal</strong>: Normal.</li>
+         * <li><strong>warning</strong>: Warning.</li>
+         * <li><strong>error</strong>: Error.</li>
          * </ul>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/190330.html">Background information about quick diagnostics</a>.</p>
+         * <p>For more information about the diagnostic result levels of each diagnostic item, see <a href="https://help.aliyun.com/document_detail/190330.html">One-click diagnostics background information</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>

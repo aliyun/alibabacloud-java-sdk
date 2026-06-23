@@ -48,7 +48,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.0/24</p>
+         * <p><code>1.1.**.**</code>/24</p>
          */
         @NameInMap("DstCidr")
         public String dstCidr;
@@ -60,7 +60,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2001:0db8:1234:5678::/64</p>
+         * <p>2001:0db8:1234:****::/64</p>
          */
         @NameInMap("DstIPv6Cidr")
         public String dstIPv6Cidr;
@@ -141,7 +141,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
          * <p>The ID of the QoS policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-pksbqfmotl5hzqmhf8</p>
+         * <p>qos-pksbqfmotl5hzq****</p>
          */
         @NameInMap("QosId")
         public String qosId;
@@ -150,7 +150,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
          * <p>The ID of the QoS queue.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+         * <p>qos-queue-9nyx2u7n71s2rc****</p>
          */
         @NameInMap("QueueId")
         public String queueId;
@@ -178,7 +178,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
          * <p>The ID of the QoS rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>qos-rule-iugg0l9x27f2nocouj</p>
+         * <p>qos-rule-iugg0l9x27f2noc****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -200,7 +200,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.0/24</p>
+         * <p><code>1.1.**.**</code>/24</p>
          */
         @NameInMap("SrcCidr")
         public String srcCidr;
@@ -212,7 +212,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2001:0db8:1234:5678::/64</p>
+         * <p>2001:0db8:1234:****::/64</p>
          */
         @NameInMap("SrcIPv6Cidr")
         public String srcIPv6Cidr;

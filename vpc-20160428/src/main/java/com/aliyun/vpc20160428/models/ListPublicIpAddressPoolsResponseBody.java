@@ -215,7 +215,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
          * <p>The Alibaba Cloud account to which the IP address pool belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>121012345612****</p>
+         * <p>121012345612*****</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;

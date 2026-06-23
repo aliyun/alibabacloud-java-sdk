@@ -14,7 +14,7 @@ public class CreateVbrHaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the VBR failover group.</p>
+     * <p>The instance ID of the VBR failover group.</p>
      * 
      * <strong>example:</strong>
      * <p>vbrha-sa1sxheuxtd98****</p>

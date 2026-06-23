@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     /**
-     * <p>The VBRs that need to acquire permissions on the VPC. Valid values:</p>
+     * <p>The scope of VBR instances that accept the authorization. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave <strong>VbrInstanceIds</strong> empty.</li>
-     * <li><strong>Specify</strong>: Permissions on the VPC are granted to the specified VBRs. <strong>VbrInstanceIds</strong> must be assigned a value.</li>
+     * <li><strong>All</strong>: Grants authorization of the VPC instance to all VBR instances in the specified region under the specified Alibaba Cloud account. In this case, the <strong>VbrInstanceIds</strong> parameter can be left empty.</li>
+     * <li><strong>Specify</strong>: Grants authorization of the VPC instance to the specified VBR instances. In this case, the <strong>VbrInstanceIds</strong> parameter is required.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String grantType;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The ID of the VPC instance for which authorization is to be granted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,8 +29,8 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region where the VPC is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPC instance for which authorization is to be granted.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The information about the VBRs.</p>
+     * <p>The list of VBR instances to be granted authorization.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -49,7 +49,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public String vbrInstanceIdsShrink;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+     * <p>The Alibaba Cloud account ID that owns the VBR instance to be granted authorization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class GrantInstanceToVbrShrinkRequest extends TeaModel {
     public Long vbrOwnerUid;
 
     /**
-     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>The region ID of the VBR instance to be granted authorization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

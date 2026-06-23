@@ -8,7 +8,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     public DescribeNatGatewaysResponseBodyNatGateways natGateways;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +17,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
@@ -35,7 +35,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of NAT gateway entries that are returned.</p>
+     * <p>The total number of entries in the NAT gateway list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

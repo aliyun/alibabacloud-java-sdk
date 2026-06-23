@@ -45,7 +45,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
          * <p>The name of the zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dubai Zone A</p>
+         * <p>中东1 可用区A</p>
          */
         @NameInMap("LocalName")
         public String localName;

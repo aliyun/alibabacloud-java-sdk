@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionLOARequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that ensures the idempotence of the request.</p>
+     * <p>Your client generates this value, which must be unique for each request and have a maximum length of 64 ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. Each API request has a unique <strong>RequestId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribePhysicalConnectionLOARequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the Express Connect circuit.</p>
+     * <p>The ID of the physical connection instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,7 @@ public class DescribePhysicalConnectionLOARequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Express Connect circuit.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the physical connection is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to get a list of available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,12 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a precheck for the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the API request. After the request passes the check, a 2XX HTTP status code is returned and the gateway endpoint is associated with the route table. This is the default value.</li>
+     * <li><p><strong>true</strong>: sends a precheck request without associating the route table. The check items include whether the AccessKey is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the precheck, a 2xx HTTP status code is returned and the route table is associated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +43,7 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the IPv6 gateway that you want to modify.</p>
+     * <p>The ID of the IPv6 gateway to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +69,7 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which you want to move the resource.</p>
+     * <p>The ID of the resource group to which you want to move the cloud resource instance.</p>
      * <blockquote>
-     * <p> You can use resource groups to facilitate resource grouping and permission management for an Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
+     * <p>A resource group is a mechanism for managing resources by group within an Alibaba Cloud account. Resource groups help you address complex resource grouping and authorization management issues within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,8 +24,8 @@ public class MoveResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the cloud resource belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the cloud resource.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The instance ID of the cloud resource for which you want to modify the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,21 +51,22 @@ public class MoveResourceGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource for which you want to modify the resource group. Valid values:</p>
+     * <p>The type of the cloud resource for which you want to modify the resource group. Valid values:</p>
      * <ul>
-     * <li><strong>Vpc</strong></li>
-     * <li><strong>Eip</strong></li>
-     * <li><strong>BandwidthPackage</strong></li>
-     * <li><strong>PrefixList</strong></li>
-     * <li><strong>PublicIpAddressPool</strong></li>
-     * <li><strong>FlowLog</strong></li>
-     * <li><strong>HaVip</strong></li>
-     * <li><strong>TrafficMirrorFilter</strong></li>
-     * <li><strong>TrafficMirrorSession</strong></li>
-     * <li><strong>IPv4Gateway</strong></li>
-     * <li><strong>IPv6Gateway</strong></li>
-     * <li><strong>DhcpOptionsSet</strong></li>
-     * <li><strong>GatewayEndpoint</strong></li>
+     * <li><strong>Vpc</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>Eip</strong>: elastic IP address (EIP)</li>
+     * <li><strong>BandwidthPackage</strong>: Internet Shared Bandwidth</li>
+     * <li><strong>PrefixList</strong>: prefix list</li>
+     * <li><strong>PublicIpAddressPool</strong>: IPAM pool</li>
+     * <li><strong>FlowLog</strong>: flow log</li>
+     * <li><strong>HaVip</strong>: high-availability (HA) virtual IP address</li>
+     * <li><strong>TrafficMirrorFilter</strong>: traffic mirror filter</li>
+     * <li><strong>TrafficMirrorSession</strong>: traffic mirror session</li>
+     * <li><strong>IPv4Gateway</strong>: IPv4 gateway</li>
+     * <li><strong>IPv6Gateway</strong>: IPv6 gateway</li>
+     * <li><strong>IPv6Address</strong>: IPv6 address</li>
+     * <li><strong>DhcpOptionsSet</strong>: DHCP options set</li>
+     * <li><strong>GatewayEndpoint</strong>: gateway endpoint</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

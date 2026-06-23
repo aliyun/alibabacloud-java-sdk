@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateMacSecKeyRequest extends TeaModel {
     /**
+     * <p>The key secret. This parameter accepts only hexadecimal characters. Lowercase letters are automatically converted to uppercase. The cipher suite determines the required length of the key secret: 32 hexadecimal characters for GCM-AES-128 or GCM-AES-XPN-128, and 64 hexadecimal characters for GCM-AES-256 or GCM-AES-XPN-256.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,17 @@ public class AssociateMacSecKeyRequest extends TeaModel {
     public String cak;
 
     /**
+     * <p>The cipher suite. Valid values:</p>
+     * <ul>
+     * <li><p>GCM-AES-128</p>
+     * </li>
+     * <li><p>GCM-AES-XPN-128</p>
+     * </li>
+     * <li><p>GCM-AES-256</p>
+     * </li>
+     * <li><p>GCM-AES-XPN-256</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +35,7 @@ public class AssociateMacSecKeyRequest extends TeaModel {
     public String cipherSuite;
 
     /**
+     * <p>The key name. This parameter accepts only hexadecimal characters. Lowercase letters are automatically converted to uppercase. The cipher suite determines the required length of the key name: 32 hexadecimal characters for GCM-AES-128 or GCM-AES-XPN-128, and 64 hexadecimal characters for GCM-AES-256 or GCM-AES-XPN-256.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +45,7 @@ public class AssociateMacSecKeyRequest extends TeaModel {
     public String ckn;
 
     /**
+     * <p>The ID of the Express Connect physical connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +55,8 @@ public class AssociateMacSecKeyRequest extends TeaModel {
     public String physicalConnectionId;
 
     /**
+     * <p>The region ID of the Express Connect physical connection.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

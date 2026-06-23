@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values:<strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,10 +14,12 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * <li><p>If this is the first query or no next query exists, you do not need to set this parameter.</p>
+     * </li>
+     * <li><p>If a next query exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +36,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+     * <p>The IDs of the resources. You can specify up to 50 resource IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp16qjewdsunr41m1****</p>
@@ -59,16 +61,31 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong></li>
-     * <li><strong>VSWITCH</strong></li>
-     * <li><strong>ROUTETABLE</strong></li>
-     * <li><strong>EIP</strong></li>
-     * <li><strong>VpnGateway</strong></li>
-     * <li><strong>NATGATEWAY</strong></li>
-     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+     * <li><strong>VPC</strong>: VPC instance.</li>
+     * <li><strong>VSWITCH</strong>: vSwitch instance.</li>
+     * <li><strong>ROUTETABLE</strong>: route table instance.</li>
+     * <li><strong>EIP</strong>: Elastic IP Address (EIP) instance.</li>
+     * <li><strong>VPNGATEWAY</strong>: VPN gateway instance.</li>
+     * <li><strong>NATGATEWAY</strong>: NAT gateway instance.</li>
+     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan instance.</li>
+     * <li><strong>PREFIXLIST</strong>: prefix list instance.</li>
+     * <li><strong>PUBLICIPADDRESSPOOL</strong>: IP address pool instance.</li>
+     * <li><strong>IPV4GATEWAY</strong>: IPv4 gateway instance.</li>
+     * <li><strong>IPV6GATEWAY</strong>: IPv6 gateway instance.</li>
+     * <li><strong>NETWORKACL</strong>: network ACL instance.</li>
+     * <li><strong>TRAFFICMIRRORFILTER</strong>: traffic mirroring filter instance.</li>
+     * <li><strong>TRAFFICMIRRORSESSION</strong>: traffic mirroring session instance.</li>
+     * <li><strong>FLOWLOG</strong>: flow log instance.</li>
+     * <li><strong>HAVIP</strong>: high-availability virtual IP address (HAVIP) instance.</li>
+     * <li><strong>DHCPOPTIONSSET</strong>: DHCP options set instance.</li>
+     * <li><strong>GATEWAYENDPOINT</strong>: gateway endpoint instance.</li>
+     * <li><strong>IPV6ADDRESS</strong>: IPv6 address instance.</li>
      * </ul>
+     * <blockquote>
+     * <p>The resource type value is case-insensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,11 +95,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag value. You can specify up to 20 tag values. It can be an empty string.</p>
-     * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
-     * <blockquote>
-     * <p> You must specify at least one of <strong>ResourceId.N</strong> and <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
-     * </blockquote>
+     * <p>The tag information.</p>
      * 
      * <strong>example:</strong>
      * <p>ListTagResources</p>
@@ -177,10 +190,10 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag. You can specify up to 20 tag keys.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <blockquote>
-         * <p> Specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> parameters (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+         * <p>You must specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>) parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -190,10 +203,10 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag. You can specify up to 20 tag values.</p>
+         * <p>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <blockquote>
-         * <p> Specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> parameters (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+         * <p>You must specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>) parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

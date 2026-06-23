@@ -14,10 +14,10 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer maxResult;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li>If this is the first query or no subsequent query exists, leave this parameter empty.</li>
+     * <li>If a subsequent query exists, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +33,8 @@ public class DescribeTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the resource belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the resource.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>The resource ID. You can specify up to 50 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -58,14 +58,28 @@ public class DescribeTagsRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>VSWITCH</strong>: vSwitch</li>
-     * <li><strong>ROUTETABLE</strong>: route table</li>
-     * <li><strong>EIP</strong>: elastic IP address (EIP)</li>
-     * <li><strong>VpnGateway</strong>: VPN gateway</li>
-     * <li><strong>NATGATEWAY</strong>: NAT gateway</li>
-     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+     * <li><strong>VSWITCH</strong>: virtual switch instance.</li>
+     * <li><strong>ROUTETABLE</strong>: route table instance.</li>
+     * <li><strong>EIP</strong>: elastic IP address (EIP) instance.</li>
+     * <li><strong>VPNGATEWAY</strong>: VPN gateway instance.</li>
+     * <li><strong>NATGATEWAY</strong>: NAT gateway instance.</li>
+     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: Internet Shared Bandwidth instance.</li>
+     * <li><strong>PREFIXLIST</strong>: prefix list instance.</li>
+     * <li><strong>PUBLICIPADDRESSPOOL</strong>: IP address pool instance.</li>
+     * <li><strong>IPV4GATEWAY</strong>: IPv4 gateway instance.</li>
+     * <li><strong>IPV6GATEWAY</strong>: IPv6 gateway instance.</li>
+     * <li><strong>NETWORKACL</strong>: network ACL instance.</li>
+     * <li><strong>TRAFFICMIRRORFILTER</strong>: traffic mirror filter instance.</li>
+     * <li><strong>TRAFFICMIRRORSESSION</strong>: traffic mirror session instance.</li>
+     * <li><strong>FLOWLOG</strong>: flow log instance.</li>
+     * <li><strong>HAVIP</strong>: high-availability virtual IP address instance.</li>
+     * <li><strong>DHCPOPTIONSSET</strong>: DHCP options set instance.</li>
+     * <li><strong>GATEWAYENDPOINT</strong>: gateway endpoint instance.</li>
      * </ul>
+     * <blockquote>
+     * <p>The resource type value is case-insensitive.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -74,7 +88,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeTagsRequestTag> tag;
@@ -166,8 +180,8 @@ public class DescribeTagsRequest extends TeaModel {
 
     public static class DescribeTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot be an empty string or start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -176,8 +190,8 @@ public class DescribeTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values.</p>
+         * <p>A tag value can be up to 128 characters in length. It can be an empty string but cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

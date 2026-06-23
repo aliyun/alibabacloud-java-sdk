@@ -70,6 +70,16 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
+    /**
+     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Sends a dry run request without creating the IPsec-VPN connection. The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are met. If the check fails, an error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the check passes, the IPsec-VPN connection is created immediately.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -313,6 +323,14 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<CreateVpnAttachmentRequestTags> tags;
 
+    /**
+     * <p>Specifies the bandwidth specification for a single VPN tunnel. Valid values:
+     * Standard (Default Value): medium, with a default bandwidth of 1 Gbps
+     * Large: large, with a default bandwidth of 3 Gbps</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
+     */
     @NameInMap("TunnelBandwidth")
     public String tunnelBandwidth;
 
