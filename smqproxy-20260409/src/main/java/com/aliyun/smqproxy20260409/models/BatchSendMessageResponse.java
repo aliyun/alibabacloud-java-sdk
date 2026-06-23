@@ -10,6 +10,9 @@ public class BatchSendMessageResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
+    @NameInMap("body")
+    public BatchSendMessageResponseBody body;
+
     public static BatchSendMessageResponse build(java.util.Map<String, ?> map) throws Exception {
         BatchSendMessageResponse self = new BatchSendMessageResponse();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class BatchSendMessageResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public BatchSendMessageResponse setBody(BatchSendMessageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public BatchSendMessageResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,18 +4,38 @@ package com.aliyun.smqproxy20260409.models;
 import com.aliyun.tea.*;
 
 public class SendMessageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DelaySeconds")
     public Integer delaySeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;Hello MNS&quot;</p>
+     */
     @NameInMap("MessageBody")
     public String messageBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>group-123</p>
+     */
     @NameInMap("MessageGroupId")
     public String messageGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;}</p>
+     */
     @NameInMap("UserProperties")
     public String userProperties;
 

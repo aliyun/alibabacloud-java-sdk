@@ -10,6 +10,9 @@ public class PublishMessageResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
+    @NameInMap("body")
+    public PublishMessageResponseBody body;
+
     public static PublishMessageResponse build(java.util.Map<String, ?> map) throws Exception {
         PublishMessageResponse self = new PublishMessageResponse();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class PublishMessageResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public PublishMessageResponse setBody(PublishMessageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public PublishMessageResponseBody getBody() {
+        return this.body;
     }
 
 }
