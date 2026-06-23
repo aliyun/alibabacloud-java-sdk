@@ -344,6 +344,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstance extends TeaModel {
+        @NameInMap("AiGatewayEnabled")
+        public String aiGatewayEnabled;
+
         /**
          * <p>Indicates whether the In-Memory Column Index feature is supported.</p>
          * 
@@ -427,7 +430,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String cpuType;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-31T08:56:25.000+0000</p>
@@ -482,7 +485,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBType;
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The database version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.5</p>
@@ -491,7 +494,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBVersion;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>test instance</p>
@@ -548,7 +551,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer dnNodeCount;
 
         /**
-         * <p>The disk space of the DN data nodes, in GB.</p>
+         * <p>The disk space of the DN data node, in GB.</p>
          */
         @NameInMap("DnStorageSpace")
         public String dnStorageSpace;
@@ -566,7 +569,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The expiration time. The time is in the yyyy-MM-ddTHH:mm:ss.sss+0000 format (UTC).</p>
+         * <p>The expiration time. Format: yyyy-MM-ddTHH:mm:ss.sss+0000 (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31T16:00:00.000+0000</p>
@@ -577,8 +580,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance has expired.</li>
-         * <li><strong>false</strong>: The instance is running normally.</li>
+         * <li><strong>true</strong>: Expired.</li>
+         * <li><strong>false</strong>: Not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -606,7 +609,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The instance DPI engine version code. This is an internal parameter.</p>
+         * <p>The engine version of the instance. This is an internal parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -621,7 +624,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<String> LTSVersions;
 
         /**
-         * <p>The latest kernel version supported by the instance.</p>
+         * <p>The latest minor engine version supported by the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -632,12 +635,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The lock mode of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Unlock</strong>: The instance is running normally.</li>
-         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
-         * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to expiration.</li>
-         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</li>
-         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked because the storage is full.</li>
-         * <li><strong>LockReadInstanceByDiskQuota</strong>: The read-only instance is automatically locked because the storage is full.</li>
+         * <li><strong>Unlock</strong>: Normal.</li>
+         * <li><strong>ManualLock</strong>: Manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: Automatically locked due to instance expiration.</li>
+         * <li><strong>LockByRestoration</strong>: Automatically locked before instance rollback.</li>
+         * <li><strong>LockByDiskQuota</strong>: Automatically locked due to insufficient disk space.</li>
+         * <li><strong>LockReadInstanceByDiskQuota</strong>: Read-only instance automatically locked due to insufficient disk space.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -665,7 +668,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
-         * <p>The current kernel version.</p>
+         * <p>The current minor engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -674,7 +677,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String minorVersion;
 
         /**
-         * <p>The network type of the instance. Only VPC is supported, which indicates a virtual private cloud (VPC).</p>
+         * <p>The network type of the instance. Only VPC is supported, which indicates Virtual Private Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -733,7 +736,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-*********</p>
@@ -760,7 +763,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <li><strong>disabled</strong>: Disabled.</li>
          * <li><strong>enabled</strong>: Enabled.</li>
          * <li><strong>processing</strong>: Being processed.</li>
-         * <li><strong>unknown</strong>: Unknown. The instance may be disconnected.</li>
+         * <li><strong>unknown</strong>: Unknown. This may be caused by the instance being unreachable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -822,7 +825,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet> tagSet;
 
         /**
-         * <p>The third zone.</p>
+         * <p>The tertiary zone for Three-zone deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-e</p>
@@ -887,6 +890,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static DescribeDBInstanceAttributeResponseBodyDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyDBInstance self = new DescribeDBInstanceAttributeResponseBodyDBInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setAiGatewayEnabled(String aiGatewayEnabled) {
+            this.aiGatewayEnabled = aiGatewayEnabled;
+            return this;
+        }
+        public String getAiGatewayEnabled() {
+            return this.aiGatewayEnabled;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setCanNotCreateColumnar(Boolean canNotCreateColumnar) {

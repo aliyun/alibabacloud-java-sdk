@@ -1200,6 +1200,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AI gateway consumer for a PolarDB-X instance.</p>
+     * 
+     * @param request CreateGatewayConsumerForPolarDBXRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGatewayConsumerForPolarDBXResponse
+     */
+    public CreateGatewayConsumerForPolarDBXResponse createGatewayConsumerForPolarDBXWithOptions(CreateGatewayConsumerForPolarDBXRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGatewayConsumerForPolarDBX"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGatewayConsumerForPolarDBXResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>***.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an AI gateway consumer for a PolarDB-X instance.</p>
+     * 
+     * @param request CreateGatewayConsumerForPolarDBXRequest
+     * @return CreateGatewayConsumerForPolarDBXResponse
+     */
+    public CreateGatewayConsumerForPolarDBXResponse createGatewayConsumerForPolarDBX(CreateGatewayConsumerForPolarDBXRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createGatewayConsumerForPolarDBXWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a Global Database Network (GDN) instance.</p>
      * 
