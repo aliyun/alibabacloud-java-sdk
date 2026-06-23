@@ -4,9 +4,6 @@ package com.aliyun.bailiancontrol20240816.models;
 import com.aliyun.tea.*;
 
 public class ListApiKeysResponseBody extends TeaModel {
-    /**
-     * <p>apiKey</p>
-     */
     @NameInMap("apiKeys")
     public java.util.List<ListApiKeysResponseBodyApiKeys> apiKeys;
 
@@ -25,9 +22,6 @@ public class ListApiKeysResponseBody extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

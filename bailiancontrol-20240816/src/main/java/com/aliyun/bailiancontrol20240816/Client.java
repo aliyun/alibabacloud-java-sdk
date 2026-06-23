@@ -101,6 +101,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("orderBy", request.orderBy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
             query.put("skip", request.skip);
         }

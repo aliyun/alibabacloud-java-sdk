@@ -16,6 +16,12 @@ public class ListApiKeysRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    @NameInMap("order")
+    public String order;
+
+    @NameInMap("orderBy")
+    public String orderBy;
+
     @NameInMap("skip")
     public Integer skip;
 
@@ -60,6 +66,22 @@ public class ListApiKeysRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListApiKeysRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
+    public ListApiKeysRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public ListApiKeysRequest setSkip(Integer skip) {

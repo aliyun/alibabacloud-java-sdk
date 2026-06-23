@@ -16,9 +16,6 @@ public class GetApiKeyResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
