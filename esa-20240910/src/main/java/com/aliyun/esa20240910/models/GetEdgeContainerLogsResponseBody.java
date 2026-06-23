@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerLogsResponseBody extends TeaModel {
     /**
-     * <p>The logs.</p>
+     * <p>The log list.</p>
      */
     @NameInMap("Items")
     public java.util.List<String> items;

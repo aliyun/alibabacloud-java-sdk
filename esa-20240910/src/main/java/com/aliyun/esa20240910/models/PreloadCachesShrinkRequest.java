@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class PreloadCachesShrinkRequest extends TeaModel {
     /**
-     * <p>The files to be prefetched.</p>
+     * <p>The prefetch objects.</p>
      */
     @NameInMap("Content")
     public String contentShrink;
 
     /**
-     * <p>By default, prefetch requests include the Accept-Encoding:gzip header. If you want a prefetch request to include other headers or implement multi-replica prefetch, you can specify a custom prefetch header by configuring the Headers parameter.</p>
+     * <p>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetching, use this parameter to specify custom prefetch headers.</p>
      */
     @NameInMap("Headers")
     public String headersShrink;
 
     /**
-     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>

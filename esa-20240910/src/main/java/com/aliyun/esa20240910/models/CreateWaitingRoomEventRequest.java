@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWaitingRoomEventRequest extends TeaModel {
     /**
-     * <p>The custom waiting room page content. This parameter is required when the waiting room type is custom. The content must use Base64 encoding.</p>
+     * <p>The custom waiting room page content. This parameter is required when the waiting room type is set to custom. The content must use Base64 encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>SGVsbG8gd29ybGQ=</p>
@@ -17,7 +17,7 @@ public class CreateWaitingRoomEventRequest extends TeaModel {
      * <p>The description of the waiting room.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试等候室</p>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
@@ -25,8 +25,8 @@ public class CreateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to disable session renewal. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enabled.</li>
-     * <li><strong>off</strong>: Disabled.</li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +38,8 @@ public class CreateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>The waiting room switch. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enabled.</li>
-     * <li><strong>off</strong>: Disabled.</li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,8 +62,8 @@ public class CreateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable JSON response. When enabled, requests with an Accept header containing &quot;application/json&quot; return JSON data. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enabled.</li>
-     * <li><strong>off</strong>: Disabled.</li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class CreateWaitingRoomEventRequest extends TeaModel {
     public String jsonResponseEnable;
 
     /**
-     * <p>The language of the waiting room page. This parameter is required when the waiting room type is default. Valid values:</p>
+     * <p>The language of the waiting room page. This parameter is required when the waiting room type is set to default. Valid values:</p>
      * <ul>
      * <li><strong>enus</strong>: English.</li>
      * <li><strong>zhcn</strong>: Simplified Chinese.</li>
@@ -109,8 +109,8 @@ public class CreateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable pre-queuing. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enabled.</li>
-     * <li><strong>off</strong>: Disabled.</li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -162,8 +162,8 @@ public class CreateWaitingRoomEventRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable random pre-queuing. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enabled.</li>
-     * <li><strong>off</strong>: Disabled.</li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class CreateWaitingRoomEventRequest extends TeaModel {
     public String waitingRoomId;
 
     /**
-     * <p>The waiting room type. Valid values:</p>
+     * <p>The type of the waiting room. Valid values:</p>
      * <ul>
      * <li><strong>default</strong>: default type.</li>
      * <li><strong>custom</strong>: custom type.</li>

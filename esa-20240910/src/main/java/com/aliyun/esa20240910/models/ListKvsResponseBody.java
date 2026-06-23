@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKvsResponseBody extends TeaModel {
     /**
-     * <p>The list of key-value pairs returned by this traversal.</p>
+     * <p>The list of key-value pairs retrieved in this traversal.</p>
      */
     @NameInMap("Keys")
     public java.util.List<ListKvsResponseBodyKeys> keys;
@@ -20,7 +20,7 @@ public class ListKvsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records on each page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -102,7 +102,7 @@ public class ListKvsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the key was last updated.</p>
+         * <p>The time when the key was last updated, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-13T07:46:03Z</p>

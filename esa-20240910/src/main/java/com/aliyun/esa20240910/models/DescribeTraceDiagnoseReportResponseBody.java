@@ -29,7 +29,7 @@ public class DescribeTraceDiagnoseReportResponseBody extends TeaModel {
     public String clientIp;
 
     /**
-     * <p>Creation time. Format: yyyy-MM-dd HH:mm:ss, timezone: +08:00.</p>
+     * <p>Creation time. Format: yyyy-MM-dd HH:mm:ss. Time zone: +08:00.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-11T01:23:21Z</p>
@@ -83,7 +83,7 @@ public class DescribeTraceDiagnoseReportResponseBody extends TeaModel {
     public Long expireTime;
 
     /**
-     * <p>Remaining available diagnosis count.</p>
+     * <p>Remaining available diagnostic attempts.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -98,7 +98,7 @@ public class DescribeTraceDiagnoseReportResponseBody extends TeaModel {
     public DescribeTraceDiagnoseReportResponseBodyReport report;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -108,9 +108,9 @@ public class DescribeTraceDiagnoseReportResponseBody extends TeaModel {
 
     /**
      * <p>Report generation status.</p>
-     * <p>0: Success.
-     * 1: Failure.
-     * 2: Timeout.
+     * <p>0: Successful.
+     * 1: Failed.
+     * 2: Timed out.
      * 3: Running.
      * 4: Waiting.</p>
      * 

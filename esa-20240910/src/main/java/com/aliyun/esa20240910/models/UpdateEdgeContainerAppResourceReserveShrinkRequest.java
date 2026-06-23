@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel {
     /**
-     * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+     * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</p>
+     * <blockquote>
+     * <p>Notice: The AppId format is the app- prefix followed by a numeric suffix, with a total length of 20 to 64 characters (example: app-8806886***83794688). Call ListEdgeContainerApps to obtain an existing AppId, or call CreateEdgeContainerApp to create an application first.</notice>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>app-88068867578379****</p>
@@ -14,7 +17,7 @@ public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel
     public String appId;
 
     /**
-     * <p>The end time of the reservation. The input time is UTC. It takes +8 hours to enter Beijing time. For example, if the current time is 2006-01-02 06:04:05, you need to enter &quot;2006-01-02T14:04:05Z&quot;.</p>
+     * <p>The reservation end time. This parameter uses UTC time. To convert from UTC+8, add 8 hours. For example, if the current time is 2006-01-02 06:04:05 in UTC+8, enter &quot;2006-01-02T14:04:05Z&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z</p>
@@ -23,7 +26,7 @@ public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel
     public String durationTime;
 
     /**
-     * <p>Whether to enable resource reservation.</p>
+     * <p>Specifies whether to enable resource reservation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +35,7 @@ public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel
     public Boolean enable;
 
     /**
-     * <p>Whether to permanently enable the reservation. Once it is enabled, you are not allowed to set the reservation deadline.</p>
+     * <p>Specifies whether to permanently enable reservation. Once enabled, you cannot set a reservation end time.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +44,7 @@ public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel
     public Boolean forever;
 
     /**
-     * <p>Reserved resource list.</p>
+     * <p>The list of reserved resources.</p>
      */
     @NameInMap("ReserveSet")
     public String reserveSetShrink;

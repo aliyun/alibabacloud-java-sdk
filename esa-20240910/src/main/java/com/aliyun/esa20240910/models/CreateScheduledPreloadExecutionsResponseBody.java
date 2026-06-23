@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     /**
-     * <p>The information about the prefetch plans that failed to be added.</p>
+     * <p>The information about prefetch plans that failed to be added.</p>
      */
     @NameInMap("FailedExecutions")
     public java.util.List<CreateScheduledPreloadExecutionsResponseBodyFailedExecutions> failedExecutions;
 
     /**
-     * <p>The list of error messages for the plans that failed to be added.</p>
+     * <p>The list of failure messages for plans that failed to be added.</p>
      */
     @NameInMap("FailedMessages")
     public java.util.List<String> failedMessages;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
@@ -35,13 +35,13 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     public Integer successCount;
 
     /**
-     * <p>The information about the prefetch plans that were successfully added.</p>
+     * <p>The information about prefetch plans that were successfully added.</p>
      */
     @NameInMap("SuccessExecutions")
     public java.util.List<CreateScheduledPreloadExecutionsResponseBodySuccessExecutions> successExecutions;
 
     /**
-     * <p>The total number of plans that you requested to add.</p>
+     * <p>The total number of plans requested to be added.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -104,7 +104,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
 
     public static class CreateScheduledPreloadExecutionsResponseBodyFailedExecutions extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15685865xxx14622</p>
@@ -113,7 +113,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>The end time of the scheduled prefetch plan.</p>
+         * <p>The end time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-03T02:43:35Z</p>
@@ -122,7 +122,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the prefetch plan.</p>
+         * <p>The prefetch plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>66599bd7397885b43804901c</p>
@@ -131,7 +131,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The interval at which batches of a scheduled prefetch plan are executed. Unit: seconds.</p>
+         * <p>The interval between each batch execution of the scheduled prefetch plan. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -140,7 +140,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The ID of the prefetch task.</p>
+         * <p>The prefetch task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>665d3af3621bccf3fe29e1a4</p>
@@ -149,7 +149,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The number of URLs to prefetch in each batch.</p>
+         * <p>The number of URLs to prefetch per batch.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -158,7 +158,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public Integer sliceLen;
 
         /**
-         * <p>The start time of the scheduled prefetch plan.</p>
+         * <p>The start time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-02T02:43:35Z</p>
@@ -169,16 +169,11 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         /**
          * <p>The status of the scheduled prefetch plan. Valid values:</p>
          * <ul>
-         * <li><p><strong>waiting</strong>: The plan is waiting to be executed.</p>
-         * </li>
-         * <li><p><strong>running</strong>: The plan is being executed.</p>
-         * </li>
-         * <li><p><strong>finished</strong>: The plan is executed.</p>
-         * </li>
-         * <li><p><strong>failed</strong>: The plan failed to be executed.</p>
-         * </li>
-         * <li><p><strong>stopped</strong>: The execution of the plan is paused.</p>
-         * </li>
+         * <li><strong>waiting</strong>: Waiting to be executed.</li>
+         * <li><strong>running</strong>: Being executed.</li>
+         * <li><strong>finished</strong>: Execution completed.</li>
+         * <li><strong>failed</strong>: Execution failed.</li>
+         * <li><strong>stopped</strong>: Execution paused.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +255,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
 
     public static class CreateScheduledPreloadExecutionsResponseBodySuccessExecutions extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15685865xxx14622</p>
@@ -269,7 +264,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>The end time of the scheduled prefetch plan.</p>
+         * <p>The end time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-03T02:43:35Z</p>
@@ -278,7 +273,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the prefetch plan.</p>
+         * <p>The prefetch plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>66599bd7397885b43804901c</p>
@@ -287,7 +282,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The interval at which batches of a scheduled prefetch plan are executed. Unit: seconds.</p>
+         * <p>The interval between each batch execution of the scheduled prefetch plan. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -296,7 +291,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The ID of the prefetch task.</p>
+         * <p>The prefetch task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>665d3af3621bccf3fe29e1a4</p>
@@ -305,7 +300,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The number of URLs to prefetch in each batch.</p>
+         * <p>The number of URLs to prefetch per batch.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -314,7 +309,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         public Integer sliceLen;
 
         /**
-         * <p>The start time of the scheduled prefetch plan.</p>
+         * <p>The start time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-02T02:43:35Z</p>
@@ -325,16 +320,11 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         /**
          * <p>The status of the scheduled prefetch plan. Valid values:</p>
          * <ul>
-         * <li><p><strong>waiting</strong>: The plan is waiting to be executed.</p>
-         * </li>
-         * <li><p><strong>running</strong>: The plan is being executed.</p>
-         * </li>
-         * <li><p><strong>finished</strong>: The plan is executed.</p>
-         * </li>
-         * <li><p><strong>failed</strong>: The plan failed to be executed.</p>
-         * </li>
-         * <li><p><strong>stopped</strong>: The execution of the plan is paused.</p>
-         * </li>
+         * <li><strong>waiting</strong>: Waiting to be executed.</li>
+         * <li><strong>running</strong>: Being executed.</li>
+         * <li><strong>finished</strong>: Execution completed.</li>
+         * <li><strong>failed</strong>: Execution failed.</li>
+         * <li><strong>stopped</strong>: Execution paused.</li>
          * </ul>
          * 
          * <strong>example:</strong>

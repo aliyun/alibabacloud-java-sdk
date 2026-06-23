@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the container is ready.</p>
+     * <p>Indicates whether the container status is ready. Valid values:</p>
      * <ul>
-     * <li>ok</li>
-     * <li>unready</li>
+     * <li><p><strong>ok</strong>: Ready.</p>
+     * </li>
+     * <li><p><strong>unready</strong>: Not ready.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     public String containersReady;
 
     /**
-     * <p>The time when the container was created. The value is a timestamp.</p>
+     * <p>The creation time (UNIX timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-24T06:46:35Z</p>
@@ -27,10 +29,12 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     public String creationTimestamp;
 
     /**
-     * <p>The initialization status of the container.</p>
+     * <p>The container initialization status. Valid values:</p>
      * <ul>
-     * <li>ok</li>
-     * <li>unready</li>
+     * <li><p><strong>ok</strong>: Succeeded.</p>
+     * </li>
+     * <li><p><strong>unready</strong>: Not completed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,11 +44,17 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     public String initialized;
 
     /**
-     * <p>The status of the container in the staging environment.</p>
+     * <p>The status of the container in the staging environment. Valid values:</p>
      * <ul>
-     * <li>NoContainer: created.</li>
+     * <li>NoContainer: no container.</li>
+     * <li>Pending: pending deployment.</li>
+     * <li>ContainerCreating: the container is being created.</li>
      * <li>Running: running.</li>
-     * <li>Failed: abnormal.</li>
+     * <li>Succeeded: completed.</li>
+     * <li>ImagePullBackOff: image pull failed.</li>
+     * <li>CrashLoopBackOff: abnormal container startup.</li>
+     * <li>Failed: failed.</li>
+     * <li>Unknown: unknown.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,16 +64,18 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     public String phase;
 
     /**
-     * <p>The details of container restart.</p>
+     * <p>The container restart status.</p>
      */
     @NameInMap("PodRestartState")
     public GetEdgeContainerStagingDeployStatusResponseBodyPodRestartState podRestartState;
 
     /**
-     * <p>Indicates whether domain names are associated with the container.</p>
+     * <p>Indicates whether the container is ready to receive traffic. Valid values:</p>
      * <ul>
-     * <li>ok</li>
-     * <li>unready</li>
+     * <li><p><strong>ok</strong>: Ready.</p>
+     * </li>
+     * <li><p><strong>unready</strong>: Not ready.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,10 +94,12 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scheduling status of the container.</p>
+     * <p>The container scheduling status. Valid values:</p>
      * <ul>
-     * <li>ok</li>
-     * <li>unready</li>
+     * <li><p><strong>ok</strong>: Succeeded.</p>
+     * </li>
+     * <li><p><strong>unready</strong>: Not completed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,7 +109,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     public String scheduled;
 
     /**
-     * <p>The virtual IP addresses.</p>
+     * <p>The list of VIPs.</p>
      */
     @NameInMap("VIPs")
     public java.util.List<String> VIPs;
@@ -188,7 +202,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         public String lastTerminatedReason;
 
         /**
-         * <p>The number of times that the container restarted.</p>
+         * <p>The number of restarts.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHttpIncomingResponseHeaderModificationRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the created rule.</p>
+     * <p>The configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>434497172875264</p>

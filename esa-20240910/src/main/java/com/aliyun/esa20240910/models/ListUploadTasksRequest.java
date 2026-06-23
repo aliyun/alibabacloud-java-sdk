@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListUploadTasksRequest extends TeaModel {
     /**
-     * <p>The time when the task ends. Specify the time in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * <p>The end time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
+     * <blockquote>
+     * <p>Notice: StartTime and EndTime must be provided together to define the query time window. An error is returned if either one is missing..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2019-12-06T12:00:00Z</p>
@@ -14,7 +17,10 @@ public class ListUploadTasksRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <blockquote>
+     * <p>Notice: This parameter is required when you call the ListUploadTasks operation..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -23,7 +29,10 @@ public class ListUploadTasksRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The time when the task starts. Specify the time in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * <p>The start time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
+     * <blockquote>
+     * <p>Notice: StartTime and EndTime must be provided together to define the query time window. An error is returned if either one is missing..</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2018-11-29T00:00:00Z</p>
@@ -34,10 +43,10 @@ public class ListUploadTasksRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>file</strong>: purges the cache by file URL.</li>
-     * <li><strong>preload</strong>: prefetches files.</li>
-     * <li><strong>directory</strong>: purges the cache by directory.</li>
-     * <li><strong>ignoreparams</strong>: purges the cache by URL with specified parameters ignored.</li>
+     * <li><strong>file</strong>: URL file purge.</li>
+     * <li><strong>preload</strong>: resource prefetch.</li>
+     * <li><strong>directory</strong>: directory purge.</li>
+     * <li><strong>ignoreparams</strong>: purge with parameters ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>

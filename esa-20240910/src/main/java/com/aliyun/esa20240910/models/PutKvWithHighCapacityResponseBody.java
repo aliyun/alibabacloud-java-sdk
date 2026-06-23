@@ -23,7 +23,7 @@ public class PutKvWithHighCapacityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The content of the key. If the length exceeds 256 characters, the first 100 and last 100 characters are displayed, with the middle omitted.</p>
+     * <p>The content of the key. If the content exceeds 256 characters, the first 100 and last 100 characters are returned with the middle portion omitted.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

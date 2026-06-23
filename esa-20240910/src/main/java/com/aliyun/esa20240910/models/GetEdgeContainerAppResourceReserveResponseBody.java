@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppResourceReserveResponseBody extends TeaModel {
     /**
-     * <p>The end time of the reservation. The input is UTC time. It takes +8 hours to enter Beijing time. For example, if the current time is 2006-01-02 06:04:05 , you need to enter &quot;2006-01-02T14:04:05Z&quot;.</p>
+     * <p>The reservation expiration time. This parameter uses UTC time. To convert from UTC+8, add 8 hours. For example, if the current UTC+8 time is 2006-01-02 06:04:05, enter &quot;2006-01-02T14:04:05Z&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z</p>
@@ -14,7 +14,7 @@ public class GetEdgeContainerAppResourceReserveResponseBody extends TeaModel {
     public String durationTime;
 
     /**
-     * <p>Whether to enable resource reservation.</p>
+     * <p>Indicates whether resource reservation is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class GetEdgeContainerAppResourceReserveResponseBody extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>Whether to enable resource reservation permanently.</p>
+     * <p>Indicates whether the reservation is permanently enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class GetEdgeContainerAppResourceReserveResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Reserved resource list.</p>
+     * <p>The list of reserved resources.</p>
      */
     @NameInMap("ReserveSet")
     public java.util.List<GetEdgeContainerAppResourceReserveResponseBodyReserveSet> reserveSet;
@@ -93,11 +93,12 @@ public class GetEdgeContainerAppResourceReserveResponseBody extends TeaModel {
 
     public static class GetEdgeContainerAppResourceReserveResponseBodyReserveSet extends TeaModel {
         /**
-         * <p>The following ISPs are supported. You do not need to enter this field for overseas and special administrative regions. ISP:</p>
+         * <p>The following Internet service providers (ISPs) are supported. This parameter is not required for regions outside the Chinese mainland.
+         * Valid values:</p>
          * <ul>
-         * <li>China Mobile: cmcc</li>
-         * <li>China Telecom: chinanet</li>
-         * <li>China Unicom: unicom</li>
+         * <li>cmcc: China Mobile</li>
+         * <li>chinanet: China Telecom</li>
+         * <li>unicom: China Unicom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,32 +108,32 @@ public class GetEdgeContainerAppResourceReserveResponseBody extends TeaModel {
         public String isp;
 
         /**
-         * <p>Chinese mainland:</p>
+         * <p>The Chinese mainland:</p>
          * <ul>
          * <li>East China: huadong</li>
          * <li>South China: huanan</li>
          * <li>Central China: huazhong</li>
          * <li>North China: huabei</li>
-         * <li>Northwest: xibei</li>
-         * <li>Southwest: xinan</li>
+         * <li>Northwest China: xibei</li>
+         * <li>Southwest China: xinan</li>
          * <li>Northeast China: dongbei</li>
          * </ul>
-         * <p>Special Administrative Regions and Overseas:</p>
+         * <p>Special administrative regions and outside China:</p>
          * <ul>
-         * <li>Taiwan, China: tw</li>
-         * <li>Macau China: mo</li>
-         * <li>Hong Kong, China: hk</li>
+         * <li>Taiwan (China): tw</li>
+         * <li>Macao (China): mo</li>
+         * <li>Hong Kong (China): hk</li>
          * <li>Japan: jp</li>
          * <li>United States: us</li>
          * <li>Thailand: th</li>
-         * <li>Korea: kr</li>
+         * <li>South Korea: kr</li>
          * <li>Russia: ru</li>
          * <li>Singapore: sg</li>
          * <li>France: fr</li>
          * <li>Spain: es</li>
          * <li>Italy: it</li>
          * <li>Sweden: se</li>
-         * <li>UAE: ae</li>
+         * <li>United Arab Emirates: ae</li>
          * <li>Indonesia: id</li>
          * <li>Chile: cl</li>
          * <li>Philippines: ph</li>
@@ -143,11 +144,11 @@ public class GetEdgeContainerAppResourceReserveResponseBody extends TeaModel {
          * <li>Brazil: br</li>
          * <li>Colombia: co</li>
          * <li>Germany: de</li>
-         * <li>UK: gb</li>
+         * <li>United Kingdom: gb</li>
          * <li>Peru: pe</li>
          * <li>Saudi Arabia: sa</li>
          * <li>Netherlands: nl</li>
-         * <li>South Africa: za</li>
+         * <li>South Africa: za.</li>
          * </ul>
          * 
          * <strong>example:</strong>

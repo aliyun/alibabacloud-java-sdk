@@ -14,7 +14,7 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     public String quota;
 
     /**
-     * <p>The total quota available in a 30-day period. A value of 0 indicates that this quota is not configured.</p>
+     * <p>The total quota at 30-day granularity. A value of 0 indicates that this quota is not configured.</p>
      * 
      * <strong>example:</strong>
      * <p>200000</p>
@@ -41,7 +41,7 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
     public String usage;
 
     /**
-     * <p>The quota used within the 30-day period.</p>
+     * <p>The used quota at 30-day granularity.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -14,7 +14,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String aliUid;
 
     /**
-     * <p>The creation time of the task.</p>
+     * <p>The time when the task was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-02T02:23:26Z</p>
@@ -23,7 +23,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The list of domain names to preload.</p>
+     * <p>The list of domain names for prefetch.</p>
      * 
      * <strong>example:</strong>
      * <p>testurl.com</p>
@@ -41,7 +41,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String errorInfo;
 
     /**
-     * <p>The URL of the OSS file that contains the URLs that failed to preload.</p>
+     * <p>The OSS address of the failed file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
@@ -50,7 +50,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String failedFileOss;
 
     /**
-     * <p>The ID of the file that contains the list of URLs. You can use this ID to download the file.</p>
+     * <p>The ID of the URL list file, used for downloading.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3b48621bccf3fe29e1a7</p>
@@ -68,7 +68,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The method used to submit the URLs.</p>
+     * <p>The URL insertion method.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -104,7 +104,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The number of URLs submitted for the preload task.</p>
+     * <p>The number of URLs that have been submitted to the system for prefetch.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,7 +113,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public Integer taskSubmitted;
 
     /**
-     * <p>The task type. Valid values are <code>preload</code> and <code>refresh</code>.</p>
+     * <p>The task type (refresh or prefetch).</p>
      * 
      * <strong>example:</strong>
      * <p>preload</p>
@@ -122,7 +122,7 @@ public class GetScheduledPreloadJobResponseBody extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The total number of URLs in the task.</p>
+     * <p>The total number of URLs.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

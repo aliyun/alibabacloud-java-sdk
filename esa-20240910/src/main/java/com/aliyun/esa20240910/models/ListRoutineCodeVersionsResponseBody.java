@@ -151,7 +151,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         public ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions confOptions;
 
         /**
-         * <p>The time when the code version was created.</p>
+         * <p>The time when the code version was created, in RFC 3339 format in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-16T09:42:47Z</p>

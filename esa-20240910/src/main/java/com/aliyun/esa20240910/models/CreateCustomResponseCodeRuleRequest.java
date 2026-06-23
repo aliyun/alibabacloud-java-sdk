@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     /**
-     * <p>Response page.</p>
+     * <p>The response page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String pageId;
 
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,10 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String returnCode;
 
     /**
-     * <p>Rule content. Use a conditional expression to match user requests. Do not set this parameter when adding a global configuration. There are two scenarios:</p>
+     * <p>The rule content. Conditional expressions are used to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li><p>Match all incoming requests: Set the value to true.</p>
-     * </li>
-     * <li><p>Match specific requests: Set the value to a custom expression, such as: (http.host eq &quot;video.example.com&quot;).</p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,12 +38,10 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Do not set this parameter when adding a global configuration. Valid values:</p>
+     * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li><p>on: Enable.</p>
-     * </li>
-     * <li><p>off: Disable.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +51,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. Do not set this parameter when adding a global configuration.</p>
+     * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -64,7 +60,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Rule execution order. A smaller value indicates higher priority.</p>
+     * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -73,7 +69,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>Site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API to get it.</p>
+     * <p>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +79,7 @@ public class CreateCustomResponseCodeRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Site configuration version number. For sites with version management enabled, use this parameter to specify the site version where the configuration takes effect. The default is version 0.</p>
+     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

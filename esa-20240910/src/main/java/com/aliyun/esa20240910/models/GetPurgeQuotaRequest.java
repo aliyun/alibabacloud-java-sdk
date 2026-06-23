@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPurgeQuotaRequest extends TeaModel {
     /**
-     * <p>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,20 +15,14 @@ public class GetPurgeQuotaRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The type of the purge task. Valid values:</p>
+     * <p>The refresh task type. Valid values:</p>
      * <ul>
-     * <li><p><strong>file</strong> (default): File purge.</p>
-     * </li>
-     * <li><p><strong>cachetag</strong>: Cache tag purge.</p>
-     * </li>
-     * <li><p><strong>directory</strong>: Directory purge.</p>
-     * </li>
-     * <li><p><strong>ignoreParams</strong>: Purge by ignoring parameters.</p>
-     * </li>
-     * <li><p><strong>hostname</strong>: Hostname purge.</p>
-     * </li>
-     * <li><p><strong>purgeall</strong>: Purges all cached content for the site.</p>
-     * </li>
+     * <li><strong>file</strong> (default): file refresh.</li>
+     * <li><strong>cachetag</strong>: cache tag refresh.</li>
+     * <li><strong>directory</strong>: directory refresh.</li>
+     * <li><strong>ignoreParams</strong>: ignore-parameters refresh.</li>
+     * <li><strong>hostname</strong>: hostname refresh.</li>
+     * <li><strong>purgeall</strong>: purge all cache under the site.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

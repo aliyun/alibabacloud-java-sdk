@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutKvWithHighCapacityRequest extends TeaModel {
     /**
-     * <p>The name of the key to set. It cannot exceed 512 characters and cannot contain spaces or backslashes (/).</p>
+     * <p>The key name to set. The key name can be up to 512 characters in length and cannot contain spaces or backslashes (/).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class PutKvWithHighCapacityRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
+     * <p>The name specified when you called the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,18 @@ public class PutKvWithHighCapacityRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The download link for the key-value pair to set. This parameter is automatically generated when you call the SDK. Use the SDK to call it.</p>
+     * <p>A publicly accessible HTTP or HTTPS URL that points to a JSON file containing the key-value pair to set. The server actively downloads the content from this URL.</p>
+     * <ul>
+     * <li><p>If you use an SDK, the SDK automatically uploads the file and generates the URL.</p>
+     * </li>
+     * <li><p>In non-SDK scenarios, upload the JSON payload to any publicly accessible HTTP service and specify the URL.</p>
+     * </li>
+     * </ul>
+     * <p>The file content pointed to by the URL must be in the following JSON format: {&quot;Namespace&quot;:&quot;<namespace>&quot;,&quot;Key&quot;:&quot;<key>&quot;,&quot;Value&quot;:&quot;<value>&quot;}.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
+     * <p><a href="https://xxxobject.oss-cn-region.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-region.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
      */
     @NameInMap("Url")
     public String url;

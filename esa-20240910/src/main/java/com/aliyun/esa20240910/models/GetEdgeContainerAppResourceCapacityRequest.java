@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppResourceCapacityRequest extends TeaModel {
     /**
-     * <p>The ID of the application. To obtain the application ID, call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+     * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> API operation to obtain the application ID.</p>
+     * <blockquote>
+     * <p>Notice: If ListEdgeContainerApps returns an empty list, call CreateEdgeContainerApp first to create an application and use the returned AppId.</notice></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -12,7 +12,7 @@ public class BlockObjectRequest extends TeaModel {
     public java.util.List<String> content;
 
     /**
-     * <p>The effective period of the block, in seconds. Specify this parameter when Type is set to block.</p>
+     * <p>The effective period of the block, in seconds. This parameter is required when the type is set to block.</p>
      * 
      * <strong>example:</strong>
      * <p>864000</p>
@@ -21,7 +21,7 @@ public class BlockObjectRequest extends TeaModel {
     public Integer maxage;
 
     /**
-     * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +33,8 @@ public class BlockObjectRequest extends TeaModel {
     /**
      * <p>The type. Valid values:</p>
      * <ul>
-     * <li><p><strong>block</strong>: Blocks access.</p>
-     * </li>
-     * <li><p><strong>unblock</strong>: Unblocks access.</p>
-     * </li>
+     * <li><strong>block</strong>: blocks the URLs.</li>
+     * <li><strong>unblock</strong>: unblocks the URLs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

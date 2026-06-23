@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ResetScheduledPreloadJobRequest extends TeaModel {
     /**
-     * <p>The ID of the scheduled prefetch task.</p>
+     * <p>The scheduled preload job ID.</p>
+     * <blockquote>
+     * <p>Notice: The scheduled preload job ID. This parameter is required. You can obtain the ID from the response of CreateScheduledPreloadJob after creating a job, or query existing job IDs by calling GetScheduledPreloadJob or ListScheduledPreloadJobs.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>665d3af3621bccf3fe29e1a4</p>

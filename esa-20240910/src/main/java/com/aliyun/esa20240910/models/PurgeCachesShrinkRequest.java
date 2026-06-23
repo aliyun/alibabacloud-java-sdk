@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PurgeCachesShrinkRequest extends TeaModel {
     /**
-     * <p>Content to be refreshed.</p>
+     * <p>The refresh content.</p>
      */
     @NameInMap("Content")
     public String contentShrink;
 
     /**
-     * <p>Used for refreshing cached resources in edge computing, such as allowing the refresh of content cached using the CacheAPI interface of an edge function.</p>
+     * <p>Specifies whether to refresh edge computing cached resources. For example, this allows you to refresh content cached by the Edge Routine CacheAPI API operation using the edge function.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,13 +20,13 @@ public class PurgeCachesShrinkRequest extends TeaModel {
     public Boolean edgeComputePurge;
 
     /**
-     * <p>Indicates whether to refresh all resources under the directory when the content from the origin and the source resource are inconsistent. The default is false.</p>
+     * <p>Specifies whether to refresh all resources under the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false.</p>
      * <ul>
-     * <li><strong>true</strong>: Refreshes all resources under the specified directory.</li>
-     * <li><strong>false</strong>: Refreshes only the changed resources under the specified directory.</li>
+     * <li><strong>true</strong>: Refreshes all resources under the corresponding directory.</li>
+     * <li><strong>false</strong>: Refreshes only the changed resources under the corresponding directory.</li>
      * </ul>
      * <blockquote>
-     * <p> Applies to: Directory refresh, cachetag refresh, ignoreParams refresh, hostname refresh, and purge all cache of the site.</p>
+     * <p> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site refresh.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class PurgeCachesShrinkRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,15 +46,15 @@ public class PurgeCachesShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The type of refresh task. Possible values:</p>
+     * <p>The type of the refresh node. Valid values:</p>
      * <ul>
-     * <li><strong>file</strong> (default): File refresh.</li>
-     * <li><strong>cachekey</strong>: Cachekey refresh.</li>
-     * <li><strong>cachetag</strong>: Cachetag refresh.</li>
-     * <li><strong>directory</strong>: Directory refresh.</li>
-     * <li><strong>ignoreParams</strong>: Ignore parameters refresh. Ignoring parameters means removing the ? and everything after it in the request URL. When performing an ignore parameters refresh, the user first submits the URL without parameters through the interface. The submitted URLs to be refreshed will then be matched against the cached resource URLs with the parameters removed. If the cached resource URL, after removing the parameters, matches the URL to be refreshed, the CDN node will refresh the cached resources.</li>
-     * <li><strong>hostname</strong>: Hostname refresh.</li>
-     * <li><strong>purgeall</strong>: Purge all cache under the site.</li>
+     * <li><strong>file</strong> (default): file refresh.</li>
+     * <li><strong>cachekey</strong>: cache key refresh.</li>
+     * <li><strong>cachetag</strong>: cache label refresh.</li>
+     * <li><strong>directory</strong>: folder refresh.</li>
+     * <li><strong>ignoreParams</strong>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the committed URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the committed URL after parameter stripping, the point of presence executes the refresh on the cached resource.</li>
+     * <li><strong>hostname</strong>: hostname refresh.</li>
+     * <li><strong>purgeall</strong>: refreshes all cached content under the site.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

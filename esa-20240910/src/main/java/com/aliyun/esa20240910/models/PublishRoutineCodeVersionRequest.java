@@ -4,17 +4,31 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class PublishRoutineCodeVersionRequest extends TeaModel {
+    /**
+     * <p>The version number of the code to publish.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1710120201067203242</p>
+     */
     @NameInMap("CodeVersion")
     public String codeVersion;
 
     /**
+     * <p>The environment name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>production</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
+     * <p>The name of the Edge Routine.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-routine1</p>
      */
     @NameInMap("Name")
     public String name;

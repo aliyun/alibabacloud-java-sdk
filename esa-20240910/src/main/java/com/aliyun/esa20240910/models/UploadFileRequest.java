@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadFileRequest extends TeaModel {
     /**
-     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,12 @@ public class UploadFileRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The type of the purge or prefetch task. Valid values:</p>
+     * <p>The type of the refresh or prefetch task. Valid values:</p>
      * <ul>
-     * <li><strong>file</strong> (default): purges the cache by file.</li>
-     * <li><strong>preload</strong>: prefetches the file.</li>
-     * <li><strong>directory</strong>: purges the cache by directory.</li>
-     * <li><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</li>
+     * <li><strong>file</strong> (default): file refresh.</li>
+     * <li><strong>preload</strong>: file prefetch.</li>
+     * <li><strong>directory</strong>: directory refresh.</li>
+     * <li><strong>ignoreParams</strong>: parameter-ignored refresh.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,11 +41,17 @@ public class UploadFileRequest extends TeaModel {
     public String uploadTaskName;
 
     /**
-     * <p>The OSS URL of the file that contains resources to be purged or prefetched.</p>
+     * <p>The URL of the refresh or prefetch file stored in OSS. The Url parameter accepts URLs in two formats:</p>
+     * <ul>
+     * <li><p>Transit URL (recommended): automatically generated through the file transfer feature of the ESA console or SDK.</p>
+     * </li>
+     * <li><p>OSS pre-signed HTTPS URL: generated after you upload the file to an authorized OSS bucket. The isFileTransferUrl field specifies whether to use the transit URL mode.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://xxxxx.oss-cn-shenzhen.aliyuncs.com/test_oss_file?Expires=1708659191&OSSAccessKeyId=**********&Signature=">https://xxxxx.oss-cn-shenzhen.aliyuncs.com/test_oss_file?Expires=1708659191&amp;OSSAccessKeyId=**********&amp;Signature=</a>**********</p>
+     * <p><a href="https://XXXXXX.oss-cn-hangzhou.aliyuncs.com/%7Bprefix%7D_%7Baccount_uid%7D_%7Bhash%7D">https://XXXXXX.oss-cn-hangzhou.aliyuncs.com/{prefix}_{account_uid}_{hash}</a></p>
      */
     @NameInMap("Url")
     public String url;

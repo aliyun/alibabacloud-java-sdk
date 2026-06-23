@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomHostnameRequest extends TeaModel {
     /**
-     * <p>The ID of the CAS certificate. This parameter is required if <code>CertType</code> is set to <code>cas</code>.</p>
+     * <p>The SSL Certificates Service certificate ID. This parameter is required when CertType is set to cas.</p>
      * 
      * <strong>example:</strong>
      * <p>30000478</p>
@@ -14,12 +14,10 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public Long casId;
 
     /**
-     * <p>The region of the CAS certificate. This parameter is required if <code>CertType</code> is set to <code>cas</code>.</p>
+     * <p>The region of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas.</p>
      * <ul>
-     * <li><p>For accounts on the China site, set this parameter to <code>cn-hangzhou</code>.</p>
-     * </li>
-     * <li><p>For accounts on the International site, set this parameter to <code>ap-southeast-1</code>.</p>
-     * </li>
+     * <li>For Chinese site accounts, set this parameter to cn-hangzhou.</li>
+     * <li>For International site accounts, set this parameter to ap-southeast-1.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,14 +27,11 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String casRegion;
 
     /**
-     * <p>The certificate type. This parameter is required if <code>SslFlag</code> is set to <code>on</code>. Valid values:</p>
+     * <p>The certificate type. This parameter is required when SslFlag is set to on. Valid values:</p>
      * <ul>
-     * <li><p><strong>free</strong>: A free certificate.</p>
-     * </li>
-     * <li><p><strong>upload</strong>: A user-uploaded certificate.</p>
-     * </li>
-     * <li><p><strong>cas</strong>: A CAS certificate.</p>
-     * </li>
+     * <li><strong>free</strong>: free certificate.</li>
+     * <li><strong>upload</strong>: uploaded certificate.</li>
+     * <li><strong>cas</strong>: SSL Certificates Service certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +41,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The content of the certificate. This parameter is required if <code>CertType</code> is set to <code>upload</code>.</p>
+     * <p>The certificate content. This parameter is required when CertType is set to upload.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
@@ -55,7 +50,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String certificate;
 
     /**
-     * <p>The custom hostname.</p>
+     * <p>The SaaS domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +60,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String hostname;
 
     /**
-     * <p>The private key of the certificate. This parameter is required if <code>CertType</code> is set to <code>upload</code>.</p>
+     * <p>The certificate private key. This parameter is required when CertType is set to upload.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -74,7 +69,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>The ID of the record to bind. Call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to get this ID.</p>
+     * <p>The ID of the record to bind. You can call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to obtain the record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +79,7 @@ public class CreateCustomHostnameRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to get this ID.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,10 +91,8 @@ public class CreateCustomHostnameRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable SSL. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: Enable SSL.</p>
-     * </li>
-     * <li><p><strong>off</strong>: Disable SSL.</p>
-     * </li>
+     * <li><strong>on</strong>: Enable SSL.</li>
+     * <li><strong>off</strong>: Disable SSL.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

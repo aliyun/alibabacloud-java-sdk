@@ -13,11 +13,17 @@ public class CommitRoutineStagingCodeRequest extends TeaModel {
     @NameInMap("CodeDescription")
     public String codeDescription;
 
+    /**
+     * <p>The deployment environment whose environment variable configuration is used. If you do not specify this parameter, environment variables are not used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>production</p>
+     */
     @NameInMap("DeployEnv")
     public String deployEnv;
 
     /**
-     * <p>The name of the edge function (Routine).</p>
+     * <p>The name of the Edge Routine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

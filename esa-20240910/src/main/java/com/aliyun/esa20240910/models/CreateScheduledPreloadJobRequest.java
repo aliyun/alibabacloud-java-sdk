@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledPreloadJobRequest extends TeaModel {
     /**
-     * <p>The method for uploading the preload file. Valid values are <code>Textbox</code> and <code>OSS</code>.</p>
+     * <p>The method of uploading prefetch files. Text box and OSS upload methods are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public String insertWay;
 
     /**
-     * <p>The name of the scheduled preload job.</p>
+     * <p>The name of the scheduled prefetch task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,8 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The URL of the OSS file that contains the URLs to preload.</p>
+     * <p>The OSS file for the scheduled prefetch task. Enter the address of the OSS file.
+     * Note: The OSS file contains the URLs that you want to prefetch.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
@@ -34,7 +35,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public String ossUrl;
 
     /**
-     * <p>The ID of the site. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>The site ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +45,7 @@ public class CreateScheduledPreloadJobRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The list of URLs to preload. This parameter is used when <code>InsertWay</code> is set to <code>Textbox</code>.</p>
+     * <p>The list of URLs to prefetch. This parameter is used when you upload prefetch files via the text box.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://testurl.com/a.txt">http://testurl.com/a.txt</a>

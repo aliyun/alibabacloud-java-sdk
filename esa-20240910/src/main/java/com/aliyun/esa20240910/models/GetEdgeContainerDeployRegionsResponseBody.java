@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerDeployRegionsResponseBody extends TeaModel {
     /**
-     * <p>The regions.</p>
+     * <p>The list of regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<String> regions;

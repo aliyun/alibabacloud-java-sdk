@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEdgeContainerAppResourceReserveResponseBody extends TeaModel {
     /**
-     * <p>The end time of the reservation. The input time is UTC. It takes +8 hours to enter Beijing time. For example, if the current time is 2006-01-02 06:04:05, you need to enter &quot;2006-01-02T14:04:05Z&quot;.</p>
+     * <p>The reservation end time. This parameter uses UTC time. To convert from UTC+8, add 8 hours. For example, if the current time is 2006-01-02 06:04:05 in UTC+8, enter &quot;2006-01-02T14:04:05Z&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z</p>
@@ -14,7 +14,7 @@ public class UpdateEdgeContainerAppResourceReserveResponseBody extends TeaModel 
     public String durationTime;
 
     /**
-     * <p>Whether to enable resource reservation.</p>
+     * <p>Specifies whether to enable resource reservation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class UpdateEdgeContainerAppResourceReserveResponseBody extends TeaModel 
     public Boolean enable;
 
     /**
-     * <p>Enable Permanent Incremental Backup</p>
+     * <p>Indicates whether reservation is permanently enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UpdateEdgeContainerAppResourceReserveResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>Reserved resource list.</p>
+     * <p>The list of reserved resources.</p>
      */
     @NameInMap("ReserveSet")
     public java.util.List<UpdateEdgeContainerAppResourceReserveResponseBodyReserveSet> reserveSet;
@@ -93,11 +93,11 @@ public class UpdateEdgeContainerAppResourceReserveResponseBody extends TeaModel 
 
     public static class UpdateEdgeContainerAppResourceReserveResponseBodyReserveSet extends TeaModel {
         /**
-         * <p>The ISP. The following types are supported. You do not need to enter the ISP in regions outside the Chinese mainland:</p>
+         * <p>The Internet service provider (ISP). The following ISPs are supported. You do not need to specify an ISP for special administrative regions or areas outside China:</p>
          * <ul>
          * <li>China Mobile: cmcc</li>
          * <li>China Telecom: chinanet</li>
-         * <li>China Unicom: unicom</li>
+         * <li>China Unicom: unicom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class UpdateEdgeContainerAppResourceReserveResponseBody extends TeaModel 
         public String isp;
 
         /**
-         * <p>Information about the region. The Chinese mainland supports the input of regions and special administrative regions, and the regions outside the Chinese mainland support the input of countries. The following is the corresponding parameter mapping:</p>
+         * <p>The region information. For the Chinese mainland, you can specify a major region. For special administrative regions and areas outside China, you can specify a country or region. The following list shows the parameter mappings:</p>
          * <p>Chinese mainland:</p>
          * <ul>
          * <li>East China: huadong</li>
@@ -118,37 +118,37 @@ public class UpdateEdgeContainerAppResourceReserveResponseBody extends TeaModel 
          * <li>Southwest China: xinan</li>
          * <li>Northeast China: dongbei</li>
          * </ul>
-         * <p>Special Administrative Regions and overseas:</p>
+         * <p>Special administrative regions and outside China:</p>
          * <ul>
-         * <li>Taiwan, China: tw</li>
-         * <li>Macau, China: mo</li>
-         * <li>Hong Kong, China: hk</li>
+         * <li>Taiwan (China): tw</li>
+         * <li>Macao (China): mo</li>
+         * <li>Hong Kong (China): hk</li>
          * <li>Japan: jp</li>
          * <li>United States: us</li>
          * <li>Thailand: th</li>
-         * <li>Korea: kr</li>
+         * <li>South Korea: kr</li>
          * <li>Russia: ru</li>
          * <li>Singapore: sg</li>
          * <li>France: fr</li>
          * <li>Spain: es</li>
          * <li>Italy: it</li>
          * <li>Sweden: se</li>
-         * <li>UAE: ae</li>
+         * <li>United Arab Emirates: ae</li>
          * <li>Indonesia: id</li>
          * <li>Chile: cl</li>
          * <li>Philippines: ph</li>
          * <li>Malaysia: my</li>
          * <li>Vietnam: vn</li>
-         * <li>Argentina: AR</li>
+         * <li>Argentina: ar</li>
          * <li>Australia: au</li>
          * <li>Brazil: br</li>
          * <li>Colombia: co</li>
          * <li>Germany: de</li>
-         * <li>UK: GB</li>
+         * <li>United Kingdom: gb</li>
          * <li>Peru: pe</li>
          * <li>Saudi Arabia: sa</li>
          * <li>Netherlands: nl</li>
-         * <li>South Africa: za</li>
+         * <li>South Africa: za.</li>
          * </ul>
          * 
          * <strong>example:</strong>

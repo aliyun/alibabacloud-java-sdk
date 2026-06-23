@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteKvWithHighCapacityAdvanceRequest extends TeaModel {
     /**
-     * <p>The name specified when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
+     * <p>The namespace name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class BatchDeleteKvWithHighCapacityAdvanceRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The download URL that stores the key-value pairs to be batch deleted, such as an OSS download URL with read permission.</p>
+     * <p>The download URL that contains the key-value pairs to be batch deleted, such as an OSS download URL with read permissions.</p>
      * <ul>
-     * <li><p>When you call this operation by using an SDK, the SDK automatically uploads the submitted content to OSS and passes in the corresponding URL.</p>
+     * <li><p>When you call this operation by using the SDK, the SDK automatically uploads the content to OSS and passes the corresponding URL.</p>
      * </li>
-     * <li><p>To call this operation directly, you must upload the JSON payload (in the same format as the BatchDeleteKv body: {&quot;Namespace&quot;:&quot;...&quot;,&quot;Keys&quot;:[...]}) to an OSS bucket and generate a signed HTTPS GET URL.</p>
+     * <li><p>To call this operation directly, upload the JSON payload (in the same format as the BatchDeleteKv body: {&quot;Namespace&quot;:&quot;...&quot;,&quot;Keys&quot;:[...]}) to an OSS bucket and generate a signed HTTPS GET URL.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

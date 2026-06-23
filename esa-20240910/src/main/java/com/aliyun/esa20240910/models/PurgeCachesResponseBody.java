@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PurgeCachesResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ET5BF670-09D5-4D0B-BEBY-D96A2A528000</p>
@@ -14,7 +14,7 @@ public class PurgeCachesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Task ID, which is returned when you create a refresh or preheat task.</p>
+     * <p>The task ID. This ID is returned when you create a refresh or prefetch task.</p>
      * 
      * <strong>example:</strong>
      * <p>15940956620</p>

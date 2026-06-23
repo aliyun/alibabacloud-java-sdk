@@ -32,13 +32,13 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tasks.</p>
+     * <p>The task list.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<DescribePurgeTasksResponseBodyTasks> tasks;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -93,7 +93,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
 
     public static class DescribePurgeTasksResponseBodyTasks extends TeaModel {
         /**
-         * <p>The purged content.</p>
+         * <p>The refresh object.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></p>
@@ -102,7 +102,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The creation time, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-26T01:56:15Z</p>
@@ -111,7 +111,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error description returned when the purge task failed.</p>
+         * <p>The error description returned when the refresh task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal Error</p>
@@ -120,7 +120,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The progress of the task, in percentage.</p>
+         * <p>The task completion progress in percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100%</p>
@@ -129,7 +129,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         public String process;
 
         /**
-         * <p>The task status.</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
          * <li><p><strong>Complete</strong>: The task is complete.</p>
          * </li>
@@ -155,20 +155,14 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The type of the purge task. Valid values:</p>
+         * <p>The refresh task type. Valid values:</p>
          * <ul>
-         * <li><p><strong>file</strong> (default): purges the cache by file.</p>
-         * </li>
-         * <li><p><strong>cachetag</strong>: purges the cache by cache tag.</p>
-         * </li>
-         * <li><p><strong>directory</strong>: purges the cache by directory.</p>
-         * </li>
-         * <li><p><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</p>
-         * </li>
-         * <li><p><strong>hostname</strong>: purges the cache by hostname.</p>
-         * </li>
-         * <li><p><strong>purgeall</strong>: purges all cache.</p>
-         * </li>
+         * <li><strong>file</strong> (default): file refresh.</li>
+         * <li><strong>cachetag</strong>: cache tag refresh.</li>
+         * <li><strong>directory</strong>: directory refresh.</li>
+         * <li><strong>ignoreParams</strong>: parameter-stripped refresh.</li>
+         * <li><strong>hostname</strong>: hostname refresh.</li>
+         * <li><strong>purgeall</strong>: refresh all cached content of the site.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ActivateVersionManagementResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C370DAF1-C838-4288-A1A0-9A87633D2***</p>

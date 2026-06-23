@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRoutineCodeVersionsRequest extends TeaModel {
     /**
-     * <p>The name of the Edge Routine program.</p>
+     * <p>The name of the Edge Routine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListRoutineCodeVersionsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The keyword for fuzzy match.</p>
+     * <p>The keyword for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>hello</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomResponseCodeRuleResponseBody extends TeaModel {
     /**
-     * <p>Configuration ID.</p>
+     * <p>The configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3528160969****</p>
@@ -14,7 +14,7 @@ public class CreateCustomResponseCodeRuleResponseBody extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C2B2F8CF-3074-5BBC-891A-AAD292E2624F</p>

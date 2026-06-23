@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledPreloadJobRequest extends TeaModel {
     /**
-     * <p>The task ID of the scheduled preload job.</p>
+     * <p>The ID of the scheduled prefetch task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

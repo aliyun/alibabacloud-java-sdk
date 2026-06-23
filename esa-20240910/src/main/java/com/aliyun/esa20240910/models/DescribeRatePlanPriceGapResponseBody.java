@@ -105,7 +105,7 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount amount of the order.</p>
+         * <p>The order discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -144,7 +144,7 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
         public String targetPlanCode;
 
         /**
-         * <p>The original order price, which equals the actual transaction price plus the discount amount.</p>
+         * <p>The original order price. Original order price = actual transaction price + discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

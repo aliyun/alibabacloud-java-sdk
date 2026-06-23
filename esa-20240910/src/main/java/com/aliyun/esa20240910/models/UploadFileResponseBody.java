@@ -14,7 +14,7 @@ public class UploadFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the file upload task. You can use this ID for task submission or query subsequently.</p>
+     * <p>The ID of the file upload task. You can use this ID to submit or query the task.</p>
      * 
      * <strong>example:</strong>
      * <p>159253299357****</p>

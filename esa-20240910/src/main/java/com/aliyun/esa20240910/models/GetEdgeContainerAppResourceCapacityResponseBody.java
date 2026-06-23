@@ -11,7 +11,7 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
     public java.util.List<GetEdgeContainerAppResourceCapacityResponseBodyRegions> regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>50423A7F-A83D-1E24-B80E-86DD25790759</p>
@@ -42,14 +42,12 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
 
     public static class GetEdgeContainerAppResourceCapacityResponseBodyRegions extends TeaModel {
         /**
-         * <p>The carrier. This parameter is returned only for regions in the Chinese mainland. Valid values:</p>
+         * <p>The following Internet service providers (ISPs) are supported. This field is not returned for regions outside the Chinese mainland.
+         * ISPs:</p>
          * <ul>
-         * <li><p>cmcc: China Mobile</p>
-         * </li>
-         * <li><p>chinanet: China Telecom</p>
-         * </li>
-         * <li><p>unicom: China Unicom</p>
-         * </li>
+         * <li>China Mobile: cmcc</li>
+         * <li>China Telecom: chinanet</li>
+         * <li>China Unicom: unicom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -59,83 +57,47 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
         public String isp;
 
         /**
-         * <p>The Chinese mainland:</p>
+         * <p>Chinese mainland:</p>
          * <ul>
-         * <li><p>huadong: East China</p>
-         * </li>
-         * <li><p>huanan: South China</p>
-         * </li>
-         * <li><p>huazhong: Central China</p>
-         * </li>
-         * <li><p>huabei: North China</p>
-         * </li>
-         * <li><p>xibei: Northwest China</p>
-         * </li>
-         * <li><p>xinan: Southwest China</p>
-         * </li>
-         * <li><p>dongbei: Northeast China</p>
-         * </li>
+         * <li>East China: huadong</li>
+         * <li>South China: huanan</li>
+         * <li>Central China: huazhong</li>
+         * <li>North China: huabei</li>
+         * <li>Northwest China: xibei</li>
+         * <li>Southwest China: xinan</li>
+         * <li>Northeast China: dongbei</li>
          * </ul>
-         * <p>Special administrative regions and regions outside the Chinese mainland:</p>
+         * <p>Special administrative regions and overseas:</p>
          * <ul>
-         * <li><p>tw: Taiwan (China)</p>
-         * </li>
-         * <li><p>mo: Macao (China)</p>
-         * </li>
-         * <li><p>hk: Hong Kong (China)</p>
-         * </li>
-         * <li><p>jp: Japan</p>
-         * </li>
-         * <li><p>us: US</p>
-         * </li>
-         * <li><p>th: Thailand</p>
-         * </li>
-         * <li><p>kr: South Korea</p>
-         * </li>
-         * <li><p>ru: Russia</p>
-         * </li>
-         * <li><p>sg: Singapore</p>
-         * </li>
-         * <li><p>fr: France</p>
-         * </li>
-         * <li><p>es: Spain</p>
-         * </li>
-         * <li><p>it: Italy</p>
-         * </li>
-         * <li><p>se: Sweden</p>
-         * </li>
-         * <li><p>ae: UAE</p>
-         * </li>
-         * <li><p>id: Indonesia</p>
-         * </li>
-         * <li><p>cl: Chile</p>
-         * </li>
-         * <li><p>ph: Philippines</p>
-         * </li>
-         * <li><p>my: Malaysia</p>
-         * </li>
-         * <li><p>vn: Vietnam</p>
-         * </li>
-         * <li><p>ar: Argentina</p>
-         * </li>
-         * <li><p>au: Australia</p>
-         * </li>
-         * <li><p>br: Brazil</p>
-         * </li>
-         * <li><p>co: Colombia</p>
-         * </li>
-         * <li><p>de: Germany</p>
-         * </li>
-         * <li><p>gb: UK</p>
-         * </li>
-         * <li><p>pe: Peru</p>
-         * </li>
-         * <li><p>sa: Saudi Arabia</p>
-         * </li>
-         * <li><p>nl: Netherlands</p>
-         * </li>
-         * <li><p>za: South Africa</p>
-         * </li>
+         * <li>Taiwan (China): tw</li>
+         * <li>Macao (China): mo</li>
+         * <li>Hong Kong (China): hk</li>
+         * <li>Japan: jp</li>
+         * <li>United States: us</li>
+         * <li>Thailand: th</li>
+         * <li>South Korea: kr</li>
+         * <li>Russia: ru</li>
+         * <li>Singapore: sg</li>
+         * <li>France: fr</li>
+         * <li>Spain: es</li>
+         * <li>Italy: it</li>
+         * <li>Sweden: se</li>
+         * <li>United Arab Emirates: ae</li>
+         * <li>Indonesia: id</li>
+         * <li>Chile: cl</li>
+         * <li>Philippines: ph</li>
+         * <li>Malaysia: my</li>
+         * <li>Vietnam: vn</li>
+         * <li>Argentina: ar</li>
+         * <li>Australia: au</li>
+         * <li>Brazil: br</li>
+         * <li>Colombia: co</li>
+         * <li>Germany: de</li>
+         * <li>United Kingdom: gb</li>
+         * <li>Peru: pe</li>
+         * <li>Saudi Arabia: sa</li>
+         * <li>Netherlands: nl</li>
+         * <li>South Africa: za</li>
          * </ul>
          * 
          * <strong>example:</strong>

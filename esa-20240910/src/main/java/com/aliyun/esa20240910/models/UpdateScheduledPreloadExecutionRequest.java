@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledPreloadExecutionRequest extends TeaModel {
     /**
-     * <p>The end time of the scheduled preload plan.</p>
+     * <p>The end time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-31T18:10:48.849+08:00</p>
@@ -14,7 +14,7 @@ public class UpdateScheduledPreloadExecutionRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the preload plan.</p>
+     * <p>The prefetch plan ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateScheduledPreloadExecutionRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The execution interval for each batch in the scheduled preload plan, in seconds.</p>
+     * <p>The execution interval between each batch of the scheduled prefetch plan, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -33,7 +33,7 @@ public class UpdateScheduledPreloadExecutionRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The number of URLs in each scheduled preload batch.</p>
+     * <p>The number of URLs to prefetch per batch.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class UpdateScheduledPreloadExecutionRequest extends TeaModel {
     public Integer sliceLen;
 
     /**
-     * <p>The start time of the scheduled preload plan.</p>
+     * <p>The start time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-31T17:10:48.849+08:00</p>

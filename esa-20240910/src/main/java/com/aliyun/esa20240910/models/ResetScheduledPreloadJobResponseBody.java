@@ -14,7 +14,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String aliUid;
 
     /**
-     * <p>The time when the task was created.</p>
+     * <p>The time when the job was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-02T02:23:26Z</p>
@@ -23,7 +23,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The list of domain names to prefetch.</p>
+     * <p>The list of preload domains.</p>
      * 
      * <strong>example:</strong>
      * <p>testurl.com</p>
@@ -41,16 +41,16 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String errorInfo;
 
     /**
-     * <p>The OSS address of the failed file.</p>
+     * <p>The OSS URL of the failed file.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
+     * <p><a href="https://xxxobject.oss-cn-region.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-region.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
      */
     @NameInMap("FailedFileOss")
     public String failedFileOss;
 
     /**
-     * <p>The ID of the URL list file, which is used for downloading.</p>
+     * <p>The file ID of the URL list, which is used for downloading.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3b48621bccf3fe29e1a7</p>
@@ -59,7 +59,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3af3621bccf3fe29e1a4</p>
@@ -77,7 +77,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String insertWay;
 
     /**
-     * <p>The task name.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -104,7 +104,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The number of URLs that have been submitted to the system for prefetch.</p>
+     * <p>The number of URLs that have been submitted to the system for preloading.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,7 +113,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public Integer taskSubmitted;
 
     /**
-     * <p>The task type, such as refresh or prefetch.</p>
+     * <p>The task type (refresh/preload).</p>
      * 
      * <strong>example:</strong>
      * <p>preload</p>

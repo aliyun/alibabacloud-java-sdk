@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListScheduledPreloadJobsResponseBody extends TeaModel {
     /**
-     * <p>List of prefetch job details.</p>
+     * <p>The list of prefetch task information.</p>
      */
     @NameInMap("Jobs")
     public java.util.List<ListScheduledPreloadJobsResponseBodyJobs> jobs;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
@@ -20,7 +20,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records after filtering.</p>
+     * <p>The total number of records after filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -59,7 +59,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
 
     public static class ListScheduledPreloadJobsResponseBodyJobs extends TeaModel {
         /**
-         * <p>Alibaba Cloud account ID.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15685865xxx14622</p>
@@ -68,7 +68,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>Job creation time.</p>
+         * <p>The task creation time in ISO 8601 format (e.g., 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-01T08:53:13Z</p>
@@ -77,7 +77,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>List of domains to prefetch.</p>
+         * <p>The list of prefetch domains.</p>
          * 
          * <strong>example:</strong>
          * <p>testurl.com</p>
@@ -86,7 +86,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String domains;
 
         /**
-         * <p>Error message.</p>
+         * <p>The error information.</p>
          * 
          * <strong>example:</strong>
          * <p>invalid domain:test.com</p>
@@ -95,7 +95,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String errorInfo;
 
         /**
-         * <p>Number of prefetch schedules.</p>
+         * <p>The number of prefetch plans.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -104,7 +104,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public Integer executionCount;
 
         /**
-         * <p>The OSS address of the failed file.</p>
+         * <p>The OSS URL of the failed file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></p>
@@ -113,7 +113,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String failedFileOss;
 
         /**
-         * <p>URL list file ID (used for downloading).</p>
+         * <p>The URL list file ID (used for downloading).</p>
          * 
          * <strong>example:</strong>
          * <p>665d3b48621bccf3fe29e1a7</p>
@@ -122,7 +122,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>Job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>665d3af3621bccf3fe29e1a4</p>
@@ -131,7 +131,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>URL insertion method.</p>
+         * <p>The URL insertion method.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -140,7 +140,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String insertWay;
 
         /**
-         * <p>Job name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -149,7 +149,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Site ID</p>
+         * <p>Site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>190007158391808</p>
@@ -158,7 +158,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public Long siteId;
 
         /**
-         * <p>Number of URLs submitted to the system for prefetching.</p>
+         * <p>The number of URLs that have been submitted to the system for prefetch.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public Integer taskSubmitted;
 
         /**
-         * <p>Task type (refresh or prefetch).</p>
+         * <p>The task type (refresh/prefetch).</p>
          * 
          * <strong>example:</strong>
          * <p>preload</p>
@@ -176,7 +176,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>Total number of URLs.</p>
+         * <p>The total number of URLs.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -185,7 +185,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         public Integer urlCount;
 
         /**
-         * <p>Number of URLs submitted.</p>
+         * <p>The number of submitted URLs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
