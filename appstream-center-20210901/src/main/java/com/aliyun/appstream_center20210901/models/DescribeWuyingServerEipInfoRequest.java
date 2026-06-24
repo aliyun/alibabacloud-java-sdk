@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeWuyingServerEipInfoRequest extends TeaModel {
     /**
-     * <p>The Internet service provider (ISP). Valid values:</p>
+     * <p>The Internet service operation provider (ISP). Valid values: </p>
      * <ul>
-     * <li>ChinaMobile: China Mobile</li>
-     * <li>ChinaTelecom: China Telecom</li>
-     * <li>ChinaUnicom: China Unicom</li>
+     * <li>ChinaMobile: Shift.</li>
+     * <li>ChinaTelecom: China Telecom.</li>
+     * <li>ChinaUnicom: China Unicom.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeWuyingServerEipInfoRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The ID of the workstation.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

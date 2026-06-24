@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListLlmTemplatesShrinkRequest extends TeaModel {
     /**
+     * <p>The model code used for filtering. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3.6-plus</p>
      */
     @NameInMap("LlmCode")
     public String llmCode;
 
+    /**
+     * <p>The model template IDs used for filtering.</p>
+     */
     @NameInMap("LlmTemplateIds")
     public String llmTemplateIdsShrink;
 
     /**
+     * <p>The ID of the associated model group.</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-xxxx</p>
      */
@@ -22,6 +29,8 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
+     * <p>The page number. Pages start from page 1. Values 0 and 1 return the same result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the model provider template.</p>
+     * 
      * <strong>example:</strong>
      * <p>mpt-xxxx</p>
      */

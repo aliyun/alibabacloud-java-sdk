@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class StopWuyingServerRequest extends TeaModel {
     /**
-     * <p>Force restart.</p>
-     * <p>Valid values:</p>
+     * <p>Specifies whether to forcibly restart the workstation. Valid values:</p>
      * <ul>
-     * <li>True.</li>
-     * <li>False</li>
+     * <li>True: forcibly restart</li>
+     * <li>False: do not forcibly restart.</li>
      * </ul>
      * 
      * <strong>example:</strong>

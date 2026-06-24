@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateLlmTemplatesRequest extends TeaModel {
+    /**
+     * <p>The list of model configurations to create.</p>
+     */
     @NameInMap("LlmTemplateItems")
     public java.util.List<BatchCreateLlmTemplatesRequestLlmTemplateItems> llmTemplateItems;
 
     /**
+     * <p>The ID of the associated model group.</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-xxxx</p>
      */
@@ -15,6 +20,7 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
+     * <p>The ID of the model provider template to which the models belong.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +60,8 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
 
     public static class BatchCreateLlmTemplatesRequestLlmTemplateItems extends TeaModel {
         /**
+         * <p>The model configuration JSON object.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;id&quot;: &quot;qwen3.6-plus&quot;,
@@ -76,10 +84,18 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>千问Plus系列模型</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Specifies whether to set this model as the default model. Each model group can have at most one default model.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -87,6 +103,8 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
         public Boolean isDefaultModel;
 
         /**
+         * <p>The model code, which must be unique within the same provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.6-plus</p>
          */
@@ -94,6 +112,8 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
         public String llmCode;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Qwen3.6-Plus</p>
          */

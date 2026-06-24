@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelTemplatesShrinkRequest extends TeaModel {
     /**
+     * <p>The Agent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,7 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public String agentPlatform;
 
     /**
+     * <p>The name of the Agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public String agentProvider;
 
     /**
+     * <p>The business type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,16 +34,23 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public Integer bizType;
 
     /**
+     * <p>Specifies whether models have been configured in the group.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("HasModel")
     public Boolean hasModel;
 
+    /**
+     * <p>The list of template group IDs used for filtering.</p>
+     */
     @NameInMap("ModelTemplateIdList")
     public String modelTemplateIdListShrink;
 
     /**
+     * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +58,8 @@ public class ListModelTemplatesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

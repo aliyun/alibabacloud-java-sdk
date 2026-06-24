@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     /**
+     * <p>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>持久会话ID。</p>
+     * <p>The persistent session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>p-0cc7s3mw2fg4j****</p>
@@ -23,6 +24,8 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String appInstancePersistentId;
 
     /**
+     * <p>The list of user group IDs to be authorized.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -30,12 +33,17 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public java.util.List<String> authorizeUserGroupIds;
 
     /**
-     * <p>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
+     * <p>The list of usernames to be authorized for the delivery group. You can specify 1 to 100 usernames.</p>
      */
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
 
     /**
+     * <p>The user avatar ID.</p>
+     * <blockquote>
+     * <p>This parameter is not available for public use.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -43,6 +51,7 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String avatarId;
 
     /**
+     * <p>The product type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +61,8 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The list of user group IDs to be deauthorized.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -59,7 +70,7 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public java.util.List<String> unAuthorizeUserGroupIds;
 
     /**
-     * <p>The IDs of the users that you want to remove from the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
+     * <p>The list of usernames to be deauthorized from the delivery group. You can specify 1 to 100 usernames.</p>
      */
     @NameInMap("UnAuthorizeUserIds")
     public java.util.List<String> unAuthorizeUserIds;

@@ -42,7 +42,7 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
 
     public static class CreateAppInstanceGroupResponseBodyAppInstanceGroupModel extends TeaModel {
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -51,7 +51,7 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The ID of the resource group. This parameter is returned if a resource group was created.</p>
+         * <p>The resource group ID. This parameter is returned if a resource group is created at the same time.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ew7va2g1wl3vm****</p>

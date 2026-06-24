@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the associated EIP.</p>
+     * <p>The EIP information.</p>
      */
     @NameInMap("EipInfoModel")
     public DescribeWuyingServerEipInfoResponseBodyEipInfoModel eipInfoModel;
@@ -54,7 +54,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The ID of the elastic network interface (ENI).</p>
+         * <p>The network interface controller (NIC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp174p2xxxxxbyh02ix</p>

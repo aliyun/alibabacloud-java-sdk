@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateModelTemplateRequest extends TeaModel {
     /**
+     * <p>The Agent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,7 @@ public class CreateModelTemplateRequest extends TeaModel {
     public String agentPlatform;
 
     /**
+     * <p>The Agent provider name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateModelTemplateRequest extends TeaModel {
     public String agentProvider;
 
     /**
+     * <p>The business type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,10 +33,17 @@ public class CreateModelTemplateRequest extends TeaModel {
     @NameInMap("BizType")
     public Integer bizType;
 
+    /**
+     * <p>The template group description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试模型分组</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The template group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

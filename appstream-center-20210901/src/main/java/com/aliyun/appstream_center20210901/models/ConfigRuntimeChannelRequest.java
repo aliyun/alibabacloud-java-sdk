@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfigRuntimeChannelRequest extends TeaModel {
     /**
+     * <p>The Agent platform (such as ENTERPRISE or JVS).</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,7 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     public String agentPlatform;
 
     /**
+     * <p>The Agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     public String agentProvider;
 
     /**
+     * <p>The third-party channel code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The channel configuration JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +47,8 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The configuration mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>Simple</p>
      */
@@ -49,6 +56,9 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     public String configMode;
 
     /**
+     * <p>The channel name.</p>
+     * <p>If you leave this parameter empty, the system automatically uses the value of Code as the name.</p>
+     * 
      * <strong>example:</strong>
      * <p>钉钉</p>
      */
@@ -56,12 +66,14 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The list of runtime IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeIds")
     public java.util.List<String> runtimeIds;
 
     /**
+     * <p>The Agent runtime type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApproveOtaTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+     * <p>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The ID of the region where the delivery group resides. You can call the <a href="https://help.aliyun.com/document_detail/428500.html">ListRegions</a> operation to query the list of regions supported by App Streaming.</p>
+     * <p>The region ID of the delivery group. You can call <a href="~~ListRegions~~">ListRegions</a> to query the list of regions supported by Wuying Cloud Application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The type of the OTA update task.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Fota: update of the system components of Alibaba Cloud Workspace</li>
-     * <li>AppUpdate</li>
-     * <li>ImageUpdate</li>
-     * </ul>
+     * <p>The over-the-air upgrade task type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +35,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String otaType;
 
     /**
-     * <p>The start time of the OTA update task. The time follows the ISO 8601 standard.</p>
+     * <p>The start time of the over-the-air upgrade task. Specify the time in ISO 8601 format.</p>
      * <p>This parameter is required.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
@@ -52,9 +46,9 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the OTA update task. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+     * <p>The over-the-air upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
      * <blockquote>
-     * <p> Each successful call to the <code>ApproveOtaTask</code> operation causes a value change of this parameter.<code> Before you call this operation, call the `ListAppInstanceGroup` operation again to obtain the latest value of this parameter.</code></p>
+     * <p>Each successful call of <code>ApproveOtaTask</code> causes the <code>TaskId</code> to change. Therefore, before calling this operation again, call <code>ListAppInstanceGroup</code> again to obtain the latest <code>TaskId</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

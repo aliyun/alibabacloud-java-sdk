@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cn-shanghai: China (Shanghai)</li>
-     * <li>cn-hangzhou: China (Hangzhou)</li>
-     * </ul>
+     * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -19,6 +14,15 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</p>
+     * <ul>
+     * <li>appstreaming.general.4c8g: 1 to 2.</li>
+     * <li>appstreaming.general.8c16g: 1 to 4.</li>
+     * <li>appstreaming.vgpu.8c16g.4g: 1 to 4.</li>
+     * <li>appstreaming.vgpu.8c31g.16g: 1 to 4.</li>
+     * <li>appstreaming.vgpu.14c93g.12g: 1 to 6.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,12 +30,14 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
     public Integer nodeCapacity;
 
     /**
-     * <p>The auto scaling policy used by the delivery group.</p>
+     * <p>The automatic scaling policy of the delivery group.</p>
      */
     @NameInMap("NodePoolStrategy")
     public ModifyNodePoolAttributeRequestNodePoolStrategy nodePoolStrategy;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ew7va2g1wl3vm****</p>
      */
@@ -40,10 +46,6 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CloudApp</p>
@@ -98,7 +100,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
 
     public static class ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedulesTimerPeriods extends TeaModel {
         /**
-         * <p>The number of resources.</p>
+         * <p>The resource count.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -107,7 +109,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The end of the time period during which the scaling policy is executed. Format: HH:mm.</p>
+         * <p>The end time. Format: HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>15:00</p>
@@ -116,7 +118,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The beginning of the time period during which the scaling policy is executed. Format: HH:mm.</p>
+         * <p>The start time. Format: HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>12:00</p>
@@ -157,11 +159,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
 
     public static class ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedules extends TeaModel {
         /**
-         * <p>The schedule type of the scaling policy. This parameter must be configured together with <code>RecurrenceValues</code>.``</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>weekly: The scaling policy is executed on specific days each week.</li>
-         * </ul>
+         * <p>The type of the policy execution cycle. You must specify both <code>RecurrenceType</code> and <code>RecurrenceValues</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>weekly</p>
@@ -170,19 +168,19 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public String recurrenceType;
 
         /**
-         * <p>The days of each week on which the scaling policy is executed.</p>
+         * <p>The list of values for the policy execution cycle.</p>
          */
         @NameInMap("RecurrenceValues")
         public java.util.List<Integer> recurrenceValues;
 
         /**
-         * <p>The time periods during which the scaling policy can be executed. The time periods must meet the following requirements:</p>
+         * <p>The list of time periods for the policy execution cycle. Requirements for time period settings:</p>
          * <ul>
-         * <li>Up to three time periods can be added.</li>
-         * <li>Time periods cannot be overlapped.</li>
-         * <li>The interval between two consecutive time periods must be greater than or equal to 5 minutes.</li>
-         * <li>Each time period must be greater than or equal to 15 minutes.</li>
-         * <li>The total length of the time periods that you specify cannot be greater than a day.</li>
+         * <li>You can add up to three time periods.</li>
+         * <li>Time periods must not overlap.</li>
+         * <li>The interval between time periods must be at least 5 minutes.</li>
+         * <li>Each time period must be at least 15 minutes long.</li>
+         * <li>All time periods combined must not span across days.</li>
          * </ul>
          */
         @NameInMap("TimerPeriods")
@@ -221,7 +219,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
 
     public static class ModifyNodePoolAttributeRequestNodePoolStrategy extends TeaModel {
         /**
-         * <p>The maximum number of idle sessions. After you specify a value for this parameter, auto scaling is triggered only if the number of idle sessions in the delivery group is smaller than the specified value and the session usage exceeds the value specified for <code>ScalingUsageThreshold</code>. Otherwise, the system determines that the idle sessions in the delivery group are sufficient and does not perform auto scaling.`` You can use this parameter to flexibly manage auto scaling and reduce costs.</p>
+         * <p>The maximum number of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the current delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the idle sessions in the delivery group are considered sufficient, and no automatic scale-out is performed. This parameter can be used to flexibly control elastic scale-out behavior and reduce costs.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -230,7 +228,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public Integer maxIdleAppInstanceAmount;
 
         /**
-         * <p>The maximum number of resources that can be created for scale-out. This parameter is required only if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>.</p>
+         * <p>The maximum number of resources that can be created during scale-out. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -239,12 +237,12 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public Integer maxScalingAmount;
 
         /**
-         * <p>The number of resources to purchase. Valid values: 1 to 100.</p>
+         * <p>The number of purchased resources. Valid values: 1 to 100.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li>If you use subscription resources, you cannot modify this parameter.</li>
-         * <li>If you use pay-as-you-go resources, you can modify this parameter only if you set <code>StrategyType</code> to <code>NODE_FIXED</code> or <code>NODE_SCALING_BY_USAGE</code>.</li>
+         * <li>If the resources are subscription resources, this parameter cannot be modified.</li>
+         * <li>If the resources are pay-as-you-go resources, this parameter can be modified when the scaling mode (<code>StrategyType</code>) is set to fixed quantity (<code>NODE_FIXED</code>) or automatic scaling (<code>NODE_SCALING_BY_USAGE</code>).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,16 +252,16 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The intervals at which the scaling policy is executed. This parameter is required only if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+         * <p>The list of policy execution cycles. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
          */
         @NameInMap("RecurrenceSchedules")
         public java.util.List<ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedules> recurrenceSchedules;
 
         /**
-         * <p>The maximum retention period of a resource to which no session is connected. If no session is connected to a resource, the resource is automatically scaled in after the specified retention period elapses. Valid values: 5 to 120. Default value: 5. Unit: minutes. If one of the following situations occurs, the resource is not scaled in.</p>
+         * <p>The maximum duration (in minutes) that a resource without session connections is retained. When no sessions are connected to a resource, a countdown starts based on the duration specified here. The resource is scaled in when the countdown ends. Valid values: 5 to 120. Default value: 5. The following exceptions apply:</p>
          * <ul>
-         * <li>If a scale-out is automatically triggered after the resource is scaled in, the scale-in is not executed. This prevents repeated scale-in and scale-out.</li>
-         * <li>If a scale-out is automatically triggered due to an increase in the number of sessions during the specified period of time, the resource is not scaled in and the countdown restarts.</li>
+         * <li>If scale-in would trigger automatic scale-out again, the scale-in is not performed to avoid repeated scale-in and scale-out operations.</li>
+         * <li>If automatic scale-out is triggered by an increase in sessions during this period, the resource is not scaled in as originally planned, and the countdown restarts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,7 +271,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public Integer scalingDownAfterIdleMinutes;
 
         /**
-         * <p>The number of resources that are created each time resources are scaled out. Valid values: 1 to 10. This parameter is required only if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>.</p>
+         * <p>The number of resources created per scale-out operation. Valid values: 1 to 10. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -282,7 +280,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public Integer scalingStep;
 
         /**
-         * <p>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage is calculated by using the following formula: <code>Session usage = Number of current sessions/(Total number of resources × Number of concurrent sessions) × 100%</code>. This parameter is required only if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>. Valid values: 0 to 100. Default value: 85.</p>
+         * <p>The upper threshold of session usage (%). Automatic scale-out is triggered when the session usage exceeds this threshold. The session usage is calculated by using the following formula: <code>Session usage = Current sessions ÷ (Total resources × Concurrent sessions per resource) × 100%</code>. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code>. Valid values: 0 to 100. Default value: 85.</p>
          * 
          * <strong>example:</strong>
          * <p>85</p>
@@ -291,7 +289,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public String scalingUsageThreshold;
 
         /**
-         * <p>The expiration date of the scaling policy. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be from 7 days to 1 year. This parameter is required only if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+         * <p>The date when the policy expires. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be between 7 days and 1 year, inclusive. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-19</p>
@@ -300,7 +298,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public String strategyDisableDate;
 
         /**
-         * <p>The effective date of the scaling policy. Format: yyyy-MM-dd. The date must be the same as or later than the current date. This parameter is required only if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+         * <p>The date when the policy takes effect. Format: yyyy-MM-dd. The date must be equal to or later than the current date. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-05</p>
@@ -313,15 +311,9 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><code>NODE_FIXED</code>: no scaling. This value is applicable to pay-as-you-go resources and subscription resources.</li>
-         * <li><code>NODE_SCALING_BY_USAGE</code>: auto scaling. This value is applicable to pay-as-you-go resources and subscription resources.</li>
-         * <li><code>NODE_SCALING_BY_SCHEDULE</code>: scheduled scaling. This value is applicable only to pay-as-you-go resources.</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>NODE_FIXED: no scaling</li>
-         * <li>NODE_SCALING_BY_SCHEDULE: scheduled scaling</li>
-         * <li>NODE_SCALING_BY_USAGE: auto scaling</li>
+         * <li><code>NODE_FIXED</code> (fixed quantity): Applicable to subscription and pay-as-you-go resources.</li>
+         * <li><code>NODE_SCALING_BY_USAGE</code> (automatic scaling): Applicable to subscription and pay-as-you-go resources.</li>
+         * <li><code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling): Applicable only to pay-as-you-go resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -331,7 +323,7 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public String strategyType;
 
         /**
-         * <p>Specifies whether to enable the warmup policy for resources. This parameter is required only if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+         * <p>Specifies whether to enable the resource prefetch policy. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

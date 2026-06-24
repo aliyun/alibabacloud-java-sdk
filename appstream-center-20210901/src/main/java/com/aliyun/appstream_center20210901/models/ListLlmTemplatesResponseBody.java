@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListLlmTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListLlmTemplatesResponseBodyData> data;
 
     /**
+     * <p>The page number of the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,8 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
 
     public static class ListLlmTemplatesResponseBodyData extends TeaModel {
         /**
+         * <p>The model configuration JSON object.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;id&quot;: &quot;qwen3.6-plus&quot;,
@@ -104,10 +117,18 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>千问Plus系列模型</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether this is the default model in the associated model group.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -115,6 +136,8 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public Boolean isDefaultModel;
 
         /**
+         * <p>The model code.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.6-plus</p>
          */
@@ -122,6 +145,8 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String llmCode;
 
         /**
+         * <p>The model template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>llmt-xxxx</p>
          */
@@ -129,6 +154,8 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String llmTemplateId;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Qwen3.6-Plus</p>
          */
@@ -136,6 +163,8 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the model provider template.</p>
+         * 
          * <strong>example:</strong>
          * <p>mpt-xxxx</p>
          */

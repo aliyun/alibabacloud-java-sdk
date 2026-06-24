@@ -14,7 +14,7 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -23,7 +23,7 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The ID of the application instance.</p>
+     * <p>The application instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ai-7ybdeiyoeh5e****</p>
@@ -32,7 +32,7 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     public String appInstanceId;
 
     /**
-     * <p>The ID of the application version.</p>
+     * <p>The application version ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1</p>
@@ -41,7 +41,7 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     public String appVersion;
 
     /**
-     * <p>The authorization code. This authorization code is valid for 3 minutes and can be used only once, regardless of whether the authentication succeeds. If multiple authentication codes are generated for a user, only the latest authentication code takes effect.</p>
+     * <p>The authorization code. The authorization code is valid for 3 minutes and can be used only once regardless of whether the verification succeeds or fails. If multiple authorization codes are generated for a user, only the last generated code is valid.</p>
      * 
      * <strong>example:</strong>
      * <p>e4e169bea1cc48e8afac53**********</p>

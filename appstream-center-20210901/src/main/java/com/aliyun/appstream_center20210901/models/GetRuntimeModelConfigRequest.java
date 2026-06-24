@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRuntimeModelConfigRequest extends TeaModel {
     /**
+     * <p>The Agent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,7 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
     public String agentPlatform;
 
     /**
+     * <p>The Agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
     public String agentProvider;
 
     /**
+     * <p>Specifies whether to include risk information.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,10 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
     public Boolean includeRiskInfo;
 
     /**
+     * <p>The Agent runtime ID. The ID mappings are as follows:</p>
+     * <p>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</p>
+     * <p>OpenClaw: Cloud computer ID, in the format of ecd-xxxx.</p>
+     * <p>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +46,7 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
     public String runtimeId;
 
     /**
+     * <p>The Agent runtime type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

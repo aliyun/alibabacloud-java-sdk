@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The image ID of the app. You can obtain the ID from the Images page in the App Streaming console.</p>
+     * <p>The application image ID. You can obtain this value from the Image Management page in the WUYING Cloud Application console.</p>
      * 
      * <strong>example:</strong>
      * <p>img-8z4nztpaqvay4****</p>
@@ -14,7 +14,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String appCenterImageId;
 
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -23,18 +23,16 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The name of the delivery groups to query. Fuzzy match is used for queries. For example, if you set this parameter to <code>Office App</code>, all delivery groups whose names contain <code>Office App</code> are queried, such as <code>My Office Apps</code> and <code>Office App A</code>.</p>
+     * <p>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <code>Office App</code>, all delivery groups whose names contain <code>Office App</code> are returned, such as <code>My Office App</code> and <code>Office App A</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>办公应用</p>
      */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
     /**
-     * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cn-shanghai: China (Shanghai)</li>
-     * <li>cn-hangzhou: China (Hangzhou)</li>
-     * </ul>
+     * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -50,7 +48,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public java.util.List<String> excludedUserGroupIds;
 
     /**
-     * <p>The ID of the resource specification that you purchase. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain the ID.</p>
+     * <p>The specification type ID of the purchased resources. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</p>
      * 
      * <strong>example:</strong>
      * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -59,6 +57,8 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String nodeInstanceType;
 
     /**
+     * <p>The office network ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hongkong+dir-643067****</p>
      */
@@ -66,7 +66,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the query results to display.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,7 +75,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The value cannot be greater than <code>100</code>.</p>
+     * <p>The number of query results per page. Maximum value: <code>100</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -85,10 +85,6 @@ public class ListAppInstanceGroupRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +94,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -108,12 +104,14 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status of the delivery groups.</p>
+     * <p>The list of delivery group statuses.</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
 
     /**
+     * <p>The tags.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -246,9 +244,21 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class ListAppInstanceGroupRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>design</p>
+         */
         @NameInMap("Value")
         public String value;
 

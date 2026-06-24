@@ -14,7 +14,7 @@ public class PageListAppInstanceGroupUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The users.</p>
+     * <p>The queried users.</p>
      */
     @NameInMap("Users")
     public java.util.List<String> users;

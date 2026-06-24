@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateModelProviderTemplateResponseBody extends TeaModel {
+    /**
+     * <p>Returned result object.</p>
+     */
     @NameInMap("Data")
     public CreateModelProviderTemplateResponseBodyData data;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class CreateModelProviderTemplateResponseBody extends TeaModel {
 
     public static class CreateModelProviderTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>Model provider template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mpt-xxxx</p>
          */

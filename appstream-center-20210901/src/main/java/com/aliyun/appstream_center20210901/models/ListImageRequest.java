@@ -5,17 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListImageRequest extends TeaModel {
     /**
-     * <p>The regions that are supported. The EDS images are centralized. Use this parameter to query the regions where the image is deployed.</p>
+     * <p>The list of supported regions.
+     * WUYING images are centralized. Use this parameter to query the regions where the image is deployed.</p>
      */
     @NameInMap("BizRegionIdList")
     public java.util.List<String> bizRegionIdList;
 
     /**
-     * <p>The service type. This parameter is not available publicly.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>1 (default)</li>
-     * </ul>
+     * <p>The business type. This parameter is not publicly available.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +21,7 @@ public class ListImageRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The list of all service types. It is not available publicly.</p>
+     * <p>The list of all business types. This parameter is not publicly available.</p>
      */
     @NameInMap("BizTypeList")
     public java.util.List<Integer> bizTypeList;
@@ -33,13 +30,13 @@ public class ListImageRequest extends TeaModel {
     public String distro;
 
     /**
-     * <p>The features supported by the image.</p>
+     * <p>The list of features supported by the image.</p>
      */
     @NameInMap("FeatureList")
     public java.util.List<String> featureList;
 
     /**
-     * <p>The image version.</p>
+     * <p>The image version information.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0.3-xxxx</p>
@@ -66,14 +63,7 @@ public class ListImageRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The type of the images.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>User: a custom image.</li>
-     * <li>Shared: a shared image.</li>
-     * <li>System: a system image.</li>
-     * <li>Community: a community image.</li>
-     * </ul>
+     * <p>The image type.</p>
      * 
      * <strong>example:</strong>
      * <p>User</p>
@@ -83,13 +73,6 @@ public class ListImageRequest extends TeaModel {
 
     /**
      * <p>The language.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>en-US: English.</li>
-     * <li>zh-HK: Chinese, Traditional (Hong Kong, China).</li>
-     * <li>zh-CN: Simplified Chinese.</li>
-     * <li>ja-JP: Japanese.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -98,14 +81,7 @@ public class ListImageRequest extends TeaModel {
     public String languageType;
 
     /**
-     * <p>The OS type of the image.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Linux</li>
-     * <li>Unknown</li>
-     * <li>Windows</li>
-     * <li>Android</li>
-     * </ul>
+     * <p>The operating system type of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -114,12 +90,7 @@ public class ListImageRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The image encapsulation type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Ecs_Container: ECS and Docker image</li>
-     * <li>Ecs: ECS image</li>
-     * </ul>
+     * <p>The image package type.</p>
      * 
      * <strong>example:</strong>
      * <p>Ecs</p>
@@ -128,7 +99,7 @@ public class ListImageRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -137,7 +108,7 @@ public class ListImageRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries per page for paging queries. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -146,17 +117,7 @@ public class ListImageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the operating system platform.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Ubuntu</li>
-     * <li>Debian</li>
-     * <li>Windows Server 2022</li>
-     * <li>Windows Server 2019</li>
-     * <li>Windows Server 2016</li>
-     * <li>Windows 11</li>
-     * <li>Windows 10</li>
-     * </ul>
+     * <p>The operating system platform name.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows Server 2019</p>
@@ -172,12 +133,6 @@ public class ListImageRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CloudDesktop: Elastic Desktop Service</li>
-     * <li>CloudApp: App Streaming</li>
-     * <li>WuyingServer: Workstation</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CloudApp</p>
@@ -186,18 +141,13 @@ public class ListImageRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The list of products that are supported when the image supports multiple products.</p>
+     * <p>The list of products supported when the image supports multiple products.</p>
      */
     @NameInMap("ProductTypeList")
     public java.util.List<String> productTypeList;
 
     /**
      * <p>The protocol type of the image.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>HDX: the High-definition Experience (HDX) protocol</li>
-     * <li>ASP: the Alibaba Cloud-developed ASP protocol</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ASP</p>
@@ -206,7 +156,7 @@ public class ListImageRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>Find images with certain fixed specifications.</p>
+     * <p>Queries images of specific defined specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.enterprise_office.2c4g</p>
@@ -215,14 +165,7 @@ public class ListImageRequest extends TeaModel {
     public String resourceInstanceType;
 
     /**
-     * <p>The status of the image. You can query images in the specified status. By default, all images in the Not Deleted state are queried.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>AVAILABLE: The image is available.</li>
-     * <li>INIT: The image is being initialized.</li>
-     * <li>CREATE_FAILED: The image failed to be created.</li>
-     * <li>CREATING: The image is being created.</li>
-     * </ul>
+     * <p>The image status. Specifies the status of images to query. By default, all images that are not deleted are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>INIT</p>
@@ -231,7 +174,7 @@ public class ListImageRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags to query.</p>
+     * <p>The tags for query.</p>
      */
     @NameInMap("TagList")
     public java.util.List<ListImageRequestTagList> tagList;
@@ -419,7 +362,7 @@ public class ListImageRequest extends TeaModel {
 
     public static class ListImageRequestTagList extends TeaModel {
         /**
-         * <p>The key of the custom tag.</p>
+         * <p>The custom tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -428,7 +371,7 @@ public class ListImageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the custom tag.</p>
+         * <p>The custom tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

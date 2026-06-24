@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group. You can call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the ID.</p>
+     * <p>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UnbindRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The session ID. You can call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the ID.</p>
+     * <p>The session ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ai-d297eyf83g5ni****</p>
@@ -24,7 +24,7 @@ public class UnbindRequest extends TeaModel {
     public String appInstanceId;
 
     /**
-     * <p>The ID of the persistent session. You can call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the ID.</p>
+     * <p>The persistent session ID. You can call the <a href="https://help.aliyun.com/document_detail/609336.html">GetConnectionTicket</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>p-0bxls9m3cl7s****</p>
@@ -44,10 +44,6 @@ public class UnbindRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

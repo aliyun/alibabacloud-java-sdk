@@ -16,10 +16,6 @@ public class ModifyAppPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Enumerated values:</p>
-     * <ul>
-     * <li>CloudApp: RDS Cloud App</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +25,7 @@ public class ModifyAppPolicyShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>Displays the policy.</p>
+     * <p>The display policy.</p>
      */
     @NameInMap("VideoPolicy")
     public String videoPolicyShrink;

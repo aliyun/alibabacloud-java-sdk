@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagCloudResourcesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the next query is required.</p>
+     * <p>The pagination token that indicates whether more results are available for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</p>
@@ -23,13 +23,13 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tags added to the cloud resources.</p>
+     * <p>The list of tags bound to the resources.</p>
      */
     @NameInMap("ResourceTags")
     public java.util.List<ListTagCloudResourcesResponseBodyResourceTags> resourceTags;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -86,11 +86,6 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The tag type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Custom: custom tag.</li>
-         * <li>System: system tag.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -149,14 +144,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the cloud resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AppId: app ID.</li>
-         * <li>WyId: Alibaba Cloud Workspace user ID.</li>
-         * <li>AppInstanceGroupId: delivery group ID.</li>
-         * <li>AliUid: tenant ID.</li>
-         * </ul>
+         * <p>The cloud resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>AppInstanceGroupId</p>
@@ -165,7 +153,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTagCloudResourcesResponseBodyResourceTagsTags> tags;

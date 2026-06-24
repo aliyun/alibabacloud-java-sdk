@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     /**
-     * <p>The browser settings.</p>
+     * <p>The browser configuration.</p>
      */
     @NameInMap("BrowserConfig")
     public String browserConfigShrink;
 
     /**
-     * <p>The ID of the cloud browser to be modified.</p>
+     * <p>The ID of the cloud browser to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public Integer maxAmount;
 
     /**
-     * <p>The network configurations.</p>
+     * <p>The network configuration.</p>
      */
     @NameInMap("Network")
     public String networkShrink;
@@ -52,7 +52,7 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String storagePolicyShrink;
 
     /**
-     * <p>The timer.</p>
+     * <p>The timers.</p>
      */
     @NameInMap("Timers")
     public String timersShrink;

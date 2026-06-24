@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveRuntimeChannelRequest extends TeaModel {
     /**
+     * <p>The agent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,7 @@ public class RemoveRuntimeChannelRequest extends TeaModel {
     public String agentPlatform;
 
     /**
+     * <p>The agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class RemoveRuntimeChannelRequest extends TeaModel {
     public String agentProvider;
 
     /**
+     * <p>The channel code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,12 +34,14 @@ public class RemoveRuntimeChannelRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The list of agent runtime IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeIds")
     public java.util.List<String> runtimeIds;
 
     /**
+     * <p>The runtime type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

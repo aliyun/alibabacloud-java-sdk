@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageByInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("Data")
     public CreateImageByInstanceResponseBodyData data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>NULL</p>
@@ -38,7 +38,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
 
     public static class CreateImageByInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the RDS image.</p>
+         * <p>The WUYING image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-07hnjj5fp****</p>
@@ -102,7 +102,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The ID of the image creation task.</p>
+         * <p>The task ID for creating the image.</p>
          * 
          * <strong>example:</strong>
          * <p>tid-0abxi0lbih******</p>
@@ -111,7 +111,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The version of the image.</p>
+         * <p>The image version.</p>
          * 
          * <strong>example:</strong>
          * <p>iv-0abxi0lbi*****</p>

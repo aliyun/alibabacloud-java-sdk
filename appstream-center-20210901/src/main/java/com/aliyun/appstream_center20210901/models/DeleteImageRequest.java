@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImageRequest extends TeaModel {
     /**
-     * <p>The ID of the RDS image.</p>
+     * <p>The AppStream image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>img-bp13mu****</p>

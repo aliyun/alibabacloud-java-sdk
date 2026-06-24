@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public BatchCreateLlmTemplatesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
 
     public static class BatchCreateLlmTemplatesResponseBodyDataSkippedItems extends TeaModel {
         /**
+         * <p>The model code that is skipped.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.5-plus</p>
          */
@@ -44,6 +51,8 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
         public String llmCode;
 
         /**
+         * <p>The reason why the model is skipped.</p>
+         * 
          * <strong>example:</strong>
          * <p>LLM template already exists with same providerTemplateId and llmCode.</p>
          */
@@ -74,13 +83,21 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
     }
 
     public static class BatchCreateLlmTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of IDs of the model templates that are created.</p>
+         */
         @NameInMap("LlmTemplateIds")
         public java.util.List<String> llmTemplateIds;
 
+        /**
+         * <p>The list of skipped model configuration items.</p>
+         */
         @NameInMap("SkippedItems")
         public java.util.List<BatchCreateLlmTemplatesResponseBodyDataSkippedItems> skippedItems;
 
         /**
+         * <p>The number of model templates that are created.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -88,6 +105,8 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>The total number of requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that can be returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,13 +14,13 @@ public class ListNodesResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The resource nodes.</p>
+     * <p>The list of resource nodes.</p>
      */
     @NameInMap("NodeModels")
     public java.util.List<ListNodesResponseBodyNodeModels> nodeModels;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the currently returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,15 +93,10 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyNodeModels extends TeaModel {
         /**
-         * <p>The billing method of the resource node.</p>
+         * <p>The billing type of the resource node.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the resource node belongs is set to Node.</p>
+         * <p>This parameter is returned only when the billing mode of the delivery group is per-resource billing (ChargeResourceMode=Node).</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PostPaid: pay-as-you-go</li>
-         * <li>Prepaid: subscription</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -110,9 +105,9 @@ public class ListNodesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The ID of the resource node.</p>
+         * <p>The resource node ID.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the resource node belongs is set to Node.</p>
+         * <p>This parameter is returned only when the billing mode of the delivery group is per-resource billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

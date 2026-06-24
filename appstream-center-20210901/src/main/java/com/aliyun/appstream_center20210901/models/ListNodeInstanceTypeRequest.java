@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodeInstanceTypeRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the resource resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cn-shanghai: China (Shanghai)</li>
-     * <li>cn-hangzhou: China (Hangzhou)</li>
-     * </ul>
+     * <p>The region ID of the resource. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -18,12 +13,30 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>The number of CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Cpu")
     public Float cpu;
 
+    /**
+     * <p>The number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Gpu")
     public Float gpu;
 
+    /**
+     * <p>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud desktops. Unit: MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("GpuMemory")
     public Integer gpuMemory;
 
@@ -31,12 +44,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public String instanceTypeForModify;
 
     /**
-     * <p>The language that you want to use.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>en-US: English (US)</li>
-     * <li>zh-CN: Simplified Chinese</li>
-     * </ul>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -44,11 +52,17 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The memory size. Unit: MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
     /**
-     * <p>The resource type that you want to query. If you do not configure this parameter, all resource types are returned.</p>
+     * <p>The resource specification type to query. If you leave this parameter empty, all specification types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -56,9 +70,21 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("NodeInstanceType")
     public String nodeInstanceType;
 
+    /**
+     * <p>The instance family.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>appstreaming.vgpu</p>
+     */
     @NameInMap("NodeInstanceTypeFamily")
     public String nodeInstanceTypeFamily;
 
+    /**
+     * <p>CPU/Memory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CPU</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
@@ -66,11 +92,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The operating system that is supported.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>Windows: the Windows operating system</li>
-     * </ul>
+     * <p>The supported operating system type.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -79,7 +101,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the query results to display.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +111,7 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <p>The number of query results per page. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,10 +122,6 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,6 +130,12 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>DESC/ASC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 

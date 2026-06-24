@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageByInstanceRequest extends TeaModel {
     /**
-     * <p>This parameter is applicable only to scenarios in which the instance type is Cloud Desktop. Specifies whether to clear private data of users. If this parameter is set to true, the created image clears data in directories other than Administrator and Public in the C:\Users directory.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: cleanup.</li>
-     * <li>false: does not clear.</li>
-     * </ul>
+     * <p>This parameter is applicable only when the instance type is cloud desktop. Specifies whether to clear user personal data. If you set this parameter to true, the created image clears data in all directories under C:\Users except the Administrator and Public directories.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -28,7 +23,7 @@ public class CreateImageByInstanceRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The description of the image.</p>
+     * <p>The image description.</p>
      * 
      * <strong>example:</strong>
      * <p>my test image v1.0</p>
@@ -37,12 +32,7 @@ public class CreateImageByInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of disk data contained in the image. By default, the system disk and data disk of the instance are included.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>SYSTEM: only system disk.</li>
-     * <li>ALL: system disk + data disk</li>
-     * </ul>
+     * <p>The type of disk data included in the image. By default, the image includes both the system cloud disk and data cloud disk of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -51,7 +41,7 @@ public class CreateImageByInstanceRequest extends TeaModel {
     public String diskType;
 
     /**
-     * <p>The name of the image.</p>
+     * <p>The image name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -60,7 +50,7 @@ public class CreateImageByInstanceRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The ID of the RDS instance. The instance can be a CloudDesktop instance, a workstation instance. To ensure data consistency in the image, we recommend that you shut down the instance before you create an image.</p>
+     * <p>The WUYING instance ID. The instance can be a cloud desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before creating the image.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-0buj1s9gm******</p>
@@ -70,11 +60,6 @@ public class CreateImageByInstanceRequest extends TeaModel {
 
     /**
      * <p>The instance type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CloudDesktop: Cloud Desktop.</li>
-     * <li>WuyingServer: Workstation</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>WuyingServer</p>
@@ -92,7 +77,7 @@ public class CreateImageByInstanceRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The ID of the child instance. This parameter is not used in cloud computing scenarios. Workstation scenarios, you need to specify a persistent session ID to ensure that a specific instance is located.</p>
+     * <p>The sub-instance ID. This parameter is not applicable to cloud desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</p>
      * 
      * <strong>example:</strong>
      * <p>p-0cc7s3n1l*****</p>

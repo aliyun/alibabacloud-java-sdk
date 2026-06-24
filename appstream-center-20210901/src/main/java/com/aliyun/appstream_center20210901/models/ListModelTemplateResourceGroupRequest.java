@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelTemplateResourceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the model group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListModelTemplateResourceGroupRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
+     * <p>The page number. Pages start from page 1. Both 0 and 1 return the same result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,12 +24,17 @@ public class ListModelTemplateResourceGroupRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of resource group IDs.</p>
+     */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 

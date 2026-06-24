@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListModelProviderTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListModelProviderTemplatesResponseBodyData> data;
 
     /**
+     * <p>The page number of the current query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page in the query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -82,6 +93,8 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
 
     public static class ListModelProviderTemplatesResponseBodyData extends TeaModel {
         /**
+         * <p>The model provider configuration as a JSON object.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;api&quot;: &quot;openai-completions&quot;,
@@ -92,20 +105,36 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The description of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼服务商</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the WUYING secure gateway proxy is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableWuyingProxy")
         public Boolean enableWuyingProxy;
 
+        /**
+         * <p>The name of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The name of the model provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>bailian</p>
          */
@@ -113,6 +142,8 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         public String providerName;
 
         /**
+         * <p>The model provider template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mpt-xxxx</p>
          */
@@ -120,6 +151,8 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         public String providerTemplateId;
 
         /**
+         * <p>The model provider type.</p>
+         * 
          * <strong>example:</strong>
          * <p>WuyingCredit</p>
          */

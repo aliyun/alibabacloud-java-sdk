@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPersistentAppInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListPersistentAppInstancesRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The IDs of the persistent sessions.</p>
+     * <p>The list of persistent session IDs.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -24,7 +24,7 @@ public class ListPersistentAppInstancesRequest extends TeaModel {
     public java.util.List<String> appInstancePersistentIds;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the query results to display. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListPersistentAppInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The value cannot be greater than <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of query results per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,12 +43,6 @@ public class ListPersistentAppInstancesRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * <li>CloudBrowser: Cloud-based Browser</li>
-     * <li>AndroidCloud: Cloud Phone</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

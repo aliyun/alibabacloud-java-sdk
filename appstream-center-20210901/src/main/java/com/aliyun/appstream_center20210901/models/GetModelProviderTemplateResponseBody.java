@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetModelProviderTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public GetModelProviderTemplateResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
 
     public static class GetModelProviderTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>The JSON configuration object of the model provider template.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;api&quot;: &quot;openai-completions&quot;,
@@ -47,20 +54,36 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The description of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼服务商。</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the WUYING secure gateway proxy is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableWuyingProxy")
         public Boolean enableWuyingProxy;
 
+        /**
+         * <p>The name of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼。</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The name of the model provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>bailian</p>
          */
@@ -68,6 +91,8 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
         public String providerName;
 
         /**
+         * <p>The ID of the model provider template.</p>
+         * 
          * <strong>example:</strong>
          * <p>mpt-xxxx</p>
          */

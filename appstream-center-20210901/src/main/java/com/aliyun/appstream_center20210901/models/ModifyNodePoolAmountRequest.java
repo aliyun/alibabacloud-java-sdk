@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAmountRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The parameters related to the configuration change of the node pool.</p>
+     * <p>The node pool specification change parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodePool")
@@ -23,10 +23,6 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +62,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
 
     public static class ModifyNodePoolAmountRequestNodePool extends TeaModel {
         /**
-         * <p>The total number of subscription nodes after the change.</p>
+         * <p>The total number of subscription nodes after the upgrade.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,11 +72,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The change mode of subscription nodes.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>EXPAND_FROM_POST_PAID_EXPLICIT: changes from specified pay-as-you-go nodes</li>
-         * </ul>
+         * <p>The modification mode for subscription nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>EXPAND_FROM_POST_PAID_EXPLICIT</p>
@@ -89,7 +81,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
         public String prePaidNodeAmountModifyMode;
 
         /**
-         * <p>The nodes for which you want to change the billing method.</p>
+         * <p>The list of nodes whose billing type is to be changed.</p>
          */
         @NameInMap("PrePaidNodeAmountModifyNodeIds")
         public java.util.List<String> prePaidNodeAmountModifyNodeIds;

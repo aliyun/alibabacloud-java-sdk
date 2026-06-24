@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListModelTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned data objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListModelTemplatesResponseBodyData> data;
 
     /**
+     * <p>The page number of the current query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListModelTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page in the query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListModelTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class ListModelTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries in the query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -82,6 +93,8 @@ public class ListModelTemplatesResponseBody extends TeaModel {
 
     public static class ListModelTemplatesResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the Agent provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>OpenClaw</p>
          */
@@ -89,6 +102,8 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         public String agentProvider;
 
         /**
+         * <p>The model group configuration JSON object.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;defaults&quot;: {
@@ -101,10 +116,18 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The template group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试模型分组</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Specifies whether models have been configured in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -112,6 +135,8 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         public Boolean hasModel;
 
         /**
+         * <p>The model group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>
          */
@@ -119,6 +144,8 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         public String modelTemplateId;
 
         /**
+         * <p>The template group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-template-001</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetRuntimeModelConfigResponseBody extends TeaModel {
+    /**
+     * <p>The returned result object.</p>
+     */
     @NameInMap("Data")
     public GetRuntimeModelConfigResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -36,9 +41,15 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
     }
 
     public static class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListInferenceMetadata extends TeaModel {
+        /**
+         * <p>The list of request modalities, such as Text, Image, and Audio.</p>
+         */
         @NameInMap("RequestModality")
         public java.util.List<String> requestModality;
 
+        /**
+         * <p>The list of response modalities, such as Text, Image, and Audio.</p>
+         */
         @NameInMap("ResponseModality")
         public java.util.List<String> responseModality;
 
@@ -66,16 +77,30 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
     }
 
     public static class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList extends TeaModel {
+        /**
+         * <p>The model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。模型在Agentic coding、前端编程、Vibe coding等代码能力、多模态万物识别、OCR、物体定位等能力上显著增强。</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The list of model features, such as function-calling, web-search, and structured-outputs.</p>
+         */
         @NameInMap("Features")
         public java.util.List<String> features;
 
+        /**
+         * <p>The inference metadata, including request and response modalities.</p>
+         */
         @NameInMap("InferenceMetadata")
         public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListInferenceMetadata inferenceMetadata;
 
         /**
+         * <p>The model code.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.6-plus</p>
          */
@@ -83,6 +108,8 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String llmCode;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Qwen3.6-Plus</p>
          */
@@ -90,6 +117,8 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The publish time in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-04T06:25:17.000+00:00</p>
          */
@@ -97,6 +126,8 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String publishedTime;
 
         /**
+         * <p>The model risk type. This parameter is returned only when the request parameter IncludeRiskInfo is set to true.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -167,20 +198,33 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
     }
 
     public static class GetRuntimeModelConfigResponseBodyDataModelProviderList extends TeaModel {
+        /**
+         * <p>The list of model information.</p>
+         */
         @NameInMap("LlmInfoList")
         public java.util.List<GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList> llmInfoList;
 
         /**
+         * <p>The model provider template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mpt-xxxx</p>
          */
         @NameInMap("ModelProviderTemplateId")
         public String modelProviderTemplateId;
 
+        /**
+         * <p>The model provider template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>百炼</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The model provider name.</p>
+         * 
          * <strong>example:</strong>
          * <p>bailian</p>
          */
@@ -228,16 +272,23 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
 
     public static class GetRuntimeModelConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The default model (format: providerName/llmCode).</p>
+         * 
          * <strong>example:</strong>
          * <p>bailian/qwen3.6-plus</p>
          */
         @NameInMap("DefaultModel")
         public String defaultModel;
 
+        /**
+         * <p>The list of model providers.</p>
+         */
         @NameInMap("ModelProviderList")
         public java.util.List<GetRuntimeModelConfigResponseBodyDataModelProviderList> modelProviderList;
 
         /**
+         * <p>The configured model group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>
          */
@@ -245,15 +296,29 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String modelTemplateId;
 
         /**
+         * <p>The model group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-template-001</p>
          */
         @NameInMap("ModelTemplateName")
         public String modelTemplateName;
 
+        /**
+         * <p>The model template association type (returned only when an association exists).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Runtime</p>
+         */
         @NameInMap("ModelTemplateRefType")
         public String modelTemplateRefType;
 
+        /**
+         * <p>The resource group ID to which the runtime belongs. The value is null if the runtime is not associated with a resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

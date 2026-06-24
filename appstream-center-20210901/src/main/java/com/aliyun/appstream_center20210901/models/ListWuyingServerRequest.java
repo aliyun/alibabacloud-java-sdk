@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWuyingServerRequest extends TeaModel {
     /**
+     * <p>The list of statuses for joining a virtual node pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>Added</p>
      */
@@ -28,7 +30,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The billing method of the Internet access package.</p>
+     * <p>The billing type.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -46,7 +48,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The office network IDs.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-172301****</p>
@@ -64,7 +66,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -80,7 +82,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>Workstation specifications.</p>
+     * <p>The workstation instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.proworkstation_flagship_elite.32c64g.48g1x</p>
@@ -89,7 +91,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public String serverInstanceType;
 
     /**
-     * <p>The status of the workstation.</p>
+     * <p>The workstation status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -105,6 +107,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public java.util.List<String> users;
 
     /**
+     * <p>The virtual node pool ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vnp-bp1234567890abcde</p>
      */

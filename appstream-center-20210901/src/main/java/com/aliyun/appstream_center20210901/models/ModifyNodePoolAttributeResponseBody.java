@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAttributeResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameter.PoolId</p>
      */
@@ -12,6 +14,8 @@ public class ModifyNodePoolAttributeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>The parameter PoolId is invalid.</p>
      */
@@ -19,6 +23,8 @@ public class ModifyNodePoolAttributeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */

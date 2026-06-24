@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAmountShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyNodePoolAmountShrinkRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The parameters related to the configuration change of the node pool.</p>
+     * <p>The node pool specification change parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodePool")
@@ -23,10 +23,6 @@ public class ModifyNodePoolAmountShrinkRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

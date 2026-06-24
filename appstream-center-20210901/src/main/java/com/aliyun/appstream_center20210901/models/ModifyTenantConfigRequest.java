@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the resource expiration reminder feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to enable resource expiration reminders.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

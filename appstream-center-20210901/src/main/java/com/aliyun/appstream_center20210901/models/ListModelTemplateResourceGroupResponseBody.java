@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListModelTemplateResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListModelTemplateResourceGroupResponseBodyData> data;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListModelTemplateResourceGroupResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListModelTemplateResourceGroupResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class ListModelTemplateResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -82,6 +93,8 @@ public class ListModelTemplateResourceGroupResponseBody extends TeaModel {
 
     public static class ListModelTemplateResourceGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-xxxxx</p>
          */

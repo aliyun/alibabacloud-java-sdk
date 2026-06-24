@@ -16,11 +16,6 @@ public class RenewAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable automatic payment.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false: manual payment. This is the default value.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -29,7 +24,7 @@ public class RenewAppInstanceGroupShrinkRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The subscription duration of resources. This parameter must be configured together with <code>PeriodUnit</code>.</p>
+     * <p>The numeric part of the resource purchase duration. This parameter is used together with PeriodUnit to specify the complete purchase duration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,19 +34,19 @@ public class RenewAppInstanceGroupShrinkRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration. This parameter must be configured together with <code>Period</code>. The following items describe valid values for the combinations of <code>Period</code> and <code>PeriodUnit</code>:</p>
+     * <p>The unit part of the resource purchase duration. This parameter is used together with Period to specify the complete purchase duration. Valid combinations of Period and PeriodUnit:</p>
      * <ul>
-     * <li>1 Week</li>
-     * <li>1 Month</li>
-     * <li>2 Month</li>
-     * <li>3 Month</li>
-     * <li>6 Month</li>
-     * <li>1 Year</li>
-     * <li>2 Year</li>
-     * <li>3 Year</li>
+     * <li>1 Week (1 week)</li>
+     * <li>1 Month (1 month)</li>
+     * <li>2 Month (2 months)</li>
+     * <li>3 Month (3 months)</li>
+     * <li>6 Month (6 months)</li>
+     * <li>1 Year (1 year)</li>
+     * <li>2 Year (2 years)</li>
+     * <li>3 Year (3 years)</li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is case-insensitive. For example, <code>Week</code> is valid and <code>week</code> is invalid. If you specify a value combination other than the preceding combinations, such as <code>2 Week</code>, the operation can still be called. However, an error occurs when you place the order.</p>
+     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid. If the request parameters do not match the combinations listed above, such as <code>2 Week</code>, the call to this operation succeeds, but an error occurs during the order placement phase.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,10 +58,6 @@ public class RenewAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +67,7 @@ public class RenewAppInstanceGroupShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The promotion ID. You can call the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation to obtain the ID.</p>
+     * <p>The promotion ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>17440009****</p>

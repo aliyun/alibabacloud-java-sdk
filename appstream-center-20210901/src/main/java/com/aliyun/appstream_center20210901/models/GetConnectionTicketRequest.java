@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
     /**
+     * <p>The access type. If you do not specify this parameter, both types are displayed. Valid values:</p>
+     * <ul>
+     * <li>INTERNET: Internet access.</li>
+     * <li>VPC: Express Connect access.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>INTERNET</p>
      * 
@@ -17,7 +23,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p> This parameter is required for the first call to this operation and optional for subsequent calls to the operation.</p>
+     * <p>This parameter is required for the initial call and optional for subsequent calls.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,11 +33,11 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The delivery groups.</p>
+     * <p>The list of delivery groups.</p>
      * <blockquote>
      * <ul>
-     * <li>If you configure this parameter, the system assigns application instances only among the specified authorized delivery groups. </li>
-     * <li>This parameter is required if you configure <code>AppInstanceId</code> or <code>AppInstancePersistentId</code>.</li>
+     * <li>If you specify this parameter, application instances are allocated only from the specified authorized delivery groups.</li>
+     * <li>If you specify the <code>AppInstanceId</code> or <code>AppInstancePersistentId</code> parameter, this parameter is required.</li>
      * </ul>
      * </blockquote>
      */
@@ -39,11 +45,11 @@ public class GetConnectionTicketRequest extends TeaModel {
     public java.util.List<String> appInstanceGroupIdList;
 
     /**
-     * <p>The ID of the application instance.</p>
+     * <p>The application instance ID.</p>
      * <blockquote>
      * <ul>
-     * <li>If you configure this parameter, the system attempts to assign only the specified application instance.</li>
-     * <li>If you configure this parameter, you must also configure <code>AppInstanceGroupIdList</code> and the number of delivery groups specified by <code>AppInstanceGroupIdList</code> must be 1.</li>
+     * <li>If you specify this parameter, only the specified application instance is allocated.</li>
+     * <li>If you specify this parameter, you must also specify the <code>AppInstanceGroupIdList</code> parameter, and the number of delivery group IDs in <code>AppInstanceGroupIdList</code> must be 1.</li>
      * </ul>
      * </blockquote>
      * 
@@ -54,7 +60,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appInstanceId;
 
     /**
-     * <p>The ID of the persistent session.</p>
+     * <p>The persistent session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>p-0bxls9m3cl7s****</p>
@@ -66,7 +72,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appPolicyId;
 
     /**
-     * <p>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">Obtain parameters configured to install and start an application</a>.</p>
+     * <p>The application startup parameter. For information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation and startup parameters</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>/q /n</p>
@@ -75,7 +81,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appStartParam;
 
     /**
-     * <p>The application version. If you configure this parameter, only an application of the specified version is started. If you do not configure this parameter, an application of a random authorized version is started.</p>
+     * <p>The application version. If you specify this parameter, only the specified version of the application is opened. If you do not specify this parameter, any authorized version of the application is opened.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
@@ -86,7 +92,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> If you configure this parameter, the system assigns application instances only among the delivery groups that reside in the specified region.</p>
+     * <p>If you specify this parameter, application instances are allocated only from delivery groups in the specified region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +102,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The ID of the convenience account.</p>
+     * <p>The username.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,11 +119,6 @@ public class GetConnectionTicketRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * <li>AndroidCloud: Cloud Phone</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,7 +130,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The task ID.</p>
      * <blockquote>
-     * <p> This parameter is required for calls other than the first call to this operation. You can use this parameter to query the task status and connection credential.</p>
+     * <p>This request parameter is required for non-initial invokes. Use this parameter to check the task status and connection credentials.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

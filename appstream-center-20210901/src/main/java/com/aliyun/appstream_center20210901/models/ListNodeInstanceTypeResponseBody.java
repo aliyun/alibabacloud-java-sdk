@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNodeInstanceTypeResponseBody extends TeaModel {
     /**
-     * <p>The resource types.</p>
+     * <p>The list of resource specifications.</p>
      */
     @NameInMap("NodeInstanceTypeModels")
     public java.util.List<ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels> nodeInstanceTypeModels;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the query results currently displayed.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on each page.</p>
+     * <p>The number of query results per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -111,7 +111,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public String gpu;
 
         /**
-         * <p>The GPU size. Unit: MB.</p>
+         * <p>The GPU memory size. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -120,13 +120,24 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public Long gpuMemory;
 
         /**
-         * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
+         * <p>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</p>
          * <ul>
+         * <li>appstreaming.general.2c4g: 1</li>
          * <li>appstreaming.general.4c8g: 1 to 2</li>
          * <li>appstreaming.general.8c16g: 1 to 4</li>
          * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
          * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
-         * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
+         * <li>appstreaming.vgpu.14c93g.12g: 1 to 7</li>
+         * <li>appstreaming.vgpu.4c10g.2gt4: 1 to 2</li>
+         * <li>appstreaming.vgpu.4c16g.2ga10: 1 to 2</li>
+         * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
+         * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
+         * <li>appstreaming.vgpu.8c16g.4gt4: 1 to 4</li>
+         * <li>appstreaming.vgpu.8c32g.4ga10: 1 to 4</li>
+         * <li>appstreaming.vgpu.12c46g.11g28: 1 to 6</li>
+         * <li>appstreaming.vgpu.14c93g.12g: 1 to 7</li>
+         * <li>appstreaming.vgpu.16c32g.8g: 1 to 8</li>
+         * <li>appstreaming.vgpu.16c62g.8ga10: 1 to 8.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +156,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The ID of the resource type.</p>
+         * <p>The ID of the resource specification type.</p>
          * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -154,12 +165,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public String nodeInstanceType;
 
         /**
-         * <p>The resource type family.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>appstreaming.general: WUYING - General</li>
-         * <li>appstreaming.vgpu: WUYING - Graphics</li>
-         * </ul>
+         * <p>The resource specification family.</p>
          * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu</p>
@@ -168,10 +174,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         public String nodeInstanceTypeFamily;
 
         /**
-         * <p>The name of the resource type.</p>
+         * <p>The name of the resource specification.</p>
          * 
          * <strong>example:</strong>
-         * <p>WUYING - General - 4 vCPUs 8 GB Memory</p>
+         * <p>无影-通用型_4核8G</p>
          */
         @NameInMap("NodeTypeName")
         public String nodeTypeName;

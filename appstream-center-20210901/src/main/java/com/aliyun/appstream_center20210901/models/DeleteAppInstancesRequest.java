@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">listAppInstanceGroup</a> operation to obtain the ID.</p>
+     * <p>The delivery group ID. You can call <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteAppInstancesRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The IDs of application instances.</p>
+     * <p>The list of application instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>if can be null:</strong>
@@ -26,10 +26,6 @@ public class DeleteAppInstancesRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

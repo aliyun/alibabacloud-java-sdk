@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetRuntimeChannelResponseBody extends TeaModel {
+    /**
+     * <p>The returned object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetRuntimeChannelResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -15,6 +20,8 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -51,13 +58,21 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
     }
 
     public static class GetRuntimeChannelResponseBodyData extends TeaModel {
+        /**
+         * <p>The channel avatar URL.</p>
+         */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        /**
+         * <p>The channel type. Valid values: System: a system-supported channel. Custom: a custom channel.</p>
+         */
         @NameInMap("ChannelType")
         public String channelType;
 
         /**
+         * <p>The channel code.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtalk-connector</p>
          */
@@ -65,6 +80,9 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The channel configuration JSON string.</p>
+         * <p>Currently, only the simple configuration mode is supported. You must pass in AppKey and AppSecret.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;appKey&quot;: &quot;abc&quot;,
@@ -74,16 +92,27 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The configuration mode. Valid values: Simple: simple configuration mode. Custom: custom configuration mode.</p>
+         */
         @NameInMap("ConfigMode")
         public String configMode;
 
+        /**
+         * <p>The QR code configuration notification page URL. This parameter is returned only for the ENTERPRISE or ENTERPRISE_JVS platform.</p>
+         */
         @NameInMap("QrCodeNotifyUrl")
         public String qrCodeNotifyUrl;
 
+        /**
+         * <p>The QR code configuration status. This parameter is returned only when the status is not in a final state.</p>
+         */
         @NameInMap("QrCodeStatus")
         public String qrCodeStatus;
 
         /**
+         * <p>The risk type. This parameter is returned only when <strong>includeRiskInfo=true</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -91,6 +120,8 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         public String riskType;
 
         /**
+         * <p>The configuration status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Configured</p>
          */

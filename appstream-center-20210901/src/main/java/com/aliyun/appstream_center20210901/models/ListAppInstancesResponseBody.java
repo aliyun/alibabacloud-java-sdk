@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesResponseBody extends TeaModel {
     /**
-     * <p>The app instances.</p>
+     * <p>The list of queried application instances.</p>
      */
     @NameInMap("AppInstanceModels")
     public java.util.List<ListAppInstancesResponseBodyAppInstanceModels> appInstanceModels;
 
     /**
-     * <p>The page number of the returned page. We recommend that you configure this parameter.</p>
+     * <p>The page number of the query results to display. Specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. The value cannot be greater than <code>100</code>. We recommend that you configure this parameter.</p>
+     * <p>The number of query results per page. Maximum value: <code>100</code>. Specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>18</p>
@@ -93,7 +93,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     public static class ListAppInstancesResponseBodyAppInstanceModelsBindInfo extends TeaModel {
         /**
-         * <p>The ID of the end user that is bound to the application instance.</p>
+         * <p>The ID of the end user bound to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>app.test</p>
@@ -102,7 +102,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The use duration of the application instance. Unit: seconds.</p>
+         * <p>The usage duration of the instance. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -135,7 +135,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     public static class ListAppInstancesResponseBodyAppInstanceModels extends TeaModel {
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-dk8p95irqfst9****</p>
@@ -144,7 +144,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The ID of the application instance.</p>
+         * <p>The application instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-8dl7dzchklmka****</p>
@@ -153,20 +153,20 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String appInstanceId;
 
         /**
-         * <p>The information about the binding between the application instance and end users.</p>
+         * <p>The binding information between the instance and the user.</p>
          */
         @NameInMap("BindInfo")
         public ListAppInstancesResponseBodyAppInstanceModelsBindInfo bindInfo;
 
         /**
-         * <p>The billing method of the app instance. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
          * <li><strong>PrePaid</strong>: subscription.</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</p>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.<blockquote>
+         * <p>This parameter is returned only when the billing mode of the delivery group to which the instance belongs is set to resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -175,7 +175,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the application instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-07T20:29:19.000+08:00</p>
@@ -184,7 +184,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the application instance was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-07T20:29:19.000+08:00</p>
@@ -193,7 +193,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The public IP address associated with the primary NIC. This value is returned only if <code>StrategyType</code> is set to <code>Mixed</code>.</p>
+         * <p>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<code>StrategyType</code>) of the delivery group is set to mixed mode pattern (<code>Mixed</code>). Otherwise, this value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>10.13.13.211</p>
@@ -208,9 +208,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String networkInterfaceIp;
 
         /**
-         * <p>The ID of the node on which the app instance runs.</p>
+         * <p>The ID of the node on which the instance runs.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</p>
+         * <p>This parameter is returned only when the billing mode of the delivery group to which the instance belongs is set to resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,12 +220,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The session status. This parameter is returned only if the application instance is in the <code>RUNNING</code> state.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>disconnect: disconnected</li>
-         * <li>connect: connected</li>
-         * </ul>
+         * <p>The session connection status. This value is returned only when the instance status is running (<code>RUNNING</code>). Otherwise, this value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>connect</p>
@@ -234,7 +229,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String sessionStatus;
 
         /**
-         * <p>The status of the application instance.</p>
+         * <p>The application instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>BOUND</p>

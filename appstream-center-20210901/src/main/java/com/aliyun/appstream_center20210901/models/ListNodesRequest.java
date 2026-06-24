@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListNodesRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number of the query results to display, starting from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 200.</p>
+     * <p>The number of query results per page. Valid values: 1 to 200.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,10 +36,6 @@ public class ListNodesRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

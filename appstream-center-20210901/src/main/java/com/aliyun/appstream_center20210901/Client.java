@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shanghai", "appstream-center.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "appstream-center.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the execution time of an over-the-air (OTA) update task.</p>
+     * <p>Sets the execution time for an over-the-air update.</p>
      * 
      * @param request ApproveOtaTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -76,7 +80,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the execution time of an over-the-air (OTA) update task.</p>
+     * <p>Sets the execution time for an over-the-air update.</p>
      * 
      * @param request ApproveOtaTaskRequest
      * @return ApproveOtaTaskResponse
@@ -135,8 +139,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After changing the assigned users, the selected users will receive corresponding notification emails. Generally, it takes about 2 minutes for the changes to take effect on the client.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</p>
+     * <p>Add or remove assigned users for a delivery group. Only users added as assigned users can access cloud applications.</p>
      * 
      * @param tmpReq AuthorizeInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -210,8 +219,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After changing the assigned users, the selected users will receive corresponding notification emails. Generally, it takes about 2 minutes for the changes to take effect on the client.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</p>
+     * <p>Add or remove assigned users for a delivery group. Only users added as assigned users can access cloud applications.</p>
      * 
      * @param request AuthorizeInstanceGroupRequest
      * @return AuthorizeInstanceGroupResponse
@@ -222,8 +236,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create model templates in batches under a model provider template in the Wuying Agent Management Center. You can add multiple models at a time and specify one of them as the default model. Existing models are automatically skipped and are not created again.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量创建LLM模板</p>
+     * <p>Creates LLM templates in batches.</p>
      * 
      * @param request BatchCreateLlmTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -262,8 +280,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create model templates in batches under a model provider template in the Wuying Agent Management Center. You can add multiple models at a time and specify one of them as the default model. Existing models are automatically skipped and are not created again.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量创建LLM模板</p>
+     * <p>Creates LLM templates in batches.</p>
      * 
      * @param request BatchCreateLlmTemplatesRequest
      * @return BatchCreateLlmTemplatesResponse
@@ -274,8 +296,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can assign a model group to resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
+     * When both an agent runtime and its resource group have model groups configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the agent runtime setting.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>配置资源组模型模板</p>
+     * <p>Configures the model group for a resource group.</p>
      * 
      * @param request ConfigResourceGroupModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -310,8 +337,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can assign a model group to resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
+     * When both an agent runtime and its resource group have model groups configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the agent runtime setting.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>配置资源组模型模板</p>
+     * <p>Configures the model group for a resource group.</p>
      * 
      * @param request ConfigResourceGroupModelTemplateRequest
      * @return ConfigResourceGroupModelTemplateResponse
@@ -322,8 +354,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can configure third-party channels for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended Agent communication methods beyond the AgentIM channel.
+     * Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>配置Runtime通道</p>
+     * <p>Configures a third-party channel for Agent runtime.</p>
      * 
      * @param request ConfigRuntimeChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -382,8 +418,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can configure third-party channels for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended Agent communication methods beyond the AgentIM channel.
+     * Before using this operation, make sure you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>配置Runtime通道</p>
+     * <p>Configures a third-party channel for Agent runtime.</p>
      * 
      * @param request ConfigRuntimeChannelRequest
      * @return ConfigRuntimeChannelResponse
@@ -394,8 +434,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
+     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通过RuntimeIds配置模型模板</p>
+     * <p>Configures model groups for Agent runtime resources.</p>
      * 
      * @param request ConfigRuntimeModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -434,8 +478,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
+     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通过RuntimeIds配置模型模板</p>
+     * <p>Configures model groups for Agent runtime resources.</p>
      * 
      * @param request ConfigRuntimeModelTemplateRequest
      * @return ConfigRuntimeModelTemplateResponse
@@ -447,8 +495,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
-     * A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</p>
+     * <p>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Cloud Application before you call this operation.
+     * A delivery group is a logical grouping for delivering cloud applications to end users. It includes the underlying cloud application resources, images that contain cloud applications, resource management policies, and user assignment settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a delivery group.</p>
@@ -627,8 +675,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
-     * A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</p>
+     * <p>Make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">billing and pricing</a> of WUYING Cloud Application before you call this operation.
+     * A delivery group is a logical grouping for delivering cloud applications to end users. It includes the underlying cloud application resources, images that contain cloud applications, resource management policies, and user assignment settings. For details, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish a delivery group</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a delivery group.</p>
@@ -643,7 +691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom image from a deployed instance. This allows you to quickly create more instances with the same configurations and avoid repeatedly configuring the instance environment each time you create the instance.</p>
+     * <p>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</p>
      * 
      * @param request CreateImageByInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -713,7 +761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom image from a deployed instance. This allows you to quickly create more instances with the same configurations and avoid repeatedly configuring the instance environment each time you create the instance.</p>
+     * <p>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</p>
      * 
      * @param request CreateImageByInstanceRequest
      * @return CreateImageByInstanceResponse
@@ -725,7 +773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a new image by debugging the delivery group.</p>
+     * <p>Creates a new image from a debug delivery group.</p>
      * 
      * @param request CreateImageFromAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -765,7 +813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a new image by debugging the delivery group.</p>
+     * <p>Creates a new image from a debug delivery group.</p>
      * 
      * @param request CreateImageFromAppInstanceGroupRequest
      * @return CreateImageFromAppInstanceGroupResponse
@@ -776,8 +824,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create a model provider template under a model template in the Wuying Agent Management Center. This template is used to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that Agents can call. After creation, the model provider template is automatically associated with the specified model template.
+     * Make sure you are fully familiar with the operations and usage of the Wuying Agent Management Center before calling this API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建模型提供商模板</p>
+     * <p>Create Model Provider Template</p>
      * 
      * @param request CreateModelProviderTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -844,8 +896,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create a model provider template under a model template in the Wuying Agent Management Center. This template is used to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot) that Agents can call. After creation, the model provider template is automatically associated with the specified model template.
+     * Make sure you are fully familiar with the operations and usage of the Wuying Agent Management Center before calling this API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建模型提供商模板</p>
+     * <p>Create Model Provider Template</p>
      * 
      * @param request CreateModelProviderTemplateRequest
      * @return CreateModelProviderTemplateResponse
@@ -856,8 +912,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+     * Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建模型模板</p>
+     * <p>Creates a model creation template.</p>
      * 
      * @param request CreateModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -904,8 +964,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create a model group in the WUYING Agent Management Center to manage the model providers and model scope that an Agent can invoke. After creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
+     * Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建模型模板</p>
+     * <p>Creates a model creation template.</p>
      * 
      * @param request CreateModelTemplateRequest
      * @return CreateModelTemplateResponse
@@ -918,16 +982,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Project is equivalent to the Resource Configuration module of the Cloud Flow console</li>
-     * <li>If there are multiple versions behind the input parameter ContentId:
-     * **
-     * <strong>Note</strong> The default version is used.
-     * Bind simultaneously</li>
-     * <li>You can call the current interface only if the default version of Content is available.</li>
+     * <li>A project corresponds to the resource configuration module in the CloudFlow console.</li>
+     * <li>If the ContentId specified in the request parameters has multiple versions, this API operation <notice>uses the default version</notice> for binding.</li>
+     * <li>This operation succeeds only when the default version of the content is in an available state.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Create one or more workstations.</p>
+     * <p>Creates one or more workstations.</p>
      * 
      * @param request CreateWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1069,16 +1130,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Project is equivalent to the Resource Configuration module of the Cloud Flow console</li>
-     * <li>If there are multiple versions behind the input parameter ContentId:
-     * **
-     * <strong>Note</strong> The default version is used.
-     * Bind simultaneously</li>
-     * <li>You can call the current interface only if the default version of Content is available.</li>
+     * <li>A project corresponds to the resource configuration module in the CloudFlow console.</li>
+     * <li>If the ContentId specified in the request parameters has multiple versions, this API operation <notice>uses the default version</notice> for binding.</li>
+     * <li>This operation succeeds only when the default version of the content is in an available state.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Create one or more workstations.</p>
+     * <p>Creates one or more workstations.</p>
      * 
      * @param request CreateWuyingServerRequest
      * @return CreateWuyingServerResponse
@@ -1091,11 +1149,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot call this operation to delete a subscription delivery group.</p>
+     * <p>This operation does not support deleting delivery groups that use subscription resources.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a delivery group that uses the By Resource - Pay-as-you-go billing method.</p>
+     * <p>Deletes a pay-as-you-go resource-based delivery group.</p>
      * 
      * @param request DeleteAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1132,11 +1190,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot call this operation to delete a subscription delivery group.</p>
+     * <p>This operation does not support deleting delivery groups that use subscription resources.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a delivery group that uses the By Resource - Pay-as-you-go billing method.</p>
+     * <p>Deletes a pay-as-you-go resource-based delivery group.</p>
      * 
      * @param request DeleteAppInstanceGroupRequest
      * @return DeleteAppInstanceGroupResponse
@@ -1148,10 +1206,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only application instances that are in the Initializing or Idle state can be deleted. The operation can be called only by specific customers.</p>
+     * <p>Only instances in the init or idle state can be deleted. This operation is available only to specific customers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an application instance.</p>
+     * <p>Deletes a specified application instance.</p>
      * 
      * @param request DeleteAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1191,10 +1249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only application instances that are in the Initializing or Idle state can be deleted. The operation can be called only by specific customers.</p>
+     * <p>Only instances in the init or idle state can be deleted. This operation is available only to specific customers.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an application instance.</p>
+     * <p>Deletes a specified application instance.</p>
      * 
      * @param request DeleteAppInstancesRequest
      * @return DeleteAppInstancesResponse
@@ -1206,15 +1264,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can only delete custom images to which a user belongs.</p>
      * <ul>
-     * <li>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</li>
-     * <li>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</li>
-     * <li>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</li>
+     * <li>You can delete only custom images that belong to you.</li>
+     * <li>For images associated with the AppStream Cloud Computer Pool, AppStream Cloud Application, or AppStream Workstation product lines, you must ensure that no AppStream instances are using the image before you can delete it.</li>
+     * <li>If an AppStream Cloud Desktop template references an image, the template is also deleted when the image is deleted.</li>
+     * <li>If an image is available in multiple regions, deleting the image removes it from all regions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete a custom RDS image</p>
+     * <p>Deletes a custom AppStream image.</p>
      * 
      * @param request DeleteImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1246,15 +1304,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can only delete custom images to which a user belongs.</p>
      * <ul>
-     * <li>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</li>
-     * <li>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</li>
-     * <li>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</li>
+     * <li>You can delete only custom images that belong to you.</li>
+     * <li>For images associated with the AppStream Cloud Computer Pool, AppStream Cloud Application, or AppStream Workstation product lines, you must ensure that no AppStream instances are using the image before you can delete it.</li>
+     * <li>If an AppStream Cloud Desktop template references an image, the template is also deleted when the image is deleted.</li>
+     * <li>If an image is available in multiple regions, deleting the image removes it from all regions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete a custom RDS image</p>
+     * <p>Deletes a custom AppStream image.</p>
      * 
      * @param request DeleteImageRequest
      * @return DeleteImageResponse
@@ -1265,8 +1323,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete a model template that has been created under a model provider template in the Wuying Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除LLM模板</p>
+     * <p>Deletes an LLM template.</p>
      * 
      * @param request DeleteLlmTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1297,8 +1359,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete a model template that has been created under a model provider template in the Wuying Agent Management Center. Before deletion, ensure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After deletion, the model configurations of associated cloud computers are automatically refreshed.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除LLM模板</p>
+     * <p>Deletes an LLM template.</p>
      * 
      * @param request DeleteLlmTemplateRequest
      * @return DeleteLlmTemplateResponse
@@ -1309,8 +1375,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, make sure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credits package). After deletion, the associated models and key configurations are also removed.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除模型提供商模板</p>
+     * <p>Deletes a model provider template.</p>
      * 
      * @param request DeleteModelProviderTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1341,8 +1411,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete a model provider template that has been created under model templates in the WUYING Agent Management Center. Before deletion, make sure that the model provider is not the provider of the default model and is not a system preset type provider (such as WUYING credits package). After deletion, the associated models and key configurations are also removed.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除模型提供商模板</p>
+     * <p>Deletes a model provider template.</p>
      * 
      * @param request DeleteModelProviderTemplateRequest
      * @return DeleteModelProviderTemplateResponse
@@ -1353,8 +1427,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete a model group that has been created in the WUYING Agent Management Center. Before deletion, ensure that the template has not been authorized to any resource. Otherwise, the deletion fails. After deletion, the model providers and models under the model group are also removed.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除模型模板</p>
+     * <p>Deletes a model template.</p>
      * 
      * @param request DeleteModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1385,8 +1463,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete a model group that has been created in the WUYING Agent Management Center. Before deletion, ensure that the template has not been authorized to any resource. Otherwise, the deletion fails. After deletion, the model providers and models under the model group are also removed.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除模型模板</p>
+     * <p>Deletes a model template.</p>
      * 
      * @param request DeleteModelTemplateRequest
      * @return DeleteModelTemplateResponse
@@ -1398,10 +1480,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workstation.</p>
+     * <p>Deletes a cloud graphics workstation.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作站</p>
+     * <p>Deletes a cloud graphics workstation.</p>
      * 
      * @param request DeleteWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1433,10 +1515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workstation.</p>
+     * <p>Deletes a cloud graphics workstation.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除工作站</p>
+     * <p>Deletes a cloud graphics workstation.</p>
      * 
      * @param request DeleteWuyingServerRequest
      * @return DeleteWuyingServerResponse
@@ -1448,7 +1530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置SLS日志投递</p>
+     * <p>Configure LogShipper for Simple Log Service</p>
      * 
      * @param request DeliverToUserSlsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1505,7 +1587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置SLS日志投递</p>
+     * <p>Configure LogShipper for Simple Log Service</p>
      * 
      * @param request DeliverToUserSlsRequest
      * @return DeliverToUserSlsResponse
@@ -1561,7 +1643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Elastic IP Addresses (EIPs) of workstations.</p>
+     * <p>Queries the Elastic IP Address (EIP) information of a Wuying workspace.</p>
      * 
      * @param request DescribeWuyingServerEipInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1597,7 +1679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Elastic IP Addresses (EIPs) of workstations.</p>
+     * <p>Queries the Elastic IP Address (EIP) information of a Wuying workspace.</p>
      * 
      * @param request DescribeWuyingServerEipInfoRequest
      * @return DescribeWuyingServerEipInfoResponse
@@ -1609,7 +1691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a delivery group.</p>
+     * <p>Queries the details of a specified delivery group.</p>
      * 
      * @param request GetAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1645,7 +1727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a delivery group.</p>
+     * <p>Queries the details of a specified delivery group.</p>
      * 
      * @param request GetAppInstanceGroupRequest
      * @return GetAppInstanceGroupResponse
@@ -1657,12 +1739,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must call this operation at least twice to obtain a connection credential.
-     * The first time you call this operation, the system assigns an application instance to the specified convenience account and then starts the application. In this case, the ID of the started task, which is indicated by <code>TaskID</code>, is returned.
-     * In subsequent calls, you must configure <code>TaskID</code> to query whether the task is completed. If the value of <code>TaskStatus</code> in the response is <code>Finished</code>, the connection credential, which is indicated by <code>Ticket</code>, is returned.</p>
+     * <p>This operation requires multiple invokes (at least two) to obtain the connection credentials.
+     * On the first invoke, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<code>TaskID</code>) is returned.
+     * On subsequent invokes, pass the <code>TaskID</code> request parameter to query whether the task is complete. When the returned task status (<code>TaskStatus</code>) is completed (<code>Finished</code>), the connection credentials (<code>Ticket</code>) are also returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the credential that is used to connect to App Streaming.</p>
+     * <p>Retrieves connection credentials for a cloud application.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1742,12 +1824,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must call this operation at least twice to obtain a connection credential.
-     * The first time you call this operation, the system assigns an application instance to the specified convenience account and then starts the application. In this case, the ID of the started task, which is indicated by <code>TaskID</code>, is returned.
-     * In subsequent calls, you must configure <code>TaskID</code> to query whether the task is completed. If the value of <code>TaskStatus</code> in the response is <code>Finished</code>, the connection credential, which is indicated by <code>Ticket</code>, is returned.</p>
+     * <p>This operation requires multiple invokes (at least two) to obtain the connection credentials.
+     * On the first invoke, an application instance is allocated to the specified convenience account and the application is started. A startup task ID (<code>TaskID</code>) is returned.
+     * On subsequent invokes, pass the <code>TaskID</code> request parameter to query whether the task is complete. When the returned task status (<code>TaskStatus</code>) is completed (<code>Finished</code>), the connection credentials (<code>Ticket</code>) are also returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the credential that is used to connect to App Streaming.</p>
+     * <p>Retrieves connection credentials for a cloud application.</p>
      * 
      * @param request GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
@@ -1759,7 +1841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information that is used to debug an application instance.</p>
+     * <p>Retrieves the information about a debug application instance.</p>
      * 
      * @param request GetDebugAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1795,7 +1877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information that is used to debug an application instance.</p>
+     * <p>Retrieves the information about a debug application instance.</p>
      * 
      * @param request GetDebugAppInstanceRequest
      * @return GetDebugAppInstanceResponse
@@ -1806,8 +1888,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询模型提供商模板详情</p>
+     * <p>Queries the details of a model provider template.</p>
      * 
      * @param request GetModelProviderTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1838,8 +1924,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询模型提供商模板详情</p>
+     * <p>Queries the details of a model provider template.</p>
      * 
      * @param request GetModelProviderTemplateRequest
      * @return GetModelProviderTemplateResponse
@@ -1851,7 +1941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an over-the-air (OTA) update task, including the available versions and version description.</p>
+     * <p>Queries the details of an over-the-air update task, including the available version and version description.</p>
      * 
      * @param request GetOtaTaskByTaskIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1883,7 +1973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an over-the-air (OTA) update task, including the available versions and version description.</p>
+     * <p>Queries the details of an over-the-air update task, including the available version and version description.</p>
      * 
      * @param request GetOtaTaskByTaskIdRequest
      * @return GetOtaTaskByTaskIdResponse
@@ -1895,7 +1985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries resource prices.</p>
+     * <p>Queries the price information of a resource.</p>
      * 
      * @param request GetResourcePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1955,7 +2045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries resource prices.</p>
+     * <p>Queries the price information of a resource.</p>
      * 
      * @param request GetResourcePriceRequest
      * @return GetResourcePriceResponse
@@ -1967,7 +2057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the renewal prices of App Streaming resources.</p>
+     * <p>Queries the renewal price of WUYING Cloud Application resources.</p>
      * 
      * @param request GetResourceRenewPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2011,7 +2101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the renewal prices of App Streaming resources.</p>
+     * <p>Queries the renewal price of WUYING Cloud Application resources.</p>
      * 
      * @param request GetResourceRenewPriceRequest
      * @return GetResourceRenewPriceResponse
@@ -2022,8 +2112,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the third-party channel configuration status of Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Runtime通道配置</p>
+     * <p>Queries the third-party channel configurations of an Agent runtime.</p>
      * 
      * @param request GetRuntimeChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2070,8 +2164,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the third-party channel configuration status of Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Runtime通道配置</p>
+     * <p>Queries the third-party channel configurations of an Agent runtime.</p>
      * 
      * @param request GetRuntimeChannelRequest
      * @return GetRuntimeChannelResponse
@@ -2082,8 +2180,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询云电脑模型配置详情</p>
+     * <p>Queries the model configuration details of a cloud computer.</p>
      * 
      * @param request GetRuntimeModelConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2130,8 +2231,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the model configuration details currently bound to a specified cloud computer in the Wuying Agent Management Center, including model groups, model provider lists, and associated model information. After you enable the risk information mode, you can also identify differences between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询云电脑模型配置详情</p>
+     * <p>Queries the model configuration details of a cloud computer.</p>
      * 
      * @param request GetRuntimeModelConfigRequest
      * @return GetRuntimeModelConfigResponse
@@ -2143,7 +2247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of multiple delivery groups that meet the query conditions.</p>
+     * <p>Queries the details of multiple delivery groups. This operation does not specify a particular delivery group but queries the details of all delivery groups that meet the specified conditions.</p>
      * 
      * @param request ListAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2229,7 +2333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of multiple delivery groups that meet the query conditions.</p>
+     * <p>Queries the details of multiple delivery groups. This operation does not specify a particular delivery group but queries the details of all delivery groups that meet the specified conditions.</p>
      * 
      * @param request ListAppInstanceGroupRequest
      * @return ListAppInstanceGroupResponse
@@ -2241,7 +2345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of application instances in a delivery group, including the IDs, status, creation time, update time, session status, and public IP addresses associated with the primary NICs of the instances.</p>
+     * <p>Queries the details of session instances in a delivery group, including instance IDs, instance statuses, creation time, update time, session statuses, and public IP addresses of primary network interfaces.</p>
      * 
      * @param request ListAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2303,7 +2407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of application instances in a delivery group, including the IDs, status, creation time, update time, session status, and public IP addresses associated with the primary NICs of the instances.</p>
+     * <p>Queries the details of session instances in a delivery group, including instance IDs, instance statuses, creation time, update time, session statuses, and public IP addresses of primary network interfaces.</p>
      * 
      * @param request ListAppInstancesRequest
      * @return ListAppInstancesResponse
@@ -2315,7 +2419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the user groups authorized by a delivery group.</p>
+     * <p>Queries the list of user groups authorized by a specified delivery group.</p>
      * 
      * @param request ListAuthorizedUserGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2367,7 +2471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the user groups authorized by a delivery group.</p>
+     * <p>Queries the list of user groups authorized by a specified delivery group.</p>
      * 
      * @param request ListAuthorizedUserGroupsRequest
      * @return ListAuthorizedUserGroupsResponse
@@ -2379,7 +2483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bindings between users and resources.</p>
+     * <p>Queries the binding information between users and resources.</p>
      * 
      * @param request ListBindInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2435,7 +2539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bindings between users and resources.</p>
+     * <p>Queries the binding information between users and resources.</p>
      * 
      * @param request ListBindInfoRequest
      * @return ListBindInfoResponse
@@ -2447,7 +2551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询桌面Agent运行时列表</p>
+     * <p>Queries the list of desktop agent runtimes.</p>
      * 
      * @param request ListDesktopAgentRuntimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2512,6 +2616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IncludeRiskInfo", request.includeRiskInfo);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.managementStatus)) {
+            query.put("ManagementStatus", request.managementStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modelConfigure)) {
             query.put("ModelConfigure", request.modelConfigure);
         }
@@ -2555,7 +2663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询桌面Agent运行时列表</p>
+     * <p>Queries the list of desktop agent runtimes.</p>
      * 
      * @param request ListDesktopAgentRuntimeRequest
      * @return ListDesktopAgentRuntimeResponse
@@ -2567,7 +2675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the image information about an ECS instance.</p>
+     * <p>Queries image information.</p>
      * 
      * @param request ListImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2685,7 +2793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the image information about an ECS instance.</p>
+     * <p>Queries image information.</p>
      * 
      * @param request ListImageRequest
      * @return ListImageResponse
@@ -2696,8 +2804,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use paging to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group dimension, the default model is automatically pinned to the top.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询LLM模板列表</p>
+     * <p>Queries a list of LLM templates.</p>
      * 
      * @param tmpReq ListLlmTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2754,8 +2866,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use paging to retrieve the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group dimension, the default model is automatically pinned to the top.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询LLM模板列表</p>
+     * <p>Queries a list of LLM templates.</p>
      * 
      * @param request ListLlmTemplatesRequest
      * @return ListLlmTemplatesResponse
@@ -2822,8 +2938,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询模型提供商模板列表</p>
+     * <p>Queries the list of model provider templates.</p>
      * 
      * @param tmpReq ListModelProviderTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2888,8 +3008,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询模型提供商模板列表</p>
+     * <p>Queries the list of model provider templates.</p>
      * 
      * @param request ListModelProviderTemplatesRequest
      * @return ListModelProviderTemplatesResponse
@@ -2900,8 +3024,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the list of resource groups authorized by a model group in the Wuying Agent Management Center.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询模型分组绑定的资源组列表</p>
+     * <p>Queries the list of resource groups associated with a model group.</p>
      * 
      * @param request ListModelTemplateResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2944,8 +3072,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the list of resource groups authorized by a model group in the Wuying Agent Management Center.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询模型分组绑定的资源组列表</p>
+     * <p>Queries the list of resource groups associated with a model group.</p>
      * 
      * @param request ListModelTemplateResourceGroupRequest
      * @return ListModelTemplateResourceGroupResponse
@@ -2956,8 +3088,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use paged query to retrieve model groups that have been created in the Wuying Agent Management Center, with paging support. You can filter results by Agent provider, Agent platform, template group ID, and whether models have been configured.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询模型模板列表</p>
+     * <p>Queries a list of model templates.</p>
      * 
      * @param tmpReq ListModelTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3018,8 +3154,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use paged query to retrieve model groups that have been created in the Wuying Agent Management Center, with paging support. You can filter results by Agent provider, Agent platform, template group ID, and whether models have been configured.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询模型模板列表</p>
+     * <p>Queries a list of model templates.</p>
      * 
      * @param request ListModelTemplatesRequest
      * @return ListModelTemplatesResponse
@@ -3031,7 +3171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource types that are available for purchase when you create a delivery group.</p>
+     * <p>Queries the resource specifications available for selection when creating a delivery group.</p>
      * 
      * @param request ListNodeInstanceTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3123,7 +3263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource types that are available for purchase when you create a delivery group.</p>
+     * <p>Queries the resource specifications available for selection when creating a delivery group.</p>
      * 
      * @param request ListNodeInstanceTypeRequest
      * @return ListNodeInstanceTypeResponse
@@ -3135,7 +3275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries resource nodes.</p>
+     * <p>Queries the list of resource nodes.</p>
      * 
      * @param request ListNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3179,7 +3319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries resource nodes.</p>
+     * <p>Queries the list of resource nodes.</p>
      * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
@@ -3191,7 +3331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about over-the-air (OTA) update tasks.</p>
+     * <p>Queries the history of over-the-air updates.</p>
      * 
      * @param request ListOtaTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3235,7 +3375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about over-the-air (OTA) update tasks.</p>
+     * <p>Queries the history of over-the-air updates.</p>
      * 
      * @param request ListOtaTaskRequest
      * @return ListOtaTaskResponse
@@ -3247,7 +3387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries app instances of the persistent session type in a delivery group.</p>
+     * <p>Queries the list of persistent session application instances in a delivery group.</p>
      * 
      * @param request ListPersistentAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3295,7 +3435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries app instances of the persistent session type in a delivery group.</p>
+     * <p>Queries the list of persistent session application instances in a delivery group.</p>
      * 
      * @param request ListPersistentAppInstancesRequest
      * @return ListPersistentAppInstancesResponse
@@ -3308,11 +3448,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> All supported regions instead of available regions are returned by this operation. For more information, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
+     * <p>The regions returned by this operation are not necessarily all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the regions that are supported by App Streaming.</p>
+     * <p>Queries the regions supported by WUYING Cloud Application.</p>
      * 
      * @param request ListRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3349,11 +3489,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> All supported regions instead of available regions are returned by this operation. For more information, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
+     * <p>The regions returned by this operation are not necessarily all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the regions that are supported by App Streaming.</p>
+     * <p>Queries the regions supported by WUYING Cloud Application.</p>
      * 
      * @param request ListRegionsRequest
      * @return ListRegionsResponse
@@ -3365,7 +3505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags added to one or more cloud resources.</p>
+     * <p>Queries the tag list of one or more specified cloud resources.</p>
      * 
      * @param request ListTagCloudResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3413,7 +3553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags added to one or more cloud resources.</p>
+     * <p>Queries the tag list of one or more specified cloud resources.</p>
      * 
      * @param request ListTagCloudResourcesRequest
      * @return ListTagCloudResourcesResponse
@@ -3425,7 +3565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of the administrator account, such as whether the resource expiration reminder feature is enabled.</p>
+     * <p>Queries the configuration information of an administrator account, such as whether resource expiration reminders are enabled.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTenantConfigResponse
@@ -3448,7 +3588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of the administrator account, such as whether the resource expiration reminder feature is enabled.</p>
+     * <p>Queries the configuration information of an administrator account, such as whether resource expiration reminders are enabled.</p>
      * @return ListTenantConfigResponse
      */
     public ListTenantConfigResponse listTenantConfig() throws Exception {
@@ -3564,11 +3704,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation can be called only if you use a pay-as-you-go delivery group for which a scheduled scaling policy is used and if you call the operation at a time other than the scheduled time.</p>
+     * <p>This operation is applicable only to pay-as-you-go resource delivery groups that have scheduled auto scaling policies enabled, and can be called successfully only outside the scaling time periods configured in the scheduled auto scaling policies.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Closes all sessions in a pay-as-you-go delivery group for which a scheduled scaling policy is used.</p>
+     * <p>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling policies enabled.</p>
      * 
      * @param request LogOffAllSessionsInAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3605,11 +3745,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation can be called only if you use a pay-as-you-go delivery group for which a scheduled scaling policy is used and if you call the operation at a time other than the scheduled time.</p>
+     * <p>This operation is applicable only to pay-as-you-go resource delivery groups that have scheduled auto scaling policies enabled, and can be called successfully only outside the scaling time periods configured in the scheduled auto scaling policies.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Closes all sessions in a pay-as-you-go delivery group for which a scheduled scaling policy is used.</p>
+     * <p>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling policies enabled.</p>
      * 
      * @param request LogOffAllSessionsInAppInstanceGroupRequest
      * @return LogOffAllSessionsInAppInstanceGroupResponse
@@ -3621,7 +3761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the general policies of a delivery group, including the number of concurrent sessions and the retention period of disconnected sessions.</p>
+     * <p>Modifies the General Policy of a delivery group, including the number of concurrent sessions and the session retention duration after disconnection.</p>
      * 
      * @param tmpReq ModifyAppInstanceGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3713,7 +3853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the general policies of a delivery group, including the number of concurrent sessions and the retention period of disconnected sessions.</p>
+     * <p>Modifies the General Policy of a delivery group, including the number of concurrent sessions and the session retention duration after disconnection.</p>
      * 
      * @param request ModifyAppInstanceGroupAttributeRequest
      * @return ModifyAppInstanceGroupAttributeResponse
@@ -3725,7 +3865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the delivery group display policy, including settings such as frame rate, resolution, and protocol type.</p>
+     * <p>Modifies the display policy of a delivery group, including settings such as frame rate, resolution, and protocol type.</p>
      * 
      * @param tmpReq ModifyAppPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3771,7 +3911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the delivery group display policy, including settings such as frame rate, resolution, and protocol type.</p>
+     * <p>Modifies the display policy of a delivery group, including settings such as frame rate, resolution, and protocol type.</p>
      * 
      * @param request ModifyAppPolicyRequest
      * @return ModifyAppPolicyResponse
@@ -3783,10 +3923,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the properties of the cloud browser.</p>
+     * <p>Modifies the attributes of a Wuying Cloud Browser.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the properties of the cloud browser.</p>
+     * <p>Modifies the attributes of a Wuying Cloud Browser.</p>
      * 
      * @param tmpReq ModifyBrowserInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3870,10 +4010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the properties of the cloud browser.</p>
+     * <p>Modifies the attributes of a Wuying Cloud Browser.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the properties of the cloud browser.</p>
+     * <p>Modifies the attributes of a Wuying Cloud Browser.</p>
      * 
      * @param request ModifyBrowserInstanceGroupRequest
      * @return ModifyBrowserInstanceGroupResponse
@@ -3885,7 +4025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the number of nodes in a subscription delivery group.</p>
+     * <p>Upgrades the number of nodes in a subscription delivery group.</p>
      * 
      * @param tmpReq ModifyNodePoolAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3931,7 +4071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the number of nodes in a subscription delivery group.</p>
+     * <p>Upgrades the number of nodes in a subscription delivery group.</p>
      * 
      * @param request ModifyNodePoolAmountRequest
      * @return ModifyNodePoolAmountResponse
@@ -3943,16 +4083,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can select one of the following scaling policies for cloud app resources:</p>
+     * <p>You can configure the scaling pattern for WUYING Cloud Application resources in Settings:</p>
      * <ul>
-     * <li>No scaling: Resources are not scaled.</li>
-     * <li>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</li>
-     * <li>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
-     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</li>
+     * <li>Fixed quantity: Elastic scaling is not used.</li>
+     * <li>Automatic scaling: Automatically scales resources based on the number of connected sessions and the idle duration without session connections.</li>
+     * <li>Scheduled scaling: Executes resource scaling during specified time periods on specified dates.
+     * Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing method and pricing</a> of WUYING Cloud Application.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the scaling policy of a delivery group. The following scaling policies are supported: fixed resource number, scheduled scaling, and auto scaling.</p>
+     * <p>Modifies the scaling mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</p>
      * 
      * @param tmpReq ModifyNodePoolAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4006,16 +4146,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can select one of the following scaling policies for cloud app resources:</p>
+     * <p>You can configure the scaling pattern for WUYING Cloud Application resources in Settings:</p>
      * <ul>
-     * <li>No scaling: Resources are not scaled.</li>
-     * <li>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</li>
-     * <li>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
-     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</li>
+     * <li>Fixed quantity: Elastic scaling is not used.</li>
+     * <li>Automatic scaling: Automatically scales resources based on the number of connected sessions and the idle duration without session connections.</li>
+     * <li>Scheduled scaling: Executes resource scaling during specified time periods on specified dates.
+     * Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing method and pricing</a> of WUYING Cloud Application.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the scaling policy of a delivery group. The following scaling policies are supported: fixed resource number, scheduled scaling, and auto scaling.</p>
+     * <p>Modifies the scaling mode of a delivery group, including fixed quantity (no elastic scaling), scheduled scaling, and automatic scaling.</p>
      * 
      * @param request ModifyNodePoolAttributeRequest
      * @return ModifyNodePoolAttributeResponse
@@ -4027,7 +4167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of the administrator account, such as whether to enable the resource expiration reminder feature.</p>
+     * <p>Modifies the configuration of an administrator account, such as whether to enable resource expiration reminders.</p>
      * 
      * @param request ModifyTenantConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4059,7 +4199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of the administrator account, such as whether to enable the resource expiration reminder feature.</p>
+     * <p>Modifies the configuration of an administrator account, such as whether to enable resource expiration reminders.</p>
      * 
      * @param request ModifyTenantConfigRequest
      * @return ModifyTenantConfigResponse
@@ -4071,7 +4211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify workstation properties.</p>
+     * <p>Modifies the properties of a cloud graphics workstation.</p>
      * 
      * @param request ModifyWuyingServerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4115,7 +4255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify workstation properties.</p>
+     * <p>Modifies the properties of a cloud graphics workstation.</p>
      * 
      * @param request ModifyWuyingServerAttributeRequest
      * @return ModifyWuyingServerAttributeResponse
@@ -4127,7 +4267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the assigned users that are added to a delivery group by page.</p>
+     * <p>Performs a paged query on allocated users added to a delivery group.</p>
      * 
      * @param request PageListAppInstanceGroupUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4171,7 +4311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the assigned users that are added to a delivery group by page.</p>
+     * <p>Performs a paged query on allocated users added to a delivery group.</p>
      * 
      * @param request PageListAppInstanceGroupUserRequest
      * @return PageListAppInstanceGroupUserResponse
@@ -4182,8 +4322,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model groups serve as inference engines for Agents to execute tasks within the resource group.
+     * When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the Agent runtime setting.
+     * When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移除资源组模型模板配置</p>
+     * <p>Removes model groups from a resource group.</p>
      * 
      * @param request RemoveResourceGroupModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4218,8 +4364,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model groups serve as inference engines for Agents to execute tasks within the resource group.
+     * When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the Agent runtime setting.
+     * When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移除资源组模型模板配置</p>
+     * <p>Removes model groups from a resource group.</p>
      * 
      * @param request RemoveResourceGroupModelTemplateRequest
      * @return RemoveResourceGroupModelTemplateResponse
@@ -4230,8 +4382,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to remove a specific third-party channel configuration from agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移除Runtime通道</p>
+     * <p>Removes a third-party channel configuration from an agent runtime.</p>
      * 
      * @param request RemoveRuntimeChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4278,8 +4434,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to remove a specific third-party channel configuration from agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移除Runtime通道</p>
+     * <p>Removes a third-party channel configuration from an agent runtime.</p>
      * 
      * @param request RemoveRuntimeChannelRequest
      * @return RemoveRuntimeChannelResponse
@@ -4290,8 +4450,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
+     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通过RuntimeIds移除模型模板配置</p>
+     * <p>Removes a model group from an Agent runtime resource.</p>
      * 
      * @param request RemoveRuntimeModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4330,8 +4494,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
+     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通过RuntimeIds移除模型模板配置</p>
+     * <p>Removes a model group from an Agent runtime resource.</p>
      * 
      * @param request RemoveRuntimeModelTemplateRequest
      * @return RemoveRuntimeModelTemplateResponse
@@ -4343,7 +4511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</p>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">Billable methods and pricing</a> of WUYING Workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Renews a delivery group.</p>
@@ -4416,7 +4584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</p>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/426039.html">Billable methods and pricing</a> of WUYING Workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Renews a delivery group.</p>
@@ -4431,7 +4599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renew one workstation.</p>
+     * <p>Renews a workstation.</p>
      * 
      * @param request RenewWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4479,7 +4647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renew one workstation.</p>
+     * <p>Renews a workstation.</p>
      * 
      * @param request RenewWuyingServerRequest
      * @return RenewWuyingServerResponse
@@ -4491,7 +4659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts the workstation.</p>
+     * <p>Restarts a workstation.</p>
      * 
      * @param request RestartWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4532,7 +4700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts the workstation.</p>
+     * <p>Restarts a workstation.</p>
      * 
      * @param request RestartWuyingServerRequest
      * @return RestartWuyingServerResponse
@@ -4544,7 +4712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates a task to replicate an image to another region.</p>
+     * <p>Initiates a task to copy an image to other regions.</p>
      * 
      * @param request StartTaskForDistributeImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4596,7 +4764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates a task to replicate an image to another region.</p>
+     * <p>Initiates a task to copy an image to other regions.</p>
      * 
      * @param request StartTaskForDistributeImageRequest
      * @return StartTaskForDistributeImageResponse
@@ -4608,7 +4776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Start the workstation.</p>
+     * <p>Starts a workstation.</p>
      * 
      * @param request StartWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4649,7 +4817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Start the workstation.</p>
+     * <p>Starts a workstation.</p>
      * 
      * @param request StartWuyingServerRequest
      * @return StartWuyingServerResponse
@@ -4661,7 +4829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops the workstation.</p>
+     * <p>Stops a workstation.</p>
      * 
      * @param request StopWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4706,7 +4874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops the workstation.</p>
+     * <p>Stops a workstation.</p>
      * 
      * @param request StopWuyingServerRequest
      * @return StopWuyingServerResponse
@@ -4718,7 +4886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and adds tags to cloud resources and updates the values of existing cloud resource tags.</p>
+     * <p>Creates and attaches tags to cloud resources. If a tag already exists on a resource, the tag value is updated.</p>
      * 
      * @param request TagCloudResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4758,7 +4926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and adds tags to cloud resources and updates the values of existing cloud resource tags.</p>
+     * <p>Creates and attaches tags to cloud resources. If a tag already exists on a resource, the tag value is updated.</p>
      * 
      * @param request TagCloudResourcesRequest
      * @return TagCloudResourcesResponse
@@ -4818,7 +4986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds a user and a session.</p>
+     * <p>Unbinds a user from a session.</p>
      * 
      * @param request UnbindRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4866,7 +5034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds a user and a session.</p>
+     * <p>Unbinds a user from a session.</p>
      * 
      * @param request UnbindRequest
      * @return UnbindResponse
@@ -4878,7 +5046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from cloud resources.</p>
+     * <p>Unbinds tags from cloud resources in a unified manner.</p>
      * 
      * @param request UntagCloudResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4918,7 +5086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from cloud resources.</p>
+     * <p>Unbinds tags from cloud resources in a unified manner.</p>
      * 
      * @param request UntagCloudResourcesRequest
      * @return UntagCloudResourcesResponse
@@ -4930,12 +5098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><strong>Warning</strong> After the image is updated, the end user session accessing the cloud application will be disconnected. Exercise caution to avoid end user data loss.<blockquote>
-     * <p> After the image of the delivery group is updated, the change takes effect on the terminal in approximately 2 minutes.</p>
+     * <blockquote>
+     * <p>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
+     * After the update is published, changes typically take about 2 minutes to take effect on the end user side.</p>
      * </blockquote>
-     * </li>
-     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Updates the image of a delivery group.</p>
@@ -4982,12 +5148,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><strong>Warning</strong> After the image is updated, the end user session accessing the cloud application will be disconnected. Exercise caution to avoid end user data loss.<blockquote>
-     * <p> After the image of the delivery group is updated, the change takes effect on the terminal in approximately 2 minutes.</p>
+     * <blockquote>
+     * <p>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
+     * After the update is published, changes typically take about 2 minutes to take effect on the end user side.</p>
      * </blockquote>
-     * </li>
-     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Updates the image of a delivery group.</p>
@@ -5001,8 +5165,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can update a model provider template that has been created in the Wuying Agent Management Center, including the template name, description, model service connection configuration, and Wuying security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新模型提供商模板</p>
+     * <p>Updates a model provider template.</p>
      * 
      * @param tmpReq UpdateModelProviderTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5057,8 +5225,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can update a model provider template that has been created in the Wuying Agent Management Center, including the template name, description, model service connection configuration, and Wuying security proxy switch. Partial field updates are supported. You only need to pass in the fields that you want to modify.
+     * Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新模型提供商模板</p>
+     * <p>Updates a model provider template.</p>
      * 
      * @param request UpdateModelProviderTemplateRequest
      * @return UpdateModelProviderTemplateResponse
@@ -5069,8 +5241,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can update a model group that has been created in the Wuying Agent Management Center, including the group name, description, and model configuration information. The updated configuration automatically takes effect on associated cloud desktops.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新模型模板</p>
+     * <p>Updates a model template.</p>
      * 
      * @param request UpdateModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5113,8 +5289,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can update a model group that has been created in the Wuying Agent Management Center, including the group name, description, and model configuration information. The updated configuration automatically takes effect on associated cloud desktops.
+     * Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新模型模板</p>
+     * <p>Updates a model template.</p>
      * 
      * @param request UpdateModelTemplateRequest
      * @return UpdateModelTemplateResponse
@@ -5126,7 +5306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the workstation image.</p>
+     * <p>Updates a workstation image.</p>
      * 
      * @param request UpdateWuyingServerImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5166,7 +5346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the workstation image.</p>
+     * <p>Updates a workstation image.</p>
      * 
      * @param request UpdateWuyingServerImageRequest
      * @return UpdateWuyingServerImageResponse

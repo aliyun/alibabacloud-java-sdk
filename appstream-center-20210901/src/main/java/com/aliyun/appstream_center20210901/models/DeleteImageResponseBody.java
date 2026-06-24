@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteImageResponseBody extends TeaModel {
     /**
-     * <p>Status code:</p>
+     * <p>The status code:</p>
      * <ul>
      * <li><code>200</code>: Success.</li>
-     * <li><code>400</code>: An error occurred.</li>
+     * <li><code>400</code>: Error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Whether the deletion is successful.</p>
-     * <p>Enumerated values:</p>
-     * <ul>
-     * <li>true:Deleted successfully.</li>
-     * <li>false:Deletion failure.</li>
-     * </ul>
+     * <p>Indicates whether the deletion is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +27,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -50,7 +45,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

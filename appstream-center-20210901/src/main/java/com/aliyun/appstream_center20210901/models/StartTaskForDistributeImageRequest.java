@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartTaskForDistributeImageRequest extends TeaModel {
     /**
-     * <p>The regions to which you want to replicate the image.</p>
+     * <p>The list of destination regions to which the image is copied.</p>
      */
     @NameInMap("DestinationRegionList")
     public java.util.List<String> destinationRegionList;
@@ -22,12 +22,6 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CloudDesktop: Elastic Desktop Service</li>
-     * <li>CloudApp: App Streaming</li>
-     * <li>WuyingServer: Workstation</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CloudApp</p>
@@ -45,7 +39,7 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
     public String retryType;
 
     /**
-     * <p>The region where the source image is located. If you leave this parameter empty, a random region is selected.</p>
+     * <p>The source region from which the image is copied. If this parameter is not specified, a random region is selected.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -54,7 +48,7 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
     public String sourceRegion;
 
     /**
-     * <p>The ID of the image version. If you do not specify this parameter, the latest image version is used by default.</p>
+     * <p>The image version ID. If this parameter is not specified, the latest image version is used.</p>
      * 
      * <strong>example:</strong>
      * <p>iv-07jyldnd9i****</p>

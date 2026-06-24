@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigResourceGroupModelTemplateRequest extends TeaModel {
     /**
+     * <p>The model group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ConfigResourceGroupModelTemplateRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
+     * <p>The resource group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

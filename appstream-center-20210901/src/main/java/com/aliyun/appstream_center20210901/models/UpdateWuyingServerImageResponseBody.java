@@ -14,7 +14,7 @@ public class UpdateWuyingServerImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the update task.</p>
+     * <p>The update task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ota-be7jzm29wrrz5****</p>

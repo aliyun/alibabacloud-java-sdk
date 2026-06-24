@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class TagCloudResourcesResponseBody extends TeaModel {
     /**
-     * <p>The cloud resources on which the operation failed and the corresponding tags.</p>
+     * <p>The list of failed resources and tag information.</p>
      */
     @NameInMap("FailedResources")
     public java.util.List<TagCloudResourcesResponseBodyFailedResources> failedResources;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -40,6 +42,8 @@ public class TagCloudResourcesResponseBody extends TeaModel {
 
     public static class TagCloudResourcesResponseBodyFailedResourcesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>System/Scheduler/STOP_NEW_USER_CONNECTION</p>
          */
@@ -47,6 +51,8 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag type.</p>
+         * 
          * <strong>example:</strong>
          * <p>System</p>
          */
@@ -54,6 +60,8 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -93,6 +101,8 @@ public class TagCloudResourcesResponseBody extends TeaModel {
 
     public static class TagCloudResourcesResponseBodyFailedResources extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>TAG_KEY_DUPLICATED</p>
          */
@@ -100,6 +110,8 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Duplicate tag keys exist.</p>
          */
@@ -107,6 +119,8 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-001</p>
          */
@@ -114,15 +128,7 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the cloud resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CenterImageId: center image ID.</li>
-         * <li>AppId: app ID.</li>
-         * <li>WyId: Alibaba Cloud Workspace user ID.</li>
-         * <li>AppInstanceGroupId: delivery group ID.</li>
-         * <li>AliUid: tenant ID.</li>
-         * </ul>
+         * <p>The cloud resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>AppInstanceGroupId</p>
@@ -130,6 +136,9 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The list of failed tag information.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<TagCloudResourcesResponseBodyFailedResourcesTags> tags;
 

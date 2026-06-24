@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppInstanceGroupImageRequest extends TeaModel {
     /**
-     * <p>The image ID of the application. You can obtain the ID from the Images page in the App Streaming console.</p>
+     * <p>The application image ID. You can obtain this ID from the Image Management page in the WUYING Cloud Application console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateAppInstanceGroupImageRequest extends TeaModel {
     public String appCenterImageId;
 
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,7 @@ public class UpdateAppInstanceGroupImageRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cn-shanghai: China (Shanghai).</li>
-     * <li>cn-hangzhou: China (Hangzhou)</li>
-     * </ul>
+     * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,10 +36,6 @@ public class UpdateAppInstanceGroupImageRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,20 +5,13 @@ import com.aliyun.tea.*;
 
 public class UntagCloudResourcesRequest extends TeaModel {
     /**
-     * <p>The resource IDs. You can specify up to 50 resource IDs. You do not need to specify this parameter if you set ResourceType to AliUid.</p>
+     * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The type of the resource from which you want to remove tags.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>AppId: app ID.</li>
-     * <li>WyId: Alibaba Cloud Workspace user ID.</li>
-     * <li>AppInstanceGroupId: delivery group ID.</li>
-     * <li>AliUid: tenant ID.</li>
-     * </ul>
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,11 +21,11 @@ public class UntagCloudResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags that you want to remove from the cloud resources. System and custom tags are supported. You can specify up to 10 tags.</p>
-     * <p>Valid values for system tags:</p>
+     * <p>The list of tags. System tags and custom tags are supported. You can specify up to 10 tags.</p>
+     * <p>Enumerated values for system tags:</p>
      * <ul>
-     * <li><code>System/Scheduler/GRAYSCALE</code>: canary tags.</li>
-     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tags used to stop new users bound to the delivery group from establishing a connection.</li>
+     * <li><code>System/Scheduler/GRAYSCALE</code>: canary release tag</li>
+     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents newly bound users in a delivery group from establishing connections.</li>
      * </ul>
      * <p>This parameter is required.</p>
      */

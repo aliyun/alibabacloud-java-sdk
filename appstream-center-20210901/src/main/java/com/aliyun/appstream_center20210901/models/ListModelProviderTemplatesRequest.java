@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelProviderTemplatesRequest extends TeaModel {
     /**
+     * <p>The Agent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,7 @@ public class ListModelProviderTemplatesRequest extends TeaModel {
     public String agentPlatform;
 
     /**
+     * <p>The name of the Agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListModelProviderTemplatesRequest extends TeaModel {
     public String agentProvider;
 
     /**
+     * <p>The business type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ListModelProviderTemplatesRequest extends TeaModel {
     public Integer bizType;
 
     /**
+     * <p>The model group ID to filter by.</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-xxxx</p>
      */
@@ -37,6 +43,8 @@ public class ListModelProviderTemplatesRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
+     * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -44,6 +52,8 @@ public class ListModelProviderTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -51,12 +61,17 @@ public class ListModelProviderTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the model provider to filter by.</p>
+     * 
      * <strong>example:</strong>
      * <p>bailian</p>
      */
     @NameInMap("ProviderName")
     public String providerName;
 
+    /**
+     * <p>The model provider template IDs to filter by.</p>
+     */
     @NameInMap("ProviderTemplateIds")
     public java.util.List<String> providerTemplateIds;
 

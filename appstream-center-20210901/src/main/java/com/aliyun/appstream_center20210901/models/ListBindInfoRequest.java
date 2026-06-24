@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListBindInfoRequest extends TeaModel {
     /**
-     * <p>The app IDs. You can specify 1 to 100 IDs.</p>
+     * <p>The list of application IDs. You can specify 1 to 100 IDs.</p>
      * <blockquote>
-     * <p> If you specify this parameter, only the bindings of the specified apps are returned.</p>
+     * <p>If you specify this parameter, only the binding information of the specified applications is returned.</p>
      * </blockquote>
      */
     @NameInMap("AppIdList")
     public java.util.List<String> appIdList;
 
     /**
-     * <p>The IDs of the delivery groups. You can specify 1 to 100 IDs.</p>
+     * <p>The list of delivery group IDs. You can specify 1 to 100 IDs.</p>
      * <blockquote>
-     * <p> If you specify this parameter, only the bindings of the specified delivery groups are returned.</p>
+     * <p>If you specify this parameter, only the binding information of the specified delivery groups is returned.</p>
      * </blockquote>
      */
     @NameInMap("AppInstanceGroupIdList")
     public java.util.List<String> appInstanceGroupIdList;
 
     /**
-     * <p>The IDs of app instances. You can specify 1 to 100 IDs.</p>
+     * <p>The list of application instance IDs. You can specify 1 to 100 IDs.</p>
      * <blockquote>
-     * <p> If you specify this parameter, only the bindings of the specified app instances are returned.</p>
+     * <p>If you specify this parameter, only the binding information of the specified application instances is returned.</p>
      * </blockquote>
      */
     @NameInMap("AppInstanceIdList")
     public java.util.List<String> appInstanceIdList;
 
     /**
-     * <p>The page number. Default value: <code>1</code>. We recommend that you specify this parameter.</p>
+     * <p>The page number of the query results to display. Default value: <code>1</code>. Specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListBindInfoRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The value cannot be greater than <code>100</code>. Default value: <code>20</code>. We recommend that you specify this parameter.</p>
+     * <p>The number of query results per page. Maximum value: <code>100</code>. Default value: <code>20</code>. Specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,18 +50,18 @@ public class ListBindInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The user IDs. You can specify 1 to 100 IDs.</p>
+     * <p>The list of user IDs. You can specify 1 to 100 IDs.</p>
      * <blockquote>
-     * <p> If you specify this parameter, only the bindings of the specified users are returned.</p>
+     * <p>If you specify this parameter, only the binding information of the specified users is returned.</p>
      * </blockquote>
      */
     @NameInMap("UserIdList")
     public java.util.List<String> userIdList;
 
     /**
-     * <p>The IDs of the Alibaba Cloud Workspace users. You can specify 1 to 100 IDs.</p>
+     * <p>The list of WUYING user IDs. You can specify 1 to 100 IDs.</p>
      * <blockquote>
-     * <p> If you specify this parameter, only the bindings of the specified Alibaba Cloud Workspace users are returned.</p>
+     * <p>If you specify this parameter, only the binding information of the specified WUYING users is returned.</p>
      * </blockquote>
      */
     @NameInMap("WyIdList")

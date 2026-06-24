@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The list of execution results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ConfigRuntimeModelTemplateResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -15,6 +20,8 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -52,6 +59,8 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
 
     public static class ConfigRuntimeModelTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>The error code returned if the execution fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -59,6 +68,8 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The HTTP status code returned if the execution fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -66,6 +77,8 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
         public Integer httpStatusCode;
 
         /**
+         * <p>The error message returned if the execution fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>The parameter callerUid may not be null.</p>
          */
@@ -73,6 +86,11 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The Agent runtime ID. The ID mapping is as follows:</p>
+         * <p>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</p>
+         * <p>OpenClaw: cloud computer ID, in the format of ecd-xxxx.</p>
+         * <p>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</p>
+         * 
          * <strong>example:</strong>
          * <p>jvs-xxxxxxxx</p>
          */
@@ -80,6 +98,8 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
         public String runtimeId;
 
         /**
+         * <p>Indicates whether the execution is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

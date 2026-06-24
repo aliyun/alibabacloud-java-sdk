@@ -14,7 +14,7 @@ public class ListTenantConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The user configurations.</p>
+     * <p>The user configuration information.</p>
      */
     @NameInMap("TenantConfigModel")
     public ListTenantConfigResponseBodyTenantConfigModel tenantConfigModel;
@@ -42,12 +42,7 @@ public class ListTenantConfigResponseBody extends TeaModel {
 
     public static class ListTenantConfigResponseBodyTenantConfigModel extends TeaModel {
         /**
-         * <p>Indicates whether the resource expiration reminder feature is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether resource expiration reminders are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

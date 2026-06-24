@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The list of removal results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<RemoveRuntimeModelTemplateResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -15,6 +20,8 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -52,6 +59,8 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
 
     public static class RemoveRuntimeModelTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>The error code returned upon failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>Runtime.NotFound</p>
          */
@@ -59,6 +68,8 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The HTTP status code returned upon failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>404</p>
          */
@@ -66,6 +77,8 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public Integer httpStatusCode;
 
         /**
+         * <p>The error message returned upon failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>The runtime is not found.</p>
          */
@@ -73,6 +86,13 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The Agent runtime ID. The ID mapping is as follows:</p>
+         * <ul>
+         * <li>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</li>
+         * <li>OpenClaw: cloud computer ID, in the format of ecd-xxxx.</li>
+         * <li>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>jvs-xxxxx</p>
          */
@@ -80,6 +100,8 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public String runtimeId;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

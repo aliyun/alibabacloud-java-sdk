@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The removal results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<RemoveResourceGroupModelTemplateResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -15,6 +20,8 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -52,6 +59,8 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
 
     public static class RemoveResourceGroupModelTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>The error code returned if the operation fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>InvalidParameter.resourceGroupIds</p>
          */
@@ -59,6 +68,8 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The error message returned if the operation fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>The parameter resourceGroupIds is invalid.</p>
          */
@@ -66,6 +77,8 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-xxxxx</p>
          */
@@ -73,6 +86,8 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>Indicates whether the operation is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

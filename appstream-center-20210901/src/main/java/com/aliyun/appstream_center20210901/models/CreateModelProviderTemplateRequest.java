@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateModelProviderTemplateRequest extends TeaModel {
     /**
+     * <p>Agent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String agentPlatform;
 
     /**
+     * <p>Agent provider name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String agentProvider;
 
     /**
+     * <p>Business type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public Integer bizType;
 
     /**
+     * <p>Model provider configuration JSON, containing connection information such as baseUrl, apiKey, and api. The apiKey is encrypted after creation. Not required when ProviderType is WuyingCredit, as it is copied from the system template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,10 +47,18 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>Model provider template description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里云百炼服务商</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Whether to enable Wuying security proxy. Must be true when ProviderType is WuyingCredit.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -53,6 +66,7 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public Boolean enableWuyingProxy;
 
     /**
+     * <p>Associated model group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,10 +75,17 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     @NameInMap("ModelTemplateId")
     public String modelTemplateId;
 
+    /**
+     * <p>Model provider template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里云百炼</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Model provider name. Must be unique within the same model template. Naming rules vary by ProviderType. For details, see the ProviderType description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +95,13 @@ public class CreateModelProviderTemplateRequest extends TeaModel {
     public String providerName;
 
     /**
+     * <p>Model provider type. Different types impose different constraints on ProviderName and Config:</p>
+     * <ul>
+     * <li>WuyingCredit: Wuying credit package. ProviderName must be wuying-credit. Created by copying from the system template. Config is not required.</li>
+     * <li>Managed: Managed provider. System-reserved names such as wuying-credit cannot be used. Config is required.</li>
+     * <li>Custom: User-defined provider. ProviderName must start with the provider- prefix. Config is required.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Managed</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAmountResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data object.</p>
      */
     @NameInMap("Data")
     public ModifyNodePoolAmountResponseBodyData data;

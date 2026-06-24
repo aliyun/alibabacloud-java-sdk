@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppInstancesResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The list of instance deletion results.</p>
      */
     @NameInMap("DeleteAppInstanceModels")
     public java.util.List<DeleteAppInstancesResponseBodyDeleteAppInstanceModels> deleteAppInstanceModels;
@@ -42,7 +42,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
 
     public static class DeleteAppInstancesResponseBodyDeleteAppInstanceModels extends TeaModel {
         /**
-         * <p>The ID of the application instance.</p>
+         * <p>The application instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-gbuea*****</p>
@@ -51,7 +51,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         public String appInstanceId;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter.ProductType</p>
@@ -60,7 +60,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned when an error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>The parameter ProductType is invalid.</p>
@@ -69,12 +69,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Specifies whether the application instance is deleted.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether the deletion is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

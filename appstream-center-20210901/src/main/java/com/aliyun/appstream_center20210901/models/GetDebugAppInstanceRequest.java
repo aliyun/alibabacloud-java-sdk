@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDebugAppInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group. You can call the <code>listAppInstanceGroup</code> operation to obtain the ID.</p>
+     * <p>The delivery group ID. You can obtain this value by calling the listAppInstanceGroup operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +16,6 @@ public class GetDebugAppInstanceRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

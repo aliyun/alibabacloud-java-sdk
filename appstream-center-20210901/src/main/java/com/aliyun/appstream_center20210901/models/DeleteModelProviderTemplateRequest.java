@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteModelProviderTemplateRequest extends TeaModel {
     /**
+     * <p>The ID of the model provider template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

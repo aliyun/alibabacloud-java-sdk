@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cn-shanghai: China (Shanghai)</li>
-     * <li>cn-hangzhou: China (Hangzhou)</li>
-     * </ul>
+     * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -19,6 +14,15 @@ public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</p>
+     * <ul>
+     * <li>appstreaming.general.4c8g: 1 to 2.</li>
+     * <li>appstreaming.general.8c16g: 1 to 4.</li>
+     * <li>appstreaming.vgpu.8c16g.4g: 1 to 4.</li>
+     * <li>appstreaming.vgpu.8c31g.16g: 1 to 4.</li>
+     * <li>appstreaming.vgpu.14c93g.12g: 1 to 6.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,12 +30,14 @@ public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     public Integer nodeCapacity;
 
     /**
-     * <p>The auto scaling policy used by the delivery group.</p>
+     * <p>The automatic scaling policy of the delivery group.</p>
      */
     @NameInMap("NodePoolStrategy")
     public String nodePoolStrategyShrink;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ew7va2g1wl3vm****</p>
      */
@@ -40,10 +46,6 @@ public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CloudApp</p>

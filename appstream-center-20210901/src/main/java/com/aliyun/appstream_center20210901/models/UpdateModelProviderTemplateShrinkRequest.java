@@ -4,23 +4,41 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelProviderTemplateShrinkRequest extends TeaModel {
+    /**
+     * <p>The model provider configuration.</p>
+     */
     @NameInMap("Config")
     public String configShrink;
 
+    /**
+     * <p>The description of the model provider template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里云百炼服务商</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Specifies whether to enable the Wuying security gateway proxy.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableWuyingProxy")
     public Boolean enableWuyingProxy;
 
+    /**
+     * <p>The name of the model provider template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里云百炼</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The ID of the model provider template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     /**
-     * <p>The image ID of the application. To obtain the image ID, log on to the <a href="https://appstreaming.console.aliyun.com/">App Streaming console</a>. In the left-side navigation pane, choose <strong>Maintenance</strong> &gt; <strong>Custom Images</strong> or Maintenance &gt; <strong>System Images</strong>.</p>
+     * <p>The application image ID. You can obtain the ID from the <strong>O&amp;M</strong> &gt; <strong>Custom Images</strong> or <strong>System Images</strong> page in the <a href="https://appstreaming.console.aliyun.com/">WUYING Cloud Application console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,12 +16,15 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the delivery group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>办公应用</p>
      */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
     /**
-     * <p>Package type.</p>
+     * <p>The package type.</p>
      * 
      * <strong>example:</strong>
      * <p>browser.package.5.250.appstreaming.general.basic</p>
@@ -30,7 +33,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String appPackageType;
 
     /**
-     * <p>Policy ID.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-0clfzcy0adpcf****</p>
@@ -39,7 +42,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String appPolicyId;
 
     /**
-     * <p>The authentication mode of the delivery group.</p>
+     * <p>The authorization mode of the delivery group.</p>
      * 
      * <strong>example:</strong>
      * <p>App</p>
@@ -52,11 +55,6 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable automatic payment.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false: manual payment. This is the default value.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -66,11 +64,6 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable auto-renewal.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false: manual payment. This is the default value.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -79,12 +72,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cn-shanghai: China (Shanghai)</li>
-     * <li>cn-hangzhou: China (Hangzhou)</li>
-     * </ul>
+     * <p>The region ID of the delivery group. For information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,10 +83,6 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The sales mode.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>Node: by resource</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,11 +93,6 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The billing method.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PostPaid: pay-as-you-go</li>
-     * <li>PrePaid: subscription</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -123,7 +102,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cls-d39iq73l5c0a8****</p>
@@ -132,9 +111,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The network settings.</p>
+     * <p>The network configuration.</p>
      * <blockquote>
-     * <p> If you want to use this parameter, submit a ticket.</p>
+     * <p>To use this parameter, submit a ticket.</p>
      * </blockquote>
      */
     @NameInMap("Network")
@@ -147,14 +126,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String nodePoolShrink;
 
     /**
-     * <p>The subscription duration of resources. This parameter is required if you set <code>ChargeType</code> to <code>PrePaid</code>. The unit of this parameter is specified by <code>PeriodUnit</code>.</p>
+     * <p>The subscription duration of the resource when <code>ChargeType</code> is set to <code>PrePaid</code>. This parameter is required. The unit is specified by <code>PeriodUnit</code>.</p>
      * <ul>
-     * <li><p>Valid value if you set <code>PeriodUnit</code> to <code>Week</code>:</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Week</code>, valid values:</p>
      * <ul>
      * <li>1</li>
      * </ul>
      * </li>
-     * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>:</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -162,7 +141,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
      * <li>6</li>
      * </ul>
      * </li>
-     * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>:</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -171,7 +150,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set <code>ChargeType</code> to <code>PostPaid</code>, set this parameter to 1.</p>
+     * <p>If <code>ChargeType</code> is set to <code>PostPaid</code>, set this parameter to 1.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -182,19 +161,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration. This parameter is available if you set <code>ChargeType</code> to <code>PrePaid</code>.</p>
+     * <p>The unit of the subscription duration when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
      * <blockquote>
-     * <p> The value of this parameter is case-insensitive. For example, <code>Week</code> is valid and <code>week</code> is invalid. If you specify an invalid value combination for Period and PeriodUnit, such as <code>2 Week</code>, the operation can still be called. However, an error occurs when you place the order.</p>
+     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid.
+     * If the request parameters do not match the valid combinations, such as <code>2 Week</code>, the API call succeeds but an error occurs during the order placement.</p>
      * </blockquote>
      * <blockquote>
-     * <p> If you set <code>ChargeType</code> to <code>PostPaid</code>, set this parameter to <code>Month</code>.</p>
+     * <p>If <code>ChargeType</code> is set to <code>PostPaid</code>, set this parameter to <code>Month</code>.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
-     * <li>Week</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -204,20 +178,16 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the pre-open application.</p>
+     * <p>The pre-opened application ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cag-b2ron*******</p>
+     * <p>cag-b2ronxxd****</p>
      */
     @NameInMap("PreOpenAppId")
     public String preOpenAppId;
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -248,7 +218,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String securityPolicyShrink;
 
     /**
-     * <p>The period of time during which the application can be recycled. The recycling period is the period of time between the time when the end user disconnects from the application and the time when processes exit the application. If you do not want to recycle the application, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. The value must be an integer. Default value: <code>15</code>. Unit: minutes.</p>
+     * <p>The application recycling timeout period, in minutes. After an end user disconnects from a cloud application for a period of time, the cloud application process exits. This period is the application recycling timeout. Set this parameter to <code>-1</code> if you do not want the application to be recycled. Valid values: -1 and 3 to 300 (integer). Default value: <code>15</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -264,7 +234,7 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String storagePolicyShrink;
 
     /**
-     * <p>Payment method subtype.</p>
+     * <p>The billing method subtype.</p>
      * 
      * <strong>example:</strong>
      * <p>postPaid</p>
@@ -273,13 +243,13 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public String subPayType;
 
     /**
-     * <p>The custom policy.</p>
+     * <p>The user-defined policy.</p>
      */
     @NameInMap("UserDefinePolicy")
     public String userDefinePolicyShrink;
 
     /**
-     * <p>List of authorized user group IDs.</p>
+     * <p>The list of authorized user group IDs.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -288,19 +258,19 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The information about the user that you want to add to the assigned user list of the delivery group. This parameter is required if you configure <code>Users</code>.</p>
+     * <p>The user information of the users to be added to the delivery group. This field is required if the <code>Users</code> parameter is specified.</p>
      */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 
     /**
-     * <p>The users that you want to add to the assigned user list of the delivery group.</p>
+     * <p>The list of usernames to be added to the delivery group as assigned users.</p>
      */
     @NameInMap("Users")
     public java.util.List<String> users;
 
     /**
-     * <p>Display policy.</p>
+     * <p>The display policy.</p>
      */
     @NameInMap("VideoPolicy")
     public String videoPolicyShrink;

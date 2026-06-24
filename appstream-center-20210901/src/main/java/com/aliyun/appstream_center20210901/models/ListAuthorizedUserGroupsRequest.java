@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUserGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The ID of the user group (exact match).</p>
+     * <p>The user group ID. This parameter is used for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>ug-00001</p>
@@ -24,13 +24,16 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the user group (fuzzy match).</p>
+     * <p>The user group name. This parameter is used for fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户组001</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number, starting from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +43,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,10 +54,6 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

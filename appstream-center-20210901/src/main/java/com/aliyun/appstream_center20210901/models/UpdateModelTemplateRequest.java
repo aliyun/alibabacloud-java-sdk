@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateModelTemplateRequest extends TeaModel {
     /**
+     * <p>The model group configuration JSON object.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;defaults&quot;: {
@@ -17,10 +19,17 @@ public class UpdateModelTemplateRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The template group description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试模型分组</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The model group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +39,8 @@ public class UpdateModelTemplateRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
+     * <p>The template group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>model-template-001</p>
      */

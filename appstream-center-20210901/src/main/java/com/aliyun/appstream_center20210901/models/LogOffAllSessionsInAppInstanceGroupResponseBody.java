@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LogOffAllSessionsInAppInstanceGroupResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter.ProductType</p>
@@ -14,7 +14,7 @@ public class LogOffAllSessionsInAppInstanceGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>The parameter ProductType is invalid.</p>

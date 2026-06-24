@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The delivery group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,35 +15,33 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The name of the delivery group.</p>
+     * <p>The delivery group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>办公应用</p>
      */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
     /**
-     * <p>The network settings.</p>
+     * <p>The network configuration.</p>
      * <blockquote>
-     * <p> If you want to use this parameter, submit a ticket.</p>
+     * <p>To use this parameter, submit a ticket.</p>
      * </blockquote>
      */
     @NameInMap("Network")
     public String networkShrink;
 
     /**
-     * <p>The information about the resource group.</p>
+     * <p>The resource group object.</p>
      */
     @NameInMap("NodePool")
     public String nodePoolShrink;
 
     /**
-     * <p>Specifies whether only one application can be opened in a session.</p>
+     * <p>Specifies whether to allow only one application per session.</p>
      * <ul>
-     * <li>After you enable this feature, the system assigns a session to each application if you open multiple applications in a delivery group. This consumes a larger number of sessions.</li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>If enabled, opening multiple applications within a delivery group allocates a separate session for each application, consuming more sessions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +51,7 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     public Boolean perSessionPerApp;
 
     /**
-     * <p>The application ID of the pre-open application. If you set <code>PreOpenMode</code> to <code>SINGLE_APP</code>, you cannot leave this parameter empty.``</p>
+     * <p>The AppId of the pre-open application. If the PreOpenMode parameter is set to <code>SINGLE_APP</code>, PreOpenAppId cannot be an empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-b2ronxxd****</p>
@@ -63,11 +61,6 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
 
     /**
      * <p>The pre-open mode.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>SINGLE_APP: enables the pre-open mode for a single application.</li>
-     * <li>OFF: disables the pre-open mode. This is the default value.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OFF</p>
@@ -77,10 +70,6 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
 
     /**
      * <p>The product type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>CloudApp: App Streaming</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +85,7 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     public String securityPolicyShrink;
 
     /**
-     * <p>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. Default value: <code>15</code>.</p>
+     * <p>The session retention duration after disconnection, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

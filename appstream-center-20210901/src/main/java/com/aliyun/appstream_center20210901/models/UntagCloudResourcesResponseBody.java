@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagCloudResourcesResponseBody extends TeaModel {
     /**
-     * <p>The cloud resources whose tags failed to be removed and the corresponding tags.</p>
+     * <p>The list of failed resources and tag information.</p>
      */
     @NameInMap("FailedResources")
     public java.util.List<UntagCloudResourcesResponseBodyFailedResources> failedResources;
@@ -52,11 +52,6 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The tag type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Custom: custom tag.</li>
-         * <li>System: system tag.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -107,7 +102,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The resource IDs.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-00000001</p>
@@ -116,14 +111,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the cloud resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AppId: app ID.</li>
-         * <li>WyId: Alibaba Cloud Workspace user ID.</li>
-         * <li>AppInstanceGroupId: delivery group ID.</li>
-         * <li>AliUid: tenant ID.</li>
-         * </ul>
+         * <p>The cloud resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>AppInstanceGroupId</p>
@@ -132,7 +120,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tags that failed to be removed from the cloud resources.</p>
+         * <p>The list of failed tag information.</p>
          */
         @NameInMap("Tags")
         public java.util.List<UntagCloudResourcesResponseBodyFailedResourcesTags> tags;

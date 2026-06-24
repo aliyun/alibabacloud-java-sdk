@@ -4,13 +4,27 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListDesktopAgentRuntimeRequest extends TeaModel {
+    /**
+     * <p>The list of agent instance statuses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("AgentInstanceStatuses")
     public java.util.List<String> agentInstanceStatuses;
 
+    /**
+     * <p>The list of agent instance versions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenClaw 2026.4.15</p>
+     */
     @NameInMap("AgentInstanceVersions")
     public java.util.List<String> agentInstanceVersions;
 
     /**
+     * <p>The agent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -18,7 +32,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The name of the agent provider.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenClaw</p>
@@ -26,10 +40,18 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     @NameInMap("AgentProvider")
     public String agentProvider;
 
+    /**
+     * <p>The list of authorized users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user001</p>
+     */
     @NameInMap("AuthUsers")
     public java.util.List<String> authUsers;
 
     /**
+     * <p>The business type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -37,6 +59,8 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Integer bizType;
 
     /**
+     * <p>Specifies whether the third-party channel is configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -44,22 +68,44 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean channelConfigure;
 
     /**
+     * <p>The deployment source.</p>
+     * 
      * <strong>example:</strong>
      * <p>Admin</p>
      */
     @NameInMap("DeploymentSource")
     public String deploymentSource;
 
+    /**
+     * <p>The list of agent runtime IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jvs-xxxxx</p>
+     */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
+    /**
+     * <p>The list of agent runtime names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Desktop001</p>
+     */
     @NameInMap("DesktopNames")
     public java.util.List<String> desktopNames;
 
+    /**
+     * <p>The list of cloud computer statuses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("DesktopStatuses")
     public java.util.List<String> desktopStatuses;
 
     /**
+     * <p>Specifies whether authorized users exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +113,9 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean hasAuthUser;
 
     /**
+     * <p>Specifies whether a risk exists. Used to filter cloud computers with or without risks. This parameter takes effect only when IncludeRiskInfo is set to true.</p>
+     * <p>Set to true to return only records with risks. Set to false to return only records without risks. If not specified, no filtering is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -74,6 +123,8 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean hasRisk;
 
     /**
+     * <p>Specifies whether to query and return risk information. Default value: false. When set to true, the response includes the RiskInfo field, and the HasRisk filter condition takes effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,12 +133,23 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>Hibernated</p>
+     */
+    @NameInMap("ManagementStatus")
+    public String managementStatus;
+
+    /**
+     * <p>Specifies whether the model is configured.</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("ModelConfigure")
     public Boolean modelConfigure;
 
     /**
+     * <p>The model group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-xxxx</p>
      */
@@ -95,6 +157,8 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
+     * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -102,6 +166,8 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -109,12 +175,20 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of resource IDs (underlying real resource IDs).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-xxxxx</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
@@ -233,6 +307,14 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     }
     public Boolean getIncludeRiskInfo() {
         return this.includeRiskInfo;
+    }
+
+    public ListDesktopAgentRuntimeRequest setManagementStatus(String managementStatus) {
+        this.managementStatus = managementStatus;
+        return this;
+    }
+    public String getManagementStatus() {
+        return this.managementStatus;
     }
 
     public ListDesktopAgentRuntimeRequest setModelConfigure(Boolean modelConfigure) {
