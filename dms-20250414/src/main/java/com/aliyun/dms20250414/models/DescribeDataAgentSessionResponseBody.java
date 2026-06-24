@@ -40,8 +40,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     /**
      * <p>The return value. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Succeeded.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The operation was successful.</li>
+     * <li><strong>false</strong>: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,27 +96,85 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     }
 
     public static class DescribeDataAgentSessionResponseBodyDataArtifacts extends TeaModel {
+        /**
+         * <p>The brief description of the artifact. This value may be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a simple report</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the backend completed the artifact task. This is a UNIX timestamp accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1778743587</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The globally unique artifact ID. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId returned by the SendChatMessage operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bab******33e1</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The artifact name. This is typically a string concatenated by the system. It is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>report_****_2026****</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The time when the backend received the artifact request. This is a UNIX timestamp accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1778743587</p>
+         */
         @NameInMap("ReceiveTime")
         public String receiveTime;
 
+        /**
+         * <p>The time when the backend actually started running the artifact task. This is a UNIX timestamp accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1778743587</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The artifact status. Valid values:</p>
+         * <ul>
+         * <li><p>PENDING: The backend has received the task but has not started it.</p>
+         * </li>
+         * <li><p>RUNNING: The backend has started the task but has not completed it.</p>
+         * </li>
+         * <li><p>SUCCESS: The task succeeded. You can query the file information by calling the ListFileUpload operation.</p>
+         * </li>
+         * <li><p>FAILED: The task failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PENDING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The artifact type. Valid values: TextReport and WebReport.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebReport</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -234,9 +292,28 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     }
 
     public static class DescribeDataAgentSessionResponseBodyDataDataSources extends TeaModel {
+        /**
+         * <p>The data source category. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CHAT</strong>: specified through the CreateDataAgentSession or SendChatMessage operation during a conversation.</p>
+         * </li>
+         * <li><p><strong>CUSTOM_AGENT</strong>: from the preset analysis data scope in a custom agent.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CHAT</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The data source details.</p>
+         * <p>When Category is CHAT or CUSTOM_AGENT, the structure of Detail is aligned with the structure of a single element in the DataSources parameter of the SendChatMessage operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
@@ -264,12 +341,30 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     }
 
     public static class DescribeDataAgentSessionResponseBodyDataRecallResults extends TeaModel {
+        /**
+         * <p>The content of the recalled knowledge chunk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sky is blue</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The similarity score of this data entry. The scoring algorithm is related to the algorithm (l2/ip/cosine) specified when the index was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.65</p>
+         */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The type of recalled knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memory</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -317,8 +412,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The stage of the custom agent. Valid values:</p>
          * <ul>
-         * <li><strong>debug</strong>: Debug stage.</li>
-         * <li><strong>prod</strong>: Production stage.</li>
+         * <li><strong>debug</strong>: the debugging stage.</li>
+         * <li><strong>prod</strong>: the production stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -336,12 +431,27 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("EnableSearch")
         public Boolean enableSearch;
 
+        /**
+         * <p>The encryption key for storing artifacts in OSS (including built-in and user-specified OSS). This is typically specified in CreateDataAgentSession.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ay***1Te</p>
+         */
         @NameInMap("EncryptKey")
         public String encryptKey;
 
+        /**
+         * <p>The encryption type for storing artifacts in OSS (including built-in and user-specified OSS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("EncryptType")
         public String encryptType;
 
+        /**
+         * <p>The list of knowledge base IDs for this session.</p>
+         */
         @NameInMap("KbUuidList")
         public java.util.List<String> kbUuidList;
 
@@ -367,9 +477,9 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The mode. Valid values:</p>
          * <ul>
-         * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
-         * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
-         * <li><strong>INSIGHT</strong>: Insight mode.</li>
+         * <li><strong>ASK_DATA</strong>: the data query mode.</li>
+         * <li><strong>ANALYSIS</strong>: the analysis mode.</li>
+         * <li><strong>INSIGHT</strong>: the insight mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,17 +488,26 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The report page width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300mm</p>
+         */
         @NameInMap("ReportPageWidth")
         public Long reportPageWidth;
 
+        /**
+         * <p>The report watermark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ReportWaterMark")
         public String reportWaterMark;
 
         /**
-         * <p>The name of the user OSS bucket.</p>
-         * <ul>
-         * <li>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</li>
-         * </ul>
+         * <p>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>user-oss-bucket</p>
@@ -518,6 +637,9 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("AgentStatus")
         public String agentStatus;
 
+        /**
+         * <p>The list of artifacts produced by the session. Currently, only reports are included.</p>
+         */
         @NameInMap("Artifacts")
         public java.util.List<DescribeDataAgentSessionResponseBodyDataArtifacts> artifacts;
 
@@ -528,7 +650,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public java.util.List<DescribeDataAgentSessionResponseBodyDataChatHistoryLocations> chatHistoryLocations;
 
         /**
-         * <p>The session creation time.</p>
+         * <p>The time when the session was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1731645908000</p>
@@ -536,11 +658,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The list of data sources used in the current session.</p>
+         */
         @NameInMap("DataSources")
         public java.util.List<DescribeDataAgentSessionResponseBodyDataDataSources> dataSources;
 
         /**
-         * <p>Indicates whether the session is saved as a favorite in the workspace by the current logged-in user.</p>
+         * <p>Indicates whether the session is saved to favorites in the workspace by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -557,11 +682,14 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("File")
         public String file;
 
+        /**
+         * <p>The recall results from the knowledge base and memory for this session.</p>
+         */
         @NameInMap("RecallResults")
         public java.util.List<DescribeDataAgentSessionResponseBodyDataRecallResults> recallResults;
 
         /**
-         * <p>Indicates whether the session is saved as a favorite by the current logged-in user.</p>
+         * <p>Indicates whether the session is saved to favorites by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

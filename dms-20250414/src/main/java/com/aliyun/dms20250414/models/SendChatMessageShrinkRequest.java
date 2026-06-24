@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageShrinkRequest extends TeaModel {
     /**
-     * <p>The agent ID. This parameter is required. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</p>
+     * <p>The agent ID. This is a required field. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The Data Management unit you are currently in. If you choose to analyze a database, this information is used to correctly connect to your Data Management instance. You can go to the Data Management console to view your current Data Management unit. If you are a user of Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), set this parameter to ap-southeast-1.</p>
+     * <p>The Data Management unit you are currently in. If you choose to analyze a database, this information is used to correctly connect to your Data Management instance. You can check your current Data Management unit in the Data Management console. If you are a user of Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), set this parameter to ap-southeast-1.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -24,13 +24,16 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The data source information. This parameter is optional.</p>
+     * <p>The data source information. This parameter can be left empty. This parameter supports only a single data source. Use the DataSources parameter instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("DataSource")
     public String dataSourceShrink;
 
     /**
-     * <p>The detailed data source information. This parameter is optional.</p>
+     * <p>The detailed data source information. This parameter can be left empty.</p>
      */
     @NameInMap("DataSources")
     public String dataSourcesShrink;
@@ -46,7 +49,17 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>The message type. Default value: <code>[primary]</code>. When the message is a response to the Agent\&quot;s human-in-the-loop question, set this parameter to <code>[additional]</code>. When the message is intended to cancel the current session, set this parameter to <code>[cancel]</code>.</p>
+     * <p>The message type. Default value: <code>[primary]</code>.  </p>
+     * <ul>
+     * <li><p>For regular interactions with the Agent, set the message type to <code>[primary]</code>.</p>
+     * </li>
+     * <li><p>When the message is a response to the Agent\&quot;s Human-in-Loop question, set the type to <code>[additional]</code>.</p>
+     * </li>
+     * <li><p>When the message is intended to trigger report generation, set the type to <code>[report]</code>.</p>
+     * </li>
+     * <li><p>When the message is intended to cancel the current session, set the type to <code>[cancel]</code>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>primary</p>
@@ -64,7 +77,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String parentSessionId;
 
     /**
-     * <p>The specific question that the Agent asks the user through human-in-the-loop. This parameter is required when the message type is <code>additional</code>.</p>
+     * <p>This field is required when the message type is <code>additional</code>. Specify the specific question that the Agent asks the user through Human-in-Loop.</p>
      * 
      * <strong>example:</strong>
      * <p>请提供计算GMV的口径。</p>
@@ -73,7 +86,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String question;
 
     /**
-     * <p>The quoted content, typically used during interaction with the Agent.</p>
+     * <p>The quoted content to pass in. This is typically used during interactions with the Agent.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
@@ -82,7 +95,9 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String quotedMessage;
 
     /**
-     * <p>Indicates which Agent message this message responds to. Set this parameter to the largest Checkpoint sequence number currently received. Set it to 0 for the first message. This field is used for message deduplication in case of occasional network issues or duplicate message delivery.</p>
+     * <p><strong>Important</strong></p>
+     * <p>When this message is a reply to an Agent message (for example, the Agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint sequence number carried by that Agent message. If this message is not a targeted reply, such as requesting further in-depth analysis after analysis is complete, leave reply_to empty or set it to &quot;0&quot;.  </p>
+     * <p>This field affects how the Agent decides to process the message. Passing an incorrect value may lead to analysis results that do not meet expectations.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -91,7 +106,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String replyTo;
 
     /**
-     * <p>The special configuration for this session. For the same session, only the configuration included in the first SendMessage call takes effect.</p>
+     * <p>The special configuration for this session. For the same session, only the configuration passed with the first SendMessage call takes effect.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -100,7 +115,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String sessionConfigShrink;
 
     /**
-     * <p>The session ID. This parameter is required. You can obtain the SessionId by calling the CreateAgentSession operation.</p>
+     * <p>The session ID. This is a required field. You can obtain the SessionId by calling the CreateAgentSession operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,6 +124,9 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The configuration items that affect only the current task.</p>
+     */
     @NameInMap("TaskConfig")
     public String taskConfigShrink;
 

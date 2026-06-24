@@ -110,6 +110,12 @@ public class SendChatMessageResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>922d7fd2-77fb-4549-9091-d51da225d47f</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 

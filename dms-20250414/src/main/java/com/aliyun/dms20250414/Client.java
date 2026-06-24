@@ -2783,6 +2783,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the operation logs of the SQL window.</p>
+     * 
+     * @param request GetSqlConsoleOperationLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSqlConsoleOperationLogResponse
+     */
+    public GetSqlConsoleOperationLogResponse getSqlConsoleOperationLogWithOptions(GetSqlConsoleOperationLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlType)) {
+            query.put("SqlType", request.sqlType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSqlConsoleOperationLog"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSqlConsoleOperationLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the operation logs of the SQL window.</p>
+     * 
+     * @param request GetSqlConsoleOperationLogRequest
+     * @return GetSqlConsoleOperationLogResponse
+     */
+    public GetSqlConsoleOperationLogResponse getSqlConsoleOperationLog(GetSqlConsoleOperationLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSqlConsoleOperationLogWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Obtains the resource configuration limit information and the instance purchase status of the workspace.</p>
      * 
@@ -3116,7 +3188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a list of Data Agent session descriptions.</p>
+     * <p>Retrieves the list of historical session descriptions for a Data Agent.</p>
      * 
      * @param request ListDataAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3143,6 +3215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.isSaved)) {
             query.put("IsSaved", request.isSaved);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -3184,7 +3260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a list of Data Agent session descriptions.</p>
+     * <p>Retrieves the list of historical session descriptions for a Data Agent.</p>
      * 
      * @param request ListDataAgentSessionRequest
      * @return ListDataAgentSessionResponse
@@ -4955,8 +5031,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
-     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> when appending information or <code>cancel</code> when canceling a session.</li>
-     * <li><code>reply_to</code> indicates which Agent message this message responds to. The default value is <code>0</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li><code>reply_to</code> indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
      * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
      * <li><code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, <code>session_config</code>, and other fields are optional but provide more detailed context information.</li>
@@ -5064,8 +5140,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
-     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> when appending information or <code>cancel</code> when canceling a session.</li>
-     * <li><code>reply_to</code> indicates which Agent message this message responds to. The default value is <code>0</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li><code>reply_to</code> indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
      * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
      * <li><code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, <code>session_config</code>, and other fields are optional but provide more detailed context information.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataAgentSessionRequest extends TeaModel {
     /**
-     * <p>The current Data Management unit.</p>
+     * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,7 +14,7 @@ public class DescribeDataAgentSessionRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The agent session ID.</p>
+     * <p>The DataAgent session ID. You can obtain this ID by calling CreateDataAgentSession.</p>
      * 
      * <strong>example:</strong>
      * <p>c61n7gm******rj</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentSessionRequest extends TeaModel {
     /**
-     * <p>Session creation end time</p>
+     * <p>The end time of the session creation period.</p>
      * 
      * <strong>example:</strong>
      * <p>1770912000000</p>
@@ -14,7 +14,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Long createEndTime;
 
     /**
-     * <p>Session creation start time</p>
+     * <p>The start time of the session creation period.</p>
      * 
      * <strong>example:</strong>
      * <p>1770825600000</p>
@@ -23,7 +23,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Long createStartTime;
 
     /**
-     * <p>Custom Agent ID</p>
+     * <p>The custom agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-4y3ca4khkcu**********ysf</p>
@@ -32,7 +32,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public String customAgentId;
 
     /**
-     * <p>Current DMS unit</p>
+     * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -41,7 +41,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>Whether to return only saved sessions</p>
+     * <p>Specifies whether to retrieve only favorited sessions.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -49,8 +49,11 @@ public class ListDataAgentSessionRequest extends TeaModel {
     @NameInMap("IsSaved")
     public Boolean isSaved;
 
+    @NameInMap("Mode")
+    public String mode;
+
     /**
-     * <p>Page number for pagination</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +62,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of records per page</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +71,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Session type. Required when you specify a collaboration workspace.</p>
+     * <p>The session type. This parameter is required if a workspace is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>myFavorite</p>
@@ -77,7 +80,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public String queryType;
 
     /**
-     * <p>Data Agent title (supports fuzzy search)</p>
+     * <p>The Data Agent title. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>帮我分析一下这份数据</p>
@@ -86,7 +89,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>Collaboration workspace ID</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20923*****7291</p>
@@ -137,6 +140,14 @@ public class ListDataAgentSessionRequest extends TeaModel {
     }
     public Boolean getIsSaved() {
         return this.isSaved;
+    }
+
+    public ListDataAgentSessionRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public ListDataAgentSessionRequest setPageNumber(Integer pageNumber) {

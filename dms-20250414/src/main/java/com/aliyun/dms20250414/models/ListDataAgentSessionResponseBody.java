@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentSessionResponseBody extends TeaModel {
     /**
-     * <p>Response data</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListDataAgentSessionResponseBodyData> data;
 
     /**
-     * <p>Error code. Returned when the request fails.</p>
+     * <p>The error code returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Error message returned when the call fails.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -29,7 +29,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Current page size</p>
+     * <p>The current page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>E0D21075-CD3E-4D98-8264-****</p>
@@ -56,12 +56,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request succeeded. Possible values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +69,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total number of records</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -80,7 +78,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public Integer total;
 
     /**
-     * <p>Total number of pages</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -167,7 +165,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
 
     public static class ListDataAgentSessionResponseBodyDataSessionConfig extends TeaModel {
         /**
-         * <p>Custom Agent ID</p>
+         * <p>The custom agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-e*******ckd</p>
@@ -176,12 +174,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
-         * <p>Custom Agent usage stage:</p>
+         * <p>The usage stage of the custom agent. Valid values:</p>
          * <ul>
-         * <li><p><strong>debug</strong> Debug stage</p>
-         * </li>
-         * <li><p><strong>prod</strong> Production stage</p>
-         * </li>
+         * <li><strong>debug</strong>: Debug stage.</li>
+         * <li><strong>prod</strong>: Production stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +187,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String customAgentStage;
 
         /**
-         * <p>Whether web search is enabled</p>
+         * <p>Specifies whether to enable web search.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -200,12 +196,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public Boolean enableSearch;
 
         /**
-         * <p>Language</p>
+         * <p>The language. Valid values:</p>
          * <ul>
-         * <li><p><strong>CHINESE</strong> Chinese</p>
-         * </li>
-         * <li><p><strong>ENGLISH</strong> English</p>
-         * </li>
+         * <li><strong>CHINESE</strong>: Chinese.</li>
+         * <li><strong>ENGLISH</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,14 +209,11 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>Mode:</p>
+         * <p>The mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>ASK_DATA</strong> Quick Inquiry Mode</p>
-         * </li>
-         * <li><p><strong>ANALYSIS</strong> Analysis mode</p>
-         * </li>
-         * <li><p><strong>INSIGHT</strong> Insight mode</p>
-         * </li>
+         * <li><strong>ASK_DATA</strong>: Ask data mode.</li>
+         * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
+         * <li><strong>INSIGHT</strong>: Insight mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,9 +223,9 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>User OSS bucket name</p>
+         * <p>The name of the user OSS bucket.</p>
          * <ul>
-         * <li>Files and reports generated during analysis can be uploaded to the user-specified OSS bucket.</li>
+         * <li>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,7 +291,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
 
     public static class ListDataAgentSessionResponseBodyData extends TeaModel {
         /**
-         * <p>Current Agent ID</p>
+         * <p>The current agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cu0cs*******mf</p>
@@ -309,7 +300,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>Current Agent status</p>
+         * <p>The current agent status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -318,7 +309,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String agentStatus;
 
         /**
-         * <p>Session creation time</p>
+         * <p>The session creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1731645908000</p>
@@ -327,7 +318,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Whether the session is saved by the current user in the workspace</p>
+         * <p>Indicates whether the session is favorited by the current logged-in user in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -336,7 +327,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public Boolean favoriteInWorkspace;
 
         /**
-         * <p>File ID</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
@@ -345,7 +336,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String file;
 
         /**
-         * <p>Whether the session is saved by the current user</p>
+         * <p>Indicates whether the session is favorited by the current logged-in user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -354,13 +345,13 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public Boolean saved;
 
         /**
-         * <p>Session configuration</p>
+         * <p>The session configuration item.</p>
          */
         @NameInMap("SessionConfig")
         public ListDataAgentSessionResponseBodyDataSessionConfig sessionConfig;
 
         /**
-         * <p>Data Agent session ID</p>
+         * <p>The Data Agent session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>h8r********4fch</p>
@@ -369,7 +360,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>Session status</p>
+         * <p>The session status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -378,7 +369,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String sessionStatus;
 
         /**
-         * <p>Title</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>分析一下这份文件，给出报告。</p>
@@ -387,7 +378,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>Session owner ID</p>
+         * <p>The ID of the session owner.</p>
          * 
          * <strong>example:</strong>
          * <p>2096******</p>
