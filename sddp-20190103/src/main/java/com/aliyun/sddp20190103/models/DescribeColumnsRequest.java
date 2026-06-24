@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeColumnsRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number for paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,18 @@ public class DescribeColumnsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The engine type. Valid values:</p>
+     * <p>Engine type. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>MariaDB</strong></li>
-     * <li><strong>Oracle</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>SQLServer</strong></li>
+     * <li><p><strong>MySQL</strong>.</p>
+     * </li>
+     * <li><p><strong>MariaDB</strong>.</p>
+     * </li>
+     * <li><p><strong>Oracle</strong>.</p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong>.</p>
+     * </li>
+     * <li><p><strong>SQLServer</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,9 +35,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The ID of the instance to which data in the column of the table belongs.</p>
+     * <p>The ID of the asset instance to which the column data in the data asset table belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeRules~~">DescribeInstances</a> operation to query the IDs of instances.</p>
+     * <p>Query column data in data asset tables authorized to connect to Data Security Center using the ID of the asset instance to which the column data in the data asset table belongs. Obtain the asset instance ID by calling the <a href="~~DescribeRules~~">DescribeInstances</a> API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +47,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The name of the instance to which data in the column of the table belongs.</p>
+     * <p>The name of the asset instance to which the column data in the data asset table belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp17t1htja573l5i8****</p>
@@ -51,10 +56,12 @@ public class DescribeColumnsRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language type for requests and responses. The default value is <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,10 +71,12 @@ public class DescribeColumnsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The data tag.</p>
+     * <p>Data tag.</p>
      * <ul>
-     * <li>101: personal sensitive information</li>
-     * <li>102: personal information</li>
+     * <li><p>101: Personal sensitive information</p>
+     * </li>
+     * <li><p>102: Personal information</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,8 +86,8 @@ public class DescribeColumnsRequest extends TeaModel {
     public String modelTagId;
 
     /**
-     * <p>The search keyword. Fuzzy match is supported.</p>
-     * <p>For example, if you enter <strong>test</strong>, all columns whose names contain <strong>test</strong> are retrieved.</p>
+     * <p>The keyword for search. Supports fuzzy match.</p>
+     * <p>For example, entering <strong>test</strong> returns all data containing <strong>test</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -87,7 +96,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of data entries displayed per page in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -96,7 +105,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which data in the column of the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+     * <p>The product name to which the column data in the data asset table belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
@@ -105,20 +114,32 @@ public class DescribeColumnsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the service to which the data object belongs. Valid values:</p>
+     * <p>The ID corresponding to the product name to which the data object belongs. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: MaxCompute</li>
-     * <li><strong>2</strong>: Object Storage Service (OSS)</li>
-     * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-     * <li><strong>4</strong>: Tablestore (OTS)</li>
-     * <li><strong>5</strong>: ApsaraDB RDS</li>
-     * <li><strong>6</strong>: self-managed database</li>
-     * <li><strong>7</strong>: PolarDB for Xscale (PolarDB-X)</li>
-     * <li><strong>8</strong>: PolarDB</li>
-     * <li><strong>9</strong>: AnalyticDB for PostgreSQL</li>
-     * <li><strong>10</strong>: ApsaraDB for OceanBase</li>
-     * <li><strong>11</strong>: ApsaraDB for MongoDB</li>
-     * <li><strong>25</strong>: ApsaraDB for Redis</li>
+     * <li><p><strong>1</strong>: MaxCompute</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADB-MYSQL</p>
+     * </li>
+     * <li><p><strong>4</strong>: TableStore</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB</p>
+     * </li>
+     * <li><p><strong>7</strong>: PolarDB-X</p>
+     * </li>
+     * <li><p><strong>8</strong>: PolarDB</p>
+     * </li>
+     * <li><p><strong>9</strong>: ADB-PG</p>
+     * </li>
+     * <li><p><strong>10</strong>: OceanBase</p>
+     * </li>
+     * <li><p><strong>11</strong>: MongoDB</p>
+     * </li>
+     * <li><p><strong>25</strong>: Redis</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,13 +149,18 @@ public class DescribeColumnsRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+     * <p>The risk level ID of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: N/A</li>
-     * <li><strong>2</strong>: S1</li>
-     * <li><strong>3</strong>: S2</li>
-     * <li><strong>4</strong>: S3</li>
-     * <li><strong>5</strong>: S4</li>
+     * <li><p><strong>1</strong>: N/A.</p>
+     * </li>
+     * <li><p><strong>2</strong>: S1.</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2.</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3.</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,9 +170,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The ID of the sensitive data detection rule that data in the column of the table hits.</p>
+     * <p>The unique ID of the sensitive data detection rule hit by the column data in the asset table.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to query the IDs of sensitive data detection rules.</p>
+     * <p>Query column data in data asset tables authorized to connect to Data Security Center using the ID of the sensitive data detection rule hit by the column data in the asset table. Obtain the sensitive data detection rule ID by calling the <a href="~~DescribeRules~~">DescribeRules</a> API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,22 +182,27 @@ public class DescribeColumnsRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The name of the sensitive data detection rule that data in the column of the table hits.</p>
+     * <p>The name of the sensitive data detection rule hit by the column data in the data asset table.</p>
      * 
      * <strong>example:</strong>
-     * <p>ID card number (the Chinese mainland)</p>
+     * <p>name</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The name of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:</p>
+     * <p>Sensitivity level name. Valid values:</p>
      * <ul>
-     * <li><strong>N/A</strong>: No sensitive data is detected.</li>
-     * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
-     * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
-     * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
-     * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+     * <li><p><strong>N/A</strong>: No sensitive data detected.</p>
+     * </li>
+     * <li><p><strong>S1</strong>: Level 1 sensitive data.</p>
+     * </li>
+     * <li><p><strong>S2</strong>: Level 2 sensitive data.</p>
+     * </li>
+     * <li><p><strong>S3</strong>: Level 3 sensitive data.</p>
+     * </li>
+     * <li><p><strong>S4</strong>: Level 4 sensitive data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -188,9 +219,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The ID of the table to which the column belongs.</p>
+     * <p>The unique ID of the asset table that contains the columns in data asset tables such as MaxCompute and RDS.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeTables~~">DescribeTables</a> operation to query the IDs of tables.</p>
+     * <p>Query column data in data asset tables authorized to connect to Data Security Center using the asset table ID. Obtain the asset table ID by calling the <a href="~~DescribeTables~~">DescribeTables</a> API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -200,7 +231,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public Long tableId;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The name of the data asset table.</p>
      * 
      * <strong>example:</strong>
      * <p>it_table</p>
@@ -209,9 +240,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The ID of the industry-specific classification template.</p>
+     * <p>Industry template ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the IDs of industry-specific classification templates.</p>
+     * <p>Obtain the industry template ID by calling <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -221,9 +252,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The ID of the template rule that is hit.</p>
+     * <p>The ID of the hit template rule.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/410143.html">DescribeCategoryTemplateRuleList</a> operation to obtain the IDs of hit template rules.</p>
+     * <p>Obtain the hit template rule ID by calling <a href="https://help.aliyun.com/document_detail/410143.html">DescribeCategoryTemplateRuleList</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

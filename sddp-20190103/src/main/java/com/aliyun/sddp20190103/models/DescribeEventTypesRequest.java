@@ -8,16 +8,18 @@ public class DescribeEventTypesRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,11 +29,14 @@ public class DescribeEventTypesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of anomalous event for which you want to query the anomalous events of subtypes. Valid values:</p>
+     * <p>The ID of the parent anomalous activity type to which the child anomalous activity type belongs. Valid values:</p>
      * <ul>
-     * <li><strong>01</strong>: anomalous permission usage</li>
-     * <li><strong>02</strong>: anomalous data flow</li>
-     * <li><strong>03</strong>: anomalous data operation</li>
+     * <li><p><strong>01</strong>: anomalous permission access.</p>
+     * </li>
+     * <li><p><strong>02</strong>: anomalous data flow.</p>
+     * </li>
+     * <li><p><strong>03</strong>: anomalous data operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +46,19 @@ public class DescribeEventTypesRequest extends TeaModel {
     public Long parentTypeId;
 
     /**
-     * <p>The type of the resource. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The resource type of the product. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: MaxCompute.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Object Storage Service (OSS).</p>
+     * </li>
+     * <li><p><strong>3</strong>: AnalyticDB for MySQL.</p>
+     * </li>
+     * <li><p><strong>4</strong>: Tablestore.</p>
+     * </li>
+     * <li><p><strong>5</strong>. ApsaraDB RDS.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -50,10 +67,12 @@ public class DescribeEventTypesRequest extends TeaModel {
     public Integer resourceId;
 
     /**
-     * <p>The status of the anomalous event. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>2</strong>: disabled</li>
+     * <li><p><strong>1</strong>: active.</p>
+     * </li>
+     * <li><p><strong>2</strong>: inactive.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

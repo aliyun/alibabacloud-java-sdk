@@ -14,7 +14,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The ID of the account that handles the anomalous event.</p>
+     * <p>The ID of the account that handled the anomalous activity.</p>
      * 
      * <strong>example:</strong>
      * <p>yundun-***</p>
@@ -23,16 +23,16 @@ public class DescribeEventsRequest extends TeaModel {
     public String dealUserId;
 
     /**
-     * <p>The end of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The time when the detection of the anomalous activity ended. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1698700000</p>
      */
     @NameInMap("EndTime")
-    public String endTime;
+    public Long endTime;
 
     /**
-     * <p>The unique ID of the anomalous event.</p>
+     * <p>The unique ID of the anomalous activity.</p>
      * 
      * <strong>example:</strong>
      * <p>789026</p>
@@ -41,7 +41,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the data asset.</p>
+     * <p>The name of the data asset instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-uf6yzvbc2tg90iuxk.l****</p>
@@ -50,10 +50,12 @@ public class DescribeEventsRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+     * <p>The service to which the data asset belongs. Valid values include MaxCompute, OSS, ADS, OTS, and <strong>RDS</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -81,20 +83,23 @@ public class DescribeEventsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The beginning of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The time when the anomalous activity occurred. This is the start time of the detection. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1657900000</p>
      */
     @NameInMap("StartTime")
-    public String startTime;
+    public Long startTime;
 
     /**
-     * <p>The handling status of the anomalous event. Valid values:</p>
+     * <p>The processing status of the anomalous activity.</p>
      * <ul>
-     * <li>0: unhandled</li>
-     * <li>1: confirmed</li>
-     * <li>2: marked as false positive</li>
+     * <li><p>0: Unhandled.</p>
+     * </li>
+     * <li><p>1: Confirmed.</p>
+     * </li>
+     * <li><p>2: Dismissed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,19 +109,19 @@ public class DescribeEventsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The name of the anomalous event subtype.</p>
+     * <p>The name of the child type of the anomalous activity.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeEventTypes</strong> operation to query the name of the anomalous event subtype.</p>
+     * <p>To query anomalous activities by the child type name, call the <strong>DescribeEventTypes</strong> operation to get the name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Anomalous volume of downloaded data</p>
+     * <p>Abnormal data download volume</p>
      */
     @NameInMap("SubTypeCode")
     public String subTypeCode;
 
     /**
-     * <p>The name of the destination service in an anomalous data flow. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong></p>
+     * <p>The destination service for an anomalous data flow event. Valid values include MaxCompute, OSS, ADS, OTS, and <strong>RDS</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -125,11 +130,14 @@ public class DescribeEventsRequest extends TeaModel {
     public String targetProductCode;
 
     /**
-     * <p>The name of the anomalous event type. Valid values:</p>
+     * <p>The code of the parent type of the anomalous activity.</p>
      * <ul>
-     * <li>01: anomalous permission usage</li>
-     * <li>02: anomalous data flow</li>
-     * <li>03: anomalous data operation</li>
+     * <li><p>01: Anomalous permission access.</p>
+     * </li>
+     * <li><p>02: Anomalous data flow.</p>
+     * </li>
+     * <li><p>03: Anomalous data operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,7 +147,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String typeCode;
 
     /**
-     * <p>The ID of the account that triggered the anomalous event.</p>
+     * <p>The ID of the account that performed the operation that triggered the anomalous activity.</p>
      * 
      * <strong>example:</strong>
      * <p>1978132506596***</p>
@@ -157,11 +165,14 @@ public class DescribeEventsRequest extends TeaModel {
     public String userName;
 
     /**
-     * <p>The risk level of the alert that is triggered. Valid values:</p>
+     * <p>The risk level of the anomalous activity.</p>
      * <ul>
-     * <li><strong>1</strong>: low</li>
-     * <li><strong>2</strong>: medium</li>
-     * <li><strong>3</strong>: high</li>
+     * <li><p><strong>1</strong>: Low.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Medium.</p>
+     * </li>
+     * <li><p><strong>3</strong>: High.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -191,11 +202,11 @@ public class DescribeEventsRequest extends TeaModel {
         return this.dealUserId;
     }
 
-    public DescribeEventsRequest setEndTime(String endTime) {
+    public DescribeEventsRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
-    public String getEndTime() {
+    public Long getEndTime() {
         return this.endTime;
     }
 
@@ -239,11 +250,11 @@ public class DescribeEventsRequest extends TeaModel {
         return this.productCode;
     }
 
-    public DescribeEventsRequest setStartTime(String startTime) {
+    public DescribeEventsRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 

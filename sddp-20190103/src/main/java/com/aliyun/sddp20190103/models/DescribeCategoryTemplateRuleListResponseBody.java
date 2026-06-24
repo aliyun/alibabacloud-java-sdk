@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of rules.</p>
+     * <p>A list of template rules.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeCategoryTemplateRuleListResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of template rules returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -96,13 +96,13 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
          * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Rule for identifying ID card numbers</p>
+         * <p>Template rule for identifying ID card numbers</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The unique ID of the rule.</p>
+         * <p>The unique ID of the template rule.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -111,7 +111,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The IDs of sensitive data types. Multiple IDs are separated by commas (,).</p>
+         * <p>A comma-separated list of IDs of the associated atomic models.</p>
          * 
          * <strong>example:</strong>
          * <p>1001,1002</p>
@@ -120,15 +120,18 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         public String identificationRuleIds;
 
         /**
-         * <p>The scan scope of the rule. The value is a JSON array of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</p>
+         * <p>The scope of data that the template rule scans. This parameter is a string converted from a JSON array. Each element in the JSON array represents a data scanning scope and contains the following fields:</p>
          * <ul>
-         * <li><p><strong>Asset</strong>: the data asset type. Valid values: RDS, DRDS, PolarDB, OTS, ADB, and OceanBase. The value is of the STRING type.</p>
+         * <li><p><strong>Asset</strong>: A string that indicates the asset type. Valid values include RDS, DRDS, PolarDB, OTS, ADB, OceanBase, and ODPS.</p>
          * </li>
-         * <li><p><strong>Content</strong>: the scan scope. The value is of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</p>
+         * <li><p><strong>Content</strong>: The specific scope of the asset to scan. This is an array of objects, where each object contains the following fields:</p>
          * <ul>
-         * <li><strong>Range</strong>: the matching condition. Valid values: Instance, database, table, column, project, bucket, and object. The value project is valid only for data assets in MaxCompute. The values bucket and object are valid only for data assets in Object Storage Service (OSS). The value of this parameter is of the STRING type.</li>
-         * <li><strong>Operator</strong>: the operator. Valid values: equals, regex, prefix, and suffix. The operator equals indicates a full match. The operator regex indicates a match by regular expression. The operator prefix indicates a match by prefix. The operator suffix indicates a match by suffix.</li>
-         * <li><strong>Value</strong>: the matching content. The value is of the STRING type.</li>
+         * <li><p><strong>Range</strong>: A string that indicates the matching range. Valid values include instance, database, table, column, project (for MaxCompute assets only), bucket (for OSS assets only), and object (for OSS assets only).</p>
+         * </li>
+         * <li><p><strong>Operator</strong>: A string that indicates the matching condition. Valid values include equals, regex (regular expression), prefix, and suffix.</p>
+         * </li>
+         * <li><p><strong>Value</strong>: A string that indicates the content to match.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -140,29 +143,41 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         public String identificationScope;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The name of the template rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>ID card number</p>
+         * <p>ID card</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The sensitivity level of the data that is not compliant with the rule. Valid values: <strong>1</strong> to <strong>11</strong>.</p>
+         * <p>The risk level of the template rule. The value ranges from <strong>1</strong> to <strong>11</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: No sensitive data is detected.</li>
-         * <li><strong>2</strong>: indicates the S1 sensitivity level.</li>
-         * <li><strong>3</strong>: indicates the S2 sensitivity level.</li>
-         * <li><strong>4</strong>: indicates the S3 sensitivity level.</li>
-         * <li><strong>5</strong>: indicates the S4 sensitivity level.</li>
-         * <li><strong>6</strong>: indicates the S5 sensitivity level.</li>
-         * <li><strong>7</strong>: indicates the S6 sensitivity level.</li>
-         * <li><strong>8</strong>: indicates the S7 sensitivity level.</li>
-         * <li><strong>9</strong>: indicates the S8 sensitivity level.</li>
-         * <li><strong>10</strong>: indicates the S9 sensitivity level.</li>
-         * <li><strong>11</strong>: indicates the S10 sensitivity level.</li>
-         * <li><strong>null</strong>: indicates all preceding sensitivity levels.</li>
+         * <li><p><strong>1</strong>: No risk.</p>
+         * </li>
+         * <li><p><strong>2</strong>: S1.</p>
+         * </li>
+         * <li><p><strong>3</strong>: S2.</p>
+         * </li>
+         * <li><p><strong>4</strong>: S3.</p>
+         * </li>
+         * <li><p><strong>5</strong>: S4.</p>
+         * </li>
+         * <li><p><strong>6</strong>: S5.</p>
+         * </li>
+         * <li><p><strong>7</strong>: S6.</p>
+         * </li>
+         * <li><p><strong>8</strong>: S7.</p>
+         * </li>
+         * <li><p><strong>9</strong>: S8.</p>
+         * </li>
+         * <li><p><strong>10</strong>: S9.</p>
+         * </li>
+         * <li><p><strong>11</strong>: S10.</p>
+         * </li>
+         * <li><p><strong>null</strong>: Indicates all risk levels, including No risk, S1, S2, S3, S4, S5, S6, S7, S8, S9, and S10.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,11 +187,14 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The status of the rule. Valid values:</p>
+         * <p>The status of the template rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>null</strong>: all states</li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>null</strong>: Represents all statuses, including enabled and disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

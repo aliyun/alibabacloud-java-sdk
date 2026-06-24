@@ -14,7 +14,7 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of sensitivity levels.</p>
+     * <p>A list of risk levels.</p>
      */
     @NameInMap("RiskLevelList")
     public java.util.List<DescribeRiskLevelsResponseBodyRiskLevelList> riskLevelList;
@@ -42,31 +42,42 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
 
     public static class DescribeRiskLevelsResponseBodyRiskLevelList extends TeaModel {
         /**
-         * <p>The description of the sensitivity level. You can enter a custom description.</p>
-         * <p>The following list describes the sensitivity level names and the corresponding default description:</p>
+         * <p>The description of the risk level. You can customize the description.</p>
+         * <p>The following list describes the mappings between risk level names and their default descriptions:</p>
          * <ul>
-         * <li><strong>NA</strong>: which indicates that no sensitive data is detected.</li>
-         * <li><strong>S1</strong>: which indicates the sensitive data at sensitivity level 1.</li>
-         * <li><strong>S2</strong>: which indicates the sensitive data at sensitivity level 2.</li>
-         * <li><strong>S3</strong>: which indicates the sensitive data at sensitivity level 3.</li>
-         * <li><strong>S4</strong>: which indicates the sensitive data at sensitivity level 4.</li>
-         * <li><strong>S5</strong>: which indicates the sensitive data at sensitivity level 5.</li>
-         * <li><strong>S6</strong>: which indicates the sensitive data at sensitivity level 6.</li>
-         * <li><strong>S7</strong>: which indicates the sensitive data at sensitivity level 7.</li>
-         * <li><strong>S8</strong>: which indicates the sensitive data at sensitivity level 8.</li>
-         * <li><strong>S9</strong>: which indicates the sensitive data at sensitivity level 9.</li>
-         * <li><strong>S10</strong>: which indicates the sensitive data at sensitivity level 10.</li>
+         * <li><p><strong>NA</strong>: No sensitive data is detected</p>
+         * </li>
+         * <li><p><strong>S1</strong>: Level-1 sensitive data</p>
+         * </li>
+         * <li><p><strong>S2</strong>: Level-2 sensitive data</p>
+         * </li>
+         * <li><p><strong>S3</strong>: Level-3 sensitive data</p>
+         * </li>
+         * <li><p><strong>S4</strong>: Level-4 sensitive data</p>
+         * </li>
+         * <li><p><strong>S5</strong>: Level-5 sensitive data</p>
+         * </li>
+         * <li><p><strong>S6</strong>: Level-6 sensitive data</p>
+         * </li>
+         * <li><p><strong>S7</strong>: Level-7 sensitive data</p>
+         * </li>
+         * <li><p><strong>S8</strong>: Level-8 sensitive data</p>
+         * </li>
+         * <li><p><strong>S9</strong>: Level-9 sensitive data</p>
+         * </li>
+         * <li><p><strong>S10</strong>: Level-10 sensitive data</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Sensitive data at sensitivity level 1</p>
+         * <p>S3</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The unique ID of the sensitivity level. Valid values: 1 to 11. Each sensitivity level ID maps a sensitivity level. For example, the sensitivity level ID of 2 corresponds to the sensitivity level S1.</p>
-         * <p>For more information, see the description of the Name parameter.</p>
+         * <p>The unique ID of the risk level. Valid values: 1 to 11. Each risk level ID corresponds to a risk level name. For example, the risk level ID 2 corresponds to the risk level S1.</p>
+         * <p>For more information about the mappings, see the description of the Name parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -75,19 +86,31 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the sensitivity level. The highest sensitivity level varies based on rule templates. The highest sensitivity level is S10. The highest sensitivity level of the <strong>Built-in data security classification templates for Alibaba and Ant Group</strong> is S4, and that of the <strong>built-in classification templates for financial data</strong> and <strong>built-in classification templates for assets</strong> is S5. For more information about the built-in classification templates for financial data, see Guidelines for Security Classification of Financial Data and Security Data - JRT 0197-2020. For a copied rule template, the highest sensitivity level is S10. The following list describes the sensitivity level names and the corresponding IDs:</p>
+         * <p>The name of the risk level for the sensitive data. The maximum risk level is S10 and varies based on the data classification template. The maximum risk level is S4 for the <strong>built-in data security classification template for Alibaba and Ant Group</strong>, and S5 for the <strong>built-in data classification template for the finance industry (with reference to JR/T 0197-2020 Financial Data Security - Guidelines for Data Security Classification)</strong> and the <strong>built-in data classification standard for the energy industry</strong>. If you use a copied template, the maximum risk level is S10.
+         * The following list describes the mappings between risk level names and IDs:</p>
          * <ul>
-         * <li><strong>NA</strong>: 1</li>
-         * <li><strong>S1</strong>: 2</li>
-         * <li><strong>S2</strong>: 3</li>
-         * <li><strong>S3</strong>: 4</li>
-         * <li><strong>S4</strong>: 5</li>
-         * <li><strong>S5</strong>: 6</li>
-         * <li><strong>S6</strong>: 7</li>
-         * <li><strong>S7</strong>: 8</li>
-         * <li><strong>S8</strong>: 9</li>
-         * <li><strong>S9</strong>: 10</li>
-         * <li><strong>S10</strong>: 11</li>
+         * <li><p><strong>NA</strong>: 1</p>
+         * </li>
+         * <li><p><strong>S1</strong>: 2</p>
+         * </li>
+         * <li><p><strong>S2</strong>: 3</p>
+         * </li>
+         * <li><p><strong>S3</strong>: 4</p>
+         * </li>
+         * <li><p><strong>S4</strong>: 5</p>
+         * </li>
+         * <li><p><strong>S5</strong>: 6</p>
+         * </li>
+         * <li><p><strong>S6</strong>: 7</p>
+         * </li>
+         * <li><p><strong>S7</strong>: 8</p>
+         * </li>
+         * <li><p><strong>S8</strong>: 9</p>
+         * </li>
+         * <li><p><strong>S9</strong>: 10</p>
+         * </li>
+         * <li><p><strong>S10</strong>: 11</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,7 +120,7 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of times that each sensitivity level is referenced in the rule template. Default value: 0.</p>
+         * <p>The number of times the risk level is referenced in the template. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

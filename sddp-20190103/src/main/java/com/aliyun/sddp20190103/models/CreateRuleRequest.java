@@ -7,8 +7,10 @@ public class CreateRuleRequest extends TeaModel {
     /**
      * <p>The content type of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: keyword</li>
-     * <li><strong>2</strong>: regular expression</li>
+     * <li><p><strong>0</strong>: keyword.</p>
+     * </li>
+     * <li><p><strong>2</strong>: regular expression.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateRuleRequest extends TeaModel {
     public Integer category;
 
     /**
-     * <p>The content of the sensitive data detection rule. You can specify a regular expression or keywords that are used to match sensitive fields or text.</p>
+     * <p>The content of the sensitive data detection rule. The content can be a regular expression or a keyword that is used to match sensitive data fields or text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,19 @@ public class CreateRuleRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The type of the content in the sensitive data detection rule. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</p>
+     * <p>The content type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: SQL injection exploit.</p>
+     * </li>
+     * <li><p><strong>2</strong>: SQL injection bypass.</p>
+     * </li>
+     * <li><p><strong>3</strong>: stored procedure abuse.</p>
+     * </li>
+     * <li><p><strong>4</strong>: buffer overflow.</p>
+     * </li>
+     * <li><p><strong>5</strong>: error-based SQL injection.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,10 +60,12 @@ public class CreateRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the content in the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,8 +77,10 @@ public class CreateRuleRequest extends TeaModel {
     /**
      * <p>The match type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: rule-based match</li>
-     * <li><strong>2</strong>: dictionary-based match</li>
+     * <li><p><strong>1</strong>: rule-based match.</p>
+     * </li>
+     * <li><p><strong>2</strong>: dictionary-based match.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +90,7 @@ public class CreateRuleRequest extends TeaModel {
     public Integer matchType;
 
     /**
-     * <p>The IDs of the models for sensitive data audit.</p>
+     * <p>The IDs of the model rules for sensitive data auditing.</p>
      * 
      * <strong>example:</strong>
      * <p>1452</p>
@@ -91,7 +109,7 @@ public class CreateRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the service to which data in the column of the table belongs. Valid values include <strong>MaxCompute</strong>, <strong>OSS</strong>, <strong>ADS</strong>, <strong>OTS</strong>, and <strong>RDS</strong>.</p>
+     * <p>The name of the service to which the data asset belongs. Valid values: <strong>MaxCompute</strong>, <strong>OSS</strong>, <strong>ADS</strong>, <strong>OTS</strong>, and <strong>RDS</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -100,7 +118,21 @@ public class CreateRuleRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the service to which the data asset belongs. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The ID of the service to which the data asset belongs. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: MaxCompute</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADS</p>
+     * </li>
+     * <li><p><strong>4</strong>: OTS</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -109,13 +141,18 @@ public class CreateRuleRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+     * <p>The sensitivity level ID of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-     * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-     * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-     * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-     * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+     * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+     * </li>
+     * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,12 +162,16 @@ public class CreateRuleRequest extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The type of the sensitive data detection rule. Valid values:</p>
+     * <p>The type of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: sensitive data detection rule</li>
-     * <li><strong>2</strong>: audit rule</li>
-     * <li><strong>3</strong>: anomalous event detection rule</li>
-     * <li><strong>99</strong>: custom rule</li>
+     * <li><p><strong>1</strong>: data detection rule.</p>
+     * </li>
+     * <li><p><strong>2</strong>: audit policy.</p>
+     * </li>
+     * <li><p><strong>3</strong>: anomaly detection rule.</p>
+     * </li>
+     * <li><p><strong>99</strong>: custom rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,7 +184,7 @@ public class CreateRuleRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>39.170.XX.XX</p>
+     * <p>106.11.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
@@ -152,16 +193,18 @@ public class CreateRuleRequest extends TeaModel {
      * <p>The statistical expression.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>{&quot;time&quot;:&quot;24&quot;,&quot;groupby&quot;:&quot;1003&quot;,&quot;having&quot;:[{&quot;key&quot;:&quot;2001&quot;,&quot;value&quot;:&quot;50&quot;}]}</p>
      */
     @NameInMap("StatExpress")
     public String statExpress;
 
     /**
-     * <p>Specifies whether to enable the sensitive data detection rule. Valid values:</p>
+     * <p>The status of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><p><strong>1</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,15 +214,15 @@ public class CreateRuleRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The type of the data asset. Valid values:</p>
+     * <p>The type of data assets that the rule supports. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: all data assets</li>
-     * <li><strong>1</strong>: structured data asset</li>
-     * <li><strong>2</strong>: unstructured data asset</li>
+     * <li><p><strong>0</strong>: all assets.</p>
+     * </li>
+     * <li><p><strong>1</strong>: structured assets.</p>
+     * </li>
+     * <li><p><strong>2</strong>: unstructured assets.</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -188,7 +231,7 @@ public class CreateRuleRequest extends TeaModel {
     public Integer supportForm;
 
     /**
-     * <p>The code of the service to which the sensitive data detection rule is applied. Valid values include <strong>MaxCompute</strong>, <strong>OSS</strong>, <strong>ADS</strong>, <strong>OTS</strong>, and <strong>RDS</strong>.</p>
+     * <p>The code of the service to which the rule applies. Valid values: <strong>MaxCompute</strong>, <strong>OSS</strong>, <strong>ADS</strong>, <strong>OTS</strong>, and <strong>RDS</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
@@ -197,7 +240,7 @@ public class CreateRuleRequest extends TeaModel {
     public String target;
 
     /**
-     * <p>The IDs of the templates that are used to audit sensitive data.</p>
+     * <p>The IDs of the template rules for sensitive data auditing.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -206,11 +249,14 @@ public class CreateRuleRequest extends TeaModel {
     public String templateRuleIds;
 
     /**
-     * <p>The risk level of the alert that is triggered. Valid values:</p>
+     * <p>The risk level. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: low</li>
-     * <li><strong>2</strong>: medium</li>
-     * <li><strong>3</strong>: high</li>
+     * <li><p><strong>1</strong>: Low.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Medium.</p>
+     * </li>
+     * <li><p><strong>3</strong>: High.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

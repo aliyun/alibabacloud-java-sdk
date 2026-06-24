@@ -14,13 +14,13 @@ public class DescribePackagesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the information about the packages.</p>
+     * <p>The information about the data asset packages.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribePackagesResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class DescribePackagesResponseBody extends TeaModel {
 
     public static class DescribePackagesResponseBodyItems extends TeaModel {
         /**
-         * <p>The point in time when the MaxCompute package was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the data asset package was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1536751124000</p>
@@ -102,7 +102,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The ID of the package.</p>
+         * <p>The unique ID of the data asset package.</p>
          * 
          * <strong>example:</strong>
          * <p>111111</p>
@@ -111,7 +111,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the instance to which the package belongs.</p>
+         * <p>The ID of the asset instance to which the data asset package belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>223453332</p>
@@ -120,7 +120,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The name of the package.</p>
+         * <p>The name of the data asset package.</p>
          * 
          * <strong>example:</strong>
          * <p>gxdata</p>
@@ -129,7 +129,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The account of the user that owns the package.</p>
+         * <p>The account of the data asset package owner.</p>
          * 
          * <strong>example:</strong>
          * <p>cou-2221</p>
@@ -138,13 +138,18 @@ public class DescribePackagesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The sensitivity level of the package. Valid values:</p>
+         * <p>The ID of the risk level for the data asset package.</p>
          * <ul>
-         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * <li><p><strong>1</strong>: N/A: No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>2</strong>: S1: Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>3</strong>: S2: Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>4</strong>: S3: Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>5</strong>: S4: Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,19 +159,21 @@ public class DescribePackagesResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the sensitivity level for the package.</p>
+         * <p>The name of the risk level for the package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Highest sensitivity level</p>
+         * <p>S3</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
-         * <p>Indicates whether the package contains sensitive data. Valid values:</p>
+         * <p>Indicates whether the data asset package contains sensitive data.</p>
          * <ul>
-         * <li>true: yes</li>
-         * <li>false: no</li>
+         * <li><p>true: Yes.</p>
+         * </li>
+         * <li><p>false: No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +183,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         public Boolean sensitive;
 
         /**
-         * <p>The total volume of sensitive data in the package. For example, the value can be the total number of sensitive tables in the MaxCompute package.</p>
+         * <p>The total number of sensitive data entries in the data asset package. For example, the total number of sensitive tables in MaxCompute.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -185,7 +192,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         public Integer sensitiveCount;
 
         /**
-         * <p>The total volume of data in the package. For example, the value can be the total number of tables in the MaxCompute package.</p>
+         * <p>The total number of data entries in the data asset package. For example, the total number of tables in MaxCompute.</p>
          * 
          * <strong>example:</strong>
          * <p>321</p>

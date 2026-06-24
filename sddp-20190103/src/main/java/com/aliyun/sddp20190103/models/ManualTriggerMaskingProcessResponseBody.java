@@ -8,7 +8,7 @@ public class ManualTriggerMaskingProcessResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>769FB3C1-F4C9-4******</p>
+     * <p>7C3AC882-E5A8-4855-BE77-B6837B695EF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDocTypesResponseBody extends TeaModel {
     /**
-     * <p>A list of OSS object types.</p>
+     * <p>A list of OSS file types.</p>
      */
     @NameInMap("DocTypeList")
     public java.util.List<DescribeDocTypesResponseBodyDocTypeList> docTypeList;
@@ -42,7 +42,7 @@ public class DescribeDocTypesResponseBody extends TeaModel {
 
     public static class DescribeDocTypesResponseBodyDocTypeList extends TeaModel {
         /**
-         * <p>The code of the object type.</p>
+         * <p>The code of the file type.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -51,7 +51,7 @@ public class DescribeDocTypesResponseBody extends TeaModel {
         public Long code;
 
         /**
-         * <p>The ID of the object type.</p>
+         * <p>The unique ID of the file type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeDocTypesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the object type.</p>
+         * <p>The name of the file type.</p>
          * 
          * <strong>example:</strong>
          * <p>C/C++ Source Code</p>

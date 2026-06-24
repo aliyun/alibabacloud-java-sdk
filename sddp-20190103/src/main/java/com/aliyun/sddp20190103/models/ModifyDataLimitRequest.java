@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyDataLimitRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the security audit feature. Valid values:</p>
+     * <p>Specifies whether to enable auditing. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><p><strong>0</strong>: Disable auditing.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Enable auditing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +20,15 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer auditStatus;
 
     /**
-     * <p>Specifies whether to automatically trigger a re-scan after a rule is modified. Valid values:</p>
+     * <p>Specifies whether to automatically trigger a rescan when a rule is changed. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><p><strong>0</strong>: Do not automatically trigger a rescan.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Automatically trigger a rescan.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>When a re-scan is triggered, DSC scans all data in your data asset.</p>
+     * <p>If a rescan is automatically triggered, a full scan is performed on the data asset.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,10 +38,12 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer autoScan;
 
     /**
-     * <p>The database engine that is run by the instance. Valid values:</p>
+     * <p>The type of the database. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>SQLServer</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>SQLServer</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,15 +56,15 @@ public class ModifyDataLimitRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The unique ID of the data asset for which you want to modify configuration items.</p>
+     * <p>The unique ID of the data asset.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the ID of the data asset.</p>
+     * <p>Call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the ID of the data asset.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -71,8 +77,10 @@ public class ModifyDataLimitRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese (default)</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,12 +90,16 @@ public class ModifyDataLimitRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The retention period of raw logs after you enable the security audit feature. Unit: days. Valid values:</p>
+     * <p>The retention period of raw logs after auditing is enabled. Unit: days. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong></li>
-     * <li><strong>90</strong></li>
-     * <li><strong>180</strong></li>
-     * <li><strong>365</strong></li>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>90</strong></p>
+     * </li>
+     * <li><p><strong>180</strong></p>
+     * </li>
+     * <li><p><strong>365</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,10 +109,12 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer logStoreDay;
 
     /**
-     * <p>Specifies whether to change the username and password that are used to log on to the ApsaraDB RDS database. Valid values:</p>
+     * <p>Specifies whether to modify the username and password that are used to connect to the database. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: Modify the username and password.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not modify the username and password.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +124,7 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Boolean modifyPassword;
 
     /**
-     * <p>The password used to log on to the ApsaraDB RDS database that you authorize DSC to access.</p>
+     * <p>The password for the ApsaraDB RDS database.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -119,7 +133,7 @@ public class ModifyDataLimitRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The port that is used to connect to the database.</p>
+     * <p>The port used to connect to the database.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -128,13 +142,18 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The name of the service to which the data asset belongs. Valid values:</p>
+     * <p>The service to which the data asset belongs. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: MaxCompute</li>
-     * <li><strong>2</strong>: Object Storage Service (OSS)</li>
-     * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-     * <li><strong>4</strong>: Tablestore</li>
-     * <li><strong>5</strong>: ApsaraDB RDS</li>
+     * <li><p><strong>1</strong>: MaxCompute</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADS</p>
+     * </li>
+     * <li><p><strong>4</strong>: OTS</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -145,11 +164,14 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer resourceType;
 
     /**
-     * <p>The number of sensitive data samples tht are collected after sensitive data detection is enabled. Valid values:</p>
+     * <p>The number of sensitive data samples to return. This parameter takes effect only after data detection is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong></li>
-     * <li><strong>5</strong></li>
-     * <li><strong>10</strong></li>
+     * <li><p><strong>0</strong></p>
+     * </li>
+     * <li><p><strong>5</strong></p>
+     * </li>
+     * <li><p><strong>10</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,21 +181,28 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer samplingSize;
 
     /**
-     * <p>The security group that is used by PrivateLink when you install the DSC agent.</p>
+     * <p>The security groups for agent-based auditing that uses PrivateLink.</p>
      */
     @NameInMap("SecurityGroupIdList")
     public java.util.List<String> securityGroupIdList;
 
     /**
-     * <p>The region in which the data asset resides. Valid values:</p>
+     * <p>The ID of the region in which the data asset is located. Valid values:</p>
      * <ul>
-     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
-     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
-     * <li><strong>cn-huhehaote</strong>: China (Hohhot)</li>
-     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
-     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
-     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><p><strong>cn-beijing</strong>: China (Beijing)</p>
+     * </li>
+     * <li><p><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</p>
+     * </li>
+     * <li><p><strong>cn-huhehaote</strong>: China (Hohhot)</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou)</p>
+     * </li>
+     * <li><p><strong>cn-shanghai</strong>: China (Shanghai)</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen)</p>
+     * </li>
+     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,7 +212,7 @@ public class ModifyDataLimitRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The username used to log on to the ApsaraDB RDS database that you authorize DSC to access.</p>
+     * <p>The username for the ApsaraDB RDS database.</p>
      * 
      * <strong>example:</strong>
      * <p>User01</p>
@@ -192,7 +221,7 @@ public class ModifyDataLimitRequest extends TeaModel {
     public String userName;
 
     /**
-     * <p>The vSwitch that is used by PrivateLink when you install the DSC agent.</p>
+     * <p>The vSwitches for agent-based auditing that uses PrivateLink.</p>
      */
     @NameInMap("VSwitchIdList")
     public java.util.List<String> vSwitchIdList;

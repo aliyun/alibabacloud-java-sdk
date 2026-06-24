@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDataObjectsRequest extends TeaModel {
     /**
+     * <p>The version of the API.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Integer APIVersion;
 
     /**
+     * <p>The name of the OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>bucketName</p>
      */
@@ -19,7 +23,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String bucket;
 
     /**
-     * <p>Page number for the paginated query. Default value: 1.</p>
+     * <p>The page number of the returned page. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -28,6 +32,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>dataBaseName</p>
      */
@@ -35,7 +41,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String dbName;
 
     /**
-     * <p>ID of the data domain to which the data asset belongs.</p>
+     * <p>The ID of the data domain to which the data asset belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -53,7 +59,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>File category code.</p>
+     * <p>The code of the file category.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,9 +68,9 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Long fileCategoryCode;
 
     /**
-     * <p>OSS file types that are supported for recognition.</p>
+     * <p>The type of the OSS file.</p>
      * <blockquote>
-     * <p>You can obtain the supported OSS file types by calling <a href="https://help.aliyun.com/document_detail/2536492.html">DescribeDocTypes</a>, using the Code field value from the response. This parameter is only valid for querying OSS-type assets.</p>
+     * <p>This parameter is valid only for querying data assets of the OSS type. You can call the <a href="https://help.aliyun.com/document_detail/2536492.html">DescribeDocTypes</a> operation to obtain the supported OSS file types. Use the value of the <code>Code</code> parameter in the response.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +80,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Long fileType;
 
     /**
-     * <p>Keyword for the asset instance ID.</p>
+     * <p>The keyword of the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8vb54hn2g9j191ddz</p>
@@ -83,10 +89,12 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language type for request and response messages, default is <strong>zh_cn</strong>. Values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese.</li>
-     * <li><strong>en_us</strong>: English.</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,6 +104,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The name of the Logstore.</p>
+     * 
      * <strong>example:</strong>
      * <p>logstore</p>
      */
@@ -103,6 +113,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String logStore;
 
     /**
+     * <p>Specifies whether to query data at the Logstore level. The Simple Log Service data catalog has two layers. Set this parameter to 1 to query data at the Logstore level.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -110,7 +122,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Integer logStoreFlag;
 
     /**
-     * <p>Member account ID.</p>
+     * <p>The ID of the member.</p>
      * 
      * <strong>example:</strong>
      * <p>**********8103</p>
@@ -119,9 +131,9 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Long memberAccount;
 
     /**
-     * <p>Model IDs of the industry template, separated by commas.</p>
+     * <p>The model ID of the industry-specific rule template. You can specify multiple IDs. Separate them with commas (,).</p>
      * <blockquote>
-     * <p>You can obtain the industry template model identifier ID by calling <a href="https://help.aliyun.com/document_detail/2536491.html">DescribeTemplateAllRules</a>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2536491.html">DescribeTemplateAllRules</a> operation to obtain the model ID of the industry-specific rule template.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,11 +143,14 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String modelIds;
 
     /**
-     * <p>Data labels to be queried, separated by commas. Values:</p>
+     * <p>The data labels to be queried. You can specify multiple data labels. Separate them with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>101</strong>: Personal Sensitive Information.</li>
-     * <li><strong>102</strong>: Personal Information.</li>
-     * <li><strong>107</strong>: General Information.</li>
+     * <li><p><strong>101</strong>: personal sensitive information</p>
+     * </li>
+     * <li><p><strong>102</strong>: personal information</p>
+     * </li>
+     * <li><p><strong>107</strong>: general information</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +160,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String modelTagIds;
 
     /**
-     * <p>When performing a paginated query, set the maximum number of data asset instances to display per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of data assets to return on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -154,7 +169,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>List of parent category IDs for the template to be queried, separated by commas.</p>
+     * <p>The IDs of the parent asset categories to be queried. You can specify multiple IDs. Separate them with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>234,236,238</p>
@@ -163,6 +178,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String parentCategoryIds;
 
     /**
+     * <p>The path of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>road</p>
      */
@@ -170,6 +187,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The ID of the product.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -177,23 +196,35 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Integer productId;
 
     /**
-     * <p>It is recommended to fill in the list of product IDs to be queried, separated by commas. Values:</p>
+     * <p>The IDs of the products to which the data assets to be queried belong. You can specify multiple product IDs. Separate them with commas (,). We recommend that you specify this parameter. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: MaxCompute</li>
-     * <li><strong>2</strong>: OSS</li>
-     * <li><strong>3</strong>: ADB-MYSQL</li>
-     * <li><strong>4</strong>: TableStore</li>
-     * <li><strong>5</strong>: RDS</li>
-     * <li><strong>6</strong>: SELF_DB</li>
-     * <li><strong>7</strong>: PolarDB-X</li>
-     * <li><strong>8</strong>: PolarDB</li>
-     * <li><strong>9</strong>: ADB-PG</li>
-     * <li><strong>10</strong>: OceanBase</li>
-     * <li><strong>11</strong>: MongoDB</li>
-     * <li><strong>25</strong>: Redis</li>
+     * <li><p><strong>1</strong>: MaxCompute</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADB-MYSQL</p>
+     * </li>
+     * <li><p><strong>4</strong>: TableStore</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB</p>
+     * </li>
+     * <li><p><strong>7</strong>: PolarDB-X</p>
+     * </li>
+     * <li><p><strong>8</strong>: PolarDB</p>
+     * </li>
+     * <li><p><strong>9</strong>: ADB-PG</p>
+     * </li>
+     * <li><p><strong>10</strong>: OceanBase</p>
+     * </li>
+     * <li><p><strong>11</strong>: MongoDB</p>
+     * </li>
+     * <li><p><strong>25</strong>: Redis</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>OSS is mutually exclusive with other products, meaning if OSS is included in the query, no other products can be listed; by default, non-OSS products are queried.</p>
+     * <p>If you want to query data assets that belong to OSS, you cannot query data assets of other products. By default, data assets of products other than OSS are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -203,6 +234,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String productIds;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
+     * 
      * <strong>example:</strong>
      * <p>project</p>
      */
@@ -210,7 +243,7 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String project;
 
     /**
-     * <p>Keyword for the data object to be queried.</p>
+     * <p>The keyword of the data asset to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>t_sddp_selfmysql_pers0</p>
@@ -219,6 +252,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String queryName;
 
     /**
+     * <p>The region in which the data asset catalog resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>
      */
@@ -226,6 +261,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The IDs of the sensitivity levels. You can specify multiple sensitivity level IDs. Separate them with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */
@@ -233,12 +270,16 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String riskLevelIdList;
 
     /**
-     * <p>Specify the risk levels of the data assets to be queried, separated by commas if multiple.</p>
+     * <p>The sensitivity level of the data asset. You can specify multiple sensitivity levels. Separate them with commas (,).</p>
      * <ul>
-     * <li><strong>2</strong>: S1, low risk level.</li>
-     * <li><strong>3</strong>: S2, medium risk level.</li>
-     * <li><strong>4</strong>: S3, high risk level.</li>
-     * <li><strong>5</strong>: S4, highest risk level.</li>
+     * <li><p><strong>2</strong>: S1, low sensitivity level</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2, medium sensitivity level</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3, high sensitivity level</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4, highest sensitivity level</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -248,6 +289,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String riskLevels;
 
     /**
+     * <p>The IDs of the rules. You can specify multiple rule IDs. Separate them with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */
@@ -255,15 +298,22 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String ruleIds;
 
     /**
-     * <p>Region where the asset is located. Values:</p>
+     * <p>The region where the data asset resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-beijing</strong>: North China 2 (Beijing).</li>
-     * <li><strong>cn-zhangjiakou</strong>: North China 3 (Zhangjiakou).</li>
-     * <li><strong>cn-huhehaote</strong>: North China 5 (Hohhot).</li>
-     * <li><strong>cn-hangzhou</strong>: East China 1 (Hangzhou).</li>
-     * <li><strong>cn-shanghai</strong>: East China 2 (Shanghai).</li>
-     * <li><strong>cn-shenzhen</strong>: South China 1 (Shenzhen).</li>
-     * <li><strong>cn-hongkong</strong>: Hong Kong, China.</li>
+     * <li><p><strong>cn-beijing</strong>: China (Beijing)</p>
+     * </li>
+     * <li><p><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</p>
+     * </li>
+     * <li><p><strong>cn-huhehaote</strong>: China (Hohhot)</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou)</p>
+     * </li>
+     * <li><p><strong>cn-shanghai</strong>: China (Shanghai)</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen)</p>
+     * </li>
+     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -273,6 +323,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
+     * <p>The name of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>TableName</p>
      */
@@ -280,6 +332,8 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -287,9 +341,9 @@ public class DescribeDataObjectsRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>Industry template ID.</p>
+     * <p>The ID of the industry-specific rule template.</p>
      * <blockquote>
-     * <p>You can obtain the industry template identifier ID by calling <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the ID of the industry-specific rule template.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

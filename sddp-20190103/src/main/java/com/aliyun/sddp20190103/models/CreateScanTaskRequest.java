@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScanTaskRequest extends TeaModel {
     /**
-     * <p>The unique ID of the data asset, such as an instance, a database, and a bucket. You can call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the unique ID.</p>
+     * <p>The unique ID of the data asset. The asset can be an instance, a database, or a bucket. Call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateScanTaskRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The interval between two consecutive custom scan tasks. Unit: days. Valid values: 1 to 2147483648.</p>
+     * <p>The interval in days between two consecutive custom scan tasks. The value must be between 1 and 2147483648.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +34,12 @@ public class CreateScanTaskRequest extends TeaModel {
     public Integer intervalDay;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response.</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +49,7 @@ public class CreateScanTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The data to be scanned in the Object Storage Service (OSS) bucket. Prefix match, suffix match, and regular expression match are supported.</p>
+     * <p>The scan scope for OSS assets. You can specify a prefix, a suffix, or a regular expression to match objects.</p>
      * 
      * <strong>example:</strong>
      * <p>/test/test</p>
@@ -56,7 +58,21 @@ public class CreateScanTaskRequest extends TeaModel {
     public String ossScanPath;
 
     /**
-     * <p>The type of the service to which the data assets to be scanned belong. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The type of resource to query. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: MaxCompute.</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS.</p>
+     * </li>
+     * <li><p><strong>3</strong>: AnalyticDB.</p>
+     * </li>
+     * <li><p><strong>4</strong>: Tablestore.</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS.</p>
+     * </li>
+     * <li><p><strong>6</strong>: a self-managed database.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +82,7 @@ public class CreateScanTaskRequest extends TeaModel {
     public Long resourceType;
 
     /**
-     * <p>The time when the scan task is executed next time. Unit: hours.</p>
+     * <p>The hour at which the next scan task runs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +92,7 @@ public class CreateScanTaskRequest extends TeaModel {
     public Integer runHour;
 
     /**
-     * <p>The time when the scan task is executed next time. Unit: minutes.</p>
+     * <p>The minute at which the next scan task runs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,12 +102,16 @@ public class CreateScanTaskRequest extends TeaModel {
     public Integer runMinute;
 
     /**
-     * <p>The matching rule that specifies the scan scope of the custom scan task. This parameter takes effect only if you set the <strong>ScanRangeContent</strong> parameter. Valid values:</p>
+     * <p>The matching rule for the scan scope of the custom scan task. This parameter takes effect only when you configure the <strong>ScanRangeContent</strong> parameter. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: exact match</li>
-     * <li><strong>1</strong>: prefix match</li>
-     * <li><strong>2</strong>: suffix match</li>
-     * <li><strong>3</strong>: regular expression match</li>
+     * <li><p><strong>0</strong>: full match.</p>
+     * </li>
+     * <li><p><strong>1</strong>: prefix match.</p>
+     * </li>
+     * <li><p><strong>2</strong>: suffix match.</p>
+     * </li>
+     * <li><p><strong>3</strong>: regular expression match.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -102,7 +122,10 @@ public class CreateScanTaskRequest extends TeaModel {
     public Integer scanRange;
 
     /**
-     * <p>The data to be scanned in a structured data asset. Prefix match, suffix match, and regular expression match are supported.</p>
+     * <p>The content to match for the scan of structured data assets. This parameter is used with the ScanRange parameter.</p>
+     * <blockquote>
+     * <p>If you set ScanRange to 0, the scan matches the exact value of this parameter. If you set ScanRange to 1, the scan matches items that have the prefix specified by this parameter. For example, if you set this parameter to \<code>test/abc\\</code>, file paths that start with \<code>test/abc\\</code> are matched. If you set ScanRange to 2, the scan matches items that have the suffix specified by this parameter. If you set ScanRange to 3, the scan matches items that match the regular expression specified by this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,7 +138,7 @@ public class CreateScanTaskRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>39.170.XX.XX</p>
+     * <p>106.11.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
@@ -131,7 +154,7 @@ public class CreateScanTaskRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The account that is used to create the scan task.</p>
+     * <p>The account that creates the scan task.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>

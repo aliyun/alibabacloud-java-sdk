@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class MaskOssImageRequest extends TeaModel {
     /**
+     * <p>The name of the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,19 +15,45 @@ public class MaskOssImageRequest extends TeaModel {
     public String bucketName;
 
     /**
+     * <p>Specifies whether to always upload the processed image.</p>
+     * <p>If you set this to false, the image is uploaded only if it matches a masking rule.</p>
+     * <p>If you set this to true, the processed image is always uploaded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsAlwaysUpload")
     public Boolean isAlwaysUpload;
 
+    @NameInMap("IsCoverObject")
+    public Boolean isCoverObject;
+
+    /**
+     * <p>Specifies whether you can restore the original image from the masked version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSupportRestore")
     public Boolean isSupportRestore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>A comma-separated list of masking rule IDs.</p>
+     * <p>The following rule IDs correspond to the listed sensitive data types:</p>
+     * <p>3000: Images that contain ID card information (Chinese mainland)</p>
+     * <p>3009: Images that contain license plate information (Chinese mainland)</p>
+     * <p>3002: Images that contain faces</p>
+     * <p>1002: Names (Simplified Chinese)</p>
+     * <p>1003: Addresses (Chinese mainland)</p>
+     * <p>4003: Unified Social Credit Code</p>
+     * <p>63009: Images that contain eyes</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +63,7 @@ public class MaskOssImageRequest extends TeaModel {
     public String maskRuleIdList;
 
     /**
+     * <p>The full key of the object stored in OSS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +73,7 @@ public class MaskOssImageRequest extends TeaModel {
     public String objectKey;
 
     /**
+     * <p>The region where the bucket is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +101,14 @@ public class MaskOssImageRequest extends TeaModel {
     }
     public Boolean getIsAlwaysUpload() {
         return this.isAlwaysUpload;
+    }
+
+    public MaskOssImageRequest setIsCoverObject(Boolean isCoverObject) {
+        this.isCoverObject = isCoverObject;
+        return this;
+    }
+    public Boolean getIsCoverObject() {
+        return this.isCoverObject;
     }
 
     public MaskOssImageRequest setIsSupportRestore(Boolean isSupportRestore) {

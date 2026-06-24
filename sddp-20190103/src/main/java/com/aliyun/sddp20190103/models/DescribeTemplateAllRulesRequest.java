@@ -14,10 +14,12 @@ public class DescribeTemplateAllRulesRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language type for the request and response, default is <strong>zh_cn</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese.</li>
-     * <li><strong>en_us</strong>: English.</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +29,9 @@ public class DescribeTemplateAllRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Industry template ID.</p>
+     * <p>The ID of the industry template.</p>
      * <blockquote>
-     * <p>You can obtain the industry template ID by calling <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a>. If this parameter is not provided, the model list of the primary template will be returned by default.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the ID of the industry template. If you do not specify this parameter, the list of models for the primary template is returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

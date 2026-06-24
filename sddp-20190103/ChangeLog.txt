@@ -1,3 +1,13 @@
+2026-06-24 Version: 2.0.0
+- Update API DescribeAuditLogs: add response parameters Body.Items.$.RamConsoleLink.
+- Update API DescribeDataObjects: add response parameters Body.Items.$.ClusterType.
+- Update API DescribeEvents: update request parameters EndTime' type has changed.
+- Update API DescribeEvents: update request parameters EndTime' format has changed.
+- Update API DescribeEvents: update request parameters StartTime' type has changed.
+- Update API DescribeEvents: update request parameters StartTime' format has changed.
+- Update API MaskOssImage: add request parameters IsCoverObject.
+
+
 2026-03-02 Version: 1.6.5
 - Update API DescribeColumns: add request parameters ServiceRegionId.
 - Update API DescribeDataObjects: add request parameters APIVersion.

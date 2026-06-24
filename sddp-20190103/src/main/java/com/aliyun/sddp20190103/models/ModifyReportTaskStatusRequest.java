@@ -8,16 +8,18 @@ public class ModifyReportTaskStatusRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,14 +29,17 @@ public class ModifyReportTaskStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies the status of the report task. Valid values:</p>
+     * <p>The status to set for the report task. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: disabled</li>
-     * <li><strong>1</strong>: enabled</li>
+     * <li><p><strong>0</strong>: Disable</p>
+     * </li>
+     * <li><p><strong>1</strong>: Enable</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the security audit feature. Valid values:</p>
+     * <p>The audit status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><p><strong>1</strong>: Auditing is enabled.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Auditing is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public Integer auditStatus;
 
     /**
-     * <p>Specifies whether DSC is authorized to access the data asset.</p>
+     * <p>The authorization status of the data asset instance.</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><p><strong>0</strong>: Unauthorized.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Authorized.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public Integer authStatus;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,13 +44,18 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The engine type. Valid values:</p>
+     * <p>The database engine type. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>MariaDB</strong></li>
-     * <li><strong>Oracle</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>SQLServer</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>MariaDB</strong></p>
+     * </li>
+     * <li><p><strong>Oracle</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>SQLServer</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,13 +68,13 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>instance-demo-****</p>
@@ -74,10 +83,12 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Simplified Chinese. This is the default value.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +98,7 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paginated query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -96,7 +107,7 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which the data asset to query belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+     * <p>The name of the product to query. Valid values: MaxCompute, OSS, ADS, OTS, and RDS.</p>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
@@ -105,14 +116,20 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the service to which the asset belongs. Valid values:</p>
+     * <p>The product type ID to query. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: MaxCompute</li>
-     * <li><strong>2</strong>: Object Storage Service (OSS)</li>
-     * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-     * <li><strong>4</strong>: Tablestore (OTS)</li>
-     * <li><strong>5</strong>: ApsaraDB RDS</li>
-     * <li><strong>6</strong>: self-managed databases</li>
+     * <li><p><strong>1</strong>: MaxCompute</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADS</p>
+     * </li>
+     * <li><p><strong>4</strong>: OTS</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +139,7 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The content based on which a fuzzy search is performed.</p>
+     * <p>The keyword for the fuzzy search of data assets.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,11 +148,14 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The data asset type based on which a fuzzy search is performed.</p>
+     * <p>The type of the fuzzy search for data assets. Valid values:</p>
      * <ul>
-     * <li><strong>InstanceId</strong>: the ID of the instance.</li>
-     * <li><strong>InstanceName</strong>: the name of the instance.</li>
-     * <li><strong>DatabaseName</strong>: the name of the database.</li>
+     * <li><p><strong>InstanceId</strong>: The instance ID.</p>
+     * </li>
+     * <li><p><strong>InstanceName</strong>: The instance name.</p>
+     * </li>
+     * <li><p><strong>DatabaseName</strong>: The database name.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +165,7 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public String searchType;
 
     /**
-     * <p>The region in which the data asset resides. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
+     * <p>The region where the asset is located. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataLimitSetResponseBody extends TeaModel {
     /**
-     * <p>The information about the data asset.</p>
+     * <p>Information about the authorized data assets.</p>
      */
     @NameInMap("DataLimitSet")
     public DescribeDataLimitSetResponseBodyDataLimitSet dataLimitSet;
@@ -42,11 +42,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     public static class DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList extends TeaModel {
         /**
-         * <p>Indicates whether the test of connectivity between DSC and the data asset is passed.</p>
+         * <p>The status of the connectivity test between Security Center and the authorized data asset.</p>
          * <ul>
-         * <li><strong>2</strong>: The connectivity test is in progress.</li>
-         * <li><strong>3</strong>: The connectivity test is passed.</li>
-         * <li><strong>4</strong>: The connectivity test failed.</li>
+         * <li><p><strong>2</strong>: The connectivity test is in progress.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The connectivity test is passed.</p>
+         * </li>
+         * <li><p><strong>4</strong>: The connectivity test has failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -56,25 +59,25 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public Integer checkStatus;
 
         /**
-         * <p>The name of the data detection status.</p>
+         * <p>The name of the connectivity test status.</p>
          * 
          * <strong>example:</strong>
-         * <p>Connectivity test status</p>
+         * <p>Connected</p>
          */
         @NameInMap("CheckStatusName")
         public String checkStatusName;
 
         /**
-         * <p>The connection string that is used to access the data asset.</p>
+         * <p>The connection string for the data asset.</p>
          * 
          * <strong>example:</strong>
-         * <p>Connection string</p>
+         * <p>jdbc:mysql://10.<em>.</em>.94:3306/test_demo</p>
          */
         @NameInMap("Connector")
         public String connector;
 
         /**
-         * <p>The time when the data asset was created. Unit: milliseconds.</p>
+         * <p>The time when the data asset was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1625587423000</p>
@@ -83,7 +86,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The ID of the data asset.</p>
+         * <p>The unique ID of the data asset.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -92,16 +95,16 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The region in which the data asset resides.</p>
+         * <p>The name of the region where the data asset is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The parent asset ID of the data asset.</p>
+         * <p>The ID of the parent asset.</p>
          * 
          * <strong>example:</strong>
          * <p>db</p>
@@ -110,7 +113,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public String parentId;
 
         /**
-         * <p>The region in which the data asset resides.</p>
+         * <p>The ID of the region where the data asset is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-****</p>
@@ -119,13 +122,20 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The type of service to which the data asset belongs. Valid values:</p>
+         * <p>The type of the data asset. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: MaxCompute</li>
-         * <li><strong>2</strong>: OSS</li>
-         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-         * <li><strong>4</strong>: Tablestore</li>
-         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * <li><p><strong>1</strong>: MaxCompute.</p>
+         * </li>
+         * <li><p><strong>2</strong>: OSS.</p>
+         * </li>
+         * <li><p><strong>3</strong>: ADS.</p>
+         * </li>
+         * <li><p><strong>4</strong>: OTS.</p>
+         * </li>
+         * <li><p><strong>5</strong>: RDS.</p>
+         * </li>
+         * <li><p><strong>6</strong>: SELF_DB.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,13 +145,20 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public Long resourceType;
 
         /**
-         * <p>The code of the service to which the data asset belongs. Valid values:</p>
+         * <p>The code for the data asset type. Valid values:</p>
          * <ul>
-         * <li><strong>ODPS</strong></li>
-         * <li><strong>OSS</strong></li>
-         * <li><strong>ADS</strong></li>
-         * <li><strong>OTS</strong></li>
-         * <li><strong>RDS</strong></li>
+         * <li><p><strong>MaxCompute</strong></p>
+         * </li>
+         * <li><p><strong>OSS</strong></p>
+         * </li>
+         * <li><p><strong>ADS</strong></p>
+         * </li>
+         * <li><p><strong>OTS</strong></p>
+         * </li>
+         * <li><p><strong>RDS</strong></p>
+         * </li>
+         * <li><p><strong>SELF_DB</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +168,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public String resourceTypeCode;
 
         /**
-         * <p>The username that is used to access the data asset.</p>
+         * <p>The username of the data owner.</p>
          * 
          * <strong>example:</strong>
          * <p>tsts</p>
@@ -256,7 +273,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     public static class DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList extends TeaModel {
         /**
-         * <p>The name of the OSS bucket to which the OSS object belongs.</p>
+         * <p>The name of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-bucket</p>
@@ -265,7 +282,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The region ID of the OSS object.</p>
+         * <p>The ID of the region where the OSS bucket is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-****</p>
@@ -298,16 +315,16 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     public static class DescribeDataLimitSetResponseBodyDataLimitSetRegionList extends TeaModel {
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-****</p>
@@ -340,31 +357,38 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     public static class DescribeDataLimitSetResponseBodyDataLimitSet extends TeaModel {
         /**
-         * <p>An array that consists of data assets that DSC is authorized to scan.</p>
+         * <p>A list of authorized data assets.</p>
          */
         @NameInMap("DataLimitList")
         public java.util.List<DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList> dataLimitList;
 
         /**
-         * <p>An array consisting of the OSS objects that DSC is authorized to scan.</p>
+         * <p>A list of authorized OSS buckets.</p>
          */
         @NameInMap("OssBucketList")
         public java.util.List<DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList> ossBucketList;
 
         /**
-         * <p>An array consisting of the regions in which the data assets can be scanned.</p>
+         * <p>A list of regions that support scanning.</p>
          */
         @NameInMap("RegionList")
         public java.util.List<DescribeDataLimitSetResponseBodyDataLimitSetRegionList> regionList;
 
         /**
-         * <p>The type of service to which the data asset belongs. Valid values:</p>
+         * <p>The type of the data asset. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: MaxCompute</li>
-         * <li><strong>2</strong>: OSS</li>
-         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-         * <li><strong>4</strong>: Tablestore</li>
-         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * <li><p><strong>1</strong>: MaxCompute.</p>
+         * </li>
+         * <li><p><strong>2</strong>: OSS.</p>
+         * </li>
+         * <li><p><strong>3</strong>: ADS.</p>
+         * </li>
+         * <li><p><strong>4</strong>: OTS.</p>
+         * </li>
+         * <li><p><strong>5</strong>: RDS.</p>
+         * </li>
+         * <li><p><strong>6</strong>: SELF_DB.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -374,13 +398,20 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public Long resourceType;
 
         /**
-         * <p>The service to which the data asset belongs. Valid values:</p>
+         * <p>The code for the data asset type. Valid values:</p>
          * <ul>
-         * <li><strong>ODPS</strong></li>
-         * <li><strong>OSS</strong></li>
-         * <li><strong>ADS</strong></li>
-         * <li><strong>OTS</strong></li>
-         * <li><strong>RDS</strong></li>
+         * <li><p><strong>MaxCompute</strong></p>
+         * </li>
+         * <li><p><strong>OSS</strong></p>
+         * </li>
+         * <li><p><strong>ADS</strong></p>
+         * </li>
+         * <li><p><strong>OTS</strong></p>
+         * </li>
+         * <li><p><strong>RDS</strong></p>
+         * </li>
+         * <li><p><strong>SELF_DB</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,7 +421,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         public String resourceTypeCode;
 
         /**
-         * <p>The total number of data objects in the data assets.</p>
+         * <p>The total number of assets found.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

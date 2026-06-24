@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCategoryTemplateListRequest extends TeaModel {
     /**
-     * <p>Page number for paginated queries. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,11 +23,12 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>Set the language type for the request and response messages, default is <strong>zh_cn</strong>.
-     * Values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese (Simplified)</li>
-     * <li><strong>en_us</strong>: English (United States)</li>
+     * <li><p><strong>zh_cn</strong>: Simplified Chinese</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: U.S. English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +38,7 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>When performing a paginated query, set the number of items per page. Default value is <strong>10</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -46,12 +47,14 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>API call scenario, default is <strong>null</strong>.
-     * Values:</p>
+     * <p>The scenario in which the operation is called. Default value: <strong>null</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>null</strong>: Old version</li>
-     * <li><strong>0</strong>: Old version</li>
-     * <li><strong>1</strong>: New version</li>
+     * <li><p><strong>null</strong>: an earlier version</p>
+     * </li>
+     * <li><p><strong>0</strong>: an earlier version</p>
+     * </li>
+     * <li><p><strong>1</strong>: the latest version</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

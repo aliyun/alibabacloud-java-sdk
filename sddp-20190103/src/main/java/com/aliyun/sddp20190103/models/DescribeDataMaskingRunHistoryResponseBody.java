@@ -14,7 +14,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The execution information about the de-identification task.</p>
+     * <p>A list of data masking task details.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataMaskingRunHistoryResponseBodyItems> items;
@@ -93,7 +93,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
 
     public static class DescribeDataMaskingRunHistoryResponseBodyItems extends TeaModel {
         /**
-         * <p>The number of rows that are in conflict with the data to be de-identified in the destination table to which the data to be de-identified is moved.</p>
+         * <p>The number of data conflicts. This is the number of rows to be inserted into the destination table that conflict with existing data.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -102,7 +102,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long conflictCount;
 
         /**
-         * <p>The type of the service to which the de-identified data belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * <p>The type of service to which the masked data is destined. Valid values: <strong>1</strong> for MaxCompute, <strong>2</strong> for OSS, <strong>3</strong> for ADS, <strong>4</strong> for OTS, and <strong>5</strong> for RDS.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -111,7 +111,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer dstType;
 
         /**
-         * <p>The service that stores the de-identified data. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The type of the destination service. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -120,7 +120,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String dstTypeCode;
 
         /**
-         * <p>The end time of the de-identification task.</p>
+         * <p>The time when the execution ended. This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1582251233000</p>
@@ -129,7 +129,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The error code that is returned when the de-identification task fails.</p>
+         * <p>The error code returned when the task fails. This parameter has a value only if the task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>masking_task_not_found</p>
@@ -138,7 +138,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String failCode;
 
         /**
-         * <p>The reason why the de-identification task fails.</p>
+         * <p>The reason the task failed.</p>
          * 
          * <strong>example:</strong>
          * <p>error</p>
@@ -147,10 +147,12 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String failMsg;
 
         /**
-         * <p>Indicates whether a file is available for download.</p>
+         * <p>Indicates whether a download file is available.</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: Yes.</p>
+         * </li>
+         * <li><p><strong>0</strong>: No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer hasSubProcess;
 
         /**
-         * <p>The ID of the task execution record.</p>
+         * <p>The ID of the execution record.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +180,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The number of rows that are de-identified.</p>
+         * <p>The number of masked rows.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -187,7 +189,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long maskingCount;
 
         /**
-         * <p>The progress of the de-identification task.</p>
+         * <p>The execution progress.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -196,7 +198,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>The number of times that the de-identification task is executed.</p>
+         * <p>The number of times the task has been executed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,7 +216,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String srcTableName;
 
         /**
-         * <p>The type of the service to which the data to be de-identified belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * <p>The type of service to which the source data belongs. Valid values: <strong>1</strong> for MaxCompute, <strong>2</strong> for OSS, <strong>3</strong> for ADS, <strong>4</strong> for OTS, and <strong>5</strong> for RDS.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -223,7 +225,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer srcType;
 
         /**
-         * <p>The service to which the data to be de-identified belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The type of the source service. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -232,7 +234,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String srcTypeCode;
 
         /**
-         * <p>The time when the de-identification task was executed. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the execution started. This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1582251233000</p>
@@ -241,14 +243,20 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the de-identification task. Valid values:</p>
+         * <p>The execution status of the task. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong>: waiting</li>
-         * <li><strong>0</strong>: being executed</li>
-         * <li><strong>1</strong>: executed</li>
-         * <li><strong>2</strong>: failed to be executed</li>
-         * <li><strong>3</strong>: terminated</li>
-         * <li><strong>4</strong>: partially failed</li>
+         * <li><p>-<strong>1</strong>: pending.</p>
+         * </li>
+         * <li><p><strong>0</strong>: running.</p>
+         * </li>
+         * <li><p><strong>1</strong>: successful.</p>
+         * </li>
+         * <li><p><strong>2</strong>: failed.</p>
+         * </li>
+         * <li><p><strong>3</strong>: stopped by user.</p>
+         * </li>
+         * <li><p><strong>4</strong>: partially failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +266,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The ID of the identification task.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>mt4HBgtw1B******</p>
@@ -267,10 +275,12 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The mode in which the de-identification task is executed. Valid values:</p>
+         * <p>The execution method. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: manual</li>
-         * <li><strong>2</strong>: scheduled</li>
+         * <li><p><strong>1</strong>: manual.</p>
+         * </li>
+         * <li><p><strong>2</strong>: scheduled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

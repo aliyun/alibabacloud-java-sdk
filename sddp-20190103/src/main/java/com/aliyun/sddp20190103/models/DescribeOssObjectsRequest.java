@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOssObjectsRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The code of the file type.</p>
+     * <p>The code of the file category.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,9 +23,9 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public Long fileCategoryCode;
 
     /**
-     * <p>The ID of the instance to which the OSS object belongs.</p>
+     * <p>The ID of the asset instance to which the OSS object belongs.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeInstances</strong> operation to query the instance ID.</p>
+     * <p>To query the list of authorized OSS objects by the ID of the asset instance, call the <strong>DescribeInstances</strong> operation to obtain the instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,12 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public Long lastScanTimeStart;
 
     /**
-     * <p>When you query data by page, use the <code>Marker</code> parameter to query the data that follows the <code>Marker</code> value.</p>
+     * <p>The position where the query starts. To retrieve the next page of results, set this parameter to the value of <code>NextMarker</code> from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>1754786235714378752</p>
@@ -84,7 +86,7 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -93,13 +95,18 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sensitivity level of the OSS object. Valid values:</p>
+     * <p>The risk level ID of the OSS object. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-     * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-     * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-     * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-     * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+     * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+     * </li>
+     * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,9 +116,9 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public Integer riskLevelId;
 
     /**
-     * <p>The ID of the sensitive data detection rule that the OSS object hits.</p>
+     * <p>The ID of the sensitive data detection rule that the OSS object matches.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeRules</strong> operation to query the ID of the sensitive data detection rule.</p>
+     * <p>To query the list of authorized OSS objects by the ID of a matched sensitive data detection rule, call the <strong>DescribeRules</strong> operation to obtain the rule ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,7 +128,7 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The region in which the data asset resides.</p>
+     * <p>The region of the asset.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -130,7 +137,7 @@ public class DescribeOssObjectsRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The ID of the industry-specific rule template.</p>
+     * <p>The ID of the industry-specific template.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

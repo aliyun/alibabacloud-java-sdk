@@ -14,7 +14,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A list of de-identification tasks.</p>
+     * <p>A list of data masking tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataMaskingTasksResponseBodyItems> items;
@@ -93,7 +93,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
 
     public static class DescribeDataMaskingTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The member account to which the desensitization target belongs.</p>
+         * <p>The member account that the data masking destination belongs to.</p>
          * 
          * <strong>example:</strong>
          * <p>192479427903xxxx</p>
@@ -108,7 +108,21 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String dstPath;
 
         /**
-         * <p>The service to which the data to be de-identified belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * <p>The product that the destination data source belongs to. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: MaxCompute.</p>
+         * </li>
+         * <li><p><strong>2</strong>: OSS.</p>
+         * </li>
+         * <li><p><strong>3</strong>: ADS.</p>
+         * </li>
+         * <li><p><strong>4</strong>: OTS.</p>
+         * </li>
+         * <li><p><strong>5</strong>: RDS.</p>
+         * </li>
+         * <li><p><strong>6</strong>: SELF_DB.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -117,7 +131,21 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Integer dstType;
 
         /**
-         * <p>The type of the service to which the de-identified data belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The type of the destination product. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MaxCompute</strong>.</p>
+         * </li>
+         * <li><p><strong>OSS</strong>.</p>
+         * </li>
+         * <li><p><strong>ADS</strong>.</p>
+         * </li>
+         * <li><p><strong>OTS</strong>.</p>
+         * </li>
+         * <li><p><strong>RDS</strong>.</p>
+         * </li>
+         * <li><p><strong>SELF_DB</strong>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -126,7 +154,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String dstTypeCode;
 
         /**
-         * <p>The time when the de-identification task is created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1582992000000</p>
@@ -135,7 +163,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Indicates whether the de-identification task is running.</p>
+         * <p>Indicates whether the task is running.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -144,7 +172,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Boolean hasUnfinishProcess;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The numerical ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +181,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the source table is de-identified.</p>
+         * <p>Indicates whether the source table is masked.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -162,7 +190,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Boolean originalTable;
 
         /**
-         * <p>The user who created the de-identification task.</p>
+         * <p>The creator of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
@@ -171,7 +199,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The number of times that the de-identification task is run.</p>
+         * <p>The number of executions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -180,7 +208,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Integer runCount;
 
         /**
-         * <p>The member account to which the desensitization source belongs.</p>
+         * <p>The member account that the data masking source belongs to.</p>
          * 
          * <strong>example:</strong>
          * <p>192479427903xxxx</p>
@@ -195,7 +223,21 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String srcPath;
 
         /**
-         * <p>The type of the service to which the data to be de-identified belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * <p>The type of the source product. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: MaxCompute.</p>
+         * </li>
+         * <li><p><strong>2</strong>: OSS.</p>
+         * </li>
+         * <li><p><strong>3</strong>: ADS.</p>
+         * </li>
+         * <li><p><strong>4</strong>: OTS.</p>
+         * </li>
+         * <li><p><strong>5</strong>: RDS.</p>
+         * </li>
+         * <li><p><strong>6</strong>: SELF_DB.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -204,7 +246,21 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Integer srcType;
 
         /**
-         * <p>The type of the service to which the data to be de-identified belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The type of the source product. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MaxCompute</strong>.</p>
+         * </li>
+         * <li><p><strong>OSS</strong>.</p>
+         * </li>
+         * <li><p><strong>ADS</strong>.</p>
+         * </li>
+         * <li><p><strong>OTS</strong>.</p>
+         * </li>
+         * <li><p><strong>RDS</strong>.</p>
+         * </li>
+         * <li><p><strong>SELF_DB</strong>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -215,8 +271,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1</strong>: enabled</li>
+         * <li><p><strong>0</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +284,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The string ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>mt4HBgtw1B******</p>
@@ -244,11 +302,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The mode in which the de-identification task is run. Valid values:</p>
+         * <p>The execution method of the task. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: manual</li>
-         * <li><strong>2</strong>: scheduled</li>
-         * <li><strong>3</strong>: manual and scheduled</li>
+         * <li><p><strong>1</strong>: Manual.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Scheduled.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Manual and scheduled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

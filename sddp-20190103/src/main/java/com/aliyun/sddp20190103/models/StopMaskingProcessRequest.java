@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopMaskingProcessRequest extends TeaModel {
     /**
-     * <p>The unique ID of the de-identification task. You can query the task ID by calling the <a href="~~DescribeDataMaskingTasks~~">DescribeDataMaskingTasks</a> operation.</p>
+     * <p>The unique ID of the data masking task. You can obtain the ID of a data masking task from the return value of the <a href="~~DescribeDataMaskingTasks~~">DescribeDataMaskingTasks</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class StopMaskingProcessRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese (Simplified). This is the default value.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English (US).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

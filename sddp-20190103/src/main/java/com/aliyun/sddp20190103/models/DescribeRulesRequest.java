@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeRulesRequest extends TeaModel {
     /**
-     * <p>The content type of the sensitive data detection rule. Valid values:</p>
+     * <p>The type of content in the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: keyword</li>
-     * <li><strong>2</strong>: regular expression</li>
+     * <li><p><strong>0</strong>: keyword</p>
+     * </li>
+     * <li><p><strong>2</strong>: regular expression</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,19 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer category;
 
     /**
-     * <p>The type of the content in the sensitive data detection rule. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</p>
+     * <p>The content type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: SQL injection exploits</p>
+     * </li>
+     * <li><p><strong>2</strong>: SQL injection bypass attempts</p>
+     * </li>
+     * <li><p><strong>3</strong>: stored procedure abuse</p>
+     * </li>
+     * <li><p><strong>4</strong>: buffer overflows</p>
+     * </li>
+     * <li><p><strong>5</strong>: error-based SQL injections</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,10 +41,12 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer contentCategory;
 
     /**
-     * <p>The external cooperation channel. Valid values:</p>
+     * <p>The source of the external cooperation request. Valid values:</p>
      * <ul>
-     * <li>DAS</li>
-     * <li>YAOCHI</li>
+     * <li><p>DAS</p>
+     * </li>
+     * <li><p>YAOCHI</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +56,7 @@ public class DescribeRulesRequest extends TeaModel {
     public String cooperationChannel;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number of the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,8 +67,10 @@ public class DescribeRulesRequest extends TeaModel {
     /**
      * <p>The type of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: built-in rule</li>
-     * <li><strong>1</strong>: custom rule</li>
+     * <li><p><strong>0</strong>: built-in</p>
+     * </li>
+     * <li><p><strong>1</strong>: custom</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +89,7 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The parent group type of the rule.</p>
+     * <p>The parent group of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>4_1</p>
@@ -80,13 +98,15 @@ public class DescribeRulesRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Specifies whether to allow earlier versions of request parameters to support keywords that are supported in later versions of request parameters. Valid values:</p>
+     * <p>Specifies whether the keyword is compatible with earlier versions. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>To specify keywords as the content type of the sensitive data detection rule, you can set the Category parameter to 0 for earlier versions of request parameters and set the Category parameter to 5 for later versions of request parameters. You can specify the KeywordCompatible parameter based on your business requirements.</p>
+     * <p>In earlier versions, the Category parameter for keywords had a value of 0. In the current version, it has a value of 5. Enable this parameter based on your business needs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,10 +116,12 @@ public class DescribeRulesRequest extends TeaModel {
     public Boolean keywordCompatible;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,8 +133,10 @@ public class DescribeRulesRequest extends TeaModel {
     /**
      * <p>The match type. Valid values:</p>
      * <ul>
-     * <li>1: rule-based match</li>
-     * <li>2: dictionary-based match</li>
+     * <li><p>1: rule-based match</p>
+     * </li>
+     * <li><p>2: dictionary-based match</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,7 +149,7 @@ public class DescribeRulesRequest extends TeaModel {
      * <p>The name of the sensitive data detection rule. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>\<em>\</em>\* rule</p>
+     * <p>***Rule</p>
      */
     @NameInMap("Name")
     public String name;
@@ -140,7 +164,21 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+     * <p>The name of the service to which the data asset belongs. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MaxCompute</strong></p>
+     * </li>
+     * <li><p><strong>OSS</strong></p>
+     * </li>
+     * <li><p><strong>ADS</strong></p>
+     * </li>
+     * <li><p><strong>OTS</strong></p>
+     * </li>
+     * <li><p><strong>RDS</strong></p>
+     * </li>
+     * <li><p><strong>SELF_DB</strong></p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
@@ -149,7 +187,21 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer productCode;
 
     /**
-     * <p>The ID of the service to which the sensitive data detection rule is applied. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The ID of the service to which the data asset belongs. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: MaxCompute</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADS</p>
+     * </li>
+     * <li><p><strong>4</strong>: OTS</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -158,13 +210,18 @@ public class DescribeRulesRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+     * <p>The sensitivity level ID of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-     * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-     * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-     * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-     * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+     * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+     * </li>
+     * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -176,10 +233,14 @@ public class DescribeRulesRequest extends TeaModel {
     /**
      * <p>The type of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: sensitive data detection rule</li>
-     * <li><strong>2</strong>: audit rule</li>
-     * <li><strong>3</strong>: anomalous event detection rule</li>
-     * <li><strong>99</strong>: custom rule</li>
+     * <li><p><strong>1</strong>: data detection rule</p>
+     * </li>
+     * <li><p><strong>2</strong>: audit policy</p>
+     * </li>
+     * <li><p><strong>3</strong>: anomaly detection rule</p>
+     * </li>
+     * <li><p><strong>99</strong>: custom rule</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -189,10 +250,12 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer ruleType;
 
     /**
-     * <p>Specifies whether to query a simplified rule. The simplified rule contains only the rule name. Valid values:</p>
+     * <p>Specifies whether to return a simplified version of the rule that contains only the rule name. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -202,10 +265,12 @@ public class DescribeRulesRequest extends TeaModel {
     public Boolean simplify;
 
     /**
-     * <p>The status of the sensitive data detection rule. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><p><strong>1</strong>: Normal</p>
+     * </li>
+     * <li><p><strong>0</strong>: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -215,14 +280,17 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The type of the data asset. Valid values:</p>
+     * <p>The type of data asset that the rule supports. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: all data assets</li>
-     * <li><strong>1</strong>: structured data asset</li>
-     * <li><strong>2</strong>: unstructured data asset</li>
+     * <li><p><strong>0</strong>: all assets</p>
+     * </li>
+     * <li><p><strong>1</strong>: structured assets</p>
+     * </li>
+     * <li><p><strong>2</strong>: unstructured assets</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.</p>
+     * <p>When you query for rules that support structured or unstructured assets, the response also includes rules that support all asset types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -232,11 +300,14 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer supportForm;
 
     /**
-     * <p>The severity level of the alert. Valid values:</p>
+     * <p>The risk level.</p>
      * <ul>
-     * <li><strong>1</strong>: low</li>
-     * <li><strong>2</strong>: medium</li>
-     * <li><strong>3</strong>: high</li>
+     * <li><p><strong>1</strong>: Low</p>
+     * </li>
+     * <li><p><strong>2</strong>: Medium</p>
+     * </li>
+     * <li><p><strong>3</strong>: High</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

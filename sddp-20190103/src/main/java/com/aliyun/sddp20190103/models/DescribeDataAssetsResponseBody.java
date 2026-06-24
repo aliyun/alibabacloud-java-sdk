@@ -14,13 +14,13 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of data assets.</p>
+     * <p>An array of data assets.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataAssetsResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of queried data assets that contain sensitive data.</p>
+     * <p>The total number of data assets that contain sensitive data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,9 +93,9 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
 
     public static class DescribeDataAssetsResponseBodyItems extends TeaModel {
         /**
-         * <p>The access control list (ACL) that controls the access permissions on the OSS bucket.</p>
+         * <p>The access control list (ACL) of the OSS bucket.</p>
          * <blockquote>
-         * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>21</strong>.</p>
+         * <p>This parameter is returned only when <strong>RangeId</strong> is <strong>21&#x20;</strong>(OSS buckets).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public String acl;
 
         /**
-         * <p>The time when the data asset was created. Unit: milliseconds.</p>
+         * <p>The time when the data asset was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1536751124000</p>
@@ -114,7 +114,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The data type of the data asset.</p>
+         * <p>The type of the data asset.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS_BUCKET</p>
@@ -132,12 +132,16 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The sensitivity tag of the data. The value is fixed as <strong>0</strong>. <strong>0</strong>, <strong>1</strong>, <strong>2</strong>, or <strong>3</strong> is returned for this parameter only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+         * <p>The sensitivity level of the data. This is a static field and is returned only when <strong>RangeId</strong> is <strong>1</strong> (MaxCompute projects).</p>
          * <ul>
-         * <li><strong>0</strong>: unclassified</li>
-         * <li><strong>1</strong>: confidential</li>
-         * <li><strong>2</strong>: sensitive</li>
-         * <li><strong>3</strong>: highly sensitive</li>
+         * <li><p><strong>0</strong>: Unclassified</p>
+         * </li>
+         * <li><p><strong>1</strong>: Confidential</p>
+         * </li>
+         * <li><p><strong>2</strong>: Sensitive</p>
+         * </li>
+         * <li><p><strong>3</strong>: Highly sensitive</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,27 +160,31 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The key value of the OSS object.</p>
+         * <p>The key of the OSS object.</p>
          * <blockquote>
-         * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>22</strong>.</p>
+         * <p>This parameter is returned only when <strong>RangeId</strong> is <strong>22</strong> (OSS objects).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Internal</p>
+         * <p>test.txt</p>
          */
         @NameInMap("ObjectKey")
         public String objectKey;
 
         /**
-         * <p>The sensitivity level of the MaxCompute data asset. Valid values:</p>
+         * <p>The name of the risk level for the MaxCompute data asset. Valid values:</p>
          * <ul>
-         * <li><strong>S1</strong>: low sensitivity level</li>
-         * <li><strong>S2</strong>: medium sensitivity level</li>
-         * <li><strong>S3</strong>: high sensitivity level</li>
-         * <li><strong>S4</strong>: highest sensitivity level</li>
+         * <li><p><strong>S1</strong>: Low</p>
+         * </li>
+         * <li><p><strong>S2</strong>: Medium</p>
+         * </li>
+         * <li><p><strong>S3</strong>: High</p>
+         * </li>
+         * <li><p><strong>S4</strong>: Highest</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+         * <p>This parameter is returned only when \<code>RangeId\\</code> is \<code>1\\</code> (MaxCompute projects).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +194,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public String odpsRiskLevelName;
 
         /**
-         * <p>The account that owns the data asset.</p>
+         * <p>The owner of the data asset.</p>
          * 
          * <strong>example:</strong>
          * <p>dtdep-239-******</p>
@@ -195,7 +203,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The name of the service to which the data asset belongs.</p>
+         * <p>The code of the service to which the data asset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -206,11 +214,16 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         /**
          * <p>The ID of the service to which the data asset belongs. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: MaxCompute</li>
-         * <li><strong>2</strong>: OSS</li>
-         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-         * <li><strong>4</strong>: Tablestore</li>
-         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * <li><p><strong>1</strong>: MaxCompute</p>
+         * </li>
+         * <li><p><strong>2</strong>: OSS</p>
+         * </li>
+         * <li><p><strong>3</strong>: AnalyticDB for MySQL</p>
+         * </li>
+         * <li><p><strong>4</strong>: Tablestore</p>
+         * </li>
+         * <li><p><strong>5</strong>: RDS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,10 +233,12 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>Indicates whether the data protection mechanism is enabled for the data asset. The value is fixed as <strong>false</strong>. <strong>true</strong> or <strong>false</strong> is returned for this parameter only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+         * <p>Indicates whether data protection is enabled. This is a static field and is returned only when <strong>RangeId</strong> is <strong>1</strong> (MaxCompute projects).</p>
          * <ul>
-         * <li><strong>false</strong>: The data protection mechanism is disabled.</li>
-         * <li><strong>true</strong>: The data protection mechanism is enabled. Only data inbound is supported. Data outbound is not supported.</li>
+         * <li><p><strong>false</strong>: Data protection is disabled.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Data protection is enabled. Data can only flow into the project, not out of it.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,19 +248,30 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public Boolean protection;
 
         /**
-         * <p>The sensitivity level of the data asset. A higher sensitivity level indicates that the identified data is more sensitive. Valid values:</p>
+         * <p>The ID of the risk level. A larger value indicates a higher risk level. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: No sensitive data is identified.</li>
-         * <li><strong>2</strong>: sensitive data at level 1.</li>
-         * <li><strong>3</strong>: sensitive data at level 2.</li>
-         * <li><strong>3</strong>: sensitive data at level 3.</li>
-         * <li><strong>5</strong>: sensitive data at level 4.</li>
-         * <li><strong>6</strong>: sensitive data at level 5.</li>
-         * <li><strong>7</strong>: sensitive data at level 6.</li>
-         * <li><strong>8</strong>: sensitive data at level 7.</li>
-         * <li><strong>9</strong>: sensitive data at level 8.</li>
-         * <li><strong>10</strong>: sensitive data at level 9.</li>
-         * <li><strong>11</strong>: sensitive data at level 10.</li>
+         * <li><p><strong>1</strong>: No sensitive data detected</p>
+         * </li>
+         * <li><p><strong>2</strong>: Level 1</p>
+         * </li>
+         * <li><p><strong>3</strong>: Level 2</p>
+         * </li>
+         * <li><p><strong>4</strong>: Level 3</p>
+         * </li>
+         * <li><p><strong>5</strong>: Level 4</p>
+         * </li>
+         * <li><p><strong>6</strong>: Level 5</p>
+         * </li>
+         * <li><p><strong>7</strong>: Level 6</p>
+         * </li>
+         * <li><p><strong>8</strong>: Level 7</p>
+         * </li>
+         * <li><p><strong>9</strong>: Level 8</p>
+         * </li>
+         * <li><p><strong>10</strong>: Level 9</p>
+         * </li>
+         * <li><p><strong>11</strong>: Level 10</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,19 +281,19 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the sensitivity level for the data asset.</p>
+         * <p>The name of the risk level.</p>
          * 
          * <strong>example:</strong>
-         * <p>Medium sensitivity level</p>
+         * <p>High risk</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
-         * <p>The name of the sensitive data detection rule that the data asset hits.</p>
+         * <p>The name of the sensitive data detection rule that the data asset matches.</p>
          * 
          * <strong>example:</strong>
-         * <p>\<em>\</em>\* rule</p>
+         * <p>***Rule</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -275,8 +301,10 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the data asset contains sensitive data. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: Yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: No</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +314,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public Boolean sensitive;
 
         /**
-         * <p>The total number of sensitive data assets. For example, the value can be the total number of sensitive MaxCompute projects, packages, or tables, the total number of sensitive ApsaraDB RDS databases or tables, or the total number of sensitive OSS buckets or objects.</p>
+         * <p>The total number of sensitive items in the data asset. For example, the total number of sensitive projects, packages, or tables in MaxCompute, the total number of sensitive databases or tables in RDS, or the total number of sensitive buckets or objects in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -295,7 +323,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public Integer sensitiveCount;
 
         /**
-         * <p>The percentage of sensitive data in all data assets.</p>
+         * <p>The percentage of sensitive data in the data asset.</p>
          * 
          * <strong>example:</strong>
          * <p>45%</p>
@@ -304,7 +332,7 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         public String sensitiveRatio;
 
         /**
-         * <p>The total number of data assets. For example, the value can be the total number of MaxCompute projects, packages, or tables, the total number of ApsaraDB RDS databases or tables, or the total number of OSS buckets or objects.</p>
+         * <p>The total number of items in the data asset. For example, the total number of projects, packages, or tables in MaxCompute, the total number of databases or tables in RDS, or the total number of buckets or objects in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>432</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOssObjectDetailV2Request extends TeaModel {
     /**
-     * <p>Bucket name.</p>
+     * <p>The name of the bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>sddp-api-scan-demo</p>
@@ -14,9 +14,9 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The unique identifier ID of the OSS storage object.</p>
+     * <p>The unique ID of the OSS object.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/410152.html">DescribeOssObjects</a> interface to get the ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/410152.html">DescribeOssObjects</a> operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,12 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String id;
 
     /**
-     * <p>Sets the language type for request and response messages. The default value is <strong>zh_cn</strong>. Values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>en_us</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese</li>
-     * <li><strong>en_us</strong>: English (US)</li>
+     * <li><p><strong>en_us</strong>: Simplified Chinese</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English (US)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String lang;
 
     /**
-     * <p>The full file name of the file stored on OSS.</p>
+     * <p>The full name of the object stored in OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>dir1/test.png</p>
@@ -48,7 +50,7 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String objectKey;
 
     /**
-     * <p>Service region ID, i.e., the region ID where the Bucket is located.</p>
+     * <p>The ID of the region where the service is enabled. This is also the region where the bucket is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -57,9 +59,9 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>Industry template ID.</p>
+     * <p>The ID of the industry-specific template.</p>
      * <blockquote>
-     * <p>You can obtain the industry template ID by calling the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> interface.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the ID of the industry-specific template.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

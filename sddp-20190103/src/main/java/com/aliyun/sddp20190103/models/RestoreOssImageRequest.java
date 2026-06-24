@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestoreOssImageRequest extends TeaModel {
     /**
+     * <p>The OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class RestoreOssImageRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The full path of the file stored in OSS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class RestoreOssImageRequest extends TeaModel {
     public String objectKey;
 
     /**
+     * <p>The ID of the region where the bucket is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +38,8 @@ public class RestoreOssImageRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
+     * <p>The storage path for the restored image.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun_dsc_original /dir1/test.png</p>
      */

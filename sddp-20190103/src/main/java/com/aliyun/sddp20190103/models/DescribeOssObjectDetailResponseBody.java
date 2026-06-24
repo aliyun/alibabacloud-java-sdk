@@ -42,11 +42,14 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
 
     public static class DescribeOssObjectDetailResponseBodyOssObjectDetailRuleListModelTags extends TeaModel {
         /**
-         * <p>The tag ID.</p>
+         * <p>The ID of the data tag for the detection model.</p>
          * <ul>
-         * <li><strong>101</strong>: sensitive personal information</li>
-         * <li><strong>102</strong>: personal information</li>
-         * <li><strong>103</strong>: important information</li>
+         * <li><p><strong>101</strong>: Personal sensitive information.</p>
+         * </li>
+         * <li><p><strong>102</strong>: Personal information.</p>
+         * </li>
+         * <li><p><strong>103</strong>: Important data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -56,11 +59,14 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The tag name.</p>
+         * <p>The name of the data tag for the detection model.</p>
          * <ul>
-         * <li>Sensitive personal information</li>
-         * <li>Personal information</li>
-         * <li>Important information</li>
+         * <li><p>Personal sensitive information.</p>
+         * </li>
+         * <li><p>Personal information.</p>
+         * </li>
+         * <li><p>Important data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,16 +100,16 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
 
     public static class DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList extends TeaModel {
         /**
-         * <p>The type of the OSS object.</p>
+         * <p>The name of the OSS object type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Excel file</p>
+         * <p>Excel</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
-         * <p>The number of times that the OSS object hits the sensitive data detection rule.</p>
+         * <p>The number of times the sensitive data detection rule was hit.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -112,19 +118,24 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>A list of tags for data that hits the recognition model.</p>
+         * <p>A list of data tags that are hit by the detection model.</p>
          */
         @NameInMap("ModelTags")
         public java.util.List<DescribeOssObjectDetailResponseBodyOssObjectDetailRuleListModelTags> modelTags;
 
         /**
-         * <p>The ID of the sensitivity level of the OSS object.</p>
+         * <p>The ID of the risk level for the OSS object.</p>
          * <ul>
-         * <li><strong>1</strong>: No sensitive data is detected.</li>
-         * <li><strong>2</strong>: indicates the low sensitivity level.</li>
-         * <li><strong>3</strong>: indicates the medium sensitivity level.</li>
-         * <li><strong>4</strong>: indicates the high sensitivity level.</li>
-         * <li><strong>5</strong>: indicates the highest sensitivity level.</li>
+         * <li><p><strong>1</strong>: No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>4</strong>: Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>5</strong>: Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,19 +145,19 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the sensitivity level for the OSS object.</p>
+         * <p>The name of the risk level for the OSS object.</p>
          * 
          * <strong>example:</strong>
-         * <p>Medium sensitivity level</p>
+         * <p>S2</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
-         * <p>The name of the sensitive data detection rule.</p>
+         * <p>The name of the sensitive data detection rule that was hit.</p>
          * 
          * <strong>example:</strong>
-         * <p>\<em>\</em>\* rule</p>
+         * <p>name</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -208,7 +219,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
 
     public static class DescribeOssObjectDetailResponseBodyOssObjectDetail extends TeaModel {
         /**
-         * <p>The name of the OSS bucket to which the OSS object belongs.</p>
+         * <p>The name of the bucket to which the OSS object belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>bucke***</p>
@@ -217,10 +228,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The type of the OSS object.</p>
+         * <p>The name of the OSS object type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Excel file</p>
+         * <p>Excel</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
@@ -235,7 +246,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The region ID of the OSS object.</p>
+         * <p>The ID of the region where the OSS object is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-***</p>
@@ -244,16 +255,16 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the sensitivity level for the OSS object.</p>
+         * <p>The name of the risk level for the OSS object.</p>
          * 
          * <strong>example:</strong>
-         * <p>Medium sensitivity level</p>
+         * <p>S2</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
-         * <p>A list of the sensitive data detection rules that the OSS object hits.</p>
+         * <p>A list of sensitive data detection rules that the OSS object hits.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList> ruleList;

@@ -14,7 +14,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The OSS objects.</p>
+     * <p>A list of OSS objects.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeOssObjectsResponseBodyItems> items;
@@ -29,9 +29,9 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     public String marker;
 
     /**
-     * <p>The ID value from which the next page of results starts.</p>
+     * <p>The token that marks the start of the next page of results.</p>
      * <blockquote>
-     * <p> This parameter is returned only when the <code>Truncated</code> parameter is set to <code>true</code>.</p>
+     * <p>This parameter is returned only when <code>Truncated</code> is <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     public String nextMarker;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -68,10 +68,12 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+     * <p>Indicates whether the results are truncated. The default value is false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The results are truncated.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The results are not truncated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,7 +153,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
     public static class DescribeOssObjectsResponseBodyItemsRuleList extends TeaModel {
         /**
-         * <p>The number of times that the rule is hit.</p>
+         * <p>The number of times the rule is matched.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -160,7 +162,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The search keyword. Fuzzy match is supported.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ID card</p>
@@ -169,13 +171,18 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the sensitivity level of the OSS object. Valid values:</p>
+         * <p>The risk level ID of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +224,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
     public static class DescribeOssObjectsResponseBodyItems extends TeaModel {
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-duplicate-***</p>
@@ -226,7 +233,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The type of the OSS object. Valid values include <strong>900001</strong>, <strong>800015</strong>, or <strong>800005</strong>, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.</p>
+         * <p>The type of the OSS object, such as <strong>900001</strong> (MP4 video file), <strong>800015</strong> (PDF document), and <strong>800005</strong> (OSS configuration file).</p>
          * 
          * <strong>example:</strong>
          * <p>900001</p>
@@ -238,13 +245,13 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
          * <p>The name of the file type.</p>
          * 
          * <strong>example:</strong>
-         * <p>MP4 file</p>
+         * <p>MP4</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
-         * <p>The code of the file type.</p>
+         * <p>The code of the file category.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -253,7 +260,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public Long fileCategoryCode;
 
         /**
-         * <p>The name of the file type.</p>
+         * <p>The name of the file category.</p>
          * 
          * <strong>example:</strong>
          * <p>text file</p>
@@ -262,7 +269,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String fileCategoryName;
 
         /**
-         * <p>The file ID of the OSS object.</p>
+         * <p>The ID of the OSS file.</p>
          * 
          * <strong>example:</strong>
          * <p>file-22***</p>
@@ -271,7 +278,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The ID of the OSS object.</p>
+         * <p>The unique ID of the OSS object.</p>
          * 
          * <strong>example:</strong>
          * <p>17383</p>
@@ -280,7 +287,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the instance to which the OSS object belongs.</p>
+         * <p>The ID of the asset instance to which the OSS object belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1232122</p>
@@ -307,7 +314,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The region ID of the OSS object.</p>
+         * <p>The region ID of the OSS object owner.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-***</p>
@@ -316,13 +323,18 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the sensitivity level of the OSS object. Valid values:</p>
+         * <p>The risk level ID of the OSS object. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,16 +344,16 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the sensitivity level for the OSS object.</p>
+         * <p>The name of the risk level for the OSS object.</p>
          * 
          * <strong>example:</strong>
-         * <p>Medium sensitivity level</p>
+         * <p>High risk</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
-         * <p>The number of rules that are hit.</p>
+         * <p>The number of matched rules.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -350,13 +362,13 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public Integer ruleCount;
 
         /**
-         * <p>The rules.</p>
+         * <p>A list of rules.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectsResponseBodyItemsRuleList> ruleList;
 
         /**
-         * <p>The number of fields that are hit.</p>
+         * <p>The number of matched fields.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -365,7 +377,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public Integer sensitiveCount;
 
         /**
-         * <p>The size of the file. Unit: bytes.</p>
+         * <p>The file size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

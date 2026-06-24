@@ -14,10 +14,12 @@ public class DescribeDataLimitSetRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese (Simplified). This is the default value.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English (US).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,8 +29,8 @@ public class DescribeDataLimitSetRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The parent asset ID of the data asset.</p>
-     * <p>You can call the <a href="~~DescribeDataLimitDetail~~">DescribeDataLimitDetail</a> or <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain the parent asset ID of the data asset from the value of the <strong>ParentId</strong> parameter.</p>
+     * <p>The ID of the parent asset.</p>
+     * <p>The <a href="~~DescribeDataLimitDetail~~">DescribeDataLimitDetail</a> or <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation returns this ID in the <strong>ParentId</strong> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>db</p>
@@ -36,18 +38,37 @@ public class DescribeDataLimitSetRequest extends TeaModel {
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <p>The region type.</p>
+     * <ul>
+     * <li><strong>native_audit</strong>: A region that supports traffic collection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>native_audit</p>
+     */
     @NameInMap("RegionType")
     public String regionType;
 
     /**
-     * <p>The type of service to which the data asset belongs. Valid values:</p>
+     * <p>The type of data asset. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: MaxCompute</li>
-     * <li><strong>2</strong>: OSS</li>
-     * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-     * <li><strong>4</strong>: Tablestore</li>
-     * <li><strong>5</strong>: ApsaraDB RDS</li>
+     * <li><p><strong>1</strong>: MaxCompute.</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS.</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADS.</p>
+     * </li>
+     * <li><p><strong>4</strong>: OTS.</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS.</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>If you set this parameter to a value other than 2, the returned OssBucketList object is empty.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,10 +23,12 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Simplified Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: US English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of template rules to return on each page. The default value is <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,20 +47,32 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sensitivity level of the data that is not compliant with the rule. Valid values: <strong>1</strong> to <strong>11</strong>. Default value: <strong>null</strong>.</p>
+     * <p>The risk level of the template rule. The value ranges from <strong>1</strong> to <strong>11</strong>. The default value is <strong>null</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: No sensitive data is detected.</li>
-     * <li><strong>2</strong>: specifies the S1 sensitivity level.</li>
-     * <li><strong>3</strong>: specifies the S2 sensitivity level.</li>
-     * <li><strong>4</strong>: specifies the S3 sensitivity level.</li>
-     * <li><strong>5</strong>: specifies the S4 sensitivity level.</li>
-     * <li><strong>6</strong>: specifies the S5 sensitivity level.</li>
-     * <li><strong>7</strong>: specifies the S6 sensitivity level.</li>
-     * <li><strong>8</strong>: specifies the S7 sensitivity level.</li>
-     * <li><strong>9</strong>: specifies the S8 sensitivity level.</li>
-     * <li><strong>10</strong>: specifies the S9 sensitivity level.</li>
-     * <li><strong>11</strong>: specifies the S10 sensitivity level.</li>
-     * <li><strong>null</strong>: specifies all preceding sensitivity levels.</li>
+     * <li><p><strong>1</strong>: No risk.</p>
+     * </li>
+     * <li><p><strong>2</strong>: S1.</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2.</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3.</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4.</p>
+     * </li>
+     * <li><p><strong>6</strong>: S5.</p>
+     * </li>
+     * <li><p><strong>7</strong>: S6.</p>
+     * </li>
+     * <li><p><strong>8</strong>: S7.</p>
+     * </li>
+     * <li><p><strong>9</strong>: S8.</p>
+     * </li>
+     * <li><p><strong>10</strong>: S9.</p>
+     * </li>
+     * <li><p><strong>11</strong>: S10.</p>
+     * </li>
+     * <li><p><strong>null</strong>: All risk levels, including No risk, S1, S2, S3, S4, S5, S6, S7, S8, S9, and S10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,11 +82,14 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The status of the rule. Default value: <strong>null</strong>. Valid values:</p>
+     * <p>The status of the template rule. The default value is <strong>null</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: disabled</li>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>null</strong>: all states</li>
+     * <li><p><strong>0</strong>: The rule is disabled.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The rule is enabled.</p>
+     * </li>
+     * <li><p><strong>null</strong>: All rules are returned, regardless of their status.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

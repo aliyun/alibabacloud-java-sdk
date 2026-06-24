@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyRuleStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the sensitive data detection rule.</p>
+     * <p>The unique ID of the sensitive data detection rule.</p>
      * <blockquote>
-     * <p>You can query the ID of the sensitive data detection rule by calling the <strong>DescribeRules</strong> operation.</p>
+     * <p>To enable or disable the detection feature for a sensitive data detection rule, provide the unique ID of the rule. Call the <strong>DescribeRules</strong> operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).</p>
+     * <p>The unique IDs of the sensitive data detection rules. Separate multiple IDs with commas.</p>
      * <blockquote>
-     * <p>You can query the ID of the sensitive data detection rule by calling the <strong>DescribeRules</strong> operation.</p>
+     * <p>To enable or disable the detection feature for sensitive data detection rules, provide the unique IDs of the rules. Call the <strong>DescribeRules</strong> operation to obtain the IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,10 +29,12 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,10 +44,12 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to enable or disable the sensitive data detection rule. Valid values:</p>
+     * <p>Specifies whether to enable or disable the detection feature for the sensitive data detection rules. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: disables the sensitive data detection rule.</li>
-     * <li><strong>1</strong>: enables the sensitive data detection rule.</li>
+     * <li><p><strong>0</strong>: Disable.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Enable.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ExecDatamaskRequest extends TeaModel {
     /**
-     * <p>The sensitive data to be de-identified. The value is a JSON string that contains the following parameters:</p>
+     * <p>The data that you want to mask. The data must be a string in JSON format and include the following fields:</p>
      * <ul>
-     * <li><strong>dataHeaderList</strong>: the names of the columns in which data needs to be de-identified. Specify the column names in accordance with the order of data that needs to be de-identified.</li>
-     * <li><strong>dataList</strong>: the data that needs to be de-identified.</li>
-     * <li><strong>ruleList</strong>: the IDs of sensitive data detection rules used to detect data that needs to be de-identified. Specify the rule IDs in accordance with the order of data that needs to be de-identified. Each ID identifies a sensitive data detection rule that is used to detect a type of sensitive data. You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to query the IDs of sensitive data detection rules.</li>
+     * <li><p><strong>dataHeaderList</strong>: The column names of the data. The order of the column names must correspond to the order of the data that you want to mask.</p>
+     * </li>
+     * <li><p><strong>dataList</strong>: The data that you want to mask.</p>
+     * </li>
+     * <li><p><strong>ruleList</strong>: A list of sensitive data type IDs. The order of the IDs must correspond to the order of the data that you want to mask. Each ID is a number that represents a sensitive data type. You can call the <a href="https://help.aliyun.com/document_detail/410141.html">DescribeRules</a> operation to obtain the IDs.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,16 +26,18 @@ public class ExecDatamaskRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Simplified Chinese</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English (US)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,10 +47,12 @@ public class ExecDatamaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the de-identification template. The ID is generated after you create the de-identification template in the <a href="https://yundun.console.aliyun.com/?%5C&p=sddpnext#/sddp/dm/template">Data Security Center (DSC) console</a>. You can choose <strong>Data desensitization</strong> &gt; <strong>Desensitization Template</strong> in the left-side navigation pane and obtain the ID of the de-identification template from the <strong>Desensitization Template</strong> page.</p>
+     * <p>The ID of the data masking template. A template ID is generated after you create a template in the <a href="https://yundun.console.aliyun.com/?p=sddp#/dm/dmConfig/cn-zhangjiakou">Data Security Center console</a>. You can find the <strong>Template ID</strong> on the <strong>Data Masking</strong> &gt; <strong>Masking Configuration</strong> &gt; <strong>Masking Template</strong> page.</p>
      * <ul>
-     * <li>If you select <strong>Field name</strong> as the matching mode of the template, DSC matches data based on the columns specified by the <strong>dataHeaderList</strong> parameter in the <strong>Data</strong> parameter.</li>
-     * <li>If you select <strong>Sensitive type</strong> as the matching mode of the template, DSC matches data based on the sensitive data detection rules specified by the <strong>ruleList</strong> parameter in the <strong>Data</strong> parameter.</li>
+     * <li><p>If the matching type of the data masking template is <strong>Field Name</strong>, the system matches the data against <strong>dataHeaderList</strong> in <strong>Data</strong>.</p>
+     * </li>
+     * <li><p>If the matching type of the data masking template is <strong>Sensitive Data Type</strong>, the system matches the data against <strong>ruleList</strong> in <strong>Data</strong>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

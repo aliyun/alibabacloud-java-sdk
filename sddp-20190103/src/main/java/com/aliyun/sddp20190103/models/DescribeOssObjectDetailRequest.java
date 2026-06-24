@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeOssObjectDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the OSS object.</p>
+     * <p>The unique ID of the OSS object.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/410152.html">DescribeOssObjects</a> operation to obtain the ID of the OSS object.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/410152.html">DescribeOssObjects</a> operation to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,12 @@ public class DescribeOssObjectDetailRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

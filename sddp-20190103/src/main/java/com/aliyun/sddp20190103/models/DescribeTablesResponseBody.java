@@ -14,7 +14,7 @@ public class DescribeTablesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of tables.</p>
+     * <p>A list of data asset tables.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeTablesResponseBodyItems> items;
@@ -105,19 +105,24 @@ public class DescribeTablesResponseBody extends TeaModel {
          * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Rule name</p>
+         * <p>Rule Name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+         * <p>The ID of the risk level for the sensitive data detection rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +164,7 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     public static class DescribeTablesResponseBodyItems extends TeaModel {
         /**
-         * <p>The point in time when the table was created. Unit: milliseconds.</p>
+         * <p>The time when the data asset table was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1536751124000</p>
@@ -168,7 +173,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The ID of the table.</p>
+         * <p>The unique ID of the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -177,16 +182,16 @@ public class DescribeTablesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The description of the data asset.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description 1</p>
+         * <p>instance description</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
-         * <p>The ID of the data asset to which the table belongs.</p>
+         * <p>The ID of the instance to which the data asset table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,16 +200,16 @@ public class DescribeTablesResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The name of the data asset to which the table belongs.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Data Asset 1</p>
+         * <p>rm-****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The name of the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>gxdata</p>
@@ -213,7 +218,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The Alibaba Cloud account to which the table belongs.</p>
+         * <p>The Alibaba Cloud account that owns the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>dtdep-239-******</p>
@@ -222,7 +227,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The name of the service to which the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>. For more information about the types of data assets from which DSC can scan for sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</p>
+         * <p>The name of the product to which the data asset table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>. For more information about the supported products, see <a href="https://help.aliyun.com/document_detail/212906.html">Data asset types that support sensitive data detection</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -231,7 +236,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the service to which the table belongs.</p>
+         * <p>The ID of the product to which the data asset table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -240,13 +245,18 @@ public class DescribeTablesResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:</p>
+         * <p>The ID of the risk level for the data asset table. Each risk level ID corresponds to a risk level name. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,13 +266,18 @@ public class DescribeTablesResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the sensitivity level for the table. Valid values:</p>
+         * <p>The name of the risk level for the data asset table. Valid values:</p>
          * <ul>
-         * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
-         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
-         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
-         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
-         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * <li><p><strong>N/A</strong>: No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>S1</strong>: Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>S2</strong>: Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>S3</strong>: Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>S4</strong>: Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,16 +287,18 @@ public class DescribeTablesResponseBody extends TeaModel {
         public String riskLevelName;
 
         /**
-         * <p>The information about the sensitive data detection rules that are hit.</p>
+         * <p>The information about the sensitive data detection rules that the data asset table hits.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeTablesResponseBodyItemsRuleList> ruleList;
 
         /**
-         * <p>Indicates whether the table contains sensitive fields. Valid values:</p>
+         * <p>Indicates whether the data asset table contains sensitive fields.</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: yes.</p>
+         * </li>
+         * <li><p><strong>false</strong>: no.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,7 +308,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         public Boolean sensitive;
 
         /**
-         * <p>The total number of sensitive fields in the table.</p>
+         * <p>The total number of sensitive fields in the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -300,7 +317,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         public Integer sensitiveCount;
 
         /**
-         * <p>The percentage of sensitive fields in the table.</p>
+         * <p>The percentage of sensitive fields in the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>21%</p>
@@ -312,13 +329,13 @@ public class DescribeTablesResponseBody extends TeaModel {
          * <p>The name of the tenant.</p>
          * 
          * <strong>example:</strong>
-         * <p>Tenant 1</p>
+         * <p>Tenate001</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
-         * <p>The total number of fields in the table.</p>
+         * <p>The total number of fields in the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>

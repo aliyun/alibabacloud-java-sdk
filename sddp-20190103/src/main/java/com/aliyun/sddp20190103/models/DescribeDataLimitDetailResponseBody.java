@@ -44,9 +44,12 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
         /**
          * <p>The status of the connectivity test between the data asset and DSC. Valid values:</p>
          * <ul>
-         * <li><strong>2</strong>: indicates that the data asset was being connected.</li>
-         * <li><strong>3</strong>: indicates that the data asset was connected to DSC.</li>
-         * <li><strong>4</strong>: indicates that the data asset failed to be connected.</li>
+         * <li><p><strong>2</strong>: indicates that the data asset was being connected.</p>
+         * </li>
+         * <li><p><strong>3</strong>: indicates that the data asset was connected to DSC.</p>
+         * </li>
+         * <li><p><strong>4</strong>: indicates that the data asset failed to be connected.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -58,13 +61,16 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
         /**
          * <p>The result that indicates the status of the connectivity test between the data asset and DSC. Valid values:</p>
          * <ul>
-         * <li><strong>Passed</strong></li>
-         * <li><strong>Failed</strong></li>
-         * <li><strong>Testing</strong></li>
+         * <li><p><strong>Passed</strong></p>
+         * </li>
+         * <li><p><strong>Failed</strong></p>
+         * </li>
+         * <li><p><strong>Testing</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Passed</p>
+         * <p>Pending</p>
          */
         @NameInMap("CheckStatusName")
         public String checkStatusName;
@@ -91,7 +97,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
          * <p>The region in which the data asset resides.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Qingdao)</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("LocalName")
         public String localName;
@@ -126,11 +132,16 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the service to which the data asset belongs. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: MaxCompute</li>
-         * <li><strong>2</strong>: OSS</li>
-         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-         * <li><strong>4</strong>: Tablestore</li>
-         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * <li><p><strong>1</strong>: MaxCompute</p>
+         * </li>
+         * <li><p><strong>2</strong>: OSS</p>
+         * </li>
+         * <li><p><strong>3</strong>: AnalyticDB for MySQL</p>
+         * </li>
+         * <li><p><strong>4</strong>: Tablestore</p>
+         * </li>
+         * <li><p><strong>5</strong>: ApsaraDB RDS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,11 +153,16 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
         /**
          * <p>The service to which the data asset belongs. Valid values:</p>
          * <ul>
-         * <li><strong>MaxCompute</strong></li>
-         * <li><strong>OSS</strong></li>
-         * <li><strong>ADS</strong></li>
-         * <li><strong>OTS</strong></li>
-         * <li><strong>RDS</strong></li>
+         * <li><p><strong>MaxCompute</strong></p>
+         * </li>
+         * <li><p><strong>OSS</strong></p>
+         * </li>
+         * <li><p><strong>ADS</strong></p>
+         * </li>
+         * <li><p><strong>OTS</strong></p>
+         * </li>
+         * <li><p><strong>RDS</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

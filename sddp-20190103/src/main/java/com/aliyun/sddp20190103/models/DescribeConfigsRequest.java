@@ -5,14 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigsRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese (Simplified). Default value.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English (United States).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>zh</p>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;

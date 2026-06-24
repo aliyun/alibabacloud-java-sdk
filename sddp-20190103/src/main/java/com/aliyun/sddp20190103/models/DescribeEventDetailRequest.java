@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEventDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the anomalous event.</p>
+     * <p>The unique ID of the anomalous activity.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeEvents</strong> operation to query the ID of the anomalous event.</p>
+     * <p>To query the details of a single anomalous activity, you must provide its unique ID. You can call the <strong>DescribeEvents</strong> operation to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,8 +20,10 @@ public class DescribeEventDetailRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

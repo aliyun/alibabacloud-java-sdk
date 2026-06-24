@@ -14,10 +14,12 @@ public class CreateSlrRoleRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response messages. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese (Simplified)</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English (US)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class CreateSlrRoleRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>39.170.XX.XX</p>
+     * <p>106.11.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

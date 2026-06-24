@@ -14,7 +14,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the anomalous events.</p>
+     * <p>A list of anomalous activities.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeEventsResponseBodyItems> items;
@@ -93,7 +93,7 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static class DescribeEventsResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when an alert was triggered for the anomalous event. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when an alert was generated for the anomalous activity. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>154529000</p>
@@ -102,10 +102,12 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long alertTime;
 
         /**
-         * <p>Indicates whether the detection of anomalous events is enhanced. If the detection of anomalous events is enhanced, the detection accuracy and the rate of triggering alerts for anomalous events are improved. Valid values:</p>
+         * <p>Indicates whether enhanced detection is enabled for the anomalous activity. Enhanced detection improves detection accuracy and the alert reporting rate.</p>
          * <ul>
-         * <li>true: yes</li>
-         * <li>false: no</li>
+         * <li><p>true: Enhanced detection is enabled.</p>
+         * </li>
+         * <li><p>false: Enhanced detection is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +117,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Boolean backed;
 
         /**
-         * <p>The display name of the account that is used to handle the anomalous event.</p>
+         * <p>The display name of the account that handled the anomalous activity.</p>
          * 
          * <strong>example:</strong>
          * <p>yundunsr</p>
@@ -124,7 +126,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String dealDisplayName;
 
         /**
-         * <p>The username of the account that is used to handle the anomalous event.</p>
+         * <p>The logon name of the account that handled the anomalous activity.</p>
          * 
          * <strong>example:</strong>
          * <p>det1111</p>
@@ -133,7 +135,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String dealLoginName;
 
         /**
-         * <p>The time when the anomalous event was handled. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the anomalous activity was handled. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12223300</p>
@@ -142,7 +144,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long dealTime;
 
         /**
-         * <p>The ID of the account that is used to handle the anomalous event.</p>
+         * <p>The ID of the account that handled the anomalous activity.</p>
          * 
          * <strong>example:</strong>
          * <p>229157443385014***</p>
@@ -151,7 +153,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long dealUserId;
 
         /**
-         * <p>The display name of the account that triggered the anomalous event.</p>
+         * <p>The display name of the account that performed the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>yundunsr</p>
@@ -160,7 +162,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The time when the anomalous event occurred. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the anomalous activity occurred. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1545829129000</p>
@@ -169,7 +171,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long eventTime;
 
         /**
-         * <p>The ID of the anomalous event.</p>
+         * <p>The unique ID of the anomalous activity that is recorded in Data Security Center (DSC).</p>
          * 
          * <strong>example:</strong>
          * <p>42233335555</p>
@@ -178,7 +180,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The username of the account that triggered the anomalous event.</p>
+         * <p>The logon name of the account that performed the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>det1111</p>
@@ -187,7 +189,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String loginName;
 
         /**
-         * <p>The name of the service in which the anomalous event was detected.</p>
+         * <p>The service to which the anomalous activity belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -196,11 +198,14 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The handling status for the anomalous event. Valid values:</p>
+         * <p>The processing status of the anomalous activity.</p>
          * <ul>
-         * <li>0: unhandled</li>
-         * <li>1: confirmed</li>
-         * <li>2: marked as false positive</li>
+         * <li><p>0: Unhandled.</p>
+         * </li>
+         * <li><p>1: Confirmed.</p>
+         * </li>
+         * <li><p>2: Dismissed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +215,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The name of the handling status for the anomalous event.</p>
+         * <p>The name of the processing status.</p>
          * 
          * <strong>example:</strong>
          * <p>Pending</p>
@@ -219,7 +224,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String statusName;
 
         /**
-         * <p>The code of the anomalous event subtype.</p>
+         * <p>The code of the child type of the anomalous activity.</p>
          * 
          * <strong>example:</strong>
          * <p>020008</p>
@@ -228,16 +233,16 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String subTypeCode;
 
         /**
-         * <p>The name of the anomalous event subtype.</p>
+         * <p>The name of the child type of the anomalous activity.</p>
          * 
          * <strong>example:</strong>
-         * <p>Anomalous volume of downloaded data</p>
+         * <p>Abnormal data download volume</p>
          */
         @NameInMap("SubTypeName")
         public String subTypeName;
 
         /**
-         * <p>The name of the destination service in an anomalous data flow.</p>
+         * <p>The destination service for the anomalous data flow event.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -246,7 +251,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String targetProductCode;
 
         /**
-         * <p>The code of the anomalous event type.</p>
+         * <p>The code of the parent type of the anomalous activity.</p>
          * 
          * <strong>example:</strong>
          * <p>02</p>
@@ -255,16 +260,16 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String typeCode;
 
         /**
-         * <p>The name of the anomalous event type.</p>
+         * <p>The name of the parent type of the anomalous activity.</p>
          * 
          * <strong>example:</strong>
-         * <p>Anomalous data flow</p>
+         * <p>Abnormal data flow</p>
          */
         @NameInMap("TypeName")
         public String typeName;
 
         /**
-         * <p>The ID of the account that triggered the anomalous event.</p>
+         * <p>The ID of the account that performed the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1978132506596***</p>
@@ -273,11 +278,14 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long userId;
 
         /**
-         * <p>The severity of the anomalous event.</p>
+         * <p>The risk level of the anomalous activity.</p>
          * <ul>
-         * <li><strong>1</strong>: low</li>
-         * <li><strong>2</strong>: medium</li>
-         * <li><strong>3</strong>: high</li>
+         * <li><p><strong>1</strong>: Low.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Medium.</p>
+         * </li>
+         * <li><p><strong>3</strong>: High.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

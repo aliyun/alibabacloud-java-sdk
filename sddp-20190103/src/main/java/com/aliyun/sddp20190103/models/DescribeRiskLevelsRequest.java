@@ -14,10 +14,12 @@ public class DescribeRiskLevelsRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li>zh_cn: Chinese (default)</li>
-     * <li>en_us: English</li>
+     * <li><p>zh_cn: Chinese. This is the default value.</p>
+     * </li>
+     * <li><p>en_us: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,10 @@ public class DescribeRiskLevelsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the industry-specific rule template.</p>
+     * <p>The ID of the industry-specific template.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> to get the ID of the industry-specific template.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDataLimitsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the security audit feature. Valid values:</p>
+     * <p>The audit status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><p><strong>1</strong>: Auditing enabled.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Auditing disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +20,18 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer auditStatus;
 
     /**
-     * <p>The data detection status. Valid values:</p>
+     * <p>The connectivity test status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The data detection is ready.</li>
-     * <li><strong>1</strong>: The data detection is running.</li>
-     * <li><strong>2</strong>: The connectivity test is in progress.</li>
-     * <li><strong>3</strong>: The connectivity test passed.</li>
-     * <li><strong>4</strong>: The connectivity test failed.</li>
+     * <li><p><strong>0</strong>: Ready.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Running.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Connectivity test in progress.</p>
+     * </li>
+     * <li><p><strong>3</strong>: Connectivity test passed.</p>
+     * </li>
+     * <li><p><strong>4</strong>: Connectivity test failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +41,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer checkStatus;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,10 +50,12 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
+     * <p>The data masking status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><p><strong>1</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,10 +65,12 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer datamaskStatus;
 
     /**
-     * <p>Specifies whether DSC has the data detection permissions on the data asset. Valid values:</p>
+     * <p>The sensitive data detection status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: yes</li>
-     * <li><strong>0</strong>: no</li>
+     * <li><p><strong>1</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +80,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer enable;
 
     /**
-     * <p>The end of the time range to query The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1616068534877</p>
@@ -78,7 +89,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The type of the database engine. Valid values include <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, and <strong>MongoDB</strong>.</p>
+     * <p>The type of the database engine. Examples: <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, and <strong>MongoDB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -98,8 +109,10 @@ public class DescribeDataLimitsRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +122,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the member.</p>
+     * <p>The ID of the member account.</p>
      * 
      * <strong>example:</strong>
      * <p>**********8103</p>
@@ -127,11 +140,14 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The parent ID of the data asset to be queried. Valid values:</p>
+     * <p>The ID of the parent asset to which the data asset belongs. Valid values:</p>
      * <ul>
-     * <li>The name or ID of the MaxCompute project.</li>
-     * <li>The name or ID of the OSS bucket.</li>
-     * <li>The name or ID of the ApsaraDB RDS instance or database.</li>
+     * <li><p>The name or ID of a MaxCompute project.</p>
+     * </li>
+     * <li><p>The name or ID of an OSS bucket.</p>
+     * </li>
+     * <li><p>The name or ID of an RDS instance or database.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,14 +157,20 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public String parentId;
 
     /**
-     * <p>The type of the service to which the data asset belongs. This parameter is required. Valid values:</p>
+     * <p>The type of service to which the data asset belongs. Data assets can be instances, databases, or buckets. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: MaxCompute</li>
-     * <li><strong>2</strong>: Object Storage Service (OSS)</li>
-     * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-     * <li><strong>4</strong>: Tablestore</li>
-     * <li><strong>5</strong>: ApsaraDB RDS</li>
-     * <li><strong>6</strong>: self-managed database</li>
+     * <li><p><strong>1</strong>: MaxCompute</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>3</strong>: AnalyticDB for MySQL</p>
+     * </li>
+     * <li><p><strong>4</strong>: Tablestore</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS</p>
+     * </li>
+     * <li><p><strong>6</strong>: A self-managed database</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,7 +180,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer resourceType;
 
     /**
-     * <p>The region in which the data asset resides.</p>
+     * <p>The ID of the region where the data asset is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -167,7 +189,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The beginning of the time range to query The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1616068534877</p>

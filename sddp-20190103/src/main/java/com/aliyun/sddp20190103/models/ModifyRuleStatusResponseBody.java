@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRuleStatusResponseBody extends TeaModel {
     /**
-     * <p>The IDs of sensitive data detection rules whose status failed to be changed. Multiple IDs are separated with commas (,).</p>
+     * <p>The IDs of the rules whose status failed to be changed. Multiple IDs are separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2,3,4</p>

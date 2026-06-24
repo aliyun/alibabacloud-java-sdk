@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataMaskingTasksRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,21 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The service to which the data to be de-identified belongs. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The product that the destination data source belongs to. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: MaxCompute.</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS.</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADS.</p>
+     * </li>
+     * <li><p><strong>4</strong>: OTS.</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS.</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +37,7 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public Integer dstType;
 
     /**
-     * <p>The end of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end time for creating the data masking task. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1583856000000</p>
@@ -32,10 +46,12 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +70,7 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The keyword used to query the de-identification tasks, which can be the task name or ID.</p>
+     * <p>A keyword to search for tasks. You can search by task name or task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -63,7 +79,7 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The beginning of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start time for creating the task. The value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1582992000000</p>

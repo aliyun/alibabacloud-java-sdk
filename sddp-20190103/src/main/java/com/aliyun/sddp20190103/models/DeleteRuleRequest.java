@@ -24,7 +24,7 @@ public class DeleteRuleRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Valid values: <strong>zh</strong> and <strong>en</strong>. The value zh indicates Chinese, and the value en indicates English.</p>
+     * <p>The language of the data asset. Valid values: -<strong>zh</strong>: Chinese -<strong>en</strong>: English</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -36,7 +36,7 @@ public class DeleteRuleRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>39.170.XX.XX</p>
+     * <p>106.11.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

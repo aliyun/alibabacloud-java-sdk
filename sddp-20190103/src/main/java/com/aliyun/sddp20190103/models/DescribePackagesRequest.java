@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePackagesRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,9 +14,9 @@ public class DescribePackagesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The ID of the instance to which the package belongs.</p>
+     * <p>The ID of the asset instance to which the data asset package belongs.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeInstances</strong> operation to query the ID of the instance.</p>
+     * <p>To query the list of MaxCompute data asset packages that are authorized for an SDPP connection by instance ID, call the <strong>DescribeInstances</strong> operation to obtain the instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,12 @@ public class DescribePackagesRequest extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class DescribePackagesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The search keyword. Fuzzy match is supported.</p>
+     * <p>The keyword for the search. Fuzzy matching is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -48,7 +50,7 @@ public class DescribePackagesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,9 +59,9 @@ public class DescribePackagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the service to which the package belongs.</p>
+     * <p>The ID of the product to which the data asset package belongs.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeDataAssets</strong> operation to query the ID of the service.</p>
+     * <p>To query the list of MaxCompute data asset packages that are authorized for an SDPP connection by product ID, call the <strong>DescribeDataAssets</strong> operation to obtain the product ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,13 +71,18 @@ public class DescribePackagesRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The sensitivity level of the package. Valid values:</p>
+     * <p>The ID of the risk level for the data asset package.</p>
      * <ul>
-     * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-     * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-     * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-     * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-     * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+     * <li><p><strong>1</strong>: N/A: No sensitive data is detected.</p>
+     * </li>
+     * <li><p><strong>2</strong>: S1: Level 1 sensitive data.</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2: Level 2 sensitive data.</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3: Level 3 sensitive data.</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4: Level 4 sensitive data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,9 +92,9 @@ public class DescribePackagesRequest extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The ID of the sensitive data detection rule that the package hits.</p>
+     * <p>The ID of the sensitive data detection rule that the data asset package matches.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeRules</strong> operation to query the ID of the sensitive data detection rule.</p>
+     * <p>To query the list of MaxCompute data asset packages that are authorized for an SDPP connection by the ID of a matching sensitive data detection rule, call the <strong>DescribeRules</strong> operation to obtain the rule ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

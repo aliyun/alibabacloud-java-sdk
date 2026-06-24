@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataLimitResponseBody extends TeaModel {
     /**
-     * <p>The ID of the data asset.</p>
+     * <p>The ID of the authorized data asset.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

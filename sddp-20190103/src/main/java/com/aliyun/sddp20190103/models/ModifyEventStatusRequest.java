@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyEventStatusRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enhance the detection of anomalous events. If you enhance the detection of anomalous events, the detection accuracy and the rate of triggering alerts for anomalous events are improved. Valid values:</p>
+     * <p>Specifies whether to enhance the detection of the anomalous activity. Enhancing detection improves accuracy and increases the alert rate for anomalous activities.</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,18 +20,18 @@ public class ModifyEventStatusRequest extends TeaModel {
     public Boolean backed;
 
     /**
-     * <p>The reason why the anomalous event is handled.</p>
+     * <p>The reason for handling the anomalous activity.</p>
      * 
      * <strong>example:</strong>
-     * <p>Anomaly confirmed</p>
+     * <p>Confirmed as violation</p>
      */
     @NameInMap("DealReason")
     public String dealReason;
 
     /**
-     * <p>The ID of the anomalous event.</p>
+     * <p>The unique ID of the anomalous activity.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeEvents</strong> operation to query the ID of the anomalous event.</p>
+     * <p>To handle an anomalous activity, you must provide its unique ID. You can obtain this ID by calling the <strong>DescribeEvents</strong> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,10 +42,12 @@ public class ModifyEventStatusRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,10 +57,12 @@ public class ModifyEventStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The method to handle the anomalous event. Valid values:</p>
+     * <p>The operation to perform on the anomalous activity.</p>
      * <ul>
-     * <li><strong>1</strong>: marks the anomalous event as a false positive.</li>
-     * <li><strong>2</strong>: confirms and handles the anomalous event.</li>
+     * <li><p><strong>1</strong>: Mark as false positive.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Confirm and handle the anomalous activity.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

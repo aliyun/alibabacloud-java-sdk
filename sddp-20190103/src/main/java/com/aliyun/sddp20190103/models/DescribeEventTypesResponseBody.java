@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEventTypesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the types of anomalous events.</p>
+     * <p>The list of anomalous activity types.</p>
      * <blockquote>
-     * <p>If you leave the ParentTypeId parameter empty, anomalous event types are returned. If you set the ParentTypeId parameter, anomalous event subtypes under the specified anomalous event type are returned.</p>
+     * <p>If ParentTypeId is empty, the parent anomalous activity types are returned. If ParentTypeId is not empty, the child anomalous activity types are returned.</p>
      * </blockquote>
      */
     @NameInMap("EventTypeList")
@@ -45,7 +45,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
 
     public static class DescribeEventTypesResponseBodyEventTypeListSubTypeList extends TeaModel {
         /**
-         * <p>The service to which the anomalous event detection rule applies. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The products to which the rule applies, including MaxCompute, OSS, AnalyticDB for MySQL, Tablestore, and ApsaraDB RDS.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -54,7 +54,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public String adaptedProduct;
 
         /**
-         * <p>The code of the anomalous event subtype.</p>
+         * <p>The code of the child anomalous activity type.</p>
          * 
          * <strong>example:</strong>
          * <p>020008</p>
@@ -63,7 +63,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The code of the configuration.</p>
+         * <p>The configuration code.</p>
          * 
          * <strong>example:</strong>
          * <p>0100**</p>
@@ -72,10 +72,12 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public String configCode;
 
         /**
-         * <p>The content format of anomalous event detection rule. Valid values:</p>
+         * <p>The format of the rule item. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: numeric values such as thresholds</li>
-         * <li><strong>1</strong>: text such as IP addresses</li>
+         * <li><p><strong>0</strong>: numeric (such as a threshold).</p>
+         * </li>
+         * <li><p><strong>1</strong>: text (such as an IP address).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,16 +87,16 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public Integer configContentType;
 
         /**
-         * <p>The description of the configuration.</p>
+         * <p>The configuration description.</p>
          * 
          * <strong>example:</strong>
-         * <p>The period of time for which the permission is not used exceeds the threshold. The specified threshold is ${value} calendar days.</p>
+         * <p>Permission idle period exceeds threshold: current threshold is defined as 7 natural days</p>
          */
         @NameInMap("ConfigDescription")
         public String configDescription;
 
         /**
-         * <p>The value of the configuration.</p>
+         * <p>The configuration value.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -103,16 +105,16 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public String configValue;
 
         /**
-         * <p>The description of the anomalous event subtype.</p>
+         * <p>The description of the child anomalous activity type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Inappropriate configuration-No protection for the MaxCompute sensitive project, \<em>\</em>\<em>\</em></p>
+         * <p>Configuration error - MaxCompute sensitive project not protected，****</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The number of times that the anomalous event hits the anomalous event detection rule.</p>
+         * <p>The number of times the rule is hit.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -121,7 +123,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public Integer eventHitCount;
 
         /**
-         * <p>The ID of the anomalous event subtype.</p>
+         * <p>The unique ID of the child anomalous activity type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,19 +132,21 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the anomalous event subtype.</p>
+         * <p>The name of the child anomalous activity type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Inappropriate configuration-No protection for the MaxCompute sensitive project</p>
+         * <p>Configuration error - MaxCompute sensitive project not protected</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Indicates whether detection is enabled for the anomalous event subtype. Valid values:</p>
+         * <p>The detection feature of Data Security Center (DSC) for the child anomalous activity type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +252,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
 
     public static class DescribeEventTypesResponseBodyEventTypeList extends TeaModel {
         /**
-         * <p>The code of the anomalous event type.</p>
+         * <p>The code of the parent anomalous activity type.</p>
          * 
          * <strong>example:</strong>
          * <p>01</p>
@@ -257,16 +261,16 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The description of the anomalous event type.</p>
+         * <p>The description of the parent anomalous activity type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Anomalous permission usage,\<em>\</em>\<em>\</em></p>
+         * <p>Permission usage anomaly, ****</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the anomalous event type.</p>
+         * <p>The unique ID of the parent anomalous activity type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -275,16 +279,16 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the anomalous event type.</p>
+         * <p>The name of the parent anomalous activity type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Anomalous permission usage</p>
+         * <p>Permission usage anomaly</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>An array that consists of anomalous event subtypes.</p>
+         * <p>The list of child anomalous activity types.</p>
          */
         @NameInMap("SubTypeList")
         public java.util.List<DescribeEventTypesResponseBodyEventTypeListSubTypeList> subTypeList;

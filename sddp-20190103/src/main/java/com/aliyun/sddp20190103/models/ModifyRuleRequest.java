@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyRuleRequest extends TeaModel {
     /**
-     * <p>The content type of the sensitive data detection rule. Valid values:</p>
+     * <p>The type of the content in the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>2</strong>: regular expression</li>
-     * <li><strong>3</strong>: algorithm</li>
-     * <li><strong>5</strong>: keyword</li>
+     * <li><p><strong>2</strong>: regular expression.</p>
+     * </li>
+     * <li><p><strong>3</strong>: algorithm.</p>
+     * </li>
+     * <li><p><strong>5</strong>: keyword.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +22,7 @@ public class ModifyRuleRequest extends TeaModel {
     public Integer category;
 
     /**
-     * <p>The content of the sensitive data detection rule. You can specify a regular expression, an algorithm, or keywords that are used to match sensitive fields or text.</p>
+     * <p>The content of the sensitive data detection rule. The rule can be a regular expression, an algorithm, or a keyword, and matches fields or text that contain sensitive data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,8 +32,8 @@ public class ModifyRuleRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The ID of the sensitive data detection rule.</p>
-     * <p>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the rule ID.</p>
+     * <p>The unique ID of the sensitive data detection rule.</p>
+     * <p>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,10 +43,12 @@ public class ModifyRuleRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Simplified Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,8 +60,10 @@ public class ModifyRuleRequest extends TeaModel {
     /**
      * <p>The match type. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: rule-based match</li>
-     * <li><strong>2</strong>: dictionary-based match</li>
+     * <li><p><strong>1</strong>: rule-based match.</p>
+     * </li>
+     * <li><p><strong>2</strong>: dictionary-based match.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +73,7 @@ public class ModifyRuleRequest extends TeaModel {
     public Integer matchType;
 
     /**
-     * <p>The IDs of the models for sensitive data audit.</p>
+     * <p>A collection of model IDs for sensitive data auditing.</p>
      * 
      * <strong>example:</strong>
      * <p>1452</p>
@@ -86,7 +93,21 @@ public class ModifyRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The service to which the sensitive data detection rule is applied. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+     * <p>The type of the product resource that contains the sensitive data detection rule. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MaxCompute</strong>.</p>
+     * </li>
+     * <li><p><strong>OSS</strong>.</p>
+     * </li>
+     * <li><p><strong>ADS</strong>.</p>
+     * </li>
+     * <li><p><strong>OTS</strong>.</p>
+     * </li>
+     * <li><p><strong>RDS</strong>.</p>
+     * </li>
+     * <li><p><strong>SELF_DB</strong>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -95,7 +116,21 @@ public class ModifyRuleRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the service to which the sensitive data detection rule is applied. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The ID of the product that contains the sensitive data detection rule. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: MaxCompute.</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS.</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADS.</p>
+     * </li>
+     * <li><p><strong>4</strong>: OTS.</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS.</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -104,13 +139,18 @@ public class ModifyRuleRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+     * <p>The ID of the risk level for the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-     * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-     * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-     * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-     * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+     * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+     * </li>
+     * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,9 +162,12 @@ public class ModifyRuleRequest extends TeaModel {
     /**
      * <p>The type of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: data detection rule</li>
-     * <li><strong>2</strong>: audit rule</li>
-     * <li><strong>3</strong>: anomalous event detection rule</li>
+     * <li><p><strong>1</strong>: data detection rule.</p>
+     * </li>
+     * <li><p><strong>2</strong>: audit policy.</p>
+     * </li>
+     * <li><p><strong>3</strong>: abnormal event rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,11 +177,14 @@ public class ModifyRuleRequest extends TeaModel {
     public Integer ruleType;
 
     /**
-     * <p>The data assets supported by the sensitive data detection rule. Valid values:</p>
+     * <p>The type of data asset that the rule supports. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: all data assets</li>
-     * <li><strong>1</strong>: structured data assets</li>
-     * <li><strong>2</strong>: unstructured data assets</li>
+     * <li><p><strong>0</strong>: all assets.</p>
+     * </li>
+     * <li><p><strong>1</strong>: structured assets.</p>
+     * </li>
+     * <li><p><strong>2</strong>: unstructured assets.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,7 +194,7 @@ public class ModifyRuleRequest extends TeaModel {
     public Integer supportForm;
 
     /**
-     * <p>The IDs of the templates that are used to audit sensitive data.</p>
+     * <p>A collection of template IDs for sensitive data auditing.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -157,11 +203,14 @@ public class ModifyRuleRequest extends TeaModel {
     public String templateRuleIds;
 
     /**
-     * <p>The risk level of the alert that is triggered by the sensitive data detection rule. Valid values:</p>
+     * <p>The risk level of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: low level</li>
-     * <li><strong>2</strong>: medium level</li>
-     * <li><strong>3</strong>: high level</li>
+     * <li><p><strong>1</strong>: low.</p>
+     * </li>
+     * <li><p><strong>2</strong>: medium.</p>
+     * </li>
+     * <li><p><strong>3</strong>: high.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

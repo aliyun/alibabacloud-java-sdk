@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIdentifyTaskStatusRequest extends TeaModel {
     /**
-     * <p>Task ID, obtained from the ID field in the response after calling CreateScanTask or ScanOssObjectV1.</p>
+     * <p>The ID of the task. Obtain this ID from the Id field in the response from calling the CreateScanTask or ScanOssObjectV1 operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class DescribeIdentifyTaskStatusRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Language type for request and response messages, default is <strong>zh_cn</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese (Simplified)</li>
-     * <li><strong>en_us</strong>: English (United States)</li>
+     * <li><p><strong>zh_cn</strong>: Simplified Chinese</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: U.S. English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

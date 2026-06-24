@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTablesRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: 1.</p>
+     * <p>The number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeTablesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The ID of the data asset to which the table belongs. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to obtain the ID of the data asset.</p>
+     * <p>The ID of the instance to which the data asset table belongs. Call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to obtain this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,10 +23,12 @@ public class DescribeTablesRequest extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class DescribeTablesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The search keyword. Fuzzy match is supported. For example, if you specify test, all tables whose names contain test are retrieved.</p>
+     * <p>The search keyword. Fuzzy search is supported. For example, if you enter test, all results that contain test are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -45,7 +47,7 @@ public class DescribeTablesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the package to which the table belongs. You can call the <a href="~~DescribePackages~~">DescribePackages</a> operation to obtain the ID of the package.</p>
+     * <p>The ID of the package to which the data asset table belongs. Call the <a href="~~DescribePackages~~">DescribePackages</a> operation to obtain this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>555555</p>
@@ -54,7 +56,7 @@ public class DescribeTablesRequest extends TeaModel {
     public Long packageId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The maximum number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,7 +65,7 @@ public class DescribeTablesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which the table belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which Data Security Center (DSC) can scan for sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</p>
+     * <p>The name of the product to which the data asset table belongs. Valid values include MaxCompute, OSS, ADS, OTS, and RDS. For more information about the supported products, see <a href="https://help.aliyun.com/document_detail/212906.html">Data asset types that support sensitive data detection</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
@@ -72,7 +74,7 @@ public class DescribeTablesRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the service to which the table belongs. You can call the <a href="~~DescribeDataAssets~~">DescribeDataAssets</a> operation to obtain the ID of the service.</p>
+     * <p>The ID of the product to which the data asset table belongs. Call the <a href="~~DescribeDataAssets~~">DescribeDataAssets</a> operation to obtain this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,13 +83,18 @@ public class DescribeTablesRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:</p>
+     * <p>The ID of the risk level for the data asset table. Each risk level ID corresponds to a risk level name. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-     * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-     * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-     * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-     * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+     * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+     * </li>
+     * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+     * </li>
+     * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+     * </li>
+     * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+     * </li>
+     * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +104,7 @@ public class DescribeTablesRequest extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The ID of the sensitive data detection rule that the table hits. You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the ID of the sensitive data detection rule.</p>
+     * <p>The ID of the sensitive data detection rule that the data asset table hits. Call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>333322</p>
@@ -106,7 +113,7 @@ public class DescribeTablesRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The region in which DSC is activated. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
+     * <p>The region where Data Security Center is available. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -115,7 +122,7 @@ public class DescribeTablesRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The ID of the industry-specific rule template.</p>
+     * <p>The ID of the industry-specific template.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

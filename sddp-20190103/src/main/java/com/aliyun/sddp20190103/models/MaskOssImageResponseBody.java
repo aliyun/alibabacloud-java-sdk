@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MaskOssImageResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>136082B3-B21F-5E9D-B68E-991FFD205D24</p>
      */

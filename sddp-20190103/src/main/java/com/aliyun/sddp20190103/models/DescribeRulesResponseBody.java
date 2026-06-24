@@ -14,7 +14,7 @@ public class DescribeRulesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The sensitive data detection rules.</p>
+     * <p>A list of sensitive data detection rules.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeRulesResponseBodyItems> items;
@@ -93,6 +93,8 @@ public class DescribeRulesResponseBody extends TeaModel {
 
     public static class DescribeRulesResponseBodyItems extends TeaModel {
         /**
+         * <p>The audit mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -100,10 +102,12 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer auditMode;
 
         /**
-         * <p>The content type of the sensitive data detection rule. Valid values:</p>
+         * <p>The type of content in the sensitive data detection rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: keyword</li>
-         * <li><strong>2</strong>: regular expression</li>
+         * <li><p><strong>0</strong>: keyword</p>
+         * </li>
+         * <li><p><strong>2</strong>: regular expression</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,7 +117,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer category;
 
         /**
-         * <p>The name of the content type of the sensitive data detection rule.</p>
+         * <p>The name of the content type for the sensitive data detection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Regular expression</p>
@@ -122,9 +126,9 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The content in the sensitive data detection rule.</p>
+         * <p>The content of the sensitive data detection rule.</p>
          * <blockquote>
-         * <p> A built-in detection rule whose CustomType is 0 does not return the content of the rule.</p>
+         * <p>The content of a built-in rule, for which CustomType is 0, is not returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -134,7 +138,19 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The type of the content in the sensitive data detection rule. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</p>
+         * <p>The content type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: SQL injection exploits</p>
+         * </li>
+         * <li><p><strong>2</strong>: SQL injection bypass attempts</p>
+         * </li>
+         * <li><p><strong>3</strong>: stored procedure abuse</p>
+         * </li>
+         * <li><p><strong>4</strong>: buffer overflows</p>
+         * </li>
+         * <li><p><strong>5</strong>: error-based SQL injections</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -145,8 +161,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the sensitive data detection rule.</p>
          * <ul>
-         * <li>0: built-in rule</li>
-         * <li>1: custom rule</li>
+         * <li><p>0: built-in</p>
+         * </li>
+         * <li><p>1: custom</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,13 +177,13 @@ public class DescribeRulesResponseBody extends TeaModel {
          * <p>The description of the sensitive data detection rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>The sensitive data detection rule is used to detect IP addresses.</p>
+         * <p>Used to identify IP addresses</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The display name of the account that is used to create the sensitive data detection rule.</p>
+         * <p>The display name of the user who created the sensitive data detection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>****test</p>
@@ -174,7 +192,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The time when the sensitive data detection rule is created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the sensitive data detection rule was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1545277010000</p>
@@ -183,7 +201,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The time when the sensitive data detection rule is modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the sensitive data detection rule was last modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1545277010000</p>
@@ -192,7 +210,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The parent group type of the rule.</p>
+         * <p>The parent group of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>4_1</p>
@@ -201,7 +219,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The number of times that the sensitive data detection rule is hit.</p>
+         * <p>The number of times the rule was hit.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -210,7 +228,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer hitTotalCount;
 
         /**
-         * <p>The ID of the sensitive data detection rule.</p>
+         * <p>The unique ID of the sensitive data detection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>20000</p>
@@ -219,7 +237,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The username of the account that is used to create the sensitive data detection rule.</p>
+         * <p>The logon name of the user who created the sensitive data detection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>det1111</p>
@@ -228,7 +246,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String loginName;
 
         /**
-         * <p>The key of the primary dimension.</p>
+         * <p>The primary dimension key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -239,8 +257,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         /**
          * <p>The match type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: rule-based match</li>
-         * <li><strong>2</strong>: dictionary-based match</li>
+         * <li><p><strong>1</strong>: rule-based match</p>
+         * </li>
+         * <li><p><strong>2</strong>: dictionary-based match</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +270,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer matchType;
 
         /**
-         * <p>The IDs of the models for sensitive data audit.</p>
+         * <p>A collection of model IDs for sensitive data auditing.</p>
          * 
          * <strong>example:</strong>
          * <p>1452</p>
@@ -268,7 +288,21 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The name of the service to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MaxCompute</strong></p>
+         * </li>
+         * <li><p><strong>OSS</strong></p>
+         * </li>
+         * <li><p><strong>ADS</strong></p>
+         * </li>
+         * <li><p><strong>OTS</strong></p>
+         * </li>
+         * <li><p><strong>RDS</strong></p>
+         * </li>
+         * <li><p><strong>SELF_DB</strong></p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -277,7 +311,21 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the service to which the sensitive data detection rule is applied. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * <p>The ID of the service to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: MaxCompute</p>
+         * </li>
+         * <li><p><strong>2</strong>: OSS</p>
+         * </li>
+         * <li><p><strong>3</strong>: ADS</p>
+         * </li>
+         * <li><p><strong>4</strong>: OTS</p>
+         * </li>
+         * <li><p><strong>5</strong>: RDS</p>
+         * </li>
+         * <li><p><strong>6</strong>: SELF_DB</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -286,13 +334,18 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long productId;
 
         /**
-         * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
+         * <p>The sensitivity level ID of the sensitive data detection rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
-         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
-         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
-         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
-         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -302,13 +355,18 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The sensitivity level of data that hits the sensitive data detection rule. Valid values:</p>
+         * <p>The name of the sensitivity level for the sensitive data detection rule. Valid values:</p>
          * <ul>
-         * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
-         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
-         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
-         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
-         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * <li><p><strong>N/A</strong>: No sensitive data is detected.</p>
+         * </li>
+         * <li><p><strong>S1</strong>: Level 1 sensitive data.</p>
+         * </li>
+         * <li><p><strong>S2</strong>: Level 2 sensitive data.</p>
+         * </li>
+         * <li><p><strong>S3</strong>: Level 3 sensitive data.</p>
+         * </li>
+         * <li><p><strong>S4</strong>: Level 4 sensitive data.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,10 +385,12 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String statExpress;
 
         /**
-         * <p>The status of the sensitive data detection rule. Valid values:</p>
+         * <p>The detection status of the sensitive data detection rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1</strong>: enabled</li>
+         * <li><p><strong>0</strong>: disabled</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,11 +400,14 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The data asset type that is supported by the sensitive data detection rule. Valid values:</p>
+         * <p>The type of data asset that the rule supports. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: all data assets</li>
-         * <li><strong>1</strong>: structured data assets</li>
-         * <li><strong>2</strong>: unstructured data assets</li>
+         * <li><p><strong>0</strong>: all assets</p>
+         * </li>
+         * <li><p><strong>1</strong>: structured assets</p>
+         * </li>
+         * <li><p><strong>2</strong>: unstructured assets</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,7 +417,21 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer supportForm;
 
         /**
-         * <p>The name of the service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The name of the service to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MaxCompute</strong></p>
+         * </li>
+         * <li><p><strong>OSS</strong></p>
+         * </li>
+         * <li><p><strong>ADS</strong></p>
+         * </li>
+         * <li><p><strong>OTS</strong></p>
+         * </li>
+         * <li><p><strong>RDS</strong></p>
+         * </li>
+         * <li><p><strong>SELF_DB</strong></p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -363,7 +440,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The IDs of the templates that are used to audit sensitive data.</p>
+         * <p>A collection of template IDs for sensitive data auditing.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -372,6 +449,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String templateRuleIds;
 
         /**
+         * <p>The threat analysis mode status. Valid values: 0 (disabled), 1 (enabled).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -379,7 +458,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer threatAnalysisStatus;
 
         /**
-         * <p>The ID of the account that is used to create the sensitive data detection rule.</p>
+         * <p>The ID of the user who created the sensitive data detection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -388,11 +467,14 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long userId;
 
         /**
-         * <p>The severity level. Valid values:</p>
+         * <p>The risk level.</p>
          * <ul>
-         * <li><strong>1</strong>: low</li>
-         * <li><strong>2</strong>: medium</li>
-         * <li><strong>3</strong>: high</li>
+         * <li><p><strong>1</strong>: Low</p>
+         * </li>
+         * <li><p><strong>2</strong>: Medium</p>
+         * </li>
+         * <li><p><strong>3</strong>: High</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

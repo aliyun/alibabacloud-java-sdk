@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of common configuration items for alerts.</p>
+     * <p>A list of common configuration items for anomaly alerts.</p>
      */
     @NameInMap("ConfigList")
     public java.util.List<DescribeConfigsResponseBodyConfigList> configList;
@@ -42,46 +42,46 @@ public class DescribeConfigsResponseBody extends TeaModel {
 
     public static class DescribeConfigsResponseBodyConfigList extends TeaModel {
         /**
-         * <p>The code of the common configuration item.</p>
+         * <p>The code of the configuration item.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>abnormal_download_file</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The description of the default value for the common configuration item.</p>
+         * <p>The default value of the configuration item.</p>
          * 
          * <strong>example:</strong>
-         * <p>The volume of logs of a specific type that are generated on the current day is less than 30% of the average volume of logs generated in the previous 10 days.</p>
+         * <p>10000</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
-         * <p>The description of the common configuration item.</p>
+         * <p>The description of the configuration item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Anomalous log output</p>
+         * <p>Unauthorized resource multiple access attempts: current threshold is defined as 10 attempts</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The unique ID of the common configuration item.</p>
+         * <p>The unique ID of the configuration item.</p>
          * 
          * <strong>example:</strong>
-         * <p>2133</p>
+         * <p>50</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The value of the common configuration item.</p>
+         * <p>The value of the configuration item.</p>
          * 
          * <strong>example:</strong>
-         * <p>30</p>
+         * <p>10000</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScanTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the custom scan task.</p>
+     * <p>The resource ID of the custom scan task.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

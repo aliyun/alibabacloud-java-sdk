@@ -8,16 +8,18 @@ public class DescribeUserStatusRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: The default value. Simplified Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: American English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

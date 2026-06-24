@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ExecDatamaskResponseBody extends TeaModel {
     /**
-     * <p>The de-identified data, which is described in a JSON string. The JSON string contains the following parameters:</p>
+     * <p>The data after it is masked. The data is a string in JSON format and includes the following fields:</p>
      * <ul>
-     * <li><strong>dataHeaderList</strong>: the names of columns that contain the de-identified data.</li>
-     * <li><strong>dataList</strong>: the de-identified data. The column order of the de-identified data is the same as that indicated by the dataHeaderList parameter.</li>
-     * <li><strong>ruleList</strong>: the IDs of sensitive data detection rules.</li>
+     * <li><p><strong>dataHeaderList</strong>: The column names of the masked data.</p>
+     * </li>
+     * <li><p><strong>dataList</strong>: The masked data. The order of the fields corresponds to the order of the column names.</p>
+     * </li>
+     * <li><p><strong>ruleList</strong>: The sensitive data type IDs. Each ID corresponds to the unique ID of a sensitive data type that is returned by the <a href="https://help.aliyun.com/document_detail/410141.html">DescribeRules</a> operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +22,7 @@ public class ExecDatamaskResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>813BA9FA-D062-42C4-8CD5-11A7640B96E6</p>

@@ -14,8 +14,8 @@ public class DeleteDataLimitRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The ID of the data asset.</p>
-     * <p>You can call the DescribeDataLimits operation to query the IDs of data assets. The value of the Id response parameter indicates the ID of a data asset.</p>
+     * <p>The unique ID of the data asset. The data asset can be an instance, a database, or a bucket.</p>
+     * <p>Call the DescribeDataLimits operation and check the Id parameter in the response to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,12 @@ public class DeleteDataLimitRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +43,7 @@ public class DeleteDataLimitRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>39.170.XX.XX</p>
+     * <p>106.11.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

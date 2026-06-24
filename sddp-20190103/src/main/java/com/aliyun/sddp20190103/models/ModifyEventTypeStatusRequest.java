@@ -8,13 +8,13 @@ public class ModifyEventTypeStatusRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values: <strong>zh</strong> and <strong>en</strong>. The value zh indicates Chinese, and the value en indicates English.</p>
+     * <p>The language of the request and response. Valid values are <strong>zh</strong> for Chinese and <strong>en</strong> for English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,9 +23,9 @@ public class ModifyEventTypeStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the anomalous event subtype. Separate multiple IDs with commas (,).</p>
+     * <p>The unique IDs of the anomalous activity subtypes. Separate multiple IDs with commas.</p>
      * <blockquote>
-     * <p>You can call the <strong>DescribeEventTypes</strong> operation to query the ID of anomalous event subtype.</p>
+     * <p>To enable SDDP to detect anomalous activities for subtypes, provide the unique IDs of the anomalous activity subtypes. Call the <strong>DescribeEventTypes</strong> operation to obtain the IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

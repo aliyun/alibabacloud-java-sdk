@@ -8,7 +8,7 @@ public class DescribeDataLimitDetailRequest extends TeaModel {
      * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
@@ -29,8 +29,10 @@ public class DescribeDataLimitDetailRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Simplified Chinese.</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Simplified Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +44,10 @@ public class DescribeDataLimitDetailRequest extends TeaModel {
     /**
      * <p>The network type of the data asset that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>2</strong>: classic network</li>
+     * <li><p><strong>1</strong>: virtual private cloud (VPC)</p>
+     * </li>
+     * <li><p><strong>2</strong>: classic network</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

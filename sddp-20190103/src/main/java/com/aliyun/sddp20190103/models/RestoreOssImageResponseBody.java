@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RestoreOssImageResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>208B016D-4CB9-4A85-96A5-0B8ED1EBF271</p>
      */
@@ -12,6 +14,8 @@ public class RestoreOssImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The storage path of the restored image in the bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun_dsc_original /dir1/test.png</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The type of the service to which the de-identified data belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The type of service to which the masked data is destined. Valid values: <strong>1</strong> for MaxCompute, <strong>2</strong> for OSS, <strong>3</strong> for ADS, <strong>4</strong> for OTS, and <strong>5</strong> for RDS.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Integer dstType;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end time to query for task executions. This is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1583856000000</p>
@@ -32,10 +32,12 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese</li>
-     * <li><strong>en_us</strong>: English</li>
+     * <li><p><strong>zh_cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,9 +47,9 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The ID of the main task.</p>
      * <blockquote>
-     * <p>If a task has one or more subtasks, the value of the parameter must be the ID of the task. Otherwise, leave this parameter empty.</p>
+     * <p>If a task has subtasks, this parameter specifies the ID of the main task. Otherwise, this parameter is empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +77,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public String srcTableName;
 
     /**
-     * <p>The type of the service to which the data to be de-identified belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The type of service to which the source data belongs. Valid values: <strong>1</strong> for MaxCompute, <strong>2</strong> for OSS, <strong>3</strong> for ADS, <strong>4</strong> for OTS, and <strong>5</strong> for RDS.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -84,7 +86,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Integer srcType;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start time to query for task executions. This is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1582992000000</p>
@@ -93,14 +95,20 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status of the de-identification task. Valid values:</p>
+     * <p>The execution status of the task. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: waiting</li>
-     * <li><strong>0</strong>: being executed</li>
-     * <li><strong>1</strong>: executed</li>
-     * <li><strong>2</strong>: failed to be executed</li>
-     * <li><strong>3</strong>: terminated</li>
-     * <li><strong>4</strong>: partially failed</li>
+     * <li><p><strong>-1</strong>: pending.</p>
+     * </li>
+     * <li><p><strong>0</strong>: running.</p>
+     * </li>
+     * <li><p><strong>1</strong>: successful.</p>
+     * </li>
+     * <li><p><strong>2</strong>: failed.</p>
+     * </li>
+     * <li><p><strong>3</strong>: stopped by user.</p>
+     * </li>
+     * <li><p><strong>4</strong>: partially failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +118,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The ID of the de-identification task.</p>
+     * <p>The ID of the data masking task.</p>
      * 
      * <strong>example:</strong>
      * <p>mt4HBgtw1B******</p>

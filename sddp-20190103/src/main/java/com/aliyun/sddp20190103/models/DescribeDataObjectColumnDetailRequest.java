@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataObjectColumnDetailRequest extends TeaModel {
     /**
-     * <p>When performing a paginated query, set the current page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,9 +23,9 @@ public class DescribeDataObjectColumnDetailRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>Set the unique identifier ID of the data object to be queried.</p>
+     * <p>The unique ID of the data object that you want to query.</p>
      * <blockquote>
-     * <p>You can obtain the identifier ID by calling <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a>.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,12 @@ public class DescribeDataObjectColumnDetailRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language type for requests and responses. Default value: <strong>zh_cn</strong>. Values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh_cn</strong>: Chinese.</li>
-     * <li><strong>en_us</strong>: English.</li>
+     * <li><p><strong>zh_cn</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en_us</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class DescribeDataObjectColumnDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>When performing a paginated query, set the maximum number of data asset instances displayed per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,20 +59,32 @@ public class DescribeDataObjectColumnDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID corresponding to the product name of the data object. Values:</p>
+     * <p>The ID of the service to which the data object belongs. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: MaxCompute</li>
-     * <li><strong>2</strong>: OSS</li>
-     * <li><strong>3</strong>: ADB-MYSQL</li>
-     * <li><strong>4</strong>: TableStore</li>
-     * <li><strong>5</strong>: RDS</li>
-     * <li><strong>6</strong>: SELF_DB</li>
-     * <li><strong>7</strong>: PolarDB-X</li>
-     * <li><strong>8</strong>: PolarDB</li>
-     * <li><strong>9</strong>: ADB-PG</li>
-     * <li><strong>10</strong>: OceanBase</li>
-     * <li><strong>11</strong>: MongoDB</li>
-     * <li><strong>25</strong>: Redis</li>
+     * <li><p><strong>1</strong>: MaxCompute</p>
+     * </li>
+     * <li><p><strong>2</strong>: OSS</p>
+     * </li>
+     * <li><p><strong>3</strong>: ADB-MYSQL</p>
+     * </li>
+     * <li><p><strong>4</strong>: Tablestore</p>
+     * </li>
+     * <li><p><strong>5</strong>: RDS</p>
+     * </li>
+     * <li><p><strong>6</strong>: SELF_DB</p>
+     * </li>
+     * <li><p><strong>7</strong>: PolarDB-X</p>
+     * </li>
+     * <li><p><strong>8</strong>: PolarDB</p>
+     * </li>
+     * <li><p><strong>9</strong>: ADB-PG</p>
+     * </li>
+     * <li><p><strong>10</strong>: OceanBase</p>
+     * </li>
+     * <li><p><strong>11</strong>: MongoDB</p>
+     * </li>
+     * <li><p><strong>25</strong>: Redis</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,9 +94,9 @@ public class DescribeDataObjectColumnDetailRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>Industry template ID.</p>
+     * <p>The ID of the industry-specific template.</p>
      * <blockquote>
-     * <p>You can obtain the industry template identifier ID by calling <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a>.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> operation to obtain the ID of the industry-specific template.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

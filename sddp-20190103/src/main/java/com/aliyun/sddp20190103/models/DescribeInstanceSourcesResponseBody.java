@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSourcesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The assets.</p>
+     * <p>A list of assets.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeInstanceSourcesResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5A7E8FB9-5011-5A90-97D9-AE587047****</p>
@@ -38,7 +38,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of assets.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,10 +93,12 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
 
     public static class DescribeInstanceSourcesResponseBodyItems extends TeaModel {
         /**
-         * <p>Indicates whether the security audit feature is enabled. Valid values:</p>
+         * <p>The audit authorization status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: Authorized.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Unauthorized.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,10 +108,12 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Integer auditStatus;
 
         /**
-         * <p>Indicates whether the automatic scan feature is enabled to detect sensitive data. Valid values:</p>
+         * <p>Indicates whether automatic scanning for sensitive data is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
+         * <li><p><strong>0</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,10 +123,12 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Integer autoScan;
 
         /**
-         * <p>Indicates whether the username and password can be changed. Valid values:</p>
+         * <p>Indicates whether the username and password can be modified. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: Yes.</p>
+         * </li>
+         * <li><p><strong>false</strong>: No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,13 +138,18 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Boolean canModifyUserName;
 
         /**
-         * <p>The data detection status. Valid values:</p>
+         * <p>The data check status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The data detection is ready.</li>
-         * <li><strong>1</strong>: The data detection is running.</li>
-         * <li><strong>2</strong>: The connectivity test is in progress.</li>
-         * <li><strong>3</strong>: The connectivity test passed.</li>
-         * <li><strong>4</strong>: The connectivity test failed.</li>
+         * <li><p><strong>0</strong>: Ready.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Running.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Connectivity test in progress.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Connectivity test passed.</p>
+         * </li>
+         * <li><p><strong>4</strong>: Connectivity test failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,10 +159,12 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Integer checkStatus;
 
         /**
-         * <p>Indicates whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
+         * <p>The status of data masking authorization. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +174,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Integer datamaskStatus;
 
         /**
-         * <p>The name of the database to which the data asset belongs.</p>
+         * <p>The name of the database to which the asset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -170,10 +183,12 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public String dbName;
 
         /**
-         * <p>Indicates whether sensitive data detection is enabled for the data asset. Valid values:</p>
+         * <p>Indicates whether sensitive data detection is enabled for the asset. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,13 +198,18 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Integer enable;
 
         /**
-         * <p>The engine type. Valid values:</p>
+         * <p>The database engine type. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>MariaDB</strong></li>
-         * <li><strong>Oracle</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>SQLServer</strong></li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>MariaDB</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>SQLServer</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,13 +222,13 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
          * <p>The reason for the failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>The password is invalid.</p>
+         * <p>password error</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the asset was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1625587423000</p>
@@ -217,7 +237,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The unique ID of the data asset.</p>
+         * <p>The unique ID of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,13 +249,13 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
          * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>instance test</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-****</p>
@@ -244,7 +264,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The storage space size of the instance. This parameter is valid only if the value of the ProductId parameter is 2. Unit: bytes.</p>
+         * <p>The size of the instance. This parameter is valid only for OSS assets. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>409600</p>
@@ -253,7 +273,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Long instanceSize;
 
         /**
-         * <p>The time when the data asset was last modified. Unit: milliseconds.</p>
+         * <p>The timestamp when the asset was last modified. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1625587423000</p>
@@ -262,7 +282,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Long lastModifyTime;
 
         /**
-         * <p>The ID of the account that is last used to modify the data asset.</p>
+         * <p>The ID of the account that last modified the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -271,7 +291,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public String lastModifyUserId;
 
         /**
-         * <p>The retention period of raw logs. Unit: days.</p>
+         * <p>The storage duration of raw logs. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -280,10 +300,12 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Integer logStoreDay;
 
         /**
-         * <p>Indicates whether the password is used. Valid values:</p>
+         * <p>The status of the password. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: In use.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Not in use.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,14 +315,20 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Integer passwordStatus;
 
         /**
-         * <p>The ID of the service to which the asset belongs. Valid values:</p>
+         * <p>The product type ID. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: MaxCompute</li>
-         * <li><strong>2</strong>: OSS</li>
-         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
-         * <li><strong>4</strong>: OTS</li>
-         * <li><strong>5</strong>: ApsaraDB RDS</li>
-         * <li><strong>6</strong>: self-managed databases</li>
+         * <li><p><strong>1</strong>: MaxCompute</p>
+         * </li>
+         * <li><p><strong>2</strong>: OSS</p>
+         * </li>
+         * <li><p><strong>3</strong>: ADS</p>
+         * </li>
+         * <li><p><strong>4</strong>: OTS</p>
+         * </li>
+         * <li><p><strong>5</strong>: RDS</p>
+         * </li>
+         * <li><p><strong>6</strong>: SELF_DB</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,7 +338,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Long productId;
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -322,13 +350,13 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
          * <p>The name of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
-         * <p>The number of sensitive data samples. Valid values: <strong>0</strong>, <strong>5</strong>, and <strong>10</strong>. Unit: data entries.</p>
+         * <p>The sensitive data sampling size. Valid values: <strong>0</strong>, <strong>5</strong>, and <strong>10</strong>. Unit: number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -337,7 +365,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         public Integer samplingSize;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>

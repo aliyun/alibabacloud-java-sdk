@@ -15,10 +15,12 @@ public class ScanOssObjectV1Request extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,14 +30,14 @@ public class ScanOssObjectV1Request extends TeaModel {
     public String lang;
 
     /**
-     * <p>The objects in the OSS bucket that you want to scan. You can specify up to 50 objects at a time.</p>
+     * <p>A list of objects to scan in the OSS bucket. You can specify up to 50 ObjectKeys.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectKeyList")
     public java.util.List<String> objectKeyList;
 
     /**
-     * <p>The ID of the region in which the OSS bucket is located.</p>
+     * <p>The ID of the region where the OSS bucket is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,9 +47,9 @@ public class ScanOssObjectV1Request extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The ID of the industry-specific classification template.</p>
+     * <p>The ID of the industry-specific template.</p>
      * <blockquote>
-     * <p> You can call the <strong>DescribeCategoryTemplateList</strong> operation to query industry-specific classification templates. If you do not specify this parameter, the system automatically uses the main template.</p>
+     * <p>Call <strong>DescribeCategoryTemplateList</strong> to get a list of templates. If you do not specify this parameter, the default active template is used for the scan.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
