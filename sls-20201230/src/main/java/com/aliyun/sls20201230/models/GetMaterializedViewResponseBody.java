@@ -4,48 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetMaterializedViewResponseBody extends TeaModel {
-    /**
-     * <p>The time interval for data aggregation, in minutes.</p>
-     */
     @NameInMap("aggIntervalMins")
     public Integer aggIntervalMins;
 
-    /**
-     * <p>Specifies whether the materialized view is active. Valid values are <code>true</code> and <code>false</code>.</p>
-     */
     @NameInMap("enabled")
     public Boolean enabled;
 
-    /**
-     * <p>The destination logstore that stores the aggregated data.</p>
-     */
     @NameInMap("logstore")
     public String logstore;
 
-    /**
-     * <p>The name of the materialized view.</p>
-     */
     @NameInMap("name")
     public String name;
 
-    /**
-     * <p>The SQL query that defines the materialized view.</p>
-     */
     @NameInMap("originalSql")
     public String originalSql;
 
-    /**
-     * <p>The time when the materialized view was created. The value is a Unix timestamp.</p>
-     */
     @NameInMap("startTime")
     public Integer startTime;
 
     @NameInMap("status")
     public GetMaterializedViewResponseBodyStatus status;
 
-    /**
-     * <p>The time to live (ttl) of the data in the destination logstore, in days.</p>
-     */
     @NameInMap("ttl")
     public Integer ttl;
 

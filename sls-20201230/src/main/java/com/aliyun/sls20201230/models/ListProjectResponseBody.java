@@ -14,7 +14,7 @@ public class ListProjectResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The list of projects that meet the query criteria.</p>
+     * <p>The list of projects that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>Not applicable</p>
@@ -23,7 +23,7 @@ public class ListProjectResponseBody extends TeaModel {
     public java.util.List<Project> projects;
 
     /**
-     * <p>The total number of projects that meet the query criteria.</p>
+     * <p>The total number of projects that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>

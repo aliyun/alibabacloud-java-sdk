@@ -32,6 +32,12 @@ public class Project extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("internalEndpoint")
+    public String internalEndpoint;
+
+    @NameInMap("internetEndpoint")
+    public String internetEndpoint;
+
     /**
      * <p>The time when the project was last modified.</p>
      * 
@@ -42,7 +48,7 @@ public class Project extends TeaModel {
     public String lastModifyTime;
 
     /**
-     * <p>The Alibaba Cloud account that owns the project.</p>
+     * <p>The Alibaba Cloud account to which the project belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -51,7 +57,7 @@ public class Project extends TeaModel {
     public String owner;
 
     /**
-     * <p>The name of the project. The name is a part of the endpoint. The project name must be unique in a region of Alibaba Cloud. After a project is created, its name cannot be changed.</p>
+     * <p>The name of the project, which is used as part of the host. The project name is globally unique within an Alibaba Cloud region and cannot be modified after creation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +67,7 @@ public class Project extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The quota of the project.</p>
+     * <p>The project quota.</p>
      */
     @NameInMap("quota")
     public java.util.Map<String, ?> quota;
@@ -76,7 +82,7 @@ public class Project extends TeaModel {
     public Boolean recycleBinEnabled;
 
     /**
-     * <p>The region where the project resides.</p>
+     * <p>The region to which the project belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -94,12 +100,10 @@ public class Project extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the project.</p>
+     * <p>The status of the project. Valid values:</p>
      * <ul>
-     * <li><p>Normal: The project is in the normal state.</p>
-     * </li>
-     * <li><p>Disable: The project is disabled.</p>
-     * </li>
+     * <li>Normal: Normal.</li>
+     * <li>Disable: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,6 +139,22 @@ public class Project extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public Project setInternalEndpoint(String internalEndpoint) {
+        this.internalEndpoint = internalEndpoint;
+        return this;
+    }
+    public String getInternalEndpoint() {
+        return this.internalEndpoint;
+    }
+
+    public Project setInternetEndpoint(String internetEndpoint) {
+        this.internetEndpoint = internetEndpoint;
+        return this;
+    }
+    public String getInternetEndpoint() {
+        return this.internetEndpoint;
     }
 
     public Project setLastModifyTime(String lastModifyTime) {

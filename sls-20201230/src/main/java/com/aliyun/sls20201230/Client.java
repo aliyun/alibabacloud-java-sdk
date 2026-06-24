@@ -11,7 +11,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._productId = "Sls";
         com.aliyun.gateway.sls.Client gatewayClient = new com.aliyun.gateway.sls.Client();
         this._spi = gatewayClient;
-        this._endpointRule = "central";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "us-west-1.log.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "us-southeast-1.log.aliyuncs.com"),
+            new TeaPair("us-east-1", "us-east-1.log.aliyuncs.com"),
+            new TeaPair("me-east-1", "me-east-1.log.aliyuncs.com"),
+            new TeaPair("me-central-1", "me-central-1.log.aliyuncs.com"),
+            new TeaPair("eu-west-1", "eu-west-1.log.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eu-central-1.log.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "cn-zhangjiakou.log.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "cn-wulanchabu.log.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "cn-shenzhen-finance-1.log.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "cn-shenzhen.log.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "cn-shanghai-finance-1.log.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "cn-shanghai.log.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "cn-qingdao.log.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "cn-nanjing.log.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "cn-huhehaote.log.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "cn-hongkong.log.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "cn-heyuan-acdr-1-intranet.log.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "cn-heyuan.log.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "cn-hangzhou-finance.log.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "cn-hangzhou.log.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "cn-guangzhou.log.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "cn-fuzhou.log.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "cn-chengdu.log.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "cn-beijing-finance-1.log.aliyuncs.com"),
+            new TeaPair("cn-beijing", "cn-beijing.log.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "ap-southeast-7.log.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "ap-southeast-6.log.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ap-southeast-5.log.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "ap-southeast-3.log.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "ap-southeast-2.log.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ap-southeast-1.log.aliyuncs.com"),
+            new TeaPair("ap-south-1", "ap-south-1.log.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "ap-northeast-2.log.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ap-northeast-1.log.aliyuncs.com")
+        );
     }
 
 
@@ -76,8 +113,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only at the endpoints in the China (Shanghai) and Singapore regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Calls observable AI tools. The capabilities of these tools are continuously updated. You can call the tool list API to retrieve the currently supported capabilities.</p>
+     * <p>Invokes an observability AI tool. Tool capabilities are continuously updated. You can call the tool list operation to retrieve the currently supported capabilities.</p>
      * 
      * @param request CallAiToolsRequest
      * @param headers map
@@ -118,8 +158,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only at the endpoints in the China (Shanghai) and Singapore regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Calls observable AI tools. The capabilities of these tools are continuously updated. You can call the tool list API to retrieve the currently supported capabilities.</p>
+     * <p>Invokes an observability AI tool. Tool capabilities are continuously updated. You can call the tool list operation to retrieve the currently supported capabilities.</p>
      * 
      * @param request CallAiToolsRequest
      * @return CallAiToolsResponse
@@ -497,6 +540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only at the China (Shanghai) and Singapore endpoints.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a dataset.</p>
      * 
@@ -532,6 +578,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is available only at the China (Shanghai) and Singapore endpoints.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a dataset.</p>
      * 
@@ -6217,27 +6266,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The Simple Log Service software development kit (SDK) is available for Go, Java, and Python. You can also call all OpenAPI operations directly.</li>
-     * <li>Specify a compression method when you call this operation. Available compression algorithms depend on your programming language. For more information, see the Accept-Encoding request parameter.</li>
+     * <li>Specify the compression method during the procedure. Different programming languages implement different compression algorithms. For details, see the Accept-Encoding request parameter.</li>
      * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</li>
      * </ul>
-     * <h3>Permissions</h3>
-     * <p>The following table lists the permissions required to call this API operation. Add the action to a RAM policy statement to grant a RAM user or RAM role permission to call this operation.</p>
+     * <h3>Authentication</h3>
+     * <p>The following table describes the authorization information required by this API. You can add the information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permissions to invoke this API.</p>
      * <table>
      * <thead>
      * <tr>
      * <th align="left">Action</th>
-     * <th align="left">Resource in an authorization policy</th>
+     * <th align="left">Resource</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td align="left"><code>log:GetLogStoreLogs</code></td>
-     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</code></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Queries raw logs from a specified Logstore in a project. The response contains raw logs within a specified time range and is compressed for transmission.</p>
+     * <p>Queries raw log data from a Logstore in a specified Project and returns raw logs within a specified time range. The results are compressed before transmission.</p>
      * 
      * @param request GetLogsV2Request
      * @param headers GetLogsV2Headers
@@ -6328,27 +6376,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The Simple Log Service software development kit (SDK) is available for Go, Java, and Python. You can also call all OpenAPI operations directly.</li>
-     * <li>Specify a compression method when you call this operation. Available compression algorithms depend on your programming language. For more information, see the Accept-Encoding request parameter.</li>
+     * <li>Specify the compression method during the procedure. Different programming languages implement different compression algorithms. For details, see the Accept-Encoding request parameter.</li>
      * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</li>
      * </ul>
-     * <h3>Permissions</h3>
-     * <p>The following table lists the permissions required to call this API operation. Add the action to a RAM policy statement to grant a RAM user or RAM role permission to call this operation.</p>
+     * <h3>Authentication</h3>
+     * <p>The following table describes the authorization information required by this API. You can add the information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permissions to invoke this API.</p>
      * <table>
      * <thead>
      * <tr>
      * <th align="left">Action</th>
-     * <th align="left">Resource in an authorization policy</th>
+     * <th align="left">Resource</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td align="left"><code>log:GetLogStoreLogs</code></td>
-     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</code></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Queries raw logs from a specified Logstore in a project. The response contains raw logs within a specified time range and is compressed for transmission.</p>
+     * <p>Queries raw log data from a Logstore in a specified Project and returns raw logs within a specified time range. The results are compressed before transmission.</p>
      * 
      * @param request GetLogsV2Request
      * @return GetLogsV2Response
@@ -6541,7 +6588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a materialized view.</p>
+     * <p>Retrieves a materialized view.</p>
      * 
      * @param request GetMaterializedViewRequest
      * @param headers GetMaterializedViewHeaders
@@ -6587,7 +6634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a materialized view.</p>
+     * <p>Retrieves a materialized view.</p>
      * 
      * @param request GetMaterializedViewRequest
      * @return GetMaterializedViewResponse
@@ -6904,22 +6951,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <h3>Operation description</h3>
+     * <p>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the details of a project.</p>
+     * <p>Queries the details of a specified project.</p>
      * 
+     * @param request GetProjectRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetProjectResponse
      */
-    public GetProjectResponse getProjectWithOptions(String project, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetProjectResponse getProjectWithOptions(String project, GetProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crossRegion)) {
+            query.put("crossRegion", request.crossRegion);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetProject"),
@@ -6937,17 +6992,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <h3>Operation description</h3>
+     * <p>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the details of a project.</p>
+     * <p>Queries the details of a specified project.</p>
+     * 
+     * @param request GetProjectRequest
      * @return GetProjectResponse
      */
-    public GetProjectResponse getProject(String project) throws Exception {
+    public GetProjectResponse getProject(String project, GetProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getProjectWithOptions(project, headers, runtime);
+        return this.getProjectWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -9347,11 +9404,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>API description</h3>
-     * <p>The host consists of a project name and a Simple Log Service endpoint. Specify the project in the host.</p>
+     * <h3>Operation description</h3>
+     * <p>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists projects that meet the specified criteria.</p>
+     * <p>Lists project information that meets the specified conditions.</p>
      * 
      * @param request ListProjectRequest
      * @param headers map
@@ -9405,11 +9462,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>API description</h3>
-     * <p>The host consists of a project name and a Simple Log Service endpoint. Specify the project in the host.</p>
+     * <h3>Operation description</h3>
+     * <p>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists projects that meet the specified criteria.</p>
+     * <p>Lists project information that meets the specified conditions.</p>
      * 
      * @param request ListProjectRequest
      * @return ListProjectResponse
@@ -13095,6 +13152,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateLoggingWithOptions(project, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The Host consists of the Project name and the Log Service endpoint. You need to specify the Project in the Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates log data in a specified Logstore under the specified Project.</p>
+     * 
+     * @param request UpdateLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLogsResponse
+     */
+    public UpdateLogsResponse updateLogsWithOptions(String project, String logstore, UpdateLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
+            body.put("data", request.data);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            body.put("from", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rowId)) {
+            body.put("rowId", request.rowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            body.put("to", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateMode)) {
+            body.put("updateMode", request.updateMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLogs"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/updatelogs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLogsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The Host consists of the Project name and the Log Service endpoint. You need to specify the Project in the Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates log data in a specified Logstore under the specified Project.</p>
+     * 
+     * @param request UpdateLogsRequest
+     * @return UpdateLogsResponse
+     */
+    public UpdateLogsResponse updateLogs(String project, String logstore, UpdateLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateLogsWithOptions(project, logstore, request, headers, runtime);
     }
 
     /**

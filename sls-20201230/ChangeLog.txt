@@ -1,3 +1,8 @@
+2026-06-24 Version: 5.16.0
+- Support API UpdateLogs.
+- Update API GetProject: add request parameters crossRegion.
+
+
 2026-06-12 Version: 5.15.0
 - Support API DeleteLogs.
 - Update API GetMaterializedView: add response parameters Body.status.

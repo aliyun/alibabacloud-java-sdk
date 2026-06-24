@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CallAiToolsRequest extends TeaModel {
     /**
-     * <p>Tool parameters.</p>
+     * <p>The tool parameters.</p>
      */
     @NameInMap("params")
     public java.util.Map<String, String> params;

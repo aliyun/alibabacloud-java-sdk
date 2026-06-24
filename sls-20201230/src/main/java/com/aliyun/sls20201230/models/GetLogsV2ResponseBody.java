@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetLogsV2ResponseBody extends TeaModel {
     /**
-     * <p>The query results.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;
 
     /**
-     * <p>The metadata of the returned data.</p>
+     * <p>The metadata of the response.</p>
      */
     @NameInMap("meta")
     public GetLogsV2ResponseBodyMeta meta;
@@ -39,7 +39,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
     public static class GetLogsV2ResponseBodyMetaPhraseQueryInfo extends TeaModel {
         /**
-         * <p>The starting offset of the scan result after index filtering.</p>
+         * <p>The start offset of the scan results after index filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -48,7 +48,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Long beginOffset;
 
         /**
-         * <p>The end offset of the scan result after index filtering.</p>
+         * <p>The end offset of the scan results after index filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -57,7 +57,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Long endOffset;
 
         /**
-         * <p>The end time of the scan result after index filtering.</p>
+         * <p>The end time of the scan results after index filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -66,7 +66,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>Indicates whether all logs are scanned.</p>
+         * <p>Indicates whether all logs have been scanned.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -115,7 +115,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
     public static class GetLogsV2ResponseBodyMeta extends TeaModel {
         /**
-         * <p>The SQL part of the query statement that follows the pipe character (|).</p>
+         * <p>The SQL part after the pipe (|) in the query statement.</p>
          * 
          * <strong>example:</strong>
          * <p>select *</p>
@@ -130,7 +130,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public java.util.List<String> columnTypes;
 
         /**
-         * <p>The number of log entries returned in this query.</p>
+         * <p>The number of log entries returned in this query request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -148,7 +148,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Integer cpuCores;
 
         /**
-         * <p>The core-hours for the Exclusive SQL.</p>
+         * <p>The core-hour consumed by Dedicated SQL.</p>
          * 
          * <strong>example:</strong>
          * <p>0.002</p>
@@ -157,7 +157,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Double cpuSec;
 
         /**
-         * <p>The time consumed by the query, in milliseconds.</p>
+         * <p>The time consumed by this query, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -181,7 +181,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> highlights;
 
         /**
-         * <p>Indicates whether nanosecond-level sorting is enabled.</p>
+         * <p>Specifies whether to enable nanosecond-precision ordering.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -190,13 +190,13 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Boolean isAccurate;
 
         /**
-         * <p>All keys in the query result.</p>
+         * <p>All keys in the query results.</p>
          */
         @NameInMap("keys")
         public java.util.List<String> keys;
 
         /**
-         * <p>The number of entries returned. This parameter is returned if the SQL statement does not contain a LIMIT clause.</p>
+         * <p>The limit on the number of rows. Returned when an SQL statement does not include a LIMIT clause.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -205,7 +205,11 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Integer limited;
 
         /**
-         * <p>The query mode. Valid values: 0: Normal query, which includes SQL queries. 1: Phrase query. 2: SCAN query. 3: SCAN SQL query.</p>
+         * <p>The query mode. Valid values:
+         * 0: standard query (including SQL)
+         * 1: phrase query
+         * 2: SCAN
+         * 3: SCAN SQL.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -214,13 +218,13 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Integer mode;
 
         /**
-         * <p>The information about the phrase query.</p>
+         * <p>The phrase query information.</p>
          */
         @NameInMap("phraseQueryInfo")
         public GetLogsV2ResponseBodyMetaPhraseQueryInfo phraseQueryInfo;
 
         /**
-         * <p>The volume of logs processed in the query, in bytes.</p>
+         * <p>The volume of logs processed by the query.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -229,7 +233,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Long processedBytes;
 
         /**
-         * <p>The number of rows processed in the query.</p>
+         * <p>The number of rows processed in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -238,12 +242,10 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Long processedRows;
 
         /**
-         * <p>The progress of the query. Valid values:</p>
+         * <p>Indicates whether the query results are complete. Valid values:</p>
          * <ul>
-         * <li><p>Complete: The query is complete, and the returned result is complete.</p>
-         * </li>
-         * <li><p>Incomplete: The query is complete, but the returned result is incomplete. You must send the request again to obtain the complete result.</p>
-         * </li>
+         * <li>Complete: The query is complete and the results are complete.</li>
+         * <li>Incomplete: The query is complete but the results are incomplete. Resend the request to obtain complete results.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +255,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The volume of data scanned in the scan query, in bytes.</p>
+         * <p>The amount of data scanned during the scan, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -262,7 +264,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public Long scanBytes;
 
         /**
-         * <p>The type of observable data.</p>
+         * <p>The observable data type.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -277,7 +279,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> terms;
 
         /**
-         * <p>The part of the query statement that precedes the pipe character (|).</p>
+         * <p>The part before the pipe (|) in the query statement.</p>
          * 
          * <strong>example:</strong>
          * <ul>

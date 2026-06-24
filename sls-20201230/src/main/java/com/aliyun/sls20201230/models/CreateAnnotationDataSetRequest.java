@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAnnotationDataSetRequest extends TeaModel {
     /**
-     * <p>The data structure of the request.</p>
+     * <p>The request struct for the dataset.</p>
      */
     @NameInMap("body")
     public MLDataSetParam body;

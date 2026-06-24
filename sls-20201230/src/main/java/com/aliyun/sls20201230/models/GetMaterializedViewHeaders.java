@@ -7,9 +7,6 @@ public class GetMaterializedViewHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    /**
-     * <p>The content type of the request. The value must be <code>application/json</code>.</p>
-     */
     @NameInMap("Content-Type")
     public String contentType;
 
