@@ -14,7 +14,7 @@ public class SaveAppRequirementResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Whether retry is allowed</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class SaveAppRequirementResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name. Query the application with this name.</p>
+     * <p>Application name, used to query the application with this name</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -41,9 +41,9 @@ public class SaveAppRequirementResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message in the response.  </p>
+     * <p>Dynamic error message, used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> provided is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class SaveAppRequirementResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>Exception message</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -95,7 +95,7 @@ public class SaveAppRequirementResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Backup parameter.</p>
+     * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

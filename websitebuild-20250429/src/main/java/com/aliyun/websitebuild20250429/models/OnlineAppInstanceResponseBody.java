@@ -3,9 +3,9 @@ package com.aliyun.websitebuild20250429.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateAppFileResponseBody extends TeaModel {
+public class OnlineAppInstanceResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The authentication failure details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,16 +23,16 @@ public class UpdateAppFileResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name can be up to 36 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>watermark</p>
+     * <p>stg.mlp_finance_cap_refund_hi</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic error code. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,13 +41,10 @@ public class UpdateAppFileResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> parameter.</p>
-     * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
-     * </blockquote>
+     * <p>The placeholder in the dynamic error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>abc</p>
+     * <p>xxxxx</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
@@ -59,19 +56,19 @@ public class UpdateAppFileResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Indicates whether the move operation is successful.</p>
+     * <p>The application module.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>{\&quot;StorageSize\&quot;: \&quot;3.29 MB\&quot;, \&quot;FileNum\&quot;: 30}</p>
      */
     @NameInMap("Module")
-    public Boolean module;
+    public java.util.Map<String, ?> module;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
+     * <p>CAB8FBB7-F93D-596D-8BA9-FB278ADF9C22</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -95,7 +92,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -103,12 +100,12 @@ public class UpdateAppFileResponseBody extends TeaModel {
     @NameInMap("Synchro")
     public Boolean synchro;
 
-    public static UpdateAppFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateAppFileResponseBody self = new UpdateAppFileResponseBody();
+    public static OnlineAppInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        OnlineAppInstanceResponseBody self = new OnlineAppInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAppFileResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+    public OnlineAppInstanceResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
@@ -116,7 +113,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public UpdateAppFileResponseBody setAllowRetry(Boolean allowRetry) {
+    public OnlineAppInstanceResponseBody setAllowRetry(Boolean allowRetry) {
         this.allowRetry = allowRetry;
         return this;
     }
@@ -124,7 +121,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.allowRetry;
     }
 
-    public UpdateAppFileResponseBody setAppName(String appName) {
+    public OnlineAppInstanceResponseBody setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -132,7 +129,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.appName;
     }
 
-    public UpdateAppFileResponseBody setDynamicCode(String dynamicCode) {
+    public OnlineAppInstanceResponseBody setDynamicCode(String dynamicCode) {
         this.dynamicCode = dynamicCode;
         return this;
     }
@@ -140,7 +137,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.dynamicCode;
     }
 
-    public UpdateAppFileResponseBody setDynamicMessage(String dynamicMessage) {
+    public OnlineAppInstanceResponseBody setDynamicMessage(String dynamicMessage) {
         this.dynamicMessage = dynamicMessage;
         return this;
     }
@@ -148,7 +145,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.dynamicMessage;
     }
 
-    public UpdateAppFileResponseBody setErrorArgs(java.util.List<?> errorArgs) {
+    public OnlineAppInstanceResponseBody setErrorArgs(java.util.List<?> errorArgs) {
         this.errorArgs = errorArgs;
         return this;
     }
@@ -156,15 +153,15 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.errorArgs;
     }
 
-    public UpdateAppFileResponseBody setModule(Boolean module) {
+    public OnlineAppInstanceResponseBody setModule(java.util.Map<String, ?> module) {
         this.module = module;
         return this;
     }
-    public Boolean getModule() {
+    public java.util.Map<String, ?> getModule() {
         return this.module;
     }
 
-    public UpdateAppFileResponseBody setRequestId(String requestId) {
+    public OnlineAppInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -172,7 +169,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateAppFileResponseBody setRootErrorCode(String rootErrorCode) {
+    public OnlineAppInstanceResponseBody setRootErrorCode(String rootErrorCode) {
         this.rootErrorCode = rootErrorCode;
         return this;
     }
@@ -180,7 +177,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.rootErrorCode;
     }
 
-    public UpdateAppFileResponseBody setRootErrorMsg(String rootErrorMsg) {
+    public OnlineAppInstanceResponseBody setRootErrorMsg(String rootErrorMsg) {
         this.rootErrorMsg = rootErrorMsg;
         return this;
     }
@@ -188,7 +185,7 @@ public class UpdateAppFileResponseBody extends TeaModel {
         return this.rootErrorMsg;
     }
 
-    public UpdateAppFileResponseBody setSynchro(Boolean synchro) {
+    public OnlineAppInstanceResponseBody setSynchro(Boolean synchro) {
         this.synchro = synchro;
         return this;
     }

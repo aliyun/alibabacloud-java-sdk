@@ -5489,6 +5489,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</p>
+     * 
+     * @param request OfflineAppInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OfflineAppInstanceResponse
+     */
+    public OfflineAppInstanceResponse offlineAppInstanceWithOptions(OfflineAppInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OfflineAppInstance"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OfflineAppInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</p>
+     * 
+     * @param request OfflineAppInstanceRequest
+     * @return OfflineAppInstanceResponse
+     */
+    public OfflineAppInstanceResponse offlineAppInstance(OfflineAppInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.offlineAppInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</p>
+     * 
+     * @param request OnlineAppInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OnlineAppInstanceResponse
+     */
+    public OnlineAppInstanceResponse onlineAppInstanceWithOptions(OnlineAppInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OnlineAppInstance"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OnlineAppInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</p>
+     * 
+     * @param request OnlineAppInstanceRequest
+     * @return OnlineAppInstanceResponse
+     */
+    public OnlineAppInstanceResponse onlineAppInstance(OnlineAppInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.onlineAppInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Operates an application by a partner.</p>
      * 
      * @param request OperateAppInstanceForPartnerRequest
@@ -7124,10 +7212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Get code generation plugin configuration information</p>
      * 
      * <b>summary</b> : 
-     * <p>Save requirements</p>
+     * <p>Save Requirement</p>
      * 
      * @param request SaveAppRequirementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7165,10 +7253,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Get code generation plugin configuration information</p>
      * 
      * <b>summary</b> : 
-     * <p>Save requirements</p>
+     * <p>Save Requirement</p>
      * 
      * @param request SaveAppRequirementRequest
      * @return SaveAppRequirementResponse
@@ -7802,10 +7890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update file</p>
+     * <p>Updates a file.</p>
      * 
      * @param request UpdateAppFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7845,10 +7933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update file</p>
+     * <p>Updates a file.</p>
      * 
      * @param request UpdateAppFileRequest
      * @return UpdateAppFileResponse

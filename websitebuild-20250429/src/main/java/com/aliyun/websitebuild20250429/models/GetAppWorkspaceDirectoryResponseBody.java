@@ -14,7 +14,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -50,7 +50,7 @@ public class GetAppWorkspaceDirectoryResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
