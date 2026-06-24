@@ -92,6 +92,9 @@ public class QueryCloseoutDomainListResponseBody extends TeaModel {
         @NameInMap("IcpStatus")
         public Boolean icpStatus;
 
+        @NameInMap("Id")
+        public Long id;
+
         @NameInMap("Introduction")
         public String introduction;
 
@@ -315,6 +318,14 @@ public class QueryCloseoutDomainListResponseBody extends TeaModel {
         }
         public Boolean getIcpStatus() {
             return this.icpStatus;
+        }
+
+        public QueryCloseoutDomainListResponseBodyData setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public QueryCloseoutDomainListResponseBodyData setIntroduction(String introduction) {
