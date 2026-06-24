@@ -8,9 +8,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The query token returned in this invocation.</p>
      * <blockquote>
-     * <p>If the NextToken parameter is not returned when you use the MaxResults and NextToken parameters to perform a paged query, no more data is returned.</p>
+     * <p>When you use MaxResults and NextToken for paging and no NextToken is returned, no more data is available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,15 +20,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the instance event list.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If MaxResults and NextToken are used to query results by page, ignore this parameter.</p>
-     * </li>
-     * <li><p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
-     * </li>
+     * <li>When you use MaxResults and NextToken for paging, the returned PageNumber parameter value is meaningless.</li>
+     * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging instead.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,15 +35,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page as specified in the request.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If MaxResults and NextToken are used to query results by page, ignore this parameter.</p>
-     * </li>
-     * <li><p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
-     * </li>
+     * <li>When you use MaxResults and NextToken for paging, the returned PageSize parameter value is meaningless.</li>
+     * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging instead.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +50,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -63,9 +59,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances.</p>
+     * <p>The total number of instance events.</p>
      * <blockquote>
-     * <p>If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</p>
+     * <p>When you use MaxResults and NextToken for paging, the returned TotalCount parameter value is meaningless.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -310,6 +306,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("InactiveDisks")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2026-06-22T00:00:00Z</p>
+         */
+        @NameInMap("InitialNotBefore")
+        public String initialNotBefore;
+
         @NameInMap("MetricName")
         public String metricName;
 
@@ -396,6 +399,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks getInactiveDisks() {
             return this.inactiveDisks;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setInitialNotBefore(String initialNotBefore) {
+            this.initialNotBefore = initialNotBefore;
+            return this;
+        }
+        public String getInitialNotBefore() {
+            return this.initialNotBefore;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setMetricName(String metricName) {

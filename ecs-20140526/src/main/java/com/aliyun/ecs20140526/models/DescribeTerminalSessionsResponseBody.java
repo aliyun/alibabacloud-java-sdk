@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTerminalSessionsResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>

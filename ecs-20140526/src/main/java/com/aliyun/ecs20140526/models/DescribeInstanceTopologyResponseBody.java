@@ -31,12 +31,34 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         return this.topologys;
     }
 
+    public static class DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes extends TeaModel {
+        @NameInMap("NetworkNodes")
+        public java.util.List<String> networkNodes;
+
+        public static DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes self = new DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes setNetworkNodes(java.util.List<String> networkNodes) {
+            this.networkNodes = networkNodes;
+            return this;
+        }
+        public java.util.List<String> getNetworkNodes() {
+            return this.networkNodes;
+        }
+
+    }
+
     public static class DescribeInstanceTopologyResponseBodyTopologysTopology extends TeaModel {
         @NameInMap("HostId")
         public String hostId;
 
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("NetworkNodes")
+        public DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes networkNodes;
 
         public static DescribeInstanceTopologyResponseBodyTopologysTopology build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTopologyResponseBodyTopologysTopology self = new DescribeInstanceTopologyResponseBodyTopologysTopology();
@@ -57,6 +79,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeInstanceTopologyResponseBodyTopologysTopology setNetworkNodes(DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes networkNodes) {
+            this.networkNodes = networkNodes;
+            return this;
+        }
+        public DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes getNetworkNodes() {
+            return this.networkNodes;
         }
 
     }

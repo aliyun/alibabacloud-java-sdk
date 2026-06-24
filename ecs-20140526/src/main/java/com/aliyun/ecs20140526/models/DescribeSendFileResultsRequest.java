@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance for which you want to query file sending records.</p>
+     * <p>The instance ID. If you specify this parameter, all file sending records of the specified instance are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>i-hz0jdfwd9f****</p>
@@ -14,18 +14,13 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:</p>
+     * <p>The overall sending status of the file. The overall status depends on the shared execution status of all target instances. Valid values:</p>
      * <ul>
-     * <li><p>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</p>
-     * </li>
-     * <li><p>Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</p>
-     * </li>
-     * <li><p>Success: The file is sent. If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</p>
-     * </li>
-     * <li><p>Failed: The file fails to be sent. If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed.</p>
-     * </li>
-     * <li><p>PartialFailed: The file sending task succeeds on some instances and fails on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</p>
-     * </li>
+     * <li>Pending: The system is validating or sending the file. The overall status is Pending if the file sending status of at least one instance is Pending.</li>
+     * <li>Running: The file is being sent to instances. The overall status is Running if the file sending status of at least one instance is Running.</li>
+     * <li>Success: The file is sent. The overall status is Success if the file sending status of all instances is Success.</li>
+     * <li>Failed: The file failed to be sent. The overall status is Failed if the file sending status of all instances is Failed.</li>
+     * <li>PartialFailed: The file is sent to some instances but failed on others. The overall status is PartialFailed if the file sending status of all instances is Success or Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +30,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String invocationStatus;
 
     /**
-     * <p>The ID of the file sending task.</p>
+     * <p>The execution ID.</p>
      * 
      * <strong>example:</strong>
      * <p>f-hz0jdfwd9f****</p>
@@ -44,8 +39,8 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <p>Valid values: 1 to 50.</p>
+     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +50,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the file whose sending records you want to query.</p>
+     * <p>The name of the file. If you specify this parameter, all sending records of the file with the specified name are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>test.txt</p>
@@ -64,7 +59,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -80,7 +75,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is about to go offline. Use NextToken and MaxResults to execute paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,7 +86,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is about to go offline. Use NextToken and MaxResults to execute paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,7 +96,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the ECS instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,7 +106,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. After you set this parameter, file sending results in the specified resource group are queried.</p>
+     * <p>The ID of the resource group to which the file sending task belongs. After you specify this parameter, you must also specify ResourceGroupId when sending a file. This way, you can filter the file sending results of the specified resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -126,7 +121,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the file sending task.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSendFileResultsRequestTag> tag;
@@ -258,9 +253,9 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     public static class DescribeSendFileResultsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>If you use one tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -269,7 +264,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
          * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

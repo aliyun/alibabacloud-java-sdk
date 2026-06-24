@@ -8,7 +8,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public DescribeInvocationsResponseBodyInvocations invocations;
 
     /**
-     * <p>Query credential value returned by this call.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -17,7 +17,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Page number of the query result.</p>
+     * <p>The page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Number of entries per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -44,7 +44,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of commands.</p>
+     * <p>The total number of commands.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

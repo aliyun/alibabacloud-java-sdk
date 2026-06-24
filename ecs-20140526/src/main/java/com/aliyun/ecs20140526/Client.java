@@ -3251,9 +3251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>API Guide</h2>
-     * <p>After you register a non-Alibaba Cloud server as an Alibaba Cloud managed instance by using an activation code, you can use various online services provided by Alibaba Cloud on the managed instance (such as Cloud Assistant, CloudOps Orchestration Service, and Alibaba Cloud DevOps).
-     * The operating system of the non-Alibaba Cloud server must meet one of the following versions, and the server must be able to access the Internet to be registered as an Alibaba Cloud managed instance.</p>
+     * <h2>API description</h2>
+     * <p>After you use an activation code to register non-Alibaba Cloud servers as Alibaba Cloud managed instances, you can use various online services provided by Alibaba Cloud on the managed instances, such as Cloud Assistant, Operation Orchestration Service (OOS), and Alibaba Cloud DevOps.
+     * The operating systems of non-Alibaba Cloud servers must meet the following version requirements, and the servers must have access to the Internet before they can be registered as Alibaba Cloud managed instances.</p>
      * <ul>
      * <li>Alibaba Cloud Linux 2/3 and later</li>
      * <li>CentOS 6/7/8 and later</li>
@@ -3264,14 +3264,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>RedHat 5/6/7 and later</li>
      * <li>SUSE Linux Enterprise Server 11/12/15 and later</li>
      * <li>Windows Server 2012/2016/2019 and later
-     * In each Alibaba Cloud Region, you can have up to 5,000 activation codes for managed instances. When the number of activation codes exceeds 1,000, you must maintain an activation code usage rate greater than 50% to continue creating new activation codes.<blockquote>
-     * <p>You can click <strong>Register New Instance</strong> on the <strong>Managed Instances</strong> tab of the <strong>ECS Cloud Assistant</strong> page to view activation code usage data.</p>
+     * In an Alibaba Cloud region, you can have up to 10 managed instance activation codes. Each activation code can be used to activate up to 10 instances. The maximum validity period of a single activation code is 4 hours.<blockquote>
+     * <p>You can go to the <strong>Managed Instances</strong> tab of the <strong>ECS Cloud Assistant</strong> page and click <strong>Register New Instance</strong> to obtain activation code usage data.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API is used to create an activation code, which is used to register non-Alibaba Cloud servers as Alibaba Cloud managed instances.</p>
+     * <p>This API is used to create an activation code. The activation code is used to register non-Alibaba Cloud servers as Alibaba Cloud managed instances.</p>
      * 
      * @param request CreateActivationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3355,9 +3355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>API Guide</h2>
-     * <p>After you register a non-Alibaba Cloud server as an Alibaba Cloud managed instance by using an activation code, you can use various online services provided by Alibaba Cloud on the managed instance (such as Cloud Assistant, CloudOps Orchestration Service, and Alibaba Cloud DevOps).
-     * The operating system of the non-Alibaba Cloud server must meet one of the following versions, and the server must be able to access the Internet to be registered as an Alibaba Cloud managed instance.</p>
+     * <h2>API description</h2>
+     * <p>After you use an activation code to register non-Alibaba Cloud servers as Alibaba Cloud managed instances, you can use various online services provided by Alibaba Cloud on the managed instances, such as Cloud Assistant, Operation Orchestration Service (OOS), and Alibaba Cloud DevOps.
+     * The operating systems of non-Alibaba Cloud servers must meet the following version requirements, and the servers must have access to the Internet before they can be registered as Alibaba Cloud managed instances.</p>
      * <ul>
      * <li>Alibaba Cloud Linux 2/3 and later</li>
      * <li>CentOS 6/7/8 and later</li>
@@ -3368,14 +3368,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>RedHat 5/6/7 and later</li>
      * <li>SUSE Linux Enterprise Server 11/12/15 and later</li>
      * <li>Windows Server 2012/2016/2019 and later
-     * In each Alibaba Cloud Region, you can have up to 5,000 activation codes for managed instances. When the number of activation codes exceeds 1,000, you must maintain an activation code usage rate greater than 50% to continue creating new activation codes.<blockquote>
-     * <p>You can click <strong>Register New Instance</strong> on the <strong>Managed Instances</strong> tab of the <strong>ECS Cloud Assistant</strong> page to view activation code usage data.</p>
+     * In an Alibaba Cloud region, you can have up to 10 managed instance activation codes. Each activation code can be used to activate up to 10 instances. The maximum validity period of a single activation code is 4 hours.<blockquote>
+     * <p>You can go to the <strong>Managed Instances</strong> tab of the <strong>ECS Cloud Assistant</strong> page and click <strong>Register New Instance</strong> to obtain activation code usage data.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API is used to create an activation code, which is used to register non-Alibaba Cloud servers as Alibaba Cloud managed instances.</p>
+     * <p>This API is used to create an activation code. The activation code is used to register non-Alibaba Cloud servers as Alibaba Cloud managed instances.</p>
      * 
      * @param request CreateActivationRequest
      * @return CreateActivationResponse
@@ -16258,13 +16258,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can query completed historical system events from up to the last 30 days. There is no time limit for querying incomplete system events.</li>
-     * <li>When neither the EventCycleStatus nor the InstanceEventCycleStatus parameter is specified, the query results include only system events in the Avoided (event avoided), Executed (event execution completed), Canceled (event canceled), or Failed (event execution failed) status by default.</li>
-     * <li>By specifying the InstanceEventCycleStatus parameter, you can also query system events in the Scheduled (awaiting execution), Executing (execution in progress), or Inquiring (inquiry in progress) status.</li>
+     * <li>You can query completed historical system events from the last 30 days. There is no time limit for querying uncompleted system events.</li>
+     * <li>If neither EventCycleStatus nor InstanceEventCycleStatus is specified, the query results include only system events in the Avoided, Executed, Canceled, and Failed states by default.</li>
+     * <li>By specifying the InstanceEventCycleStatus parameter, you can also query system events in the Scheduled, Executing, and Inquiring states.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the DescribeInstanceHistoryEvents API and specify parameters such as InstanceId and EventType to query system event information for a specified instance. By default, this operation queries historical system events that are in a non-active state.</p>
+     * <p>Queries system event information for a specified instance by calling the DescribeInstanceHistoryEvents operation. You can specify parameters such as InstanceId and EventType. By default, this operation queries historical system events in inactive states.</p>
      * 
      * @param request DescribeInstanceHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16385,13 +16385,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can query completed historical system events from up to the last 30 days. There is no time limit for querying incomplete system events.</li>
-     * <li>When neither the EventCycleStatus nor the InstanceEventCycleStatus parameter is specified, the query results include only system events in the Avoided (event avoided), Executed (event execution completed), Canceled (event canceled), or Failed (event execution failed) status by default.</li>
-     * <li>By specifying the InstanceEventCycleStatus parameter, you can also query system events in the Scheduled (awaiting execution), Executing (execution in progress), or Inquiring (inquiry in progress) status.</li>
+     * <li>You can query completed historical system events from the last 30 days. There is no time limit for querying uncompleted system events.</li>
+     * <li>If neither EventCycleStatus nor InstanceEventCycleStatus is specified, the query results include only system events in the Avoided, Executed, Canceled, and Failed states by default.</li>
+     * <li>By specifying the InstanceEventCycleStatus parameter, you can also query system events in the Scheduled, Executing, and Inquiring states.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the DescribeInstanceHistoryEvents API and specify parameters such as InstanceId and EventType to query system event information for a specified instance. By default, this operation queries historical system events that are in a non-active state.</p>
+     * <p>Queries system event information for a specified instance by calling the DescribeInstanceHistoryEvents operation. You can specify parameters such as InstanceId and EventType. By default, this operation queries historical system events in inactive states.</p>
      * 
      * @param request DescribeInstanceHistoryEventsRequest
      * @return DescribeInstanceHistoryEventsResponse
@@ -17389,18 +17389,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>When you invoke API operations by using Cloud Assistant CLI, make sure that request parameters of different data types are in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</li>
+     * </ul>
      * <h3>Usage notes</h3>
      * <ul>
-     * <li>When you call this operation using Alibaba Cloud CLI, request parameter values of different data types must be in specific formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</li>
-     * </ul>
-     * <h3>Recommendations</h3>
-     * <ul>
-     * <li>We recommend that you perform a dry run by setting the DryRun parameter to check parameter validity and authorization status.</li>
-     * <li>To query the first page of results, set the <code>MaxResults</code> parameter to limit the number of entries returned. Use the <code>NextToken</code> value in the response to retrieve subsequent pages. For subsequent page queries, set the <code>NextToken</code> parameter to the value from the previous response and set <code>MaxResults</code> to limit the number of entries returned.</li>
+     * <li>Send a dry run request by specifying the DryRun request parameter to check parameter validity and authorization.</li>
+     * <li>When performing a paging query for the first page, set only <code>MaxResults</code> to limit the number of entries to return. The <code>NextToken</code> value returned in the result serves as the token for querying subsequent pages. When performing a paging query for subsequent pages, set NextToken to the <code>NextToken</code> value obtained from the previous response as the query token, and set <code>MaxResults</code> to limit the number of entries to return.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This operation queries a list of instances based on specified conditions and returns detailed information about the instances.</p>
+     * <p>Supports conditional query of instance lists based on different request conditions and retrieves the detailed information of the instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17596,18 +17596,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>When you invoke API operations by using Cloud Assistant CLI, make sure that request parameters of different data types are in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</li>
+     * </ul>
      * <h3>Usage notes</h3>
      * <ul>
-     * <li>When you call this operation using Alibaba Cloud CLI, request parameter values of different data types must be in specific formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">CLI parameter format</a>.</li>
-     * </ul>
-     * <h3>Recommendations</h3>
-     * <ul>
-     * <li>We recommend that you perform a dry run by setting the DryRun parameter to check parameter validity and authorization status.</li>
-     * <li>To query the first page of results, set the <code>MaxResults</code> parameter to limit the number of entries returned. Use the <code>NextToken</code> value in the response to retrieve subsequent pages. For subsequent page queries, set the <code>NextToken</code> parameter to the value from the previous response and set <code>MaxResults</code> to limit the number of entries returned.</li>
+     * <li>Send a dry run request by specifying the DryRun request parameter to check parameter validity and authorization.</li>
+     * <li>When performing a paging query for the first page, set only <code>MaxResults</code> to limit the number of entries to return. The <code>NextToken</code> value returned in the result serves as the token for querying subsequent pages. When performing a paging query for subsequent pages, set NextToken to the <code>NextToken</code> value obtained from the previous response as the query token, and set <code>MaxResults</code> to limit the number of entries to return.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This operation queries a list of instances based on specified conditions and returns detailed information about the instances.</p>
+     * <p>Supports conditional query of instance lists based on different request conditions and retrieves the detailed information of the instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -17733,30 +17733,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>API Guide</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must use this API to check the actual execution results, and the actual output takes precedence.</li>
-     * <li>You can query execution information from the last four weeks, with a maximum retention limit of 100,000 records.</li>
-     * <li>You can obtain job results through <a href="https://help.aliyun.com/document_detail/2669130.html">management event subscription for Cloud Assistant task status</a>, which avoids frequent polling and improves efficiency.</li>
-     * <li>When performing a paged query on the home page, you only need to set <code>MaxResults</code> to limit the number of returned entries. The <code>NextToken</code> in the return result serves as the credential for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> value obtained from the previous response as the query credential, and set <code>MaxResults</code> to limit the number of returned entries.</li>
+     * <li>After you execute a command, the command is not guaranteed to succeed or produce the expected results. Call this operation to view the actual execution results, which are based on the actual output.</li>
+     * <li>You can query execution information from the last 30 days. A maximum of 10,000 records of execution information can be retained.</li>
+     * <li>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, avoiding frequent polling and improving efficiency.</li>
+     * <li>When querying the first page of a paging query, set only <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> value returned in the result serves as the credential for querying subsequent pages. When querying subsequent pages, set <code>NextToken</code> to the value obtained from the previous response and set <code>MaxResults</code> to limit the number of entries returned.</li>
      * <li>Differences between <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code>:<ul>
-     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> invocation targets multiple instances:<ul>
-     * <li><code>DescribeInvocations</code> provides the execution status on each instance and an aggregation status across all instances.</li>
-     * <li><code>DescribeInvocationResults</code> only provides individual execution statuses per instance, without aggregated multi-instance status.</li>
+     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies multiple instances:<ul>
+     * <li><code>DescribeInvocations</code> returns the execution status on each instance and the aggregation status across multiple instances.</li>
+     * <li><code>DescribeInvocationResults</code> returns only the individual execution status on each instance, without the aggregation status across multiple instances.</li>
      * </ul>
      * </li>
-     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> invocation targets one instance:<ul>
-     * <li>There is little difference between <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code>, and they can fully replace each other.</li>
+     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies one instance:<ul>
+     * <li><code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> are largely interchangeable. You can replace one with the other.</li>
      * </ul>
      * </li>
-     * <li>When you need to view the execution history of scheduled (periodic) tasks or automatic startup tasks (<code>RepeatMode=Period, EveryReboot</code>), only <code>DescribeInvocationResults</code> can retrieve historical execution records (by specifying <code>IncludeHistory=true</code>). In contrast, <code>DescribeInvocations</code> only returns the latest task status.</li>
+     * <li>When you need to view the execution details of scheduled (periodic) tasks or tasks that execute at each system startup (<code>RepeatMode=Period, EveryReboot</code>), only <code>DescribeInvocationResults</code> can return the history of past execution records (you must specify <code>IncludeHistory=true</code>). <code>DescribeInvocations</code> returns only the latest task status.</li>
      * <li>When you need to view the command content or parameters, only <code>DescribeInvocations</code> returns <code>CommandContent</code>.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>$.parameters[11].schema.items.properties.Value.example</p>
+     * <p>Queries the execution results of one or more Cloud Assistant commands, that is, the actual execution results on ECS instances.</p>
      * 
      * @param request DescribeInvocationResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17856,30 +17856,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>API Guide</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must use this API to check the actual execution results, and the actual output takes precedence.</li>
-     * <li>You can query execution information from the last four weeks, with a maximum retention limit of 100,000 records.</li>
-     * <li>You can obtain job results through <a href="https://help.aliyun.com/document_detail/2669130.html">management event subscription for Cloud Assistant task status</a>, which avoids frequent polling and improves efficiency.</li>
-     * <li>When performing a paged query on the home page, you only need to set <code>MaxResults</code> to limit the number of returned entries. The <code>NextToken</code> in the return result serves as the credential for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> value obtained from the previous response as the query credential, and set <code>MaxResults</code> to limit the number of returned entries.</li>
+     * <li>After you execute a command, the command is not guaranteed to succeed or produce the expected results. Call this operation to view the actual execution results, which are based on the actual output.</li>
+     * <li>You can query execution information from the last 30 days. A maximum of 10,000 records of execution information can be retained.</li>
+     * <li>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, avoiding frequent polling and improving efficiency.</li>
+     * <li>When querying the first page of a paging query, set only <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> value returned in the result serves as the credential for querying subsequent pages. When querying subsequent pages, set <code>NextToken</code> to the value obtained from the previous response and set <code>MaxResults</code> to limit the number of entries returned.</li>
      * <li>Differences between <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code>:<ul>
-     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> invocation targets multiple instances:<ul>
-     * <li><code>DescribeInvocations</code> provides the execution status on each instance and an aggregation status across all instances.</li>
-     * <li><code>DescribeInvocationResults</code> only provides individual execution statuses per instance, without aggregated multi-instance status.</li>
+     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies multiple instances:<ul>
+     * <li><code>DescribeInvocations</code> returns the execution status on each instance and the aggregation status across multiple instances.</li>
+     * <li><code>DescribeInvocationResults</code> returns only the individual execution status on each instance, without the aggregation status across multiple instances.</li>
      * </ul>
      * </li>
-     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> invocation targets one instance:<ul>
-     * <li>There is little difference between <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code>, and they can fully replace each other.</li>
+     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies one instance:<ul>
+     * <li><code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> are largely interchangeable. You can replace one with the other.</li>
      * </ul>
      * </li>
-     * <li>When you need to view the execution history of scheduled (periodic) tasks or automatic startup tasks (<code>RepeatMode=Period, EveryReboot</code>), only <code>DescribeInvocationResults</code> can retrieve historical execution records (by specifying <code>IncludeHistory=true</code>). In contrast, <code>DescribeInvocations</code> only returns the latest task status.</li>
+     * <li>When you need to view the execution details of scheduled (periodic) tasks or tasks that execute at each system startup (<code>RepeatMode=Period, EveryReboot</code>), only <code>DescribeInvocationResults</code> can return the history of past execution records (you must specify <code>IncludeHistory=true</code>). <code>DescribeInvocations</code> returns only the latest task status.</li>
      * <li>When you need to view the command content or parameters, only <code>DescribeInvocations</code> returns <code>CommandContent</code>.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>$.parameters[11].schema.items.properties.Value.example</p>
+     * <p>Queries the execution results of one or more Cloud Assistant commands, that is, the actual execution results on ECS instances.</p>
      * 
      * @param request DescribeInvocationResultsRequest
      * @return DescribeInvocationResultsResponse
@@ -17892,28 +17892,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you execute a command, it does not necessarily mean that the command has run successfully or produced the expected effect. You must check the actual execution result through the API return value, and the actual output result takes precedence.</li>
-     * <li>You can query execution information from the past four weeks, with a maximum retention limit of 100,000 records.</li>
-     * <li>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status event notifications</a> to obtain task results via events, avoiding frequent polling and thereby improving efficiency.</li>
-     * <li>When performing a paged query on the home page, you only need to set <code>MaxResults</code> to limit the number of returned entries. The <code>NextToken</code> in the return result serves as the credential for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> obtained from the previous response as the query credential, and also set <code>MaxResults</code> to limit the number of returned entries.</li>
+     * <li>After you run a command, it does not necessarily run successfully or produce the expected results. You must check the actual execution results based on the return values of this operation.</li>
+     * <li>You can query execution information from the last 30 days. A maximum of 10,000 execution records are retained.</li>
+     * <li>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</li>
+     * <li>When paged query the first page of results, set only <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> value in the response serves as the token for querying subsequent pages. When paged query subsequent pages, set <code>NextToken</code> to the value obtained from the previous response and set <code>MaxResults</code> to limit the number of entries returned.</li>
      * <li>Differences between <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code>:<ul>
      * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies multiple instances:<ul>
-     * <li><code>DescribeInvocations</code> provides the execution status on each instance as well as the aggregated status across all instances.</li>
-     * <li><code>DescribeInvocationResults</code> only provides the individual execution status per instance, without the aggregated multi-instance status.</li>
+     * <li><code>DescribeInvocations</code> returns the execution status on each instance and the aggregated status across multiple instances.</li>
+     * <li><code>DescribeInvocationResults</code> returns only the individual execution status on each instance, without the aggregated status across multiple instances.</li>
      * </ul>
      * </li>
-     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies only one instance:<ul>
-     * <li>There is little difference between <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code>, and they can be used interchangeably.</li>
+     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies one instance:<ul>
+     * <li><code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> are largely interchangeable.</li>
      * </ul>
      * </li>
-     * <li>When you need to view the execution history of scheduled (periodic) tasks or tasks that automatically run at system startup (<code>RepeatMode=Period, EveryReboot</code>), only <code>DescribeInvocationResults</code> can retrieve historical execution records (by specifying <code>IncludeHistory=true</code>). In contrast, <code>DescribeInvocations</code> only returns the latest task status.</li>
-     * <li>When you need to view the command content and parameters, only <code>DescribeInvocations</code> returns <code>CommandContent</code>.</li>
+     * <li>When you want to view the execution history of scheduled (periodic) tasks or tasks that run automatically at instance startup (<code>RepeatMode=Period, EveryReboot</code>), only <code>DescribeInvocationResults</code> can return historical execution records (you must specify <code>IncludeHistory=true</code>). <code>DescribeInvocations</code> returns only the latest task status.</li>
+     * <li>When you want to view the command content and parameters, only <code>DescribeInvocations</code> returns <code>CommandContent</code>.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the DescribeInvocations API to query the execution list and status of Cloud Assistant commands.</p>
+     * <p>Queries the execution list and status of Cloud Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18030,28 +18030,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you execute a command, it does not necessarily mean that the command has run successfully or produced the expected effect. You must check the actual execution result through the API return value, and the actual output result takes precedence.</li>
-     * <li>You can query execution information from the past four weeks, with a maximum retention limit of 100,000 records.</li>
-     * <li>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status event notifications</a> to obtain task results via events, avoiding frequent polling and thereby improving efficiency.</li>
-     * <li>When performing a paged query on the home page, you only need to set <code>MaxResults</code> to limit the number of returned entries. The <code>NextToken</code> in the return result serves as the credential for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> obtained from the previous response as the query credential, and also set <code>MaxResults</code> to limit the number of returned entries.</li>
+     * <li>After you run a command, it does not necessarily run successfully or produce the expected results. You must check the actual execution results based on the return values of this operation.</li>
+     * <li>You can query execution information from the last 30 days. A maximum of 10,000 execution records are retained.</li>
+     * <li>You can subscribe to <a href="https://help.aliyun.com/document_detail/2669130.html">Cloud Assistant task status events</a> to obtain task results through events, which avoids frequent polling and improves efficiency.</li>
+     * <li>When paged query the first page of results, set only <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> value in the response serves as the token for querying subsequent pages. When paged query subsequent pages, set <code>NextToken</code> to the value obtained from the previous response and set <code>MaxResults</code> to limit the number of entries returned.</li>
      * <li>Differences between <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code>:<ul>
      * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies multiple instances:<ul>
-     * <li><code>DescribeInvocations</code> provides the execution status on each instance as well as the aggregated status across all instances.</li>
-     * <li><code>DescribeInvocationResults</code> only provides the individual execution status per instance, without the aggregated multi-instance status.</li>
+     * <li><code>DescribeInvocations</code> returns the execution status on each instance and the aggregated status across multiple instances.</li>
+     * <li><code>DescribeInvocationResults</code> returns only the individual execution status on each instance, without the aggregated status across multiple instances.</li>
      * </ul>
      * </li>
-     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies only one instance:<ul>
-     * <li>There is little difference between <code>DescribeInvocations</code> and <code>DescribeInvocationResults</code>, and they can be used interchangeably.</li>
+     * <li>When a single <code>RunCommand</code>/<code>InvokeCommand</code> call specifies one instance:<ul>
+     * <li><code>DescribeInvocations</code> and <code>DescribeInvocationResults</code> are largely interchangeable.</li>
      * </ul>
      * </li>
-     * <li>When you need to view the execution history of scheduled (periodic) tasks or tasks that automatically run at system startup (<code>RepeatMode=Period, EveryReboot</code>), only <code>DescribeInvocationResults</code> can retrieve historical execution records (by specifying <code>IncludeHistory=true</code>). In contrast, <code>DescribeInvocations</code> only returns the latest task status.</li>
-     * <li>When you need to view the command content and parameters, only <code>DescribeInvocations</code> returns <code>CommandContent</code>.</li>
+     * <li>When you want to view the execution history of scheduled (periodic) tasks or tasks that run automatically at instance startup (<code>RepeatMode=Period, EveryReboot</code>), only <code>DescribeInvocationResults</code> can return historical execution records (you must specify <code>IncludeHistory=true</code>). <code>DescribeInvocations</code> returns only the latest task status.</li>
+     * <li>When you want to view the command content and parameters, only <code>DescribeInvocations</code> returns <code>CommandContent</code>.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke the DescribeInvocations API to query the execution list and status of Cloud Assistant commands.</p>
+     * <p>Queries the execution list and status of Cloud Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -21309,15 +21309,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Operation description:</h2>
      * <ul>
-     * <li>When you send a file, the file may fail to be sent to specific Elastic Compute Service (ECS) instances. You can call this operation to check the file sending results.</li>
-     * <li>You can call this operation to query the file sending records within the last six weeks.</li>
-     * <li>During a paged query, when you call the DescribeSendFileResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeSendFileResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * <li>After you send a file, the file is not necessarily sent successfully. You must check the actual delivery result based on the return value of this operation. The actual output prevails.</li>
+     * <li>You can query execution information from the last 30 days. A maximum of 10,000 entries of execution information can be retained.</li>
+     * <li>When you perform a paging query for the first page, set only <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> value obtained from the previous response and set <code>MaxResults</code> to limit the number of entries returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the files sent by Cloud Assistant and their status.</p>
+     * <p>Queries the list and status of files sent by Cloud Assistant by calling DescribeSendFileResults.</p>
      * 
      * @param request DescribeSendFileResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21409,15 +21409,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
+     * <h2>Operation description:</h2>
      * <ul>
-     * <li>When you send a file, the file may fail to be sent to specific Elastic Compute Service (ECS) instances. You can call this operation to check the file sending results.</li>
-     * <li>You can call this operation to query the file sending records within the last six weeks.</li>
-     * <li>During a paged query, when you call the DescribeSendFileResults operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeSendFileResults operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</li>
+     * <li>After you send a file, the file is not necessarily sent successfully. You must check the actual delivery result based on the return value of this operation. The actual output prevails.</li>
+     * <li>You can query execution information from the last 30 days. A maximum of 10,000 entries of execution information can be retained.</li>
+     * <li>When you perform a paging query for the first page, set only <code>MaxResults</code> to limit the number of entries returned. The <code>NextToken</code> value in the response serves as the token for querying subsequent pages. When querying subsequent pages, set the <code>NextToken</code> parameter to the <code>NextToken</code> value obtained from the previous response and set <code>MaxResults</code> to limit the number of entries returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the files sent by Cloud Assistant and their status.</p>
+     * <p>Queries the list and status of files sent by Cloud Assistant by calling DescribeSendFileResults.</p>
      * 
      * @param request DescribeSendFileResultsRequest
      * @return DescribeSendFileResultsResponse
@@ -22837,10 +22837,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the session records of Session Manager that were generated in the last four weeks.</p>
+     * <p>You can query Session Manager session records created within the last 30 days. A maximum of 1,000 successful records are retained.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the session records of Elastic Compute Service (ECS) Session Manager.</p>
+     * <p>Queries the session history of Session Manager.</p>
      * 
      * @param request DescribeTerminalSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22904,10 +22904,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the session records of Session Manager that were generated in the last four weeks.</p>
+     * <p>You can query Session Manager session records created within the last 30 days. A maximum of 1,000 successful records are retained.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the session records of Elastic Compute Service (ECS) Session Manager.</p>
+     * <p>Queries the session history of Session Manager.</p>
      * 
      * @param request DescribeTerminalSessionsRequest
      * @return DescribeTerminalSessionsResponse
@@ -29816,19 +29816,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>When modifying the bandwidth configuration of a subscription (PrePaid) instance, a public IP address is automatically allocated when the maximum outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value.</p>
+     * <li><p>When you modify the bandwidth configuration of a subscription (PrePaid) instance, a public IP address is automatically allocated if the outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value.</p>
      * </li>
-     * <li><p>When modifying the bandwidth configuration of a pay-as-you-go (PostPaid) instance, a public IP address is not automatically allocated when the maximum outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value. You need to set the <code>AllocatePublicIp</code> parameter to <code>true</code> to allocate a public IP address.</p>
-     * </li>
-     * <li><p>For classic network (Classic) instances, when the maximum outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value, the instance must be in the Stopped state.</p>
+     * <li><p>When you modify the bandwidth configuration of a pay-as-you-go (PostPaid) instance, a public IP address is not automatically allocated if the outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value. You need to set the <code>AllocatePublicIp</code> parameter to <code>true</code> to allocate a public IP address.</p>
      * <blockquote>
-     * <p>Within a single region, there is a limit on the total peak pay-by-bandwidth public bandwidth for a single Alibaba Cloud account. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</p>
+     * <p>In a single region, the total peak pay-by-bandwidth public bandwidth of a single Alibaba Cloud account is subject to a limit. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</p>
      * </blockquote>
      * </li>
      * <li><p>Fees:</p>
      * <ul>
-     * <li>After upgrading bandwidth, the payment is automatically deducted by default. Make sure your payment method has sufficient balance. Otherwise, an abnormal order will be generated and can only be voided. If your account balance is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the ECS console to pay for the order.</li>
-     * <li>After downgrading bandwidth, the price difference is refunded through the original payment method. Coupons that have already been used are not refunded.</li>
+     * <li>After the bandwidth is upgraded, the payment is automatically deducted by default. Make sure that your payment method has sufficient balance. Otherwise, an abnormal order is generated, and you can only cancel the order. If your account balance is insufficient, you can set the AutoPay parameter to false. In this case, a normal unpaid order is generated. You can log on to the ECS console to pay for the order.</li>
+     * <li>After the bandwidth is downgraded, the price difference is refunded to the original payment method. Vouchers that have been used are not refundable.</li>
      * </ul>
      * </li>
      * </ul>
@@ -29919,19 +29917,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>When modifying the bandwidth configuration of a subscription (PrePaid) instance, a public IP address is automatically allocated when the maximum outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value.</p>
+     * <li><p>When you modify the bandwidth configuration of a subscription (PrePaid) instance, a public IP address is automatically allocated if the outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value.</p>
      * </li>
-     * <li><p>When modifying the bandwidth configuration of a pay-as-you-go (PostPaid) instance, a public IP address is not automatically allocated when the maximum outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value. You need to set the <code>AllocatePublicIp</code> parameter to <code>true</code> to allocate a public IP address.</p>
-     * </li>
-     * <li><p>For classic network (Classic) instances, when the maximum outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value, the instance must be in the Stopped state.</p>
+     * <li><p>When you modify the bandwidth configuration of a pay-as-you-go (PostPaid) instance, a public IP address is not automatically allocated if the outbound public bandwidth (InternetMaxBandwidthOut) is upgraded from 0 Mbit/s to a non-zero value. You need to set the <code>AllocatePublicIp</code> parameter to <code>true</code> to allocate a public IP address.</p>
      * <blockquote>
-     * <p>Within a single region, there is a limit on the total peak pay-by-bandwidth public bandwidth for a single Alibaba Cloud account. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</p>
+     * <p>In a single region, the total peak pay-by-bandwidth public bandwidth of a single Alibaba Cloud account is subject to a limit. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</p>
      * </blockquote>
      * </li>
      * <li><p>Fees:</p>
      * <ul>
-     * <li>After upgrading bandwidth, the payment is automatically deducted by default. Make sure your payment method has sufficient balance. Otherwise, an abnormal order will be generated and can only be voided. If your account balance is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the ECS console to pay for the order.</li>
-     * <li>After downgrading bandwidth, the price difference is refunded through the original payment method. Coupons that have already been used are not refunded.</li>
+     * <li>After the bandwidth is upgraded, the payment is automatically deducted by default. Make sure that your payment method has sufficient balance. Otherwise, an abnormal order is generated, and you can only cancel the order. If your account balance is insufficient, you can set the AutoPay parameter to false. In this case, a normal unpaid order is generated. You can log on to the ECS console to pay for the order.</li>
+     * <li>After the bandwidth is downgraded, the price difference is refunded to the original payment method. Vouchers that have been used are not refundable.</li>
      * </ul>
      * </li>
      * </ul>
@@ -37421,28 +37417,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>API Guide</h2>
-     * <p>When you customize a remote connection client through code, you can invoke this API to obtain the WebSocketUrl for remotely connecting to an ECS instance. Note the following when invoking this API:</p>
+     * <h2>Operation description</h2>
+     * <p>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for establishing a remote connection to an ECS instance. Take note of the following items:</p>
      * <ul>
      * <li>The specified ECS instance must be in the running state.</li>
-     * <li>The specified ECS instance must have the Cloud Assistant Agent installed. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether the Cloud Assistant Agent is installed on the ECS instance and to query its version number.<ul>
-     * <li>If the Cloud Assistant Agent is not installed on your ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</li>
-     * <li>The Cloud Assistant Agent version must be higher than the following versions to support the Session Manager feature. To upgrade the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable automatic upgrade of Cloud Assistant Agent</a>.<ul>
+     * <li>The specified ECS instance must have Cloud Assistant Agent installed. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of Cloud Assistant Agent.<ul>
+     * <li>If Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</li>
+     * <li>Cloud Assistant Agent must be later than the following versions to support the session management feature. To upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.<ul>
      * <li>Linux operating system: 2.2.3.256</li>
      * <li>Windows operating system: 2.1.3.256</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
-     * <li>After successful invocation of this API, the WebSocketUrl remains valid for 10 minutes.</li>
-     * <li>If no data transmission occurs within 3 minutes after the session is established, Cloud Assistant shuts down the connection.</li>
-     * <li>Within the same Region, the number of created and active sessions cannot exceed 1,000. The number of sessions in Connection Status per ECS instance cannot exceed 20. The bandwidth limit for a single session is 200 kb/s.</li>
-     * <li>The port forwarding feature currently supports TCP port forwarding only and does not support UDP.</li>
-     * <li>To permanently close a session and invalidate the WebSocketUrl, invoke the EndTerminalSession API.</li>
+     * <li>After this operation is invoked, the WebSocketUrl is valid for 10 minutes.</li>
+     * <li>After a session is established, Cloud Assistant performs a shutdown of the connection if no data is transmitted for 3 minutes.</li>
+     * <li>In a single region, up to 100 sessions can be created and available. A single ECS instance can have up to 20 active sessions. The bandwidth limit for a single session is 200 KB/s.</li>
+     * <li>The port forwarding feature supports only TCP port forwarding. UDP is not supported.</li>
+     * <li>To permanently shutdown a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke StartTerminalSession to create a session based on the Session Manager feature. You can establish a WebSocket session with an ECS instance by specifying its instance ID. Use the WebSocketUrl returned by the API to remotely connect to the ECS instance.</p>
+     * <p>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by this operation allows you to establish a remote connection to the ECS instance.</p>
      * 
      * @param tmpReq StartTerminalSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37536,28 +37532,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>API Guide</h2>
-     * <p>When you customize a remote connection client through code, you can invoke this API to obtain the WebSocketUrl for remotely connecting to an ECS instance. Note the following when invoking this API:</p>
+     * <h2>Operation description</h2>
+     * <p>When you customize a remote connection client by using code, you can invoke this operation to obtain the WebSocketUrl for establishing a remote connection to an ECS instance. Take note of the following items:</p>
      * <ul>
      * <li>The specified ECS instance must be in the running state.</li>
-     * <li>The specified ECS instance must have the Cloud Assistant Agent installed. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether the Cloud Assistant Agent is installed on the ECS instance and to query its version number.<ul>
-     * <li>If the Cloud Assistant Agent is not installed on your ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</li>
-     * <li>The Cloud Assistant Agent version must be higher than the following versions to support the Session Manager feature. To upgrade the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable automatic upgrade of Cloud Assistant Agent</a>.<ul>
+     * <li>The specified ECS instance must have Cloud Assistant Agent installed. You can invoke <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of Cloud Assistant Agent.<ul>
+     * <li>If Cloud Assistant Agent is not installed on the ECS instance, invoke <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> to install it.</li>
+     * <li>Cloud Assistant Agent must be later than the following versions to support the session management feature. To upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.<ul>
      * <li>Linux operating system: 2.2.3.256</li>
      * <li>Windows operating system: 2.1.3.256</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
-     * <li>After successful invocation of this API, the WebSocketUrl remains valid for 10 minutes.</li>
-     * <li>If no data transmission occurs within 3 minutes after the session is established, Cloud Assistant shuts down the connection.</li>
-     * <li>Within the same Region, the number of created and active sessions cannot exceed 1,000. The number of sessions in Connection Status per ECS instance cannot exceed 20. The bandwidth limit for a single session is 200 kb/s.</li>
-     * <li>The port forwarding feature currently supports TCP port forwarding only and does not support UDP.</li>
-     * <li>To permanently close a session and invalidate the WebSocketUrl, invoke the EndTerminalSession API.</li>
+     * <li>After this operation is invoked, the WebSocketUrl is valid for 10 minutes.</li>
+     * <li>After a session is established, Cloud Assistant performs a shutdown of the connection if no data is transmitted for 3 minutes.</li>
+     * <li>In a single region, up to 100 sessions can be created and available. A single ECS instance can have up to 20 active sessions. The bandwidth limit for a single session is 200 KB/s.</li>
+     * <li>The port forwarding feature supports only TCP port forwarding. UDP is not supported.</li>
+     * <li>To permanently shutdown a session and invalidate the WebSocketUrl, invoke the EndTerminalSession operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke StartTerminalSession to create a session based on the Session Manager feature. You can establish a WebSocket session with an ECS instance by specifying its instance ID. Use the WebSocketUrl returned by the API to remotely connect to the ECS instance.</p>
+     * <p>Invokes StartTerminalSession to create a session based on the session management feature. You can establish a WebSocket session with an ECS instance by specifying the instance ID. The WebSocketUrl returned by this operation allows you to establish a remote connection to the ECS instance.</p>
      * 
      * @param request StartTerminalSessionRequest
      * @return StartTerminalSessionResponse

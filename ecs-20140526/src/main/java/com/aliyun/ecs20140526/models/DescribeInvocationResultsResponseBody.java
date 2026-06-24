@@ -5,59 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationResultsResponseBody extends TeaModel {
     /**
-     * <p>The execution status of the command task. Valid values:</p>
-     * <ul>
-     * <li><p>Running:</p>
-     * <ul>
-     * <li><p>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</p>
-     * </li>
-     * <li><p>One-time task: If the command is being run on instances, the execution state is Running.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>Finished:</p>
-     * <ul>
-     * <li><p>Scheduled task: The execution state can never be Finished.</p>
-     * </li>
-     * <li><p>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>Success:</p>
-     * <ul>
-     * <li><p>One-time task: The execution is complete, and the exit code is 0.</p>
-     * </li>
-     * <li><p>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>Failed:</p>
-     * <ul>
-     * <li><p>Scheduled task: The execution state can never be Failed.</p>
-     * </li>
-     * <li><p>One-time task: The execution fails on all instances.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>PartialFailed:</p>
-     * <ul>
-     * <li><p>Scheduled task: The execution state can never be PartialFailed.</p>
-     * </li>
-     * <li><p>One-time task: The execution fails on some instances.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>Stopped: The task is stopped.</p>
-     * </li>
-     * <li><p>Stopping: The task is being stopped.</p>
-     * </li>
-     * </ul>
+     * <p>The collection of command execution results.</p>
      */
     @NameInMap("Invocation")
     public DescribeInvocationResultsResponseBodyInvocation invocation;
 
     /**
-     * <p>The ID of the command.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
@@ -442,9 +396,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public DescribeInvocationResultsResponseBodyInvocationInvocationResults invocationResults;
 
         /**
-         * <blockquote>
-         * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
-         * </blockquote>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -453,14 +405,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
-         * <ul>
-         * <li><p>PlainText: returns the original command content and command output.</p>
-         * </li>
-         * <li><p>Base64: returns the Base64-encoded command content and command output.</p>
-         * </li>
-         * </ul>
-         * <p>Default value: Base64.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -469,14 +414,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
-         * <ul>
-         * <li><p>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</p>
-         * </li>
-         * <li><p>false: does not return the results of historical scheduled executions.</p>
-         * </li>
-         * </ul>
-         * <p>Default value: false.</p>
+         * <p>The number of entries per page in the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -485,9 +423,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <blockquote>
-         * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
-         * </blockquote>
+         * <p>The total number of commands.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

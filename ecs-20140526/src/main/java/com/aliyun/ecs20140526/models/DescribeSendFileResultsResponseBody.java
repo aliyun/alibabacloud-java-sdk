@@ -8,7 +8,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     public DescribeSendFileResultsResponseBodyInvocations invocations;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -17,7 +17,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of file sending tasks queried.</p>
+     * <p>The total number of scripts.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
