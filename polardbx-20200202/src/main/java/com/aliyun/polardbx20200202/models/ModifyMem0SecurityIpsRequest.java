@@ -15,7 +15,7 @@ public class ModifyMem0SecurityIpsRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The name of the whitelist group for the instance.</p>
+     * <p>The name of the whitelist group of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

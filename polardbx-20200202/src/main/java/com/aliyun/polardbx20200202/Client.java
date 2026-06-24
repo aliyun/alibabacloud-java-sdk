@@ -264,6 +264,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, to ensure operation safety.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a public domain name for a Mem0 instance.</p>
+     * 
+     * @param request AllocateMem0PublicConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AllocateMem0PublicConnectionResponse
+     */
+    public AllocateMem0PublicConnectionResponse allocateMem0PublicConnectionWithOptions(AllocateMem0PublicConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionStringPrefix)) {
+            query.put("ConnectionStringPrefix", request.connectionStringPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AllocateMem0PublicConnection"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AllocateMem0PublicConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to confirm that no active connections exist before a rollback task, to ensure operation safety.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a public domain name for a Mem0 instance.</p>
+     * 
+     * @param request AllocateMem0PublicConnectionRequest
+     * @return AllocateMem0PublicConnectionResponse
+     */
+    public AllocateMem0PublicConnectionResponse allocateMem0PublicConnection(AllocateMem0PublicConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.allocateMem0PublicConnectionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Mounts a columnar instance to a specified primary database instance.</p>
      * 
@@ -7198,10 +7260,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the whitelist of a memory engine instance.</p>
+     * <p>Modifies the whitelist of a memory engine.</p>
      * 
      * @param request ModifyMem0SecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7249,10 +7311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the whitelist of a memory engine instance.</p>
+     * <p>Modifies the whitelist of a memory engine.</p>
      * 
      * @param request ModifyMem0SecurityIpsRequest
      * @return ModifyMem0SecurityIpsResponse
@@ -7596,6 +7658,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleaseInstancePublicConnectionResponse releaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseInstancePublicConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to verify that no active connections exist before a rollback task to ensure operational safety.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public domain name for a Mem0 instance.</p>
+     * 
+     * @param request ReleaseMem0PublicConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleaseMem0PublicConnectionResponse
+     */
+    public ReleaseMem0PublicConnectionResponse releaseMem0PublicConnectionWithOptions(ReleaseMem0PublicConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentConnectionString)) {
+            query.put("CurrentConnectionString", request.currentConnectionString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReleaseMem0PublicConnection"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseMem0PublicConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to verify that no active connections exist before a rollback task to ensure operational safety.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public domain name for a Mem0 instance.</p>
+     * 
+     * @param request ReleaseMem0PublicConnectionRequest
+     * @return ReleaseMem0PublicConnectionResponse
+     */
+    public ReleaseMem0PublicConnectionResponse releaseMem0PublicConnection(ReleaseMem0PublicConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.releaseMem0PublicConnectionWithOptions(request, runtime);
     }
 
     /**

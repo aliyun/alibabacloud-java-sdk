@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details about the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ModifyMem0SecurityIpsResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The data struct.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public ModifyMem0SecurityIpsResponseBodyData data;
@@ -56,7 +56,7 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
 
     public static class ModifyMem0SecurityIpsResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The operation name.</p>
+         * <p>The API operation name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -65,7 +65,7 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the identity used for authentication in the request.</p>
+         * <p>The identity used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -74,7 +74,7 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the authenticated principal belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the identity used for authentication belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,10 +83,10 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the identity used for authentication in the request. Valid values:</p>
+         * <p>The type of identity used for authentication in the request. Valid values:</p>
          * <ul>
-         * <li>SubUser: RAM user</li>
-         * <li>AssumedRoleUser: RAM role</li>
+         * <li>SubUser: RAM user.</li>
+         * <li>AssumedRoleUser: RAM role.</li>
          * <li>Federated: SSO federated identity.</li>
          * </ul>
          * 
@@ -97,7 +97,7 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encrypted complete diagnostic message.</p>
+         * <p>The encrypted complete diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -106,9 +106,9 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of denial by the access policy. Valid values:</p>
+         * <p>The type of the permission denial. Valid values:</p>
          * <ul>
-         * <li><strong>ImplicitDeny</strong>: The resource owner has not configured a relevant permission policy for the current user. Unauthorized operations are denied by default.</li>
+         * <li><strong>ImplicitDeny</strong>: The resource owner has not granted the required permissions to the current user. Unauthorized operations are denied by default.</li>
          * <li><strong>ExplicitDeny</strong>: The RAM policy configured by the resource owner explicitly denies the current user access to the corresponding resource.</li>
          * </ul>
          * 
@@ -119,7 +119,7 @@ public class ModifyMem0SecurityIpsResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>PolicyType</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
