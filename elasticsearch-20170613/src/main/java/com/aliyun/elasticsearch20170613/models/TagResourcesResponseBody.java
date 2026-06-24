@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3D8795D9-8FF5-46B2-86E6-E3B407*******</p>
      */
@@ -12,6 +14,12 @@ public class TagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result. Valid values:</p>
+     * <ul>
+     * <li>true: The tag-resource relationships are created.</li>
+     * <li>false: The tag-resource relationships failed to be created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

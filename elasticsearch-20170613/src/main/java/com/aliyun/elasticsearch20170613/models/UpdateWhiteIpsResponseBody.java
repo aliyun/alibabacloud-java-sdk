@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWhiteIpsResponseBody extends TeaModel {
     /**
-     * <p>The updated whitelist.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8D58B014-BBD7-4D80-B219-00B9D5C6860C</p>
@@ -14,7 +14,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The network configurations.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public UpdateWhiteIpsResponseBodyResult result;
@@ -42,7 +42,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
 
     public static class UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList extends TeaModel {
         /**
-         * <p>The type of the whitelist. The value of this parameter is fixed as PRIVATE_ES, which indicates a private IP address whitelist.</p>
+         * <p>The name of the whitelist group. The default group is included by default.</p>
          * 
          * <strong>example:</strong>
          * <p>test_group</p>
@@ -50,10 +50,15 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <p>The IP address information in the whitelist group.</p>
+         */
         @NameInMap("ips")
         public java.util.List<String> ips;
 
         /**
+         * <p>The whitelist type. The value is fixed as PRIVATE_ES, which indicates the private network internal-facing access whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIVATE_ES</p>
          */
@@ -93,7 +98,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
 
     public static class UpdateWhiteIpsResponseBodyResultNetworkConfig extends TeaModel {
         /**
-         * <p>The IP addresses in the whitelist.</p>
+         * <p>The list of whitelist groups.</p>
          */
         @NameInMap("whiteIpGroupList")
         public java.util.List<UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList> whiteIpGroupList;
@@ -115,13 +120,13 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
 
     public static class UpdateWhiteIpsResponseBodyResult extends TeaModel {
         /**
-         * <p>The list of whitelists.</p>
+         * <p>The private network internal-facing access whitelist (deprecated).</p>
          */
         @NameInMap("esIPWhitelist")
         public java.util.List<String> esIPWhitelist;
 
         /**
-         * <p>The name of the whitelist. By default, the default whitelist is included.</p>
+         * <p>The network configuration.</p>
          */
         @NameInMap("networkConfig")
         public UpdateWhiteIpsResponseBodyResultNetworkConfig networkConfig;

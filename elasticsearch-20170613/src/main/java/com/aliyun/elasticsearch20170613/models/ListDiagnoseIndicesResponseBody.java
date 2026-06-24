@@ -13,6 +13,9 @@ public class ListDiagnoseIndicesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

@@ -4,10 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ValidateShrinkNodesRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public java.util.List<ValidateShrinkNodesRequestBody> body;
 
     /**
+     * <p>The number of nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,7 +20,11 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to ignore the cluster health status.</p>
+     * <ul>
+     * <li>true: ignores the cluster health status.</li>
+     * <li>false (default): does not ignore the cluster health status.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,10 +33,10 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     public Boolean ignoreStatus;
 
     /**
-     * <p>Returned results:</p>
+     * <p>The type of nodes to scale in. Valid values:</p>
      * <ul>
-     * <li>true: can be scaled in</li>
-     * <li>false: cannot be scaled in.</li>
+     * <li>WORKER: hot node</li>
+     * <li>WORKER_WARM: warm node</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -76,6 +85,8 @@ public class ValidateShrinkNodesRequest extends TeaModel {
 
     public static class ValidateShrinkNodesRequestBody extends TeaModel {
         /**
+         * <p>The IP address of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.xx.xx</p>
          */
@@ -83,6 +94,8 @@ public class ValidateShrinkNodesRequest extends TeaModel {
         public String host;
 
         /**
+         * <p>The node name of the cloud-native ACK-based cluster. You can call the <a href="https://help.aliyun.com/document_detail/183958.html">ListAllNode</a> operation to obtain the node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-cn-pl32xxxxxxx-data-f-1</p>
          */
@@ -90,6 +103,12 @@ public class ValidateShrinkNodesRequest extends TeaModel {
         public String hostName;
 
         /**
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>WORKER: hot node</li>
+         * <li>WORKER_WARM: warm node</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>WORKER</p>
          */
@@ -97,6 +116,8 @@ public class ValidateShrinkNodesRequest extends TeaModel {
         public String nodeType;
 
         /**
+         * <p>The access port number of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>9200</p>
          */
@@ -104,6 +125,8 @@ public class ValidateShrinkNodesRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The zone ID of the node in the instance. For example, the zone ID of China (Shanghai) Zone C is cn-shanghai-c.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai-c</p>
          */

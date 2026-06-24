@@ -5,22 +5,39 @@ import com.aliyun.tea.*;
 
 public class Elasticsearch extends TeaModel {
     /**
+     * <p>Indicates whether the new dedicated master node is enabled. Valid values:</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("advancedDedicateMaster")
     public Boolean advancedDedicateMaster;
 
+    /**
+     * <p>The advanced settings.</p>
+     */
     @NameInMap("advancedSetting")
     public ElasticsearchAdvancedSetting advancedSetting;
 
+    /**
+     * <p>The Aliws dictionary configuration.</p>
+     */
     @NameInMap("aliwsDicts")
     public java.util.List<DictInfo> aliwsDicts;
 
+    /**
+     * <p>The client node configuration.</p>
+     */
     @NameInMap("clientNodeConfiguration")
     public ClientNodeConfiguration clientNodeConfiguration;
 
     /**
+     * <p>The time when the instance was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-07-13T03:58:07.253Z</p>
      */
@@ -28,6 +45,12 @@ public class Elasticsearch extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>Indicates whether the instance contains data nodes. Valid values:</p>
+     * <ul>
+     * <li>true: The instance contains data nodes.</li>
+     * <li>false: The instance does not contain data nodes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,6 +58,8 @@ public class Elasticsearch extends TeaModel {
     public Boolean dataNode;
 
     /**
+     * <p>Indicates whether the instance contains legacy dedicated master nodes (deprecated).</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -42,26 +67,42 @@ public class Elasticsearch extends TeaModel {
     public Boolean dedicateMaster;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>es-cn-abc</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The IK dictionary configuration.</p>
+     */
     @NameInMap("dictList")
     public java.util.List<DictInfo> dictList;
 
     /**
+     * <p>The private network access address of the Elasticsearch instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>es-cn-3h4k3axh33th9****.elasticsearch.aliyuncs.com</p>
      */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <p>The elastic data node configuration.</p>
+     */
     @NameInMap("elasticDataNodeConfiguration")
     public ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
     /**
+     * <p>Indicates whether private network access to Kibana is enabled. Valid values:</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -69,6 +110,12 @@ public class Elasticsearch extends TeaModel {
     public Boolean enableKibanaPrivateNetwork;
 
     /**
+     * <p>Indicates whether public network access to Kibana is enabled. Valid values:</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -76,6 +123,12 @@ public class Elasticsearch extends TeaModel {
     public Boolean enableKibanaPublicNetwork;
 
     /**
+     * <p>Indicates whether the public network address of the instance is enabled. Valid values:</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,29 +136,48 @@ public class Elasticsearch extends TeaModel {
     public Boolean enablePublic;
 
     /**
+     * <p>The time when the instance expires. For pay-as-you-go instances, the default value is 100 years.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>The YML file configuration of the instance.</p>
+     */
     @NameInMap("esConfig")
     public java.util.Map<String, String> esConfig;
 
+    /**
+     * <p>The private network access whitelist configuration of the instance (deprecated).</p>
+     */
     @NameInMap("esIPWhitelist")
     public java.util.List<String> esIPWhitelist;
 
     /**
+     * <p>The instance version.</p>
+     * 
      * <strong>example:</strong>
      * <p>6.3.2_with_X-Pack</p>
      */
     @NameInMap("esVersion")
     public String esVersion;
 
+    /**
+     * <p>The extension parameter settings of the instance.</p>
+     */
     @NameInMap("extendConfigs")
     public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
     /**
+     * <p>Indicates whether client nodes are enabled. Valid values:</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -113,6 +185,12 @@ public class Elasticsearch extends TeaModel {
     public Boolean haveClientNode;
 
     /**
+     * <p>Indicates whether elastic data nodes are enabled. Valid values:</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -120,36 +198,57 @@ public class Elasticsearch extends TeaModel {
     public Boolean haveElasticDataNode;
 
     /**
+     * <p>Indicates whether the instance contains Kibana nodes. Valid values:</p>
+     * <ul>
+     * <li>true: The instance contains Kibana nodes.</li>
+     * <li>false: The instance does not contain Kibana nodes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("haveKibana")
     public Boolean haveKibana;
 
+    /**
+     * <p>The IK hot dictionary configuration.</p>
+     */
     @NameInMap("ikHotDicts")
     public java.util.List<DictInfo> ikHotDicts;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>es-cn-3h4k3axh33th9****</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The Kibana node configuration.</p>
+     */
     @NameInMap("kibanaConfiguration")
     public KibanaNodeConfiguration kibanaConfiguration;
 
     /**
+     * <p>The public network access address of Kibana.</p>
+     * 
      * <strong>example:</strong>
      * <p>es-cn-3h4k3axh33th9****.kibana.elasticsearch.aliyuncs.com</p>
      */
     @NameInMap("kibanaDomain")
     public String kibanaDomain;
 
+    /**
+     * <p>The public network access whitelist configuration of Kibana.</p>
+     */
     @NameInMap("kibanaIPWhitelist")
     public java.util.List<String> kibanaIPWhitelist;
 
     /**
+     * <p>The public network access port of Kibana.</p>
+     * 
      * <strong>example:</strong>
      * <p>5601</p>
      */
@@ -157,16 +256,23 @@ public class Elasticsearch extends TeaModel {
     public Long kibanaPort;
 
     /**
+     * <p>The private network access address of Kibana.</p>
+     * 
      * <strong>example:</strong>
      * <p>es-cn-tl329rbpc0001****-kibana.internal.elasticsearch.aliyuncs.com</p>
      */
     @NameInMap("kibanaPrivateDomain")
     public String kibanaPrivateDomain;
 
+    /**
+     * <p>The IP whitelist configuration for private network access to Kibana.</p>
+     */
     @NameInMap("kibanaPrivateIPWhitelist")
     public java.util.List<String> kibanaPrivateIPWhitelist;
 
     /**
+     * <p>The private network access port of Kibana.</p>
+     * 
      * <strong>example:</strong>
      * <p>5601</p>
      */
@@ -174,29 +280,48 @@ public class Elasticsearch extends TeaModel {
     public Long kibanaPrivatePort;
 
     /**
+     * <p>The access protocol for Kibana. Valid values: HTTP and HTTPS.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTPS</p>
      */
     @NameInMap("kibanaProtocol")
     public String kibanaProtocol;
 
+    /**
+     * <p>The dedicated master node configuration.</p>
+     */
     @NameInMap("masterConfiguration")
     public MasterNodeConfiguration masterConfiguration;
 
+    /**
+     * <p>The network configuration of the instance.</p>
+     */
     @NameInMap("networkConfig")
     public NetworkConfig networkConfig;
 
     /**
+     * <p>The number of data nodes in the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("nodeAmount")
     public Long nodeAmount;
 
+    /**
+     * <p>The data node configuration.</p>
+     */
     @NameInMap("nodeSpec")
     public NodeSpec nodeSpec;
 
     /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li>prepaid: subscription.</li>
+     * <li>postpaid: pay-as-you-go.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>prepaid</p>
      */
@@ -204,16 +329,27 @@ public class Elasticsearch extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The private network access port of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>9200</p>
      */
     @NameInMap("port")
     public Long port;
 
+    /**
+     * <p>The private network address access whitelist configuration of the instance.</p>
+     */
     @NameInMap("privateNetworkIpWhiteList")
     public java.util.List<String> privateNetworkIpWhiteList;
 
     /**
+     * <p>The instance edition. Valid values:</p>
+     * <ul>
+     * <li>logEnhancement: Advanced Edition.</li>
+     * <li>generalBusiness: general commercial edition.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>generalBusiness</p>
      */
@@ -221,6 +357,8 @@ public class Elasticsearch extends TeaModel {
     public String productType;
 
     /**
+     * <p>The access protocol of the instance. Valid values: HTTP and HTTPS.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -228,26 +366,38 @@ public class Elasticsearch extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The public network access address of the Elasticsearch instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>es-cn-3h4k3axh33th9****.elasticsearch.aliyuncs.com</p>
      */
     @NameInMap("publicDomain")
     public String publicDomain;
 
+    /**
+     * <p>The public network access whitelist configuration of the instance.</p>
+     */
     @NameInMap("publicIpWhitelist")
     public java.util.List<String> publicIpWhitelist;
 
     /**
+     * <p>The public network access port of the Elasticsearch instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>9200</p>
      */
     @NameInMap("publicPort")
     public Long publicPort;
 
+    /**
+     * <p>The high availability configuration of the instance.</p>
+     */
     @NameInMap("readWritePolicy")
     public ReadWritePolicy readWritePolicy;
 
     /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekzvowej3i****</p>
      */
@@ -255,6 +405,12 @@ public class Elasticsearch extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Indicates whether the instance is in the Elasticsearch service VPC. Valid values:</p>
+     * <ul>
+     * <li>true: The instance is in the service VPC.</li>
+     * <li>false: The instance is not in the service VPC.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -262,19 +418,35 @@ public class Elasticsearch extends TeaModel {
     public Boolean serviceVpc;
 
     /**
+     * <p>The status of the instance. Valid values:</p>
+     * <ul>
+     * <li>active: Normal.</li>
+     * <li>activating: Taking effect.</li>
+     * <li>inactive: Frozen.</li>
+     * <li>invalid: Expired.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The synonym dictionary configuration of the instance.</p>
+     */
     @NameInMap("synonymsDicts")
     public java.util.List<DictInfo> synonymsDicts;
 
+    /**
+     * <p>The instance tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
     /**
+     * <p>The time when the instance was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-07-13T03:58:07.253Z</p>
      */
@@ -282,22 +454,36 @@ public class Elasticsearch extends TeaModel {
     public String updatedAt;
 
     /**
+     * <p>Indicates whether warm data nodes are enabled. Valid values:</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("warmNode")
     public Boolean warmNode;
 
+    /**
+     * <p>The warm data node configuration.</p>
+     */
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
 
     /**
+     * <p>The number of zones for the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("zoneCount")
     public Long zoneCount;
 
+    /**
+     * <p>The zone information of the instance.</p>
+     */
     @NameInMap("zoneInfos")
     public java.util.List<ZoneInfo> zoneInfos;
 
@@ -748,6 +934,8 @@ public class Elasticsearch extends TeaModel {
 
     public static class ElasticsearchAdvancedSetting extends TeaModel {
         /**
+         * <p>GC垃圾回收器名称。支持CMS和G1。</p>
+         * 
          * <strong>example:</strong>
          * <p>CMS</p>
          */

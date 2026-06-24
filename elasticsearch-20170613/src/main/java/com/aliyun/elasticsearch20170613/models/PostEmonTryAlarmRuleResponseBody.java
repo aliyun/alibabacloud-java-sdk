@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PostEmonTryAlarmRuleResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class PostEmonTryAlarmRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class PostEmonTryAlarmRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3EC5731F-0944-4E4F-9DD5-1F976B3FCC3D</p>
      */
@@ -26,6 +32,8 @@ public class PostEmonTryAlarmRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the alert message was sent. Valid values: true (sent) and false (failed to send).</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListIndexTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The index template list information.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListIndexTemplatesResponseBodyResult> result;
 
@@ -37,6 +42,8 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
 
     public static class ListIndexTemplatesResponseBodyResultTemplate extends TeaModel {
         /**
+         * <p>The aliases configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}</p>
          */
@@ -44,6 +51,8 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         public String aliases;
 
         /**
+         * <p>The mappings configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
          */
@@ -51,6 +60,8 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         public String mappings;
 
         /**
+         * <p>The settings configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;mydata\&quot;:{}}</p>
          */
@@ -90,6 +101,14 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
 
     public static class ListIndexTemplatesResponseBodyResult extends TeaModel {
         /**
+         * <p>Indicates whether the data stream is enabled. Valid values:</p>
+         * <ul>
+         * <li><p>true: enabled.</p>
+         * </li>
+         * <li><p>false (default): not enabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -97,16 +116,23 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         public Boolean dataStream;
 
         /**
+         * <p>The index lifecycle policy name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_ilm_policy</p>
          */
         @NameInMap("ilmPolicy")
         public String ilmPolicy;
 
+        /**
+         * <p>The index pattern information.</p>
+         */
         @NameInMap("indexPatterns")
         public java.util.List<String> indexPatterns;
 
         /**
+         * <p>The index template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-template</p>
          */
@@ -114,12 +140,17 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         public String indexTemplate;
 
         /**
+         * <p>The index template priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("priority")
         public Integer priority;
 
+        /**
+         * <p>The component template.</p>
+         */
         @NameInMap("template")
         public ListIndexTemplatesResponseBodyResultTemplate template;
 

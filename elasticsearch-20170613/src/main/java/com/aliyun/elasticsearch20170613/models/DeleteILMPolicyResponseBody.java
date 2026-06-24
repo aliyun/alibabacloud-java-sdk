@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteILMPolicyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>694FDC20-0FDD-47C4-B921-BFF902FA****</p>
      */
@@ -12,6 +14,14 @@ public class DeleteILMPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result. Valid values:</p>
+     * <ul>
+     * <li><p>true: The specified lifecycle policy definition is deleted.</p>
+     * </li>
+     * <li><p>false: The specified lifecycle policy definition failed to be deleted.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

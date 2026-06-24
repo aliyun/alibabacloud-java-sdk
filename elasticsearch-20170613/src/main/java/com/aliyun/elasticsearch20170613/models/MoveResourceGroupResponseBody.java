@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -60,10 +60,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the source of the dictionary file. Valid values:</p>
+         * <p>The source type. Valid values:</p>
          * <ul>
-         * <li>OSS: Object Storage Service (OSS). You must make sure that the access control list (ACL) of the related OSS bucket is public read.</li>
-         * <li>ORIGIN: previously uploaded dictionary.</li>
+         * <li>OSS: OSS open storage. Make sure that the OSS bucket has public-read permission.</li>
+         * <li>ORIGIN: retains the previously uploaded dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,12 +73,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the dictionary. Valid values:</p>
+         * <p>The dictionary type. Valid values:</p>
          * <ul>
-         * <li>STOP: stopword list</li>
-         * <li>MAIN: main dictionary</li>
-         * <li>SYNONYMS: synonym dictionary</li>
-         * <li>ALI_WS: Alibaba Cloud dictionary</li>
+         * <li>STOP: stopword.</li>
+         * <li>MAIN: main dictionary.</li>
+         * <li>SYNONYMS: synonym dictionary.</li>
+         * <li>ALI_WS: Alibaba dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -146,7 +146,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The storage type.</p>
+         * <p>The storage type of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -155,7 +155,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The specification category.</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.n4.small</p>
@@ -213,7 +213,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -222,7 +222,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The storage type.</p>
+         * <p>The storage type of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -231,7 +231,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The specification category.</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.large</p>
@@ -280,7 +280,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     public static class MoveResourceGroupResponseBodyResultNetworkConfig extends TeaModel {
         /**
-         * <p>The network type. Only the VPC is supported.</p>
+         * <p>The network type. Only VPC is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -289,7 +289,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp16k1dvzxtmagcva****</p>
@@ -298,7 +298,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The zone where the cluster resides.</p>
+         * <p>The zone where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -307,7 +307,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String vsArea;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1k4ec6s7sjdbudw****</p>
@@ -356,7 +356,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     public static class MoveResourceGroupResponseBodyResultNodeSpec extends TeaModel {
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -365,7 +365,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The storage type.</p>
+         * <p>The storage type of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -374,7 +374,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The specification category.</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.n4.small</p>
@@ -433,10 +433,10 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the source of the dictionary file. Valid values:</p>
+         * <p>The source type. Valid values:</p>
          * <ul>
-         * <li>OSS: Object Storage Service (OSS). You must make sure that the ACL of the related OSS bucket is public read.</li>
-         * <li>ORIGIN: previously uploaded dictionary.</li>
+         * <li>OSS: OSS open storage. Make sure that the OSS bucket has public-read permission.</li>
+         * <li>ORIGIN: retains the previously uploaded dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -446,12 +446,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the dictionary. Valid values:</p>
+         * <p>The dictionary type. Valid values:</p>
          * <ul>
-         * <li>STOP: stopword list</li>
-         * <li>MAIN: main dictionary</li>
-         * <li>SYNONYMS: synonym dictionary</li>
-         * <li>ALI_WS: Alibaba Cloud dictionary</li>
+         * <li>STOP: stopword.</li>
+         * <li>MAIN: main dictionary.</li>
+         * <li>SYNONYMS: synonym dictionary.</li>
+         * <li>ALI_WS: Alibaba dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -501,7 +501,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     public static class MoveResourceGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the cluster was created.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-07-06T10:18:48.662Z</p>
@@ -510,7 +510,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc</p>
@@ -519,13 +519,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The configurations of IK dictionaries.</p>
+         * <p>The IK dictionary configuration.</p>
          */
         @NameInMap("dictList")
         public java.util.List<MoveResourceGroupResponseBodyResultDictList> dictList;
 
         /**
-         * <p>The internal endpoint of the cluster.</p>
+         * <p>The internal endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
@@ -534,7 +534,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The version of the cluster.</p>
+         * <p>The instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>6.7.0_with_X-Pack</p>
@@ -543,7 +543,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String esVersion;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1x0w001c****</p>
@@ -552,13 +552,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The configurations of Kibana nodes.</p>
+         * <p>The configuration of Kibana nodes.</p>
          */
         @NameInMap("kibanaConfiguration")
         public MoveResourceGroupResponseBodyResultKibanaConfiguration kibanaConfiguration;
 
         /**
-         * <p>The public endpoint of the Kibana console of the cluster.</p>
+         * <p>The public network access address for Kibana.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</p>
@@ -567,7 +567,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String kibanaDomain;
 
         /**
-         * <p>The port number that is used to access the Kibana console of the cluster over the Internet.</p>
+         * <p>The public port for Kibana.</p>
          * 
          * <strong>example:</strong>
          * <p>5601</p>
@@ -576,19 +576,19 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer kibanaPort;
 
         /**
-         * <p>The configurations of dedicated master nodes.</p>
+         * <p>The configuration of master nodes.</p>
          */
         @NameInMap("masterConfiguration")
         public MoveResourceGroupResponseBodyResultMasterConfiguration masterConfiguration;
 
         /**
-         * <p>The network configurations.</p>
+         * <p>The network configuration.</p>
          */
         @NameInMap("networkConfig")
         public MoveResourceGroupResponseBodyResultNetworkConfig networkConfig;
 
         /**
-         * <p>The number of data nodes in the cluster.</p>
+         * <p>The number of data nodes of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -597,16 +597,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The configurations of data nodes.</p>
+         * <p>The configuration of data nodes.</p>
          */
         @NameInMap("nodeSpec")
         public MoveResourceGroupResponseBodyResultNodeSpec nodeSpec;
 
         /**
-         * <p>The billing method of the cluster. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>prepaid: subscription</li>
-         * <li>postpaid: pay-as-you-go</li>
+         * <li>prepaid: subscription.</li>
+         * <li>postpaid: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -616,7 +616,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>The public endpoint of the cluster.</p>
+         * <p>The public network access address.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1x0w001c****.public.elasticsearch.aliyuncs.com</p>
@@ -625,7 +625,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String publicDomain;
 
         /**
-         * <p>The port number that is used to access the cluster over the Internet.</p>
+         * <p>The public port.</p>
          * 
          * <strong>example:</strong>
          * <p>9200</p>
@@ -634,12 +634,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer publicPort;
 
         /**
-         * <p>The status of the cluster. Valid values:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li>active: The cluster is normal.</li>
-         * <li>activating: The cluster is being activated.</li>
-         * <li>Inactive: The cluster is frozen.</li>
-         * <li>invalid: The cluster is valid.</li>
+         * <li>active: Normal.</li>
+         * <li>activating: Taking effect.</li>
+         * <li>inactive: Frozen.</li>
+         * <li>invalid: Expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -649,13 +649,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The configurations of synonym dictionaries.</p>
+         * <p>The synonym dictionary configuration.</p>
          */
         @NameInMap("synonymsDicts")
         public java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> synonymsDicts;
 
         /**
-         * <p>The time when the cluster was last updated.</p>
+         * <p>The time when the instance was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-18T10:10:04.484Z</p>

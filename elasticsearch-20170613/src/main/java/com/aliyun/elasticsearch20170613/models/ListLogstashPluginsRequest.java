@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogstashPluginsRequest extends TeaModel {
     /**
-     * <p>USER</p>
+     * <p>The plugin name.</p>
      * 
      * <strong>example:</strong>
      * <p>logstash-filter-clone</p>
@@ -14,7 +14,7 @@ public class ListLogstashPluginsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The page number of the plugin list. Default value: 1. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListLogstashPluginsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The number of entries per page in paging settings. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -32,7 +32,11 @@ public class ListLogstashPluginsRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The description of the plug-in.</p>
+     * <p>The plugin source. Valid values:</p>
+     * <ul>
+     * <li>USER: custom plugin</li>
+     * <li>SYSTEM: system preset plugin.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>USER</p>

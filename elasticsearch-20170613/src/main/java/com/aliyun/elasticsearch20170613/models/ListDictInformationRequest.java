@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDictInformationRequest extends TeaModel {
     /**
+     * <p>The type of the OSS dictionary to be added. Valid values: IK_HOT, IK, SYNONYMS, and ALIWS. Default value: IK.</p>
+     * 
      * <strong>example:</strong>
      * <p>ALIWS</p>
      */
@@ -12,6 +14,7 @@ public class ListDictInformationRequest extends TeaModel {
     public String analyzerType;
 
     /**
+     * <p>The name of the OSS bucket where the dictionary file is stored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListDictInformationRequest extends TeaModel {
     public String bucketName;
 
     /**
+     * <p>The storage path of the dictionary file in the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateKibanaSsoRequest extends TeaModel {
     /**
+     * <p>true: Enabled; false: shutdown</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

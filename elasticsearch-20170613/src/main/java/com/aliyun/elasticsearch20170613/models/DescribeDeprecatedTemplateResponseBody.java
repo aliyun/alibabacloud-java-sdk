@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result information.</p>
+     */
     @NameInMap("Result")
     public DescribeDeprecatedTemplateResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
 
     public static class DescribeDeprecatedTemplateResponseBodyResultTemplate extends TeaModel {
         /**
+         * <p>The alias configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;{}&quot;</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
         public String aliases;
 
         /**
+         * <p>The mappings configuration of the index template.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}&quot;</p>
          */
@@ -51,6 +60,8 @@ public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
         public String mappings;
 
         /**
+         * <p>The settings configuration of the index template.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}&quot;</p>
          */
@@ -90,16 +101,27 @@ public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
 
     public static class DescribeDeprecatedTemplateResponseBodyResult extends TeaModel {
         /**
+         * <p>Indicates whether automatic creation of a data stream is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Automatic creation of a data stream is enabled.</li>
+         * <li>false: Automatic creation of a data stream is not enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("dataStream")
         public Boolean dataStream;
 
+        /**
+         * <p>The index pattern information.</p>
+         */
         @NameInMap("indexPatterns")
         public java.util.List<String> indexPatterns;
 
         /**
+         * <p>The index template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>openstore-index-template</p>
          */
@@ -107,16 +129,23 @@ public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
         public String indexTemplate;
 
         /**
+         * <p>The priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("order")
         public Long order;
 
+        /**
+         * <p>The index template configuration information.</p>
+         */
         @NameInMap("template")
         public DescribeDeprecatedTemplateResponseBodyResultTemplate template;
 
         /**
+         * <p>The version of the index template.</p>
+         * 
          * <strong>example:</strong>
          * <p>70000</p>
          */

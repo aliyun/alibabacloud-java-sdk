@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEcsInstancesRequest extends TeaModel {
     /**
-     * <p>test</p>
+     * <p>The list of ECS instance IDs. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</p>
@@ -14,7 +14,7 @@ public class ListEcsInstancesRequest extends TeaModel {
     public String ecsInstanceIds;
 
     /**
-     * <p>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</p>
+     * <p>The name of the ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class ListEcsInstancesRequest extends TeaModel {
     public String ecsInstanceName;
 
     /**
-     * <p>10</p>
+     * <p>The page number of the returned results. Maximum value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListEcsInstancesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>[&quot;i-bp13y63575oypr9d\<em>\</em>\<em>\</em>&quot;,&quot;i-bp1gyhphjaj73jsr\<em>\</em>\<em>\</em>&quot;]</p>
+     * <p>The number of results per page. Default value: 10. Maximum value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,11 @@ public class ListEcsInstancesRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>vpc-bp16k1dvzxtmagcva\<em>\</em>\<em>\</em></p>
+     * <p>Instance tags of the ECS instance. The following fields must be included:</p>
+     * <ul>
+     * <li>tagKey: instance tag key.</li>
+     * <li>tagValue: instance tag value.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</p>
@@ -50,7 +54,7 @@ public class ListEcsInstancesRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the VPC where the ECS instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp16k1dvzxtmagcva****</p>

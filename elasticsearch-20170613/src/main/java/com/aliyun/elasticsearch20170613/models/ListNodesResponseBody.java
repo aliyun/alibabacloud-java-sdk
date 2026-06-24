@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The response headers.</p>
      */
     @NameInMap("Headers")
     public ListNodesResponseBodyHeaders headers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E1FD7642-7C40-4FF2-9C0F-21F1A1746F70</p>
@@ -20,7 +20,7 @@ public class ListNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListNodesResponseBodyResult> result;
@@ -56,7 +56,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of returned records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -92,8 +92,8 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The type of the IP address. Valid values:</p>
          * <ul>
-         * <li>public: public IP address</li>
-         * <li>private: private IP address</li>
+         * <li>public: public IP address.</li>
+         * <li>private: private IP address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyResultTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -136,7 +136,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>xyz</p>
@@ -169,12 +169,12 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyResult extends TeaModel {
         /**
-         * <p>The status of the shipper on the ECS instance. Valid values:</p>
+         * <p>The status of each collector on the ECS instance. Valid values:</p>
          * <ul>
-         * <li>heartOk: The heartbeat is normal.</li>
-         * <li>heartLost: The heartbeat is abnormal.</li>
-         * <li>uninstalled: The shipper is not installed.</li>
-         * <li>failed: The shipper fails to be installed.</li>
+         * <li>heartOk: normal heartbeat.</li>
+         * <li>heartLost: abnormal heartbeat.</li>
+         * <li>uninstalled: not installed.</li>
+         * <li>failed: installation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,10 +184,10 @@ public class ListNodesResponseBody extends TeaModel {
         public String agentStatus;
 
         /**
-         * <p>Indicates whether the Cloud Assistant client is installed. Valid values:</p>
+         * <p>Indicates whether Cloud Assistant is enabled. Valid values:</p>
          * <ul>
-         * <li>true: installed</li>
-         * <li>false: not installed</li>
+         * <li>true: enabled.</li>
+         * <li>false: not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String cloudAssistantStatus;
 
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The ECS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp13y63575oypr****</p>
@@ -206,7 +206,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String ecsInstanceId;
 
         /**
-         * <p>The name of the ECS instance.</p>
+         * <p>The ECS instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_beat</p>
@@ -215,7 +215,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String ecsInstanceName;
 
         /**
-         * <p>The IP addresses of the ECS instance.</p>
+         * <p>The list of IP address information of the ECS instance.</p>
          */
         @NameInMap("ipAddress")
         public java.util.List<ListNodesResponseBodyResultIpAddress> ipAddress;
@@ -223,8 +223,8 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The operating system type of the ECS instance. Valid values:</p>
          * <ul>
-         * <li>windows: Windows Server</li>
-         * <li>linux: Linux</li>
+         * <li>windows: Windows Server.</li>
+         * <li>linux: Linux.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,10 +236,10 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The status of the ECS instance. Valid values:</p>
          * <ul>
-         * <li>running: The instance is running.</li>
-         * <li>starting: The instance is being started.</li>
-         * <li>stopping: The instance is being stopped.</li>
-         * <li>stopped: The instance is stopped.</li>
+         * <li>running: running.</li>
+         * <li>starting: starting.</li>
+         * <li>stopping: stopping.</li>
+         * <li>stopped: stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags of the ECS instance.</p>
+         * <p>The tag information of the ECS instance.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListNodesResponseBodyResultTags> tags;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DiagnoseInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the report.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -14,7 +14,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public DiagnoseInstanceResponseBodyResult result;
@@ -40,9 +40,83 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class DiagnoseInstanceResponseBodyResultItems extends TeaModel {
+        @NameInMap("desc")
+        public String desc;
+
+        @NameInMap("detail")
+        public java.util.Map<String, ?> detail;
+
+        @NameInMap("item")
+        public String item;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("state")
+        public String state;
+
+        @NameInMap("suggest")
+        public String suggest;
+
+        public static DiagnoseInstanceResponseBodyResultItems build(java.util.Map<String, ?> map) throws Exception {
+            DiagnoseInstanceResponseBodyResultItems self = new DiagnoseInstanceResponseBodyResultItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DiagnoseInstanceResponseBodyResultItems setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public DiagnoseInstanceResponseBodyResultItems setDetail(java.util.Map<String, ?> detail) {
+            this.detail = detail;
+            return this;
+        }
+        public java.util.Map<String, ?> getDetail() {
+            return this.detail;
+        }
+
+        public DiagnoseInstanceResponseBodyResultItems setItem(String item) {
+            this.item = item;
+            return this;
+        }
+        public String getItem() {
+            return this.item;
+        }
+
+        public DiagnoseInstanceResponseBodyResultItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DiagnoseInstanceResponseBodyResultItems setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public DiagnoseInstanceResponseBodyResultItems setSuggest(String suggest) {
+            this.suggest = suggest;
+            return this;
+        }
+        public String getSuggest() {
+            return this.suggest;
+        }
+
+    }
+
     public static class DiagnoseInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the diagnostic instance.</p>
+         * <p>The timestamp when the diagnostic report was generated.</p>
          * 
          * <strong>example:</strong>
          * <p>1535745731000</p>
@@ -50,14 +124,24 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         @NameInMap("createTime")
         public Long createTime;
 
+        @NameInMap("diagnosisMode")
+        public String diagnosisMode;
+
         /**
+         * <p>The instance ID of the diagnosed instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1x0w001c****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
+        @NameInMap("items")
+        public java.util.List<DiagnoseInstanceResponseBodyResultItems> items;
+
         /**
+         * <p>The report ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>trigger__2020-08-17T17:09:02</p>
          */
@@ -65,6 +149,8 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         public String reportId;
 
         /**
+         * <p>The diagnostic status. Valid values: SUCCESS, FAILED, and RUNNING.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -84,12 +170,28 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DiagnoseInstanceResponseBodyResult setDiagnosisMode(String diagnosisMode) {
+            this.diagnosisMode = diagnosisMode;
+            return this;
+        }
+        public String getDiagnosisMode() {
+            return this.diagnosisMode;
+        }
+
         public DiagnoseInstanceResponseBodyResult setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DiagnoseInstanceResponseBodyResult setItems(java.util.List<DiagnoseInstanceResponseBodyResultItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<DiagnoseInstanceResponseBodyResultItems> getItems() {
+            return this.items;
         }
 
         public DiagnoseInstanceResponseBodyResult setReportId(String reportId) {

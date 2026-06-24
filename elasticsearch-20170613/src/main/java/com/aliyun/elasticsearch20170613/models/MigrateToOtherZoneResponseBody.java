@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateToOtherZoneResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -14,10 +14,10 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return results:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: migration succeeded</li>
-     * <li>false: The migration fails</li>
+     * <li>true: The migration was successful.</li>
+     * <li>false: The migration failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

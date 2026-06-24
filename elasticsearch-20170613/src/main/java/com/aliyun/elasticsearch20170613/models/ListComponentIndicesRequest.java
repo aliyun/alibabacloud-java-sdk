@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListComponentIndicesRequest extends TeaModel {
     /**
+     * <p>The name of the composable template.</p>
+     * 
      * <strong>example:</strong>
      * <p>template</p>
      */
@@ -12,6 +14,8 @@ public class ListComponentIndicesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number for paging. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      * 
@@ -22,6 +26,8 @@ public class ListComponentIndicesRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page for paging. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      * 

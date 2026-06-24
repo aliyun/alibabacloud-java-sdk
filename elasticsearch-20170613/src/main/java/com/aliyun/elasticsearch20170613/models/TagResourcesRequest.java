@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>A tag.</p>
+     * <p>The resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The resource type. Set this parameter to INSTANCE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The value of the tag.</p>
+     * <p>The tag information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
@@ -59,7 +59,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTags extends TeaModel {
         /**
-         * <p>The returned object.</p>
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,11 +69,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Indicates whether tags are added to the clusters. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>The tag value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

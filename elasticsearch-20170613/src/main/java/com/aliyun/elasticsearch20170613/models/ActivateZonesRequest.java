@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ActivateZonesRequest extends TeaModel {
     /**
-     * <p>请求体参数。</p>
+     * <p>The request body parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;cn-hangzhou-i&quot;,&quot;cn-hangzhou-h&quot;]</p>
+     * <p>空</p>
      */
     @NameInMap("body")
     public String body;

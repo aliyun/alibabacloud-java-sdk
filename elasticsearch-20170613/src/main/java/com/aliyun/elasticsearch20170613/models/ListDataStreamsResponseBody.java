@@ -4,16 +4,24 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDataStreamsResponseBody extends TeaModel {
+    /**
+     * <p>The response headers.</p>
+     */
     @NameInMap("Headers")
     public ListDataStreamsResponseBodyHeaders headers;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the returned data streams.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDataStreamsResponseBodyResult> result;
 
@@ -48,6 +56,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
 
     public static class ListDataStreamsResponseBodyHeaders extends TeaModel {
         /**
+         * <p>The total number of data streams.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -55,6 +65,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public Integer xManagedCount;
 
         /**
+         * <p>The total storage size of indexes. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>143993923932990</p>
          */
@@ -86,6 +98,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
 
     public static class ListDataStreamsResponseBodyResultIndices extends TeaModel {
         /**
+         * <p>The time when the data stream list was queried.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-07-13T03:58:07.253Z</p>
          */
@@ -93,6 +107,16 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The index status. Valid values:</p>
+         * <ul>
+         * <li><p>Green: healthy.</p>
+         * </li>
+         * <li><p>Yellow: warning.</p>
+         * </li>
+         * <li><p>Red: abnormal.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Green</p>
          */
@@ -100,6 +124,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public String health;
 
         /**
+         * <p>This field is deprecated and can be ignored.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -107,6 +133,16 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public Boolean isManaged;
 
         /**
+         * <p>The managed status of the index. Valid values:</p>
+         * <ul>
+         * <li><p>following: managed.</p>
+         * </li>
+         * <li><p>closing: being unmanaged.</p>
+         * </li>
+         * <li><p>closed: not managed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>following</p>
          */
@@ -114,6 +150,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public String managedStatus;
 
         /**
+         * <p>The data stream name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Log1</p>
          */
@@ -121,6 +159,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The total storage space occupied by the current index. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>15393899</p>
          */
@@ -184,6 +224,16 @@ public class ListDataStreamsResponseBody extends TeaModel {
 
     public static class ListDataStreamsResponseBodyResult extends TeaModel {
         /**
+         * <p>The data stream status. Valid values:</p>
+         * <ul>
+         * <li><p>Green: healthy.</p>
+         * </li>
+         * <li><p>Yellow: warning.</p>
+         * </li>
+         * <li><p>Red: abnormal.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Green</p>
          */
@@ -191,6 +241,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public String health;
 
         /**
+         * <p>The index lifecycle policy name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rollver1</p>
          */
@@ -198,16 +250,23 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public String ilmPolicyName;
 
         /**
+         * <p>The index template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>template1</p>
          */
         @NameInMap("indexTemplateName")
         public String indexTemplateName;
 
+        /**
+         * <p>The index information under the current data stream.</p>
+         */
         @NameInMap("indices")
         public java.util.List<ListDataStreamsResponseBodyResultIndices> indices;
 
         /**
+         * <p>The total storage space occupied by managed indexes under the current data stream. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788239393298</p>
          */
@@ -215,6 +274,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public Long managedStorageSize;
 
         /**
+         * <p>The index name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-index-0001</p>
          */
@@ -222,6 +283,8 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The total storage space occupied by all indexes under the current data stream. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788239393298</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEventRecordsRequest extends TeaModel {
     /**
+     * <p>Start time for event query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1746516590000</p>
      */
@@ -12,6 +14,8 @@ public class ListEventRecordsRequest extends TeaModel {
     public String beginTime;
 
     /**
+     * <p>End time for event query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1746775790000</p>
      */
@@ -19,6 +23,8 @@ public class ListEventRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Page number for paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListEventRecordsRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Number of entries per page for paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class ListEventRecordsRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Object content used for filtering. This parameter is optional. If empty, event records for all instances are returned. Note: The value passed must correspond to the selected filter type.</p>
+     * 
      * <strong>example:</strong>
      * <p>**</p>
      */
@@ -40,6 +50,8 @@ public class ListEventRecordsRequest extends TeaModel {
     public String termContent;
 
     /**
+     * <p>Object type used for filtering. This parameter is optional. If empty, event records of all types are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceId</p>
      */

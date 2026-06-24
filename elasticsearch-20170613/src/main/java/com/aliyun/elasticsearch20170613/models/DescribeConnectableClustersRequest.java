@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeConnectableClustersRequest extends TeaModel {
     /**
-     * <p>The ID of the instance that can communicate with each other.</p>
+     * <p>Specifies whether to return instances that are already connected. Valid values:</p>
+     * <ul>
+     * <li>true (default): The returned instance list includes instances that are already connected.</li>
+     * <li>false: The returned instance list does not include instances that are already connected.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

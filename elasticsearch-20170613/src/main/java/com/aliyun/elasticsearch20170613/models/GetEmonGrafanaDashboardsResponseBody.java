@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1E9D9827-2092-4385-9DA1-FC5A8D1DB3F5</p>
      */
@@ -26,6 +32,12 @@ public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the Grafana dashboard list is retrieved. Valid values:</p>
+     * <ul>
+     * <li>true: succeeded.</li>
+     * <li>false: failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

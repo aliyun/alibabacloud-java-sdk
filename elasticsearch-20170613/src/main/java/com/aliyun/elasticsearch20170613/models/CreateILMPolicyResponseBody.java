@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateILMPolicyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
@@ -12,6 +14,8 @@ public class CreateILMPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the lifecycle policy that is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-policy</p>
      */

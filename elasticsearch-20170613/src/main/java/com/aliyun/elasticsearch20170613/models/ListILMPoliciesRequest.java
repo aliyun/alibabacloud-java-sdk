@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListILMPoliciesRequest extends TeaModel {
     /**
+     * <p>The name of the index lifecycle policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>policy-1</p>
      */

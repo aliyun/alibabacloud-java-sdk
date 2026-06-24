@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPipelineResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+     * <p>The response headers.</p>
      */
     @NameInMap("Headers")
     public ListPipelineResponseBodyHeaders headers;
 
     /**
-     * <p>The response.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -20,7 +20,7 @@ public class ListPipelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the pipeline was created.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListPipelineResponseBodyResult> result;
@@ -56,7 +56,7 @@ public class ListPipelineResponseBody extends TeaModel {
 
     public static class ListPipelineResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The time when the pipeline was updated.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -81,6 +81,8 @@ public class ListPipelineResponseBody extends TeaModel {
 
     public static class ListPipelineResponseBodyResult extends TeaModel {
         /**
+         * <p>The time when the pipeline was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-08-05T03:10:38.188Z</p>
          */
@@ -88,6 +90,8 @@ public class ListPipelineResponseBody extends TeaModel {
         public String gmtCreatedTime;
 
         /**
+         * <p>The time when the pipeline was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-08-05T08:43:31.757Z</p>
          */
@@ -95,12 +99,7 @@ public class ListPipelineResponseBody extends TeaModel {
         public String gmtUpdateTime;
 
         /**
-         * <p>The status of the pipeline. Supported:</p>
-         * <ul>
-         * <li>NOT_DEPLOYED: The node is not deployed.</li>
-         * <li>RUNNING</li>
-         * <li>DELETED: Deleted. The console does not display this status.</li>
-         * </ul>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pipeline_test</p>
@@ -109,6 +108,13 @@ public class ListPipelineResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
+         * <p>The pipeline status. Valid values:</p>
+         * <ul>
+         * <li>NOT_DEPLOYED: not deployed.</li>
+         * <li>RUNNING: running.</li>
+         * <li>DELETED: deleted. This status is not displayed in the console.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NOT_DEPLOYED</p>
          */

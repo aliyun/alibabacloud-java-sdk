@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstanceIndicesRequest extends TeaModel {
     /**
-     * <p>false</p>
+     * <p>Specifies whether to retrieve all indexes. Valid values:</p>
+     * <ul>
+     * <li><p>true: Returns the index list that includes system indexes.</p>
+     * </li>
+     * <li><p>false (default): Returns the index list that excludes system indexes.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +20,13 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>15</p>
+     * <p>Specifies whether to display only managed indexes. Valid values:</p>
+     * <ul>
+     * <li><p>true: Displays only managed indexes.</p>
+     * </li>
+     * <li><p>false (default): Displays all indexes.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +35,13 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public Boolean isManaged;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to display only OpenStore cold-phase indexes. Valid values:</p>
+     * <ul>
+     * <li><p>true: Displays only OpenStore cold-phase indexes.</p>
+     * </li>
+     * <li><p>false (default): Displays all indexes.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +50,7 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public Boolean isOpenstore;
 
     /**
-     * <p>1</p>
+     * <p>The index name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>log-0001</p>
@@ -41,7 +59,7 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The header of the response.</p>
+     * <p>The page number of the instance list. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +68,7 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The total size of the index in Cloud Hosting. Unit: bytes.</p>
+     * <p>The number of entries per page for paging. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

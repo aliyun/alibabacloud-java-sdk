@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdatePrivateNetworkWhiteIpsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6DEBE5EE-0368-4757-8F82-EF9C3972****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public UpdatePrivateNetworkWhiteIpsResponseBodyResult result;
 

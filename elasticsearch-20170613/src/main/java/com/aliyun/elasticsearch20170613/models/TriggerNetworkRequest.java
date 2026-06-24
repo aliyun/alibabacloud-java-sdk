@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class TriggerNetworkRequest extends TeaModel {
     /**
+     * <p>The action type. Valid values:</p>
+     * <ul>
+     * <li>CLOSE: disable.</li>
+     * <li>OPEN: enable.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,11 @@ public class TriggerNetworkRequest extends TeaModel {
     public String actionType;
 
     /**
+     * <p>The network type. Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: public network.</li>
+     * <li>PRIVATE: private network.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +33,11 @@ public class TriggerNetworkRequest extends TeaModel {
     public String networkType;
 
     /**
+     * <p>The instance type. Valid values:</p>
+     * <ul>
+     * <li>KIBANA: Kibana cluster.</li>
+     * <li>WORKER: Elasticsearch cluster.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +47,8 @@ public class TriggerNetworkRequest extends TeaModel {
     public String nodeType;
 
     /**
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>407d02b74c49beb5bfdac7ec8bde2488</p>
      */

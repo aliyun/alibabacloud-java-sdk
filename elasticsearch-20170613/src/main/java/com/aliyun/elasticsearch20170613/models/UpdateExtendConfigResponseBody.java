@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateExtendConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
@@ -12,6 +14,12 @@ public class UpdateExtendConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result. Valid values:</p>
+     * <ul>
+     * <li>true: The scenario-based configuration template was modified.</li>
+     * <li>false: The scenario-based configuration template failed to be modified.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

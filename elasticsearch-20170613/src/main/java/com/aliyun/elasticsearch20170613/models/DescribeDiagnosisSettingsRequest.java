@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosisSettingsRequest extends TeaModel {
     /**
-     * <p>The language of the returned result. Default value: en.</p>
+     * <p>The language of the returned results. Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

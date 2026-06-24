@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAckNamespacesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number. (Deprecated).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAckNamespacesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of records per page. (Deprecated).</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

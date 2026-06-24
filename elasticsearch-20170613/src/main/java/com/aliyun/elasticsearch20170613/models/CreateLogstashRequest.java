@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLogstashRequest extends TeaModel {
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ls-cn-abc</p>
      */
@@ -12,12 +14,14 @@ public class CreateLogstashRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The network configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("networkConfig")
     public CreateLogstashRequestNetworkConfig networkConfig;
 
     /**
+     * <p>The number of nodes in the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,25 +31,46 @@ public class CreateLogstashRequest extends TeaModel {
     public Integer nodeAmount;
 
     /**
+     * <p>The configuration of data nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("nodeSpec")
     public CreateLogstashRequestNodeSpec nodeSpec;
 
+    /**
+     * <p>The billing details of the subscription instance. This parameter is required when you create a subscription instance.</p>
+     */
     @NameInMap("paymentInfo")
     public CreateLogstashRequestPaymentInfo paymentInfo;
 
     /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li>prepaid: subscription.</li>
+     * <li>postpaid: pay-as-you-go.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>prepaid</p>
      */
     @NameInMap("paymentType")
     public String paymentType;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxxkk2p7****</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The instance version. Valid values:</p>
+     * <ul>
+     * <li>6.7_with_X-Pack</li>
+     * <li>7.4_with_X-Pack.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +80,8 @@ public class CreateLogstashRequest extends TeaModel {
     public String version;
 
     /**
+     * <p>A unique token that is used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
@@ -140,6 +167,8 @@ public class CreateLogstashRequest extends TeaModel {
 
     public static class CreateLogstashRequestNetworkConfig extends TeaModel {
         /**
+         * <p>The network type. Currently, only VPC is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc</p>
          */
@@ -147,6 +176,7 @@ public class CreateLogstashRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +186,7 @@ public class CreateLogstashRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone where the instance is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +196,7 @@ public class CreateLogstashRequest extends TeaModel {
         public String vsArea;
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +246,8 @@ public class CreateLogstashRequest extends TeaModel {
 
     public static class CreateLogstashRequestNodeSpec extends TeaModel {
         /**
+         * <p>The disk size of the node. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -221,6 +255,12 @@ public class CreateLogstashRequest extends TeaModel {
         public Long disk;
 
         /**
+         * <p>The disk type of the node. Valid values:</p>
+         * <ul>
+         * <li>cloud_ssd</li>
+         * <li>cloud_efficiency.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
          */
@@ -228,10 +268,11 @@ public class CreateLogstashRequest extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The node specifications. For more information about specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>logstash.n4.small</p>
+         * <p>elasticsearch.ic5.2xlarge</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -269,6 +310,8 @@ public class CreateLogstashRequest extends TeaModel {
 
     public static class CreateLogstashRequestPaymentInfo extends TeaModel {
         /**
+         * <p>The auto-renewal epoch. Unit: months. This parameter is required when <strong>isAutoRenew</strong> is set to <strong>true</strong>. The valid values are the same as those on the buy page.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -276,6 +319,8 @@ public class CreateLogstashRequest extends TeaModel {
         public Long autoRenewDuration;
 
         /**
+         * <p>The subscription duration. You can purchase the instance on a monthly or yearly basis. Unit: 1 to 9 months, or 1 to 3 years.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -283,6 +328,12 @@ public class CreateLogstashRequest extends TeaModel {
         public Long duration;
 
         /**
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -290,6 +341,12 @@ public class CreateLogstashRequest extends TeaModel {
         public Boolean isAutoRenew;
 
         /**
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li>Year: year.</li>
+         * <li>Month: month.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Month</p>
          */

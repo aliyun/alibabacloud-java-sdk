@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class PluginAnalysisRequest extends TeaModel {
     /**
+     * <p>Request body parameters  </p>
+     * <pre><code class="language-json">
+     * </code></pre>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;name&quot;: &quot;plugin_name.zip&quot;,// plugin name
@@ -18,6 +22,12 @@ public class PluginAnalysisRequest extends TeaModel {
     public String body;
 
     /**
+     * <p>Whether to perform pre-upgrade validation:  </p>
+     * <ul>
+     * <li>true: Validate only  </li>
+     * <li>false: Upload directly</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TriggerNetworkResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A5D8E74-565C-43DC-B031-29289FA****</p>
      */
@@ -12,6 +14,12 @@ public class TriggerNetworkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result. Valid values:</p>
+     * <ul>
+     * <li>true: The operation was successful.</li>
+     * <li>false: The operation failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

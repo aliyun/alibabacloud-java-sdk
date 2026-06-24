@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ValidateShrinkNodesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
@@ -12,6 +14,12 @@ public class ValidateShrinkNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result.</p>
+     * <ul>
+     * <li>true: The nodes can be scaled in.</li>
+     * <li>false: The nodes cannot be scaled in.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDiagnoseReportIdsResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The response headers.</p>
      */
     @NameInMap("Headers")
     public ListDiagnoseReportIdsResponseBodyHeaders headers;
@@ -19,6 +19,9 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 
@@ -53,7 +56,7 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
 
     public static class ListDiagnoseReportIdsResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

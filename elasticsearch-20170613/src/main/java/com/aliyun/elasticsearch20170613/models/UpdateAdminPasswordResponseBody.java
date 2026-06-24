@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAdminPasswordResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0FA05123-745C-42FD-A69B-AFF48EF9****</p>
      */
@@ -12,6 +14,12 @@ public class UpdateAdminPasswordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the password is updated. Valid values:</p>
+     * <ul>
+     * <li>true: The password is updated.</li>
+     * <li>false: The password failed to be updated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

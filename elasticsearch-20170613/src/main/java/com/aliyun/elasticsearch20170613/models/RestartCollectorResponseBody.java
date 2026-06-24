@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartCollectorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>84B4038A-AF38-4BF4-9FAD-EA92A4FFF00A</p>
@@ -14,10 +14,10 @@ public class RestartCollectorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the shipper is restarted. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The shipper is restarted.</li>
-     * <li>false: The shipper fails to be restarted.</li>
+     * <li>true: The restart was successful.</li>
+     * <li>false: The restart failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

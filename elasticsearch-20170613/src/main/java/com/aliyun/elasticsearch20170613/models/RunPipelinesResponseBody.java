@@ -16,8 +16,8 @@ public class RunPipelinesResponseBody extends TeaModel {
     /**
      * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: successful</li>
-     * <li>false: failed</li>
+     * <li>true: The deployment succeeded.</li>
+     * <li>false: The deployment failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

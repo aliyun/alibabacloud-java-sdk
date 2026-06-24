@@ -14,10 +14,10 @@ public class ValidateConnectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the connectivity is normal. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The validation succeeded.</li>
+     * <li>false: The validation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDictsResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The response headers.</p>
      */
     @NameInMap("Headers")
     public ListDictsResponseBodyHeaders headers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2937F832-F39E-41EF-89BA-B528342A2A3A</p>
@@ -20,7 +20,7 @@ public class ListDictsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The request result.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListDictsResponseBodyResult> result;
@@ -56,7 +56,7 @@ public class ListDictsResponseBody extends TeaModel {
 
     public static class ListDictsResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -81,7 +81,7 @@ public class ListDictsResponseBody extends TeaModel {
 
     public static class ListDictsResponseBodyResult extends TeaModel {
         /**
-         * <p>The link that is used to download the dictionary over the Internet. The link is valid for 90s.</p>
+         * <p>The publicly accessible download URL. The URL is valid for 90 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&OSSAccessKeyId=LTAI*****V9&Signature=PNPO********BBGsJDO4V3VfU4sE%3D">http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&amp;OSSAccessKeyId=LTAI*****V9&amp;Signature=PNPO********BBGsJDO4V3VfU4sE%3D</a></p>
@@ -90,7 +90,7 @@ public class ListDictsResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>The size of the dictionary file. Unit: byte.</p>
+         * <p>The size of the dictionary file, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2782602</p>
@@ -99,7 +99,7 @@ public class ListDictsResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
-         * <p>The name of the dictionary file.</p>
+         * <p>The file name of the dictionary file.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_MAIN.dic</p>
@@ -108,7 +108,7 @@ public class ListDictsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The source type.</p>
+         * <p>A fixed value.</p>
          * 
          * <strong>example:</strong>
          * <p>ORIGIN</p>
@@ -119,8 +119,10 @@ public class ListDictsResponseBody extends TeaModel {
         /**
          * <p>The type of the IK dictionary. Valid values:</p>
          * <ul>
-         * <li>MAIN: main dictionary</li>
-         * <li>STOP: stopword list</li>
+         * <li><p>MAIN: main tokenization dictionary.</p>
+         * </li>
+         * <li><p>STOP: stopword dictionary.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

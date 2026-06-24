@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateCollectorResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8466BDFB-C513-4B8D-B4E3-5AB256AB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public CreateCollectorResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class CreateCollectorResponseBody extends TeaModel {
 
     public static class CreateCollectorResponseBodyResult extends TeaModel {
         /**
+         * <p>The ID of the collector that is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>ct-cn-4135is2tj194p****</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLogstashSettingsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>71D0D1DA-B22F-58CB-AF5B-D1657A6A****</p>

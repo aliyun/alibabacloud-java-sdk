@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateKibanaPvlNetworkRequest extends TeaModel {
     /**
+     * <p>The endpoint name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>es-cn-27a3mul6l00***-kibana</p>
+     * <p>es-cn-text-kibana</p>
      */
     @NameInMap("endpointName")
     public String endpointName;
 
+    /**
+     * <p>The list of security groups.</p>
+     */
     @NameInMap("securityGroups")
     public java.util.List<String> securityGroups;
 
     /**
+     * <p>Used to ensure the idempotency of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -22,8 +29,10 @@ public class UpdateKibanaPvlNetworkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The Kibana private network connection ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>es-cn-27a3mul6l0***-kibana-internal</p>
+     * <p>es-cn-vo93ngti8000a****-kibana-internal-internal</p>
      */
     @NameInMap("pvlId")
     public String pvlId;

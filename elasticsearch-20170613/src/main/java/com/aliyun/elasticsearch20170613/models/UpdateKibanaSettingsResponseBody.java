@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateKibanaSettingsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DC*****</p>
@@ -14,10 +14,10 @@ public class UpdateKibanaSettingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return results:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The Kibana language modified successfully</li>
-     * <li>false: The Kibana language modified failed</li>
+     * <li>true: The Kibana language was modified.</li>
+     * <li>false: The Kibana language failed to be modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>

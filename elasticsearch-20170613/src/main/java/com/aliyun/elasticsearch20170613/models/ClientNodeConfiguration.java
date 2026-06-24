@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClientNodeConfiguration extends TeaModel {
     /**
+     * <p>The number of client nodes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ClientNodeConfiguration extends TeaModel {
     public Long amount;
 
     /**
+     * <p>The storage size of the client node. Unit: GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ClientNodeConfiguration extends TeaModel {
     public Long disk;
 
     /**
+     * <p>The storage type of the client node. Only cloud_efficiency (ultra cloud disk) is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ClientNodeConfiguration extends TeaModel {
     public String diskType;
 
     /**
+     * <p>The node specifications of the client node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

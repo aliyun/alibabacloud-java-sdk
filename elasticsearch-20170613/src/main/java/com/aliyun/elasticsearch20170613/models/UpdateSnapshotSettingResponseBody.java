@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSnapshotSettingResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
@@ -14,7 +14,7 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public UpdateSnapshotSettingResponseBodyResult result;
@@ -42,7 +42,7 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
 
     public static class UpdateSnapshotSettingResponseBodyResult extends TeaModel {
         /**
-         * <p>Specifies whether to enable automatic backup.</p>
+         * <p>Indicates whether automatic backup is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

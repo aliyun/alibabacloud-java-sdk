@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class MasterNodeConfiguration extends TeaModel {
     /**
+     * <p>The number of dedicated master nodes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class MasterNodeConfiguration extends TeaModel {
     public Long amount;
 
     /**
+     * <p>The storage space of dedicated master nodes. Unit: GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,11 @@ public class MasterNodeConfiguration extends TeaModel {
     public Long disk;
 
     /**
+     * <p>The storage type of dedicated master nodes. Valid values:</p>
+     * <ul>
+     * <li>cloud_ssd: standard SSD</li>
+     * <li>cloud_essd (default): Enterprise SSD (ESSD).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +39,7 @@ public class MasterNodeConfiguration extends TeaModel {
     public String diskType;
 
     /**
+     * <p>The node specifications of dedicated master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

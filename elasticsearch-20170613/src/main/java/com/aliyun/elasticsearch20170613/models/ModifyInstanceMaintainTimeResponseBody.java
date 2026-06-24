@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMaintainTimeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
@@ -12,6 +14,8 @@ public class ModifyInstanceMaintainTimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

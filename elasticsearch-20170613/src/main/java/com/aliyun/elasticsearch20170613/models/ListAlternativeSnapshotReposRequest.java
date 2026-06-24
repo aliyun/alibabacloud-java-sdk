@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListAlternativeSnapshotReposRequest extends TeaModel {
     /**
-     * <p>Indicates whether to return the OSS reference repository added. The return value. Valid values: true and false.</p>
+     * <p>Specifies whether to return the OSS reference repositories that have already been added. Valid values:</p>
+     * <ul>
+     * <li>true (default): Returns the already added repositories.</li>
+     * <li>false: Does not return the already added repositories.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

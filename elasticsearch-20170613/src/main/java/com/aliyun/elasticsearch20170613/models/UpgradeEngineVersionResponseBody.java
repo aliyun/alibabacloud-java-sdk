@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeEngineVersionResponseBody extends TeaModel {
     /**
-     * <p>The verification information.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DC*****</p>
@@ -14,14 +14,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The type of the error. Valid values:</p>
-     * <ul>
-     * <li>clusterStatus: the health status of the cluster.</li>
-     * <li>clusterConfigYml: Cluster YML File</li>
-     * <li>clusterConfigPlugins: Cluster Configuration File</li>
-     * <li>clusterResource: cluster resources</li>
-     * <li>clusterSnapshot: cluster snapshot</li>
-     * </ul>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public java.util.List<UpgradeEngineVersionResponseBodyResult> result;
@@ -49,6 +42,8 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
 
     public static class UpgradeEngineVersionResponseBodyResultValidateResult extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ClusterStatusNotHealth</p>
          */
@@ -56,6 +51,8 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>The cluster status is not health</p>
          */
@@ -63,10 +60,13 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The verification is passed. Valid values:</p>
+         * <p>The error type. Valid values:</p>
          * <ul>
-         * <li>success: through</li>
-         * <li>failed: failed</li>
+         * <li>clusterStatus: cluster health status.</li>
+         * <li>clusterConfigYml: cluster YML file.</li>
+         * <li>clusterConfigPlugins: cluster configuration file.</li>
+         * <li>clusterResource: cluster resources.</li>
+         * <li>clusterSnapshot: cluster snapshot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,6 +108,12 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
 
     public static class UpgradeEngineVersionResponseBodyResult extends TeaModel {
         /**
+         * <p>Indicates whether the check is passed. Valid values:</p>
+         * <ul>
+         * <li>success: passed.</li>
+         * <li>failed: not passed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -115,13 +121,19 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The check information.</p>
          */
         @NameInMap("validateResult")
         public java.util.List<UpgradeEngineVersionResponseBodyResultValidateResult> validateResult;
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The check type. Valid values:</p>
+         * <ul>
+         * <li>checkClusterHealth: cluster health status.</li>
+         * <li>checkConfigCompatible: configuration compatibility status.</li>
+         * <li>checkClusterResource: resource space status.</li>
+         * <li>checkClusterSnapshot: whether a snapshot exists.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>checkClusterHealth</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenHttpsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -14,10 +14,10 @@ public class OpenHttpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return results:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: open the HTTPS protocol successfully</li>
-     * <li>false: open the HTTPS protocol failed</li>
+     * <li>true: The HTTPS protocol is enabled.</li>
+     * <li>false: The HTTPS protocol failed to be enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

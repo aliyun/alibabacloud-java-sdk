@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeTemplatesResponseBodyResult> result;
 
@@ -37,6 +42,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyResult extends TeaModel {
         /**
+         * <p>The template content.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\n\t\&quot;persistent\&quot;:{\n\t\t\&quot;search\&quot;:{\n\t\t\t\&quot;max_buckets\&quot;:\&quot;10000\&quot;\n\t\t}\n\t}\n}</p>
          */
@@ -44,6 +51,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The template name. Valid values:</p>
+         * <ul>
+         * <li>staticSettings: elasticsearch.yml configuration</li>
+         * <li>ilmPolicy: index lifecycle configuration</li>
+         * <li>indexTemplate: index template configuration</li>
+         * <li>dynamicSettings: cluster dynamic configuration.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>dynamicSettings</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     /**
-     * <p>The details of the Elasticsearch cluster.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E5EF11F1-DBAE-4020-AC24-DFA6C4345CAE</p>
@@ -14,7 +14,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The private IP address whitelists for access to the Kibana console of the cluster.</p>
+     * <p>The details of the Elasticsearch instance.</p>
      */
     @NameInMap("Result")
     public UpdateKibanaWhiteIpsResponseBodyResult result;
@@ -42,7 +42,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
 
     public static class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList extends TeaModel {
         /**
-         * <p>The IP addresses in the whitelist.</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>test_group_name</p>
@@ -51,12 +51,14 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP addresses in the whitelist.</p>
+         * <p>The list of IP addresses in the whitelist group.</p>
          */
         @NameInMap("ips")
         public java.util.List<String> ips;
 
         /**
+         * <p>The whitelist type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC_KIBANA</p>
          */
@@ -96,7 +98,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
 
     public static class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig extends TeaModel {
         /**
-         * <p>The IP address whitelists.</p>
+         * <p>The network type.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -105,7 +107,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1jy348ibzulk6hn****</p>
@@ -114,7 +116,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The network type.</p>
+         * <p>The region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -123,7 +125,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         public String vsArea;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1a0mifpletdd1da****</p>
@@ -132,7 +134,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>The IP address whitelists.</p>
+         * <p>The whitelist group list.</p>
          */
         @NameInMap("whiteIpGroupList")
         public java.util.List<UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList> whiteIpGroupList;
@@ -186,19 +188,19 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
 
     public static class UpdateKibanaWhiteIpsResponseBodyResult extends TeaModel {
         /**
-         * <p>The public IP address whitelists for access to the Kibana console of the cluster.</p>
+         * <p>The Kibana access whitelist.</p>
          */
         @NameInMap("kibanaIPWhitelist")
         public java.util.List<String> kibanaIPWhitelist;
 
         /**
-         * <p>The private IP address whitelists for access to the Kibana console of the cluster.</p>
+         * <p>The Kibana internal-facing whitelist.</p>
          */
         @NameInMap("kibanaPrivateIPWhitelist")
         public java.util.List<String> kibanaPrivateIPWhitelist;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The network configuration.</p>
          */
         @NameInMap("networkConfig")
         public UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig networkConfig;

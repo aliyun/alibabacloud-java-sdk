@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListAckClustersRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number. (Deprecated).</p>
      * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of records per page. (Deprecated).</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>15</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the ACK clusters belong.</p>
+     * <p>The ID of the VPC where the ACK cluster resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp12nu14urf0upaf4****</p>

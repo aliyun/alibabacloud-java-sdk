@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class RestartLogstashResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the current instance.</p>
+     */
     @NameInMap("Result")
     public Logstash result;
 

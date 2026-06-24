@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEmonGrafanaAlertsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetEmonGrafanaAlertsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class GetEmonGrafanaAlertsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>08FA74C7-5654-4309-9729-D555AF587B7F</p>
      */
@@ -26,6 +32,12 @@ public class GetEmonGrafanaAlertsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the Grafana alert list is retrieved. Valid values:</p>
+     * <ul>
+     * <li>true: The alert list is retrieved.</li>
+     * <li>false: The alert list failed to be retrieved.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

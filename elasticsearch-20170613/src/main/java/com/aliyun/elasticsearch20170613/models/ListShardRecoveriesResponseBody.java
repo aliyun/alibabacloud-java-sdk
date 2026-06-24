@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListShardRecoveriesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
@@ -14,7 +14,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListShardRecoveriesResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
 
     public static class ListShardRecoveriesResponseBodyResult extends TeaModel {
         /**
-         * <p>The data restoration progress.</p>
+         * <p>The data recovery progress.</p>
          * 
          * <strong>example:</strong>
          * <p>80%</p>
@@ -51,7 +51,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public String bytesPercent;
 
         /**
-         * <p>The total amount of data that is restored.</p>
+         * <p>The total amount of data to be recovered.</p>
          * 
          * <strong>example:</strong>
          * <p>12086</p>
@@ -60,7 +60,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public Long bytesTotal;
 
         /**
-         * <p>The file execution progress.</p>
+         * <p>The file recovery progress.</p>
          * 
          * <strong>example:</strong>
          * <p>80.0%</p>
@@ -78,7 +78,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public Long filesTotal;
 
         /**
-         * <p>The name of the index.</p>
+         * <p>The index name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-index-000001</p>
@@ -96,7 +96,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public String sourceHost;
 
         /**
-         * <p>The name of the source node.</p>
+         * <p>The source node.</p>
          * 
          * <strong>example:</strong>
          * <p>2Kni3dJ</p>
@@ -105,14 +105,20 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public String sourceNode;
 
         /**
-         * <p>The data restoration status. Valid values:</p>
+         * <p>The stage of the data recovery process. Valid values:</p>
          * <ul>
-         * <li>done: Data restoration is complete.</li>
-         * <li>finalize: Data is being cleared.</li>
-         * <li>index: Index metadata is being read, and bytes are being copied from source to destination.</li>
-         * <li>init: Data restoration is not started.</li>
-         * <li>start: Data restoration is started.</li>
-         * <li>translog: Translogs are being redone.</li>
+         * <li><p>done: Recovery is complete.</p>
+         * </li>
+         * <li><p>finalize: Cleanup operations are in progress.</p>
+         * </li>
+         * <li><p>index: Reading index metadata and copying bytes from the source to the target.</p>
+         * </li>
+         * <li><p>init: Recovery has not started.</p>
+         * </li>
+         * <li><p>start: Recovery is starting.</p>
+         * </li>
+         * <li><p>translog: Replaying the transaction log.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +128,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public String stage;
 
         /**
-         * <p>The IP address of the destination node.</p>
+         * <p>The IP address of the target node.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -131,7 +137,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public String targetHost;
 
         /**
-         * <p>The name of the destination node.</p>
+         * <p>The target node.</p>
          * 
          * <strong>example:</strong>
          * <p>YVVKLmW</p>
@@ -140,7 +146,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public String targetNode;
 
         /**
-         * <p>The number of translog operations to be restored.</p>
+         * <p>The number of translog operations to be recovered.</p>
          * 
          * <strong>example:</strong>
          * <p>12086</p>
@@ -149,7 +155,7 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public Long translogOps;
 
         /**
-         * <p>The restoration progress of translog operations.</p>
+         * <p>The progress of translog operation recovery.</p>
          * 
          * <strong>example:</strong>
          * <p>80%</p>

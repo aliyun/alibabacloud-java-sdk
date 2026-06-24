@@ -14,10 +14,10 @@ public class ModifyDeployMachineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the ECS instances are changed. Valid values:</p>
+     * <p>Indicates whether the update is successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

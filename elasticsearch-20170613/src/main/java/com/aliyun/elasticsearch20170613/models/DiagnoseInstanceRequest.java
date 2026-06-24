@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DiagnoseInstanceRequest extends TeaModel {
     /**
-     * <p>The timestamp when the diagnostic report was generated.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -13,13 +13,25 @@ public class DiagnoseInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The diagnostic items.</p>
+     */
     @NameInMap("diagnoseItems")
     public java.util.List<String> diagnoseItems;
 
+    /**
+     * <p>The list of indexes to diagnose.</p>
+     */
     @NameInMap("indices")
     public java.util.List<String> indices;
 
     /**
+     * <p>The type of the diagnostic task. Valid values:</p>
+     * <ul>
+     * <li>ALL: Diagnoses all indexes.</li>
+     * <li>SELECT: Diagnoses selected indexes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ALL</p>
      */
@@ -27,7 +39,14 @@ public class DiagnoseInstanceRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The language of the report. Default value: browser language. Valid values:</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh: Simplified Chinese</li>
+     * <li>zt: Traditional Chinese</li>
+     * <li>es: Spanish</li>
+     * <li>fr: French.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>

@@ -11,6 +11,8 @@ public class NetworkConfig extends TeaModel {
     public java.util.List<NetworkConfigLoadBalanceConfig> loadBalanceConfig;
 
     /**
+     * <p>The load balancing type. Default value: DEFAULT.</p>
+     * 
      * <strong>example:</strong>
      * <p>DEFAULT</p>
      */
@@ -18,6 +20,8 @@ public class NetworkConfig extends TeaModel {
     public String loadBalanceType;
 
     /**
+     * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -25,6 +29,8 @@ public class NetworkConfig extends TeaModel {
     public String type;
 
     /**
+     * <p>The VPC ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp1xk0naij7jx4ph1****</p>
      */
@@ -32,6 +38,8 @@ public class NetworkConfig extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID of the network.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>
      */
@@ -39,12 +47,17 @@ public class NetworkConfig extends TeaModel {
     public String vsArea;
 
     /**
+     * <p>The vSwitch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp1ogpdintii5qvyx****</p>
      */
     @NameInMap("vswitchId")
     public String vswitchId;
 
+    /**
+     * <p>The IP whitelist group configuration. You do not need to set this parameter when you call the createInstance operation to create an instance because the setting does not take effect during instance creation. Use a separate API operation to configure whitelists for different roles.</p>
+     */
     @NameInMap("whiteIpGroupList")
     public java.util.List<WhiteIpGroup> whiteIpGroupList;
 
@@ -118,10 +131,15 @@ public class NetworkConfig extends TeaModel {
     }
 
     public static class NetworkConfigLoadBalanceConfig extends TeaModel {
+        /**
+         * <p>可用区信息，如: cn-hangzhou-i</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
         /**
+         * <p>vswitchId</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxxx</p>
          */

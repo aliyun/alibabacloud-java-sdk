@@ -4,16 +4,25 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreateCollectorRequest extends TeaModel {
+    /**
+     * <p>The collection paths of fileBeat. This parameter is required only when the collector is deployed on ECS instances.</p>
+     */
     @NameInMap("collectorPaths")
     public java.util.List<String> collectorPaths;
 
     /**
+     * <p>The configuration file information of the collector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configs")
     public java.util.List<CreateCollectorRequestConfigs> configs;
 
     /**
+     * <p>Specifies whether to perform only a dry run without performing the actual request. This parameter is used only when you create or update a collector. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run without creating or updating the collector.</li>
+     * <li>false: performs a dry run and sends the request.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +32,14 @@ public class CreateCollectorRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The extended configurations of the collector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("extendConfigs")
     public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
     /**
+     * <p>The name of the collector. The name must be 1 to 30 characters in length, start with an uppercase or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +49,7 @@ public class CreateCollectorRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The type of the collector. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +59,11 @@ public class CreateCollectorRequest extends TeaModel {
     public String resType;
 
     /**
+     * <p>The version of the collector. Valid values:</p>
+     * <ul>
+     * <li>ECS-based deployment: 6.8.5_with_community</li>
+     * <li>ACK-based deployment: 6.8.13_with_community.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +73,7 @@ public class CreateCollectorRequest extends TeaModel {
     public String resVersion;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC) where the collector resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +83,7 @@ public class CreateCollectorRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the created crawer.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -152,6 +170,7 @@ public class CreateCollectorRequest extends TeaModel {
 
     public static class CreateCollectorRequestConfigs extends TeaModel {
         /**
+         * <p>The file content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +180,7 @@ public class CreateCollectorRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

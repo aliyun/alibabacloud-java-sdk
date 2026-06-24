@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVpcEndpointResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
@@ -12,6 +14,14 @@ public class DeleteVpcEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the deletion is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The deletion is successful.</p>
+     * </li>
+     * <li><p>false: The deletion failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

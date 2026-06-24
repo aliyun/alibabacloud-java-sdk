@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ZoneInfo extends TeaModel {
     /**
+     * <p>The zone status. Valid values:</p>
+     * <ul>
+     * <li>ISOLATION: offline</li>
+     * <li>NORMAL: Normal.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -12,6 +18,8 @@ public class ZoneInfo extends TeaModel {
     public String status;
 
     /**
+     * <p>The zone ID, which uniquely identifies the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>
      */

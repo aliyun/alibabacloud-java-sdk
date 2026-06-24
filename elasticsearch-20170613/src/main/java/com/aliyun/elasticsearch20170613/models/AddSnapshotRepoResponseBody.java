@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddSnapshotRepoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -14,10 +14,10 @@ public class AddSnapshotRepoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return results:</p>
+     * <p>The result. Valid values:</p>
      * <ul>
-     * <li>true: Reference warehouse created successfully</li>
-     * <li>false: Reference warehouse created failed</li>
+     * <li>true: The reference repository is created.</li>
+     * <li>false: The reference repository failed to be created.</li>
      * </ul>
      * 
      * <strong>example:</strong>

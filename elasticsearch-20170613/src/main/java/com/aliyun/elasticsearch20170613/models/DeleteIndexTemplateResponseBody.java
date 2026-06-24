@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteIndexTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A0761F7E-0B50-46B9-8CAA-EBB3A420****</p>
      */
@@ -12,6 +14,14 @@ public class DeleteIndexTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result. Valid values:</p>
+     * <ul>
+     * <li><p>true: The index template was deleted.</p>
+     * </li>
+     * <li><p>false: The index template failed to be deleted.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

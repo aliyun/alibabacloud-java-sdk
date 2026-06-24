@@ -42,13 +42,13 @@ public class ListExtendfilesResponseBody extends TeaModel {
 
     public static class ListExtendfilesResponseBodyResult extends TeaModel {
         /**
-         * <p>The path of the driver file.</p>
+         * <p>The extension file path.</p>
          */
         @NameInMap("filePath")
         public String filePath;
 
         /**
-         * <p>The size of the driver file.</p>
+         * <p>The extension file size.</p>
          * 
          * <strong>example:</strong>
          * <p>968668</p>
@@ -57,7 +57,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
-         * <p>The name of the driver file.</p>
+         * <p>The extension file name.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql-connector-java-5.1.35.jar</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogstashLogResponseBody extends TeaModel {
     /**
-     * <p>The details of the log.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</p>
@@ -14,7 +14,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The timestamp of log generation. Unit: ms.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListLogstashLogResponseBodyResult> result;
@@ -42,12 +42,14 @@ public class ListLogstashLogResponseBody extends TeaModel {
 
     public static class ListLogstashLogResponseBodyResult extends TeaModel {
         /**
-         * <p>The IP address of the node that generates the log.</p>
+         * <p>The detailed content of the log.</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>The IP address of the node that generated the log.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.xx.xx</p>
          */
@@ -55,6 +57,8 @@ public class ListLogstashLogResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ls-cn-v0h1kzca****</p>
          */
@@ -62,7 +66,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The log level. Valid values: trace, debug, info, warn, and error. GC logs do not have a level.</p>
          * 
          * <strong>example:</strong>
          * <p>info</p>
@@ -71,6 +75,8 @@ public class ListLogstashLogResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The timestamp when the log was generated. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1531985112420</p>
          */

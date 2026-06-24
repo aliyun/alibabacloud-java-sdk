@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
     /**
-     * <p>cn-hangzhou-i</p>
+     * <p>The instance name. Fuzzy search is supported. For example, if you search for all instances matching <strong>abc</strong>, all instances named <strong>abc</strong>, <strong>abcde</strong>, <strong>xyabc</strong>, and <strong>xabcy</strong> may be returned.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyunes_test1</p>
@@ -14,7 +14,7 @@ public class ListInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>advanced</p>
+     * <p>The instance version.</p>
      * 
      * <strong>example:</strong>
      * <p>6.7_with_X-Pack</p>
@@ -23,7 +23,15 @@ public class ListInstanceRequest extends TeaModel {
     public String esVersion;
 
     /**
-     * <p>The number of data nodes.</p>
+     * <p>The edition type of the instance. Valid values:</p>
+     * <ul>
+     * <li><p>x-pack: Commercial Edition</p>
+     * </li>
+     * <li><p>advanced/IS: Enhanced Edition</p>
+     * </li>
+     * <li><p>community: Basic Edition</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>advanced</p>
@@ -32,7 +40,7 @@ public class ListInstanceRequest extends TeaModel {
     public String instanceCategory;
 
     /**
-     * <p>postpaid</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>es-cn-v641a0ta3000g****</p>
@@ -41,7 +49,8 @@ public class ListInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
+     * <p>The page number of the instance list.
+     * Start value: <strong>1</strong>, default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,10 +59,12 @@ public class ListInstanceRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>Specifies whether to include dedicated master nodes. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li>true: The files contain data that is dumped to the IA storage medium.</li>
-     * <li>false: The files do not contain data that is dumped to the IA storage medium.</li>
+     * <li><p>postpaid: pay-as-you-go</p>
+     * </li>
+     * <li><p>prepaid: subscription</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +74,7 @@ public class ListInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzvowej3i****</p>
@@ -72,7 +83,7 @@ public class ListInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>vpc-bp16k1dvzxtmagcva\<em>\</em>\<em>\</em></p>
+     * <p>The number of entries per page for paginated queries. Maximum value: <strong>100</strong>, default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -84,7 +95,7 @@ public class ListInstanceRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The header of the response.</p>
+     * <p>The instance tags.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
@@ -93,7 +104,7 @@ public class ListInstanceRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the virtual private cloud (VPC) where the instance is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp16k1dvzxtmagcva****</p>
@@ -102,7 +113,7 @@ public class ListInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The zone ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>

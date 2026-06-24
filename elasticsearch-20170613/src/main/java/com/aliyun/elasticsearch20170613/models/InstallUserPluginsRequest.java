@@ -4,6 +4,12 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class InstallUserPluginsRequest extends TeaModel {
+    /**
+     * <p>The list of custom plugins to install.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[     {&quot;name&quot;: &quot;pluginName1.zip&quot;},     {&quot;name&quot;: &quot;pluginName2.zip&quot;} ]</p>
+     */
     @NameInMap("body")
     public String body;
 

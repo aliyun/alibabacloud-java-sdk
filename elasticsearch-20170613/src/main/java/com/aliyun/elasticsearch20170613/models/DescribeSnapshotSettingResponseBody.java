@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotSettingResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
@@ -14,7 +14,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public DescribeSnapshotSettingResponseBodyResult result;
@@ -42,7 +42,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
 
     public static class DescribeSnapshotSettingResponseBodyResult extends TeaModel {
         /**
-         * <p>Whether to enable automatic backup.</p>
+         * <p>Indicates whether automatic backup is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +51,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>Automatic backup time configuration, using Quartz Cron expression.</p>
+         * <p>The automatic backup time configuration, specified as a Quartz Cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 01 ? * * *</p>

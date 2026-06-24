@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKibanaPluginsResponseBody extends TeaModel {
     /**
-     * <p>The request header.</p>
+     * <p>The request headers.</p>
      */
     @NameInMap("Headers")
     public ListKibanaPluginsResponseBodyHeaders headers;
@@ -20,7 +20,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the plug-ins.</p>
+     * <p>The plugin information returned by the current request.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListKibanaPluginsResponseBodyResult> result;
@@ -81,7 +81,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
 
     public static class ListKibanaPluginsResponseBodyResult extends TeaModel {
         /**
-         * <p>The description of the plug-in.</p>
+         * <p>The plugin description.</p>
          * 
          * <strong>example:</strong>
          * <p>Customize DSL statements to query data.</p>
@@ -90,7 +90,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the plug-in.</p>
+         * <p>The plugin name.</p>
          * 
          * <strong>example:</strong>
          * <p>bsearch_querybuilder</p>
@@ -99,7 +99,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The source of the plug-in.</p>
+         * <p>The source of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -108,7 +108,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The URL of the introduction to the plug-in. The value null is supported.</p>
+         * <p>The URL of the plugin introduction. The value can be null.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx">https://xxxx</a></p>
@@ -117,7 +117,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         public String specificationUrl;
 
         /**
-         * <p>The installation status of the plug-in.</p>
+         * <p>The installation status of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTALLED</p>

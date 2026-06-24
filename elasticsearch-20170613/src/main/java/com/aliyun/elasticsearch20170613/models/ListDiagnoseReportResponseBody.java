@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDiagnoseReportResponseBody extends TeaModel {
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The response headers.</p>
      */
     @NameInMap("Headers")
     public ListDiagnoseReportResponseBodyHeaders headers;
 
     /**
-     * <p>The header of the response.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -20,12 +20,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The trigger mode of health diagnostics. Valid values:</p>
-     * <ul>
-     * <li>SYSTEM: The system is automatically triggered.</li>
-     * <li>INNER: internal trigger</li>
-     * <li>USER: manually triggered by the user</li>
-     * </ul>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListDiagnoseReportResponseBodyResult> result;
@@ -61,7 +56,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     public static class ListDiagnoseReportResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The returned results.</p>
+         * <p>The total number of records returned.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -86,7 +81,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     public static class ListDiagnoseReportResponseBodyResultDiagnoseItemsDetail extends TeaModel {
         /**
-         * <p>The diagnosis.</p>
+         * <p>The description of the diagnostic item.</p>
          * 
          * <strong>example:</strong>
          * <p>Check whether the number of replica shards is optimal and easy to maintain</p>
@@ -95,7 +90,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The description of the diagnostic item.</p>
+         * <p>The full name of the diagnostic item.</p>
          * 
          * <strong>example:</strong>
          * <p>Number of Replica Shards</p>
@@ -104,7 +99,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The suggestion for the diagnosis.</p>
+         * <p>The diagnostic result.</p>
          * 
          * <strong>example:</strong>
          * <p>You may need to adjust the numbers of replica shards of some indices as follows:  [geoname08 : 0 -&gt; 1][geoname09 : 0 -&gt; 1][geonametest01 : 0 -&gt; 1]</p>
@@ -113,6 +108,8 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>The diagnostic suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>You can call the following function in the Elasticsearch API....</p>
          */
@@ -120,7 +117,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public String suggest;
 
         /**
-         * <p>The full name of the diagnostic item.</p>
+         * <p>The type of the diagnostic result. Valid values:</p>
+         * <ul>
+         * <li>TEXT: text description</li>
+         * <li>CONSOLE_API: console-triggered</li>
+         * <li>ES_API: API-triggered.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ES_API</p>
@@ -177,18 +179,13 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     public static class ListDiagnoseReportResponseBodyResultDiagnoseItems extends TeaModel {
         /**
-         * <p>The type of the diagnostic result. Valid values:</p>
-         * <ul>
-         * <li>TEXT: text description</li>
-         * <li>CONSOLE_API: console-triggered</li>
-         * <li>ES_API: API triggered</li>
-         * </ul>
+         * <p>The details of the diagnostic item.</p>
          */
         @NameInMap("detail")
         public ListDiagnoseReportResponseBodyResultDiagnoseItemsDetail detail;
 
         /**
-         * <p>The details of the diagnostic item.</p>
+         * <p>The health status of the diagnostic item. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
          * 
          * <strong>example:</strong>
          * <p>YELLOW</p>
@@ -197,7 +194,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public String health;
 
         /**
-         * <p>The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         * <p>The name of the diagnostic item.</p>
          * 
          * <strong>example:</strong>
          * <p>IndexAliasUseDiagnostic</p>
@@ -236,9 +233,83 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     }
 
+    public static class ListDiagnoseReportResponseBodyResultItems extends TeaModel {
+        @NameInMap("desc")
+        public String desc;
+
+        @NameInMap("detail")
+        public java.util.Map<String, ?> detail;
+
+        @NameInMap("item")
+        public String item;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("state")
+        public String state;
+
+        @NameInMap("suggest")
+        public String suggest;
+
+        public static ListDiagnoseReportResponseBodyResultItems build(java.util.Map<String, ?> map) throws Exception {
+            ListDiagnoseReportResponseBodyResultItems self = new ListDiagnoseReportResponseBodyResultItems();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDiagnoseReportResponseBodyResultItems setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public ListDiagnoseReportResponseBodyResultItems setDetail(java.util.Map<String, ?> detail) {
+            this.detail = detail;
+            return this;
+        }
+        public java.util.Map<String, ?> getDetail() {
+            return this.detail;
+        }
+
+        public ListDiagnoseReportResponseBodyResultItems setItem(String item) {
+            this.item = item;
+            return this;
+        }
+        public String getItem() {
+            return this.item;
+        }
+
+        public ListDiagnoseReportResponseBodyResultItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListDiagnoseReportResponseBodyResultItems setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public ListDiagnoseReportResponseBodyResultItems setSuggest(String suggest) {
+            this.suggest = suggest;
+            return this;
+        }
+        public String getSuggest() {
+            return this.suggest;
+        }
+
+    }
+
     public static class ListDiagnoseReportResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the report.</p>
+         * <p>The timestamp when the report was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1535745731000</p>
@@ -247,13 +318,16 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The name of the item.</p>
+         * <p>The list of diagnostic items in the report.</p>
          */
         @NameInMap("diagnoseItems")
         public java.util.List<ListDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems;
 
+        @NameInMap("diagnosisMode")
+        public String diagnosisMode;
+
         /**
-         * <p>Reports the list of diagnostic item information.</p>
+         * <p>The overall health status of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
          * 
          * <strong>example:</strong>
          * <p>YELLOW</p>
@@ -262,7 +336,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public String health;
 
         /**
-         * <p>The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         * <p>The instance ID of the diagnosed instance.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc</p>
@@ -270,8 +344,11 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        @NameInMap("items")
+        public java.util.List<ListDiagnoseReportResponseBodyResultItems> items;
+
         /**
-         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
+         * <p>The report ID.</p>
          * 
          * <strong>example:</strong>
          * <p>trigger__2020-08-17T17:09:02f</p>
@@ -280,7 +357,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public String reportId;
 
         /**
-         * <p>The ID of the instance for diagnosis.</p>
+         * <p>The diagnostic status. Valid values: SUCCESS, FAILED, and RUNNING.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -289,7 +366,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The timestamp when the report was created.</p>
+         * <p>The trigger method of the health diagnostics. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: automatically triggered by the system</li>
+         * <li>INNER: internally triggered</li>
+         * <li>USER: manually triggered by the user.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -318,6 +400,14 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             return this.diagnoseItems;
         }
 
+        public ListDiagnoseReportResponseBodyResult setDiagnosisMode(String diagnosisMode) {
+            this.diagnosisMode = diagnosisMode;
+            return this;
+        }
+        public String getDiagnosisMode() {
+            return this.diagnosisMode;
+        }
+
         public ListDiagnoseReportResponseBodyResult setHealth(String health) {
             this.health = health;
             return this;
@@ -332,6 +422,14 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListDiagnoseReportResponseBodyResult setItems(java.util.List<ListDiagnoseReportResponseBodyResultItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<ListDiagnoseReportResponseBodyResultItems> getItems() {
+            return this.items;
         }
 
         public ListDiagnoseReportResponseBodyResult setReportId(String reportId) {

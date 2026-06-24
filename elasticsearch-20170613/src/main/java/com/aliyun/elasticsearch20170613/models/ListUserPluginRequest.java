@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserPluginRequest extends TeaModel {
     /**
+     * <p>Plugin Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-plugin</p>
      */
@@ -12,6 +14,8 @@ public class ListUserPluginRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Page number for paging the plugin list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListUserPluginRequest extends TeaModel {
     public String page;
 
     /**
+     * <p>Number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

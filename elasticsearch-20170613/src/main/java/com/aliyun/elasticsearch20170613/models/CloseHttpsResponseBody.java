@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloseHttpsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DC****</p>
      */
@@ -12,6 +14,12 @@ public class CloseHttpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result. Valid values:</p>
+     * <ul>
+     * <li>true: The HTTPS protocol is disabled.</li>
+     * <li>false: The HTTPS protocol failed to be disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

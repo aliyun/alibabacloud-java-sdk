@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -42,10 +42,10 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
 
     public static class DescribeXpackMonitorConfigResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the X-Pack Monitoring feature is enabled. Valid values:</p>
+         * <p>Indicates whether X-Pack monitoring is enabled. Valid values:</p>
          * <ul>
-         * <li>true: enabled</li>
-         * <li>false: disabled</li>
+         * <li>true: enabled.</li>
+         * <li>false: not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         public java.util.List<String> endpoints;
 
         /**
-         * <p>The ID of the associated Elasticsearch cluster.</p>
+         * <p>The instance ID of the Elasticsearch instance associated with X-Pack monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1x0w001c****</p>
@@ -70,7 +70,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         public java.util.List<String> pipelineIds;
 
         /**
-         * <p>The username that is used to access the associated Elasticsearch cluster.</p>
+         * <p>The username used to access the Elasticsearch instance associated with X-Pack monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>elastic</p>

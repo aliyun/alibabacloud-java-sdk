@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIndexTemplatesRequest extends TeaModel {
     /**
+     * <p>The index template name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-template</p>
      */
@@ -12,6 +14,8 @@ public class ListIndexTemplatesRequest extends TeaModel {
     public String indexTemplate;
 
     /**
+     * <p>The page number of the instance list. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +23,8 @@ public class ListIndexTemplatesRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

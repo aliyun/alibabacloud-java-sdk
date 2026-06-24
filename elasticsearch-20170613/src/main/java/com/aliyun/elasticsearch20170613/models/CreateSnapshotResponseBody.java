@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSnapshotResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -14,10 +14,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return results:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: manual snapshot backup successfully</li>
-     * <li>false: manual snapshot backup failed</li>
+     * <li>true: The manual snapshot backup is successful.</li>
+     * <li>false: The manual snapshot backup failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

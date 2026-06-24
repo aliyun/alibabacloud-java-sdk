@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitModelResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC4****</p>
@@ -14,6 +14,8 @@ public class InitModelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Return Result</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

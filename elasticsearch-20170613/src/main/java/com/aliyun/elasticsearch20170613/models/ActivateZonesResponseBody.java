@@ -14,10 +14,10 @@ public class ActivateZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the nodes in disabled zones are restored. Valid values:</p>
+     * <p>The result of the operation. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The zone is resumed.</li>
+     * <li>false: The zone failed to be resumed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

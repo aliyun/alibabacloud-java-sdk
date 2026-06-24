@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPipelineIdsRequest extends TeaModel {
     /**
+     * <p>The request body parameters. For more information, see the RequestBody section below.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;userName&quot;:&quot;elastic&quot;,     &quot;password&quot;:&quot;xxxxxx&quot; }</p>
      */

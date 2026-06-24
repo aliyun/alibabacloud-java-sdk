@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetRegionConfigurationResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned region configuration information.</p>
+     */
     @NameInMap("Result")
     public GetRegionConfigurationResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultClientNodeAmountRange extends TeaModel {
         /**
+         * <p>The maximum number of coordinating nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
@@ -44,6 +51,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxAmount;
 
         /**
+         * <p>The minimum number of coordinating nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -75,6 +84,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultClientNodeDiskList extends TeaModel {
         /**
+         * <p>The disk storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
          */
@@ -82,6 +93,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The maximum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -89,6 +102,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxSize;
 
         /**
+         * <p>The minimum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -96,6 +111,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer minSize;
 
         /**
+         * <p>The maximum continuous value that can be set for the disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -143,6 +160,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultDataDiskList extends TeaModel {
         /**
+         * <p>The disk storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
          */
@@ -150,6 +169,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The maximum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>5120</p>
          */
@@ -157,6 +178,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxSize;
 
         /**
+         * <p>The minimum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -164,6 +187,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer minSize;
 
         /**
+         * <p>The maximum continuous value that can be set for the disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -222,6 +247,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultElasticNodePropertiesAmountRange extends TeaModel {
         /**
+         * <p>The maximum number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
@@ -229,6 +256,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxAmount;
 
         /**
+         * <p>The minimum number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -260,6 +289,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultElasticNodePropertiesDiskList extends TeaModel {
         /**
+         * <p>Indicates whether disk encryption is supported.</p>
+         * <ul>
+         * <li><p>true: supported</p>
+         * </li>
+         * <li><p>false: not supported</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -267,6 +304,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Boolean diskEncryption;
 
         /**
+         * <p>The disk storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
          */
@@ -274,6 +313,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The maximum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>5120</p>
          */
@@ -281,6 +322,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxSize;
 
         /**
+         * <p>The minimum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -288,6 +331,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer minSize;
 
         /**
+         * <p>The maximum continuous value that can be set for the disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -353,9 +398,15 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultElasticNodeProperties extends TeaModel {
+        /**
+         * <p>The range for the number of elastic nodes.</p>
+         */
         @NameInMap("amountRange")
         public GetRegionConfigurationResponseBodyResultElasticNodePropertiesAmountRange amountRange;
 
+        /**
+         * <p>The list of disk configurations.</p>
+         */
         @NameInMap("diskList")
         public java.util.List<GetRegionConfigurationResponseBodyResultElasticNodePropertiesDiskList> diskList;
 
@@ -395,6 +446,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultEsVersionsLatestList extends TeaModel {
         /**
+         * <p>The supported major version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.5_with_X-Pack</p>
          */
@@ -402,6 +455,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The full name of the supported minor version.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.5.3_with_X-Pack</p>
          */
@@ -433,6 +488,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultJvmConfine extends TeaModel {
         /**
+         * <p>The minimum memory size required to enable JVM garbage collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -478,6 +535,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultKibanaNodePropertiesAmountRange extends TeaModel {
         /**
+         * <p>The maximum number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -485,6 +544,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxAmount;
 
         /**
+         * <p>The minimum number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -515,6 +576,9 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultKibanaNodeProperties extends TeaModel {
+        /**
+         * <p>The allowed range for the number of nodes.</p>
+         */
         @NameInMap("amountRange")
         public GetRegionConfigurationResponseBodyResultKibanaNodePropertiesAmountRange amountRange;
 
@@ -546,6 +610,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultMasterDiskList extends TeaModel {
         /**
+         * <p>The disk storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
          */
@@ -553,6 +619,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The maximum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -560,6 +628,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxSize;
 
         /**
+         * <p>The minimum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -567,6 +637,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer minSize;
 
         /**
+         * <p>The maximum continuous value that can be set for the disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -614,6 +686,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultNode extends TeaModel {
         /**
+         * <p>The maximum number of data nodes allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -621,6 +695,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxAmount;
 
         /**
+         * <p>The minimum number of data nodes allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -652,6 +728,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultNodeSpecList extends TeaModel {
         /**
+         * <p>The number of CPU cores for this specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -659,6 +737,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer cpuCount;
 
         /**
+         * <p>The disk size for this specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>44000</p>
          */
@@ -666,6 +746,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer disk;
 
         /**
+         * <p>The disk storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>local_efficiency</p>
          */
@@ -673,6 +755,12 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String diskType;
 
         /**
+         * <p>Indicates whether the specification is available for purchase.</p>
+         * <ul>
+         * <li>true: available</li>
+         * <li>false: unavailable</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -680,6 +768,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The memory size of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>64</p>
          */
@@ -687,6 +777,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer memorySize;
 
         /**
+         * <p>The specification name.</p>
+         * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.large</p>
          */
@@ -694,6 +786,16 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String spec;
 
         /**
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li><p>common: cloud disk</p>
+         * </li>
+         * <li><p>local_efficiency: local SATA disk</p>
+         * </li>
+         * <li><p>local_ssd: local SSD disk</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>local_efficiency</p>
          */
@@ -765,6 +867,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultSupportVersionsSupportVersionList extends TeaModel {
         /**
+         * <p>The version available on the purchase page.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.5</p>
          */
@@ -772,6 +876,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The detailed version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.5.3</p>
          */
@@ -803,12 +909,23 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultSupportVersions extends TeaModel {
         /**
+         * <p>The instance category. Valid values:</p>
+         * <ul>
+         * <li><p>advanced: Enhanced Edition</p>
+         * </li>
+         * <li><p>x-pack: Commercial Edition</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>x-pack</p>
          */
         @NameInMap("instanceCategory")
         public String instanceCategory;
 
+        /**
+         * <p>The supported Elasticsearch version information.</p>
+         */
         @NameInMap("supportVersionList")
         public java.util.List<GetRegionConfigurationResponseBodyResultSupportVersionsSupportVersionList> supportVersionList;
 
@@ -837,6 +954,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultWarmNodePropertiesAmountRange extends TeaModel {
         /**
+         * <p>The maximum number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -844,6 +963,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxAmount;
 
         /**
+         * <p>The minimum number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -875,6 +996,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
 
     public static class GetRegionConfigurationResponseBodyResultWarmNodePropertiesDiskList extends TeaModel {
         /**
+         * <p>Indicates whether disk encryption is supported.</p>
+         * <ul>
+         * <li><p>true: supported</p>
+         * </li>
+         * <li><p>false: not supported</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -882,6 +1011,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Boolean diskEncryption;
 
         /**
+         * <p>The disk storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
          */
@@ -889,6 +1020,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The maximum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>5120</p>
          */
@@ -896,6 +1029,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer maxSize;
 
         /**
+         * <p>The minimum disk size allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -903,6 +1038,8 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public Integer minSize;
 
         /**
+         * <p>The maximum continuous value that can be set for the disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -968,9 +1105,15 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultWarmNodeProperties extends TeaModel {
+        /**
+         * <p>The range for the number of nodes.</p>
+         */
         @NameInMap("amountRange")
         public GetRegionConfigurationResponseBodyResultWarmNodePropertiesAmountRange amountRange;
 
+        /**
+         * <p>The list of disk configurations.</p>
+         */
         @NameInMap("diskList")
         public java.util.List<GetRegionConfigurationResponseBodyResultWarmNodePropertiesDiskList> diskList;
 
@@ -1009,9 +1152,15 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResult extends TeaModel {
+        /**
+         * <p>The range for the number of coordinating nodes.</p>
+         */
         @NameInMap("clientNodeAmountRange")
         public GetRegionConfigurationResponseBodyResultClientNodeAmountRange clientNodeAmountRange;
 
+        /**
+         * <p>The allowed values for coordinating node disks.</p>
+         */
         @NameInMap("clientNodeDiskList")
         public java.util.List<GetRegionConfigurationResponseBodyResultClientNodeDiskList> clientNodeDiskList;
 
@@ -1019,19 +1168,29 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         public java.util.List<String> clientNodeSpec;
 
         /**
+         * <p>The URL of the purchase page.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://common-buy.aliyun.com/?commodityCode=elasticsearch&orderType=BUY#/buy">https://common-buy.aliyun.com/?commodityCode=elasticsearch&amp;orderType=BUY#/buy</a></p>
          */
         @NameInMap("createUrl")
         public String createUrl;
 
+        /**
+         * <p>The allowed values for data node disks.</p>
+         */
         @NameInMap("dataDiskList")
         public java.util.List<GetRegionConfigurationResponseBodyResultDataDiskList> dataDiskList;
 
+        /**
+         * <p>The elastic node configuration.</p>
+         */
         @NameInMap("elasticNodeProperties")
         public GetRegionConfigurationResponseBodyResultElasticNodeProperties elasticNodeProperties;
 
         /**
+         * <p>The environment flag.</p>
+         * 
          * <strong>example:</strong>
          * <p>production</p>
          */
@@ -1041,43 +1200,69 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         @NameInMap("esVersions")
         public java.util.List<String> esVersions;
 
+        /**
+         * <p>The list of Elasticsearch versions available for purchase.</p>
+         */
         @NameInMap("esVersionsLatestList")
         public java.util.List<GetRegionConfigurationResponseBodyResultEsVersionsLatestList> esVersionsLatestList;
 
         @NameInMap("instanceSupportNodes")
         public java.util.List<String> instanceSupportNodes;
 
+        /**
+         * <p>The JVM validation configuration.</p>
+         */
         @NameInMap("jvmConfine")
         public GetRegionConfigurationResponseBodyResultJvmConfine jvmConfine;
 
+        /**
+         * <p>The Kibana node configuration.</p>
+         */
         @NameInMap("kibanaNodeProperties")
         public GetRegionConfigurationResponseBodyResultKibanaNodeProperties kibanaNodeProperties;
 
         @NameInMap("logstashZones")
         public java.util.List<String> logstashZones;
 
+        /**
+         * <p>The allowed values for dedicated master node disks.</p>
+         */
         @NameInMap("masterDiskList")
         public java.util.List<GetRegionConfigurationResponseBodyResultMasterDiskList> masterDiskList;
 
         @NameInMap("masterSpec")
         public java.util.List<String> masterSpec;
 
+        /**
+         * <p>The node configuration.</p>
+         */
         @NameInMap("node")
         public GetRegionConfigurationResponseBodyResultNode node;
 
+        /**
+         * <p>The list of data node specifications.</p>
+         */
         @NameInMap("nodeSpecList")
         public java.util.List<GetRegionConfigurationResponseBodyResultNodeSpecList> nodeSpecList;
 
         /**
+         * <p>The current region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The supported version configurations.</p>
+         */
         @NameInMap("supportVersions")
         public java.util.List<GetRegionConfigurationResponseBodyResultSupportVersions> supportVersions;
 
+        /**
+         * <p>The warm node configuration.</p>
+         */
         @NameInMap("warmNodeProperties")
         public GetRegionConfigurationResponseBodyResultWarmNodeProperties warmNodeProperties;
 

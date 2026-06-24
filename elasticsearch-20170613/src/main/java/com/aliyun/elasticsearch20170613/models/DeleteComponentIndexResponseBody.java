@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteComponentIndexResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
@@ -12,6 +14,12 @@ public class DeleteComponentIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result. Valid values:</p>
+     * <ul>
+     * <li>true: The deletion was successful.</li>
+     * <li>false: The deletion failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

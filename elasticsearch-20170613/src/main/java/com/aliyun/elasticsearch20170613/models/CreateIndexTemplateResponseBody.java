@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIndexTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
@@ -12,6 +14,8 @@ public class CreateIndexTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the created cluster index template.</p>
+     * 
      * <strong>example:</strong>
      * <p>index-template</p>
      */

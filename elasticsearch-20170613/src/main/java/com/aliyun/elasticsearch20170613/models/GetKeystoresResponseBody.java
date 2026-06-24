@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKeystoresResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -13,6 +13,9 @@ public class GetKeystoresResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConnectedClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -14,10 +14,10 @@ public class DeleteConnectedClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return results:</p>
+     * <p>The result of the operation. Valid values:</p>
      * <ul>
-     * <li>true: remove the interworking instance successfully</li>
-     * <li>false: remove the interworking instance failed</li>
+     * <li>true: The connected instance is removed.</li>
+     * <li>false: The connected instance failed to be removed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

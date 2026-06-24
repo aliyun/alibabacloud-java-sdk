@@ -5,19 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status of the instance. Valid values:</p>
-     * <ul>
-     * <li>active: normal</li>
-     * <li>activating: taking effect</li>
-     * <li>inactive: frozen</li>
-     * <li>invalid: invalid</li>
-     * </ul>
+     * <p>The response headers.</p>
      */
     @NameInMap("Headers")
     public ListInstanceResponseBodyHeaders headers;
 
     /**
-     * <p>The time when the node is created.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -26,7 +20,7 @@ public class ListInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether it is a service VPC.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListInstanceResponseBodyResult> result;
@@ -62,11 +56,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyHeaders extends TeaModel {
         /**
-         * <p>Specifies whether to include dedicated master nodes (obsolete). Valid values:</p>
-         * <ul>
-         * <li>true: The files contain data that is dumped to the IA storage medium.</li>
-         * <li>false: The files do not contain data that is dumped to the IA storage medium.</li>
-         * </ul>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -91,7 +81,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultClientNodeConfiguration extends TeaModel {
         /**
-         * <p>The size of the node storage space. Unit: GB.</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -100,11 +90,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>Specifies whether to enable disk encryption for the node. Valid values:</p>
-         * <ul>
-         * <li>true: enables instant image cache.</li>
-         * <li>false: disables reuse of image cache layers.</li>
-         * </ul>
+         * <p>The storage size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -113,12 +99,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The storage type of the node. Valid values:</p>
-         * <ul>
-         * <li>cloud_ssd: SSD.</li>
-         * <li>cloud_essd: ESSD.</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * </ul>
+         * <p>The storage type of the node. Only ultra disks (cloud_efficiency) are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -127,7 +108,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The number of nodes.</p>
+         * <p>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.large</p>
@@ -135,6 +116,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        /**
+         * <p>The description of node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C 2G</p>
+         */
         @NameInMap("specInfo")
         public String specInfo;
 
@@ -196,7 +183,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The size of the node storage space. Unit: GB.</p>
+         * <p>The storage size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -205,7 +192,13 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The storage type of the node.</p>
+         * <p>Indicates whether disk encryption is enabled for the node. Valid values:</p>
+         * <ul>
+         * <li><p>true: Disk encryption is enabled.</p>
+         * </li>
+         * <li><p>false: Disk encryption is not enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -214,7 +207,15 @@ public class ListInstanceResponseBody extends TeaModel {
         public Boolean diskEncryption;
 
         /**
-         * <p>The configuration of dedicated master nodes.</p>
+         * <p>The storage type of the node. Valid values:</p>
+         * <ul>
+         * <li><p>cloud_ssd: standard SSD</p>
+         * </li>
+         * <li><p>cloud_essd: enhanced SSD (ESSD)</p>
+         * </li>
+         * <li><p>cloud_efficiency: ultra disk</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -223,7 +224,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
+         * <p>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.large</p>
@@ -231,6 +232,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        /**
+         * <p>The description of node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C 2G</p>
+         */
         @NameInMap("specInfo")
         public String specInfo;
 
@@ -291,7 +298,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
         /**
-         * <p>The size of the node storage space. Unit: GB.</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -300,7 +307,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.</p>
+         * <p>The storage size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -309,7 +316,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The network configurations.</p>
+         * <p>The storage type of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -318,7 +325,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The number of nodes.</p>
+         * <p>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.n4.small</p>
@@ -326,6 +333,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        /**
+         * <p>The description of node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C 2G</p>
+         */
         @NameInMap("specInfo")
         public String specInfo;
 
@@ -378,7 +391,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultMasterConfiguration extends TeaModel {
         /**
-         * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -387,7 +400,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The vSwitch ID of the cluster.</p>
+         * <p>The storage size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -396,7 +409,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The configuration of data nodes.</p>
+         * <p>The storage type of the node. Only cloud_ssd (standard SSD) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -405,7 +418,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The zone where the cluster resides.</p>
+         * <p>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.large</p>
@@ -413,6 +426,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("spec")
         public String spec;
 
+        /**
+         * <p>The description of node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C 2G</p>
+         */
         @NameInMap("specInfo")
         public String specInfo;
 
@@ -465,16 +484,23 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultNetworkConfigWhiteIpGroupList extends TeaModel {
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <p>The IP address whitelist.</p>
+         */
         @NameInMap("ips")
         public java.util.List<String> ips;
 
         /**
+         * <p>The network type. PRIVATE_ES: Elasticsearch private network. PUBLIC_KIBANA: Kibana public network. PUBLIC_ES: Elasticsearch public network. PRIVATE_KIBANA: Kibana private network.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC_KIBANA</p>
          */
@@ -514,11 +540,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultNetworkConfig extends TeaModel {
         /**
-         * <p>The storage type of the node. Valid values:</p>
-         * <ul>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * </ul>
+         * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -527,7 +549,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The storage space of the node. Unit: GB.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-abc</p>
@@ -536,11 +558,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>Specifies whether to use disk encryption. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>The zone where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>
@@ -549,7 +567,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String vsArea;
 
         /**
-         * <p>The performance level of the ESSD. This parameter is required when the diskType parameter is set to cloud_essd. Valid values: PL1, PL2, and PL3.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-def</p>
@@ -557,6 +575,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("vswitchId")
         public String vswitchId;
 
+        /**
+         * <p>The whitelist group settings for the public and private networks of the cluster.</p>
+         */
         @NameInMap("whiteIpGroupList")
         public java.util.List<ListInstanceResponseBodyResultNetworkConfigWhiteIpGroupList> whiteIpGroupList;
 
@@ -609,6 +630,8 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultNodeSpec extends TeaModel {
         /**
+         * <p>The storage size of the node. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -616,6 +639,12 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
+         * <p>Indicates whether disk encryption is used. Valid values:</p>
+         * <ul>
+         * <li>true: Disk encryption is used.</li>
+         * <li>false: Disk encryption is not used.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -623,6 +652,14 @@ public class ListInstanceResponseBody extends TeaModel {
         public Boolean diskEncryption;
 
         /**
+         * <p>The storage type of the node. Valid values:</p>
+         * <ul>
+         * <li><p>cloud_ssd: standard SSD</p>
+         * </li>
+         * <li><p>cloud_efficiency: ultra disk</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
          */
@@ -630,6 +667,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The performance level of the ESSD. This parameter is required when diskType is cloud_essd. Valid values: PL1, PL2, and PL3.</p>
+         * 
          * <strong>example:</strong>
          * <p>PL1</p>
          */
@@ -637,12 +676,20 @@ public class ListInstanceResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
+         * <p>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>elasticsearch.n4.small</p>
          */
         @NameInMap("spec")
         public String spec;
 
+        /**
+         * <p>The description of node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C 2G</p>
+         */
         @NameInMap("specInfo")
         public String specInfo;
 
@@ -703,7 +750,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultTags extends TeaModel {
         /**
-         * <p>The size of the node storage space. Unit: GB.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -712,7 +759,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The storage type of the node. Only ultra disks (cloud_efficiency) are supported.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -783,10 +830,12 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>Indicates whether the instance contains dedicated master nodes. Valid values:</p>
          * <ul>
-         * <li><strong>prepaid</strong>: subscription</li>
-         * <li><strong>postpaid</strong>: pay-as-you-go</li>
+         * <li><p>true: The instance contains dedicated master nodes.</p>
+         * </li>
+         * <li><p>false: The instance does not contain dedicated master nodes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -795,22 +844,25 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("advancedDedicateMaster")
         public Boolean advancedDedicateMaster;
 
+        /**
+         * <p>The deployment mode and architecture type:
+         * exclusive: basic management and control
+         * public: cloud-native management and control</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("archType")
         public String archType;
 
         /**
-         * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
+         * <p>The configuration of client nodes.</p>
          */
         @NameInMap("clientNodeConfiguration")
         public ListInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration;
 
         /**
-         * <p>The status of the pay-as-you-go service that is overlaid on a subscription instance. Valid values:</p>
-         * <ul>
-         * <li><strong>active</strong>: normal</li>
-         * <li><strong>closed</strong>: Close</li>
-         * <li><strong>indebt</strong>: Overdue payments are frozen</li>
-         * </ul>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-13T03:58:07.253Z</p>
@@ -819,7 +871,13 @@ public class ListInstanceResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The edition of the dedicated KMS instance.</p>
+         * <p>Indicates whether the instance contains dedicated master nodes (deprecated). Valid values:</p>
+         * <ul>
+         * <li><p>true: The instance contains dedicated master nodes.</p>
+         * </li>
+         * <li><p>false: The instance does not contain dedicated master nodes.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -828,7 +886,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Boolean dedicateMaster;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc</p>
@@ -836,20 +894,32 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The internal endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q8auz0005****.elasticsearch.aliyuncs.com</p>
+         */
         @NameInMap("domain")
         public String domain;
 
         /**
-         * <p>The configuration of Kibana nodes.</p>
+         * <p>The configuration of elastic data nodes.</p>
          */
         @NameInMap("elasticDataNodeConfiguration")
         public ListInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
+        /**
+         * <p>The expiration time of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715826092044</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>6.7_with_X-Pack</p>
@@ -858,13 +928,13 @@ public class ListInstanceResponseBody extends TeaModel {
         public String esVersion;
 
         /**
-         * <p>The configurations of elastic data nodes.</p>
+         * <p>The extended configurations of the cluster.</p>
          */
         @NameInMap("extendConfigs")
         public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
         /**
-         * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-v641a0ta3000g****</p>
@@ -873,7 +943,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The configuration of cluster extension parameters.</p>
+         * <p>Indicates whether the instance uses the new deployment architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -882,31 +952,37 @@ public class ListInstanceResponseBody extends TeaModel {
         public String isNewDeployment;
 
         /**
-         * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
+         * <p>The configuration of Kibana nodes.</p>
          */
         @NameInMap("kibanaConfiguration")
         public ListInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration;
 
+        /**
+         * <p>The public network access whitelist for Kibana nodes of the cluster.</p>
+         */
         @NameInMap("kibanaIPWhitelist")
         public java.util.List<String> kibanaIPWhitelist;
 
+        /**
+         * <p>The private network access whitelist for Kibana nodes of the cluster.</p>
+         */
         @NameInMap("kibanaPrivateIPWhitelist")
         public java.util.List<String> kibanaPrivateIPWhitelist;
 
         /**
-         * <p>The VPC ID of the cluster.</p>
+         * <p>The configuration of master nodes.</p>
          */
         @NameInMap("masterConfiguration")
         public ListInstanceResponseBodyResultMasterConfiguration masterConfiguration;
 
         /**
-         * <p>The instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
+         * <p>The network configuration.</p>
          */
         @NameInMap("networkConfig")
         public ListInstanceResponseBodyResultNetworkConfig networkConfig;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The number of data nodes in the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -915,13 +991,19 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The VPC ID of the cluster.</p>
+         * <p>The configuration of data nodes.</p>
          */
         @NameInMap("nodeSpec")
         public ListInstanceResponseBodyResultNodeSpec nodeSpec;
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>prepaid</strong>: subscription</p>
+         * </li>
+         * <li><p><strong>postpaid</strong>: pay-as-you-go</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>postpaid</p>
@@ -929,11 +1011,28 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>The access port of the instance.</p>
+         * <blockquote>
+         * <p>Notice: When the instance is being created or the instance status is abnormal, this value may be empty or 0.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>9200</p>
+         */
         @NameInMap("port")
         public String port;
 
         /**
-         * <p>The tags of the instance. Each tag is a key-value pair.</p>
+         * <p>The status of the pay-as-you-go service that is overlaid on a subscription instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>active</strong>: normal</p>
+         * </li>
+         * <li><p><strong>closed</strong>: closed</p>
+         * </li>
+         * <li><p><strong>indebt</strong>: frozen due to overdue payment</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -941,17 +1040,29 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("postpaidServiceStatus")
         public String postpaidServiceStatus;
 
+        /**
+         * <p>The private network access whitelist for the Elasticsearch cluster.</p>
+         */
         @NameInMap("privateNetworkIpWhiteList")
         public java.util.List<String> privateNetworkIpWhiteList;
 
+        /**
+         * <p>The access protocol. Valid values: HTTP and HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
+        /**
+         * <p>The public network access whitelist for the Elasticsearch cluster.</p>
+         */
         @NameInMap("publicIpWhitelist")
         public java.util.List<String> publicIpWhitelist;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzvowej3i****</p>
@@ -960,7 +1071,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Specifies whether to deploy the new architecture.</p>
+         * <p>Indicates whether the instance is a service VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -969,7 +1080,19 @@ public class ListInstanceResponseBody extends TeaModel {
         public Boolean serviceVpc;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li><p>active: normal</p>
+         * </li>
+         * <li><p>activating: taking effect</p>
+         * </li>
+         * <li><p>inactive: frozen</p>
+         * </li>
+         * <li><p>invalid: invalid. The cluster does not exist or is inaccessible. In this case, some fields in the API response may be missing, such as domain and kibanaDomain.</p>
+         * </li>
+         * <li><p>unknown: unknown. The cluster does not exist or is inaccessible. In this case, some fields in the API response may be missing, such as domain and kibanaDomain.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -978,13 +1101,13 @@ public class ListInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of nodes.</p>
+         * <p>The instance tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListInstanceResponseBodyResultTags> tags;
 
         /**
-         * <p>Coordination node configuration.</p>
+         * <p>The time when the instance was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-18T10:10:04.484Z</p>
@@ -993,6 +1116,8 @@ public class ListInstanceResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1uag5jj38c****</p>
          */

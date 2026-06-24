@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSuggestShrinkableNodesRequest extends TeaModel {
     /**
-     * <p>The number of nodes that you want to remove.</p>
+     * <p>The expected number of removable nodes to retrieve.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class GetSuggestShrinkableNodesRequest extends TeaModel {
     public Boolean ignoreStatus;
 
     /**
-     * <p>The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.</p>
+     * <p>The type of nodes to scale in. <strong>WORKER</strong> indicates hot nodes. <strong>WORKER_WARM</strong> indicates warm nodes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

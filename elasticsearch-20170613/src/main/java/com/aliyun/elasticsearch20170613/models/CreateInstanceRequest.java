@@ -4,29 +4,52 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    /**
+     * <p>Coordinating node configuration.</p>
+     */
     @NameInMap("clientNodeConfiguration")
     public ClientNodeConfiguration clientNodeConfiguration;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>es</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Elastic node configuration.</p>
+     */
     @NameInMap("elasticDataNodeConfiguration")
     public ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
     /**
+     * <p>The access password of the instance. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$%^&amp;*()_+-=). The password must be 8 to 32 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>es_password</p>
+     * <p>Es_password</p>
      */
     @NameInMap("esAdminPassword")
     public String esAdminPassword;
 
     /**
+     * <p>The instance version. Valid values:</p>
+     * <ul>
+     * <li>8.5.1_with_X-Pack</li>
+     * <li>7.10_with_X-Pack</li>
+     * <li>6.7_with_X-Pack</li>
+     * <li>7.7_with_X-Pack</li>
+     * <li>6.8_with_X-Pack</li>
+     * <li>6.3_with_X-Pack</li>
+     * <li>5.6_with_X-Pack</li>
+     * <li>5.5.3_with_X-Pack</li>
+     * </ul>
+     * <blockquote>
+     * <p>The versions listed above may not include all versions supported by Elasticsearch instances. You can call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation to view the actually supported versions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,25 +59,48 @@ public class CreateInstanceRequest extends TeaModel {
     public String esVersion;
 
     /**
+     * <p>The edition type:</p>
+     * <ul>
+     * <li>x-pack: creates a commercial edition instance, or a kernel-enhanced edition instance without Indexing Service or OpenStore enabled.</li>
+     * <li>IS: creates a kernel-enhanced edition instance with Indexing Service or OpenStore enabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>advanced</p>
      */
     @NameInMap("instanceCategory")
     public String instanceCategory;
 
+    /**
+     * <p>Kibana node configuration.</p>
+     * <blockquote>
+     * <p>We strongly recommend that you enable the Kibana node.</p>
+     * </blockquote>
+     */
     @NameInMap("kibanaConfiguration")
     public KibanaNodeConfiguration kibanaConfiguration;
 
+    /**
+     * <p>Dedicated master node configuration.</p>
+     * <blockquote>
+     * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you use createInstance to create an instance with next-generation cloud disk dedicated master nodes, you must specify the instance family with the <code>.new</code> suffix, for example, elasticsearch.sn1ne.large.new.</p>
+     * </blockquote>
+     */
     @NameInMap("masterConfiguration")
     public MasterNodeConfiguration masterConfiguration;
 
     /**
+     * <p>Network configuration.</p>
+     * <blockquote>
+     * <p>Specifying IP whitelists is not supported when creating an instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("networkConfig")
     public NetworkConfig networkConfig;
 
     /**
+     * <p>The number of data nodes. Valid values: 2 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,13 +109,28 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("nodeAmount")
     public Integer nodeAmount;
 
+    /**
+     * <p>Data node configuration.</p>
+     * <blockquote>
+     * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you use createInstance to create an instance with next-generation cloud disk data nodes, you must specify the instance family with the <code>.new</code> suffix, for example, elasticsearch.sn1ne.large.new.</p>
+     * </blockquote>
+     */
     @NameInMap("nodeSpec")
     public NodeSpec nodeSpec;
 
+    /**
+     * <p>The billing details of the subscription instance. This parameter is required when you create a subscription instance.</p>
+     */
     @NameInMap("paymentInfo")
     public PaymentInfo paymentInfo;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>postpaid: pay-as-you-go.</li>
+     * <li>prepaid: subscription.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>postpaid</p>
      */
@@ -77,19 +138,29 @@ public class CreateInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rg-aekzu7tsu4nem4q</p>
+     * <p>rg-aekzu7tsu4n****</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Instance tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<CreateInstanceRequestTags> tags;
 
+    /**
+     * <p>Cold data node configuration.</p>
+     */
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
 
     /**
+     * <p>The number of zones for the instance. Valid values: 1, 2, and 3. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -97,6 +168,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer zoneCount;
 
     /**
+     * <p>Used to ensure the idempotency of the request. The parameter value is generated by the client and must be unique across different requests. The value cannot exceed 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
@@ -253,9 +326,21 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestTags extends TeaModel {
+        /**
+         * <p>The tag key of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyTest</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyValue</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 

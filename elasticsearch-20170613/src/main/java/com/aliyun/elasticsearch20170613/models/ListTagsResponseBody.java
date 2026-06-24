@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagsResponseBody extends TeaModel {
     /**
-     * <p>The key of the tag.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -13,6 +13,9 @@ public class ListTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListTagsResponseBodyResult> result;
 
@@ -39,6 +42,8 @@ public class ListTagsResponseBody extends TeaModel {
 
     public static class ListTagsResponseBodyResult extends TeaModel {
         /**
+         * <p>The label key.</p>
+         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -46,6 +51,8 @@ public class ListTagsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The label value.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */

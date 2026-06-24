@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataStreamsRequest extends TeaModel {
     /**
+     * <p>Specifies whether to display only managed indexes. Valid values:</p>
+     * <ul>
+     * <li><p>true: displays only managed indexes.</p>
+     * </li>
+     * <li><p>false (default): displays all indexes.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +20,8 @@ public class ListDataStreamsRequest extends TeaModel {
     public Boolean isManaged;
 
     /**
+     * <p>The data stream name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Log1</p>
      */

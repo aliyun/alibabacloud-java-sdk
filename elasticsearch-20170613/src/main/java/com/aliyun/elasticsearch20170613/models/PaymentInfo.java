@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PaymentInfo extends TeaModel {
     /**
+     * <p>The auto-renewal cycle. Unit: month. This parameter is required when <strong>isAutoRenew</strong> is set to <strong>true</strong>. The valid values are the same as those on the buy page.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class PaymentInfo extends TeaModel {
     public Long autoRenewDuration;
 
     /**
+     * <p>The subscription duration. This parameter is required. You can specify the duration in months or years.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,12 @@ public class PaymentInfo extends TeaModel {
     public Long duration;
 
     /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <ul>
+     * <li>true: enabled.</li>
+     * <li>false (default): disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +36,12 @@ public class PaymentInfo extends TeaModel {
     public Boolean isAutoRenew;
 
     /**
+     * <p>The unit of the subscription duration. This parameter is required. Valid values:</p>
+     * <ul>
+     * <li>Year: year</li>
+     * <li>Month: month.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */

@@ -4,13 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateKeystoresRequest extends TeaModel {
+    /**
+     * <p>Delete keystore configuration</p>
+     */
     @NameInMap("remove")
     public java.util.List<String> remove;
 
+    /**
+     * <p>Add or update keystore</p>
+     */
     @NameInMap("update")
     public java.util.Map<String, String> update;
 
     /**
+     * <p>Whether to force the change. false: non-forced, true: forced</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

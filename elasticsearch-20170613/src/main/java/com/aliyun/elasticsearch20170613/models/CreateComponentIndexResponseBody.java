@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateComponentIndexResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C20022BA-5382-4339-89FB-30AF48A05431</p>
      */
@@ -12,6 +14,12 @@ public class CreateComponentIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result. Valid values:</p>
+     * <ul>
+     * <li>true: The template was created successfully.</li>
+     * <li>false: The template failed to be created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

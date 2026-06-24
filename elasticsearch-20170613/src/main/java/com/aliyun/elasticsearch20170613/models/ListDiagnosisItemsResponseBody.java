@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListDiagnosisItemsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDiagnosisItemsResponseBodyResult> result;
 
@@ -37,13 +42,20 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
 
     public static class ListDiagnosisItemsResponseBodyResult extends TeaModel {
         /**
+         * <p>The diagnostic item description.</p>
+         * 
          * <strong>example:</strong>
          * <p>诊断集群写数据是否有堆积当集群的数据写入存在堆积时，会造成BulkReject异常，可能会导致数据丢失，且会造成系统资源消耗严重</p>
          */
         @NameInMap("description")
         public String description;
 
+        @NameInMap("esApiRequired")
+        public Boolean esApiRequired;
+
         /**
+         * <p>The diagnostic item identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>ClusterBulkRejectDiagnostic</p>
          */
@@ -51,6 +63,8 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The diagnostic item name.</p>
+         * 
          * <strong>example:</strong>
          * <p>索引写入BulkReject诊断</p>
          */
@@ -68,6 +82,14 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListDiagnosisItemsResponseBodyResult setEsApiRequired(Boolean esApiRequired) {
+            this.esApiRequired = esApiRequired;
+            return this;
+        }
+        public Boolean getEsApiRequired() {
+            return this.esApiRequired;
         }
 
         public ListDiagnosisItemsResponseBodyResult setKey(String key) {

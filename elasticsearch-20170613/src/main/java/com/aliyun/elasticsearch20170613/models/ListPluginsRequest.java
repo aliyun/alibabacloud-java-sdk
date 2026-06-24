@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPluginsRequest extends TeaModel {
     /**
-     * <p>SYSTEM</p>
+     * <p>The plugin name.</p>
      * 
      * <strong>example:</strong>
      * <p>analysis-ik</p>
@@ -14,7 +14,7 @@ public class ListPluginsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListPluginsRequest extends TeaModel {
     public String page;
 
     /**
-     * <p>The header of the response.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListPluginsRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The plugin source type. Only SYSTEM (system plugin) is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM</p>

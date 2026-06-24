@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCollectorsRequest extends TeaModel {
     /**
-     * <p>The ID of the resource with which the shipper is associated.</p>
+     * <p>The instance ID associated with the collector.</p>
      * 
      * <strong>example:</strong>
      * <p>es-cn-nif1q8auz0003****</p>
@@ -14,7 +14,7 @@ public class ListCollectorsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the shipper.</p>
+     * <p>The collector name.</p>
      * 
      * <strong>example:</strong>
      * <p>collectorName1</p>
@@ -23,7 +23,7 @@ public class ListCollectorsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of the page to return. Valid values: 1 to 200. Default value: 1.</p>
+     * <p>The page number of the returned results. Default value: 1. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListCollectorsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The ID of the shipper.</p>
+     * <p>The collector ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ct-cn-77uqof2s7rg5c****</p>
@@ -41,7 +41,7 @@ public class ListCollectorsRequest extends TeaModel {
     public String resId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.</p>
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,10 +50,12 @@ public class ListCollectorsRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:</p>
+     * <p>The type of machine on which the collector is deployed. If this parameter is not specified, all types are returned. Valid values:</p>
      * <ul>
-     * <li>ECS</li>
-     * <li>ACK</li>
+     * <li><p>ECS: ECS instance</p>
+     * </li>
+     * <li><p>ACK: Container Kubernetes cluster.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

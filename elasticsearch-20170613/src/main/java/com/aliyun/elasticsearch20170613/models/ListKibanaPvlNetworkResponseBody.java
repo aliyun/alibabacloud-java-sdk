@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKibanaPvlNetworkResponseBody extends TeaModel {
     /**
-     * <p>request id</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -13,6 +13,9 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of result objects.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListKibanaPvlNetworkResponseBodyResult> result;
 
@@ -39,6 +42,8 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
 
     public static class ListKibanaPvlNetworkResponseBodyResultVSwitchIdsZone extends TeaModel {
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xdefafns***</p>
          */
@@ -46,6 +51,8 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>
          */
@@ -77,6 +84,8 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
 
     public static class ListKibanaPvlNetworkResponseBodyResult extends TeaModel {
         /**
+         * <p>The time when the Kibana private network connection was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-07T06:26:28Z</p>
          */
@@ -84,6 +93,8 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The endpoint ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ep-bp1tah7zbrwmkjef****</p>
          */
@@ -91,6 +102,8 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         public String endpointId;
 
         /**
+         * <p>The endpoint name.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-cn-xxdjfia****-kibana</p>
          */
@@ -98,6 +111,14 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         public String endpointName;
 
         /**
+         * <p>The endpoint status. Valid values:</p>
+         * <ul>
+         * <li><p>Disconnected: not connected.</p>
+         * </li>
+         * <li><p>Connected: connected.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Connected</p>
          */
@@ -105,19 +126,29 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         public String endpointStatus;
 
         /**
+         * <p>The Kibana private network connection ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-cn-27a3mul6l***-kibana-internal</p>
          */
         @NameInMap("pvlId")
         public String pvlId;
 
+        /**
+         * <p>The list of security groups.</p>
+         */
         @NameInMap("securityGroups")
         public java.util.List<String> securityGroups;
 
+        /**
+         * <p>The vSwitch and zone information.</p>
+         */
         @NameInMap("vSwitchIdsZone")
         public java.util.List<ListKibanaPvlNetworkResponseBodyResultVSwitchIdsZone> vSwitchIdsZone;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp16k1dvzxtma*****</p>
          */

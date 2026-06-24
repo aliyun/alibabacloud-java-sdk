@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RolloverDataStreamResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
@@ -12,6 +14,14 @@ public class RolloverDataStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned result. Valid values:</p>
+     * <ul>
+     * <li><p>true: The rollover succeeded.</p>
+     * </li>
+     * <li><p>false: The rollover failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

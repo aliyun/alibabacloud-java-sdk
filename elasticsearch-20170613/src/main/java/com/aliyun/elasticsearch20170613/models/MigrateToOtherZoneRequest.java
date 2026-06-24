@@ -8,7 +8,11 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String body;
 
     /**
-     * <p>Verify whether the zone node can be migrated. true indicates that the data is only verified and the migration task is not executed. false indicates that the migration task is executed after the verification is successful.</p>
+     * <p>Specifies whether to perform a dry run to check whether zone node migration is feasible. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a validation check without executing the migration task.</li>
+     * <li>false: executes the migration task after the validation check succeeds.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

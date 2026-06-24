@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeIndexTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>25DB38F8-82E4-4D16-82BB-FF077C7F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the index template.</p>
+     */
     @NameInMap("Result")
     public DescribeIndexTemplateResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
 
     public static class DescribeIndexTemplateResponseBodyResultTemplate extends TeaModel {
         /**
+         * <p>The aliases configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;mydata\&quot;:{}}</p>
          */
@@ -44,6 +51,8 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public String aliases;
 
         /**
+         * <p>The mappings configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
          */
@@ -51,6 +60,8 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public String mappings;
 
         /**
+         * <p>The settings configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;index.refresh_interval\&quot;:\&quot;1s\&quot;}</p>
          */
@@ -90,6 +101,15 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
 
     public static class DescribeIndexTemplateResponseBodyResult extends TeaModel {
         /**
+         * <p>Indicates whether the data stream is enabled. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Not enabled.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -97,6 +117,8 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public Boolean dataStream;
 
         /**
+         * <p>The Policy Name of the lifecycle epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>cube_default_ilm_policy</p>
          */
@@ -107,6 +129,8 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public java.util.List<String> indexPatterns;
 
         /**
+         * <p>The name of the index template.</p>
+         * 
          * <strong>example:</strong>
          * <p>data-stream-default</p>
          */
@@ -114,12 +138,17 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public String indexTemplate;
 
         /**
+         * <p>The priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("priority")
         public Integer priority;
 
+        /**
+         * <p>The component template.</p>
+         */
         @NameInMap("template")
         public DescribeIndexTemplateResponseBodyResultTemplate template;
 

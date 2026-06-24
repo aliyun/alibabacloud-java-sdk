@@ -4,16 +4,24 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDeprecatedTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The response headers.</p>
+     */
     @NameInMap("Headers")
     public ListDeprecatedTemplatesResponseBodyHeaders headers;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDeprecatedTemplatesResponseBodyResult> result;
 
@@ -48,6 +56,8 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     public static class ListDeprecatedTemplatesResponseBodyHeaders extends TeaModel {
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -71,6 +81,8 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     public static class ListDeprecatedTemplatesResponseBodyResultTemplate extends TeaModel {
         /**
+         * <p>The alias configuration of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;{}&quot;</p>
          */
@@ -78,6 +90,8 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         public String aliases;
 
         /**
+         * <p>The mappings configuration of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}&quot;</p>
          */
@@ -85,6 +99,8 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         public String mappings;
 
         /**
+         * <p>The settings configuration of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}&quot;</p>
          */
@@ -124,16 +140,27 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     public static class ListDeprecatedTemplatesResponseBodyResult extends TeaModel {
         /**
+         * <p>Indicates whether the template matches a data stream. Valid values:</p>
+         * <ul>
+         * <li>true: matched</li>
+         * <li>false: not matched.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("dataStream")
         public Boolean dataStream;
 
+        /**
+         * <p>The index template information.</p>
+         */
         @NameInMap("indexPatterns")
         public java.util.List<String> indexPatterns;
 
         /**
+         * <p>The index template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>openstore-index-template</p>
          */
@@ -141,16 +168,23 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         public String indexTemplate;
 
         /**
+         * <p>The priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("order")
         public Long order;
 
+        /**
+         * <p>The index template configuration.</p>
+         */
         @NameInMap("template")
         public ListDeprecatedTemplatesResponseBodyResultTemplate template;
 
         /**
+         * <p>The version of the index template.</p>
+         * 
          * <strong>example:</strong>
          * <p>70000</p>
          */

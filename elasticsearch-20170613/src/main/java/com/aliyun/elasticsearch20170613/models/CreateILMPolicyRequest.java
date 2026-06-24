@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateILMPolicyRequest extends TeaModel {
     /**
+     * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and can contain a maximum of 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */

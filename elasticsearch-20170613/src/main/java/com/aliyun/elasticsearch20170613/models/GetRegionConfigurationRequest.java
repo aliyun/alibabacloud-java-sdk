@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRegionConfigurationRequest extends TeaModel {
     /**
+     * <p>The current zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-f</p>
      */

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListDictsRequest extends TeaModel {
     /**
-     * <p>The type of the dictionary. Valid values:</p>
+     * <p>The dictionary type. Valid values:</p>
      * <ul>
-     * <li>IK: IK dictionary after a standard update</li>
-     * <li>IK_HOT: IK dictionary after a rolling update</li>
-     * <li>SYNONYMS: synonym dictionary</li>
-     * <li>ALIWS: Alibaba Cloud dictionary</li>
+     * <li><p>IK: IK cold update dictionary.</p>
+     * </li>
+     * <li><p>IK_HOT: IK hot update dictionary.</p>
+     * </li>
+     * <li><p>SYNONYMS: Synonym dictionary.</p>
+     * </li>
+     * <li><p>ALIWS: Alibaba dictionary.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +25,7 @@ public class ListDictsRequest extends TeaModel {
     public String analyzerType;
 
     /**
-     * <p>The name of the dictionary file.</p>
+     * <p>The name of the file to filter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_MAIN.dic</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InterruptLogstashTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code returned. If the API operation is successfully called, this parameter is not returned.</p>
+     * <p>The error code. This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -14,7 +14,7 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message returned. If the API operation is successfully called, this parameter is not returned.</p>
+     * <p>The error message. This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>.</p>
@@ -32,10 +32,10 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the task is suspended. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The task is suspended.</li>
+     * <li>false: The task failed to be suspended.</li>
      * </ul>
      * 
      * <strong>example:</strong>

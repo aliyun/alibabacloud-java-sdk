@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterDataInformationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -14,7 +14,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public GetClusterDataInformationResponseBodyResult result;
@@ -41,20 +41,14 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
     }
 
     public static class GetClusterDataInformationResponseBodyResultMetaInfo extends TeaModel {
-        /**
-         * <p>The fields in the Mapping for the index.</p>
-         */
         @NameInMap("fields")
         public java.util.List<String> fields;
 
-        /**
-         * <p>The index list of the cluster.</p>
-         */
         @NameInMap("indices")
         public java.util.List<String> indices;
 
         /**
-         * <p>The Mapping configuration of the cluster.</p>
+         * <p>The mapping configuration of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;_doc\&quot;:{\&quot;properties\&quot;:{\&quot;user\&quot;:{\&quot;properties\&quot;:{\&quot;last\&quot;:{\&quot;type\&quot;:\&quot;text\&quot;,...}}}}}}</p>
@@ -63,7 +57,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         public String mapping;
 
         /**
-         * <p>The Settings of the cluster.</p>
+         * <p>The settings configuration of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>{\n  \&quot;index\&quot;: {\n    \&quot;replication\&quot;: {\n}.....}}</p>
@@ -71,9 +65,6 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         @NameInMap("settings")
         public String settings;
 
-        /**
-         * <p>Specifies the type of the index.</p>
-         */
         @NameInMap("typeName")
         public java.util.List<String> typeName;
 
@@ -126,7 +117,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
 
     public static class GetClusterDataInformationResponseBodyResult extends TeaModel {
         /**
-         * <p>Whether it is connectable.</p>
+         * <p>Indicates whether the cluster is connectable.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -135,7 +126,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         public Boolean connectable;
 
         /**
-         * <p>The metadata of the cluster.</p>
+         * <p>The metadata information of the cluster.</p>
          */
         @NameInMap("metaInfo")
         public GetClusterDataInformationResponseBodyResultMetaInfo metaInfo;

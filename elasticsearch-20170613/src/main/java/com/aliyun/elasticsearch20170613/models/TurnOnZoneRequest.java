@@ -8,6 +8,8 @@ public class TurnOnZoneRequest extends TeaModel {
     public Boolean hpAlbZoneDrained;
 
     /**
+     * <p>The zone of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
      */

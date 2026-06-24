@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListDictInformationResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C4334EA-D22B-48BD-AE28-08EE68******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public ListDictInformationResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class ListDictInformationResponseBody extends TeaModel {
 
     public static class ListDictInformationResponseBodyResultOssObject extends TeaModel {
         /**
+         * <p>The name of the OSS bucket where the file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-osstest*</p>
          */
@@ -44,6 +51,8 @@ public class ListDictInformationResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The MD5 checksum (ETag) of the OSS file, in uppercase.</p>
+         * 
          * <strong>example:</strong>
          * <p>2ABAB5E70BBF631145647F6BE533****</p>
          */
@@ -51,6 +60,8 @@ public class ListDictInformationResponseBody extends TeaModel {
         public String etag;
 
         /**
+         * <p>The storage path of the dictionary file in the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss/dict_0*.dic</p>
          */
@@ -90,16 +101,29 @@ public class ListDictInformationResponseBody extends TeaModel {
 
     public static class ListDictInformationResponseBodyResult extends TeaModel {
         /**
+         * <p>The size of the dictionary file. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2202301</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The details of the OSS file.</p>
+         */
         @NameInMap("ossObject")
         public ListDictInformationResponseBodyResultOssObject ossObject;
 
         /**
+         * <p>The dictionary type. Valid values:</p>
+         * <ul>
+         * <li><p>MAIN: primary tokenization dictionary</p>
+         * </li>
+         * <li><p>STOP: stopword dictionary.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STOP</p>
          */

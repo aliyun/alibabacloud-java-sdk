@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataTasksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -14,7 +14,7 @@ public class ListDataTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListDataTasksResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListDataTasksResponseBody extends TeaModel {
 
     public static class ListDataTasksResponseBodyResultSinkCluster extends TeaModel {
         /**
-         * <p>The type of the target cluster. Default value: elasticsearch.</p>
+         * <p>The destination cluster type. Default value: elasticsearch.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String dataSourceType;
 
         /**
-         * <p>The public network access address of the target cluster.</p>
+         * <p>The public network access address of the destination cluster.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://192.168.xx.xx:4101">http://192.168.xx.xx:4101</a></p>
@@ -60,7 +60,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The target index.</p>
+         * <p>The destination index.</p>
          * 
          * <strong>example:</strong>
          * <p>product_info</p>
@@ -69,7 +69,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String index;
 
         /**
-         * <p>The type of the destination index.</p>
+         * <p>The index type.</p>
          * 
          * <strong>example:</strong>
          * <p>_doc</p>
@@ -78,7 +78,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The ID of the VPC to which the cluster belongs.</p>
+         * <p>The ID of the virtual private cloud (VPC) where the cluster resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze55voww95g82gak****</p>
@@ -87,7 +87,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The instance ID or Server Load Balancer (SLB) ID of the current cluster.</p>
+         * <p>The instance ID of the current cluster or the load balancing SLB (Server Load Balancer) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-09k1rnu3g0002****-worker</p>
@@ -96,7 +96,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String vpcInstanceId;
 
         /**
-         * <p>The access port number of the cluster.</p>
+         * <p>The port number used to access the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>9200</p>
@@ -169,7 +169,7 @@ public class ListDataTasksResponseBody extends TeaModel {
 
     public static class ListDataTasksResponseBodyResultSourceCluster extends TeaModel {
         /**
-         * <p>The type of the source cluster. Default value: elasticsearch.</p>
+         * <p>The source cluster type. Default value: elasticsearch.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String dataSourceType;
 
         /**
-         * <p>The index whose data you want to migrate.</p>
+         * <p>The index to be migrated.</p>
          * 
          * <strong>example:</strong>
          * <p>product_info</p>
@@ -196,7 +196,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String mapping;
 
         /**
-         * <p>The routing field to index the table. It is set to the primary key by default.</p>
+         * <p>The routing field of the index. The primary key field is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>_id</p>
@@ -205,7 +205,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String routing;
 
         /**
-         * <p>The Settings of the cluster.</p>
+         * <p>The Settings configuration of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>{\n  \&quot;index\&quot;: {\n    \&quot;replication\&quot;: {\n}.....}}</p>
@@ -214,7 +214,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String settings;
 
         /**
-         * <p>The type of the destination index.</p>
+         * <p>The index type.</p>
          * 
          * <strong>example:</strong>
          * <p>_doc</p>
@@ -279,7 +279,7 @@ public class ListDataTasksResponseBody extends TeaModel {
 
     public static class ListDataTasksResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the site monitoring task was created.</p>
+         * <p>The time when the task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-07-30 06:32:18</p>
@@ -288,19 +288,19 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The information of the target cluster.</p>
+         * <p>The destination cluster information.</p>
          */
         @NameInMap("sinkCluster")
         public ListDataTasksResponseBodyResultSinkCluster sinkCluster;
 
         /**
-         * <p>The information about the source cluster.</p>
+         * <p>The source cluster information.</p>
          */
         @NameInMap("sourceCluster")
         public ListDataTasksResponseBodyResultSourceCluster sourceCluster;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -309,7 +309,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>et_cn_mfv1233r47272****</p>

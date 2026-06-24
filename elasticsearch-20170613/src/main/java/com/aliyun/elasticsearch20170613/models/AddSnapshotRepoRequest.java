@@ -4,6 +4,14 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class AddSnapshotRepoRequest extends TeaModel {
+    /**
+     * <p>The cross-cluster backup information, which specifies the reference instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;repoPath&quot; :&quot;es-cn-4591jumei000u****&quot;
+     * }</p>
+     */
     @NameInMap("body")
     public String body;
 

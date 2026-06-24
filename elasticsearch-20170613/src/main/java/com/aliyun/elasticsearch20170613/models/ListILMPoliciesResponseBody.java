@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListILMPoliciesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of index lifecycle policies returned by the request.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListILMPoliciesResponseBodyResult> result;
 
@@ -37,6 +42,8 @@ public class ListILMPoliciesResponseBody extends TeaModel {
 
     public static class ListILMPoliciesResponseBodyResult extends TeaModel {
         /**
+         * <p>The name of the index lifecycle policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>policy-1</p>
          */
@@ -44,6 +51,8 @@ public class ListILMPoliciesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The index lifecycle content.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;hot&quot;:{&quot;minAge&quot;:&quot;0ms&quot;,&quot;actions&quot;:{&quot;rollover&quot;:{&quot;maxSize&quot;:&quot;50gb&quot;,&quot;maxAge&quot;:&quot;30d&quot;},&quot;setPriority&quot;:{&quot;priority&quot;:100}}},&quot;delete&quot;:{&quot;minAge&quot;:&quot;3d&quot;,&quot;actions&quot;:{&quot;delete&quot;:{}}}}</p>
          */

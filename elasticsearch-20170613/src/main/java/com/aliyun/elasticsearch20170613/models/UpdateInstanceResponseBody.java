@@ -11,7 +11,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The time when the instance was created.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -20,13 +20,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the instance. Valid values:</p>
-     * <ul>
-     * <li>active: normal</li>
-     * <li>activating: taking effect</li>
-     * <li>inactive: frozen</li>
-     * <li>invalid: invalid</li>
-     * </ul>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public UpdateInstanceResponseBodyResult result;
@@ -70,7 +64,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static class UpdateInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
         /**
-         * <p>The configuration of dedicated master nodes.</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -79,7 +73,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The node specifications.</p>
+         * <p>The storage size of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -88,7 +82,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The number of nodes.</p>
+         * <p>The storage type of the node. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -97,7 +91,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The storage type of the node. This parameter can be ignored.</p>
+         * <p>节点规格。</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.n4.small</p>
@@ -146,6 +140,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static class UpdateInstanceResponseBodyResultMasterConfiguration extends TeaModel {
         /**
+         * <p>The number of nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -153,6 +149,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Integer amount;
 
         /**
+         * <p>The storage size of the node. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -160,6 +158,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
+         * <p>The storage type of the node. Only cloud_ssd (standard SSD) is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
          */
@@ -167,7 +167,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.</p>
+         * <p>节点规格。</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.large</p>
@@ -216,7 +216,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static class UpdateInstanceResponseBodyResultNodeSpec extends TeaModel {
         /**
-         * <p>The node specifications.</p>
+         * <p>The storage size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -225,7 +225,11 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The number of nodes.</p>
+         * <p>The storage type of the node. Valid values:</p>
+         * <ul>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -234,7 +238,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The configuration of Kibana nodes.</p>
+         * <p>节点规格。</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.xlarge</p>
@@ -275,7 +279,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static class UpdateInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>The private domain name of the instance.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-13T03:58:07.253Z</p>
@@ -284,7 +288,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The configuration of data nodes.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -293,7 +297,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>实例的私网访问域名。</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc.elasticsearch.aliyuncs.com</p>
@@ -302,7 +306,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The node specifications.</p>
+         * <p>The instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.5.3_with_X-Pack</p>
@@ -311,7 +315,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String esVersion;
 
         /**
-         * <p>The storage space of the node. Unit: GB.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc</p>
@@ -320,23 +324,19 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The size of the node storage space.</p>
+         * <p>The Kibana node configuration.</p>
          */
         @NameInMap("kibanaConfiguration")
         public UpdateInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration;
 
         /**
-         * <p>The storage space of the node. Unit: GB.</p>
+         * <p>The master node configuration.</p>
          */
         @NameInMap("masterConfiguration")
         public UpdateInstanceResponseBodyResultMasterConfiguration masterConfiguration;
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
-         * <ul>
-         * <li>prepaid: subscription</li>
-         * <li>postpaid: pay-as-you-go</li>
-         * </ul>
+         * <p>The number of data nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -345,17 +345,17 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The storage type of the node. Valid values:</p>
-         * <ul>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_efficiency: ultra disk</li>
-         * </ul>
+         * <p>The data node configuration.</p>
          */
         @NameInMap("nodeSpec")
         public UpdateInstanceResponseBodyResultNodeSpec nodeSpec;
 
         /**
-         * <p>The edition of the dedicated KMS instance.</p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>prepaid: subscription</li>
+         * <li>postpaid: pay-as-you-go.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>postpaid</p>
@@ -364,7 +364,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>active: Normal</li>
+         * <li>activating: Taking effect</li>
+         * <li>inactive: Frozen</li>
+         * <li>invalid: Invalid.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>active</p>

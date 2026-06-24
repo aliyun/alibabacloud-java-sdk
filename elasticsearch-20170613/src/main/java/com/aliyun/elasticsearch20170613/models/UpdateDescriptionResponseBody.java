@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateDescriptionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FDF34727-1664-44C1-A8DA-3EB72D60****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public UpdateDescriptionResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class UpdateDescriptionResponseBody extends TeaModel {
 
     public static class UpdateDescriptionResponseBodyResult extends TeaModel {
         /**
+         * <p>The updated instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyunes_test_name</p>
          */

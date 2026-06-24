@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallKibanaSystemPluginResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DC****</p>
@@ -13,9 +13,6 @@ public class InstallKibanaSystemPluginResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of plug-ins to be installed.</p>
-     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

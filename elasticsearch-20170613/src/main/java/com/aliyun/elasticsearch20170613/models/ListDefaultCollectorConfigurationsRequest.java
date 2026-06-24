@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     /**
-     * <p>The shipper type. Valid values:</p>
+     * <p>The type of the collector. Valid values:</p>
      * <ul>
      * <li>fileBeat</li>
      * <li>metricBeat</li>
      * <li>heartBeat</li>
-     * <li>auditBeat</li>
+     * <li>auditBeat.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,10 +21,10 @@ public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     public String resType;
 
     /**
-     * <p>The shipper version. The shipper version varies based on the type of the machine on which the shipper is deployed. Valid values:</p>
+     * <p>The version of the collector. The available versions vary based on the type of machine on which the collector is deployed. Valid values:</p>
      * <ul>
      * <li>ECS: 6.8.5_with_community</li>
-     * <li>ACK: 6.8.13_with_community</li>
+     * <li>ACK: 6.8.13_with_community.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,10 +35,10 @@ public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     public String resVersion;
 
     /**
-     * <p>The type of the machine on which the shipper is deployed. If you do not configure this parameter, the default configuration files of shippers deployed on all types of machines are returned. Valid values:</p>
+     * <p>The type of machine on which the collector is deployed. If you do not specify this parameter, all types are returned. Valid values:</p>
      * <ul>
-     * <li>ECS: ECS instance</li>
-     * <li>ACK: ACK cluster</li>
+     * <li>ECS: Elastic Compute Service (ECS) instance</li>
+     * <li>ACK: Container Service for Kubernetes (ACK) cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>

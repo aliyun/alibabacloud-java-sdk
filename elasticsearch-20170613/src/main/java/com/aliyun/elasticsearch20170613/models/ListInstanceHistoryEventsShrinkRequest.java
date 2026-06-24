@@ -4,10 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
+    /**
+     * <p>The request body parameters.</p>
+     */
     @NameInMap("body")
     public java.util.List<ListInstanceHistoryEventsShrinkRequestBody> body;
 
     /**
+     * <p>The end time for querying by event creation time. Specify a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
      */
@@ -15,16 +20,23 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventCreateEndTime;
 
     /**
+     * <p>The start time for querying by event creation time. Specify a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
      */
     @NameInMap("eventCreateStartTime")
     public String eventCreateStartTime;
 
+    /**
+     * <p>The lifecycle status of the event.</p>
+     */
     @NameInMap("eventCycleStatus")
     public String eventCycleStatusShrink;
 
     /**
+     * <p>The end time for querying by event execution time. Specify a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
      */
@@ -32,6 +44,8 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventExecuteEndTime;
 
     /**
+     * <p>The start time for querying by event execution time. Specify a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
      */
@@ -39,6 +53,8 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventExecuteStartTime;
 
     /**
+     * <p>The end time for querying by event completion time. Specify a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
      */
@@ -46,19 +62,29 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String eventFinashEndTime;
 
     /**
+     * <p>The start time for querying by event completion time. Specify a timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1645596516000</p>
      */
     @NameInMap("eventFinashStartTime")
     public String eventFinashStartTime;
 
+    /**
+     * <p>The event level.</p>
+     */
     @NameInMap("eventLevel")
     public String eventLevelShrink;
 
+    /**
+     * <p>The event type.</p>
+     */
     @NameInMap("eventType")
     public String eventTypeShrink;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>es-cn-2r42l7a740005****</p>
      */
@@ -66,6 +92,8 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The IP address of the node that triggered the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.1.xx.xx</p>
      */
@@ -73,6 +101,8 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public String nodeIP;
 
     /**
+     * <p>The starting document offset. The value must be a non-negative integer. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -80,6 +110,8 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of events to return. The value must be a non-negative integer. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -205,6 +237,12 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
 
     public static class ListInstanceHistoryEventsShrinkRequestBody extends TeaModel {
         /**
+         * <p>Specifies whether to sort in descending order. Valid values:</p>
+         * <ul>
+         * <li>true (default): Yes.</li>
+         * <li>false: No.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -212,6 +250,13 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
         public Boolean desc;
 
         /**
+         * <p>The field by which the results are sorted. Valid values:</p>
+         * <ul>
+         * <li>event_time: event creation time</li>
+         * <li>event_execute_start_time: event execution time</li>
+         * <li>event_execute_finish_time: event completion time.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>event_time</p>
          */

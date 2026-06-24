@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListPipelineIdsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListPipelineIdsResponseBodyResult> result;
 
@@ -37,6 +42,14 @@ public class ListPipelineIdsResponseBody extends TeaModel {
 
     public static class ListPipelineIdsResponseBodyResult extends TeaModel {
         /**
+         * <p>Indicates whether the pipeline is available. Valid values:</p>
+         * <ul>
+         * <li><p>true: Available.</p>
+         * </li>
+         * <li><p>false: Not available.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +57,8 @@ public class ListPipelineIdsResponseBody extends TeaModel {
         public Boolean available;
 
         /**
+         * <p>The error code returned when the pipeline is unavailable.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -51,6 +66,8 @@ public class ListPipelineIdsResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The error message returned when the pipeline is unavailable.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -58,6 +75,8 @@ public class ListPipelineIdsResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The pipeline ID created in Kibana.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKibanaManagement</p>
          */

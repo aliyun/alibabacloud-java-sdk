@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDiagnoseIndicesRequest extends TeaModel {
     /**
-     * <p>The language. Multiple languages are supported.</p>
+     * <p>The language. Default value: the browser language. Valid values:</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh: Simplified Chinese</li>
+     * <li>zt: Traditional Chinese</li>
+     * <li>es: Spanish</li>
+     * <li>fr: French.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>

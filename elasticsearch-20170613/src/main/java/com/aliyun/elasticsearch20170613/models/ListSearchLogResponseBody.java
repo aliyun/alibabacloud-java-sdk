@@ -5,21 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSearchLogResponseBody extends TeaModel {
     /**
-     * <p>The level of the log. Valid values:</p>
-     * <ul>
-     * <li>warn: warning log</li>
-     * <li>info: information log</li>
-     * <li>error: error log</li>
-     * <li>trace: trace logs</li>
-     * <li>debug: debug logs</li>
-     * </ul>
-     * <p>The level information has been migrated to the contentCollection field.</p>
+     * <p>The response headers.</p>
      */
     @NameInMap("Headers")
     public ListSearchLogResponseBodyHeaders headers;
 
     /**
-     * <p>The list of logs returned by the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</p>
@@ -28,7 +20,7 @@ public class ListSearchLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The content of the log entry. Migrated to the contentCollection field.</p>
+     * <p>The list of logs returned by the request.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListSearchLogResponseBodyResult> result;
@@ -64,7 +56,7 @@ public class ListSearchLogResponseBody extends TeaModel {
 
     public static class ListSearchLogResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The IP address of the node that generates the log.</p>
+         * <p>The total number of records for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -89,7 +81,7 @@ public class ListSearchLogResponseBody extends TeaModel {
 
     public static class ListSearchLogResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The detailed log content. This field has been migrated to the contentCollection field.</p>
          * 
          * <strong>example:</strong>
          * <p>[GC (Allocation Failure) 2018-07-19T17:24:20.682+0800: 7516.513: [ParNew: 6604768K-&gt;81121K(7341504K), 0.0760606 secs] 7226662K-&gt;703015K(31813056K), 0.0762507 secs] [Times: user=0.52 sys=0.00, real=0.07 secs]</p>
@@ -98,6 +90,8 @@ public class ListSearchLogResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The log details. Different log types return different content fields.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;level&quot;: &quot;info&quot;, &quot;host&quot;: &quot;<code>192.168.**.**</code>&quot;, &quot;time&quot;: &quot;2019-03-18T08:16:12.741Z&quot;,&quot;content&quot;: &quot;[o.e.c.r.a.AllocationService] [MnNASM_] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[my_index][3]] ...]).&quot;}</p>
          */
@@ -105,7 +99,7 @@ public class ListSearchLogResponseBody extends TeaModel {
         public java.util.Map<String, ?> contentCollection;
 
         /**
-         * <p>Details of the log entry. Different content fields are returned for different log types.</p>
+         * <p>The IP address of the node that generated the log.</p>
          * 
          * <strong>example:</strong>
          * <p><code>192.168.**.**</code></p>
@@ -114,6 +108,8 @@ public class ListSearchLogResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1x0w001c****</p>
          */
@@ -121,7 +117,15 @@ public class ListSearchLogResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The timestamp when the log is generated. Unit: ms.</p>
+         * <p>The log level. Valid values:</p>
+         * <ul>
+         * <li>warn: warning log</li>
+         * <li>info: information log</li>
+         * <li>error: error log</li>
+         * <li>trace: trace log</li>
+         * <li>debug: debug log</li>
+         * </ul>
+         * <p>The level information has been migrated to the contentCollection field.</p>
          * 
          * <strong>example:</strong>
          * <p>info</p>
@@ -130,6 +134,8 @@ public class ListSearchLogResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The timestamp when the log was generated, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1531985112420</p>
          */

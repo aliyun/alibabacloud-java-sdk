@@ -62,8 +62,8 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
-         * <li>OSS</li>
-         * <li>ORIGIN</li>
+         * <li>OSS: uses OSS open storage.</li>
+         * <li>ORIGIN: retains a previously uploaded dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,10 +73,10 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the dictionaries. Valid values:</p>
+         * <p>The dictionary type. Valid values:</p>
          * <ul>
-         * <li>MAIN: IK main dictionary</li>
-         * <li>STOP: IK stopword list</li>
+         * <li>MAIN: IK main tokenizer dictionary.</li>
+         * <li>STOP: IK stopword dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>

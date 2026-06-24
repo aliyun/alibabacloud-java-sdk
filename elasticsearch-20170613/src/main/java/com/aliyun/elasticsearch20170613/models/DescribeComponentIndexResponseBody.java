@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeComponentIndexResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public DescribeComponentIndexResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
 
     public static class DescribeComponentIndexResponseBodyResultTemplate extends TeaModel {
         /**
+         * <p>The alias configuration of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -44,6 +51,8 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         public java.util.Map<String, ?> aliases;
 
         /**
+         * <p>The mappings configuration of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;properties&quot;: { &quot;@timestamp&quot;: { &quot;type&quot;: &quot;date&quot; } } }</p>
          */
@@ -51,6 +60,8 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         public java.util.Map<String, ?> mappings;
 
         /**
+         * <p>The settings configuration of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;index.number_of_replicas&quot;: 0 }</p>
          */
@@ -90,12 +101,17 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
 
     public static class DescribeComponentIndexResponseBodyResult extends TeaModel {
         /**
+         * <p>The metadata, which is used to store information such as remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</p>
          */
         @NameInMap("_meta")
         public java.util.Map<String, ?> meta;
 
+        /**
+         * <p>The template information.</p>
+         */
         @NameInMap("template")
         public DescribeComponentIndexResponseBodyResultTemplate template;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeactivateZonesResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -14,10 +14,10 @@ public class DeactivateZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: Zone offline successful</li>
-     * <li>false: Zone offline failed</li>
+     * <li>true: The zones are taken offline.</li>
+     * <li>false: The zones failed to be taken offline.</li>
      * </ul>
      * 
      * <strong>example:</strong>

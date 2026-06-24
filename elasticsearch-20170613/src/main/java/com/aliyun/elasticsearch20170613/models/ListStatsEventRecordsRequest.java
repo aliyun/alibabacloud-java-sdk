@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListStatsEventRecordsRequest extends TeaModel {
     /**
+     * <p>Event type</p>
+     * 
      * <strong>example:</strong>
      * <p>UserOperator</p>
      */
@@ -12,6 +14,8 @@ public class ListStatsEventRecordsRequest extends TeaModel {
     public String eventType;
 
     /**
+     * <p>Event level</p>
+     * 
      * <strong>example:</strong>
      * <p>Info</p>
      */
@@ -19,6 +23,8 @@ public class ListStatsEventRecordsRequest extends TeaModel {
     public String level;
 
     /**
+     * <p>Status of the management event</p>
+     * 
      * <strong>example:</strong>
      * <p>Executed</p>
      */

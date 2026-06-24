@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListDiagnoseReportIdsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value must be a UNIX timestamp.</p>
+     * <p>The end timestamp of the query.
+     * Minimum value: 1000000000000 ms
+     * Maximum value: 2000000000000 ms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +17,23 @@ public class ListDiagnoseReportIdsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the reports.</p>
+     * <p>The language of the reports to retrieve. Default value: the browser language. Valid values:</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh: Simplified Chinese</li>
+     * <li>zt: Traditional Chinese</li>
+     * <li>es: Spanish</li>
+     * <li>fr: French.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>spanish</p>
+     * <p>en</p>
      */
     @NameInMap("lang")
     public String lang;
 
     /**
-     * <p>The number of the page to return. Valid values: 1 to 200. Default value: 1.</p>
+     * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +42,7 @@ public class ListDiagnoseReportIdsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 500. Default value: 10.</p>
+     * <p>The number of report IDs per page. Default value: 10. Minimum value: 1. Maximum value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -42,7 +51,9 @@ public class ListDiagnoseReportIdsRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The beginning of the time range to query. The value must be a UNIX timestamp.</p>
+     * <p>The start timestamp of the query.
+     * Minimum value: 1000000000000 ms
+     * Maximum value: 2000000000000 ms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +63,7 @@ public class ListDiagnoseReportIdsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The method that is used to trigger health diagnostics. Valid values: SYSTEM, INNER, and USER.</p>
+     * <p>The trigger method of the health diagnostics. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM</p>

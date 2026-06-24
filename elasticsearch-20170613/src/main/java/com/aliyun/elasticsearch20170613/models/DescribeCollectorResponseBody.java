@@ -42,7 +42,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
 
     public static class DescribeCollectorResponseBodyResultConfigs extends TeaModel {
         /**
-         * <p>The content of the file.</p>
+         * <p>The file content.</p>
          * 
          * <strong>example:</strong>
          * <p>fileBeat.inputs:xxx</p>
@@ -51,7 +51,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>filebeat.yml</p>
@@ -84,12 +84,12 @@ public class DescribeCollectorResponseBody extends TeaModel {
 
     public static class DescribeCollectorResponseBodyResultExtendConfigsMachines extends TeaModel {
         /**
-         * <p>The status of the shipper on the ECS instance. Valid values:</p>
+         * <p>The status of the collector on the ECS instance. Valid values:</p>
          * <ul>
          * <li>heartOk: The heartbeat is normal.</li>
          * <li>heartLost: The heartbeat is abnormal.</li>
-         * <li>uninstalled: The shipper is not installed.</li>
-         * <li>failed: The shipper fails to be installed.</li>
+         * <li>uninstalled: Not installed.</li>
+         * <li>failed: Installation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String agentStatus;
 
         /**
-         * <p>The IDs of the ECS instances.</p>
+         * <p>The list of ECS instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1gyhphjaj73jsr****</p>
@@ -134,9 +134,9 @@ public class DescribeCollectorResponseBody extends TeaModel {
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>collectorTargetInstance</li>
-         * <li>collectorDeployMachine</li>
-         * <li>collectorElasticsearchForKibana</li>
+         * <li>collectorTargetInstance: the collector Output</li>
+         * <li>collectorDeployMachine: the deployment machine of the collector</li>
+         * <li>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana Dashboard.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,10 +146,12 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Indicates whether monitoring is enabled. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorTargetInstance</strong>. Valid values:</p>
+         * <p>Indicates whether Monitoring is enabled. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +161,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public Boolean enableMonitoring;
 
         /**
-         * <p>The ID of the machine group. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorDeployMachine</strong>.</p>
+         * <p>The machine group ID. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>default_ct-cn-5i2l75bz4776****</p>
@@ -168,7 +170,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The private endpoint of Kibana after you enable the Kibana dashboard. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorElasticsearchForKibana</strong>.</p>
+         * <p>The private endpoint of Kibana after Kibana Dashboard is enabled. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorElasticsearchForKibana</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1x0w001c****-kibana.internal.elasticsearch.aliyuncs.com:5601</p>
@@ -180,7 +182,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public java.util.List<String> hosts;
 
         /**
-         * <p>The ID of the resource that is associated with the shipper. If the value of <strong>configType</strong> is <strong>collectorTargetInstance</strong>, the value of this parameter is the ID of the resource specified in the output configuration part of the shipper. If the value of <strong>configType</strong> is <strong>collectorDeployMachines</strong> and the value of <strong>type</strong> is <strong>ACKCluster</strong>, the value of this parameter is the ID of the ACK cluster.</p>
+         * <p>The ID of the instance associated with the collector. When <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>, this parameter indicates the instance ID of the collector Output. When <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>, this parameter indicates the ACK (Container Kubernetes) cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1****</p>
@@ -189,7 +191,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of the cluster specified in the output configuration part of the shipper. Valid values: elasticsearch and logstash. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorTargetInstance</strong>.</p>
+         * <p>The type of instance specified in the collector Output. Valid values: elasticsearch and logstash. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch</p>
@@ -198,7 +200,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The public endpoint of Kibana after you enable the Kibana dashboard. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorElasticsearchForKibana</strong>.</p>
+         * <p>The public network access address of Kibana after Kibana Dashboard is enabled. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorElasticsearchForKibana</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://es-cn-nif1z89fz003i****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-nif1z89fz003i****.kibana.elasticsearch.aliyuncs.com:5601</a></p>
@@ -207,13 +209,13 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String kibanaHost;
 
         /**
-         * <p>The information about the Elastic Compute Service (ECS) instances on which the shipper is deployed. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorDeployMachines</strong> and the value of <strong>type</strong> is <strong>ECSInstanceId</strong>.</p>
+         * <p>The list of ECS machines on which the collector is deployed. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ECSInstanceId</strong>.</p>
          */
         @NameInMap("machines")
         public java.util.List<DescribeCollectorResponseBodyResultExtendConfigsMachines> machines;
 
         /**
-         * <p>The transmission protocol, which must be the same as the access protocol of the resource specified in the output configuration part of the shipper. Valid values: HTTP and HTTPS. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorTargetInstance</strong>.</p>
+         * <p>The transport protocol, which must be the same as the access protocol of the instance specified in the collector Output. Valid values: HTTP and HTTPS. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -222,7 +224,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of pods from which data is succcessfully collected in the Container Service for Kubernetes (ACK) cluster.</p>
+         * <p>The number of pods in the ACK cluster from which data is successfully collected.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -231,7 +233,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String successPodsCount;
 
         /**
-         * <p>The total number of pods from which data is collected in the ACK cluster.</p>
+         * <p>The total number of pods in the ACK cluster from which data is collected.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -240,10 +242,10 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String totalPodsCount;
 
         /**
-         * <p>The type of the machine on which the shipper is deployed. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorDeployMachine</strong>. Valid values:</p>
+         * <p>The type of machine on which the collector is deployed. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>. Valid values:</p>
          * <ul>
-         * <li>ECSInstanceId</li>
-         * <li>ACKCluster</li>
+         * <li>ECSInstanceId: ECS</li>
+         * <li>ACKCluster: Container Kubernetes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +255,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The username that is used to access the resource specified in the output configuration part of the shipper. The default value is elastic. This parameter is returned if the value of <strong>configType</strong> is <strong>collectorTargetInstance</strong> or <strong>collectorElasticsearchForKibana</strong>.</p>
+         * <p>The username used to access the instance specified in the collector Output. Default value: elastic. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorTargetInstance</strong> or <strong>collectorElasticsearchForKibana</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>elastic</p>
@@ -385,16 +387,16 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public java.util.List<String> collectorPaths;
 
         /**
-         * <p>The information about the configuration file of the shipper.</p>
+         * <p>The configuration file information of the collector.</p>
          */
         @NameInMap("configs")
         public java.util.List<DescribeCollectorResponseBodyResultConfigs> configs;
 
         /**
-         * <p>Indicates whether a dry run is performed. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run without creating the collector. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Only validates the request without creating the collector.</li>
+         * <li>false: Validates the request and creates the collector.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -404,13 +406,13 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
-         * <p>The extended configurations of the shipper.</p>
+         * <p>The extended configurations of the collector.</p>
          */
         @NameInMap("extendConfigs")
         public java.util.List<DescribeCollectorResponseBodyResultExtendConfigs> extendConfigs;
 
         /**
-         * <p>The time when the shipper was created.</p>
+         * <p>The time when the collector was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-20T07:26:47.000+0000</p>
@@ -419,7 +421,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String gmtCreatedTime;
 
         /**
-         * <p>The time when the shipper was updated.</p>
+         * <p>The time when the collector was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-20T07:26:47.000+0000</p>
@@ -428,7 +430,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String gmtUpdateTime;
 
         /**
-         * <p>The name of the shipper.</p>
+         * <p>The collector name.</p>
          * 
          * <strong>example:</strong>
          * <p>ct-cn-4135is2tj194p****</p>
@@ -446,7 +448,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The ID of the shipper.</p>
+         * <p>The collector instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ct-cn-rg31ahn82m0qd****</p>
@@ -455,7 +457,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String resId;
 
         /**
-         * <p>The type of the shipper. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</p>
+         * <p>The collector type. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</p>
          * 
          * <strong>example:</strong>
          * <p>fileBeat</p>
@@ -464,7 +466,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String resType;
 
         /**
-         * <p>The version of the shipper.</p>
+         * <p>The collector version.</p>
          * 
          * <strong>example:</strong>
          * <p>6.8.5_with_community</p>
@@ -473,10 +475,10 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String resVersion;
 
         /**
-         * <p>The status of the shipper. Valid values:</p>
+         * <p>The collector status. Valid values:</p>
          * <ul>
-         * <li>activating</li>
-         * <li>active</li>
+         * <li>activing: being activated</li>
+         * <li>active: activated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -486,7 +488,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) where the shipper resides.</p>
+         * <p>The ID of the virtual private cloud (VPC) where the collector resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp16k1dvzxtma*****</p>

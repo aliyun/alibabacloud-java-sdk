@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ValidateSlrPermissionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC4ED7DD-8C84-49B5-8A95-456F82E44D13</p>
      */
@@ -12,6 +14,12 @@ public class ValidateSlrPermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the service-linked role has been created. Valid values:</p>
+     * <ul>
+     * <li>true: The role has been created.</li>
+     * <li>false: The role has not been created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

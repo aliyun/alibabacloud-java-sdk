@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateDynamicSettingsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the dynamic settings were successfully updated.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

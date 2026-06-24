@@ -4,10 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class Logstash extends TeaModel {
+    /**
+     * <p>The instance configuration.</p>
+     */
     @NameInMap("config")
     public java.util.Map<String, String> config;
 
     /**
+     * <p>The time when the instance was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-07-13T03:58:07.253Z</p>
      */
@@ -15,6 +20,8 @@ public class Logstash extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>Specifies whether to enable data nodes. This parameter must be set to true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +29,8 @@ public class Logstash extends TeaModel {
     public Boolean dataNode;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ls-cn-abc</p>
      */
@@ -29,36 +38,57 @@ public class Logstash extends TeaModel {
     public String description;
 
     /**
+     * <p>The expiration time of the subscription instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>4749897600000</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>The node information.</p>
+     */
     @NameInMap("endpointList")
     public java.util.List<LogstashEndpointList> endpointList;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ls-cn-n6w1o5jq****</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The network configuration.</p>
+     */
     @NameInMap("networkConfig")
     public LogstashNetworkConfig networkConfig;
 
     /**
+     * <p>The number of nodes in the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("nodeAmount")
     public Long nodeAmount;
 
+    /**
+     * <p>The data node configuration.</p>
+     */
     @NameInMap("nodeSpec")
     public LogstashNodeSpec nodeSpec;
 
     /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li>prepaid: subscription</li>
+     * <li>postpaid: pay-as-you-go.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>postpaid</p>
      */
@@ -66,6 +96,8 @@ public class Logstash extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The access protocol of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -73,6 +105,8 @@ public class Logstash extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm2h5vbzd****</p>
      */
@@ -80,16 +114,27 @@ public class Logstash extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The zone status. Valid values:</p>
+     * <ul>
+     * <li>ISOLATION: offline</li>
+     * <li>NORMAL: Normal.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The instance tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<LogstashTags> tags;
 
     /**
+     * <p>The time when the instance was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-07-18T10:10:04.484Z</p>
      */
@@ -97,6 +142,12 @@ public class Logstash extends TeaModel {
     public String updatedAt;
 
     /**
+     * <p>The instance version. Valid values:</p>
+     * <ul>
+     * <li>6.7.0_with_X-Pack</li>
+     * <li>7.4.0_with_X-Pack.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>6.7.0_with_X-Pack</p>
      */
@@ -104,12 +155,17 @@ public class Logstash extends TeaModel {
     public String version;
 
     /**
+     * <p>The number of zones for the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("zoneCount")
     public Long zoneCount;
 
+    /**
+     * <p>The zone information.</p>
+     */
     @NameInMap("zoneInfos")
     public java.util.List<LogstashZoneInfos> zoneInfos;
 
@@ -272,6 +328,8 @@ public class Logstash extends TeaModel {
 
     public static class LogstashEndpointList extends TeaModel {
         /**
+         * <p>The IP address of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.xx.xx</p>
          */
@@ -279,6 +337,8 @@ public class Logstash extends TeaModel {
         public String host;
 
         /**
+         * <p>The access port number of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>9200</p>
          */
@@ -286,6 +346,8 @@ public class Logstash extends TeaModel {
         public Long port;
 
         /**
+         * <p>The zone ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -325,6 +387,8 @@ public class Logstash extends TeaModel {
 
     public static class LogstashNetworkConfig extends TeaModel {
         /**
+         * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc</p>
          */
@@ -332,6 +396,8 @@ public class Logstash extends TeaModel {
         public String type;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-abc</p>
          */
@@ -339,6 +405,8 @@ public class Logstash extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone in which the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-*</p>
          */
@@ -346,6 +414,8 @@ public class Logstash extends TeaModel {
         public String vsArea;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-def</p>
          */
@@ -393,6 +463,8 @@ public class Logstash extends TeaModel {
 
     public static class LogstashNodeSpec extends TeaModel {
         /**
+         * <p>The disk size of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -400,6 +472,8 @@ public class Logstash extends TeaModel {
         public Long disk;
 
         /**
+         * <p>The disk type of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
          */
@@ -407,6 +481,8 @@ public class Logstash extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The node specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>logstash.n4.small</p>
          */
@@ -446,6 +522,8 @@ public class Logstash extends TeaModel {
 
     public static class LogstashTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -453,6 +531,8 @@ public class Logstash extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -484,6 +564,12 @@ public class Logstash extends TeaModel {
 
     public static class LogstashZoneInfos extends TeaModel {
         /**
+         * <p>The zone status. Valid values:</p>
+         * <ul>
+         * <li>ISOLATION: offline</li>
+         * <li>NORMAL: Normal.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -491,6 +577,8 @@ public class Logstash extends TeaModel {
         public String status;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */

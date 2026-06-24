@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLogstashResponseBody extends TeaModel {
     /**
-     * <p>The billing method of the instance. Supported: prepaid (subscription) and postpaid (pay-as-you-go).</p>
+     * <p>The request header information.</p>
      */
     @NameInMap("Headers")
     public ListLogstashResponseBodyHeaders headers;
 
     /**
-     * <p>Detailed information about the matching instances.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AC442F2F-5068-4434-AA21-E78947A9****</p>
@@ -20,7 +20,7 @@ public class ListLogstashResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the VPC.</p>
+     * <p>The list of instances returned by the current request.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListLogstashResponseBodyResult> result;
@@ -56,7 +56,7 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The number of data nodes.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -81,7 +81,7 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyResultTags extends TeaModel {
         /**
-         * <p>The disk size of the node.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -90,7 +90,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The instance type of the ECS instance.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -123,6 +123,8 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyResultNetworkConfig extends TeaModel {
         /**
+         * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc</p>
          */
@@ -130,7 +132,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-abc</p>
@@ -139,6 +141,8 @@ public class ListLogstashResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone where the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-*</p>
          */
@@ -146,6 +150,8 @@ public class ListLogstashResponseBody extends TeaModel {
         public String vsArea;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-def</p>
          */
@@ -193,7 +199,7 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyResultNodeSpec extends TeaModel {
         /**
-         * <p>The network configurations.</p>
+         * <p>The disk size of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -202,7 +208,11 @@ public class ListLogstashResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>Indicates whether disk encryption is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -211,7 +221,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public Boolean diskEncryption;
 
         /**
-         * <p>The zone where the cluster resides.</p>
+         * <p>The disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -220,7 +230,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The type of the disk.</p>
+         * <p>The instance specification.</p>
          * 
          * <strong>example:</strong>
          * <p>logstash.n4.small</p>
@@ -269,13 +279,13 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyResult extends TeaModel {
         /**
-         * <p>The configuration information of the data node.</p>
+         * <p>The instance tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListLogstashResponseBodyResultTags> tags;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-13T03:58:07.253Z</p>
@@ -284,7 +294,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>ls-cn-abc</p>
@@ -300,7 +310,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The tag value of the cloud disk.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ls-cn-n6w1o5jq****</p>
@@ -309,13 +319,13 @@ public class ListLogstashResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
+         * <p>The network configuration.</p>
          */
         @NameInMap("networkConfig")
         public ListLogstashResponseBodyResultNetworkConfig networkConfig;
 
         /**
-         * <p>The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.</p>
+         * <p>The number of nodes in the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -324,17 +334,13 @@ public class ListLogstashResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>Specifies whether to use disk encryption. Valid values:</p>
-         * <ul>
-         * <li>true: Enables the concurrent query feature for queries other than aggregate queries.</li>
-         * <li>false: Disables the concurrent query feature for queries other than aggregate queries.</li>
-         * </ul>
+         * <p>The configuration information of data nodes.</p>
          */
         @NameInMap("nodeSpec")
         public ListLogstashResponseBodyResultNodeSpec nodeSpec;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The billing method of the instance. Valid values: prepaid (subscription) and postpaid (pay-as-you-go).</p>
          * 
          * <strong>example:</strong>
          * <p>postpaid</p>
@@ -346,7 +352,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The version of the instance. Currently, only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</p>
+         * <p>The status of the instance. Valid values: active (Normal), activating (Taking Effect), inactive (Frozen), and invalid (Expired).</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -355,7 +361,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag of the instance. Valid values:</p>
+         * <p>The time when the instance was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-07-18T10:10:04.484Z</p>
@@ -364,7 +370,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The tag key of the cloud disk.</p>
+         * <p>The instance version. Currently, only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>6.7.0_with_X-Pack</p>

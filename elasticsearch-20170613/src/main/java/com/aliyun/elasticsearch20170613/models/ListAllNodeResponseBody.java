@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAllNodeResponseBody extends TeaModel {
     /**
-     * <p>The zone ID of the node.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0D71B597-F3FF-5B56-88D7-74F9D3F7****</p>
@@ -14,10 +14,7 @@ public class ListAllNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The CPU utilization.</p>
-     * <blockquote>
-     * <p> If the <strong>extended</strong> request parameter is set to <strong>true</strong> and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.</p>
-     * </blockquote>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListAllNodeResponseBodyResult> result;
@@ -45,7 +42,10 @@ public class ListAllNodeResponseBody extends TeaModel {
 
     public static class ListAllNodeResponseBodyResult extends TeaModel {
         /**
-         * <p>The disk usage.</p>
+         * <p>The CPU usage.</p>
+         * <blockquote>
+         * <p>When <strong>extended</strong> is set to <strong>true</strong> and the monitoring information of the node is being synchronized, the parameter value returns null. In this case, wait 10 seconds and send the request again to retrieve the value.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>4.2%</p>
@@ -54,7 +54,7 @@ public class ListAllNodeResponseBody extends TeaModel {
         public String cpuPercent;
 
         /**
-         * <p>The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.</p>
+         * <p>The disk usage.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0%</p>
@@ -63,6 +63,8 @@ public class ListAllNodeResponseBody extends TeaModel {
         public String diskUsedPercent;
 
         /**
+         * <p>The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.</p>
+         * 
          * <strong>example:</strong>
          * <p>GREEN</p>
          */
@@ -70,7 +72,7 @@ public class ListAllNodeResponseBody extends TeaModel {
         public String health;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The JVM memory usage.</p>
          * 
          * <strong>example:</strong>
          * <p>21.6%</p>
@@ -79,7 +81,7 @@ public class ListAllNodeResponseBody extends TeaModel {
         public String heapPercent;
 
         /**
-         * <p>The port that is used to connect to the node.</p>
+         * <p>The IP address of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>10.15.XX.XX</p>
@@ -88,6 +90,8 @@ public class ListAllNodeResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The one-minute load average.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.12</p>
          */
@@ -95,7 +99,14 @@ public class ListAllNodeResponseBody extends TeaModel {
         public String loadOneM;
 
         /**
-         * <p>The 1-minute load of the node.</p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>MASTER: dedicated master node</li>
+         * <li>WORKER: hot node</li>
+         * <li>WORKER_WARM: warm node</li>
+         * <li>COORDINATING: client node</li>
+         * <li>KIBANA: Kibana node.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>WORKER</p>
@@ -104,6 +115,8 @@ public class ListAllNodeResponseBody extends TeaModel {
         public String nodeType;
 
         /**
+         * <p>The access port of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>9200</p>
          */
@@ -111,14 +124,7 @@ public class ListAllNodeResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The type of the nodes. Valid values:</p>
-         * <ul>
-         * <li>MASTER: dedicated master node</li>
-         * <li>WORKER: hot node</li>
-         * <li>WORKER_WARM: warm node</li>
-         * <li>COORDINATING: client node</li>
-         * <li>KIBANA: Kibana node</li>
-         * </ul>
+         * <p>The zone where the node resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

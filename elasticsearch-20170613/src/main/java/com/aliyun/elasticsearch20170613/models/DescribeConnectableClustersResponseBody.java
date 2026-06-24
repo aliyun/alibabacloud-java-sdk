@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeConnectableClustersResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeConnectableClustersResponseBodyResult> result;
 
@@ -37,6 +42,8 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
 
     public static class DescribeConnectableClustersResponseBodyResult extends TeaModel {
         /**
+         * <p>The instance ID of instances that can establish private network peering.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-cn-xxx</p>
          */
@@ -44,6 +51,8 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
         public String instances;
 
         /**
+         * <p>The network type of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc</p>
          */

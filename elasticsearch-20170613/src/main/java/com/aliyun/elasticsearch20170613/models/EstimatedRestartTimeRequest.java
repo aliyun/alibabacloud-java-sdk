@@ -8,7 +8,7 @@ public class EstimatedRestartTimeRequest extends TeaModel {
     public String body;
 
     /**
-     * <p>Specifies whether to forcibly restart the cluster. Default value: false.</p>
+     * <p>Specifies whether to force restart the instance. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>1d2db86sca4384811e0b5e8707e******</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>1d2db86sca4384811e0b5e8707e\<em>\</em>\<em>\</em>\<em>\</em></p>
+     * <p>The page number of the resource relationship list. This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of instance IDs to query. The value is in JSON array format and can contain up to 20 items.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</p>
@@ -33,7 +33,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceIds;
 
     /**
-     * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</p>
+     * <p>The resource type definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</p>
+     * <p>The number of entries per page in Settings for paged query and paging. This field is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,13 +53,10 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.</p>
-     * <blockquote>
-     * <p> The return examples does not contain this parameter.</p>
-     * </blockquote>
+     * <p>The list of tags to query. The value is in JSON string format and can contain up to 20 items.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;,  &quot;value&quot;:&quot;IT&quot;}]</p>
+     * <p>[{&quot;key&quot;:&quot;env&quot;, &quot;value&quot;:&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

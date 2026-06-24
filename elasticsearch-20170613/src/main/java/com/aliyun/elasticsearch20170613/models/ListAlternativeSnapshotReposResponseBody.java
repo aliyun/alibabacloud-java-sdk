@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -14,7 +14,7 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListAlternativeSnapshotReposResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
 
     public static class ListAlternativeSnapshotReposResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-6ja1ro4jt000c****</p>
@@ -51,7 +51,7 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The address of the repository.</p>
+         * <p>The repository address.</p>
          * 
          * <strong>example:</strong>
          * <p>RepoPath</p>

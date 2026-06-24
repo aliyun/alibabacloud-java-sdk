@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TransferNodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
@@ -12,6 +14,12 @@ public class TransferNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the operation. Valid values:</p>
+     * <ul>
+     * <li>true: The task was successful.</li>
+     * <li>false: The task failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

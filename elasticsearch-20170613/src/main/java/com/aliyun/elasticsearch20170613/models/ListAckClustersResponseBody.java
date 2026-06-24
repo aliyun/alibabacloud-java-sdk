@@ -14,7 +14,7 @@ public class ListAckClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The list of ACK clusters returned by the current request.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListAckClustersResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListAckClustersResponseBody extends TeaModel {
 
     public static class ListAckClustersResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c5ea2c2d9a3cf499481292f60425d****</p>
@@ -51,7 +51,7 @@ public class ListAckClustersResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The type of the cluster. The value is fixed as ManagedKubernetes.</p>
+         * <p>The cluster type. Only ManagedKubernetes is supported, which indicates a managed Kubernetes cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ManagedKubernetes</p>
@@ -60,7 +60,7 @@ public class ListAckClustersResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -69,7 +69,7 @@ public class ListAckClustersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the VPC to which the cluster belongs.</p>
+         * <p>The ID of the VPC where the cluster resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp12nu14urf0upaf4****</p>

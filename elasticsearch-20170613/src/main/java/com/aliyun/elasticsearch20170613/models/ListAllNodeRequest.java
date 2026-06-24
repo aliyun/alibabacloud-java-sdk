@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAllNodeRequest extends TeaModel {
     /**
-     * <p>The Java Virtual Machine (JVM) heap memory usage of the node.</p>
+     * <p>Specifies whether to return monitoring information for the nodes. Valid values:</p>
+     * <ul>
+     * <li><p>true (default): Returns monitoring information.</p>
+     * </li>
+     * <li><p>false: Does not return monitoring information.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>

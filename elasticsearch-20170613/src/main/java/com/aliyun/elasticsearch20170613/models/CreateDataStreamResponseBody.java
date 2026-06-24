@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateDataStreamResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the created data stream.</p>
+     */
     @NameInMap("Result")
     public CreateDataStreamResponseBodyResult result;
 
@@ -37,6 +42,8 @@ public class CreateDataStreamResponseBody extends TeaModel {
 
     public static class CreateDataStreamResponseBodyResult extends TeaModel {
         /**
+         * <p>The data stream name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds-</p>
          */

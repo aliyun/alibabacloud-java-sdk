@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateConnectionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -13,6 +13,12 @@ public class ValidateConnectionRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The information about the Elasticsearch instance to which you want to validate connectivity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;endpoints&quot;: [         &quot;<a href="http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200">http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200</a>&quot;     ],     &quot;userName&quot;: &quot;elastic&quot;,     &quot;password&quot;: &quot;xxxx&quot; }</p>
+     */
     @NameInMap("body")
     public String body;
 

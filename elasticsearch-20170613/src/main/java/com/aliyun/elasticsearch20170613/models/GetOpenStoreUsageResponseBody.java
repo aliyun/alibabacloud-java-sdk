@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOpenStoreUsageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E1DE2491-804F-4C86-BAB4-548DD70B****</p>
@@ -14,7 +14,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The current request result.</p>
+     * <p>The result of the current request.</p>
      */
     @NameInMap("Result")
     public GetOpenStoreUsageResponseBodyResult result;
@@ -42,7 +42,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
 
     public static class GetOpenStoreUsageResponseBodyResult extends TeaModel {
         /**
-         * <p>The current OpenStore storage capacity (estimated value based on actual indexes). Unit: Byte.</p>
+         * <p>The current OpenStore storage usage, which is an estimated value based on actual indexes. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>204800</p>
@@ -51,7 +51,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         public Long currentUsage;
 
         /**
-         * <p>The storage capacity of OpenStore yesterday. Unit: bytes.</p>
+         * <p>The OpenStore storage usage on the previous day. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>184320</p>

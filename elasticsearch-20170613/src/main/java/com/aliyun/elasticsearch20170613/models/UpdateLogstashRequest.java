@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateLogstashRequest extends TeaModel {
     /**
+     * <p>The number of nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("nodeAmount")
     public Integer nodeAmount;
 
+    /**
+     * <p>The node specifications.</p>
+     */
     @NameInMap("nodeSpec")
     public UpdateLogstashRequestNodeSpec nodeSpec;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
@@ -52,6 +59,8 @@ public class UpdateLogstashRequest extends TeaModel {
 
     public static class UpdateLogstashRequestNodeSpec extends TeaModel {
         /**
+         * <p>The disk size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -59,6 +68,12 @@ public class UpdateLogstashRequest extends TeaModel {
         public Integer disk;
 
         /**
+         * <p>The disk type. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra cloud disk</li>
+         * <li>cloud_ssd: SSD cloud disk.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
          */
@@ -66,6 +81,8 @@ public class UpdateLogstashRequest extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The specification information. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn1ne.large</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDiagnoseReportRequest extends TeaModel {
     /**
-     * <p>SYSTEM</p>
+     * <p>Specifies whether to display the details of diagnostic items.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,11 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public Boolean detail;
 
     /**
-     * <p>1</p>
+     * <p>The end timestamp of the query. Unit: milliseconds.</p>
+     * <ul>
+     * <li>Minimum value: 1000000000000</li>
+     * <li>Maximum value: 2000000000000.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +28,23 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>1594569600000</p>
+     * <p>The language of the reports to retrieve. Default value: the browser language. Valid values:</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh: Simplified Chinese</li>
+     * <li>zt: Traditional Chinese</li>
+     * <li>es: Spanish</li>
+     * <li>fr: French.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>spanish</p>
+     * <p>es</p>
      */
     @NameInMap("lang")
     public String lang;
 
     /**
-     * <p>20</p>
+     * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +53,7 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>true</p>
+     * <p>The number of reports per page. Default value: 10. Minimum value: 1. Maximum value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,7 +62,11 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>1595174399999</p>
+     * <p>The start timestamp of the query. Unit: milliseconds.</p>
+     * <ul>
+     * <li>Minimum value: 1000000000000</li>
+     * <li>Maximum value: 2000000000000.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +76,12 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The trigger method of the health diagnostics. Valid values:</p>
+     * <ul>
+     * <li>SYSTEM (default): automatically triggered by the system</li>
+     * <li>INNER: internally triggered</li>
+     * <li>USER: manually triggered by the user.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM</p>

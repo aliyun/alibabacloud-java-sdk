@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdatePipelineManagementConfigRequest extends TeaModel {
+    /**
+     * <p>The list of access addresses of the Elasticsearch instance where Kibana resides after Kibana pipeline management is enabled.</p>
+     */
     @NameInMap("endpoints")
     public java.util.List<String> endpoints;
 
@@ -11,16 +14,27 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     public String esInstanceId;
 
     /**
+     * <p>The password used to log on to Kibana.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>The list of pipelines managed by Kibana.</p>
+     */
     @NameInMap("pipelineIds")
     public java.util.List<String> pipelineIds;
 
     /**
+     * <p>The pipeline management method. Valid values:</p>
+     * <ul>
+     * <li>ES: Kibana pipeline management.</li>
+     * <li>MULTIPLE_PIPELINE: configuration file management.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ES</p>
      */
@@ -28,6 +42,8 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     public String pipelineManagementType;
 
     /**
+     * <p>The username used to log on to Kibana.</p>
+     * 
      * <strong>example:</strong>
      * <p>elastic</p>
      */
@@ -35,6 +51,8 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     public String userName;
 
     /**
+     * <p>A unique token used to ensure idempotence of the request. The client generates this value. The value must be unique across different requests and can contain up to 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */

@@ -4,16 +4,24 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceHistoryEventsResponseBody extends TeaModel {
+    /**
+     * <p>The response headers.</p>
+     */
     @NameInMap("Headers")
     public ListInstanceHistoryEventsResponseBodyHeaders headers;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D1A6830A-F59B-4E05-BFAC-9496C21DBBA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListInstanceHistoryEventsResponseBodyResult> result;
 
@@ -48,6 +56,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
 
     public static class ListInstanceHistoryEventsResponseBodyHeaders extends TeaModel {
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -55,6 +65,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public Long xTotalCount;
 
         /**
+         * <p>The total number of failures.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -62,6 +74,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public Long xTotalFailed;
 
         /**
+         * <p>The total number of successes.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -101,6 +115,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
 
     public static class ListInstanceHistoryEventsResponseBodyResult extends TeaModel {
         /**
+         * <p>The ECS instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-2ze8s9cjdf2cv969****</p>
          */
@@ -108,6 +124,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String ecsId;
 
         /**
+         * <p>The event creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-12-07T00:00:00Z</p>
          */
@@ -115,6 +133,13 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String eventCreateTime;
 
         /**
+         * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li>FAILED: failed</li>
+         * <li>EXECUTED: executed</li>
+         * <li>EXECUTING: executing.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EXECUTED</p>
          */
@@ -122,6 +147,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String eventCycleStatus;
 
         /**
+         * <p>The event execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-12-07T00:00:00Z</p>
          */
@@ -129,6 +156,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String eventExecuteTime;
 
         /**
+         * <p>The event completion time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-12-07T00:00:00Z</p>
          */
@@ -136,6 +165,13 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String eventFinashTime;
 
         /**
+         * <p>The event level. Valid values:</p>
+         * <ul>
+         * <li>INFO: information</li>
+         * <li>WARN: warning</li>
+         * <li>CRITICAL: critical.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INFO</p>
          */
@@ -143,6 +179,16 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String eventLevel;
 
         /**
+         * <p>The event type. Valid values:</p>
+         * <ul>
+         * <li>ECS:AUTO_RESTART: Automatic restart of an ECS node.</li>
+         * <li>Instance:InstanceFailure.Reboot:Executed: ECS instance reboot completed (instance error).</li>
+         * <li>Instance:InstanceFailure.Reboot:Executing: ECS instance reboot started (instance error).</li>
+         * <li>Instance:SystemFailure.Reboot:Executed: ECS instance reboot completed (system error).</li>
+         * <li>Instance:SystemFailure.Reboot:Executing: ECS instance reboot started (system error).</li>
+         * <li>Instance:SystemFailure.Reboot:Failed: ECS instance reboot failed (system error).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ECS:AUTO_RESTART</p>
          */
@@ -150,6 +196,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String eventType;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-cn-2r42l7a740005****</p>
          */
@@ -157,6 +205,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The IP address of the node that generated the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.1.xx.xx</p>
          */
@@ -164,6 +214,8 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         public String nodeIP;
 
         /**
+         * <p>The region ID where the event occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

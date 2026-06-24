@@ -4,16 +4,24 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListComponentIndicesResponseBody extends TeaModel {
+    /**
+     * <p>The response headers.</p>
+     */
     @NameInMap("Headers")
     public ListComponentIndicesResponseBodyHeaders headers;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the returned results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListComponentIndicesResponseBodyResult> result;
 
@@ -48,6 +56,8 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     public static class ListComponentIndicesResponseBodyHeaders extends TeaModel {
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -71,6 +81,8 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     public static class ListComponentIndicesResponseBodyResultContentTemplateSettingsIndexLifecycle extends TeaModel {
         /**
+         * <p>The name of the lifecycle policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>synthetics</p>
          */
@@ -94,12 +106,21 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     public static class ListComponentIndicesResponseBodyResultContentTemplateSettingsIndex extends TeaModel {
         /**
+         * <p>The index compression method. Valid values:</p>
+         * <ul>
+         * <li>LZ4: the default compression algorithm of Elasticsearch. It provides fast compression and decompression but a relatively lower compression ratio.</li>
+         * <li>best_compression: uses the best_compression algorithm for compression, which provides a higher compression ratio.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>best_compression</p>
          */
         @NameInMap("codec")
         public String codec;
 
+        /**
+         * <p>The index lifecycle configuration.</p>
+         */
         @NameInMap("lifecycle")
         public ListComponentIndicesResponseBodyResultContentTemplateSettingsIndexLifecycle lifecycle;
 
@@ -127,6 +148,9 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     }
 
     public static class ListComponentIndicesResponseBodyResultContentTemplateSettings extends TeaModel {
+        /**
+         * <p>The index information.</p>
+         */
         @NameInMap("index")
         public ListComponentIndicesResponseBodyResultContentTemplateSettingsIndex index;
 
@@ -146,6 +170,9 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     }
 
     public static class ListComponentIndicesResponseBodyResultContentTemplate extends TeaModel {
+        /**
+         * <p>The settings configuration of the template.</p>
+         */
         @NameInMap("settings")
         public ListComponentIndicesResponseBodyResultContentTemplateSettings settings;
 
@@ -166,16 +193,23 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     public static class ListComponentIndicesResponseBodyResultContent extends TeaModel {
         /**
+         * <p>The metadata, which is used to store information such as remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</p>
          */
         @NameInMap("_meta")
         public java.util.Map<String, ?> meta;
 
+        /**
+         * <p>The composable template object.</p>
+         */
         @NameInMap("template")
         public ListComponentIndicesResponseBodyResultContentTemplate template;
 
         /**
+         * <p>The version of the composable template.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -214,13 +248,21 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     }
 
     public static class ListComponentIndicesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The information about the index templates that reference this composable template.</p>
+         */
         @NameInMap("composed")
         public java.util.List<String> composed;
 
+        /**
+         * <p>The content of the composable template.</p>
+         */
         @NameInMap("content")
         public ListComponentIndicesResponseBodyResultContent content;
 
         /**
+         * <p>The name of the composable template.</p>
+         * 
          * <strong>example:</strong>
          * <p>synthetics-settings</p>
          */

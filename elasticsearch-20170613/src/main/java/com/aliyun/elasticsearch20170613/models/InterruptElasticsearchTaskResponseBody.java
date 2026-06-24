@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InterruptElasticsearchTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code. Only displayed if an exception is returned.</p>
+     * <p>The error code. This parameter is returned only when an exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceStatusNotSupportCurrentAction</p>
@@ -14,7 +14,7 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message. Only displayed if an exception is returned.</p>
+     * <p>The error message. This parameter is returned only when an exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>The cluster is running tasks or in an error status. Try again later.</p>
@@ -23,7 +23,7 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
@@ -32,10 +32,10 @@ public class InterruptElasticsearchTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return results:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: interrupted change successfully</li>
-     * <li>false: interrupted change failed</li>
+     * <li>true: The change is interrupted.</li>
+     * <li>false: The change failed to be interrupted.</li>
      * </ul>
      * 
      * <strong>example:</strong>

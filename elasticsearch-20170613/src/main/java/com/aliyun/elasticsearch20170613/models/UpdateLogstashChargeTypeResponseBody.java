@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLogstashChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -14,10 +14,10 @@ public class UpdateLogstashChargeTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the billing method of the cluster is switched. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The billing method is switched.</li>
-     * <li>false: The billing method fails to be switched.</li>
+     * <li>true: The conversion succeeded.</li>
+     * <li>false: The conversion failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

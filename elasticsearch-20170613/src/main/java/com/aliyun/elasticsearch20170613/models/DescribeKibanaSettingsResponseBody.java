@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeKibanaSettingsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6D*****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeKibanaSettingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Some configurable Kibana settings. For more information, see <a href="https://www.elastic.co/guide/cn/kibana/current/settings.html">Kibana settings</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;map.includeElasticMapsService&quot;: &quot;false&quot;, &quot;server.ssl.cert&quot;: &quot;/home/admin/packages/kibana/config/cert/client.crt&quot;, &quot;server.ssl.enabled&quot;: &quot;true&quot;, &quot;server.ssl.key&quot;: &quot;/home/admin/packages/kibana/config/cert/client.key&quot;, &quot;xpack.reporting.capture.browser.chromium.disableSandbox&quot;: &quot;true&quot;}</p>
      */

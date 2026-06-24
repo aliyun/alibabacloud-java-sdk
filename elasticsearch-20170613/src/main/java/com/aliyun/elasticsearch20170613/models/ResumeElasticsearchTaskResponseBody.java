@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeElasticsearchTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -14,10 +14,10 @@ public class ResumeElasticsearchTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return results:</p>
+     * <p>The return result:</p>
      * <ul>
-     * <li>true: resume the interrupted change successfully</li>
-     * <li>false: resume the interrupted change successfully failed</li>
+     * <li>true: The interrupted change was resumed successfully.</li>
+     * <li>false: The interrupted change failed to be resumed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

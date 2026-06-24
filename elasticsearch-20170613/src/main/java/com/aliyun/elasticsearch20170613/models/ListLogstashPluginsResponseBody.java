@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogstashPluginsResponseBody extends TeaModel {
     /**
-     * <p>The address of the documentation for the plug-in.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -14,16 +14,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the plug-in. Valid values:</p>
-     * <ul>
-     * <li>INSTALLED: Installed</li>
-     * <li>UNINSTALLED: Not installed</li>
-     * <li>INSTALLING: The instance is being installed.</li>
-     * <li>UNINSTALLING: The instance is being uninstalled.</li>
-     * <li>UPGRADING: The backup gateway is being upgraded.</li>
-     * <li>FAILED: Installation failed</li>
-     * <li>UNKNOWN: The cluster is lost and cannot be created.</li>
-     * </ul>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListLogstashPluginsResponseBodyResult> result;
@@ -51,7 +42,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
 
     public static class ListLogstashPluginsResponseBodyResult extends TeaModel {
         /**
-         * <p>The source of the plug-in.</p>
+         * <p>The plugin description.</p>
          * 
          * <strong>example:</strong>
          * <p>The clone filter is for duplicating events.</p>
@@ -60,6 +51,8 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The plugin name.</p>
+         * 
          * <strong>example:</strong>
          * <p>logstash-filter-clone</p>
          */
@@ -67,6 +60,8 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The plugin source.</p>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
          */
@@ -74,7 +69,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The name of the plug-in.</p>
+         * <p>The URL of the plugin documentation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.html">https://xxx.html</a></p>
@@ -83,6 +78,17 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         public String specificationUrl;
 
         /**
+         * <p>The plugin status. Valid values:</p>
+         * <ul>
+         * <li>INSTALLED: installed</li>
+         * <li>UNINSTALLED: not installed</li>
+         * <li>INSTALLING: being installed</li>
+         * <li>UNINSTALLING: being uninstalled</li>
+         * <li>UPGRADING: being upgraded</li>
+         * <li>FAILED: installation failed</li>
+         * <li>UNKNOWN: the cluster is disconnected and the creation status cannot be retrieved.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INSTALLED</p>
          */

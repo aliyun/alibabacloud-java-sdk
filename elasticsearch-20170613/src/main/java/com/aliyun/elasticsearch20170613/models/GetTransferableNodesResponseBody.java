@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTransferableNodesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -14,7 +14,7 @@ public class GetTransferableNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<GetTransferableNodesResponseBodyResult> result;

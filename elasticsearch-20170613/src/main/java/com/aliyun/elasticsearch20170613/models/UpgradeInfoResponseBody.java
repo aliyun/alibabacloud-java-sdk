@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeInfoResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
@@ -13,6 +13,9 @@ public class UpgradeInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result body</p>
+     */
     @NameInMap("Result")
     public UpgradeInfoResponseBodyResult result;
 
@@ -39,6 +42,8 @@ public class UpgradeInfoResponseBody extends TeaModel {
 
     public static class UpgradeInfoResponseBodyResultUpgradeInfo extends TeaModel {
         /**
+         * <p>Current repo version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.7.3</p>
          */
@@ -46,6 +51,8 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String curRepoVersion;
 
         /**
+         * <p>Upgradable repo version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.7.3</p>
          */
@@ -53,6 +60,8 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String updateRepoVersion;
 
         /**
+         * <p>Indicates whether an upgradable version exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -60,6 +69,8 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public Boolean upgrade;
 
         /**
+         * <p>Current Milvus version</p>
+         * 
          * <strong>example:</strong>
          * <p>2.2.4</p>
          */
@@ -67,6 +78,8 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String curApackVersion;
 
         /**
+         * <p>Current ES version</p>
+         * 
          * <strong>example:</strong>
          * <p>8.17.0</p>
          */
@@ -74,6 +87,8 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String curEsVersion;
 
         /**
+         * <p>Upgradable Milvus version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.2.4</p>
          */
@@ -81,6 +96,8 @@ public class UpgradeInfoResponseBody extends TeaModel {
         public String upgradeApackVersion;
 
         /**
+         * <p>Upgradable ES version</p>
+         * 
          * <strong>example:</strong>
          * <p>8.17.0</p>
          */
@@ -151,6 +168,9 @@ public class UpgradeInfoResponseBody extends TeaModel {
     }
 
     public static class UpgradeInfoResponseBodyResult extends TeaModel {
+        /**
+         * <p>Upgrade information.</p>
+         */
         @NameInMap("UpgradeInfo")
         public UpgradeInfoResponseBodyResultUpgradeInfo upgradeInfo;
 

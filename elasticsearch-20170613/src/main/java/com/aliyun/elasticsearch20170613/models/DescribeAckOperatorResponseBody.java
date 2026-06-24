@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAckOperatorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6615EE8D-FD9D-4FD3-997E-6FEA5B8D82ED</p>
@@ -42,12 +42,12 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
 
     public static class DescribeAckOperatorResponseBodyResult extends TeaModel {
         /**
-         * <p>The installation status of ES-operator. Valid values:</p>
+         * <p>The Operator installation status. Valid values:</p>
          * <ul>
-         * <li>deployed: ES-operator is installed.</li>
-         * <li>not-deploy: ES-operator is not installed.</li>
-         * <li>failed: ES-operator fails to be installed.</li>
-         * <li>unknown: The installation status of ES-operator is unknown.</li>
+         * <li>deployed: installed</li>
+         * <li>not-deploy: not installed</li>
+         * <li>failed: installation failed</li>
+         * <li>unknown: unknown status.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The version of ES-operator.</p>
+         * <p>The Operator version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
