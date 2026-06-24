@@ -494,6 +494,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates an open-source username and password.</p>
+     * 
+     * @param request CreateOpenSourceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOpenSourceAccountResponse
+     */
+    public CreateOpenSourceAccountResponse createOpenSourceAccountWithOptions(CreateOpenSourceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOpenSourceAccount"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOpenSourceAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an open-source username and password.</p>
+     * 
+     * @param request CreateOpenSourceAccountRequest
+     * @return CreateOpenSourceAccountResponse
+     */
+    public CreateOpenSourceAccountResponse createOpenSourceAccount(CreateOpenSourceAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOpenSourceAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an open source permission.</p>
+     * 
+     * @param request CreateOpenSourcePermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOpenSourcePermissionResponse
+     */
+    public CreateOpenSourcePermissionResponse createOpenSourcePermissionWithOptions(CreateOpenSourcePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configure)) {
+            query.put("Configure", request.configure);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.read)) {
+            query.put("Read", request.read);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vhost)) {
+            query.put("Vhost", request.vhost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.write)) {
+            query.put("Write", request.write);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOpenSourcePermission"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOpenSourcePermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an open source permission.</p>
+     * 
+     * @param request CreateOpenSourcePermissionRequest
+     * @return CreateOpenSourcePermissionResponse
+     */
+    public CreateOpenSourcePermissionResponse createOpenSourcePermission(CreateOpenSourcePermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOpenSourcePermissionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>A queue is a buffer that stores messages. In ApsaraMQ for RabbitMQ, messages are sent to a specified exchange and then routed to a bound queue.</p>
      * 
      * @param request CreateQueueRequest
@@ -800,6 +928,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteExchangeResponse deleteExchange(DeleteExchangeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteExchangeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the username and password of an open-source user.</p>
+     * 
+     * @param request DeleteOpenSourceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOpenSourceAccountResponse
+     */
+    public DeleteOpenSourceAccountResponse deleteOpenSourceAccountWithOptions(DeleteOpenSourceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOpenSourceAccount"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOpenSourceAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the username and password of an open-source user.</p>
+     * 
+     * @param request DeleteOpenSourceAccountRequest
+     * @return DeleteOpenSourceAccountResponse
+     */
+    public DeleteOpenSourceAccountResponse deleteOpenSourceAccount(DeleteOpenSourceAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOpenSourceAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an open source permission.</p>
+     * 
+     * @param request DeleteOpenSourcePermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOpenSourcePermissionResponse
+     */
+    public DeleteOpenSourcePermissionResponse deleteOpenSourcePermissionWithOptions(DeleteOpenSourcePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vhost)) {
+            query.put("Vhost", request.vhost);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOpenSourcePermission"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOpenSourcePermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an open source permission.</p>
+     * 
+     * @param request DeleteOpenSourcePermissionRequest
+     * @return DeleteOpenSourcePermissionResponse
+     */
+    public DeleteOpenSourcePermissionResponse deleteOpenSourcePermission(DeleteOpenSourcePermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOpenSourcePermissionWithOptions(request, runtime);
     }
 
     /**
@@ -1281,6 +1509,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enumerates open-source usernames and passwords.</p>
+     * 
+     * @param request ListOpenSourceAccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOpenSourceAccountsResponse
+     */
+    public ListOpenSourceAccountsResponse listOpenSourceAccountsWithOptions(ListOpenSourceAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOpenSourceAccounts"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOpenSourceAccountsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enumerates open-source usernames and passwords.</p>
+     * 
+     * @param request ListOpenSourceAccountsRequest
+     * @return ListOpenSourceAccountsResponse
+     */
+    public ListOpenSourceAccountsResponse listOpenSourceAccounts(ListOpenSourceAccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOpenSourceAccountsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists open source permissions.</p>
+     * 
+     * @param request ListOpenSourcePermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOpenSourcePermissionsResponse
+     */
+    public ListOpenSourcePermissionsResponse listOpenSourcePermissionsWithOptions(ListOpenSourcePermissionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOpenSourcePermissions"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOpenSourcePermissionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists open source permissions.</p>
+     * 
+     * @param request ListOpenSourcePermissionsRequest
+     * @return ListOpenSourcePermissionsResponse
+     */
+    public ListOpenSourcePermissionsResponse listOpenSourcePermissions(ListOpenSourcePermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOpenSourcePermissionsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>ApsaraMQ for RabbitMQ lets you query only online consumer clients. You cannot query offline consumer clients.</p>
      * 
@@ -1656,7 +1992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the elastic scaling switch of a serverless instance.</p>
+     * <p>Update serverless switch</p>
      * 
      * @param request UpdateInstanceServerlessSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1696,7 +2032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the elastic scaling switch of a serverless instance.</p>
+     * <p>Update serverless switch</p>
      * 
      * @param request UpdateInstanceServerlessSwitchRequest
      * @return UpdateInstanceServerlessSwitchResponse
@@ -1704,5 +2040,133 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateInstanceServerlessSwitchResponse updateInstanceServerlessSwitch(UpdateInstanceServerlessSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceServerlessSwitchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the username and password for open-source access.</p>
+     * 
+     * @param request UpdateOpenSourceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateOpenSourceAccountResponse
+     */
+    public UpdateOpenSourceAccountResponse updateOpenSourceAccountWithOptions(UpdateOpenSourceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateOpenSourceAccount"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOpenSourceAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the username and password for open-source access.</p>
+     * 
+     * @param request UpdateOpenSourceAccountRequest
+     * @return UpdateOpenSourceAccountResponse
+     */
+    public UpdateOpenSourceAccountResponse updateOpenSourceAccount(UpdateOpenSourceAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateOpenSourceAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates open source permissions.</p>
+     * 
+     * @param request UpdateOpenSourcePermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateOpenSourcePermissionResponse
+     */
+    public UpdateOpenSourcePermissionResponse updateOpenSourcePermissionWithOptions(UpdateOpenSourcePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configure)) {
+            query.put("Configure", request.configure);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.read)) {
+            query.put("Read", request.read);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vhost)) {
+            query.put("Vhost", request.vhost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.write)) {
+            query.put("Write", request.write);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateOpenSourcePermission"),
+            new TeaPair("version", "2019-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOpenSourcePermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates open source permissions.</p>
+     * 
+     * @param request UpdateOpenSourcePermissionRequest
+     * @return UpdateOpenSourcePermissionResponse
+     */
+    public UpdateOpenSourcePermissionResponse updateOpenSourcePermission(UpdateOpenSourcePermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateOpenSourcePermissionWithOptions(request, runtime);
     }
 }

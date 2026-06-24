@@ -3,9 +3,9 @@ package com.aliyun.amqp_open20191212.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateInstanceServerlessSwitchResponseBody extends TeaModel {
+public class CreateOpenSourceAccountResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,7 @@ public class UpdateInstanceServerlessSwitchResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
-     */
-    @NameInMap("Data")
-    public Boolean data;
-
-    /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -29,16 +23,16 @@ public class UpdateInstanceServerlessSwitchResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>CCBB1225-C392-480E-8C7F-D09AB2CD2***</p>
+     * <p>FEBA5E0C-50D0-4FA6-A794-4901E5465***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The result of the request.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -46,12 +40,12 @@ public class UpdateInstanceServerlessSwitchResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateInstanceServerlessSwitchResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateInstanceServerlessSwitchResponseBody self = new UpdateInstanceServerlessSwitchResponseBody();
+    public static CreateOpenSourceAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateOpenSourceAccountResponseBody self = new CreateOpenSourceAccountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateInstanceServerlessSwitchResponseBody setCode(Integer code) {
+    public CreateOpenSourceAccountResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -59,15 +53,7 @@ public class UpdateInstanceServerlessSwitchResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateInstanceServerlessSwitchResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
-    }
-
-    public UpdateInstanceServerlessSwitchResponseBody setMessage(String message) {
+    public CreateOpenSourceAccountResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -75,7 +61,7 @@ public class UpdateInstanceServerlessSwitchResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateInstanceServerlessSwitchResponseBody setRequestId(String requestId) {
+    public CreateOpenSourceAccountResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -83,7 +69,7 @@ public class UpdateInstanceServerlessSwitchResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateInstanceServerlessSwitchResponseBody setSuccess(Boolean success) {
+    public CreateOpenSourceAccountResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
