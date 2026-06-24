@@ -12,7 +12,7 @@ public class QueryBuyerDomainTradeRecordsShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2025-07-07 23:59:59</p>
+     * <p>2024-05-01 00:00:00</p>
      */
     @NameInMap("EndDate")
     public String endDate;
@@ -40,7 +40,7 @@ public class QueryBuyerDomainTradeRecordsShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>{\&quot;payTime\&quot;:\&quot;desc\&quot;}</p>
+     * <p>{&quot;payTime&quot;:&quot;desc&quot;}</p>
      */
     @NameInMap("Sorter")
     public String sorter;
@@ -54,7 +54,7 @@ public class QueryBuyerDomainTradeRecordsShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
      */
     @NameInMap("StartPrice")
     public Float startPrice;

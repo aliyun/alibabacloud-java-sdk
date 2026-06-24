@@ -7,10 +7,6 @@ public class AcceptDemandResponseBody extends TeaModel {
     @NameInMap("BindUrl")
     public String bindUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>497F7522-82B0-4BD4-84FE-AE8749E4C2F9</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

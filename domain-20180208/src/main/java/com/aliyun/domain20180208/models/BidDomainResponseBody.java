@@ -4,17 +4,9 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class BidDomainResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>12345678</p>
-     */
     @NameInMap("AuctionId")
     public String auctionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CC615585-9D93-4179-BD16-09337E32A3A7</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

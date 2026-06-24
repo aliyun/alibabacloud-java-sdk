@@ -6,27 +6,18 @@ import com.aliyun.tea.*;
 public class BidDomainRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>12345678</p>
      */
     @NameInMap("AuctionId")
     public String auctionId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>RMB</p>
      */
     @NameInMap("Currency")
     public String currency;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("MaxBid")
     public Float maxBid;

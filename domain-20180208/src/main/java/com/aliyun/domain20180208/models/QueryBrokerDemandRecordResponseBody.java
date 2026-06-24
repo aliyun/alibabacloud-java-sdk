@@ -4,41 +4,21 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class QueryBrokerDemandRecordResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public QueryBrokerDemandRecordResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>497F7522-82B0-4BD4-84FE-AE8749E4C2F9</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 

@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class QueryBookingDomainInfoRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>abc.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

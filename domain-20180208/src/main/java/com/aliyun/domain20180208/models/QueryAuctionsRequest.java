@@ -7,24 +7,12 @@ public class QueryAuctionsRequest extends TeaModel {
     @NameInMap("AuctionEndTimeOrder")
     public String auctionEndTimeOrder;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("Status")
     public String status;
 

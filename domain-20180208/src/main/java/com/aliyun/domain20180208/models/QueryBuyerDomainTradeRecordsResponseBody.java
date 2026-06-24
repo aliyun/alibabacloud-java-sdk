@@ -8,8 +8,6 @@ public class QueryBuyerDomainTradeRecordsResponseBody extends TeaModel {
     public QueryBuyerDomainTradeRecordsResponseBodyModule module;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>8F5BC888-521D-503A-A79B-CEDC9A23D716</p>
      */
@@ -47,49 +45,49 @@ public class QueryBuyerDomainTradeRecordsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>RMB</p>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <strong>example:</strong>
-         * <p>2025-07-07 23:59:59</p>
+         * <p>2024-05-01 00:00:00</p>
          */
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
         /**
          * <strong>example:</strong>
-         * <p>kythelmet.cn</p>
+         * <p>test.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <strong>example:</strong>
-         * <p>2025-07-07 23:59:59</p>
+         * <p>2024-05-01 00:00:00</p>
          */
         @NameInMap("PayTime")
         public String payTime;
 
         /**
          * <strong>example:</strong>
-         * <p>SUCCESS</p>
+         * <p>FAIL</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <strong>example:</strong>
-         * <p>5b05d1f7-26f0-4ad7-97d9-ac96fd9b65ba</p>
+         * <p>TR2025120110192900****</p>
          */
         @NameInMap("TradeId")
         public String tradeId;
 
         /**
          * <strong>example:</strong>
-         * <p>27660.0</p>
+         * <p>100</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -193,21 +191,21 @@ public class QueryBuyerDomainTradeRecordsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>1</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <strong>example:</strong>
-         * <p>294</p>
+         * <p>1</p>
          */
         @NameInMap("TotalItemNum")
         public Integer totalItemNum;
 
         /**
          * <strong>example:</strong>
-         * <p>4</p>
+         * <p>1</p>
          */
         @NameInMap("TotalPageNum")
         public Integer totalPageNum;
