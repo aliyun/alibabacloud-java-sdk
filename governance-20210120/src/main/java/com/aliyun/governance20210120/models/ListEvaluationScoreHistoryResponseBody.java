@@ -14,7 +14,7 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The historical scores.</p>
+     * <p>The historical detection scores.</p>
      */
     @NameInMap("ScoreHistory")
     public ListEvaluationScoreHistoryResponseBodyScoreHistory scoreHistory;
@@ -42,7 +42,7 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
 
     public static class ListEvaluationScoreHistoryResponseBodyScoreHistoryTotalScoreHistory extends TeaModel {
         /**
-         * <p>The time when the score was generated. The time is in UTC.</p>
+         * <p>The time when the score was generated, in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-30T03:34:02Z</p>
@@ -85,7 +85,7 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
 
     public static class ListEvaluationScoreHistoryResponseBodyScoreHistory extends TeaModel {
         /**
-         * <p>The historical scores.</p>
+         * <p>The historical detection scores.</p>
          */
         @NameInMap("TotalScoreHistory")
         public java.util.List<ListEvaluationScoreHistoryResponseBodyScoreHistoryTotalScoreHistory> totalScoreHistory;

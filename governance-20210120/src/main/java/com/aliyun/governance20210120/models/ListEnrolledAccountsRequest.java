@@ -15,8 +15,7 @@ public class ListEnrolledAccountsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
-     * <p>You do not need to specify this parameter for the first request.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</p>

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class EnrollAccountResponseBody extends TeaModel {
     /**
-     * <p>The account ID.</p>
+     * <p>The ID of the enrolled account.</p>
+     * <p>colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</p>
+     * <p>143165363236\<em>\</em>\<em>\</em></p>
      * 
      * <strong>example:</strong>
      * <p>143165363236****</p>

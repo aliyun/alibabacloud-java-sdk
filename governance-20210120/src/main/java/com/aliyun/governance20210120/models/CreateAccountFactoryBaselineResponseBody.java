@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccountFactoryBaselineResponseBody extends TeaModel {
     /**
-     * <p>The baseline ID.</p>
+     * <p>The ID of the baseline.</p>
      * 
      * <strong>example:</strong>
      * <p>afb-bp1e6ixtiwupap8m****</p>

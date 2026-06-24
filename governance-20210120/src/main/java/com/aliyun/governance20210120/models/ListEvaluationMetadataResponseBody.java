@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationMetadataResponseBody extends TeaModel {
     /**
-     * <p>The metadata of a governance maturity check.</p>
+     * <p>The governance evaluation definition metadata.</p>
      */
     @NameInMap("EvaluationMetadata")
     public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadata> evaluationMetadata;
@@ -42,16 +42,16 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActionsGuidance extends TeaModel {
         /**
-         * <p>The display name of the fixing button.</p>
+         * <p>The display name of the remediation step button.</p>
          * 
          * <strong>example:</strong>
-         * <p>Manual fixing</p>
+         * <p>Manual fix</p>
          */
         @NameInMap("ButtonName")
         public String buttonName;
 
         /**
-         * <p>The navigation URL of the fixing button.</p>
+         * <p>The URL that the remediation step button links to.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></p>
@@ -60,7 +60,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String buttonRef;
 
         /**
-         * <p>The fixing procedure.</p>
+         * <p>The content of the remediation step.</p>
          * 
          * <strong>example:</strong>
          * <p>You must replace the AccessKey pair of your Alibaba Cloud account. To do so, perform the following steps:</br>1. Log on to the RAM console. In the left-side navigation pane, choose Identities &gt; Users. On the Users page, click Create User.</br>2. On the Create User page, enter a logon name and select OpenAPI Access for the Access Mode parameter.</br>3. After the RAM user is created, save the AccessKey pair. Then, find the user that you created on the Users page and click Add Permissions in the Actions column. In the Grant Permission panel, find the AdministratorAccess policy and attach it to the RAM user.</br>4. In a program, replace the AccessKey pair of the Alibaba Cloud account with the AccessKey pair of the RAM user created in the previous step and check whether the program runs as expected in the test environment.</br>5. If the program runs as expected, publish the program to the production environment and disable the previous AccessKey pair of your Alibaba Cloud account. Then, check whether the program runs as expected.</br>6. If the program runs as expected, delete the disabled AccessKey pair after the specified period of time, such as 90 days.</p>
@@ -69,7 +69,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The title of the fixing procedure.</p>
+         * <p>The title of the remediation step.</p>
          * 
          * <strong>example:</strong>
          * <p>Scenario 3: AccessKey pair that is used within the last 90 days</p>
@@ -118,9 +118,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActions extends TeaModel {
         /**
-         * <p>The fixing method.</p>
+         * <p>The remediation method category.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+         * <p>This parameter is returned only when <code>RemediationType</code> is set to <code>Analysis</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String classification;
 
         /**
-         * <p>The fixing cost.</p>
+         * <p>The remediation cost.</p>
          * 
          * <strong>example:</strong>
          * <p>You are not charged for this operation.</p>
@@ -139,36 +139,36 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String costDescription;
 
         /**
-         * <p>The description of the fixing item.</p>
+         * <p>The remediation description.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+         * <p>This parameter is returned only when <code>RemediationType</code> is set to <code>Analysis</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Console logon is enabled for the RAM user. The RAM user owns an AccessKey pair that is never used.</p>
+         * <p>A RAM user has both console logon and an AccessKey pair enabled, but the AccessKey pair has never been used.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The content of the fixing items.</p>
+         * <p>The remediation guidance.</p>
          */
         @NameInMap("Guidance")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActionsGuidance> guidance;
 
         /**
-         * <p>The usage notes of the fixing item.</p>
+         * <p>The remediation precautions.</p>
          * 
          * <strong>example:</strong>
-         * <p>The BestPracticesForIdentityAndPermissions compliance package is enabled in Cloud Config to check the settings and usage of the AccessKey pair, Alibaba Cloud account, and RAM users.</p>
+         * <p>This governance item enables the Best Practices for AccessKey and Permission Governance compliance package in Cloud Config to check the settings and usage of AccessKey pairs, Alibaba Cloud accounts, and RAM users.</p>
          */
         @NameInMap("Notice")
         public String notice;
 
         /**
-         * <p>The fixing suggestion.</p>
+         * <p>The remediation suggestion.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
+         * <p>This parameter is returned only when <code>RemediationType</code> is set to <code>Analysis</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -234,17 +234,17 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediation extends TeaModel {
         /**
-         * <p>The fixing operations.</p>
+         * <p>The remediation actions.</p>
          */
         @NameInMap("Actions")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActions> actions;
 
         /**
-         * <p>The type of the fixing method. Valid values:</p>
+         * <p>The remediation type. Valid values:</p>
          * <ul>
-         * <li>Manual: manual fixing</li>
-         * <li>QuickFix: quick fixing</li>
-         * <li>Analysis: auxiliary decision-making</li>
+         * <li>Manual: Manual remediation.</li>
+         * <li>QuickFix: Quick fix.</li>
+         * <li>Analysis: Assisted decision-making.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadata extends TeaModel {
         /**
-         * <p>The fixing items.</p>
+         * <p>The remediation item.</p>
          */
         @NameInMap("Remediation")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediation> remediation;
@@ -300,16 +300,16 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadataResourcePropertyMetadata extends TeaModel {
         /**
-         * <p>The display name of the resource property.</p>
+         * <p>The display name of the property.</p>
          * 
          * <strong>example:</strong>
-         * <p>AccessKey Pair Last Used At</p>
+         * <p>Last time the AccessKey pair was used</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The name of the resource property.</p>
+         * <p>The resource property name.</p>
          * 
          * <strong>example:</strong>
          * <p>AkLastUsedTime</p>
@@ -318,7 +318,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String propertyName;
 
         /**
-         * <p>The type of the resource property.</p>
+         * <p>The resource property type.</p>
          * 
          * <strong>example:</strong>
          * <p>String</p>
@@ -359,7 +359,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadata extends TeaModel {
         /**
-         * <p>The metadata of the resource properties.</p>
+         * <p>The resource property metadata.</p>
          */
         @NameInMap("ResourcePropertyMetadata")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadataResourcePropertyMetadata> resourcePropertyMetadata;
@@ -381,7 +381,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata extends TeaModel {
         /**
-         * <p>The category of the check item.</p>
+         * <p>The pillar to which the evaluation item belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Security</p>
@@ -390,16 +390,16 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The description of the check item.</p>
+         * <p>The description of the evaluation item.</p>
          * 
          * <strong>example:</strong>
-         * <p>If you use an AccessKey pair of an Alibaba Cloud account, you have full permissions on the resources of the account. You cannot set limits on the account, such as setting limits on source IP addresses or access duration. If the AccessKey pair is leaked, resources within the account are exposed to high security risks. If your Alibaba Cloud account has an existing AccessKey pair, the check result is Non-compliant.</p>
+         * <p>If you use an AccessKey pair of an Alibaba Cloud account, you have full permissions that cannot be restricted by conditions such as source IP address or access time. Once leaked, the risk is extremely high. If an AccessKey pair exists for the Alibaba Cloud account, it is considered non-compliant.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The display name of the check item.</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>An AccessKey pair is enabled for the Alibaba Cloud account.</p>
@@ -408,7 +408,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ID of the metadata.</p>
+         * <p>The random ID of the metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>pxgtda****</p>
@@ -417,7 +417,7 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The governance level of the check item.</p>
+         * <p>The recommended governance level of the evaluation item.</p>
          * 
          * <strong>example:</strong>
          * <p>High</p>
@@ -426,22 +426,22 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String recommendationLevel;
 
         /**
-         * <p>The metadata of the fixing task.</p>
+         * <p>The remediation metadata.</p>
          */
         @NameInMap("RemediationMetadata")
         public ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadata remediationMetadata;
 
         /**
-         * <p>The metadata of the checked resources.</p>
+         * <p>The resource metadata of the evaluation item.</p>
          */
         @NameInMap("ResourceMetadata")
         public ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadata resourceMetadata;
 
         /**
-         * <p>The scope of the check item. Valid values:</p>
+         * <p>The scope to which the evaluation item belongs. Valid values:</p>
          * <ul>
-         * <li>Account: the check item in a single-account governance maturity check</li>
-         * <li>ResourceDirectory: the check item in a multi-account governance maturity check</li>
+         * <li>Account: single-account evaluation item.</li>
+         * <li>ResourceDirectory: multi-account evaluation item.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -451,10 +451,10 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The status of the check item. Valid values:</p>
+         * <p>The status of the evaluation item. Valid values:</p>
          * <ul>
-         * <li>Released: The check item is released.</li>
-         * <li>Beta: The check item is pre-released.</li>
+         * <li>Released: officially released.</li>
+         * <li>Beta: pre-release.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -464,6 +464,8 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         public String stage;
 
         /**
+         * <p>The governance topic code to which the evaluation item belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>ResourceUtilization</p>
          */
@@ -559,15 +561,15 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadata extends TeaModel {
         /**
-         * <p>The metadata objects of a specific metadata type.</p>
+         * <p>The list of metadata objects under a specific metadata type.</p>
          */
         @NameInMap("Metadata")
         public java.util.List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata> metadata;
 
         /**
-         * <p>The type of the metadata. Valid values:</p>
+         * <p>The metadata type. Valid values:</p>
          * <ul>
-         * <li>Metric: the check item</li>
+         * <li>Metric: evaluation item.</li>
          * </ul>
          * 
          * <strong>example:</strong>

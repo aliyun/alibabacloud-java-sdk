@@ -118,7 +118,7 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
 
     public static class ListAccountFactoryBaselineItemsResponseBodyBaselineItems extends TeaModel {
         /**
-         * <p>The dependency of the baseline item.</p>
+         * <p>The dependencies of the baseline item.</p>
          */
         @NameInMap("DependsOn")
         public java.util.List<ListAccountFactoryBaselineItemsResponseBodyBaselineItemsDependsOn> dependsOn;

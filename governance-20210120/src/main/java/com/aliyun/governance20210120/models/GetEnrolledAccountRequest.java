@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEnrolledAccountRequest extends TeaModel {
     /**
-     * <p>The account ID.</p>
+     * <p>The ID of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

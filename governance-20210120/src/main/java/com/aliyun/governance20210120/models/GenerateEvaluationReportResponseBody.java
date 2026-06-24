@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateEvaluationReportResponseBody extends TeaModel {
     /**
+     * <p>The account ID for which the report is generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>103144549568****</p>
      */
@@ -12,6 +14,8 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
     public Long accountId;
 
     /**
+     * <p>The governance maturity evaluation score.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.7684</p>
      */
@@ -19,6 +23,8 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
     public Double evaluationScore;
 
     /**
+     * <p>The evaluation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-12T07:25:33Z</p>
      */
@@ -26,6 +32,14 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
     public String evaluationTime;
 
     /**
+     * <p>Indicates whether the report generation is complete.</p>
+     * <blockquote>
+     * <ul>
+     * <li>true: The report generation is complete.</li>
+     * <li>false: The report generation is not complete.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +47,13 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
     public String finished;
 
     /**
+     * <p>The report type. Valid values:</p>
+     * <ul>
+     * <li>EvaluationAccountHtmlReport: single-account HTML report.</li>
+     * <li>EvaluationAccountExcelReport: single-account Excel report.</li>
+     * <li>EvaluationMultiAccountExcelReport: multi-account Excel report.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>EvaluationAccountExcelReport</p>
      */
@@ -40,6 +61,8 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
     public String reportType;
 
     /**
+     * <p>The download URL of the report.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://governance-prod-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/reports-html/">https://governance-prod-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/reports-html/</a>*****</p>
      */

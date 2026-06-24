@@ -80,7 +80,7 @@ public class CreateAccountFactoryBaselineRequest extends TeaModel {
          * <p>The configurations of the baseline item. The value of this parameter is a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;EnabledServices\&quot;:[\&quot;CEN_TR\&quot;,\&quot;CDT\&quot;,\&quot;CMS\&quot;,\&quot;KMS\&quot;]}</p>
+         * <p>{&quot;EnabledServices&quot;:[&quot;CEN_TR&quot;,&quot;CDT&quot;,&quot;CMS&quot;,&quot;KMS&quot;]}</p>
          */
         @NameInMap("Config")
         public String config;

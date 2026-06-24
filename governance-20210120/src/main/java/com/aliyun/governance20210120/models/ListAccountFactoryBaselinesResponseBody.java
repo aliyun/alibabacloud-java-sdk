@@ -59,7 +59,7 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
 
     public static class ListAccountFactoryBaselinesResponseBodyBaselines extends TeaModel {
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          * 
          * <strong>example:</strong>
          * <p>afb-bp1durvn3lgqe28v****</p>
@@ -77,7 +77,7 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
         public String baselineName;
 
         /**
-         * <p>The time at which the baseline was created.</p>
+         * <p>The time when the baseline was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-30T09:09:28Z</p>
@@ -97,8 +97,10 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
         /**
          * <p>The type of the baseline. Valid values:</p>
          * <ul>
-         * <li>System: default baseline.</li>
-         * <li>Custom: custom baseline.</li>
+         * <li><p>System: The baseline is a default baseline.</p>
+         * </li>
+         * <li><p>Custom: The baseline is a custom baseline.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

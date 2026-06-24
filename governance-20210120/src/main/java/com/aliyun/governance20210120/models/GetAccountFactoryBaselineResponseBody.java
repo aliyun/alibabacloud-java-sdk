@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     /**
-     * <p>The baseline ID.</p>
+     * <p>The ID of the baseline.</p>
      * 
      * <strong>example:</strong>
      * <p>afb-bp16ae2k8a3yo3d*****</p>
@@ -58,8 +58,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     /**
      * <p>The type of the baseline. Valid values:</p>
      * <ul>
-     * <li>System: default baseline.</li>
-     * <li>Custom: custom baseline.</li>
+     * <li><p>System: The baseline is a default baseline.</p>
+     * </li>
+     * <li><p>Custom: The baseline is a custom baseline.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,7 +163,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
          * <p>The name of the baseline item.</p>
          * 
          * <strong>example:</strong>
-         * <p>1097526274671790</p>
+         * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
          */
         @NameInMap("Name")
         public String name;

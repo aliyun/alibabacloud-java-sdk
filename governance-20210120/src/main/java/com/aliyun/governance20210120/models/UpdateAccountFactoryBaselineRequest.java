@@ -22,12 +22,18 @@ public class UpdateAccountFactoryBaselineRequest extends TeaModel {
 
     /**
      * <p>The name of the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom baseline</p>
      */
     @NameInMap("BaselineName")
     public String baselineName;
 
     /**
      * <p>The description of the baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default baseline</p>
      */
     @NameInMap("Description")
     public String description;
@@ -91,7 +97,7 @@ public class UpdateAccountFactoryBaselineRequest extends TeaModel {
          * <p>The configurations of the baseline item. The value of this parameter is a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;EnabledServices\&quot;:[\&quot;CEN_TR\&quot;,\&quot;CDT\&quot;,\&quot;CMS\&quot;,\&quot;KMS\&quot;]}</p>
+         * <p>{&quot;EnabledServices&quot;:[&quot;CEN_TR&quot;,&quot;CDT&quot;,&quot;CMS&quot;,&quot;KMS&quot;]}</p>
          */
         @NameInMap("Config")
         public String config;

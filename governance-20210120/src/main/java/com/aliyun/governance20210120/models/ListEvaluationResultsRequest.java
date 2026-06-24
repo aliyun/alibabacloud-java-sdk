@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationResultsRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+     * <p>Member account ID. This parameter is only applicable to multi-account evaluation mode.</p>
      * 
      * <strong>example:</strong>
      * <p>176618589410****</p>
@@ -13,13 +13,24 @@ public class ListEvaluationResultsRequest extends TeaModel {
     @NameInMap("AccountId")
     public Long accountId;
 
+    @NameInMap("EvaluationDomain")
+    public String evaluationDomain;
+
     /**
-     * <p>The filter conditions.</p>
+     * <p>Filter conditions.</p>
      */
     @NameInMap("Filters")
     public java.util.List<ListEvaluationResultsRequestFilters> filters;
 
     /**
+     * <p>Special evaluation code. Valid values:</p>
+     * <ul>
+     * <li>basic (default): Basic model (governance maturity) evaluation.</li>
+     * <li>ack: Container construction special evaluation.</li>
+     * <li>ai: Machine learning special evaluation.</li>
+     * <li>nis: Network service special evaluation.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */
@@ -27,7 +38,7 @@ public class ListEvaluationResultsRequest extends TeaModel {
     public String lensCode;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,6 +47,12 @@ public class ListEvaluationResultsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Governance maturity evaluation scope. Valid values:</p>
+     * <ul>
+     * <li>Account (default): Performs single-account governance maturity evaluation, evaluating only the current account.</li>
+     * <li>ResourceDirectory: Performs multi-account governance maturity evaluation, evaluating all member accounts in the resource directory. Before performing this operation, you must first upgrade to multi-account governance maturity evaluation.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ResourceDirectory</p>
      */
@@ -43,6 +60,8 @@ public class ListEvaluationResultsRequest extends TeaModel {
     public String scope;
 
     /**
+     * <p>Evaluation snapshot ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>es-bp1r**************</p>
      */
@@ -50,6 +69,8 @@ public class ListEvaluationResultsRequest extends TeaModel {
     public String snapshotId;
 
     /**
+     * <p>Governance topic code.</p>
+     * 
      * <strong>example:</strong>
      * <p>IdentityAndAccessManagement</p>
      */
@@ -67,6 +88,14 @@ public class ListEvaluationResultsRequest extends TeaModel {
     }
     public Long getAccountId() {
         return this.accountId;
+    }
+
+    public ListEvaluationResultsRequest setEvaluationDomain(String evaluationDomain) {
+        this.evaluationDomain = evaluationDomain;
+        return this;
+    }
+    public String getEvaluationDomain() {
+        return this.evaluationDomain;
     }
 
     public ListEvaluationResultsRequest setFilters(java.util.List<ListEvaluationResultsRequestFilters> filters) {
@@ -119,11 +148,11 @@ public class ListEvaluationResultsRequest extends TeaModel {
 
     public static class ListEvaluationResultsRequestFilters extends TeaModel {
         /**
-         * <p>The key of the filter condition. Valid values:</p>
+         * <p>Filter condition key. Valid values:</p>
          * <ul>
-         * <li>ResourceId: the resource ID.</li>
-         * <li>ResourceName: the name of the resource.</li>
-         * <li>ResourceType: the resource type.</li>
+         * <li>ResourceId: Resource ID.</li>
+         * <li>ResourceName: Resource name.</li>
+         * <li>ResourceType: Resource type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +162,7 @@ public class ListEvaluationResultsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The list of filter condition values.</p>
+         * <p>List of filter condition values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
