@@ -2206,14 +2206,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>The response is an SSE stream. Each event follows the<code>SSEEvent</code> schema and includes metadata, such as the message level.</li>
-     * <li>The <code>content</code> field contains either message text or a JSON object, as determined by the <code>content_type</code> field.</li>
+     * <li>The response is returned as an SSE stream, where each event follows the <code>SSEEvent</code> schema and contains meta-information such as the message level.</li>
+     * <li>The <code>content</code> field in each SSE event may carry actual message text or a JSON object, depending on the value of <code>content_type</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</p>
+     * <p>Retrieves chat content from a specific checkpoint by specifying the session ID and AgentId.</p>
      * 
      * @param request GetChatContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2257,14 +2257,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>The response is an SSE stream. Each event follows the<code>SSEEvent</code> schema and includes metadata, such as the message level.</li>
-     * <li>The <code>content</code> field contains either message text or a JSON object, as determined by the <code>content_type</code> field.</li>
+     * <li>The response is returned as an SSE stream, where each event follows the <code>SSEEvent</code> schema and contains meta-information such as the message level.</li>
+     * <li>The <code>content</code> field in each SSE event may carry actual message text or a JSON object, depending on the value of <code>content_type</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</p>
+     * <p>Retrieves chat content from a specific checkpoint by specifying the session ID and AgentId.</p>
      * 
      * @param request GetChatContentRequest
      * @return GetChatContentResponse
@@ -5031,15 +5031,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
-     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
-     * <li><code>reply_to</code> indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
-     * <li><code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, <code>session_config</code>, and other fields are optional but provide more detailed context information.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of the user\&quot;s previous message.</li>
+     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are all optional, but provide more detailed context information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a user message to a specified session or cancels a session.</p>
+     * <p>Send a user message to a specified session or cancel the session.</p>
      * 
      * @param tmpReq SendChatMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5118,6 +5118,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskConfig", request.taskConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5140,15 +5144,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
-     * <li><code>message_type</code> defaults to <code>primary</code>. To append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
-     * <li><code>reply_to</code> indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
-     * <li><code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, <code>session_config</code>, and other fields are optional but provide more detailed context information.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of the user\&quot;s previous message.</li>
+     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are all optional, but provide more detailed context information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a user message to a specified session or cancels a session.</p>
+     * <p>Send a user message to a specified session or cancel the session.</p>
      * 
      * @param request SendChatMessageRequest
      * @return SendChatMessageResponse

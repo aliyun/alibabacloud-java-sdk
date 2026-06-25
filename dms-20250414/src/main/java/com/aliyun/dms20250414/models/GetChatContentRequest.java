@@ -14,7 +14,7 @@ public class GetChatContentRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The service returns output starting from this checkpoint.</p>
+     * <p>The backend will return output starting from this checkpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class GetChatContentRequest extends TeaModel {
     public String checkpoint;
 
     /**
-     * <p>The DMS unit. For users on the Alibaba Cloud China site, the default value is cn-hangzhou.</p>
+     * <p>The current DMS unit. Chinese mainland users of Alibaba Cloud should use cn-hangzhou by default.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
