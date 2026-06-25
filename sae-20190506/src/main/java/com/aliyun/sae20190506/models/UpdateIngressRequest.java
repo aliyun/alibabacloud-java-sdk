@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateIngressRequest extends TeaModel {
     /**
-     * <p>The ID of the <strong>CLB</strong> certificate. Valid values:</p>
+     * <p><strong>CLB</strong> certificate ID. Details are as follows:</p>
      * <ul>
-     * <li>If the <strong>LoadBalanceType</strong> is <strong>clb</strong>, use this field to configure the HTTPS listener certificate.</li>
+     * <li>If <strong>LoadBalanceType</strong> is <strong>clb</strong>, use this field to configure the HTTPS listener certificate.</li>
      * </ul>
-     * <p>For more information about how to use SSL certificate IDs for CLB, see <a href="https://help.aliyun.com/document_detail/90792.html">Manage certificates (CLB)</a>.</p>
+     * <p>For more information about using SSL certificate IDs with CLB, see <a href="">Manage Certificates (CLB)</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>188077086902****_176993d****_181437****_108724****</p>
@@ -18,10 +18,12 @@ public class UpdateIngressRequest extends TeaModel {
     public String certId;
 
     /**
-     * <p>The ID of the multi-certificate <strong>ALB</strong>. Valid values:</p>
+     * <p><strong>ALB</strong> multiple certificate IDs. Details are as follows:</p>
      * <ul>
-     * <li>If the <strong>LoadBalanceType</strong> is <strong>alb</strong>, use this field to configure multiple certificates for HTTPS listeners. Separate multiple certificate IDs with commas (,).</li>
-     * <li>The ID of the SSL certificate used by ALB must be obtained from the digital certificate product. For example, in the configuration <code>756***-cn-hangzhou</code>, the <code>756***</code> is the certificate ID obtained from the product page, and the <code>-cn-hangzhou</code> is a fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
+     * <li><p>If <strong>LoadBalanceType</strong> is <strong>alb</strong>, use this field to configure multiple HTTPS listener certificates. Separate multiple certificate IDs with commas.</p>
+     * </li>
+     * <li><p>Obtain the SSL certificate ID used by ALB from the digital certificate product. For example, configure <code>756***-cn-hangzhou</code>, where <code>756***</code> is the certificate ID obtained from the product page, and <code>-cn-hangzhou</code> is a fixed suffix. For more information, see <a href="">Manage Certificates (ALB)</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,17 +32,25 @@ public class UpdateIngressRequest extends TeaModel {
     @NameInMap("CertIds")
     public String certIds;
 
+    /**
+     * <p>Cross-domain configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;Enable\&quot;:\&quot;true\&quot;}</p>
+     */
     @NameInMap("CorsConfig")
     public String corsConfig;
 
     /**
-     * <p>The default forwarding rule. Forwards traffic to a specified application through a specified port based on the IP address. The following table describes the parameters.</p>
+     * <p>Default forwarding rule. Forward traffic to the specified application by IP address through the specified port. Parameter description:</p>
      * <ul>
-     * <li><strong>appId</strong>: the ID of the application.</li>
-     * <li><strong>containerPort</strong>: the container port of the application.</li>
+     * <li><p><strong>appId</strong>: Application ID.</p>
+     * </li>
+     * <li><p><strong>containerPort</strong>: Application instance port.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> All requests that do not match the forwarding rules specified for Rules are forwarded over the port to the application.</p>
+     * <p>All requests that do not match or satisfy the <strong>Rules</strong> forwarding rule are forwarded to this specified application.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +60,7 @@ public class UpdateIngressRequest extends TeaModel {
     public String defaultRule;
 
     /**
-     * <p>The name of the routing rule.</p>
+     * <p>Routing rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>ingress-sae-test</p>
@@ -58,28 +68,64 @@ public class UpdateIngressRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Enable or disable data compression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableGzip")
     public Boolean enableGzip;
 
+    /**
+     * <p>Enable or disable obtaining the client IP address of the visitor through the X-Forwarded-For header field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableXForwardedFor")
     public Boolean enableXForwardedFor;
 
+    /**
+     * <p>Obtain the listening port of the SLB instance through the X-Forwarded-Port header field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableXForwardedForClientSrcPort")
     public Boolean enableXForwardedForClientSrcPort;
 
+    /**
+     * <p>Specifies whether to determine the listener protocol of the SLB instance from the X-Forwarded-Proto header field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableXForwardedForProto")
     public Boolean enableXForwardedForProto;
 
+    /**
+     * <p>Obtain the SLB instance ID through the SLB-ID header field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableXForwardedForSlbId")
     public Boolean enableXForwardedForSlbId;
 
+    /**
+     * <p>Whether to obtain the listening port of the Server Load Balancer instance from the X-Forwarded-Port header field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableXForwardedForSlbPort")
     public Boolean enableXForwardedForSlbPort;
 
     /**
-     * <p>The timeout period of idle connections. Unit: seconds.</p>
+     * <p>Idle connection timeout, in seconds (s).</p>
      * <blockquote>
-     * <p> A value of 0 indicates that the default value is used.</p>
+     * <p>A value of 0 indicates that the default idle timeout is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,7 +135,7 @@ public class UpdateIngressRequest extends TeaModel {
     public Integer idleTimeout;
 
     /**
-     * <p>The ID of the routing rule.</p>
+     * <p>Routing rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +145,7 @@ public class UpdateIngressRequest extends TeaModel {
     public Long ingressId;
 
     /**
-     * <p>The SLB listening port. This port cannot be occupied.</p>
+     * <p>SLB listening port. This port must not be occupied.</p>
      * 
      * <strong>example:</strong>
      * <p>443</p>
@@ -108,10 +154,12 @@ public class UpdateIngressRequest extends TeaModel {
     public String listenerPort;
 
     /**
-     * <p>The protocol that is used to forward requests. Valid values:</p>
+     * <p>Forwarding Protocol. Details are as follows:</p>
      * <ul>
-     * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify transmitted data.</li>
-     * <li><strong>HTTPS</strong>: HTTPS is suitable for applications that require encrypted data transmission.</li>
+     * <li><p><strong>HTTP</strong>: Applies to applications that need to identify data content.</p>
+     * </li>
+     * <li><p><strong>HTTPS</strong>: Applies to applications that need encrypted transmission.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,7 +169,7 @@ public class UpdateIngressRequest extends TeaModel {
     public String listenerProtocol;
 
     /**
-     * <p>The parameter is deprecated and cannot be updated.</p>
+     * <p>Deprecated parameter. Updates are no longer supported.</p>
      * 
      * <strong>example:</strong>
      * <p>clb</p>
@@ -130,7 +178,7 @@ public class UpdateIngressRequest extends TeaModel {
     public String loadBalanceType;
 
     /**
-     * <p>The request timed out. Unit: seconds.</p>
+     * <p>Request timeout, in seconds (s).</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -139,12 +187,16 @@ public class UpdateIngressRequest extends TeaModel {
     public Integer requestTimeout;
 
     /**
-     * <p>The forwarding rule. Forwards traffic to a specified application through a specified port based on the domain name and request path. The following table describes the parameters.</p>
+     * <p>Forwarding rules. Forward traffic to the specified application by domain name and URI of the request through the specified port. Parameter description:</p>
      * <ul>
-     * <li><strong>appId</strong>: the ID of the application.</li>
-     * <li><strong>containerPort</strong>: The port of the application instance.</li>
-     * <li><strong>domain</strong>: the domain name.</li>
-     * <li><strong>path</strong>: the request path.</li>
+     * <li><p><strong>appId</strong>: Application ID.</p>
+     * </li>
+     * <li><p><strong>containerPort</strong>: Application instance port.</p>
+     * </li>
+     * <li><p><strong>domain</strong>: Domain name.</p>
+     * </li>
+     * <li><p><strong>path</strong>: URI of the request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -154,7 +206,7 @@ public class UpdateIngressRequest extends TeaModel {
     public String rules;
 
     /**
-     * <p>The ID of a security policy.</p>
+     * <p>Security policy instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tls_cipher_policy_1_2_strict_with_1_3</p>

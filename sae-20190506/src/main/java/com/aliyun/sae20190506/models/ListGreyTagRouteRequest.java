@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGreyTagRouteRequest extends TeaModel {
     /**
-     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

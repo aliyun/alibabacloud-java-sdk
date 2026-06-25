@@ -7,10 +7,14 @@ public class TagResourcesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +24,7 @@ public class TagResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates that the operation was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,20 +33,24 @@ public class TagResourcesResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>This parameter is returned only if the request fails.</p>
+     * </li>
+     * <li><p>For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The additional information returned.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, a specific error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,10 +69,12 @@ public class TagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether tags were added to the specified resources. Valid values:</p>
+     * <p>Indicates whether the tags were added to the resources. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The tags were added.</li>
-     * <li><strong>false</strong>: The tags failed to be added.</li>
+     * <li><p><strong>true</strong>: The tags were added.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The tags failed to be added.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +84,7 @@ public class TagResourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID that you can use to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

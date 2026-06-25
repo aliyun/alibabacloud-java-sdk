@@ -4,15 +4,21 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class GetChangeOrderMetricRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The SAE application type. Valid values:</p>
+     * <p>The type of the SAE application.</p>
      * <ul>
-     * <li><strong>micro_service</strong></li>
-     * <li><strong>web</strong></li>
-     * <li><strong>job</strong></li>
+     * <li><p><strong>micro_service</strong></p>
+     * </li>
+     * <li><p><strong>web</strong></p>
+     * </li>
+     * <li><p><strong>job</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,14 +27,19 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     @NameInMap("AppSource")
     public String appSource;
 
+    /**
+     * <p>The type of the change order.</p>
+     */
     @NameInMap("CoType")
     public String coType;
 
     /**
-     * <p>The CPU allocation policy. Valid values:</p>
+     * <p>The CPU allocation policy.</p>
      * <ul>
-     * <li><strong>request</strong>: CPU cores are allocated only when a request is initiated.</li>
-     * <li><strong>always</strong>: Fixed CPU cores are always allocated.</li>
+     * <li><p><strong>request</strong>: CPU is allocated only when a request is received.</p>
+     * </li>
+     * <li><p><strong>always</strong>: A fixed amount of CPU is always allocated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +69,7 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     public Long limit;
 
     /**
-     * <p>The field based on which you want to sort the returned entries.</p>
+     * <p>The field by which to sort the query results. The value of this parameter must be a field in the response parameters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +79,7 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

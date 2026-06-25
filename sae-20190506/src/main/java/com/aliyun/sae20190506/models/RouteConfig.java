@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RouteConfig extends TeaModel {
     /**
-     * <p>pathConfig</p>
+     * <p>The path configurations.</p>
      */
     @NameInMap("routes")
     public java.util.List<PathConfig> routes;

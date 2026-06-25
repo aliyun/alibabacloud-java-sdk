@@ -5,7 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListNamespaceChangeOrdersRequest extends TeaModel {
     /**
-     * <p>2</p>
+     * <p>The change order status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: Preparing.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Executing.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Succeeded.</p>
+     * </li>
+     * <li><p><strong>3</strong>: Failed.</p>
+     * </li>
+     * <li><p><strong>6</strong>: Terminated.</p>
+     * </li>
+     * <li><p><strong>10</strong>: System Error.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +28,13 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public String coStatus;
 
     /**
-     * <p>CoBatchStartApplication</p>
+     * <p>The change order type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>CoBatchStartApplication</strong>: Batch Start Application.</p>
+     * </li>
+     * <li><p><strong>CoBatchStopApplication</strong>: Batch Stop Application.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CoBatchStartApplication</p>
@@ -23,7 +43,7 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public String coType;
 
     /**
-     * <p>1</p>
+     * <p>The current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +52,7 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>test</p>
+     * <p>A keyword for a fuzzy search of change order descriptions. Change orders whose descriptions contain this <strong>key</strong> are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -41,7 +61,7 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>cn-shanghai:test</p>
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +71,7 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>20</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

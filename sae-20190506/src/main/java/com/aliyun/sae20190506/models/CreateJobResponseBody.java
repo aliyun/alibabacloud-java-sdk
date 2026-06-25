@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <p>The HTTP status code or a POP error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,29 +24,30 @@ public class CreateJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateJobResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The additional information that is returned. Take note of the following rules:</p>
+     * <p>Additional information. Valid values:</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +57,7 @@ public class CreateJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3***</p>
@@ -61,10 +66,12 @@ public class CreateJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application deployment is successful. Take note of the following rules:</p>
+     * <p>Indicates whether the job template was created successfully. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The job template was created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The job template was not created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +81,7 @@ public class CreateJobResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The call trace ID. You can use this ID to query detailed information about the call.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
@@ -145,7 +152,7 @@ public class CreateJobResponseBody extends TeaModel {
 
     public static class CreateJobResponseBodyData extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>The job template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -154,7 +161,7 @@ public class CreateJobResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the change order. It can be used to query the task status.</p>
+         * <p>The change order ID. You can use this ID to check the execution status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>

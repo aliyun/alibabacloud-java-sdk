@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableApplicationScalingRuleRequest extends TeaModel {
     /**
-     * <p>timer-0800-2100</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DisableApplicationScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the Auto Scaling policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

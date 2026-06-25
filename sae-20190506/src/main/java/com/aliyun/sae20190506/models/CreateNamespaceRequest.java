@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
     /**
-     * <p>Indicates whether to enable SAE built-in registry:</p>
+     * <p>Specifies whether to enable the built-in service registry of SAE.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
-     * <p>Default value: true. If you do not use the built-in registry, you can set this parameter to false to accelerate the creation of a namespace.</p>
+     * <p>The default value is true. If you do not use the built-in service registry, set this parameter to false to speed up namespace creation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -19,7 +21,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public Boolean enableMicroRegistration;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The short-format namespace ID. You do not need to specify a region ID. This parameter is recommended. The ID cannot exceed 20 characters in length and can contain only lowercase letters and digits.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -28,7 +30,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String nameSpaceShortId;
 
     /**
-     * <p>The message returned for the operation.</p>
+     * <p>The description of the namespace. The description cannot exceed 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -37,7 +39,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String namespaceDescription;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The long-format namespace ID. If you specify this parameter, NameSpaceShortId is ignored. This parameter is retained for compatibility. Use the short-format namespace ID instead. The format is <code>&lt;RegionId&gt;:&lt;NamespaceId&gt;</code>. The <code>NamespaceId</code> can contain only lowercase letters and digits and cannot exceed 32 characters in length. Example: <code>cn-beijing:test</code>. For information about the regions that SAE supports, see <a href="https://help.aliyun.com/document_detail/126213.html">DescribeRegions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
@@ -46,7 +48,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the namespace. The name cannot exceed 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

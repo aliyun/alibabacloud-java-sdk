@@ -15,14 +15,14 @@ public class ExecJobRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
+     * <p>The startup command, which must be an executable that exists in the container. Example:</p>
      * <pre><code>command:
      *       - echo
      *       - abc
      *       - &gt;
      *       - file0
      * </code></pre>
-     * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+     * <p>Based on this example, <code>Command</code> is <code>echo</code> and <code>CommandArgs</code> is <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>echo</p>
@@ -31,9 +31,9 @@ public class ExecJobRequest extends TeaModel {
     public String command;
 
     /**
-     * <p>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <strong>Command</strong> parameter. The name must meet the following format requirements:</p>
+     * <p>The arguments for the <strong>Command</strong> parameter. The value must be a string that represents a JSON array. Format:</p>
      * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-     * <p>In the preceding example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. This parameter is optional.</p>
+     * <p>In the preceding example for the <code>Command</code> parameter, <code>CommandArgs</code> is <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The JSON array <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be converted to a string. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -42,20 +42,26 @@ public class ExecJobRequest extends TeaModel {
     public String commandArgs;
 
     /**
-     * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
+     * <p>The container environment variables. You can specify custom environment variables or reference an existing ConfigMap. For more information about creating a ConfigMap, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>.</p>
      * <ul>
-     * <li><p>Configure custom environment variables</p>
+     * <li><p>Custom configuration</p>
      * <ul>
-     * <li><strong>name</strong>: the name of the environment variable.</li>
-     * <li><strong>value</strong>: the value of the environment variable.</li>
+     * <li><p><strong>name</strong>: The name of the environment variable.</p>
+     * </li>
+     * <li><p><strong>value</strong>: The value of the environment variable.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Reference ConfigMap</p>
+     * <li><p>Reference a ConfigMap</p>
      * <ul>
-     * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
-     * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
-     * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
-     * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+     * <li><p><strong>name</strong>: The name of the environment variable. You can reference a single key or all keys. To reference all keys, use the <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code> format. Example: <code>sae-sys-configmap-all-test1</code>.</p>
+     * </li>
+     * <li><p><strong>valueFrom</strong>: The source of the environment variable. Set the value to <code>configMapRef</code>.</p>
+     * </li>
+     * <li><p><strong>configMapId</strong>: The ID of the ConfigMap.</p>
+     * </li>
+     * <li><p><strong>key</strong>: The key that you want to reference. If you want to reference all key-value pairs, do not specify this parameter.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -67,7 +73,7 @@ public class ExecJobRequest extends TeaModel {
     public String envs;
 
     /**
-     * <p>The event ID. This is a user-defined parameter used for idempotency so that only one job is created for the same event ID.</p>
+     * <p>A customizable event ID that ensures idempotency. The system creates only one job for requests that have the same event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
@@ -76,7 +82,8 @@ public class ExecJobRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The arguments in the JAR package. The arguments are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+     * <p>Arguments for starting a job deployed from a JAR package. The default startup command is:
+     * <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
      * 
      * <strong>example:</strong>
      * <p>custom-args</p>
@@ -85,7 +92,8 @@ public class ExecJobRequest extends TeaModel {
     public String jarStartArgs;
 
     /**
-     * <p>The option settings in the JAR package. The settings are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArg</code>.</p>
+     * <p>Options for starting a job deployed from a JAR package. The default startup command is:
+     * <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArg</code></p>
      * 
      * <strong>example:</strong>
      * <p>-Xms4G -Xmx4G</p>
@@ -103,7 +111,7 @@ public class ExecJobRequest extends TeaModel {
     public String replicas;
 
     /**
-     * <p>The time at which the job is triggered. Format: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
+     * <p>The time to trigger the job, specified in the <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-14T14:25:02Z</p>
@@ -112,7 +120,7 @@ public class ExecJobRequest extends TeaModel {
     public String time;
 
     /**
-     * <p>The startup command of the WAR package. For information about how to configure the startup command, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</p>
+     * <p>The startup command for a job deployed from a WAR package. Configuration is the same as for an image-based deployment. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>

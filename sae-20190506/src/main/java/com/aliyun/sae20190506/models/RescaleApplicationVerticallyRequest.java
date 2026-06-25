@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RescaleApplicationVerticallyRequest extends TeaModel {
     /**
-     * <p>The app ID.</p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Target CPU specification. Unit: millicore.</p>
+     * <p>The CPU specifications, in millicores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public Boolean deploy;
 
     /**
-     * <p>The disk size. Unit: GB.</p>
+     * <p>The disk size for each node, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -37,7 +37,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public String diskSize;
 
     /**
-     * <p>Target memory specification. Unit: MB.</p>
+     * <p>The memory size, in MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>Enable application scale rules automatically.</p>
+     * <p>Specifies whether to automatically enable the auto scaling rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +62,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public Boolean autoEnableApplicationScalingRule;
 
     /**
-     * <p>The ratio of minimum ready instances.</p>
+     * <p>The minimum percentage of ready instances.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -71,7 +71,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public Integer minReadyInstanceRatio;
 
     /**
-     * <p>Minimum ready instances.</p>
+     * <p>The minimum number of ready instances.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

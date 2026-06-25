@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ImageRegistryConfig extends TeaModel {
+    /**
+     * <p>The authentication configuration for the image repository.</p>
+     */
     @NameInMap("AuthConfig")
     public RegistryAuthenticationConfig authConfig;
 
+    /**
+     * <p>The certificate configuration for the image repository.</p>
+     */
     @NameInMap("CertConfig")
     public RegistryCertificateConfig certConfig;
 

@@ -5,7 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
     /**
-     * <p>bucketPath</p>
+     * <p>The HTTP status code or a POP error code. Valid values:</p>
+     * <ul>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,22 +24,25 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about a namespace.</p>
+     * <p>The information about the namespace.</p>
      */
     @NameInMap("Data")
     public CreateNamespaceResponseBodyData data;
 
     /**
-     * <p><a href="http://sae_pop_pre/#vpc">http://sae_pop_pre/#vpc</a></p>
-     * 
-     * <strong>example:</strong>
-     * <p>bucketName</p>
+     * <p>The error code.</p>
+     * <ul>
+     * <li><p>If the request is successful, this parameter is not returned.</p>
+     * </li>
+     * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The additional information returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +51,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The description of the custom namespace.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -47,7 +60,13 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>mountDir</p>
+     * <p>Indicates whether the namespace was successfully created. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The namespace was created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The namespace failed to be created.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +75,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The trace ID. You can use the trace ID to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a981dd515966966104121683d****</p>
@@ -127,10 +146,12 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     public static class CreateNamespaceResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the SAE built-in registry is enabled:</p>
+         * <p>Indicates whether the built-in service registry of SAE is enabled.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,11 +161,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public Boolean enableMicroRegistration;
 
         /**
-         * <p>Indicates whether the namespace was created. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The instance was created.</li>
-         * <li><strong>false</strong>: The call failed to be created.</li>
-         * </ul>
+         * <p>The short-format namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -153,7 +170,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String nameSpaceShortId;
 
         /**
-         * <p>The short ID of the namespace.</p>
+         * <p>The description of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -162,11 +179,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String namespaceDescription;
 
         /**
-         * <p>The error code returned. Take note of the following rules:</p>
-         * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
-         * </ul>
+         * <p>The ID of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -175,7 +188,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>Null</p>
+         * <p>The name of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -184,13 +197,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The HTTP status code. Valid values:</p>
-         * <ul>
-         * <li><strong>2xx</strong>: The call was successful.</li>
-         * <li><strong>3xx</strong>: The call was redirected.</li>
-         * <li><strong>4xx</strong>: The call failed.</li>
-         * <li><strong>5xx</strong>: A server error occurred.</li>
-         * </ul>
+         * <p>The region where the namespace resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

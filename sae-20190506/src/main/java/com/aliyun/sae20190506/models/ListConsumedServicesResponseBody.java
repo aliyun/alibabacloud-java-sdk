@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListConsumedServicesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the microservices.</p>
+     * <p>The information about the microservices.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListConsumedServicesResponseBodyData> data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The returned message.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +66,12 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the list of microservices was queried. Valid values:</p>
+     * <p>Indicates whether the list of subscribed microservices was retrieved.</p>
      * <ul>
-     * <li><strong>true</strong>: The list was queried.</li>
-     * <li><strong>false</strong>: The list failed to be queried.</li>
+     * <li><p><strong>true</strong>: The list was retrieved.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The list failed to be retrieved.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The ID of the request trace. Use this ID to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -142,7 +152,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
 
     public static class ListConsumedServicesResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
@@ -151,7 +161,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>This parameter is reserved.</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -160,13 +170,13 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         public String group2Ip;
 
         /**
-         * <p>The service groups that corresponds to the consumed services.</p>
+         * <p>The groups to which the consumed services belong.</p>
          */
         @NameInMap("Groups")
         public java.util.List<String> groups;
 
         /**
-         * <p>The addresses where the services can be subscribed to.</p>
+         * <p>The service subscription addresses.</p>
          */
         @NameInMap("Ips")
         public java.util.List<String> ips;

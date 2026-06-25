@@ -17,8 +17,10 @@ public class SuspendJobRequest extends TeaModel {
     /**
      * <p>Start or suspend a job template.</p>
      * <ul>
-     * <li>true: Start a job template.</li>
-     * <li>false: Suspend a job template.</li>
+     * <li><p>true: Start a job template.</p>
+     * </li>
+     * <li><p>false: Suspend a job template.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

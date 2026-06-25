@@ -15,10 +15,12 @@ public class UnbindSlbRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Specifies whether to disassociate the Internet-facing SLB instance. Valid values:</p>
+     * <p>Specifies whether to unbind the public network SLB. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: dissociates the Internet-facing SLB instance.</li>
-     * <li><strong>false</strong>: does not dissociate the Internet-facing SLB instance.</li>
+     * <li><p><strong>true</strong>: unbinds the public network SLB.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not unbind the public network SLB.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +30,12 @@ public class UnbindSlbRequest extends TeaModel {
     public Boolean internet;
 
     /**
-     * <p>Specifies whether to disassociate the internal-facing SLB instance. Valid values:</p>
+     * <p>Specifies whether to unbind the private network SLB. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: dissociates the internal-facing SLB instance.</li>
-     * <li><strong>false</strong>: does not dissociate the internal-facing SLB instance.</li>
+     * <li><p><strong>true</strong>: unbinds the private network SLB.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not unbind the private network SLB.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

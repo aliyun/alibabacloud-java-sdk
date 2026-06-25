@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNamespacedConfigMapsRequest extends TeaModel {
     /**
-     * <p>cn-hangzhou</p>
+     * <p>The ID of the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

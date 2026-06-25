@@ -7,10 +7,14 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request is redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the canary release rule.</p>
+     * <p>The information about the grey tag route.</p>
      */
     @NameInMap("Data")
     public DeleteGreyTagRouteResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code. The following describes when this field is returned:</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The response message. Valid values:</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p><strong>success</strong> is returned if the request is successful.</p>
+     * </li>
+     * <li><p>An error message is returned if the request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +66,12 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The information was queried.</li>
-     * <li><strong>false</strong>: The information failed to be queried.</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID. You can use this ID to query call details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -142,7 +152,7 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
 
     public static class DeleteGreyTagRouteResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the canary release rule. The ID is globally unique.</p>
+         * <p>The globally unique ID of the grey tag route.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>

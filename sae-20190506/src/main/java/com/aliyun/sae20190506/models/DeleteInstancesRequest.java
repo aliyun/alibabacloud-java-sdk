@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteInstancesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the instance to be deleted.</p>
+     * <p>The IDs of the application instances to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,10 +7,14 @@ public class DescribePipelineResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The call was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The call failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,12 +32,11 @@ public class DescribePipelineResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed. Take note of the following rules:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li><p>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</p>
+     * </li>
+     * <li><p>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -59,8 +62,10 @@ public class DescribePipelineResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the batch information was obtained. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The information was queried.</li>
-     * <li><strong>false</strong>: The image failed to be found.</li>
+     * <li><p><strong>true</strong>: The information was queried.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The image failed to be found.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,8 +157,10 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * <p>Indicates whether to execute the subsequent tasks when the task failed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The subsequent tasks cannot be executed.</li>
-         * <li><strong>1</strong>: The subsequent tasks can be executed.</li>
+         * <li><p><strong>0</strong>: The subsequent tasks cannot be executed.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The subsequent tasks can be executed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,8 +190,10 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a running task can be manually skipped. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The running task can be skipped.</li>
-         * <li><strong>false</strong>: The zone does not allow you to change the network type of an ApsaraDB for Redis instance from classic network to VPC.</li>
+         * <li><p><strong>true</strong>: The running task can be skipped.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The zone does not allow you to change the network type of an ApsaraDB for Redis instance from classic network to VPC.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,12 +214,18 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The task is prepared for execution.</li>
-         * <li><strong>1</strong>: The task is being executed.</li>
-         * <li><strong>2</strong>: successful</li>
-         * <li><strong>3</strong>: The task could not be executed.</li>
-         * <li><strong>5</strong>: The task is pending retry.</li>
-         * <li><strong>6</strong>: The task was terminated.</li>
+         * <li><p><strong>0</strong>: The task is prepared for execution.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The task is being executed.</p>
+         * </li>
+         * <li><p><strong>2</strong>: successful</p>
+         * </li>
+         * <li><p><strong>3</strong>: The task could not be executed.</p>
+         * </li>
+         * <li><p><strong>5</strong>: The task is pending retry.</p>
+         * </li>
+         * <li><p><strong>6</strong>: The task was terminated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +247,7 @@ public class DescribePipelineResponseBody extends TeaModel {
          * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Environment initialization</p>
+         * <p>Initialize environment</p>
          */
         @NameInMap("TaskName")
         public String taskName;
@@ -320,8 +335,10 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * <p>The execution type of the stage. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: in sequence.</li>
-         * <li><strong>1</strong>: in parallel.</li>
+         * <li><p><strong>0</strong>: in sequence.</p>
+         * </li>
+         * <li><p><strong>1</strong>: in parallel.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,7 +360,7 @@ public class DescribePipelineResponseBody extends TeaModel {
          * <p>The name of the stage.</p>
          * 
          * <strong>example:</strong>
-         * <p>Deploy an application</p>
+         * <p>Deployment application</p>
          */
         @NameInMap("StageName")
         public String stageName;
@@ -351,11 +368,16 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * <p>The status of the batch processing stage. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The batch is prepared for this processing stage.</li>
-         * <li><strong>1</strong>: The task is being executed.</li>
-         * <li><strong>2</strong>: successful</li>
-         * <li><strong>3</strong>: The processing failed in this stage.</li>
-         * <li><strong>6</strong>: The processing stage was terminated.</li>
+         * <li><p><strong>0</strong>: The batch is prepared for this processing stage.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The task is being executed.</p>
+         * </li>
+         * <li><p><strong>2</strong>: successful</p>
+         * </li>
+         * <li><p><strong>3</strong>: The processing failed in this stage.</p>
+         * </li>
+         * <li><p><strong>6</strong>: The processing stage was terminated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,7 +444,7 @@ public class DescribePipelineResponseBody extends TeaModel {
          * <p>The status of the change order for the batch.</p>
          * 
          * <strong>example:</strong>
-         * <p>Successful</p>
+         * <p>Execution succeeded</p>
          */
         @NameInMap("CoStatus")
         public String coStatus;
@@ -458,7 +480,7 @@ public class DescribePipelineResponseBody extends TeaModel {
          * <p>The name of the batch.</p>
          * 
          * <strong>example:</strong>
-         * <p>First batch</p>
+         * <p>Batch 1 change</p>
          */
         @NameInMap("PipelineName")
         public String pipelineName;
@@ -466,12 +488,18 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * <p>The batch status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The batch is prepared for processing.</li>
-         * <li><strong>1</strong>: The task is being executed.</li>
-         * <li><strong>2</strong>: successful</li>
-         * <li><strong>3</strong>: The processing failed in this stage.</li>
-         * <li><strong>6</strong>: The batch processing was terminated.</li>
-         * <li><strong>10</strong>: The batch could not be processed due to a system exception.</li>
+         * <li><p><strong>0</strong>: The batch is prepared for processing.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The task is being executed.</p>
+         * </li>
+         * <li><p><strong>2</strong>: successful</p>
+         * </li>
+         * <li><p><strong>3</strong>: The processing failed in this stage.</p>
+         * </li>
+         * <li><p><strong>6</strong>: The batch processing was terminated.</p>
+         * </li>
+         * <li><p><strong>10</strong>: The batch could not be processed due to a system exception.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -483,8 +511,10 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * <p>Indicates whether to start processing the next batch. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: indicates that the next batch cannot be processed yet.</li>
-         * <li><strong>true</strong>: indicates that the next batch can be processed now.</li>
+         * <li><p><strong>false</strong>: indicates that the next batch cannot be processed yet.</p>
+         * </li>
+         * <li><p><strong>true</strong>: indicates that the next batch can be processed now.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

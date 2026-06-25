@@ -7,10 +7,14 @@ public class SuspendJobResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The call was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The call failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,12 +35,11 @@ public class SuspendJobResponseBody extends TeaModel {
     /**
      * <p>The error code returned. Valid values:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li><p>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</p>
+     * </li>
+     * <li><p>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -44,8 +47,10 @@ public class SuspendJobResponseBody extends TeaModel {
     /**
      * <p>The additional information that is returned. Valid values:</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>success: If the call is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>An error code: If the call fails, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,8 +71,10 @@ public class SuspendJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the job was executed. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The job was executed.</li>
-     * <li><strong>false</strong>: The job failed to be executed.</li>
+     * <li><p><strong>true</strong>: The job was executed.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The job failed to be executed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -17,8 +17,10 @@ public class RollbackApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically enable an auto scaling policy for the application. Take note of the following rules:</p>
      * <ul>
-     * <li><strong>true</strong>: turns on Logon-free Sharing</li>
-     * <li><strong>false</strong>: turns off Logon-free Sharing</li>
+     * <li><p><strong>true</strong>: turns on Logon-free Sharing</p>
+     * </li>
+     * <li><p><strong>false</strong>: turns off Logon-free Sharing</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,11 +41,13 @@ public class RollbackApplicationRequest extends TeaModel {
     /**
      * <p>The percentage of the minimum number of available instances. Take note of the following rules:</p>
      * <ul>
-     * <li>If you set the value to <strong>-1</strong>, the minimum number of available instances is not determined based on this parameter. Default value: -1.</li>
-     * <li>If you set the value to a number <strong>from 0 to 100</strong>, the minimum number of available instances is calculated by using the following formula: Current number of instances × (Value of MinReadyInstanceRatio × 100%). The value is the nearest integer rounded up from the calculated result. For example, if the percentage is set to <strong>50</strong>% and five instances are available, the minimum number of available instances is 3.</li>
+     * <li><p>If you set the value to <strong>-1</strong>, the minimum number of available instances is not determined based on this parameter. Default value: -1.</p>
+     * </li>
+     * <li><p>If you set the value to a number <strong>from 0 to 100</strong>, the minimum number of available instances is calculated by using the following formula: Current number of instances × (Value of MinReadyInstanceRatio × 100%). The value is the nearest integer rounded up from the calculated result. For example, if the percentage is set to <strong>50</strong>% and five instances are available, the minimum number of available instances is 3.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>When both <strong>MinReadyInstance</strong> and <strong>MinReadyInstanceRatio</strong> are specified and <strong>MinReadyInstanceRatio</strong> is set to a number from 0 to 100, the value of <strong>MinReadyInstanceRatio</strong> takes precedence.** For example, if <strong>MinReadyInstances</strong> is set to **5, and <strong>MinReadyInstanceRatio</strong> is set to <strong>50</strong>, the minimum number of available instances is set to the nearest integer rounded up from the calculated result of the following formula: Current number of instances × <strong>50%</strong>.</p>
+     * <p>When both <strong>MinReadyInstance</strong> and <strong>MinReadyInstanceRatio</strong> are specified and <strong>MinReadyInstanceRatio</strong> is set to a number from 0 to 100, the value of <strong>MinReadyInstanceRatio</strong> takes precedence.\<em>\</em> For example, if <strong>MinReadyInstances</strong> is set to \*\*5, and <strong>MinReadyInstanceRatio</strong> is set to <strong>50</strong>, the minimum number of available instances is set to the nearest integer rounded up from the calculated result of the following formula: Current number of instances × <strong>50%</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,8 +59,10 @@ public class RollbackApplicationRequest extends TeaModel {
     /**
      * <p>The minimum number of available instances. Take note of the following rules:</p>
      * <ul>
-     * <li>If you set the value to <strong>0</strong>, business interruptions occur when the application is updated.</li>
-     * <li>If you set the value to \<em>\</em>-1\<em>\</em>, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</li>
+     * <li><p>If you set the value to <strong>0</strong>, business interruptions occur when the application is updated.</p>
+     * </li>
+     * <li><p>If you set the value to \<em>\</em>-1\<em>\</em>, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.</p>
@@ -87,9 +93,12 @@ public class RollbackApplicationRequest extends TeaModel {
      * </li>
      * <li><p><strong>batchUpdate</strong>: the phased release policy.</p>
      * <ul>
-     * <li><strong>batch</strong>: the number of release batches.</li>
-     * <li><strong>releaseType</strong>: the processing method for the batches. Valid values: <strong>auto</strong> and <strong>manual</strong>.</li>
-     * <li><strong>batchWaitTime</strong>: the interval between release batches. Unit: seconds.</li>
+     * <li><p><strong>batch</strong>: the number of release batches.</p>
+     * </li>
+     * <li><p><strong>releaseType</strong>: the processing method for the batches. Valid values: <strong>auto</strong> and <strong>manual</strong>.</p>
+     * </li>
+     * <li><p><strong>batchWaitTime</strong>: the interval between release batches. Unit: seconds.</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p><strong>grayUpdate</strong>: the number of release batches in the phased release after a canary release. This parameter is returned only if the <strong>type</strong> parameter is set to <strong>GrayBatchUpdate</strong>.</p>

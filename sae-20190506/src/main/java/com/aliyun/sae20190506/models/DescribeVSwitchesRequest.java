@@ -4,25 +4,14 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>vsw-bp165bn1eu4fyztdvbfvo,vsw-bp1iof8x4ypzrwfwg1h08</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>KKKK</p>
-     */
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>vpc-wz97dyzl4m3dtuacb36ox</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

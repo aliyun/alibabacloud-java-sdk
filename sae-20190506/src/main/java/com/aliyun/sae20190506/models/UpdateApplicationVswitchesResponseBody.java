@@ -7,10 +7,14 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request is redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request is invalid.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,20 +24,24 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the request was successful, this parameter is not returned.****</li>
-     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error code</strong> section of this topic.</li>
+     * <li><p>This parameter is not returned for successful requests.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned. Valid values:</p>
+     * <p>The returned message. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, <strong>success</strong> is returned.</li>
-     * <li>If the request failed, an error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +51,7 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -52,10 +60,12 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the list of applications was obtained. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The applications were obtained.</li>
-     * <li><strong>false</strong>: The applications failed to be queried.</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +75,7 @@ public class UpdateApplicationVswitchesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID. You can use this ID to trace the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

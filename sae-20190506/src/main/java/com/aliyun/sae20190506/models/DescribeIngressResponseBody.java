@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeIngressResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code returned for the request. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class DescribeIngressResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeIngressResponseBodyData data;
 
     /**
-     * <p>The error codes. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li><strong>ErrorCode</strong> is not returned if a request is successful.</li>
-     * <li><strong>ErrorCode</strong> is returned if a request failed. For more information, see <strong>Error code</strong> section of this topic.</li>
+     * <li><p>This parameter is returned only if the request fails.</p>
+     * </li>
+     * <li><p>For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned. Valid values:</p>
+     * <p>The returned message.</p>
      * <ul>
-     * <li><strong>success</strong> is returned when a request is successful.</li>
-     * <li>An error code is returned when the request failed.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, a specific error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +57,7 @@ public class DescribeIngressResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of a request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,10 +66,12 @@ public class DescribeIngressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the configurations of Ingresses were queried successfully. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The information was queried.</li>
-     * <li><strong>false</strong>: The information failed to be queried.</li>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class DescribeIngressResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of a trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID used to query the details of a call.</p>
      * 
      * <strong>example:</strong>
      * <p>0a981dd515966966104121683d****</p>
@@ -141,24 +151,81 @@ public class DescribeIngressResponseBody extends TeaModel {
     }
 
     public static class DescribeIngressResponseBodyDataCorsConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to allow credentials in cross-origin requests. Valid values:</p>
+         * <ul>
+         * <li><p><strong>on</strong>: yes</p>
+         * </li>
+         * <li><p><strong>off</strong>: no</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("AllowCredentials")
         public String allowCredentials;
 
+        /**
+         * <p>The headers that are allowed in cross-origin requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
+         */
         @NameInMap("AllowHeaders")
         public String allowHeaders;
 
+        /**
+         * <p>The HTTP methods that are allowed for cross-origin requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
+         */
         @NameInMap("AllowMethods")
         public String allowMethods;
 
+        /**
+         * <p>The origins that are allowed to access the resource. You can specify a single asterisk (<code>*</code>) or one or more specific origins.</p>
+         * <ul>
+         * <li><p>A specific origin must start with <code>http://</code> or <code>https://</code> and be a valid domain name or a first-level wildcard domain name. Example: <code>http://*.test.abc.example.com</code>.</p>
+         * </li>
+         * <li><p>You can optionally specify a port. The valid port range is <strong>1</strong> to <strong>65535</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("AllowOrigin")
         public String allowOrigin;
 
+        /**
+         * <p>Specifies whether to enable CORS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enable")
         public String enable;
 
+        /**
+         * <p>The headers that are exposed to clients.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
+         */
         @NameInMap("ExposeHeaders")
         public String exposeHeaders;
 
+        /**
+         * <p>The maximum cache duration of preflight requests in the browser, in seconds.</p>
+         * <p>Valid values: <strong>-1</strong> to <strong>172800</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MaxAge")
         public String maxAge;
 
@@ -227,7 +294,7 @@ public class DescribeIngressResponseBody extends TeaModel {
 
     public static class DescribeIngressResponseBodyDataDefaultRule extends TeaModel {
         /**
-         * <p>The ID of the application that is specified in the default rule.</p>
+         * <p>The ID of the application for the default rule.</p>
          * 
          * <strong>example:</strong>
          * <p>395b60e4-0550-458d-9c54-a265d036****</p>
@@ -236,7 +303,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application that is specified in the default rule.</p>
+         * <p>The name of the application for the default rule.</p>
          * 
          * <strong>example:</strong>
          * <p>app1</p>
@@ -247,20 +314,23 @@ public class DescribeIngressResponseBody extends TeaModel {
         /**
          * <p>The backend protocol. Valid values:</p>
          * <ul>
-         * <li><strong>http</strong>: HTTP is suitable for applications that need to identify the transmitted data.</li>
-         * <li><strong>https</strong>: HTTP is suitable for applications that require encrypted data transmission.</li>
-         * <li><strong>grpc</strong>: GRPC is suitable for load balancing scenarios in which you want to deploy services in multi-language frameworks, such as the .NET framework.</li>
+         * <li><p><strong>http</strong>: Suitable for applications that need to identify data content.</p>
+         * </li>
+         * <li><p><strong>https</strong>: Suitable for applications that require encrypted transmission.</p>
+         * </li>
+         * <li><p><strong>grpc</strong>: Suitable for load balancing gRPC services developed in multiple languages, such as .NET.</p>
+         * </li>
          * </ul>
-         * <p>This parameter is returned only if the<strong>LoadBalanceType</strong> parameter is set to <strong>ALB</strong> and the <strong>ListenerProtocol</strong> parameter <strong>is set to HTTPS</strong>.</p>
+         * <p>This parameter is valid only when the <code>LoadBalanceType</code> parameter is set to <code>alb</code> and the <code>ListenerProtocol</code> parameter is set to <code>HTTPS</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTTP</p>
+         * <p>http</p>
          */
         @NameInMap("BackendProtocol")
         public String backendProtocol;
 
         /**
-         * <p>The container port of the application that is specified in the default rule.</p>
+         * <p>The backend port for the default rule.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -308,9 +378,27 @@ public class DescribeIngressResponseBody extends TeaModel {
     }
 
     public static class DescribeIngressResponseBodyDataRulesRuleActions extends TeaModel {
+        /**
+         * <p>The configuration of the action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;host\&quot;:\&quot;<a href="http://www.example.com%5C%5C%22,%5C%5C%22path%5C%5C%22:%5C%5C%22/example/text%5C%5C%22,%5C%5C%22query%5C%5C%22:%5C%5C%22x=1%5C%5C%22%7D">www.example.com\\&quot;,\\&quot;path\\&quot;:\\&quot;/example/text\\&quot;,\\&quot;query\\&quot;:\\&quot;x=1\\&quot;}</a></p>
+         */
         @NameInMap("ActionConfig")
         public String actionConfig;
 
+        /**
+         * <p>The type of the action. Valid values:</p>
+         * <ul>
+         * <li><p>rewrite: a rewrite policy</p>
+         * </li>
+         * <li><p>redirect: a redirection policy</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rewrite</p>
+         */
         @NameInMap("ActionType")
         public String actionType;
 
@@ -339,7 +427,7 @@ public class DescribeIngressResponseBody extends TeaModel {
 
     public static class DescribeIngressResponseBodyDataRules extends TeaModel {
         /**
-         * <p>The ID of the application specified in the forwarding rule.</p>
+         * <p>The ID of the destination application.</p>
          * 
          * <strong>example:</strong>
          * <p>395b60e4-0550-458d-9c54-a265d036****</p>
@@ -348,7 +436,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application specified in the forwarding rules.</p>
+         * <p>The name of the destination application.</p>
          * 
          * <strong>example:</strong>
          * <p>app1</p>
@@ -359,20 +447,23 @@ public class DescribeIngressResponseBody extends TeaModel {
         /**
          * <p>The backend protocol. Valid values:</p>
          * <ul>
-         * <li><strong>http</strong>: HTTP is suitable for applications that need to identify the transmitted data.</li>
-         * <li><strong>https</strong>: HTTPS is suitable for applications that require encrypted data transmission.</li>
-         * <li><strong>grpc</strong>: GRPC is suitable for load balancing scenarios in which you want to deploy services in multi-language frameworks, such as the .NET framework.</li>
+         * <li><p><strong>http</strong>: Suitable for applications that need to identify data content.</p>
+         * </li>
+         * <li><p><strong>https</strong>: Suitable for applications that require encrypted transmission.</p>
+         * </li>
+         * <li><p><strong>grpc</strong>: Suitable for load balancing gRPC services developed in multiple languages, such as .NET.</p>
+         * </li>
          * </ul>
-         * <p>This parameter is returned only if the <strong>LoadBalanceType</strong> parameter is set to <strong>ALB</strong> and the <strong>ListenerProtocol</strong> parameter is set to <strong>HTTPS</strong>.</p>
+         * <p>This parameter is valid only when the <code>LoadBalanceType</code> parameter is set to <code>alb</code> and the <code>ListenerProtocol</code> parameter is set to <code>HTTPS</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTTP</p>
+         * <p>http</p>
          */
         @NameInMap("BackendProtocol")
         public String backendProtocol;
 
         /**
-         * <p>Tthe container port of the application specified in the forwarding rules.</p>
+         * <p>The backend port of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -381,7 +472,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public Integer containerPort;
 
         /**
-         * <p>The domain name of the application specified in the forwarding rules.</p>
+         * <p>The domain name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>edas.site</p>
@@ -390,7 +481,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The path of a URL.</p>
+         * <p>The URL path.</p>
          * 
          * <strong>example:</strong>
          * <p>/path1</p>
@@ -399,7 +490,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The path that is used to rewrite the original path.</p>
+         * <p>The rewritten path.</p>
          * 
          * <strong>example:</strong>
          * <p>/${1}</p>
@@ -407,6 +498,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("RewritePath")
         public String rewritePath;
 
+        /**
+         * <p>The actions of the forwarding rule.</p>
+         */
         @NameInMap("RuleActions")
         public java.util.List<DescribeIngressResponseBodyDataRulesRuleActions> ruleActions;
 
@@ -483,7 +577,7 @@ public class DescribeIngressResponseBody extends TeaModel {
 
     public static class DescribeIngressResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the certificate that is associated with a Classic Load Balancer (<strong>CLB</strong>) instance.</p>
+         * <p>The ID of the <strong>Classic Load Balancer (CLB)</strong> certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>13623****809_16cad216b32_845_-419427029</p>
@@ -492,7 +586,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String certId;
 
         /**
-         * <p>The ID of the certificate that is associated with an Application Load Balancer <strong>ALB</strong> instance.</p>
+         * <p>The comma-separated IDs of the <strong>Application Load Balancer (ALB)</strong> certificates.</p>
          * 
          * <strong>example:</strong>
          * <p>87<em><strong>35-cn-hangzhou,812</strong></em>3-cn-hangzhou</p>
@@ -500,9 +594,34 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("CertIds")
         public String certIds;
 
+        /**
+         * <p>The configurations for Cross-Origin Resource Sharing (CORS). Valid HTTP methods:</p>
+         * <ul>
+         * <li><p><strong>GET</strong></p>
+         * </li>
+         * <li><p><strong>POST</strong></p>
+         * </li>
+         * <li><p><strong>PUT</strong></p>
+         * </li>
+         * <li><p><strong>DELETE</strong></p>
+         * </li>
+         * <li><p><strong>HEAD</strong></p>
+         * </li>
+         * <li><p><strong>OPTIONS</strong></p>
+         * </li>
+         * <li><p><strong>PATCH</strong></p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("CorsConfig")
         public DescribeIngressResponseBodyDataCorsConfig corsConfig;
 
+        /**
+         * <p>Indicates whether the Application Load Balancer (ALB) instance was provisioned by SAE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CreatedBySae")
         public Boolean createdBySae;
 
@@ -513,7 +632,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public DescribeIngressResponseBodyDataDefaultRule defaultRule;
 
         /**
-         * <p>The name of a routing rule.</p>
+         * <p>The description of the Ingress.</p>
          * 
          * <strong>example:</strong>
          * <p>ingress-sae-test</p>
@@ -521,26 +640,59 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Specifies whether to enable Gzip compression.</p>
+         */
         @NameInMap("EnableGzip")
         public Boolean enableGzip;
 
+        /**
+         * <p>Specifies whether to use the <code>X-Forwarded-For</code> header to retrieve client IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableXForwardedFor")
         public Boolean enableXForwardedFor;
 
+        /**
+         * <p>Specifies whether to use a header to retrieve the source port of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableXForwardedForClientSrcPort")
         public Boolean enableXForwardedForClientSrcPort;
 
+        /**
+         * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableXForwardedForProto")
         public Boolean enableXForwardedForProto;
 
+        /**
+         * <p>Specifies whether to use the <code>SLB-ID</code> header to retrieve the ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableXForwardedForSlbId")
         public Boolean enableXForwardedForSlbId;
 
+        /**
+         * <p>Specifies whether to use the <code>X-Forwarded-Port</code> header to retrieve the listener port of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableXForwardedForSlbPort")
         public Boolean enableXForwardedForSlbPort;
 
         /**
-         * <p>The ID of a routing rule.</p>
+         * <p>The ID of the Ingress.</p>
          * 
          * <strong>example:</strong>
          * <p>87</p>
@@ -549,6 +701,11 @@ public class DescribeIngressResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The connection idle timeout, in seconds.</p>
+         * <p>Valid values: 1 to 60.</p>
+         * <p>Default value: 15.</p>
+         * <p>If no request is received within the timeout period, the load balancer closes the connection. A new connection is established when the next request is received.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -556,7 +713,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public Integer idleTimeout;
 
         /**
-         * <p>The listener ports for an SLB instance.</p>
+         * <p>The listener port of the SLB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -565,12 +722,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         public Integer listenerPort;
 
         /**
-         * <p>The protocol used to forward requests. Valid values:</p>
+         * <p>The request forwarding protocol. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify the transmitted data.</li>
-         * <li><strong>HTTPS</strong>: HTTPS is suitable for applications that require encrypted data transmission.</li>
+         * <li><p><strong>HTTP</strong>: Suitable for applications that need to identify data content.</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: Suitable for applications that require encrypted transmission.</p>
+         * </li>
          * </ul>
-         * <p>This parameter is optional in the <strong>CreateIngress</strong> and <strong>UpadateIngress</strong> operations. If you do not configure this parameter when you call the CreateIngress or UpdateIngress operation to create or update a gateway routing rule, this parameter is not returned for the corresponding response.</p>
+         * <p>This parameter is optional for the <code>CreateIngress</code> and <code>UpdateIngress</code> operations. It is not returned if it was not specified when the Ingress was created or updated.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -579,10 +738,12 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String listenerProtocol;
 
         /**
-         * <p>The type of SLB instances. Valid values:</p>
+         * <p>The type of the Server Load Balancer (SLB) instance. Valid values:</p>
          * <ul>
-         * <li><strong>clb</strong>: Classic Load Balancer (formerly known as SLB).</li>
-         * <li><strong>alb</strong>: Application Load Balancer.</li>
+         * <li><p><strong>clb</strong>: Classic Load Balancer (CLB), formerly known as SLB.</p>
+         * </li>
+         * <li><p><strong>alb</strong>: Application Load Balancer (ALB).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -592,7 +753,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String loadBalanceType;
 
         /**
-         * <p>The name of a routing rule.</p>
+         * <p>The name of the Ingress.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-uf6jt0nu4z6ior943****-80-f5****</p>
@@ -601,7 +762,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of a namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:sae-test</p>
@@ -610,6 +771,11 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
+         * <p>The request timeout, in seconds.</p>
+         * <p>Valid values: 1 to 180.</p>
+         * <p>Default value: 60.</p>
+         * <p>If a backend server does not respond within the specified timeout period, the load balancer terminates the request and returns an HTTP 504 error to the client.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -623,6 +789,8 @@ public class DescribeIngressResponseBody extends TeaModel {
         public java.util.List<DescribeIngressResponseBodyDataRules> rules;
 
         /**
+         * <p>The ID of the security policy instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>sp-n0kn923****</p>
          */
@@ -630,7 +798,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String securityPolicyId;
 
         /**
-         * <p>The ID of a Server Load Balancer (SLB) instance.</p>
+         * <p>The ID of the Server Load Balancer (SLB) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-uf62****6d13tq2u5</p>
@@ -639,10 +807,12 @@ public class DescribeIngressResponseBody extends TeaModel {
         public String slbId;
 
         /**
-         * <p>The type of an SLB instance. Valid values:</p>
+         * <p>The type of the SLB instance. Valid values:</p>
          * <ul>
-         * <li><strong>internet</strong>: an Internet-facing SLB instance</li>
-         * <li><strong>intranet</strong>: an Intranet-facing SLB instance</li>
+         * <li><p><strong>internet</strong>: An internet-facing instance.</p>
+         * </li>
+         * <li><p><strong>intranet</strong>: An internal-facing instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

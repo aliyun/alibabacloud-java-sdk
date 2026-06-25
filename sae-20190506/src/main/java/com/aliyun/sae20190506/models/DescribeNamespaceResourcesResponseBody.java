@@ -7,10 +7,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request failed.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request was invalid.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeNamespaceResourcesResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li><p>A successful request does not return the <strong>ErrorCode</strong> field.</p>
+     * </li>
+     * <li><p>A failed request returns the <strong>ErrorCode</strong> field. For more information, see the list of <strong>error codes</strong> in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The returned message. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong> is returned when the request succeeds.</li>
-     * <li>An error code is returned when the request fails.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +57,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,10 +66,12 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the information about resources in the namespace was queried successfully. Valid values:</p>
+     * <p>Indicates whether the namespace resources were queried successfully.</p>
      * <ul>
-     * <li><strong>true</strong>: indicates that the query was successful.</li>
-     * <li><strong>false</strong>: indicates that the query failed.</li>
+     * <li><p><strong>true</strong>: The query was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The query failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The trace ID. You can use this ID to query the details of the call.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -141,6 +151,9 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceResourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The version of the APM Java agent.</p>
+         */
         @NameInMap("ApmJavaAgentVersion")
         public String apmJavaAgentVersion;
 
@@ -154,7 +167,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public Long appCount;
 
         /**
-         * <p>The region to which the namespace belongs.</p>
+         * <p>The region of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -190,7 +203,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String jumpServerIp;
 
         /**
-         * <p>The ID of the change order.</p>
+         * <p>The release order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>afedb3c4-63f8-4a3d-aaa3-2c30363f****</p>
@@ -199,10 +212,12 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String lastChangeOrderId;
 
         /**
-         * <p>Indicates whether a change order is being executed in the namespace. Valid values:</p>
+         * <p>Indicates whether a release order is running in the namespace. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that a change order is being executed in the namespace.</li>
-         * <li><strong>false</strong>: indicates that no change orders are being executed in the namespace.</li>
+         * <li><p><strong>true</strong>: A release order is running.</p>
+         * </li>
+         * <li><p><strong>false</strong>: No release order is running.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,18 +227,28 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public Boolean lastChangeOrderRunning;
 
         /**
-         * <p>The status of the latest change order. Valid values:</p>
+         * <p>The status of the last release order. Valid values:</p>
          * <ul>
-         * <li><strong>READY</strong>: The change order is ready.</li>
-         * <li><strong>RUNNING</strong>: The change order is being executed.</li>
-         * <li><strong>SUCCESS</strong>: The change order was executed.</li>
-         * <li><strong>FAIL</strong>: The change order could not be executed.</li>
-         * <li><strong>ABORT</strong>: The change order was terminated.</li>
-         * <li><strong>WAIT_BATCH_CONFIRM</strong>: The change order is pending execution. You must manually confirm the release batch.</li>
-         * <li><strong>AUTO_BATCH_WAIT</strong>: The change order is pending execution. SAE will automatically confirm the release batch.</li>
-         * <li><strong>SYSTEM_FAIL</strong>: A system exception occurred.</li>
-         * <li><strong>WAIT_APPROVAL</strong>: The change order is pending approval.</li>
-         * <li><strong>APPROVED</strong>: The change order is approved and is pending execution.</li>
+         * <li><p><strong>READY</strong>: The release order is ready.</p>
+         * </li>
+         * <li><p><strong>RUNNING</strong>: The release order is running.</p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong>: The release order was successful.</p>
+         * </li>
+         * <li><p><strong>FAIL</strong>: The release order failed.</p>
+         * </li>
+         * <li><p><strong>ABORT</strong>: The release order was aborted.</p>
+         * </li>
+         * <li><p><strong>WAIT_BATCH_CONFIRM</strong>: The release order is waiting for manual batch confirmation.</p>
+         * </li>
+         * <li><p><strong>AUTO_BATCH_WAIT</strong>: The release order is in an automatic batch-wait state.</p>
+         * </li>
+         * <li><p><strong>SYSTEM_FAIL</strong>: A system error occurred.</p>
+         * </li>
+         * <li><p><strong>WAIT_APPROVAL</strong>: The release order is pending approval.</p>
+         * </li>
+         * <li><p><strong>APPROVED</strong>: The release order is approved and pending execution.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,6 +258,8 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String lastChangeOrderStatus;
 
         /**
+         * <p>The short-format namespace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -240,7 +267,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String nameSpaceShortId;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shangha:test</p>
@@ -249,7 +276,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -258,10 +285,12 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>Indicates whether the notification of a change order is expired. Valid values:</p>
+         * <p>Indicates whether the notification for the release order has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: indicates that the notification is expired.</li>
-         * <li><strong>false</strong>: indicates that the notification is not expired.</li>
+         * <li><p><strong>true</strong>: The notification has expired.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The notification has not expired.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +300,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public Boolean notificationExpired;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-wz969ngg2e49q5i4****</p>
@@ -279,11 +308,34 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
+         * <ul>
+         * <li><p>To use SLS resources that are automatically created by SAE: <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</p>
+         * </li>
+         * <li><p>To use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</p>
+         * </li>
+         * </ul>
+         * <p>The configuration includes the following parameters:</p>
+         * <ul>
+         * <li><p><strong>projectName</strong>: The project name in SLS.</p>
+         * </li>
+         * <li><p><strong>logDir</strong>: The log path.</p>
+         * </li>
+         * <li><p><strong>logType</strong>: The log type. <strong>stdout</strong> indicates the standard output of the container. Only one stdout entry is allowed. If you omit this parameter, file logs are collected.</p>
+         * </li>
+         * <li><p><strong>logstoreName</strong>: The Logstore name in SLS.</p>
+         * </li>
+         * <li><p><strong>logtailName</strong>: The Logtail name in SLS. If you omit this parameter, SAE creates a Logtail.</p>
+         * </li>
+         * </ul>
+         * <p>You do not need to set this parameter if the SLS log collection configuration is unchanged for subsequent deployments. To disable log collection, set this parameter to an empty string (&quot;&quot;).</p>
+         */
         @NameInMap("SlsConfigs")
         public String slsConfigs;
 
         /**
-         * <p>The ID of the tenant in the SAE namespace.</p>
+         * <p>The tenant ID of the SAE namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>838cad95-973f-48fe-830b-2a8546d7****</p>
@@ -292,7 +344,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
@@ -301,7 +353,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2ze559r1z1bpwqxwp****</p>
@@ -310,7 +362,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The name of the vSwitch.</p>
+         * <p>The vSwitch name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -319,7 +371,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String vSwitchName;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze0i263cnn311nvj****</p>
@@ -328,7 +380,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The name of the VPC.</p>
+         * <p>The VPC name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

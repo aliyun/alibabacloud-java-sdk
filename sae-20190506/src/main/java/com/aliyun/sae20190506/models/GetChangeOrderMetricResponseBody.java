@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetChangeOrderMetricResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The following limits are imposed on the ID:</p>
+     * <p>The HTTP status code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client-side error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server-side error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,16 +24,18 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of applications.</p>
+     * <p>The list of application information.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetChangeOrderMetricResponseBodyData> data;
 
     /**
-     * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
+     * <p>The response message.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>Returns <strong>success</strong> if the request is successful.</p>
+     * </li>
+     * <li><p>Returns an error code if the request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,16 +48,18 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
+     * <p>3B763F98-0BA2-5C23-B6B8-558568D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the microservice list was obtained. The following limits are imposed on the ID:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The namespaces were obtained.</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,11 +123,14 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The average duration of a change order, in milliseconds.</p>
+         */
         @NameInMap("AvgTimeCostMs")
         public Float avgTimeCostMs;
 
         /**
-         * <p>The number of abnormal change orders.</p>
+         * <p>The number of failed change orders.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +139,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         public Long error;
 
         /**
-         * <p>The percentage of change failures.</p>
+         * <p>The percentage of failed change orders.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -136,6 +147,9 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         @NameInMap("ErrorPercent")
         public Float errorPercent;
 
+        /**
+         * <p>The maximum duration, in milliseconds.</p>
+         */
         @NameInMap("MaxTimeCostMs")
         public Float maxTimeCostMs;
 
@@ -148,6 +162,9 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The optimization suggestions.</p>
+         */
         @NameInMap("OptimizeSuggestions")
         public String optimizeSuggestions;
 
@@ -160,6 +177,9 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The average task duration, in milliseconds.</p>
+         */
         @NameInMap("TaskTimeCostMsAvg")
         public String taskTimeCostMsAvg;
 

@@ -38,9 +38,12 @@ public class CreateSecretShrinkRequest extends TeaModel {
      * </ul>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Opaque</li>
-     * <li>kubernetes.io/dockerconfigjson</li>
-     * <li>kubernetes.io/tls</li>
+     * <li><p>Opaque</p>
+     * </li>
+     * <li><p>kubernetes.io/dockerconfigjson</p>
+     * </li>
+     * <li><p>kubernetes.io/tls</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

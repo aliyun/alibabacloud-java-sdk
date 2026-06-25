@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     /**
-     * <p>The route configuration of the gateway.</p>
+     * <p>The configuration of the gateway route.</p>
      * <blockquote>
-     * <p> This parameter is required if the gateway entry of the lane group is Java.</p>
+     * <p>This parameter is required if the gateway entry application for the swimlane group is a Java application.</p>
      * </blockquote>
      */
     @NameInMap("AppEntryRule")
     public CreateOrUpdateSwimmingLaneRequestAppEntryRule appEntryRule;
 
     /**
-     * <p>Full-link Grayscale Mode:</p>
+     * <p>The end-to-end canary release mode.</p>
      * <ul>
-     * <li>0: The request is routed based on the content of the request.</li>
-     * <li>1: routing based on percentages</li>
+     * <li><p><code>0</code>: content-based routing</p>
+     * </li>
+     * <li><p><code>1</code>: percentage-based routing</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public Integer canaryModel;
 
     /**
-     * <p>Lane Status</p>
+     * <p>The status of the swimlane.</p>
      * <ul>
-     * <li>true: enabled</li>
-     * <li>false: disabled</li>
+     * <li><p><code>true</code>: enabled</p>
+     * </li>
+     * <li><p><code>false</code>: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +44,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The ID of the lane group to which the lane belongs.</p>
+     * <p>The ID of the swimlane group.</p>
      * 
      * <strong>example:</strong>
      * <p>b2a8a925-477a-eswa-b823-d5e22500****</p>
@@ -49,7 +53,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The ID of the lane.</p>
+     * <p>The ID of the swimlane.</p>
      * 
      * <strong>example:</strong>
      * <p>13857</p>
@@ -58,7 +62,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public Long laneId;
 
     /**
-     * <p>The name of the lane.</p>
+     * <p>The name of the swimlane.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -67,25 +71,25 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public String laneName;
 
     /**
-     * <p>The tag of the lane.</p>
+     * <p>The tag of the swimlane.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
+     * <p>g1</p>
      */
     @NameInMap("LaneTag")
     public String laneTag;
 
     /**
-     * <p>The route configuration of the MSE gateway.</p>
+     * <p>Configuration for the MSE gateway route.</p>
      * <blockquote>
-     * <p> If the <strong>EntryAppType</strong> is set to <strong>apig</strong> or <strong>mse-gw</strong>, it is required.</p>
+     * <p>This parameter is required if the <strong>EntryAppType</strong> parameter is set to <strong>apig</strong> or <strong>mse-gw</strong>.</p>
      * </blockquote>
      */
     @NameInMap("MseGatewayEntryRule")
     public CreateOrUpdateSwimmingLaneRequestMseGatewayEntryRule mseGatewayEntryRule;
 
     /**
-     * <p>The namespace ID.</p>
+     * <p>The ID of the namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
@@ -172,13 +176,18 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneRequestAppEntryRuleConditions extends TeaModel {
         /**
-         * <p>Matching Rule:</p>
+         * <p>The matching rule.</p>
          * <ul>
-         * <li>The exact match. The condition is met if the traffic value and the condition value are exactly the same.</li>
-         * <li>The exact match. The condition is met if the traffic value and the condition value are exactly the same.</li>
-         * <li>The inclusive match. The condition is met if the traffic value is included in the specified list.</li>
-         * <li>The percentage match. Principle: The condition is met if \&quot;hash(get(<code>key</code>)) % 100 &lt; value\&quot;.</li>
-         * <li>Regular match: a regular expression match. The condition is met when the match is based on regular expression rules.</li>
+         * <li><p><code>==</code>: Exact match. The attribute\&quot;s value must be identical to the value specified.</p>
+         * </li>
+         * <li><p><code>!=</code>: Negated exact match. The attribute\&quot;s value must not be identical to the value specified.</p>
+         * </li>
+         * <li><p><code>in</code>: Inclusion match. The attribute\&quot;s value must be present in the specified comma-separated list of values.</p>
+         * </li>
+         * <li><p><code>percentage</code>: Percentage-based match. The expression <code>hash(get(key)) % 100 &lt; value</code> must be true.</p>
+         * </li>
+         * <li><p><code>regex</code>: Regular expression match. The attribute\&quot;s value must match the specified regular expression.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +197,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public String condition;
 
         /**
-         * <p>The parameter name.</p>
+         * <p>The name of the header, parameter, or cookie.</p>
          * 
          * <strong>example:</strong>
          * <p>t</p>
@@ -197,11 +206,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameter type. Valid values:</p>
+         * <p>The type of the request attribute to match.</p>
          * <ul>
-         * <li>header</li>
-         * <li>param</li>
-         * <li>Cookie: forwards requests based on cookies.</li>
+         * <li><p><code>header</code>: A request header.</p>
+         * </li>
+         * <li><p><code>param</code>: A request parameter.</p>
+         * </li>
+         * <li><p><code>cookie</code>: A request cookie.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +223,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The match value of the condition.</p>
+         * <p>The value to match against the request attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>g1</p>
@@ -260,10 +272,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneRequestAppEntryRule extends TeaModel {
         /**
-         * <p>Logical connectors between conditions:</p>
+         * <p>The logical operator used to combine conditions.</p>
          * <ul>
-         * <li>AND: All conditions are met at the same time.</li>
-         * <li>OR: Any condition is met.</li>
+         * <li><p><code>AND</code>: All conditions must be met.</p>
+         * </li>
+         * <li><p><code>OR</code>: At least one of the conditions must be met.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,16 +287,18 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public String conditionJoiner;
 
         /**
-         * <p>The conditions that trigger circuit breaking.</p>
+         * <p>The match conditions.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<CreateOrUpdateSwimmingLaneRequestAppEntryRuleConditions> conditions;
 
         /**
-         * <p>Whether to enable proportional grayscale.</p>
+         * <p>Specifies whether to enable percentage-based routing.</p>
          * <ul>
-         * <li>true: enabled. After you enable this parameter, you must configure the PercentageByPath.</li>
-         * <li>false: disables the service.</li>
+         * <li><p><code>true</code>: Enables percentage-based routing. You must also configure the <code>PercentageByPath</code> parameter.</p>
+         * </li>
+         * <li><p><code>false</code>: Disables percentage-based routing.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,13 +308,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public Boolean independentPercentageEnable;
 
         /**
-         * <p>The matched request path.</p>
+         * <p>The request paths to match.</p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
         /**
-         * <p>The traffic ratio. Valid values: 0 to 100.</p>
+         * <p>The traffic percentage for percentage-based routing. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -307,7 +323,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>The traffic configuration.</p>
+         * <p>An object that maps request paths to traffic percentages.</p>
          */
         @NameInMap("PercentageByPath")
         public java.util.Map<String, Integer> percentageByPath;
@@ -371,11 +387,16 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         /**
          * <p>The matching rule.</p>
          * <ul>
-         * <li>\==: exact match.</li>
-         * <li>! =: exact match.</li>
-         * <li>in: contains matches.</li>
-         * <li>Percentage: Percentage matching.</li>
-         * <li>Regular matching: specifies whether a regular expression is used to search for the original string.</li>
+         * <li><p><code>==</code>: Exact match. The attribute\&quot;s value must be identical to the value specified.</p>
+         * </li>
+         * <li><p><code>!=</code>: Negated exact match. The attribute\&quot;s value must not be identical to the value specified.</p>
+         * </li>
+         * <li><p><code>in</code>: Inclusion match. The attribute\&quot;s value must be present in the specified comma-separated list of values.</p>
+         * </li>
+         * <li><p><code>percentage</code>: Percentage-based match. The expression <code>hash(get(key)) % 100 &lt; value</code> must be true.</p>
+         * </li>
+         * <li><p><code>regex</code>: Regular expression match. The attribute\&quot;s value must match the specified regular expression.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -385,7 +406,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public String condition;
 
         /**
-         * <p>The parameter name.</p>
+         * <p>The name of the header, parameter, or cookie.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -394,11 +415,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameter type. Valid values:</p>
+         * <p>The type of the request attribute to match.</p>
          * <ul>
-         * <li>header</li>
-         * <li>param</li>
-         * <li>Cookie: forwards requests based on cookies.</li>
+         * <li><p><code>header</code>: A request header.</p>
+         * </li>
+         * <li><p><code>param</code>: A request parameter.</p>
+         * </li>
+         * <li><p><code>cookie</code>: A request cookie.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,7 +432,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The match value of the condition.</p>
+         * <p>The value to match against the request attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>g1</p>
@@ -457,10 +481,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneRequestMseGatewayEntryRule extends TeaModel {
         /**
-         * <p>Logical connectors between conditions:</p>
+         * <p>The logical operator used to combine conditions.</p>
          * <ul>
-         * <li>AND: All conditions are met at the same time.</li>
-         * <li>OR: Any condition is met.</li>
+         * <li><p><code>AND</code>: All conditions must be met.</p>
+         * </li>
+         * <li><p><code>OR</code>: At least one of the conditions must be met.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -470,16 +496,18 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public String conditionJoiner;
 
         /**
-         * <p>Routing Condition</p>
+         * <p>The match conditions.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<CreateOrUpdateSwimmingLaneRequestMseGatewayEntryRuleConditions> conditions;
 
         /**
-         * <p>Whether to enable proportional grayscale.</p>
+         * <p>Specifies whether to enable percentage-based routing.</p>
          * <ul>
-         * <li>true: Enabled. After you enable this parameter, you must configure the PercentageByPath.</li>
-         * <li>false: Disabled.</li>
+         * <li><p><code>true</code>: Enables percentage-based routing. You must also configure the <code>PercentageByRoute</code> parameter.</p>
+         * </li>
+         * <li><p><code>false</code>: Disables percentage-based routing.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -489,7 +517,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public Boolean independentPercentageEnable;
 
         /**
-         * <p>The percentage of traffic replication. Valid values: 0 to 100.</p>
+         * <p>The traffic mirroring percentage. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -498,13 +526,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>The traffic configuration.</p>
+         * <p>An object that maps route IDs to traffic percentages.</p>
          */
         @NameInMap("PercentageByRoute")
         public java.util.Map<String, Integer> percentageByRoute;
 
         /**
-         * <p>The ID of the route.</p>
+         * <p>The route IDs.</p>
          */
         @NameInMap("RouteIds")
         public java.util.List<Long> routeIds;

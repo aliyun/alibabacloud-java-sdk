@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSecretRequest extends TeaModel {
     /**
-     * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
+     * <p>The ID of the namespace where the Secret instance is located. If the instance is in the default namespace, specify only the region ID, such as <code>cn-beijing</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,7 @@ public class UpdateSecretRequest extends TeaModel {
     public UpdateSecretRequestSecretData secretData;
 
     /**
+     * <p>The ID of the Secret instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,9 +62,9 @@ public class UpdateSecretRequest extends TeaModel {
 
     public static class UpdateSecretRequestSecretData extends TeaModel {
         /**
-         * <p>The information about the key-value pairs of the Secret. This parameter is required. The following formats are supported:</p>
-         * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
-         * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage a Kubernetes Secret</a>.</p>
+         * <p>The key-value pairs of the Secret. This parameter is required. The value must be a JSON object.</p>
+         * <p>For more information about configuration items, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage and use secrets</a>.</p>
+         * <p>k specifies a key and v specifies a value. For more information about configuration items, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage and use secrets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

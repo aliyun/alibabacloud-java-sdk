@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationScalingRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteApplicationScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The name of the Auto Scaling policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

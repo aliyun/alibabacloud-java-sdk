@@ -12,7 +12,7 @@ public class WebAclEntryConfig extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.2.3.4/32</p>
+     * <p>219.145.XX.XX</p>
      */
     @NameInMap("Entry")
     public String entry;

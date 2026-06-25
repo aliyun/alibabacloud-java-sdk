@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PathConfig extends TeaModel {
     /**
-     * <p>applicationName</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>applicationName</p>
@@ -14,7 +14,7 @@ public class PathConfig extends TeaModel {
     public String applicationName;
 
     /**
-     * <p>path</p>
+     * <p>The path.</p>
      * 
      * <strong>example:</strong>
      * <p>/packages</p>

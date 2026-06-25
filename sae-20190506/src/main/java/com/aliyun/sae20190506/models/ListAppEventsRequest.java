@@ -14,7 +14,7 @@ public class ListAppEventsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,10 +23,12 @@ public class ListAppEventsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The type of the event. Valid values:</p>
+     * <p>The event type. Valid values:</p>
      * <ul>
-     * <li><strong>Warning</strong>: an alert.</li>
-     * <li><strong>Normal</strong>: a normal event.</li>
+     * <li><p><strong>Warning</strong>: An event that indicates a potential problem.</p>
+     * </li>
+     * <li><p><strong>Normal</strong>: An event that indicates a routine operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListAppEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The namespace ID.</p>
+     * <p>The ID of the region where the namespace is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,13 +48,18 @@ public class ListAppEventsRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The type of the object. Valid values:</p>
+     * <p>The object kind. Valid values:</p>
      * <ul>
-     * <li><strong>Deployment</strong>: an application.</li>
-     * <li><strong>Pod</strong>: an application instance.</li>
-     * <li><strong>Service</strong>: a Server Load Balancer (SLB) instance.</li>
-     * <li><strong>HorizontalPodAutoscaler</strong>: an auto scaling policy.</li>
-     * <li><strong>CloneSet</strong>: an application.</li>
+     * <li><p><strong>Deployment</strong>: The application.</p>
+     * </li>
+     * <li><p><strong>Pod</strong>: The application instance.</p>
+     * </li>
+     * <li><p><strong>Service</strong>: The Server Load Balancer (SLB) instance.</p>
+     * </li>
+     * <li><p><strong>HorizontalPodAutoscaler</strong>: The auto scaling policy.</p>
+     * </li>
+     * <li><p><strong>CloneSet</strong>: The application.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +69,7 @@ public class ListAppEventsRequest extends TeaModel {
     public String objectKind;
 
     /**
-     * <p>The name of the object. Fuzzy search by prefix is supported.</p>
+     * <p>The name of the object. Prefix matching is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-x****</p>
@@ -71,7 +78,7 @@ public class ListAppEventsRequest extends TeaModel {
     public String objectName;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 0 to 10000.</p>
+     * <p>The number of entries to return per page. The value must be an integer from 0 to 10,000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -80,7 +87,7 @@ public class ListAppEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The cause of the event. Fuzzy search by prefix is supported.</p>
+     * <p>The reason for the event. Prefix matching is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Started</p>

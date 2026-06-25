@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateAppModeResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,20 +24,24 @@ public class UpdateAppModeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong>.</li>
+     * <li><p>This parameter is not returned for successful requests.</p>
+     * </li>
+     * <li><p>It is returned for failed requests. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned. The following limits are imposed on the ID:</p>
+     * <p>The additional information.</p>
      * <ul>
-     * <li>The request is normal. <strong>success</strong> is returned.</li>
-     * <li>If the request is abnormal, the specific exception error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +51,7 @@ public class UpdateAppModeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -52,7 +60,7 @@ public class UpdateAppModeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application was created. true and false. false</p>
+     * <p>Indicates whether the request succeeded. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -61,7 +69,7 @@ public class UpdateAppModeResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+     * <p>The trace ID for querying request details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

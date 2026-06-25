@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class BindNlbRequest extends TeaModel {
     /**
-     * <p>The type of the IP addresses. Valid values:</p>
+     * <p>The address type of the NLB instance.</p>
      * <ul>
-     * <li>Internet: public endpoint.</li>
-     * <li>Intranet: private endpoint.</li>
+     * <li><p><code>Internet</code>: a public IP address.</p>
+     * </li>
+     * <li><p><code>Intranet</code>: a private IP address.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class BindNlbRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The ID of the application to which the NLB instance is bound.</p>
+     * <p>The ID of the target application.</p>
      * 
      * <strong>example:</strong>
      * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -27,12 +29,16 @@ public class BindNlbRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The listener that you want to manage. The value is a string that consists of JSON arrays. Each listener contains the following fields:</p>
+     * <p>The listeners, specified as a JSON-formatted string. Each listener object contains the following fields:</p>
      * <ul>
-     * <li><strong>port</strong>: the port number of the NLB listener. This field is required. Data type: integer. Valid values: 0 to 65535.</li>
-     * <li><strong>TargetPort</strong>: the port number of the container listener. This field is required. Data type: integer. Valid values: 0 to 65535.</li>
-     * <li><strong>Protocol</strong>: the listener protocol. This field is required. Data type: string. Valid values: TCP, UDP, and TCPSSL.</li>
-     * <li><strong>CertIds</strong>: the IDs of the server certificates. This field is optional. Data type: string. This field is supported only by TCPSSL listeners.</li>
+     * <li><p><strong>Port</strong>: Integer. Required. The listener port. Valid values: 0 to 65535.</p>
+     * </li>
+     * <li><p><strong>TargetPort</strong>: Integer. Required. The port on the application instance that receives traffic. Valid values: 0 to 65535.</p>
+     * </li>
+     * <li><p><strong>Protocol</strong>: String. Required. The listener protocol. Valid values: <code>TCP</code>, <code>UDP</code>, and <code>TCPSSL</code>.</p>
+     * </li>
+     * <li><p><strong>CertIds</strong>: String. Optional. The server certificate IDs. This parameter is required only for <code>TCPSSL</code> listeners.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("Listeners")
@@ -48,10 +54,12 @@ public class BindNlbRequest extends TeaModel {
     public String nlbId;
 
     /**
-     * <p>The mappings between zones and vSwitches. The value is a JSON string. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones. A ZoneMapping contains the following fields:</p>
+     * <p>The mappings between zones and vSwitches, specified as a JSON-formatted string. You can add up to 10 zones. If the current region supports two or more zones, you must specify at least two zones. Each <code>ZoneMapping</code> object contains the following fields:</p>
      * <ul>
-     * <li>The ID of the vSwitch in the zone. Each zone can contain only one vSwitch and one subnet. Data type: string.</li>
-     * <li>The zone ID of the NLB instance. Data type: string.</li>
+     * <li><p><strong>VSwitchId</strong>: String. The ID of the vSwitch in the specified zone. Each zone can have only one vSwitch and one subnet.</p>
+     * </li>
+     * <li><p>ZoneId, String, the zone ID of the Network Load Balancer instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

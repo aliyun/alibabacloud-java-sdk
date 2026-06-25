@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogConfigsRequest extends TeaModel {
     /**
-     * <p>10</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListLogConfigsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListLogConfigsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>1</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateNamespaceVpcRequest extends TeaModel {
     /**
+     * <p>The short-format namespace ID. You do not need to include the region ID. We recommend that you use this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,7 +14,7 @@ public class UpdateNamespaceVpcRequest extends TeaModel {
     public String nameSpaceShortId;
 
     /**
-     * <p>vpc-2ze0i263cnn311nvj\<em>\</em>\<em>\</em></p>
+     * <p>The long-format namespace ID. If you set this parameter, it takes precedence over NameSpaceShortId. This parameter is for backward compatibility. Use the short-format namespace ID to simplify the request.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
@@ -21,7 +23,7 @@ public class UpdateNamespaceVpcRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the VPC. This VPC replaces the original VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,8 +7,10 @@ public class UpdateNamespaceRequest extends TeaModel {
     /**
      * <p>Indicates whether to enable SAE built-in registry:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <p>If you set this parameter to true, a shared registry is created for the namespace. The registry cannot be disabled after it is created.</p>
      * 

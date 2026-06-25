@@ -14,6 +14,12 @@ public class AbortChangeOrderRequest extends TeaModel {
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
+    /**
+     * <p>Specifies whether to roll back the change order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Rollback")
     public Boolean rollback;
 

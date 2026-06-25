@@ -14,7 +14,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of resources. Separate multiple resource IDs with comma (,). This parameter is required if you do not specify the <strong>Tags</strong> parameter.</p>
+     * <p>The resource IDs. You can specify up to 50 resource IDs in a JSON array. This parameter is required unless you specify the <strong>Tags</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceIds;
 
     /**
-     * <p>The type of the resource. Set the value to <code>application</code>.</p>
+     * <p>The resource type. Only <code>application</code> is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,13 +34,15 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag in the format of a key-value pair. This parameter is required if you do not specify the <strong>ResourceIds</strong> parameter. The following parameters are involved:</p>
+     * <p>The key-value pairs of the tags. This parameter is required unless you specify the <strong>ResourceIds</strong> parameter. The following rules apply:</p>
      * <ul>
-     * <li><strong>key</strong>: the tag key. It cannot exceed 128 characters in length.</li>
-     * <li><strong>value</strong>: the tag value. It cannot exceed 128 characters in length.</li>
+     * <li><p><strong>key</strong>: The tag key. The key must be 1 to 128 characters in length.</p>
+     * </li>
+     * <li><p><strong>value</strong>: The tag value. The value must be 1 to 128 characters in length.</p>
+     * </li>
      * </ul>
-     * <p>Tag keys and tag values are case-sensitive. If you specify multiple tags, the system adds all the tags to the specified resources. Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
-     * <p>Tag keys and tag values cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>Tags are case-sensitive. If you specify multiple tags, they are created and bound to the specified resources. For a single resource, each tag key must be unique. If you specify a tag key that already exists for a resource, the operation updates the existing tag value.</p>
+     * <p>A tag key cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;v1&quot;}]</p>

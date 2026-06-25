@@ -14,17 +14,35 @@ public class UpdateApplicationVswitchesRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>Indicates whether to deploy the application immediately. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Deploys the application immediately. This is the default.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The application is not deployed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Deploy")
     public Boolean deploy;
 
+    /**
+     * <p>The minimum percentage of ready instances.</p>
+     */
     @NameInMap("MinReadyInstanceRatio")
     public Integer minReadyInstanceRatio;
 
+    /**
+     * <p>The minimum number of ready instances.</p>
+     */
     @NameInMap("MinReadyInstances")
     public Integer minReadyInstances;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request was invalid.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +24,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The current page number.</p>
+     * <p>Current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,26 +33,25 @@ public class ListApplicationsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The queried applications.</p>
+     * <p>The object that contains pagination details and the array of applications.</p>
      */
     @NameInMap("Data")
     public ListApplicationsResponseBodyData data;
 
     /**
-     * <p>The returned error code. Valid values:</p>
+     * <p>The error code. This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li><p>A successful request does not return the <strong>ErrorCode</strong> field.</p>
+     * </li>
+     * <li><p>A failed request returns the <strong>ErrorCode</strong> field. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>The ID of the request.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional message.</p>
+     * <p>Additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -57,7 +60,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page size.</p>
+     * <p>Page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -66,7 +69,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
@@ -77,8 +80,10 @@ public class ListApplicationsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +93,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The number of applications.</p>
+     * <p>Total number of applications.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -217,7 +222,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyDataApplicationsChildren extends TeaModel {
         /**
-         * <p>If is deleting this application.</p>
+         * <p>Indicates whether the canary release application is being deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -229,13 +234,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          * <p>The application description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Test application</p>
          */
         @NameInMap("AppDescription")
         public String appDescription;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the canary release application.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxx-xxx-xxx</p>
@@ -244,7 +249,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the canary release application.</p>
          * 
          * <strong>example:</strong>
          * <p>app1</p>
@@ -253,7 +258,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The way to deploy applications.</p>
+         * <p>The application\&quot;s deployment method.</p>
          * 
          * <strong>example:</strong>
          * <p>Image</p>
@@ -262,7 +267,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The base application ID.</p>
+         * <p>The ID of the base application.</p>
          * 
          * <strong>example:</strong>
          * <p>ee99cce6-1c8e-4bfa-96c3-3e2fa9******</p>
@@ -271,7 +276,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String baseAppId;
 
         /**
-         * <p>The CPU sepcification.</p>
+         * <p>The CPU specification.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -279,11 +284,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>Indicates if the application is configured to stop automatically when idle.</p>
+         */
         @NameInMap("EnableIdle")
         public String enableIdle;
 
         /**
-         * <p>The number of instances.</p>
+         * <p>The configured number of instances for the canary release application.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -291,6 +299,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Instances")
         public Integer instances;
 
+        /**
+         * <p>Indicates whether the canary release application is stateful.</p>
+         */
         @NameInMap("IsStateful")
         public Boolean isStateful;
 
@@ -304,7 +315,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer mem;
 
         /**
-         * <p>If this application has enabled MSE.</p>
+         * <p>Indicates whether Microservices Engine (MSE) is enabled for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -331,11 +342,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The application edition.</p>
+         * <p>The edition of the application:</p>
          * <ul>
-         * <li>lite: the lightweight edition.</li>
-         * <li>std: the standard edition.</li>
-         * <li>pro: the professional edition.</li>
+         * <li><p>lite: Lite</p>
+         * </li>
+         * <li><p>std: Standard</p>
+         * </li>
+         * <li><p>pro: Pro</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,7 +359,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String newSaeVersion;
 
         /**
-         * <p>The programming language of this application.</p>
+         * <p>The programming language of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>java</p>
@@ -362,11 +376,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The number of instances in running state.</p>
+         * <p>The number of running instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -375,7 +392,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer runningInstances;
 
         /**
-         * <p>If the scale rule is enabled.</p>
+         * <p>Indicates whether an auto scaling policy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -384,7 +401,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Boolean scaleRuleEnabled;
 
         /**
-         * <p>The type of the scale rule.</p>
+         * <p>The type of the auto scaling policy.</p>
          * 
          * <strong>example:</strong>
          * <p>timing</p>
@@ -393,7 +410,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String scaleRuleType;
 
         /**
-         * <p>The application tag.</p>
+         * <p>An array of tags assigned to the canary release application.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListApplicationsResponseBodyDataApplicationsChildrenTags> tags;
@@ -583,7 +600,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyDataApplicationsTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -592,7 +609,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -627,8 +644,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the application is being deleted. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The application is being deleted.</li>
-         * <li><strong>false</strong>: The application is not being deleted.</li>
+         * <li><p><strong>true</strong>: The application is being deleted.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The application is not being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -647,7 +666,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appDescription;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe****</p>
@@ -665,7 +684,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The application type.</p>
+         * <p>The application\&quot;s deployment method.</p>
          * 
          * <strong>example:</strong>
          * <p>Image</p>
@@ -674,7 +693,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The base app ID. Only gray-release applications have this property.</p>
+         * <p>The ID of the base application. This parameter is returned only for canary release applications.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxx-xx-xxx</p>
@@ -683,21 +702,28 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String baseAppId;
 
         /**
-         * <p>The gray-release application list of this application.</p>
+         * <p>An array of canary release applications associated with this application.</p>
          */
         @NameInMap("Children")
         public java.util.List<ListApplicationsResponseBodyDataApplicationsChildren> children;
 
         /**
-         * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+         * <p>The CPU allocated to each instance, measured in millicores. This value cannot be 0. Valid values:</p>
          * <ul>
-         * <li><strong>500</strong></li>
-         * <li><strong>1000</strong></li>
-         * <li><strong>2000</strong></li>
-         * <li><strong>4000</strong></li>
-         * <li><strong>8000</strong></li>
-         * <li><strong>16000</strong></li>
-         * <li><strong>32000</strong></li>
+         * <li><p><strong>500</strong></p>
+         * </li>
+         * <li><p><strong>1000</strong></p>
+         * </li>
+         * <li><p><strong>2000</strong></p>
+         * </li>
+         * <li><p><strong>4000</strong></p>
+         * </li>
+         * <li><p><strong>8000</strong></p>
+         * </li>
+         * <li><p><strong>16000</strong></p>
+         * </li>
+         * <li><p><strong>32000</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -707,7 +733,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The disk size. Unit: GB.</p>
+         * <p>The disk size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -716,7 +742,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer diskSize;
 
         /**
-         * <p>If the idle mode is enabled.</p>
+         * <p>Indicates if the application is configured to stop automatically when idle.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -725,7 +751,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String enableIdle;
 
         /**
-         * <p>The image URL.</p>
+         * <p>The URL of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/sae-serverless-demo/sae-demo:microservice-java-provider-v1.0</p>
@@ -734,7 +760,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The number of application instances.</p>
+         * <p>The configured number of application instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -742,25 +768,41 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Instances")
         public Integer instances;
 
+        /**
+         * <p>Indicates whether the application is stateful.</p>
+         */
         @NameInMap("IsStateful")
         public Boolean isStateful;
 
+        /**
+         * <p>The labels of the application.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
         /**
-         * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <p>The memory allocated to each instance, measured in megabytes (MB). This value cannot be 0 and must be compatible with the CPU allocation. The following options are available:</p>
          * <ul>
-         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
-         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
-         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-         * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * <li><p><strong>1024</strong>: For a CPU allocation of 500 or 1,000 millicores.</p>
+         * </li>
+         * <li><p><strong>2048</strong>: For a CPU allocation of 500, 1,000, or 2,000 millicores.</p>
+         * </li>
+         * <li><p><strong>4096</strong>: For a CPU allocation of 1,000, 2,000, or 4,000 millicores.</p>
+         * </li>
+         * <li><p><strong>8192</strong>: For a CPU allocation of 2,000, 4,000, or 8,000 millicores.</p>
+         * </li>
+         * <li><p><strong>12288</strong>: For a CPU allocation of 12,000 millicores.</p>
+         * </li>
+         * <li><p><strong>16384</strong>: For a CPU allocation of 4,000, 8,000, or 16,000 millicores.</p>
+         * </li>
+         * <li><p><strong>24576</strong>: For a CPU allocation of 12,000 millicores.</p>
+         * </li>
+         * <li><p><strong>32768</strong>: For a CPU allocation of 16,000 millicores.</p>
+         * </li>
+         * <li><p><strong>65536</strong>: For a CPU allocation of 8,000, 16,000, or 32,000 millicores.</p>
+         * </li>
+         * <li><p><strong>131072</strong>: For a CPU allocation of 32,000 millicores.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -770,7 +812,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer mem;
 
         /**
-         * <p>The application has enabled MSE or not.</p>
+         * <p>Indicates whether Microservices Engine (MSE) is enabled for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -779,11 +821,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Boolean mseEnabled;
 
         /**
-         * <p>The name space of MSE:</p>
+         * <p>The ID of the MSE namespace. This value determines the service edition.</p>
          * <ul>
-         * <li>default: the free edition.</li>
-         * <li>sae-pro: the professional edition.</li>
-         * <li>sae-ent: the enterprise eiditon.</li>
+         * <li><p>default: Free edition</p>
+         * </li>
+         * <li><p>sae-pro: Professional edition</p>
+         * </li>
+         * <li><p>sae-ent: Enterprise edition</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -793,7 +838,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String mseNamespaceId;
 
         /**
-         * <p>The namespace ID.</p>
+         * <p>The ID of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:demo</p>
@@ -811,11 +856,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The application edition.</p>
+         * <p>The edition of the application:</p>
          * <ul>
-         * <li>lite: the lightweight edition.</li>
-         * <li>std: the standard edition.</li>
-         * <li>pro: the professional edition.</li>
+         * <li><p>lite: Lite</p>
+         * </li>
+         * <li><p>std: Standard</p>
+         * </li>
+         * <li><p>pro: Pro</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -825,7 +873,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String newSaeVersion;
 
         /**
-         * <p>The package URL.</p>
+         * <p>The URL of the application\&quot;s deployment package.</p>
          */
         @NameInMap("PackageUrl")
         public String packageUrl;
@@ -840,7 +888,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String programmingLanguage;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region where the application is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -848,6 +896,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -861,13 +912,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer runningInstances;
 
         /**
-         * <p>The tags of the application.</p>
+         * <p>An array of tags assigned to the application.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListApplicationsResponseBodyDataApplicationsTags> tags;
 
         /**
-         * <p>VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -1097,7 +1148,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The queried applications.</p>
+         * <p>An array of application objects.</p>
          */
         @NameInMap("Applications")
         public java.util.List<ListApplicationsResponseBodyDataApplications> applications;
@@ -1112,7 +1163,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of records in each page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1121,7 +1172,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The number of applications.</p>
+         * <p>The total number of applications.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

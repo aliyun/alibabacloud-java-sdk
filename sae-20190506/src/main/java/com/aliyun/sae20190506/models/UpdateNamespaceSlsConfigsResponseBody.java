@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     /**
-     * <p>The status code or error code. Valid values: 2xx: The request was successful. 3xx: The request was redirected. 4xx: The request was invalid. 5xx: A server error occurred.</p>
+     * <p>The API status code or POP error code. Valid values: 2xx (success), 3xx (redirect), 4xx (client error), 5xx (server error).</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,20 +14,19 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error code. Value description:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, this field is not returned.</li>
-     * <li>For more information, see the <strong>Error codes</strong> section of this topic.</li>
+     * <li><p>If the request is successful, the response does not include the <code>ErrorCode</code> parameter.</p>
+     * </li>
+     * <li><p>If the request fails, the response includes the <code>ErrorCode</code> parameter. For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>InvalidNamespaceId.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The additional information.</p>
+     * <p>Additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -36,7 +35,7 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the Simple Log Service configuration for the namespace was updated. Valid values: true and false.</p>
+     * <p>Indicates whether the namespace\&quot;s SLS configuration was successfully updated. A value of <code>true</code> indicates success, while <code>false</code> indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -45,7 +44,7 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace, which is used to query the exact call information.</p>
+     * <p>The trace ID for the request. You can use this ID to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

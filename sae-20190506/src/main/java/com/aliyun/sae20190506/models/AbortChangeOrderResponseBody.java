@@ -7,10 +7,14 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,23 +24,25 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public AbortChangeOrderResponseBodyData data;
 
     /**
-     * <p>The error code. Value values:</p>
+     * <p>The error code. This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
      * <ul>
-     * <li><strong>ErrorCode</strong> is not returned if a request is successful.</li>
-     * <li><strong>ErrorCode</strong> is returned if a request failed. For more information, see <strong>Error code</strong> section of this topic.</li>
+     * <li><p>If the request is successful, this parameter is not returned.</p>
+     * </li>
+     * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned for the operation.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +51,7 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -54,10 +60,12 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the change order was terminated. Valid values:</p>
+     * <p>Indicates whether the change order is stopped. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The change order was terminated.</li>
-     * <li><strong>false</strong>: The change order failed to be terminated.</li>
+     * <li><p><strong>true</strong>: The change order is stopped.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The change order is not stopped.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +75,7 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace.</p>
+     * <p>The trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

@@ -14,7 +14,7 @@ public class SuspendTrafficRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The IDs of the instances.</p>
      * 
      * <strong>example:</strong>
      * <p>c-668727a8-17d86664-41e5bb******,c-668727a8-17d86664-7e4958******</p>

@@ -22,12 +22,11 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     /**
      * <p>The error code. Value description:</p>
      * <ul>
-     * <li>If the request succeeds, this field is not returned.</li>
-     * <li>For more information, see the <strong>Error codes</strong> section of this topic.</li>
+     * <li><p>If the request succeeds, this field is not returned.</p>
+     * </li>
+     * <li><p>For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -35,8 +34,10 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     /**
      * <p>The additional information. Value description:</p>
      * <ul>
-     * <li>If the request was successful, <strong>success</strong> is returned.</li>
-     * <li>If the request failed, an error code is returned.</li>
+     * <li><p>If the request was successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request failed, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,8 +58,10 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the application instance groups were obtained successfully. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -168,11 +171,16 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
         /**
          * <p>The application status. Valid values:</p>
          * <ul>
-         * <li>EXPIRED</li>
-         * <li>REBOOTING</li>
-         * <li>WAITING</li>
-         * <li>FAIL</li>
-         * <li>NULL/SUCCESS</li>
+         * <li><p>EXPIRED</p>
+         * </li>
+         * <li><p>REBOOTING</p>
+         * </li>
+         * <li><p>WAITING</p>
+         * </li>
+         * <li><p>FAIL</p>
+         * </li>
+         * <li><p>NULL/SUCCESS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

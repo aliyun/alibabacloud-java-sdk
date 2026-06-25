@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListWebInstancesOutput extends TeaModel {
     /**
      * <p>The error message of instance creation. If the instance creation was successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
      */
     @NameInMap("CurrentError")
     public String currentError;

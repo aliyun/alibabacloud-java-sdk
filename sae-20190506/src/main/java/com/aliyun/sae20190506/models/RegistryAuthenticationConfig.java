@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegistryAuthenticationConfig extends TeaModel {
     /**
+     * <p>The password for the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc***</p>
      */
@@ -12,6 +14,8 @@ public class RegistryAuthenticationConfig extends TeaModel {
     public String password;
 
     /**
+     * <p>The username for the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */

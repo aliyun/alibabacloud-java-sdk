@@ -14,17 +14,22 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>Specifies whether to enable idle mode for the application.</p>
+     */
     @NameInMap("EnableIdle")
     public Boolean enableIdle;
 
     /**
-     * <p>The percentage of the minimum number of available instances. Valid values:</p>
+     * <p>The minimum number of ready instances, specified as a percentage of the total number of instances. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong> (default value): The minimum number of available instances is not determined based on this parameter.</li>
-     * <li><strong>0 to 100</strong>: The minimum number of available instances is calculated by using the following formula: Number of existing instances × Value of MinReadyInstanceRatio × 100%. The calculation result is rounded up to the nearest integer. For example, if the number of existing instances is 5 and MinReadyInstanceRatio is set to 50, the minimum number of available instances is 3.</li>
+     * <li><p><strong>-1</strong>: Indicates that a percentage is not used. In this case, the value of <code>MinReadyInstances</code> is used.</p>
+     * </li>
+     * <li><p><strong>0\~100</strong>: A percentage. The result is rounded up. For example, if you set this parameter to 50 (%) and the application has 5 instances, the minimum number of ready instances is 3.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When <strong>MinReadyInstance</strong> and <strong>MinReadyInstanceRatio</strong> are passed at the same time and the <strong>MinReadyInstanceRatio</strong> value is not \<em>\</em>-1\<em>\</em>, the <strong>MinReadyInstanceRatio</strong> parameter takes precedence. <strong>Note</strong>When both <strong>MinReadyInstance</strong> and <strong>MinReadyInstanceRatio</strong> are specified and <strong>MinReadyInstanceRatio</strong> is set to a number from 0 to 100, the value of <strong>MinReadyInstanceRatio</strong> takes precedence.</p>
+     * <p>If you specify both <code>MinReadyInstances</code> and a <code>MinReadyInstanceRatio</code> other than <code>-1</code>, <code>MinReadyInstanceRatio</code> takes precedence. For example, if <code>MinReadyInstances</code> is set to <code>5</code> and <code>MinReadyInstanceRatio</code> is set to <code>50</code>, the system uses <code>50</code> (%) to calculate the minimum number of ready instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,13 +39,15 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public Integer minReadyInstanceRatio;
 
     /**
-     * <p>The minimum number of available instances. Special values:</p>
+     * <p>The minimum number of ready instances. Valid values:</p>
      * <ul>
-     * <li>If you set the value to <strong>0</strong>, business is interrupted when the application is updated.</li>
-     * <li>If you set this property to -1, the system calculates a recommended value as the minimum number of available instances by using the following formula: Recommended value = Number of existing instances × 25%. The calculation result is rounded up to the nearest integer. For example, if the number of existing instances is 5, the recommended value is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</li>
+     * <li><p>If you set this parameter to <code>0</code>, the application is interrupted during an update.</p>
+     * </li>
+     * <li><p>If you set this parameter to <code>-1</code>, the system sets the value to 25% of the current number of instances, rounded up. For example, if the application has 5 instances, the minimum number of ready instances is 2 (5 × 25% = 1.25, rounded up to 2).</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> To ensure business continuity, make sure that at least one instance is available during application deployment and rollback.</p>
+     * <p>To ensure service continuity during a rolling deployment, we recommend setting the minimum number of ready instances to 1 or more.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,8 +59,10 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the auto scaling policy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The auto scaling policy is enabled.</li>
-     * <li><strong>false</strong>: The auto scaling policy is disabled.</li>
+     * <li><p><strong>true</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,76 +72,96 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public Boolean scalingRuleEnable;
 
     /**
-     * <p>The configurations of the metric-based auto scaling policy. This parameter is required if you set the ScalingRuleType parameter to metric.</p>
-     * <p>The following list describes the involved parameters:</p>
+     * <p>Configurations for the metric-based auto scaling policy. This parameter is required if <code>ScalingRuleType</code> is set to <code>metric</code> or <code>mix</code>.</p>
+     * <p>The parameter is a JSON string that contains the following fields:</p>
      * <ul>
-     * <li><p><strong>maxReplicas</strong>: the maximum number of instances in the application.</p>
+     * <li><p><strong>maxReplicas</strong>: The maximum number of application instances.</p>
      * </li>
-     * <li><p><strong>minReplicas</strong>: the minimum number of instances in the application.</p>
+     * <li><p><strong>minReplicas</strong>: The minimum number of application instances.</p>
      * </li>
-     * <li><p><strong>metricType</strong>: the metric that is used to trigger the auto scaling policy.</p>
+     * <li><p><strong>metricType</strong>: The metric that triggers the auto scaling policy. Valid values:</p>
      * <ul>
-     * <li><strong>CPU</strong>: the CPU utilization.</li>
-     * <li><strong>MEMORY</strong>: the memory usage.</li>
-     * <li><strong>QPS</strong>: the average QPS within 1 minute per Java application instance.</li>
-     * <li><strong>RT</strong>: the average response time of all API operations within 1 minute in the Java application.</li>
-     * <li><strong>tcpActiveConn</strong>: the average number of active TCP connections within 30 seconds per instance.</li>
-     * <li><strong>SLB_QPS</strong>: the average QPS of the Internet-facing SLB instance within 15 seconds per instance.</li>
-     * <li><strong>SLB_RT</strong>: the average response time of the Internet-facing SLB instance within 15 seconds.</li>
-     * <li><strong>INTRANET_SLB_QPS</strong>: the average QPS of the internal-facing SLB instance within 15 seconds per instance.</li>
-     * <li><strong>INTRANET_SLB_RT</strong>: the average response time of the internal-facing SLB instance within 15 seconds.</li>
+     * <li><p><strong>CPU</strong>: CPU utilization.</p>
+     * </li>
+     * <li><p><strong>MEMORY</strong>: Memory utilization.</p>
+     * </li>
+     * <li><p><strong>QPS</strong>: The average queries per second (QPS) per instance for a Java application over a 1-minute period.</p>
+     * </li>
+     * <li><p><strong>RT</strong>: The average response time (RT) of all service interfaces for a Java application over a 1-minute period.</p>
+     * </li>
+     * <li><p><strong>tcpActiveConn</strong>: The average number of active TCP connections per instance over a 30-second period.</p>
+     * </li>
+     * <li><p><strong>SLB_QPS</strong>: The average QPS per instance for a public-facing SLB instance over a 15-second period.</p>
+     * </li>
+     * <li><p><strong>SLB_RT</strong>: The average RT of a public-facing SLB instance over a 15-second period.</p>
+     * </li>
+     * <li><p><strong>INTRANET_SLB_QPS</strong>: The average QPS per instance for an internal-facing SLB instance over a 15-second period.</p>
+     * </li>
+     * <li><p><strong>INTRANET_SLB_RT</strong>: The average RT of an internal-facing SLB instance over a 15-second period.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p><strong>metricTargetAverageUtilization</strong>: the limit on the metric that is specified by <strong>metricType</strong>. You can specify following limits:</p>
+     * <li><p><strong>metricTargetAverageUtilization</strong>: The target value for the metric specified by <code>metricType</code>. The unit of this value depends on <code>metricType</code>.</p>
      * <ul>
-     * <li>The limit on the CPU utilization. Unit: percentage.</li>
-     * <li>The limit on the memory usage. Unit: percentage.</li>
-     * <li>The limit on the QPS.</li>
-     * <li>The limit on the response time. Unit: milliseconds.</li>
-     * <li>The limit on the average number of active TCP connections per second.</li>
-     * <li>The limit on the QPS of the Internet-facing SLB instance.</li>
-     * <li>The limit on the response time of the Internet-facing SLB instance. Unit: milliseconds.</li>
-     * <li>The limit on the QPS of the internal-facing SLB instance.</li>
-     * <li>The limit on the response time of the internal-facing SLB instance. Unit: milliseconds.</li>
+     * <li><p>Target CPU utilization, in percentage.</p>
+     * </li>
+     * <li><p>Target memory utilization, in percentage.</p>
+     * </li>
+     * <li><p>Target QPS, in requests per second.</p>
+     * </li>
+     * <li><p>Target response time, in milliseconds.</p>
+     * </li>
+     * <li><p>Average number of active TCP connections.</p>
+     * </li>
+     * <li><p>Target public-facing SLB QPS, in requests per second.</p>
+     * </li>
+     * <li><p>Target public-facing SLB response time, in milliseconds.</p>
+     * </li>
+     * <li><p>Target internal-facing SLB QPS, in requests per second.</p>
+     * </li>
+     * <li><p>Target internal-facing SLB response time, in milliseconds.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p><strong>slbId</strong>: the ID of the SLB instance.</p>
+     * <li><p><strong>slbId</strong>: The SLB instance ID.</p>
      * </li>
-     * <li><p><strong>slbProject</strong>: the Simple Log Service (SLS) project.</p>
+     * <li><p><strong>slbProject</strong>: The Log Service project.</p>
      * </li>
-     * <li><p><strong>slbLogstore</strong>: the SLS Logstore.</p>
+     * <li><p><strong>slbLogstore</strong>: The Log Service Logstore.</p>
      * </li>
-     * <li><p><strong>vport</strong>: the listener port of the SLB instance. HTTP and HTTPS are supported.</p>
+     * <li><p><strong>vport</strong>: The SLB listener port. The HTTP and HTTPS protocols are supported.</p>
      * </li>
-     * <li><p><strong>scaleUpRules</strong>: the scale-out rules.</p>
+     * <li><p><strong>scaleUpRules</strong>: The rules to scale out the application.</p>
      * </li>
-     * <li><p><strong>scaleDownRules</strong>: the scale-in rule.</p>
+     * <li><p><strong>scaleDownRules</strong>: The rules to scale in the application.</p>
      * </li>
-     * <li><p><strong>step</strong>: the scale-out or scale-in step size. This parameter specifies the maximum number of instances that can be added or removed per unit time.</p>
+     * <li><p><strong>step</strong>: The step size for scaling out or scaling in. This is the maximum number of instances that can be added or removed in a single scaling activity.</p>
      * </li>
-     * <li><p><strong>disabled</strong>: specifies whether to disable the application scale-in. If you set this parameter to true, the application instances are never reduced. This prevents business risks during peak hours.</p>
+     * <li><p><strong>disabled</strong>: Specifies whether to prevent the application from scaling in. If set to <code>true</code>, the number of application instances is never reduced. This can prevent business risks caused by scaling in during peak hours.</p>
      * <ul>
-     * <li><strong>true</strong>: disables the application scale-in.</li>
-     * <li><strong>false</strong>: enables the application scale-in. Default value: false.</li>
+     * <li><p><strong>true</strong>: Scale-in is disabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Scale-in is enabled. This is the default value.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p><strong>stabilizationWindowSeconds</strong>: the cooldown period during which the system is stable and does not perform scale-out or scale-in operations. Valid values: 0 to 3600. Unit: seconds. Default value: 0.</p>
+     * <li><p><strong>stabilizationWindowSeconds</strong>: The cooldown period for scaling out or scaling in, in seconds. Valid values: 0 to 3600. The default value is 0.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p> NoteYou can specify one or more metrics as the trigger conditions of the auto scaling policy. If one of the values of the specified metrics is greater than or equal to the specified limit, the application is scaled out. The number of instances after the scale-out operation is less than or equal to the value of the specified maximum application instances. If the values of all specified metrics are less than the limits, the application is scaled in. The number of instances after the scale-in operation is greater than or equal to the value of the specified minimum application instances.</p>
+     * <p>You can configure one or more metrics. If you configure multiple metrics, the application scales out when any of the metrics meets or exceeds its target value, up to the specified maximum number of instances. The application scales in only when all metrics are below their target values, down to the specified minimum number of instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;maxReplicas&quot;:3,&quot;minReplicas&quot;:1,&quot;metrics&quot;:[{&quot;metricType&quot;:&quot;CPU&quot;,&quot;metricTargetAverageUtilization&quot;:20},{&quot;metricType&quot;:&quot;MEMORY&quot;,&quot;metricTargetAverageUtilization&quot;:30},{&quot;metricType&quot;:&quot;tcpActiveConn&quot;,&quot;metricTargetAverageUtilization&quot;:20},{&quot;metricType&quot;:&quot;SLB_QPS&quot;,&quot;MetricTargetAverageUtilization&quot;:25,&quot;SlbProject&quot;:&quot;aliyun-fc-cn-hangzhou-d95881d9-5d3c-5f26-a6b8-<strong><strong><strong><strong><strong><strong>&quot;,&quot;SlbLogstore&quot;:&quot;function-log&quot;,&quot;Vport&quot;:&quot;80&quot;},{&quot;metricType&quot;:&quot;SLB_RT&quot;,&quot;MetricTargetAverageUtilization&quot;:35,&quot;SlbProject&quot;:&quot;aliyun-fc-cn-hangzhou-d95881d9-5d3c-5f26-a6b8-</strong></strong></strong></strong></strong></strong>&quot;,&quot;SlbLogstore&quot;:&quot;function-log&quot;,&quot;Vport&quot;:&quot;80&quot;}],&quot;scaleUpRules&quot;:{&quot;step&quot;:&quot;100&quot;,&quot;disabled&quot;:false,&quot;stabilizationWindowSeconds&quot;:0},&quot;scaleDownRules&quot;:{&quot;step&quot;:&quot;100&quot;,&quot;disabled&quot;:false,&quot;stabilizationWindowSeconds&quot;:300}}</p>
+     * <p>{&quot;maxReplicas&quot;:3,&quot;minReplicas&quot;:1,&quot;metrics&quot;:[{&quot;metricType&quot;:&quot;CPU&quot;,&quot;metricTargetAverageUtilization&quot;:20},{&quot;metricType&quot;:&quot;MEMORY&quot;,&quot;metricTargetAverageUtilization&quot;:30},{&quot;metricType&quot;:&quot;tcpActiveConn&quot;,&quot;metricTargetAverageUtilization&quot;:20},{&quot;metricType&quot;:&quot;SLB_QPS&quot;,&quot;MetricTargetAverageUtilization&quot;:25,&quot;slbId&quot;:&quot;lb-xxx&quot;,&quot;slbProject&quot;:&quot;aliyun-fc-cn-hangzhou-d95881d9-5d3c-5f26-a6b8-<strong><strong><strong><strong><strong><strong>&quot;,&quot;slbLogstore&quot;:&quot;function-log&quot;,&quot;vport&quot;:&quot;80&quot;},{&quot;metricType&quot;:&quot;SLB_RT&quot;,&quot;MetricTargetAverageUtilization&quot;:35,&quot;slbId&quot;:&quot;lb-xxx&quot;,&quot;slbProject&quot;:&quot;aliyun-fc-cn-hangzhou-d95881d9-5d3c-5f26-a6b8-</strong></strong></strong></strong></strong></strong>&quot;,&quot;slbLogstore&quot;:&quot;function-log&quot;,&quot;vport&quot;:&quot;80&quot;}],&quot;scaleUpRules&quot;:{&quot;step&quot;:&quot;100&quot;,&quot;disabled&quot;:false,&quot;stabilizationWindowSeconds&quot;:0},&quot;scaleDownRules&quot;:{&quot;step&quot;:&quot;100&quot;,&quot;disabled&quot;:false,&quot;stabilizationWindowSeconds&quot;:300}}</p>
      */
     @NameInMap("ScalingRuleMetric")
     public String scalingRuleMetric;
 
     /**
-     * <p>The name of the auto scaling policy. The name must be unique in an application, and can be up to 32 characters in length. It must start with a lowercase letter and can contain only lowercase letters, digits, and hyphens (-).</p>
+     * <p>The name of the auto scaling policy. The name must be unique within an application, start with a lowercase letter, and contain only lowercase letters, digits, and hyphens (-). The name can be up to 32 characters long.</p>
      * <blockquote>
-     * <p> You cannot change the names of created auto scaling policies.</p>
+     * <p>The policy name cannot be changed after creation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -143,41 +172,51 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public String scalingRuleName;
 
     /**
-     * <p>The configuration of the scheduled elasticity policy. This parameter is required if you select Scheduled Scaling Policy or Use SDK to Set.</p>
-     * <p>The following table describes the parameters.</p>
+     * <p>Configurations for the scheduled auto scaling policy. This parameter is required if <code>ScalingRuleType</code> is set to <code>timing</code> or if you use an SDK.</p>
+     * <p>The parameter is a JSON string that contains the following fields:</p>
      * <ul>
-     * <li><p><strong>beginDate</strong> and <strong>endDate</strong>: <strong>beginDate</strong> is the start date and <strong>endDate</strong> is the end date, which is used to configure the timing Auto Scaling policy. Valid values:</p>
+     * <li><p><strong>beginDate</strong> and <strong>endDate</strong>: The start and end dates of the policy\&quot;s effective period.</p>
      * <ul>
-     * <li>If both values are <strong>null</strong>, long-term execution is performed. This is the default value.</li>
-     * <li>If the value is a specific date, for example, the <strong>beginDate</strong> is <strong>2021-03-25</strong> and the <strong>endDate</strong> is <strong>2021-04-25</strong>, the validity period is one month.</li>
-     * </ul>
+     * <li><p>If both fields are set to <code>null</code> (default), the policy is effective indefinitely.</p>
      * </li>
-     * <li><p><strong>period</strong>: The period during which the timed Auto Scaling policy is executed. Valid values:</p>
-     * <ul>
-     * <li><p><em><em>\</em> \</em> \***: The scheduled policy is executed at a specified time every day.</p>
-     * </li>
-     * <li><p><em><em>\</em> \</em> Fri,Mon**: The scheduled policy is executed at the specified time on the specified number of days per week. You can select multiple time zones. The time zone is GMT +8. Valid values:</p>
-     * <ul>
-     * <li><strong>Sun</strong>: Sunday</li>
-     * <li><strong>Mon</strong>: Monday</li>
-     * <li><strong>Tue</strong>: Tuesday</li>
-     * <li><strong>Wed</strong>: Wednesday</li>
-     * <li><strong>Thu</strong>: Thursday</li>
-     * <li><strong>Fri</strong>: Friday</li>
-     * <li><strong>Sat</strong>: Saturday</li>
-     * </ul>
-     * </li>
-     * <li><p><em><em>1,2,3,28,31 \</em> \</em>**: The scheduled auto scaling policy is executed at a specified point in time on one or more dates of each month. Valid values: 1 to 31. If a month does not have the 31st day, the auto scaling policy is executed on the specified days other than the 31st day.</p>
+     * <li><p>If you specify a date range, for example, <code>beginDate</code> is <code>2021-03-25</code> and <code>endDate</code> is <code>2021-04-25</code>, the policy is effective for one month.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p><strong>schedules</strong>: the points in time at which the scheduled auto scaling policy is triggered and the number of application instances that are retained during the time periods. You can specify up to 20 points in time. The following list describes the involved parameters:</p>
+     * <li><p><strong>period</strong>: The recurrence rule for the scheduled auto scaling policy.</p>
      * <ul>
-     * <li><p><strong>atTime</strong>: the point in time at which the policy is triggered. <strong>targetReplicas</strong>: the number of application instances that you want to retain during the corresponding time period or the minimum number of available instances required for each deployment.****</p>
+     * <li><p><em><em>\</em> \</em> \***: The policy is executed at a specified time every day.</p>
      * </li>
-     * <li><p><strong>Valid values: 1 to 50.</strong> Valid values: 1 to 50.</p>
-     * <p>**</p>
-     * <p><strong>Note</strong>Make sure that at least one instance is available during the application deployment and rollback to prevent your business from being interrupted. If you set the value to <strong>0</strong>, business interruptions occur when the application is updated. If you set the value to <strong>0</strong>, business interruptions occur when the application is updated.</p>
+     * <li><p><em><em>\</em> \</em> Fri,Mon**: The policy is executed at a specified time on specific days of the week. You can select multiple days. The time is in the GMT+8 time zone. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Sun</strong>: Sunday</p>
+     * </li>
+     * <li><p><strong>Mon</strong>: Monday</p>
+     * </li>
+     * <li><p><strong>Tue</strong>: Tuesday</p>
+     * </li>
+     * <li><p><strong>Wed</strong>: Wednesday</p>
+     * </li>
+     * <li><p><strong>Thu</strong>: Thursday</p>
+     * </li>
+     * <li><p><strong>Fri</strong>: Friday</p>
+     * </li>
+     * <li><p><strong>Sat</strong>: Saturday</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p><em><em>1,2,3,28,31 \</em> \</em>**: The policy is executed at a specified time on specific days of a month. You can select multiple days. The value can be from 1 to 31. If a month does not have the specified day, for example, the 31st, the policy is not executed on that day for that month.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p><strong>schedules</strong>: The trigger times and the corresponding target number of instances. You can specify a maximum of 20 schedules. The parameter includes the following fields:</p>
+     * <ul>
+     * <li><p><strong>atTime</strong>: The trigger time in <code>HH:mm</code> format. For example, <code>08:00</code>.</p>
+     * </li>
+     * <li><p><strong>targetReplicas</strong>: The target number of application instances. Valid values: 1 to 50.</p>
+     * <blockquote>
+     * <p>During a rolling deployment, we recommend that you set the minimum number of ready instances to 1 or more to prevent service interruptions. If you set the minimum number of ready instances to <code>0</code>, your application will be interrupted during an update.</p>
+     * </blockquote>
      * </li>
      * </ul>
      * </li>
@@ -190,22 +229,25 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public String scalingRuleTimer;
 
     /**
-     * <p>The type of the auto scaling policy. Take note of the following rules:</p>
+     * <p>The type of the auto scaling policy. Valid values:</p>
      * <ul>
-     * <li><strong>timing</strong>: a scheduled auto scaling policy.</li>
-     * <li><strong>metric</strong>: a metric-based auto scaling policy.</li>
-     * <li><strong>mix</strong>: a hybrid auto scaling policy.</li>
+     * <li><p><strong>timing</strong>: scheduled auto scaling.</p>
+     * </li>
+     * <li><p><strong>metric</strong>: metric-based auto scaling.</p>
+     * </li>
+     * <li><p><strong>mix</strong>: mixed auto scaling.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you set this parameter to timing, the ScalingRuleTimer parameter must be specified.</p>
+     * <li><p>If you set this parameter to <code>timing</code>, the <code>ScalingRuleTimer</code> parameter is required.</p>
      * </li>
-     * <li><p>If you set this parameter to metric, the ScalingRuleMetric parameter must be specified.</p>
+     * <li><p>If you set this parameter to <code>metric</code>, the <code>ScalingRuleMetric</code> parameter is required.</p>
      * </li>
-     * <li><p>If you set this parameter to mix, the ScalingRuleMetric parameter must be specified. You can specify the ScalingRuleTimer parameter based on your business requirements.</p>
+     * <li><p>If you set this parameter to <code>mix</code>, the <code>ScalingRuleMetric</code> parameter is required. You can also configure the <code>ScalingRuleTimer</code> parameter as needed.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

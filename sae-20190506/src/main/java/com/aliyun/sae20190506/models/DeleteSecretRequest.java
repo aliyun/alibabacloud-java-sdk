@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSecretRequest extends TeaModel {
     /**
-     * <p>The ID of the namespace in which the Secret resides. By default, the namespace ID is the same as the region ID.</p>
+     * <p>The ID of the namespace. If the secret is in the default namespace, you need to specify only the region ID, for example, <code>cn-beijing</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteSecretRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The ID of the Secret to be deleted. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to view the Secret IDs.</p>
+     * <p>The ID of the secret to delete. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

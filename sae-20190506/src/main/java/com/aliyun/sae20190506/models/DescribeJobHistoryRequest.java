@@ -35,10 +35,14 @@ public class DescribeJobHistoryRequest extends TeaModel {
     /**
      * <p>The status of the job. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The job is not executed.</li>
-     * <li><strong>1</strong>: The job is executed.</li>
-     * <li><strong>2</strong>: The job fails to be executed.</li>
-     * <li><strong>3</strong>: The job is being executed.</li>
+     * <li><p><strong>0</strong>: The job is not executed.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The job is executed.</p>
+     * </li>
+     * <li><p><strong>2</strong>: The job fails to be executed.</p>
+     * </li>
+     * <li><p><strong>3</strong>: The job is being executed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

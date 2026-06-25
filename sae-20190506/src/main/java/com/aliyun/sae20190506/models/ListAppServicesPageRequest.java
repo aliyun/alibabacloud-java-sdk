@@ -15,7 +15,7 @@ public class ListAppServicesPageRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListAppServicesPageRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Valid values: 0 to 9999.</p>
+     * <p>The page size. The value must be an integer from 0 to 9,999.</p>
      * 
      * <strong>example:</strong>
      * <p>9999</p>
@@ -35,8 +35,10 @@ public class ListAppServicesPageRequest extends TeaModel {
     /**
      * <p>The service type. Valid values:</p>
      * <ul>
-     * <li><strong>dubbo</strong></li>
-     * <li><strong>springCloud</strong></li>
+     * <li><p><strong>Dubbo</strong></p>
+     * </li>
+     * <li><p><strong>Spring Cloud</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

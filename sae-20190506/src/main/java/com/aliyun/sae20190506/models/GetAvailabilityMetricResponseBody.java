@@ -42,7 +42,7 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3A92C4EA-4C53-5A1C-8AEB-F2DB11982D5F</p>
+     * <p>3A92C4EA-4C53-5A1C-8AEB-F2DB1198****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

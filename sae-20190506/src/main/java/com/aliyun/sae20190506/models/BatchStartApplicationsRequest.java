@@ -8,7 +8,7 @@ public class BatchStartApplicationsRequest extends TeaModel {
      * <p>The IDs of the applications that you want to start. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</p>
+     * <p>00893b3a-0e24-45ed-be0c-1f20e07b****</p>
      */
     @NameInMap("AppIds")
     public String appIds;

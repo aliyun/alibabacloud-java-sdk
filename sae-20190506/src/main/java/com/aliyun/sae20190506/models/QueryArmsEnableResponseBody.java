@@ -22,12 +22,11 @@ public class QueryArmsEnableResponseBody extends TeaModel {
     /**
      * <p>The error code. Value description:</p>
      * <ul>
-     * <li>If the request was successful, this field is not returned.</li>
-     * <li>For more information, see the <strong>Error codes</strong> section of this topic.</li>
+     * <li><p>If the request was successful, this field is not returned.</p>
+     * </li>
+     * <li><p>For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>InvalidApplication.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -35,8 +34,10 @@ public class QueryArmsEnableResponseBody extends TeaModel {
     /**
      * <p>The additional information. Value description:</p>
      * <ul>
-     * <li>If the request was successful, <strong>success</strong> is returned.</li>
-     * <li>If the request failed, an error code is returned.</li>
+     * <li><p>If the request was successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request failed, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,8 +58,10 @@ public class QueryArmsEnableResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

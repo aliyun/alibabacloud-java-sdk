@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeleteConfigMapResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code returned for the request.</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: success</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: redirection</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: client error</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: server error</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class DeleteConfigMapResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The operation result.</p>
      */
     @NameInMap("Data")
     public DeleteConfigMapResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>Not returned if the request is successful.</p>
+     * </li>
+     * <li><p>Returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The response message.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +66,12 @@ public class DeleteConfigMapResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the ConfigMap was deleted. Valid values:</p>
+     * <p>Indicates whether the deletion succeeded. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The ConfigMap was deleted.</li>
-     * <li><strong>false</strong>: The ConfigMap failed to be deleted.</li>
+     * <li><p><strong>true</strong>: The deletion was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The deletion failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class DeleteConfigMapResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID for querying request details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -142,7 +152,7 @@ public class DeleteConfigMapResponseBody extends TeaModel {
 
     public static class DeleteConfigMapResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the deleted ConfigMap.</p>
+         * <p>The ID of the deleted ConfigMap instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

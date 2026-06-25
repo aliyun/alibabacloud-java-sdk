@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppVersionsRequest extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

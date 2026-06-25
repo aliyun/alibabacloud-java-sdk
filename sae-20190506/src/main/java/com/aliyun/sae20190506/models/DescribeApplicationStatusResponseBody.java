@@ -7,10 +7,14 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request was invalid.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationStatusResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>If the request is successful, this parameter is not returned.</p>
+     * </li>
+     * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The response message.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>If the call is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the call fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +66,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the status of the application was queried. Valid values:</p>
+     * <p>Indicates whether the application status was obtained. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The status was queried.</li>
-     * <li><strong>false</strong>: The status failed to be queried.</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID that is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -142,7 +152,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
 
     public static class DescribeApplicationStatusResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
@@ -151,10 +161,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>Indicates whether Application Real-Time Monitoring Service (ARMS) advanced monitoring is enabled. Valid values:</p>
+         * <p>Indicates whether ARMS Advanced Edition is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +185,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         public String armsApmInfo;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The time when the application was created. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1563373372746</p>
@@ -184,9 +196,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         /**
          * <p>The current status of the application. Valid values:</p>
          * <ul>
-         * <li><strong>RUNNING</strong></li>
-         * <li><strong>STOPPED</strong></li>
-         * <li><strong>UNKNOWN</strong></li>
+         * <li><p><strong>RUNNING</strong>: The application is running.</p>
+         * </li>
+         * <li><p><strong>STOPPED</strong>: The application is stopped.</p>
+         * </li>
+         * <li><p><strong>UNKNOWN</strong>: The application status is unknown.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,10 +211,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
-         * <p>Indicates whether SAE agent is enabled.</p>
+         * <p>Indicates whether the SAE agent is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,7 +235,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         public Long fileSizeLimit;
 
         /**
-         * <p>The ID of the latest change order that is executed. If no change orders are executed or if change orders expire, this parameter is left empty.</p>
+         * <p>The ID of the most recently executed change order. This parameter is empty if no change order was executed or if the information about the change order has expired.</p>
          * 
          * <strong>example:</strong>
          * <p>1ccc2339-fc19-49aa-bda0-1e7b8497****</p>
@@ -227,10 +244,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         public String lastChangeOrderId;
 
         /**
-         * <p>Indicates whether the latest change order is being executed. Valid values:</p>
+         * <p>Indicates whether the most recent change order is being executed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,18 +259,28 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         public Boolean lastChangeOrderRunning;
 
         /**
-         * <p>The status of the latest change order. Valid values:</p>
+         * <p>The status of the most recent change order. Valid values:</p>
          * <ul>
-         * <li><strong>READY</strong>: The change order is ready.</li>
-         * <li><strong>RUNNING</strong>: The change order is being executed.</li>
-         * <li><strong>SUCCESS</strong>: The change order was executed.</li>
-         * <li><strong>FAIL</strong>: The change order failed to be executed.</li>
-         * <li><strong>ABORT</strong>: The change order is stopped.</li>
-         * <li><strong>WAIT_BATCH_CONFIRM</strong>: The change order is pending execution. You must manually confirm the release batch.</li>
-         * <li><strong>AUTO_BATCH_WAIT</strong>: The change order is pending execution. SAE will automatically confirm the release batch.</li>
-         * <li><strong>SYSTEM_FAIL</strong>: A system exception occurred.</li>
-         * <li><strong>WAIT_APPROVAL</strong>: The change order is pending approval.</li>
-         * <li><strong>APPROVED</strong>: The change order is approved and is pending execution.</li>
+         * <li><p><strong>READY</strong>: The change order is ready.</p>
+         * </li>
+         * <li><p><strong>RUNNING</strong>: The change order is being executed.</p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong>: The change order was successful.</p>
+         * </li>
+         * <li><p><strong>FAIL</strong>: The change order failed.</p>
+         * </li>
+         * <li><p><strong>ABORT</strong>: The change order was aborted.</p>
+         * </li>
+         * <li><p><strong>WAIT_BATCH_CONFIRM</strong>: The change order is waiting for manual confirmation for the next batch.</p>
+         * </li>
+         * <li><p><strong>AUTO_BATCH_WAIT</strong>: The change order is in a waiting state for an automatic batch.</p>
+         * </li>
+         * <li><p><strong>SYSTEM_FAIL</strong>: A system error occurred.</p>
+         * </li>
+         * <li><p><strong>WAIT_APPROVAL</strong>: The change order is pending approval.</p>
+         * </li>
+         * <li><p><strong>APPROVED</strong>: The change order is approved and is pending execution.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,10 +299,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         public Integer runningInstances;
 
         /**
-         * <p>The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:</p>
+         * <p>The substatus of the change order. This parameter is used to determine whether an exception occurs during the release process. Valid values:</p>
          * <ul>
-         * <li><strong>NORMAL</strong></li>
-         * <li><strong>RUNNING_BUT_HAS_ERROR</strong>: For example, if an error occurs during a phased release, you must manually roll back the application. In this case, the change order cannot be completed because the change order is still being executed.</li>
+         * <li><p><strong>NORMAL</strong>: The release is normal.</p>
+         * </li>
+         * <li><p><strong>RUNNING_BUT_HAS_ERROR</strong>: The release is abnormal. For example, if an error occurs during a phased release, you must manually roll back the release. In this case, the change order cannot be completed and the status of the change order remains <strong>RUNNING</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

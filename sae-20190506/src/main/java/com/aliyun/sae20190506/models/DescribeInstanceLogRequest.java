@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceLogRequest extends TeaModel {
     /**
-     * <p>The ID of the sidecar container. You can call the <a href="https://help.aliyun.com/document_detail/2834847.html">DescribeApplicationInstances</a> to obtain the ID.</p>
+     * <p>The ID of the sidecar container. Call the <a href="https://help.aliyun.com/document_detail/2834847.html">ListApplicationInstances</a> operation to obtain this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sidecar-test-01</p>
@@ -23,6 +23,12 @@ public class DescribeInstanceLogRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to view the log of the instance from before its last restart. Note: This parameter is active only if the instance was restarted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Previous")
     public String previous;
 

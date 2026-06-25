@@ -4,20 +4,42 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigurationPriceRequest extends TeaModel {
+    /**
+     * <p>The BestEffort policy. Valid values:</p>
+     * <ul>
+     * <li><p>besteffort: BestEffort</p>
+     * </li>
+     * <li><p>try-besteffort: BestEffort preferred</p>
+     * </li>
+     * <li><p>default: default</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("BestEffortType")
     public String bestEffortType;
 
     /**
-     * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+     * <p>The number of CPU cores required for each instance. Unit: millicores. This value cannot be 0. Only the following defined specifications are supported:</p>
      * <ul>
-     * <li><strong>500</strong></li>
-     * <li><strong>1000</strong></li>
-     * <li><strong>2000</strong></li>
-     * <li><strong>4000</strong></li>
-     * <li><strong>8000</strong></li>
-     * <li><strong>12000</strong></li>
-     * <li><strong>16000</strong></li>
-     * <li><strong>32000</strong></li>
+     * <li><p><strong>500</strong></p>
+     * </li>
+     * <li><p><strong>1000</strong></p>
+     * </li>
+     * <li><p><strong>2000</strong></p>
+     * </li>
+     * <li><p><strong>4000</strong></p>
+     * </li>
+     * <li><p><strong>8000</strong></p>
+     * </li>
+     * <li><p><strong>12000</strong></p>
+     * </li>
+     * <li><p><strong>16000</strong></p>
+     * </li>
+     * <li><p><strong>32000</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,18 +56,28 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     public String gpuPpu810e;
 
     /**
-     * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+     * <p>The amount of memory required for each instance. Unit: MB. This value cannot be 0. The memory size must correspond to the CPU specification. Only the following defined specifications are supported:</p>
      * <ul>
-     * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-     * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
-     * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-     * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8,000.</li>
-     * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-     * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-     * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
-     * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-     * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-     * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+     * <li><p><strong>1024</strong>: Corresponds to 500 millicores and 1,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>2048</strong>: Corresponds to 500, 1,000, and 2,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>4096</strong>: Corresponds to 1,000, 2,000, and 4,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>8192</strong>: Corresponds to 2,000, 4,000, and 8,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>12288</strong>: Corresponds to 12,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>16384</strong>: Corresponds to 4,000, 8,000, and 16,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>24576</strong>: Corresponds to 12,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>32768</strong>: Corresponds to 16,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>65536</strong>: Corresponds to 8,000, 16,000, and 32,000 millicores of CPU.</p>
+     * </li>
+     * <li><p><strong>131072</strong>: Corresponds to 32,000 millicores of CPU.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,17 +87,39 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The application version. Valid values:</p>
+     * <ul>
+     * <li><p>lite: Lightweight Edition</p>
+     * </li>
+     * <li><p>std: Standard Edition</p>
+     * </li>
+     * <li><p>pro: Professional Edition</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>std</p>
+     */
     @NameInMap("NewSaeVersion")
     public String newSaeVersion;
 
+    /**
+     * <p>The resource type. Valid values: NULL (default), default, and haiguang (Haiguang server).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>Scenarios:</p>
+     * <p>The application scenario. Valid values:</p>
      * <ul>
-     * <li>Web</li>
-     * <li>micro_service</li>
+     * <li><p>web</p>
+     * </li>
+     * <li><p>micro_service</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

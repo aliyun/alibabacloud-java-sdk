@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Container extends TeaModel {
     /**
-     * <p>The startup parameters of the container.</p>
+     * <p>Container startup arguments.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</p>
@@ -14,7 +14,7 @@ public class Container extends TeaModel {
     public String args;
 
     /**
-     * <p>The startup command of the container.</p>
+     * <p>Container start command.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;/bin/sh&quot;]</p>
@@ -23,13 +23,13 @@ public class Container extends TeaModel {
     public String command;
 
     /**
-     * <p>The container environment variables.</p>
+     * <p>Container environment variables.</p>
      */
     @NameInMap("EnvironmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
     /**
-     * <p>The container image.</p>
+     * <p>Container image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,19 +39,19 @@ public class Container extends TeaModel {
     public String image;
 
     /**
-     * <p>The configuration of the image repository.</p>
+     * <p>Image repository configuration.</p>
      */
     @NameInMap("ImageRegistryConfig")
     public ImageRegistryConfig imageRegistryConfig;
 
     /**
-     * <p>The configuration for collecting monitoring records.</p>
+     * <p>Monitoring collection configuration.</p>
      */
     @NameInMap("MetricsCollectConfig")
     public MetricsCollectConfig metricsCollectConfig;
 
     /**
-     * <p>The port of the container.</p>
+     * <p>Container port.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -60,7 +60,7 @@ public class Container extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The number of concurrent requests on a single instance.</p>
+     * <p>Maximum concurrent requests per instance.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -69,7 +69,7 @@ public class Container extends TeaModel {
     public Integer requestConcurrency;
 
     /**
-     * <p>The timeout period of the container request.</p>
+     * <p>Container request timeout, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -78,32 +78,32 @@ public class Container extends TeaModel {
     public Integer requestTimeout;
 
     /**
-     * <p>The configurations of the container resources.</p>
+     * <p>Container resource configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public ContainerResources resources;
 
     /**
-     * <p>The configuration of container log collection.</p>
+     * <p>Container log collection configuration.</p>
      */
     @NameInMap("SLSCollectConfigs")
     public SLSCollectConfigs SLSCollectConfigs;
 
     /**
-     * <p>The container startup check configuration.</p>
+     * <p>Container startup probe configuration.</p>
      */
     @NameInMap("StartupProbe")
     public StartupProbe startupProbe;
 
     /**
-     * <p>The container NAS configuration.</p>
+     * <p>Container NAS configuration.</p>
      */
     @NameInMap("WebNASConfig")
     public WebNASConfig webNASConfig;
 
     /**
-     * <p>The container OSS mount configuration.</p>
+     * <p>Container OSS mount configuration.</p>
      */
     @NameInMap("WebOSSConfig")
     public WebOSSConfig webOSSConfig;

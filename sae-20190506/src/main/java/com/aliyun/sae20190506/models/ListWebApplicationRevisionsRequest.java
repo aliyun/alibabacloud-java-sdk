@@ -27,7 +27,7 @@ public class ListWebApplicationRevisionsRequest extends TeaModel {
      * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
-     * <p>A2RN</p>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespacesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request was invalid.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server-side error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information of namespaces.</p>
+     * <p>The details of the namespaces.</p>
      */
     @NameInMap("Data")
     public DescribeNamespacesResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>This parameter is returned only if the request fails.</p>
+     * </li>
+     * <li><p>For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The message returned by the system.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>Returns <strong>success</strong> if the request is successful.</p>
+     * </li>
+     * <li><p>Returns a specific error message if the request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +66,12 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the list of namespaces was queried. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li><strong>true</strong>: The list was queried.</li>
-     * <li><strong>false</strong>: The list failed to be queried.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID that can be used to query the details of a call.</p>
      * 
      * <strong>example:</strong>
      * <p>0a981dd515966966104121683d****</p>
@@ -142,7 +152,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyDataNamespaces extends TeaModel {
         /**
-         * <p>The ACM-specific AccessKey ID. It can be used to manage data in an Application Configuration Management (ACM) namespace. For more information, see <a href="https://help.aliyun.com/document_detail/68941.html">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</p>
+         * <p>The access key ID for Application Configuration Management (ACM), used to manage data in an ACM namespace. For more information, see <a href="https://help.aliyun.com/document_detail/68941.html">Differences between an Alibaba Cloud access key and an ACM-specific access key</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>b34dbe3315c64f9f99b58ea447ec****</p>
@@ -151,7 +161,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The endpoint of the host.</p>
+         * <p>The service endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>addr-bj-internal.edas.aliyun.com</p>
@@ -178,7 +188,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public String namespaceDescription;
 
         /**
-         * <p>The ID of the namespace. You cannot query, modify, or delete the default namespace.</p>
+         * <p>The namespace ID. The default namespace cannot be queried, modified, or deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -196,7 +206,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region. For example, \&quot;cn-beijing\&quot; indicates China (Beijing).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -205,7 +215,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ACM-specific AccessKey secret. It can be used to manage data in an ACM namespace. For more information, see <a href="https://help.aliyun.com/document_detail/68941.html">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</p>
+         * <p>The secret access key for Application Configuration Management (ACM), used to manage data in an ACM namespace. For more information, see <a href="https://help.aliyun.com/document_detail/68941.html">Differences between an Alibaba Cloud access key and an ACM-specific access key</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>G/w6sseK7+nb3S6HBmANDBMD****</p>
@@ -303,7 +313,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyData extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -312,13 +322,13 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The namespaces.</p>
+         * <p>The list of namespaces.</p>
          */
         @NameInMap("Namespaces")
         public java.util.List<DescribeNamespacesResponseBodyDataNamespaces> namespaces;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

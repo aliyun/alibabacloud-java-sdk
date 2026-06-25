@@ -42,7 +42,7 @@ public class GetScaleAppMetricResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
+     * <p>3B763F98-0BA2-5C23-B6B8-558568D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

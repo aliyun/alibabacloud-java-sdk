@@ -5,26 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the baseline application.</p>
+     * <p>The IDs of the baseline applications.</p>
      */
     @NameInMap("AppIds")
     public String appIdsShrink;
 
     /**
-     * <p>The unique ID of the corresponding gateway.</p>
+     * <p>The unique ID of the gateway.</p>
      * 
      * <strong>example:</strong>
-     * <p>mse_ingresspost-cn-axc49******</p>
+     * <p>gw-ea43f648ac46485aa8c894ba1b******</p>
      */
     @NameInMap("EntryAppId")
     public String entryAppId;
 
     /**
-     * <p>The application entry type (gateway type).</p>
+     * <p>The type of the gateway that acts as the application\&quot;s entry point.</p>
      * <ul>
-     * <li><strong>apig:</strong> cloud-native API Gateway</li>
-     * <li><strong>mse:</strong> Java Services Gateway</li>
-     * <li><strong>mse-gw:</strong> MSE cloud-native Gateway</li>
+     * <li><p><strong>apig:</strong> cloud-native API gateway</p>
+     * </li>
+     * <li><p><strong>mse:</strong> java service gateway</p>
+     * </li>
+     * <li><p><strong>mse-gw:</strong> MSE Cloud Native Gateway</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,16 +37,16 @@ public class CreateOrUpdateSwimmingLaneGroupShrinkRequest extends TeaModel {
     public String entryAppType;
 
     /**
-     * <p>The ID of the lane group. This is required when you update a lane group.</p>
+     * <p>The ID of the swimming lane group. This parameter is required when you update a swimming lane group.</p>
      * 
      * <strong>example:</strong>
-     * <p>2047</p>
+     * <p>110272</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
-     * <p>The name of the lane group.</p>
+     * <p>The name of the swimming lane group.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-test</p>
@@ -52,7 +55,7 @@ public class CreateOrUpdateSwimmingLaneGroupShrinkRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of a namespace.</p>
+     * <p>The ID of the namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
@@ -61,7 +64,7 @@ public class CreateOrUpdateSwimmingLaneGroupShrinkRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The end-to-end grayscale version. Valid values: 0 and 2 (recommended).</p>
+     * <p>The version of the end-to-end canary release. Valid values: 0 and 2. The value 2 is recommended.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -7,10 +7,14 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the call was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the call failed.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,29 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The data returned by the request.</p>
      */
     @NameInMap("Data")
     public ListNamespacedConfigMapsResponseBodyData data;
 
     /**
-     * <p>The returned error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li></li>
+     * <li><p>This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned information. Valid values:</p>
+     * <p>The response message. Valid values:</p>
      * <ul>
-     * <li>If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>If the call fails, an error code is returned.</li>
+     * <li><p>Returns <strong>success</strong> if the request is successful.</p>
+     * </li>
+     * <li><p>Returns an error message if the request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +56,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,10 +65,12 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the ConfigMap instances were obtained. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The instances were obtained.</li>
-     * <li><strong>false</strong>: The instances failed to be obtained.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +80,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID. You can use this ID to trace the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -142,7 +151,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
 
     public static class ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f16b4000-9058-4c22-a49d-49a28f0b****</p>
@@ -151,7 +160,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-app</p>
@@ -193,7 +202,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public Long configMapId;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1593760185111</p>
@@ -202,9 +211,8 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The data of ConfigMap key-value pairs. Format:</p>
-         * <p>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</p>
-         * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configurations</a>.</p>
+         * <p>The key-value pairs of the ConfigMap instance.</p>
+         * <p>For more information about the ConfigMap, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configuration items</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
@@ -222,7 +230,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the ConfigMap instance.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test-name</p>
@@ -231,7 +239,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -240,13 +248,13 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>The application that is associated with the instance.</p>
+         * <p>The associated applications.</p>
          */
         @NameInMap("RelateApps")
         public java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> relateApps;
 
         /**
-         * <p>The time when the instance was last modified.</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1593760185111</p>
@@ -327,7 +335,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
 
     public static class ListNamespacedConfigMapsResponseBodyData extends TeaModel {
         /**
-         * <p>The ConfigMap instances.</p>
+         * <p>The list of ConfigMap instances.</p>
          */
         @NameInMap("ConfigMaps")
         public java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMaps> configMaps;

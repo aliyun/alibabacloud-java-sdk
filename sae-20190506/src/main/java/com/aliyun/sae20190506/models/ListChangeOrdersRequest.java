@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChangeOrdersRequest extends TeaModel {
     /**
-     * <p>1</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,29 @@ public class ListChangeOrdersRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The status of the change order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: Preparing.</p>
+     * </li>
+     * <li><p><strong>1</strong>: In progress.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Succeeded.</p>
+     * </li>
+     * <li><p><strong>3</strong>: Failed.</p>
+     * </li>
+     * <li><p><strong>6</strong>: Stopped.</p>
+     * </li>
+     * <li><p><strong>8</strong>: Paused for manual confirmation.</p>
+     * </li>
+     * <li><p><strong>9</strong>: Paused for automatic confirmation.</p>
+     * </li>
+     * <li><p><strong>10</strong>: Failed due to a system exception.</p>
+     * </li>
+     * <li><p><strong>11</strong>: Pending approval.</p>
+     * </li>
+     * <li><p><strong>12</strong>: Approved and pending execution.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -26,26 +48,46 @@ public class ListChangeOrdersRequest extends TeaModel {
     /**
      * <p>The type of the change order. Valid values:</p>
      * <ul>
-     * <li><strong>CoBindSlb</strong>: associates the Server Load Balancer (SLB) instance with the application.</li>
-     * <li><strong>CoUnbindSlb</strong>: disassociates an SLB instance from the application.</li>
-     * <li><strong>CoCreateApp</strong>: creates the application.</li>
-     * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
-     * <li><strong>CoDeploy</strong>: deploys the application.</li>
-     * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
-     * <li><strong>CoRollback</strong>: rolls back the application.</li>
-     * <li><strong>CoScaleIn</strong>: scales in the application.</li>
-     * <li><strong>CoScaleOut</strong>: scales out the application.</li>
-     * <li><strong>CoStartApplication</strong>: starts the application.</li>
-     * <li><strong>CoStopApplication</strong>: stops the application.</li>
-     * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance type.</li>
-     * <li><strong>CoDeployHistroy</strong>: rolls back the application to an earlier version.</li>
-     * <li><strong>CoBindNas</strong>: associates a network-attached storage (NAS) file system with the application.</li>
-     * <li><strong>CoUnbindNas</strong>: disassociates a NAS file system from the application.</li>
-     * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
-     * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
-     * <li><strong>CoRestartInstances</strong>: restarts the instance.</li>
-     * <li><strong>CoDeleteInstances</strong>: deletes the instance.</li>
-     * <li><strong>CoScaleInAppWithInstances</strong>: reduces the specified number of application instances.</li>
+     * <li><p><strong>CoBindSlb</strong>: Attach an SLB instance.</p>
+     * </li>
+     * <li><p><strong>CoUnbindSlb</strong>: Detach an SLB instance.</p>
+     * </li>
+     * <li><p><strong>CoCreateApp</strong>: Create an application.</p>
+     * </li>
+     * <li><p><strong>CoDeleteApp</strong>: Delete an application.</p>
+     * </li>
+     * <li><p><strong>CoDeploy</strong>: Deploy an application.</p>
+     * </li>
+     * <li><p><strong>CoRestartApplication</strong>: Restart an application.</p>
+     * </li>
+     * <li><p><strong>CoRollback</strong>: Roll back an application.</p>
+     * </li>
+     * <li><p><strong>CoScaleIn</strong>: Scale in an application.</p>
+     * </li>
+     * <li><p><strong>CoScaleOut</strong>: Scale out an application.</p>
+     * </li>
+     * <li><p><strong>CoStartApplication</strong>: Start an application.</p>
+     * </li>
+     * <li><p><strong>CoStopApplication</strong>: Stop an application.</p>
+     * </li>
+     * <li><p><strong>CoRescaleApplicationVertically</strong>: Change the instance type.</p>
+     * </li>
+     * <li><p><strong>CoDeployHistroy</strong>: Roll back to a previous version.</p>
+     * </li>
+     * <li><p><strong>CoBindNas</strong>: Attach a NAS file system.</p>
+     * </li>
+     * <li><p><strong>CoUnbindNas</strong>: Detach a NAS file system.</p>
+     * </li>
+     * <li><p><strong>CoBatchStartApplication</strong>: Batch start applications.</p>
+     * </li>
+     * <li><p><strong>CoBatchStopApplication</strong>: Batch stop applications.</p>
+     * </li>
+     * <li><p><strong>CoRestartInstances</strong>: Restart instances.</p>
+     * </li>
+     * <li><p><strong>CoDeleteInstances</strong>: Delete instances.</p>
+     * </li>
+     * <li><p><strong>CoScaleInAppWithInstances</strong>: Scale in an application by specifying instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +97,7 @@ public class ListChangeOrdersRequest extends TeaModel {
     public String coType;
 
     /**
-     * <p>20</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,7 +106,7 @@ public class ListChangeOrdersRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>CoCreateApp</p>
+     * <p>The keyword for a fuzzy search of change order descriptions. The operation returns only the change orders whose descriptions contain the <strong>keyword</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -72,11 +114,14 @@ public class ListChangeOrdersRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The field by which to sort the results.</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
-     * <p>test</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -84,6 +129,15 @@ public class ListChangeOrdersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The sort order for the field specified by the <strong>OrderBy</strong> parameter. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The results are sorted in ascending order.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The results are sorted in descending order.</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("Reverse")
     public Boolean reverse;
 

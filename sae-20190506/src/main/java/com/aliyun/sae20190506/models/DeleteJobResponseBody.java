@@ -7,10 +7,14 @@ public class DeleteJobResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The call was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The call failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +27,7 @@ public class DeleteJobResponseBody extends TeaModel {
      * <p>The result returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>{msg: &quot;&quot;, code: 200, success: true}</p>
+     * <p>{&quot;msg&quot;: &quot;&quot;,&quot;code&quot;: 200,&quot;success&quot;: true}</p>
      */
     @NameInMap("Data")
     public String data;
@@ -31,12 +35,11 @@ public class DeleteJobResponseBody extends TeaModel {
     /**
      * <p>The error code that is returned. Take note of the following rules:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request is successful.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li><p>The <strong>ErrorCode</strong> parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -44,8 +47,10 @@ public class DeleteJobResponseBody extends TeaModel {
     /**
      * <p>The additional information that is returned. Valid values:</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>success: If the call is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>An error code: If the call fails, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,8 +71,10 @@ public class DeleteJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the application is deleted. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The namespaces were obtained.</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: The namespaces were obtained.</p>
+     * </li>
+     * <li><p><strong>false</strong>: no</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

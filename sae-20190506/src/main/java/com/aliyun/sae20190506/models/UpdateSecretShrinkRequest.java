@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSecretShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
+     * <p>The ID of the namespace where the Secret instance is located. If the instance is in the default namespace, specify only the region ID, such as <code>cn-beijing</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,7 @@ public class UpdateSecretShrinkRequest extends TeaModel {
     public String secretDataShrink;
 
     /**
+     * <p>The ID of the Secret instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

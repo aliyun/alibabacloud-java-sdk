@@ -9,6 +9,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "sae.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "sae.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "sae.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "sae.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "sae.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "sae.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "sae.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "sae.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "sae.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "sae.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "sae.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "sae.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "sae.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "sae.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "sae.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sae", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -75,7 +92,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminate a change order.</p>
+     * <p>This operation stops a change order.</p>
      * 
      * @param request AbortChangeOrderRequest
      * @param headers map
@@ -113,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminate a change order.</p>
+     * <p>This operation stops a change order.</p>
      * 
      * @param request AbortChangeOrderRequest
      * @return AbortChangeOrderResponse
@@ -287,7 +304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a Network Load Balancer (NLB) instance with an application.</p>
+     * <p>Binds a Network Load Balancer (NLB) instance to an application.</p>
      * 
      * @param request BindNlbRequest
      * @param headers map
@@ -337,7 +354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a Network Load Balancer (NLB) instance with an application.</p>
+     * <p>Binds a Network Load Balancer (NLB) instance to an application.</p>
      * 
      * @param request BindNlbRequest
      * @return BindNlbResponse
@@ -472,7 +489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application.</p>
+     * <p>Create an application.</p>
      * 
      * @param tmpReq CreateApplicationRequest
      * @param headers map
@@ -866,7 +883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application.</p>
+     * <p>Create an application.</p>
      * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -879,17 +896,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Precautions</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>You can create up to five auto scaling policies for one application.</li>
-     * <li>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</li>
-     * <li>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</li>
-     * <li>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</li>
-     * <li>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
+     * <li>You can create up to five elasticity policies per application.</li>
+     * <li>For each scheduled elasticity policy, you can create up to 20 trigger points per day.</li>
+     * <li>While an elasticity policy is enabled, do not manually perform operations on the application, such as scaling, deployment, changing specifications, restarting, or stopping. To perform these operations, disable the policy first.</li>
+     * <li>You cannot add or enable an elasticity policy for an application that is undergoing a scale-out, scale-in, deployment (single-batch, phased, or canary), specification change, restart, or stop.</li>
+     * <li>To scale out an application to more than 50 instances, contact SAE technical support to be added to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an auto scaling policy for an application.</p>
+     * <p>Create an application auto scaling policy.</p>
      * 
      * @param request CreateApplicationScalingRuleRequest
      * @param headers map
@@ -955,17 +972,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Precautions</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>You can create up to five auto scaling policies for one application.</li>
-     * <li>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</li>
-     * <li>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</li>
-     * <li>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</li>
-     * <li>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
+     * <li>You can create up to five elasticity policies per application.</li>
+     * <li>For each scheduled elasticity policy, you can create up to 20 trigger points per day.</li>
+     * <li>While an elasticity policy is enabled, do not manually perform operations on the application, such as scaling, deployment, changing specifications, restarting, or stopping. To perform these operations, disable the policy first.</li>
+     * <li>You cannot add or enable an elasticity policy for an application that is undergoing a scale-out, scale-in, deployment (single-batch, phased, or canary), specification change, restart, or stop.</li>
+     * <li>To scale out an application to more than 50 instances, contact SAE technical support to be added to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an auto scaling policy for an application.</p>
+     * <p>Create an application auto scaling policy.</p>
      * 
      * @param request CreateApplicationScalingRuleRequest
      * @return CreateApplicationScalingRuleResponse
@@ -1040,11 +1057,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can configure only one canary release rule for each application.</p>
+     * <p>You can currently configure only one canary rule per application.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a canary release rule for a Spring Cloud or Dubbo application.</p>
+     * <p>Create a canary release rule for a Spring Cloud or Dubbo application.</p>
      * 
      * @param request CreateGreyTagRouteRequest
      * @param headers map
@@ -1099,11 +1116,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can configure only one canary release rule for each application.</p>
+     * <p>You can currently configure only one canary rule per application.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a canary release rule for a Spring Cloud or Dubbo application.</p>
+     * <p>Create a canary release rule for a Spring Cloud or Dubbo application.</p>
      * 
      * @param request CreateGreyTagRouteRequest
      * @return CreateGreyTagRouteResponse
@@ -1116,7 +1133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a routing rule.</p>
+     * <p>Create a routing rule.</p>
      * 
      * @param request CreateIngressRequest
      * @param headers map
@@ -1240,7 +1257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a routing rule.</p>
+     * <p>Create a routing rule.</p>
      * 
      * @param request CreateIngressRequest
      * @return CreateIngressResponse
@@ -1253,7 +1270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a job template.</p>
+     * <p>This operation creates a job template.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -1509,7 +1526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a job template.</p>
+     * <p>This operation creates a job template.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -1522,7 +1539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a namespace.</p>
+     * <p>Creates a namespace.</p>
      * 
      * @param request CreateNamespaceRequest
      * @param headers map
@@ -1572,7 +1589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a namespace.</p>
+     * <p>Creates a namespace.</p>
      * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -1585,7 +1602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a lane.</p>
+     * <p>Create or update a swimlane.</p>
      * 
      * @param tmpReq CreateOrUpdateSwimmingLaneRequest
      * @param headers map
@@ -1661,7 +1678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a lane.</p>
+     * <p>Create or update a swimlane.</p>
      * 
      * @param request CreateOrUpdateSwimmingLaneRequest
      * @return CreateOrUpdateSwimmingLaneResponse
@@ -1674,7 +1691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a lane group.</p>
+     * <p>Creates or updates a swimming lane group.</p>
      * 
      * @param tmpReq CreateOrUpdateSwimmingLaneGroupRequest
      * @param headers map
@@ -1738,7 +1755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a lane group.</p>
+     * <p>Creates or updates a swimming lane group.</p>
      * 
      * @param request CreateOrUpdateSwimmingLaneGroupRequest
      * @return CreateOrUpdateSwimmingLaneGroupResponse
@@ -1971,7 +1988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></p>
+     * <p>Deletes an Auto Scaling policy for an application.</p>
      * 
      * @param request DeleteApplicationScalingRuleRequest
      * @param headers map
@@ -2009,7 +2026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></p>
+     * <p>Deletes an Auto Scaling policy for an application.</p>
      * 
      * @param request DeleteApplicationScalingRuleRequest
      * @return DeleteApplicationScalingRuleResponse
@@ -2022,7 +2039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a ConfigMap.</p>
+     * <p>Deletes a ConfigMap instance.</p>
      * 
      * @param request DeleteConfigMapRequest
      * @param headers map
@@ -2056,7 +2073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a ConfigMap.</p>
+     * <p>Deletes a ConfigMap instance.</p>
      * 
      * @param request DeleteConfigMapRequest
      * @return DeleteConfigMapResponse
@@ -2069,7 +2086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a canary release rule based on the specified rule ID.</p>
+     * <p>Deletes a grey tag route by the specified rule ID.</p>
      * 
      * @param request DeleteGreyTagRouteRequest
      * @param headers map
@@ -2103,7 +2120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a canary release rule based on the specified rule ID.</p>
+     * <p>Deletes a grey tag route by the specified rule ID.</p>
      * 
      * @param request DeleteGreyTagRouteRequest
      * @return DeleteGreyTagRouteResponse
@@ -2167,7 +2184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a routing rule.</p>
+     * <p>Deletes an ingress instance.</p>
      * 
      * @param request DeleteIngressRequest
      * @param headers map
@@ -2201,7 +2218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a routing rule.</p>
+     * <p>Deletes an ingress instance.</p>
      * 
      * @param request DeleteIngressRequest
      * @return DeleteIngressResponse
@@ -2214,7 +2231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an application instance.</p>
+     * <p>Deletes one or more application instances.</p>
      * 
      * @param request DeleteInstancesRequest
      * @param headers map
@@ -2252,7 +2269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an application instance.</p>
+     * <p>Deletes one or more application instances.</p>
      * 
      * @param request DeleteInstancesRequest
      * @return DeleteInstancesResponse
@@ -2312,7 +2329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a namespace.</p>
+     * <p>Deletes a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @param headers map
@@ -2350,7 +2367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a namespace.</p>
+     * <p>Deletes a namespace.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
@@ -2363,7 +2380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Secret.</p>
+     * <p>Deletes a secret.</p>
      * 
      * @param request DeleteSecretRequest
      * @param headers map
@@ -2401,7 +2418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Secret.</p>
+     * <p>Deletes a secret.</p>
      * 
      * @param request DeleteSecretRequest
      * @return DeleteSecretResponse
@@ -2414,7 +2431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a lane group.</p>
+     * <p>Deletes a swimming lane group.</p>
      * 
      * @param request DeleteSwimmingLaneGroupRequest
      * @param headers map
@@ -2452,7 +2469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a lane group.</p>
+     * <p>Deletes a swimming lane group.</p>
      * 
      * @param request DeleteSwimmingLaneGroupRequest
      * @return DeleteSwimmingLaneGroupResponse
@@ -2624,7 +2641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys an application.</p>
+     * <p>Deploy an application.</p>
      * 
      * @param tmpReq DeployApplicationRequest
      * @param headers map
@@ -3010,7 +3027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys an application.</p>
+     * <p>Deploy an application.</p>
      * 
      * @param request DeployApplicationRequest
      * @return DeployApplicationResponse
@@ -3023,7 +3040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata details of the service of an application.</p>
+     * <p>Describes the metadata details of an application service.</p>
      * 
      * @param request DescribeAppServiceDetailRequest
      * @param headers map
@@ -3081,7 +3098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata details of the service of an application.</p>
+     * <p>Describes the metadata details of an application service.</p>
      * 
      * @param request DescribeAppServiceDetailRequest
      * @return DescribeAppServiceDetailResponse
@@ -3094,7 +3111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an application.</p>
+     * <p>Retrieves the configuration of an application.</p>
      * 
      * @param request DescribeApplicationConfigRequest
      * @param headers map
@@ -3132,7 +3149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an application.</p>
+     * <p>Retrieves the configuration of an application.</p>
      * 
      * @param request DescribeApplicationConfigRequest
      * @return DescribeApplicationConfigResponse
@@ -3145,7 +3162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the instance groups of an application.</p>
+     * <p>Use <code>DescribeApplicationGroups</code> to retrieve application instance groups.</p>
      * 
      * @param request DescribeApplicationGroupsRequest
      * @param headers map
@@ -3187,7 +3204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the instance groups of an application.</p>
+     * <p>Use <code>DescribeApplicationGroups</code> to retrieve application instance groups.</p>
      * 
      * @param request DescribeApplicationGroupsRequest
      * @return DescribeApplicationGroupsResponse
@@ -3200,7 +3217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the image of an application.</p>
+     * <p>Retrieves information about an application image.</p>
      * 
      * @param request DescribeApplicationImageRequest
      * @param headers map
@@ -3238,7 +3255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the image of an application.</p>
+     * <p>Retrieves information about an application image.</p>
      * 
      * @param request DescribeApplicationImageRequest
      * @return DescribeApplicationImageResponse
@@ -3251,7 +3268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application instances.</p>
+     * <p>Retrieves a list of application instances.</p>
      * 
      * @param request DescribeApplicationInstancesRequest
      * @param headers map
@@ -3309,7 +3326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application instances.</p>
+     * <p>Retrieves a list of application instances.</p>
      * 
      * @param request DescribeApplicationInstancesRequest
      * @return DescribeApplicationInstancesResponse
@@ -3373,7 +3390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</p>
+     * <p>View the NLB configuration for the application.</p>
      * 
      * @param request DescribeApplicationNlbsRequest
      * @param headers map
@@ -3407,7 +3424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</p>
+     * <p>View the NLB configuration for the application.</p>
      * 
      * @param request DescribeApplicationNlbsRequest
      * @return DescribeApplicationNlbsResponse
@@ -3420,7 +3437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an Auto Scaling policy of an application.</p>
+     * <p>Describes a single auto scaling policy for an application.</p>
      * 
      * @param request DescribeApplicationScalingRuleRequest
      * @param headers map
@@ -3458,7 +3475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an Auto Scaling policy of an application.</p>
+     * <p>Describes a single auto scaling policy for an application.</p>
      * 
      * @param request DescribeApplicationScalingRuleRequest
      * @return DescribeApplicationScalingRuleResponse
@@ -3471,7 +3488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the auto scaling policies of an application.</p>
+     * <p>Describes the Auto Scaling policies for an application.</p>
      * 
      * @param request DescribeApplicationScalingRulesRequest
      * @param headers map
@@ -3505,7 +3522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the auto scaling policies of an application.</p>
+     * <p>Describes the Auto Scaling policies for an application.</p>
      * 
      * @param request DescribeApplicationScalingRulesRequest
      * @return DescribeApplicationScalingRulesResponse
@@ -3518,7 +3535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the SLB configuration of an application.</p>
+     * <p>Queries the configurations of Server Load Balancer (SLB) instances for an application.</p>
      * 
      * @param request DescribeApplicationSlbsRequest
      * @param headers map
@@ -3552,7 +3569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the SLB configuration of an application.</p>
+     * <p>Queries the configurations of Server Load Balancer (SLB) instances for an application.</p>
      * 
      * @param request DescribeApplicationSlbsRequest
      * @return DescribeApplicationSlbsResponse
@@ -3565,7 +3582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of an application.</p>
+     * <p>Call the DescribeApplicationStatus API to get an application\&quot;s status.</p>
      * 
      * @param request DescribeApplicationStatusRequest
      * @param headers map
@@ -3599,7 +3616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of an application.</p>
+     * <p>Call the DescribeApplicationStatus API to get an application\&quot;s status.</p>
      * 
      * @param request DescribeApplicationStatusRequest
      * @return DescribeApplicationStatusResponse
@@ -3612,7 +3629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a change order.</p>
+     * <p>Call DescribeChangeOrder to get information about a change order.</p>
      * 
      * @param request DescribeChangeOrderRequest
      * @param headers map
@@ -3646,7 +3663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a change order.</p>
+     * <p>Call DescribeChangeOrder to get information about a change order.</p>
      * 
      * @param request DescribeChangeOrderRequest
      * @return DescribeChangeOrderResponse
@@ -3659,7 +3676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the version of the component that is required when you create and deploy an application.</p>
+     * <p>Call the DescribeComponents API to retrieve the component versions required to create an application deployment.</p>
      * 
      * @param request DescribeComponentsRequest
      * @param headers map
@@ -3697,7 +3714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the version of the component that is required when you create and deploy an application.</p>
+     * <p>Call the DescribeComponents API to retrieve the component versions required to create an application deployment.</p>
      * 
      * @param request DescribeComponentsRequest
      * @return DescribeComponentsResponse
@@ -3710,7 +3727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a ConfigMap.</p>
+     * <p>Queries the details of a ConfigMap instance.</p>
      * 
      * @param request DescribeConfigMapRequest
      * @param headers map
@@ -3744,7 +3761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a ConfigMap.</p>
+     * <p>Queries the details of a ConfigMap instance.</p>
      * 
      * @param request DescribeConfigMapRequest
      * @return DescribeConfigMapResponse
@@ -3757,7 +3774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query configuration price.</p>
+     * <p>Queries the price of a configuration.</p>
      * 
      * @param request DescribeConfigurationPriceRequest
      * @param headers map
@@ -3819,7 +3836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query configuration price.</p>
+     * <p>Queries the price of a configuration.</p>
      * 
      * @param request DescribeConfigurationPriceRequest
      * @return DescribeConfigurationPriceResponse
@@ -3832,7 +3849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the container components of a microservices application.</p>
+     * <p>Retrieves the microservice container components for an application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3858,7 +3875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the container components of a microservices application.</p>
+     * <p>Retrieves the microservice container components for an application.</p>
      * @return DescribeEdasContainersResponse
      */
     public DescribeEdasContainersResponse describeEdasContainers() throws Exception {
@@ -3869,7 +3886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a canary release rule based on the specified rule ID.</p>
+     * <p>Gets a canary release rule by rule ID.</p>
      * 
      * @param request DescribeGreyTagRouteRequest
      * @param headers map
@@ -3903,7 +3920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a canary release rule based on the specified rule ID.</p>
+     * <p>Gets a canary release rule by rule ID.</p>
      * 
      * @param request DescribeGreyTagRouteRequest
      * @return DescribeGreyTagRouteResponse
@@ -3916,7 +3933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeIngress operation to query the details of an Ingress.</p>
+     * <p>Queries the details of an Ingress.</p>
      * 
      * @param request DescribeIngressRequest
      * @param headers map
@@ -3950,7 +3967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeIngress operation to query the details of an Ingress.</p>
+     * <p>Queries the details of an Ingress.</p>
      * 
      * @param request DescribeIngressRequest
      * @return DescribeIngressResponse
@@ -3963,7 +3980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of a sidecar container instance.</p>
+     * <p>Retrieves the log of an instance.</p>
      * 
      * @param request DescribeInstanceLogRequest
      * @param headers map
@@ -4005,7 +4022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of a sidecar container instance.</p>
+     * <p>Retrieves the log of an instance.</p>
      * 
      * @param request DescribeInstanceLogRequest
      * @return DescribeInstanceLogResponse
@@ -4018,7 +4035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all instance types.</p>
+     * <p>Retrieves a list of available application instance specifications.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4044,7 +4061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all instance types.</p>
+     * <p>Retrieves a list of available application instance specifications.</p>
      * @return DescribeInstanceSpecificationsResponse
      */
     public DescribeInstanceSpecificationsResponse describeInstanceSpecifications() throws Exception {
@@ -4055,7 +4072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a job template.</p>
+     * <p>Calls the <code>DescribeJob</code> API to retrieve job template configuration.</p>
      * 
      * @param request DescribeJobRequest
      * @param headers map
@@ -4093,7 +4110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a job template.</p>
+     * <p>Calls the <code>DescribeJob</code> API to retrieve job template configuration.</p>
      * 
      * @param request DescribeJobRequest
      * @return DescribeJobResponse
@@ -4318,7 +4335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the information about resources in a namespace.</p>
+     * <p>Queries the resources in a namespace.</p>
      * 
      * @param request DescribeNamespaceResourcesRequest
      * @param headers map
@@ -4356,7 +4373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the information about resources in a namespace.</p>
+     * <p>Queries the resources in a namespace.</p>
      * 
      * @param request DescribeNamespaceResourcesRequest
      * @return DescribeNamespaceResourcesResponse
@@ -4467,7 +4484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available regions.</p>
+     * <p>Queries the available regions.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4493,7 +4510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available regions.</p>
+     * <p>Queries the available regions.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -4555,7 +4572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries details about swimlanes.</p>
+     * <p>Retrieves the details of a swimlane.</p>
      * 
      * @param request DescribeSwimmingLaneRequest
      * @param headers map
@@ -4597,7 +4614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries details about swimlanes.</p>
+     * <p>Retrieves the details of a swimlane.</p>
      * 
      * @param request DescribeSwimmingLaneRequest
      * @return DescribeSwimmingLaneResponse
@@ -5042,7 +5059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables an auto scaling policy for an application.</p>
+     * <p>Disables an Auto Scaling policy for an application.</p>
      * 
      * @param request DisableApplicationScalingRuleRequest
      * @param headers map
@@ -5080,7 +5097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables an auto scaling policy for an application.</p>
+     * <p>Disables an Auto Scaling policy for an application.</p>
      * 
      * @param request DisableApplicationScalingRuleRequest
      * @return DisableApplicationScalingRuleResponse
@@ -5238,7 +5255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a job.</p>
+     * <p>Call ExecJob to run a job.</p>
      * 
      * @param request ExecJobRequest
      * @param headers map
@@ -5308,7 +5325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a job.</p>
+     * <p>Call ExecJob to run a job.</p>
      * 
      * @param request ExecJobRequest
      * @return ExecJobResponse
@@ -5321,7 +5338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information of an application.</p>
+     * <p>Retrieves basic information about an application.</p>
      * 
      * @param request GetApplicationRequest
      * @param headers map
@@ -5363,7 +5380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information of an application.</p>
+     * <p>Retrieves basic information about an application.</p>
      * 
      * @param request GetApplicationRequest
      * @return GetApplicationResponse
@@ -5506,7 +5523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries top N applications in abnormal change orders.</p>
+     * <p>To retrieve the top N applications with abnormal change orders, call the <code>GetChangeOrderMetric</code> API.</p>
      * 
      * @param request GetChangeOrderMetricRequest
      * @param headers map
@@ -5568,7 +5585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries top N applications in abnormal change orders.</p>
+     * <p>To retrieve the top N applications with abnormal change orders, call the <code>GetChangeOrderMetric</code> API.</p>
      * 
      * @param request GetChangeOrderMetricRequest
      * @return GetChangeOrderMetricResponse
@@ -5762,7 +5779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all lane groups.</p>
+     * <p>Returns a list of all swimlane groups.</p>
      * 
      * @param request ListAllSwimmingLaneGroupsRequest
      * @param headers map
@@ -5796,7 +5813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all lane groups.</p>
+     * <p>Returns a list of all swimlane groups.</p>
      * 
      * @param request ListAllSwimmingLaneGroupsRequest
      * @return ListAllSwimmingLaneGroupsResponse
@@ -5809,7 +5826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all swimlanes.</p>
+     * <p>Lists all swimlanes.</p>
      * 
      * @param request ListAllSwimmingLanesRequest
      * @param headers map
@@ -5847,7 +5864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all swimlanes.</p>
+     * <p>Lists all swimlanes.</p>
      * 
      * @param request ListAllSwimmingLanesRequest
      * @return ListAllSwimmingLanesResponse
@@ -5860,7 +5877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the events that occurred in an application.</p>
+     * <p>To list application events, call the <code>ListAppEvents</code> API.</p>
      * 
      * @param request ListAppEventsRequest
      * @param headers map
@@ -5922,7 +5939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the events that occurred in an application.</p>
+     * <p>To list application events, call the <code>ListAppEvents</code> API.</p>
      * 
      * @param request ListAppEventsRequest
      * @return ListAppEventsResponse
@@ -5935,7 +5952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of microservices.</p>
+     * <p>Lists microservices.</p>
      * 
      * @param request ListAppServicesRequest
      * @param headers map
@@ -6001,7 +6018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of microservices.</p>
+     * <p>Lists microservices.</p>
      * 
      * @param request ListAppServicesRequest
      * @return ListAppServicesResponse
@@ -6014,7 +6031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the services of an application.</p>
+     * <p>Call <code>ListAppServicesPage</code> to get a list of application services.</p>
      * 
      * @param request ListAppServicesPageRequest
      * @param headers map
@@ -6060,7 +6077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the services of an application.</p>
+     * <p>Call <code>ListAppServicesPage</code> to get a list of application services.</p>
      * 
      * @param request ListAppServicesPageRequest
      * @return ListAppServicesPageResponse
@@ -6073,7 +6090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deployment versions of an application.</p>
+     * <p>Lists the historical versions of an application.</p>
      * 
      * @param request ListAppVersionsRequest
      * @param headers map
@@ -6107,7 +6124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deployment versions of an application.</p>
+     * <p>Lists the historical versions of an application.</p>
      * 
      * @param request ListAppVersionsRequest
      * @return ListAppVersionsResponse
@@ -6171,7 +6188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a list of applications.</p>
+     * <p>Get a list of applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @param headers map
@@ -6249,7 +6266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a list of applications.</p>
+     * <p>Get a list of applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse
@@ -6262,7 +6279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the application list for the end-to-end grayscale pull application list.</p>
+     * <p>Retrieves a list of applications for full-link canary releases.</p>
      * 
      * @param request ListApplicationsForSwimmingLaneRequest
      * @param headers map
@@ -6304,7 +6321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the application list for the end-to-end grayscale pull application list.</p>
+     * <p>Retrieves a list of applications for full-link canary releases.</p>
      * 
      * @param request ListApplicationsForSwimmingLaneRequest
      * @return ListApplicationsForSwimmingLaneResponse
@@ -6317,7 +6334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a list of change orders.</p>
+     * <p>Lists change orders.</p>
      * 
      * @param request ListChangeOrdersRequest
      * @param headers map
@@ -6379,7 +6396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a list of change orders.</p>
+     * <p>Lists change orders.</p>
      * 
      * @param request ListChangeOrdersRequest
      * @return ListChangeOrdersResponse
@@ -6392,7 +6409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of microservices that are subscribed.</p>
+     * <p>You can call the ListConsumedServices operation to retrieve a list of subscribed microservices.</p>
      * 
      * @param request ListConsumedServicesRequest
      * @param headers map
@@ -6426,7 +6443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of microservices that are subscribed.</p>
+     * <p>You can call the ListConsumedServices operation to retrieve a list of subscribed microservices.</p>
      * 
      * @param request ListConsumedServicesRequest
      * @return ListConsumedServicesResponse
@@ -6440,11 +6457,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can configure only one canary release rule for each application.</p>
+     * <p>You can configure only one grayscale rule for each application.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a canary release rule based on an application ID.</p>
+     * <p>Queries the details of a grayscale rule based on an application ID.</p>
      * 
      * @param request ListGreyTagRouteRequest
      * @param headers map
@@ -6479,11 +6496,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can configure only one canary release rule for each application.</p>
+     * <p>You can configure only one grayscale rule for each application.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a canary release rule based on an application ID.</p>
+     * <p>Queries the details of a grayscale rule based on an application ID.</p>
      * 
      * @param request ListGreyTagRouteRequest
      * @return ListGreyTagRouteResponse
@@ -6496,7 +6513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Use ListIngress API call to query Ingress list</p>
+     * <p>Retrieves a list of Ingresses.</p>
      * 
      * @param request ListIngressesRequest
      * @param headers map
@@ -6542,7 +6559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Use ListIngress API call to query Ingress list</p>
+     * <p>Retrieves a list of Ingresses.</p>
      * 
      * @param request ListIngressesRequest
      * @return ListIngressesResponse
@@ -6555,7 +6572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about job templates.</p>
+     * <p>Retrieves a list of job templates.</p>
      * 
      * @param request ListJobsRequest
      * @param headers map
@@ -6625,7 +6642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about job templates.</p>
+     * <p>Retrieves a list of job templates.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -6638,7 +6655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application logs.</p>
+     * <p>Returns a list of application logs.</p>
      * 
      * @param request ListLogConfigsRequest
      * @param headers map
@@ -6680,7 +6697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application logs.</p>
+     * <p>Returns a list of application logs.</p>
      * 
      * @param request ListLogConfigsRequest
      * @return ListLogConfigsResponse
@@ -6693,7 +6710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of change orders in a namespace.</p>
+     * <p>Lists deployment orders in a namespace.</p>
      * 
      * @param request ListNamespaceChangeOrdersRequest
      * @param headers map
@@ -6747,7 +6764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of change orders in a namespace.</p>
+     * <p>Lists deployment orders in a namespace.</p>
      * 
      * @param request ListNamespaceChangeOrdersRequest
      * @return ListNamespaceChangeOrdersResponse
@@ -6760,7 +6777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the ConfigMap instances in a namespace.</p>
+     * <p>Lists ConfigMap instances in a namespace.</p>
      * 
      * @param request ListNamespacedConfigMapsRequest
      * @param headers map
@@ -6794,7 +6811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the ConfigMap instances in a namespace.</p>
+     * <p>Lists ConfigMap instances in a namespace.</p>
      * 
      * @param request ListNamespacedConfigMapsRequest
      * @return ListNamespacedConfigMapsResponse
@@ -6807,7 +6824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of microservices that are published.</p>
+     * <p>Queries a list of published microservices.</p>
      * 
      * @param request ListPublishedServicesRequest
      * @param headers map
@@ -6841,7 +6858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of microservices that are published.</p>
+     * <p>Queries a list of published microservices.</p>
      * 
      * @param request ListPublishedServicesRequest
      * @return ListPublishedServicesResponse
@@ -6854,7 +6871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Secrets in a namespace.</p>
+     * <p>Call ListSecrets to list Secrets in a namespace.</p>
      * 
      * @param request ListSecretsRequest
      * @param headers map
@@ -6888,7 +6905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Secrets in a namespace.</p>
+     * <p>Call ListSecrets to list Secrets in a namespace.</p>
      * 
      * @param request ListSecretsRequest
      * @return ListSecretsResponse
@@ -6901,7 +6918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the gateway routes that are available for a lane</p>
+     * <p>Lists the gateway routes that can be associated with a swimming lane.</p>
      * 
      * @param request ListSwimmingLaneGatewayRoutesRequest
      * @param headers map
@@ -6939,7 +6956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the gateway routes that are available for a lane</p>
+     * <p>Lists the gateway routes that can be associated with a swimming lane.</p>
      * 
      * @param request ListSwimmingLaneGatewayRoutesRequest
      * @return ListSwimmingLaneGatewayRoutesResponse
@@ -6952,7 +6969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all lane tags.</p>
+     * <p>Lists all swimming lane tags.</p>
      * 
      * @param request ListSwimmingLaneGroupTagsRequest
      * @param headers map
@@ -6990,7 +7007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all lane tags.</p>
+     * <p>Lists all swimming lane tags.</p>
      * 
      * @param request ListSwimmingLaneGroupTagsRequest
      * @return ListSwimmingLaneGroupTagsResponse
@@ -7003,7 +7020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the mapping relationships between applications and tags.</p>
+     * <p>Call the <code>ListTagResources</code> API to list the tags associated with your applications.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param headers map
@@ -7053,7 +7070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the mapping relationships between applications and tags.</p>
+     * <p>Call the <code>ListTagResources</code> API to list the tags associated with your applications.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -7500,7 +7517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource usage of an application.</p>
+     * <p>Gets the resource usage for an application.</p>
      * 
      * @param request QueryResourceStaticsRequest
      * @param headers map
@@ -7534,7 +7551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource usage of an application.</p>
+     * <p>Gets the resource usage for an application.</p>
      * 
      * @param request QueryResourceStaticsRequest
      * @return QueryResourceStaticsResponse
@@ -7661,7 +7678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the instance specifications of an application.</p>
+     * <p>Changes the instance type of an application.</p>
      * 
      * @param request RescaleApplicationVerticallyRequest
      * @param headers map
@@ -7731,7 +7748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the instance specifications of an application.</p>
+     * <p>Changes the instance type of an application.</p>
      * 
      * @param request RescaleApplicationVerticallyRequest
      * @return RescaleApplicationVerticallyResponse
@@ -7854,7 +7871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</p>
+     * <p>Resumes traffic on an instance from Classic Load Balancer (CLB), Network Load Balancer (NLB), CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Service.</p>
      * 
      * @param request ResumeTrafficRequest
      * @param headers map
@@ -7892,7 +7909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</p>
+     * <p>Resumes traffic on an instance from Classic Load Balancer (CLB), Network Load Balancer (NLB), CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Service.</p>
      * 
      * @param request ResumeTrafficRequest
      * @return ResumeTrafficResponse
@@ -8227,7 +8244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</p>
+     * <p>Stops routing traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services to the specified instances.</p>
      * 
      * @param request SuspendTrafficRequest
      * @param headers map
@@ -8265,7 +8282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</p>
+     * <p>Stops routing traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services to the specified instances.</p>
      * 
      * @param request SuspendTrafficRequest
      * @return SuspendTrafficResponse
@@ -8278,7 +8295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to resources.</p>
+     * <p>Adds one or more tags to specified resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -8324,7 +8341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to resources.</p>
+     * <p>Adds one or more tags to specified resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -8337,7 +8354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the UnbindNlb operation to delete an NLB listener bound for application access</p>
+     * <p>Unbinds an NLB listener from an application.</p>
      * 
      * @param request UnbindNlbRequest
      * @param headers map
@@ -8383,7 +8400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the UnbindNlb operation to delete an NLB listener bound for application access</p>
+     * <p>Unbinds an NLB listener from an application.</p>
      * 
      * @param request UnbindNlbRequest
      * @return UnbindNlbResponse
@@ -8396,7 +8413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates an internal-facing or Internet-facing SLB instance from an application.</p>
+     * <p>Unbinds a public or private SLB instance from an application.</p>
      * 
      * @param request UnbindSlbRequest
      * @param headers map
@@ -8438,7 +8455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates an internal-facing or Internet-facing SLB instance from an application.</p>
+     * <p>Unbinds a public or private SLB instance from an application.</p>
      * 
      * @param request UnbindSlbRequest
      * @return UnbindSlbResponse
@@ -8451,7 +8468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes one or more tags from specified resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param headers map
@@ -8501,7 +8518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes one or more tags from specified resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -8514,7 +8531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Application Idle Mode Update</p>
+     * <p>Updates the idle mode for an application.</p>
      * 
      * @param request UpdateAppModeRequest
      * @param headers map
@@ -8564,7 +8581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Application Idle Mode Update</p>
+     * <p>Updates the idle mode for an application.</p>
      * 
      * @param request UpdateAppModeRequest
      * @return UpdateAppModeResponse
@@ -8577,7 +8594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the security group of an application.</p>
+     * <p>Updates an application security group.</p>
      * 
      * @param request UpdateAppSecurityGroupRequest
      * @param headers map
@@ -8615,7 +8632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the security group of an application.</p>
+     * <p>Updates an application security group.</p>
      * 
      * @param request UpdateAppSecurityGroupRequest
      * @return UpdateAppSecurityGroupResponse
@@ -8679,11 +8696,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
-     * <p>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</p>
+     * <h2>Usage notes</h2>
+     * <p>To scale an application beyond 50 instances, contact SAE technical support to be added to the allowlist. For details, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the auto scaling policy of an application.</p>
+     * <p>Updating the application auto-scaling policy</p>
      * 
      * @param request UpdateApplicationScalingRuleRequest
      * @param headers map
@@ -8745,11 +8762,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
-     * <p>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</p>
+     * <h2>Usage notes</h2>
+     * <p>To scale an application beyond 50 instances, contact SAE technical support to be added to the allowlist. For details, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the auto scaling policy of an application.</p>
+     * <p>Updating the application auto-scaling policy</p>
      * 
      * @param request UpdateApplicationScalingRuleRequest
      * @return UpdateApplicationScalingRuleResponse
@@ -8762,7 +8779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the configuration of a vSwitch.</p>
+     * <p>Updates the vSwitch configuration for an application.</p>
      * 
      * @param request UpdateApplicationVswitchesRequest
      * @param headers map
@@ -8812,7 +8829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the configuration of a vSwitch.</p>
+     * <p>Updates the vSwitch configuration for an application.</p>
      * 
      * @param request UpdateApplicationVswitchesRequest
      * @return UpdateApplicationVswitchesResponse
@@ -8825,7 +8842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a ConfigMap.</p>
+     * <p>Updates a ConfigMap instance.</p>
      * 
      * @param request UpdateConfigMapRequest
      * @param headers map
@@ -8869,7 +8886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a ConfigMap.</p>
+     * <p>Updates a ConfigMap instance.</p>
      * 
      * @param request UpdateConfigMapRequest
      * @return UpdateConfigMapResponse
@@ -8882,7 +8899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a canary release rule.</p>
+     * <p>Updates a grey tag route.</p>
      * 
      * @param request UpdateGreyTagRouteRequest
      * @param headers map
@@ -8932,7 +8949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a canary release rule.</p>
+     * <p>Updates a grey tag route.</p>
      * 
      * @param request UpdateGreyTagRouteRequest
      * @return UpdateGreyTagRouteResponse
@@ -8945,7 +8962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the configurations of an Ingress instance.</p>
+     * <p>Update the configuration of an Ingress instance.</p>
      * 
      * @param request UpdateIngressRequest
      * @param headers map
@@ -9053,7 +9070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the configurations of an Ingress instance.</p>
+     * <p>Update the configuration of an Ingress instance.</p>
      * 
      * @param request UpdateIngressRequest
      * @return UpdateIngressResponse
@@ -9066,7 +9083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job template.</p>
+     * <p>Call the UpdateJob API to update a job template.</p>
      * 
      * @param request UpdateJobRequest
      * @param headers map
@@ -9286,7 +9303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job template.</p>
+     * <p>Call the UpdateJob API to update a job template.</p>
      * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
@@ -9362,7 +9379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the Simple Log Service configuration for a namespace.</p>
+     * <p>Updates the namespace-level SLS configuration.</p>
      * 
      * @param request UpdateNamespaceSlsConfigsRequest
      * @param headers map
@@ -9408,7 +9425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the Simple Log Service configuration for a namespace.</p>
+     * <p>Updates the namespace-level SLS configuration.</p>
      * 
      * @param request UpdateNamespaceSlsConfigsRequest
      * @return UpdateNamespaceSlsConfigsResponse
@@ -9421,7 +9438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cn-beijing:test</p>
+     * <p>Updates the VPC that is attached to a namespace.</p>
      * 
      * @param request UpdateNamespaceVpcRequest
      * @param headers map
@@ -9463,7 +9480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cn-beijing:test</p>
+     * <p>Updates the VPC that is attached to a namespace.</p>
      * 
      * @param request UpdateNamespaceVpcRequest
      * @return UpdateNamespaceVpcResponse
@@ -9476,11 +9493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The HTTP status code. Valid values:
-     * \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
-     * \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
-     * \*   \<em>\<em>4xx\</em>\</em>: The call failed.
-     * \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</p>
+     * <p>Updates a Secret instance.</p>
      * 
      * @param tmpReq UpdateSecretRequest
      * @param headers map
@@ -9528,11 +9541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The HTTP status code. Valid values:
-     * \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
-     * \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
-     * \*   \<em>\<em>4xx\</em>\</em>: The call failed.
-     * \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</p>
+     * <p>Updates a Secret instance.</p>
      * 
      * @param request UpdateSecretRequest
      * @return UpdateSecretResponse
@@ -9545,7 +9554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the enabled property of the swimlane.</p>
+     * <p>Updates the enabled status of a swimming lane.</p>
      * 
      * @param request UpdateSwimmingLaneEnableAttributeRequest
      * @param headers map
@@ -9591,7 +9600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the enabled property of the swimlane.</p>
+     * <p>Updates the enabled status of a swimming lane.</p>
      * 
      * @param request UpdateSwimmingLaneEnableAttributeRequest
      * @return UpdateSwimmingLaneEnableAttributeResponse

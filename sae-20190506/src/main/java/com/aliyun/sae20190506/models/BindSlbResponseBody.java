@@ -31,6 +31,9 @@ public class BindSlbResponseBody extends TeaModel {
      * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
      * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>空</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

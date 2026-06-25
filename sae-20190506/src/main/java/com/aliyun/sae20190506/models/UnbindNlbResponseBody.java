@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class UnbindNlbResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: Success.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: Redirection.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: Client error.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: Server error.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,20 +30,24 @@ public class UnbindNlbResponseBody extends TeaModel {
     public UnbindNlbResponseBodyData data;
 
     /**
-     * <p>The status code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> section of this topic.</li>
+     * <li><p>The <strong>ErrorCode</strong> parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned. Valid values:</p>
+     * <p>The returned message.</p>
      * <ul>
-     * <li>If the request was successful, <strong>success</strong> is returned.</li>
-     * <li>If the request failed, an error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +57,7 @@ public class UnbindNlbResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,10 +66,12 @@ public class UnbindNlbResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the internal-facing or Internet-facing NLB instance was disassociated. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li><strong>true</strong>: The NLB instance was disassociated.</li>
-     * <li><strong>false</strong>: The NLB instance failed to be disassociated.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class UnbindNlbResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID for the request. Use this ID to query request details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a981dd515966966104121683d****</p>
@@ -142,7 +152,7 @@ public class UnbindNlbResponseBody extends TeaModel {
 
     public static class UnbindNlbResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the change order. The ID can be used to query the status of the change task.</p>
+         * <p>The change order ID. Use this ID to check the task\&quot;s execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>ba386059-69b1-4e65-b1e5-0682d9fa****</p>

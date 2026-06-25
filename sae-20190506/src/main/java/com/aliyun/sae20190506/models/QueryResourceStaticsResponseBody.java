@@ -7,10 +7,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,29 +24,30 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The resource usage.</p>
+     * <p>The resource usage information.</p>
      */
     @NameInMap("Data")
     public QueryResourceStaticsResponseBodyData data;
 
     /**
-     * <p>The error code. </p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * <ul>
-     * <li><strong>success</strong> is returned when the request succeeds.</li>
-     * <li>An error code is returned when the request fails.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +57,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7CCF7092-72CA-4431-90D6-C7D98752****</p>
@@ -61,10 +66,12 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the resource usage of an application was obtained. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: indicates that the resource usage was obtained.</li>
-     * <li><strong>false</strong>: indicates that the resource usage could not be obtained.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +81,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The trace ID used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a08a015623098794277264e****</p>
@@ -145,7 +152,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
     public static class QueryResourceStaticsResponseBodyDataRealTimeRes extends TeaModel {
         /**
-         * <p>The CPU usage. Unit: core per minute.</p>
+         * <p>The CPU usage, in Core·min.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -154,7 +161,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public Float cpu;
 
         /**
-         * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+         * <p>The ephemeral storage usage, in GiB·min.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -163,7 +170,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public Float ephemeralStorage;
 
         /**
-         * <p>The memory usage. Unit: GiB per minute.</p>
+         * <p>The memory usage, in GiB·min.</p>
          * 
          * <strong>example:</strong>
          * <p>26</p>
@@ -204,7 +211,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
     public static class QueryResourceStaticsResponseBodyDataSummary extends TeaModel {
         /**
-         * <p>The usage of active vCPU. Unit: Core*min.</p>
+         * <p>The active vCPU usage, in Core·min.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -213,7 +220,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public Float activeCpu;
 
         /**
-         * <p>The CPU usage. Unit: core per minute.</p>
+         * <p>The CPU usage, in Core·min.</p>
          * 
          * <strong>example:</strong>
          * <p>3354</p>
@@ -222,7 +229,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public Float cpu;
 
         /**
-         * <p>The CU usage.</p>
+         * <p>The number of CUs used.</p>
          * 
          * <strong>example:</strong>
          * <p>2312145</p>
@@ -231,7 +238,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public Float cu;
 
         /**
-         * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+         * <p>The ephemeral storage usage, in GiB·min.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -240,17 +247,19 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public Float ephemeralStorage;
 
         /**
-         * <strong>example:</strong>
-         * <p>c8g1</p>
+         * <p>The GpuA10 usage.</p>
          */
         @NameInMap("GpuA10")
         public Float gpuA10;
 
+        /**
+         * <p>The GpuPpu810e usage.</p>
+         */
         @NameInMap("GpuPpu810e")
         public Float gpuPpu810e;
 
         /**
-         * <p>The usage of idle CPU. Unit: Core*min.</p>
+         * <p>The idle vCPU usage, in Core·min.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -259,7 +268,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public Float idleCpu;
 
         /**
-         * <p>The memory usage. Unit: GiB per minute.</p>
+         * <p>The memory usage, in GiB·min.</p>
          * 
          * <strong>example:</strong>
          * <p>6708</p>
@@ -346,7 +355,7 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public QueryResourceStaticsResponseBodyDataRealTimeRes realTimeRes;
 
         /**
-         * <p>The resource usage of the current month.</p>
+         * <p>The resource usage in the current month.</p>
          */
         @NameInMap("Summary")
         public QueryResourceStaticsResponseBodyDataSummary summary;

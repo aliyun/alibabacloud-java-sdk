@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,25 @@ public class DescribeJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information of the job template.</p>
+     * <p>The job template information.</p>
      */
     @NameInMap("Data")
     public DescribeJobResponseBodyData data;
 
     /**
-     * <p>The error code returned. Take note of the following rules:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, <strong>ErrorCode</strong> is not returned.</li>
-     * <li>If the call fails, <strong>ErrorCode</strong> is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+     * <li><p>The <strong>ErrorCode</strong> parameter is returned only if the request fails.</p>
+     * </li>
+     * <li><p>For a list of possible <strong>ErrorCode</strong> values, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -57,10 +60,12 @@ public class DescribeJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the configurations of the job template were obtained. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The configurations were obtained.</li>
-     * <li><strong>false</strong>: The configurations failed to be obtained.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +75,7 @@ public class DescribeJobResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
@@ -150,7 +155,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public Long configMapId;
 
         /**
-         * <p>The ConfigMap name.</p>
+         * <p>The name of the ConfigMap.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -159,7 +164,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String configMapName;
 
         /**
-         * <p>The key-value pair that is stored in the ConfigMap.</p>
+         * <p>The key of the key-value pair in the ConfigMap.</p>
          * 
          * <strong>example:</strong>
          * <p>k1</p>
@@ -168,7 +173,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The path on which the ConfigMap is mounted.</p>
+         * <p>The container mount path.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp</p>
@@ -217,7 +222,7 @@ public class DescribeJobResponseBody extends TeaModel {
 
     public static class DescribeJobResponseBodyDataMountDesc extends TeaModel {
         /**
-         * <p>The path on which the NAS file system is mounted.</p>
+         * <p>The container mount path.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp</p>
@@ -226,7 +231,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The directory in the NAS file system.</p>
+         * <p>The directory in the Apsara File Storage NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -259,7 +264,7 @@ public class DescribeJobResponseBody extends TeaModel {
 
     public static class DescribeJobResponseBodyDataOssMountDescs extends TeaModel {
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-bucket</p>
@@ -268,7 +273,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The directory or object in OSS. If the specified directory or object does not exist, an error is returned.</p>
+         * <p>The directory or object that you created in the OSS bucket. An exception is returned if the specified mount directory does not exist.</p>
          * 
          * <strong>example:</strong>
          * <p>data/user.data</p>
@@ -277,7 +282,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String bucketPath;
 
         /**
-         * <p>The path of the container in SAE. The parameter value that you specified overwrites the original value. If the specified path does not exist, SAE automatically creates the path.</p>
+         * <p>The path in your SAE container. If the path exists, it is overwritten. If the path does not exist, a new path is created.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/data/user.data</p>
@@ -286,10 +291,12 @@ public class DescribeJobResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>Indicates whether the job template can use the container directory to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
+         * <p>Specifies whether the container has read-only access to the mounted resources. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The job template has the read-only permissions.</li>
-         * <li><strong>false</strong>: The job template has the read and write permissions.</li>
+         * <li><p><strong>true</strong>: The path has read-only permissions.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The path has read and write permissions.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -381,7 +388,7 @@ public class DescribeJobResponseBody extends TeaModel {
 
     public static class DescribeJobResponseBodyData extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/190675.html">Pull images across Alibaba Cloud accounts</a> and <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
+         * <p>The ARN of the RAM role that is required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/190675.html">Pull images across Alibaba Cloud accounts</a> and <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/adminrole</p>
@@ -390,7 +397,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String acrAssumeRoleArn;
 
         /**
-         * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+         * <p>The ID of the Container Registry (ACR) Enterprise Edition instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xxxxxx</p>
@@ -426,7 +433,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The number of times that the job was retried.</p>
+         * <p>The maximum number of retries for a failed job.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -434,18 +441,21 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("BackoffLimit")
         public Long backoffLimit;
 
+        /**
+         * <p>The Best-Effort policy.</p>
+         */
         @NameInMap("BestEffortType")
         public String bestEffortType;
 
         /**
-         * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
+         * <p>The image startup command. The command must be an executable that exists in the container. Example:</p>
          * <pre><code>command:
          *       - echo
          *       - abc
          *       - &gt;
          *       - file0
          * </code></pre>
-         * <p>In this example, the Command parameter is set to <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+         * <p>In this example, <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>echo</p>
@@ -454,9 +464,9 @@ public class DescribeJobResponseBody extends TeaModel {
         public String command;
 
         /**
-         * <p>The arguments of the image startup command. This parameter contains the arguments that are required for <strong>Command</strong>. Format:</p>
+         * <p>The arguments of the image startup command. The arguments are passed to the <strong>Command</strong> parameter. Format:</p>
          * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-         * <p>In the preceding <strong>Command</strong> example, the CommandArgs parameter is set to <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The data type of <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be an array of strings in the JSON format. If this parameter does not exist in the Command parameter, you do not need to configure it.</p>
+         * <p>In the example of the <strong>Command</strong> parameter, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. In this case, <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be converted to a string in the format of a JSON array. If this parameter is not specified, you do not need to configure it.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -465,11 +475,14 @@ public class DescribeJobResponseBody extends TeaModel {
         public String commandArgs;
 
         /**
-         * <p>The concurrency policy of the job. Valid values:</p>
+         * <p>The concurrency policy for the job. Valid values:</p>
          * <ul>
-         * <li><strong>Forbid</strong>: Concurrent running is prohibited. If the previous job is not completed, no new job is created.</li>
-         * <li><strong>Allow</strong>: Concurrent running is allowed.</li>
-         * <li><strong>Replace</strong>: If the previous job is not completed when the time to create a new job is reached, the new job replaces the previous job.</li>
+         * <li><p><strong>Forbid</strong>: Forbids concurrent runs. A new job is not created if the previous one has not completed.</p>
+         * </li>
+         * <li><p><strong>Allow</strong>: Allows concurrent runs.</p>
+         * </li>
+         * <li><p><strong>Replace</strong>: If the previous job has not completed, the new job replaces it.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -479,21 +492,28 @@ public class DescribeJobResponseBody extends TeaModel {
         public String concurrencyPolicy;
 
         /**
-         * <p>The details of the ConfigMap.</p>
+         * <p>The information about the mounted ConfigMap.</p>
          */
         @NameInMap("ConfigMapMountDesc")
         public java.util.List<DescribeJobResponseBodyDataConfigMapMountDesc> configMapMountDesc;
 
         /**
-         * <p>The CPU specifications required for each instance. Unit: millicore. This parameter cannot be set to 0. Valid values:</p>
+         * <p>The number of CPU cores that are required by each instance. Unit: millicores. This parameter cannot be set to 0. Only the following fixed specifications are supported:</p>
          * <ul>
-         * <li><strong>500</strong></li>
-         * <li><strong>1000</strong></li>
-         * <li><strong>2000</strong></li>
-         * <li><strong>4000</strong></li>
-         * <li><strong>8000</strong></li>
-         * <li><strong>16000</strong></li>
-         * <li><strong>32000</strong></li>
+         * <li><p><strong>500</strong></p>
+         * </li>
+         * <li><p><strong>1000</strong></p>
+         * </li>
+         * <li><p><strong>2000</strong></p>
+         * </li>
+         * <li><p><strong>4000</strong></p>
+         * </li>
+         * <li><p><strong>8000</strong></p>
+         * </li>
+         * <li><p><strong>16000</strong></p>
+         * </li>
+         * <li><p><strong>32000</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -503,10 +523,12 @@ public class DescribeJobResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The custom mapping between the hostname and IP address in the container. Valid values:</p>
+         * <p>The custom host mapping in the container. The parameters are described as follows:</p>
          * <ul>
-         * <li><strong>hostName</strong>: the domain name or hostname.</li>
-         * <li><strong>ip</strong>: the IP address.</li>
+         * <li><p><strong>hostName</strong>: The domain name or hostname.</p>
+         * </li>
+         * <li><p><strong>ip</strong>: The IP address.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -516,7 +538,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String customHostAlias;
 
         /**
-         * <p>The version of the container, such as Ali-Tomcat, in which a job that is developed based on High-speed Service Framework (HSF) is deployed.</p>
+         * <p>The version of the runtime environment in the HSF framework, such as an Ali-Tomcat container.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5.3</p>
@@ -525,20 +547,26 @@ public class DescribeJobResponseBody extends TeaModel {
         public String edasContainerVersion;
 
         /**
-         * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
+         * <p>The container environment variables. You can define custom variables or reference a ConfigMap. To reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. The following formats are supported:</p>
          * <ul>
-         * <li><p>Custom configuration</p>
+         * <li><p>Define custom variables</p>
          * <ul>
-         * <li><strong>name</strong>: the name of the environment variable.</li>
-         * <li><strong>value</strong>: the value of the environment variable.</li>
+         * <li><p><strong>name</strong>: The name of the environment variable.</p>
+         * </li>
+         * <li><p><strong>value</strong>: The value of the environment variable.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>Reference a ConfigMap</p>
          * <ul>
-         * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. To reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
-         * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
-         * <li><strong>configMapId</strong>: the ID of the ConfigMap.</li>
-         * <li><strong>key</strong>: the key. If you want to reference all keys, you do not need to configure this parameter.</li>
+         * <li><p><strong>name</strong>: The name of the environment variable. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>, for example, <code>sae-sys-configmap-all-test1</code>.</p>
+         * </li>
+         * <li><p><strong>valueFrom</strong>: The source of the environment variable. Set the value to <code>configMapRef</code>.</p>
+         * </li>
+         * <li><p><strong>configMapId</strong>: The ID of the ConfigMap.</p>
+         * </li>
+         * <li><p><strong>key</strong>: The key of the key-value pair. If you reference all keys in the ConfigMap, you do not need to specify this parameter.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -550,7 +578,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String envs;
 
         /**
-         * <p>The ID of the corresponding secret.</p>
+         * <p>The ID of the Secret.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -559,7 +587,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String imagePullSecrets;
 
         /**
-         * <p>The URL of the image. This parameter is returned only if <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
+         * <p>The image URL. This parameter is required if <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>docker.io/library/nginx:1.14.2</p>
@@ -568,7 +596,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The arguments in the JAR package. The arguments are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The arguments for the startup of a JAR package. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>start</p>
@@ -577,7 +605,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String jarStartArgs;
 
         /**
-         * <p>The option settings in the JAR package. The settings are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The options for the startup of a JAR package. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>-Dtest=true</p>
@@ -586,16 +614,22 @@ public class DescribeJobResponseBody extends TeaModel {
         public String jarStartOptions;
 
         /**
-         * <p>The version of the Java Development Kit (JDK) on which the deployment package of the application depends. The following versions are supported:</p>
+         * <p>The JDK version that the deployment package requires. The following versions are supported:</p>
          * <ul>
-         * <li><strong>Open JDK 8</strong></li>
-         * <li><strong>Open JDK 7</strong></li>
-         * <li><strong>Dragonwell 11</strong></li>
-         * <li><strong>Dragonwell 8</strong></li>
-         * <li><strong>openjdk-8u191-jdk-alpine3.9</strong></li>
-         * <li><strong>openjdk-7u201-jdk-alpine3.9</strong></li>
+         * <li><p><strong>Open JDK 8</strong></p>
+         * </li>
+         * <li><p><strong>Open JDK 7</strong></p>
+         * </li>
+         * <li><p><strong>Dragonwell 11</strong></p>
+         * </li>
+         * <li><p><strong>Dragonwell 8</strong></p>
+         * </li>
+         * <li><p><strong>openjdk-8u191-jdk-alpine3.9</strong></p>
+         * </li>
+         * <li><p><strong>openjdk-7u201-jdk-alpine3.9</strong></p>
+         * </li>
          * </ul>
-         * <p>This parameter is not returned if <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
+         * <p>This parameter is not applicable if <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Open JDK 8</p>
@@ -604,18 +638,28 @@ public class DescribeJobResponseBody extends TeaModel {
         public String jdk;
 
         /**
-         * <p>The size of memory that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <p>The memory required by each instance, in MB. This value cannot be 0. CPU and memory resources are allocated in fixed ratios. The following combinations are supported:</p>
          * <ul>
-         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
-         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
-         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
-         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
-         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
-         * <li>This parameter is set to <strong>24567</strong> if the Cpu parameter is set to 12000.</li>
-         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
-         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
-         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * <li><p><strong>1024</strong>: corresponds to 500 millicores and 1,000 millicores.</p>
+         * </li>
+         * <li><p><strong>2048</strong>: corresponds to 500, 1,000, and 2,000 millicores.</p>
+         * </li>
+         * <li><p><strong>4096</strong>: corresponds to 1,000, 2,000, and 4,000 millicores.</p>
+         * </li>
+         * <li><p><strong>8192</strong>: corresponds to 2,000, 4,000, and 8,000 millicores.</p>
+         * </li>
+         * <li><p><strong>12288</strong>: corresponds to 12,000 millicores.</p>
+         * </li>
+         * <li><p><strong>16384</strong>: corresponds to 4,000, 8,000, and 16,000 millicores.</p>
+         * </li>
+         * <li><p><strong>24576</strong>: corresponds to 12,000 millicores.</p>
+         * </li>
+         * <li><p><strong>32768</strong>: corresponds to 16,000 millicores.</p>
+         * </li>
+         * <li><p><strong>65536</strong>: corresponds to 8,000, 16,000, and 32,000 millicores.</p>
+         * </li>
+         * <li><p><strong>131072</strong>: corresponds to 32,000 millicores.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -625,13 +669,13 @@ public class DescribeJobResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The details of the mounted NAS file system.</p>
+         * <p>The mount description.</p>
          */
         @NameInMap("MountDesc")
         public java.util.List<DescribeJobResponseBodyDataMountDesc> mountDesc;
 
         /**
-         * <p>The mount target of the Apsara File Storage NAS (NAS) file system in the virtual private cloud (VPC) where the job template is deployed. If you do not need to modify the NAS configurations when you deploy the job template, configure the <strong>MountHost</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use NAS, leave the <strong>MountHost</strong> parameter empty in the request.</p>
+         * <p>The mount target of the Apsara File Storage NAS file system in the job template\&quot;s VPC. You can omit this parameter if the NAS configuration is unchanged during redeployment. To clear the NAS configuration, set this parameter to an empty string (<code>&quot;&quot;</code>).</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -649,7 +693,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>The configurations for mounting the NAS file system.</p>
+         * <p>The configuration for mounting an Apsara File Storage NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</p>
@@ -658,7 +702,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String nasConfigs;
 
         /**
-         * <p>The ID of the NAS file system.</p>
+         * <p>The ID of the Apsara File Storage NAS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>AKSN89**</p>
@@ -667,7 +711,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String nasId;
 
         /**
-         * <p>The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS).</p>
+         * <p>The AccessKey ID for accessing Object Storage Service (OSS) buckets.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -676,7 +720,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String ossAkId;
 
         /**
-         * <p>The AccessKey secret that is used to read data from and write data to OSS.</p>
+         * <p>The AccessKey secret for accessing OSS buckets.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -685,36 +729,51 @@ public class DescribeJobResponseBody extends TeaModel {
         public String ossAkSecret;
 
         /**
-         * <p>The description of mounted OSS buckets.</p>
+         * <p>The description of the mounted OSS bucket.</p>
          */
         @NameInMap("OssMountDescs")
         public java.util.List<DescribeJobResponseBodyDataOssMountDescs> ossMountDescs;
 
         /**
-         * <p>The type of the deployment package. Valid values:</p>
+         * <p>The type of the job package. Valid values:</p>
          * <ul>
-         * <li><p>If you deploy a Java job template, you can set this parameter to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
+         * <li><p>For Java deployments, <strong>FatJar</strong>, <strong>War</strong>, and <strong>Image</strong> are supported.</p>
          * </li>
-         * <li><p>If you deploy a PHP job template, the following types are available:</p>
+         * <li><p>For PHP deployments, the following package types are supported:</p>
          * <ul>
-         * <li><strong>PhpZip</strong></li>
-         * <li><strong>IMAGE_PHP_5_4</strong></li>
-         * <li><strong>IMAGE_PHP_5_4_ALPINE</strong></li>
-         * <li><strong>IMAGE_PHP_5_5</strong></li>
-         * <li><strong>IMAGE_PHP_5_5_ALPINE</strong></li>
-         * <li><strong>IMAGE_PHP_5_6</strong></li>
-         * <li><strong>IMAGE_PHP_5_6_ALPINE</strong></li>
-         * <li><strong>IMAGE_PHP_7_0</strong></li>
-         * <li><strong>IMAGE_PHP_7_0_ALPINE</strong></li>
-         * <li><strong>IMAGE_PHP_7_1</strong></li>
-         * <li><strong>IMAGE_PHP_7_1_ALPINE</strong></li>
-         * <li><strong>IMAGE_PHP_7_2</strong></li>
-         * <li><strong>IMAGE_PHP_7_2_ALPINE</strong></li>
-         * <li><strong>IMAGE_PHP_7_3</strong></li>
-         * <li><strong>IMAGE_PHP_7_3_ALPINE</strong></li>
+         * <li><p><strong>PhpZip</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_5_4</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_5_4_ALPINE</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_5_5</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_5_5_ALPINE</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_5_6</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_5_6_ALPINE</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_7_0</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_7_0_ALPINE</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_7_1</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_7_1_ALPINE</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_7_2</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_7_2_ALPINE</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_7_3</strong></p>
+         * </li>
+         * <li><p><strong>IMAGE_PHP_7_3_ALPINE</strong></p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>If you deploy a Python job template, you can set this parameter to <strong>PythonZip</strong> or <strong>Image</strong>.</p>
+         * <li><p>For Python deployments, <strong>PythonZip</strong> and <strong>Image</strong> are supported.</p>
          * </li>
          * </ul>
          * 
@@ -725,13 +784,13 @@ public class DescribeJobResponseBody extends TeaModel {
         public String packageType;
 
         /**
-         * <p>The URL of the deployment package. This parameter is returned only if <strong>PackageType</strong> is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
+         * <p>The URL of the package. This parameter is required if <strong>Package Type</strong> is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
          */
         @NameInMap("PackageUrl")
         public String packageUrl;
 
         /**
-         * <p>The version of the deployment package. This parameter is required only if <strong>PackageType</strong> is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
+         * <p>The version of the package. This parameter is required if <strong>Package Type</strong> is set to <strong>FatJar</strong> or <strong>War</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -740,7 +799,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String packageVersion;
 
         /**
-         * <p>The details of the PHP configuration file.</p>
+         * <p>The content of the PHP configuration file.</p>
          * 
          * <strong>example:</strong>
          * <p>k1=v1</p>
@@ -749,7 +808,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String phpConfig;
 
         /**
-         * <p>The path on which the PHP configuration file for job startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
+         * <p>The mount path of the PHP job startup configuration. Make sure that the PHP server uses this configuration to start.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/etc/php/php.ini</p>
@@ -758,7 +817,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String phpConfigLocation;
 
         /**
-         * <p>The script that is run immediately after the container is started. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\\]}}</code></p>
+         * <p>The script to execute after the container starts. This script runs immediately after the system creates the container. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</code></p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
@@ -767,7 +826,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String postStart;
 
         /**
-         * <p>The script that is run before the container is stopped. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\\]}}</code></p>
+         * <p>The script to execute before the container stops. This script runs before the system deletes the container. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</code></p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
@@ -776,12 +835,16 @@ public class DescribeJobResponseBody extends TeaModel {
         public String preStop;
 
         /**
-         * <p>The programming language in which the job template is created. Valid values:</p>
+         * <p>The programming language that is used for the job template. Valid values:</p>
          * <ul>
-         * <li><strong>java</strong>: Java</li>
-         * <li><strong>php</strong>: PHP</li>
-         * <li><strong>python</strong>: Python</li>
-         * <li><strong>other</strong>: other programming languages, such as C++, Go, .NET, and Node.js</li>
+         * <li><p><strong>java</strong>: Java</p>
+         * </li>
+         * <li><p><strong>php</strong>: PHP</p>
+         * </li>
+         * <li><p><strong>python</strong>: Python</p>
+         * </li>
+         * <li><p><strong>other</strong>: Other languages, such as C++, Go, .NET, and Node.js.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -791,7 +854,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String programmingLanguage;
 
         /**
-         * <p>The Internet request URLs of one-time jobs.</p>
+         * <p>The list of public request URLs for the one-time task.</p>
          */
         @NameInMap("PublicWebHookUrls")
         public java.util.List<String> publicWebHookUrls;
@@ -806,7 +869,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String python;
 
         /**
-         * <p>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If no software package is configured, you can specify dependencies based on your business requirements.</p>
+         * <p>The Python module dependencies to install. By default, SAE installs dependencies from a <code>requirements.txt</code> file in the package\&quot;s root directory. Use this parameter to specify dependencies if a <code>requirements.txt</code> file is not present or to add extra modules.</p>
          * 
          * <strong>example:</strong>
          * <p>Flask==2.0</p>
@@ -815,7 +878,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String pythonModules;
 
         /**
-         * <p>The ID of the job template that you reference.</p>
+         * <p>The ID of the referenced job template.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -824,7 +887,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String refAppId;
 
         /**
-         * <p>The IDs of the referenced job templates.</p>
+         * <p>The IDs of job templates that reference this template.</p>
          */
         @NameInMap("RefedAppIds")
         public java.util.List<String> refedAppIds;
@@ -848,7 +911,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public Integer replicas;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-wz969ngg2e49q5i4****</p>
@@ -857,7 +920,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>Indicates whether job sharding is enabled.</p>
+         * <p>Specifies whether to enable job sharding.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -866,7 +929,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public Boolean slice;
 
         /**
-         * <p>The parameters of job sharding.</p>
+         * <p>The parameters for job sharding.</p>
          * 
          * <strong>example:</strong>
          * <p>SliceEnvs</p>
@@ -875,20 +938,27 @@ public class DescribeJobResponseBody extends TeaModel {
         public String sliceEnvs;
 
         /**
-         * <p>The logging configurations of Log Service.</p>
+         * <p>The configuration for collecting logs to Log Service (SLS).</p>
          * <ul>
-         * <li>To use Log Service resources that are automatically created by SAE, set this parameter to <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
-         * <li>To use custom Log Service resources, set this parameter to <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
+         * <li><p>Use an SLS resource that SAE automatically creates: <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</p>
+         * </li>
+         * <li><p>Use a custom SLS resource: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</p>
+         * </li>
          * </ul>
-         * <p>Parameter description:</p>
+         * <p>The parameters are described as follows:</p>
          * <ul>
-         * <li><strong>projectName</strong>: the name of the Log Service project.</li>
-         * <li><strong>logDir</strong>: the path in which logs are stored.</li>
-         * <li><strong>logType</strong>: the log type. <strong>stdout</strong>: the standard output (stdout) log of the container. Only one stdout value for this parameter can be specified. If this parameter is not configured, file logs are collected.</li>
-         * <li><strong>logstoreName</strong>: the name of the Logstore in Log Service.</li>
-         * <li><strong>logtailName</strong>: the name of the Logtail in Log Service. If this parameter is not configured, a new Logtail is created.</li>
+         * <li><p><strong>projectName</strong>: The name of the SLS project.</p>
+         * </li>
+         * <li><p><strong>logDir</strong>: The log path.</p>
+         * </li>
+         * <li><p><strong>logType</strong>: The log type. <strong>stdout</strong> specifies the container\&quot;s standard output logs. You can specify only one log of the stdout type. If this parameter is omitted, file logs are collected.</p>
+         * </li>
+         * <li><p><strong>logstoreName</strong>: The name of the Logstore in SLS.</p>
+         * </li>
+         * <li><p><strong>logtailName</strong>: The name of the Logtail configuration in SLS. If you do not specify this parameter, a new Logtail configuration is created.</p>
+         * </li>
          * </ul>
-         * <p>If you do not need to modify the logging configurations when you deploy the application, configure <strong>SlsConfigs</strong> only in the first request. If you no longer need to use Log Service, leave <strong>SlsConfigs</strong> empty in the request.</p>
+         * <p>You can omit this parameter if the Log Service configuration is unchanged during redeployment. To disable log collection, set this parameter to an empty string (<code>&quot;&quot;</code>).</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
@@ -897,7 +967,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String slsConfigs;
 
         /**
-         * <p>Indicates whether the job template is suspended.</p>
+         * <p>Specifies whether to suspend the job template.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -906,13 +976,13 @@ public class DescribeJobResponseBody extends TeaModel {
         public Boolean suspend;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the job template.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeJobResponseBodyDataTags> tags;
 
         /**
-         * <p>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
+         * <p>The timeout for a graceful stop, in seconds. Default: 30. Valid values: 1 to 300.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -921,7 +991,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public Integer terminationGracePeriodSeconds;
 
         /**
-         * <p>The timeout period of the job. Unit: seconds.</p>
+         * <p>The timeout period for the job. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -939,13 +1009,18 @@ public class DescribeJobResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The Tomcat configuration. If you want to delete the configuration, set this parameter to {} or leave this parameter empty. Parameter description:</p>
+         * <p>The Tomcat file configuration. To delete the configuration, set this parameter to &quot;&quot; or &quot;{}&quot;.</p>
          * <ul>
-         * <li><strong>port</strong>: the port number. Valid values: 1024 to 65535. The root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If this parameter is not configured, the default value 8080 is used.</li>
-         * <li><strong>contextPath</strong>: the path. Default value: /. The value indicates the root directory.</li>
-         * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. Default value: 400.</li>
-         * <li><strong>uriEncoding</strong>: the URI encoding scheme in the Tomcat container. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. If this parameter is not configured, the default value <strong>ISO-8859-1</strong> is used.</li>
-         * <li><strong>useBodyEncoding</strong>: indicates whether to use the encoding scheme that is specified by <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
+         * <li><p><strong>port</strong>: The port number. Valid values: 1024 to 65535. Ports below 1024 are reserved. If you do not specify a port, the default value is 8080.</p>
+         * </li>
+         * <li><p><strong>contextPath</strong>: The access path. Default value: /.</p>
+         * </li>
+         * <li><p><strong>maxThreads</strong>: The maximum number of connections in the connection pool. Default value: 400.</p>
+         * </li>
+         * <li><p><strong>uriEncoding</strong>: The URI encoding scheme for Tomcat. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. If you do not specify this parameter, the default value <strong>ISO-8859-1</strong> is used.</p>
+         * </li>
+         * <li><p><strong>useBodyEncodingForUri</strong>: Specifies whether to use the character encoding from the request body for the URI. Default value: <strong>true</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -967,7 +1042,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze0i263cnn311nvj****</p>
@@ -976,13 +1051,13 @@ public class DescribeJobResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The internal request URLs for one-time jobs.</p>
+         * <p>The list of private request URLs for the one-time task.</p>
          */
         @NameInMap("VpcWebHookUrls")
         public java.util.List<String> vpcWebHookUrls;
 
         /**
-         * <p>The option settings in the WAR package. The settings are used to start the job. The default startup command is <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
+         * <p>The options for the startup of a WAR package. The default startup command is <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>custom-option</p>
@@ -991,12 +1066,14 @@ public class DescribeJobResponseBody extends TeaModel {
         public String warStartOptions;
 
         /**
-         * <p>The version of the Tomcat container on which the deployment package depends. The following versions are supported:</p>
+         * <p>The version of the Tomcat container on which the package depends. The following versions are supported:</p>
          * <ul>
-         * <li><strong>apache-tomcat-7.0.91</strong></li>
-         * <li><strong>apache-tomcat-8.5.42</strong></li>
+         * <li><p><strong>apache-tomcat-7.0.91</strong></p>
+         * </li>
+         * <li><p><strong>apache-tomcat-8.5.42</strong></p>
+         * </li>
          * </ul>
-         * <p>This parameter is not returned if <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
+         * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>apache-tomcat-7.0.91</p>

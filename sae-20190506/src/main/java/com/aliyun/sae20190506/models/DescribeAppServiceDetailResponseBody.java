@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeAppServiceDetailResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The status of the API call or a POP error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the call was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the call failed.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p><strong>2xx</strong>: success.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: redirection.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: client error.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: server error.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,23 +24,25 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeAppServiceDetailResponseBodyData data;
 
     /**
-     * <p>The returned error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li><p>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</p>
+     * </li>
+     * <li><p>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the list of <strong>error codes</strong> in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The additional information returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +51,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B2C7874F-F109-5B34-8618-2C10BBA2****</p>
@@ -54,10 +60,12 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the meta data was obtained. Valid values:</p>
+     * <p>Indicates whether the metadata was obtained. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The metadata was obtained.</li>
-     * <li><strong>false</strong>: The metadata failed to be obtained.</li>
+     * <li><p><strong>true</strong>: The metadata was obtained.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The metadata failed to be obtained.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +75,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The call chain ID. Use this ID for a term query of call details.</p>
      * 
      * <strong>example:</strong>
      * <p>0b16399316402420740034918e****</p>
@@ -147,7 +155,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>arg0</p>
@@ -156,7 +164,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the parameter.</p>
+         * <p>The parameter type.</p>
          * 
          * <strong>example:</strong>
          * <p>java.lang.String</p>
@@ -206,7 +214,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String methodController;
 
         /**
-         * <p>The name of the method.</p>
+         * <p>The method name.</p>
          * 
          * <strong>example:</strong>
          * <p>echo</p>
@@ -224,7 +232,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String nameDetail;
 
         /**
-         * <p>The definition of the parameter.</p>
+         * <p>The parameter definitions.</p>
          */
         @NameInMap("ParameterDefinitions")
         public java.util.List<DescribeAppServiceDetailResponseBodyDataMethodsParameterDefinitions> parameterDefinitions;
@@ -236,30 +244,25 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public java.util.List<String> parameterDetails;
 
         /**
-         * <p>The types of the parameters.</p>
+         * <p>The parameter types.</p>
          */
         @NameInMap("ParameterTypes")
         public java.util.List<String> parameterTypes;
 
         /**
-         * <p>The request paths. Format:</p>
-         * <p><code>/path</code></p>
+         * <p>The request paths.</p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
         /**
-         * <p>The request methods. Valid values:</p>
-         * <ul>
-         * <li><strong>GET</strong></li>
-         * <li><strong>ALL</strong></li>
-         * </ul>
+         * <p>The request methods.</p>
          */
         @NameInMap("RequestMethods")
         public java.util.List<String> requestMethods;
 
         /**
-         * <p>The details of the response.</p>
+         * <p>The details of the returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -268,7 +271,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String returnDetails;
 
         /**
-         * <p>The data format of the response.</p>
+         * <p>The return type.</p>
          * 
          * <strong>example:</strong>
          * <p>java.lang.String</p>
@@ -374,7 +377,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String dubboApplicationName;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-micro-service-******</p>
@@ -383,7 +386,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String edasAppName;
 
         /**
-         * <p>The group to which the service belongs. You can create a custom group.</p>
+         * <p>The service group. This is a custom parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>springCloud</p>
@@ -392,7 +395,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The metadata. Example: <code>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</code>.</p>
+         * <p>The metadata. Example: <code>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</code></p>
          * 
          * <strong>example:</strong>
          * <p>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</p>
@@ -401,13 +404,13 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>The methods.</p>
+         * <p>The list of methods.</p>
          */
         @NameInMap("Methods")
         public java.util.List<DescribeAppServiceDetailResponseBodyDataMethods> methods;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>service-provider</p>
@@ -416,7 +419,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The port used by the service.</p>
+         * <p>The ports used by the service.</p>
          */
         @NameInMap("ServicePorts")
         public java.util.List<Long> servicePorts;
@@ -431,16 +434,18 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String serviceProtocol;
 
         /**
-         * <p>The tag of the service.</p>
+         * <p>The tags of the service.</p>
          */
         @NameInMap("ServiceTags")
         public java.util.List<String> serviceTags;
 
         /**
-         * <p>The type of the service. Valid values:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
-         * <li><strong>dubbo</strong></li>
-         * <li><strong>springCloud</strong></li>
+         * <li><p><strong>dubbo</strong></p>
+         * </li>
+         * <li><p><strong>springCloud</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -459,7 +464,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         public String springApplicationName;
 
         /**
-         * <p>The version of the service. You can create a custom version.</p>
+         * <p>The service version. This is a custom parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

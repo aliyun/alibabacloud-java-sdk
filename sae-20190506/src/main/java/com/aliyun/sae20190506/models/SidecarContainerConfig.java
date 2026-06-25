@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SidecarContainerConfig extends TeaModel {
     /**
-     * <p>The ID of the Container Registry Enterprise Edition instance. This parameter is required if the ImageUrl parameter is set to the URL of an image in a Container Registry Enterprise Edition instance.</p>
+     * <p>The instance ID of the ACR Enterprise Edition. This parameter is required if the <code>ImageUrl</code> is from an ACR Enterprise Edition repository.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-xxxxxx</p>
@@ -14,7 +14,7 @@ public class SidecarContainerConfig extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>The startup command of the image.</p>
+     * <p>The startup command for the image. This command overrides the <code>ENTRYPOINT</code> defined in the image.</p>
      * 
      * <strong>example:</strong>
      * <p>python</p>
@@ -23,7 +23,7 @@ public class SidecarContainerConfig extends TeaModel {
     public String command;
 
     /**
-     * <p>The parameters of the image startup command.</p>
+     * <p>The arguments for the startup command. This parameter corresponds to <code>CMD</code> in the Dockerfile.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -32,7 +32,7 @@ public class SidecarContainerConfig extends TeaModel {
     public String commandArgs;
 
     /**
-     * <p>The description of the ConfigMap mounted to the application.</p>
+     * <p>The settings for mounting a ConfigMap. Use this to inject configuration data into the container as files.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
@@ -41,7 +41,7 @@ public class SidecarContainerConfig extends TeaModel {
     public String configMapMountDesc;
 
     /**
-     * <p>Cpu</p>
+     * <p>The CPU resources allocated to the container, measured in millicores. For example, a value of 1000 represents 1 vCPU.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -50,7 +50,7 @@ public class SidecarContainerConfig extends TeaModel {
     public Integer cpu;
 
     /**
-     * <p>The EmptyDir description.</p>
+     * <p>The configuration for an <code>emptyDir</code> volume. This creates a temporary directory that persists for the life of the application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;name\&quot;:\&quot;workdir\&quot;,\&quot;mountPath\&quot;:\&quot;/usr/local/tomcat/webapps\&quot;}]</p>
@@ -59,7 +59,7 @@ public class SidecarContainerConfig extends TeaModel {
     public String emptyDirDesc;
 
     /**
-     * <p>The environment variables of the container.</p>
+     * <p>The environment variables to set in the container. Specify the variables as a JSON array of key-value pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;TEST_ENV_KEY&quot;,&quot;value&quot;:&quot;TEST_ENV_VAR&quot;}]</p>
@@ -68,7 +68,7 @@ public class SidecarContainerConfig extends TeaModel {
     public String envs;
 
     /**
-     * <p>The image address.</p>
+     * <p>The container image URL.</p>
      * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com/demo/nginx:latest</p>
@@ -76,11 +76,14 @@ public class SidecarContainerConfig extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>The configuration for the liveness probe. The liveness probe checks if the container is running. If the probe fails, the system restarts the container.</p>
+     */
     @NameInMap("Liveness")
     public String liveness;
 
     /**
-     * <p>Memory</p>
+     * <p>The amount of memory allocated to the container, measured in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -89,7 +92,7 @@ public class SidecarContainerConfig extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>The container name.</p>
+     * <p>The name of the container.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -97,15 +100,27 @@ public class SidecarContainerConfig extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The configuration for the postStart hook. This hook runs immediately after the container starts to perform initialization tasks.</p>
+     */
     @NameInMap("PostStart")
     public String postStart;
 
+    /**
+     * <p>The configuration for the preStop hook. This hook runs immediately before the container is terminated to ensure a graceful shutdown.</p>
+     */
     @NameInMap("PreStop")
     public String preStop;
 
+    /**
+     * <p>The configuration for the readiness probe. The readiness probe checks if the container is ready to handle requests. The system will not direct traffic to a container until its readiness probe succeeds.</p>
+     */
     @NameInMap("Readiness")
     public String readiness;
 
+    /**
+     * <p>Specifies how to mount a Secret. This lets you securely use sensitive data, such as credentials or keys, in your application.</p>
+     */
     @NameInMap("SecretMountDesc")
     public String secretMountDesc;
 

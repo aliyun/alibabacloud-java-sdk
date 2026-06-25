@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGreyTagRouteRequest extends TeaModel {
     /**
-     * <p>The ID of the canary release rule.</p>
+     * <p>The ID of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

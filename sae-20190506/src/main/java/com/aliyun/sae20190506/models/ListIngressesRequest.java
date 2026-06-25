@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIngressesRequest extends TeaModel {
     /**
-     * <p>The ID of an application.</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>bbf3a590-6d13-46fe-8ca9-c947a20b****</p>
@@ -13,11 +13,14 @@ public class ListIngressesRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The current page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The ID of a namespace.</p>
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +29,9 @@ public class ListIngressesRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The page size.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

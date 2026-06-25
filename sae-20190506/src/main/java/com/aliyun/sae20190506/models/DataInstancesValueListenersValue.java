@@ -14,7 +14,7 @@ public class DataInstancesValueListenersValue extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The listener port of the NLB instance.</p>
+     * <p>The listener port.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -23,13 +23,18 @@ public class DataInstancesValueListenersValue extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The status of the NLB listener.</p>
+     * <p>The state of the NLB listener. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: The listener is being created.</li>
-     * <li><strong>Configuring</strong>: The listener is being configured.</li>
-     * <li><strong>Bounded</strong>: The listener runs as expected.</li>
-     * <li><strong>Unbinding</strong>: The listener is being deleted.</li>
-     * <li><strong>Failed</strong>: The listener is unavailable.</li>
+     * <li><p><strong>Creating</strong>: The listener is being created.</p>
+     * </li>
+     * <li><p><strong>Configuring</strong>: The listener is being configured.</p>
+     * </li>
+     * <li><p><strong>Bounded</strong>: The listener is running as expected.</p>
+     * </li>
+     * <li><p><strong>Unbinding</strong>: The listener is being deleted.</p>
+     * </li>
+     * <li><p><strong>Failed</strong>: The listener is unavailable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +44,7 @@ public class DataInstancesValueListenersValue extends TeaModel {
     public String status;
 
     /**
-     * <p>The open ports of the NLB instance.</p>
+     * <p>The target port.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -48,7 +53,7 @@ public class DataInstancesValueListenersValue extends TeaModel {
     public Integer targetPort;
 
     /**
-     * <p>The server certificates.</p>
+     * <p>The server certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123157******</p>

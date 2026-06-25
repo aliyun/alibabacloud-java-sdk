@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.</p>
+     * <p>A query can return a maximum of 50 results. If the number of results exceeds this limit, the response includes a NextToken. To retrieve the next page of results, pass this token in your next request.</p>
      * 
      * <strong>example:</strong>
      * <p>A2RN</p>
@@ -24,7 +24,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID. Separate multiple resource IDs with comma (,). This parameter is required if you do not specify the <strong>Tags</strong> parameter.</p>
+     * <p>The resource IDs, specified as a JSON array of strings. This parameter is required if the <strong>Tags</strong> parameter is not specified.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;d42921c4-5433-4abd-8075-0e536f8b****&quot;]</p>
@@ -33,7 +33,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceIds;
 
     /**
-     * <p>The type of the resource. Set the value to <code>application</code>.</p>
+     * <p>The resource type. Only <code>application</code> is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,13 +43,15 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag in the format of a key-value pair. This parameter is required if you do not specify the <strong>ResourceIds</strong> parameter. The following parameters are involved:</p>
+     * <p>The tags used to filter resources. This parameter is required if the <strong>ResourceIds</strong> parameter is not specified. A tag is a key-value pair.</p>
      * <ul>
-     * <li><strong>key</strong>: the tag key. It cannot exceed 128 characters in length.</li>
-     * <li><strong>value</strong>: the tag value. It cannot exceed 128 characters in length.</li>
+     * <li><p><strong>key</strong>: The tag key. The key can be 1 to 128 characters in length.</p>
+     * </li>
+     * <li><p><strong>value</strong>: The tag value. The value can be 1 to 128 characters in length.</p>
+     * </li>
      * </ul>
-     * <p>Tag keys and tag values are case-sensitive. If you specify multiple tags, the system adds all the tags to the specified resources. Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
-     * <p>Tag keys and tag values cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>Tag keys and tag values are case-sensitive. If you specify multiple tags, the operation returns only resources that have all the specified tags.</p>
+     * <p>A tag key cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;v1&quot;}]</p>

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateIngressResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request is redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurs.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurs.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,29 +24,30 @@ public class CreateIngressResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Responses.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public CreateIngressResponseBodyData data;
 
     /**
-     * <p>Error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the request is successful, no <strong>ErrorCode</strong> fields are returned.</li>
-     * <li>Request failed: <strong>ErrorCode</strong> fields are returned. For more information, see <strong>Error codes</strong>.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>success</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional information. Valid values:</p>
+     * <p>The returned message.</p>
      * <ul>
-     * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
-     * <li>If the request is abnormal, the specific exception error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,8 +68,10 @@ public class CreateIngressResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the routing rule was created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The ConfigMap was created.</li>
-     * <li><strong>false</strong>: The ConfigMap failed to be created.</li>
+     * <li><p><strong>true</strong>: The routing rule was created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The routing rule failed to be created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +81,7 @@ public class CreateIngressResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

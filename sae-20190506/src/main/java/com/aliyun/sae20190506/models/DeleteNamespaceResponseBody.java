@@ -7,10 +7,14 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,15 +26,17 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li><p>If the request is successful, this parameter is not returned.</p>
+     * </li>
+     * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information that is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -39,7 +45,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -50,8 +56,10 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the namespace was deleted. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: indicates that the namespace was deleted.</li>
-     * <li><strong>false</strong>: indicates that the namespace could not be deleted.</li>
+     * <li><p><strong>true</strong>: The namespace was deleted.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The namespace failed to be deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +69,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The trace ID. You can use this ID to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a981dd515966966104121683d****</p>

@@ -8,7 +8,7 @@ public class ListWebApplicationRevisionsOutput extends TeaModel {
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
-     * <p>A2RN</p>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

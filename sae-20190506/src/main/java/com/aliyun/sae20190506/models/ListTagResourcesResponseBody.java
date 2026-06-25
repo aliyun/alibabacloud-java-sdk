@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong> indicates that the request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong> indicates that the request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong> indicates that a client-side error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong> indicates that a server-side error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListTagResourcesResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>This parameter is returned only if the request fails.</p>
+     * </li>
+     * <li><p>For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The message returned for the request.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +66,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the mapping relationships between applications and tags were queried. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The mapping relationships were queried.</li>
-     * <li><strong>false</strong>: The mapping relationships failed to be queried.</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID that is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc5f84e15916043198032146d****</p>
@@ -151,7 +161,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource. Valid value: <code>application</code>.</p>
+         * <p>The type of the resource. The value is fixed as <code>application</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::SAE::APPLICATION</p>
@@ -218,7 +228,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyData extends TeaModel {
         /**
-         * <p>A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.</p>
+         * <p>The token that is used to retrieve the next page of results. A query returns a maximum of 50 results. If the results are truncated, you can use this token in a subsequent request to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -227,7 +237,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The mapping relationships between applications and tags.</p>
+         * <p>The list of tags and their associated resources.</p>
          */
         @NameInMap("TagResources")
         public java.util.List<ListTagResourcesResponseBodyDataTagResources> tagResources;

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request was invalid.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,20 +24,24 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error codes. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The returned message.</p>
      * <ul>
-     * <li>If the request was successful, <strong>success</strong> is returned.</li>
-     * <li>If the request failed, an error code is returned.</li>
+     * <li><p><strong>success</strong> is returned if the request is successful.</p>
+     * </li>
+     * <li><p>An error code is returned if the request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +51,7 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -52,10 +60,12 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the auto scaling policy was disabled. Valid values:</p>
+     * <p>Indicates whether the Auto Scaling policy was disabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The auto scaling policy was disabled.</li>
-     * <li><strong>false</strong>: The auto scaling policy failed to be disabled.</li>
+     * <li><p><strong>true</strong>: The policy was disabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The policy failed to be disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,6 +75,8 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The trace ID that is used to query the details of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */

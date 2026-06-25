@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListAppServicesPageResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: Success.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: Redirect.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: client error.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: server error.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,23 +24,25 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of services.</p>
+     * <p>The service list.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListAppServicesPageResponseBodyData> data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> section of this topic.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>A message that describes the outcome of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +51,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2583E089-99C2-562E-8B7E-73512136****</p>
@@ -54,10 +60,12 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the microservice list was obtained. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The list was obtained.</li>
-     * <li><strong>false</strong>: The list failed to be obtained.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +75,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0be3e0c816394483660457498e****</p>
@@ -138,7 +146,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
 
     public static class ListAppServicesPageResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hc4fs1****@98314c8790b****</p>
@@ -147,7 +155,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         public String edasAppId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-micro-service-******</p>
@@ -156,7 +164,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         public String edasAppName;
 
         /**
-         * <p>The group to which the service belongs. You can create a custom group.</p>
+         * <p>The service group. This value is user-defined.</p>
          * 
          * <strong>example:</strong>
          * <p>springCloud</p>
@@ -183,7 +191,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The version of a service. You can create a custom version.</p>
+         * <p>The service version. This value is user-defined.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -248,7 +256,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
 
     public static class ListAppServicesPageResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the current page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +265,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         public String currentPage;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -266,7 +274,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
-         * <p>The number of entries returned on each page. Valid values: 0 to 9999.</p>
+         * <p>The number of entries per page. The value must be in the range of 0 to 9999.</p>
          * 
          * <strong>example:</strong>
          * <p>9999</p>
@@ -275,13 +283,13 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         public String pageSize;
 
         /**
-         * <p>The result returned.</p>
+         * <p>The returned results.</p>
          */
         @NameInMap("Result")
         public java.util.List<ListAppServicesPageResponseBodyDataResult> result;
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

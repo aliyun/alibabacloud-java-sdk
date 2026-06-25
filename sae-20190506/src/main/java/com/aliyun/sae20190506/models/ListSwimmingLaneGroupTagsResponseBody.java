@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: Redirection.</li>
-     * <li><strong>4xx</strong>: Request error.</li>
-     * <li><strong>5xx</strong>: Server error.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Responses.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListSwimmingLaneGroupTagsResponseBodyData> data;
 
     /**
-     * <p>Error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the request is successful, no <strong>ErrorCode</strong> fields are returned.</li>
-     * <li>Request failed: <strong>ErrorCode</strong> fields are returned. For more information, see <strong>Error codes</strong>.</li>
+     * <li><p>This parameter is not returned if the request succeeds.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional information. Valid values:</p>
+     * <p>The response message.</p>
      * <ul>
-     * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
-     * <li>If the request is abnormal, the specific exception error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +57,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30375C38-F4ED-4135-A0AE-5C75DC7F****</p>
@@ -58,10 +66,12 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the data is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+     * <p>The trace ID that is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622920113732501e****</p>
@@ -145,16 +155,16 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
          * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;version&quot;:&quot;1.0.0&quot;,&quot;owner&quot;:&quot;team-a&quot;}</p>
+         * <p>{\&quot;tag\&quot;:\&quot;g1\&quot;,\&quot;priority\&quot;:100,\&quot;type\&quot;:\&quot;tag\&quot;,\&quot;desc\&quot;:\&quot;sys-label\&quot;}</p>
          */
         @NameInMap("Metadata")
         public String metadata;
 
         /**
-         * <p>The label of the lane.</p>
+         * <p>The swimming lane tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
+         * <p>g1</p>
          */
         @NameInMap("Tag")
         public String tag;

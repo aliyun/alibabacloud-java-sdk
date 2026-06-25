@@ -4,10 +4,6 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
@@ -17,33 +13,15 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0a981dd515966966104121683d****</p>
-     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -109,38 +87,18 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
     }
 
     public static class ListApplicationCenterServiceInstancesResponseBodyDataServiceInstances extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2025-10-28T02:18:51Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tftestacc54</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>si-2063aea4b23b4781a26b</p>
-         */
         @NameInMap("ServiceInstanceId")
         public String serviceInstanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>user-service</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Dify HA</p>
-         */
         @NameInMap("TemplateName")
         public String templateName;
 

@@ -5,10 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateConfigMapResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the ConfigMap instance was updated. Valid values:</p>
+     * <p>The HTTP status code or the POP error code.</p>
      * <ul>
-     * <li><strong>true</strong>: The instance was updated.</li>
-     * <li><strong>false</strong>: The instance failed to be updated.</li>
+     * <li><p><strong>2xx</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request is redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +24,25 @@ public class UpdateConfigMapResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the ConfigMap instance.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public UpdateConfigMapResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li><strong>2xx:</strong>: indicates that the call was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the call failed.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>Additional information about the call.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +51,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -54,6 +60,14 @@ public class UpdateConfigMapResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the ConfigMap instance was updated.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The instance was updated.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The instance failed to be updated.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,7 +75,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The trace ID that is used to query the details of the call.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -132,11 +146,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
 
     public static class UpdateConfigMapResponseBodyData extends TeaModel {
         /**
-         * <p>The returned error code. Valid values:</p>
-         * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
-         * </ul>
+         * <p>The ID of the ConfigMap instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

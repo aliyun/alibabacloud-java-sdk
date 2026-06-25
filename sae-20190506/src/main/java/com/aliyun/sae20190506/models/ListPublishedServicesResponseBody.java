@@ -7,10 +7,14 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request is redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client error occurs.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurs.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the microservices.</p>
+     * <p>The list of published microservices.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListPublishedServicesResponseBodyData> data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>For more information about error codes, see the <strong>Error codes</strong> section.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The returned message.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>Returns <strong>success</strong> if the request is successful.</p>
+     * </li>
+     * <li><p>Returns an error code if the request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +66,12 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the list of microservices was queried. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The list was queried.</li>
-     * <li><strong>false</strong>: The list failed to be queried.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID for querying call details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -142,7 +152,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
 
     public static class ListPublishedServicesResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
@@ -151,7 +161,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The reserved parameter. This parameter does not take effect.</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -160,19 +170,19 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         public String group2Ip;
 
         /**
-         * <p>The service group that corresponds to the consumed service.</p>
+         * <p>The groups to which the service belongs.</p>
          */
         @NameInMap("Groups")
         public java.util.List<String> groups;
 
         /**
-         * <p>The addresses where services can be subscribed to.</p>
+         * <p>The service subscription addresses.</p>
          */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
         /**
-         * <p>The name of the published service.</p>
+         * <p>The published service name.</p>
          * 
          * <strong>example:</strong>
          * <p>com.alibaba.nodejs.ItemService</p>
@@ -181,7 +191,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the published service.</p>
+         * <p>The published service type.</p>
          * 
          * <strong>example:</strong>
          * <p>RPC</p>
@@ -190,7 +200,7 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The version of the published services.</p>
+         * <p>The published service version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

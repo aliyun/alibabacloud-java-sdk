@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class WebVersionStatus extends TeaModel {
     /**
      * <p>The error message of the application execution. If the execution is successful, a null value is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>空</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;

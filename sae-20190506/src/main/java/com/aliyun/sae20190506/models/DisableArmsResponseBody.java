@@ -7,10 +7,14 @@ public class DisableArmsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,20 +24,19 @@ public class DisableArmsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DisableArmsResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</p>
+     * </li>
+     * <li><p>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -51,29 +54,25 @@ public class DisableArmsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>C0616FF6-9536-47BF-8A03-FB70386DFC71</p>
+     * <p>6DA47906-6070-5A16-896D-67DCF38A6B7B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The trace ID.</p>
+     * <p>The trace ID that is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
-     * <p>ac1a0b2215623063975374318e6d53</p>
+     * <p>0bc3b4ad17412276398692303e4cb1</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -141,11 +140,7 @@ public class DisableArmsResponseBody extends TeaModel {
 
     public static class DisableArmsResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates if enabled. Valid values: </p>
-         * <ul>
-         * <li>true: enabled</li>
-         * <li>false: disabled</li>
-         * </ul>
+         * <p>Indicates whether ARMS monitoring is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -4,17 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationCenterServiceInstancesRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>cn-beijing:test</p>
-     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cn-beijing</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

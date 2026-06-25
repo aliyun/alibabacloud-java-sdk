@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindNlbRequest extends TeaModel {
     /**
-     * <p>A short description of struct</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -14,7 +14,7 @@ public class UnbindNlbRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of NLB instance.</p>
+     * <p>The NLB instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>nlb-7z7jjbzz44d82c9***</p>
@@ -23,7 +23,7 @@ public class UnbindNlbRequest extends TeaModel {
     public String nlbId;
 
     /**
-     * <p>The listener port of the instance. Valid values: 0 to 65535.</p>
+     * <p>The listener port, which must be between 0 and 65535.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -32,11 +32,14 @@ public class UnbindNlbRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The type of the protocol. Valid values:</p>
+     * <p>The protocol. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong>.</li>
-     * <li><strong>UDP</strong>.</li>
-     * <li><strong>TCPSSL</strong>.</li>
+     * <li><p><strong>TCP</strong></p>
+     * </li>
+     * <li><p><strong>UDP</strong></p>
+     * </li>
+     * <li><p><strong>TCPSSL</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

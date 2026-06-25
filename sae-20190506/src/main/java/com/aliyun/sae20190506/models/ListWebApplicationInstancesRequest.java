@@ -52,6 +52,9 @@ public class ListWebApplicationInstancesRequest extends TeaModel {
 
     /**
      * <p>The status of the application instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;

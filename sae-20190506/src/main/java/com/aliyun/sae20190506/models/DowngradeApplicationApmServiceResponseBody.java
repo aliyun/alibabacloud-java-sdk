@@ -7,10 +7,14 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code or the error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +31,6 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
 
     /**
      * <p>The status code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>400</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -55,8 +56,10 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether ARMS advanced monitoring is disabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      */
     @NameInMap("Success")
@@ -136,8 +139,10 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether ARMS advanced monitoring is disabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -7,10 +7,14 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Take note of the following rules:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The call was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The call failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,8 +26,10 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
      * <ul>
-     * <li>If the request is successful, this parameter is not returned.****</li>
-     * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li><p>If the request is successful, this parameter is not returned.\<em>\</em>\<em>\</em></p>
+     * </li>
+     * <li><p>This parameter is returned only if the request failed.\<em>\</em>\<em>\</em> For more information, see <strong>Error codes</strong> in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("Data")
@@ -32,12 +38,11 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed. Take note of the following rules:</p>
      * <ul>
-     * <li>The ErrorCode parameter is not returned if the request succeeds.</li>
-     * <li>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</li>
+     * <li><p>The ErrorCode parameter is not returned if the request succeeds.</p>
+     * </li>
+     * <li><p>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>NULL</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -63,8 +68,10 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the application deployment is successful. Take note of the following rules:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,10 +154,14 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * <li><p><strong>2xx</strong>: indicates that the request was successful.</p>
+         * </li>
+         * <li><p><strong>3xx</strong>: indicates that the request was redirected.</p>
+         * </li>
+         * <li><p><strong>4xx</strong>: indicates that the request was invalid.</p>
+         * </li>
+         * <li><p><strong>5xx</strong>: indicates that a server error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

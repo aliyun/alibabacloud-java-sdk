@@ -14,7 +14,7 @@ public class ListJobsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The number of the page to return. The parameter value is a positive integer that is greater than or equal to 1.</p>
+     * <p>The page number. The value starts from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,10 +23,12 @@ public class ListJobsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The dimension by which applications are filtered. Valid values:</p>
+     * <p>The dimension by which to filter job templates. Valid values:</p>
      * <ul>
-     * <li><strong>appName</strong>: Applications are filtered by job template name.</li>
-     * <li><strong>appIds</strong>: Applications are filtered by job template ID.</li>
+     * <li><p><strong>appName</strong>: The name of the job template.</p>
+     * </li>
+     * <li><p><strong>appIds</strong>: The ID of the job template.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListJobsRequest extends TeaModel {
     public String fieldType;
 
     /**
-     * <p>Enter the name and ID of the job template.</p>
+     * <p>The name or ID of the target job template. This value corresponds to the dimension specified by <strong>FieldType</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-app</p>
@@ -54,10 +56,12 @@ public class ListJobsRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>Specifies how applications are sorted. Valid values:</p>
+     * <p>The sorting method for the job templates. Valid values:</p>
      * <ul>
-     * <li><strong>running</strong>: The applications are sorted based on the number of running instances.</li>
-     * <li><strong>instances</strong>: The applications are sorted based on the number of destination instances.</li>
+     * <li><p><strong>running</strong>: Sorts by the number of running instances.</p>
+     * </li>
+     * <li><p><strong>instances</strong>: Sorts by the number of destination instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +71,7 @@ public class ListJobsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of entries to return on each page. Valid value: 0 to 200.</p>
+     * <p>The number of entries per page. Valid values: 0 to 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -76,10 +80,12 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to sort the field names that are passed by <strong>OrderBy</strong> in ascending order. Valid values:</p>
+     * <p>Specifies whether to sort the results in ascending or descending order based on the field specified by the <strong>OrderBy</strong> parameter. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: in ascending order</li>
-     * <li><strong>false</strong>: in descending order</li>
+     * <li><p><strong>true</strong>: ascending order.</p>
+     * </li>
+     * <li><p><strong>false</strong>: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,10 +95,12 @@ public class ListJobsRequest extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>The tags that are displayed in a JSON string. Valid values:</p>
+     * <p>A list of tags. This is a JSON string. The value consists of the following parts:</p>
      * <ul>
-     * <li><strong>key</strong>: the tag key</li>
-     * <li><strong>value</strong>: the tag value</li>
+     * <li><p><strong>key</strong>: The tag key.</p>
+     * </li>
+     * <li><p><strong>value</strong>: The tag value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +110,7 @@ public class ListJobsRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>Set the value to <code>job</code>.</p>
+     * <p>The workload. Set the value to <code>job</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>job</p>

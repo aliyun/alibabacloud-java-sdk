@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ConfirmPipelineBatchResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code for the request.</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +24,7 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The batch information.</p>
+     * <p>The pipeline information.</p>
      */
     @NameInMap("Data")
     public ConfirmPipelineBatchResponseBodyData data;
@@ -28,8 +32,10 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li><p>The <strong>ErrorCode</strong> field is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>The <strong>ErrorCode</strong> field is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
@@ -45,7 +51,7 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -54,10 +60,12 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the processing of the next batch started as required. Valid values:</p>
+     * <p>Indicates whether the batch confirmation was successful.</p>
      * <ul>
-     * <li><strong>true</strong>: The processing started.</li>
-     * <li><strong>false</strong>: The processing could not start.</li>
+     * <li><p><strong>true</strong>: The confirmation was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The confirmation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +75,7 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * <p>The trace ID. You can use this ID to look up the details of the call.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -138,7 +146,7 @@ public class ConfirmPipelineBatchResponseBody extends TeaModel {
 
     public static class ConfirmPipelineBatchResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the batch.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e2e-vds-feh-***</p>

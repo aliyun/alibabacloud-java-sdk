@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegistryCertificateConfig extends TeaModel {
     /**
+     * <p>The Base64-encoded certificate of the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCmZha2VDZXJ0aWZpY2F0ZQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t</p>
      */
@@ -12,6 +14,8 @@ public class RegistryCertificateConfig extends TeaModel {
     public String certBase64;
 
     /**
+     * <p>Specifies whether to access the image repository in an insecure manner.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

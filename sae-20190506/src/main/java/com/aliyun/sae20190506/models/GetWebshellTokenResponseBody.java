@@ -7,10 +7,14 @@ public class GetWebshellTokenResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,12 +32,11 @@ public class GetWebshellTokenResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the call failed. Value values:</p>
      * <ul>
-     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-     * <li>If the request failed, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>If the request was successful, <strong>ErrorCode</strong> is not returned.</p>
+     * </li>
+     * <li><p>If the request failed, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>400</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -41,8 +44,10 @@ public class GetWebshellTokenResponseBody extends TeaModel {
     /**
      * <p>The returned message. Value description:</p>
      * <ul>
-     * <li>If the request was successful, a success message is returned.</li>
-     * <li>An error code is returned if the request failed.</li>
+     * <li><p>If the request was successful, a success message is returned.</p>
+     * </li>
+     * <li><p>An error code is returned if the request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

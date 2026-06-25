@@ -7,8 +7,10 @@ public class DescribeNamespaceListRequest extends TeaModel {
     /**
      * <p>Specifies whether to return custom namespaces. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The system returns custom namespaces.</li>
-     * <li><strong>false</strong>: The system does not return custom namespaces.</li>
+     * <li><p><strong>true</strong>: The system returns custom namespaces.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The system does not return custom namespaces.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class DescribeNamespaceListRequest extends TeaModel {
     /**
      * <p>Indicates whether hybrid cloud namespaces are excluded. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Hybrid cloud namespaces are excluded.</li>
-     * <li><strong>false</strong>: Hybrid cloud namespaces are included.</li>
+     * <li><p><strong>true</strong>: Hybrid cloud namespaces are excluded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Hybrid cloud namespaces are included.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

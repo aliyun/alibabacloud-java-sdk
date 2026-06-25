@@ -5,10 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListLogConfigsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the logging configurations of an application were obtained. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: indicates that the configurations were obtained.</li>
-     * <li><strong>false</strong>: indicates that the configurations could not be obtained.</li>
+     * <li><p><strong>2xx</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request is redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A request error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +24,31 @@ public class ListLogConfigsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The logging configurations.</p>
+     * <p>The information about the file logs.</p>
      */
     @NameInMap("Data")
     public ListLogConfigsResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> list in this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The returned message.</p>
+     * <ul>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error code is returned.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,11 +57,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned message.</p>
-     * <ul>
-     * <li><strong>success</strong> is returned when the request succeeds.</li>
-     * <li>An error code is returned when the request fails.</li>
-     * </ul>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,6 +66,14 @@ public class ListLogConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the list of application logs was obtained. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The list was obtained.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The list failed to be obtained.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -65,7 +81,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The logging configurations.</p>
+     * <p>The trace ID of the request. You can use the trace ID to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1d5e2c15671581252413581d****</p>
@@ -136,7 +152,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
 
     public static class ListLogConfigsResponseBodyDataLogConfigs extends TeaModel {
         /**
-         * <p>The path of logs.</p>
+         * <p>The name of the Simple Log Service configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>sae-1f240907a6faf58c653f09e81b7e****</p>
@@ -145,7 +161,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public String configName;
 
         /**
-         * <p>The storage type of logs.</p>
+         * <p>The time when the log configuration was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-08-29 17:18:00</p>
@@ -154,7 +170,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The path of the log file (log source).</p>
+         * <p>The path of the log file. This is the log source.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/logs/hsf/hsf.log</p>
@@ -163,7 +179,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public String logDir;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The log type. Only <strong>file_log</strong> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>file_log</p>
@@ -172,7 +188,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public String logType;
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -181,7 +197,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The time when the configuration was created.</p>
+         * <p>The name of the Logstore in Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>sae-1f240907a6faf58c653f09e81b7e****</p>
@@ -190,7 +206,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public String slsLogStore;
 
         /**
-         * <p>The type of the log. Set this value to <strong>file_log</strong>.</p>
+         * <p>The ID of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>sae-56f77b65-788d-442a-9885-7f20d91f****</p>
@@ -199,7 +215,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public String slsProject;
 
         /**
-         * <p>The ID of the Log Service project.</p>
+         * <p>The storage class for Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>sls</p>
@@ -280,7 +296,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
 
     public static class ListLogConfigsResponseBodyData extends TeaModel {
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -289,17 +305,13 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The details of the logging configuration.</p>
+         * <p>The log configurations.</p>
          */
         @NameInMap("LogConfigs")
         public java.util.List<ListLogConfigsResponseBodyDataLogConfigs> logConfigs;
 
         /**
-         * <p>The error code.</p>
-         * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
-         * </ul>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -308,7 +320,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

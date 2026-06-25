@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeChangeOrderResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client-side error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server-side error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,17 +30,19 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
     public DescribeChangeOrderResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>If the request is successful, this parameter is not returned.</p>
+     * </li>
+     * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -54,10 +60,12 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The information was queried.</li>
-     * <li><strong>false</strong>: The information failed to be queried.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +75,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID of the request. This ID is used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -156,7 +164,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public Integer parallelCount;
 
         /**
-         * <p>The ID of the batch.</p>
+         * <p>The batch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0e4acf82-c9b1-4c1e-ac28-55776338****</p>
@@ -165,7 +173,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The name of the batch.</p>
+         * <p>The batch name.</p>
          * 
          * <strong>example:</strong>
          * <p>Batch 1 Change</p>
@@ -174,7 +182,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public String pipelineName;
 
         /**
-         * <p>The time when the batch processing started.</p>
+         * <p>The start time of the batch.</p>
          * 
          * <strong>example:</strong>
          * <p>1562831689704</p>
@@ -185,16 +193,26 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         /**
          * <p>The status of the batch. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The batch is being prepared.</li>
-         * <li><strong>1</strong>: The batch is being processed.</li>
-         * <li><strong>2</strong>: The batch was processed.</li>
-         * <li><strong>3</strong>: The batch failed to be processed.</li>
-         * <li><strong>6</strong>: The batch processing was terminated.</li>
-         * <li><strong>8</strong>: The execution process is pending. You must manually release the batch.</li>
-         * <li><strong>9</strong>: The execution process is pending. SAE will automatically release the batch.</li>
-         * <li><strong>10</strong>: The batch failed to be processed due to a system exception.</li>
-         * <li><strong>11</strong>: The batch is pending approval.</li>
-         * <li><strong>12</strong>: The batch is approved and is pending execution.</li>
+         * <li><p><strong>0</strong>: Preparing</p>
+         * </li>
+         * <li><p><strong>1</strong>: In progress</p>
+         * </li>
+         * <li><p><strong>2</strong>: Succeeded</p>
+         * </li>
+         * <li><p><strong>3</strong>: Failed</p>
+         * </li>
+         * <li><p><strong>6</strong>: Terminated</p>
+         * </li>
+         * <li><p><strong>8</strong>: Awaiting manual confirmation</p>
+         * </li>
+         * <li><p><strong>9</strong>: Awaiting automatic confirmation</p>
+         * </li>
+         * <li><p><strong>10</strong>: Failed due to a system error</p>
+         * </li>
+         * <li><p><strong>11</strong>: Pending approval</p>
+         * </li>
+         * <li><p><strong>12</strong>: Approved and pending execution</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,7 +222,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the batch information was last modified.</p>
+         * <p>The time when the batch was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1562847178007</p>
@@ -277,7 +295,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
 
     public static class DescribeChangeOrderResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bbbbb-3fd370b2-3646-4ba6-91f9-9423e19ab0cd-*****</p>
@@ -286,7 +304,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>app-test</p>
@@ -294,14 +312,20 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>Indicates whether gray tag routing is enabled.</p>
+         */
         @NameInMap("ApplicationEnableGreyTagRoute")
         public Boolean applicationEnableGreyTagRoute;
 
+        /**
+         * <p>The update strategy for the application.</p>
+         */
         @NameInMap("ApplicationUpdateStrategy")
         public String applicationUpdateStrategy;
 
         /**
-         * <p>The approval ID of the change order.</p>
+         * <p>The approval ID for the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>67de0b39-a9d4-4c09-a170-cf438208****</p>
@@ -310,10 +334,12 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public String approvalId;
 
         /**
-         * <p>Indicates whether SAE automatically releases the batches. Valid values:</p>
+         * <p>Indicates whether to automatically release the change in batches. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: SAE automatically releases the batches.</li>
-         * <li><strong>false</strong>: SAE does not automatically release the batches.</li>
+         * <li><p><strong>true</strong>: The change is automatically released.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The change is not automatically released.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +349,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public Boolean auto;
 
         /**
-         * <p>The number of release batches.</p>
+         * <p>The number of batches.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -332,10 +358,12 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public Integer batchCount;
 
         /**
-         * <p>The processing method for the batches. Valid values:</p>
+         * <p>The release mode for batches. Valid values:</p>
          * <ul>
-         * <li><strong>auto</strong>: SAE automatically releases the batches.</li>
-         * <li><strong>Manual</strong>: You must manually release the batches.</li>
+         * <li><p><strong>auto</strong>: Automatic release.</p>
+         * </li>
+         * <li><p><strong>manual</strong>: Manual release.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,7 +373,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public String batchType;
 
         /**
-         * <p>The interval between batches in a phased release. SAE automatically releases batches at the specified interval. Unit: minutes.</p>
+         * <p>The wait time, in minutes, between batches in an automatic release.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -354,7 +382,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public Integer batchWaitTime;
 
         /**
-         * <p>The ID of the change order.</p>
+         * <p>The change order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>765fa5c0-9ebb-4bb4-b383-1f885447**</p>
@@ -363,34 +391,57 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public String changeOrderId;
 
         /**
-         * <p>The change type, which corresponds to the <strong>CoTypeCode</strong> parameter.</p>
+         * <p>The change type. This parameter is a description of <code>CoTypeCode</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Batch Restart Instances</p>
          */
         @NameInMap("CoType")
         public String coType;
 
         /**
-         * <p>The code of the change type. Valid values:</p>
+         * <p>The change type code. Valid values:</p>
          * <ul>
-         * <li><strong>CoBindSlb</strong>: associates a Sever Load Balancer (SLB) instance with the application.</li>
-         * <li><strong>CoUnbindSlb</strong>: disassociates the SLB instance from the application.</li>
-         * <li><strong>CoCreateApp</strong>: creates the application.</li>
-         * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
-         * <li><strong>CoDeploy</strong>: deploys the application.</li>
-         * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
-         * <li><strong>CoRollback</strong>: rolls back the application.</li>
-         * <li><strong>CoScaleIn</strong>: scales in the application.</li>
-         * <li><strong>CoScaleOut</strong>: scales out the application.</li>
-         * <li><strong>CoStart</strong>: starts the application.</li>
-         * <li><strong>CoStop</strong>: stops the application.</li>
-         * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance type.</li>
-         * <li><strong>CoDeployHistroy</strong>: rolls back the application to a historical version.</li>
-         * <li><strong>CoBindNas</strong>: associates a NAS file system with the application.</li>
-         * <li><strong>CoUnbindNas</strong>: disassociates the NAS file system from the application.</li>
-         * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
-         * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
-         * <li><strong>CoRestartInstances</strong>: restarts the instances.</li>
-         * <li><strong>CoDeleteInstances</strong>: deletes the instances.</li>
-         * <li><strong>CoScaleInAppWithInstances</strong>: reduces the specified number of application instances.</li>
+         * <li><p><strong>CoBindSlb</strong>: Binds an SLB instance.</p>
+         * </li>
+         * <li><p><strong>CoUnbindSlb</strong>: Unbinds an SLB instance.</p>
+         * </li>
+         * <li><p><strong>CoCreateApp</strong>: Creates an application.</p>
+         * </li>
+         * <li><p><strong>CoDeleteApp</strong>: Deletes an application.</p>
+         * </li>
+         * <li><p><strong>CoDeploy</strong>: Deploys an application.</p>
+         * </li>
+         * <li><p><strong>CoRestartApplication</strong>: Restarts an application.</p>
+         * </li>
+         * <li><p><strong>CoRollback</strong>: Rolls back an application.</p>
+         * </li>
+         * <li><p><strong>CoScaleIn</strong>: Scales in an application.</p>
+         * </li>
+         * <li><p><strong>CoScaleOut</strong>: Scales out an application.</p>
+         * </li>
+         * <li><p><strong>CoStart</strong>: Starts an application.</p>
+         * </li>
+         * <li><p><strong>CoStop</strong>: Stops an application.</p>
+         * </li>
+         * <li><p><strong>CoRescaleApplicationVertically</strong>: Modifies instance specifications.</p>
+         * </li>
+         * <li><p><strong>CoDeployHistroy</strong>: Rolls back to a historical version.</p>
+         * </li>
+         * <li><p><strong>CoBindNas</strong>: Binds a NAS file system.</p>
+         * </li>
+         * <li><p><strong>CoUnbindNas</strong>: Unbinds a NAS file system.</p>
+         * </li>
+         * <li><p><strong>CoBatchStartApplication</strong>: Starts applications in batches.</p>
+         * </li>
+         * <li><p><strong>CoBatchStopApplication</strong>: Stops applications in batches.</p>
+         * </li>
+         * <li><p><strong>CoRestartInstances</strong>: Restarts instances.</p>
+         * </li>
+         * <li><p><strong>CoDeleteInstances</strong>: Deletes instances.</p>
+         * </li>
+         * <li><p><strong>CoScaleInAppWithInstances</strong>: Scales in an application by specifying instances.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,16 +495,26 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         /**
          * <p>The status of the change order. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The change order is being prepared.</li>
-         * <li><strong>1</strong>: The change order is being executed.</li>
-         * <li><strong>2</strong>: The change order was executed.</li>
-         * <li><strong>3</strong>: The change order failed to be executed.</li>
-         * <li><strong>6</strong>: The change order was terminated.</li>
-         * <li><strong>8</strong>: The execution process is pending. You must manually release the batches.</li>
-         * <li><strong>9</strong>: The execution process is pending. SAE will automatically release the batches.</li>
-         * <li><strong>10</strong>: The execution failed due to a system exception.</li>
-         * <li><strong>11</strong>: The change order is pending approval.</li>
-         * <li><strong>12</strong>: The change order is approved and is pending execution.</li>
+         * <li><p><strong>0</strong>: Preparing</p>
+         * </li>
+         * <li><p><strong>1</strong>: In progress</p>
+         * </li>
+         * <li><p><strong>2</strong>: Succeeded</p>
+         * </li>
+         * <li><p><strong>3</strong>: Failed</p>
+         * </li>
+         * <li><p><strong>6</strong>: Terminated</p>
+         * </li>
+         * <li><p><strong>8</strong>: Awaiting manual confirmation</p>
+         * </li>
+         * <li><p><strong>9</strong>: Awaiting automatic confirmation</p>
+         * </li>
+         * <li><p><strong>10</strong>: Failed due to a system error</p>
+         * </li>
+         * <li><p><strong>11</strong>: Pending approval</p>
+         * </li>
+         * <li><p><strong>12</strong>: Approved and pending execution</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -463,10 +524,12 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:</p>
+         * <p>The substatus of the release order. This parameter indicates whether an exception occurred during the release. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No exception occurred.</li>
-         * <li><strong>1</strong>: An exception occurred. For example, if an error occurs during a phased release, you must manually roll back the application. In this case, the change order cannot be completed, so the Status parameter is still displayed as &quot;1&quot;, which indicates that the change order is being executed. You can check the value of this parameter to determine whether an exception occurs.</li>
+         * <li><p><strong>0</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Abnormal. For example, if a batch release fails, you must manually perform a rollback, leaving the release order in the In Progress state.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -476,10 +539,12 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         public Integer subStatus;
 
         /**
-         * <p>Indicates whether the application can be rolled back. Valid values:</p>
+         * <p>Indicates whether rollback is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The application can be rolled back.</li>
-         * <li><strong>false</strong>: The application cannot be rolled back.</li>
+         * <li><p><strong>true</strong>: Rollback is supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Rollback is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

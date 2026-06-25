@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
     /**
-     * <p>The interface status or POP error code. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: Redirection.</li>
-     * <li><strong>4xx</strong>: Request error.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: Success</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: Redirection</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: Client error</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: Server error</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,20 +24,24 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the request is successful, no <strong>ErrorCode</strong> fields are returned.</li>
-     * <li>Request failed: <strong>ErrorCode</strong> fields are returned. For more information, see <strong>Error codes</strong>.</li>
+     * <li><p>This parameter is not returned if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional information. Valid values:</p>
+     * <p>The returned message.</p>
      * <ul>
-     * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
-     * <li>If the request is abnormal, the specific exception error code is returned.</li>
+     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +51,7 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -52,10 +60,12 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the data is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The policy was deleted.</li>
-     * <li><strong>false</strong>: The policy failed to be deleted.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +75,7 @@ public class UpdateSwimmingLaneEnableAttributeResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+     * <p>The trace ID. You can use the trace ID to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622920113732501e****</p>

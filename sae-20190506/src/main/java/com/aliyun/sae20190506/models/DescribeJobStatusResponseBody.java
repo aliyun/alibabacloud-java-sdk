@@ -7,10 +7,14 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The call was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The call failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,12 +32,11 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     /**
      * <p>The error code returned. Take note of the following rules:</p>
      * <ul>
-     * <li><strong>ErrorCode</strong> is not returned if the request succeeds.</li>
-     * <li><strong>ErrorCode</strong> is returned if the request fails. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+     * <li><p><strong>ErrorCode</strong> is not returned if the request succeeds.</p>
+     * </li>
+     * <li><p><strong>ErrorCode</strong> is returned if the request fails. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -41,8 +44,10 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     /**
      * <p>The returned message. Take note of the following rules:</p>
      * <ul>
-     * <li>If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>If the call fails, an error code is returned.</li>
+     * <li><p>If the call is successful, <strong>success</strong> is returned.</p>
+     * </li>
+     * <li><p>If the call fails, an error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,8 +68,10 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,8 +190,10 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         /**
          * <p>The returned message. Take note of the following rules:</p>
          * <ul>
-         * <li>If the call is successful, <strong>success</strong> is returned.</li>
-         * <li>If the call fails, an error code is returned.</li>
+         * <li><p>If the call is successful, <strong>success</strong> is returned.</p>
+         * </li>
+         * <li><p>If the call fails, an error code is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,10 +214,14 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         /**
          * <p>The status of the job. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The job is not executed.</li>
-         * <li><strong>1</strong>: The job was executed.</li>
-         * <li><strong>2</strong>: The job failed to be executed.</li>
-         * <li><strong>3</strong>: The job is being executed.</li>
+         * <li><p><strong>0</strong>: The job is not executed.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The job was executed.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The job failed to be executed.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The job is being executed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

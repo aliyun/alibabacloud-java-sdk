@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeployApplicationResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <p>The API status or POP error code. Values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: Success.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: Redirection.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: Request error.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: Server error.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,29 +24,33 @@ public class DeployApplicationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DeployApplicationResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <p>The error code. Values:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li><p>On success: This field is not returned.</p>
+     * </li>
+     * <li><p>On failure: This field is returned. For details, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Null</p>
+     * <p>空</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The additional information that is returned. Take note of the following rules:</p>
+     * <p>Additional information. Values:</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p>On success, returns <strong>success</strong>.</p>
+     * </li>
+     * <li><p>On failure, returns a specific error code.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +60,7 @@ public class DeployApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3***</p>
@@ -61,10 +69,12 @@ public class DeployApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application deployment is successful. Take note of the following rules:</p>
+     * <p>Whether the deployment succeeded. Values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Deployment succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Deployment failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +84,7 @@ public class DeployApplicationResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID for precise query of call information.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
@@ -154,7 +164,7 @@ public class DeployApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the change order. It can be used to query the task status.</p>
+         * <p>The returned change order ID. Use it to query task execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
@@ -163,10 +173,12 @@ public class DeployApplicationResponseBody extends TeaModel {
         public String changeOrderId;
 
         /**
-         * <p>Specifies whether approval is required when a RAM user performs release. Take note of the following rules:</p>
+         * <p>Whether RAM users need approval to deploy changes. Values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Approval required.</p>
+         * </li>
+         * <li><p><strong>false</strong>: No approval required.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

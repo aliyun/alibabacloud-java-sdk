@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopApplicationRequest extends TeaModel {
     /**
-     * <p>The returned message.</p>
-     * <ul>
-     * <li><strong>success</strong> is returned when the request succeeds.</li>
-     * <li>An error code is returned when the request fails.</li>
-     * </ul>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

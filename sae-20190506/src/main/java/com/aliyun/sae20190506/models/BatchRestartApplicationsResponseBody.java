@@ -23,9 +23,6 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
     /**
      * <p>The error code. Value description:</p>
      * <p>If the request succeeds, this field is not returned. It is returned only if the request fails. For more information, see the &quot;Error codes&quot; section in this topic.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

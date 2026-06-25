@@ -7,10 +7,14 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: A client-side error occurred.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server-side error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,26 +24,30 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the image of the application.</p>
+     * <p>The application image information.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationImageResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>This parameter is left empty if the request is successful.</p>
+     * </li>
+     * <li><p>This parameter returns an error code if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The returned message.</p>
      * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
+     * <li><p><strong>success</strong> is returned if the request is successful.</p>
+     * </li>
+     * <li><p>An error code is returned if the request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +66,12 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the information about the image was obtained. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The information was obtained.</li>
-     * <li><strong>false</strong>: The information failed to be obtained.</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +81,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID that is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -163,7 +173,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The image repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -172,7 +182,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the namespace to which the image repository belongs.</p>
+         * <p>The image namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -181,7 +191,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
-         * <p>The type of the repository. Only Container Registry is supported.</p>
+         * <p>The image repository type. Currently, only Container Registry is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>ALI_HUB</p>
@@ -190,7 +200,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         public String repoOriginType;
 
         /**
-         * <p>The tag of the image.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -199,7 +209,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         public String repoTag;
 
         /**
-         * <p>This parameter is reserved.</p>
+         * <p>A reserved field.</p>
          */
         @NameInMap("RepoType")
         public String repoType;

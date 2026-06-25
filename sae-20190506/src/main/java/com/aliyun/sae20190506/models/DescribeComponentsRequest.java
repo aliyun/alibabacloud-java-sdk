@@ -14,10 +14,12 @@ public class DescribeComponentsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The type of the supported components. Valid values:</p>
+     * <p>The supported component type. Valid values:</p>
      * <ul>
-     * <li><strong>TOMCAT</strong></li>
-     * <li><strong>JDK</strong></li>
+     * <li><p><strong>TOMCAT</strong></p>
+     * </li>
+     * <li><p><strong>JDK</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

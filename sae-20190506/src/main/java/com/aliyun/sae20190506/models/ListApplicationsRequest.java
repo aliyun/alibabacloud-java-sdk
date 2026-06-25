@@ -14,11 +14,14 @@ public class ListApplicationsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The SAE application type. Valid values:</p>
+     * <p>The type of the SAE application.</p>
      * <ul>
-     * <li><strong>micro_service</strong></li>
-     * <li><strong>web</strong></li>
-     * <li><strong>job</strong></li>
+     * <li><p><strong>micro_service</strong></p>
+     * </li>
+     * <li><p><strong>web</strong></p>
+     * </li>
+     * <li><p><strong>job</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,12 +40,16 @@ public class ListApplicationsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Set the filtering criteria for applications. The value options are as follows:</p>
+     * <p>The field to filter applications by. Valid values:</p>
      * <ul>
-     * <li>appName: Application name.</li>
-     * <li>appIds: Application IDs.</li>
-     * <li>slbIps: SLB IP addresses.</li>
-     * <li>instanceIps: Instance IP addresses.</li>
+     * <li><p><strong>appName</strong>: The application name.</p>
+     * </li>
+     * <li><p><strong>appIds</strong>: The application ID.</p>
+     * </li>
+     * <li><p><strong>slbIps</strong>: The SLB IP address.</p>
+     * </li>
+     * <li><p><strong>instanceIps</strong>: The instance IP address.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +59,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String fieldType;
 
     /**
-     * <p>The name, ID, SLB IP, or instance IP of the target application.</p>
+     * <p>The value for the field specified by <code>FieldType</code>. This can be an application name, application ID, SLB IP address, or instance IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-app</p>
@@ -60,6 +67,9 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("FieldValue")
     public String fieldValue;
 
+    /**
+     * <p>Filters applications by whether they are stateful. Set this parameter to <code>true</code> to return only stateful applications, or to <code>false</code> to return only stateless applications.</p>
+     */
     @NameInMap("IsStateful")
     public String isStateful;
 
@@ -72,24 +82,37 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The edition of the application:</p>
+     * <ul>
+     * <li><p><code>lite</code>: Lite</p>
+     * </li>
+     * <li><p><code>std</code>: Standard</p>
+     * </li>
+     * <li><p><code>pro</code>: Pro</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("NewSaeVersion")
     public String newSaeVersion;
 
     /**
-     * <p>Specifies how applications are sorted. Valid values:</p>
+     * <p>The field to sort the applications by. Valid values:</p>
      * <ul>
-     * <li><strong>running</strong>: The applications are sorted based on the number of running instances.</li>
-     * <li><strong>instances</strong>: The applications are sorted based on the number of destination instances.</li>
+     * <li><p><strong>runnings</strong>: Sorts the applications by the current instance count.</p>
+     * </li>
+     * <li><p><strong>instances</strong>: Sorts the applications by the target instance count.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>running</p>
+     * <p>runnings</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
-     * <p>The number of records in each page. Value range: [0,10000]</p>
+     * <p>The number of entries to return per page. Valid values: 0 to 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -98,11 +121,37 @@ public class ListApplicationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Sort by the running status of application instances. If the statuses are the same, sort by instance ID. The value options are as follows:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>true: Sort in ascending order. Instances are arranged according to the startup process, for example: to ultimately reach the running state, an instance must first go through steps such as starting containers, pulling images, and initializing the instance.</li>
-     * <li>false: Sort in descending order.</li>
+     * <li><p><strong>true</strong>: Sorts the results in ascending order.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Sorts the results in descending order.</p>
+     * </li>
      * </ul>
+     * <ol>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * <li><hr>
+     * </li>
+     * </ol>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -111,13 +160,15 @@ public class ListApplicationsRequest extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>The tag in the format of a key-value pair.</p>
+     * <p>Filters applications by tags. The tags are specified as a JSON string that contains an array of key-value pairs.</p>
      * <ul>
-     * <li><strong>key</strong>: the tag key. It cannot exceed 128 characters in length.</li>
-     * <li><strong>value</strong>: the tag value. It cannot exceed 128 characters in length.</li>
+     * <li><p><strong>key</strong>: The tag key, which can be 1 to 128 characters in length.</p>
+     * </li>
+     * <li><p><strong>value</strong>: The tag value, which can be 1 to 128 characters in length.</p>
+     * </li>
      * </ul>
-     * <p>Tag keys and tag values are case-sensitive. If you specify multiple tags, the system adds all the tags to the specified resources. Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
-     * <p>Tag keys and tag values cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>This parameter is case-sensitive. An application is returned only if it matches all specified tags. On a resource, a tag key can have only one tag value.</p>
+     * <p>The tag key and tag value cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</p>

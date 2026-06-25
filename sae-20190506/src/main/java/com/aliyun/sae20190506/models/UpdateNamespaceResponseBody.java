@@ -7,10 +7,14 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The call was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The call failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,12 +32,11 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     /**
      * <p>The error code returned. Take note of the following rules:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li><p>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</p>
+     * </li>
+     * <li><p>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -59,8 +62,10 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the information about the namespace was updated. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The instance was updated.</li>
-     * <li><strong>false</strong>: The instance failed to be updated.</li>
+     * <li><p><strong>true</strong>: The instance was updated.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The instance failed to be updated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,8 +148,10 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether to enable SAE built-in registry:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -7,10 +7,14 @@ public class CreateSecretResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code or the error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The request was successful.</li>
-     * <li><strong>3xx</strong>: The request was redirected.</li>
-     * <li><strong>4xx</strong>: The request failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li><p><strong>2xx</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: The request was redirected.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: The request failed.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: A server error occurred.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,12 +32,11 @@ public class CreateSecretResponseBody extends TeaModel {
     /**
      * <p>The status code. Value values:</p>
      * <ul>
-     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
-     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li><p>If the request was successful, <strong>ErrorCode</strong> is not returned.</p>
+     * </li>
+     * <li><p>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>400</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -59,8 +62,10 @@ public class CreateSecretResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the Secret was created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The ConfigMap was created.</li>
-     * <li><strong>false</strong>: The ConfigMap failed to be created.</li>
+     * <li><p><strong>true</strong>: The ConfigMap was created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The ConfigMap failed to be created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
