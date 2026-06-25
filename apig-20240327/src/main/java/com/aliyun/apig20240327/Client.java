@@ -2555,7 +2555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information of a consumer.</p>
+     * <p>Retrieves an API consumer.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2581,7 +2581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information of a consumer.</p>
+     * <p>Retrieves an API consumer.</p>
      * @return GetConsumerResponse
      */
     public GetConsumerResponse getConsumer(String consumerId) throws Exception {
@@ -3086,10 +3086,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API supports creating multiple services.</p>
+     * <p>The API supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get the MCP server.</p>
+     * <p>Get MCP Server.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3115,10 +3115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API supports creating multiple services.</p>
+     * <p>The API supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get the MCP server.</p>
+     * <p>Get MCP Server.</p>
      * @return GetMcpServerResponse
      */
     public GetMcpServerResponse getMcpServer(String mcpServerId) throws Exception {
@@ -3695,6 +3695,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listConsumerAuthorizationRulesWithOptions(consumerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消费者配额限流规则列表</p>
+     * 
+     * @param request ListConsumerQuotaRulesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConsumerQuotaRulesResponse
+     */
+    public ListConsumerQuotaRulesResponse listConsumerQuotaRulesWithOptions(String consumerId, ListConsumerQuotaRulesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumerQuotaRules"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumers/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerId) + "/quota-rules"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerQuotaRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消费者配额限流规则列表</p>
+     * 
+     * @param request ListConsumerQuotaRulesRequest
+     * @return ListConsumerQuotaRulesResponse
+     */
+    public ListConsumerQuotaRulesResponse listConsumerQuotaRules(String consumerId, ListConsumerQuotaRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumerQuotaRulesWithOptions(consumerId, request, headers, runtime);
     }
 
     /**
