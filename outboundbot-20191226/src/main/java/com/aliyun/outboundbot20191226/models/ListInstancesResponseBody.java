@@ -23,7 +23,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>A list of service instances.</p>
+     * <p>The list of service instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
@@ -56,7 +56,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -161,7 +161,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesResourceTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -170,7 +170,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -212,7 +212,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The ID of the user who created the instance.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>34234</p>
@@ -221,7 +221,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long creatorId;
 
         /**
-         * <p>The name of the user who created the instance.</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -230,7 +230,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The description of the Outbound Calling Bot service instance.</p>
+         * <p>The description of the Outbound Bot service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>这是一个实例</p>
@@ -239,7 +239,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The ID of the service instance.</p>
+         * <p>The service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
@@ -248,7 +248,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the Outbound Calling Bot service instance.</p>
+         * <p>The name of the Outbound Bot service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>回访</p>
@@ -257,7 +257,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Indicates whether the instance is a system-predefined instance.</p>
+         * <p>Indicates whether the instance is a system preset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -266,7 +266,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean isPreset;
 
         /**
-         * <p>The maximum number of concurrent outbound calls.</p>
+         * <p>The maximum number of concurrent outbound calls allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -284,7 +284,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String ownerName;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
@@ -293,7 +293,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag information.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptVariablesRequest extends TeaModel {
     /**
-     * <p>The instance ID, also known as the business ID.</p>
+     * <p>The instance ID (also referred to as the business ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListScriptVariablesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to retrieve variables from the sandbox.</p>
+     * <p>Specifies whether the environment is a test environment.</p>
      * 
      * <strong>example:</strong>
      * <p>true：测试环境
@@ -26,7 +26,7 @@ public class ListScriptVariablesRequest extends TeaModel {
     public Boolean sandbox;
 
     /**
-     * <p>The script ID.</p>
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

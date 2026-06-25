@@ -9,6 +9,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shanghai", "outboundbot.cn-shanghai.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("outboundbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -3252,7 +3255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Preview text-to-speech (TTS) audio.</p>
+     * <p>TTS preview.</p>
      * 
      * @param request DescribeTTSDemoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3275,6 +3278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
             query.put("Engine", request.engine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extParams)) {
+            query.put("ExtParams", request.extParams);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -3332,7 +3339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Preview text-to-speech (TTS) audio.</p>
+     * <p>TTS preview.</p>
      * 
      * @param request DescribeTTSDemoRequest
      * @return DescribeTTSDemoResponse
@@ -4532,7 +4539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the public key for an asymmetric encryption algorithm.</p>
+     * <p>Obtains the public key of the asymmetric encryption algorithm.</p>
      * 
      * @param request GetPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4557,7 +4564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the public key for an asymmetric encryption algorithm.</p>
+     * <p>Obtains the public key of the asymmetric encryption algorithm.</p>
      * 
      * @param request GetPublicKeyRequest
      * @return GetPublicKeyResponse
@@ -5535,7 +5542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists Outbound Calling Bot service instances.</p>
+     * <p>Queries the list of Outbound Bot service instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5583,7 +5590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists Outbound Calling Bot service instances.</p>
+     * <p>Queries the list of Outbound Bot service instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -6191,7 +6198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the variables used in a script.</p>
+     * <p>Queries the variables that are currently used in a scenario.</p>
      * 
      * @param request ListScriptVariablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6231,7 +6238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the variables used in a script.</p>
+     * <p>Queries the variables that are currently used in a scenario.</p>
      * 
      * @param request ListScriptVariablesRequest
      * @return ListScriptVariablesResponse

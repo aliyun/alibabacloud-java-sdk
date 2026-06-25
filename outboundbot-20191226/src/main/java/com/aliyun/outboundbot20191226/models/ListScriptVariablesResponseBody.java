@@ -23,7 +23,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The API message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The script variables.</p>
+     * <p>The list of variables.</p>
      */
     @NameInMap("Variables")
     public java.util.List<ListScriptVariablesResponseBodyVariables> variables;
@@ -110,7 +110,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
 
     public static class ListScriptVariablesResponseBodyVariables extends TeaModel {
         /**
-         * <p>The variable description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>表示客户的真实姓名</p>
@@ -119,7 +119,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The variable display name.</p>
+         * <p>The display name of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>姓名</p>
@@ -128,7 +128,7 @@ public class ListScriptVariablesResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The variable name.</p>
+         * <p>The name of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>

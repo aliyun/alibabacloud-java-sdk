@@ -7,7 +7,7 @@ public class DescribeTTSDemoRequest extends TeaModel {
     /**
      * <p>The AccessKey (AK) for this namespace.</p>
      * <blockquote>
-     * <p>Enter the AK when the engine is xunfei.</p>
+     * <p>When the engine is set to xunfei, you must enter the AK.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String accessKey;
 
     /**
-     * <p>Alibaba Cloud custom voice ID</p>
+     * <p>Alibaba Cloud customized voice, which is the voice call ID.</p>
      * 
      * <strong>example:</strong>
      * <p>voice-e1be3a6</p>
@@ -26,11 +26,11 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String aliCustomizedVoice;
 
     /**
-     * <p>Speech service type</p>
+     * <p>Voice service type.</p>
      * <ul>
-     * <li><p>When using <strong>ali</strong> as a custom service, enter the appKey of your Intelligent Speech Interaction project.</p>
+     * <li><p>When using <strong>ali</strong> as the custom service, this field stores the appKey of the Intelligent Speech Interaction product project.</p>
      * </li>
-     * <li><p>When using <strong>xunfei</strong> as a custom service, enter its appKey.</p>
+     * <li><p>When using <strong>xunfei</strong> as the custom service provider, this field stores the corresponding appKey.</p>
      * </li>
      * </ul>
      * 
@@ -41,13 +41,13 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>Storage engine. Choose from ali, volc, or xunfei.</p>
+     * <p>Storage engine. Valid values: ali, volc, and xunfei.</p>
      * <ul>
-     * <li><p>Enter <strong>ali</strong> when using the default service or Alibaba Cloud as a custom service.</p>
+     * <li><p>When using the default service or selecting Alibaba Cloud as the custom service, set this parameter to <strong>ali</strong>.</p>
      * </li>
-     * <li><p>Enter <strong>volc</strong> when using the doubao service.</p>
+     * <li><p>When using the Doubao service, set this parameter to <strong>volc</strong>.</p>
      * </li>
-     * <li><p>Enter <strong>xunfei</strong> when using iFLYTEK as a service provider. This option is only available for small-model scenarios.</p>
+     * <li><p>When using xunfei as the service provider, set this parameter to <strong>xunfei</strong>. This value can only be used in small model scenarios.</p>
      * </li>
      * </ul>
      * 
@@ -57,8 +57,11 @@ public class DescribeTTSDemoRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("ExtParams")
+    public String extParams;
+
     /**
-     * <p>Instance ID</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,11 +71,11 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Service type
-     * Managed: The default Intelligent Speech Interaction service for Intelligent Outbound Calling (public service).
-     * Authorized: An Intelligent Speech Interaction service you purchased on Alibaba Cloud public cloud (your private service). You can grant authorization by going to Scenario Management &gt; Edit &gt; Call Service &gt; Custom Service.</p>
+     * <p>Service type.
+     * Managed: The default Intelligent Speech Interaction product service of the Outbound Bot product (public service).
+     * Authorized: The Intelligent Speech Interaction product service purchased by the public cloud customer (customer\&quot;s private service), authorized through Script Management &gt; Edit &gt; Call Service &gt; Custom Service.</p>
      * <blockquote>
-     * <p>Set this parameter to Authorized when using Alibaba Cloud\&quot;s Intelligent Speech Interaction as your custom service provider.</p>
+     * <p>When using Alibaba Cloud Intelligent Speech Interaction, that is, when using Alibaba Cloud as the custom service provider, set this parameter to Authorized.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,9 +85,10 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String nlsServiceType;
 
     /**
-     * <p>Pitch. An integer between -500 and 500. Default is 0.</p>
-     * <p>A value greater than 0 raises pitch.</p>
-     * <p>A value less than 0 lowers pitch.</p>
+     * <p>Pitch.
+     * An integer between [-500, 500]. Default value: 0.</p>
+     * <p>A value greater than 0 indicates a higher pitch.</p>
+     * <p>A value less than 0 indicates a lower pitch.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -93,7 +97,7 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public Integer pitchRate;
 
     /**
-     * <p>Scenario ID</p>
+     * <p>Script ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5ab2d935-306c-478a-88bf-d08e4e25c1b7</p>
@@ -102,9 +106,9 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>The AccessKey secret (SK) for this namespace.</p>
+     * <p>The AccessKey Secret (SK) for this namespace.</p>
      * <blockquote>
-     * <p>Enter the SK when the engine is xunfei.</p>
+     * <p>When the engine is set to xunfei, you must enter the SK.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,9 +118,10 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String secretKey;
 
     /**
-     * <p>Speech rate. An integer between -500 and 500. Default is 0.</p>
-     * <p>A value greater than 0 increases speech speed.</p>
-     * <p>A value less than 0 decreases speech speed.</p>
+     * <p>Speech rate.
+     * An integer between [-500, 500]. Default value: 0.</p>
+     * <p>A value greater than 0 indicates a faster speech rate.</p>
+     * <p>A value less than 0 indicates a slower speech rate.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -125,7 +130,7 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public Integer speechRate;
 
     /**
-     * <p>Text to convert to speech</p>
+     * <p>Text content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,9 +140,9 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String text;
 
     /**
-     * <p>Voice ID. Examples include aixia, siyue, and xiaoyun. For the full list of available voices, see the voice list below.</p>
+     * <p>Voice information, such as aixia, siyue, or xiaoyun. For the complete list of available voices, refer to the voice list below.</p>
      * <blockquote>
-     * <p>Cloned voices use dynamic Voice IDs that are generated during voice cloning. Therefore, specific Voice IDs for cloned voices are not listed here. To get a cloned voice’s Voice ID, call ListVoiceClone from the voice cloning page.</p>
+     * <p>Because the Voice value of a cloned voice is a unique, non-fixed value generated during voice cloning, the specific Voice value cannot be provided at this stage. You must obtain the specific VoiceID from the voice cloning page by calling the ListVoiceClone API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -147,9 +152,10 @@ public class DescribeTTSDemoRequest extends TeaModel {
     public String voice;
 
     /**
-     * <p>Volume. An integer between 0 and 100. Default is 50.</p>
-     * <p>A value greater than 50 increases volume.</p>
-     * <p>A value less than 50 decreases volume.</p>
+     * <p>Volume.
+     * An integer between [0, 100]. Default value: 50.</p>
+     * <p>A value greater than 50 indicates a higher volume.</p>
+     * <p>A value less than 50 indicates a lower volume.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -192,6 +198,14 @@ public class DescribeTTSDemoRequest extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public DescribeTTSDemoRequest setExtParams(String extParams) {
+        this.extParams = extParams;
+        return this;
+    }
+    public String getExtParams() {
+        return this.extParams;
     }
 
     public DescribeTTSDemoRequest setInstanceId(String instanceId) {

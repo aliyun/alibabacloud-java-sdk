@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>The name of the Outbound Calling Bot instance.</p>
+     * <p>The name of the Outbound Bot instance.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -32,9 +32,9 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * <blockquote>
-     * <p>For more information, see ListResourceGroups.</p>
+     * <p>You can obtain the source API from the Resource Management documentation. For more information, see: <a href="https://api.aliyun.com/document/ResourceManager/2020-03-31/ListResourceGroups">https://api.aliyun.com/document/ResourceManager/2020-03-31/ListResourceGroups</a></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,9 +44,9 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the service instance.</p>
+     * <p>The list of tags for the service instances.</p>
      * <blockquote>
-     * <p>You can call the ListResourceTags operation to obtain the tags.</p>
+     * <p>You can call the ListResourceTags operation to obtain tags.</p>
      * </blockquote>
      */
     @NameInMap("Tag")
@@ -99,7 +99,7 @@ public class ListInstancesRequest extends TeaModel {
 
     public static class ListInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of the instance tag.</p>
+         * <p>The tag key of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -108,7 +108,7 @@ public class ListInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the instance tag.</p>
+         * <p>The tag value of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>

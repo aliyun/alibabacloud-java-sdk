@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTenantKeyResponseBody extends TeaModel {
     /**
-     * <p>The status code of the request.</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class CreateTenantKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
