@@ -8325,16 +8325,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateSslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
-     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being created.
-     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL server is created.</p>
      * <ul>
-     * <li>You cannot repeatedly call the <strong>CreateSslVpnServer</strong> operation within the specified period of time.</li>
+     * <li><strong>CreateSslVpnServer</strong> is an asynchronous operation. After you send a request, the system returns an instance ID but the SSL server has not been created yet. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL server:<ul>
+     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the SSL server is being created.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the SSL server is created.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisite</h3>
+     * </li>
+     * <li><strong>CreateSslVpnServer</strong> does not support concurrent creation of SSL servers under the same VPN gateway.</li>
+     * </ul>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
-     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * <li>You have created a VPN gateway with the SSL-VPN feature enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8361,6 +8363,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.compress)) {
             query.put("Compress", request.compress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnsServers)) {
+            query.put("DnsServers", request.dnsServers);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -8442,16 +8448,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateSslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
-     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being created.
-     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL server is created.</p>
      * <ul>
-     * <li>You cannot repeatedly call the <strong>CreateSslVpnServer</strong> operation within the specified period of time.</li>
+     * <li><strong>CreateSslVpnServer</strong> is an asynchronous operation. After you send a request, the system returns an instance ID but the SSL server has not been created yet. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the VPN gateway instance to determine the creation status of the SSL server:<ul>
+     * <li>If the VPN gateway instance is in the <strong>updating</strong> state, the SSL server is being created.</li>
+     * <li>If the VPN gateway instance is in the <strong>active</strong> state, the SSL server is created.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisite</h3>
+     * </li>
+     * <li><strong>CreateSslVpnServer</strong> does not support concurrent creation of SSL servers under the same VPN gateway.</li>
+     * </ul>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
-     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * <li>You have created a VPN gateway with the SSL-VPN feature enabled. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -20069,7 +20077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more SSL-VPN servers.</p>
+     * <p>Queries the SSL servers that have been created by calling the DescribeSslVpnServers operation.</p>
      * 
      * @param request DescribeSslVpnServersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20141,7 +20149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries one or more SSL-VPN servers.</p>
+     * <p>Queries the SSL servers that have been created by calling the DescribeSslVpnServers operation.</p>
      * 
      * @param request DescribeSslVpnServersRequest
      * @return DescribeSslVpnServersResponse
@@ -30060,19 +30068,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To enable two-factor authentication for an SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</p>
      * <ul>
-     * <li>If you modify only <strong>Name</strong>, this operation is synchronous. If you modify other parameters besides <strong>Name</strong>, this operation is asynchronous.</li>
-     * <li><strong>ModifySslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<ul>
-     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being modified.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL server is modified.</li>
+     * <li>If you want to enable two-factor authentication for the SSL server, first make sure the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * <li>When only the <strong>Name</strong> of the SSL-VPN server is modified, this operation is synchronous. If configurations other than <strong>Name</strong> are also modified, this operation is asynchronous.</li>
+     * <li>When the <strong>ModifySslVpnServer</strong> operation is asynchronous, the system first returns a request ID, but the configuration of the SSL-VPN server has not been modified yet, and the modification task is still in progress in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to confirm the modification status of the SSL-VPN server configuration:<ul>
+     * <li>When the VPN gateway instance is in the <strong>updating</strong> state, the configuration of the SSL-VPN server is being modified.</li>
+     * <li>When the VPN gateway instance is in the <strong>active</strong> state, the configuration of the SSL-VPN server has been modified successfully.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call <strong>ModifySslVpnServer</strong> within the specified period of time.</li>
+     * <li>The <strong>ModifySslVpnServer</strong> operation does not support concurrent modification of SSL-VPN server configurations under the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an SSL server.</p>
+     * <p>Calls the ModifySslVpnServer operation to modify the configuration of an SSL-VPN server.</p>
      * 
      * @param request ModifySslVpnServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30095,6 +30103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.compress)) {
             query.put("Compress", request.compress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnsServers)) {
+            query.put("DnsServers", request.dnsServers);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -30176,19 +30188,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To enable two-factor authentication for an SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</p>
      * <ul>
-     * <li>If you modify only <strong>Name</strong>, this operation is synchronous. If you modify other parameters besides <strong>Name</strong>, this operation is asynchronous.</li>
-     * <li><strong>ModifySslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<ul>
-     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being modified.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL server is modified.</li>
+     * <li>If you want to enable two-factor authentication for the SSL server, first make sure the VPN gateway instance supports this feature. You may need to upgrade the VPN gateway instance. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">SSL-VPN two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
+     * <li>When only the <strong>Name</strong> of the SSL-VPN server is modified, this operation is synchronous. If configurations other than <strong>Name</strong> are also modified, this operation is asynchronous.</li>
+     * <li>When the <strong>ModifySslVpnServer</strong> operation is asynchronous, the system first returns a request ID, but the configuration of the SSL-VPN server has not been modified yet, and the modification task is still in progress in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway instance associated with the SSL-VPN server to confirm the modification status of the SSL-VPN server configuration:<ul>
+     * <li>When the VPN gateway instance is in the <strong>updating</strong> state, the configuration of the SSL-VPN server is being modified.</li>
+     * <li>When the VPN gateway instance is in the <strong>active</strong> state, the configuration of the SSL-VPN server has been modified successfully.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call <strong>ModifySslVpnServer</strong> within the specified period of time.</li>
+     * <li>The <strong>ModifySslVpnServer</strong> operation does not support concurrent modification of SSL-VPN server configurations under the same VPN gateway.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an SSL server.</p>
+     * <p>Calls the ModifySslVpnServer operation to modify the configuration of an SSL-VPN server.</p>
      * 
      * @param request ModifySslVpnServerRequest
      * @return ModifySslVpnServerResponse

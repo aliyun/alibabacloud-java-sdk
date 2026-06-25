@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSslVpnServerResponseBody extends TeaModel {
     /**
-     * <p>The SSL server name.</p>
+     * <p>The name of the SSL server.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

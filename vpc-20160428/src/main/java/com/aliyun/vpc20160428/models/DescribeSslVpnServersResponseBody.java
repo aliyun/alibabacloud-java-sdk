@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSslVpnServersResponseBody extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     public DescribeSslVpnServersResponseBodySslVpnServers sslVpnServers;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -103,6 +103,9 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
 
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("DnsServers")
+        public String dnsServers;
 
         @NameInMap("EnableMultiFactorAuth")
         public Boolean enableMultiFactorAuth;
@@ -192,6 +195,14 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setDnsServers(String dnsServers) {
+            this.dnsServers = dnsServers;
+            return this;
+        }
+        public String getDnsServers() {
+            return this.dnsServers;
         }
 
         public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setEnableMultiFactorAuth(Boolean enableMultiFactorAuth) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSslVpnServersRequest extends TeaModel {
     /**
-     * <p>The SSL server name.</p>
+     * <p>The name of the SSL server.</p>
      * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -39,8 +39,8 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the SSL server.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the SSL server. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,8 +50,8 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID of the SSL server.</p>
-     * <p>The SSL server and its associated VPN gateway belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway belongs.</p>
+     * <p>The ID of the resource group to which the SSL server belongs.</p>
+     * <p>The SSL server belongs to the same resource group as the associated VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the resource group ID of the VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>
