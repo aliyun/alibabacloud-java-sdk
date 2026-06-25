@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class LineageEntity extends TeaModel {
     /**
-     * <p>Attributes</p>
+     * <p>The entity\&quot;s attributes.</p>
      */
     @NameInMap("Attributes")
     public java.util.Map<String, ?> attributes;
 
     /**
-     * <p>EntityType</p>
+     * <p>The entity type.</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
-     * <p>Name</p>
+     * <p>The entity\&quot;s name.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>QualifiedName</p>
+     * <p>The entity\&quot;s qualified name.</p>
      */
     @NameInMap("QualifiedName")
     public String qualifiedName;

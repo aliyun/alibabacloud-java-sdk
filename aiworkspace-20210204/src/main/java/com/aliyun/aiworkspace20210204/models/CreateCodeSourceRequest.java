@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateCodeSourceRequest extends TeaModel {
     /**
-     * <p>The visibility of the code build. Valid values:</p>
+     * <p>The visibility of the code configuration. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: The code build is visible to all members in the workspace.</li>
-     * <li>PRIVATE: The code build is visible only to you and the administrator of the workspace.</li>
+     * <li><p>PUBLIC: The configuration is visible to everyone in the workspace.</p>
+     * </li>
+     * <li><p>PRIVATE: The configuration is visible only to you and workspace administrators.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,6 +31,9 @@ public class CreateCodeSourceRequest extends TeaModel {
     @NameInMap("CodeBranch")
     public String codeBranch;
 
+    /**
+     * <p>The commit ID of the code. \<code>CodeCommit\\</code> takes precedence over \<code>CodeBranch\\</code>. If you specify \<code>CodeCommit\\</code>, \<code>CodeBranch\\</code> is ignored.</p>
+     */
     @NameInMap("CodeCommit")
     public String codeCommit;
 
@@ -42,7 +47,7 @@ public class CreateCodeSourceRequest extends TeaModel {
     public String codeRepo;
 
     /**
-     * <p>The token used to access the code repository.</p>
+     * <p>The access token for the code repository.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -51,7 +56,7 @@ public class CreateCodeSourceRequest extends TeaModel {
     public String codeRepoAccessToken;
 
     /**
-     * <p>The username of the code repository.</p>
+     * <p>The username for the code repository.</p>
      * 
      * <strong>example:</strong>
      * <p>use***</p>
@@ -60,7 +65,7 @@ public class CreateCodeSourceRequest extends TeaModel {
     public String codeRepoUserName;
 
     /**
-     * <p>The description of the code build, which helps you distinguish between code builds.</p>
+     * <p>The description of the code configuration, which helps distinguish it from other configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>code source of dlc examples</p>
@@ -69,7 +74,7 @@ public class CreateCodeSourceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the code build.</p>
+     * <p>The name of the code configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +84,7 @@ public class CreateCodeSourceRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The local mount path of the code. By default, the code is mounted to the /root/code/ path.</p>
+     * <p>The local mount path for the code. The default is <code>/root/code/</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>/root/code/code-source-1</p>
@@ -88,7 +93,7 @@ public class CreateCodeSourceRequest extends TeaModel {
     public String mountPath;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The workspace ID. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

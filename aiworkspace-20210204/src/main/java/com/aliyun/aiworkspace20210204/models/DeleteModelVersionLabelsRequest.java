@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteModelVersionLabelsRequest extends TeaModel {
     /**
-     * <p>The key of the tag to be deleted. Separate multiple tag keys with commas (,).</p>
+     * <p>The keys of the labels that you want to delete. Separate multiple keys with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>key1,key2</p>

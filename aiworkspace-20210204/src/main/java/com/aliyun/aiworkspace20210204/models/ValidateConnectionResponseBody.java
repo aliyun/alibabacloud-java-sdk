@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ValidateConnectionResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the validation result.</p>
+     */
     @NameInMap("Details")
     public java.util.Map<String, String> details;
 
     /**
+     * <p>A description of the validation result.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection is reachable.</p>
      */
@@ -22,6 +29,8 @@ public class ValidateConnectionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -29,6 +38,14 @@ public class ValidateConnectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The validation status.</p>
+     * <ul>
+     * <li><p>success: The validation is successful.</p>
+     * </li>
+     * <li><p>failed: The validation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

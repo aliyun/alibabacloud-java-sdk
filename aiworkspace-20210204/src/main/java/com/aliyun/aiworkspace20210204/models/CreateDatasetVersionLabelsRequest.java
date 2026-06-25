@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetVersionLabelsRequest extends TeaModel {
     /**
-     * <p>The tags.</p>
+     * <p>The list of labels.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Labels")

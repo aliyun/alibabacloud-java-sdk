@@ -14,13 +14,13 @@ public class ListResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources.</p>
+     * <p>The list of resources.</p>
      */
     @NameInMap("Resources")
     public java.util.List<ListResourcesResponseBodyResources> resources;
 
     /**
-     * <p>The number of resources that meet the filter conditions.</p>
+     * <p>The total number of entries that match the filter criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -68,7 +68,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>Indicates whether the resources are encrypted.</p>
+         * <p>Indicates whether encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -77,7 +77,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The primary key for the encryption.</p>
+         * <p>The encryption key.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
@@ -118,7 +118,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyResourcesExecutor extends TeaModel {
         /**
-         * <p>This parameter is invalid and deprecated.</p>
+         * <p><strong>Deprecated.</strong> This parameter is no longer used.</p>
          * 
          * <strong>example:</strong>
          * <p>110973******7793</p>
@@ -143,7 +143,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyResourcesLabels extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>system.supported.dsw</p>
@@ -152,7 +152,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -194,7 +194,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The specification description.</p>
+         * <p>The specification value.</p>
          * 
          * <strong>example:</strong>
          * <p>11500</p>
@@ -227,20 +227,25 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyResourcesQuotas extends TeaModel {
         /**
-         * <p>The resource group type. Valid values:</p>
+         * <p>The card type. Valid values:</p>
          * <ul>
-         * <li>CPU</li>
-         * <li>GPU</li>
+         * <li><p><code>CPU</code></p>
+         * </li>
+         * <li><p><code>GPU</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cpu</p>
+         * <p>CPU</p>
          */
         @NameInMap("CardType")
         public String cardType;
 
         /**
-         * <p>The alias of the quota.</p>
+         * <p>The display name of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认后付费Quota</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -257,12 +262,14 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>isolate: subscription</li>
-         * <li>share: pay-as-you-go</li>
+         * <li><p><code>isolate</code>: subscription</p>
+         * </li>
+         * <li><p><code>share</code>: pay-as-you-go</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>develop</p>
+         * <p>isolate</p>
          */
         @NameInMap("Mode")
         public String mode;
@@ -279,13 +286,20 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * <p>The product code. Valid values:</p>
          * <ul>
-         * <li>PAI_isolate: CPU subscription resource groups of PAI</li>
-         * <li>PAI_share: GPU pay-as-you-go resource groups of PAI</li>
-         * <li>MaxCompute_share: pay-as-you-go resource groups of MaxCompute</li>
-         * <li>MaxCompute_isolate: subscription resource groups of MaxCompute</li>
-         * <li>DataWorks_isolate: subscription resource groups of DataWorks</li>
-         * <li>DataWorks_share: pay-as-you-go resource groups of DataWorks</li>
-         * <li>DLC_share: pay-as-you-go resource groups of Deep Learning Containers (DLC)</li>
+         * <li><p><code>PAI_isolate</code>: PAI subscription resource group (PAI CPU)</p>
+         * </li>
+         * <li><p><code>PAI_share</code>: PAI pay-as-you-go resource group (PAI GPU)</p>
+         * </li>
+         * <li><p><code>MaxCompute_share</code>: MaxCompute pay-as-you-go resource group</p>
+         * </li>
+         * <li><p><code>MaxCompute_isolate</code>: MaxCompute subscription resource group</p>
+         * </li>
+         * <li><p><code>DataWorks_isolate</code>: DataWorks subscription resource group</p>
+         * </li>
+         * <li><p><code>DataWorks_share</code>: DataWorks pay-as-you-go resource group</p>
+         * </li>
+         * <li><p><code>DLC_share</code>: DLC pay-as-you-go resource group</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,9 +311,12 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * <p>The quota type. Valid values:</p>
          * <ul>
-         * <li>PAI</li>
-         * <li>MaxCompute</li>
-         * <li>DLC</li>
+         * <li><p><code>PAI</code></p>
+         * </li>
+         * <li><p><code>MaxCompute</code></p>
+         * </li>
+         * <li><p><code>DLC</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,7 +326,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String quotaType;
 
         /**
-         * <p>The quota specifications.</p>
+         * <p>The list of specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;cu\&quot;:\&quot;11500\&quot;,\&quot;minCu\&quot;:\&quot;2300\&quot;,\&quot;parentId\&quot;:\&quot;0\&quot;}</p>
@@ -390,7 +407,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyResources extends TeaModel {
         /**
-         * <p>The encryption information, which is valid only for MaxCompute resources.</p>
+         * <p>The encryption details. This parameter is valid only for MaxCompute resources.</p>
          */
         @NameInMap("Encryption")
         public ListResourcesResponseBodyResourcesEncryption encryption;
@@ -398,8 +415,10 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * <p>The environment type. Valid values:</p>
          * <ul>
-         * <li>dev: development environment</li>
-         * <li>prod: production environment</li>
+         * <li><p><code>dev</code>: development environment</p>
+         * </li>
+         * <li><p><code>prod</code>: production environment</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -409,13 +428,13 @@ public class ListResourcesResponseBody extends TeaModel {
         public String envType;
 
         /**
-         * <p>This parameter is invalid and deprecated.</p>
+         * <p><strong>Deprecated.</strong> This parameter is no longer used.</p>
          */
         @NameInMap("Executor")
         public ListResourcesResponseBodyResourcesExecutor executor;
 
         /**
-         * <p>The time when the resource group is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The time when the resource was created. The time is displayed in UTC and is formatted in ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -424,7 +443,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The name of the resource group, which is unique within the Alibaba Cloud account.</p>
+         * <p>The name of the resource group. The name must be unique within an Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>groupName</p>
@@ -442,10 +461,12 @@ public class ListResourcesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the resource is the default resource. Each type of resources has a default resource. Valid values:</p>
+         * <p>Indicates whether the resource is the default resource of its type. Each resource type has only one default resource. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p><code>true</code>: The resource is the default resource.</p>
+         * </li>
+         * <li><p><code>false</code>: The resource is not the default resource.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -455,7 +476,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of labels.</p>
          */
         @NameInMap("Labels")
         public java.util.List<ListResourcesResponseBodyResourcesLabels> labels;
@@ -470,7 +491,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>**This field is no longer used and will be removed. Use the ResourceType field.</p>
+         * <p><strong>Deprecated.</strong> This parameter is deprecated and will be removed in a future release. Use the <code>ResourceType</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -479,17 +500,30 @@ public class ListResourcesResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The quotas.</p>
+         * <p>The list of quotas.</p>
          */
         @NameInMap("Quotas")
         public java.util.List<ListResourcesResponseBodyResourcesQuotas> quotas;
 
         /**
-         * <p>The resource type. Valid values:</p>
+         * <p>The type of the resource. Valid values:</p>
          * <ul>
-         * <li>MaxCompute</li>
-         * <li>DLC</li>
-         * <li>FLINK</li>
+         * <li><p><code>MaxCompute</code>: MaxCompute resources</p>
+         * </li>
+         * <li><p><code>ECS</code>: ECS resources</p>
+         * </li>
+         * <li><p><code>Lingjun</code>: Lingjun intelligent computing resources</p>
+         * </li>
+         * <li><p><code>ACS</code>: ACS computing resources</p>
+         * </li>
+         * <li><p><code>Flink</code>: Flink resources</p>
+         * </li>
+         * <li><p><code>SelfManagedAckPro</code>: self-managed cluster resources for AckPro</p>
+         * </li>
+         * <li><p><code>SelfManagedAckLingjun</code>: self-managed cluster resources for AckLingjun</p>
+         * </li>
+         * <li><p><code>SelfManagedASI</code>: self-managed cluster resources for ASI (third-party cloud)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -499,7 +533,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The resource specification.</p>
+         * <p>The resource specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>对于MaxCompute {&quot;Endpoint&quot;: &quot;odps.alibaba-inc.com&quot;, &quot;Project&quot;: &quot;mignshi&quot;}</p>
@@ -508,7 +542,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public java.util.Map<String, ?> spec;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

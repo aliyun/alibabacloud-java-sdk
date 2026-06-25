@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetVersionsRequest extends TeaModel {
     /**
-     * <p>The dataset tag keys, which are used to filter datasets. Datasets whose tag keys or tag values contain a specified string are filtered.</p>
+     * <p>The label keys used to filter the dataset list. Datasets are returned if their label keys contain the specified strings.</p>
      * 
      * <strong>example:</strong>
      * <p>key1,key2</p>
@@ -14,7 +14,7 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String labelKeys;
 
     /**
-     * <p>The dataset tag values, which are used to filter datasets. Datasets whose tag keys or tag values contain a specified string are filtered.</p>
+     * <p>The label values used to filter the dataset list. Datasets are returned if their label values contain the specified strings.</p>
      * 
      * <strong>example:</strong>
      * <p>value1,value2</p>
@@ -23,10 +23,12 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String labelValues;
 
     /**
-     * <p>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC. Valid values:</p>
+     * <p>The sort order for the paged query. The default value is ASC. Valid values:</p>
      * <ul>
-     * <li>ASC: ascending order</li>
-     * <li>DESC: descending order.</li>
+     * <li><p>ASC: Ascending order.</p>
+     * </li>
+     * <li><p>DESC: Descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +48,7 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. The default value is 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,8 +60,10 @@ public class ListDatasetVersionsRequest extends TeaModel {
     /**
      * <p>The dataset properties. Valid values:</p>
      * <ul>
-     * <li>DIRECTORY</li>
-     * <li>FILE</li>
+     * <li><p>DIRECTORY: Folder.</p>
+     * </li>
+     * <li><p>FILE: File.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,17 +73,22 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String properties;
 
     /**
-     * <p>The field used to sort the results in queries by page. Default value: GmtCreateTime.
-     * Valid values:</p>
+     * <p>The field to use for sorting in a paged query. The default value is GmtCreateTime. Valid values:</p>
      * <ul>
-     * <li>SourceType</li>
-     * <li>DataSourceType</li>
-     * <li>DataSize</li>
-     * <li>DataCount</li>
-     * <li>Property</li>
-     * <li>GmtCreateTime: The results are sorted by creation time. This is the default value.</li>
-     * <li>GmtModifiedTime: The results are sorted by modification time.</li>
-     * <li>DatasetId</li>
+     * <li><p>GmtCreateTime (default): Creation time.</p>
+     * </li>
+     * <li><p>GmtModifiedTime: Modification time.</p>
+     * </li>
+     * <li><p>SourceType</p>
+     * </li>
+     * <li><p>DataSourceType</p>
+     * </li>
+     * <li><p>Property</p>
+     * </li>
+     * <li><p>DataSize</p>
+     * </li>
+     * <li><p>DataCount</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,11 +98,14 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The data source ID.</p>
+     * <p>The ID of the data source.</p>
      * <ul>
-     * <li>If SourceType is set to USER, the value of SourceId is a custom string.</li>
-     * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-     * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+     * <li><p>If SourceTypes is USER, you can specify a custom ID.</p>
+     * </li>
+     * <li><p>If SourceTypes is ITAG, this is the ID of the iTAG annotation task.</p>
+     * </li>
+     * <li><p>If SourceTypes is PAI_PUBLIC_DATASET, this parameter is empty by default.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,9 +117,12 @@ public class ListDatasetVersionsRequest extends TeaModel {
     /**
      * <p>The source type. Valid values:</p>
      * <ul>
-     * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
-     * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
-     * <li>USER: a dataset registered by a user.</li>
+     * <li><p>PAI-PUBLIC-DATASET: A public dataset from PAI.</p>
+     * </li>
+     * <li><p>ITAG: A dataset generated from the annotation results of the iTAG module.</p>
+     * </li>
+     * <li><p>USER: A dataset registered by a user.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

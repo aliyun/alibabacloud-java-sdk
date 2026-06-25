@@ -8,7 +8,7 @@ public class ListWorkspaceUsersRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The display names of users who can be added to the workspace as members.</p>
+     * <p>The display name of the user that can be added as a workspace member.</p>
      * 
      * <strong>example:</strong>
      * <p>doctest****</p>

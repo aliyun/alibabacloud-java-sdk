@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetUserConfigsRequest extends TeaModel {
     /**
-     * <p>The configurations list.</p>
+     * <p>The list of configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<SetUserConfigsRequestConfigs> configs;
@@ -25,7 +25,7 @@ public class SetUserConfigsRequest extends TeaModel {
 
     public static class SetUserConfigsRequestConfigs extends TeaModel {
         /**
-         * <p>The category. Only DataPrivacyConfig is supported.</p>
+         * <p>The classification. Only DataPrivacyConfig is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class SetUserConfigsRequest extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The key of the configuration item.</p>
+         * <p>The configuration key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class SetUserConfigsRequest extends TeaModel {
         public String configKey;
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The configuration value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

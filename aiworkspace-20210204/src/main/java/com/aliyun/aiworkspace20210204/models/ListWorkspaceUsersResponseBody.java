@@ -14,7 +14,7 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of users who meet the filter conditions.</p>
+     * <p>The number of users that meet the filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The users.</p>
+     * <p>The list of users.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListWorkspaceUsersResponseBodyUsers> users;

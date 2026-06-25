@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetsResponseBody extends TeaModel {
     /**
-     * <p>The datasets.</p>
+     * <p>The list of datasets.</p>
      */
     @NameInMap("Datasets")
     public java.util.List<Dataset> datasets;
@@ -20,7 +20,7 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total count of datasets.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

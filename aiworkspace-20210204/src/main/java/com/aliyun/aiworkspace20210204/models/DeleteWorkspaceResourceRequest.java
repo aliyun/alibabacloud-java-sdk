@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceResourceRequest extends TeaModel {
     /**
-     * <p>The name of the resource group. You can call <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a> to obtain the name of the resource group.</p>
+     * <p>The resource group name. To get the resource group name, see <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>group</p>
@@ -14,7 +14,7 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The tags. Multiple tags are separated by commas (,).</p>
+     * <p>A comma-separated list of labels.</p>
      * 
      * <strong>example:</strong>
      * <p>system.supported.eas=true</p>
@@ -23,10 +23,12 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     public String labels;
 
     /**
-     * <p>The operation to perform. Valid values:</p>
+     * <p>The deletion behavior. Valid values:</p>
      * <ul>
-     * <li>DetachAndDelete: disassociates a resource from a workspace and deletes the resource in the workspace. This is the default value.</li>
-     * <li>Detach: disassociates a resource group from a workspace.</li>
+     * <li><p><code>DetachAndDelete</code> (default): Detaches the resource from the workspace and deletes the resource.</p>
+     * </li>
+     * <li><p><code>Detach</code>: Detaches the resource from the workspace.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     public String option;
 
     /**
-     * <p>**This field is no longer used and will be removed. Use the ResourceType field instead.</p>
+     * <p><strong>This parameter is deprecated and will be removed. Use the <code>ResourceType</code> parameter instead.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>DLC</p>
@@ -45,7 +47,7 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The resource IDs. Multiple resource IDs are separated by commas (,). The GroupName values for the specified resources must be the same. You cannot leave both GroupName and ResourceIds empty. You can specify both parameters.</p>
+     * <p>A comma-separated list of resource IDs. All specified resources must belong to the same <code>GroupName</code>. You must specify a value for at least one of the <code>GroupName</code> or <code>ResourceIds</code> parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource-dks<strong><strong><strong>jkf,Resource-adf</strong></strong></strong>dss</p>
@@ -56,11 +58,22 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>ECS</li>
-     * <li>Lingjun</li>
-     * <li>ACS</li>
-     * <li>FLINK</li>
-     * <li>MaxCompute (This resource type is valid only if Option is set to Detach.)</li>
+     * <li><p><code>ECS</code>: general-purpose computing resources</p>
+     * </li>
+     * <li><p><code>Lingjun</code>: Lingjun intelligent computing resources</p>
+     * </li>
+     * <li><p><code>ACS</code>: ACS computing resources</p>
+     * </li>
+     * <li><p><code>Flink</code>: Flink resources.</p>
+     * </li>
+     * <li><p><code>MaxCompute</code>: MaxCompute resources. For this resource type, the <code>Option</code> parameter can only be set to <code>Detach</code>.</p>
+     * </li>
+     * <li><p><code>SelfManagedAckPro</code>: AckPro unified management cluster resources</p>
+     * </li>
+     * <li><p><code>SelfManagedAckLingjun</code>: AckLinjun unified management cluster resources</p>
+     * </li>
+     * <li><p><code>SelfManagedASI</code>: ASI unified management cluster resources (third-party cloud)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

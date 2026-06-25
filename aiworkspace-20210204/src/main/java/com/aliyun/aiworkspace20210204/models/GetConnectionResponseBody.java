@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetConnectionResponseBody extends TeaModel {
     /**
-     * <p>The resource accessibility. Valid values:</p>
+     * <p>The visibility of the resource. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: All members in the workspace can access the workspace.</li>
-     * <li>PRIVATE: Only the creator can access the workspace.</li>
+     * <li><p>PUBLIC: All members in the current workspace can access the resource.</p>
+     * </li>
+     * <li><p>PRIVATE: Only the creator can access the resource.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetConnectionResponseBody extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The connection configuration.</p>
+     * <p>The configuration information of the connection.</p>
      */
     @NameInMap("Configs")
     public java.util.Map<String, String> configs;
@@ -33,7 +35,10 @@ public class GetConnectionResponseBody extends TeaModel {
     public String connectionId;
 
     /**
-     * <p>The connection name.</p>
+     * <p>The name of the connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Database connection</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
@@ -41,15 +46,24 @@ public class GetConnectionResponseBody extends TeaModel {
     /**
      * <p>The type of the connection. Valid values:</p>
      * <ul>
-     * <li>DashScopeConnection: Alibaba Cloud Model Studio connection.</li>
-     * <li>OpenLLMConnection: Open source model connection.</li>
-     * <li>MilvusConnection: Milvus connection.</li>
-     * <li>OpenSearchConnection: OpenSearch connection.</li>
-     * <li>LindormConnection: Lindorm connection.</li>
-     * <li>ElasticsearchConnection: Elasticsearch connection.</li>
-     * <li>HologresConnection: Hologres connection.</li>
-     * <li>RDSConnection: RDS connection.</li>
-     * <li>CustomConnection: Custom connection.</li>
+     * <li><p>DashScopeConnection: A connection to a Model Studio service.</p>
+     * </li>
+     * <li><p>OpenLLMConnection: A connection to an open-source model.</p>
+     * </li>
+     * <li><p>MilvusConnection: A connection to Milvus.</p>
+     * </li>
+     * <li><p>OpenSearchConnection: A connection to OpenSearch.</p>
+     * </li>
+     * <li><p>LindormConnection: A connection to Lindorm.</p>
+     * </li>
+     * <li><p>ElasticsearchConnection: A connection to Elasticsearch.</p>
+     * </li>
+     * <li><p>HologresConnection: A connection to Hologres.</p>
+     * </li>
+     * <li><p>RDSConnection: A connection to RDS.</p>
+     * </li>
+     * <li><p>CustomConnection: A custom connection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,13 +82,16 @@ public class GetConnectionResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The connection description.</p>
+     * <p>The description of the connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用于数据集检索。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The time when the connection is created, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The UTC time when the connection was created. The time is in the ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-07T07:54:56Z</p>
@@ -83,7 +100,7 @@ public class GetConnectionResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the connection is modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The UTC time when the connection was last modified. The time is in the ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-07T07:54:56Z</p>
@@ -92,13 +109,13 @@ public class GetConnectionResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The models, which apply to model service connections.</p>
+     * <p>The list of models. This parameter is applicable to connections of the model service type.</p>
      */
     @NameInMap("Models")
     public java.util.List<GetConnectionResponseBodyModels> models;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
@@ -107,13 +124,13 @@ public class GetConnectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The instance resource information of the connection, which applies to database connections.</p>
+     * <p>The instance resource information of the connection. This parameter is typically used for database connections.</p>
      */
     @NameInMap("ResourceMeta")
     public GetConnectionResponseBodyResourceMeta resourceMeta;
 
     /**
-     * <p>The encrypted configuration, in key-value pairs. Examples: the database logon password and the key of the model connection.</p>
+     * <p>The key-value pairs that need to be encrypted. Examples include the logon password for a database and the key for a model connection.</p>
      */
     @NameInMap("Secrets")
     public java.util.Map<String, String> secrets;
@@ -247,6 +264,9 @@ public class GetConnectionResponseBody extends TeaModel {
     public static class GetConnectionResponseBodyModels extends TeaModel {
         /**
          * <p>The display name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试语言模型。</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -263,9 +283,12 @@ public class GetConnectionResponseBody extends TeaModel {
         /**
          * <p>The model type. Valid values:</p>
          * <ul>
-         * <li>LLM</li>
-         * <li>Embedding</li>
-         * <li>ReRank</li>
+         * <li><p>LLM: A large language model (LLM).</p>
+         * </li>
+         * <li><p>Embedding: An embedding model.</p>
+         * </li>
+         * <li><p>ReRank: A reranking model.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,10 +298,12 @@ public class GetConnectionResponseBody extends TeaModel {
         public String modelType;
 
         /**
-         * <p>Indicates whether a tool can be called by using ToolCall. Valid values:</p>
+         * <p>Indicates whether tool calling is supported. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Tool calling is supported.</p>
+         * </li>
+         * <li><p>false: Tool calling is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,6 +352,12 @@ public class GetConnectionResponseBody extends TeaModel {
     }
 
     public static class GetConnectionResponseBodyResourceMeta extends TeaModel {
+        /**
+         * <p>Additional configuration information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vpcId&quot;:&quot;vpc-xxxx&quot;}</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
@@ -341,6 +372,9 @@ public class GetConnectionResponseBody extends TeaModel {
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

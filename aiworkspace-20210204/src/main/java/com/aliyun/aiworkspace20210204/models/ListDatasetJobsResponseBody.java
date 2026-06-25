@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetJobsResponseBody extends TeaModel {
     /**
-     * <p>The jobs in the dataset.</p>
+     * <p>A list of dataset jobs.</p>
      */
     @NameInMap("DatasetJobs")
     public java.util.List<DatasetJob> datasetJobs;
@@ -21,6 +21,9 @@ public class ListDatasetJobsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of jobs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

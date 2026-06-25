@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetJobRequest extends TeaModel {
     /**
-     * <p>The dataset version name.</p>
+     * <p>The name of the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -14,13 +14,16 @@ public class UpdateDatasetJobRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The dataset job description.</p>
+     * <p>The description of the dataset job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a job description of a dataset.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>478**</p>

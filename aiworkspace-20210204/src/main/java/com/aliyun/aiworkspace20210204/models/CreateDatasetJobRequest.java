@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetJobRequest extends TeaModel {
     /**
-     * <p>The dataset version.</p>
+     * <p>The name of the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -14,18 +14,29 @@ public class CreateDatasetJobRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The job description.</p>
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a job description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The job action.</p>
-     * <p>Valid values:</p>
+     * <p>The task operation.</p>
      * <ul>
-     * <li>SemanticIndex</li>
-     * <li>IntelligentTag</li>
-     * <li>FileMetaExport</li>
+     * <li><p>SemanticIndex: semantic index</p>
+     * </li>
+     * <li><p>IntelligentTag: intelligent tagging</p>
+     * </li>
+     * <li><p>FileMetaExport: metadata export</p>
+     * </li>
+     * <li><p>FileMetaBuild: build and update metadata</p>
+     * </li>
+     * <li><p>IntelligentTagRevert: revoke intelligent tagging</p>
+     * </li>
+     * <li><p>FileMetaImport: metadata import</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,10 +47,12 @@ public class CreateDatasetJobRequest extends TeaModel {
     public String jobAction;
 
     /**
-     * <p>The job mode.</p>
-     * <p>Valid values:</p>
+     * <p>The task type.</p>
      * <ul>
-     * <li>Full: full mode.</li>
+     * <li><p>Full (default): forces the processing of all metadata. This task takes a long time to execute.</p>
+     * </li>
+     * <li><p>Increment: processes only changed or unsuccessfully processed metadata. The SemanticIndex and IntelligentTag tasks support Increment and Full. Other tasks support only Full.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +62,7 @@ public class CreateDatasetJobRequest extends TeaModel {
     public String jobMode;
 
     /**
-     * <p>The job configuration.</p>
+     * <p>The task details.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +72,7 @@ public class CreateDatasetJobRequest extends TeaModel {
     public String jobSpec;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
     /**
-     * <p>The images.</p>
+     * <p>The list of images.</p>
      */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
@@ -59,7 +59,7 @@ public class ListImagesResponseBody extends TeaModel {
 
     public static class ListImagesResponseBodyImagesLabels extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>system.chipType</p>
@@ -68,7 +68,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>GPU</p>
@@ -101,10 +101,12 @@ public class ListImagesResponseBody extends TeaModel {
 
     public static class ListImagesResponseBodyImages extends TeaModel {
         /**
-         * <p>The accessibility of the image. Valid values:</p>
+         * <p>The visibility of the image. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: All members can access the image.</li>
-         * <li>PRIVATE: Only the creator can access the image.</li>
+         * <li><p>PUBLIC: All members in the current workspace can perform operations on the image.</p>
+         * </li>
+         * <li><p>PRIVATE: Only the creator can perform operations on the image.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +125,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the image is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The time when the image was created. The time is in UTC and the format is ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -132,7 +134,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The time when the image is modified, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>The time when the image was last modified. The time is in UTC and the format is ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -150,13 +152,13 @@ public class ListImagesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The image address, which includes the version number.</p>
+         * <p>The image URL, which includes the version number.</p>
          */
         @NameInMap("ImageUri")
         public String imageUri;
 
         /**
-         * <p>The image tags.</p>
+         * <p>The list of image labels.</p>
          */
         @NameInMap("Labels")
         public java.util.List<ListImagesResponseBodyImagesLabels> labels;
@@ -171,16 +173,16 @@ public class ListImagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The UID of the Alibaba Cloud account that created the image.</p>
          * 
          * <strong>example:</strong>
-         * <p>15577******82932</p>
+         * <p>155**********904</p>
          */
         @NameInMap("ParentUserId")
         public String parentUserId;
 
         /**
-         * <p>The image size. Unit: GB.</p>
+         * <p>The image size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -189,22 +191,22 @@ public class ListImagesResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>镜像来源 ID</p>
+         * <p>The ID of the image source.</p>
          */
         @NameInMap("SourceId")
         public String sourceId;
 
         /**
-         * <p>镜像来源类型</p>
+         * <p>The type of the image source.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The UID of the Alibaba Cloud account that created the image.</p>
          * 
          * <strong>example:</strong>
-         * <p>15577******82932</p>
+         * <p>155**********904</p>
          */
         @NameInMap("UserId")
         public String userId;

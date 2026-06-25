@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class Relationship extends TeaModel {
     /**
-     * <p>Attributes</p>
+     * <p>A collection of key-value pairs providing additional details about the relationship.</p>
      */
     @NameInMap("Attributes")
     public java.util.Map<String, ?> attributes;
 
     /**
-     * <p>DataChannel</p>
+     * <p>The channel or system through which the relationship is established.</p>
      */
     @NameInMap("DataChannel")
     public String dataChannel;
 
     /**
-     * <p>RelationshipGuid</p>
+     * <p>The globally unique identifier (GUID) for the relationship.</p>
      */
     @NameInMap("RelationshipGuid")
     public String relationshipGuid;
 
     /**
-     * <p>RelationshipType</p>
+     * <p>Specifies the type of relationship.</p>
      */
     @NameInMap("RelationshipType")
     public String relationshipType;

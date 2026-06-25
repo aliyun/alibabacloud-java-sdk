@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPermissionRequest extends TeaModel {
     /**
-     * <p>The accessibility. Valid values:</p>
+     * <p>The access type. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: All members in the workspace can access the workspace.</li>
-     * <li>PRIVATE: Only the creator can access the workspace.</li>
+     * <li><p>PUBLIC: All members in the workspace can perform the operation.</p>
+     * </li>
+     * <li><p>PRIVATE: Only the creator can perform the operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +26,7 @@ public class GetPermissionRequest extends TeaModel {
     public String callerUid;
 
     /**
-     * <p>The UID of the Alibaba Cloud account that is used to create the workspace.</p>
+     * <p>The UID of the Alibaba Cloud account that created the workspace permission.</p>
      * 
      * <strong>example:</strong>
      * <p>17915******4216</p>
@@ -36,10 +38,12 @@ public class GetPermissionRequest extends TeaModel {
     public java.util.Map<String, ?> labels;
 
     /**
-     * <p>The configuration. Separate multiple configurations with commas (,). Valid values:</p>
+     * <p>Optional configurations. Separate multiple configurations with commas (,). Valid values:</p>
      * <ul>
-     * <li>ResourceEmpty: The Resource parameter is not configured.</li>
-     * <li>DisableRam: The RAM check is not performed.</li>
+     * <li><p>ResourceEmpty: The resource is empty. This value is used if you do not set the Resource parameter.</p>
+     * </li>
+     * <li><p>DisableRam: RAM verification is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

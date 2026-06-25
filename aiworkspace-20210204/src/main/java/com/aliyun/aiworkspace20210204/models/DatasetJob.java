@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DatasetJob extends TeaModel {
     /**
-     * <p>The number of completed files.</p>
+     * <p>The total number of completed files.</p>
      * 
      * <strong>example:</strong>
      * <p>990</p>
@@ -14,7 +14,7 @@ public class DatasetJob extends TeaModel {
     public Long completedFileCount;
 
     /**
-     * <p>The job creation time (UTC).</p>
+     * <p>The time when the job was created (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-20T04:05:59Z</p>
@@ -42,12 +42,15 @@ public class DatasetJob extends TeaModel {
 
     /**
      * <p>The job description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一个数据集任务描述。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The number of failed files.</p>
+     * <p>The total number of failed files.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +59,7 @@ public class DatasetJob extends TeaModel {
     public Long failedFileCount;
 
     /**
-     * <p>The job finish time (UTC).</p>
+     * <p>The time when the job was finished (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-20T06:03:48Z</p>
@@ -65,7 +68,7 @@ public class DatasetJob extends TeaModel {
     public String finishTime;
 
     /**
-     * <p>The job action.</p>
+     * <p>The job operation.</p>
      * 
      * <strong>example:</strong>
      * <p>SemanticIndex</p>
@@ -75,10 +78,6 @@ public class DatasetJob extends TeaModel {
 
     /**
      * <p>The job mode.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>Full</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Full</p>
@@ -87,7 +86,7 @@ public class DatasetJob extends TeaModel {
     public String jobMode;
 
     /**
-     * <p>The job details.</p>
+     * <p>The job specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</p>
@@ -96,7 +95,7 @@ public class DatasetJob extends TeaModel {
     public String jobSpec;
 
     /**
-     * <p>The job logs.</p>
+     * <p>A list of task logs.</p>
      */
     @NameInMap("Logs")
     public java.util.List<String> logs;
@@ -111,7 +110,7 @@ public class DatasetJob extends TeaModel {
     public String status;
 
     /**
-     * <p>The number of job files.</p>
+     * <p>The total number of files for the job.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

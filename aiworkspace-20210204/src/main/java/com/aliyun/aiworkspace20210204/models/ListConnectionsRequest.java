@@ -4,35 +4,58 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionsRequest extends TeaModel {
+    /**
+     * <p>Visibility of the connection. Valid values:</p>
+     * <ul>
+     * <li><p>PUBLIC: visible to all workspace members.</p>
+     * </li>
+     * <li><p>PRIVATE: visible only to the creator.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
     /**
-     * <p>The list of connection IDs.</p>
+     * <p>List of connection IDs to filter by.</p>
      */
     @NameInMap("ConnectionIds")
     public java.util.List<String> connectionIds;
 
     /**
-     * <p>The connection name.</p>
+     * <p>Connection name. Supports fuzzy matching.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Database connection</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
 
     /**
-     * <p>The list of connection types.</p>
+     * <p>List of connection types to filter by.</p>
      */
     @NameInMap("ConnectionTypes")
     public java.util.List<String> connectionTypes;
 
+    /**
+     * <p>Alibaba Cloud account ID of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12908*******3242</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
     /**
-     * <p>The encryption settings. Valid values:</p>
+     * <p>Encryption option for sensitive fields in the response. Valid values:</p>
      * <ul>
-     * <li>PlainText</li>
-     * <li>Secret</li>
+     * <li><p>PlainText: returns values in plaintext.</p>
+     * </li>
+     * <li><p>Secret: returns values in ciphertext.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +65,7 @@ public class ListConnectionsRequest extends TeaModel {
     public String encryptOption;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>Maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +74,7 @@ public class ListConnectionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The model identifier.</p>
+     * <p>Model identifier. Filters connections associated with this model.</p>
      * 
      * <strong>example:</strong>
      * <p>model_001</p>
@@ -60,13 +83,13 @@ public class ListConnectionsRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The list of model types.</p>
+     * <p>List of model types to filter by.</p>
      */
     @NameInMap("ModelTypes")
     public java.util.List<String> modelTypes;
 
     /**
-     * <p>The pagination token that indicates the start position from which to retrieve data on the next page.</p>
+     * <p>The token that marks the starting position for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -75,10 +98,12 @@ public class ListConnectionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy.</p>
+     * <p>Sort order. Use with the SortBy parameter. Valid values:</p>
      * <ul>
-     * <li>ASC: ascending order.</li>
-     * <li>DESC: descending order. This is the default value.</li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * <li><p>DESC (default): descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,9 +113,9 @@ public class ListConnectionsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The field used to sort the results in queries by page. Default value: GmtCreateTime. Valid value:</p>
+     * <p>Field by which to sort results. Default value: GmtCreateTime. Valid values:</p>
      * <ul>
-     * <li>GmtCreateTime: The results are sorted by creation time. This is the default value.</li>
+     * <li>GmtCreateTime (default): sorts by creation time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,10 +125,12 @@ public class ListConnectionsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Specifies whether a tool can be called by using ToolCall. Valid values:</p>
+     * <p>Whether tool calling is supported. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: supported.</p>
+     * </li>
+     * <li><p>false: not supported.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +140,7 @@ public class ListConnectionsRequest extends TeaModel {
     public Boolean toolCall;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>Workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>478**</p>

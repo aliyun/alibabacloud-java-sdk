@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCodeSourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the deleted code source.</p>
+     * <p>The ID of the deleted code source configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>code-20210111103721-85qz78ia96lu</p>
@@ -14,7 +14,7 @@ public class DeleteCodeSourceResponseBody extends TeaModel {
     public String codeSourceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>

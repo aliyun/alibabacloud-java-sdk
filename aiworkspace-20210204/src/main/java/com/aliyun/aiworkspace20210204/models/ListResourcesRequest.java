@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
     /**
-     * <p>The name of the resource group. You can call <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a> to obtain the name of the resource group.</p>
+     * <p>The name of the resource group. To get the resource group name, see <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>group</p>
@@ -14,8 +14,8 @@ public class ListResourcesRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>Tag-based filter conditions. Multiple conditions are separated by commas (,). Only resources that meet all the specified tag-based filter conditions are returned.</p>
-     * <p>This parameter is available only for resources whose ProductType is ACS.</p>
+     * <p>A comma-separated list of labels. This operation returns only the resources that have all the specified labels.</p>
+     * <p>This parameter is available only for resources whose <code>ResourceTypes</code> is set to <code>ACS</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>system.supported.dsw=true,system.supported.dlc=true</p>
@@ -24,10 +24,12 @@ public class ListResourcesRequest extends TeaModel {
     public String labels;
 
     /**
-     * <p>The operation to perform. Valid values:</p>
+     * <p>The option to query resources. Valid values:</p>
      * <ul>
-     * <li>ListResourceByWorkspace: obtains the resources in the workspace. This is the default value.</li>
-     * <li>ListResource: obtains the resources of the user.</li>
+     * <li><p><code>ListResourceByWorkspace</code> (Default): lists the resources in a workspace.</p>
+     * </li>
+     * <li><p><code>ListResource</code>: lists the resources of the current user.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +39,7 @@ public class ListResourcesRequest extends TeaModel {
     public String option;
 
     /**
-     * <p>The page number. The pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value must be greater than or equal to 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +57,7 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>**This field is no longer used and will be removed. Use the ResourceType field instead.</p>
+     * <p><strong>Deprecated.</strong> This parameter is deprecated. Use the <code>ResourceType</code> parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
@@ -64,9 +66,9 @@ public class ListResourcesRequest extends TeaModel {
     public String productTypes;
 
     /**
-     * <p>The quota IDs, which are separated by commas (,). Only resources that contain all the specified quotas are returned.</p>
+     * <p>A comma-separated list of quota IDs. This operation returns only the resources that are associated with all the specified quota IDs.</p>
      * <blockquote>
-     * <p> This parameter is available only for resources whose ResourceTypes is ACS.</p>
+     * <p>This parameter is available only for resources whose <code>ResourceTypes</code> is set to <code>ACS</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,10 +78,12 @@ public class ListResourcesRequest extends TeaModel {
     public String quotaIds;
 
     /**
-     * <p>The resource name. The value must meet the following requirements:</p>
+     * <p>The resource name. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 3 to 28 characters in length.</li>
-     * <li>The name is unique in the region.</li>
+     * <li><p>The name must be 3 to 28 characters in length.</p>
+     * </li>
+     * <li><p>The name must be unique within a region.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,11 +95,22 @@ public class ListResourcesRequest extends TeaModel {
     /**
      * <p>The resource types. Valid values:</p>
      * <ul>
-     * <li>MaxCompute</li>
-     * <li>ECS</li>
-     * <li>Lingjun</li>
-     * <li>ACS</li>
-     * <li>FLINK</li>
+     * <li><p><code>MaxCompute</code>: MaxCompute resources.</p>
+     * </li>
+     * <li><p><code>ECS</code>: ECS resources.</p>
+     * </li>
+     * <li><p><code>Lingjun</code>: Lingjun computing resources.</p>
+     * </li>
+     * <li><p><code>ACS</code>: ACS computing resources.</p>
+     * </li>
+     * <li><p><code>Flink</code>: Flink resources.</p>
+     * </li>
+     * <li><p><code>SelfManagedAckPro</code>: self-managed AckPro cluster resources.</p>
+     * </li>
+     * <li><p><code>SelfManagedAckLingjun</code>: self-managed AckLingjun cluster resources.</p>
+     * </li>
+     * <li><p><code>SelfManagedASI</code>: self-managed ASI cluster resources from a third-party cloud.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,10 +120,12 @@ public class ListResourcesRequest extends TeaModel {
     public String resourceTypes;
 
     /**
-     * <p>Specifies whether to show detailed information, which includes the Quotas field. Valid values:</p>
+     * <p>Specifies whether to return detailed information. The detailed information includes the <code>Quotas</code> field. Valid values:</p>
      * <ul>
-     * <li>true (default)</li>
-     * <li>false</li>
+     * <li><p><code>true</code> (Default): returns detailed information.</p>
+     * </li>
+     * <li><p><code>false</code>: does not return detailed information.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,11 +135,14 @@ public class ListResourcesRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The fields to return. Multiple fields are separated by commas (,). Valid values:</p>
+     * <p>A comma-separated list of fields that you want to return. Valid values:</p>
      * <ul>
-     * <li>Quota</li>
-     * <li>Label</li>
-     * <li>IsDefault</li>
+     * <li><p><code>Quota</code></p>
+     * </li>
+     * <li><p><code>Label</code></p>
+     * </li>
+     * <li><p><code>IsDefault</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,10 +152,12 @@ public class ListResourcesRequest extends TeaModel {
     public String verboseFields;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace. To get the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <ul>
-     * <li>This parameter is required when the Option parameter is set to ListResourceByWorkspace.</li>
-     * <li>You do not need to configure this parameter when the Option parameter is set to ListResource.</li>
+     * <li><p>This parameter is required if <code>Option</code> is set to <code>ListResourceByWorkspace</code>.</p>
+     * </li>
+     * <li><p>This parameter is not required if <code>Option</code> is set to <code>ListResource</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

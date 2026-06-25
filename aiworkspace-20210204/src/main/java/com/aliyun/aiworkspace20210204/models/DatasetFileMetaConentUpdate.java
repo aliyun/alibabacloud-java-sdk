@@ -6,24 +6,15 @@ import com.aliyun.tea.*;
 public class DatasetFileMetaConentUpdate extends TeaModel {
     /**
      * <p>The file comment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The first image file in the dataset.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The MIME type of the file. The value consists of a type and a subtype.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>image/png</li>
-     * <li>image/svg+xml</li>
-     * <li>image/jpeg</li>
-     * <li>image/tiff</li>
-     * <li>image/gif</li>
-     * <li>image/bmp</li>
-     * <li>image/x-icon</li>
-     * <li>image/heic</li>
-     * <li>image/webp</li>
-     * </ul>
+     * <p>The MIME type of the file. It includes a type and a subtype.</p>
      * 
      * <strong>example:</strong>
      * <p>image/jpeg</p>
@@ -32,7 +23,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The file size. Unit: byte.</p>
+     * <p>The file size in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -41,7 +32,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The metadata ID of the dataset file.</p>
+     * <p>The ID of the dataset file metadata.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,17 +42,17 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     public String datasetFileMetaId;
 
     /**
-     * <p>The time when the file is created. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the file was created, in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-01-12T14:36:01Z</p>
+     * <p>2025-01-12T14:36:01.001Z</p>
      */
     @NameInMap("FileCreateTime")
     public String fileCreateTime;
 
     /**
-     * <p>The fingerprint information of the file.</p>
+     * <p>The file fingerprint information.</p>
      * 
      * <strong>example:</strong>
      * <p>124FB71******7BE45608CDEA4DE54B3</p>
@@ -79,15 +70,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The file type, which is the same as Multipurpose Internet Mail Extensions (MIME) type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>image</li>
-     * <li>application</li>
-     * <li>audio</li>
-     * <li>video</li>
-     * <li>text</li>
-     * </ul>
+     * <p>The file type. This is the primary type from the Multipurpose Internet Mail Extensions (MIME) type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -96,17 +79,17 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The time when the file is last modified. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the file was last modified, in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-01-12T14:36:01Z</p>
+     * <p>2025-01-12T14:36:01.001Z</p>
      */
     @NameInMap("FileUpdateTime")
     public String fileUpdateTime;
 
     /**
-     * <p>The specific metadata of the file, such as the width and height of an image and the bitrate and resolution of a video file. You cannot retrieve the metadata. The value is a JSON string.</p>
+     * <p>Specific file metadata, such as the width and height of an image, and the bitrate and resolution of a video. Retrieval based on this metadata is not yet supported. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -122,7 +105,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     public String metaAttributes;
 
     /**
-     * <p>The ID of the semantic index-based job.</p>
+     * <p>The ID of the job that builds the semantic index.</p>
      * 
      * <strong>example:</strong>
      * <p>dsjob-klfwt*****l0escvt3</p>
@@ -131,7 +114,7 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     public String semanticIndexJobId;
 
     /**
-     * <p>The time when the semantic index is created.</p>
+     * <p>The time when the semantic index was built.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -141,39 +124,47 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     public String semanticIndexUpdateTime;
 
     /**
-     * <p>The tags to be updated.</p>
+     * <p>The tag groups to update.</p>
      * <ul>
-     * <li>Update an algorithm tag group (a valid TagJobId must be set):</li>
+     * <li>Update tags using an algorithm. Set a valid TagJobId.</li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>{
-     *    &quot;ai&quot;:[&quot;Lane line&quot;, &quot;Water horse&quot;, &quot;Sunny day&quot;]
+     *    &quot;ai&quot;:[&quot;lane line&quot;, &quot;water barrier&quot;, &quot;sunny day&quot;]
      * }
      * </code></pre>
      * <ul>
-     * <li><p>Update a user-defined tag group (add or remove indicates that tags are added or deleted): Tag groups that can be updated:</p>
+     * <li><p>Manual tagging: Use add or remove to add or delete tags within a tag group. The modifiable tag groups are:</p>
      * <ul>
-     * <li>user: a list of user-defined tags that can be added to or deleted from a single piece of metadata.</li>
-     * <li>user-delete-ai-tags: a list of tags that you want to delete from an algorithm tag group.</li>
+     * <li><p>user: A list of tag names to add to or delete from a single metadata entry.</p>
+     * </li>
+     * <li><p>user-delete-ai-tags: A list of tag names to delete from the algorithm-generated tag group for a single metadata entry.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>{
      *     &quot;user&quot;:{
-     *         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;],
-     *         &quot;remove&quot;:[&quot;Water horse&quot;]    },
+     *         &quot;add&quot;:[&quot;lane line&quot;,&quot;sunny day&quot;],
+     *         &quot;remove&quot;:[&quot;water barrier&quot;]
+     *     },
      *     &quot;user-delete-ai-tags&quot;:{
-     *         &quot;add&quot;: [&quot;Ground shadow&quot;],
+     *         &quot;add&quot;: [&quot;ground shade&quot;],
      *         &quot;remove&quot;: []
      *     }
      * }
      * </code></pre>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ai&quot;:[&quot;cat&quot;], &quot;user&quot;:[&quot;black&quot;]}</p>
+     * <p>{
+     *     &quot;user&quot;:{
+     *         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;],
+     *         &quot;remove&quot;:[&quot;Water horse&quot;]
+     *     },
+     *     &quot;user-delete-ai-tags&quot;:{
+     *         &quot;add&quot;: [&quot;Ground shadow&quot;],
+     *         &quot;remove&quot;: []
+     *     }
+     * }</p>
      */
     @NameInMap("Tags")
     public String tags;

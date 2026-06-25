@@ -5,34 +5,25 @@ import com.aliyun.tea.*;
 
 public class DatasetFileMetaContentGet extends TeaModel {
     /**
-     * <p>The file comment.</p>
+     * <p>The comment on the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The first image file in the dataset.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The MIME type of the file. It contains a Type and a SubType.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>image/png: PNG</li>
-     * <li>image/jpeg: JPEG</li>
-     * <li>image/tiff: TIFF</li>
-     * <li>image/bmp: BMP</li>
-     * <li>image/gif: GIF</li>
-     * <li>image/x-icon: ICON</li>
-     * <li>image/svg + xml: SVG</li>
-     * <li>image/heic: HEIC</li>
-     * <li>image/webp: WEBP</li>
-     * </ul>
+     * <p>The MIME type of the file. It includes a type and a subtype.</p>
      * 
      * <strong>example:</strong>
-     * <p>text/png</p>
+     * <p>image/png</p>
      */
     @NameInMap("ContentType")
     public String contentType;
 
     /**
-     * <p>The file size. Unit: byte.</p>
+     * <p>The file size in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -41,7 +32,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The metadata ID of the dataset file.</p>
+     * <p>The ID of the dataset file metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>07914c9534586e4e7aa6e9dbca5009082df******fd8a0d857b33296c59bf6</p>
@@ -50,7 +41,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String datasetFileMetaId;
 
     /**
-     * <p>The time when the file was created. Format: ISO8601.</p>
+     * <p>The time when the file was created. The time is in the ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +51,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileCreateTime;
 
     /**
-     * <p>The directory of the file that is stored in OSS, NAS, or Cloud Parallel File Storage (CPFS).</p>
+     * <p>The path of the folder where the OSS, NAS, or CPFS file is located.</p>
      * 
      * <strong>example:</strong>
      * <p>icp_certificate_card/icp/1577179298694813/1716429710367</p>
@@ -69,7 +60,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileDir;
 
     /**
-     * <p>The fingerprint value of the file. Used to check the uniqueness of the file. This value changes after the file content is modified. OSS files use ETags, and NAS files use MD5.</p>
+     * <p>The fingerprint of the file. This value ensures the uniqueness of the file content. The value changes if the file content is modified. For OSS files, the ETag is used. For NAS files, the MD5 hash is used.</p>
      * 
      * <strong>example:</strong>
      * <p>D41D8CD98F*****E9800998ECF8</p>
@@ -87,15 +78,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The file type. The same as MIME type.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>image</li>
-     * <li>application</li>
-     * <li>audio</li>
-     * <li>video</li>
-     * <li>text</li>
-     * </ul>
+     * <p>The file type. This is the same as the Multipurpose Internet Mail Extensions (MIME) type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -104,7 +87,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The time when the file was last modified. Format: ISO8601.</p>
+     * <p>The time when the file was last modified. The time is in the ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -114,23 +97,19 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String fileUpdateTime;
 
     /**
-     * <p>The specific metadata of the file. You cannot retrieve the metadata. In JSON String format.</p>
+     * <p>The specific metadata of the file. This metadata cannot be used for retrieval. The format is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;Image&quot;:
-     *     {
-     *         &quot;Width&quot;: 1920,
-     *         &quot;Height&quot;: 1080,
-     *         &quot;Channel&quot;: 3
-     *     }
+     *     &quot;ImageHeight&quot;: 1080,
+     *     &quot;ImageWidth&quot;: 1920
      * }</p>
      */
     @NameInMap("MetaAttributes")
     public String metaAttributes;
 
     /**
-     * <p>The ID of the semantic index-based job.</p>
+     * <p>The ID of the job that builds the semantic index.</p>
      * 
      * <strong>example:</strong>
      * <p>dsjob-klfwtjtov*****scvt3</p>
@@ -139,7 +118,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String semanticIndexJobId;
 
     /**
-     * <p>The time when the semantic index-based job is created.</p>
+     * <p>The time when the semantic index was built.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -152,7 +131,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the tag is last modified. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the tag was last modified. The time is in the ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -162,17 +141,19 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String tagUpdateTime;
 
     /**
-     * <p>The tags for the metadata. The tags are divided into the following groups:</p>
+     * <p>A collection of tags for the metadata. It includes the following groups:</p>
      * <ul>
      * <li><p>Algorithm tag group:</p>
      * <ul>
-     * <li>ai: a list of tags that are aggregated by all algorithm tagging tasks for a single piece of metadata.</li>
+     * <li>ai: A list of tag names aggregated from all algorithmic tagging tasks for a single metadata record.</li>
      * </ul>
      * </li>
-     * <li><p>User-defined tag groups:</p>
+     * <li><p>User-defined tag group:</p>
      * <ul>
-     * <li>user: a list of user-defined tags that are added to a single piece of metadata.</li>
-     * <li>user-delete-ai-tags: a list of tags that you want to delete from an algorithm tag group.</li>
+     * <li><p>user: A list of tag names that a user adds to a single metadata record.</p>
+     * </li>
+     * <li><p>user-delete-ai-tags: A list of tag names from the algorithm tag group that the user wants to delete from a single metadata record.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -181,13 +162,19 @@ public class DatasetFileMetaContentGet extends TeaModel {
      * <p>{
      *     &quot;ai&quot;:
      *     [
-     *         &quot;Felis catus&quot;,
-     *         &quot;Shorthair&quot;
+     *         &quot;Lane line&quot;,
+     *         &quot;Water horse&quot;,
+     *         &quot;Sunny day&quot;
      *     ],
      *     &quot;user&quot;:
      *     [
-     *         &quot;cat&quot;,
-     *         &quot;White&quot;
+     *         &quot;Everett&quot;,
+     *         &quot;Intelligent driving Dataset 1&quot;,
+     *         &quot;Cloudy day&quot;
+     *     ],
+     *     &quot;user-delete-ai-tags&quot;:
+     *     [
+     *         &quot;Sunny day&quot;
      *     ]
      * }</p>
      */
@@ -195,11 +182,26 @@ public class DatasetFileMetaContentGet extends TeaModel {
     public String tags;
 
     /**
-     * <p>The unique URI of the file. Used to record the unique path of the file. File paths in OSS and NAS are supported.</p>
-     * <p><strong>OSS</strong></p>
-     * <p>oss://${bucket}/${path}</p>
-     * <p><strong>NAS</strong></p>
-     * <p>nas://${fileSystemId}/${path}</p>
+     * <p>The unique URI of the file. This URI records the unique path of the file. Paths for files in OSS and NAS are supported.</p>
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>OSS</p>
+     * </summary>
+     * 
+     * <p>oss\://${bucket}/${path}</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>NAS</p>
+     * </summary>
+     * 
+     * <p>nas\://${fileSystemId}/${path}</p>
+     * </details>
      * 
      * <strong>example:</strong>
      * <p>oss://*****-test/dataset/1653421.jpg

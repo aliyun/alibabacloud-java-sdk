@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectionRequest extends TeaModel {
     /**
-     * <p>The connection configuration. The connection configuration is in the key-value format. The keys configured for different connection types are different. For more information, see the supplementary description of the request parameters in CreateConnection.</p>
+     * <p>The configuration of the connection, specified as key-value pairs. The keys in the Configs parameter vary based on the connection type. For more information, see the request parameters in the CreateConnection topic.</p>
      */
     @NameInMap("Configs")
     public java.util.Map<String, String> configs;
 
     /**
-     * <p>The connection description.</p>
+     * <p>The description of the connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Connection for data labeling.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The models.</p>
+     * <p>A list of model information.</p>
      */
     @NameInMap("Models")
     public java.util.List<UpdateConnectionRequestModels> models;
 
     /**
-     * <p>The key-value configuration to be encrypted, such as the database logon password and the key for model connection.</p>
+     * <p>Key-value pairs that require encryption, such as database logon passwords and keys for model connections.</p>
      */
     @NameInMap("Secrets")
     public java.util.Map<String, String> secrets;
@@ -87,9 +90,12 @@ public class UpdateConnectionRequest extends TeaModel {
         /**
          * <p>The model type. Valid values:</p>
          * <ul>
-         * <li>LLM</li>
-         * <li>Embedding</li>
-         * <li>ReRank</li>
+         * <li><p>LLM</p>
+         * </li>
+         * <li><p>Embedding</p>
+         * </li>
+         * <li><p>ReRank</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,8 +107,10 @@ public class UpdateConnectionRequest extends TeaModel {
         /**
          * <p>Indicates whether tool calling is supported. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Tool calling is supported.</p>
+         * </li>
+         * <li><p>false: Tool calling is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

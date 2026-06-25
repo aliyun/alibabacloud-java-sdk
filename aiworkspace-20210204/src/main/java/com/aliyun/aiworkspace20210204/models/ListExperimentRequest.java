@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExperimentRequest extends TeaModel {
     /**
-     * <p>The tag filter conditions. Multiple conditions are separated by commas (,). The format of a single condition filter is <code>key=value</code>.</p>
+     * <p>The filter conditions for labels. Separate multiple conditions with commas (,). A single filter condition must be in the <code>Key=Value</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>is_evaluation:true</p>
@@ -14,7 +14,7 @@ public class ListExperimentRequest extends TeaModel {
     public String labels;
 
     /**
-     * <p>The maximum number of entries in the request. Default value: 10.</p>
+     * <p>The maximum number of results to return. The default is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListExperimentRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The experiment name.</p>
+     * <p>The name of the experiment.</p>
      * 
      * <strong>example:</strong>
      * <p>exp-test</p>
@@ -32,16 +32,18 @@ public class ListExperimentRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The optional parameters.</p>
+     * <p>Optional parameters.</p>
      */
     @NameInMap("Options")
     public ListExperimentRequestOptions options;
 
     /**
-     * <p>The order of specific fields of results in a paged query (ascending or descending).</p>
+     * <p>The order in which to sort the results of a paged query. Valid values:</p>
      * <ul>
-     * <li>ASC: ascending order</li>
-     * <li>DESC: descending order. This is the default value.</li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * <li><p>DESC (default): descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +53,7 @@ public class ListExperimentRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The strings used for sorting. The following fields can be used for sorting: GmtCreateTime, Name, GmtModifiedTime, and ExperimentId. The sorting order can be ASC (default) and DESC.</p>
+     * <p>A list of sorting methods as strings. You can sort by the following fields: GmtCreateTime, Name, GmtModifiedTime, or ExperimentId. The sorting methods are DESC and ASC. The default is ASC.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime DESC,Name ASC</p>
@@ -60,7 +62,7 @@ public class ListExperimentRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. The value starts from 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +80,7 @@ public class ListExperimentRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The pagination token, which starts from 0. Default value: 0.</p>
+     * <p>The paging token. It starts from 0. The default is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -87,7 +89,7 @@ public class ListExperimentRequest extends TeaModel {
     public Long pageToken;
 
     /**
-     * <p>The field used for sorting. The GmtCreateTime field is used.</p>
+     * <p>The field to use for sorting in a paged query. Currently, only the GmtCreateTime field is supported for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -96,7 +98,7 @@ public class ListExperimentRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Specifies whether to obtain the LatestRun value that is related to the experiment.</p>
+     * <p>Specifies whether to retrieve the LatestRun information related to the experiment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -105,13 +107,13 @@ public class ListExperimentRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The ID of the workspace to which the experiment belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace where the experiment resides. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <blockquote>
-     * <p> If you do not specify a workspace ID, the system returns the experiments in the default workspace.</p>
+     * <p>If you do not specify a workspace ID, the system returns the list of experiments in the default workspace.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>151739</p>
+     * <p>1517**</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -219,7 +221,7 @@ public class ListExperimentRequest extends TeaModel {
 
     public static class ListExperimentRequestOptions extends TeaModel {
         /**
-         * <p>Specifies whether to exactly match the experiment by name. Valid values: true and false.</p>
+         * <p>Specifies whether to perform an exact match for the name. Valid values are &quot;true&quot; and &quot;false&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -27,6 +27,12 @@ public class ModelVersion extends TeaModel {
     @NameInMap("CompressionSpec")
     public java.util.Map<String, ?> compressionSpec;
 
+    /**
+     * <p>蒸馏配置。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("DistillationSpec")
     public java.util.Map<String, ?> distillationSpec;
 
@@ -229,6 +235,9 @@ public class ModelVersion extends TeaModel {
 
     /**
      * <p>The model version description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>情感分析。</p>
      */
     @NameInMap("VersionDescription")
     public String versionDescription;
@@ -418,9 +427,21 @@ public class ModelVersion extends TeaModel {
     }
 
     public static class ModelVersionLabels extends TeaModel {
+        /**
+         * <p>标签的key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>标签的value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 

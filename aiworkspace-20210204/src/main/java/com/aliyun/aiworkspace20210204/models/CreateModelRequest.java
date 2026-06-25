@@ -7,8 +7,10 @@ public class CreateModelRequest extends TeaModel {
     /**
      * <p>The visibility of the model in the workspace. Valid values:</p>
      * <ul>
-     * <li>PRIVATE (default): Visible only to you and the administrator of the workspace.</li>
-     * <li>PUBLIC: Vvisible to all users in the workspace.</li>
+     * <li><p>PRIVATE (default): The model is visible only to you and administrators in the workspace.</p>
+     * </li>
+     * <li><p>PUBLIC: The model is visible to everyone in the workspace.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateModelRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The domain of the model. Describes the domain in which the model is for. Example: nlp (natural language processing), cv (computer vision), and others.</p>
+     * <p>The domain. This describes the field that the model is designed for, such as nlp (Natural Language Processing) or cv (computer vision).</p>
      * 
      * <strong>example:</strong>
      * <p>nlp</p>
@@ -47,19 +49,22 @@ public class CreateModelRequest extends TeaModel {
     public java.util.Map<String, ?> extraInfo;
 
     /**
-     * <p>The tags. This parameter will be deprecated and replaced by Tag.</p>
+     * <p>A list of labels. This parameter is deprecated and is replaced by the Tag parameter.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The model description, used to distinguish different models.</p>
+     * <p>The description of the model. Use this to distinguish different models.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>News classification.</p>
      */
     @NameInMap("ModelDescription")
     public String modelDescription;
 
     /**
-     * <p>The documentation of the model.</p>
+     * <p>The model documentation.</p>
      * 
      * <strong>example:</strong>
      * <p>https://*.md</p>
@@ -70,12 +75,15 @@ public class CreateModelRequest extends TeaModel {
     /**
      * <p>The name of the model. The name must be 1 to 127 characters in length.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>News classification</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
-     * <p>The model type. Example: Checkpoint or LoRA.</p>
+     * <p>The model type, such as Checkpoint or LoRA.</p>
      * 
      * <strong>example:</strong>
      * <p>Checkpoint</p>
@@ -84,7 +92,7 @@ public class CreateModelRequest extends TeaModel {
     public String modelType;
 
     /**
-     * <p>The sequence number of the model. Can be used for custom sorting.</p>
+     * <p>The ordinal number of the model. You can use this for custom sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -93,7 +101,7 @@ public class CreateModelRequest extends TeaModel {
     public Long orderNumber;
 
     /**
-     * <p>The source of the model. The community or organization to which the source model belongs, such as ModelScope or HuggingFace.</p>
+     * <p>The source of the model. This specifies the community or organization that the source model belongs to, such as ModelScope and HuggingFace.</p>
      * 
      * <strong>example:</strong>
      * <p>ModelScope</p>
@@ -101,17 +109,23 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    /**
+     * <p>The number of parameters, in millions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("ParameterSize")
     public Long parameterSize;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<Label> tag;
 
     /**
-     * <p>The task of the model. Describes the specific problem that the model solves. Example: text-classification.</p>
+     * <p>The task. This describes the specific problem that the model solves, such as text-classification (text classification).</p>
      * 
      * <strong>example:</strong>
      * <p>text-classification</p>
@@ -120,7 +134,7 @@ public class CreateModelRequest extends TeaModel {
     public String task;
 
     /**
-     * <p>The workspace ID. Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>796**</p>

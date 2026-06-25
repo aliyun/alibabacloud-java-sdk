@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetJobConfigsResponseBody extends TeaModel {
     /**
-     * <p>The dataset job configurations.</p>
+     * <p>A list of dataset job configurations.</p>
      */
     @NameInMap("DatasetJobConfigs")
     public java.util.List<DatasetJobConfig> datasetJobConfigs;

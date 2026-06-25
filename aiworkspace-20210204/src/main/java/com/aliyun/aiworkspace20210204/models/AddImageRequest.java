@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddImageRequest extends TeaModel {
     /**
-     * <p>The accessibility of the image. Valid values:</p>
+     * <p>The visibility of the image. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: The image is accessible to all members in the workspace.</li>
-     * <li>PRIVATE: The image is accessible only to the image creator.</li>
+     * <li><p>PUBLIC: All members of the workspace can perform operations on the image.</p>
+     * </li>
+     * <li><p>PRIVATE: Only the creator can perform operations on the image.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +20,17 @@ public class AddImageRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The image description.</p>
+     * <p>The description of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NLP model compression training image</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The image ID. If you do not specify this parameter, the system automatically generates an image ID. The image ID must start with image- followed by 18 characters in letters or digits.</p>
+     * <p>The ID of the image. If you leave this parameter empty, the system automatically generates an ID.
+     * The format is \<code>image-\\</code> followed by 18 uppercase letters, lowercase letters, or digits.</p>
      * 
      * <strong>example:</strong>
      * <p>image-k83*****cv</p>
@@ -33,7 +39,7 @@ public class AddImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The URL of the image, which can be repeated. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a> to view the image URL.</p>
+     * <p>The URI of the image. The URI can be reused. For more information, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,37 +49,60 @@ public class AddImageRequest extends TeaModel {
     public String imageUri;
 
     /**
-     * <p>The image tag, which is an array. Each element in the array contains a key-value pair. Alibaba Cloud images have the system.official=true tag. You can add the following keys to an image:</p>
+     * <p>The labels of the image. This is an array where each item contains a key and a value.
+     * Official images have the following label: system.official=true
+     * The following keys are supported:</p>
      * <ul>
-     * <li>system.chipType</li>
-     * <li>system.dsw.cudaVersion</li>
-     * <li>system.dsw.fromImageId</li>
-     * <li>system.dsw.fromInstanceId</li>
-     * <li>system.dsw.id</li>
-     * <li>system.dsw.os</li>
-     * <li>system.dsw.osVersion</li>
-     * <li>system.dsw.resourceType</li>
-     * <li>system.dsw.rootImageId</li>
-     * <li>system.dsw.stage</li>
-     * <li>system.dsw.tag</li>
-     * <li>system.dsw.type</li>
-     * <li>system.framework</li>
-     * <li>system.origin</li>
-     * <li>system.pythonVersion</li>
-     * <li>system.source</li>
-     * <li>system.supported.dlc</li>
-     * <li>system.supported.dsw</li>
+     * <li><p>system.chipType</p>
+     * </li>
+     * <li><p>system.dsw\.cudaVersion</p>
+     * </li>
+     * <li><p>system.dsw\.fromImageId</p>
+     * </li>
+     * <li><p>system.dsw\.fromInstanceId</p>
+     * </li>
+     * <li><p>system.dsw\.id</p>
+     * </li>
+     * <li><p>system.dsw\.os</p>
+     * </li>
+     * <li><p>system.dsw\.osVersion</p>
+     * </li>
+     * <li><p>system.dsw\.resourceType</p>
+     * </li>
+     * <li><p>system.dsw\.rootImageId</p>
+     * </li>
+     * <li><p>system.dsw\.stage</p>
+     * </li>
+     * <li><p>system.dsw\.tag</p>
+     * </li>
+     * <li><p>system.dsw\.type</p>
+     * </li>
+     * <li><p>system.framework</p>
+     * </li>
+     * <li><p>system.origin</p>
+     * </li>
+     * <li><p>system.pythonVersion</p>
+     * </li>
+     * <li><p>system.source</p>
+     * </li>
+     * <li><p>system.supported.dlc</p>
+     * </li>
+     * <li><p>system.supported.dsw</p>
+     * </li>
      * </ul>
      */
     @NameInMap("Labels")
     public java.util.List<AddImageRequestLabels> labels;
 
     /**
-     * <p>The image name. The name must meet the following requirements:</p>
+     * <p>The image name. The naming convention is as follows:</p>
      * <ul>
-     * <li>The name must be 1 to 50 characters in length.</li>
-     * <li>The name can contain lowercase letters, digits, and hyphens (-). The name must start with a lowercase letter.</li>
-     * <li>The name must be unique in a workspace.</li>
+     * <li><p>The name must be 1 to 50 characters long.</p>
+     * </li>
+     * <li><p>The name can contain lowercase letters, digits, and hyphens (-). It must start with a letter.</p>
+     * </li>
+     * <li><p>The name must be unique within the workspace.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -84,7 +113,7 @@ public class AddImageRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The size of the image. Unit: GB.</p>
+     * <p>The size of the image, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -92,14 +121,22 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("Size")
     public Long size;
 
+    /**
+     * <p>The source ID of the image. If the source type is Build, this ID corresponds to the image build ID.</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <p>The source type of the image. Valid values:
+     * Import
+     * Build</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace to which the image belongs. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>15******45</p>
@@ -194,7 +231,7 @@ public class AddImageRequest extends TeaModel {
 
     public static class AddImageRequestLabels extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>system.chipType</p>
@@ -203,7 +240,7 @@ public class AddImageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>GPU</p>

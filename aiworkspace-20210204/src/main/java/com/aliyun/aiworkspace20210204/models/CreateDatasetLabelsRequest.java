@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetLabelsRequest extends TeaModel {
     /**
-     * <p>The tags.</p>
+     * <p>The list of labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;

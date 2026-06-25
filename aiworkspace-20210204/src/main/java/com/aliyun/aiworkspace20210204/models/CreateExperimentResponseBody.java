@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentResponseBody extends TeaModel {
     /**
-     * <p>The returned data. If the operation is asynchronously implemented, the job ID is returned.</p>
+     * <p>If the call is asynchronous, the API returns a JobId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExperimentId-example-id-****</p>
      */
     @NameInMap("ExperimentId")
     public String experimentId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Request ID</p>
      */
     @NameInMap("RequestId")
     public String requestId;

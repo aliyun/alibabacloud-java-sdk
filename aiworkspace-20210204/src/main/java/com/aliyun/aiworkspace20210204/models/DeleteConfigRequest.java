@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class DeleteConfigRequest extends TeaModel {
     /**
-     * <p>The category of the configuration item. Valid values:</p>
+     * <p>The classification of the configuration item. The following classifications are supported:</p>
      * <ul>
-     * <li>CommonResourceConfig</li>
-     * <li>DLCAutoRecycle - DLCPriorityConfig</li>
-     * <li>DSWPriorityConfig</li>
-     * <li>QuotaMaximumDuration</li>
-     * <li>CommonTagConfig</li>
+     * <li><p>DLCAutoRecycle: The DLC automatic release configuration.</p>
+     * </li>
+     * <li><p>DLCPriorityConfig: The DLC priority settings.</p>
+     * </li>
+     * <li><p>DSWPriorityConfig: The DSW priority settings.</p>
+     * </li>
+     * <li><p>QuotaMaximumDuration: The maximum runtime configuration of a DLC task for a quota.</p>
+     * </li>
+     * <li><p>CommonTagConfig: The tag settings.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +26,7 @@ public class DeleteConfigRequest extends TeaModel {
     public String categoryName;
 
     /**
-     * <p>The filter conditions. Separate multiple conditions with commas (,). The conditions have an AND relationship.</p>
+     * <p>The filter conditions. Separate multiple conditions with commas. The conditions are combined with a logical AND.</p>
      * 
      * <strong>example:</strong>
      * <p>key1=value;key2=value2</p>

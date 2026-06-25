@@ -5,25 +5,16 @@ import com.aliyun.tea.*;
 
 public class DatasetFileMetaContentCreate extends TeaModel {
     /**
-     * <p>The file comment.</p>
+     * <p>The comment on the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The first image file in the dataset.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The MIME type of the file. It contains Type and SubType.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>image/png: PNG.</li>
-     * <li>image/jpeg: JPEG.</li>
-     * <li>image/tiff: TIFF.</li>
-     * <li>image/bmp: BMP.</li>
-     * <li>image/gif: GIF.</li>
-     * <li>image/x-icon: ICON.</li>
-     * <li>image/svg+xml: SVG.</li>
-     * <li>image/webp: WEBP.</li>
-     * <li>image/heic: HEIC</li>
-     * </ul>
+     * <p>The MIME type of the file. It includes a type and a subtype.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +24,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The file size. Unit: bytes.</p>
+     * <p>The size of the file in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -42,7 +33,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The time when the file was created. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the file was created. The time is in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +43,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileCreateTime;
 
     /**
-     * <p>The file fingerprint. Used to check the uniqueness of the file. This value changes after the file content is modified. OSS files use ETags, and NAS files use MD5 values.</p>
+     * <p>The fingerprint of the file. This value ensures the uniqueness of the file content and changes if the content is modified. For OSS files, this is the ETag. For NAS files, this is the MD5 value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +53,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileFingerPrint;
 
     /**
-     * <p>The file name.</p>
+     * <p>The name of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>00001.jpeg</p>
@@ -71,15 +62,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The file type. The same as MIME type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>image</li>
-     * <li>application</li>
-     * <li>audio</li>
-     * <li>video</li>
-     * <li>text</li>
-     * </ul>
+     * <p>The type of the file. This is the same as the Multipurpose Internet Mail Extensions (MIME) type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +72,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The time when the file was last modified. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the file was last modified. The time is in ISO 8601 format.</p>
      * <p>This parameter is required.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
@@ -100,47 +83,62 @@ public class DatasetFileMetaContentCreate extends TeaModel {
     public String fileUpdateTime;
 
     /**
-     * <p>The specific metadata of the file. You cannot retrieve the metadata. The value is a JSON string.</p>
+     * <p>The specific metadata of the file. This metadata cannot be used for retrieval. The value must be a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;Image&quot;:
-     *     {
-     *         &quot;Width&quot;: 1920,
-     *         &quot;Height&quot;: 1080,
-     *         &quot;Channel&quot;: 3
-     *     }
+     *     &quot;ImageHeight&quot;: 1080,
+     *     &quot;ImageWidth&quot;: 1920
      * }</p>
      */
     @NameInMap("MetaAttributes")
     public String metaAttributes;
 
     /**
-     * <p>The tags manually added. The value is a JSON string. Operable tag group:</p>
+     * <p>The tags that are manually added by users. The \<code>add\\</code> operation is used to add tags to a tag group. The value must be a JSON string.
+     * The following tag group is available:</p>
      * <ul>
-     * <li>user: the list of tags to add to a metadata entry.</li>
+     * <li>user: A list of tag names added to a single piece of metadata.</li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>{
      *     &quot;user&quot;:{
-     *         &quot;add&quot;:[&quot;lane line&quot;,&quot;sunny&quot;]
+     *         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
      *     }
      * }
      * </code></pre>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;user&quot;:[&quot;cat&quot;, &quot;White&quot;]}</p>
+     * <p>{
+     *     &quot;user&quot;:{
+     *         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
+     *     }
+     * }</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
-     * <p>The URI of the file. Used to record the unique path of the file. File paths in Object Storage Service (OSS) and File Storage NAS (NAS) are supported.</p>
-     * <p><strong>OSS</strong></p>
-     * <p>oss://${bucket}/${path}</p>
-     * <p><strong>NAS</strong></p>
-     * <p>nas://${fileSystemId}/${path}</p>
+     * <p>The unique URI of the file. This URI records the unique path of the file. The path can be an OSS or NAS path.</p>
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>OSS</p>
+     * </summary>
+     * 
+     * <p>oss\://${bucket}/${path}</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>NAS</p>
+     * </summary>
+     * 
+     * <p>nas\://${fileSystemId}/${path}</p>
+     * </details>
+     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

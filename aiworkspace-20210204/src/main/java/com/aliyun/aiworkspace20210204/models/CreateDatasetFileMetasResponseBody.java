@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetFileMetasResponseBody extends TeaModel {
     /**
-     * <p>The metadata that failed to be created.</p>
+     * <p>A list of file metadata records that failed to be created.</p>
      */
     @NameInMap("FailedDetails")
     public java.util.List<DatasetFileMetaResponse> failedDetails;
@@ -20,12 +20,7 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the metadata records of all dataset files were created. The value true indicates that the metadata records of all dataset files are created. If the value is false, view the failure details specified by FailedDetails.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>The status of the batch metadata creation. A value of \<code>true\\</code> indicates that all records were created successfully. If the value is \<code>false\\</code>, check \<code>FailedDetails\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -34,7 +29,7 @@ public class CreateDatasetFileMetasResponseBody extends TeaModel {
     public Boolean status;
 
     /**
-     * <p>The metadata that is created.</p>
+     * <p>A list of file metadata records that were successfully created.</p>
      */
     @NameInMap("SucceedDetails")
     public java.util.List<DatasetFileMetaResponse> succeedDetails;

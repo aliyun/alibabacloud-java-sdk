@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRunsRequest extends TeaModel {
     /**
-     * <p>The ID of the experiment that the run belongs.</p>
+     * <p>The ID of the experiment to which the run belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>exp-1zpfthdx******</p>
@@ -23,10 +23,12 @@ public class ListRunsRequest extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The label. Exact match is supported. Valid values:</p>
+     * <p>The labels of the run for an exact match. The following formats are supported:</p>
      * <ul>
-     * <li>Single-label query: Set the value to is_evaluation.</li>
-     * <li>Multi-label query (not recommended in non-special scenarios and may have performance issues): Set the value to is_evaluation:true,LLM_evaluation:true. Multiple labels are separated with commas (,), indicating that the key-value pairs of multiple labels must be matched at the same time.</li>
+     * <li><p>Single-label query: &quot;is_evaluation:true&quot;</p>
+     * </li>
+     * <li><p>Multi-label query: &quot;is_evaluation:true,LLM_evaluation:true&quot;. This method is not recommended for common scenarios because it may degrade performance. Use commas (,) to separate multiple labels. The system matches all specified key-value pairs.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListRunsRequest extends TeaModel {
     public String labels;
 
     /**
-     * <p>The maximum number of entries in the request. Default value: 10.</p>
+     * <p>The maximum number of results to return. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +47,7 @@ public class ListRunsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The run name.</p>
+     * <p>The name of the run.</p>
      * 
      * <strong>example:</strong>
      * <p>myName</p>
@@ -54,10 +56,12 @@ public class ListRunsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy.</p>
+     * <p>The sort order for the paged query. Use this parameter with SortBy.</p>
      * <ul>
-     * <li>ASC</li>
-     * <li>DESC (default)</li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * <li><p>DESC (default): descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +71,7 @@ public class ListRunsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The strings by which the results are sorted. The following parameters can be used to sort the results: GmtCreateTime and Name. The sorting order can be ASC (default) and DESC. Separate multiple strings with commas (,).</p>
+     * <p>The fields to sort by and the sort order. You can sort by GmtCreateTime and Name. Valid sort orders are DESC and ASC. The default is ASC. To sort by multiple fields, separate them with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime DESC,Name ASC</p>
@@ -85,7 +89,7 @@ public class ListRunsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records to display on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -94,7 +98,7 @@ public class ListRunsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The pagination token, which starts from 0. Default value: 0.</p>
+     * <p>The paging token. The value starts from 0. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -103,10 +107,12 @@ public class ListRunsRequest extends TeaModel {
     public Long pageToken;
 
     /**
-     * <p>The field used for sorting. Valid values:</p>
+     * <p>The field to use for sorting. Valid values:</p>
      * <ul>
-     * <li>Name: the name of the run.</li>
-     * <li>GmtCreateTime: the time when the run is created.</li>
+     * <li><p>Name: the name of the run.</p>
+     * </li>
+     * <li><p>GmtCreateTime (default): the time when the run was created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +122,7 @@ public class ListRunsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ID of the workload associated with the run.</p>
+     * <p>The ID of the PAI workload associated with the run.</p>
      * 
      * <strong>example:</strong>
      * <p>job-rbvg5wzlj****</p>
@@ -125,7 +131,7 @@ public class ListRunsRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The type of the workload associated with the run.</p>
+     * <p>The type of the PAI workload associated with the run.</p>
      * 
      * <strong>example:</strong>
      * <p>TrainingService</p>
@@ -134,10 +140,12 @@ public class ListRunsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>Specifies whether to show detailed information, including Metrics, Params, and Labels. Valid values:</p>
+     * <p>Specifies whether to display details, including Metrics, Params, and Labels. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true: displays details.</p>
+     * </li>
+     * <li><p>false (default): does not display details.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,13 +155,13 @@ public class ListRunsRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The ID of the workspace to which the experiment belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace where the experiment resides. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <blockquote>
-     * <p> If you do not specify a workspace ID, the system returns the runs of the default workspace.</p>
+     * <p>If you do not specify a workspace ID, the system returns the list of runs in the default workspace.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>22840</p>
+     * <p>228**</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

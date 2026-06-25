@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
     /**
+     * <p>The product codes, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>PAI_isolate</p>
      */
@@ -12,6 +14,8 @@ public class ListProductsRequest extends TeaModel {
     public String productCodes;
 
     /**
+     * <p>The service codes, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */

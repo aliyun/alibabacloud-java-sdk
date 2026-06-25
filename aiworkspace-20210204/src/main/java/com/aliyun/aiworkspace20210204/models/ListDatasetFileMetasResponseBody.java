@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetFileMetasResponseBody extends TeaModel {
     /**
-     * <p>The metadata records of the dataset files.</p>
+     * <p>The detailed metadata of the dataset files.</p>
      */
     @NameInMap("DatasetFileMetas")
     public java.util.List<DatasetFileMeta> datasetFileMetas;
@@ -20,7 +20,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>The dataset version.</p>
+     * <p>The version name of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -29,6 +29,8 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public String datasetVersion;
 
     /**
+     * <p>The maximum number of results returned per page when you use the \<code>NextToken\\</code> parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,7 +38,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. If the number of results exceeds the maximum number of entries allowed per page, a pagination token is returned. This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</p>
+     * <p>The pagination token. If the number of results that match the query exceeds the page size, this token is returned. To retrieve the next page of data, use the returned token in your next request. Repeat this process until no token is returned, which indicates that all data has been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</p>
@@ -45,7 +47,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

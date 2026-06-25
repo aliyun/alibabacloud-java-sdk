@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetFileMetasRequest extends TeaModel {
     /**
-     * <p>The metadata records to be updated for the dataset files.</p>
+     * <p>A list of dataset file metadata to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DatasetFileMetas")
     public java.util.List<DatasetFileMetaConentUpdate> datasetFileMetas;
 
     /**
-     * <p>The dataset version.</p>
+     * <p>The name of the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -21,7 +21,7 @@ public class UpdateDatasetFileMetasRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The ID of the tagging job that is associated with the metadata tag of the dataset file.</p>
+     * <p>The ID of the tagging job for updating metadata tags.</p>
      * 
      * <strong>example:</strong>
      * <p>dsjob-hv0b1****u8taig3y</p>
@@ -30,7 +30,7 @@ public class UpdateDatasetFileMetasRequest extends TeaModel {
     public String tagJobId;
 
     /**
-     * <p>The ID of the workspace to which the dataset belongs. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The ID of the workspace that contains the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>796**</p>

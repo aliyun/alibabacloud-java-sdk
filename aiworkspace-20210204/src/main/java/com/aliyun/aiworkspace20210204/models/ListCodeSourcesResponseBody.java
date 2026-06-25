@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCodeSourcesResponseBody extends TeaModel {
     /**
-     * <p>The code sources.</p>
+     * <p>A list of code source configurations.</p>
      */
     @NameInMap("CodeSources")
     public java.util.List<CodeSourceItem> codeSources;
@@ -20,7 +20,7 @@ public class ListCodeSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of code sources that meet the filter conditions.</p>
+     * <p>The total number of code source configurations that meet the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

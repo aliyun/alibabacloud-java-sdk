@@ -14,7 +14,7 @@ public class DeleteWorkspaceResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>The affected resource IDs.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;

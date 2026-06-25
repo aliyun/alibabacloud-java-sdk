@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListModelVersionsRequest extends TeaModel {
     /**
-     * <p>The approval status based on which the model versions are queried. Valid values:</p>
+     * <p>The approval status. This parameter is used to filter the model version list. Valid values:</p>
      * <ul>
-     * <li>Pending</li>
-     * <li>Approved</li>
-     * <li>Rejected</li>
+     * <li><p>Pending: The model version is pending approval.</p>
+     * </li>
+     * <li><p>Approved: The model version is approved for publishing.</p>
+     * </li>
+     * <li><p>Rejected: The model version is rejected for publishing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,18 +22,28 @@ public class ListModelVersionsRequest extends TeaModel {
     public String approvalStatus;
 
     /**
-     * <p>The model format used to filter model versions. Valid values:</p>
+     * <p>The model format. This parameter is used to filter the model version list. Valid values:</p>
      * <ul>
-     * <li>OfflineModel</li>
-     * <li>SavedModel</li>
-     * <li>Keras H5</li>
-     * <li>Frozen Pb</li>
-     * <li>Caffe Prototxt</li>
-     * <li>TorchScript</li>
-     * <li>XGBoost</li>
-     * <li>PMML</li>
-     * <li>AlinkModel</li>
-     * <li>ONNX</li>
+     * <li><p>OfflineModel</p>
+     * </li>
+     * <li><p>SavedModel</p>
+     * </li>
+     * <li><p>Keras H5</p>
+     * </li>
+     * <li><p>Frozen Pb</p>
+     * </li>
+     * <li><p>Caffe Prototxt</p>
+     * </li>
+     * <li><p>TorchScript</p>
+     * </li>
+     * <li><p>XGBoost</p>
+     * </li>
+     * <li><p>PMML</p>
+     * </li>
+     * <li><p>AlinkModel</p>
+     * </li>
+     * <li><p>ONNX</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,14 +53,21 @@ public class ListModelVersionsRequest extends TeaModel {
     public String formatType;
 
     /**
-     * <p>The framework used to filter model versions.</p>
+     * <p>The model framework. This parameter is used to filter the model version list. Valid values:</p>
      * <ul>
-     * <li>Pytorch -XGBoost</li>
-     * <li>Keras</li>
-     * <li>Caffe</li>
-     * <li>Alink</li>
-     * <li>Xflow</li>
-     * <li>TensorFlow</li>
+     * <li><p>Pytorch
+     * -XGBoost</p>
+     * </li>
+     * <li><p>Keras</p>
+     * </li>
+     * <li><p>Caffe</p>
+     * </li>
+     * <li><p>Alink</p>
+     * </li>
+     * <li><p>Xflow</p>
+     * </li>
+     * <li><p>TensorFlow</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +77,7 @@ public class ListModelVersionsRequest extends TeaModel {
     public String frameworkType;
 
     /**
-     * <p>The label. Model versions whose label key or label value contains a specific label are filtered.</p>
+     * <p>The label string. This parameter is used to filter the list. Model versions that have the specified string in the key or value of their labels are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>key1</p>
@@ -66,10 +86,12 @@ public class ListModelVersionsRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC.</p>
+     * <p>The order in which to sort the entries in the paged query. The default value is ASC.</p>
      * <ul>
-     * <li>ASC</li>
-     * <li>DESC</li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * <li><p>DESC: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +101,7 @@ public class ListModelVersionsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the model version list. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -88,7 +110,7 @@ public class ListModelVersionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page for a paged query. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -97,7 +119,7 @@ public class ListModelVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field used to sort the results. The GmtCreateTime field is used for sorting.</p>
+     * <p>The field to use for sorting in the paged query. Currently, the GmtCreateTime field is used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -108,19 +130,23 @@ public class ListModelVersionsRequest extends TeaModel {
     /**
      * <p>The source ID.</p>
      * <ul>
-     * <li>If the source type is Custom, this field is not limited.</li>
-     * <li>If the source type is PAIFlow or TrainingService, the format is:</li>
+     * <li><p>If the source type is Custom, this parameter is not restricted.</p>
+     * </li>
+     * <li><p>If the source is PAIFlow or TrainingService, the format is as follows:</p>
+     * </li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
      * </code></pre>
-     * <p>Take note of the following parameters:</p>
+     * <p>where:</p>
      * <ul>
-     * <li>region is the region ID.</li>
-     * <li>workspaceId is the ID of the workspace.</li>
-     * <li>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
-     * <li>id is a unique identifier.</li>
+     * <li><p>region is the Alibaba Cloud region ID.</p>
+     * </li>
+     * <li><p>workspaceId is the workspace ID.</p>
+     * </li>
+     * <li><p>kind: the type. Valid values: PipelineRun (PAIFlow pipeline) and ServiceJob (training service).</p>
+     * </li>
+     * <li><p>id: the unique identifier.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -130,11 +156,14 @@ public class ListModelVersionsRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The source type used to filter model versions. Valid values:</p>
+     * <p>The source type of the model. This parameter is used to filter the model version list. Valid values:</p>
      * <ul>
-     * <li>Custom (default)</li>
-     * <li>PAIFlow</li>
-     * <li>TrainingService</li>
+     * <li><p>Custom (default): a custom model.</p>
+     * </li>
+     * <li><p>PAIFlow: a model from a PAI pipeline.</p>
+     * </li>
+     * <li><p>TrainingService: a model from a PAI training service.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,7 +173,7 @@ public class ListModelVersionsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The model version used to filter model versions.</p>
+     * <p>The model version name. This parameter is used to filter the model version list.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.1</p>

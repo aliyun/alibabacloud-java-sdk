@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateProductOrdersRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically pay for the provided products.</p>
+     * <p>Specifies whether to automatically pay for all products listed in the Products parameter.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Enables automatic payment.</p>
+     * </li>
+     * <li><p>false: Disables automatic payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateProductOrdersRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The list of products to be purchased. Separate them with commas (,).</p>
+     * <p>The list of products to purchase.</p>
      */
     @NameInMap("Products")
     public java.util.List<CreateProductOrdersRequestProducts> products;
@@ -46,7 +48,7 @@ public class CreateProductOrdersRequest extends TeaModel {
 
     public static class CreateProductOrdersRequestProductsInstanceProperties extends TeaModel {
         /**
-         * <p>The property code.</p>
+         * <p>The code of the instance property.</p>
          * 
          * <strong>example:</strong>
          * <p>commodity_type</p>
@@ -55,13 +57,16 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>The property name.</p>
+         * <p>The name of the instance property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Object Storage Service</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The property value.</p>
+         * <p>The value of the instance property.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -102,10 +107,12 @@ public class CreateProductOrdersRequest extends TeaModel {
 
     public static class CreateProductOrdersRequestProducts extends TeaModel {
         /**
-         * <p>Specifies whether to automatically renew the product.</p>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Enables auto-renewal.</p>
+         * </li>
+         * <li><p>false: Disables auto-renewal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +122,7 @@ public class CreateProductOrdersRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The billing method. Only POSTPAY is supported.</p>
+         * <p>The billing method. Currently, only POSTPAY is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -124,7 +131,7 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The purchase duration. You can use this parameter together with pricingCycle. Only 1 is supported.</p>
+         * <p>The subscription duration. This parameter is used with PricingCycle. Currently, only a value of 1 is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -133,20 +140,65 @@ public class CreateProductOrdersRequest extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The properties of the instance.</p>
+         * <p>The list of instance properties.</p>
          * <ul>
-         * <li>DataWorks_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-shanghai&quot; } ]</li>
-         * <li>OSS_share: [ { &quot;Code&quot;: &quot;commodity_type&quot;, &quot;Value&quot;: &quot;oss&quot;, &quot;Name&quot;: &quot;Object Storage Service&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot;, &quot;Name&quot;: &quot;1 Hour&quot; } ]</li>
-         * <li>PAI_share: None</li>
-         * <li>China bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;odps_specification_type&quot;, &quot;Value&quot;: &quot;OdpsStandard&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</li>
-         * <li>International bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</li>
+         * <li><p>DataWorks_share:
+         * [ {
+         * &quot;Code&quot;: &quot;region&quot;,
+         * &quot;Value&quot;: &quot;cn-shanghai&quot;
+         * }
+         * ]</p>
+         * </li>
+         * <li><p>OSS_share:
+         * [ {
+         * &quot;Code&quot;: &quot;commodity_type&quot;,
+         * &quot;Value&quot;: &quot;oss&quot;,
+         * &quot;Name&quot;: &quot;Object Storage Service&quot;
+         * },
+         * {
+         * &quot;Code&quot;: &quot;ord_time&quot;,
+         * &quot;Value&quot;: &quot;1:Hour&quot;,
+         * &quot;Name&quot;: &quot;1 Hour&quot;
+         * }
+         * ]</p>
+         * </li>
+         * <li><p>PAI_share: None</p>
+         * </li>
+         * <li><p>MaxCompute_share for accounts in mainland China:
+         * [
+         * {
+         * &quot;Code&quot;: &quot;region&quot;,
+         * &quot;Value&quot;: &quot;cn-hangzhou&quot;
+         * },
+         * {
+         * &quot;Code&quot;: &quot;odps_specification_type&quot;,
+         * &quot;Value&quot;: &quot;OdpsStandard&quot;
+         * },
+         * {
+         * &quot;Code&quot;: &quot;ord_time&quot;,
+         * &quot;Value&quot;: &quot;1:Hour&quot;
+         * }
+         * ]</p>
+         * </li>
+         * <li><p>MaxCompute_share for accounts outside mainland China:
+         * [
+         * {
+         * &quot;Code&quot;: &quot;region&quot;,
+         * &quot;Value&quot;: &quot;cn-hangzhou&quot;
+         * },
+         * {
+         * &quot;Code&quot;: &quot;ord_time&quot;,
+         * &quot;Value&quot;: &quot;1:Hour&quot;
+         * }
+         * ]</p>
+         * </li>
          * </ul>
          */
         @NameInMap("InstanceProperties")
         public java.util.List<CreateProductOrdersRequestProductsInstanceProperties> instanceProperties;
 
         /**
-         * <p>The type of the order. Only BUY is supported.</p>
+         * <p>The order type. Currently, only BUY is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -155,10 +207,12 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String orderType;
 
         /**
-         * <p>The billing cycle. Valid values:</p>
+         * <p>The billing cycle. The following values are supported:</p>
          * <ul>
-         * <li>Month: The price is calculated every month. DataWorks_share only supports Month.</li>
-         * <li>Hour: The price is calculated every hour. OSS_share and MaxCompute_share only support Hour.</li>
+         * <li><p>Month: Monthly billing. Only DataWorks_share supports this value.</p>
+         * </li>
+         * <li><p>Hour: Hourly billing. Only OSS_share and MaxCompute_share support this value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,12 +222,16 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String pricingCycle;
 
         /**
-         * <p>The product code. Valid values:</p>
+         * <p>The product code. The following codes are supported:</p>
          * <ul>
-         * <li>DataWorks_share: pay-as-you-go DataWorks</li>
-         * <li>MaxCompute_share: pay-as-you-go MaxCompute</li>
-         * <li>PAI_share: pay-as-you-go PAI.</li>
-         * <li>OSS_share: pay-as-you-go OSS</li>
+         * <li><p>DataWorks_share: The pay-as-you-go DataWorks product.</p>
+         * </li>
+         * <li><p>MaxCompute_share: The pay-as-you-go MaxCompute product.</p>
+         * </li>
+         * <li><p>PAI_share: The pay-as-you-go PAI product.</p>
+         * </li>
+         * <li><p>OSS_share: The pay-as-you-go OSS product.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -4,14 +4,28 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
+    /**
+     * <p>Specifies the dataset\&quot;s visibility.</p>
+     * <ul>
+     * <li><p><code>PUBLIC</code>: The dataset is publicly accessible.</p>
+     * </li>
+     * <li><p><code>PRIVATE</code>: The dataset is privately accessible.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
     /**
-     * <p>The storage types of the data source. Multiple data source types are separated by commas (,). Valid values:</p>
+     * <p>The data source type. To specify multiple types, separate them with commas (,). Valid values:</p>
      * <ul>
-     * <li>NAS: File Storage NAS (NAS).</li>
-     * <li>OSS: Object Storage Service (OSS).</li>
+     * <li><p><code>NAS</code>: The data source is NAS.</p>
+     * </li>
+     * <li><p><code>OSS</code>: The data source is OSS.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,13 +35,18 @@ public class ListDatasetsRequest extends TeaModel {
     public String dataSourceTypes;
 
     /**
-     * <p>The dataset types. Multiple dataset types are separated by commas (,). Valid values:</p>
+     * <p>The data type of the dataset. To specify multiple data types, separate them with commas (,). Valid values:</p>
      * <ul>
-     * <li>Video: video</li>
-     * <li>COMMON: common</li>
-     * <li>TEXT: text</li>
-     * <li>PIC: picture</li>
-     * <li>AUDIO: audio</li>
+     * <li><p><code>VIDEO</code>: video.</p>
+     * </li>
+     * <li><p><code>COMMON</code>: general.</p>
+     * </li>
+     * <li><p><code>TEXT</code>: text.</p>
+     * </li>
+     * <li><p><code>PIC</code>: image.</p>
+     * </li>
+     * <li><p><code>AUDIO</code>: audio.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,14 +55,34 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("DataTypes")
     public String dataTypes;
 
+    /**
+     * <p>A comma-separated list of dataset IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-rcdg3wxxxxxhc5jk87</p>
+     */
     @NameInMap("DatasetIds")
     public String datasetIds;
 
+    /**
+     * <p>The dataset edition. Valid values:</p>
+     * <ul>
+     * <li><p><code>BASIC</code>: Basic edition. Does not support file metadata management.</p>
+     * </li>
+     * <li><p><code>ADVANCED</code>: Advanced edition. This edition is supported only for OSS datasets. Each version can manage metadata for up to 1 million files.</p>
+     * </li>
+     * <li><p><code>LOGICAL</code>: Logical edition. This edition is supported only for OSS datasets and is suitable for most use cases. Each version can manage metadata for up to 1 million files. You must use an SDK with this edition.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BASIC</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
     /**
-     * <p>The dataset tag, which is used to filter datasets. Datasets whose tag key or tag value contains a specified string are filtered.</p>
+     * <p>A label used to filter datasets. The operation returns datasets whose label key or value contains the specified string.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -52,7 +91,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The dataset name. Fuzzy search based on the dataset name is supported.</p>
+     * <p>The dataset name. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>myName</p>
@@ -61,10 +100,12 @@ public class ListDatasetsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The order of specific fields of the entries on the returned page. Valid values: ASC and DESC. Default value: ASC.</p>
+     * <p>The sort order for the results, based on the <code>SortBy</code> parameter. The default is <code>ASC</code>.</p>
      * <ul>
-     * <li>ASC: The entries are sorted in ascending order.</li>
-     * <li>DESC: The entries are sorted in descending order.</li>
+     * <li><p><code>ASC</code>: ascending order.</p>
+     * </li>
+     * <li><p><code>DESC</code>: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +115,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for the paged query. Starts at 1. The default is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -83,7 +124,7 @@ public class ListDatasetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of datasets to return per page. The default is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -92,10 +133,12 @@ public class ListDatasetsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The dataset properties. Multiple properties are separated by commas (,). Valid values:</p>
+     * <p>The dataset properties. To specify multiple properties, separate them with commas (,). Valid values:</p>
      * <ul>
-     * <li>DIRECTORY</li>
-     * <li>FILE</li>
+     * <li><p><code>DIRECTORY</code>: A folder.</p>
+     * </li>
+     * <li><p><code>FILE</code>: A file.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +148,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String properties;
 
     /**
-     * <p>The dataset provider. If the value pai is returned, the dataset is a public dataset provided by PAI.</p>
+     * <p>The dataset provider. Set this parameter to <code>pai</code> to query public datasets on the PAI platform.</p>
      * 
      * <strong>example:</strong>
      * <p>pai</p>
@@ -113,11 +156,25 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <p>A filter for shared datasets.</p>
+     * <ul>
+     * <li><p><code>TO_ME</code>: Returns only datasets shared with you.</p>
+     * </li>
+     * <li><p><code>BY_ME</code>: Returns only datasets that you have shared with others and displays details of the sharing configuration.</p>
+     * </li>
+     * <li><p>If this parameter is omitted or empty, the operation returns all datasets in the current workspace, including those shared with you.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BY_ME</p>
+     */
     @NameInMap("ShareScope")
     public String shareScope;
 
     /**
-     * <p>The field used for sorting.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -126,7 +183,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ID of the iTAG labeled dataset that is used as the source dataset.</p>
+     * <p>The source dataset ID for an iTAG annotation set.</p>
      * 
      * <strong>example:</strong>
      * <p>d-rcdg3wxxxxxhc5jk87</p>
@@ -135,11 +192,14 @@ public class ListDatasetsRequest extends TeaModel {
     public String sourceDatasetId;
 
     /**
-     * <p>The data source ID.</p>
+     * <p>The source ID. The value of this parameter varies based on the <code>SourceTypes</code> value:</p>
      * <ul>
-     * <li>If SourceType is set to USER, the value of SourceId is a custom string.</li>
-     * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-     * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+     * <li><p>If <code>SourceTypes</code> is <code>USER</code>, you can specify a custom value for <code>SourceId</code>.</p>
+     * </li>
+     * <li><p>If <code>SourceTypes</code> is <code>ITAG</code>, <code>SourceId</code> is the ID of the iTAG task.</p>
+     * </li>
+     * <li><p>If <code>SourceTypes</code> is <code>PAI_PUBLIC_DATASET</code>, this parameter is empty by default.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -149,12 +209,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The source types. Multiple source types are separated by commas (,). Valid values:</p>
-     * <ul>
-     * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
-     * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
-     * <li>USER: a dataset registered by a user.</li>
-     * </ul>
+     * <p>The source type. To specify multiple types, separate them with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>USER,ITAG</p>
@@ -163,7 +218,8 @@ public class ListDatasetsRequest extends TeaModel {
     public String sourceTypes;
 
     /**
-     * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID. If you do not specify this parameter, the default workspace is used. If the default workspace does not exist, an error is reported.</p>
+     * <p>The ID of the workspace that contains the dataset. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.
+     * If this parameter is not specified, the default workspace is used. An error is returned if the default workspace does not exist.</p>
      * 
      * <strong>example:</strong>
      * <p>324**</p>

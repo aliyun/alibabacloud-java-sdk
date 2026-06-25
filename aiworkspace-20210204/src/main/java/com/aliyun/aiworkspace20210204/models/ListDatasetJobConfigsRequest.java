@@ -7,8 +7,10 @@ public class ListDatasetJobConfigsRequest extends TeaModel {
     /**
      * <p>The configuration type.</p>
      * <ul>
-     * <li>MultimodalIntelligentTag</li>
-     * <li>MultimodalSemanticIndex</li>
+     * <li><p>MultimodalIntelligentTag</p>
+     * </li>
+     * <li><p>MultimodalSemanticIndex</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,11 +19,17 @@ public class ListDatasetJobConfigsRequest extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    /**
+     * <p>The name of the dataset version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("DatasetVersion")
     public String datasetVersion;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +38,7 @@ public class ListDatasetJobConfigsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries per page. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

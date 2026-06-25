@@ -7,9 +7,12 @@ public class UpdateModelVersionRequest extends TeaModel {
     /**
      * <p>The approval status. Valid values:</p>
      * <ul>
-     * <li>Pending</li>
-     * <li>Approved</li>
-     * <li>Rejected</li>
+     * <li><p>Pending: The model is pending approval.</p>
+     * </li>
+     * <li><p>Approved: The model is approved to be published.</p>
+     * </li>
+     * <li><p>Rejected: The model is not approved to be published.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,6 +30,12 @@ public class UpdateModelVersionRequest extends TeaModel {
     @NameInMap("CompressionSpec")
     public java.util.Map<String, ?> compressionSpec;
 
+    /**
+     * <p>The distillation configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("DistillationSpec")
     public java.util.Map<String, ?> distillationSpec;
 
@@ -40,7 +49,7 @@ public class UpdateModelVersionRequest extends TeaModel {
     public java.util.Map<String, ?> evaluationSpec;
 
     /**
-     * <p>The additional information.</p>
+     * <p>Other information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -52,16 +61,20 @@ public class UpdateModelVersionRequest extends TeaModel {
     public java.util.Map<String, ?> extraInfo;
 
     /**
-     * <p>Describes how to apply to downstream inference services. For example, describes the processor and container of Elastic Algorithm Service (EAS). Example: <code>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code>.</p>
+     * <p>Describes how to apply the model to downstream inference applications. For example, describe the processor and container for Elastic Algorithm Service (EAS). Example:
+     * <code>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</p>
+     * <p>{
+     *     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot;
+     * }</p>
      */
     @NameInMap("InferenceSpec")
     public java.util.Map<String, ?> inferenceSpec;
 
     /**
-     * <p>The model metrics. The length after serialization is limited to 8,192.</p>
+     * <p>The model metrics.
+     * The length cannot exceed 8,192 characters after serialization.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -86,7 +99,7 @@ public class UpdateModelVersionRequest extends TeaModel {
     public java.util.Map<String, ?> metrics;
 
     /**
-     * <p>The extended field, which is of the JsonString type.</p>
+     * <p>The extended field. This field is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -97,19 +110,23 @@ public class UpdateModelVersionRequest extends TeaModel {
     /**
      * <p>The source ID.</p>
      * <ul>
-     * <li>If the source type is Custom, this field is not limited.</li>
-     * <li>If the source type is PAIFlow or TrainingService, the format is:</li>
+     * <li><p>If the source type is Custom, this field has no restrictions.</p>
+     * </li>
+     * <li><p>If the source is PAIFlow or TrainingService, the format is as follows:</p>
+     * </li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
      * </code></pre>
-     * <p>Take note of the following parameters:</p>
+     * <p>The parameters are described as follows:</p>
      * <ul>
-     * <li>region is the region ID.</li>
-     * <li>workspaceId is the ID of the workspace.</li>
-     * <li>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
-     * <li>id is a unique identifier.</li>
+     * <li><p>region: the Alibaba Cloud region ID.</p>
+     * </li>
+     * <li><p>workspaceId: the workspace ID.</p>
+     * </li>
+     * <li><p>kind: the type. Valid values: PipelineRun (PAI pipeline) or ServiceJob (training service).</p>
+     * </li>
+     * <li><p>id: the unique identifier.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,11 +136,14 @@ public class UpdateModelVersionRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The type of the model source. Valid values:</p>
+     * <p>The source type of the model. Valid values:</p>
      * <ul>
-     * <li>Custom (default)</li>
-     * <li>PAIFlow</li>
-     * <li>TrainingService</li>
+     * <li><p>Custom (default): The model is a custom model.</p>
+     * </li>
+     * <li><p>PAIFlow: The model is from a PAI pipeline.</p>
+     * </li>
+     * <li><p>TrainingService: The model is from a PAI training service.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,7 +153,7 @@ public class UpdateModelVersionRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The training configurations used for fine-tuning and incremental training.</p>
+     * <p>The training configuration. This is used for fine-tuning and incremental training.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -142,7 +162,10 @@ public class UpdateModelVersionRequest extends TeaModel {
     public java.util.Map<String, ?> trainingSpec;
 
     /**
-     * <p>The model version description.</p>
+     * <p>The description of the model version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>General sentiment analysis.</p>
      */
     @NameInMap("VersionDescription")
     public String versionDescription;

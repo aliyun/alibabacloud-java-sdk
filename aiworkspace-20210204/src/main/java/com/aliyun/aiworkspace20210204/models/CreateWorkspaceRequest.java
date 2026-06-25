@@ -5,44 +5,50 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
     /**
-     * <p>The description of the workspace. The description can be up to 80 characters in length.</p>
+     * <p>The description of the workspace. The description cannot exceed 80 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>description</p>
+     * <p>这是一个工作空间描述示例。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The display name of the workspace. You can set it based on the purpose of the workspace. If left empty, the name of the workspace is used.</p>
+     * <p>We recommend that you name the workspace based on its business attribute to facilitate identification of its purpose. If you do not configure this parameter, the workspace name is used by default.</p>
      * 
      * <strong>example:</strong>
-     * <p>display name</p>
+     * <p>demo工作空间</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>The environment of the workspace.</p>
+     * <p>The environments included in the workspace:</p>
      * <ul>
-     * <li>Workspaces in basic mode can run only in the production environment (prod).</li>
-     * <li>Workspaces in standard mode can run in both the development and production environments (dev and prod).</li>
+     * <li>The simple mode contains only the production environment (prod).</li>
+     * <li>The standard mode contains both the development environment (dev) and the production environment (prod).</li>
      * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
+    /**
+     * <p>The resource group ID. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmwp7rkyq****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the workspace. Format:</p>
+     * <p>The name of the workspace. The format is as follows:</p>
      * <ul>
-     * <li>The name must be 3 to 23 characters in length, and can contain letters, underscores (_), and digits.</li>
-     * <li>The name must start with a letter.</li>
-     * <li>It must be unique in the current region.</li>
+     * <li>The length is 3 to 23 characters and can contain letters, underscores (_), or digits.</li>
+     * <li>It must start with a letter (uppercase or lowercase).</li>
+     * <li>It must be unique within the current region.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

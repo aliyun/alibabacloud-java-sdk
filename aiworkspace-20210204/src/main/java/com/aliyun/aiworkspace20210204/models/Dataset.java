@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class Dataset extends TeaModel {
     /**
-     * <p>The workspace accessibility. Valid values:</p>
+     * <p>The visibility of the dataset in the workspace. Valid values:</p>
      * <ul>
-     * <li>PRIVATE (default): The dataset is accessible only to you and the administrator of the workspace.</li>
-     * <li>PUBLIC: The dataset is accessible to all members in the workspace.</li>
+     * <li><p><code>PRIVATE</code>: Visible only to the dataset\&quot;s owner and administrators.</p>
+     * </li>
+     * <li><p><code>PUBLIC</code>: The dataset is visible to all users in the workspace.</p>
+     * </li>
+     * <li><p><code>ROLE_PUBLIC</code>: Visible to specified workspace roles (see <code>AccessibleRoleIdList</code>). The owner and administrators also have visibility.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,16 +21,14 @@ public class Dataset extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>If <code>Accessibility</code> is <code>ROLE_PUBLIC</code>, this parameter lists the IDs of workspace roles that can view the dataset. Role IDs that start with <code>PAI</code> are built-in roles, and those that start with <code>role-</code> are custom roles.</p>
+     */
     @NameInMap("AccessibleRoleIdList")
     public java.util.List<String> accessibleRoleIdList;
 
     /**
-     * <p>The data source type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>NAS</li>
-     * <li>OSS</li>
-     * </ul>
+     * <p>The type of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>NAS</p>
@@ -35,13 +37,18 @@ public class Dataset extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The data type. Valid values:</p>
+     * <p>The data type of the dataset. Valid values:</p>
      * <ul>
-     * <li>COMMON (default)</li>
-     * <li>PIC</li>
-     * <li>TEXT</li>
-     * <li>Video</li>
-     * <li>AUDIO</li>
+     * <li><p><code>COMMON</code>: (Default) Common data.</p>
+     * </li>
+     * <li><p><code>PIC</code>: Images.</p>
+     * </li>
+     * <li><p><code>TEXT</code>: Text.</p>
+     * </li>
+     * <li><p><code>VIDEO</code>: Videos.</p>
+     * </li>
+     * <li><p><code>AUDIO</code>: Audio.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +58,7 @@ public class Dataset extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The dataset ID.</p>
+     * <p>The ID of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>d-c0h44g3****j8o4348</p>
@@ -60,12 +67,19 @@ public class Dataset extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>The dataset description.</p>
+     * <p>The description of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description of a dataset.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The edition of the dataset. Valid values:</p>
+     * <p><code>BASIC</code>: The basic edition. This edition does not support file metadata management.
+     * <code>ADVANCED</code>: The advanced edition. This edition is supported only for OSS datasets and allows metadata management for up to 1 million files per version.</p>
+     * 
      * <strong>example:</strong>
      * <p>BASIC</p>
      */
@@ -73,7 +87,7 @@ public class Dataset extends TeaModel {
     public String edition;
 
     /**
-     * <p>The time when the dataset was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -82,7 +96,7 @@ public class Dataset extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the dataset was modified.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -91,12 +105,49 @@ public class Dataset extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The dataset import information, such as OSS, NAS, and CPFS.</p>
-     * <p><strong>OSS</strong></p>
-     * <p>{ &quot;region&quot;: &quot;${region}&quot;,//The region ID. &quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name. &quot;path&quot;: &quot;${path}&quot; //The file path. }</p>
-     * <p><strong>NAS</strong></p>
-     * <p><strong>CPFS</strong></p>
-     * <p><strong>CPFS for Lingjun</strong></p>
+     * <p>The configuration for importing data from a storage source. Supported sources include OSS, NAS, and CPFS.</p>
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>OSS</p>
+     * </summary>
+     * 
+     * <p>{
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.
+     * &quot;bucket&quot;: &quot;${bucket}&quot;,// The bucket name.
+     * &quot;path&quot;: &quot;${path}&quot; // The file path.
+     * }</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>NAS</p>
+     * </summary>
+     * 
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>CPFS</p>
+     * </summary>
+     * 
+     * <p>Content</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>Intelligent Computing CPFS</p>
+     * </summary>
+     * 
+     * <p>Content</p>
+     * </details>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -110,23 +161,29 @@ public class Dataset extends TeaModel {
     @NameInMap("ImportInfo")
     public String importInfo;
 
+    /**
+     * <p>Indicates whether the dataset is shared.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsShared")
     public Boolean isShared;
 
     /**
-     * <p>The labels.</p>
+     * <p>A list of labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The latest dataset version.</p>
+     * <p>Details of the latest dataset version.</p>
      */
     @NameInMap("LatestVersion")
     public DatasetVersion latestVersion;
 
     /**
-     * <p>MountAccess</p>
+     * <p>The mount access permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>RO RW</p>
@@ -135,13 +192,13 @@ public class Dataset extends TeaModel {
     public String mountAccess;
 
     /**
-     * <p>The IDs of the roles that have read and write permissions on the dataset in the workspace. The IDs starting with PAI is the IDs of the basic roles, and the IDs starting with role- is the IDs of the custom roles. If the list contains &quot;\*&quot;, all roles have read and write permissions.</p>
+     * <p>A list of IDs for workspace roles with read and write permissions on the dataset. Role IDs that start with <code>PAI</code> are built-in roles, and role IDs that start with <code>role-</code> are custom roles. An asterisk (<code>*</code>) indicates that all roles have read and write permissions.</p>
      */
     @NameInMap("MountAccessReadWriteRoleIdList")
     public java.util.List<String> mountAccessReadWriteRoleIdList;
 
     /**
-     * <p>The dataset name.</p>
+     * <p>The name of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>myName</p>
@@ -150,7 +207,7 @@ public class Dataset extends TeaModel {
     public String name;
 
     /**
-     * <p>The extended field that can be used as an option. The value is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can use the mountPath field to specify the default mount path of the dataset.</p>
+     * <p>A JSON string of extended options. When you use the dataset in a Data Lake Compute job, you can configure the <code>mountPath</code> field to specify the default mount path for the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -170,10 +227,12 @@ public class Dataset extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The dataset property. Valid values:</p>
+     * <p>Indicates whether the dataset corresponds to a single file or a directory. Valid values:</p>
      * <ul>
-     * <li>FILE</li>
-     * <li>DIRECTORY</li>
+     * <li><p><code>FILE</code>: The dataset is a file.</p>
+     * </li>
+     * <li><p><code>DIRECTORY</code>: The dataset is a directory.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,10 +242,12 @@ public class Dataset extends TeaModel {
     public String property;
 
     /**
-     * <p>The provider type of the dataset. Valid values:</p>
+     * <p>The type of the data source provider. Valid values:</p>
      * <ul>
-     * <li>Ecs (default)</li>
-     * <li>Lingjun</li>
+     * <li><p><code>ECS</code> (Default)</p>
+     * </li>
+     * <li><p><code>Lingjun</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -195,14 +256,20 @@ public class Dataset extends TeaModel {
     @NameInMap("ProviderType")
     public String providerType;
 
+    /**
+     * <p>The source of the shared dataset. This parameter is valid only when <code>IsShared</code> is <code>true</code>.</p>
+     */
     @NameInMap("SharedFrom")
     public DatasetShareRelationship sharedFrom;
 
+    /**
+     * <p>The sharing configuration for the dataset.</p>
+     */
     @NameInMap("SharingConfig")
     public DatasetSharingConfig sharingConfig;
 
     /**
-     * <p>The ID of the source dataset for the labeled dataset.</p>
+     * <p>The ID of the source dataset for the annotated dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>d-bvfasdfxxxxj8o411</p>
@@ -211,7 +278,7 @@ public class Dataset extends TeaModel {
     public String sourceDatasetId;
 
     /**
-     * <p>The version of the source dataset for the labeled dataset.</p>
+     * <p>The version of the source dataset for the annotated dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>
@@ -229,13 +296,7 @@ public class Dataset extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The source type.
-     * Valid values:</p>
-     * <ul>
-     * <li>PAI_PUBLIC_DATASET</li>
-     * <li>ITAG</li>
-     * <li>USER</li>
-     * </ul>
+     * <p>The source type.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -244,7 +305,7 @@ public class Dataset extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The labeling template of the iTAG labeled dataset.</p>
+     * <p>The annotation template for the iTAG annotated dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>text-classification</p>
@@ -255,13 +316,21 @@ public class Dataset extends TeaModel {
     /**
      * <p>URI examples:</p>
      * <ul>
-     * <li>Object Storage Service (OSS) data source: <code>oss://bucket.endpoint/object</code></li>
-     * <li>File Storage NAS (NAS) data source: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code></li>
-     * <li>Cloud Parallel File Storage (CPFS) 1.0 data source: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code></li>
-     * <li>CPFS 2.0 data source: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code></li>
+     * <li><p>OSS data source:
+     * <code>oss://bucket.endpoint/object</code></p>
+     * </li>
+     * <li><p>General-purpose NAS data source:
+     * <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code></p>
+     * </li>
+     * <li><p>CPFS 1.0 data source:
+     * <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code></p>
+     * </li>
+     * <li><p>CPFS 2.0 data source:
+     * <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID of the CPFS 1.0 file system is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID of the CPFS 2.0 file system is in the cpfs-&lt;16-bit ASCII characters&gt; format.</p>
+     * <p>The format of the <code>fsid</code> distinguishes CPFS 1.0 from CPFS 2.0. A CPFS 1.0 <code>fsid</code> has the format <code>cpfs-&lt;8-character ASCII string&gt;</code>, and a CPFS 2.0 <code>fsid</code> has the format <code>cpfs-&lt;16-character ASCII string&gt;</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -280,7 +349,7 @@ public class Dataset extends TeaModel {
     public String userId;
 
     /**
-     * <p>The ID of the workspace to which the dataset belongs.</p>
+     * <p>The ID of the workspace where the dataset is located.</p>
      * 
      * <strong>example:</strong>
      * <p>478**</p>
@@ -534,6 +603,9 @@ public class Dataset extends TeaModel {
     }
 
     public static class DatasetSharingConfig extends TeaModel {
+        /**
+         * <p>A list of sharing relationships.</p>
+         */
         @NameInMap("SharedTo")
         public java.util.List<DatasetShareRelationship> sharedTo;
 

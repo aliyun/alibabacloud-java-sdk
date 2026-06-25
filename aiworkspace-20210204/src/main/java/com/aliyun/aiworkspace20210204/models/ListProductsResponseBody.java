@@ -4,16 +4,24 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
+    /**
+     * <p>The list of products.</p>
+     */
     @NameInMap("Products")
     public java.util.List<ListProductsResponseBodyProducts> products;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1e195c5116124202371861018d5bde</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of services.</p>
+     */
     @NameInMap("Services")
     public java.util.List<ListProductsResponseBodyServices> services;
 
@@ -47,10 +55,15 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyProducts extends TeaModel {
+        /**
+         * <p>Indicates whether the user has permission to purchase the product.</p>
+         */
         @NameInMap("HasPermissionToPurchase")
         public Boolean hasPermissionToPurchase;
 
         /**
+         * <p>Indicates whether the product is purchased.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -58,6 +71,8 @@ public class ListProductsResponseBody extends TeaModel {
         public Boolean isPurchased;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>DataWorks_isolate</p>
          */
@@ -68,6 +83,8 @@ public class ListProductsResponseBody extends TeaModel {
         public String productId;
 
         /**
+         * <p>The purchase URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://common-buy.aliy">https://common-buy.aliy</a></p>
          */
@@ -123,16 +140,23 @@ public class ListProductsResponseBody extends TeaModel {
 
     public static class ListProductsResponseBodyServices extends TeaModel {
         /**
+         * <p>Indicates whether the service is activated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsOpen")
         public Boolean isOpen;
 
+        /**
+         * <p>The activation URL.</p>
+         */
         @NameInMap("OpenUrl")
         public String openUrl;
 
         /**
+         * <p>The service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */

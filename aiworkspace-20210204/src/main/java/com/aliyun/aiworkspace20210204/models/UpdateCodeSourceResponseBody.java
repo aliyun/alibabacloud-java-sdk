@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCodeSourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the code build.</p>
+     * <p>The ID of the code source.</p>
      * 
      * <strong>example:</strong>
      * <p>code-20********</p>

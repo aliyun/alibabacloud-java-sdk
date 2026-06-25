@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to display supplementary information such as the workspace owner. Valid values:</p>
+     * <p>Specifies whether to return additional information, such as the workspace owner. Valid values:</p>
      * <ul>
-     * <li>false (default)</li>
-     * <li>true</li>
+     * <li><p>false (default): Does not return additional information.</p>
+     * </li>
+     * <li><p>true: Returns additional information.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

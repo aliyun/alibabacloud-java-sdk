@@ -17,7 +17,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeBranch;
 
     /**
-     * <p>The code commit ID.</p>
+     * <p>The commit ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3a6*****</p>
@@ -26,7 +26,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeCommit;
 
     /**
-     * <p>The address of the code repository.</p>
+     * <p>The URL of the code repository.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>******</p>
@@ -35,7 +35,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepo;
 
     /**
-     * <p>The access token corresponding to the username.</p>
+     * <p>The access token for the username.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -44,7 +44,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepoAccessToken;
 
     /**
-     * <p>The username used to access the code repository.</p>
+     * <p>The username for the code repository.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-user</p>
@@ -53,13 +53,16 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepoUserName;
 
     /**
-     * <p>The description of the code build.</p>
+     * <p>The description of the code source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Training code for XX</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the code build.</p>
+     * <p>The name of the code source.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCodeSource1</p>

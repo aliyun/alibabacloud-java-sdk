@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A0F049F0-8D69-5BAC-8F10-B******A34C</p>

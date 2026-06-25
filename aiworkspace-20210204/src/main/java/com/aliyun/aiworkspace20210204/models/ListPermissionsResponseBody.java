@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The permissions.</p>
+     * <p>The list of permissions.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<ListPermissionsResponseBodyPermissions> permissions;
@@ -20,7 +20,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of permissions that meet the filter conditions.</p>
+     * <p>The number of entries that meet the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,11 +59,14 @@ public class ListPermissionsResponseBody extends TeaModel {
 
     public static class ListPermissionsResponseBodyPermissionsPermissionRules extends TeaModel {
         /**
-         * <p>The accessibility of the permission rule. Valid values:</p>
+         * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: All members in the workspace can access the permission rule.</li>
-         * <li>PRIVATE: Only the creator can access the permission rule.</li>
-         * <li>ANY: All users can access the permission rule.</li>
+         * <li><p>PUBLIC: All members in the current workspace can perform the operation.</p>
+         * </li>
+         * <li><p>PRIVATE: Only the creator can perform the operation.</p>
+         * </li>
+         * <li><p>ANY: Both the creator and non-creators can perform the operation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,10 +76,14 @@ public class ListPermissionsResponseBody extends TeaModel {
         public String accessibility;
 
         /**
-         * <p>The type of access. If you set Accessibility to PUBLIC, all users can access the workspace. This parameter is invalid. If you set Accessibility to PRIVATE, the permissions are determined based on the value of EntityAccessType. The value of EntityAccessType can be:</p>
+         * <p>The entity access type.
+         * This parameter is invalid if Accessibility is set to PUBLIC. In this case, all users can perform the operation.
+         * If Accessibility is set to PRIVATE, the permission is determined by the value of EntityAccessType. Valid values:</p>
          * <ul>
-         * <li>CREATOR: Only the creator can access the workspace.</li>
-         * <li>ANY: All users can access the workspace.</li>
+         * <li><p>CREATOR: Only the creator can perform the operation.</p>
+         * </li>
+         * <li><p>ANY: Both the creator and non-creators can perform the operation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +117,8 @@ public class ListPermissionsResponseBody extends TeaModel {
 
     public static class ListPermissionsResponseBodyPermissions extends TeaModel {
         /**
-         * <p>The permission name, which is unique in a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>. The example value PaiDLC:GetTensorboard indicates the permission to view details about a TensorBoard job on the Deep Learning Containers (DLC) page.</p>
+         * <p>The name of the permission point. The name is unique within the same region. For more information about permission points, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.
+         * For example, the value PaiDLC:GetTensorboard grants the permission to view Tensorboard details for the DLC feature.</p>
          * 
          * <strong>example:</strong>
          * <p>PaiDLC:GetTensorboard</p>
@@ -119,7 +127,7 @@ public class ListPermissionsResponseBody extends TeaModel {
         public String permissionCode;
 
         /**
-         * <p>The permission rules.</p>
+         * <p>The list of permission rules.</p>
          */
         @NameInMap("PermissionRules")
         public java.util.List<ListPermissionsResponseBodyPermissionsPermissionRules> permissionRules;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConfigsRequest extends TeaModel {
     /**
-     * <p>The list of workspace configurations to update or add.</p>
+     * <p>A list of workspace configurations to update or add.</p>
      */
     @NameInMap("Configs")
     public java.util.List<UpdateConfigsRequestConfigs> configs;
@@ -25,7 +25,7 @@ public class UpdateConfigsRequest extends TeaModel {
 
     public static class UpdateConfigsRequestConfigsLabels extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -67,14 +67,20 @@ public class UpdateConfigsRequest extends TeaModel {
 
     public static class UpdateConfigsRequestConfigs extends TeaModel {
         /**
-         * <p>The category of the configuration item. Supported categories:</p>
+         * <p>The category of the configuration item. The following categories are supported:</p>
          * <ul>
-         * <li>CommonResourceConfig</li>
-         * <li>DLCAutoRecycle</li>
-         * <li>DLCPriorityConfig</li>
-         * <li>DSWPriorityConfig</li>
-         * <li>QuotaMaximumDuration</li>
-         * <li>CommonTagConfig</li>
+         * <li><p>CommonResourceConfig: General resource configuration.</p>
+         * </li>
+         * <li><p>DLCAutoRecycle: DLC automatic recycling.</p>
+         * </li>
+         * <li><p>DLCPriorityConfig: DLC priority settings.</p>
+         * </li>
+         * <li><p>DSWPriorityConfig: DSW priority settings.</p>
+         * </li>
+         * <li><p>QuotaMaximumDuration: Configuration for the maximum runtime of a DLC job within a quota.</p>
+         * </li>
+         * <li><p>CommonTagConfig: Tag settings.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,13 +90,18 @@ public class UpdateConfigsRequest extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The key of the configuration item. Supported keys:</p>
+         * <p>The key of the configuration item. The following keys are supported:</p>
          * <ul>
-         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
-         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-         * <li>predefinedTags: The predefined tags of the workspace. All created resources must have tags.</li>
+         * <li><p>tempStoragePath: The path for temporary storage. This key is valid only when CategoryName is set to CommonResourceConfig.</p>
+         * </li>
+         * <li><p>isAutoRecycle: The configuration for automatic resource recycling. This key is valid only when CategoryName is set to DLCAutoRecycle.</p>
+         * </li>
+         * <li><p>priorityConfig: The priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</p>
+         * </li>
+         * <li><p>quotaMaximumDuration: The maximum runtime configuration for a DLC job within a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</p>
+         * </li>
+         * <li><p>predefinedTags: The predefined tags for the workspace. Created resources must have these tags.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,7 +113,7 @@ public class UpdateConfigsRequest extends TeaModel {
         /**
          * <p>The value of the configuration item.</p>
          * <ul>
-         * <li>When ConfigKey is predefinedTags, the ConfigValue follows this format: [{&quot;Type&quot;:&quot;Tag&quot;,&quot;Key&quot;:&quot;Key1&quot;,&quot;Value&quot;:&quot;{&quot;Products&quot;:&quot;DLC,DSW,EAS&quot;,&quot;Values&quot;:&quot;value1,value2,value3&quot;}&quot;}]. &quot;Products&quot; indicates the products that use the predefined tags.</li>
+         * <li>If ConfigKey is set to predefinedTags, the format of ConfigValue is [{&quot;Type&quot;:&quot;Tag&quot;,&quot;Key&quot;:&quot;Key1&quot;,&quot;Value&quot;:&quot;{\\&quot;Products\\&quot;:\\&quot;DLC,DSW,EAS\\&quot;,\\&quot;Values\\&quot;:\\&quot;value1,value2,value3\\&quot;}&quot;}]. The Products field specifies which products use the predefined tags.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +123,7 @@ public class UpdateConfigsRequest extends TeaModel {
         public String configValue;
 
         /**
-         * <p>The tags of the configuration item.</p>
+         * <p>A list of tags for the configuration item.</p>
          */
         @NameInMap("Labels")
         public java.util.List<UpdateConfigsRequestConfigsLabels> labels;

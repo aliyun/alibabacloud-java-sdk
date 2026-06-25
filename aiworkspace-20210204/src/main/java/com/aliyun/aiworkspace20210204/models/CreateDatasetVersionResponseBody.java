@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class CreateDatasetVersionResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>41A847C8-3D12-5F24-8CE9-7F9EB2DA9ECD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The dataset version name.</p>
+     * <p>The name of the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDatasetVersionLabelsRequest extends TeaModel {
     /**
-     * <p>The tag keys. Multiple tags are separated by commas (,).</p>
+     * <p>The keys of the version labels. Separate multiple keys with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DatasetVersion extends TeaModel {
     /**
-     * <p>DataCount</p>
+     * <p>The total number of data items in the version.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -14,7 +14,7 @@ public class DatasetVersion extends TeaModel {
     public Long dataCount;
 
     /**
-     * <p>DataSize</p>
+     * <p>The total size of the data in the version, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -23,7 +23,7 @@ public class DatasetVersion extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>DataSourceType</p>
+     * <p>The data source type. For example, the value <code>OSS</code> indicates Object Storage Service.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -32,7 +32,7 @@ public class DatasetVersion extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>Description</p>
+     * <p>A custom description for the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>base model v1</p>
@@ -41,7 +41,7 @@ public class DatasetVersion extends TeaModel {
     public String description;
 
     /**
-     * <p>create time</p>
+     * <p>The creation time of the dataset version, in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -50,7 +50,7 @@ public class DatasetVersion extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>modify time</p>
+     * <p>The time the dataset version was last modified, in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -59,7 +59,7 @@ public class DatasetVersion extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>ImportInfo</p>
+     * <p>Information about the import source, in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -74,13 +74,13 @@ public class DatasetVersion extends TeaModel {
     public String importInfo;
 
     /**
-     * <p>Labels</p>
+     * <p>A list of labels applied to the dataset version.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>MountAccess</p>
+     * <p>The access permission for the mounted dataset. For example, <code>RO</code> means read-only.</p>
      * 
      * <strong>example:</strong>
      * <p>RO</p>
@@ -89,7 +89,7 @@ public class DatasetVersion extends TeaModel {
     public String mountAccess;
 
     /**
-     * <p>Options</p>
+     * <p>Additional configurations for the dataset version, in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -100,7 +100,7 @@ public class DatasetVersion extends TeaModel {
     public String options;
 
     /**
-     * <p>property</p>
+     * <p>The data format of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>FILE</p>
@@ -109,7 +109,7 @@ public class DatasetVersion extends TeaModel {
     public String property;
 
     /**
-     * <p>SourceId</p>
+     * <p>The ID of the source from which the version was created.</p>
      * 
      * <strong>example:</strong>
      * <p>d-65mrsr5fub4u74lej3</p>
@@ -118,7 +118,7 @@ public class DatasetVersion extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>SourceType</p>
+     * <p>The method used to create the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -127,7 +127,7 @@ public class DatasetVersion extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>Uri</p>
+     * <p>The URI of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS://xxx</p>
@@ -136,7 +136,7 @@ public class DatasetVersion extends TeaModel {
     public String uri;
 
     /**
-     * <p>version name</p>
+     * <p>The name of the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>

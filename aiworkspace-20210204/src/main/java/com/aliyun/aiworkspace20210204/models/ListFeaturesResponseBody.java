@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListFeaturesResponseBody extends TeaModel {
+    /**
+     * <p>The list of features.</p>
+     */
     @NameInMap("Features")
     public java.util.List<String> features;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -15,6 +20,8 @@ public class ListFeaturesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of features.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

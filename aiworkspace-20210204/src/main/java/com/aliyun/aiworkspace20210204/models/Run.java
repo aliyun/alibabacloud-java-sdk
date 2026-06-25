@@ -5,91 +5,124 @@ import com.aliyun.tea.*;
 
 public class Run extends TeaModel {
     /**
-     * <p>The visibility.</p>
+     * <p>The visibility of the run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
     /**
-     * <p>The ID of the experiment that corresponds to the run.</p>
+     * <p>The ID of the experiment associated with the run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exp-1zpfthdx******</p>
      */
     @NameInMap("ExperimentId")
     public String experimentId;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the run was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     /**
-     * <p>The last modified time.</p>
+     * <p>The time when the run was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     /**
-     * <p>The labels added to the run.</p>
+     * <p>The list of labels for the run.</p>
      */
     @NameInMap("Labels")
     public java.util.List<RunLabel> labels;
 
     /**
-     * <p>The metrics of the run.</p>
+     * <p>The list of metrics for the run.</p>
      */
     @NameInMap("Metrics")
     public java.util.List<RunMetric> metrics;
 
     /**
-     * <p>Parameter</p>
+     * <p>Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testrun</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the owner account.</p>
+     * <p>The ID of the owner\&quot;s root account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>163104*****3440</p>
      */
     @NameInMap("OwnerId")
     public String ownerId;
 
     /**
-     * <p>The hyperparameters of the run.</p>
+     * <p>The list of hyperparameters for the run.</p>
      */
     @NameInMap("Params")
     public java.util.List<RunParam> params;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The run ID.</p>
+     * <p>The unique ID of the run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>run-1qJhzJ2YXgX****</p>
      */
     @NameInMap("RunId")
     public String runId;
 
     /**
      * <p>The ID of the source PAI workload.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>train9s0afvjkf</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
      * <p>The type of the source PAI workload.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TrainingService</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
-     * <p>The owner ID.</p>
+     * <p>The ID of the owner.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The ID of the workspace to which the run belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>145883</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

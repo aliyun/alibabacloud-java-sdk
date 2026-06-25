@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetVersionRequest extends TeaModel {
     /**
-     * <p>The number of dataset files.</p>
+     * <p>The number of files in the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -14,7 +14,7 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public Long dataCount;
 
     /**
-     * <p>The size of the dataset file. Unit: bytes.</p>
+     * <p>The size of the space occupied by the dataset files. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>19000</p>
@@ -23,13 +23,16 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The type of the data source. Separate multiple types with commas (,). Valid values:</p>
+     * <p>The type of the data source. If you specify multiple types, separate them with commas (,). Valid values:</p>
      * <ul>
-     * <li>NAS: File Storage NAS (NAS).</li>
-     * <li>OSS: Object Storage Service (OSS).</li>
-     * <li>CPFS</li>
+     * <li><p>NAS: The data is stored in Alibaba Cloud File Storage (NAS).</p>
+     * </li>
+     * <li><p>OSS: The data is stored in Alibaba Cloud Object Storage Service (OSS).</p>
+     * </li>
+     * <li><p>CPFS</p>
+     * </li>
      * </ul>
-     * <p>Note: The DataSourceType value of a dataset version must be the same as that of the dataset. When you create a dataset version, the system checks whether the values are the same.</p>
+     * <p>Note: The DataSourceType of the version must be the same as the DataSourceType of the dataset. The system verifies this consistency when you create the version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,42 +42,76 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The description of the dataset. Descriptions are used to differentiate datasets.</p>
+     * <p>A custom description for the dataset version. This helps distinguish different dataset versions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description of the dataset version.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The dataset storage import configurations, such as OSS, NAS, and CPFS.</p>
-     * <p><strong>OSS</strong></p>
-     * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name\
-     * &quot;path&quot;: &quot;${path}&quot; // The file path\
-     * }\</p>
-     * <p><strong>NAS</strong></p>
-     * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system\
-     * }\</p>
-     * <p><strong>CPFS</strong></p>
-     * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service\
-     * &quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory\
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-     * }\</p>
-     * <p><strong>CPFS for Lingjun</strong></p>
-     * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;path&quot;: &quot;${path}&quot;, // The ile system path\
-     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only\
-     * &quot;isVpcMount&quot;: boolean, // Whether the mount point is a VPC mount point, CPFS for Lingjun only\
-     * }\</p>
+     * <p>The storage import configuration of the dataset. Supported storage types include OSS, NAS, and CPFS.</p>
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>OSS</p>
+     * </summary>
+     * 
+     * <p>{<br>
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>
+     * &quot;bucket&quot;: &quot;${bucket}&quot;,// The bucket name.<br>
+     * &quot;path&quot;: &quot;${path}&quot; // The file path.<br>
+     * }</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>NAS</p>
+     * </summary>
+     * 
+     * <p>{<br>
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>
+     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount target of the file system.<br>
+     * }</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>CPFS</p>
+     * </summary>
+     * 
+     * <p>{<br>
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>
+     * &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The protocol service of the file system.<br>
+     * &quot;exportId&quot;: &quot;${export_id}&quot;, // The exported directory of the file system.<br>
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>
+     * }</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>Intelligent Computing CPFS</p>
+     * </summary>
+     * 
+     * <p>{<br>
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.<br>
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.<br>
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.<br>
+     * &quot;mountTarget&quot;: &quot;${mount_target}&quot;, // The mount target of the file system. This parameter is specific to the Intelligent Computing edition.<br>
+     * &quot;isVpcMount&quot;: boolean, // Specifies whether the mount target is in a VPC. This parameter is specific to the Intelligent Computing edition.<br>
+     * }</p>
+     * </details>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -89,13 +126,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String importInfo;
 
     /**
-     * <p>The tags of the dataset version.</p>
+     * <p>A list of tags for the dataset version.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The extended field, which is of the JsonString type. When you use the dataset in Deep Learning Containers (DLC), you can use the mountPath field to specify the default mount path of the dataset.</p>
+     * <p>The extended field, which is a JSON string.
+     * When DLC uses the dataset, you can configure the mountPath field to specify the default mount path for the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -108,8 +146,10 @@ public class CreateDatasetVersionRequest extends TeaModel {
     /**
      * <p>The property of the dataset. Valid values:</p>
      * <ul>
-     * <li>FILE</li>
-     * <li>DIRECTORY</li>
+     * <li><p>FILE: A file.</p>
+     * </li>
+     * <li><p>DIRECTORY: A folder.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -122,9 +162,12 @@ public class CreateDatasetVersionRequest extends TeaModel {
     /**
      * <p>The ID of the data source.</p>
      * <ul>
-     * <li>If SourceType is set to USER, the value of SourceId can be a custom string.</li>
-     * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-     * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+     * <li><p>If SourceType is set to USER, you can customize the SourceId.</p>
+     * </li>
+     * <li><p>If SourceType is set to ITAG, which indicates a dataset generated from the annotation results of the iTAG module, SourceId is the task ID from iTAG.</p>
+     * </li>
+     * <li><p>If SourceType is set to PAI_PUBLIC_DATASET, which indicates a dataset created from a public PAI dataset, SourceId is empty by default.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,17 +177,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The type of the data source. Default value: USER. Valid values:</p>
+     * <p>The type of the data source. The default value is USER. Valid values:</p>
      * <ul>
-     * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
-     * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
-     * <li>USER: a dataset registered by a user.</li>
-     * </ul>
-     * <p>For each job type:</p>
-     * <ul>
-     * <li>PAI_PUBLIC_DATASET: PAI_PUBLIC_DATASET.</li>
-     * <li>ITAG: ITAG.</li>
-     * <li>USER: USER.</li>
+     * <li><p>PAI-PUBLIC-DATASET: a public dataset from PAI.</p>
+     * </li>
+     * <li><p>ITAG: a dataset generated from the annotation results of the iTAG module.</p>
+     * </li>
+     * <li><p>USER: a dataset registered by a user.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -154,10 +194,16 @@ public class CreateDatasetVersionRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>Example format:</p>
+     * <p>The following examples show how to configure the URI:</p>
      * <ul>
-     * <li>Value format when DataSourceType is set to OSS: <code>oss://bucket.endpoint/object</code>.</li>
-     * <li>Value formats when DataSourceType is set to NAS: General-purpose NAS: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>. CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>. CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</li>
+     * <li><p>If the data source type is OSS: <code>oss://bucket.endpoint/object</code></p>
+     * </li>
+     * <li><p>If the data source type is NAS:
+     * The format for a general-purpose NAS file system is <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>.
+     * CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>.
+     * CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>.
+     * CPFS 1.0 and CPFS 2.0 are distinguished by the format of the fsid. The format for CPFS 1.0 is cpfs-&lt;8 ASCII characters&gt;. The format for CPFS 2.0 is cpfs-&lt;16 ASCII characters&gt;.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,20 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
     /**
-     * <p>The workspace description.</p>
+     * <p>The description of the workspace.</p>
      * 
      * <strong>example:</strong>
-     * <p>Description</p>
+     * <p>This is an example workspace.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The display name of the workspace.</p>
+     * <p>The display name of the workspace. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 3 to 23 characters in length, and can contain letters, underscores (_), and digits.</li>
-     * <li>The name must start with a letter.</li>
-     * <li>The name must be unique in the current region.</li>
+     * <li><p>The name must be 3 to 23 characters in length and can contain letters, underscores (_), and digits.</p>
+     * </li>
+     * <li><p>The name must start with a letter.</p>
+     * </li>
+     * <li><p>The name must be unique within the current region.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

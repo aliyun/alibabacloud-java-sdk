@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DatasetJobConfig extends TeaModel {
     /**
-     * <p>The content of the dataset job configuration, in the JSON format.</p>
+     * <p>The content of the dataset job configuration, in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
@@ -23,7 +23,7 @@ public class DatasetJobConfig extends TeaModel {
     public String configType;
 
     /**
-     * <p>The time when the dataset job was created.</p>
+     * <p>The creation time of the dataset job configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-14T01:37:37Z</p>
@@ -32,7 +32,7 @@ public class DatasetJobConfig extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The ID of the dataset job configuration.</p>
+     * <p>The unique ID for the dataset job configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>dscfg-xxxxxxxxxxxx</p>
@@ -44,7 +44,7 @@ public class DatasetJobConfig extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The time when the dataset job was modified.</p>
+     * <p>The last modification time of the dataset job configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-11T02:18:54Z</p>
@@ -53,7 +53,7 @@ public class DatasetJobConfig extends TeaModel {
     public String modifyTime;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>234*34</p>

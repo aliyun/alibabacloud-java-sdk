@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserConfigsRequest extends TeaModel {
     /**
-     * <p>The category. Currently, only DataPrivacyConfig is supported.</p>
+     * <p>The category. Only DataPrivacyConfig is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>DataPrivacyConfig</p>
@@ -14,7 +14,7 @@ public class ListUserConfigsRequest extends TeaModel {
     public String categoryNames;
 
     /**
-     * <p>The configuration item keys. Currently, only customizePAIAssumedRole is supported.</p>
+     * <p>A collection of configuration keys. Only customizePAIAssumedRole is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>customizePAIAssumedRole</p>

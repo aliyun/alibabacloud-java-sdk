@@ -7,9 +7,12 @@ public class GetModelVersionResponseBody extends TeaModel {
     /**
      * <p>The approval status. Valid values:</p>
      * <ul>
-     * <li>Pending</li>
-     * <li>Approved</li>
-     * <li>Rejected</li>
+     * <li><p>Pending: The model is pending approval.</p>
+     * </li>
+     * <li><p>Approved: The model is approved for publishing.</p>
+     * </li>
+     * <li><p>Rejected: The model is rejected for publishing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,6 +30,12 @@ public class GetModelVersionResponseBody extends TeaModel {
     @NameInMap("CompressionSpec")
     public java.util.Map<String, ?> compressionSpec;
 
+    /**
+     * <p>The distillation configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("DistillationSpec")
     public java.util.Map<String, ?> distillationSpec;
 
@@ -40,7 +49,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     public java.util.Map<String, ?> evaluationSpec;
 
     /**
-     * <p>The additional information.</p>
+     * <p>Other information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -54,16 +63,26 @@ public class GetModelVersionResponseBody extends TeaModel {
     /**
      * <p>The model format. Valid values:</p>
      * <ul>
-     * <li>OfflineModel</li>
-     * <li>SavedModel</li>
-     * <li>Keras H5</li>
-     * <li>Frozen Pb</li>
-     * <li>Caffe Prototxt</li>
-     * <li>TorchScript</li>
-     * <li>XGBoost</li>
-     * <li>PMML</li>
-     * <li>AlinkModel</li>
-     * <li>ONNX</li>
+     * <li><p>OfflineModel</p>
+     * </li>
+     * <li><p>SavedModel</p>
+     * </li>
+     * <li><p>Keras H5</p>
+     * </li>
+     * <li><p>Frozen Pb</p>
+     * </li>
+     * <li><p>Caffe Prototxt</p>
+     * </li>
+     * <li><p>TorchScript</p>
+     * </li>
+     * <li><p>XGBoost</p>
+     * </li>
+     * <li><p>PMML</p>
+     * </li>
+     * <li><p>AlinkModel</p>
+     * </li>
+     * <li><p>ONNX</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,12 +94,19 @@ public class GetModelVersionResponseBody extends TeaModel {
     /**
      * <p>The model framework. Valid values:</p>
      * <ul>
-     * <li>Pytorch -XGBoost</li>
-     * <li>Keras</li>
-     * <li>Caffe</li>
-     * <li>Alink</li>
-     * <li>Xflow</li>
-     * <li>TensorFlow</li>
+     * <li><p>Pytorch
+     * -XGBoost</p>
+     * </li>
+     * <li><p>Keras</p>
+     * </li>
+     * <li><p>Caffe</p>
+     * </li>
+     * <li><p>Alink</p>
+     * </li>
+     * <li><p>Xflow</p>
+     * </li>
+     * <li><p>TensorFlow</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +116,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     public String frameworkType;
 
     /**
-     * <p>The time when the model was created, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The UTC time when the model was created. The time is in the ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
@@ -99,7 +125,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the model was last modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The UTC time when the model was last updated. The time is in the ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
@@ -108,7 +134,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>Describes how to apply to downstream inference services. For example, describes the processor and container of Elastic Algorithm Service (EAS).</p>
+     * <p>Describes how to apply the model to a downstream inference service. For example, this can describe the processor and container for Elastic Algorithm Service (EAS).</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -119,7 +145,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     public java.util.Map<String, ?> inferenceSpec;
 
     /**
-     * <p>The labels.</p>
+     * <p>The list of labels for the model version.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
@@ -134,7 +160,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     public java.util.Map<String, ?> metrics;
 
     /**
-     * <p>The extended field. The value of this parameter is a JSON string.</p>
+     * <p>The extended field. This field is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -163,19 +189,23 @@ public class GetModelVersionResponseBody extends TeaModel {
     /**
      * <p>The source ID.</p>
      * <ul>
-     * <li>If the source type is Custom, this field is not limited.</li>
-     * <li>If the source type is PAIFlow or TrainingService, the format is:</li>
+     * <li><p>If the source type is Custom, this field has no limits.</p>
+     * </li>
+     * <li><p>If the source is PAIFlow or TrainingService, the format is:</p>
+     * </li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
      * </code></pre>
-     * <p>Take note of the following parameters:</p>
+     * <p>The parameters are:</p>
      * <ul>
-     * <li>region is the region ID.</li>
-     * <li>workspaceId is the ID of the workspace.</li>
-     * <li>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
-     * <li>id is a unique identifier.</li>
+     * <li><p>region: The ID of the Alibaba Cloud region.</p>
+     * </li>
+     * <li><p>workspaceId: The workspace ID.</p>
+     * </li>
+     * <li><p>kind: The type. Valid values: PipelineRun (PAI pipeline) and ServiceJob (training service).</p>
+     * </li>
+     * <li><p>id: The unique identifier.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -187,9 +217,12 @@ public class GetModelVersionResponseBody extends TeaModel {
     /**
      * <p>The source type of the model. Valid values:</p>
      * <ul>
-     * <li>Custom</li>
-     * <li>PAIFlow</li>
-     * <li>TrainingService</li>
+     * <li><p>Custom: The model is a custom model.</p>
+     * </li>
+     * <li><p>PAIFlow: The model is from a PAI pipeline.</p>
+     * </li>
+     * <li><p>TrainingService: The model is from a PAI training service.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -199,7 +232,7 @@ public class GetModelVersionResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The training configurations used for fine-tuning and incremental training.</p>
+     * <p>The training configuration. This is the configuration for fine-tuning and incremental training.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -208,10 +241,12 @@ public class GetModelVersionResponseBody extends TeaModel {
     public java.util.Map<String, ?> trainingSpec;
 
     /**
-     * <p>The URI of the model version, which is the location where the model is stored. Valid values:</p>
+     * <p>The URI of the model version. This is the storage location of the model. Valid values:</p>
      * <ul>
-     * <li>The HTTP(S) address of the model. Example: <code>https://myweb.com/mymodel.tar.gz</code>.</li>
-     * <li>The Object Storage Service (OSS) path of the model, in the format of <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code>. For endpoint, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>. Example: <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</li>
+     * <li><p>The HTTP or HTTPS URL of the model. Example: <code>https://myweb.com/mymodel.tar.gz</code>.</p>
+     * </li>
+     * <li><p>If the model is stored in Object Storage Service (OSS), the format is <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code>. For more information about how to configure the endpoint, see <a href="https://help.aliyun.com/document_detail/31837.html">Endpoints</a>. Example: <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("Uri")
@@ -227,7 +262,10 @@ public class GetModelVersionResponseBody extends TeaModel {
     public String userId;
 
     /**
-     * <p>The version description.</p>
+     * <p>The description of the model version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>General sentiment analysis.</p>
      */
     @NameInMap("VersionDescription")
     public String versionDescription;

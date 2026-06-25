@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMemberResponseBody extends TeaModel {
     /**
-     * <p>The returned members.</p>
+     * <p>The list of members.</p>
      */
     @NameInMap("Members")
     public java.util.List<CreateMemberResponseBodyMembers> members;

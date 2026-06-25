@@ -7,8 +7,10 @@ public class ListImagesRequest extends TeaModel {
     /**
      * <p>The visibility of the image. This parameter is valid only for custom images.</p>
      * <ul>
-     * <li>PUBLIC: The image is visible to all users.</li>
-     * <li>PRIVATE: The image is visible only to you and the administrator of the workspace.</li>
+     * <li><p>PUBLIC: The image is public.</p>
+     * </li>
+     * <li><p>PRIVATE: The image is private.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,26 +23,46 @@ public class ListImagesRequest extends TeaModel {
     public String imageUri;
 
     /**
-     * <p>The tag filter conditions. Multiple conditions are separated by commas (,). The format of a single condition filter is <code>key=value</code>. The following keys are supported:</p>
+     * <p>The filter conditions for labels. Separate multiple conditions with commas (,).
+     * The format for a single filter condition is <code>Key=Value</code>.
+     * The supported values for Key are:</p>
      * <ul>
-     * <li>system.chipType</li>
-     * <li>system.dsw.cudaVersion</li>
-     * <li>system.dsw.fromImageId</li>
-     * <li>system.dsw.fromInstanceId</li>
-     * <li>system.dsw.id</li>
-     * <li>system.dsw.os</li>
-     * <li>system.dsw.osVersion</li>
-     * <li>system.dsw.resourceType</li>
-     * <li>system.dsw.rootImageId</li>
-     * <li>system.dsw.stage</li>
-     * <li>system.dsw.tag</li>
-     * <li>system.dsw.type</li>
-     * <li>system.framework</li>
-     * <li>system.origin</li>
-     * <li>system.pythonVersion</li>
-     * <li>system.source</li>
-     * <li>system.supported.dlc</li>
-     * <li>system.supported.dsw</li>
+     * <li><p>system.chipType</p>
+     * </li>
+     * <li><p>system.dsw\.cudaVersion</p>
+     * </li>
+     * <li><p>system.dsw\.fromImageId</p>
+     * </li>
+     * <li><p>system.dsw\.fromInstanceId</p>
+     * </li>
+     * <li><p>system.dsw\.id</p>
+     * </li>
+     * <li><p>system.dsw\.os</p>
+     * </li>
+     * <li><p>system.dsw\.osVersion</p>
+     * </li>
+     * <li><p>system.dsw\.resourceType</p>
+     * </li>
+     * <li><p>system.dsw\.rootImageId</p>
+     * </li>
+     * <li><p>system.dsw\.stage</p>
+     * </li>
+     * <li><p>system.dsw\.tag</p>
+     * </li>
+     * <li><p>system.dsw\.type</p>
+     * </li>
+     * <li><p>system.framework</p>
+     * </li>
+     * <li><p>system.origin</p>
+     * </li>
+     * <li><p>system.pythonVersion</p>
+     * </li>
+     * <li><p>system.source</p>
+     * </li>
+     * <li><p>system.supported.dlc</p>
+     * </li>
+     * <li><p>system.supported.dsw</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +72,7 @@ public class ListImagesRequest extends TeaModel {
     public String labels;
 
     /**
-     * <p>The image name. Fuzzy match is supported.</p>
+     * <p>The name of the image. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>tensorflow_2.9</p>
@@ -59,10 +81,12 @@ public class ListImagesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy. Default value: ASC. Valid values:</p>
+     * <p>The order in which to sort the results of a paged query. This parameter is used with SortBy. The default value is ASC.</p>
      * <ul>
-     * <li>ASC: ascending order</li>
-     * <li>DESC: descending order.</li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * <li><p>DESC: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +96,7 @@ public class ListImagesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the image list. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,7 +105,7 @@ public class ListImagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>The number of entries to return on each page for a paged query. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -90,7 +114,7 @@ public class ListImagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The image name and description that are used for fuzzy search.</p>
+     * <p>Performs a fuzzy search by image name and description.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -99,7 +123,7 @@ public class ListImagesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The field used for sorting. The GmtCreateTime field is used.</p>
+     * <p>The field to use for sorting in a paged query. Currently, only the GmtCreateTime field is used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -108,10 +132,12 @@ public class ListImagesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Specifies whether to display non-essential information, which contains tags. Valid values:</p>
+     * <p>Specifies whether to display non-essential information. Non-essential information currently includes Labels. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Includes non-essential information.</p>
+     * </li>
+     * <li><p>false: Does not include non-essential information.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,7 +147,7 @@ public class ListImagesRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>20******55</p>

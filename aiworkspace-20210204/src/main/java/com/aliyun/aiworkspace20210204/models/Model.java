@@ -53,6 +53,8 @@ public class Model extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>最后版本更新时间。</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
      */
@@ -82,6 +84,9 @@ public class Model extends TeaModel {
 
     /**
      * <p>The model description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>情感分析。</p>
      */
     @NameInMap("ModelDescription")
     public String modelDescription;
@@ -106,6 +111,9 @@ public class Model extends TeaModel {
 
     /**
      * <p>The model name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>情感分析</p>
      */
     @NameInMap("ModelName")
     public String modelName;
@@ -147,6 +155,8 @@ public class Model extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>参数量，单位M。</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -162,6 +172,9 @@ public class Model extends TeaModel {
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <p>标签列表</p>
+     */
     @NameInMap("Tags")
     public java.util.List<Label> tags;
 

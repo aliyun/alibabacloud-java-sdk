@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRunResponseBody extends TeaModel {
     /**
-     * <p>The run ID.</p>
+     * <p>The ID of the run.</p>
      * 
      * <strong>example:</strong>
      * <p>run-1meoz7VJd2C6f****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LogRunMetricsRequest extends TeaModel {
     /**
-     * <p>The metrics.</p>
+     * <p>The list of metrics.</p>
      */
     @NameInMap("Metrics")
     public java.util.List<RunMetric> metrics;

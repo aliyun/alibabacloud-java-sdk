@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDefaultWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The conditions of the default workspace in the creation process.</p>
+     * <p>The details about the creation stages of the default workspace.</p>
      */
     @NameInMap("Conditions")
     public java.util.List<GetDefaultWorkspaceResponseBodyConditions> conditions;
 
     /**
-     * <p>The UID of the Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account that created the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>17915******4216</p>
@@ -20,7 +20,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The workspace description.</p>
+     * <p>The description of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace description example</p>
@@ -38,17 +38,19 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The environments of the workspace. Valid values:</p>
+     * <p>The environments in the workspace.</p>
      * <ul>
-     * <li>Workspaces in basic mode can run only in the production environment.</li>
-     * <li>Workspaces in standard mode can run in both the development and production environments.</li>
+     * <li><p>A workspace in basic mode contains only the production (prod) environment.</p>
+     * </li>
+     * <li><p>A workspace in standard mode contains the development (dev) and production (prod) environments.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
     /**
-     * <p>The time when the workspace was created, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the workspace was created. The time is in Coordinated Universal Time (UTC) and is formatted in ISO 8601.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -57,7 +59,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the workspace was modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the workspace was last modified. The time is in UTC and is formatted in ISO 8601.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -66,7 +68,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The UID of the Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account that created the workspace.</p>
      */
     @NameInMap("Owner")
     public GetDefaultWorkspaceResponseBodyOwner owner;
@@ -81,14 +83,20 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The workspace status. Valid values:</p>
+     * <p>The status of the workspace. Valid values:</p>
      * <ul>
-     * <li>ENABLED</li>
-     * <li>INITIALIZING</li>
-     * <li>FAILURE</li>
-     * <li>DISABLED</li>
-     * <li>FROZEN</li>
-     * <li>UPDATING</li>
+     * <li><p>ENABLED: Normal.</p>
+     * </li>
+     * <li><p>INITIALIZING: Initializing.</p>
+     * </li>
+     * <li><p>FAILURE: Failed.</p>
+     * </li>
+     * <li><p>DISABLED: Disabled.</p>
+     * </li>
+     * <li><p>FROZEN: Frozen due to an overdue payment.</p>
+     * </li>
+     * <li><p>UPDATING: The workspace is being updated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +115,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The workspace name, which is unique in a region.</p>
+     * <p>The name of the workspace. The name must be unique within the same region.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-example</p>
@@ -218,7 +226,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
 
     public static class GetDefaultWorkspaceResponseBodyConditions extends TeaModel {
         /**
-         * <p>The returned status code. HTTP status code 200 indicates that the request was successful. Other HTTP status codes indicate that the request failed.</p>
+         * <p>The status code. A value of 200 indicates that the request was successful. Other values indicate that the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -227,7 +235,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         public Long code;
 
         /**
-         * <p>The error message. If the returned status code is 200, this parameter is empty.</p>
+         * <p>The error message. This parameter is empty if the status code is 200.</p>
          * 
          * <strong>example:</strong>
          * <p>Create Failed</p>
@@ -238,10 +246,14 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>CREATING: The workspace is being created.</li>
-         * <li>WORKSPACE_CREATED: The workspace is created.</li>
-         * <li>MEMBERS_ADDED: The member is added.</li>
-         * <li>ENABLED: The workspace is created and the member is added.</li>
+         * <li><p>CREATING: Creating.</p>
+         * </li>
+         * <li><p>WORKSPACE_CREATED: The workspace is created.</p>
+         * </li>
+         * <li><p>MEMBERS_ADDED: Members are added.</p>
+         * </li>
+         * <li><p>ENABLED: The process is complete.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +295,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
 
     public static class GetDefaultWorkspaceResponseBodyOwner extends TeaModel {
         /**
-         * <p>The user ID.</p>
+         * <p>The UID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>17915******4216</p>
@@ -292,7 +304,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The UID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>17915******4216</p>

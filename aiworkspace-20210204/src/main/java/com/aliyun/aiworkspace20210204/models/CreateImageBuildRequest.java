@@ -4,11 +4,23 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateImageBuildRequest extends TeaModel {
+    /**
+     * <p>An idempotence token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>镜像构建的可见性，可能值： - PUBLIC：当前工作空间所有成员都可以操作。 - PRIVATE：只有创建者可以操作。</p>
+     * <p>The visibility of the image.</p>
+     * <ul>
+     * <li><p><strong>PUBLIC</strong>: The image is public.</p>
+     * </li>
+     * <li><p><strong>PRIVATE</strong>: The image is private.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
@@ -17,19 +29,22 @@ public class CreateImageBuildRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>构建配置，指定待构建的 Dockerfile 文件内容。</p>
+     * <p><strong>The build configuration. Specify the content of the Dockerfile to be built.</strong></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BuildConfig")
     public CreateImageBuildRequestBuildConfig buildConfig;
 
     /**
+     * <p>The metadata of the image.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Image")
     public CreateImageBuildRequestImage image;
 
     /**
+     * <p>The name of the image build task.</p>
+     * 
      * <strong>example:</strong>
      * <p>build-my-image</p>
      */
@@ -37,38 +52,42 @@ public class CreateImageBuildRequest extends TeaModel {
     public String imageBuildJobName;
 
     /**
-     * <p>是否覆盖更新 ACR 镜像仓库中已存在的镜像 tag。</p>
+     * <p>Specifies whether to overwrite an existing image version in the image repository.</p>
      */
     @NameInMap("OverwriteImageTag")
     public Boolean overwriteImageTag;
 
     /**
-     * <p>代表region的资源属性字段</p>
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>构建任务运行资源</p>
+     * <p>The resources used to run the task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resource")
     public CreateImageBuildRequestResource resource;
 
     /**
+     * <p><strong>The configuration of the target image repository.</strong></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TargetRegistry")
     public CreateImageBuildRequestTargetRegistry targetRegistry;
 
     /**
-     * <p>用户专有网络信息。使用企业版 ACR 实例时，此参数必填，指定在用户 ACR 实例的访问控制里已添加的专有网络。</p>
+     * <p>The information about the user\&quot;s virtual private cloud (VPC). This parameter is required when you use the public resource group.</p>
      */
     @NameInMap("UserVpc")
     public CreateImageBuildRequestUserVpc userVpc;
 
     /**
-     * <p>镜像构建所属的工作空间ID。</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -172,6 +191,13 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestBuildConfig extends TeaModel {
         /**
+         * <p>The build type. The following types are supported:</p>
+         * <ul>
+         * <li><p><strong>PackageInstallation</strong>: Installs software packages based on a specified image.</p>
+         * </li>
+         * <li><p><strong>CustomDockerfile</strong>: Builds an image based on a custom Dockerfile.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +207,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String buildType;
 
         /**
-         * <p>Dockerfile文件内容</p>
+         * <p>The content of the Dockerfile to be built.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +218,8 @@ public class CreateImageBuildRequest extends TeaModel {
         public String dockerfile;
 
         /**
+         * <p>The authentication information for the private image repository. You can specify the authentication information for an ACR image repository that does not belong to you. The format is \<code>{&quot;user_registry_domain&quot;:{&quot;Auth&quot;:&quot;base64 encoded auth&quot;}}\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;user-test-registry-vpc.cn-wulanchabu.cr.aliyuncs.com&quot;: {
@@ -235,6 +263,8 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestImageLabels extends TeaModel {
         /**
+         * <p>The key of the image label.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -242,6 +272,8 @@ public class CreateImageBuildRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the image label.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -272,13 +304,31 @@ public class CreateImageBuildRequest extends TeaModel {
     }
 
     public static class CreateImageBuildRequestImage extends TeaModel {
+        /**
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Build test image</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The image labels.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<CreateImageBuildRequestImageLabels> labels;
 
         /**
+         * <p>The name of the image. The name must meet the following requirements:</p>
+         * <ul>
+         * <li><p>The name must be 1 to 50 characters in length.</p>
+         * </li>
+         * <li><p>The name can contain lowercase letters, digits, and hyphens (-). It must start with a letter.</p>
+         * </li>
+         * <li><p>The name must be unique within the same workspace.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,6 +338,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The image URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -337,6 +388,8 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestResourceResourceConfig extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -344,6 +397,8 @@ public class CreateImageBuildRequest extends TeaModel {
         public String CPU;
 
         /**
+         * <p>The memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>8Gi</p>
          */
@@ -375,7 +430,7 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestResource extends TeaModel {
         /**
-         * <p>后付费资源规格</p>
+         * <p>The instance type of the pay-as-you-go resource. This parameter is required when you use the public resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -383,10 +438,15 @@ public class CreateImageBuildRequest extends TeaModel {
         @NameInMap("EcsSpec")
         public String ecsSpec;
 
+        /**
+         * <p>The resource configuration. Specify this parameter when you use subscription resources. Leave it empty when you use the public resource group.</p>
+         */
         @NameInMap("ResourceConfig")
         public CreateImageBuildRequestResourceResourceConfig resourceConfig;
 
         /**
+         * <p>The resource quota ID. This parameter applies only to subscription resources. Do not set this parameter for pay-as-you-go resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>quotaadzoqup693z</p>
          */
@@ -394,6 +454,8 @@ public class CreateImageBuildRequest extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The type of the subscription resource. Currently, only Lingjun resources are supported. Specify this parameter when you use subscription resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>Lingjun</p>
          */
@@ -441,6 +503,8 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestTargetRegistry extends TeaModel {
         /**
+         * <p>The ID of the image repository instance. This parameter is required when you use ACR as the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>cri-**abcd</p>
          */
@@ -448,6 +512,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The type of the target image repository. Only ACR Enterprise Edition is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -481,7 +546,10 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestUserVpc extends TeaModel {
         /**
-         * <p>默认路由网卡出口</p>
+         * <p>The default route.</p>
+         * <ul>
+         * <li>eth1: Indicates that the user\&quot;s elastic network interface (ENI) is used to access the external network through a private gateway. For more information, see <a href="https://help.aliyun.com/zh/pai/user-guide/configure-a-dsw-instance-to-access-the-internet-through-a-private-nat-gateway?spm=a2c4g.11186623.0.0.3b3965f6SZWm85">Configure a Distribution Switch (DSW) instance to access the Internet through a private NAT gateway</a>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>eth1</p>
@@ -490,13 +558,19 @@ public class CreateImageBuildRequest extends TeaModel {
         public String defaultRoute;
 
         /**
-         * <p>扩展网段</p>
+         * <p>The extended CIDR blocks.</p>
+         * <ul>
+         * <li><p>If you do not specify a vSwitch ID, you can leave this parameter empty. The system automatically obtains all CIDR blocks of the VPC.</p>
+         * </li>
+         * <li><p>If you specify a vSwitch ID, you must specify this parameter. For best results, include all CIDR blocks of the VPC.</p>
+         * </li>
+         * </ul>
          */
         @NameInMap("ExtendedCidrs")
         public java.util.List<String> extendedCidrs;
 
         /**
-         * <p>安全组 ID</p>
+         * <p>The security group ID. This parameter is required when you configure a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-abcdef**</p>
@@ -505,7 +579,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>交换机 ID</p>
+         * <p>The vSwitch ID. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>vs-abcdef**</p>
@@ -514,7 +588,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String switchId;
 
         /**
-         * <p>专有网络 ID</p>
+         * <p>The VPC ID. If the build task needs to access your ACR Enterprise Edition instance, specify a VPC that is in the access control list of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-abcdef**</p>

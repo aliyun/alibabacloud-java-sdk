@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDatasetFileMetasResponseBody extends TeaModel {
     /**
-     * <p>The metadata records that fail to be deleted for the dataset files.</p>
+     * <p>A list of file metadata records that failed to be deleted.</p>
      */
     @NameInMap("FailedDetails")
     public java.util.List<DatasetFileMetaResponse> failedDetails;
@@ -20,7 +20,7 @@ public class DeleteDatasetFileMetasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the metadata records of all dataset files were deleted. The value true indicates that the metadata records of all dataset files are deleted. If the value is false, view the failure details specified by FailedDetails.</p>
+     * <p>The status of the batch deletion. A value of \<code>true\\</code> indicates that all metadata records were deleted. If the value is \<code>false\\</code>, check the \<code>FailedDetails\\</code> parameter for more information.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

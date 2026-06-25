@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetJobsRequest extends TeaModel {
     /**
-     * <p>The dataset version name.</p>
+     * <p>The name of the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -14,7 +14,7 @@ public class ListDatasetJobsRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The action to be performed on the job.</p>
+     * <p>The job action.</p>
      * 
      * <strong>example:</strong>
      * <p>SemanticIndex</p>
@@ -22,11 +22,23 @@ public class ListDatasetJobsRequest extends TeaModel {
     @NameInMap("JobAction")
     public String jobAction;
 
+    /**
+     * <p>The order in which to sort the results. This parameter is used with <code>SortBy</code>. Default: DESC.</p>
+     * <ul>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * <li><p>DESC: descending order.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages are 1-indexed. Default: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,9 +55,21 @@ public class ListDatasetJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The field by which to sort the results. By default, the results are sorted by <code>CreateTime</code> in descending order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The job status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -53,7 +77,7 @@ public class ListDatasetJobsRequest extends TeaModel {
     public Boolean withLogs;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMembersRequest extends TeaModel {
     /**
-     * <p>The member name. Fuzzy match is supported.</p>
+     * <p>Username. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>zhangsan</p>
@@ -14,7 +14,7 @@ public class ListMembersRequest extends TeaModel {
     public String memberName;
 
     /**
-     * <p>The page number of the workspace list. Pages start from page 1. Default value: 1.</p>
+     * <p>Page number. Pages start at 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListMembersRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>Number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,15 +32,22 @@ public class ListMembersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The roles that are used to filter members. Multiple roles are separated by commas (,). Valid values:</p>
+     * <p>Roles used to filter members. Separate multiple roles with commas (,). Valid values:</p>
      * <ul>
-     * <li>PAI.AlgoDeveloper: algorithm developer</li>
-     * <li>PAI.AlgoOperator: algorithm O\&amp;M engineer</li>
-     * <li>PAI.LabelManager: labeling administrator</li>
-     * <li>PAI.MaxComputeDeveloper: MaxCompute developer</li>
-     * <li>PAI.WorkspaceAdmin: administrator</li>
-     * <li>PAI.WorkspaceGuest: guest</li>
-     * <li>PAI.WorkspaceOwner: owner</li>
+     * <li><p>PAI.AlgoDeveloper: Algorithm developer</p>
+     * </li>
+     * <li><p>PAI.AlgoOperator: Algorithm O\&amp;M engineer</p>
+     * </li>
+     * <li><p>PAI.LabelManager: Annotation administrator</p>
+     * </li>
+     * <li><p>PAI.MaxComputeDeveloper: MaxCompute developer</p>
+     * </li>
+     * <li><p>PAI.WorkspaceAdmin: Workspace administrator</p>
+     * </li>
+     * <li><p>PAI.WorkspaceGuest: Guest</p>
+     * </li>
+     * <li><p>PAI.WorkspaceOwner: Workspace owner</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

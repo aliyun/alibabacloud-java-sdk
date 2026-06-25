@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDefaultWorkspaceRequest extends TeaModel {
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

@@ -14,7 +14,7 @@ public class CreateModelVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The version of the model.</p>
+     * <p>The model version.</p>
      * 
      * <strong>example:</strong>
      * <p>0.1.0</p>

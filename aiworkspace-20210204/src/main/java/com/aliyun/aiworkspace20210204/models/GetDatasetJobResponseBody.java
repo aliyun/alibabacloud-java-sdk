@@ -14,7 +14,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public Long completedFileCount;
 
     /**
-     * <p>The time when the job is started.</p>
+     * <p>The time when the task was started.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-15T07:06:42Z</p>
@@ -23,7 +23,10 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The job description.</p>
+     * <p>The task description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a task description.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -38,7 +41,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public Long failedFileCount;
 
     /**
-     * <p>The time when the job ends.</p>
+     * <p>The time when the task was finished.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-07-16T02:03:23Z</p>
@@ -47,13 +50,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String finishTime;
 
     /**
-     * <p>The action that is performed on the job.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>SemanticIndex: semantic indexing</li>
-     * <li>IntelligentTag: smart labeling</li>
-     * <li>FileMetaExport: metadata export</li>
-     * </ul>
+     * <p>The task operation.</p>
      * 
      * <strong>example:</strong>
      * <p>SemanticIndex</p>
@@ -62,11 +59,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String jobAction;
 
     /**
-     * <p>The job mode.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>Full: full data mode.</li>
-     * </ul>
+     * <p>The task pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>Full</p>
@@ -75,7 +68,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String jobMode;
 
     /**
-     * <p>The job details.</p>
+     * <p>The task details.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</p>
@@ -84,7 +77,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String jobSpec;
 
     /**
-     * <p>The job logs.</p>
+     * <p>The list of task logs.</p>
      */
     @NameInMap("Logs")
     public java.util.List<String> logs;
@@ -99,17 +92,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The job state.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Succeeded</li>
-     * <li>Failed</li>
-     * <li>Running</li>
-     * <li>Pending</li>
-     * <li>PartialFailed</li>
-     * <li>Deleting</li>
-     * <li>ManuallyStop</li>
-     * </ul>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -118,7 +101,7 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The total number of job files.</p>
+     * <p>The total number of files for the task.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

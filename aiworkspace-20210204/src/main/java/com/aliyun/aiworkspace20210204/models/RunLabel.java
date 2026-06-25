@@ -5,32 +5,32 @@ import com.aliyun.tea.*;
 
 public class RunLabel extends TeaModel {
     /**
-     * <p>The creation time.</p>
+     * <p>Time when the label was created</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     /**
-     * <p>The last modified time.</p>
+     * <p>Time when the label was last modified</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     /**
-     * <p>The label key.</p>
+     * <p>Key of the label</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The ID of the run.</p>
+     * <p>ID of the Run that owns this label</p>
      */
     @NameInMap("RunId")
     public String runId;
 
     /**
-     * <p>The label value.</p>
+     * <p>Value of the label</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Value")

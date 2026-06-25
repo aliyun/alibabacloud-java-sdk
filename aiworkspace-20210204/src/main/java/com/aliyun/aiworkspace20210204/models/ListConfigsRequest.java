@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListConfigsRequest extends TeaModel {
     /**
-     * <p>The category of the configuration item. Supported categories:</p>
+     * <p>The category of the configuration item. The following categories are supported:</p>
      * <ul>
-     * <li>CommonResourceConfig</li>
-     * <li>DLCAutoRecycle</li>
-     * <li>DLCPriorityConfig</li>
-     * <li>DSWPriorityConfig</li>
-     * <li>QuotaMaximumDuration</li>
-     * <li>CommonTagConfig</li>
+     * <li><p>CommonResourceConfig: The common resource configuration.</p>
+     * </li>
+     * <li><p>DLCAutoRecycle: The automatic recycling configuration for DLC.</p>
+     * </li>
+     * <li><p>DLCPriorityConfig: The priority configuration for DLC.</p>
+     * </li>
+     * <li><p>DSWPriorityConfig: The priority configuration for DSW.</p>
+     * </li>
+     * <li><p>QuotaMaximumDuration: The configuration for the maximum runtime of a DLC task in a quota.</p>
+     * </li>
+     * <li><p>CommonTagConfig: The label configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,13 +28,18 @@ public class ListConfigsRequest extends TeaModel {
     public String categoryName;
 
     /**
-     * <p>The key of the configuration item. Supported keys:</p>
+     * <p>The key of the configuration item. The following keys are supported:</p>
      * <ul>
-     * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-     * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
-     * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-     * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-     * <li>predefinedTags: The predefined tags of the workspace. All created resources must have tags</li>
+     * <li><p>tempStoragePath: The path for temporary storage. This key is valid only when CategoryName is set to CommonResourceConfig.</p>
+     * </li>
+     * <li><p>isAutoRecycle: The automatic recycling configuration. This key is valid only when CategoryName is set to DLCAutoRecycle.</p>
+     * </li>
+     * <li><p>priorityConfig: The priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</p>
+     * </li>
+     * <li><p>quotaMaximumDuration: The configuration for the maximum runtime of a DLC task in a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</p>
+     * </li>
+     * <li><p>predefinedTags: The predefined labels for the workspace. Resources that you create must have these labels.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +49,7 @@ public class ListConfigsRequest extends TeaModel {
     public String configKeys;
 
     /**
-     * <p>The tags used as filter conditions. Separate multiple tags with commas (,). These conditions are in an AND relationship.</p>
+     * <p>The labels to use as filter conditions. Separate multiple labels with commas. A logical AND operation is performed on these labels.</p>
      * 
      * <strong>example:</strong>
      * <p>key1=value1,key2=value2</p>
@@ -47,10 +58,12 @@ public class ListConfigsRequest extends TeaModel {
     public String labels;
 
     /**
-     * <p>Specifies whether to show the tag information.</p>
+     * <p>Specifies whether to return label information.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Returns label information.</p>
+     * </li>
+     * <li><p>false: Does not return label information.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

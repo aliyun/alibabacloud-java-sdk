@@ -23,7 +23,7 @@ public class ListModelVersionsResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The model versions.</p>
+     * <p>The list of model versions.</p>
      */
     @NameInMap("Versions")
     public java.util.List<ModelVersion> versions;

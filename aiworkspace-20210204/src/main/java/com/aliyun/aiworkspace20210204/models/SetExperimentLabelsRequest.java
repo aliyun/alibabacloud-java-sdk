@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetExperimentLabelsRequest extends TeaModel {
     /**
-     * <p>The tags.</p>
+     * <p>A list of labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<LabelInfo> labels;

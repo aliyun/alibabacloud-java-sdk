@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListConfigsResponseBody extends TeaModel {
     /**
-     * <p>The configuration items.</p>
+     * <p>The list of configuration items.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A******C83E</p>
@@ -20,7 +20,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of items returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -59,7 +59,7 @@ public class ListConfigsResponseBody extends TeaModel {
 
     public static class ListConfigsResponseBodyConfigsLabels extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -68,7 +68,7 @@ public class ListConfigsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -101,13 +101,18 @@ public class ListConfigsResponseBody extends TeaModel {
 
     public static class ListConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The key of the configuration item. Supported keys:</p>
+         * <p>The key of the configuration item. The following keys are supported:</p>
          * <ul>
-         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
-         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-         * <li>predefinedTags: The predefined tags of the workspace. All created resources must have tags</li>
+         * <li><p>tempStoragePath: The path for temporary storage. This key is valid only when CategoryName is set to CommonResourceConfig.</p>
+         * </li>
+         * <li><p>isAutoRecycle: The automatic recycling configuration. This key is valid only when CategoryName is set to DLCAutoRecycle.</p>
+         * </li>
+         * <li><p>priorityConfig: The priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</p>
+         * </li>
+         * <li><p>quotaMaximumDuration: The configuration for the maximum runtime of a DLC task in a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</p>
+         * </li>
+         * <li><p>predefinedTags: The predefined labels for the workspace. Resources that you create must have these labels.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +137,7 @@ public class ListConfigsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The tags of the configuration item.</p>
+         * <p>The list of labels for the configuration item.</p>
          */
         @NameInMap("Labels")
         public java.util.List<ListConfigsResponseBodyConfigsLabels> labels;

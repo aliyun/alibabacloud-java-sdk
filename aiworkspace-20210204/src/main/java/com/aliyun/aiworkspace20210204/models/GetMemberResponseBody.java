@@ -17,7 +17,7 @@ public class GetMemberResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The time when the workspace is created, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the member was created. The time is in Coordinated Universal Time (UTC) and the format is ISO 8601.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>

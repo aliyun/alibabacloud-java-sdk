@@ -14,7 +14,7 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources.</p>
+     * <p>A list of resources.</p>
      */
     @NameInMap("Resources")
     public java.util.List<CreateWorkspaceResourceResponseBodyResources> resources;

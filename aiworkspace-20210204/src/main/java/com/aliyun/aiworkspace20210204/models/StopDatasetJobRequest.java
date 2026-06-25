@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopDatasetJobRequest extends TeaModel {
     /**
-     * <p>The dataset version.</p>
+     * <p>The name of the dataset version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -14,7 +14,7 @@ public class StopDatasetJobRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>478**</p>

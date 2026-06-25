@@ -49,7 +49,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "aiworkspace.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "aiworkspace.aliyuncs.com"),
             new TeaPair("me-east-1", "aiworkspace.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "aiworkspace.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "aiworkspace.aliyuncs.com"),
+            new TeaPair("us-west-1", "aiworkspace.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "aiworkspace.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "aiworkspace.na-south-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "aiworkspace.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "aiworkspace.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "aiworkspace.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "aiworkspace.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "aiworkspace.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "aiworkspace.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "aiworkspace.cn-guangzhou.aliyuncs.com	"),
+            new TeaPair("cn-beijing", "aiworkspace.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "aiworkspace.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "aiworkspace.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "aiworkspace.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "aiworkspace.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "aiworkspace.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aiworkspace", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -70,10 +91,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can be called only by the internal system and cannot be called by external users.</p>
+     * <p>This API is for internal system calls only.</p>
      * 
      * <b>summary</b> : 
-     * <p>Receives and processes system event messages sent by DataWorks.</p>
+     * <p>PAI accepts and processes system event messages from DataWorks.</p>
      * 
      * @param request AcceptDataworksEventRequest
      * @param headers map
@@ -111,10 +132,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can be called only by the internal system and cannot be called by external users.</p>
+     * <p>This API is for internal system calls only.</p>
      * 
      * <b>summary</b> : 
-     * <p>Receives and processes system event messages sent by DataWorks.</p>
+     * <p>PAI accepts and processes system event messages from DataWorks.</p>
      * 
      * @param request AcceptDataworksEventRequest
      * @return AcceptDataworksEventResponse
@@ -210,7 +231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to an image.</p>
+     * <p>Adds labels to a specified image.</p>
      * 
      * @param request AddImageLabelsRequest
      * @param headers map
@@ -244,7 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to an image.</p>
+     * <p>Adds labels to a specified image.</p>
      * 
      * @param request AddImageLabelsRequest
      * @return AddImageLabelsResponse
@@ -257,7 +278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a role to a member in a workspace. After you add a role to a member, the member is granted the permissions of the role.</p>
+     * <p>Assigns a role to a member in a workspace, granting that member the role\&quot;s permissions.</p>
      * 
      * @param request AddMemberRoleRequest
      * @param headers map
@@ -285,7 +306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a role to a member in a workspace. After you add a role to a member, the member is granted the permissions of the role.</p>
+     * <p>Assigns a role to a member in a workspace, granting that member the role\&quot;s permissions.</p>
      * 
      * @param request AddMemberRoleRequest
      * @return AddMemberRoleResponse
@@ -298,7 +319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a resource belongs based on the ID.</p>
+     * <p>Changes the resource group of a specified resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -340,7 +361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a resource belongs based on the ID.</p>
+     * <p>Changes the resource group of a specified resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -353,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a code build in Platform for AI (PAI). You can configure Git branches and commit IDs. After the code build is created, you can reference the code build in a Deep Learning Containers (DLC) job.</p>
+     * <p>Creates a code configuration in PAI using a code branch and commit ID from a Git repository. This configuration can then be referenced in DLC jobs.</p>
      * 
      * @param request CreateCodeSourceRequest
      * @param headers map
@@ -427,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a code build in Platform for AI (PAI). You can configure Git branches and commit IDs. After the code build is created, you can reference the code build in a Deep Learning Containers (DLC) job.</p>
+     * <p>Creates a code configuration in PAI using a code branch and commit ID from a Git repository. This configuration can then be referenced in DLC jobs.</p>
      * 
      * @param request CreateCodeSourceRequest
      * @return CreateCodeSourceResponse
@@ -440,7 +461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a connection. This API is used to connect Platform for AI (PAI) to customer models and databases in LangStudio and multimodal dataset search scenarios.</p>
+     * <p>Creates a connection to link PAI cloud services with your models, databases, and other services. This is useful for scenarios such as LangStudio and multimodal dataset retrieval.</p>
      * 
      * @param request CreateConnectionRequest
      * @param headers map
@@ -506,7 +527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a connection. This API is used to connect Platform for AI (PAI) to customer models and databases in LangStudio and multimodal dataset search scenarios.</p>
+     * <p>Creates a connection to link PAI cloud services with your models, databases, and other services. This is useful for scenarios such as LangStudio and multimodal dataset retrieval.</p>
      * 
      * @param request CreateConnectionRequest
      * @return CreateConnectionResponse
@@ -662,7 +683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates the metadata records of multiple files in a dataset at a time.</p>
+     * <p>Creates file metadata records for a dataset in a batch.</p>
      * 
      * @param request CreateDatasetFileMetasRequest
      * @param headers map
@@ -704,7 +725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates the metadata records of multiple files in a dataset at a time.</p>
+     * <p>Creates file metadata records for a dataset in a batch.</p>
      * 
      * @param request CreateDatasetFileMetasRequest
      * @return CreateDatasetFileMetasResponse
@@ -784,7 +805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job configuration for a dataset.</p>
+     * <p>Creates a dataset Job configuration.</p>
      * 
      * @param request CreateDatasetJobConfigRequest
      * @param headers map
@@ -830,7 +851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job configuration for a dataset.</p>
+     * <p>Creates a dataset Job configuration.</p>
      * 
      * @param request CreateDatasetJobConfigRequest
      * @return CreateDatasetJobConfigResponse
@@ -843,14 +864,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>When you call this operation, note the following:</p>
      * <ul>
-     * <li>The tag key and value are not empty strings and cannot exceed 128 characters in length.</li>
-     * <li>The tag key cannot start with any of the following strings: &quot;aliyun&quot;, &quot;acs&quot;, &quot;http://&quot;, and &quot;https://&quot;.</li>
+     * <li>The key and value of a label must be a non-empty string with a maximum length of 128 characters.</li>
+     * <li>A label key cannot start with aliyun, acs, http\://, or https\://.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates tags for a dataset.</p>
+     * <p>Adds labels to a dataset.</p>
      * 
      * @param request CreateDatasetLabelsRequest
      * @param headers map
@@ -884,14 +905,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>When you call this operation, note the following:</p>
      * <ul>
-     * <li>The tag key and value are not empty strings and cannot exceed 128 characters in length.</li>
-     * <li>The tag key cannot start with any of the following strings: &quot;aliyun&quot;, &quot;acs&quot;, &quot;http://&quot;, and &quot;https://&quot;.</li>
+     * <li>The key and value of a label must be a non-empty string with a maximum length of 128 characters.</li>
+     * <li>A label key cannot start with aliyun, acs, http\://, or https\://.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates tags for a dataset.</p>
+     * <p>Adds labels to a dataset.</p>
      * 
      * @param request CreateDatasetLabelsRequest
      * @return CreateDatasetLabelsResponse
@@ -991,7 +1012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates tags for a dataset version.</p>
+     * <p>Creates labels for a dataset version.</p>
      * 
      * @param request CreateDatasetVersionLabelsRequest
      * @param headers map
@@ -1025,7 +1046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates tags for a dataset version.</p>
+     * <p>Creates labels for a dataset version.</p>
      * 
      * @param request CreateDatasetVersionLabelsRequest
      * @return CreateDatasetVersionLabelsResponse
@@ -1100,8 +1121,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * 
      * <b>summary</b> : 
-     * <p>创建镜像构建任务</p>
+     * <p>Builds a custom image based on the specified configuration. After the image is successfully built, it is added to the list of custom images in the current workspace.</p>
      * 
      * @param request CreateImageBuildRequest
      * @param headers map
@@ -1176,8 +1200,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * 
      * <b>summary</b> : 
-     * <p>创建镜像构建任务</p>
+     * <p>Builds a custom image based on the specified configuration. After the image is successfully built, it is added to the list of custom images in the current workspace.</p>
      * 
      * @param request CreateImageBuildRequest
      * @return CreateImageBuildResponse
@@ -1190,7 +1217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a user to a workspace as a member. You can add multiple users as members.</p>
+     * <p>Adds one or more users to a workspace.</p>
      * 
      * @param request CreateMemberRequest
      * @param headers map
@@ -1224,7 +1251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a user to a workspace as a member. You can add multiple users as members.</p>
+     * <p>Adds one or more users to a workspace.</p>
      * 
      * @param request CreateMemberRequest
      * @return CreateMemberResponse
@@ -1237,7 +1264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model. A model is a collection of model versions. When you create a model, you must specify the model name and description.</p>
+     * <p>Creates a model, which is a collection of model versions. You must specify information such as the model name and description.</p>
      * 
      * @param request CreateModelRequest
      * @param headers map
@@ -1323,7 +1350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model. A model is a collection of model versions. When you create a model, you must specify the model name and description.</p>
+     * <p>Creates a model, which is a collection of model versions. You must specify information such as the model name and description.</p>
      * 
      * @param request CreateModelRequest
      * @return CreateModelResponse
@@ -1336,7 +1363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a tag for a model.</p>
+     * <p>Creates labels for a model.</p>
      * 
      * @param request CreateModelLabelsRequest
      * @param headers map
@@ -1370,7 +1397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a tag for a model.</p>
+     * <p>Creates labels for a model.</p>
      * 
      * @param request CreateModelLabelsRequest
      * @return CreateModelLabelsResponse
@@ -1383,7 +1410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a new version for the specified model.</p>
+     * <p>Adds a new version to a specified model.</p>
      * 
      * @param request CreateModelVersionRequest
      * @param headers map
@@ -1481,7 +1508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a new version for the specified model.</p>
+     * <p>Adds a new version to a specified model.</p>
      * 
      * @param request CreateModelVersionRequest
      * @return CreateModelVersionResponse
@@ -1494,7 +1521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a tag for a model version.</p>
+     * <p>Creates labels for a model version.</p>
      * 
      * @param request CreateModelVersionLabelsRequest
      * @param headers map
@@ -1528,7 +1555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a tag for a model version.</p>
+     * <p>Creates labels for a model version.</p>
      * 
      * @param request CreateModelVersionLabelsRequest
      * @return CreateModelVersionLabelsResponse
@@ -1541,7 +1568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go order for DataWorks, OSS, PAI, or MaxCompute.</p>
+     * <p>Purchases products. This operation supports pay-as-you-go purchases of DataWorks, OSS, PAI, and MaxCompute.</p>
      * 
      * @param request CreateProductOrdersRequest
      * @param headers map
@@ -1579,7 +1606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a pay-as-you-go order for DataWorks, OSS, PAI, or MaxCompute.</p>
+     * <p>Purchases products. This operation supports pay-as-you-go purchases of DataWorks, OSS, PAI, and MaxCompute.</p>
      * 
      * @param request CreateProductOrdersRequest
      * @return CreateProductOrdersResponse
@@ -1592,7 +1619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a run. A run is an experiment that can be associated with a specific workload or simply a code execution.</p>
+     * <p>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</p>
      * 
      * @param request CreateRunRequest
      * @param headers map
@@ -1646,7 +1673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a run. A run is an experiment that can be associated with a specific workload or simply a code execution.</p>
+     * <p>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</p>
      * 
      * @param request CreateRunRequest
      * @return CreateRunResponse
@@ -1722,7 +1749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates resources with a workspace.</p>
+     * <p>Add a resource reference to a workspace.</p>
      * 
      * @param request CreateWorkspaceResourceRequest
      * @param headers map
@@ -1760,7 +1787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates resources with a workspace.</p>
+     * <p>Add a resource reference to a workspace.</p>
      * 
      * @param request CreateWorkspaceResourceRequest
      * @return CreateWorkspaceResourceResponse
@@ -1773,7 +1800,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a code source based on the provided ID.</p>
+     * <p>Creates a workspace role.</p>
+     * 
+     * @param request CreateWorkspaceRoleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkspaceRoleResponse
+     */
+    public CreateWorkspaceRoleResponse createWorkspaceRoleWithOptions(String WorkspaceId, CreateWorkspaceRoleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modulePermissions)) {
+            body.put("ModulePermissions", request.modulePermissions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            body.put("RoleName", request.roleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
+            body.put("RoleType", request.roleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkspaceRole"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/roles"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkspaceRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a workspace role.</p>
+     * 
+     * @param request CreateWorkspaceRoleRequest
+     * @return CreateWorkspaceRoleResponse
+     */
+    public CreateWorkspaceRoleResponse createWorkspaceRole(String WorkspaceId, CreateWorkspaceRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWorkspaceRoleWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a code source configuration by its ID.</p>
      * 
      * @param request DeleteCodeSourceRequest
      * @param headers map
@@ -1801,7 +1883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a code source based on the provided ID.</p>
+     * <p>Deletes a code source configuration by its ID.</p>
      * 
      * @param request DeleteCodeSourceRequest
      * @return DeleteCodeSourceResponse
@@ -1814,7 +1896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes workspace configurations.</p>
+     * <p>Deletes a workspace configuration.</p>
      * 
      * @param request DeleteConfigRequest
      * @param headers map
@@ -1852,7 +1934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes workspace configurations.</p>
+     * <p>Deletes a workspace configuration.</p>
      * 
      * @param request DeleteConfigRequest
      * @return DeleteConfigResponse
@@ -1947,7 +2029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the metadata records of multiple files in a dataset at a time.</p>
+     * <p>Deletes file metadata records from a dataset in batches.</p>
      * 
      * @param request DeleteDatasetFileMetasRequest
      * @param headers map
@@ -1989,7 +2071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the metadata records of multiple files in a dataset at a time.</p>
+     * <p>Deletes file metadata records from a dataset in batches.</p>
      * 
      * @param request DeleteDatasetFileMetasRequest
      * @return DeleteDatasetFileMetasResponse
@@ -2002,7 +2084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dataset job.</p>
+     * <p>Deletes a dataset Job.</p>
      * 
      * @param request DeleteDatasetJobRequest
      * @param headers map
@@ -2030,7 +2112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dataset job.</p>
+     * <p>Deletes a dataset Job.</p>
      * 
      * @param request DeleteDatasetJobRequest
      * @return DeleteDatasetJobResponse
@@ -2043,7 +2125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a job configuration for a dataset.</p>
+     * <p>Deletes a dataset job configuration.</p>
      * 
      * @param request DeleteDatasetJobConfigRequest
      * @param headers map
@@ -2077,7 +2159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a job configuration for a dataset.</p>
+     * <p>Deletes a dataset job configuration.</p>
      * 
      * @param request DeleteDatasetJobConfigRequest
      * @return DeleteDatasetJobConfigResponse
@@ -2090,7 +2172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dataset tag.</p>
+     * <p>Deletes labels from a dataset.</p>
      * 
      * @param request DeleteDatasetLabelsRequest
      * @param headers map
@@ -2124,7 +2206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dataset tag.</p>
+     * <p>Deletes labels from a dataset.</p>
      * 
      * @param request DeleteDatasetLabelsRequest
      * @return DeleteDatasetLabelsResponse
@@ -2137,7 +2219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the information about a specified version of a dataset. Version v1 cannot be deleted by using this operation. When you call the DeleteDataset operation to delete a dataset, it can be deleted at the same time.</p>
+     * <p>Deletes a specified version of a dataset. This operation cannot be used to delete version v1. Version v1 is deleted with the dataset when you call the DeleteDataset operation.</p>
      * 
      * @param request DeleteDatasetVersionRequest
      * @param headers map
@@ -2165,7 +2247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the information about a specified version of a dataset. Version v1 cannot be deleted by using this operation. When you call the DeleteDataset operation to delete a dataset, it can be deleted at the same time.</p>
+     * <p>Deletes a specified version of a dataset. This operation cannot be used to delete version v1. Version v1 is deleted with the dataset when you call the DeleteDataset operation.</p>
      * 
      * @param request DeleteDatasetVersionRequest
      * @return DeleteDatasetVersionResponse
@@ -2178,7 +2260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes tags for a dataset version.</p>
+     * <p>Deletes labels from a dataset version.</p>
      * 
      * @param request DeleteDatasetVersionLabelsRequest
      * @param headers map
@@ -2212,7 +2294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes tags for a dataset version.</p>
+     * <p>Deletes labels from a dataset version.</p>
      * 
      * @param request DeleteDatasetVersionLabelsRequest
      * @return DeleteDatasetVersionLabelsResponse
@@ -2266,7 +2348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an experiment tag.</p>
+     * <p>Deletes a label from an experiment.</p>
      * 
      * @param request DeleteExperimentLabelRequest
      * @param headers map
@@ -2294,7 +2376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an experiment tag.</p>
+     * <p>Deletes a label from an experiment.</p>
      * 
      * @param request DeleteExperimentLabelRequest
      * @return DeleteExperimentLabelResponse
@@ -2307,7 +2389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a member from a workspace.</p>
+     * <p>Deletes members from a workspace.</p>
      * 
      * @param request DeleteMembersRequest
      * @param headers map
@@ -2341,7 +2423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a member from a workspace.</p>
+     * <p>Deletes members from a workspace.</p>
      * 
      * @param request DeleteMembersRequest
      * @return DeleteMembersResponse
@@ -2395,7 +2477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the labels of a model.</p>
+     * <p>Deletes model labels.</p>
      * 
      * @param request DeleteModelLabelsRequest
      * @param headers map
@@ -2429,7 +2511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the labels of a model.</p>
+     * <p>Deletes model labels.</p>
      * 
      * @param request DeleteModelLabelsRequest
      * @return DeleteModelLabelsResponse
@@ -2483,7 +2565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a model version tag.</p>
+     * <p>Deletes labels from a model version.</p>
      * 
      * @param request DeleteModelVersionLabelsRequest
      * @param headers map
@@ -2517,7 +2599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a model version tag.</p>
+     * <p>Deletes labels from a model version.</p>
      * 
      * @param request DeleteModelVersionLabelsRequest
      * @return DeleteModelVersionLabelsResponse
@@ -2571,7 +2653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a tag that is added to a run.</p>
+     * <p>Deletes a label from a run.</p>
      * 
      * @param request DeleteRunLabelRequest
      * @param headers map
@@ -2599,7 +2681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a tag that is added to a run.</p>
+     * <p>Deletes a label from a run.</p>
      * 
      * @param request DeleteRunLabelRequest
      * @return DeleteRunLabelResponse
@@ -2612,7 +2694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes user configurations.</p>
+     * <p>Deletes a user configuration.</p>
      * 
      * @param request DeleteUserConfigRequest
      * @param headers map
@@ -2650,7 +2732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes user configurations.</p>
+     * <p>Deletes a user configuration.</p>
      * 
      * @param request DeleteUserConfigRequest
      * @return DeleteUserConfigResponse
@@ -2663,7 +2745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a workspace. After you delete a workspace, the associated resources are not automatically released. You must manually release the resources.</p>
+     * <p>Deletes a workspace. This operation does not release associated resources. You must release them manually.</p>
      * 
      * @param request DeleteWorkspaceRequest
      * @param headers map
@@ -2691,7 +2773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a workspace. After you delete a workspace, the associated resources are not automatically released. You must manually release the resources.</p>
+     * <p>Deletes a workspace. This operation does not release associated resources. You must release them manually.</p>
      * 
      * @param request DeleteWorkspaceRequest
      * @return DeleteWorkspaceResponse
@@ -2704,7 +2786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a resource from a workspace. The resource is not deleted at the underlying layer.</p>
+     * <p>Detaches a resource from a workspace. This operation does not delete the underlying resource.</p>
      * 
      * @param request DeleteWorkspaceResourceRequest
      * @param headers map
@@ -2758,7 +2840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a resource from a workspace. The resource is not deleted at the underlying layer.</p>
+     * <p>Detaches a resource from a workspace. This operation does not delete the underlying resource.</p>
      * 
      * @param request DeleteWorkspaceResourceRequest
      * @return DeleteWorkspaceResourceResponse
@@ -2771,7 +2853,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a code source.</p>
+     * <p>Deletes one or more roles from a workspace.</p>
+     * 
+     * @param request DeleteWorkspaceRolesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkspaceRolesResponse
+     */
+    public DeleteWorkspaceRolesResponse deleteWorkspaceRolesWithOptions(String WorkspaceId, DeleteWorkspaceRolesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roleIds)) {
+            body.put("RoleIds", request.roleIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWorkspaceRoles"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/roles/action/delete"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkspaceRolesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes one or more roles from a workspace.</p>
+     * 
+     * @param request DeleteWorkspaceRolesRequest
+     * @return DeleteWorkspaceRolesResponse
+     */
+    public DeleteWorkspaceRolesResponse deleteWorkspaceRoles(String WorkspaceId, DeleteWorkspaceRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWorkspaceRolesWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Gets the details of a specified code source configuration.</p>
      * 
      * @param request GetCodeSourceRequest
      * @param headers map
@@ -2799,7 +2928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a code source.</p>
+     * <p>Gets the details of a specified code source configuration.</p>
      * 
      * @param request GetCodeSourceRequest
      * @return GetCodeSourceResponse
@@ -2812,7 +2941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a workspace configuration item.</p>
+     * <p>Retrieves the configurations of a workspace.</p>
      * 
      * @param request GetConfigRequest
      * @param headers map
@@ -2854,7 +2983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a workspace configuration item.</p>
+     * <p>Retrieves the configurations of a workspace.</p>
      * 
      * @param request GetConfigRequest
      * @return GetConfigResponse
@@ -2867,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the connection details.</p>
+     * <p>Retrieves the details of a connection.</p>
      * 
      * @param request GetConnectionRequest
      * @param headers map
@@ -2901,7 +3030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the connection details.</p>
+     * <p>Retrieves the details of a connection.</p>
      * 
      * @param request GetConnectionRequest
      * @return GetConnectionResponse
@@ -2914,7 +3043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a dataset.</p>
+     * <p>Retrieves a dataset.</p>
      * 
      * @param request GetDatasetRequest
      * @param headers map
@@ -2942,7 +3071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a dataset.</p>
+     * <p>Retrieves a dataset.</p>
      * 
      * @param request GetDatasetRequest
      * @return GetDatasetResponse
@@ -2955,7 +3084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata records of specific files in a dataset.</p>
+     * <p>Retrieves the metadata record of a specified file in a dataset.</p>
      * 
      * @param request GetDatasetFileMetaRequest
      * @param headers map
@@ -2993,7 +3122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata records of specific files in a dataset.</p>
+     * <p>Retrieves the metadata record of a specified file in a dataset.</p>
      * 
      * @param request GetDatasetFileMetaRequest
      * @return GetDatasetFileMetaResponse
@@ -3006,7 +3135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains metadata statistics of a dataset.</p>
+     * <p>Retrieves statistics for metadata in a dataset.</p>
      * 
      * @param request GetDatasetFileMetasStatisticsRequest
      * @param headers map
@@ -3052,7 +3181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains metadata statistics of a dataset.</p>
+     * <p>Retrieves statistics for metadata in a dataset.</p>
      * 
      * @param request GetDatasetFileMetasStatisticsRequest
      * @return GetDatasetFileMetasStatisticsResponse
@@ -3065,7 +3194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a dataset job.</p>
+     * <p>Retrieves a dataset job.</p>
      * 
      * @param request GetDatasetJobRequest
      * @param headers map
@@ -3103,7 +3232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a dataset job.</p>
+     * <p>Retrieves a dataset job.</p>
      * 
      * @param request GetDatasetJobRequest
      * @return GetDatasetJobResponse
@@ -3116,7 +3245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a job configuration for a dataset.</p>
+     * <p>Retrieves the configuration of a dataset job.</p>
      * 
      * @param request GetDatasetJobConfigRequest
      * @param headers map
@@ -3150,7 +3279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a job configuration for a dataset.</p>
+     * <p>Retrieves the configuration of a dataset job.</p>
      * 
      * @param request GetDatasetJobConfigRequest
      * @return GetDatasetJobConfigResponse
@@ -3163,7 +3292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about a specified version of a dataset.</p>
+     * <p>Retrieves information about a specific dataset version.</p>
      * 
      * @param request GetDatasetVersionRequest
      * @param headers map
@@ -3191,7 +3320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about a specified version of a dataset.</p>
+     * <p>Retrieves information about a specific dataset version.</p>
      * 
      * @param request GetDatasetVersionRequest
      * @return GetDatasetVersionResponse
@@ -3204,7 +3333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the default workspace.</p>
+     * <p>Retrieves the details of the default workspace.</p>
      * 
      * @param request GetDefaultWorkspaceRequest
      * @param headers map
@@ -3238,7 +3367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the default workspace.</p>
+     * <p>Retrieves the details of the default workspace.</p>
      * 
      * @param request GetDefaultWorkspaceRequest
      * @return GetDefaultWorkspaceResponse
@@ -3251,7 +3380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains an experiment.</p>
+     * <p>Retrieves an experiment.</p>
      * 
      * @param request GetExperimentRequest
      * @param headers map
@@ -3285,7 +3414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains an experiment.</p>
+     * <p>Retrieves an experiment.</p>
      * 
      * @param request GetExperimentRequest
      * @return GetExperimentResponse
@@ -3298,7 +3427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about an image.</p>
+     * <p>Retrieves the details of an image.</p>
      * 
      * @param request GetImageRequest
      * @param headers map
@@ -3332,7 +3461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about an image.</p>
+     * <p>Retrieves the details of an image.</p>
      * 
      * @param request GetImageRequest
      * @return GetImageResponse
@@ -3345,7 +3474,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a member in a workspace.</p>
+     * <p>Gets the details of a job.</p>
+     * 
+     * @param request GetInstanceJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceJobResponse
+     */
+    public GetInstanceJobResponse getInstanceJobWithOptions(String InstanceJobId, GetInstanceJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceJob"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instancejobs/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceJobId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Gets the details of a job.</p>
+     * 
+     * @param request GetInstanceJobRequest
+     * @return GetInstanceJobResponse
+     */
+    public GetInstanceJobResponse getInstanceJob(String InstanceJobId, GetInstanceJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getInstanceJobWithOptions(InstanceJobId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a member of a workspace.</p>
      * 
      * @param request GetMemberRequest
      * @param headers map
@@ -3383,7 +3553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a member in a workspace.</p>
+     * <p>Retrieves a member of a workspace.</p>
      * 
      * @param request GetMemberRequest
      * @return GetMemberResponse
@@ -3396,7 +3566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a specified model.</p>
+     * <p>Gets the details of a specified model.</p>
      * 
      * @param request GetModelRequest
      * @param headers map
@@ -3424,7 +3594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a specified model.</p>
+     * <p>Gets the details of a specified model.</p>
      * 
      * @param request GetModelRequest
      * @return GetModelResponse
@@ -3437,7 +3607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a model version.</p>
+     * <p>Retrieves a model version.</p>
      * 
      * @param request GetModelVersionRequest
      * @param headers map
@@ -3465,7 +3635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a model version.</p>
+     * <p>Retrieves a model version.</p>
      * 
      * @param request GetModelVersionRequest
      * @return GetModelVersionResponse
@@ -3478,7 +3648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains permissions on a workspace.</p>
+     * <p>Retrieves the permissions of a workspace.</p>
      * 
      * @param tmpReq GetPermissionRequest
      * @param headers map
@@ -3546,7 +3716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains permissions on a workspace.</p>
+     * <p>Retrieves the permissions of a workspace.</p>
      * 
      * @param request GetPermissionRequest
      * @return GetPermissionResponse
@@ -3559,7 +3729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the run information.</p>
+     * <p>Retrieves run details.</p>
      * 
      * @param request GetRunRequest
      * @param headers map
@@ -3593,7 +3763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the run information.</p>
+     * <p>Retrieves run details.</p>
      * 
      * @param request GetRunRequest
      * @return GetRunResponse
@@ -3606,7 +3776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a workspace.</p>
+     * <p>Retrieves the details of a workspace.</p>
      * 
      * @param request GetWorkspaceRequest
      * @param headers map
@@ -3640,7 +3810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a workspace.</p>
+     * <p>Retrieves the details of a workspace.</p>
      * 
      * @param request GetWorkspaceRequest
      * @return GetWorkspaceResponse
@@ -3653,7 +3823,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists code sources. Pagination, sorting, and filtering by condition are supported.</p>
+     * <p>Gets information about a specific role within a workspace.</p>
+     * 
+     * @param request GetWorkspaceRoleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceRoleResponse
+     */
+    public GetWorkspaceRoleResponse getWorkspaceRoleWithOptions(String WorkspaceId, String RoleId, GetWorkspaceRoleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspaceRole"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/roles/" + com.aliyun.openapiutil.Client.getEncodeParam(RoleId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Gets information about a specific role within a workspace.</p>
+     * 
+     * @param request GetWorkspaceRoleRequest
+     * @return GetWorkspaceRoleResponse
+     */
+    public GetWorkspaceRoleResponse getWorkspaceRole(String WorkspaceId, String RoleId, GetWorkspaceRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkspaceRoleWithOptions(WorkspaceId, RoleId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of code source configurations with support for paging, sorting, and filtering.</p>
      * 
      * @param request ListCodeSourcesRequest
      * @param headers map
@@ -3707,7 +3918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists code sources. Pagination, sorting, and filtering by condition are supported.</p>
+     * <p>Queries a list of code source configurations with support for paging, sorting, and filtering.</p>
      * 
      * @param request ListCodeSourcesRequest
      * @return ListCodeSourcesResponse
@@ -3720,7 +3931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of workspace configurations.</p>
+     * <p>Lists the configurations for a workspace.</p>
      * 
      * @param request ListConfigsRequest
      * @param headers map
@@ -3766,7 +3977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of workspace configurations.</p>
+     * <p>Lists the configurations for a workspace.</p>
      * 
      * @param request ListConfigsRequest
      * @return ListConfigsResponse
@@ -3779,7 +3990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists connections.</p>
+     * <p>Queries a list of connections.</p>
      * 
      * @param tmpReq ListConnectionsRequest
      * @param headers map
@@ -3879,7 +4090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists connections.</p>
+     * <p>Queries a list of connections.</p>
      * 
      * @param request ListConnectionsRequest
      * @return ListConnectionsResponse
@@ -3892,7 +4103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of dataset files.</p>
+     * <p>Queries the files in a dataset.</p>
      * 
      * @param tmpReq ListDatasetFileMetasRequest
      * @param headers map
@@ -4060,7 +4271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of dataset files.</p>
+     * <p>Queries the files in a dataset.</p>
      * 
      * @param request ListDatasetFileMetasRequest
      * @return ListDatasetFileMetasResponse
@@ -4073,7 +4284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the dataset job configurations at a time.</p>
+     * <p>Lists dataset job configurations in batches.</p>
      * 
      * @param request ListDatasetJobConfigsRequest
      * @param headers map
@@ -4123,7 +4334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the dataset job configurations at a time.</p>
+     * <p>Lists dataset job configurations in batches.</p>
      * 
      * @param request ListDatasetJobConfigsRequest
      * @return ListDatasetJobConfigsResponse
@@ -4136,7 +4347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists jobs in a dataset.</p>
+     * <p>Lists dataset jobs.</p>
      * 
      * @param request ListDatasetJobsRequest
      * @param headers map
@@ -4202,7 +4413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists jobs in a dataset.</p>
+     * <p>Lists dataset jobs.</p>
      * 
      * @param request ListDatasetJobsRequest
      * @return ListDatasetJobsResponse
@@ -4215,7 +4426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists dataset versions.</p>
+     * <p>Retrieves a list of dataset versions.</p>
      * 
      * @param request ListDatasetVersionsRequest
      * @param headers map
@@ -4281,7 +4492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists dataset versions.</p>
+     * <p>Retrieves a list of dataset versions.</p>
      * 
      * @param request ListDatasetVersionsRequest
      * @return ListDatasetVersionsResponse
@@ -4409,7 +4620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists experiments.</p>
+     * <p>Retrieves a list of experiments.</p>
      * 
      * @param tmpReq ListExperimentRequest
      * @param headers map
@@ -4493,7 +4704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists experiments.</p>
+     * <p>Retrieves a list of experiments.</p>
      * 
      * @param request ListExperimentRequest
      * @return ListExperimentResponse
@@ -4506,7 +4717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of features.</p>
+     * <p>Retrieves a list of features.</p>
      * 
      * @param request ListFeaturesRequest
      * @param headers map
@@ -4540,7 +4751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of features.</p>
+     * <p>Retrieves a list of features.</p>
      * 
      * @param request ListFeaturesRequest
      * @return ListFeaturesResponse
@@ -4553,7 +4764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all tags of an image.</p>
+     * <p>Queries a list of image labels.</p>
      * 
      * @param request ListImageLabelsRequest
      * @param headers map
@@ -4603,7 +4814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all tags of an image.</p>
+     * <p>Queries a list of image labels.</p>
      * 
      * @param request ListImageLabelsRequest
      * @return ListImageLabelsResponse
@@ -4703,7 +4914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the members in a workspace.</p>
+     * <p>Lists members in a workspace.</p>
      * 
      * @param request ListMembersRequest
      * @param headers map
@@ -4753,7 +4964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the members in a workspace.</p>
+     * <p>Lists members in a workspace.</p>
      * 
      * @param request ListMembersRequest
      * @return ListMembersResponse
@@ -4766,7 +4977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of model versions.</p>
+     * <p>Retrieves a list of model versions.</p>
      * 
      * @param request ListModelVersionsRequest
      * @param headers map
@@ -4840,7 +5051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of model versions.</p>
+     * <p>Retrieves a list of model versions.</p>
      * 
      * @param request ListModelVersionsRequest
      * @return ListModelVersionsResponse
@@ -4853,7 +5064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of models.</p>
+     * <p>Retrieves a list of models.</p>
      * 
      * @param tmpReq ListModelsRequest
      * @param headers map
@@ -4957,7 +5168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of models.</p>
+     * <p>Retrieves a list of models.</p>
      * 
      * @param request ListModelsRequest
      * @return ListModelsResponse
@@ -4970,7 +5181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the permissions that a user has in a workspace.</p>
+     * <p>Retrieves a list of user permissions in a workspace.</p>
      * 
      * @param request ListPermissionsRequest
      * @param headers map
@@ -4998,7 +5209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the permissions that a user has in a workspace.</p>
+     * <p>Retrieves a list of user permissions in a workspace.</p>
      * 
      * @param request ListPermissionsRequest
      * @return ListPermissionsResponse
@@ -5011,7 +5222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举产品</p>
+     * <p>Lists products.</p>
      * 
      * @param request ListProductsRequest
      * @param headers map
@@ -5053,7 +5264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举产品</p>
+     * <p>Lists products.</p>
      * 
      * @param request ListProductsRequest
      * @return ListProductsResponse
@@ -5066,7 +5277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the list of quotas.</p>
+     * <p>Retrieves a list of resource quotas.</p>
      * 
      * @param request ListQuotasRequest
      * @param headers map
@@ -5100,7 +5311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the list of quotas.</p>
+     * <p>Retrieves a list of resource quotas.</p>
      * 
      * @param request ListQuotasRequest
      * @return ListQuotasResponse
@@ -5113,7 +5324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resources that are associated with a workspace.</p>
+     * <p>Lists resources associated with a workspace.</p>
      * 
      * @param request ListResourcesRequest
      * @param headers map
@@ -5191,7 +5402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resources that are associated with a workspace.</p>
+     * <p>Lists resources associated with a workspace.</p>
      * 
      * @param request ListResourcesRequest
      * @return ListResourcesResponse
@@ -5204,7 +5415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the metrics for a run.</p>
+     * <p>Retrieves a list of metric records for a run.</p>
      * 
      * @param request ListRunMetricsRequest
      * @param headers map
@@ -5246,7 +5457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the metrics for a run.</p>
+     * <p>Retrieves a list of metric records for a run.</p>
      * 
      * @param request ListRunMetricsRequest
      * @return ListRunMetricsResponse
@@ -5259,7 +5470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of runs.</p>
+     * <p>Retrieves a list of runs.</p>
      * 
      * @param request ListRunsRequest
      * @param headers map
@@ -5349,7 +5560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of runs.</p>
+     * <p>Retrieves a list of runs.</p>
      * 
      * @param request ListRunsRequest
      * @return ListRunsResponse
@@ -5362,7 +5573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries user information.</p>
+     * <p>Retrieves user configurations.</p>
      * 
      * @param request ListUserConfigsRequest
      * @param headers map
@@ -5400,7 +5611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries user information.</p>
+     * <p>Retrieves user configurations.</p>
      * 
      * @param request ListUserConfigsRequest
      * @return ListUserConfigsResponse
@@ -5413,7 +5624,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the users who do not belong to a workspace. These users can be added to the workspace as members.</p>
+     * <p>Lists the roles in a specified workspace.</p>
+     * 
+     * @param request ListWorkspaceRolesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWorkspaceRolesResponse
+     */
+    public ListWorkspaceRolesResponse listWorkspaceRolesWithOptions(String WorkspaceId, ListWorkspaceRolesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleIds)) {
+            query.put("RoleIds", request.roleIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            query.put("RoleName", request.roleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
+            query.put("RoleType", request.roleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verboseFields)) {
+            query.put("VerboseFields", request.verboseFields);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWorkspaceRoles"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/roles"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkspaceRolesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the roles in a specified workspace.</p>
+     * 
+     * @param request ListWorkspaceRolesRequest
+     * @return ListWorkspaceRolesResponse
+     */
+    public ListWorkspaceRolesResponse listWorkspaceRoles(String WorkspaceId, ListWorkspaceRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWorkspaceRolesWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists users that can be added as members to a workspace.</p>
      * 
      * @param request ListWorkspaceUsersRequest
      * @param headers map
@@ -5451,7 +5741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the users who do not belong to a workspace. These users can be added to the workspace as members.</p>
+     * <p>Lists users that can be added as members to a workspace.</p>
      * 
      * @param request ListWorkspaceUsersRequest
      * @return ListWorkspaceUsersResponse
@@ -5464,10 +5754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use the option parameter to specify query options, so as to obtain different information about the workspaces.</p>
+     * <p>You can specify different query options by using the option parameter to retrieve different workspace-related information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all workspaces in a region.</p>
+     * <p>Retrieves the list of workspaces in a specified region.</p>
      * 
      * @param request ListWorkspacesRequest
      * @param headers map
@@ -5549,10 +5839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use the option parameter to specify query options, so as to obtain different information about the workspaces.</p>
+     * <p>You can specify different query options by using the option parameter to retrieve different workspace-related information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all workspaces in a region.</p>
+     * <p>Retrieves the list of workspaces in a specified region.</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -5565,7 +5855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Logs multiple metrics for a run at a time.</p>
+     * <p>Records the metrics of a run in a batch.</p>
      * 
      * @param request LogRunMetricsRequest
      * @param headers map
@@ -5599,7 +5889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Logs multiple metrics for a run at a time.</p>
+     * <p>Records the metrics of a run in a batch.</p>
      * 
      * @param request LogRunMetricsRequest
      * @return LogRunMetricsResponse
@@ -5612,7 +5902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a private code source to a workspace to make the code source publicly accessible.</p>
+     * <p>Publishes a private code source, making it public in a workspace.</p>
      * 
      * @param request PublishCodeSourceRequest
      * @param headers map
@@ -5640,7 +5930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a private code source to a workspace to make the code source publicly accessible.</p>
+     * <p>Publishes a private code source, making it public in a workspace.</p>
      * 
      * @param request PublishCodeSourceRequest
      * @return PublishCodeSourceResponse
@@ -5694,7 +5984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes an image. After the image is published, the visibility of the image is changed from PRIVATE to PUBLIC.</p>
+     * <p>Publishes an image and changes its visibility from PRIVATE to PUBLIC.</p>
      * 
      * @param request PublishImageRequest
      * @param headers map
@@ -5722,7 +6012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes an image. After the image is published, the visibility of the image is changed from PRIVATE to PUBLIC.</p>
+     * <p>Publishes an image and changes its visibility from PRIVATE to PUBLIC.</p>
      * 
      * @param request PublishImageRequest
      * @return PublishImageResponse
@@ -5735,7 +6025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes an image.</p>
+     * <p>Deletes an image.</p>
      * 
      * @param request RemoveImageRequest
      * @param headers map
@@ -5763,7 +6053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes an image.</p>
+     * <p>Deletes an image.</p>
      * 
      * @param request RemoveImageRequest
      * @return RemoveImageResponse
@@ -5776,7 +6066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes an image tag.</p>
+     * <p>Removes a label from an image.</p>
      * 
      * @param request RemoveImageLabelsRequest
      * @param headers map
@@ -5804,7 +6094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes an image tag.</p>
+     * <p>Removes a label from an image.</p>
      * 
      * @param request RemoveImageLabelsRequest
      * @return RemoveImageLabelsResponse
@@ -5817,7 +6107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a member role.</p>
+     * <p>Removes a role from a member.</p>
      * 
      * @param request RemoveMemberRoleRequest
      * @param headers map
@@ -5845,7 +6135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a member role.</p>
+     * <p>Removes a role from a member.</p>
      * 
      * @param request RemoveMemberRoleRequest
      * @return RemoveMemberRoleResponse
@@ -5858,7 +6148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a experiment tag.</p>
+     * <p>Updates the labels of an experiment.</p>
      * 
      * @param request SetExperimentLabelsRequest
      * @param headers map
@@ -5892,7 +6182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a experiment tag.</p>
+     * <p>Updates the labels of an experiment.</p>
      * 
      * @param request SetExperimentLabelsRequest
      * @return SetExperimentLabelsResponse
@@ -5905,7 +6195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the user configurations.</p>
+     * <p>Updates user configurations.</p>
      * 
      * @param request SetUserConfigsRequest
      * @param headers map
@@ -5939,7 +6229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the user configurations.</p>
+     * <p>Updates user configurations.</p>
      * 
      * @param request SetUserConfigsRequest
      * @return SetUserConfigsResponse
@@ -5952,7 +6242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a dataset job.</p>
+     * <p>Stops a dataset Job.</p>
      * 
      * @param request StopDatasetJobRequest
      * @param headers map
@@ -5990,7 +6280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a dataset job.</p>
+     * <p>Stops a dataset Job.</p>
      * 
      * @param request StopDatasetJobRequest
      * @return StopDatasetJobResponse
@@ -6003,7 +6293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a code build.</p>
+     * <p>Updates a code source.</p>
      * 
      * @param request UpdateCodeSourceRequest
      * @param headers map
@@ -6069,7 +6359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a code build.</p>
+     * <p>Updates a code source.</p>
      * 
      * @param request UpdateCodeSourceRequest
      * @return UpdateCodeSourceResponse
@@ -6082,7 +6372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates or adds a workspace configuration item.</p>
+     * <p>Updates or creates workspace configurations.</p>
      * 
      * @param request UpdateConfigRequest
      * @param headers map
@@ -6128,7 +6418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates or adds a workspace configuration item.</p>
+     * <p>Updates or creates workspace configurations.</p>
      * 
      * @param request UpdateConfigRequest
      * @return UpdateConfigResponse
@@ -6141,7 +6431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates or adds workspace configurations in batches.</p>
+     * <p>Updates or creates workspace configurations in batches.</p>
      * 
      * @param request UpdateConfigsRequest
      * @param headers map
@@ -6175,7 +6465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates or adds workspace configurations in batches.</p>
+     * <p>Updates or creates workspace configurations in batches.</p>
      * 
      * @param request UpdateConfigsRequest
      * @return UpdateConfigsResponse
@@ -6188,7 +6478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a connection.</p>
+     * <p>Updates a connection configuration.</p>
      * 
      * @param request UpdateConnectionRequest
      * @param headers map
@@ -6234,7 +6524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a connection.</p>
+     * <p>Updates a connection configuration.</p>
      * 
      * @param request UpdateConnectionRequest
      * @return UpdateConnectionResponse
@@ -6247,7 +6537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and other information about a dataset.</p>
+     * <p>Updates the properties of a dataset, such as its name and description.</p>
      * 
      * @param request UpdateDatasetRequest
      * @param headers map
@@ -6309,7 +6599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and other information about a dataset.</p>
+     * <p>Updates the properties of a dataset, such as its name and description.</p>
      * 
      * @param request UpdateDatasetRequest
      * @return UpdateDatasetResponse
@@ -6322,7 +6612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the metadata records of multiple files in a dataset at a time.</p>
+     * <p>Updates multiple file metadata records in a dataset.</p>
      * 
      * @param request UpdateDatasetFileMetasRequest
      * @param headers map
@@ -6368,7 +6658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the metadata records of multiple files in a dataset at a time.</p>
+     * <p>Updates multiple file metadata records in a dataset.</p>
      * 
      * @param request UpdateDatasetFileMetasRequest
      * @return UpdateDatasetFileMetasResponse
@@ -6436,7 +6726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job configuration for a dataset.</p>
+     * <p>Updates a dataset job configuration.</p>
      * 
      * @param request UpdateDatasetJobConfigRequest
      * @param headers map
@@ -6478,7 +6768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a job configuration for a dataset.</p>
+     * <p>Updates a dataset job configuration.</p>
      * 
      * @param request UpdateDatasetJobConfigRequest
      * @return UpdateDatasetJobConfigResponse
@@ -6491,7 +6781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a specified version of a dataset.</p>
+     * <p>Updates the information for a specific version of a dataset.</p>
      * 
      * @param request UpdateDatasetVersionRequest
      * @param headers map
@@ -6537,7 +6827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a specified version of a dataset.</p>
+     * <p>Updates the information for a specific version of a dataset.</p>
      * 
      * @param request UpdateDatasetVersionRequest
      * @return UpdateDatasetVersionResponse
@@ -6550,7 +6840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies a workspace as the default workspace.</p>
+     * <p>Sets a workspace as the default.</p>
      * 
      * @param request UpdateDefaultWorkspaceRequest
      * @param headers map
@@ -6584,7 +6874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies a workspace as the default workspace.</p>
+     * <p>Sets a workspace as the default.</p>
      * 
      * @param request UpdateDefaultWorkspaceRequest
      * @return UpdateDefaultWorkspaceResponse
@@ -6648,7 +6938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the basic configuration information about a model.</p>
+     * <p>Updates the basic configuration of a model.</p>
      * 
      * @param request UpdateModelRequest
      * @param headers map
@@ -6722,7 +7012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the basic configuration information about a model.</p>
+     * <p>Updates the basic configuration of a model.</p>
      * 
      * @param request UpdateModelRequest
      * @return UpdateModelResponse
@@ -6826,7 +7116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the run information.</p>
+     * <p>Updates the details of a run.</p>
      * 
      * @param request UpdateRunRequest
      * @param headers map
@@ -6868,7 +7158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the run information.</p>
+     * <p>Updates the details of a run.</p>
      * 
      * @param request UpdateRunRequest
      * @return UpdateRunResponse
@@ -6932,7 +7222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the resources of a workspace.</p>
+     * <p>Updates resources in a workspace.</p>
      * 
      * @param request UpdateWorkspaceResourceRequest
      * @param headers map
@@ -6990,7 +7280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the resources of a workspace.</p>
+     * <p>Updates resources in a workspace.</p>
      * 
      * @param request UpdateWorkspaceResourceRequest
      * @return UpdateWorkspaceResourceResponse
@@ -7003,7 +7293,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证连接</p>
+     * <p>Updates a role in a workspace.</p>
+     * 
+     * @param request UpdateWorkspaceRoleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWorkspaceRoleResponse
+     */
+    public UpdateWorkspaceRoleResponse updateWorkspaceRoleWithOptions(String WorkspaceId, String RoleId, UpdateWorkspaceRoleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modulePermissions)) {
+            body.put("ModulePermissions", request.modulePermissions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            body.put("RoleName", request.roleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWorkspaceRole"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/roles/" + com.aliyun.openapiutil.Client.getEncodeParam(RoleId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkspaceRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a role in a workspace.</p>
+     * 
+     * @param request UpdateWorkspaceRoleRequest
+     * @return UpdateWorkspaceRoleResponse
+     */
+    public UpdateWorkspaceRoleResponse updateWorkspaceRole(String WorkspaceId, String RoleId, UpdateWorkspaceRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWorkspaceRoleWithOptions(WorkspaceId, RoleId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Validates a connection.</p>
      * 
      * @param request ValidateConnectionRequest
      * @param headers map
@@ -7057,7 +7398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证连接</p>
+     * <p>Validates a connection.</p>
      * 
      * @param request ValidateConnectionRequest
      * @return ValidateConnectionResponse

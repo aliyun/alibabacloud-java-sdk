@@ -7,8 +7,10 @@ public class UpdateModelRequest extends TeaModel {
     /**
      * <p>The visibility of the model in the workspace. Valid values:</p>
      * <ul>
-     * <li>PRIVATE: The model is visible only to you and the administrator of the workspace.</li>
-     * <li>PUBLIC: The model is visible to all users in the workspace.</li>
+     * <li><p>PRIVATE: The model is visible only to you and administrators in the workspace.</p>
+     * </li>
+     * <li><p>PUBLIC: The model is visible to everyone in the workspace.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class UpdateModelRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The domain. This parameter describes the domain in which the model is applied. Valid values: nlp (natural language processing) and cv (computer vision).</p>
+     * <p>The domain of the model. This parameter specifies the field where the model is applied. Examples: nlp (natural language processing) and cv (computer vision).</p>
      * 
      * <strong>example:</strong>
      * <p>nlp</p>
@@ -45,12 +47,15 @@ public class UpdateModelRequest extends TeaModel {
 
     /**
      * <p>The model description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>News classification.</p>
      */
     @NameInMap("ModelDescription")
     public String modelDescription;
 
     /**
-     * <p>The documentation of the model.</p>
+     * <p>The model document.</p>
      * 
      * <strong>example:</strong>
      * <p>https://*.md</p>
@@ -59,13 +64,16 @@ public class UpdateModelRequest extends TeaModel {
     public String modelDoc;
 
     /**
-     * <p>The model name, which must be 1 to 127 characters in length.</p>
+     * <p>The name of the model. The name must be 1 to 127 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>News classification</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
-     * <p>The model type. Valid values: Checkpoint and LoRA.</p>
+     * <p>The model type, such as Checkpoint or LoRA.</p>
      * 
      * <strong>example:</strong>
      * <p>Checkpoint</p>
@@ -74,7 +82,7 @@ public class UpdateModelRequest extends TeaModel {
     public String modelType;
 
     /**
-     * <p>The sequence number of the model. This parameter can be used for custom sorting.</p>
+     * <p>The ordinal number of the model. You can use this parameter for custom sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -83,7 +91,7 @@ public class UpdateModelRequest extends TeaModel {
     public Long orderNumber;
 
     /**
-     * <p>The source of the model. This parameter describes the community or organization to which the source model belongs. Valid values: ModelScope and HuggingFace.</p>
+     * <p>The source of the model. This parameter describes the community or organization to which the source model belongs, such as ModelScope and HuggingFace.</p>
      * 
      * <strong>example:</strong>
      * <p>ModelScope</p>
@@ -91,11 +99,17 @@ public class UpdateModelRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    /**
+     * <p>The number of parameters, in millions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("ParameterSize")
     public Long parameterSize;
 
     /**
-     * <p>The task. This parameter specifies the specific issue that the model resolves. Example: text-classification.</p>
+     * <p>The task of the model. This parameter describes the specific problem that the model solves. For example, text-classification.</p>
      * 
      * <strong>example:</strong>
      * <p>text-classification</p>

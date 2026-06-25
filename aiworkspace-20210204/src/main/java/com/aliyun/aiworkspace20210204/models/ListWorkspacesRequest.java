@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
-     * <p>The list of returned fields of workspace details. Used to limit the fields in the returned results. Separate multiple fields with commas (,). Currently, only Id is supported, which is the workspace ID.</p>
+     * <p>The list of return fields for workspace details. This parameter limits the workspace properties returned in the result.
+     * Separate multiple properties with commas (,). Currently, only Id is supported, which represents the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>Id</p>
@@ -14,7 +15,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String fields;
 
     /**
-     * <p>The modules, separated by commas (,). Default value: PAI.</p>
+     * <p>The comma-separated list of modules. Default value: PAI.</p>
      * 
      * <strong>example:</strong>
      * <p>PAI</p>
@@ -23,10 +24,10 @@ public class ListWorkspacesRequest extends TeaModel {
     public String moduleList;
 
     /**
-     * <p>The query options. Valid values:</p>
+     * <p>The query option. Valid values:</p>
      * <ul>
-     * <li>GetWorkspaces (default): Obtains a list of Workspaces.</li>
-     * <li>GetResourceLimits: Obtains a list of ResourceLimits.</li>
+     * <li>GetWorkspaces (default): retrieves the workspace list. The Workspaces parameter is returned.</li>
+     * <li>GetResourceLimits: retrieves resource limits. The ResourceLimits parameter is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,9 +37,9 @@ public class ListWorkspacesRequest extends TeaModel {
     public String option;
 
     /**
-     * <p>The order of results (ascending or descending). Valid values:</p>
+     * <p>The sort order for the specified sort field in a paged query. Valid values:</p>
      * <ul>
-     * <li>ASC: ascending order. This is the default value.</li>
+     * <li>ASC (default): ascending order.</li>
      * <li>DESC: descending order.</li>
      * </ul>
      * 
@@ -49,7 +50,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number of the workspace list. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the workspace list. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,7 +59,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The number of entries per page in a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -67,7 +68,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource group ID. To obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>The resource group ID. For information about how to view the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmwp7rky****</p>
@@ -76,10 +77,10 @@ public class ListWorkspacesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies how to sort the results. Default value: GmtCreateTime. Valid values:</p>
+     * <p>The field used for sorting in a paged query. Default value: GmtCreateTime. Valid values:</p>
      * <ul>
-     * <li>GmtCreateTime: Sort by the time when created.</li>
-     * <li>GmtModifiedTime: Sort by the time when modified.</li>
+     * <li>GmtCreateTime (default): sorts by creation time.</li>
+     * <li>GmtModifiedTime: sorts by modification time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,12 +92,12 @@ public class ListWorkspacesRequest extends TeaModel {
     /**
      * <p>The workspace status. Valid values:</p>
      * <ul>
-     * <li>ENABLED</li>
-     * <li>INITIALIZING</li>
-     * <li>FAILURE</li>
-     * <li>DISABLED</li>
-     * <li>FROZEN</li>
-     * <li>UPDATING</li>
+     * <li>ENABLED: Normal.</li>
+     * <li>INITIALIZING: Being initialized.</li>
+     * <li>FAILURE: Failed.</li>
+     * <li>DISABLED: Manually disabled.</li>
+     * <li>FROZEN: Frozen due to overdue payment.</li>
+     * <li>UPDATING: Being updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,10 +110,10 @@ public class ListWorkspacesRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>Specifies whether to display workspace details. Valid values:</p>
+     * <p>Specifies whether to display detailed workspace information. Valid values:</p>
      * <ul>
-     * <li>false (default)</li>
-     * <li>true</li>
+     * <li>false (default): does not display detailed information.</li>
+     * <li>true: displays detailed information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +123,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The workspace IDs. Separate multiple IDs by commas (,).</p>
+     * <p>The list of workspace IDs. Separate multiple workspace IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>123,234</p>
@@ -131,7 +132,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String workspaceIds;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>

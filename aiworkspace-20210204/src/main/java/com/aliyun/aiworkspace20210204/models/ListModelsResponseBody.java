@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelsResponseBody extends TeaModel {
     /**
-     * <p>The models.</p>
+     * <p>The list of models.</p>
      */
     @NameInMap("Models")
     public java.util.List<Model> models;

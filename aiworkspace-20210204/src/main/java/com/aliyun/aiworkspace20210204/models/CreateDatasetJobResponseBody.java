@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the dataset job.</p>
+     * <p>The dataset task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dsjob-9jx1******uj9e</p>

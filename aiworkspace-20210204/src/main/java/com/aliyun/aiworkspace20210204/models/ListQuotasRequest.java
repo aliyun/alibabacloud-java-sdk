@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotasRequest extends TeaModel {
     /**
-     * <p>The quota name. Fuzzy search is supported.</p>
+     * <p>The name of the resource quota. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>quota-name</p>

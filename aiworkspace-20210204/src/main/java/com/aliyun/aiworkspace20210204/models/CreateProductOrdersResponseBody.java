@@ -14,13 +14,16 @@ public class CreateProductOrdersResponseBody extends TeaModel {
     public String buyProductRequestId;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the purchase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The purchase order ID.</p>
+     * <p>The ID of the purchase order.</p>
      * 
      * <strong>example:</strong>
      * <p>210292536260646</p>

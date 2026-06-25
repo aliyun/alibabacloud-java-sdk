@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelsRequest extends TeaModel {
     /**
-     * <p>The collection where the model is located. You can specify multiple collections and separate them with commas (,).</p>
+     * <p>The collections to which the model belongs. You can specify multiple collections. Separate them with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>AI4D,QuickStart</p>
@@ -13,11 +13,14 @@ public class ListModelsRequest extends TeaModel {
     @NameInMap("Collections")
     public String collections;
 
+    /**
+     * <p>The conditions.</p>
+     */
     @NameInMap("Conditions")
     public java.util.List<ListModelsRequestConditions> conditions;
 
     /**
-     * <p>The domain. Only models in the domain are returned. Valid values: nlp (Natural Language Processing) and cv (Computer Vision).</p>
+     * <p>The domain. This parameter is used to filter the model list by domain. Examples: nlp (natural language processing) and cv (computer vision).</p>
      * 
      * <strong>example:</strong>
      * <p>nlp</p>
@@ -26,7 +29,7 @@ public class ListModelsRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The label. Models whose label key or label value contains a specific label are filtered.</p>
+     * <p>The label string. This parameter is used to filter the list. Models are returned if their label keys or values contain the specified string.</p>
      * 
      * <strong>example:</strong>
      * <p>key1</p>
@@ -35,7 +38,10 @@ public class ListModelsRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The model name used to filter the returned models.</p>
+     * <p>The model name. This parameter is used to filter the model list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sentiment analysis</p>
      */
     @NameInMap("ModelName")
     public String modelName;
@@ -50,10 +56,12 @@ public class ListModelsRequest extends TeaModel {
     public String modelType;
 
     /**
-     * <p>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC.</p>
+     * <p>The order in which to sort the results of a paged query. The default value is ASC.</p>
      * <ul>
-     * <li>ASC</li>
-     * <li>DESC</li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * <li><p>DESC: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +71,7 @@ public class ListModelsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The model source used to filter the models that belong to a community or organization, such as ModelScope and Hugging Face.</p>
+     * <p>The model source. This parameter is used to filter the model list by community or organization. Examples: ModelScope and HuggingFace.</p>
      * 
      * <strong>example:</strong>
      * <p>ModelScope</p>
@@ -72,7 +80,7 @@ public class ListModelsRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the model list. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,7 +89,7 @@ public class ListModelsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of models to display on each page in a paged query. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -90,7 +98,7 @@ public class ListModelsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The provider. If you configure this parameter, only the models exposed by the provider are returned. If you leave this parameter empty, only models owned by the user are returned.</p>
+     * <p>The provider. If you specify a provider, only the public models from that provider are returned. If you leave this parameter empty, your own models are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>pai</p>
@@ -99,7 +107,7 @@ public class ListModelsRequest extends TeaModel {
     public String provider;
 
     /**
-     * <p>The query condition. For example, if you set the value to nlp, all models that match ModelName, Domain, Task, LabelKey, and LabelValue are returned.</p>
+     * <p>The query condition. This parameter performs a fuzzy match on ModelName, Domain, Task, LabelKey, and LabelValue. For example, if you enter nlp, models that match in any of these fields are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>nlp</p>
@@ -108,7 +116,7 @@ public class ListModelsRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The field used to sort the results. The GmtCreateTime field is used for sorting.</p>
+     * <p>The field to use for sorting in a paged query. Currently, only the GmtCreateTime field is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -117,13 +125,16 @@ public class ListModelsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The tags of the model.</p>
+     * <p>The list of tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Endpoint</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListModelsRequestTag> tag;
 
     /**
-     * <p>The task used to filter the models that belong to the task type. Example: text-classification.</p>
+     * <p>The task. This parameter is used to filter the model list by task type. Example: text-classification.</p>
      * 
      * <strong>example:</strong>
      * <p>text-classification</p>
@@ -132,7 +143,7 @@ public class ListModelsRequest extends TeaModel {
     public String task;
 
     /**
-     * <p>The workspace ID. Only models in this workspace are queried. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The workspace ID. The returned list contains only the models in the specified workspace. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>324**</p>
@@ -274,12 +285,30 @@ public class ListModelsRequest extends TeaModel {
     }
 
     public static class ListModelsRequestConditions extends TeaModel {
+        /**
+         * <p>The parameter name. Example: ParameterSize.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ParameterSize</p>
+         */
         @NameInMap("Column")
         public String column;
 
+        /**
+         * <p>The operator. Example: LessThan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LessThan</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The value. Example: 3000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -316,7 +345,7 @@ public class ListModelsRequest extends TeaModel {
 
     public static class ListModelsRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -325,7 +354,7 @@ public class ListModelsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

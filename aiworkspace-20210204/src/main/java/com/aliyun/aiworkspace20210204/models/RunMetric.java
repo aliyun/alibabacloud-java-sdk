@@ -12,13 +12,13 @@ public class RunMetric extends TeaModel {
     public String key;
 
     /**
-     * <p>The step number that generated the metric.</p>
+     * <p>The step when the metric was recorded.</p>
      */
     @NameInMap("Step")
     public Long step;
 
     /**
-     * <p>The timestamp when the metric was generated.</p>
+     * <p>The timestamp when the metric was recorded.</p>
      */
     @NameInMap("Timestamp")
     public Long timestamp;

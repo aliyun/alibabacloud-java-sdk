@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetDatasetResponseBody extends TeaModel {
     /**
-     * <p>The visibility of the workspace. Valid values:</p>
+     * <p>The visibility of the dataset in the workspace. Valid values:</p>
      * <ul>
-     * <li>PRIVATE: The workspace is visible only to you and the administrator of the workspace.</li>
-     * <li>PUBLIC: The workspace is visible to all users.</li>
+     * <li><p><code>PRIVATE</code>: The dataset is visible only to its owner and workspace administrators.</p>
+     * </li>
+     * <li><p><code>PUBLIC</code>: The dataset is visible to all members in the workspace.</p>
+     * </li>
+     * <li><p><code>ROLE_PUBLIC</code>: The dataset is visible to specific workspace roles. For the list of roles, see the <code>AccessibleRoleIdList</code> parameter. The dataset owner and workspace administrators can always view the dataset.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,14 +21,19 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>A list of workspace role IDs that can view the dataset. This parameter takes effect only when <code>Accessibility</code> is set to <code>ROLE_PUBLIC</code>. A role ID that starts with <code>PAI</code> is a basic role ID. A role ID that starts with <code>role-</code> is a custom role ID.</p>
+     */
     @NameInMap("AccessibleRoleIdList")
     public java.util.List<String> accessibleRoleIdList;
 
     /**
-     * <p>The type of the data source. Valid values:</p>
+     * <p>The data source type. Valid values:</p>
      * <ul>
-     * <li>OSS: Object Storage Service (OSS)</li>
-     * <li>NAS: File Storage NAS (NAS)</li>
+     * <li><p><code>OSS</code>: Object Storage Service (OSS).</p>
+     * </li>
+     * <li><p><code>NAS</code>: Apsara File Storage NAS.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,13 +43,18 @@ public class GetDatasetResponseBody extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The data type. Valid values:</p>
+     * <p>The data type of the dataset. Valid values:</p>
      * <ul>
-     * <li>COMMON: common</li>
-     * <li>PIC: picture</li>
-     * <li>TEXT: text</li>
-     * <li>VIDEO: video</li>
-     * <li>AUDIO: audio</li>
+     * <li><p><code>COMMON</code>: General data</p>
+     * </li>
+     * <li><p><code>PIC</code>: images</p>
+     * </li>
+     * <li><p><code>TEXT</code>: text</p>
+     * </li>
+     * <li><p><code>VIDEO</code>: videos</p>
+     * </li>
+     * <li><p><code>AUDIO</code>: audio</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,16 +73,31 @@ public class GetDatasetResponseBody extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>The description.</p>
+     * <p>The description of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用于标注的数据。</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The edition of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p><code>BASIC</code>: The basic edition, which does not support file metadata management.</p>
+     * </li>
+     * <li><p><code>ADVANCED</code>: The advanced edition, which is supported only for OSS datasets and allows you to manage metadata for up to 1 million files per version.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BASIC</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the dataset was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
@@ -77,7 +106,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The update time.</p>
+     * <p>The time when the dataset was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
@@ -86,36 +115,67 @@ public class GetDatasetResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The dataset configurations to be imported to a storage, such as OSS, NAS, or CPFS.</p>
-     * <p><strong>OSS</strong></p>
+     * <p>The storage import configuration of the dataset. Storage services such as OSS, NAS, and CPFS are supported.</p>
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>OSS</p>
+     * </summary>
+     * 
      * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;bucket&quot;: &quot;${bucket}&quot;,// The bucket name\
-     * &quot;path&quot;: &quot;${path}&quot; // The file path\
-     * }\</p>
-     * <p><strong>NAS</strong></p>
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+     * &quot;bucket&quot;: &quot;${bucket}&quot;,// The bucket name.\
+     * &quot;path&quot;: &quot;${path}&quot; // The path to the file or folder.\
+     * }</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>NAS</p>
+     * </summary>
+     * 
      * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system\
-     * }\</p>
-     * <p><strong>CPFS</strong></p>
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+     * &quot;path&quot;: &quot;${path}&quot;, // The path in the file system.\
+     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The file system mount target.\
+     * }</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>CPFS</p>
+     * </summary>
+     * 
      * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service\
-     * &quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory\
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-     * }\</p>
-     * <p><strong>CPFS for Lingjun</strong></p>
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+     * &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The protocol service ID.\
+     * &quot;exportId&quot;: &quot;${export_id}&quot;, // The export directory ID.\
+     * &quot;path&quot;: &quot;${path}&quot;, // The path in the file system.\
+     * }</p>
+     * </details>
+     * 
+     * <details>
+     * 
+     * <summary>
+     * 
+     * <p>CPFS for Intelligent Computing</p>
+     * </summary>
+     * 
      * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only\
-     * &quot;isVpcMount&quot;: boolean, // Whether the mount point is a VPC mount point, CPFS for Lingjun only\
-     * }\</p>
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+     * &quot;path&quot;: &quot;${path}&quot;, // The path in the file system.\
+     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The file system mount target. This parameter is specific to CPFS for Intelligent Computing.\
+     * &quot;isVpcMount&quot;: boolean, // Specifies whether the mount target is a VPC mount target. Specific to CPFS for Intelligent Computing.\
+     * }</p>
+     * </details>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -129,11 +189,17 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("ImportInfo")
     public String importInfo;
 
+    /**
+     * <p>Indicates whether the dataset is a shared dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsShared")
     public Boolean isShared;
 
     /**
-     * <p>The tags.</p>
+     * <p>The labels attached to the dataset.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
@@ -145,10 +211,12 @@ public class GetDatasetResponseBody extends TeaModel {
     public DatasetVersion latestVersion;
 
     /**
-     * <p>The access permission on the dataset when the dataset is mounted. Valid values:</p>
+     * <p>The mount permissions for the dataset. Valid values:</p>
      * <ul>
-     * <li>RO: read-only permissions</li>
-     * <li>RW: read and write permissions</li>
+     * <li><p><code>RO</code>: read-only mount</p>
+     * </li>
+     * <li><p><code>RW</code>: read and write mount</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,7 +226,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String mountAccess;
 
     /**
-     * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names start with PAI are basic role names and the names start with role- are custom role names. If the list contains asterisks (\*), all roles have read and write permissions.</p>
+     * <p>A list of workspace role IDs granted read/write permissions for the dataset. A role ID that starts with <code>PAI</code> is a basic role ID. A role ID that starts with <code>role-</code> is a custom role ID. If the list contains <code>*</code>, all roles have read and write permissions.</p>
      */
     @NameInMap("MountAccessReadWriteRoleIdList")
     public java.util.List<String> mountAccessReadWriteRoleIdList;
@@ -173,7 +241,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The extended fields of the dataset v1 (initial version). The value is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can use the mountPath field to specify the default mount path of the dataset.</p>
+     * <p>Extended properties for the initial dataset version (v1), in JSON string format. For example, when using the dataset in a DLC job, you can set the <code>mountPath</code> field to specify the default mount path.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -184,7 +252,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String options;
 
     /**
-     * <p>The ID of the Alibaba Could account.</p>
+     * <p>The owner ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1631044****3440</p>
@@ -193,10 +261,12 @@ public class GetDatasetResponseBody extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The property of the dataset of the initial version v1. Valid values:</p>
+     * <p>The property of the initial dataset version (v1). Valid values:</p>
      * <ul>
-     * <li>FILE</li>
-     * <li>DIRECTORY</li>
+     * <li><p><code>FILE</code>: The dataset is a file.</p>
+     * </li>
+     * <li><p><code>DIRECTORY</code>: The dataset is a folder.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -206,7 +276,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String property;
 
     /**
-     * <p>The dataset provider. If the value pai is returned, the dataset is a public dataset in PAI.</p>
+     * <p>The provider of the dataset. If the value is <code>pai</code>, the dataset is a PAI public dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>pai</p>
@@ -215,10 +285,12 @@ public class GetDatasetResponseBody extends TeaModel {
     public String provider;
 
     /**
-     * <p>The type of the data source for the dataset. Valid values:</p>
+     * <p>The type of the data source provider. Valid values:</p>
      * <ul>
-     * <li>Ecs (default)</li>
-     * <li>Lingjun</li>
+     * <li><p><code>ECS</code> (default)</p>
+     * </li>
+     * <li><p><code>Lingjun</code></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -236,14 +308,20 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The source from which the dataset was shared. This parameter is returned only if <code>IsShared</code> is <code>true</code>.</p>
+     */
     @NameInMap("SharedFrom")
     public DatasetShareRelationship sharedFrom;
 
+    /**
+     * <p>The sharing configuration for the dataset.</p>
+     */
     @NameInMap("SharingConfig")
     public GetDatasetResponseBodySharingConfig sharingConfig;
 
     /**
-     * <p>The ID of the source dataset generated from a labeling job of iTAG.</p>
+     * <p>The ID of the source dataset for the iTAG annotation set.</p>
      * 
      * <strong>example:</strong>
      * <p>d-rcdg3wxxxxxhc5jk87</p>
@@ -252,7 +330,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String sourceDatasetId;
 
     /**
-     * <p>The version of the source dataset generated from a labeling job of iTAG.</p>
+     * <p>The version of the source dataset for the annotation set.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>
@@ -261,11 +339,14 @@ public class GetDatasetResponseBody extends TeaModel {
     public String sourceDatasetVersion;
 
     /**
-     * <p>The ID of the source for the dataset v1 (initial version). Valid values:</p>
+     * <p>The ID of the data source for the initial version (v1). The meaning of this parameter varies based on the <code>SourceType</code> value.</p>
      * <ul>
-     * <li>If SourceType is set to USER, the value of SourceId can be a custom string.</li>
-     * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-     * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
+     * <li><p>If <code>SourceType</code> is <code>USER</code>, you can specify a custom value for <code>SourceId</code>.</p>
+     * </li>
+     * <li><p>If <code>SourceType</code> is <code>ITAG</code>, the dataset is generated from an iTAG annotation task, and <code>SourceId</code> is the task ID.</p>
+     * </li>
+     * <li><p>If <code>SourceType</code> is <code>PAI_PUBLIC_DATASET</code>, the dataset is created from a PAI public dataset. In this case, <code>SourceId</code> is empty.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -275,12 +356,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The type of the source for the dataset v1 (initial version). Valid values:</p>
-     * <ul>
-     * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
-     * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
-     * <li>USER: a dataset registered by a user.</li>
-     * </ul>
+     * <p>The source type of the initial dataset version (v1).</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -289,7 +365,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The labeling template for the source dataset generated from a labeling job of iTAG.</p>
+     * <p>The annotation template of the iTAG annotation set.</p>
      * 
      * <strong>example:</strong>
      * <p>TextClassification</p>
@@ -298,10 +374,13 @@ public class GetDatasetResponseBody extends TeaModel {
     public String tagTemplateType;
 
     /**
-     * <p>The URI of the initial version v1.</p>
+     * <p>The URI of the initial dataset version (v1). The supported formats are as follows:</p>
      * <ul>
-     * <li>Sample format for the OSS data source: <code>oss://bucket.endpoint/object</code></li>
-     * <li>Sample formats for the NAS data source: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>: General-purpose NAS. <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>: Cloud Parallel File Storage (CPFS) 1.0. <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>: CPFS 2.0. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID. The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</li>
+     * <li><p>For an OSS data source: <code>oss://bucket.endpoint/object</code>.</p>
+     * </li>
+     * <li><p>For a NAS data source, the format varies by NAS type:</p>
+     * <p>CPFS 1.0 and CPFS 2.0 are distinguished by the format of the file system ID ():</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -311,7 +390,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String uri;
 
     /**
-     * <p>The ID of the user to which the dataset belongs.</p>
+     * <p>The user ID of the dataset owner.</p>
      * 
      * <strong>example:</strong>
      * <p>2485765****023475</p>
@@ -320,7 +399,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String userId;
 
     /**
-     * <p>The ID of the workspace to which the dataset belongs.</p>
+     * <p>The ID of the workspace where the dataset is located.</p>
      * 
      * <strong>example:</strong>
      * <p>478**</p>
@@ -590,6 +669,9 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     public static class GetDatasetResponseBodySharingConfig extends TeaModel {
+        /**
+         * <p>A list of relationships indicating to whom the dataset is shared.</p>
+         */
         @NameInMap("SharedTo")
         public java.util.List<DatasetShareRelationship> sharedTo;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImageLabelsRequest extends TeaModel {
     /**
-     * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
+     * <p>The image ID. For more information about how to obtain an image ID, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>image-4c62******53uor</p>
@@ -14,7 +14,9 @@ public class ListImageLabelsRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The tag filter conditions, separated with commas (,). The format of a single condition filter is <code>key=value</code>. Takes effect independently from LabelKeys.</p>
+     * <p>The filter conditions for labels. Separate multiple conditions with commas.
+     * The format for a single condition is <code>key=value</code>.
+     * This parameter works independently of the LabelKeys parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>system.framework=XGBoost 1.6.0,system.official=true</p>
@@ -23,7 +25,8 @@ public class ListImageLabelsRequest extends TeaModel {
     public String labelFilter;
 
     /**
-     * <p>The tag keys, separated with commas (,). System tags start with system and take effect independently from LabelFilter.</p>
+     * <p>The list of tag keys. Separate multiple keys with commas (,).
+     * System tags start with &quot;system&quot;. This parameter works independently of the LabelFilter parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>system.framework,system.official</p>
@@ -41,7 +44,7 @@ public class ListImageLabelsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

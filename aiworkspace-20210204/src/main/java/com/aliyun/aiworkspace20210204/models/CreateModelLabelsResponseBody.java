@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelLabelsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F81D9EC0-1872-50F5-A96C-A0647D****1D</p>

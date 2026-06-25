@@ -7,8 +7,10 @@ public class CodeSourceItem extends TeaModel {
     /**
      * <p>The visibility of the code source. Valid values:</p>
      * <ul>
-     * <li>PRIVATE: Visible only to you and the administrator in the workspace.</li>
-     * <li>PUBLIC: Visible to all users in the workspace.</li>
+     * <li><p><code>PRIVATE</code>: Visible only to you and workspace administrators.</p>
+     * </li>
+     * <li><p><code>PUBLIC</code>: Visible to all workspace members.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,6 +19,9 @@ public class CodeSourceItem extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The clone type.</p>
+     */
     @NameInMap("CloneType")
     public Integer cloneType;
 
@@ -30,7 +35,7 @@ public class CodeSourceItem extends TeaModel {
     public String codeBranch;
 
     /**
-     * <p>The code commit ID</p>
+     * <p>The commit ID.</p>
      * 
      * <strong>example:</strong>
      * <p>44da10**********</p>
@@ -39,7 +44,7 @@ public class CodeSourceItem extends TeaModel {
     public String codeCommit;
 
     /**
-     * <p>The address of the code repository.</p>
+     * <p>The code repository URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>****</p>
@@ -48,13 +53,13 @@ public class CodeSourceItem extends TeaModel {
     public String codeRepo;
 
     /**
-     * <p>The token used to access the code repository.</p>
+     * <p>The access token for the code repository.</p>
      */
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
     /**
-     * <p>The username of the code repository.</p>
+     * <p>The username for the code repository.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -72,7 +77,7 @@ public class CodeSourceItem extends TeaModel {
     public String codeSourceId;
 
     /**
-     * <p>The code source description.</p>
+     * <p>The description of the code source.</p>
      * 
      * <strong>example:</strong>
      * <p>code source of dlc examples</p>
@@ -81,7 +86,7 @@ public class CodeSourceItem extends TeaModel {
     public String description;
 
     /**
-     * <p>The code source name.</p>
+     * <p>The display name of the code source.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCodeSourceName1</p>
@@ -90,7 +95,7 @@ public class CodeSourceItem extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the code source was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-18T12:52:15Z</p>
@@ -99,7 +104,7 @@ public class CodeSourceItem extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The last modified time.</p>
+     * <p>The time when the code source was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-18T12:52:15Z</p>
@@ -108,7 +113,7 @@ public class CodeSourceItem extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>The local mount path of the code.</p>
+     * <p>The local mount path for the code repository.</p>
      * 
      * <strong>example:</strong>
      * <p>/root/code/</p>

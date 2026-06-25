@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFeaturesRequest extends TeaModel {
     /**
+     * <p>Feature names, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>PaiConsole:IntegrateWithWorkspace</p>
      */

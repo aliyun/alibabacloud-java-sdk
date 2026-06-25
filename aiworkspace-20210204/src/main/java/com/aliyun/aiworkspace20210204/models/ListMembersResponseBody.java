@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMembersResponseBody extends TeaModel {
     /**
-     * <p>The members.</p>
+     * <p>The list of workspace members.</p>
      */
     @NameInMap("Members")
     public java.util.List<ListMembersResponseBodyMembers> members;
@@ -20,7 +20,7 @@ public class ListMembersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of members that meet the filter conditions.</p>
+     * <p>Total number of members that match the filter criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,6 +59,8 @@ public class ListMembersResponseBody extends TeaModel {
 
     public static class ListMembersResponseBodyMembers extends TeaModel {
         /**
+         * <p>Account name of the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>testAccount</p>
          */
@@ -66,6 +68,16 @@ public class ListMembersResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>Account type. Valid values:</p>
+         * <ul>
+         * <li><p>1: Alibaba Cloud account</p>
+         * </li>
+         * <li><p>5: RAM user</p>
+         * </li>
+         * <li><p>6: RAM role</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -73,7 +85,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The display name of the member.</p>
+         * <p>Display name of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>myDisplayName</p>
@@ -82,7 +94,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The time when the user is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * <p>Time when the member was added, in UTC. Format: ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -91,7 +103,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The member ID.</p>
+         * <p>Member ID.</p>
          * 
          * <strong>example:</strong>
          * <p>14588*****51688039</p>
@@ -100,7 +112,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The username.</p>
+         * <p>Username of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>user1</p>
@@ -109,13 +121,13 @@ public class ListMembersResponseBody extends TeaModel {
         public String memberName;
 
         /**
-         * <p>The list of roles.</p>
+         * <p>Roles assigned to the member.</p>
          */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
-         * <p>The user ID.</p>
+         * <p>Alibaba Cloud account ID of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>215139******88039</p>

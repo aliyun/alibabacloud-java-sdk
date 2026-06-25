@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserConfigRequest extends TeaModel {
     /**
-     * <p>The configuration item keys. Currently, only customizePAIAssumedRole.</p>
+     * <p>The configuration key. Only customizePAIAssumedRole is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>tempStoragePath</p>

@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceResourceRequest extends TeaModel {
     /**
-     * <p>The operation to perform. Valid values:</p>
+     * <p>The creation behavior. Valid values:</p>
      * <ul>
-     * <li>CreateAndAttach: creates resources and associates the resources with a workspace.</li>
-     * <li>Attach: associates resources with a workspace.</li>
+     * <li><p><code>CreateAndAttach</code>: Creates a resource and attaches it to the workspace.</p>
+     * </li>
+     * <li><p><code>Attach</code>: Attaches an existing resource to the workspace. This option requires you to specify the <code>Name</code>, <code>ResourceType</code>, <code>GroupName</code>, and <code>EnvType</code> parameters.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> MaxCompute supports only the Attach operation.</p>
+     * <p>MaxCompute resources only support the <code>Attach</code> option.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
     public String option;
 
     /**
-     * <p>The resources.</p>
+     * <p>The list of resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
@@ -50,7 +52,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
 
     public static class CreateWorkspaceResourceRequestResourcesLabels extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>system.support.eas</p>
@@ -59,7 +61,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The label value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -92,7 +94,8 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
 
     public static class CreateWorkspaceResourceRequestResourcesQuotas extends TeaModel {
         /**
-         * <p>The quota ID. You can call <a href="https://help.aliyun.com/document_detail/449144.html">ListQuotas</a> to obtain the quota ID.</p>
+         * <p>The ID of the resource quota. To obtain the resource quota ID, see <a href="https://help.aliyun.com/document_detail/449144.html">ListQuotas</a>. This parameter is required only for subscription MaxCompute resources.
+         * For ECS, Lingjun, and ACS resources, you do not need to specify this parameter. Their quota information is configured in the <code>Spec</code> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>232892******92912</p>
@@ -119,8 +122,10 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         /**
          * <p>The environment type. Valid values:</p>
          * <ul>
-         * <li>dev: development environment</li>
-         * <li>prod: production environment</li>
+         * <li><p><code>dev</code>: development environment</p>
+         * </li>
+         * <li><p><code>prod</code>: production environment</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -131,7 +136,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String envType;
 
         /**
-         * <p>The name of the resource group, which is unique within your Alibaba Cloud account. This parameter is required for MaxCompute, Elastic Compute Service (ECS), Lingjun, Alibaba Cloud Container Compute Service (ACS), and Realtime Compute for Apache Flink resources.</p>
+         * <p>The name of the resource group. The name must be unique within an Alibaba Cloud account. This parameter is required for MaxCompute, ECS, Lingjun, ACS, and Flink resources.</p>
          * 
          * <strong>example:</strong>
          * <p>groupName</p>
@@ -140,10 +145,12 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>Specifies whether the resource is the default resource. Each type of resources has a default resource. Valid values:</p>
+         * <p>Indicates whether this is the default resource for its type. Each resource type can have only one default resource.</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li><p><code>false</code> (default): The resource is not the default resource.</p>
+         * </li>
+         * <li><p><code>true</code>: The resource is the default resource.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +160,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The labels added to the resource.</p>
+         * <p>An array of resource tags.</p>
          */
         @NameInMap("Labels")
         public java.util.List<CreateWorkspaceResourceRequestResourcesLabels> labels;
@@ -161,8 +168,12 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         /**
          * <p>The resource name. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name must be 3 to 28 characters in length, and can contain only letters, digits, and underscores (_). The name must start with a letter.</li>
-         * <li>The name must be unique in the region.</li>
+         * <li><p>Must be 3 to 28 characters long, start with a letter, and can contain only letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>Must be unique within the same region.</p>
+         * </li>
+         * <li><p>If <code>Option</code> is set to <code>Attach</code> and <code>ResourceType</code> is set to <code>MaxCompute</code>, this parameter specifies the project name.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -173,7 +184,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>**This parameter is no longer used and will be removed. Use the ResourceType parameter instead.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and will be removed in a future version. Use the <code>ResourceType</code> parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -182,19 +193,30 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String productType;
 
         /**
-         * <p>The quotas. Only MaxCompute quotas are available.</p>
+         * <p>The resource quotas. Currently, only MaxCompute resources have resource quotas.</p>
          */
         @NameInMap("Quotas")
         public java.util.List<CreateWorkspaceResourceRequestResourcesQuotas> quotas;
 
         /**
-         * <p>The resource types. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>MaxCompute</li>
-         * <li>ECS</li>
-         * <li>Lingjun</li>
-         * <li>ACS</li>
-         * <li>FLINK</li>
+         * <li><p><code>MaxCompute</code>: MaxCompute resources</p>
+         * </li>
+         * <li><p><code>ECS</code>: general-purpose computing resources</p>
+         * </li>
+         * <li><p><code>Lingjun</code>: Lingjun intelligent computing resources</p>
+         * </li>
+         * <li><p><code>ACS</code>: ACS computing resources</p>
+         * </li>
+         * <li><p><code>Flink</code>: Flink resources</p>
+         * </li>
+         * <li><p><code>SelfManagedAckPro</code>: unified managed cluster resource (AckPro)</p>
+         * </li>
+         * <li><p><code>SelfManagedAckLingjun</code>: unified managed cluster resource (AckLingjun)</p>
+         * </li>
+         * <li><p><code>SelfManagedASI</code>: unified managed cluster resource for third-party clouds (ASI)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,13 +226,34 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The resource specifications in the JSON format.</p>
+         * <p>The resource specification in JSON format. For ECS and Lingjun resources, the format is as follows:
+         * {<br>
+         * &quot;clusterType&quot;: &quot;The type of the cluster&quot;,
+         * &quot;resourceId&quot;: &quot;The ID of the quota&quot;,
+         * &quot;resourceName&quot;: &quot;The name of the quota&quot;
+         * }
+         * The <code>clusterType</code> parameter can have the following values:<br></p>
+         * <ul>
+         * <li><p><code>share</code>: shared resource group</p>
+         * </li>
+         * <li><p><code>private</code>: dedicated resource group</p>
+         * </li>
+         * <li><p><code>FullyManaged</code>: fully managed ACS resource</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;clusterType&quot;: &quot;private&quot;,
+         *         &quot;resourceId&quot;: &quot;quota1c<strong><strong><strong>b4&quot;,
+         *         &quot;resourceName&quot;: &quot;unif</strong></strong></strong>90&quot;
+         *       }</p>
          */
         @NameInMap("Spec")
         public java.util.Map<String, ?> spec;
 
         /**
-         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * <p>The ID of the workspace to which the resource belongs. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

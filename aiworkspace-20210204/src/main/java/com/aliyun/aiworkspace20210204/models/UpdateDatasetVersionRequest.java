@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetVersionRequest extends TeaModel {
     /**
+     * <p>The number of files in the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,16 +14,27 @@ public class UpdateDatasetVersionRequest extends TeaModel {
     public Long dataCount;
 
     /**
+     * <p>The size of the dataset files, in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>100000</p>
      */
     @NameInMap("DataSize")
     public Long dataSize;
 
+    /**
+     * <p>A custom description of the dataset to distinguish it from other datasets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description of a dataset version.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>An extension field in the JSON String format.
+     * When DLC uses the dataset, you can configure the mountPath field to specify the default mount path.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;

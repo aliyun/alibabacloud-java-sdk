@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetConnectionRequest extends TeaModel {
     /**
-     * <p>The encryption settings. Valid values:</p>
+     * <p>The encryption setting. Valid values:</p>
      * <ul>
-     * <li>PlainText</li>
-     * <li>Secret</li>
+     * <li><p>PlainText: The value is in plaintext.</p>
+     * </li>
+     * <li><p>Secret: The value is in ciphertext.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotasResponseBody extends TeaModel {
     /**
-     * <p>The returned quotas.</p>
+     * <p>The list of resource quotas.</p>
      */
     @NameInMap("Quotas")
     public java.util.List<ListQuotasResponseBodyQuotas> quotas;
@@ -20,7 +20,7 @@ public class ListQuotasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of quotas that meet the filter conditions.</p>
+     * <p>The number of resource quotas that meet the filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +68,7 @@ public class ListQuotasResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The specification type. The parameter can be left empty.</p>
+         * <p>The type. This parameter can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -118,7 +118,10 @@ public class ListQuotasResponseBody extends TeaModel {
 
     public static class ListQuotasResponseBodyQuotas extends TeaModel {
         /**
-         * <p>The alias of the quota.</p>
+         * <p>The alias of the resource quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认Quota。</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -135,8 +138,10 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>isolate: subscription</li>
-         * <li>share: pay-as-you-go</li>
+         * <li><p>isolate: subscription.</p>
+         * </li>
+         * <li><p>share: pay-as-you-go.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,30 +160,32 @@ public class ListQuotasResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The product code. Valid values:</p>
+         * <p>The product name. Valid values:</p>
          * <ul>
-         * <li>PAI_isolate: CPU subscription resource groups of PAI</li>
-         * <li>PAI_share: GPU pay-as-you-go resource groups of PAI</li>
+         * <li><p>PAI_isolate: a subscription PAI resource group (PAI CPU).</p>
+         * </li>
+         * <li><p>PAI_share: a pay-as-you-go PAI resource group (PAI GPU).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>MaxCompute_share</p>
+         * <p>PAI_share</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The quota type. Valid value:</p>
-         * <p>PAI: indicates GPU resource groups of MaxCompute.</p>
+         * <p>The type of the resource quota. Valid value:</p>
+         * <p>PAI: a GPU resource group cluster of MaxCompute.</p>
          * 
          * <strong>example:</strong>
-         * <p>MaxCompute</p>
+         * <p>PAI</p>
          */
         @NameInMap("QuotaType")
         public String quotaType;
 
         /**
-         * <p>The quota specifications.</p>
+         * <p>The list of specification descriptions.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;cu\&quot;:\&quot;11500\&quot;,\&quot;minCu\&quot;:\&quot;2300\&quot;,\&quot;parentId\&quot;:\&quot;0\&quot;}</p>

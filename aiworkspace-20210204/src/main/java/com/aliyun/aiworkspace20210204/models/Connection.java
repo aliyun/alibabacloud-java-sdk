@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class Connection extends TeaModel {
     /**
-     * <p>The workspace accessibility. Valid values:</p>
+     * <p>The workspace visibility. Valid values:</p>
      * <ul>
-     * <li>PRIVATE (default): accessible only to you and the administrator of the workspace.</li>
-     * <li>PUBLIC: accessible to all members in the workspace.</li>
+     * <li><p>PRIVATE (default): The connection is visible only to you and administrators in the workspace.</p>
+     * </li>
+     * <li><p>PUBLIC: The connection is visible to all users in the workspace.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class Connection extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The connection configuration.</p>
+     * <p>The connection configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.Map<String, String> configs;
@@ -33,7 +35,10 @@ public class Connection extends TeaModel {
     public String connectionId;
 
     /**
-     * <p>The connection name.</p>
+     * <p>The name of the connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lindorm-connection</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
@@ -41,15 +46,24 @@ public class Connection extends TeaModel {
     /**
      * <p>The connection type. Valid values:</p>
      * <ul>
-     * <li>DashScopeConnection</li>
-     * <li>OpenLLMConnection</li>
-     * <li>MilvusConnection</li>
-     * <li>OpenSearchConnection</li>
-     * <li>LindormConnection</li>
-     * <li>ElasticsearchConnection</li>
-     * <li>HologresConnection</li>
-     * <li>RDSConnection</li>
-     * <li>CustomConnection</li>
+     * <li><p>DashScopeConnection: A service connection to Alibaba Cloud Model Studio.</p>
+     * </li>
+     * <li><p>OpenLLMConnection: An open source model connection.</p>
+     * </li>
+     * <li><p>MilvusConnection: A Milvus connection.</p>
+     * </li>
+     * <li><p>OpenSearchConnection: An OpenSearch connection.</p>
+     * </li>
+     * <li><p>LindormConnection: A Lindorm connection.</p>
+     * </li>
+     * <li><p>ElasticsearchConnection: An Elasticsearch connection.</p>
+     * </li>
+     * <li><p>HologresConnection: A Hologres connection.</p>
+     * </li>
+     * <li><p>RDSConnection: An RDS connection.</p>
+     * </li>
+     * <li><p>CustomConnection: A custom connection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +73,7 @@ public class Connection extends TeaModel {
     public String connectionType;
 
     /**
-     * <p>The connection creator.</p>
+     * <p>The creator of the connection.</p>
      * 
      * <strong>example:</strong>
      * <p>20925961****557803</p>
@@ -69,12 +83,15 @@ public class Connection extends TeaModel {
 
     /**
      * <p>The connection description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description of a database connection.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The time when the connection was modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the connection was created. The time is in UTC and follows the ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-07T07:54:56Z</p>
@@ -83,7 +100,7 @@ public class Connection extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the connection was modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the connection was last modified. The time is in UTC and follows the ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-07T07:54:56Z</p>
@@ -92,19 +109,19 @@ public class Connection extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The models.</p>
+     * <p>The model list.</p>
      */
     @NameInMap("Models")
     public java.util.List<ConnectionModels> models;
 
     /**
-     * <p>The connection resource. This parameter is used for the connection configuration of the database type.</p>
+     * <p>The resource information for the connection. This usually applies to database connection configurations.</p>
      */
     @NameInMap("ResourceMeta")
     public ConnectionResourceMeta resourceMeta;
 
     /**
-     * <p>The key-value configuration to be encrypted, such as the database logon password and the key for model connection.</p>
+     * <p>The key-value configurations to encrypt, such as database logon passwords and model connection keys.</p>
      */
     @NameInMap("Secrets")
     public java.util.Map<String, String> secrets;
@@ -229,7 +246,10 @@ public class Connection extends TeaModel {
 
     public static class ConnectionModels extends TeaModel {
         /**
-         * <p>The display name of the model.</p>
+         * <p>The model\&quot;s display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGE model deploy.</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -246,9 +266,12 @@ public class Connection extends TeaModel {
         /**
          * <p>The model type. Valid values:</p>
          * <ul>
-         * <li>LLM</li>
-         * <li>Embedding</li>
-         * <li>ReRank</li>
+         * <li><p>LLM (large language model)</p>
+         * </li>
+         * <li><p>Embedding (Embedding model)</p>
+         * </li>
+         * <li><p>ReRank (ReRank model)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,10 +281,12 @@ public class Connection extends TeaModel {
         public String modelType;
 
         /**
-         * <p>Indicates whether tool calling was supported. Valid values:</p>
+         * <p>Indicates whether tool calling is supported. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Supported</p>
+         * </li>
+         * <li><p>false: Not supported</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,6 +335,12 @@ public class Connection extends TeaModel {
     }
 
     public static class ConnectionResourceMeta extends TeaModel {
+        /**
+         * <p>Extra configuration information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vpcId&quot;:&quot;vpc-xxxx&quot;}</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
@@ -324,6 +355,9 @@ public class Connection extends TeaModel {
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lindorm-xxxxxxx</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
