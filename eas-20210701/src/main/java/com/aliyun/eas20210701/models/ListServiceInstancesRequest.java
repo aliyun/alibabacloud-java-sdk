@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstancesRequest extends TeaModel {
     /**
-     * <p>The keyword used to query instances. Instances can be queried based on instance name, instance IP address, IP address of the server where the instance resides, and instance type.</p>
+     * <p>A keyword for the search. You can search by instance name, instance IP address, host IP address, or instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>10.118.xx.xx</p>
@@ -14,7 +14,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The IP address of the server where the instance resides.</p>
+     * <p>The IP address of the host where the service instance is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>10.224.xx.xx</p>
@@ -23,7 +23,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String hostIP;
 
     /**
-     * <p>The IP address of the instance.</p>
+     * <p>The IP address of the service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>10.224.xx.xx</p>
@@ -32,7 +32,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String instanceIP;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>foo-bdc5xxxx-8l7rk</p>
@@ -41,7 +41,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance state.</p>
+     * <p>The status of the service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -59,7 +59,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies whether the instance is a preemptible instance.</p>
+     * <p>Specifies whether the instance is a spot instance.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -67,37 +67,26 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("IsSpot")
     public Boolean isSpot;
 
+    /**
+     * <p>Specifies whether to query the list of instance replicas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ListReplica")
     public Boolean listReplica;
 
+    /**
+     * <p>The type of the sub-service. This parameter is valid only for aggregation services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LLMDecode</p>
+     */
     @NameInMap("MemberType")
     public String memberType;
 
     /**
-     * <p>The sorting order.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>asc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>The instances are sorted in ascending order.</p>
-     * </li>
-     * <li><p>desc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>The instances are sorted in descending order.</p>
-     * </li>
-     * </ul>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -106,7 +95,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -115,7 +104,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The number of entries to return on each page. The default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -123,33 +112,35 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The quota ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quota1****</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The name of the instance replica.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbh-qwen3-a1bc-prefill-ep1tp4dp</p>
+     */
     @NameInMap("ReplicaName")
     public String replicaName;
 
+    /**
+     * <p>The resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-xxxxxxx</p>
+     */
     @NameInMap("Resource")
     public String resource;
 
     /**
-     * <p>The type of the resource group to which the instance belongs.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>PublicResource</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>DedicatedResource</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The type of the resource group to which the service instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>PublicResource</p>
@@ -158,54 +149,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The service role.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>DataSet</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>dataset service</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>SDProxy</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>Stable-Diffusion proxy service</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>Standard</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>standard service</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>Queue</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>queue service</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * </ul>
+     * <p>The role of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>Queue</p>
@@ -214,19 +158,7 @@ public class ListServiceInstancesRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The field that you use to sort the query results.</p>
-     * <ul>
-     * <li><p>Set the value to StartTime.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>The value specifies that the query results are sorted based on the time when the instances were created</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * </ul>
+     * <p>The field to use for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>StartTime</p>

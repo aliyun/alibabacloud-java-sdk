@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConfigsResponseBody extends TeaModel {
     /**
-     * <p>配置项列表</p>
+     * <p>The list of dynamic parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Key&quot;: &quot;rate_limit&quot;, &quot;Value&quot;: &quot;{\&quot;limit\&quot;: 100}&quot;, &quot;CreatedAt&quot;: &quot;2024-01-15T10:30:00Z&quot;, &quot;UpdatedAt&quot;: &quot;2024-01-15T10:30:00Z&quot;}]</p>
@@ -14,7 +14,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public java.util.List<ListConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>是否有更多数据</p>
+     * <p>Indicates if more entries are available. <code>true</code> if more entries exist; otherwise, <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>服务名称</p>
+     * <p>The service name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-service</p>
@@ -32,7 +32,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>当前页码</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>每页数量</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,7 +50,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>总数量</p>
+     * <p>The total number of entries found.</p>
      * 
      * <strong>example:</strong>
      * <p>150</p>
@@ -59,7 +59,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public Long total;
 
     /**
-     * <p>配置类型</p>
+     * <p>The configuration type.</p>
      * 
      * <strong>example:</strong>
      * <p>Service</p>
@@ -130,7 +130,7 @@ public class ListConfigsResponseBody extends TeaModel {
 
     public static class ListConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>创建时间</p>
+         * <p>The time when the dynamic parameter was created, in UTC and ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T10:00:00Z</p>
@@ -139,7 +139,7 @@ public class ListConfigsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>配置项键名</p>
+         * <p>The name of the dynamic parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>rate_limit</p>
@@ -148,7 +148,7 @@ public class ListConfigsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>更新时间</p>
+         * <p>The time when the dynamic parameter was last updated, in UTC and ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T10:00:00Z</p>
@@ -157,7 +157,7 @@ public class ListConfigsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>配置值</p>
+         * <p>The value of the dynamic parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

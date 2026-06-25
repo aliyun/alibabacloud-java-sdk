@@ -4,11 +4,17 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayShrinkRequest extends TeaModel {
+    /**
+     * <p>The billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+     * <p>The ID of the private gateway. You can obtain the ID from the private_gateway_id field in the response of the ListResources operation.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -17,7 +23,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The private gateway alias.</p>
+     * <p>The alias of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>mygateway1</p>
@@ -25,20 +31,41 @@ public class ListGatewayShrinkRequest extends TeaModel {
     @NameInMap("GatewayName")
     public String gatewayName;
 
+    /**
+     * <p>The type of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Application</p>
+     */
     @NameInMap("GatewayType")
     public String gatewayType;
 
+    /**
+     * <p>Specifies whether to enable access over the public network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("InternetEnabled")
     public Boolean internetEnabled;
 
+    /**
+     * <p>Filter by tag.</p>
+     */
     @NameInMap("Label")
     public String labelShrink;
 
+    /**
+     * <p>The sort order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the gateway list to return. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +74,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The number of gateways to return on each page. The default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -56,7 +83,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
+     * <p>The ID of the resource group. You can obtain the ID from the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-4gt8twzwllfo******</p>
@@ -64,9 +91,21 @@ public class ListGatewayShrinkRequest extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The field to sort by.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
+    /**
+     * <p>The status of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConfigRequest extends TeaModel {
     /**
-     * <p>新的配置值</p>
+     * <p>The new dynamic parameter value. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

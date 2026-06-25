@@ -4,13 +4,21 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceRolloutRequest extends TeaModel {
+    /**
+     * <p>The configuration for the Batch strategy.</p>
+     */
     @NameInMap("Batch")
     public CreateServiceRolloutRequestBatch batch;
 
+    /**
+     * <p>The configuration for the Partition strategy.</p>
+     */
     @NameInMap("Partition")
     public CreateServiceRolloutRequestPartition partition;
 
     /**
+     * <p>Specifies whether to pause the rollout.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -48,6 +56,8 @@ public class CreateServiceRolloutRequest extends TeaModel {
 
     public static class CreateServiceRolloutRequestBatch extends TeaModel {
         /**
+         * <p>The number of instances to update in each batch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -55,6 +65,8 @@ public class CreateServiceRolloutRequest extends TeaModel {
         public String batchSize;
 
         /**
+         * <p>The wait interval after each batch completes.</p>
+         * 
          * <strong>example:</strong>
          * <p>5m</p>
          */
@@ -86,6 +98,8 @@ public class CreateServiceRolloutRequest extends TeaModel {
 
     public static class CreateServiceRolloutRequestPartition extends TeaModel {
         /**
+         * <p>The number of instances to update to the new version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

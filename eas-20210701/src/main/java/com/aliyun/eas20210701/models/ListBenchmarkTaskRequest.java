@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBenchmarkTaskRequest extends TeaModel {
     /**
-     * <p>The keyword used to query required stress testing tasks. If this parameter is specified, the system returns stress testing tasks based on the names of the stress testing tasks in the matched Elastic Algorithm Service (EAS).</p>
+     * <p>The filter used to query tasks. If you specify this parameter, the system returns tasks whose names or associated service names match the filter value.</p>
      * 
      * <strong>example:</strong>
      * <p>test_bench</p>
@@ -29,7 +29,7 @@ public class ListBenchmarkTaskRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The name of the Elastic Algorithm Service (EAS) service that corresponds to the stress testing task. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

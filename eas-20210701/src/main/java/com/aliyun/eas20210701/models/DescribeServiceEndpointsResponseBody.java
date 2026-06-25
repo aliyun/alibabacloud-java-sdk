@@ -14,16 +14,16 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
     public String accessToken;
 
     /**
-     * <p>The service endpoints.</p>
+     * <p>The list of service endpoints.</p>
      */
     @NameInMap("Endpoints")
     public java.util.List<DescribeServiceEndpointsResponseBodyEndpoints> endpoints;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>Execution successful.</p>
+     * <p>Execution succeeded.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -76,6 +76,18 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
 
     public static class DescribeServiceEndpointsResponseBodyEndpoints extends TeaModel {
         /**
+         * <p>The ID of the backend service. The value of this parameter varies based on the value of EndpointType:</p>
+         * <ul>
+         * <li><p>If EndpointType is DefaultGateway, this parameter is set to default.</p>
+         * </li>
+         * <li><p>If EndpointType is PrivateGateway, this parameter is the ID of the dedicated gateway.</p>
+         * </li>
+         * <li><p>If EndpointType is Nlb, this parameter is the ID of the NLB instance.</p>
+         * </li>
+         * <li><p>If EndpointType is Nacos, this parameter is the ID of the Nacos instance.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>nlb-5q4sp7u6oorkha****</p>
          */
@@ -83,19 +95,45 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
         public String backendId;
 
         /**
+         * <p>The connection type of the service endpoint. Valid values:</p>
+         * <ul>
+         * <li><p>DefaultGateway: The service is connected using a shared gateway.</p>
+         * </li>
+         * <li><p>PrivateGateway: The service is connected using a dedicated gateway.</p>
+         * </li>
+         * <li><p>Nlb: The service is attached to a Network Load Balancer (NLB) instance.</p>
+         * </li>
+         * <li><p>Nacos: The service is attached to a Nacos instance.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Nlb</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The list of internet-facing endpoints.</p>
+         */
         @NameInMap("InternetEndpoints")
         public java.util.List<String> internetEndpoints;
 
+        /**
+         * <p>The list of internal endpoints.</p>
+         */
         @NameInMap("IntranetEndpoints")
         public java.util.List<String> intranetEndpoints;
 
         /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><p>Group: The endpoint of an audience group.</p>
+         * </li>
+         * <li><p>Service: The endpoint of a service.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Service</p>
          */
@@ -103,6 +141,8 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
         public String pathType;
 
         /**
+         * <p>The port number. This parameter is returned only when the service is attached to an NLB or Nacos instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>9090</p>
          */

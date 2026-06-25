@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>Desc</li>
-     * <li>Asc</li>
+     * <li><p><code>Desc</code>: descending order</p>
+     * </li>
+     * <li><p><code>Asc</code>: ascending order</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListResourcesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +38,7 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation to query the ID of the resource group.</p>
+     * <p>The resource group ID. The <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation returns this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-h7lcw24dyqztwxxxxxx</p>
@@ -45,7 +47,7 @@ public class ListResourcesRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The name of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation to query the name of the resource group.</p>
+     * <p>The resource group name. The <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation returns this name.</p>
      * 
      * <strong>example:</strong>
      * <p>MyResource</p>
@@ -63,10 +65,12 @@ public class ListResourcesRequest extends TeaModel {
     public String resourceStatus;
 
     /**
-     * <p>The type of the resource group. Valid values:</p>
+     * <p>The resource group type. Valid values:</p>
      * <ul>
-     * <li>Dedicated: the dedicated resource group.</li>
-     * <li>SelfManaged: the self-managed resource group.</li>
+     * <li><p><code>Dedicated</code>: dedicated resource group</p>
+     * </li>
+     * <li><p><code>SelfManaged</code>: self-managed resource group</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,20 +80,7 @@ public class ListResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The condition by which the results are sorted. By default, the query results are sorted by the timestamp type in descending order.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PrePaidInstanceCount</li>
-     * <li>CpuCount</li>
-     * <li>Memory</li>
-     * <li>CreateTime</li>
-     * <li>PostPaidInstanceCount</li>
-     * <li>MemoryUsed</li>
-     * <li>GpuCount</li>
-     * <li>GpuUsed</li>
-     * <li>CpuUsed</li>
-     * <li>ServiceCount</li>
-     * </ul>
+     * <p>The sort field. Timestamp fields are sorted in descending order by default.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -97,6 +88,12 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    /**
+     * <p>The usage mode of the resource group. The default value is <code>inference</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inference</p>
+     */
     @NameInMap("UsageMode")
     public String usageMode;
 

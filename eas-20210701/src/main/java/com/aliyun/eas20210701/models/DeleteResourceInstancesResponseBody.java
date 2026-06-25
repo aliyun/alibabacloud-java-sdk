@@ -8,7 +8,7 @@ public class DeleteResourceInstancesResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Instances eas-i-011227132046,eas-i-011227132046 are deleting</p>
+     * <p>Instances eas-i-01122713****,eas-i-01122713**** are deleting</p>
      */
     @NameInMap("Message")
     public String message;

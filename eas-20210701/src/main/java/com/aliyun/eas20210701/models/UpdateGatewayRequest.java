@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable Internet access. Default value: false.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to enable public network access. The default value is false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,12 +14,7 @@ public class UpdateGatewayRequest extends TeaModel {
     public Boolean enableInternet;
 
     /**
-     * <p>Specifies whether to enable private access. Default value: true.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to enable intranet access. The default value is true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +23,7 @@ public class UpdateGatewayRequest extends TeaModel {
     public Boolean enableIntranet;
 
     /**
-     * <p>Specifies whether to enable HTTP to HTTPS redirection. Default value: false.</p>
+     * <p>Specifies whether to enable HTTP to HTTPS redirection. The default value is false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,22 +32,26 @@ public class UpdateGatewayRequest extends TeaModel {
     public Boolean enableSSLRedirection;
 
     /**
-     * <p>The instance type used by the private gateway. Valid values:</p>
+     * <p>The instance type of the private gateway. Valid values:</p>
      * <ul>
-     * <li>2c4g</li>
-     * <li>4c8g</li>
-     * <li>8c16g</li>
-     * <li>16c32g</li>
+     * <li><p>2c4g</p>
+     * </li>
+     * <li><p>4c8g</p>
+     * </li>
+     * <li><p>8c16g</p>
+     * </li>
+     * <li><p>16c32g</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ecs.c6.4xlarge</p>
+     * <p>2c4g</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>Specifies whether it is the default private gateway.</p>
+     * <p>Specifies whether the gateway is the default private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -75,7 +69,7 @@ public class UpdateGatewayRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of nodes in the private gateway.</p>
+     * <p>The number of private gateway nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -83,9 +77,18 @@ public class UpdateGatewayRequest extends TeaModel {
     @NameInMap("Replicas")
     public Integer replicas;
 
+    /**
+     * <p>The list of vSwitches. This parameter applies only to application-type dedicated gateways.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <p>The VPC where the gateway resides. This parameter applies only to application-type dedicated gateways.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1jkde2******3mew</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

@@ -8,7 +8,7 @@ public class DeleteResourceLogResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Log service for resource [eas-r-asdasdasd] is deleting</p>
+     * <p>Log service for resource [eas-r-asdas****] is deleting</p>
      */
     @NameInMap("Message")
     public String message;

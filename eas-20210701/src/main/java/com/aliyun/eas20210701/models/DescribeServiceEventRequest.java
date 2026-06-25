@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceEventRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. By default, the current point in time is the end of the time range to query.</p>
+     * <p>The end time of the query range, in UTC. The default value is the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-02 15:04:05</p>
@@ -16,8 +16,10 @@ public class DescribeServiceEventRequest extends TeaModel {
     /**
      * <p>The event type. Valid values:</p>
      * <ul>
-     * <li>Normal</li>
-     * <li>Warning</li>
+     * <li><p>Normal: a normal event.</p>
+     * </li>
+     * <li><p>Warning: a warning event.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DescribeServiceEventRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The instance name. For more information about how to obtain the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+     * <p>The name of the service instance. To obtain this name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>echo-test-784xxxx85d-hhnd8</p>
@@ -36,7 +38,7 @@ public class DescribeServiceEventRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +47,7 @@ public class DescribeServiceEventRequest extends TeaModel {
     public String pageNum;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The number of events to return per page. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +56,7 @@ public class DescribeServiceEventRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The beginning of the time range to query. The time must be in UTC. The default value is seven days ago.</p>
+     * <p>The start time of the query range, in UTC. The default value is 7 days ago.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-02 15:04:05</p>

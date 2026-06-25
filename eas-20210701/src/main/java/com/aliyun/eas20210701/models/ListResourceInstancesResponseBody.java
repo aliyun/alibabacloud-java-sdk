@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListResourceInstancesResponseBody extends TeaModel {
     /**
-     * <p>The instances.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ResourceInstance> instances;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned list of instances.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of instances returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of instances.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -24,7 +24,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("ap-south-1", "pai-eas.ap-south-1.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "pai-eas.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "pai-eas.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "pai-eas.cn-chengdu.aliyuncs.com")
+            new TeaPair("cn-chengdu", "pai-eas.cn-chengdu.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "pai-eas.us-southeast-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "pai-eas.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "pai-eas.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "pai-eas.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "pai-eas.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "pai-eas.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "pai-eas.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "pai-eas.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "pai-eas.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "pai-eas.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "pai-eas.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "pai-eas.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "pai-eas.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -368,8 +381,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API creates a new dynamic parameter by sending a POST request to a specified path.</li>
+     * <li>The dynamic parameter name (<code>ConfigKey</code>) can contain letters, digits, periods (.), underscores (_), hyphens (-), and forward slashes (/). The maximum length is 100 characters.</li>
+     * <li>The request body must include the dynamic parameter value (<code>Value</code>).</li>
+     * <li>If successful, the API returns the new dynamic parameter\&quot;s name (<code>Key</code>), value (<code>Value</code>), creation time, and update time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建单个配置</p>
+     * <p>Creates a single dynamic parameter in a specified service.</p>
      * 
      * @param request CreateConfigRequest
      * @param headers map
@@ -402,8 +424,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API creates a new dynamic parameter by sending a POST request to a specified path.</li>
+     * <li>The dynamic parameter name (<code>ConfigKey</code>) can contain letters, digits, periods (.), underscores (_), hyphens (-), and forward slashes (/). The maximum length is 100 characters.</li>
+     * <li>The request body must include the dynamic parameter value (<code>Value</code>).</li>
+     * <li>If successful, the API returns the new dynamic parameter\&quot;s name (<code>Key</code>), value (<code>Value</code>), creation time, and update time.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建单个配置</p>
+     * <p>Creates a single dynamic parameter in a specified service.</p>
      * 
      * @param request CreateConfigRequest
      * @return CreateConfigResponse
@@ -415,8 +446,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建故障注入任务</p>
+     * <p>Creates a fault injection task.</p>
      * 
      * @param request CreateFaultInjectionRequest
      * @param headers map
@@ -453,8 +487,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建故障注入任务</p>
+     * <p>Creates a fault injection task.</p>
      * 
      * @param request CreateFaultInjectionRequest
      * @return CreateFaultInjectionResponse
@@ -547,8 +584,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you use this operation.</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an internal endpoint of a private gateway.</p>
+     * <p>Creates an internal endpoint for a private gateway.</p>
      * 
      * @param request CreateGatewayIntranetLinkedVpcRequest
      * @param headers map
@@ -593,8 +633,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you use this operation.</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an internal endpoint of a private gateway.</p>
+     * <p>Creates an internal endpoint for a private gateway.</p>
      * 
      * @param request CreateGatewayIntranetLinkedVpcRequest
      * @return CreateGatewayIntranetLinkedVpcResponse
@@ -664,10 +707,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</p>
+     * <p>*Before you use this operation, make sure that you fully understand the billing of Elastic Algorithm Service (EAS) and its <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a>.**.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource group.</p>
+     * <p>Creates a service group.</p>
+     * 
+     * @param request CreateGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGroupResponse
+     */
+    public CreateGroupResponse createGroupWithOptions(CreateGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.network)) {
+            body.put("Network", request.network);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workSpaceId)) {
+            body.put("WorkSpaceId", request.workSpaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGroup"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/groups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>*Before you use this operation, make sure that you fully understand the billing of Elastic Algorithm Service (EAS) and its <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a>.**.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service group.</p>
+     * 
+     * @param request CreateGroupRequest
+     * @return CreateGroupResponse
+     */
+    public CreateGroupResponse createGroup(CreateGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createGroupWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>Before calling this API, make sure you understand the billing method and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create a new resource group.</p>
      * 
      * @param request CreateResourceRequest
      * @param headers map
@@ -741,10 +849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</p>
+     * <p><em>Before calling this API, make sure you understand the billing method and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource group.</p>
+     * <p>Create a new resource group.</p>
      * 
      * @param request CreateResourceRequest
      * @return CreateResourceResponse
@@ -756,8 +864,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<strong><a href="https://help.aliyun.com/document_detail/144261.html"><strong>pricing</strong></a></strong>&#x20;of Elastic Algorithm Service (EAS).*</em></p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates instances in a dedicated resource group.</p>
+     * <p>Creates machine instances in a dedicated resource group.</p>
      * 
      * @param request CreateResourceInstancesRequest
      * @param headers map
@@ -818,8 +929,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<strong><a href="https://help.aliyun.com/document_detail/144261.html"><strong>pricing</strong></a></strong>&#x20;of Elastic Algorithm Service (EAS).*</em></p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates instances in a dedicated resource group.</p>
+     * <p>Creates machine instances in a dedicated resource group.</p>
      * 
      * @param request CreateResourceInstancesRequest
      * @return CreateResourceInstancesResponse
@@ -1010,7 +1124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the Cron Horizontal Pod Autoscaler (CronHPA) feature for a service.</p>
+     * <p>Creates a scheduled auto scaling rule for a service.</p>
      * 
      * @param request CreateServiceCronScalerRequest
      * @param headers map
@@ -1048,7 +1162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the Cron Horizontal Pod Autoscaler (CronHPA) feature for a service.</p>
+     * <p>Creates a scheduled auto scaling rule for a service.</p>
      * 
      * @param request CreateServiceCronScalerRequest
      * @return CreateServiceCronScalerResponse
@@ -1061,7 +1175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建连接服务的token</p>
+     * <p>Call this operation to obtain a token and a WebSocket URL for logging on to a container.</p>
      * 
      * @param request CreateServiceInstanceTokenRequest
      * @param headers map
@@ -1099,7 +1213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建连接服务的token</p>
+     * <p>Call this operation to obtain a token and a WebSocket URL for logging on to a container.</p>
      * 
      * @param request CreateServiceInstanceTokenRequest
      * @return CreateServiceInstanceTokenResponse
@@ -1163,18 +1277,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li><strong>策略互斥</strong>：<code>Partition</code>（分区发布）和<code>Batch</code>（批量发布）两种策略只能选择其中一种，不能同时使用。</li>
-     * <li><strong>请求速率限制</strong>：每秒最多100次请求。</li>
-     * <li><strong>授权信息</strong>：需要具备<code>eas:CreateServiceRollout</code>权限才能调用此接口。</li>
-     * <li><strong>资源ARN</strong>：<code>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</code>。</li>
-     * <li><strong>暂停发布</strong>：通过设置<code>Paused</code>参数为<code>true</code>可以暂停发布流程，之后可通过<code>UpdateServiceRollout</code>接口恢复或取消发布。</li>
-     * <li><strong>监控与回滚</strong>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<code>Partition</code>值或删除发布策略来实现。</li>
+     * <li><strong>Mutually exclusive strategies</strong>: You can use either the <code>Partition</code> or the <code>Batch</code> strategy, but not both.</li>
+     * <li><strong>Request rate limit</strong>: Up to 100 requests per second.</li>
+     * <li><strong>Authorization</strong>: This operation requires the <code>eas:CreateServiceRollout</code> permission.</li>
+     * <li><strong>ARN</strong>: <code>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</code>.</li>
+     * <li><strong>Pause a rollout</strong>: To pause the service rollout, set the <code>Paused</code> parameter to <code>true</code>. You can then resume or cancel the rollout by calling the <code>UpdateServiceRollout</code> operation.</li>
+     * <li><strong>Monitoring and rollback</strong>: Monitor service metrics during the service rollout to promptly identify and resolve issues. To perform a rollback, you can adjust the <code>Partition</code> value or delete the rollout strategy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建服务更新计划</p>
+     * <p>Creates a service rollout.</p>
      * 
      * @param request CreateServiceRolloutRequest
      * @param headers map
@@ -1216,18 +1330,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li><strong>策略互斥</strong>：<code>Partition</code>（分区发布）和<code>Batch</code>（批量发布）两种策略只能选择其中一种，不能同时使用。</li>
-     * <li><strong>请求速率限制</strong>：每秒最多100次请求。</li>
-     * <li><strong>授权信息</strong>：需要具备<code>eas:CreateServiceRollout</code>权限才能调用此接口。</li>
-     * <li><strong>资源ARN</strong>：<code>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</code>。</li>
-     * <li><strong>暂停发布</strong>：通过设置<code>Paused</code>参数为<code>true</code>可以暂停发布流程，之后可通过<code>UpdateServiceRollout</code>接口恢复或取消发布。</li>
-     * <li><strong>监控与回滚</strong>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<code>Partition</code>值或删除发布策略来实现。</li>
+     * <li><strong>Mutually exclusive strategies</strong>: You can use either the <code>Partition</code> or the <code>Batch</code> strategy, but not both.</li>
+     * <li><strong>Request rate limit</strong>: Up to 100 requests per second.</li>
+     * <li><strong>Authorization</strong>: This operation requires the <code>eas:CreateServiceRollout</code> permission.</li>
+     * <li><strong>ARN</strong>: <code>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</code>.</li>
+     * <li><strong>Pause a rollout</strong>: To pause the service rollout, set the <code>Paused</code> parameter to <code>true</code>. You can then resume or cancel the rollout by calling the <code>UpdateServiceRollout</code> operation.</li>
+     * <li><strong>Monitoring and rollback</strong>: Monitor service metrics during the service rollout to promptly identify and resolve issues. To perform a rollback, you can adjust the <code>Partition</code> value or delete the rollout strategy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建服务更新计划</p>
+     * <p>Creates a service rollout.</p>
      * 
      * @param request CreateServiceRolloutRequest
      * @return CreateServiceRolloutResponse
@@ -1392,8 +1506,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API deletes a specific configuration by its region ID, configuration type, service name, and configuration key. Ensure all parameter values are accurate to avoid accidentally deleting critical configurations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除单个配置项</p>
+     * <p>Deletes a single dynamic parameter for a specified service.</p>
      * 
      * @param request DeleteConfigRequest
      * @param headers map
@@ -1420,8 +1538,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API deletes a specific configuration by its region ID, configuration type, service name, and configuration key. Ensure all parameter values are accurate to avoid accidentally deleting critical configurations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除单个配置项</p>
+     * <p>Deletes a single dynamic parameter for a specified service.</p>
      * 
      * @param request DeleteConfigRequest
      * @return DeleteConfigResponse
@@ -1433,8 +1555,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除故障注入任务</p>
+     * <p>Deletes a fault injection task.</p>
      * 
      * @param request DeleteFaultInjectionRequest
      * @param headers map
@@ -1461,8 +1586,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除故障注入任务</p>
+     * <p>Deletes a fault injection task.</p>
      * 
      * @param request DeleteFaultInjectionRequest
      * @return DeleteFaultInjectionResponse
@@ -1623,8 +1751,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> for Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除网关标签</p>
+     * <p>Deletes gateway labels.</p>
      * 
      * @param tmpReq DeleteGatewayLabelRequest
      * @param headers map
@@ -1663,8 +1794,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> for Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除网关标签</p>
+     * <p>Deletes gateway labels.</p>
      * 
      * @param request DeleteGatewayLabelRequest
      * @return DeleteGatewayLabelResponse
@@ -1673,6 +1807,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteGatewayLabelWithOptions(ClusterId, GatewayId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a service group.</p>
+     * 
+     * @param request DeleteGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteGroupResponse
+     */
+    public DeleteGroupResponse deleteGroupWithOptions(String ClusterId, String GroupName, DeleteGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cascadeDelete)) {
+            query.put("CascadeDelete", request.cascadeDelete);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGroup"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/groups/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(GroupName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a service group.</p>
+     * 
+     * @param request DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
+    public DeleteGroupResponse deleteGroup(String ClusterId, String GroupName, DeleteGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteGroupWithOptions(ClusterId, GroupName, request, headers, runtime);
     }
 
     /**
@@ -1759,7 +1940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the tags of an instance in a resource group.</p>
+     * <p>Deletes instance tags from a resource group.</p>
      * 
      * @param tmpReq DeleteResourceInstanceLabelRequest
      * @param headers map
@@ -1819,7 +2000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the tags of an instance in a resource group.</p>
+     * <p>Deletes instance tags from a resource group.</p>
      * 
      * @param request DeleteResourceInstanceLabelRequest
      * @return DeleteResourceInstanceLabelResponse
@@ -2046,8 +2227,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<strong><a href="https://help.aliyun.com/document_detail/144261.html"><strong>pricing</strong></a></strong>&#x20;of Elastic Algorithm Service (EAS).*</em></p>
+     * 
      * <b>summary</b> : 
-     * <p>Restarts the instances of a service.</p>
+     * <p>Restarts specified instances of a service.</p>
      * 
      * @param request DeleteServiceInstancesRequest
      * @param headers map
@@ -2092,8 +2276,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<strong><a href="https://help.aliyun.com/document_detail/144261.html"><strong>pricing</strong></a></strong>&#x20;of Elastic Algorithm Service (EAS).*</em></p>
+     * 
      * <b>summary</b> : 
-     * <p>Restarts the instances of a service.</p>
+     * <p>Restarts specified instances of a service.</p>
      * 
      * @param request DeleteServiceInstancesRequest
      * @return DeleteServiceInstancesResponse
@@ -2106,7 +2293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes existing service tags.</p>
+     * <p>Deletes a service label.</p>
      * 
      * @param tmpReq DeleteServiceLabelRequest
      * @param headers map
@@ -2154,7 +2341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes existing service tags.</p>
+     * <p>Deletes a service label.</p>
      * 
      * @param request DeleteServiceLabelRequest
      * @return DeleteServiceLabelResponse
@@ -2220,7 +2407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除服务更新计划</p>
+     * <p>Deletes a service rollout.</p>
      * 
      * @param request DeleteServiceRolloutRequest
      * @param headers map
@@ -2260,7 +2447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除服务更新计划</p>
+     * <p>Deletes a service rollout.</p>
      * 
      * @param request DeleteServiceRolloutRequest
      * @return DeleteServiceRolloutResponse
@@ -2525,7 +2712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instance types for an available instance in a shared resource group.</p>
+     * <p>Returns a list of available machine specifications.</p>
      * 
      * @param tmpReq DescribeMachineSpecRequest
      * @param headers map
@@ -2573,7 +2760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instance types for an available instance in a shared resource group.</p>
+     * <p>Returns a list of available machine specifications.</p>
      * 
      * @param request DescribeMachineSpecRequest
      * @return DescribeMachineSpecResponse
@@ -2623,7 +2810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a resource group.</p>
+     * <p>Retrieves the details of a resource group.</p>
      * 
      * @param request DescribeResourceRequest
      * @param headers map
@@ -2651,7 +2838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a resource group.</p>
+     * <p>Retrieves the details of a resource group.</p>
      * 
      * @param request DescribeResourceRequest
      * @return DescribeResourceResponse
@@ -2910,7 +3097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of service endpoints.</p>
+     * <p>Retrieves a list of service endpoints.</p>
      * 
      * @param request DescribeServiceEndpointsRequest
      * @param headers map
@@ -2938,7 +3125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of service endpoints.</p>
+     * <p>Retrieves a list of service endpoints.</p>
      * 
      * @param request DescribeServiceEndpointsRequest
      * @return DescribeServiceEndpointsResponse
@@ -2951,7 +3138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about recent service deployment events.</p>
+     * <p>Queries recent deployment events for a specified service.</p>
      * 
      * @param request DescribeServiceEventRequest
      * @param headers map
@@ -3005,7 +3192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about recent service deployment events.</p>
+     * <p>Queries recent deployment events for a specified service.</p>
      * 
      * @param request DescribeServiceEventRequest
      * @return DescribeServiceEventResponse
@@ -3190,7 +3377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查看服务更新计划</p>
+     * <p>Retrieves the details of a service rollout.</p>
      * 
      * @param request DescribeServiceRolloutRequest
      * @param headers map
@@ -3229,7 +3416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查看服务更新计划</p>
+     * <p>Retrieves the details of a service rollout.</p>
      * 
      * @param request DescribeServiceRolloutRequest
      * @return DescribeServiceRolloutResponse
@@ -3348,7 +3535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Views the details of a virtual resource group.</p>
+     * <p>Queries the details of a virtual resource group.</p>
      * 
      * @param request DescribeVirtualResourceRequest
      * @param headers map
@@ -3376,7 +3563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Views the details of a virtual resource group.</p>
+     * <p>Queries the details of a virtual resource group.</p>
      * 
      * @param request DescribeVirtualResourceRequest
      * @return DescribeVirtualResourceResponse
@@ -3536,7 +3723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of stress testing tasks that are created by the current user.</p>
+     * <p>Lists all deployed stress testing tasks.</p>
      * 
      * @param request ListBenchmarkTaskRequest
      * @param headers map
@@ -3602,7 +3789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of stress testing tasks that are created by the current user.</p>
+     * <p>Lists all deployed stress testing tasks.</p>
      * 
      * @param request ListBenchmarkTaskRequest
      * @return ListBenchmarkTaskResponse
@@ -3614,8 +3801,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li><code>ClusterId</code> specifies the service\&quot;s region.</li>
+     * <li><code>ConfigType</code> specifies the configuration type. Only <code>service</code> is supported.</li>
+     * <li><code>Name</code> specifies the service name.</li>
+     * <li>Use the <code>Page</code> and <code>PageSize</code> parameters to paginate the results.</li>
+     * <li>The response contains the details of the dynamic parameters and pagination information.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询服务的所有配置项（支持分页）</p>
+     * <p>Retrieves a list of dynamic parameters for a specified service.</p>
      * 
      * @param request ListConfigsRequest
      * @param headers map
@@ -3652,8 +3849,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li><code>ClusterId</code> specifies the service\&quot;s region.</li>
+     * <li><code>ConfigType</code> specifies the configuration type. Only <code>service</code> is supported.</li>
+     * <li><code>Name</code> specifies the service name.</li>
+     * <li>Use the <code>Page</code> and <code>PageSize</code> parameters to paginate the results.</li>
+     * <li>The response contains the details of the dynamic parameters and pagination information.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询服务的所有配置项（支持分页）</p>
+     * <p>Retrieves a list of dynamic parameters for a specified service.</p>
      * 
      * @param request ListConfigsRequest
      * @return ListConfigsResponse
@@ -3666,7 +3873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of private gateways.</p>
+     * <p>Lists private gateways.</p>
      * 
      * @param tmpReq ListGatewayRequest
      * @param headers map
@@ -3750,7 +3957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of private gateways.</p>
+     * <p>Lists private gateways.</p>
      * 
      * @param request ListGatewayRequest
      * @return ListGatewayResponse
@@ -3763,7 +3970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of custom domain names of a private gateway.</p>
+     * <p>Lists the custom domain names for a private gateway.</p>
      * 
      * @param request ListGatewayDomainsRequest
      * @param headers map
@@ -3791,7 +3998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of custom domain names of a private gateway.</p>
+     * <p>Lists the custom domain names for a private gateway.</p>
      * 
      * @param request ListGatewayDomainsRequest
      * @return ListGatewayDomainsResponse
@@ -3803,8 +4010,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of the internal endpoints of a private gateway.</p>
+     * <p>Lists the internal access endpoints of a private gateway.</p>
      * 
      * @param request ListGatewayIntranetLinkedVpcRequest
      * @param headers map
@@ -3831,8 +4041,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of the internal endpoints of a private gateway.</p>
+     * <p>Lists the internal access endpoints of a private gateway.</p>
      * 
      * @param request ListGatewayIntranetLinkedVpcRequest
      * @return ListGatewayIntranetLinkedVpcResponse
@@ -3845,7 +4058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</p>
+     * <p>Lists the VPC peering connections for a gateway\&quot;s private network endpoint.</p>
      * 
      * @param request ListGatewayIntranetLinkedVpcPeerRequest
      * @param headers map
@@ -3879,7 +4092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</p>
+     * <p>Lists the VPC peering connections for a gateway\&quot;s private network endpoint.</p>
      * 
      * @param request ListGatewayIntranetLinkedVpcPeerRequest
      * @return ListGatewayIntranetLinkedVpcPeerResponse
@@ -3933,18 +4146,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries created service groups.</p>
+     * <p>Lists created service groups.</p>
      * 
-     * @param request ListGroupsRequest
+     * @param tmpReq ListGroupsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGroupsResponse
      */
-    public ListGroupsResponse listGroupsWithOptions(ListGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListGroupsResponse listGroupsWithOptions(ListGroupsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListGroupsShrinkRequest request = new ListGroupsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labels)) {
+            request.labelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labels, "Labels", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelsShrink)) {
+            query.put("Labels", request.labelsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
@@ -3991,7 +4214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries created service groups.</p>
+     * <p>Lists created service groups.</p>
      * 
      * @param request ListGroupsRequest
      * @return ListGroupsResponse
@@ -4004,7 +4227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of workers in a resource group.</p>
+     * <p>Lists the service workers of a resource instance.</p>
      * 
      * @param request ListResourceInstanceWorkerRequest
      * @param headers map
@@ -4066,7 +4289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of workers in a resource group.</p>
+     * <p>Lists the service workers of a resource instance.</p>
      * 
      * @param request ListResourceInstanceWorkerRequest
      * @return ListResourceInstanceWorkerResponse
@@ -4079,7 +4302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances in a dedicated resource group.</p>
+     * <p>Lists the instances in a specified dedicated resource group.</p>
      * 
      * @param tmpReq ListResourceInstancesRequest
      * @param headers map
@@ -4163,7 +4386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances in a dedicated resource group.</p>
+     * <p>Lists the instances in a specified dedicated resource group.</p>
      * 
      * @param request ListResourceInstancesRequest
      * @return ListResourceInstancesResponse
@@ -4235,7 +4458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of dedicated resource groups for the current user.</p>
+     * <p>Lists the resource groups for the current user.</p>
      * 
      * @param request ListResourcesRequest
      * @param headers map
@@ -4301,7 +4524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of dedicated resource groups for the current user.</p>
+     * <p>Lists the resource groups for the current user.</p>
      * 
      * @param request ListResourcesRequest
      * @return ListResourcesResponse
@@ -4354,8 +4577,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取故障注入信息</p>
+     * <p>Retrieves fault injection information.</p>
      * 
      * @param request ListServiceInstanceFaultInjectionInfoRequest
      * @param headers map
@@ -4382,8 +4608,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取故障注入信息</p>
+     * <p>Retrieves fault injection information.</p>
      * 
      * @param request ListServiceInstanceFaultInjectionInfoRequest
      * @return ListServiceInstanceFaultInjectionInfoResponse
@@ -4395,8 +4624,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Ensure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries instances of a service.</p>
+     * <p>Lists the instances of a specified service.</p>
      * 
      * @param request ListServiceInstancesRequest
      * @param headers map
@@ -4497,8 +4729,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Ensure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries instances of a service.</p>
+     * <p>Lists the instances of a specified service.</p>
      * 
      * @param request ListServiceInstancesRequest
      * @return ListServiceInstancesResponse
@@ -4756,7 +4991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of virtual resource groups for the current user.</p>
+     * <p>Queries the virtual resource groups for the current user.</p>
      * 
      * @param request ListVirtualResourceRequest
      * @param headers map
@@ -4810,7 +5045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of virtual resource groups for the current user.</p>
+     * <p>Queries the virtual resource groups for the current user.</p>
      * 
      * @param request ListVirtualResourceRequest
      * @return ListVirtualResourceResponse
@@ -4823,7 +5058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates resource group instances.</p>
+     * <p>Migrates instances to a specified resource group.</p>
      * 
      * @param request MigrateResourceInstanceRequest
      * @param headers map
@@ -4865,7 +5100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrates resource group instances.</p>
+     * <p>Migrates instances to a specified resource group.</p>
      * 
      * @param request MigrateResourceInstanceRequest
      * @return MigrateResourceInstanceResponse
@@ -5011,7 +5246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>伸缩服务</p>
+     * <p>Scales a service.</p>
      * 
      * @param request ScaleServiceRequest
      * @param headers map
@@ -5049,7 +5284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>伸缩服务</p>
+     * <p>Scales a service.</p>
      * 
      * @param request ScaleServiceRequest
      * @return ScaleServiceResponse
@@ -5340,8 +5575,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to update a dynamic parameter by providing its <code>ClusterId</code>, <code>ConfigType</code>, <code>Name</code>, and <code>ConfigKey</code>. The request body must contain the new parameter value in the <code>Value</code> field. Ensure you provide the correct path parameters to avoid errors.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新单个配置项</p>
+     * <p>Updates a dynamic parameter for a specific cluster and service.</p>
      * 
      * @param request UpdateConfigRequest
      * @param headers map
@@ -5374,8 +5613,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to update a dynamic parameter by providing its <code>ClusterId</code>, <code>ConfigType</code>, <code>Name</code>, and <code>ConfigKey</code>. The request body must contain the new parameter value in the <code>Value</code> field. Ensure you provide the correct path parameters to avoid errors.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新单个配置项</p>
+     * <p>Updates a dynamic parameter for a specific cluster and service.</p>
      * 
      * @param request UpdateConfigRequest
      * @return UpdateConfigResponse
@@ -5388,7 +5631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a private gateway.</p>
+     * <p>Updates a private gateway.</p>
      * 
      * @param request UpdateGatewayRequest
      * @param headers map
@@ -5454,7 +5697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a private gateway.</p>
+     * <p>Updates a private gateway.</p>
      * 
      * @param request UpdateGatewayRequest
      * @return UpdateGatewayResponse
@@ -5466,8 +5709,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改网关标签</p>
+     * <p>Adds a gateway label or updates an existing one.</p>
      * 
      * @param request UpdateGatewayLabelRequest
      * @param headers map
@@ -5500,8 +5746,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改网关标签</p>
+     * <p>Adds a gateway label or updates an existing one.</p>
      * 
      * @param request UpdateGatewayLabelRequest
      * @return UpdateGatewayLabelResponse
@@ -5514,7 +5763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the specific fields of a service group.</p>
+     * <p>Updates specific fields of a service group.</p>
      * 
      * @param request UpdateGroupRequest
      * @param headers map
@@ -5524,6 +5773,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateGroupResponse updateGroupWithOptions(String ClusterId, String GroupName, UpdateGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.network)) {
+            body.put("Network", request.network);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.trafficMode)) {
             body.put("TrafficMode", request.trafficMode);
         }
@@ -5548,7 +5805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the specific fields of a service group.</p>
+     * <p>Updates specific fields of a service group.</p>
      * 
      * @param request UpdateGroupRequest
      * @return UpdateGroupResponse
@@ -5671,7 +5928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the service scheduling status of an instance in a dedicated resource group.</p>
+     * <p>Updates the scheduling status of an instance in a dedicated resource group.</p>
      * 
      * @param request UpdateResourceInstanceRequest
      * @param headers map
@@ -5713,7 +5970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the service scheduling status of an instance in a dedicated resource group.</p>
+     * <p>Updates the scheduling status of an instance in a dedicated resource group.</p>
      * 
      * @param request UpdateResourceInstanceRequest
      * @return UpdateResourceInstanceResponse
@@ -5900,7 +6157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the Cron Horizontal Pod Autoscaler (CronHPA) settings of a service.</p>
+     * <p>Updates the scheduled auto scaling configuration for a service.</p>
      * 
      * @param request UpdateServiceCronScalerRequest
      * @param headers map
@@ -5938,7 +6195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the Cron Horizontal Pod Autoscaler (CronHPA) settings of a service.</p>
+     * <p>Updates the scheduled auto scaling configuration for a service.</p>
      * 
      * @param request UpdateServiceCronScalerRequest
      * @return UpdateServiceCronScalerResponse
@@ -5950,8 +6207,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates attributes of service instances. Only isolation can be performed for service instances.</p>
+     * <p>Updates the properties of a service instance. This operation applies only to fencing service instances.</p>
      * 
      * @param request UpdateServiceInstanceRequest
      * @param headers map
@@ -5998,8 +6258,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates attributes of service instances. Only isolation can be performed for service instances.</p>
+     * <p>Updates the properties of a service instance. This operation applies only to fencing service instances.</p>
      * 
      * @param request UpdateServiceInstanceRequest
      * @return UpdateServiceInstanceResponse
@@ -6110,17 +6373,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li><strong>至少提供一个参数</strong>：必须在请求中指定<code>Partition</code>、<code>Batch</code>或<code>Paused</code>中的至少一个参数。</li>
-     * <li><strong>互斥策略</strong>：不能同时提供<code>Partition</code>和<code>Batch</code>配置。</li>
-     * <li><strong>实时生效</strong>：更新将立即生效，影响正在进行的服务发布过程。</li>
-     * <li><strong>回退操作</strong>：通过增加<code>Partition</code>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</li>
-     * <li><strong>暂停不影响参数</strong>：暂停发布不会改变已设置的<code>Partition</code>或<code>Batch</code>参数，仅暂停执行当前策略。</li>
+     * <li><strong>Provide at least one parameter</strong>: Specify at least one of the <code>Partition</code>, <code>Batch</code>, or <code>Paused</code> parameters.</li>
+     * <li><strong>Mutually exclusive strategies</strong>: You cannot specify both the <code>Partition</code> and <code>Batch</code> parameters in the same request.</li>
+     * <li><strong>Immediate effect</strong>: Updates take effect immediately and affect ongoing service rollouts.</li>
+     * <li><strong>Rollback</strong>: You can perform a rollback by increasing the <code>Partition</code> value. However, this is not an automatic process, and you must manually update the service image.</li>
+     * <li><strong>Pause does not affect parameters</strong>: Pausing a rollout does not change the configured <code>Partition</code> or <code>Batch</code> parameters. It only suspends the current rollout strategy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新服务发布计划</p>
+     * <p>Updates a service rollout.</p>
      * 
      * @param request UpdateServiceRolloutRequest
      * @param headers map
@@ -6162,17 +6425,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li><strong>至少提供一个参数</strong>：必须在请求中指定<code>Partition</code>、<code>Batch</code>或<code>Paused</code>中的至少一个参数。</li>
-     * <li><strong>互斥策略</strong>：不能同时提供<code>Partition</code>和<code>Batch</code>配置。</li>
-     * <li><strong>实时生效</strong>：更新将立即生效，影响正在进行的服务发布过程。</li>
-     * <li><strong>回退操作</strong>：通过增加<code>Partition</code>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</li>
-     * <li><strong>暂停不影响参数</strong>：暂停发布不会改变已设置的<code>Partition</code>或<code>Batch</code>参数，仅暂停执行当前策略。</li>
+     * <li><strong>Provide at least one parameter</strong>: Specify at least one of the <code>Partition</code>, <code>Batch</code>, or <code>Paused</code> parameters.</li>
+     * <li><strong>Mutually exclusive strategies</strong>: You cannot specify both the <code>Partition</code> and <code>Batch</code> parameters in the same request.</li>
+     * <li><strong>Immediate effect</strong>: Updates take effect immediately and affect ongoing service rollouts.</li>
+     * <li><strong>Rollback</strong>: You can perform a rollback by increasing the <code>Partition</code> value. However, this is not an automatic process, and you must manually update the service image.</li>
+     * <li><strong>Pause does not affect parameters</strong>: Pausing a rollout does not change the configured <code>Partition</code> or <code>Batch</code> parameters. It only suspends the current rollout strategy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新服务发布计划</p>
+     * <p>Updates a service rollout.</p>
      * 
      * @param request UpdateServiceRolloutRequest
      * @return UpdateServiceRolloutResponse

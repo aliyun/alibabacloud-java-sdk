@@ -4,16 +4,31 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeMachineSpecShrinkRequest extends TeaModel {
+    /**
+     * <p>The billing method. The default value is \<code>PostPaid\\</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>No input required</p>
      */
     @NameInMap("InstanceTypes")
     @Deprecated
     public String instanceTypesShrink;
 
+    /**
+     * <p>The resource type. The default value is \<code>Public\\</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

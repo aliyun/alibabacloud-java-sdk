@@ -3,12 +3,12 @@ package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class CreateServiceCronScalerResponseBody extends TeaModel {
+public class DeleteGroupResponseBody extends TeaModel {
     /**
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Create cron scaler for service [foo] successfully</p>
+     * <p>Delete service group foo successfully</p>
      */
     @NameInMap("Message")
     public String message;
@@ -17,17 +17,17 @@ public class CreateServiceCronScalerResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>40325405-579C-4D82****</p>
+     * <p>40325405-579C-4D82********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateServiceCronScalerResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateServiceCronScalerResponseBody self = new CreateServiceCronScalerResponseBody();
+    public static DeleteGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteGroupResponseBody self = new DeleteGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateServiceCronScalerResponseBody setMessage(String message) {
+    public DeleteGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -35,7 +35,7 @@ public class CreateServiceCronScalerResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateServiceCronScalerResponseBody setRequestId(String requestId) {
+    public DeleteGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

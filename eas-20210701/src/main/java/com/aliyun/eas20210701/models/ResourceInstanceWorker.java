@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResourceInstanceWorker extends TeaModel {
     /**
-     * <p>The maximum number of CPU cores.</p>
+     * <p>The CPU core limit.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public Integer cpuLimit;
 
     /**
-     * <p>The number of CPU cores that you applied for.</p>
+     * <p>The number of CPU cores requested.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public Integer cpuRequest;
 
     /**
-     * <p>The maximum number of GPUs.</p>
+     * <p>The GPU limit.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -32,7 +32,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public Integer gpuLimit;
 
     /**
-     * <p>The number of GPUs that you applied for.</p>
+     * <p>The number of GPUs requested.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +41,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public Integer gpuRequest;
 
     /**
-     * <p>The maximum memory size.</p>
+     * <p>The memory limit.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -50,7 +50,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public Long memoryLimit;
 
     /**
-     * <p>The memory size that you applied for.</p>
+     * <p>The requested memory.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -68,7 +68,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public String name;
 
     /**
-     * <p>Indicates whether the instance worker is ready.</p>
+     * <p>Indicates whether the instance is ready.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public Boolean ready;
 
     /**
-     * <p>The number of times the instance worker restarted.</p>
+     * <p>The number of times the instance has been restarted.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -86,7 +86,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public Long restartCount;
 
     /**
-     * <p>The service name.</p>
+     * <p>The name of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>test-in****</p>
@@ -95,7 +95,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The time when the instance worker started.</p>
+     * <p>The start time of the instance, in UTC (ISO 8601 format).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-09T09:56:19Z</p>
@@ -104,51 +104,7 @@ public class ResourceInstanceWorker extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The instance state.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Terminating</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Succeeded</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Unknown</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Failed</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Running</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Pending</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The status of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>

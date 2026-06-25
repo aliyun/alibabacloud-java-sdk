@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
     /**
-     * <p>The token that is used to access the service.</p>
+     * <p>The access token for the service.</p>
      * 
      * <strong>example:</strong>
      * <p>MzJiMDI5MDliODc0MTlkYmI0ZDhlYmExYjczYTIyZTE3Zm********</p>
@@ -14,7 +14,7 @@ public class Service extends TeaModel {
     public String accessToken;
 
     /**
-     * <p>The application service configuration.</p>
+     * <p>The application configuration for the service.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ModelStorage&quot;:&quot;oss&quot;}</p>
@@ -23,7 +23,7 @@ public class Service extends TeaModel {
     public String appConfig;
 
     /**
-     * <p>The name of the application service specification.</p>
+     * <p>The application specification name for the service.</p>
      * 
      * <strong>example:</strong>
      * <p>llama_7b_fp16</p>
@@ -32,7 +32,7 @@ public class Service extends TeaModel {
     public String appSpecName;
 
     /**
-     * <p>The application service type.</p>
+     * <p>The application type of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>LLM</p>
@@ -41,7 +41,7 @@ public class Service extends TeaModel {
     public String appType;
 
     /**
-     * <p>The application service version.</p>
+     * <p>The application version of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -49,11 +49,17 @@ public class Service extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <p>Indicates whether auto scaling is enabled for the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoscalerEnabled")
     public Boolean autoscalerEnabled;
 
     /**
-     * <p>The user ID (UID) of the Alibaba Cloud account that is used to create the service.</p>
+     * <p>The UID of the account that created the service.</p>
      * 
      * <strong>example:</strong>
      * <p>20123*******</p>
@@ -62,7 +68,7 @@ public class Service extends TeaModel {
     public String callerUid;
 
     /**
-     * <p>The number of CPU cores that you applied for each instance.</p>
+     * <p>The number of CPU cores requested for each instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -71,7 +77,7 @@ public class Service extends TeaModel {
     public Integer cpu;
 
     /**
-     * <p>The time when the service was created. The time is displayed in the UTC RFC3339 format.</p>
+     * <p>The time when the service was created, in RFC 3339 format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-29T11:13:20Z</p>
@@ -79,11 +85,17 @@ public class Service extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>Indicates whether scheduled scaling is enabled for the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CronscalerEnabled")
     public Boolean cronscalerEnabled;
 
     /**
-     * <p>The version of the model that is running.</p>
+     * <p>The current version of the running model.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -92,22 +104,34 @@ public class Service extends TeaModel {
     public Integer currentVersion;
 
     /**
-     * <p>The additional information about the service.</p>
+     * <p>Additional information about the service.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;blue_green_services\&quot;:[\&quot;test\&quot;,\&quot;testxxxx\&quot;]}</p>
+     * <p>{&quot;blue_green_services&quot;:[&quot;test&quot;,&quot;testxxxx&quot;]}</p>
      */
     @NameInMap("ExtraData")
     public String extraData;
 
+    /**
+     * <p>The percentage of GPU computing power requested for each instance when GPU sharing is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("GPUCorePercentage")
     public Integer GPUCorePercentage;
 
+    /**
+     * <p>The amount of GPU memory requested for each instance when GPU sharing is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("GPUMemory")
     public Integer GPUMemory;
 
     /**
-     * <p>The ID of the dedicated gateway for the service. This parameter is available only for services that are associated with dedicated gateways.</p>
+     * <p>The ID of the dedicated gateway for the service. This field is returned only for services that are bound to a dedicated gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxxxxx</p>
@@ -116,7 +140,7 @@ public class Service extends TeaModel {
     public String gateway;
 
     /**
-     * <p>The number of GPUs that you applied for each instance.</p>
+     * <p>The number of GPUs requested for each instance.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -125,7 +149,7 @@ public class Service extends TeaModel {
     public Integer gpu;
 
     /**
-     * <p>The data image of the service.</p>
+     * <p>The image used by the service.</p>
      * 
      * <strong>example:</strong>
      * <p>registry.cn-shanghai.aliyuncs.com/eas/echo_cn-shanghai:v0.0.1-20210129111320</p>
@@ -133,11 +157,14 @@ public class Service extends TeaModel {
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>A breakdown of the instance count by resource type.</p>
+     */
     @NameInMap("InstanceCountInResource")
     public ServiceInstanceCountInResource instanceCountInResource;
 
     /**
-     * <p>The public endpoint of the service. This parameter is returned only in the DescribeService API operation.</p>
+     * <p>The internet endpoint of the service. This field is returned only by the <code>DescribeService</code> operation.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
@@ -146,7 +173,7 @@ public class Service extends TeaModel {
     public String internetEndpoint;
 
     /**
-     * <p>The internal endpoint of the service. This parameter is returned only in the DescribeService API operation.</p>
+     * <p>The intranet endpoint of the service. This field is returned only by the <code>DescribeService</code> operation.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
@@ -155,7 +182,7 @@ public class Service extends TeaModel {
     public String intranetEndpoint;
 
     /**
-     * <p>The labels.</p>
+     * <p>The labels of the service.</p>
      */
     @NameInMap("Labels")
     public java.util.List<ServiceLabels> labels;
@@ -170,7 +197,7 @@ public class Service extends TeaModel {
     public Integer latestVersion;
 
     /**
-     * <p>The memory size that you applied for each instance. Unit: MB.</p>
+     * <p>The amount of memory requested for each instance, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -179,7 +206,7 @@ public class Service extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>The service summary.</p>
+     * <p>A message that provides information about the service status.</p>
      * 
      * <strong>example:</strong>
      * <p>Service start successfully</p>
@@ -188,7 +215,7 @@ public class Service extends TeaModel {
     public String message;
 
     /**
-     * <p>The namespace in which the service resides.</p>
+     * <p>The namespace where the service is located.</p>
      * 
      * <strong>example:</strong>
      * <p>echo</p>
@@ -197,7 +224,7 @@ public class Service extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The UID of the Alibaba Cloud account that is used to create the service.</p>
+     * <p>The UID of the primary account used to create the service.</p>
      * 
      * <strong>example:</strong>
      * <p>11234*******</p>
@@ -206,7 +233,7 @@ public class Service extends TeaModel {
     public String parentUid;
 
     /**
-     * <p>The number of instances for the pending service.</p>
+     * <p>The number of pending instances for the service.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -215,7 +242,7 @@ public class Service extends TeaModel {
     public Integer pendingInstance;
 
     /**
-     * <p>The quota ID for the service. This parameter is available only for services deployed by using Lingjun resource quotas.</p>
+     * <p>The quota ID of the service. This field is returned only for services that are deployed on a Lingjun resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>quotaxxxxx</p>
@@ -224,7 +251,7 @@ public class Service extends TeaModel {
     public String quotaId;
 
     /**
-     * <p>The reason for which the service is in the current state.</p>
+     * <p>The reason for the service status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -233,7 +260,7 @@ public class Service extends TeaModel {
     public String reason;
 
     /**
-     * <p>The region in which the service resides.</p>
+     * <p>The region where the service is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -268,11 +295,17 @@ public class Service extends TeaModel {
     @NameInMap("ResourceAlias")
     public String resourceAlias;
 
+    /**
+     * <p>Indicates whether a burstable resource pool is enabled for the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ResourceBurstable")
     public Boolean resourceBurstable;
 
     /**
-     * <p>The service role.</p>
+     * <p>The role of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>Queue</p>
@@ -281,16 +314,16 @@ public class Service extends TeaModel {
     public String role;
 
     /**
-     * <p>The additional attributes of the service role. This parameter is returned only in the DescribeService API operation.</p>
+     * <p>Additional attributes of the service role. This field is returned only by the <code>DescribeService</code> operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;{\&quot;ApproxMaxLength\&quot;:null,\&quot;Length\&quot;:null,\&quot;MaxPayloadBytes\&quot;:null}&quot;</p>
+     * <p>{&quot;ApproxMaxLength&quot;:null,&quot;Length&quot;:null,&quot;MaxPayloadBytes&quot;:null}</p>
      */
     @NameInMap("RoleAttrs")
     public String roleAttrs;
 
     /**
-     * <p>The number of instances for the running service.</p>
+     * <p>The number of running instances of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -299,13 +332,7 @@ public class Service extends TeaModel {
     public Integer runningInstance;
 
     /**
-     * <p>The security lock of the service.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>all: forbids all operations.</li>
-     * <li>dangerous: forbids the operation of deleting or stopping the service.</li>
-     * <li>none: forbids no operations.</li>
-     * </ul>
+     * <p>The safety lock status of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>dangerous</p>
@@ -314,7 +341,7 @@ public class Service extends TeaModel {
     public String safetyLock;
 
     /**
-     * <p>The public endpoint that is used in the asynchronization request of the service. This parameter is returned only in the DescribeService API operation.</p>
+     * <p>The internet endpoint for synchronous requests to an asynchronous service. This field is returned only by the <code>DescribeService</code> operation.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/async_path.echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/async_path.echo</a></p>
@@ -323,7 +350,7 @@ public class Service extends TeaModel {
     public String secondaryInternetEndpoint;
 
     /**
-     * <p>The internal endpoint that is used in the asynchronization request of the service. This parameter is returned only in the DescribeService API operation.</p>
+     * <p>The intranet endpoint for synchronous requests to an asynchronous service. This field is returned only by the <code>DescribeService</code> operation.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/async_path.echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/async_path.echo</a></p>
@@ -332,10 +359,10 @@ public class Service extends TeaModel {
     public String secondaryIntranetEndpoint;
 
     /**
-     * <p>The service configurations.</p>
+     * <p>The configuration of the service.</p>
      * 
      * <strong>example:</strong>
-     * <p>{        &quot;metadata&quot;: {             &quot;cpu&quot;:1,             &quot;instance&quot;:1,             &quot;memory&quot;:1024           },         &quot;name&quot;:&quot;echo&quot;,         &quot;processor_entry&quot;:&quot;libecho.so&quot;,         &quot;processor_path&quot;:&quot;<a href="http://oss-cn-hangzhou-zmf.aliyuncs.com/059247/echo_processor_release.tar.gz">http://oss-cn-hangzhou-zmf.aliyuncs.com/059247/echo_processor_release.tar.gz</a>&quot;,         &quot;processor_type&quot;:&quot;cpp&quot;     }</p>
+     * <p>{&quot;metadata&quot;:{&quot;cpu&quot;:1,&quot;instance&quot;:1,&quot;memory&quot;:1024},&quot;name&quot;:&quot;echo&quot;,&quot;processor_entry&quot;:&quot;libecho.so&quot;,&quot;processor_path&quot;:&quot;<a href="http://oss-cn-hangzhou-zmf.aliyuncs.com/059247/echo_processor_release.tar.gz%22,%22processor_type%22:%22cpp%22%7D">http://oss-cn-hangzhou-zmf.aliyuncs.com/059247/echo_processor_release.tar.gz&quot;,&quot;processor_type&quot;:&quot;cpp&quot;}</a></p>
      */
     @NameInMap("ServiceConfig")
     public String serviceConfig;
@@ -359,7 +386,7 @@ public class Service extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The service name.</p>
+     * <p>The name of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>echo</p>
@@ -368,7 +395,7 @@ public class Service extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The service ID. ServiceUid has the same meaning as ServiceId, and the values of the two parameters are the same.</p>
+     * <p>The service ID. This value is the same as <code>ServiceId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-m-xxasdat</p>
@@ -377,7 +404,7 @@ public class Service extends TeaModel {
     public String serviceUid;
 
     /**
-     * <p>The source from which the service deployment request is initiated.</p>
+     * <p>The deployment source of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>dsw</p>
@@ -386,24 +413,7 @@ public class Service extends TeaModel {
     public String source;
 
     /**
-     * <p>The service status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Creating</li>
-     * <li>Deploying</li>
-     * <li>Stopped</li>
-     * <li>Failed</li>
-     * <li>Updating</li>
-     * <li>Stopping</li>
-     * <li>Waiting</li>
-     * <li>HotUpdate</li>
-     * <li>Starting</li>
-     * <li>DeleteFailed</li>
-     * <li>Running</li>
-     * <li>Scaling</li>
-     * <li>Pending</li>
-     * <li>Deleting</li>
-     * </ul>
+     * <p>The status of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -421,12 +431,7 @@ public class Service extends TeaModel {
     public Integer totalInstance;
 
     /**
-     * <p>The traffic state.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>standalone: independent traffic.</li>
-     * <li>grouping: grouped traffic.</li>
-     * </ul>
+     * <p>The traffic state of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>standalone</p>
@@ -435,7 +440,7 @@ public class Service extends TeaModel {
     public String trafficState;
 
     /**
-     * <p>The time when the service was updated. The time is displayed in the UTC RFC3339 format.</p>
+     * <p>The time when the service was last updated, in RFC 3339 format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-29T11:13:20Z</p>
@@ -444,7 +449,7 @@ public class Service extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The weight of the service in canary release.</p>
+     * <p>The traffic weight for the canary release of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -894,12 +899,30 @@ public class Service extends TeaModel {
     }
 
     public static class ServiceInstanceCountInResource extends TeaModel {
+        /**
+         * <p>The number of instances that use dedicated or self-managed resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Dedicated")
         public Integer dedicated;
 
+        /**
+         * <p>The number of instances that use public resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Public")
         public Integer _public;
 
+        /**
+         * <p>The number of instances that use a Lingjun quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Quota")
         public Integer quota;
 
@@ -936,7 +959,7 @@ public class Service extends TeaModel {
 
     public static class ServiceLabels extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The key of the service label.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -945,7 +968,7 @@ public class Service extends TeaModel {
         public String labelKey;
 
         /**
-         * <p>The label value.</p>
+         * <p>The value of the service label.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

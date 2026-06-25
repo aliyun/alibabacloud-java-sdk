@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayLabelResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeed to update gateway gw-1uhcqmsc7x22****** labels.</p>
      */
@@ -12,6 +14,8 @@ public class UpdateGatewayLabelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
      */

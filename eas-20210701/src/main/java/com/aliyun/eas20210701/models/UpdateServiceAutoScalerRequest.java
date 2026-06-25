@@ -220,8 +220,10 @@ public class UpdateServiceAutoScalerRequest extends TeaModel {
         /**
          * <p>The name of the metric for triggering auto scaling. Valid values:</p>
          * <ul>
-         * <li>qps: the queries per second (QPS) for an individual instance.</li>
-         * <li>cpu: the CPU utilization.</li>
+         * <li><p>qps: the queries per second (QPS) for an individual instance.</p>
+         * </li>
+         * <li><p>cpu: the CPU utilization.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -243,8 +245,10 @@ public class UpdateServiceAutoScalerRequest extends TeaModel {
         /**
          * <p>The threshold of the metric that triggers auto scaling.</p>
          * <ul>
-         * <li>If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.</li>
-         * <li>If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.</li>
+         * <li><p>If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.</p>
+         * </li>
+         * <li><p>If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

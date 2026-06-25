@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateConfigResponseBody extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class CreateConfigResponseBody extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>The dynamic parameter name.</p>
+     * 
      * <strong>example:</strong>
      * <p>model-config</p>
      */
@@ -19,6 +23,8 @@ public class CreateConfigResponseBody extends TeaModel {
     public String key;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class CreateConfigResponseBody extends TeaModel {
     public String updatedAt;
 
     /**
+     * <p>The dynamic parameter value.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;model&quot;: &quot;gpt-4&quot;}</p>
      */

@@ -17,7 +17,7 @@ public class DeleteGatewayResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Gateway is deleted.</p>
+     * <p>Gateway gw-1uhcqmsc7x22****** is deleted</p>
      */
     @NameInMap("Message")
     public String message;

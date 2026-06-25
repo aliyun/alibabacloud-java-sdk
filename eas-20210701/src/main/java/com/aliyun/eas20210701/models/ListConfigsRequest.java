@@ -4,9 +4,21 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListConfigsRequest extends TeaModel {
+    /**
+     * <p><strong>The page number.</strong> Default: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p><strong>The number of entries per page.</strong> Default: 100. Maximum: 200.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

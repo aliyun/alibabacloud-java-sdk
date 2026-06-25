@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>A message that indicates a successful operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>instance xxxx isolation updated to true。</p>
      */
     @NameInMap("Message")
     public String message;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayLabelShrinkRequest extends TeaModel {
     /**
+     * <p>The keys of the labels that you want to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LabelKeys")

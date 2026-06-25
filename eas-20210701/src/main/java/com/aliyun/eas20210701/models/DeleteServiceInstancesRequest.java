@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceInstancesRequest extends TeaModel {
     /**
-     * <p>The name of the container whose process needs to be restarted. This parameter takes effect only if the SoftRestart parameter is set to true.</p>
+     * <p>The name of the container in which to restart the process. This parameter is valid only when \<code>SoftRestart\\</code> is set to \<code>true\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>worker0</p>
@@ -14,7 +14,7 @@ public class DeleteServiceInstancesRequest extends TeaModel {
     public String container;
 
     /**
-     * <p>The instances that you want to restart. Separate multiple instance names with commas (,). For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+     * <p>The instances to restart. Separate multiple instance names with a comma (,). For more information, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>foo-rdsbxxxx,foo-rdsaxxxx</p>
@@ -22,11 +22,17 @@ public class DeleteServiceInstancesRequest extends TeaModel {
     @NameInMap("InstanceList")
     public String instanceList;
 
+    /**
+     * <p>Specifies whether the instance is a replica.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsReplica")
     public Boolean isReplica;
 
     /**
-     * <p>Specifies whether to restart only the container process without recreating the instance. Default value: false. Valid values: true and false.</p>
+     * <p>Specifies whether to restart only the container process without rebuilding the instance. The default value is false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

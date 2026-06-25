@@ -3,12 +3,12 @@ package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class CreateServiceCronScalerResponseBody extends TeaModel {
+public class CreateGroupResponseBody extends TeaModel {
     /**
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Create cron scaler for service [foo] successfully</p>
+     * <p>Create service group foo successfully</p>
      */
     @NameInMap("Message")
     public String message;
@@ -22,12 +22,12 @@ public class CreateServiceCronScalerResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateServiceCronScalerResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateServiceCronScalerResponseBody self = new CreateServiceCronScalerResponseBody();
+    public static CreateGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateGroupResponseBody self = new CreateGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateServiceCronScalerResponseBody setMessage(String message) {
+    public CreateGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -35,7 +35,7 @@ public class CreateServiceCronScalerResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateServiceCronScalerResponseBody setRequestId(String requestId) {
+    public CreateGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

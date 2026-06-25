@@ -4,6 +4,12 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Instance extends TeaModel {
+    /**
+     * <p>The creation time of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-27T09:46:05Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -16,11 +22,17 @@ public class Instance extends TeaModel {
     @NameInMap("CurrentAmount")
     public Float currentAmount;
 
+    /**
+     * <p>Indicates whether the instance is removed from active service rotation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Detached")
     public Boolean detached;
 
     /**
-     * <p>The IP address of the instance in the user-created VPC.</p>
+     * <p>The IP address of the instance in your VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.100</p>
@@ -29,7 +41,7 @@ public class Instance extends TeaModel {
     public String externalIP;
 
     /**
-     * <p>The port number of the instance in the user-created VPC.</p>
+     * <p>The port number of the instance in your VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -38,7 +50,7 @@ public class Instance extends TeaModel {
     public Integer externalInstancePort;
 
     /**
-     * <p>The IP address of the host where the instance resides.</p>
+     * <p>The IP address of the instance\&quot;s host.</p>
      * 
      * <strong>example:</strong>
      * <p>11.0.XX.XX</p>
@@ -47,7 +59,7 @@ public class Instance extends TeaModel {
     public String hostIP;
 
     /**
-     * <p>The name of the host where the instance resides.</p>
+     * <p>The name of the instance\&quot;s host.</p>
      * 
      * <strong>example:</strong>
      * <p>smart-scene-cls-854dbdc99d-****</p>
@@ -65,7 +77,7 @@ public class Instance extends TeaModel {
     public String innerIP;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>foo-5fc8946767-v****</p>
@@ -83,7 +95,7 @@ public class Instance extends TeaModel {
     public Integer instancePort;
 
     /**
-     * <p>The instance specification.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c7.large</p>
@@ -91,9 +103,21 @@ public class Instance extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>Indicates whether the instance is running the latest version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsLatest")
     public Boolean isLatest;
 
+    /**
+     * <p>Indicates whether the instance is a replica.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsReplica")
     public Boolean isReplica;
 
@@ -107,7 +131,7 @@ public class Instance extends TeaModel {
     public Boolean isSpot;
 
     /**
-     * <p>Indicates whether the instance is isolated.</p>
+     * <p>Indicates whether the instance accepts traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -116,7 +140,7 @@ public class Instance extends TeaModel {
     public Boolean isolated;
 
     /**
-     * <p>The last state of the instance.</p>
+     * <p>The status of the instance when it last exited.</p>
      */
     @NameInMap("LastState")
     public java.util.List<java.util.Map<String, ?>> lastState;
@@ -131,7 +155,7 @@ public class Instance extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The original hourly price of the spot instance before a discount is used.</p>
+     * <p>The original price of the spot instance before discounts.</p>
      * 
      * <strong>example:</strong>
      * <p>2.2</p>
@@ -140,7 +164,7 @@ public class Instance extends TeaModel {
     public Float originalAmount;
 
     /**
-     * <p>The number of processes that have started for the instance.</p>
+     * <p>The number of processes that have started in the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -149,7 +173,7 @@ public class Instance extends TeaModel {
     public Integer readyProcesses;
 
     /**
-     * <p>The reason for which the instance is in the current state.</p>
+     * <p>The identifier for the current status of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -157,11 +181,17 @@ public class Instance extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The name of the replica.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xwq-sglang-dist-7dff0</p>
+     */
     @NameInMap("ReplicaName")
     public String replicaName;
 
     /**
-     * <p>The type of the resource group to which the instance belongs. Valid values: PublicResource and PrivateResource.</p>
+     * <p>The type of the resource group to which the instance belongs. Valid values include PublicResource and PrivateResource.</p>
      * 
      * <strong>example:</strong>
      * <p>PublicResource</p>
@@ -170,7 +200,7 @@ public class Instance extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The number of times for which the instance is restarted.</p>
+     * <p>The number of times the instance has been restarted.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -179,7 +209,7 @@ public class Instance extends TeaModel {
     public Integer restartCount;
 
     /**
-     * <p>The service role of the instance. Valid values: Queue, DataLoader, and Standard.</p>
+     * <p>The server role of the instance. Valid values include Queue, DataLoader, and Standard.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -188,7 +218,7 @@ public class Instance extends TeaModel {
     public String role;
 
     /**
-     * <p>The time when the instance was started. This parameter is deprecated. StartTime is used instead.</p>
+     * <p>The start time of the instance. (Deprecated. Use StartTime instead.)</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-27T09:46:05Z</p>
@@ -198,7 +228,7 @@ public class Instance extends TeaModel {
     public String startAt;
 
     /**
-     * <p>The time when the instance was started.</p>
+     * <p>The start time of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-27T09:46:05Z</p>
@@ -207,16 +237,7 @@ public class Instance extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The current state of the instance.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Terminating</li>
-     * <li>Succeeded</li>
-     * <li>Unknown</li>
-     * <li>Failed</li>
-     * <li>Running</li>
-     * <li>Pending</li>
-     * </ul>
+     * <p>The status of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -225,7 +246,7 @@ public class Instance extends TeaModel {
     public String status;
 
     /**
-     * <p>The IP address of the host in the VPC.</p>
+     * <p>The IP address of the host in the dedicated network.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.xx.xx</p>
@@ -234,7 +255,7 @@ public class Instance extends TeaModel {
     public String tenantHostIP;
 
     /**
-     * <p>The IP address of the instance in the VPC.</p>
+     * <p>The IP address of the instance in the dedicated network.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.xx.xx</p>
@@ -243,7 +264,7 @@ public class Instance extends TeaModel {
     public String tenantInstanceIP;
 
     /**
-     * <p>The total number of processes that the instance contains.</p>
+     * <p>The total number of processes for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -252,7 +273,7 @@ public class Instance extends TeaModel {
     public Integer totalProcesses;
 
     /**
-     * <p>The zone to which the instance belongs.</p>
+     * <p>The zone where the instance is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-a</p>

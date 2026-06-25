@@ -132,12 +132,14 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         /**
          * <p>The metric name. Valid values:</p>
          * <ul>
-         * <li>QPS</li>
-         * <li>CPU</li>
+         * <li><p>QPS</p>
+         * </li>
+         * <li><p>CPU</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>qps</p>
+         * <p>QPS</p>
          */
         @NameInMap("metricName")
         public String metricName;
@@ -195,8 +197,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         /**
          * <p>The metric name. Valid values:</p>
          * <ul>
-         * <li>QPS: the queries per second (QPS) for an individual instance.</li>
-         * <li>CPU: the CPU utilization.</li>
+         * <li><p>QPS: the queries per second (QPS) for an individual instance.</p>
+         * </li>
+         * <li><p>CPU: the CPU utilization.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,8 +221,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         /**
          * <p>The threshold of the metric that triggers auto scaling.</p>
          * <ul>
-         * <li>If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.</li>
-         * <li>If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.</li>
+         * <li><p>If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.</p>
+         * </li>
+         * <li><p>If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

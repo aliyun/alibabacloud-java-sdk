@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Group extends TeaModel {
     /**
-     * <p>The token that is used to access the service group.</p>
+     * <p>The access token for the traffic entry of the service group.</p>
      * 
      * <strong>example:</strong>
      * <p>MzJiMDI5MDliODc0MTlkYmI0ZDhlYmExYjczYTIyZTE3Zm********</p>
@@ -13,8 +13,11 @@ public class Group extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
+    @NameInMap("CallerUid")
+    public String callerUid;
+
     /**
-     * <p>The region where the service group resides.</p>
+     * <p>The region in which the service group resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -23,7 +26,7 @@ public class Group extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The time when the service group was created. The time is displayed in UTC.</p>
+     * <p>The time when the service group was created. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-05-19T14:19:42Z</p>
@@ -49,6 +52,9 @@ public class Group extends TeaModel {
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
+    @NameInMap("Labels")
+    public java.util.List<GroupLabels> labels;
+
     /**
      * <p>The name of the service group.</p>
      * 
@@ -58,8 +64,14 @@ public class Group extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Network")
+    public GroupNetwork network;
+
+    @NameInMap("ParentUid")
+    public String parentUid;
+
     /**
-     * <p>The queue service that is included in the service group.</p>
+     * <p>The queue services contained in the service group.</p>
      * 
      * <strong>example:</strong>
      * <p>qservice</p>
@@ -69,11 +81,6 @@ public class Group extends TeaModel {
 
     /**
      * <p>The traffic mode.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>auto: The traffic is automatically allocated based on the number of instances.</li>
-     * <li>customized: The traffic is allocated based on the custom weight.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>auto</p>
@@ -82,7 +89,7 @@ public class Group extends TeaModel {
     public String trafficMode;
 
     /**
-     * <p>The time when the service group was updated. The time is displayed in UTC.</p>
+     * <p>The time when the service group was last updated. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-29T11:13:20Z</p>
@@ -101,6 +108,14 @@ public class Group extends TeaModel {
     }
     public String getAccessToken() {
         return this.accessToken;
+    }
+
+    public Group setCallerUid(String callerUid) {
+        this.callerUid = callerUid;
+        return this;
+    }
+    public String getCallerUid() {
+        return this.callerUid;
     }
 
     public Group setClusterId(String clusterId) {
@@ -135,12 +150,36 @@ public class Group extends TeaModel {
         return this.intranetEndpoint;
     }
 
+    public Group setLabels(java.util.List<GroupLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<GroupLabels> getLabels() {
+        return this.labels;
+    }
+
     public Group setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public Group setNetwork(GroupNetwork network) {
+        this.network = network;
+        return this;
+    }
+    public GroupNetwork getNetwork() {
+        return this.network;
+    }
+
+    public Group setParentUid(String parentUid) {
+        this.parentUid = parentUid;
+        return this;
+    }
+    public String getParentUid() {
+        return this.parentUid;
     }
 
     public Group setQueueService(String queueService) {
@@ -165,6 +204,88 @@ public class Group extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public static class GroupLabels extends TeaModel {
+        @NameInMap("LabelKey")
+        public String labelKey;
+
+        @NameInMap("LabelValue")
+        public String labelValue;
+
+        public static GroupLabels build(java.util.Map<String, ?> map) throws Exception {
+            GroupLabels self = new GroupLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public GroupLabels setLabelKey(String labelKey) {
+            this.labelKey = labelKey;
+            return this;
+        }
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        public GroupLabels setLabelValue(String labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
+    }
+
+    public static class GroupNetwork extends TeaModel {
+        @NameInMap("GatewayId")
+        public String gatewayId;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static GroupNetwork build(java.util.Map<String, ?> map) throws Exception {
+            GroupNetwork self = new GroupNetwork();
+            return TeaModel.build(map, self);
+        }
+
+        public GroupNetwork setGatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        public GroupNetwork setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public GroupNetwork setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public GroupNetwork setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
     }
 
 }

@@ -4,20 +4,45 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the instance is a replica.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsReplica")
     public Boolean isReplica;
 
+    /**
+     * <p>Specifies whether to fence the service instance. After an instance is fenced, it is no longer managed by the VPC controller and a new instance is created. The fenced instance is reserved for troubleshooting or debugging. Note: You cannot unfence an instance. Valid values:</p>
+     * <ul>
+     * <li>true: Fences the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Detach")
     public Boolean detach;
 
+    /**
+     * <blockquote>
+     * <p>This parameter is for an invitational preview. It is not generally available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Hibernate")
     public Boolean hibernate;
 
     /**
-     * <p>Specifies whether to isolate the service instance. Valid values:</p>
+     * <p>Specifies whether to isolate the instance. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The instance is isolated and does not receive traffic.</p>
+     * </li>
+     * <li><p>false: The instance is not isolated and receives traffic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

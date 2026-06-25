@@ -11,21 +11,35 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>Specifies whether to enable Auto Scaling for the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoscalerEnabled")
     public Boolean autoscalerEnabled;
 
     /**
+     * <p>The UID of the account that created the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>19989224166xxxxxxx</p>
      */
     @NameInMap("CallerUid")
     public String callerUid;
 
+    /**
+     * <p>Specifies whether to enable scheduled auto scaling for the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CronscalerEnabled")
     public Boolean cronscalerEnabled;
 
     /**
-     * <p>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</p>
+     * <p>The keyword for a fuzzy search. This parameter supports fuzzy searches by service name only.</p>
      * 
      * <strong>example:</strong>
      * <p>foo</p>
@@ -43,7 +57,7 @@ public class ListServicesShrinkRequest extends TeaModel {
     public String gateway;
 
     /**
-     * <p>The name of the service group. For more information about how to query the name of a service group, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+     * <p>The name of the service group. To learn how to obtain this name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>foo</p>
@@ -51,20 +65,28 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>Specifies whether to include services that do not belong to any workspace. The default value is true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeNoWorkspace")
     public Boolean includeNoWorkspace;
 
     /**
-     * <p>The tag that is used to filter services.</p>
+     * <p>Filters services by label.</p>
      */
     @NameInMap("Label")
     public String labelShrink;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>desc (default): The query results are sorted in descending order.</li>
-     * <li>asc: The query results are sorted in ascending order.</li>
+     * <li><p><code>desc</code> (default): descending.</p>
+     * </li>
+     * <li><p><code>asc</code>: ascending.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +96,7 @@ public class ListServicesShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the results to return. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -83,7 +105,7 @@ public class ListServicesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The number of services to return per page. The default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -92,7 +114,7 @@ public class ListServicesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the primary service that corresponds to the Band member service.</p>
+     * <p>The UID of the primary service. This parameter applies to member services in a service group.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-m-ijafy3c8cxxxx</p>
@@ -104,22 +126,40 @@ public class ListServicesShrinkRequest extends TeaModel {
      * <p>The quota ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>quota12345</p>
+     * <p>quota1****</p>
      */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The custom name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
     @NameInMap("ResourceAliasName")
     public String resourceAliasName;
 
+    /**
+     * <p>Specifies whether to enable a burstable resource pool for the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ResourceBurstable")
     public Boolean resourceBurstable;
 
+    /**
+     * <p>The ID of the resource group. To learn how to query for this ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eas-r-asdas****</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The name or ID of the resource group to which the service belongs.</p>
+     * <p>The name or ID of the service\&quot;s resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-hd0qwy8cxxxx</p>
@@ -128,23 +168,27 @@ public class ListServicesShrinkRequest extends TeaModel {
     @Deprecated
     public String resourceName;
 
+    /**
+     * <p>The type of resource the service uses. Valid values:</p>
+     * <ul>
+     * <li><p>PublicResource</p>
+     * </li>
+     * <li><p>DedicatedResource</p>
+     * </li>
+     * <li><p>Lingjun</p>
+     * </li>
+     * <li><p>SelfManagedLingjun</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PublicResource</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The server role.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>DataLoader</li>
-     * <li>FrontEnd</li>
-     * <li>DataSet</li>
-     * <li>SDProxy</li>
-     * <li>LLMSscheduler</li>
-     * <li>ScalableJob</li>
-     * <li>LLMGateway</li>
-     * <li>Job</li>
-     * <li>Queue</li>
-     * </ul>
+     * <p>The service role.</p>
      * 
      * <strong>example:</strong>
      * <p>LLMGateway</p>
@@ -162,135 +206,7 @@ public class ListServicesShrinkRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The service state.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Creating</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Stopped</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Failed</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Complete</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Cloning</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Stopping</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Updating</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Waiting</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>HotUpdate</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Committing</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Starting</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>DeleteFailed</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Running</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Developing</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Scaling</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Deleted</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Pending</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Deleting</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The status of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -301,40 +217,30 @@ public class ListServicesShrinkRequest extends TeaModel {
     /**
      * <p>The service type. Valid values:</p>
      * <ul>
-     * <li>Async</li>
-     * <li>Standard</li>
-     * <li>Offline Task</li>
-     * <li>Proxima</li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
      * <li><p>Async</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
      * </li>
      * <li><p>Standard</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
+     * </li>
+     * <li><p>Queue</p>
+     * </li>
+     * <li><p>LLM</p>
+     * </li>
+     * <li><p>RAG</p>
+     * </li>
+     * <li><p>Serverless</p>
+     * </li>
+     * <li><p>LLMGatewayService</p>
      * </li>
      * <li><p>OfflineTask</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
      * </li>
-     * <li><p>Proxima</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li><p>SDCluster</p>
+     * </li>
+     * <li><p>ScalableJob</p>
+     * </li>
+     * <li><p>ScalableJobService</p>
+     * </li>
+     * <li><p>AssistantJob</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -344,7 +250,7 @@ public class ListServicesShrinkRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The user ID (UID) of the service.</p>
+     * <p>The service UID.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-m-c9iw3yitxxxx</p>
@@ -353,7 +259,7 @@ public class ListServicesShrinkRequest extends TeaModel {
     public String serviceUid;
 
     /**
-     * <p>The sort field. By default, the query results are sorted by the timestamp type in descending order.</p>
+     * <p>The sort field. By default, results are sorted by timestamp in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -361,6 +267,12 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    /**
+     * <p>Specifies whether the service accepts group traffic. This parameter applies only to services within a service group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grouping</p>
+     */
     @NameInMap("TrafficState")
     public String trafficState;
 
@@ -368,7 +280,7 @@ public class ListServicesShrinkRequest extends TeaModel {
      * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>1234**</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

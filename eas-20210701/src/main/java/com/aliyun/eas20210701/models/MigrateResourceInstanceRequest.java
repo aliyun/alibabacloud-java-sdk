@@ -15,12 +15,18 @@ public class MigrateResourceInstanceRequest extends TeaModel {
     public String destResourceId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The IDs of the instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>Specifies whether to migrate the instances to a general computing resource group. If set to true, specify the ID of the general computing resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("MigrateToHybrid")
     public Boolean migrateToHybrid;
 

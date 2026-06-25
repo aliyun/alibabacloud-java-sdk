@@ -14,7 +14,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
      * <p>The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.</p>
      * 
      * <strong>example:</strong>
-     * <p>72.16.0.0/16</p>
+     * <p>172.16.0.0/16</p>
      */
     @NameInMap("DestinationCIDRs")
     public String destinationCIDRs;
@@ -50,7 +50,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
      * <p>The ID of the VPC that is directly connected.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-uf66uio7md****</p>
+     * <p>vpc-uf66uio7m****1</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

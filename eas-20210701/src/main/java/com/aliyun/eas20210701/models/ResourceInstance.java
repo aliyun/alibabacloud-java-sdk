@@ -23,7 +23,7 @@ public class ResourceInstance extends TeaModel {
     public Boolean autoRenewal;
 
     /**
-     * <p>The billing method of the instance.</p>
+     * <p>The billing method for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -50,7 +50,7 @@ public class ResourceInstance extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>The number of CPU cores for the instance.</p>
+     * <p>The number of CPUs for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -68,7 +68,7 @@ public class ResourceInstance extends TeaModel {
     public Integer instanceGpuCount;
 
     /**
-     * <p>The GPU memory size of the instance.</p>
+     * <p>The VRAM size of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>0G</p>
@@ -112,17 +112,17 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The lifecycle phase of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>succeeded</p>
+     */
     @NameInMap("InstancePhase")
     public String instancePhase;
 
     /**
-     * <p>The instance status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Ready-SchedulingDisabled</li>
-     * <li>Ready</li>
-     * <li>NotReady</li>
-     * </ul>
+     * <p>The status of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -140,10 +140,10 @@ public class ResourceInstance extends TeaModel {
     public Integer instanceSystemDiskSize;
 
     /**
-     * <p>The IP address of the instance in the VPC.</p>
+     * <p>The IP address of the instance in a dedicated network.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.xx.xx</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("InstanceTenantIp")
     public String instanceTenantIp;
@@ -158,7 +158,7 @@ public class ResourceInstance extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The number of CPU cores used by the instance.</p>
+     * <p>The number of CPUs in use.</p>
      * 
      * <strong>example:</strong>
      * <p>2.4</p>
@@ -167,7 +167,7 @@ public class ResourceInstance extends TeaModel {
     public Float instanceUsedCpu;
 
     /**
-     * <p>The number of GPUs used by the instance.</p>
+     * <p>The number of GPUs in use.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -176,7 +176,7 @@ public class ResourceInstance extends TeaModel {
     public Float instanceUsedGpu;
 
     /**
-     * <p>The size of the GPU memory used by the instance.</p>
+     * <p>The amount of VRAM in use.</p>
      * 
      * <strong>example:</strong>
      * <p>470M</p>
@@ -185,7 +185,7 @@ public class ResourceInstance extends TeaModel {
     public String instanceUsedGpuMemory;
 
     /**
-     * <p>The size of the memory used by the instance.</p>
+     * <p>The amount of memory in use.</p>
      * 
      * <strong>example:</strong>
      * <p>1000M</p>
@@ -194,19 +194,31 @@ public class ResourceInstance extends TeaModel {
     public String instanceUsedMemory;
 
     /**
-     * <p>The instance tags.</p>
+     * <p>The labels of the instance.</p>
      */
     @NameInMap("Labels")
     public java.util.List<ResourceInstanceLabels> labels;
 
+    /**
+     * <p>The operator who performed the last cordon.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24340xxxxxxxx</p>
+     */
     @NameInMap("LastCordonOperator")
     public String lastCordonOperator;
 
+    /**
+     * <p>The reason for the last cordon.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operating</p>
+     */
     @NameInMap("LastCordonReason")
     public String lastCordonReason;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -224,7 +236,7 @@ public class ResourceInstance extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The ID of the zone to which the instance belongs.</p>
+     * <p>The zone of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>
@@ -455,7 +467,7 @@ public class ResourceInstance extends TeaModel {
 
     public static class ResourceInstanceLabels extends TeaModel {
         /**
-         * <p>The tag key of the instance.</p>
+         * <p>The label key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -464,7 +476,7 @@ public class ResourceInstance extends TeaModel {
         public String labelKey;
 
         /**
-         * <p>The tag value of the instance.</p>
+         * <p>The label value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

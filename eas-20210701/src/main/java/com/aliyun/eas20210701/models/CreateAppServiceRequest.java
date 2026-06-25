@@ -17,7 +17,7 @@ public class CreateAppServiceRequest extends TeaModel {
      * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12****</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

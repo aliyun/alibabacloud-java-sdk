@@ -4,11 +4,23 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListResourceInstanceWorkerRequest extends TeaModel {
+    /**
+     * <p>The sort order.</p>
+     * <ul>
+     * <li><p>Asc: ascending order.</p>
+     * </li>
+     * <li><p>Desc: descending order.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +29,7 @@ public class ListResourceInstanceWorkerRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The number of entries to return on each page. The default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -25,20 +37,44 @@ public class ListResourceInstanceWorkerRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Indicates whether the health check passed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Ready")
     public Boolean ready;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>echo</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The field to sort by.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
+    /**
+     * <p>The status of the worker instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The worker name.</p>
+     * <p>The name of the worker instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test-fd95xxxxx-xxxxxx</p>

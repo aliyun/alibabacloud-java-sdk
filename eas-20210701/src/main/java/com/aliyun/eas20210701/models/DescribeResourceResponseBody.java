@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster to which the resource group belongs.</p>
+     * <p>The ID of the cluster that contains the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -23,7 +23,7 @@ public class DescribeResourceResponseBody extends TeaModel {
     public Integer cpuCount;
 
     /**
-     * <p>The number of vCPUs that is used.</p>
+     * <p>The number of CPU cores in use.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -32,7 +32,7 @@ public class DescribeResourceResponseBody extends TeaModel {
     public Integer cpuUsed;
 
     /**
-     * <p>The time when the resource group was created.</p>
+     * <p>The time the resource group was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-05-19T14:19:42Z</p>
@@ -41,7 +41,7 @@ public class DescribeResourceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The additional information, such as the connection status of a virtual private cloud (VPC) and the log status of Log Service.</p>
+     * <p>Additional information, such as the VPC connection status and the SLS log status.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;vswitch_id&quot;:&quot;vsw-bp17uo6xebcusy****&quot;,&quot;gpu_share&quot;:true,&quot;aux_vswitch_id_list&quot;:[&quot;vsw-bp13b3pvjap3vxn****&quot;,&quot;vsw-bp1nls8o5hk8mt8*****&quot;],&quot;security_group_id&quot;:&quot;sg-bp1j1z7297hcink*****&quot;,&quot;vpc_id&quot;:&quot;vpc-bp1kjr3rfyhx01*****&quot;,&quot;destination_cidr&quot;:&quot;172.16.0.12/28&quot;,&quot;role_arn&quot;:&quot;acs:ram::1157703270*****:role/AliyunServiceRoleForPaiEas&quot;,&quot;sls_project&quot;:&quot;&quot;,&quot;sls_logstore&quot;:&quot;&quot;,&quot;sls_status&quot;:&quot;ResourceReady&quot;,&quot;sls_message&quot;:&quot;&quot;,&quot;update_time&quot;:&quot;&quot;}</p>
@@ -49,6 +49,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("ExtraData")
     public String extraData;
 
+    /**
+     * <p>The features that the resource group supports.</p>
+     */
     @NameInMap("Features")
     public java.util.List<String> features;
 
@@ -56,13 +59,13 @@ public class DescribeResourceResponseBody extends TeaModel {
      * <p>The total number of GPUs.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>4</p>
      */
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
     /**
-     * <p>The number of GPUs that is used.</p>
+     * <p>The number of GPUs in use.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -79,17 +82,35 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
+    /**
+     * <p>The maximum number of CPU cores that can be allocated to a single instance in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("InstanceMaxAllocatableCPU")
     public Integer instanceMaxAllocatableCPU;
 
+    /**
+     * <p>The maximum number of GPUs that can be allocated to a single instance in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("InstanceMaxAllocatableGPU")
     public Float instanceMaxAllocatableGPU;
 
+    /**
+     * <p>The maximum amount of memory that can be allocated to a single instance in the resource group, in MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("InstanceMaxAllocatableMemory")
     public Integer instanceMaxAllocatableMemory;
 
     /**
-     * <p>The total memory size. Unit: MB.</p>
+     * <p>The total memory size, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>8192</p>
@@ -98,7 +119,7 @@ public class DescribeResourceResponseBody extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>The size of memory that is used. Unit: MB.</p>
+     * <p>The amount of memory in use, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -107,7 +128,7 @@ public class DescribeResourceResponseBody extends TeaModel {
     public Integer memoryUsed;
 
     /**
-     * <p>The returned message.</p>
+     * <p>A message that provides details about the status of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource is ready</p>
@@ -152,7 +173,7 @@ public class DescribeResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the Elastic Algorithm Service (EAS) resource.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-glkfpsxuw57x1h*****</p>
@@ -161,7 +182,7 @@ public class DescribeResourceResponseBody extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The name of the EAS resource.</p>
+     * <p>The name of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>my-resouce****</p>
@@ -172,8 +193,10 @@ public class DescribeResourceResponseBody extends TeaModel {
     /**
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
-     * <li>Dedicated: the dedicated resource group.</li>
-     * <li>SelfManaged: the self-managed resource group.</li>
+     * <li><p><code>Dedicated</code>: a dedicated resource group.</p>
+     * </li>
+     * <li><p><code>SelfManaged</code>: a self-managed resource group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -182,11 +205,17 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The number of services deployed in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceCount")
     public String serviceCount;
 
     /**
-     * <p>The state of the resource group.</p>
+     * <p>The status of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>ResourceReady</p>
@@ -195,7 +224,7 @@ public class DescribeResourceResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the resource group was last updated.</p>
+     * <p>The time the resource group was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-02-24T11:52:17Z</p>
@@ -203,6 +232,12 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The usage mode of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inference</p>
+     */
     @NameInMap("UsageMode")
     public String usageMode;
 

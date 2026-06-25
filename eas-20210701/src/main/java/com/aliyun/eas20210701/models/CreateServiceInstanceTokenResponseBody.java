@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateServiceInstanceTokenResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
      */
@@ -12,6 +14,8 @@ public class CreateServiceInstanceTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>This parameter is not used.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -19,6 +23,8 @@ public class CreateServiceInstanceTokenResponseBody extends TeaModel {
     public String streamlogUrl;
 
     /**
+     * <p>This parameter is not used.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -26,12 +32,17 @@ public class CreateServiceInstanceTokenResponseBody extends TeaModel {
     public String token;
 
     /**
+     * <p>This parameter is not used.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
     @NameInMap("Url")
     public String url;
 
+    /**
+     * <p>URL for logging on to the container using Workbench.</p>
+     */
     @NameInMap("WorkbenchUrl")
     public String workbenchUrl;
 

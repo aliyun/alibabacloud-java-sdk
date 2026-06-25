@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceEventResponseBody extends TeaModel {
     /**
-     * <p>The events.</p>
+     * <p>The list of events.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeServiceEventResponseBodyEvents> events;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total count of events.</p>
      * 
      * <strong>example:</strong>
      * <p>29</p>
@@ -38,7 +38,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -93,7 +93,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
 
     public static class DescribeServiceEventResponseBodyEvents extends TeaModel {
         /**
-         * <p>The returned message. The message is formatted and returned in the JSON format.</p>
+         * <p>The event message, which is a JSON-formatted string.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;versionId\&quot;:1,\&quot;message\&quot;:\&quot;Stage scale complete\&quot;,\&quot;availableInstance\&quot;:1,\&quot;unavailableInstance\&quot;:0}</p>
@@ -102,7 +102,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The cause of the event. The information about the change in the service status is returned.</p>
+         * <p>The reason for the event, which indicates a change in the service status.</p>
          * 
          * <strong>example:</strong>
          * <p>Updating</p>
@@ -110,11 +110,23 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><p>Service: a service.</p>
+         * </li>
+         * <li><p>Pod: a service instance.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Service</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
         /**
-         * <p>The time when the event occurred. The time must be in UTC.</p>
+         * <p>The time when the event occurred, in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-09 06:30:00</p>
@@ -125,8 +137,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         /**
          * <p>The event type. Valid values:</p>
          * <ul>
-         * <li>Normal</li>
-         * <li>Warning</li>
+         * <li><p>Normal: a normal event.</p>
+         * </li>
+         * <li><p>Warning: a warning event.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

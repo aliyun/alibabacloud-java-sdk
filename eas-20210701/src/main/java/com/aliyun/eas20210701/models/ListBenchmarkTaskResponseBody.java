@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBenchmarkTaskResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned list of tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of tasks to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,16 +32,16 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The stress testing tasks.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<ListBenchmarkTaskResponseBodyTasks> tasks;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of tasks.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -93,7 +93,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
 
     public static class ListBenchmarkTaskResponseBodyTasks extends TeaModel {
         /**
-         * <p>The number of instances that are available for stress testing.</p>
+         * <p>The number of available stress testing instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -105,13 +105,13 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
          * <p>The time when the stress testing task was created.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-12-04T02:43:15Z</p>
+         * <p>2020-02-04T02:43:15Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The returned message.</p>
+         * <p>A summary of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>Benchmark task [benchmark-larec-test-1076] is Running</p>
@@ -120,7 +120,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The region ID of the stress testing task.</p>
+         * <p>The region where the stress testing task is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -129,7 +129,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The name of the service on which you want to perform a stress testing.</p>
+         * <p>The name of the service to be stress tested.</p>
          * 
          * <strong>example:</strong>
          * <p>test_quota</p>
@@ -138,72 +138,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The state of the stress testing task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Creating</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Starting</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DeleteFailed</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Running</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Stopping</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Error</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Updating</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Deleting</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CreateFailed</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The status of the stress testing task.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -230,7 +165,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The time when the stress testing task was updated.</p>
+         * <p>The time when the stress testing task was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-24T03:11:30Z</p>

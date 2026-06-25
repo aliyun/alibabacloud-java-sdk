@@ -4,11 +4,23 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListVirtualResourceRequest extends TeaModel {
+    /**
+     * <p>The sorting order. Valid values:</p>
+     * <ul>
+     * <li><p>Desc: Descending order.</p>
+     * </li>
+     * <li><p>Asc: Ascending order.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for the list of virtual resource groups. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +29,7 @@ public class ListVirtualResourceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The number of virtual resource groups to display on each page. The default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -25,6 +37,12 @@ public class ListVirtualResourceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The field that is used to sort the results. By default, the results are sorted by timestamp in descending order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 

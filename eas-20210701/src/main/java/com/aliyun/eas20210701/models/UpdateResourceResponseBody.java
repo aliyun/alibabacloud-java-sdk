@@ -17,7 +17,7 @@ public class UpdateResourceResponseBody extends TeaModel {
      * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>eas-r-asdasdasd</p>
+     * <p>eas-r-asdasdasd****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

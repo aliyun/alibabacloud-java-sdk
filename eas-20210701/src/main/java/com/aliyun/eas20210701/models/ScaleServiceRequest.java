@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScaleServiceRequest extends TeaModel {
     /**
+     * <p>The target number of instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ScaleServiceRequest extends TeaModel {
     public Long instance;
 
     /**
+     * <p>A list of instance names to prioritize for removal during a scale-in operation.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

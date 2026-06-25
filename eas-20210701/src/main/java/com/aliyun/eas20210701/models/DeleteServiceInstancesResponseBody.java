@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceInstancesResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance(s) [foo-rdsb,foo-rdsa]  for service [foo] in region [cn-shanghai] was deleted successfully</p>

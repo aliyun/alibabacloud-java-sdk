@@ -23,7 +23,7 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Execution successful.</p>
+     * <p>Execution succeeded.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -78,10 +78,14 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
         /**
          * <p>The backend access ID, which varies based on the value of the EndpointType parameter.</p>
          * <ul>
-         * <li>If you set EndpointType to DefaultGateway, the value of this parameter is default.</li>
-         * <li>If you set EndpointType to PrivateGateway, the value of this parameter is the ID of the dedicated gateway.</li>
-         * <li>If you set EndpointType to Nlb, the value of this parameter is the ID of the NLB instance.</li>
-         * <li>If you set EndpointType to Nacos, the value of this parameter is the ID of the Nacos instance.</li>
+         * <li><p>If you set EndpointType to DefaultGateway, the value of this parameter is default.</p>
+         * </li>
+         * <li><p>If you set EndpointType to PrivateGateway, the value of this parameter is the ID of the dedicated gateway.</p>
+         * </li>
+         * <li><p>If you set EndpointType to Nlb, the value of this parameter is the ID of the NLB instance.</p>
+         * </li>
+         * <li><p>If you set EndpointType to Nacos, the value of this parameter is the ID of the Nacos instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,10 +97,14 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
         /**
          * <p>The service endpoint type. Valid values:</p>
          * <ul>
-         * <li>DefaultGateway: the shared gateway.</li>
-         * <li>PrivateGateway: the dedicated gateway.</li>
-         * <li>Nlb: Associate the service with the Network Load Balancer (NLB) instance.</li>
-         * <li>Nacos: Associate the service with the Nacos instance.</li>
+         * <li><p>DefaultGateway: the shared gateway.</p>
+         * </li>
+         * <li><p>PrivateGateway: the dedicated gateway.</p>
+         * </li>
+         * <li><p>Nlb: Associate the service with the Network Load Balancer (NLB) instance.</p>
+         * </li>
+         * <li><p>Nacos: Associate the service with the Nacos instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

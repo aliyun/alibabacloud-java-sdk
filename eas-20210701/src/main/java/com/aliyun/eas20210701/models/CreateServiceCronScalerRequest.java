@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateServiceCronScalerRequest extends TeaModel {
     /**
-     * <p>The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.</p>
+     * <p>A list of cron expressions for dates to exclude.</p>
      */
     @NameInMap("ExcludeDates")
     public java.util.List<String> excludeDates;
 
     /**
-     * <p>The description of the CronHPA job.</p>
+     * <p>The scheduled scaling tasks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScaleJobs")
@@ -40,7 +40,7 @@ public class CreateServiceCronScalerRequest extends TeaModel {
 
     public static class CreateServiceCronScalerRequestScaleJobs extends TeaModel {
         /**
-         * <p>The name of the CronHPA job.</p>
+         * <p>The name of the scheduled auto-scaling task.</p>
          * 
          * <strong>example:</strong>
          * <p>scale-job-1</p>
@@ -49,7 +49,7 @@ public class CreateServiceCronScalerRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The cron expression that is used to configure the execution time of the CronHPA job. For more information about how to configure cron expressions, see <strong>Description of special characters</strong> in this topic.</p>
+         * <p>The cron expression that specifies when to run the scaling task. For more information about how to configure a cron expression, see the <strong>Cron expressions</strong> section.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class CreateServiceCronScalerRequest extends TeaModel {
         public String schedule;
 
         /**
-         * <p>The number of instances that you want to configure for the CronHPA job.</p>
+         * <p>The target number of instances for the scaling task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +68,12 @@ public class CreateServiceCronScalerRequest extends TeaModel {
         @NameInMap("TargetSize")
         public Integer targetSize;
 
+        /**
+         * <p>The time zone for the scheduled scaling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 

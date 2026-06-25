@@ -8,7 +8,7 @@ public class StopBenchmarkTaskResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Benchmark task [benchmark-larec-test-1076] is Stopping</p>
+     * <p>Benchmark task [benchmark-larec-test-dbe5] is Stopping</p>
      */
     @NameInMap("Message")
     public String message;

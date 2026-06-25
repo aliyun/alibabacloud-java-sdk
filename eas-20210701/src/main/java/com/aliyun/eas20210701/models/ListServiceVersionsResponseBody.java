@@ -104,9 +104,12 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the image is available. Valid values:</p>
          * <ul>
-         * <li>true: The image is available.</li>
-         * <li>false: The image is unavailable.</li>
-         * <li>unknown: The availability of the image is unknown.</li>
+         * <li><p>true: The image is available.</p>
+         * </li>
+         * <li><p>false: The image is unavailable.</p>
+         * </li>
+         * <li><p>unknown: The availability of the image is unknown.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,9 +155,12 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Elastic Algorithm service (EAS) is activated. Valid values:</p>
          * <ul>
-         * <li>true: EAS is activated.</li>
-         * <li>false: EAS is not activated.</li>
-         * <li>unknown: The activation of EAS is unknown.</li>
+         * <li><p>true: EAS is activated.</p>
+         * </li>
+         * <li><p>false: EAS is not activated.</p>
+         * </li>
+         * <li><p>unknown: The activation of EAS is unknown.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

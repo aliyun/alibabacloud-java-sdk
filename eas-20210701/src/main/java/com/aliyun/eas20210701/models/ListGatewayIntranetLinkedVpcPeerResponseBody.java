@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the private gateway.</p>
+     * <p>The private gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -14,13 +14,13 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The VPC peers.</p>
+     * <p>A list of peer VPCs.</p>
      */
     @NameInMap("PeerVpcList")
     public java.util.List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList> peerVpcList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
@@ -59,7 +59,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
 
     public static class ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs extends TeaModel {
         /**
-         * <p>The region where the VPC peer resides.</p>
+         * <p>The region where the peer VPC is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -71,7 +71,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the VPC peer.</p>
+         * <p>The ID of the peer VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf66uio7md****</p>
@@ -112,7 +112,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
 
     public static class ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList extends TeaModel {
         /**
-         * <p>The IDs of the VPC peers.</p>
+         * <p>A list of peer VPC IDs.</p>
          */
         @NameInMap("PeerVpcs")
         public java.util.List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs> peerVpcs;

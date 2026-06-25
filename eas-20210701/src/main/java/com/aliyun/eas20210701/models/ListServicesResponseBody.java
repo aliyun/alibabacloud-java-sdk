@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListServicesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of services per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -32,13 +32,13 @@ public class ListServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The services.</p>
+     * <p>The list of services.</p>
      */
     @NameInMap("Services")
     public java.util.List<Service> services;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of services.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

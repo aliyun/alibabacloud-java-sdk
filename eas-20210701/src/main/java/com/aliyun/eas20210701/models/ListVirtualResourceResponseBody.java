@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirtualResourceResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned list of virtual resource groups.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of virtual resource groups returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
@@ -32,7 +32,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of virtual resource groups.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -41,7 +41,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The virtual resource groups.</p>
+     * <p>The list of virtual resource groups.</p>
      */
     @NameInMap("VirtualResources")
     public java.util.List<ListVirtualResourceResponseBodyVirtualResources> virtualResources;

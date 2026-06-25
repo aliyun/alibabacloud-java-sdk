@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceInstanceRequest extends TeaModel {
     /**
-     * <p>The operation that updates the scheduling state of the instance in a dedicated resource group. Valid values:</p>
+     * <p>The scheduling behavior to update for the instance in the dedicated resource group. Valid values:</p>
      * <ul>
-     * <li>Uncordon: allows scheduling the service to this instance.</li>
-     * <li>Cordon: prohibits scheduling the service to this instance.</li>
-     * <li>Drain: evicts the service that has been scheduled to this instance.</li>
+     * <li><p>Uncordon: Allows services to be scheduled to the instance.</p>
+     * </li>
+     * <li><p>Cordon: Prevents services from being scheduled to the instance.</p>
+     * </li>
+     * <li><p>Drain: Evicts the service instances that are running on the instance.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

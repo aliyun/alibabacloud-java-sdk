@@ -3,7 +3,7 @@ package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class ListGroupsRequest extends TeaModel {
+public class ListGroupsShrinkRequest extends TeaModel {
     /**
      * <p>The filter name. Fuzzy match is supported.</p>
      * 
@@ -17,7 +17,7 @@ public class ListGroupsRequest extends TeaModel {
      * <p>The user-defined labels.</p>
      */
     @NameInMap("Labels")
-    public java.util.Map<String, String> labels;
+    public String labelsShrink;
 
     /**
      * <p>The sort order of the results.</p>
@@ -73,12 +73,12 @@ public class ListGroupsRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static ListGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListGroupsRequest self = new ListGroupsRequest();
+    public static ListGroupsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListGroupsShrinkRequest self = new ListGroupsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListGroupsRequest setFilter(String filter) {
+    public ListGroupsShrinkRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -86,15 +86,15 @@ public class ListGroupsRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListGroupsRequest setLabels(java.util.Map<String, String> labels) {
-        this.labels = labels;
+    public ListGroupsShrinkRequest setLabelsShrink(String labelsShrink) {
+        this.labelsShrink = labelsShrink;
         return this;
     }
-    public java.util.Map<String, String> getLabels() {
-        return this.labels;
+    public String getLabelsShrink() {
+        return this.labelsShrink;
     }
 
-    public ListGroupsRequest setOrder(String order) {
+    public ListGroupsShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -102,7 +102,7 @@ public class ListGroupsRequest extends TeaModel {
         return this.order;
     }
 
-    public ListGroupsRequest setPageNumber(String pageNumber) {
+    public ListGroupsShrinkRequest setPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -110,7 +110,7 @@ public class ListGroupsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListGroupsRequest setPageSize(String pageSize) {
+    public ListGroupsShrinkRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -118,7 +118,7 @@ public class ListGroupsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListGroupsRequest setSort(String sort) {
+    public ListGroupsShrinkRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }
@@ -126,7 +126,7 @@ public class ListGroupsRequest extends TeaModel {
         return this.sort;
     }
 
-    public ListGroupsRequest setTrafficMode(String trafficMode) {
+    public ListGroupsShrinkRequest setTrafficMode(String trafficMode) {
         this.trafficMode = trafficMode;
         return this;
     }
@@ -134,7 +134,7 @@ public class ListGroupsRequest extends TeaModel {
         return this.trafficMode;
     }
 
-    public ListGroupsRequest setWorkspaceId(String workspaceId) {
+    public ListGroupsShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

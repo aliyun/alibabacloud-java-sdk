@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMachineSpecResponseBody extends TeaModel {
     /**
-     * <p>The instance types when the resources are specified.</p>
+     * <p>A list of available instance types for deployment.</p>
      */
     @NameInMap("InstanceMetas")
     public java.util.List<DescribeMachineSpecResponseBodyInstanceMetas> instanceMetas;
@@ -20,7 +20,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The values that can be supported when the number of CPUs and memory size are specified for deployment.</p>
+     * <p>The supported combinations of CPU and memory values for deployment.</p>
      */
     @NameInMap("Types")
     public java.util.List<DescribeMachineSpecResponseBodyTypes> types;
@@ -56,7 +56,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
 
     public static class DescribeMachineSpecResponseBodyInstanceMetas extends TeaModel {
         /**
-         * <p>The number of CPU cores in the instance type.</p>
+         * <p>The number of CPU cores of the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -65,7 +65,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         public Integer CPU;
 
         /**
-         * <p>The GPU type in the instance type. If the instance type is not a GPU-based instance type, this parameter does not exist.</p>
+         * <p>The GPU model of the instance type. This field is not returned for non-GPU instance types.</p>
          * 
          * <strong>example:</strong>
          * <p>GU30</p>
@@ -83,7 +83,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         public Integer GPUAmount;
 
         /**
-         * <p>The GPU memory in the instance type. Unit: GB.</p>
+         * <p>The GPU memory size of the instance type, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -92,7 +92,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         public Float GPUMemory;
 
         /**
-         * <p>The name of the instance type.</p>
+         * <p>The instance type name.</p>
          * 
          * <strong>example:</strong>
          * <p>ml.gu7i.c32m188.1-gu30</p>
@@ -101,7 +101,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Indicates whether the instance type is available.</p>
+         * <p>Indicates whether the instance type is currently available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         public Boolean isAvailable;
 
         /**
-         * <p>The memory size in the instance type. Unit: GB.</p>
+         * <p>The memory size of the instance type, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>188</p>
@@ -119,7 +119,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         public Float memory;
 
         /**
-         * <p>The minimum discount that can be accepted when the preemptible instance type does not include a usage duration. 0.1 indicates one fold. If this parameter is not returned, the bidding feature is not supported.</p>
+         * <p>The minimum discount currently offered for a spot instance in no-protection mode. A value of 0.1 indicates a 90% discount. If this field is not returned, the instance type does not support spot instances.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -128,7 +128,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         public Float nonProtectSpotDiscount;
 
         /**
-         * <p>The minimum discount that can be accepted when the preemptible instance type has the 1-hour protection duration. 0.1 indicates one fold. If this parameter is not returned, the bidding feature is not supported.</p>
+         * <p>The current lowest discount for a spot instance with a 1-hour protection period. A value of 0.1 indicates a 90% discount. If this field is not returned, the instance type does not support spot instances.</p>
          * 
          * <strong>example:</strong>
          * <p>0.12</p>
@@ -138,12 +138,6 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
 
         /**
          * <p>The inventory status of the instance type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>WithStock</li>
-         * <li>ClosedWithStock</li>
-         * <li>NoStock</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>WithStock</p>
@@ -153,12 +147,6 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
 
         /**
          * <p>The source of the instance type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ECS</li>
-         * <li>BareMetal</li>
-         * <li>Lingjun</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -263,7 +251,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
 
     public static class DescribeMachineSpecResponseBodyTypes extends TeaModel {
         /**
-         * <p>Valid values:</p>
+         * <p>The valid values for the number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -272,7 +260,7 @@ public class DescribeMachineSpecResponseBody extends TeaModel {
         public Integer CPU;
 
         /**
-         * <p>The optional values for memory when CPU is set to a specific value as above.</p>
+         * <p>The valid memory values for the specified number of CPU cores.</p>
          */
         @NameInMap("Memory")
         public java.util.List<Integer> memory;

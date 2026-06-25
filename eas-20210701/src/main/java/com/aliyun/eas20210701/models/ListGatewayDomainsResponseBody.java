@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListGatewayDomainsResponseBody extends TeaModel {
     /**
-     * <p>The custom domain names.</p>
+     * <p>The list of custom domain names.</p>
      */
     @NameInMap("CustomDomains")
     public java.util.List<ListGatewayDomainsResponseBodyCustomDomains> customDomains;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>Successfully get custom domains</p>
@@ -20,7 +20,7 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
@@ -58,11 +58,17 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
     }
 
     public static class ListGatewayDomainsResponseBodyCustomDomains extends TeaModel {
+        /**
+         * <p>The expiration date of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-25</p>
+         */
         @NameInMap("CertificateEndDate")
         public String certificateEndDate;
 
         /**
-         * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after you upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc%5C&p=cas">Certificate Management Service</a> console.</p>
+         * <p>The ID of the SSL certificate attached to the domain name. To obtain the certificate ID, upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc%5C&p=cas">Digital Certificate Management Service</a> console.</p>
          * 
          * <strong>example:</strong>
          * <p>1473**25</p>
@@ -70,15 +76,39 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         @NameInMap("CertificateId")
         public String certificateId;
 
+        /**
+         * <p>The name of the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-9955038</p>
+         */
         @NameInMap("CertificateName")
         public String certificateName;
 
+        /**
+         * <p>The issuance date of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-13</p>
+         */
         @NameInMap("CertificateStartDate")
         public String certificateStartDate;
 
+        /**
+         * <p>The status of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("CertificateStatus")
         public String certificateStatus;
 
+        /**
+         * <p>The time when the domain name was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-19T14:19:42Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -92,12 +122,7 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The domain name type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>intranet: internal network.</li>
-         * <li>internet: public network.</li>
-         * </ul>
+         * <p>The type of the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>intranet</p>
@@ -105,6 +130,12 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the domain name was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-19T14:19:42Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

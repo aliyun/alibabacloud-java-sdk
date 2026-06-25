@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster to which the resource group belongs.</p>
+     * <p>The ID of the cluster that contains the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -20,7 +20,7 @@ public class CreateResourceResponseBody extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The user ID (UID) of the resource group owner.</p>
+     * <p>The UID of the resource group owner.</p>
      * 
      * <strong>example:</strong>
      * <p>14401087478****</p>
@@ -38,7 +38,7 @@ public class CreateResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-h7lcw24dyqztwxxxxxx</p>

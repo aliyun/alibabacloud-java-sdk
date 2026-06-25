@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateServiceInstanceTokenRequest extends TeaModel {
     /**
+     * <p>Type of URL to return. Valid values:</p>
+     * <ul>
+     * <li><strong>WorkBench</strong>: Log on to the container using Workbench.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>WorkBench</p>
      */
@@ -12,6 +17,8 @@ public class CreateServiceInstanceTokenRequest extends TeaModel {
     public String actionType;
 
     /**
+     * <p>Name of the service worker. Call the ListServiceContainers operation to get the worker name.</p>
+     * 
      * <strong>example:</strong>
      * <p>worker0</p>
      */

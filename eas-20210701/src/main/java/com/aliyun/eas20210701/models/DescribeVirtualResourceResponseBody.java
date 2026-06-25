@@ -14,7 +14,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Indicates whether the retention period of preemptible instances was disabled.</p>
+     * <p>Indicates whether the protection period for spot instances is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -22,11 +22,14 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     @NameInMap("DisableSpotProtectionPeriod")
     public Boolean disableSpotProtectionPeriod;
 
+    /**
+     * <p>The collection of features for the virtual resource group. This identifies the attributes that the resource group supports.</p>
+     */
     @NameInMap("Features")
     public java.util.List<String> features;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
@@ -164,7 +167,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The priority of resource scheduling. A greater number specifies a higher priority.</p>
+         * <p>The scheduling priority of the resource. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -173,7 +176,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The instance type of the public resource group.</p>
+         * <p>The ID of the Lingjun resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>quota185lqxxxxxx</p>
@@ -182,7 +185,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public String quotaId;
 
         /**
-         * <p>The region where the resource resides.</p>
+         * <p>The region where the resource is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -200,7 +203,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The maximum price of preemptible instances in a public resource group.</p>
+         * <p>The maximum price for a spot instance in the public resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>10.05</p>

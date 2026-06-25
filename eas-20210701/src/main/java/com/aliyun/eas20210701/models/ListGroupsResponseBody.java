@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
     /**
-     * <p>The service groups.</p>
+     * <p>The list of service groups.</p>
      */
     @NameInMap("Groups")
     public java.util.List<Group> groups;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number of the returned group list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of groups displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of service groups.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

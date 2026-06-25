@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceLabelShrinkRequest extends TeaModel {
     /**
-     * <p>The service tags that you want to delete.</p>
+     * <p>The keys of the service labels that you want to delete. This parameter is deprecated. Use the LabelKeys parameter instead.</p>
      */
     @NameInMap("Keys")
     @Deprecated
     public String keysShrink;
 
+    /**
+     * <p>The keys of the service labels that you want to delete.</p>
+     */
     @NameInMap("LabelKeys")
     public String labelKeysShrink;
 

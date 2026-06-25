@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateResourceInstancesResponseBody extends TeaModel {
     /**
-     * <p>The instance IDs.</p>
+     * <p>A list of machine instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for a successful operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Create 5 new ecs instance(s) in resource [eas-r-asdasdasd] successfully</p>

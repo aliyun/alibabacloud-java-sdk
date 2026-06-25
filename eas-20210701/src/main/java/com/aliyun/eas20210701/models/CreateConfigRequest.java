@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigRequest extends TeaModel {
     /**
-     * <p>配置值</p>
+     * <p>The dynamic parameter value.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;model&quot;: &quot;gpt-4&quot;}</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Resource extends TeaModel {
     /**
-     * <p>The information about the clusters.</p>
+     * <p>The ID of the cluster where the resource group is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -14,7 +14,7 @@ public class Resource extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The total number of CPU cores.</p>
+     * <p>The total number of CPU cores in the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -22,11 +22,17 @@ public class Resource extends TeaModel {
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
+    /**
+     * <p>The number of used CPU cores in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("CpuUsed")
     public Integer cpuUsed;
 
     /**
-     * <p>The time when the instance was created.</p>
+     * <p>The time the resource group was created, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-02-26T17:52:49Z</p>
@@ -35,7 +41,7 @@ public class Resource extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The additional information.</p>
+     * <p>Additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -43,11 +49,14 @@ public class Resource extends TeaModel {
     @NameInMap("ExtraData")
     public java.util.Map<String, ?> extraData;
 
+    /**
+     * <p>The features supported by the resource group.</p>
+     */
     @NameInMap("Features")
     public java.util.List<String> features;
 
     /**
-     * <p>The total number of GPUs.</p>
+     * <p>The total number of GPUs in the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,11 +64,17 @@ public class Resource extends TeaModel {
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
+    /**
+     * <p>The number of used GPUs in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GpuUsed")
     public Float gpuUsed;
 
     /**
-     * <p>The total number of instances. It is equal to the number of subscription instances plus the number of pay-as-you-go instances.</p>
+     * <p>The total number of instances (prepaid and postpaid) in the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -67,23 +82,53 @@ public class Resource extends TeaModel {
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
+    /**
+     * <p>The maximum number of allocatable CPU cores per node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("InstanceMaxAllocatableCPU")
     public Integer instanceMaxAllocatableCPU;
 
+    /**
+     * <p>The maximum number of allocatable GPUs per node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("InstanceMaxAllocatableGPU")
     public Float instanceMaxAllocatableGPU;
 
+    /**
+     * <p>The maximum allocatable memory per node in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("InstanceMaxAllocatableMemory")
     public Integer instanceMaxAllocatableMemory;
 
+    /**
+     * <p>The total memory of the resource group, in MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8192</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The amount of used memory in the resource group, in MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("MemoryUsed")
     public Integer memoryUsed;
 
     /**
-     * <p>The latest message about the resource group.</p>
+     * <p>The latest status message for the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource is ready</p>
@@ -92,7 +137,7 @@ public class Resource extends TeaModel {
     public String message;
 
     /**
-     * <p>The number of pay-as-you-go instances.</p>
+     * <p>The number of postpaid instances.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -101,7 +146,7 @@ public class Resource extends TeaModel {
     public Integer postPaidInstanceCount;
 
     /**
-     * <p>The number of subscription instances.</p>
+     * <p>The number of prepaid instances.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -110,7 +155,7 @@ public class Resource extends TeaModel {
     public Integer prePaidInstanceCount;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The unique identifier of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-asdasdasd</p>
@@ -130,8 +175,10 @@ public class Resource extends TeaModel {
     /**
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
-     * <li>Dedicated: the dedicated resource group.</li>
-     * <li>SelfManaged: the self-managed resource group.</li>
+     * <li><p><code>Dedicated</code>: A dedicated resource group.</p>
+     * </li>
+     * <li><p><code>SelfManaged</code>: A self-managed resource group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,6 +187,12 @@ public class Resource extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The number of services deployed in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceCount")
     public Integer serviceCount;
 
@@ -147,13 +200,13 @@ public class Resource extends TeaModel {
      * <p>The status of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>ResouceReady</p>
+     * <p>ResourceReady</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The time when the instance was last updated.</p>
+     * <p>The time the resource group was last updated, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-02-26T19:52:49Z</p>
@@ -161,16 +214,17 @@ public class Resource extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The usage mode of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inference</p>
+     */
     @NameInMap("UsageMode")
     public String usageMode;
 
     /**
-     * <p>The vendor of the resource group instances.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ECS</li>
-     * <li>BareMetal</li>
-     * </ul>
+     * <p>The provider of the compute instances in the resource group, such as ECS.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>

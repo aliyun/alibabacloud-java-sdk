@@ -4,11 +4,17 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
+     * <p>The time when the private gateway was created. The time is in Coordinated Universal Time (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-05-19T14:19:42Z</p>
@@ -44,17 +50,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String gatewayName;
 
     /**
-     * <p>The instance type used by the private gateway.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>8c16g</li>
-     * <li>4c8g</li>
-     * <li>2c4g</li>
-     * <li>16c32g</li>
-     * </ul>
+     * <p>The instance type of the private gateway.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs.c6.4xlarge</p>
+     * <p>2c4g</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -63,13 +62,13 @@ public class DescribeGatewayResponseBody extends TeaModel {
      * <p>The public endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>gw-1uhcqmsc7x22******-1801786532******.cn-hangzhou.pai-eas.aliyuncs.com</p>
+     * <p>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</p>
      */
     @NameInMap("InternetDomain")
     public String internetDomain;
 
     /**
-     * <p>Indicates whether Internet access is enabled.</p>
+     * <p>Indicates whether public network access is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -78,15 +77,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean internetEnabled;
 
     /**
-     * <p>Indicates whether Internet access is enabled.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Creating: Internet access is being enabled.</li>
-     * <li>Failed: Internet access failed to be enabled or deleted.</li>
-     * <li>Running: Internet access is running.</li>
-     * <li>Deleted: Internet access is deleted.</li>
-     * <li>Deleting: Internet access is being deleted.</li>
-     * </ul>
+     * <p>The status of public network access.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -95,10 +86,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String internetStatus;
 
     /**
-     * <p>The internal endpoint.</p>
+     * <p>The private endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-hangzhou.pai-eas.aliyuncs.com</p>
+     * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</p>
      */
     @NameInMap("IntranetDomain")
     public String intranetDomain;
@@ -107,7 +98,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean intranetEnabled;
 
     /**
-     * <p>Indicates whether it is the default private gateway.</p>
+     * <p>Indicates whether the gateway is the default private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +110,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public java.util.List<DescribeGatewayResponseBodyLabels> labels;
 
     /**
-     * <p>The number of nodes in the private gateway.</p>
+     * <p>The number of private gateway nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -137,7 +128,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the HTTP to HTTPS redirection is enabled.</p>
+     * <p>Indicates whether HTTP to HTTPS redirection is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -147,25 +138,15 @@ public class DescribeGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The status of the private gateway.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Creating</li>
-     * <li>Stopped</li>
-     * <li>Failed</li>
-     * <li>Running</li>
-     * <li>Deleted</li>
-     * <li>Deleting</li>
-     * <li>Waiting</li>
-     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>PrivateGatewayRunning</p>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The time when the private gateway was updated. The time is displayed in UTC.</p>
+     * <p>The time when the private gateway was last updated. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-02-24T11:52:17Z</p>

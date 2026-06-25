@@ -220,9 +220,12 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
         /**
          * <p>The name of the metric for triggering auto scaling. Valid values:</p>
          * <ul>
-         * <li>qps: the queries per second (qps) for an individual instance.</li>
-         * <li>cpu: the cpu utilization.</li>
-         * <li>gpu[util]: gpu utilization.</li>
+         * <li><p>qps: the queries per second (qps) for an individual instance.</p>
+         * </li>
+         * <li><p>cpu: the cpu utilization.</p>
+         * </li>
+         * <li><p>gpu[util]: gpu utilization.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -244,9 +247,12 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
         /**
          * <p>The threshold of the metric that triggers auto scaling.</p>
          * <ul>
-         * <li>If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.</li>
-         * <li>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</li>
-         * <li>If you set metricName to gpu, scale-out is triggered when the average gpu utilization for a single instance is greater than this threshold.</li>
+         * <li><p>If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.</p>
+         * </li>
+         * <li><p>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</p>
+         * </li>
+         * <li><p>If you set metricName to gpu, scale-out is triggered when the average gpu utilization for a single instance is greater than this threshold.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

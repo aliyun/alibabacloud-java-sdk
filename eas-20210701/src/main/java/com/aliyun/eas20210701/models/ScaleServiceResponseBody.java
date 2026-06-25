@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScaleServiceResponseBody extends TeaModel {
     /**
+     * <p>A message indicating the result of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Service [foo] in region [cn-shanghai] is scaling</p>
      */
@@ -12,6 +14,8 @@ public class ScaleServiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
      */

@@ -8,7 +8,7 @@ public class CreateServiceMirrorResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Traffic mirroring is ON for service [foo] in region [cn-shanghia], ratio [70%]</p>
+     * <p>Traffic mirroring is ON for service [foo] in region [cn-shanghai], ratio [70%]</p>
      */
     @NameInMap("Message")
     public String message;

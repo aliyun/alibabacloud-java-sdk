@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayRequest extends TeaModel {
     /**
-     * <p>The resource group ID. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
+     * <p>The name of the resource group. For more information, see the ResourceName field that is returned by the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation when ResourceType is SelfManaged.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-4gt8twzwllfo******</p>
@@ -16,8 +16,10 @@ public class CreateGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li>false (default)</li>
-     * <li>true</li>
+     * <li><p>false (default): Auto-renewal is disabled.</p>
+     * </li>
+     * <li><p>true: Auto-renewal is enabled.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("AutoRenewal")
@@ -26,8 +28,10 @@ public class CreateGatewayRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription.</li>
-     * <li>PostPaid: pay-as-you-go.</li>
+     * <li><p>PrePaid: subscription.</p>
+     * </li>
+     * <li><p>PostPaid: pay-as-you-go.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,12 +41,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Specifies whether to enable Internet access. Default value: false.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to enable public network access. The default value is false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -51,12 +50,7 @@ public class CreateGatewayRequest extends TeaModel {
     public Boolean enableInternet;
 
     /**
-     * <p>Specifies whether to enable private access. Default value: true.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to enable internal network access. The default value is true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,16 +62,20 @@ public class CreateGatewayRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The instance type used by the private gateway. Valid values:</p>
+     * <p>The instance type of the private gateway. Valid values:</p>
      * <ul>
-     * <li>2c4g</li>
-     * <li>4c8g</li>
-     * <li>8c16g</li>
-     * <li>16c32g</li>
+     * <li><p>2c4g</p>
+     * </li>
+     * <li><p>4c8g</p>
+     * </li>
+     * <li><p>8c16g</p>
+     * </li>
+     * <li><p>16c32g</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ecs.c6.4xlarge</p>
+     * <p>2c4g</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -92,7 +90,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of nodes in the private gateway.</p>
+     * <p>The number of nodes for the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

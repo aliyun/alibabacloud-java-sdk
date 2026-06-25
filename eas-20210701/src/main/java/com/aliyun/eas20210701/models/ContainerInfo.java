@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContainerInfo extends TeaModel {
     /**
-     * <p>The reason why the container is in the current state.</p>
+     * <p>The reason for the current status.</p>
      * 
      * <strong>example:</strong>
      * <p>PodInitializing</p>
@@ -14,11 +14,11 @@ public class ContainerInfo extends TeaModel {
     public String currentReaon;
 
     /**
-     * <p>The current state of the container. Valid values:</p>
+     * <p>The current status. Valid values:</p>
      * <ul>
-     * <li>Waiting</li>
-     * <li>Running</li>
-     * <li>Terminated</li>
+     * <li>Waiting: waiting</li>
+     * <li>Running: running</li>
+     * <li>Terminated: terminated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ContainerInfo extends TeaModel {
     public String currentStatus;
 
     /**
-     * <p>The time when the container entered the current state.</p>
+     * <p>The time when the current status occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-21T06:17:57Z</p>
@@ -46,7 +46,7 @@ public class ContainerInfo extends TeaModel {
     public String image;
 
     /**
-     * <p>The reason why the container is in the last state.</p>
+     * <p>The reason for the previous status.</p>
      * 
      * <strong>example:</strong>
      * <p>Error</p>
@@ -55,11 +55,11 @@ public class ContainerInfo extends TeaModel {
     public String lastReason;
 
     /**
-     * <p>The last state of the container. Valid values:</p>
+     * <p>The previous status. Valid values:</p>
      * <ul>
-     * <li>Waiting</li>
-     * <li>Running</li>
-     * <li>Terminated</li>
+     * <li>Waiting: waiting</li>
+     * <li>Running: running</li>
+     * <li>Terminated: terminated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ContainerInfo extends TeaModel {
     public String lastStatus;
 
     /**
-     * <p>The time when the container entered the last state.</p>
+     * <p>The time when the previous status occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-21T05:17:57Z</p>
@@ -87,7 +87,7 @@ public class ContainerInfo extends TeaModel {
     public String name;
 
     /**
-     * <p>The port number.</p>
+     * <p>The port.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -96,23 +96,7 @@ public class ContainerInfo extends TeaModel {
     public Integer port;
 
     /**
-     * <p>Indicates whether the container passed the health check.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Indicates whether the health check is passed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -121,7 +105,7 @@ public class ContainerInfo extends TeaModel {
     public Boolean ready;
 
     /**
-     * <p>The number of times the container restarted.</p>
+     * <p>The number of restarts.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
