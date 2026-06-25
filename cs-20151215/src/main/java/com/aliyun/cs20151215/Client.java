@@ -8434,7 +8434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</p>
+     * <p>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</p>
      * 
      * @param request UpgradeClusterNodepoolRequest
      * @param headers map
@@ -8444,6 +8444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeClusterNodepoolResponse upgradeClusterNodepoolWithOptions(String ClusterId, String NodepoolId, UpgradeClusterNodepoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreWarningCheck)) {
+            body.put("ignore_warning_check", request.ignoreWarningCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             body.put("image_id", request.imageId);
         }
@@ -8501,7 +8505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</p>
+     * <p>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</p>
      * 
      * @param request UpgradeClusterNodepoolRequest
      * @return UpgradeClusterNodepoolResponse

@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterNodepoolRequest extends TeaModel {
+    @NameInMap("ignore_warning_check")
+    public Boolean ignoreWarningCheck;
+
     /**
      * <p>The system image ID of the node.</p>
      * 
@@ -69,6 +72,14 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
     public static UpgradeClusterNodepoolRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClusterNodepoolRequest self = new UpgradeClusterNodepoolRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeClusterNodepoolRequest setIgnoreWarningCheck(Boolean ignoreWarningCheck) {
+        this.ignoreWarningCheck = ignoreWarningCheck;
+        return this;
+    }
+    public Boolean getIgnoreWarningCheck() {
+        return this.ignoreWarningCheck;
     }
 
     public UpgradeClusterNodepoolRequest setImageId(String imageId) {
@@ -140,7 +151,7 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
         public Integer batchInterval;
 
         /**
-         * <p>The maximum number of nodes that can be upgraded in parallel per batch. Nodes in the node pool are upgraded in batches.</p>
+         * <p>The maximum number of nodes that can be updated in parallel per batch. Nodes in the node pool are updated in batches.</p>
          * <p>Valid values: [1,10].</p>
          * <p>Default value: 10.</p>
          * 
@@ -153,8 +164,8 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
         /**
          * <p>The automatic pause policy during node upgrades. Valid values:</p>
          * <ul>
-         * <li>FirstBatch: pauses after the first batch is completed.</li>
-         * <li>EveryBatch: pauses after each batch is completed.</li>
+         * <li>FirstBatch: pauses after the first batch is complete.</li>
+         * <li>EveryBatch: pauses after each batch is complete.</li>
          * <li>NotPause: does not pause.</li>
          * </ul>
          * 
