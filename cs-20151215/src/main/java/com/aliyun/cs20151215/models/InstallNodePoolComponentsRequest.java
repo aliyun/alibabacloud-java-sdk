@@ -54,20 +54,23 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
     public static class InstallNodePoolComponentsRequestComponentsConfig extends TeaModel {
         /**
          * <p>The custom configuration of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
          */
         @NameInMap("customConfig")
-        public java.util.Map<String, String> customConfig;
+        public java.util.Map<String, ?> customConfig;
 
         public static InstallNodePoolComponentsRequestComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
             InstallNodePoolComponentsRequestComponentsConfig self = new InstallNodePoolComponentsRequestComponentsConfig();
             return TeaModel.build(map, self);
         }
 
-        public InstallNodePoolComponentsRequestComponentsConfig setCustomConfig(java.util.Map<String, String> customConfig) {
+        public InstallNodePoolComponentsRequestComponentsConfig setCustomConfig(java.util.Map<String, ?> customConfig) {
             this.customConfig = customConfig;
             return this;
         }
-        public java.util.Map<String, String> getCustomConfig() {
+        public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
         }
 

@@ -11,7 +11,7 @@ public class Nodepool extends TeaModel {
     public NodepoolAutoScaling autoScaling;
 
     /**
-     * <p>[This field is deprecated. Use desired_size instead.]</p>
+     * <p>This parameter is deprecated. Use desired_size instead.</p>
      * <p>The number of nodes in the node pool.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class Nodepool extends TeaModel {
     public Long count;
 
     /**
-     * <p>[This field is deprecated.]</p>
+     * <p>This parameter is deprecated.</p>
      * <p>The edge node pool configuration.</p>
      */
     @NameInMap("interconnect_config")
@@ -30,7 +30,7 @@ public class Nodepool extends TeaModel {
     public NodepoolInterconnectConfig interconnectConfig;
 
     /**
-     * <p>The network type of the edge node pool. This value is valid only for node pools whose <code>type</code> is <code>edge</code>. Valid values:</p>
+     * <p>The network type of the edge node pool. This parameter is valid only for node pools whose <code>type</code> is <code>edge</code>. Valid values:</p>
      * <ul>
      * <li><code>basic</code>: basic.</li>
      * <li><code>private</code>: dedicated. Supported in version 1.22 and later.</li>
@@ -88,7 +88,7 @@ public class Nodepool extends TeaModel {
     public NodepoolScalingGroup scalingGroup;
 
     /**
-     * <p>The confidential computing node pool configuration.</p>
+     * <p>The confidential computing configuration of the node pool.</p>
      */
     @NameInMap("tee_config")
     public NodepoolTeeConfig teeConfig;
@@ -955,20 +955,23 @@ public class Nodepool extends TeaModel {
     public static class NodepoolNodeComponentsConfig extends TeaModel {
         /**
          * <p>节点组件自定义配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
          */
         @NameInMap("custom_config")
-        public java.util.Map<String, String> customConfig;
+        public java.util.Map<String, ?> customConfig;
 
         public static NodepoolNodeComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
             NodepoolNodeComponentsConfig self = new NodepoolNodeComponentsConfig();
             return TeaModel.build(map, self);
         }
 
-        public NodepoolNodeComponentsConfig setCustomConfig(java.util.Map<String, String> customConfig) {
+        public NodepoolNodeComponentsConfig setCustomConfig(java.util.Map<String, ?> customConfig) {
             this.customConfig = customConfig;
             return this;
         }
-        public java.util.Map<String, String> getCustomConfig() {
+        public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
         }
 

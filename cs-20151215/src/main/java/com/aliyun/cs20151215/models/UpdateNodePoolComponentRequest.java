@@ -102,20 +102,23 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
     public static class UpdateNodePoolComponentRequestConfig extends TeaModel {
         /**
          * <p>The custom configuration of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
          */
         @NameInMap("customConfig")
-        public java.util.Map<String, String> customConfig;
+        public java.util.Map<String, ?> customConfig;
 
         public static UpdateNodePoolComponentRequestConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateNodePoolComponentRequestConfig self = new UpdateNodePoolComponentRequestConfig();
             return TeaModel.build(map, self);
         }
 
-        public UpdateNodePoolComponentRequestConfig setCustomConfig(java.util.Map<String, String> customConfig) {
+        public UpdateNodePoolComponentRequestConfig setCustomConfig(java.util.Map<String, ?> customConfig) {
             this.customConfig = customConfig;
             return this;
         }
-        public java.util.Map<String, String> getCustomConfig() {
+        public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
         }
 
@@ -123,7 +126,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The interval between batches during the upgrade. Unit: seconds.</p>
+         * <p>The interval between batches during the upgrade, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +144,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
-         * <p>The automatic pause policy during node upgrades.</p>
+         * <p>The automatic pause policy during the node upgrade process.</p>
          * 
          * <strong>example:</strong>
          * <p>NotPause</p>

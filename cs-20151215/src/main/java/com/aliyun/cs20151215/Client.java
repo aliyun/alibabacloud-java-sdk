@@ -1409,7 +1409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>A node pool is a logical collection of nodes that share the same attributes. Node pools allow unified management and operations, such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</p>
+     * <p>A node pool is a logical collection of nodes with the same attributes, allowing unified management and O&amp;M of nodes, such as node upgrades and auto scaling. You can further leverage the automated O&amp;M capabilities of node pools to use features such as automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, reducing O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @param headers map
@@ -1503,7 +1503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>A node pool is a logical collection of nodes that share the same attributes. Node pools allow unified management and operations, such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</p>
+     * <p>A node pool is a logical collection of nodes with the same attributes, allowing unified management and O&amp;M of nodes, such as node upgrades and auto scaling. You can further leverage the automated O&amp;M capabilities of node pools to use features such as automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, reducing O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -2989,7 +2989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of a specified node pool in a cluster by node pool ID.</p>
+     * <p>You can call the DescribeClusterNodePoolDetail operation to query the configuration of a specified node pool in a cluster by node pool ID.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3015,7 +3015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of a specified node pool in a cluster by node pool ID.</p>
+     * <p>You can call the DescribeClusterNodePoolDetail operation to query the configuration of a specified node pool in a cluster by node pool ID.</p>
      * @return DescribeClusterNodePoolDetailResponse
      */
     public DescribeClusterNodePoolDetailResponse describeClusterNodePoolDetail(String ClusterId, String NodepoolId) throws Exception {
