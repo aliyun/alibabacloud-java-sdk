@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTemplateByParamRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
+     * <p>Deprecated. Retained for backward compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>Abandoned, historical reasons for compatibility</p>
@@ -14,7 +14,7 @@ public class QueryTemplateByParamRequest extends TeaModel {
     public Integer fromType;
 
     /**
-     * <p>The keyword of the template name. By default, a paged query is performed for all templates.</p>
+     * <p>The keyword of the template name. By default, a paging query is performed on all templates.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -26,7 +26,7 @@ public class QueryTemplateByParamRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class QueryTemplateByParamRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. The default value is 20.</p>
+     * <p>The number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class QueryTemplateByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
+     * <p>Deprecated. Retained for backward compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>Abandoned, historical reasons for compatibility</p>

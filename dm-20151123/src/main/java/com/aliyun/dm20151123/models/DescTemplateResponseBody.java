@@ -14,7 +14,7 @@ public class DescTemplateResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
+     * <p>Deprecated. Retained for backward compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>Abandoned, historical reasons for compatibility</p>
@@ -32,7 +32,7 @@ public class DescTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
+     * <p>Deprecated. Retained for backward compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>Abandoned, historical reasons for compatibility</p>
@@ -41,7 +41,7 @@ public class DescTemplateResponseBody extends TeaModel {
     public String smsContent;
 
     /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
+     * <p>Deprecated. Retained for backward compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>Abandoned, historical reasons for compatibility</p>
@@ -59,7 +59,7 @@ public class DescTemplateResponseBody extends TeaModel {
     public String templateName;
 
     /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
+     * <p>Deprecated. Retained for backward compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>Abandoned, historical reasons for compatibility</p>
@@ -68,16 +68,12 @@ public class DescTemplateResponseBody extends TeaModel {
     public String templateNickName;
 
     /**
-     * <p>The status of the template. Valid values:</p>
+     * <p>The template status. Valid values:</p>
      * <ul>
-     * <li><p>0: The template is a draft.</p>
-     * </li>
-     * <li><p>1: The template is pending approval.</p>
-     * </li>
-     * <li><p>2: The template is approved.</p>
-     * </li>
-     * <li><p>3: The template is rejected.</p>
-     * </li>
+     * <li>0: draft.</li>
+     * <li>1: pending review.</li>
+     * <li>2: approved.</li>
+     * <li>3: rejected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +83,7 @@ public class DescTemplateResponseBody extends TeaModel {
     public String templateStatus;
 
     /**
-     * <p>The template subject, which is used to create the email subject.</p>
+     * <p>The template subject, which is used to compose the email subject.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -105,7 +101,7 @@ public class DescTemplateResponseBody extends TeaModel {
     public String templateText;
 
     /**
-     * <p>This parameter is deprecated. It is retained for historical compatibility.</p>
+     * <p>Deprecated. Retained for backward compatibility.</p>
      * 
      * <strong>example:</strong>
      * <p>Abandoned, historical reasons for compatibility</p>

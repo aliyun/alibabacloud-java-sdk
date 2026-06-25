@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTemplateByParamResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

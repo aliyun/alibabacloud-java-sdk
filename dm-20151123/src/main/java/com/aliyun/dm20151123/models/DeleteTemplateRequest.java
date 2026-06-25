@@ -3,12 +3,12 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class DescTemplateRequest extends TeaModel {
+public class DeleteTemplateRequest extends TeaModel {
     /**
-     * <p>Deprecated. Retained for backward compatibility.</p>
+     * <p>The channel through which the user accesses the service. Default value: 1.</p>
      * 
      * <strong>example:</strong>
-     * <p>Abandoned, historical reasons for compatibility</p>
+     * <p>1</p>
      */
     @NameInMap("FromType")
     public Integer fromType;
@@ -27,17 +27,17 @@ public class DescTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>3xxxx2</p>
+     * <p>409481</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;
 
-    public static DescTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescTemplateRequest self = new DescTemplateRequest();
+    public static DeleteTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteTemplateRequest self = new DeleteTemplateRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescTemplateRequest setFromType(Integer fromType) {
+    public DeleteTemplateRequest setFromType(Integer fromType) {
         this.fromType = fromType;
         return this;
     }
@@ -45,7 +45,7 @@ public class DescTemplateRequest extends TeaModel {
         return this.fromType;
     }
 
-    public DescTemplateRequest setOwnerId(Long ownerId) {
+    public DeleteTemplateRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -53,7 +53,7 @@ public class DescTemplateRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DeleteTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -61,7 +61,7 @@ public class DescTemplateRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescTemplateRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DeleteTemplateRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -69,7 +69,7 @@ public class DescTemplateRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescTemplateRequest setTemplateId(Integer templateId) {
+    public DeleteTemplateRequest setTemplateId(Integer templateId) {
         this.templateId = templateId;
         return this;
     }

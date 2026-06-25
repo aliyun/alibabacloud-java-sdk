@@ -2154,6 +2154,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries template information.</p>
+     * 
+     * @param request DeleteTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTemplateResponse
+     */
+    public DeleteTemplateResponse deleteTemplateWithOptions(DeleteTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fromType)) {
+            query.put("FromType", request.fromType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTemplate"),
+            new TeaPair("version", "2015-11-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries template information.</p>
+     * 
+     * @param request DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
+    public DeleteTemplateResponse deleteTemplate(DeleteTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes the verification file after the verification process is complete.</p>
      * 
      * @param request DeleteValidateFileRequest
@@ -2310,10 +2370,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves information about a specific email template, including its name, creation time, and content.</p>
+     * <p>Queries template information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the information about an email template.</p>
+     * <p>Queries template information.</p>
      * 
      * @param request DescTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2361,10 +2421,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves information about a specific email template, including its name, creation time, and content.</p>
+     * <p>Queries template information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the information about an email template.</p>
+     * <p>Queries template information.</p>
      * 
      * @param request DescTemplateRequest
      * @return DescTemplateResponse
@@ -3474,6 +3534,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies an email template.</p>
+     * 
+     * @param request ModifyTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTemplateResponse
+     */
+    public ModifyTemplateResponse modifyTemplateWithOptions(ModifyTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fromType)) {
+            query.put("FromType", request.fromType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsContent)) {
+            query.put("SmsContent", request.smsContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsType)) {
+            query.put("SmsType", request.smsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateNickName)) {
+            query.put("TemplateNickName", request.templateNickName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateSubject)) {
+            query.put("TemplateSubject", request.templateSubject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateText)) {
+            query.put("TemplateText", request.templateText);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTemplate"),
+            new TeaPair("version", "2015-11-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies an email template.</p>
+     * 
+     * @param request ModifyTemplateRequest
+     * @return ModifyTemplateResponse
+     */
+    public ModifyTemplateResponse modifyTemplate(ModifyTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>免费试用Sendify</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
@@ -3989,10 +4137,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query to retrieve a list of templates.</p>
+     * <p>Queries template list information by paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve a list of templates.</p>
+     * <p>Queries template list information by paging.</p>
      * 
      * @param request QueryTemplateByParamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4052,10 +4200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query to retrieve a list of templates.</p>
+     * <p>Queries template list information by paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve a list of templates.</p>
+     * <p>Queries template list information by paging.</p>
      * 
      * @param request QueryTemplateByParamRequest
      * @return QueryTemplateByParamResponse
