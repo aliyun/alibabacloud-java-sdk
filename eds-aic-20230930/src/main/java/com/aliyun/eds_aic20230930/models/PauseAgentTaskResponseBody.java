@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PauseAgentTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class PauseAgentTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -19,12 +23,17 @@ public class PauseAgentTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E38B41A8-8E00-5AE4-A957-6636ACB8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<PauseAgentTaskResponseBodyTasks> tasks;
 
@@ -67,6 +76,15 @@ public class PauseAgentTaskResponseBody extends TeaModel {
 
     public static class PauseAgentTaskResponseBodyTasks extends TeaModel {
         /**
+         * <p>The current status of the task. The following are possible values:</p>
+         * <p>PENDING: The task is being created.</p>
+         * <p>RUNNING: The task is running.</p>
+         * <p>COMPLETED: The task is completed.</p>
+         * <p>FAILED: The task failed.</p>
+         * <p>TIMEOUT: The task timed out.</p>
+         * <p>PAUSING: The task is being paused.</p>
+         * <p>PAUSED: The task is paused.</p>
+         * 
          * <strong>example:</strong>
          * <p>PAUSING</p>
          */
@@ -74,6 +92,8 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
+         * <p>The reason the task failed to pause.</p>
+         * 
          * <strong>example:</strong>
          * <p>Task status [COMPLETED] does not support pause, only RUNNING tasks can be paused.</p>
          */
@@ -81,6 +101,8 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         public String failedReason;
 
         /**
+         * <p>The ID of the Mobile node.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-anzzuho371azi44xr</p>
          */
@@ -88,6 +110,8 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time when the pause request was initiated, in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-13T17:42:19Z</p>
          */
@@ -95,6 +119,9 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         public String pausingAt;
 
         /**
+         * <p>The status of the task before the pause request. The only valid value is:</p>
+         * <p>RUNNING: The task is running.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -102,6 +129,8 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         public String previousStatus;
 
         /**
+         * <p>The unique ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditPackageRequest extends TeaModel {
     /**
+     * <p>The ID of the credit package.</p>
+     * 
      * <strong>example:</strong>
      * <p>crp-xagydbhfkah****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCreditPackageRequest extends TeaModel {
     public String creditPackageId;
 
     /**
+     * <p>The status of the credit package.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
      */

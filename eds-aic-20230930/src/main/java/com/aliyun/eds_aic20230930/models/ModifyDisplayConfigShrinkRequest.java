@@ -4,9 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDisplayConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>A list of instance IDs.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    /**
+     * <p>The display settings.</p>
+     */
     @NameInMap("DisplayConfig")
     public String displayConfigShrink;
 

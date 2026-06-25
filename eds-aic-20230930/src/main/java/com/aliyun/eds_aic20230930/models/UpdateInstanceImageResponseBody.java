@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceImageResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
      */
@@ -12,6 +14,8 @@ public class UpdateInstanceImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-1ljew7on6ay0j****</p>
      */

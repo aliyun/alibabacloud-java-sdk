@@ -12,11 +12,6 @@ public class SetAdbSecureRequest extends TeaModel {
 
     /**
      * <p>The status of the ADB authentication feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: The ADB authentication feature is disabled.</li>
-     * <li>1: The ADB authentication feature is enabled.</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

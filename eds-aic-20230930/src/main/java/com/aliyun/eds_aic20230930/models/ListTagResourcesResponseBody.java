@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The token that marks the position from which to start the next query. If this parameter is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
      */
@@ -12,12 +14,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20393E53-8FF1-524C-B494-B478A5369733</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A collection of resources and their tag information.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -52,27 +59,35 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
+         * <p>The resource ID. This is the ID of the cloud phone instance.</p>
+         * 
          * <strong>example:</strong>
-         * <p>acp-123456abc****</p>
+         * <p>acp-8jwttemxb4t6y****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ALIYUN::ACP::INSTANC</p>
+         * <p>ALIYUN::ACP::INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>For</p>
+         * <p>department</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TF</p>
          */

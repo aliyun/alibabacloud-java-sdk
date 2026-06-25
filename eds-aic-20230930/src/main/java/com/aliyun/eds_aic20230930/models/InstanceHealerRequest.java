@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class InstanceHealerRequest extends TeaModel {
     /**
+     * <p>The list of instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
     /**
+     * <p>The policy type. The only supported value is Clean.</p>
+     * 
      * <strong>example:</strong>
      * <p>Clean</p>
      */
@@ -18,6 +21,8 @@ public class InstanceHealerRequest extends TeaModel {
     public String strategy;
 
     /**
+     * <p>The timeout period in seconds. If you do not specify this parameter, the default value is 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */

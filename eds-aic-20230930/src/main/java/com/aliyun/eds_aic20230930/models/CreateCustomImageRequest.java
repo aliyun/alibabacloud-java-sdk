@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomImageRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. By default, this parameter is left empty. The token cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. By default, this parameter is left empty. The token cannot exceed 100 characters in length. Requests with the same ClientToken triggers only one creation.</p>
      * 
      * <strong>example:</strong>
      * <p>20393E53-8FF1-524C-B494-B478A5369733</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstancePropertiesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cpn-2ofr9kf41apy3****-014</p>
      */

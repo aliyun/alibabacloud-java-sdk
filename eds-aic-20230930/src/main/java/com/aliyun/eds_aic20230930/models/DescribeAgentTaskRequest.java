@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeAgentTaskRequest extends TeaModel {
+    /**
+     * <p>A list of task IDs.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNetworkBlacklistRequest extends TeaModel {
     /**
+     * <p>The query type. Valid values: IP and Domain. If you do not specify this parameter, information for both types is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>IP</p>
      * 

@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class ModifyJVSInstanceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to apply the configuration to all instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("ApplyToAll")
     public Boolean applyToAll;
 
+    /**
+     * <p>The credit limit configuration. New configurations overwrite existing ones.</p>
+     */
     @NameInMap("CreditConfig")
     public java.util.List<ModifyJVSInstanceRequestCreditConfig> creditConfig;
 
+    /**
+     * <p>A list of instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The new instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>defaultInstanceName</p>
      */
@@ -63,6 +73,8 @@ public class ModifyJVSInstanceRequest extends TeaModel {
 
     public static class ModifyJVSInstanceRequestCreditConfig extends TeaModel {
         /**
+         * <p>The credit limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -70,6 +82,8 @@ public class ModifyJVSInstanceRequest extends TeaModel {
         public Long creditLimit;
 
         /**
+         * <p>The credit limit period.</p>
+         * 
          * <strong>example:</strong>
          * <p>day</p>
          */

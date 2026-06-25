@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricTopResponseBody extends TeaModel {
     /**
+     * <p>The number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The instance monitoring data.</p>
+     */
     @NameInMap("MetricTotalModel")
     public java.util.List<DescribeMetricTopResponseBodyMetricTotalModel> metricTotalModel;
 
     /**
+     * <p>The token to retrieve the next page of results. If the results are not fully returned in a single query, this parameter is not empty. You can use this token in a subsequent query to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeMetricTopResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4610632D-D661-5982-B3D7-5D3FD183F****</p>
      */
@@ -67,6 +76,11 @@ public class DescribeMetricTopResponseBody extends TeaModel {
 
     public static class DescribeMetricTopResponseBodyMetricTotalModelMetricModelListDataPoints extends TeaModel {
         /**
+         * <p>The average value. Unit: %.</p>
+         * <blockquote>
+         * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>99.52</p>
          */
@@ -74,6 +88,8 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         public Double average;
 
         /**
+         * <p>The ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-fkuit0cmyru4p****</p>
          */
@@ -81,6 +97,11 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The maximum value. Unit: %.</p>
+         * <blockquote>
+         * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -88,19 +109,41 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         public Double maximum;
 
         /**
+         * <p>The minimum value.</p>
+         * <blockquote>
+         * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>93.1</p>
          */
         @NameInMap("Minimum")
         public Double minimum;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudPhone-****</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The properties.</p>
+         * <blockquote>
+         * <p>A JSON string that contains the extension properties.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;IP&quot;:&quot;192.168.<em>.</em>**&quot;}</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
         /**
+         * <p>The timestamp of the data point. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1548777660000</p>
          */
@@ -171,10 +214,15 @@ public class DescribeMetricTopResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricTopResponseBodyMetricTotalModelMetricModelList extends TeaModel {
+        /**
+         * <p>The monitoring data points.</p>
+         */
         @NameInMap("DataPoints")
         public java.util.List<DescribeMetricTopResponseBodyMetricTotalModelMetricModelListDataPoints> dataPoints;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance_in_traffic</p>
          */
@@ -206,6 +254,9 @@ public class DescribeMetricTopResponseBody extends TeaModel {
 
     public static class DescribeMetricTopResponseBodyMetricTotalModel extends TeaModel {
         /**
+         * <p>For instance-level monitoring, this is the cloud phone instance ID.
+         * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, this is the matrix ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-fkuit0cmyru4p****</p>
          */
@@ -213,12 +264,17 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>np-5hh4a31emkt6u****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The monitoring data of metrics.</p>
+         */
         @NameInMap("MetricModelList")
         public java.util.List<DescribeMetricTopResponseBodyMetricTotalModelMetricModelList> metricModelList;
 

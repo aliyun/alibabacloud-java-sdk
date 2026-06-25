@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartInstanceAdbRequest extends TeaModel {
     /**
+     * <p>A list of 1 to 100 cloud phone instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

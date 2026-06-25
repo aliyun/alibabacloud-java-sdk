@@ -4,16 +4,30 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ChangeCloudPhoneNodeRequest extends TeaModel {
+    /**
+     * <p>Indicates if automatic payment is enabled. Default: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     @NameInMap("DisplayConfig")
     public String displayConfig;
 
+    /**
+     * <p>The downstream bandwidth limit, in Mbps.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("DownBandwidthLimit")
     public Integer downBandwidthLimit;
 
     /**
+     * <p>The instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac.max</p>
      */
@@ -21,6 +35,8 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The ID of the cloud phone matrix.</p>
+     * 
      * <strong>example:</strong>
      * <p>cpn-0ugbptfu473fy****</p>
      */
@@ -28,15 +44,29 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The number of cloud phone instances. Call the <a href="t2729804.xdita#"></a>operation to query the minimum and maximum number of allowed instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PhoneCount")
     public Integer phoneCount;
 
+    /**
+     * <p>The capacity of the internal storage, in GiB. Valid values: 10 to 4000. If you do not specify this parameter, the current capacity is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PhoneDataVolume")
     public Integer phoneDataVolume;
 
+    /**
+     * <p>The promotion ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50003308011****</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
@@ -46,6 +76,12 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("SwapSize")
     public Integer swapSize;
 
+    /**
+     * <p>The upstream bandwidth limit, in Mbps.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("UpBandwidthLimit")
     public Integer upBandwidthLimit;
 

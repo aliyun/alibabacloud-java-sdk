@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunSyncCommandRequest extends TeaModel {
     /**
+     * <p>The content of the command to execute.</p>
+     * 
      * <strong>example:</strong>
      * <p>ls</p>
      */
@@ -12,16 +14,23 @@ public class RunSyncCommandRequest extends TeaModel {
     public String commandContent;
 
     /**
+     * <p>The encoding of the command content. If you provide a value that is not a valid option, the system uses the default value, <code>PlainText</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>PlainText</p>
      */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    /**
+     * <p>An array of Cloud Phone instance IDs. You can specify up to 50 instances in a single request.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The timeout for command execution, in milliseconds. Valid range: 500 to 3000. Default: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

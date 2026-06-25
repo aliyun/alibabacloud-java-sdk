@@ -17,7 +17,7 @@ public class ModifyAppRequest extends TeaModel {
      * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
-     * <p>defaultAppName</p>
+     * <p>Application name</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -26,7 +26,7 @@ public class ModifyAppRequest extends TeaModel {
      * <p>The description of the application.</p>
      * 
      * <strong>example:</strong>
-     * <p>default description.</p>
+     * <p>Application description</p>
      */
     @NameInMap("Description")
     public String description;

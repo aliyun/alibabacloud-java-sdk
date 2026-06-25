@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceGroupImageRequest extends TeaModel {
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateInstanceGroupImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The IDs of the instance groups.</p>
+     * <p>A list of instance group IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceGroupIds")

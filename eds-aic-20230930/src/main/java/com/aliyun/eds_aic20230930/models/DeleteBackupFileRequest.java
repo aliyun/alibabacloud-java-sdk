@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupFileRequest extends TeaModel {
     /**
+     * <p>A list of backup file IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackupFileIdList")

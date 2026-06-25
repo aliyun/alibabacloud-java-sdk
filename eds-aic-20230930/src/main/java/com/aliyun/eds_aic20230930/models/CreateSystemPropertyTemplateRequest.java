@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSystemPropertyTemplateRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically generate preset system properties.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,15 +14,37 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
     public Boolean enableAuto;
 
     /**
+     * <p>The URL of the property template file. The API parses the file synchronously. An error is returned if the file format is invalid.</p>
+     * <blockquote>
+     * <p>The file must be in the following format: <code>{ &quot;properties&quot;:{&quot;key1&quot;:&quot;value1&quot;}}</code>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://filepath****.com">https://filepath****.com</a></p>
      */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>The information about the system property template.</p>
+     */
     @NameInMap("SystemPropertyInfo")
     public CreateSystemPropertyTemplateRequestSystemPropertyInfo systemPropertyInfo;
 
+    /**
+     * <p>The name of the template. The name must meet the following requirements:</p>
+     * <ul>
+     * <li><p>Be 2 to 32 characters in length.</p>
+     * </li>
+     * <li><p>Start with an uppercase or lowercase letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>Contain letters, digits, colons (:), underscores (_), and hyphens (-). Periods (.) are not supported.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Template1</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -63,6 +87,8 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
 
     public static class CreateSystemPropertyTemplateRequestSystemPropertyInfoCustomPropertyInfos extends TeaModel {
         /**
+         * <p>The key of the custom property.</p>
+         * 
          * <strong>example:</strong>
          * <p>propKey</p>
          */
@@ -70,6 +96,8 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String propertyName;
 
         /**
+         * <p>The value of the custom property.</p>
+         * 
          * <strong>example:</strong>
          * <p>propValue</p>
          */
@@ -100,10 +128,17 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
     }
 
     public static class CreateSystemPropertyTemplateRequestSystemPropertyInfo extends TeaModel {
+        /**
+         * <p>A list of custom properties.</p>
+         */
         @NameInMap("CustomPropertyInfos")
         public java.util.List<CreateSystemPropertyTemplateRequestSystemPropertyInfoCustomPropertyInfos> customPropertyInfos;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -111,6 +146,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBootloader;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -118,6 +157,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBuildDisplayId;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -125,6 +168,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBuildFingerprint;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -132,6 +179,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBuildHost;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -139,6 +190,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBuildId;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -146,6 +201,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBuildProduct;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -153,6 +212,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBuildTags;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -160,6 +223,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBuildType;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -167,6 +234,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roBuildUser;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -174,6 +245,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roProductBoard;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -181,6 +256,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roProductBrand;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -188,6 +267,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roProductDevice;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -195,6 +278,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roProductManufacturer;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -202,6 +289,10 @@ public class CreateSystemPropertyTemplateRequest extends TeaModel {
         public String roProductModel;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */

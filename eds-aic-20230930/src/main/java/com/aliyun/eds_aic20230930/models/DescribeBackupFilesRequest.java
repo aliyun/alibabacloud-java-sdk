@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupFilesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>acp-34pqe4r0kd9kn****</p>
@@ -14,7 +14,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String androidInstanceId;
 
     /**
-     * <p>The name of the instance. Fuzzy match is supported.</p>
+     * <p>The instance name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>acp-34pqe4r0kd9kn****</p>
@@ -23,21 +23,16 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String androidInstanceName;
 
     /**
-     * <p>Specifies whether the whole instance is backed up.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to perform a full device backup.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("BackupAll")
     public Boolean backupAll;
 
     /**
-     * <p>The ID of the backup file.</p>
+     * <p>The backup file ID.</p>
      * 
      * <strong>example:</strong>
      * <p>bf-dxrh5jrv0zpb8****</p>
@@ -46,25 +41,25 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String backupFileId;
 
     /**
-     * <p>The name of the backup file. Fuzzy match is supported.</p>
+     * <p>The backup file name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>defaulBackupFile</p>
+     * <p>abc</p>
      */
     @NameInMap("BackupFileName")
     public String backupFileName;
 
     /**
-     * <p>The description of the backup file. Fuzzy match is supported.</p>
+     * <p>The description. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>default description.</p>
+     * <p>desc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The end of the period for querying generated backup files.</p>
+     * <p>Queries backup files created before the specified time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-20 10:00:00</p>
@@ -82,7 +77,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The ID of the instance group.</p>
+     * <p>The instance group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ag-fxdx91jsfyiy3****</p>
@@ -91,7 +86,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String instanceGroupId;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -100,7 +95,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to start reading from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -112,7 +107,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String saleMode;
 
     /**
-     * <p>The beginning of the period for querying generated backup files.</p>
+     * <p>Queries backup files created after the specified time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-23 10:00:00</p>
@@ -121,7 +116,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the backup files.</p>
+     * <p>The list of backup file statuses.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;

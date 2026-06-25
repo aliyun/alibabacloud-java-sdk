@@ -22,6 +22,12 @@ public class ModifyCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>Specifies the streaming mode for instances in the cloud phone matrix. If this parameter is left empty, the exclusive mode is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StreamMode")
     public Integer streamMode;
 

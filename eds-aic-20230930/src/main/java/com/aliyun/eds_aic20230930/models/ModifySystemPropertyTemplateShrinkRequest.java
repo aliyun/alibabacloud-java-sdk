@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySystemPropertyTemplateShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically generate preset system properties.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,22 +14,38 @@ public class ModifySystemPropertyTemplateShrinkRequest extends TeaModel {
     public Boolean enableAuto;
 
     /**
+     * <p>The URL of the property template file. The system synchronously parses the file. If the file format is invalid, a parsing error is returned.</p>
+     * <blockquote>
+     * <p>File template format: <code>{ &quot;properties&quot;:{&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;}}</code>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://filepath****.com">https://filepath****.com</a></p>
      */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>The information about the system property template.</p>
+     */
     @NameInMap("SystemPropertyInfo")
     public String systemPropertyInfoShrink;
 
     /**
+     * <p>The ID of the property template.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-angyvganxlf****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The name of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Template 1</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

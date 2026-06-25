@@ -4,11 +4,14 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudPhoneNodeResponseBody extends TeaModel {
+    /**
+     * <p>Details of the bandwidth package order.</p>
+     */
     @NameInMap("NetworkPackageOrderModel")
     public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel networkPackageOrderModel;
 
     /**
-     * <p>The cloud phone matrixes.</p>
+     * <p>A list of Cloud Phone matrices.</p>
      */
     @NameInMap("NodeInfos")
     public java.util.List<CreateCloudPhoneNodeResponseBodyNodeInfos> nodeInfos;
@@ -69,9 +72,21 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
     }
 
     public static class CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel extends TeaModel {
+        /**
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-uf63gsv8j0ir53*****</p>
+         */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        /**
+         * <p>The order ID of the bandwidth package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25954415983*****</p>
+         */
         @NameInMap("BandwidthPackageOrderId")
         public String bandwidthPackageOrderId;
 
@@ -100,13 +115,13 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
 
     public static class CreateCloudPhoneNodeResponseBodyNodeInfos extends TeaModel {
         /**
-         * <p>The IDs of the cloud phone instances.</p>
+         * <p>A list of Cloud Phone instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The ID of the cloud phone matrix.</p>
+         * <p>The ID of the Cloud Phone matrix.</p>
          * 
          * <strong>example:</strong>
          * <p>cpn-e5kxgjyt8s1mb****</p>

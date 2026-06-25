@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,12 +14,8 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The billing method.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PrePaid: subscription</li>
-     * <li>PostPaid: pay-as-you-go</li>
-     * </ul>
+     * <p>The billing type.
+     * [_single.params.ChargeType.enum. PrePaid]Subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -28,16 +24,16 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The IDs of the instance groups.</p>
+     * <p>The list of instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
     /**
-     * <p>The name of the instance group. Instance groups support fuzzy search by name.</p>
+     * <p>The instance group name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>defaultInstanceGroup</p>
+     * <p>Cloud phone</p>
      */
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
@@ -55,7 +51,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The maximum number of entries per page. Value range: 0 to 100. Default value: 100.</p>
+     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,7 +60,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token that indicates the position from which the current read operation starts. Leave this parameter empty to read from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -73,7 +69,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-1b77w6xrqfubi****</p>
@@ -82,12 +78,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>The purchase mode of cloud phone instances.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Instance (default): the instance group mode.</li>
-     * <li>Node: the matrix mode [whitelisted].</li>
-     * </ul>
+     * <p>The purchase mode of the cloud phone.</p>
      * 
      * <strong>example:</strong>
      * <p>standard</p>
@@ -96,18 +87,7 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String saleMode;
 
     /**
-     * <p>The status of the instance group.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>UPDATING_FAILED: The image update for the instance group failed.</li>
-     * <li>FAILED: The instance group failed to be created.</li>
-     * <li>RUNNING: The instance group is available.</li>
-     * <li>EXPIRED: The instance group expired.</li>
-     * <li>DELETING: The instance group is being deleted.</li>
-     * <li>DELETED: The instance group is deleted.</li>
-     * <li>UPDATING: The instance group is undergoing an image update.</li>
-     * <li>CREATING: The instance group is being created.</li>
-     * </ul>
+     * <p>The instance group status.</p>
      * 
      * <strong>example:</strong>
      * <p>CREATING</p>
@@ -115,6 +95,9 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the instance group. You can bind up to 20 tags to each instance.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeAndroidInstanceGroupsRequestTags> tags;
 
@@ -220,9 +203,27 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     }
 
     public static class DescribeAndroidInstanceGroupsRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify 1 to 20 tag keys.</p>
+         * <blockquote>
+         * <p>Notice: The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://..</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <blockquote>
+         * <p>Notice: The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>..</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2025</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckResourceStockRequest extends TeaModel {
     /**
-     * <p>Specification ID.</p>
+     * <p>The ID of the instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>acp.basic.small</p>
@@ -13,11 +13,17 @@ public class CheckResourceStockRequest extends TeaModel {
     @NameInMap("AcpSpecId")
     public String acpSpecId;
 
+    /**
+     * <p>The number of Cloud Phone instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,11 +32,17 @@ public class CheckResourceStockRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>Specifies whether to enable GPU acceleration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("GpuAcceleration")
     public Boolean gpuAcceleration;
 
     /**
-     * <p>The availability zone of the resource.</p>
+     * <p>The zone where the resource resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>

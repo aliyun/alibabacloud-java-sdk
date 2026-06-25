@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the auto-payment feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>False (default): You must manually complete the payment in the Alibaba Cloud Expenses and Costs console.</li>
-     * <li>true: enables the auto-payment feature.</li>
-     * </ul>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -19,12 +14,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable the auto-renewal feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: enables the auto-renewal feature. In this case, the system automatically renews instances upon expiration.</li>
-     * <li>false (default): disables the auto-renewal feature. In this case, you need to manually renew instances upon expiration.</li>
-     * </ul>
+     * <p>Specifies whether to enable auto-renewal.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,9 +22,21 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The ID of the Shared Bandwidth instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp-uf6g3hgg*******8s3lxiob3</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The bandwidth type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp_ecd</p>
+     */
     @NameInMap("BandwidthPackageType")
     public String bandwidthPackageType;
 
@@ -58,7 +60,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The number of cloud phone matrixes you want to purchase.</p>
+     * <p>The number of Cloud Phone matrices to purchase.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -66,9 +68,18 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("Count")
     public String count;
 
+    /**
+     * <p>The display settings.</p>
+     */
     @NameInMap("DisplayConfig")
     public String displayConfigShrink;
 
+    /**
+     * <p>The downstream bandwidth limit, in Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("DownBandwidthLimit")
     public Integer downBandwidthLimit;
 
@@ -82,12 +93,10 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance specification.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ac.max: By default, this specification allows up to 25 instances. You can adjust this number by using PhoneCount (Value range: 4 to 40).</li>
-     * <li>ac.plus: By default, this specification allows up to 40 instances. You can adjust this number by using PhoneCount (Value range: 4 to 40).</li>
-     * </ul>
+     * <p>The instance type.</p>
+     * <blockquote>
+     * <p>To purchase more instance types, <a href="https://smartservice.console.aliyun.com/service/pre-sales-chat?spm=5176.6d6ecb63.0.0.729adda2VqVQx7">contact pre-sales support</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ac.max</p>
@@ -107,14 +116,23 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>The network settings for the instance.</p>
+     */
     @NameInMap("NetworkInfo")
     public String networkInfoShrink;
 
+    /**
+     * <p>The network type of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>network_pro_ecd</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
-     * <p>The name of the cloud phone matrix.</p>
+     * <p>The name of the Cloud Phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>node_name</p>
@@ -126,10 +144,12 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String paidCallBackUrl;
 
     /**
-     * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. Valid values:</p>
+     * <p>The subscription duration. The unit is specified by the <code>PeriodUnit</code> parameter.</p>
      * <ul>
-     * <li>When <code>PeriodUnit</code> is set to <strong>year</strong>: 1.</li>
-     * <li>When <code>PeriodUnit</code> is set to <strong>month</strong>: 1, 2, 3, and 6.</li>
+     * <li><p>If <code>PeriodUnit</code> is set to <strong>Year</strong>, this parameter can only be set to 1.</p>
+     * </li>
+     * <li><p>If <code>PeriodUnit</code> is set to <strong>Month</strong>, valid values are 1, 2, 3, and 6.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,11 +160,6 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
 
     /**
      * <p>The unit of the subscription duration.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Month (default)</li>
-     * <li>Year</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -153,7 +168,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The number of instances per cloud phone matrix.</p>
+     * <p>The number of Cloud Phone instances to create in a single Cloud Phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>25</p>
@@ -161,6 +176,12 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("PhoneCount")
     public Integer phoneCount;
 
+    /**
+     * <p>The size of the independent internal storage, in GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PhoneDataVolume")
     public Integer phoneDataVolume;
 
@@ -168,7 +189,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The resolution height. Unit: pixel.</p>
+     * <p>The vertical resolution, in pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -177,7 +198,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer resolutionHeight;
 
     /**
-     * <p>The resolution width. Unit: pixel.</p>
+     * <p>The horizontal resolution, in pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>720</p>
@@ -186,7 +207,10 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer resolutionWidth;
 
     /**
-     * <p>The shared storage size Unit: GiB.</p>
+     * <p>The size of the shared internal storage, in GiB.</p>
+     * <blockquote>
+     * <p>The size must exceed 10 GiB per instance in the matrix.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -195,19 +219,21 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer serverShareDataVolume;
 
     /**
-     * <p>The matrix specification.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cpm.gn6.gx1</li>
-     * </ul>
+     * <p>The server type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpm.gn6.gx1</p>
+     * <p>cpm.gx7.10xlarge</p>
      */
     @NameInMap("ServerType")
     public String serverType;
 
+    /**
+     * <p>The streaming mode for instances in the Cloud Phone matrix. Defaults to preemption mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StreamMode")
     public Integer streamMode;
 
@@ -220,14 +246,26 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateCloudPhoneNodeShrinkRequestTag> tag;
 
+    /**
+     * <p>The upstream bandwidth limit, in Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("UpBandwidthLimit")
     public Integer upBandwidthLimit;
 
+    /**
+     * <p>The template for instance creation. Set this parameter to <code>Random</code> to use a random template, or specify a template ID to use a specific template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Random</p>
+     */
     @NameInMap("UseTemplate")
     public String useTemplate;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The VSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zeekryyc1q3sm72l****</p>

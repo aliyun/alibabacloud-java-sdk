@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExpandDataVolumeRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable automatic payment. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,25 +14,44 @@ public class ExpandDataVolumeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>The IDs of the cloud phone matrices.</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
+    /**
+     * <p>The size of the instance storage. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PhoneDataVolume")
     public Integer phoneDataVolume;
 
+    /**
+     * <p>The promotion ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50003308011****</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
+     * <p>The size of the shared storage for the matrix. Unit: GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

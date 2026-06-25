@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class GetNetworkBlacklistResponseBody extends TeaModel {
+    /**
+     * <p>The network blacklist.</p>
+     */
     @NameInMap("NetworkBlacklistModel")
     public GetNetworkBlacklistResponseBodyNetworkBlacklistModel networkBlacklistModel;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A578AD3A-8E7C-54FE-A09F-B060941*****</p>
      */
@@ -36,9 +41,15 @@ public class GetNetworkBlacklistResponseBody extends TeaModel {
     }
 
     public static class GetNetworkBlacklistResponseBodyNetworkBlacklistModel extends TeaModel {
+        /**
+         * <p>The list of blacklisted domain names.</p>
+         */
         @NameInMap("DomainBlacklist")
         public java.util.List<String> domainBlacklist;
 
+        /**
+         * <p>The list of blacklisted IP addresses.</p>
+         */
         @NameInMap("IpBlacklist")
         public java.util.List<String> ipBlacklist;
 

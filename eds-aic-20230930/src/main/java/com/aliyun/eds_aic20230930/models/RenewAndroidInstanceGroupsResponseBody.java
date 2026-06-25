@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewAndroidInstanceGroupsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>22326560487****</p>
@@ -14,7 +14,7 @@ public class RenewAndroidInstanceGroupsResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B886792-2051-5DB4-8AE6-C8E45D3B4****</p>

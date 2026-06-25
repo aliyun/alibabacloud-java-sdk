@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopInstanceAdbRequest extends TeaModel {
     /**
+     * <p>The list of Android instance IDs. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

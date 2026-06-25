@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class InstanceHealerResponseBody extends TeaModel {
+    /**
+     * <p>The diagnosis result object.</p>
+     */
     @NameInMap("InstanceHealerModel")
     public InstanceHealerResponseBodyInstanceHealerModel instanceHealerModel;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
      */
@@ -37,6 +42,8 @@ public class InstanceHealerResponseBody extends TeaModel {
 
     public static class InstanceHealerResponseBodyInstanceHealerModel extends TeaModel {
         /**
+         * <p>The result of the task execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class BackupAndroidInstanceRequest extends TeaModel {
     /**
+     * <p>A list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
     /**
+     * <p>The name of the backup file.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -18,12 +21,15 @@ public class BackupAndroidInstanceRequest extends TeaModel {
     public String backupFileName;
 
     /**
+     * <p>The upload URL for the backup file.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackupFilePath")
     public String backupFilePath;
 
     /**
+     * <p>The description of the full instance backup.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a backup android instance</p>
      */
@@ -31,6 +37,7 @@ public class BackupAndroidInstanceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The region where the backup is stored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

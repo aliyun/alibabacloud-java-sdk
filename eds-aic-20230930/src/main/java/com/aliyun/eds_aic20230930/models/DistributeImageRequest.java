@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DistributeImageRequest extends TeaModel {
     /**
-     * <p>The regions to which you want to distribute an image.</p>
+     * <p>The list of destination regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DistributeRegionList")
     public java.util.List<String> distributeRegionList;
 
     /**
-     * <p>The ID of the image that you want to distribute.</p>
+     * <p>The ID of the image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

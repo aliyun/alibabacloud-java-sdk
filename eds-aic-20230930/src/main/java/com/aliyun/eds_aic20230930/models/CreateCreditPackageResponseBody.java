@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCreditPackageResponseBody extends TeaModel {
     /**
+     * <p>The credit package ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>crp-bt7e2t4anbq50****</p>
      */
@@ -12,6 +14,8 @@ public class CreateCreditPackageResponseBody extends TeaModel {
     public String creditPackageId;
 
     /**
+     * <p>The time when the credit package takes effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-04-30 00:00:00</p>
      */
@@ -19,6 +23,8 @@ public class CreateCreditPackageResponseBody extends TeaModel {
     public String effectiveTime;
 
     /**
+     * <p>The time when the credit package expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-10-30 00:00:00</p>
      */
@@ -26,6 +32,8 @@ public class CreateCreditPackageResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>223684716098****</p>
      */
@@ -33,6 +41,8 @@ public class CreateCreditPackageResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
      */

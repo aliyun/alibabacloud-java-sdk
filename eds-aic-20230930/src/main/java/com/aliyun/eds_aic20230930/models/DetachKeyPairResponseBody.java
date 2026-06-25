@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DetachKeyPairResponseBody extends TeaModel {
     /**
-     * <p>The object that is returned.</p>
+     * <p>The result object.</p>
      */
     @NameInMap("Data")
     public DetachKeyPairResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
@@ -42,13 +42,13 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
     public static class DetachKeyPairResponseBodyData extends TeaModel {
         /**
-         * <p>The IDs of the cloud phone instances from which the ADB key pair is successfully detached.</p>
+         * <p>A list of IDs of the instances from which the key pair was successfully detached.</p>
          */
         @NameInMap("DetachedInstanceIds")
         public java.util.List<String> detachedInstanceIds;
 
         /**
-         * <p>The number of the cloud phone instances from which the ADB key pair failed to be detached.</p>
+         * <p>The number of instances from which the key pair failed to detach.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -66,7 +66,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         public String keyPairId;
 
         /**
-         * <p>The total number of the cloud phone instances.</p>
+         * <p>The total number of instances for which the detach operation was attempted.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

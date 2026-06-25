@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the webcam redirection feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>off</li>
-     * <li>on</li>
-     * </ul>
+     * <p>Specifies whether to enable local camera redirection.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -19,13 +14,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String cameraRedirect;
 
     /**
-     * <p>The read/write permissions on the clipboard.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>read: read-only.</li>
-     * <li>readwrite: read and write.</li>
-     * <li>off: read/write disabled.</li>
-     * </ul>
+     * <p>The clipboard permission.</p>
      * 
      * <strong>example:</strong>
      * <p>readwrite</p>
@@ -34,14 +23,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String clipboard;
 
     /**
-     * <p>The file transfer policy of the Alibaba Cloud Workspace web client.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>all: File upload and download are supported.</li>
-     * <li>download: Only file download is supported.</li>
-     * <li>upload: Only file upload is supported.</li>
-     * <li>off: File upload or download is forbidden.</li>
-     * </ul>
+     * <p>The file transfer policy for the web client.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -50,13 +32,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String html5FileTransfer;
 
     /**
-     * <p>The read/write permissions on the on-premises drive.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>read: read-only.</li>
-     * <li>readwrite: ready and write.</li>
-     * <li>off: read/write disabled.</li>
-     * </ul>
+     * <p>The local disk mapping permission.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -66,11 +42,6 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to lock the resolution.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>off</li>
-     * <li>on</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -79,25 +50,31 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String lockResolution;
 
     /**
-     * <p>The network redirection policy.</p>
+     * <p>Network redirection.</p>
      */
     @NameInMap("NetRedirectPolicy")
     public CreatePolicyGroupRequestNetRedirectPolicy netRedirectPolicy;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>defaultPolicy</p>
+     * <p>Default policy</p>
      */
     @NameInMap("PolicyGroupName")
     public String policyGroupName;
 
+    /**
+     * <p>The policy type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
+     */
     @NameInMap("PolicyType")
     public String policyType;
 
     /**
-     * <p>The height of the resolution. Unit: pixels.</p>
+     * <p>The resolution height, in pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -106,7 +83,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public Integer resolutionHeight;
 
     /**
-     * <p>The width of the resolution. Unit: pixels.</p>
+     * <p>The resolution width, in pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>720</p>
@@ -114,6 +91,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("ResolutionWidth")
     public Integer resolutionWidth;
 
+    /**
+     * <p>Screen watermark.</p>
+     */
     @NameInMap("Watermark")
     public CreatePolicyGroupRequestWatermark watermark;
 
@@ -212,12 +192,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     public static class CreatePolicyGroupRequestNetRedirectPolicyRules extends TeaModel {
         /**
-         * <p>The type of the rule.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>prc: an application package name.</li>
-         * <li>domain: a domain name.</li>
-         * </ul>
+         * <p>The rule type.</p>
          * 
          * <strong>example:</strong>
          * <p>domain</p>
@@ -226,10 +201,10 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String ruleType;
 
         /**
-         * <p>The name of the application package or domain name.</p>
+         * <p>The application package name or domain name.</p>
          * 
          * <strong>example:</strong>
-         * <p>*.example.com</p>
+         * <p>*.baidu.com</p>
          */
         @NameInMap("Target")
         public String target;
@@ -259,12 +234,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     public static class CreatePolicyGroupRequestNetRedirectPolicy extends TeaModel {
         /**
-         * <p>Specifies whether to manually configure a custom proxy.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Specifies whether to manually configure a transparent proxy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -273,7 +243,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String customProxy;
 
         /**
-         * <p>The IPv4 address of the custom proxy.</p>
+         * <p>The IP address of the transparent proxy. The IP address must be in IPv4 format.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX</p>
@@ -282,12 +252,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String hostAddr;
 
         /**
-         * <p>Specifies whether to enable the network redirection feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Specifies whether to enable network redirection.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -296,7 +261,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String netRedirect;
 
         /**
-         * <p>The port of the custom proxy. Valid values: 1 to 65535.</p>
+         * <p>The port of the transparent proxy. Valid values: 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>1145</p>
@@ -305,7 +270,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>The password of the proxy. The password must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
+         * <p>The proxy password. The password must be 1 to 256 characters in length. It cannot contain Chinese characters or whitespace characters.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -314,11 +279,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String proxyPassword;
 
         /**
-         * <p>The type of the proxy protocol.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>socks5.</li>
-         * </ul>
+         * <p>The proxy protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>socks5</p>
@@ -327,7 +288,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String proxyType;
 
         /**
-         * <p>The username of the proxy. The name must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
+         * <p>The proxy username. The username must be 1 to 256 characters in length. It cannot contain Chinese characters or whitespace characters.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -336,7 +297,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String proxyUserName;
 
         /**
-         * <p>The proxy rules. You can create up to 100 proxy rules.</p>
+         * <p>The list of proxy rules. You can specify up to 100 rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<CreatePolicyGroupRequestNetRedirectPolicyRules> rules;
@@ -413,21 +374,54 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
 
     public static class CreatePolicyGroupRequestWatermark extends TeaModel {
+        /**
+         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WatermarkColor")
         public Integer watermarkColor;
 
+        /**
+         * <p>The custom text for the watermark. The text can be up to 10 characters long and cannot contain emojis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom text</p>
+         */
         @NameInMap("WatermarkCustomText")
         public String watermarkCustomText;
 
+        /**
+         * <p>The font size of the watermark. Valid values: 10 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("WatermarkFontSize")
         public Integer watermarkFontSize;
 
+        /**
+         * <p>Specifies whether to enable the screen watermark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("WatermarkSwitch")
         public String watermarkSwitch;
 
+        /**
+         * <p>The opacity of the watermark. A larger value indicates lower transparency. Valid values: 10 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("WatermarkTransparencyValue")
         public Integer watermarkTransparencyValue;
 
+        /**
+         * <p>The screen watermark content.</p>
+         */
         @NameInMap("WatermarkTypes")
         public java.util.List<String> watermarkTypes;
 

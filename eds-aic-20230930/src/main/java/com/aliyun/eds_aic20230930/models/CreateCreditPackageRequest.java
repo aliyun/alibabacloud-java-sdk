@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateCreditPackageRequest extends TeaModel {
     /**
+     * <p>Whether to enable auto-payment. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enables auto-payment. Make sure that your account has a sufficient balance.</p>
+     * </li>
+     * <li><p><strong>false</strong> (Default): Creates an unpaid order.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If your account has an insufficient balance, you can set this parameter to false. This generates an unpaid order. You can then pay for the order in the Wuying Cloud Phone management console.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +23,8 @@ public class CreateCreditPackageRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>The number of credits.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -19,6 +32,8 @@ public class CreateCreditPackageRequest extends TeaModel {
     public String creditAmount;
 
     /**
+     * <p>The subscription duration. The PeriodUnit parameter specifies the unit for the duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -26,6 +41,15 @@ public class CreateCreditPackageRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription duration.
+     * Valid values:</p>
+     * <ul>
+     * <li><p><strong>Month</strong>: The period is measured in months.</p>
+     * </li>
+     * <li><p><strong>Year</strong>: The period is measured in years.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -33,6 +57,8 @@ public class CreateCreditPackageRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The promotion ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
      */

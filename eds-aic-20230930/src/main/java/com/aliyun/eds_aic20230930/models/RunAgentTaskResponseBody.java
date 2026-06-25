@@ -4,10 +4,18 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RunAgentTaskResponseBody extends TeaModel {
+    /**
+     * <p>The response status code. A value of <code>200</code> indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>For example, &quot;200&quot; indicates success.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The number of tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +23,8 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -22,12 +32,17 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<RunAgentTaskResponseBodyTasks> tasks;
 
@@ -77,26 +92,53 @@ public class RunAgentTaskResponseBody extends TeaModel {
     }
 
     public static class RunAgentTaskResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The current status of the task. Valid values:</p>
+         * <p><code>PENDING</code>: The task is being created.</p>
+         * <p><code>RUNNING</code>: The task is running.</p>
+         * <p><code>COMPLETED</code>: The task completed successfully.</p>
+         * <p><code>FAILED</code>: The task failed.</p>
+         * <p><code>TIMEOUT</code>: The task timed out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
+         */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
         /**
+         * <p>The mobile node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-ek65k51zoxia3x8xz</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the task started running, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-13T17:42:19Z</p>
+         */
         @NameInMap("RunningAt")
         public String runningAt;
 
         /**
+         * <p>The globally unique task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The user prompt that the Agent used to perform the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Download DingTalk from App Store</p>
+         */
         @NameInMap("UserPrompt")
         public String userPrompt;
 

@@ -88,7 +88,7 @@ public class DescribeAppsResponseBody extends TeaModel {
          * <p>Apk size.</p>
          * 
          * <strong>example:</strong>
-         * <p>10244893</p>
+         * <p>2.7</p>
          */
         @NameInMap("ApkSize")
         public String apkSize;
@@ -111,6 +111,12 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The application type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
@@ -127,7 +133,7 @@ public class DescribeAppsResponseBody extends TeaModel {
          * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>default description.</p>
+         * <p>CustomApp</p>
          */
         @NameInMap("Description")
         public String description;
@@ -163,12 +169,18 @@ public class DescribeAppsResponseBody extends TeaModel {
          * <p>The installation/uninstallation status of the application.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>INSTALLFAILED: The application failed to be installed.</li>
-         * <li>UNINSTALLING: The application is being uninstalled.</li>
-         * <li>INSTALLING: The application is being installed.</li>
-         * <li>UNINSTALLED: The application is uninstalled.</li>
-         * <li>INSTALLED: The application is installed.</li>
-         * <li>UNINSTALLFAILED: The application failed to be uninstalled.</li>
+         * <li><p>INSTALLFAILED: The application failed to be installed.</p>
+         * </li>
+         * <li><p>UNINSTALLING: The application is being uninstalled.</p>
+         * </li>
+         * <li><p>INSTALLING: The application is being installed.</p>
+         * </li>
+         * <li><p>UNINSTALLED: The application is uninstalled.</p>
+         * </li>
+         * <li><p>INSTALLED: The application is installed.</p>
+         * </li>
+         * <li><p>UNINSTALLFAILED: The application failed to be uninstalled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +199,7 @@ public class DescribeAppsResponseBody extends TeaModel {
          * <p>The value of MD5.</p>
          * 
          * <strong>example:</strong>
-         * <p>THCIEH73KEK3334</p>
+         * <p>009ee07fe13a29fa0c180ed0b6bc****</p>
          */
         @NameInMap("MD5")
         public String MD5;
@@ -196,7 +208,7 @@ public class DescribeAppsResponseBody extends TeaModel {
          * <p>The name of the application package.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn.rdstar.rdstarandroid</p>
+         * <p>com.example.chinalife</p>
          */
         @NameInMap("PackageName")
         public String packageName;
@@ -205,9 +217,12 @@ public class DescribeAppsResponseBody extends TeaModel {
          * <p>The status of the application.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>FAILED: The application failed to be created.</li>
-         * <li>NORMAL: The application is available.</li>
-         * <li>CREATING: The application is being created.</li>
+         * <li><p>FAILED: The application failed to be created.</p>
+         * </li>
+         * <li><p>NORMAL: The application is available.</p>
+         * </li>
+         * <li><p>CREATING: The application is being created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

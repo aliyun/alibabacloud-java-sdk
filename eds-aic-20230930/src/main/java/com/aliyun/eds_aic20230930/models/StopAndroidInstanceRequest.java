@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class StopAndroidInstanceRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud phone instances.</p>
+     * <p>A list of instance IDs.</p>
      */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
-     * <p>Specifies whether to enforce a stop operation. If a cloud phone instance fails to stop due to system or network issues, a forced stop can be triggered, though it may result in data loss.</p>
+     * <p>Specifies whether to forcibly shut down the instance. If an instance cannot shut down because of a system or network exception, you can force it to shut down. This may cause data loss.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,6 +19,12 @@ public class StopAndroidInstanceRequest extends TeaModel {
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    /**
+     * <p>The sale pattern. This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
+     */
     @NameInMap("SaleMode")
     public String saleMode;
 

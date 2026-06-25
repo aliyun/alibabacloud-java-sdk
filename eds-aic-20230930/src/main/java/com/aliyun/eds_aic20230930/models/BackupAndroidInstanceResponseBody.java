@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class BackupAndroidInstanceResponseBody extends TeaModel {
     /**
+     * <p>The number of instances that were backed up.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The returned result objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<BackupAndroidInstanceResponseBodyData> data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>440D7342-5FC2-5E7C-B2DB-D0B4EAC2BDF1</p>
      */
@@ -22,6 +29,8 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-14xwibw7pyrjd****</p>
      */
@@ -67,6 +76,8 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
 
     public static class BackupAndroidInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The cloud phone instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-34pqe4r0kd9kn****</p>
          */
@@ -74,6 +85,8 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
+         * <p>The ID of the backup file.</p>
+         * 
          * <strong>example:</strong>
          * <p>bf-b0qbg3pbpjkn7****</p>
          */
@@ -81,6 +94,8 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         public String backupFileId;
 
         /**
+         * <p>The name of the backup file.</p>
+         * 
          * <strong>example:</strong>
          * <p>a-58ftsoo90p0qa****.ab</p>
          */
@@ -88,6 +103,8 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         public String backupFileName;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-bp67acfmxazb4p****</p>
          */

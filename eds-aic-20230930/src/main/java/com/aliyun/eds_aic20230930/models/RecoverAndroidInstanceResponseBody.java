@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RecoverAndroidInstanceResponseBody extends TeaModel {
     /**
+     * <p>The number of restored instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The returned result objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<RecoverAndroidInstanceResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
      */
@@ -22,6 +29,8 @@ public class RecoverAndroidInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The batch task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-1ljew7on6ay0j****</p>
      */
@@ -67,6 +76,8 @@ public class RecoverAndroidInstanceResponseBody extends TeaModel {
 
     public static class RecoverAndroidInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-34pqe4r0kd9kn****</p>
          */
@@ -74,6 +85,8 @@ public class RecoverAndroidInstanceResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-bp67acfmxazb4p****</p>
          */

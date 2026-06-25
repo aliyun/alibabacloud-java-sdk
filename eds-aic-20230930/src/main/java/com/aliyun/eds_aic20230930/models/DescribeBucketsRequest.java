@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeBucketsRequest extends TeaModel {
     /**
+     * <p>The type of the OSS file.</p>
+     * <blockquote>
+     * <p>This parameter is not yet available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>docx</p>
      */

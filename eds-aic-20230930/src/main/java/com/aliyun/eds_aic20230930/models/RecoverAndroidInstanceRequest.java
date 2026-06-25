@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class RecoverAndroidInstanceRequest extends TeaModel {
     /**
+     * <p>A list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
     /**
+     * <p>The ID of the backup file.</p>
+     * 
      * <strong>example:</strong>
      * <p>bf-azhps4rdyi2th****</p>
      */
@@ -18,12 +21,15 @@ public class RecoverAndroidInstanceRequest extends TeaModel {
     public String backupFileId;
 
     /**
+     * <p>The OSS URL where the backup file is uploaded.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackupFilePath")
     public String backupFilePath;
 
     /**
+     * <p>The region where the backup is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
      */
@@ -31,6 +37,7 @@ public class RecoverAndroidInstanceRequest extends TeaModel {
     public String uploadEndpoint;
 
     /**
+     * <p>The upload type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

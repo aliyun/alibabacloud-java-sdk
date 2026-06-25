@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shanghai", "eds-aic.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eds-aic.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eds-aic", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,9 +32,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</p>
      * <ul>
-     * <li>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the ~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</li>
+     * <li>You can attach to an ADB key pair only to cloud phone instances in the Running state.</li>
+     * <li>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the \~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -70,9 +74,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</p>
      * <ul>
-     * <li>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the ~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</li>
+     * <li>You can attach to an ADB key pair only to cloud phone instances in the Running state.</li>
+     * <li>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the \~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -147,8 +151,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>To ensure that the backup is successful, shut down the instance before you start the data backup. The operation may fail if the cloud phone instance is used during the backup process.</li>
+     * <li>You should test the backup file to ensure that you can restore the instance from it. After the restoration is complete, verify that your data is complete and that all features function correctly. Do not delete the original backup file or reset the source instance until this verification is complete. Otherwise, you may lose your data.</li>
+     * <li>You cannot back up and restore data between different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>整机备份</p>
+     * <p>Creates a full backup of a Cloud Phone instance. The backup includes installed applications and properties.</p>
      * 
      * @param request BackupAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -195,8 +206,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>To ensure that the backup is successful, shut down the instance before you start the data backup. The operation may fail if the cloud phone instance is used during the backup process.</li>
+     * <li>You should test the backup file to ensure that you can restore the instance from it. After the restoration is complete, verify that your data is complete and that all features function correctly. Do not delete the original backup file or reset the source instance until this verification is complete. Otherwise, you may lose your data.</li>
+     * <li>You cannot back up and restore data between different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>整机备份</p>
+     * <p>Creates a full backup of a Cloud Phone instance. The backup includes installed applications and properties.</p>
      * 
      * @param request BackupAndroidInstanceRequest
      * @return BackupAndroidInstanceResponse
@@ -207,8 +225,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Shut down the cloud phone instance before you back up data to ensure that the operation succeeds. Using the cloud phone during a backup may cause the operation to fail.</li>
+     * <li>Ensure that the backup file can be used to restore the instance successfully. After you restore from a backup, verify that your data is complete and that all features are working correctly. Do not delete the original backup file or reset the source instance until you complete this verification. Failure to do so may result in data loss.</li>
+     * <li>Backup and restore operations are not suppported across different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>应用备份</p>
+     * <p>Backs up specified applications on a cloud phone instance. The backup includes the application and its cache.</p>
      * 
      * @param request BackupAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -259,8 +284,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Shut down the cloud phone instance before you back up data to ensure that the operation succeeds. Using the cloud phone during a backup may cause the operation to fail.</li>
+     * <li>Ensure that the backup file can be used to restore the instance successfully. After you restore from a backup, verify that your data is complete and that all features are working correctly. Do not delete the original backup file or reset the source instance until you complete this verification. Failure to do so may result in data loss.</li>
+     * <li>Backup and restore operations are not suppported across different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>应用备份</p>
+     * <p>Backs up specified applications on a cloud phone instance. The backup includes the application and its cache.</p>
      * 
      * @param request BackupAppRequest
      * @return BackupAppResponse
@@ -272,10 +304,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to upload only backup files generated by cloud phones to Object Storage Service (OSS) buckets.</p>
+     * <p>You can save backup files generated by cloud phones only to Object Storage Service (OSS).</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates and uploads backup files.</p>
+     * <p>Generates a backup file and uploads it to remote storage. You can use this operation for regular data backups. You can also back up files from one instance and restore them to multiple instances, a process similar to data replication or migration.</p>
      * 
      * @param request BackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -343,10 +375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to upload only backup files generated by cloud phones to Object Storage Service (OSS) buckets.</p>
+     * <p>You can save backup files generated by cloud phones only to Object Storage Service (OSS).</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates and uploads backup files.</p>
+     * <p>Generates a backup file and uploads it to remote storage. You can use this operation for regular data backups. You can also back up files from one instance and restore them to multiple instances, a process similar to data replication or migration.</p>
      * 
      * @param request BackupFileRequest
      * @return BackupFileResponse
@@ -357,8 +389,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * 本接口的作用因云手机产品版本和实例串流模式而异：</p>
+     * <ul>
+     * <li>云手机实例版或云手机矩阵版（抢占模式）：只能通过同一个<code>EnduserId</code>获取<code>Ticket</code>。</li>
+     * <li>云手机矩阵版（协同模式）：可通过传入不同的<code>EnduserId</code>来为不同的用户（至多 5 个）同时获取<code>Ticket</code>并串流。每次只能传入 1 个<code>EnduserId</code>。<blockquote>
+     * <p>实例串流模式可通过 <a href="https://help.aliyun.com/document_detail/2878539.html">ModifyCloudPhoneNode</a> 接口的<code>StreamMode</code>参数来定义。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves connection tickets in batch.</p>
+     * <p>Retrieves connection tickets in batch. This operation generates connection tickets asynchronously. In most cases, the tickets are returned directly in the response of the first call. However, in some situations, the initial response will contain a <code>TaskId</code>. You must then poll this endpoint with the <code>TaskId</code> until the generation is complete and the tickets are returned.</p>
      * 
      * @param request BatchGetAcpConnectionTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -409,8 +452,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * 本接口的作用因云手机产品版本和实例串流模式而异：</p>
+     * <ul>
+     * <li>云手机实例版或云手机矩阵版（抢占模式）：只能通过同一个<code>EnduserId</code>获取<code>Ticket</code>。</li>
+     * <li>云手机矩阵版（协同模式）：可通过传入不同的<code>EnduserId</code>来为不同的用户（至多 5 个）同时获取<code>Ticket</code>并串流。每次只能传入 1 个<code>EnduserId</code>。<blockquote>
+     * <p>实例串流模式可通过 <a href="https://help.aliyun.com/document_detail/2878539.html">ModifyCloudPhoneNode</a> 接口的<code>StreamMode</code>参数来定义。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves connection tickets in batch.</p>
+     * <p>Retrieves connection tickets in batch. This operation generates connection tickets asynchronously. In most cases, the tickets are returned directly in the response of the first call. However, in some situations, the initial response will contain a <code>TaskId</code>. You must then poll this endpoint with the <code>TaskId</code> until the generation is complete and the tickets are returned.</p>
      * 
      * @param request BatchGetAcpConnectionTicketRequest
      * @return BatchGetAcpConnectionTicketResponse
@@ -422,7 +476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消云手机实例上正在运行的Agent任务。</p>
+     * <p>Cancels running agent tasks on a mobile node.</p>
      * 
      * @param request CancelAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -454,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消云手机实例上正在运行的Agent任务。</p>
+     * <p>Cancels running agent tasks on a mobile node.</p>
      * 
      * @param request CancelAgentTaskRequest
      * @return CancelAgentTaskResponse
@@ -466,7 +520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云手机矩阵的配置</p>
+     * <p>Modifies the configuration of a cloud phone matrix, including the instance type and the number of cloud phone instances.</p>
      * 
      * @param request ChangeCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -538,7 +592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云手机矩阵的配置</p>
+     * <p>Modifies the configuration of a cloud phone matrix, including the instance type and the number of cloud phone instances.</p>
      * 
      * @param request ChangeCloudPhoneNodeRequest
      * @return ChangeCloudPhoneNodeResponse
@@ -550,7 +604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check the resource inventory.</p>
+     * <p>Checks the inventory of Cloud Phone resources. Before you create an instance, call this operation to check whether resources are available in the target region. Create the instance only after you confirm that resources are available.</p>
      * 
      * @param request CheckResourceStockRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -598,7 +652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check the resource inventory.</p>
+     * <p>Checks the inventory of Cloud Phone resources. Before you create an instance, call this operation to check whether resources are available in the target region. Create the instance only after you confirm that resources are available.</p>
      * 
      * @param request CheckResourceStockRequest
      * @return CheckResourceStockResponse
@@ -610,14 +664,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating an instance group, ensure you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing methods</a> supported by Cloud Phone.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * Before you create a cloud phone instance group, you must complete identity verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Individual identity verification</a>.
+     * Note that creating a cloud phone instance group incurs charges. Before you proceed, make sure that you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing method</a>.</p>
      * <ul>
-     * <li>If the billing method of an instance group is PrePaid, AutoPay is set to false by default. In this case, you need to go to <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually complete the payment.</li>
-     * <li>You can also set AutoPay to true based on your business requirements.</li>
+     * <li>If the billing method for the instance group is subscription (PrePaid), AutoPay is set to false by default. After you call the API, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a> to manually pay for the order.</li>
+     * <li>To enable automatic payments, set AutoPay to true.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates pay-as-you-go or subscription instance groups.</p>
+     * <p>Create pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can group instances with similar functions into an instance group to manage them as a single unit.</p>
      * 
      * @param tmpReq CreateAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -767,14 +823,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating an instance group, ensure you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing methods</a> supported by Cloud Phone.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * Before you create a cloud phone instance group, you must complete identity verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Individual identity verification</a>.
+     * Note that creating a cloud phone instance group incurs charges. Before you proceed, make sure that you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing method</a>.</p>
      * <ul>
-     * <li>If the billing method of an instance group is PrePaid, AutoPay is set to false by default. In this case, you need to go to <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually complete the payment.</li>
-     * <li>You can also set AutoPay to true based on your business requirements.</li>
+     * <li>If the billing method for the instance group is subscription (PrePaid), AutoPay is set to false by default. After you call the API, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a> to manually pay for the order.</li>
+     * <li>To enable automatic payments, set AutoPay to true.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates pay-as-you-go or subscription instance groups.</p>
+     * <p>Create pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can group instances with similar functions into an instance group to manage them as a single unit.</p>
      * 
      * @param request CreateAndroidInstanceGroupRequest
      * @return CreateAndroidInstanceGroupResponse
@@ -786,22 +844,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When creating an app, you can provide app information to the system in one of the following ways:</p>
+     * <p>When you create an application, you can pass the application information in one of the following two ways:</p>
      * <ul>
-     * <li>Way 1: Apps from the Application Center<ul>
-     * <li>You can use one of the following methods:<ul>
-     * <li>Method 1: Pass in the <code>FileName</code> and <code>FilePath</code> parameters at the same time.</li>
-     * <li>Method 2: Pass in the <code>OssAppUrl</code> parameter</li>
+     * <li>Method 1: Pass an application from the WUYING Workspace app center.<ul>
+     * <li>Supported methods:<ul>
+     * <li>Method 1: Pass <code>FileName</code> and <code>FilePath</code>. Both parameters are required.</li>
+     * <li>Method 2: Pass <code>OssAppUrl</code>.</li>
      * </ul>
      * </li>
-     * <li>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</li>
-     * <li>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <code>FileName</code>, <code>FilePath</code>, and <code>OssAppUrl</code> parameters.</li>
+     * <li>Rule: If you pass an application from the WUYING Workspace app center, you must use at least one of the two methods. If you use both, Method 1 takes precedence.</li>
+     * <li>Prerequisite: Log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service Enterprise console</a>. Follow the on-screen instructions to upload your application file to the WUYING Workspace app center. You can then obtain the required request parameters for this operation: <code>FileName</code> and <code>FilePath</code>, or <code>OssAppUrl</code>.</li>
      * </ul>
      * </li>
-     * <li>Way 2: Custom apps<ul>
-     * <li>Pass in the <code>CustomAppInfo</code> parameter.</li>
-     * <li>Rule: If you pass in the <code>CustomAppInfo</code> parameter, all six fields within it are required.<blockquote>
-     * <p> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</p>
+     * <li>Method 2: Pass a custom application.<ul>
+     * <li>Supported method: Pass <code>CustomAppInfo</code>.</li>
+     * <li>Rule: If you pass <code>CustomAppInfo</code>, all six fields in this object parameter are required.<blockquote>
+     * <p>If you use both Method 1 and Method 2, the information passed in Method 2 takes precedence.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -809,7 +867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Android application.</p>
+     * <p>Creates an Android application. Before you can install an application, you must use this API operation to create it. The application is not downloaded when it is created. It is downloaded only during installation. Ensure that the cloud phone can access the download URL.</p>
      * 
      * @param tmpReq CreateAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -883,22 +941,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When creating an app, you can provide app information to the system in one of the following ways:</p>
+     * <p>When you create an application, you can pass the application information in one of the following two ways:</p>
      * <ul>
-     * <li>Way 1: Apps from the Application Center<ul>
-     * <li>You can use one of the following methods:<ul>
-     * <li>Method 1: Pass in the <code>FileName</code> and <code>FilePath</code> parameters at the same time.</li>
-     * <li>Method 2: Pass in the <code>OssAppUrl</code> parameter</li>
+     * <li>Method 1: Pass an application from the WUYING Workspace app center.<ul>
+     * <li>Supported methods:<ul>
+     * <li>Method 1: Pass <code>FileName</code> and <code>FilePath</code>. Both parameters are required.</li>
+     * <li>Method 2: Pass <code>OssAppUrl</code>.</li>
      * </ul>
      * </li>
-     * <li>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</li>
-     * <li>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <code>FileName</code>, <code>FilePath</code>, and <code>OssAppUrl</code> parameters.</li>
+     * <li>Rule: If you pass an application from the WUYING Workspace app center, you must use at least one of the two methods. If you use both, Method 1 takes precedence.</li>
+     * <li>Prerequisite: Log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service Enterprise console</a>. Follow the on-screen instructions to upload your application file to the WUYING Workspace app center. You can then obtain the required request parameters for this operation: <code>FileName</code> and <code>FilePath</code>, or <code>OssAppUrl</code>.</li>
      * </ul>
      * </li>
-     * <li>Way 2: Custom apps<ul>
-     * <li>Pass in the <code>CustomAppInfo</code> parameter.</li>
-     * <li>Rule: If you pass in the <code>CustomAppInfo</code> parameter, all six fields within it are required.<blockquote>
-     * <p> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</p>
+     * <li>Method 2: Pass a custom application.<ul>
+     * <li>Supported method: Pass <code>CustomAppInfo</code>.</li>
+     * <li>Rule: If you pass <code>CustomAppInfo</code>, all six fields in this object parameter are required.<blockquote>
+     * <p>If you use both Method 1 and Method 2, the information passed in Method 2 takes precedence.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -906,7 +964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Android application.</p>
+     * <p>Creates an Android application. Before you can install an application, you must use this API operation to create it. The application is not downloaded when it is created. It is downloaded only during installation. Ensure that the cloud phone can access the download URL.</p>
      * 
      * @param request CreateAppRequest
      * @return CreateAppResponse
@@ -918,7 +976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cloud phone matrix.</p>
+     * <p>In Cloud Phone, a matrix is a logical resource management unit that represents a physical server instance. Creating a matrix provisions a physical server, which you can then partition into multiple independent Cloud Phone instances. These instances share the compute, storage, and network resources of the matrix. The matrix configuration determines how many instances you can create.</p>
      * 
      * @param tmpReq CreateCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1086,7 +1144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cloud phone matrix.</p>
+     * <p>In Cloud Phone, a matrix is a logical resource management unit that represents a physical server instance. Creating a matrix provisions a physical server, which you can then partition into multiple independent Cloud Phone instances. These instances share the compute, storage, and network resources of the matrix. The matrix configuration determines how many instances you can create.</p>
      * 
      * @param request CreateCloudPhoneNodeRequest
      * @return CreateCloudPhoneNodeResponse
@@ -1097,8 +1155,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is a billable operation. Before calling this operation, ensure that you understand the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11186623.help-menu-254658.d_0_1_1.78bc5732j49PWP">billing methods and pricing</a> of Wuying Cloud Phone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建积分包</p>
+     * <p>Creates an order for a credit package.</p>
      * 
      * @param request CreateCreditPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1145,8 +1206,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is a billable operation. Before calling this operation, ensure that you understand the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11186623.help-menu-254658.d_0_1_1.78bc5732j49PWP">billing methods and pricing</a> of Wuying Cloud Phone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建积分包</p>
+     * <p>Creates an order for a credit package.</p>
      * 
      * @param request CreateCreditPackageRequest
      * @return CreateCreditPackageResponse
@@ -1158,7 +1222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom image from a cloud phone instance.</p>
+     * <p>Creates a custom image from a cloud phone instance. Then, you can use the image to create more cloud phones with the same configuration.</p>
      * 
      * @param request CreateCustomImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1202,7 +1266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom image from a cloud phone instance.</p>
+     * <p>Creates a custom image from a cloud phone instance. Then, you can use the image to create more cloud phones with the same configuration.</p>
      * 
      * @param request CreateCustomImageRequest
      * @return CreateCustomImageResponse
@@ -1214,11 +1278,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In addition to using the CreateKeyPair operation to generate a key pair, you can also create one by using the ADB tool and upload it to the Cloud Phone console. The usage of this key pair is identical to that of a system-generated key pair.
-     * Each tenant can create up to 500 key pairs.</p>
+     * <p>You can also use the Android Debug Bridge (ADB) tool to create a key pair and then upload it to the Cloud Phone console by calling the <a href="t2729840.xdita#"></a>operation. This key pair can be used in the same way as a key pair created by the system.
+     * Each tenant can have a maximum of 500 key pairs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Android Debug Bridge (ADB) key pair. The system retains the public key and provides a PEM-encoded private key in PKCS#8 format, adhering to the ADB connection specification. You must securely store the private key.</p>
+     * <p>You can connect to Cloud Phones using the Android Debug Bridge (ADB). ADB lets you manage devices and applications, and transfer files. These operations require high permissions. Because Cloud Phones do not have physical interfaces, you cannot use a USB connection to trigger an authorization dialog box on the device. Therefore, you must configure a key pair before you connect to a Cloud Phone with ADB over a network. This key pair ensures that the device trusts the client and that all operations are secure. You can call the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key. The private key is in PEM-encoded PKCS#8 format and complies with ADB connection standards. You must securely store the private key.</p>
      * 
      * @param request CreateKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1250,11 +1314,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In addition to using the CreateKeyPair operation to generate a key pair, you can also create one by using the ADB tool and upload it to the Cloud Phone console. The usage of this key pair is identical to that of a system-generated key pair.
-     * Each tenant can create up to 500 key pairs.</p>
+     * <p>You can also use the Android Debug Bridge (ADB) tool to create a key pair and then upload it to the Cloud Phone console by calling the <a href="t2729840.xdita#"></a>operation. This key pair can be used in the same way as a key pair created by the system.
+     * Each tenant can have a maximum of 500 key pairs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an Android Debug Bridge (ADB) key pair. The system retains the public key and provides a PEM-encoded private key in PKCS#8 format, adhering to the ADB connection specification. You must securely store the private key.</p>
+     * <p>You can connect to Cloud Phones using the Android Debug Bridge (ADB). ADB lets you manage devices and applications, and transfer files. These operations require high permissions. Because Cloud Phones do not have physical interfaces, you cannot use a USB connection to trigger an authorization dialog box on the device. Therefore, you must configure a key pair before you connect to a Cloud Phone with ADB over a network. This key pair ensures that the device trusts the client and that all operations are secure. You can call the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key. The private key is in PEM-encoded PKCS#8 format and complies with ADB connection standards. You must securely store the private key.</p>
      * 
      * @param request CreateKeyPairRequest
      * @return CreateKeyPairResponse
@@ -1265,8 +1329,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is a billable operation. Before you call this operation, review the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11174283.help-menu-254658.d_0_1_1.23695732Cpmwbs">billing methods and pricing</a> of Wuying Cloud Phone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建套餐包</p>
+     * <p>Places an order for a package.</p>
      * 
      * @param request CreateMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1349,8 +1416,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This is a billable operation. Before you call this operation, review the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11174283.help-menu-254658.d_0_1_1.23695732Cpmwbs">billing methods and pricing</a> of Wuying Cloud Phone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建套餐包</p>
+     * <p>Places an order for a package.</p>
      * 
      * @param request CreateMobileAgentPackageRequest
      * @return CreateMobileAgentPackageResponse
@@ -1362,7 +1432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a policy.</p>
+     * <p>Creates a policy that applies unified settings to cloud phones. These settings include features such as network redirection, watermarks, resolution, and the clipboard.</p>
      * 
      * @param tmpReq CreatePolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1444,7 +1514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a policy.</p>
+     * <p>Creates a policy that applies unified settings to cloud phones. These settings include features such as network redirection, watermarks, resolution, and the clipboard.</p>
      * 
      * @param request CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -1456,10 +1526,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create a screenshot of a cloud phone instance and upload it to the default Object Storage Service (OSS) bucket. The operation returns a task ID, which you can use with the DescribeTasks operation to get the download link for the screenshot.</p>
+     * <p>This operation creates a screenshot of a cloud phone and uploads it to the default Object Storage Service (OSS) bucket. The operation returns a task ID. You can then call the DescribeTasks operation to retrieve the download link for the screenshot.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a screenshot of a cloud phone instance.</p>
+     * <p>This asynchronous API operation generates a screenshot of a cloud phone.</p>
      * 
      * @param request CreateScreenshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1503,10 +1573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create a screenshot of a cloud phone instance and upload it to the default Object Storage Service (OSS) bucket. The operation returns a task ID, which you can use with the DescribeTasks operation to get the download link for the screenshot.</p>
+     * <p>This operation creates a screenshot of a cloud phone and uploads it to the default Object Storage Service (OSS) bucket. The operation returns a task ID. You can then call the DescribeTasks operation to retrieve the download link for the screenshot.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a screenshot of a cloud phone instance.</p>
+     * <p>This asynchronous API operation generates a screenshot of a cloud phone.</p>
      * 
      * @param request CreateScreenshotRequest
      * @return CreateScreenshotResponse
@@ -1518,7 +1588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建系统属性模板</p>
+     * <p>Creates a system property template. The key-value pairs defined in the template are sent to cloud phones and set as properties in their Android systems using the setprop command. APKs or related programs can then read these property values.</p>
      * 
      * @param tmpReq CreateSystemPropertyTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1568,7 +1638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建系统属性模板</p>
+     * <p>Creates a system property template. The key-value pairs defined in the template are sent to cloud phones and set as properties in their Android systems using the setprop command. APKs or related programs can then read these property values.</p>
      * 
      * @param request CreateSystemPropertyTemplateRequest
      * @return CreateSystemPropertyTemplateResponse
@@ -1580,11 +1650,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can delete only pay-as-you-go instance groups.
-     * You can delete subscription instance groups only after they expire.</p>
+     * <p>Pay-as-you-go instance groups can be deleted at any time.
+     * Subscription instance groups can be deleted only after they expire.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete an instance group.</p>
+     * <p>Deletes an Android instance group. All instances in the group are also deleted. This operation cannot be undone. Proceed with caution.</p>
      * 
      * @param request DeleteAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1616,11 +1686,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can delete only pay-as-you-go instance groups.
-     * You can delete subscription instance groups only after they expire.</p>
+     * <p>Pay-as-you-go instance groups can be deleted at any time.
+     * Subscription instance groups can be deleted only after they expire.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete an instance group.</p>
+     * <p>Deletes an Android instance group. All instances in the group are also deleted. This operation cannot be undone. Proceed with caution.</p>
      * 
      * @param request DeleteAndroidInstanceGroupRequest
      * @return DeleteAndroidInstanceGroupResponse
@@ -1676,7 +1746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除备份文件</p>
+     * <p>Deletes a batch of backup files.</p>
      * 
      * @param request DeleteBackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1708,7 +1778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除备份文件</p>
+     * <p>Deletes a batch of backup files.</p>
      * 
      * @param request DeleteBackupFileRequest
      * @return DeleteBackupFileResponse
@@ -1882,7 +1952,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a policy.</p>
+     * <p>Deletes a node package.</p>
+     * 
+     * @param request DeleteMobileAgentPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMobileAgentPackageResponse
+     */
+    public DeleteMobileAgentPackageResponse deleteMobileAgentPackageWithOptions(DeleteMobileAgentPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.packageIds)) {
+            query.put("PackageIds", request.packageIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMobileAgentPackage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMobileAgentPackageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a node package.</p>
+     * 
+     * @param request DeleteMobileAgentPackageRequest
+     * @return DeleteMobileAgentPackageResponse
+     */
+    public DeleteMobileAgentPackageResponse deleteMobileAgentPackage(DeleteMobileAgentPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMobileAgentPackageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>A policy group cannot be deleted if it is associated with an instance group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more policy groups.</p>
      * 
      * @param request DeletePolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1913,8 +2030,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A policy group cannot be deleted if it is associated with an instance group.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a policy.</p>
+     * <p>Deletes one or more policy groups.</p>
      * 
      * @param request DeletePolicyGroupRequest
      * @return DeletePolicyGroupResponse
@@ -1925,8 +2045,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deleting property templates does not affect instances for which you have already called the <a href="t3010125.xdita#"></a>operation to send templates.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除系统属性模板</p>
+     * <p>Deletes system property templates.</p>
      * 
      * @param request DeleteSystemPropertyTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1957,8 +2080,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deleting property templates does not affect instances for which you have already called the <a href="t3010125.xdita#"></a>operation to send templates.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除系统属性模板</p>
+     * <p>Deletes system property templates.</p>
      * 
      * @param request DeleteSystemPropertyTemplatesRequest
      * @return DeleteSystemPropertyTemplatesResponse
@@ -1970,7 +2096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询具体Task的相关信息</p>
+     * <p>Retrieves details of specified Agent Tasks.</p>
      * 
      * @param request DescribeAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2002,7 +2128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询具体Task的相关信息</p>
+     * <p>Retrieves details of specified Agent Tasks.</p>
      * 
      * @param request DescribeAgentTaskRequest
      * @return DescribeAgentTaskResponse
@@ -2014,7 +2140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an instance group.</p>
+     * <p>Queries the details of a cloud phone instance group.</p>
      * 
      * @param request DescribeAndroidInstanceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2090,7 +2216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an instance group.</p>
+     * <p>Queries the details of a cloud phone instance group.</p>
      * 
      * @param request DescribeAndroidInstanceGroupsRequest
      * @return DescribeAndroidInstanceGroupsResponse
@@ -2102,7 +2228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cloud phone instances.</p>
+     * <p>Queries the details of cloud phone instances.</p>
      * 
      * @param request DescribeAndroidInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2222,7 +2348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cloud phone instances.</p>
+     * <p>Queries the details of cloud phone instances.</p>
      * 
      * @param request DescribeAndroidInstancesRequest
      * @return DescribeAndroidInstancesResponse
@@ -2310,10 +2436,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to query only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</p>
+     * <p>Currently, only backup files generated by cloud phones can be stored in Object Storage Service (OSS).</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries backup files.</p>
+     * <p>Queries a list of backup files.</p>
      * 
      * @param request DescribeBackupFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2397,10 +2523,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to query only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</p>
+     * <p>Currently, only backup files generated by cloud phones can be stored in Object Storage Service (OSS).</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries backup files.</p>
+     * <p>Queries a list of backup files.</p>
      * 
      * @param request DescribeBackupFilesRequest
      * @return DescribeBackupFilesResponse
@@ -2411,8 +2537,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, you can save backup files generated by Cloud Phone only to Object Storage Service (OSS).</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询bucket信息</p>
+     * <p>Queries information about buckets. This operation returns only the buckets whose names start with <code>cloudphone-saved-bucket-</code>.</p>
      * 
      * @param request DescribeBucketsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2443,8 +2572,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, you can save backup files generated by Cloud Phone only to Object Storage Service (OSS).</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询bucket信息</p>
+     * <p>Queries information about buckets. This operation returns only the buckets whose names start with <code>cloudphone-saved-bucket-</code>.</p>
      * 
      * @param request DescribeBucketsRequest
      * @return DescribeBucketsResponse
@@ -2456,7 +2588,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a cloud phone matrix.</p>
+     * <p>Queries the details of Cloud Phone matrices.
+     * In the Cloud Phone service, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. This physical server can be partitioned into multiple independent Cloud Phone instances that share the underlying computing, storage, and network resources of the matrix. Creating a matrix is equivalent to provisioning a physical server on which you can create Cloud Phone instances. The number of instances that you can create varies depending on the configuration.</p>
      * 
      * @param request DescribeCloudPhoneNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2528,7 +2661,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a cloud phone matrix.</p>
+     * <p>Queries the details of Cloud Phone matrices.
+     * In the Cloud Phone service, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. This physical server can be partitioned into multiple independent Cloud Phone instances that share the underlying computing, storage, and network resources of the matrix. Creating a matrix is equivalent to provisioning a physical server on which you can create Cloud Phone instances. The number of instances that you can create varies depending on the configuration.</p>
      * 
      * @param request DescribeCloudPhoneNodesRequest
      * @return DescribeCloudPhoneNodesResponse
@@ -2540,7 +2674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询积分包</p>
+     * <p>Retrieves the details of one or more credit packages.</p>
      * 
      * @param request DescribeCreditPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2576,7 +2710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询积分包</p>
+     * <p>Retrieves the details of one or more credit packages.</p>
      * 
      * @param request DescribeCreditPackageRequest
      * @return DescribeCreditPackageResponse
@@ -2588,7 +2722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询显示设置</p>
+     * <p>Queries the display settings.</p>
      * 
      * @param request DescribeDisplayConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2620,7 +2754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询显示设置</p>
+     * <p>Queries the display settings.</p>
      * 
      * @param request DescribeDisplayConfigRequest
      * @return DescribeDisplayConfigResponse
@@ -2632,7 +2766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries images.</p>
+     * <p>Queries a list of available images.</p>
      * 
      * @param request DescribeImageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2702,7 +2836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries images.</p>
+     * <p>Queries a list of available images.</p>
      * 
      * @param request DescribeImageListRequest
      * @return DescribeImageListResponse
@@ -2713,8 +2847,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is being deprecated. Use the <a href="t2740507.xdita#"></a>operation to query the progress and results of a command execution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the execution results of commands.</p>
+     * <p>Queries the execution results of a command run by calling the RunCommand operation.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2749,8 +2886,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is being deprecated. Use the <a href="t2740507.xdita#"></a>operation to query the progress and results of a command execution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the execution results of commands.</p>
+     * <p>Queries the execution results of a command run by calling the RunCommand operation.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -2762,7 +2902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询JVS实例信息</p>
+     * <p>Retrieves details of JVS instances.</p>
      * 
      * @param request DescribeJVSInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2802,7 +2942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询JVS实例信息</p>
+     * <p>Retrieves details of JVS instances.</p>
      * 
      * @param request DescribeJVSInstanceRequest
      * @return DescribeJVSInstanceResponse
@@ -2870,7 +3010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定监控项的最新监控数据</p>
+     * <p>Queries the latest monitoring data for an instance or a matrix. You can query metrics such as CPU, memory, disk, and network.</p>
      * 
      * @param request DescribeMetricLastRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2932,7 +3072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定监控项的最新监控数据</p>
+     * <p>Queries the latest monitoring data for an instance or a matrix. You can query metrics such as CPU, memory, disk, and network.</p>
      * 
      * @param request DescribeMetricLastRequest
      * @return DescribeMetricLastResponse
@@ -2944,7 +3084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定监控项的监控数据</p>
+     * <p>Queries monitoring data for specified metrics, such as network bandwidth.</p>
      * 
      * @param request DescribeMetricListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3008,7 +3148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定监控项的监控数据</p>
+     * <p>Queries monitoring data for specified metrics, such as network bandwidth.</p>
      * 
      * @param request DescribeMetricListRequest
      * @return DescribeMetricListResponse
@@ -3020,7 +3160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定监控项的最新监控数据</p>
+     * <p>Queries the latest monitoring data for metrics such as instance network bandwidth and returns the results in a sorted list.</p>
      * 
      * @param request DescribeMetricTopRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3080,7 +3220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定监控项的最新监控数据</p>
+     * <p>Queries the latest monitoring data for metrics such as instance network bandwidth and returns the results in a sorted list.</p>
      * 
      * @param request DescribeMetricTopRequest
      * @return DescribeMetricTopResponse
@@ -3092,7 +3232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询节点套餐详细信息</p>
+     * <p>Retrieves the details of one or more node packages.</p>
      * 
      * @param request DescribeMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3144,7 +3284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询节点套餐详细信息</p>
+     * <p>Retrieves the details of one or more node packages.</p>
      * 
      * @param request DescribeMobileAgentPackageRequest
      * @return DescribeMobileAgentPackageResponse
@@ -3204,7 +3344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query available specifications.</p>
+     * <p>Queries the available specifications for cloud phones. This information is required to create an instance. For the cloud phone matrix mode, this operation also returns the minimum and maximum number of instances allowed per matrix.</p>
      * 
      * @param request DescribeSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3268,7 +3408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query available specifications.</p>
+     * <p>Queries the available specifications for cloud phones. This information is required to create an instance. For the cloud phone matrix mode, this operation also returns the minimum and maximum number of instances allowed per matrix.</p>
      * 
      * @param request DescribeSpecRequest
      * @return DescribeSpecResponse
@@ -3280,7 +3420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询系统属性模板</p>
+     * <p>Describes system property templates.</p>
      * 
      * @param request DescribeSystemPropertyTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3324,7 +3464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询系统属性模板</p>
+     * <p>Describes system property templates.</p>
      * 
      * @param request DescribeSystemPropertyTemplatesRequest
      * @return DescribeSystemPropertyTemplatesResponse
@@ -3336,8 +3476,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</p>
      * <ul>
+     * <li>You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</li>
      * <li>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</li>
      * <li>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
      * <strong>Example</strong>
@@ -3345,7 +3485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries tasks created for a cloud phone instance.</p>
+     * <p>Queries tasks created for a cloud phone instance. Many operations on cloud phones—such as creating, starting, or stopping them—are asynchronous. When you initiate an operation, the system returns a <code>Task ID</code> that you can use to track its progress and final result. You can call this API to retrieve a list of all tasks and their execution statuses.</p>
      * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3429,8 +3569,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</p>
      * <ul>
+     * <li>You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</li>
      * <li>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</li>
      * <li>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
      * <strong>Example</strong>
@@ -3438,7 +3578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries tasks created for a cloud phone instance.</p>
+     * <p>Queries tasks created for a cloud phone instance. Many operations on cloud phones—such as creating, starting, or stopping them—are asynchronous. When you initiate an operation, the system returns a <code>Task ID</code> that you can use to track its progress and final result. You can call this API to retrieve a list of all tasks and their execution statuses.</p>
      * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -3450,7 +3590,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you detach an ADB key pair from a cloud phone instance, the ADB connection will fail. This occurs because the system can no longer authenticate using a valid ADB public key, leading to authentication errors.</p>
+     * <ul>
+     * <li>After a key pair is detached, the cloud phone no longer stores a valid ADB public key. As a result, ADB connections may fail to authenticate.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Detaches an Android Debug Bridge (ADB) key pair from one or more cloud phone instances.</p>
@@ -3489,7 +3631,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  After you detach an ADB key pair from a cloud phone instance, the ADB connection will fail. This occurs because the system can no longer authenticate using a valid ADB public key, leading to authentication errors.</p>
+     * <ul>
+     * <li>After a key pair is detached, the cloud phone no longer stores a valid ADB public key. As a result, ADB connections may fail to authenticate.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Detaches an Android Debug Bridge (ADB) key pair from one or more cloud phone instances.</p>
@@ -3503,8 +3647,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Connections to instances are established using the <a href="t2848888.xdita#"></a>. After a connection is closed with <code>session.stop()</code>, the system maintains the user-instance association for 5 minutes. During this time, other users cannot connect. The <code>DisconnectAndroidInstance</code> operation lets you disassociate the instance immediately.
+     * &lt;props=&quot;china&quot;&gt;If you use the Cloud Phone Matrix Edition and the instance stream pattern is collaborative mode, you can specify <code>EndUserId</code> to disconnect a specific user and invalidate the corresponding ticket.</p>
+     * 
      * <b>summary</b> : 
-     * <p>实例断开连接</p>
+     * <p>Disconnects a connected instance or disassociates an instance that is associated with another user.</p>
      * 
      * @param request DisconnectAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3539,8 +3687,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Connections to instances are established using the <a href="t2848888.xdita#"></a>. After a connection is closed with <code>session.stop()</code>, the system maintains the user-instance association for 5 minutes. During this time, other users cannot connect. The <code>DisconnectAndroidInstance</code> operation lets you disassociate the instance immediately.
+     * &lt;props=&quot;china&quot;&gt;If you use the Cloud Phone Matrix Edition and the instance stream pattern is collaborative mode, you can specify <code>EndUserId</code> to disconnect a specific user and invalidate the corresponding ticket.</p>
+     * 
      * <b>summary</b> : 
-     * <p>实例断开连接</p>
+     * <p>Disconnects a connected instance or disassociates an instance that is associated with another user.</p>
      * 
      * @param request DisconnectAndroidInstanceRequest
      * @return DisconnectAndroidInstanceResponse
@@ -3552,10 +3704,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you distribute an image in supported regions, the distribution cannot be canceled.</p>
+     * <p>You cannot cancel the distribution of an image to a region after the image is distributed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Distributes an image.</p>
+     * <p>Distributes an image to one or more regions. This lets you use the image to create cloud phones in regions other than its source region.</p>
      * 
      * @param request DistributeImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3591,10 +3743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you distribute an image in supported regions, the distribution cannot be canceled.</p>
+     * <p>You cannot cancel the distribution of an image to a region after the image is distributed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Distributes an image.</p>
+     * <p>Distributes an image to one or more regions. This lets you use the image to create cloud phones in regions other than its source region.</p>
      * 
      * @param request DistributeImageRequest
      * @return DistributeImageResponse
@@ -3664,7 +3816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>结束协同</p>
+     * <p>Ends all coordination tasks for a cloud phone instance and invalidates the coordination code.</p>
      * 
      * @param request EndCoordinationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3704,7 +3856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>结束协同</p>
+     * <p>Ends all coordination tasks for a cloud phone instance and invalidates the coordination code.</p>
      * 
      * @param request EndCoordinationRequest
      * @return EndCoordinationResponse
@@ -3715,8 +3867,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is only available on the china site (aliyun.com).</p>
+     * 
      * <b>summary</b> : 
-     * <p>存储扩容</p>
+     * <p>Expands the storage of a cloud phone matrix. You can expand shared storage for matrix-level files such as images, and instance storage. Expanding the storage incurs new fees, and the API response returns an order ID.</p>
      * 
      * @param request ExpandDataVolumeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3771,8 +3926,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is only available on the china site (aliyun.com).</p>
+     * 
      * <b>summary</b> : 
-     * <p>存储扩容</p>
+     * <p>Expands the storage of a cloud phone matrix. You can expand shared storage for matrix-level files such as images, and instance storage. Expanding the storage incurs new fees, and the API response returns an order ID.</p>
      * 
      * @param request ExpandDataVolumeRequest
      * @return ExpandDataVolumeResponse
@@ -3784,7 +3942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扩容实例的独立机身存储</p>
+     * <p>Expands the phone storage for one or more matrix instances.</p>
      * 
      * @param request ExpandPhoneDataVolumeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3836,7 +3994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扩容实例的独立机身存储</p>
+     * <p>Expands the phone storage for one or more matrix instances.</p>
      * 
      * @param request ExpandPhoneDataVolumeRequest
      * @return ExpandPhoneDataVolumeResponse
@@ -3848,10 +4006,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</p>
+     * <p>This operation fetches only files or folders from a cloud phone to Object Storage Service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Pulls a file from a cloud phone instance and stores it in Object Storage Service (OSS).</p>
+     * <p>Fetches files from a cloud phone to Object Storage Service (OSS).</p>
      * 
      * @param request FetchFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3903,10 +4061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</p>
+     * <p>This operation fetches only files or folders from a cloud phone to Object Storage Service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Pulls a file from a cloud phone instance and stores it in Object Storage Service (OSS).</p>
+     * <p>Fetches files from a cloud phone to Object Storage Service (OSS).</p>
      * 
      * @param request FetchFileRequest
      * @return FetchFileResponse
@@ -3921,7 +4079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</p>
+     * <p>By default, you can only use the BatchGetAcpConnectionTicket operation to get the ticket for a connection to a cloud phone, and a cloud phone supports only one connected user at a time. To allow multiple users to connect to a cloud phone at the same time, connect to the cloud phone with a convenience account, use this operation to generate a collaboration code by using the current account, and share this code with other convenience accounts to allow them to access the same cloud phone.</p>
      * 
      * @param request GenerateCoordinationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3960,7 +4118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</p>
+     * <p>By default, you can only use the BatchGetAcpConnectionTicket operation to get the ticket for a connection to a cloud phone, and a cloud phone supports only one connected user at a time. To allow multiple users to connect to a cloud phone at the same time, connect to the cloud phone with a convenience account, use this operation to generate a collaboration code by using the current account, and share this code with other convenience accounts to allow them to access the same cloud phone.</p>
      * 
      * @param request GenerateCoordinationCodeRequest
      * @return GenerateCoordinationCodeResponse
@@ -3972,7 +4130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取属性模板信息</p>
+     * <p>Retrieves the properties of an instance. This operation runs the android getprop command to retrieve all properties of the cloud phone.</p>
      * 
      * @param request GetInstancePropertiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4004,7 +4162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取属性模板信息</p>
+     * <p>Retrieves the properties of an instance. This operation runs the android getprop command to retrieve all properties of the cloud phone.</p>
      * 
      * @param request GetInstancePropertiesRequest
      * @return GetInstancePropertiesResponse
@@ -4015,8 +4173,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation requires image version 26.01 or later.</li>
+     * <li>This operation queries the network access blacklist for your account. The blacklist includes IP addresses and domain names.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网络黑名单列表查询</p>
+     * <p>Queries the network access blacklist for IP addresses and domain names.</p>
      * 
      * @param request GetNetworkBlacklistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4047,8 +4211,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation requires image version 26.01 or later.</li>
+     * <li>This operation queries the network access blacklist for your account. The blacklist includes IP addresses and domain names.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网络黑名单列表查询</p>
+     * <p>Queries the network access blacklist for IP addresses and domain names.</p>
      * 
      * @param request GetNetworkBlacklistRequest
      * @return GetNetworkBlacklistResponse
@@ -4059,8 +4229,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can import a custom image to develop custom features or services.</li>
+     * <li>First, obtain the required Android Open Source Project (AOSP) image baseline from the platform. Then, create a custom build. After the build is complete, import the image to the platform. For detailed instructions, contact Wuying technical support.</li>
+     * <li>Ensure the image tar package is smaller than 2 GB. Otherwise, image parsing may fail.</li>
+     * <li>Ensure the Object Storage Service (OSS) address is in mainland China. If the address is outside mainland China or in the Hong Kong region, the image file download may time out.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>导入自定义镜像</p>
+     * <p>Imports a custom image.</p>
      * 
      * @param request ImportImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4099,8 +4277,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>You can import a custom image to develop custom features or services.</li>
+     * <li>First, obtain the required Android Open Source Project (AOSP) image baseline from the platform. Then, create a custom build. After the build is complete, import the image to the platform. For detailed instructions, contact Wuying technical support.</li>
+     * <li>Ensure the image tar package is smaller than 2 GB. Otherwise, image parsing may fail.</li>
+     * <li>Ensure the Object Storage Service (OSS) address is in mainland China. If the address is outside mainland China or in the Hong Kong region, the image file download may time out.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>导入自定义镜像</p>
+     * <p>Imports a custom image.</p>
      * 
      * @param request ImportImageRequest
      * @return ImportImageResponse
@@ -4166,10 +4352,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * <p>Before you can install an application, you must create it by calling the <a href="https://help.aliyun.com/document_detail/2807330.html">CreateApp</a> operation. This is an asynchronous operation. You can call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation to query the task status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs an app on multiple cloud phone instances at the same time.</p>
+     * <p>Installs applications in batches on Cloud Phone instances.</p>
      * 
      * @param request InstallAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4209,10 +4395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * <p>Before you can install an application, you must create it by calling the <a href="https://help.aliyun.com/document_detail/2807330.html">CreateApp</a> operation. This is an asynchronous operation. You can call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation to query the task status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs an app on multiple cloud phone instances at the same time.</p>
+     * <p>Installs applications in batches on Cloud Phone instances.</p>
      * 
      * @param request InstallAppRequest
      * @return InstallAppResponse
@@ -4224,7 +4410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>安装监控插件</p>
+     * <p>Installs the monitoring plugin in a single step. An instance can generate monitoring data only after the plugin is installed.</p>
      * 
      * @param request InstallMonitorAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4260,7 +4446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>安装监控插件</p>
+     * <p>Installs the monitoring plugin in a single step. An instance can generate monitoring data only after the plugin is installed.</p>
      * 
      * @param request InstallMonitorAgentRequest
      * @return InstallMonitorAgentResponse
@@ -4272,7 +4458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例诊断</p>
+     * <p>Diagnoses and recovers cloud phone matrix instances. This operation clears the system log files of an instance to prevent the instance from becoming unrecoverable due to a full disk.</p>
      * 
      * @param request InstanceHealerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4312,7 +4498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例诊断</p>
+     * <p>Diagnoses and recovers cloud phone matrix instances. This operation clears the system log files of an instance to prevent the instance from becoming unrecoverable due to a full disk.</p>
      * 
      * @param request InstanceHealerRequest
      * @return InstanceHealerResponse
@@ -4324,7 +4510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询ADB端口连接信息</p>
+     * <p>Queries the Android Debug Bridge (ADB) connection information for instances. This operation is available only to standard networks.</p>
      * 
      * @param request ListInstanceAdbAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4380,7 +4566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询ADB端口连接信息</p>
+     * <p>Queries the Android Debug Bridge (ADB) connection information for instances. This operation is available only to standard networks.</p>
      * 
      * @param request ListInstanceAdbAttributesRequest
      * @return ListInstanceAdbAttributesResponse
@@ -4451,8 +4637,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify at least one of the following parameters in the request to determine the queried object: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, or <code>Tag.N.Value</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源标签</p>
+     * <p>Queries the tags that are associated with Cloud Phone instances.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4503,8 +4692,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify at least one of the following parameters in the request to determine the queried object: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, or <code>Tag.N.Value</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源标签</p>
+     * <p>Queries the tags that are associated with Cloud Phone instances.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -4516,7 +4708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies attributes of a cloud phone instance. Currently, this operation allows you to modify only the name of a cloud phone instance.</p>
+     * <p>Modifies the information of an Android instance. Currently, this operation can be used to modify only the instance name and the upstream and downstream bandwidth limits.</p>
      * 
      * @param request ModifyAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4564,7 +4756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies attributes of a cloud phone instance. Currently, this operation allows you to modify only the name of a cloud phone instance.</p>
+     * <p>Modifies the information of an Android instance. Currently, this operation can be used to modify only the instance name and the upstream and downstream bandwidth limits.</p>
      * 
      * @param request ModifyAndroidInstanceRequest
      * @return ModifyAndroidInstanceResponse
@@ -4687,8 +4879,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Changing the streaming mode is an asynchronous operation. Please do not perform this action frequently.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix.</p>
+     * <p>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix. Note: In the Cloud Phone system, a Matrix (Cloud Phone Server) is a logical resource management unit that represents a single physical server instance. This physical server can be partitioned into multiple, independently running cloud phone instances. These instances share the Matrix\&quot;s underlying compute, storage, and network resources. Creating a Matrix is equivalent to leasing a dedicated physical server. On this server, you can then create your cloud phone instances. The number of instances you can create depends on their configuration.</p>
      * 
      * @param request ModifyCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4727,8 +4922,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Changing the streaming mode is an asynchronous operation. Please do not perform this action frequently.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix.</p>
+     * <p>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix. Note: In the Cloud Phone system, a Matrix (Cloud Phone Server) is a logical resource management unit that represents a single physical server instance. This physical server can be partitioned into multiple, independently running cloud phone instances. These instances share the Matrix\&quot;s underlying compute, storage, and network resources. Creating a Matrix is equivalent to leasing a dedicated physical server. On this server, you can then create your cloud phone instances. The number of instances you can create depends on their configuration.</p>
      * 
      * @param request ModifyCloudPhoneNodeRequest
      * @return ModifyCloudPhoneNodeResponse
@@ -4740,7 +4938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改显示设置</p>
+     * <p>Modifies display settings.</p>
      * 
      * @param tmpReq ModifyDisplayConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4782,7 +4980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改显示设置</p>
+     * <p>Modifies display settings.</p>
      * 
      * @param request ModifyDisplayConfigRequest
      * @return ModifyDisplayConfigResponse
@@ -4862,7 +5060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改JVS信息</p>
+     * <p>Modifies the configuration of a JVS instance.</p>
      * 
      * @param request ModifyJVSInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4906,7 +5104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改JVS信息</p>
+     * <p>Modifies the configuration of a JVS instance.</p>
      * 
      * @param request ModifyJVSInstanceRequest
      * @return ModifyJVSInstanceResponse
@@ -4966,7 +5164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a policy.</p>
+     * <p>Modifies the information of a policy group.</p>
      * 
      * @param tmpReq ModifyPolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5048,7 +5246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a policy.</p>
+     * <p>Modifies the information of a policy group.</p>
      * 
      * @param request ModifyPolicyGroupRequest
      * @return ModifyPolicyGroupResponse
@@ -5059,8 +5257,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you modify a property template, the <a href="t3010125.xdita#"></a>operation is not triggered. To apply the changes to cloud phones, you must call the <a href="t3010125.xdita#"></a>operation separately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改属性模板</p>
+     * <p>Modifies a property template.</p>
      * 
      * @param tmpReq ModifySystemPropertyTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5113,8 +5314,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you modify a property template, the <a href="t3010125.xdita#"></a>operation is not triggered. To apply the changes to cloud phones, you must call the <a href="t3010125.xdita#"></a>operation separately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改属性模板</p>
+     * <p>Modifies a property template.</p>
      * 
      * @param request ModifySystemPropertyTemplateRequest
      * @return ModifySystemPropertyTemplateResponse
@@ -5126,7 +5330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="t2740507.xdita#"></a>operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</p>
@@ -5169,7 +5373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="t2740507.xdita#"></a>operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</p>
@@ -5184,7 +5388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停云手机实例上正在运行的 Agent 任务。</p>
+     * <p>Pauses running agent tasks on Mobile nodes.</p>
      * 
      * @param request PauseAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5216,7 +5420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停云手机实例上正在运行的 Agent 任务。</p>
+     * <p>Pauses running agent tasks on Mobile nodes.</p>
      * 
      * @param request PauseAgentTaskRequest
      * @return PauseAgentTaskResponse
@@ -5228,10 +5432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you restart a cloud phone instance, make sure it is in one of the following states: <strong>Available, Abnormal, Backup failure, and Restoration failure</strong>.</p>
+     * <p>You can reboot an instance only if its status is Active, Abnormal, Backup failed, or <strong>Recover failed</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Restarts one or more cloud phone instances.</p>
+     * <p>Reboots (shuts down and then starts) Cloud Phone instances.</p>
      * 
      * @param request RebootAndroidInstancesInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5275,10 +5479,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you restart a cloud phone instance, make sure it is in one of the following states: <strong>Available, Abnormal, Backup failure, and Restoration failure</strong>.</p>
+     * <p>You can reboot an instance only if its status is Active, Abnormal, Backup failed, or <strong>Recover failed</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Restarts one or more cloud phone instances.</p>
+     * <p>Reboots (shuts down and then starts) Cloud Phone instances.</p>
      * 
      * @param request RebootAndroidInstancesInGroupRequest
      * @return RebootAndroidInstancesInGroupResponse
@@ -5289,8 +5493,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>When you restore a full instance, the system restarts the instance to ensure a successful restoration. A restart is not required if you restore only applications and data. Make sure the instance is in an active state. Do not perform any operations on the instance during the restoration process. Otherwise, the restoration may fail.</li>
+     * <li>Ensure that the backup file can be used to restore the instance properly. After a restoration is complete, check that all your data is complete and all features are working properly. Do not delete the original backup file or reset the source instance until you have verified the restored data. Otherwise, you may lose your data.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>整机恢复</p>
+     * <p>Restores a full instance backup to another cloud phone instance.</p>
      * 
      * @param request RecoverAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5337,8 +5547,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>When you restore a full instance, the system restarts the instance to ensure a successful restoration. A restart is not required if you restore only applications and data. Make sure the instance is in an active state. Do not perform any operations on the instance during the restoration process. Otherwise, the restoration may fail.</li>
+     * <li>Ensure that the backup file can be used to restore the instance properly. After a restoration is complete, check that all your data is complete and all features are working properly. Do not delete the original backup file or reset the source instance until you have verified the restored data. Otherwise, you may lose your data.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>整机恢复</p>
+     * <p>Restores a full instance backup to another cloud phone instance.</p>
      * 
      * @param request RecoverAndroidInstanceRequest
      * @return RecoverAndroidInstanceResponse
@@ -5349,8 +5565,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>A full instance recovery restarts the cloud phone. An application and data recovery does not require a restart. To ensure a successful recovery, make sure your cloud phone is in the active state. Do not perform any operations on the cloud phone during the recovery process. Otherwise, the recovery operation may fail.</li>
+     * <li>If the application being recovered already exists on the target cloud phone, the existing application is uninstalled before the backup version is installed. This prevents version conflicts.</li>
+     * <li>Ensure that your backup file can be used to recover the instance or application properly. After a recovery is complete, verify that your data is complete and all features work correctly. Do not delete the original backup file or reset the source instance until you have verified that the recovery was successful. Otherwise, there is risks that you lose some data.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>恢复应用</p>
+     * <p>Recovers an application from a backup file to another cloud phone instance.</p>
      * 
      * @param request RecoverAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5397,8 +5620,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>A full instance recovery restarts the cloud phone. An application and data recovery does not require a restart. To ensure a successful recovery, make sure your cloud phone is in the active state. Do not perform any operations on the cloud phone during the recovery process. Otherwise, the recovery operation may fail.</li>
+     * <li>If the application being recovered already exists on the target cloud phone, the existing application is uninstalled before the backup version is installed. This prevents version conflicts.</li>
+     * <li>Ensure that your backup file can be used to recover the instance or application properly. After a recovery is complete, verify that your data is complete and all features work correctly. Do not delete the original backup file or reset the source instance until you have verified that the recovery was successful. Otherwise, there is risks that you lose some data.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>恢复应用</p>
+     * <p>Recovers an application from a backup file to another cloud phone instance.</p>
      * 
      * @param request RecoverAppRequest
      * @return RecoverAppResponse
@@ -5480,7 +5710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews instance groups.</p>
+     * <p>Renews subscription Cloud Phone instance groups. If a subscription instance group expires, the system automatically deletes the instance group and its instances after 15 days. You cannot recover deleted resources. Renew your instance groups promptly to prevent resource loss.</p>
      * 
      * @param request RenewAndroidInstanceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5532,7 +5762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews instance groups.</p>
+     * <p>Renews subscription Cloud Phone instance groups. If a subscription instance group expires, the system automatically deletes the instance group and its instances after 15 days. You cannot recover deleted resources. Renew your instance groups promptly to prevent resource loss.</p>
      * 
      * @param request RenewAndroidInstanceGroupsRequest
      * @return RenewAndroidInstanceGroupsResponse
@@ -5544,7 +5774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a cloud mobile matrix.</p>
+     * <p>Renews the specified cloud phone matrices.</p>
      * 
      * @param request RenewCloudPhoneNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5602,7 +5832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a cloud mobile matrix.</p>
+     * <p>Renews the specified cloud phone matrices.</p>
      * 
      * @param request RenewCloudPhoneNodesRequest
      * @return RenewCloudPhoneNodesResponse
@@ -5614,7 +5844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费MobileAgent套餐包</p>
+     * <p>Renews a mobile agent package.</p>
      * 
      * @param request RenewMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5670,7 +5900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费MobileAgent套餐包</p>
+     * <p>Renews a mobile agent package.</p>
      * 
      * @param request RenewMobileAgentPackageRequest
      * @return RenewMobileAgentPackageResponse
@@ -5682,10 +5912,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you reset a cloud phone instance, make sure it is in one of the following states: <strong>Available, Stopped, Abnormal, Backup failure, and Restoration failure</strong>.</p>
+     * <p>You can reset an instance (initialize its system) only when the instance is Active, Stopped, Abnormal, Backup Failed, or <strong>Recover Failed</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets one or more cloud phone instances.</p>
+     * <p>Resets the instance by reinstalling the operating system using its original image. Note: The reset operation will fail if the image that was used to create the Cloud Phone has since been deleted.</p>
      * 
      * @param request ResetAndroidInstancesInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5729,10 +5959,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you reset a cloud phone instance, make sure it is in one of the following states: <strong>Available, Stopped, Abnormal, Backup failure, and Restoration failure</strong>.</p>
+     * <p>You can reset an instance (initialize its system) only when the instance is Active, Stopped, Abnormal, Backup Failed, or <strong>Recover Failed</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets one or more cloud phone instances.</p>
+     * <p>Resets the instance by reinstalling the operating system using its original image. Note: The reset operation will fail if the image that was used to create the Cloud Phone has since been deleted.</p>
      * 
      * @param request ResetAndroidInstancesInGroupRequest
      * @return ResetAndroidInstancesInGroupResponse
@@ -5744,7 +5974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>继续云手机实例上正在运行的 Agent 任务。</p>
+     * <p>Resumes paused agent automation tasks on a mobile instance.</p>
      * 
      * @param request ResumeAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5780,7 +6010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>继续云手机实例上正在运行的 Agent 任务。</p>
+     * <p>Resumes paused agent automation tasks on a mobile instance.</p>
      * 
      * @param request ResumeAgentTaskRequest
      * @return ResumeAgentTaskResponse
@@ -5792,7 +6022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发云手机内的 Agent 执行 AI 自动化任务。</p>
+     * <p>Triggers an Agent on a mobile node to run an AI-powered automation task.</p>
      * 
      * @param request RunAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5840,7 +6070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发云手机内的 Agent 执行 AI 自动化任务。</p>
+     * <p>Triggers an Agent on a mobile node to run an AI-powered automation task.</p>
      * 
      * @param request RunAgentTaskRequest
      * @return RunAgentTaskResponse
@@ -5852,7 +6082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a command on a cloud phone instance.</p>
+     * <p>Runs a command on one or more cloud phone instances.</p>
      * 
      * @param request RunCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5900,7 +6130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a command on a cloud phone instance.</p>
+     * <p>Runs a command on one or more cloud phone instances.</p>
      * 
      * @param request RunCommandRequest
      * @return RunCommandResponse
@@ -5911,8 +6141,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The <code>RunSyncCommand</code> operation is designed for commands that return a result quickly, typically within milliseconds. For longer-running commands that may take several seconds, we recommend using the asynchronous <a href="t2729835.xdita#"></a>operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通过eds agent通道下发命令</p>
+     * <p>Runs a synchronous command on one or more Cloud Phone instances and returns the execution result.</p>
      * 
      * @param request RunSyncCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5955,8 +6188,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The <code>RunSyncCommand</code> operation is designed for commands that return a result quickly, typically within milliseconds. For longer-running commands that may take several seconds, we recommend using the asynchronous <a href="t2729835.xdita#"></a>operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通过eds agent通道下发命令</p>
+     * <p>Runs a synchronous command on one or more Cloud Phone instances and returns the execution result.</p>
      * 
      * @param request RunSyncCommandRequest
      * @return RunSyncCommandResponse
@@ -5968,10 +6204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to only push files or folders from OSS buckets to cloud phone instances.</p>
+     * <p>Use this operation to send files or folders from Object Storage Service (OSS) to cloud phones.</p>
      * 
      * <b>summary</b> : 
-     * <p>Pushes files from Object Storage Service (OSS) buckets to cloud phone instances.</p>
+     * <p>Pushes files from Object Storage Service (OSS) or a public download link to one or more cloud phones.</p>
      * 
      * @param request SendFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6035,10 +6271,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, this operation allows you to only push files or folders from OSS buckets to cloud phone instances.</p>
+     * <p>Use this operation to send files or folders from Object Storage Service (OSS) to cloud phones.</p>
      * 
      * <b>summary</b> : 
-     * <p>Pushes files from Object Storage Service (OSS) buckets to cloud phone instances.</p>
+     * <p>Pushes files from Object Storage Service (OSS) or a public download link to one or more cloud phones.</p>
      * 
      * @param request SendFileRequest
      * @return SendFileResponse
@@ -6050,7 +6286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送属性模板</p>
+     * <p>Sends a property template to cloud phone instances and, based on the template, sets properties in the Android system using the setprop command. An APK or a related program can read these property values. If you specify multiple template IDs, the property templates are randomly sent to the cloud phone instances.</p>
      * 
      * @param request SendSystemPropertyTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6092,7 +6328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送属性模板</p>
+     * <p>Sends a property template to cloud phone instances and, based on the template, sets properties in the Android system using the setprop command. An APK or a related program can read these property values. If you specify multiple template IDs, the property templates are randomly sent to the cloud phone instances.</p>
      * 
      * @param request SendSystemPropertyTemplateRequest
      * @return SendSystemPropertyTemplateResponse
@@ -6157,8 +6393,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation requires image version 26.01 or later.</li>
+     * <li>This API call synchronously updates the IP address blacklist and the domain name blacklist.</li>
+     * <li>The IP address blacklist supports individual IP addresses and IP address segments. The update overwrites the existing configuration. If you pass an empty string (&quot;&quot;), all configured IP blacklist entries are purged.</li>
+     * <li>The domain name blacklist supports only exact matches and does not support regular expressions. If you pass an empty string (&quot;&quot;), all configured domain name blacklist entries are purged.</li>
+     * <li>After you change the configuration, restart the cloud phone to apply the new blacklist rules. Note that these rules may not take effect if you use an agent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>设置网络黑名单</p>
+     * <p>Adds or purges IP addresses and domain names from the network access blacklist.</p>
      * 
      * @param request SetNetworkBlacklistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6193,8 +6438,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation requires image version 26.01 or later.</li>
+     * <li>This API call synchronously updates the IP address blacklist and the domain name blacklist.</li>
+     * <li>The IP address blacklist supports individual IP addresses and IP address segments. The update overwrites the existing configuration. If you pass an empty string (&quot;&quot;), all configured IP blacklist entries are purged.</li>
+     * <li>The domain name blacklist supports only exact matches and does not support regular expressions. If you pass an empty string (&quot;&quot;), all configured domain name blacklist entries are purged.</li>
+     * <li>After you change the configuration, restart the cloud phone to apply the new blacklist rules. Note that these rules may not take effect if you use an agent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>设置网络黑名单</p>
+     * <p>Adds or purges IP addresses and domain names from the network access blacklist.</p>
      * 
      * @param request SetNetworkBlacklistRequest
      * @return SetNetworkBlacklistResponse
@@ -6209,7 +6463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only supports starting when the instance is in the <strong>Stopped, Backup Failed, or Recovery Failed</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Start instances.</p>
+     * <p>Start cloud phone instances.</p>
      * 
      * @param request StartAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6248,7 +6502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only supports starting when the instance is in the <strong>Stopped, Backup Failed, or Recovery Failed</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Start instances.</p>
+     * <p>Start cloud phone instances.</p>
      * 
      * @param request StartAndroidInstanceRequest
      * @return StartAndroidInstanceResponse
@@ -6259,8 +6513,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This feature can be enabled when the instance is not in the <strong>UNAVAILABLE</strong> state and has a <strong>private IP address</strong> assigned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启实例ADB端口并创建端口转发条目</p>
+     * <p>Enables the Android Debug Bridge (ADB) connection for an instance and creates an Internet mapping rule for its ADB port. This feature is available only for standard networks.</p>
      * 
      * @param request StartInstanceAdbRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6291,8 +6548,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This feature can be enabled when the instance is not in the <strong>UNAVAILABLE</strong> state and has a <strong>private IP address</strong> assigned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启实例ADB端口并创建端口转发条目</p>
+     * <p>Enables the Android Debug Bridge (ADB) connection for an instance and creates an Internet mapping rule for its ADB port. This feature is available only for standard networks.</p>
      * 
      * @param request StartInstanceAdbRequest
      * @return StartInstanceAdbResponse
@@ -6304,10 +6564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you stop a cloud phone instance, make sure it is in one of the following states: <strong>Available, Backup failure, and Restoration failure</strong>.</p>
+     * <p>An instance can be stopped only if it is in the Active, Backup Failed, or <strong>Recover Failed</strong> status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a cloud phone instance.</p>
+     * <p>Stops (shuts down) an Android instance.</p>
      * 
      * @param request StopAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6347,10 +6607,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you stop a cloud phone instance, make sure it is in one of the following states: <strong>Available, Backup failure, and Restoration failure</strong>.</p>
+     * <p>An instance can be stopped only if it is in the Active, Backup Failed, or <strong>Recover Failed</strong> status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a cloud phone instance.</p>
+     * <p>Stops (shuts down) an Android instance.</p>
      * 
      * @param request StopAndroidInstanceRequest
      * @return StopAndroidInstanceResponse
@@ -6362,7 +6622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止实例ADB端口并删除端口转发条目</p>
+     * <p>Disables the ADB connection for an Android instance and deletes its ADB port forwarding rules. This operation applies only to standard networks.</p>
      * 
      * @param request StopInstanceAdbRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6394,7 +6654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止实例ADB端口并删除端口转发条目</p>
+     * <p>Disables the ADB connection for an Android instance and deletes its ADB port forwarding rules. This operation applies only to standard networks.</p>
      * 
      * @param request StopInstanceAdbRequest
      * @return StopInstanceAdbResponse
@@ -6406,7 +6666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给资源打标签</p>
+     * <p>Adds tags to one or more cloud phones.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6446,7 +6706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>给资源打标签</p>
+     * <p>Adds tags to one or more cloud phones.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -6458,10 +6718,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * <p>This is an asynchronous operation. You can query the task status in the Task Hub by calling <a href="~~DescribeTasks~~">DescribeTasks</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uninstalls an app from multiple cloud phone instances.</p>
+     * <p>Uninstalls applications from one or more Cloud Phone instances.</p>
      * 
      * @param request UninstallAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6501,10 +6761,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * <p>This is an asynchronous operation. You can query the task status in the Task Hub by calling <a href="~~DescribeTasks~~">DescribeTasks</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uninstalls an app from multiple cloud phone instances.</p>
+     * <p>Uninstalls applications from one or more Cloud Phone instances.</p>
      * 
      * @param request UninstallAppRequest
      * @return UninstallAppResponse
@@ -6516,7 +6776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>卸载监控插件</p>
+     * <p>Uninstalls the monitoring plugin.</p>
      * 
      * @param request UninstallMonitorAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6552,7 +6812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>卸载监控插件</p>
+     * <p>Uninstalls the monitoring plugin.</p>
      * 
      * @param request UninstallMonitorAgentRequest
      * @return UninstallMonitorAgentResponse
@@ -6564,7 +6824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源标签</p>
+     * <p>Removes tags from cloud phones. If a tag is no longer associated with any cloud phone after it is removed, the tag is automatically deleted.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6608,7 +6868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源标签</p>
+     * <p>Removes tags from cloud phones. If a tag is no longer associated with any cloud phone after it is removed, the tag is automatically deleted.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -6668,10 +6928,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure the image is in the Available state and the region of the image is included in the region list of the desired instance group. In addition, the instance group itself is available.</p>
+     * <p>The image and the instance group must be in the active state. The image must be available in the same region as the instance group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the image of an instance group.</p>
+     * <p>Updates the image of an instance group. This update affects all instances in the group.</p>
      * 
      * @param request UpdateInstanceGroupImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6707,10 +6967,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure the image is in the Available state and the region of the image is included in the region list of the desired instance group. In addition, the instance group itself is available.</p>
+     * <p>The image and the instance group must be in the active state. The image must be available in the same region as the instance group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the image of an instance group.</p>
+     * <p>Updates the image of an instance group. This update affects all instances in the group.</p>
      * 
      * @param request UpdateInstanceGroupImageRequest
      * @return UpdateInstanceGroupImageResponse
@@ -6721,8 +6981,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;You can change images only for cloud phone matrix instances. Other instance types are not supported.&lt;props=&quot;intl&quot;&gt;This feature is not available on the Alibaba Cloud international site (www\.alibabacloud.com).</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新实例镜像</p>
+     * <p>Changes the image of an instance in a cloud phone matrix. You can change the image for an instance only when the instance is in the Running, Stopped, or Failed to change the image state. The GPU vendor of the target image must match the GPU vendor of the server where the instance runs. If you change the image across major versions, such as from Android 10 to Android 12, the system clears all data. This operation is equivalent to changing the image and then resetting the instance.</p>
      * 
      * @param request UpdateInstanceImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6765,8 +7028,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;You can change images only for cloud phone matrix instances. Other instance types are not supported.&lt;props=&quot;intl&quot;&gt;This feature is not available on the Alibaba Cloud international site (www\.alibabacloud.com).</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新实例镜像</p>
+     * <p>Changes the image of an instance in a cloud phone matrix. You can change the image for an instance only when the instance is in the Running, Stopped, or Failed to change the image state. The GPU vendor of the target image must match the GPU vendor of the server where the instance runs. If you change the image across major versions, such as from Android 10 to Android 12, the system clears all data. This operation is equivalent to changing the image and then resetting the instance.</p>
      * 
      * @param request UpdateInstanceImageRequest
      * @return UpdateInstanceImageResponse
@@ -6777,11 +7043,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Currently, this operation allows you to only increase the size of an instance group.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Upgrades an instance group. Currently, this operation allows you to only increase the number of instances in an instance group.</p>
+     * <p>Upgrades an instance group. This operation only supports scaling out an instance group, which increases the number of instances.</p>
      * 
      * @param request UpgradeAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6828,11 +7091,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Currently, this operation allows you to only increase the size of an instance group.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Upgrades an instance group. Currently, this operation allows you to only increase the number of instances in an instance group.</p>
+     * <p>Upgrades an instance group. This operation only supports scaling out an instance group, which increases the number of instances.</p>
      * 
      * @param request UpgradeAndroidInstanceGroupRequest
      * @return UpgradeAndroidInstanceGroupResponse

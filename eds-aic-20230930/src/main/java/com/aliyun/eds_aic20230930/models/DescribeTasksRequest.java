@@ -90,15 +90,6 @@ public class DescribeTasksRequest extends TeaModel {
 
     /**
      * <p>The state of the task.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PartFinished: The task is partially successful.</li>
-     * <li>Finished: The task is completed.</li>
-     * <li>Failed: The task failed.</li>
-     * <li>Skipped: The task is skipped.</li>
-     * <li>Processing: The task is running.</li>
-     * <li>Waiting: The task is in queue.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Processing</p>
@@ -114,25 +105,6 @@ public class DescribeTasksRequest extends TeaModel {
 
     /**
      * <p>The type of the task.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>BackupFile: backs up files.</li>
-     * <li>StopInstance: stops cloud phone instances.</li>
-     * <li>RebootInstance: restarts cloud phone instances.</li>
-     * <li>StartApp: starts apps.</li>
-     * <li>SendFile: uploads files.</li>
-     * <li>RunCommand: sends remote command.</li>
-     * <li>RestartApp: restarts apps.</li>
-     * <li>ResetInstance: resets cloud phone instances.</li>
-     * <li>RecoverFile: recovers files.</li>
-     * <li>UninstallApp: uninstalls apps.</li>
-     * <li>StopApp: stops apps.</li>
-     * <li>Screenshot: takes screenshots.</li>
-     * <li>InstallApp: installs apps.</li>
-     * <li>FetchFile: downloads files.</li>
-     * <li>UpdateGroupImage: replaces images.</li>
-     * <li>StartInstance: starts instances.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>StartInstance</p>

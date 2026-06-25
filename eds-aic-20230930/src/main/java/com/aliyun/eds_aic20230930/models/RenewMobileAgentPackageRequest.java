@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class RenewMobileAgentPackageRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enables automatic payment. Make sure that your account balance is sufficient.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Generates an unpaid order.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If your account balance is insufficient, set this parameter to <code>false</code> to generate an unpaid order. You can then pay for the order in the Wuying Mobile Cloud Phone management console.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,16 +23,23 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>Specifies whether to enable auto-renewal. The default value is <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>A list of mobile agent package IDs.</p>
+     */
     @NameInMap("MobileAgentPackageIds")
     public java.util.List<String> mobileAgentPackageIds;
 
     /**
+     * <p>The URL to which a user is redirected after a successful payment.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></p>
      */
@@ -29,6 +47,8 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public String paidCallbackUrl;
 
     /**
+     * <p>The renewal period. The <code>PeriodUnit</code> parameter specifies the time unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -36,6 +56,15 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the renewal period.
+     * Valid values:</p>
+     * <ul>
+     * <li><p><strong>Month</strong>: month.</p>
+     * </li>
+     * <li><p><strong>Year</strong>: year.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -43,6 +72,8 @@ public class RenewMobileAgentPackageRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The promotion ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
      */

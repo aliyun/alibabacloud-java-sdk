@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetNetworkBlacklistResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2B9E6946-0E2A-5D2B-B275-361DF81F****</p>
      */

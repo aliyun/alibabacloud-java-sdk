@@ -4,11 +4,14 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class GetInstancePropertiesResponseBody extends TeaModel {
+    /**
+     * <p>The instance properties.</p>
+     */
     @NameInMap("PropertyTemplateModel")
     public GetInstancePropertiesResponseBodyPropertyTemplateModel propertyTemplateModel;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC******</p>
@@ -39,6 +42,11 @@ public class GetInstancePropertiesResponseBody extends TeaModel {
 
     public static class GetInstancePropertiesResponseBodyPropertyTemplateModel extends TeaModel {
         /**
+         * <p>The instance properties.</p>
+         * <blockquote>
+         * <p>Format: <code>{ &quot;propties&quot;:{&quot;key1&quot;:&quot;value1&quot;}}</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>{ &quot;propties&quot;:{&quot;key1&quot;:&quot;value1&quot;}}</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAndroidInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud phone instance.</p>
+     * <p>The ID of a single instance. If you specify this parameter, InstanceIds is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>acp-8v5bjld0r7tkl****</p>
@@ -13,16 +13,27 @@ public class ModifyAndroidInstanceRequest extends TeaModel {
     @NameInMap("AndroidInstanceId")
     public String androidInstanceId;
 
+    /**
+     * <p>The limit for downstream bandwidth. Unit: Mbps.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("DownBandwidthLimit")
     public Integer downBandwidthLimit;
 
+    /**
+     * <p>The list of Android instance IDs. You can specify from 1 to 100 IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The new name of the cloud phone instance.</p>
+     * <p>The new name for the instance.</p>
      * <blockquote>
-     * <p> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</p>
+     * <ul>
+     * <li>The name can be up to 30 characters long. It must start with a letter or a Chinese character and cannot start with http\:// or https\://. The name can contain only letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,6 +42,12 @@ public class ModifyAndroidInstanceRequest extends TeaModel {
     @NameInMap("NewAndroidInstanceName")
     public String newAndroidInstanceName;
 
+    /**
+     * <p>The limit for upstream bandwidth. Unit: Mbps.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("UpBandwidthLimit")
     public Integer upBandwidthLimit;
 

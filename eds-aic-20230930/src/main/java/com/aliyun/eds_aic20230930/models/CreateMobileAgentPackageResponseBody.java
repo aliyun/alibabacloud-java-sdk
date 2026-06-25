@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateMobileAgentPackageResponseBody extends TeaModel {
+    /**
+     * <p>A list of package IDs.</p>
+     */
     @NameInMap("MobileAgentPackageIds")
     public java.util.List<String> mobileAgentPackageIds;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22326560487****</p>
      */
@@ -15,6 +20,8 @@ public class CreateMobileAgentPackageResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
      */

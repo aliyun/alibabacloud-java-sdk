@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PauseAgentTaskRequest extends TeaModel {
     /**
+     * <p>A list of task IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TaskIds")

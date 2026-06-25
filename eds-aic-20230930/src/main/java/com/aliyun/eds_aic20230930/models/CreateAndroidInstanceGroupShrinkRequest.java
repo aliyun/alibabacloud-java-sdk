@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     /**
-     * <p>The number of instance groups. Default value: 1. Maximum value: 1.</p>
+     * <p>The number of instance groups to create. Valid values: 1 to 100. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -15,11 +15,6 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable automatic payment. Default value: false.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: enables automatic payment. Make sure that your Alibaba Cloud account has sufficient balance.</li>
-     * <li>false: disables automatic payment. You must manually complete the payment.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -28,12 +23,7 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: automatically renew resource upon expiration.</li>
-     * <li>false: manually renew resources upon expiration.</li>
-     * </ul>
+     * <p>Specifies whether to enable auto-renewal for subscription resources. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -48,16 +38,7 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public String bandwidthPackageType;
 
     /**
-     * <p>The ID of the region. You can call the DescribeRegions operation to query the regions where Cloud Phone is supported.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cn-shenzhen: China (Shenzhen).</li>
-     * <li>cn-beijing: China (Beijing).</li>
-     * <li>cn-shanghai: China (Shanghai).</li>
-     * <li>cn-hongkong: China (Hong Kong).</li>
-     * <li>ap-southeast-1: Singapore.</li>
-     * <li>cn-hangzhou: China (Hangzhou).</li>
-     * </ul>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions where Cloud Phone instances are available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,11 +49,6 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The billing method.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PostPaid: pay-as-you-go.</li>
-     * <li>PrePaid: subscription.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -81,17 +57,17 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. The value cannot exceed 100 characters in length.</p>
+     * <p>A client-generated token to ensure request idempotence. This parameter prevents duplicate requests. The token can be up to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>asadbuvwiabdbvchjsbj</p>
+     * <p>asadbuvwiabdbvchj****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,11 +78,6 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable GPU acceleration.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: enables GPU acceleration.</li>
-     * <li>false (default): disables GPU acceleration.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -115,7 +86,7 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public Boolean gpuAcceleration;
 
     /**
-     * <p>The ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/2807324.html">DescribeImageList</a> operation to query images.</p>
+     * <p>The image ID. You can call the <a href="~~DescribeImageList~~">DescribeImageList</a> operation to query available images for Cloud Phone instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -127,23 +98,17 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The name of the instance group.</p>
      * <blockquote>
-     * <p> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name can be up to 30 characters in length. It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. The name can contain only Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>defaultInstanceGroup</p>
+     * <p>Cloud phoneA</p>
      */
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
     /**
-     * <p>The specifications of the instance group. You can call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the available specifications.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>acp.perf.large: Performance (8 vCPUs, 16 GiB of memory, and 32 GiB of storage.</li>
-     * <li>acp.basic.small: Lightweight (2 vCPUs, 4 GiB of memory, and 32 GiB of storage).</li>
-     * <li>acp.std.large: Standard (4 vCPUs, 8 GiB of memory, and 32 GiB of storage).</li>
-     * </ul>
+     * <p>The instance group specification. You can call the <a href="~~DescribeSpec~~">DescribeSpec</a> operation to query the specifications that are available for Cloud Phone instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -157,7 +122,7 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -167,9 +132,9 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public Integer ipv6Bandwidth;
 
     /**
-     * <p>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually bind key pairs to individual cloud phone instances.</p>
+     * <p>The key pair ID. If you specify a valid key pair ID when you create the instance group, the system attaches the key pair to all successfully created instances. No separate API call is required to attach the key pair.</p>
      * <blockquote>
-     * <p> Binding key pairs to cloud phone instances is currently not supported during instance group resizing.</p>
+     * <p>Attaching a key pair during a scale-out operation is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -185,7 +150,7 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The number of cloud phones in the instance group. Maximum value: 100.</p>
+     * <p>The number of instances in the instance group. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -194,10 +159,12 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public Integer numberOfInstances;
 
     /**
-     * <p>The ID of the network.</p>
+     * <p>The network ID.</p>
      * <ul>
-     * <li>This parameter is required if you assign a shared network to cloud phones. You can go to the <a href="https://wya.wuying.aliyun.com/network">Network</a> page of the Cloud Phone console to retrieve the ID of a <strong>shared network</strong>. If no shared network is available in the Cloud Phone console, you can leave this parameter empty. The system automatically creates one when you create an instance group.</li>
-     * <li>This parameter is required if you assign a virtual private cloud (VPC) to cloud phones. You can go to the <a href="https://wya.wuying.aliyun.com/network">Network</a> page of the Cloud Phone console to retrieve the ID of a <strong>VPC</strong>. If no VPC is available in the Cloud Phone console, you must first create one.</li>
+     * <li><p>To create instances in a Shared Network: This parameter is optional. Specify the ID of a <strong>Shared Network</strong>. You can find the ID on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone console &gt; Network</a> page. If no Shared Network is available in the console, you can omit this parameter. The system automatically creates a Shared Network when you create the instance group.</p>
+     * </li>
+     * <li><p>To create instances in a VPC: This parameter is required. Specify the ID of a <strong>VPC</strong>. You can find the ID on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone console &gt; Network</a> page. If no VPC is available in the console, you must create one first.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -214,7 +181,7 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public String paidCallBackUrl;
 
     /**
-     * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
+     * <p>The subscription duration. The PeriodUnit parameter specifies the unit.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -224,12 +191,6 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The unit of the subscription duration.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
-     * <li>Hour (Note that this unit is supported only by pay-as-you-go.)</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -238,7 +199,7 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/2807352.html">ListPolicyGroups</a> operation to query policies.</p>
+     * <p>The policy ID. You can call the <a href="~~ListPolicyGroups~~">ListPolicyGroups</a> operation to query available policies.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-b7bxrrwxkijjh****</p>
@@ -256,16 +217,18 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     public Integer streamMode;
 
     /**
-     * <p>The tags</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateAndroidInstanceGroupShrinkRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> operation to query vSwitches.</p>
+     * <p>The vSwitch ID. You can call the <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> operation to query available vSwitches.</p>
      * <ul>
-     * <li>This parameter is not required if you assign a shared network to cloud phones.</li>
-     * <li>This parameter is required if you assign a VPC to cloud phones. The vSwitch specified by this parameter is used to create cloud phones.</li>
+     * <li><p>If you create instances in a Shared Network, omit this parameter.</p>
+     * </li>
+     * <li><p>If you create instances in a VPC, this parameter is required. The system creates the instances in the specified vSwitch.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

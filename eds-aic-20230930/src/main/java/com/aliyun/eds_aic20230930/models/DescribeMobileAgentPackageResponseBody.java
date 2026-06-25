@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeMobileAgentPackageResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of packages.</p>
+     */
     @NameInMap("PackageList")
     public java.util.List<DescribeMobileAgentPackageResponseBodyPackageList> packageList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -82,16 +93,23 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
     public static class DescribeMobileAgentPackageResponseBodyPackageList extends TeaModel {
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-10-30 00:00:00</p>
          */
         @NameInMap("ExpiredAt")
         public String expiredAt;
 
+        /**
+         * <p>The list of node instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
+         * <p>The total package credit.</p>
+         * 
          * <strong>example:</strong>
          * <p>8000</p>
          */
@@ -99,6 +117,8 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String packageCredit;
 
         /**
+         * <p>The package ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmag-bp19i1yxu60r7twy****</p>
          */
@@ -106,6 +126,8 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String packageId;
 
         /**
+         * <p>The package specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>advanced</p>
          */
@@ -116,6 +138,8 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String packageSpecName;
 
         /**
+         * <p>The package status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
@@ -123,6 +147,8 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public String packageStatus;
 
         /**
+         * <p>The amount of credit used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */

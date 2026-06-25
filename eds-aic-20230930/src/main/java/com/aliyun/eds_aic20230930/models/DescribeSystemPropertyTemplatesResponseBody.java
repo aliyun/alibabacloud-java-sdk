@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The token used to start the next query. An empty value indicates that all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU****</p>
      */
@@ -12,7 +14,7 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>
@@ -20,10 +22,15 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of property template objects.</p>
+     */
     @NameInMap("SystemPropertyTemplateModel")
     public java.util.List<DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModel> systemPropertyTemplateModel;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -69,6 +76,8 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
 
     public static class DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModelSystemPropertyInfoCustomPropertyInfos extends TeaModel {
         /**
+         * <p>The property name.</p>
+         * 
          * <strong>example:</strong>
          * <p>propKey</p>
          */
@@ -76,6 +85,8 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
         public String propertyName;
 
         /**
+         * <p>The property value.</p>
+         * 
          * <strong>example:</strong>
          * <p>propValue</p>
          */
@@ -106,10 +117,17 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModelSystemPropertyInfo extends TeaModel {
+        /**
+         * <p>The custom property information.</p>
+         */
         @NameInMap("CustomPropertyInfos")
         public java.util.List<DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModelSystemPropertyInfoCustomPropertyInfos> customPropertyInfos;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not yet available for use.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -141,6 +159,8 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
 
     public static class DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModel extends TeaModel {
         /**
+         * <p>Indicates whether preset system properties can be automatically generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -148,6 +168,8 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
         public Boolean enableAuto;
 
         /**
+         * <p>The URL path of the property template file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://filepath****.com">https://filepath****.com</a></p>
          */
@@ -155,22 +177,35 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
         public String filePath;
 
         /**
+         * <p>The template status.</p>
+         * 
          * <strong>example:</strong>
          * <p>init</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The system property template information.</p>
+         */
         @NameInMap("SystemPropertyInfo")
         public DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModelSystemPropertyInfo systemPropertyInfo;
 
         /**
+         * <p>The property template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-0caoenwutkkx****</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

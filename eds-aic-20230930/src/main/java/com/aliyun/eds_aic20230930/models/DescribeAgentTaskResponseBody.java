@@ -4,10 +4,18 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeAgentTaskResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>For example, &quot;200&quot; indicates success.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The task count.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +23,8 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -22,12 +32,17 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>310A783E-CC46-5452-A8A3-71AE5DB5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<DescribeAgentTaskResponseBodyTasks> tasks;
 
@@ -77,39 +92,80 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeAgentTaskResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The task\&quot;s current status. Valid values:</p>
+         * <p><code>PENDING</code>: The task is being created.</p>
+         * <p><code>RUNNING</code>: The task is running.</p>
+         * <p><code>COMPLETED</code>: The task has completed.</p>
+         * <p><code>FAILED</code>: The task failed.</p>
+         * <p><code>TIMEOUT</code>: The task timed out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
+         */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
         /**
+         * <p>The mobile node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-anzzuho371azi44xr</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The task\&quot;s creation time, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-13T17:42:19Z</p>
+         */
         @NameInMap("RunningAt")
         public String runningAt;
 
         /**
+         * <p>The number of steps executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("Steps")
         public String steps;
 
+        /**
+         * <p>The task duration. This field is returned only when <code>CurrentStatus</code> is <code>FAILED</code> or <code>COMPLETED</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("TaskDuration")
         public String taskDuration;
 
         /**
+         * <p>The globally unique task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The task result. This field is returned only when <code>CurrentStatus</code> is <code>COMPLETED</code> or <code>FAILED</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Download DingTalk succeeded.</p>
+         */
         @NameInMap("TaskResult")
         public String taskResult;
 
+        /**
+         * <p>The user prompt that the Agent uses to perform the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Download DingTalk from App Store</p>
+         */
         @NameInMap("UserPrompt")
         public String userPrompt;
 

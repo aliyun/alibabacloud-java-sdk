@@ -4,9 +4,21 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class SetNetworkBlacklistRequest extends TeaModel {
+    /**
+     * <p>Domain name blacklist.</p>
+     * <blockquote>
+     * <p>Supports a maximum of 200 domain names.</p>
+     * </blockquote>
+     */
     @NameInMap("DomainBlacklist")
     public java.util.List<String> domainBlacklist;
 
+    /**
+     * <p>IP address blacklist.</p>
+     * <blockquote>
+     * <p>Supports a maximum of 200 IP addresses or IP address segments.</p>
+     * </blockquote>
+     */
     @NameInMap("IpBlacklist")
     public java.util.List<String> ipBlacklist;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the instance groups.</p>
+     * <p>The instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
     /**
-     * <p>The instance groups.</p>
+     * <p>The created instance groups.</p>
      */
     @NameInMap("InstanceGroupInfos")
     public java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> instanceGroupInfos;
@@ -20,7 +20,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     public CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel networkPackageOrderModel;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>22365781890****</p>
@@ -29,7 +29,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
@@ -84,7 +84,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
 
     public static class CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos extends TeaModel {
         /**
-         * <p>The ID of the instance group.</p>
+         * <p>The instance group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-cuv4scs4obxch****</p>
@@ -93,7 +93,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         public String instanceGroupId;
 
         /**
-         * <p>The IDs of the instances.</p>
+         * <p>The instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;

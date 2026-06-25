@@ -4,13 +4,21 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeMobileAgentPackageRequest extends TeaModel {
+    /**
+     * <p>An array of node instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>An array of package IDs.</p>
+     */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;
 
     /**
+     * <p>The package specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>advanced</p>
      */
@@ -18,6 +26,8 @@ public class DescribeMobileAgentPackageRequest extends TeaModel {
     public String packageSpec;
 
     /**
+     * <p>The package status.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
      */
@@ -25,6 +35,8 @@ public class DescribeMobileAgentPackageRequest extends TeaModel {
     public String packageStatus;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,6 +44,8 @@ public class DescribeMobileAgentPackageRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

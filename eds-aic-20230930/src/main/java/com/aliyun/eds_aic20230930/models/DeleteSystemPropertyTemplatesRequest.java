@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DeleteSystemPropertyTemplatesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the property templates.</p>
+     */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 

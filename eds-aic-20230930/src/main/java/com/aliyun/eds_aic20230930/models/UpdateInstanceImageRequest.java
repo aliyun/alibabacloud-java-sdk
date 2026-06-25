@@ -8,15 +8,26 @@ public class UpdateInstanceImageRequest extends TeaModel {
     public Boolean ignoreParamValidation;
 
     /**
+     * <p>The ID of the image. Call <a href="t2730769.xdita#"></a>to query the list of images for cloud phones.</p>
+     * 
      * <strong>example:</strong>
      * <p>imgc-075cllfeuazh0****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
+    /**
+     * <p>Specifies whether to reset the instance. If you reset the instance, all user data on the instance is cleared.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Reset")
     public Boolean reset;
 

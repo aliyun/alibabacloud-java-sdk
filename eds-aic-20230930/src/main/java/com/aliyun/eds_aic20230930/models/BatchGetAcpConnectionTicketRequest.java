@@ -4,6 +4,12 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class BatchGetAcpConnectionTicketRequest extends TeaModel {
+    /**
+     * <p>The connection mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("ConnectionMode")
     public String connectionMode;
 
@@ -32,7 +38,7 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The instance connection tasks.</p>
+     * <p>The instance connection task, which is used to query whether the ticket retrieval task is completed.</p>
      */
     @NameInMap("InstanceTasks")
     public java.util.List<BatchGetAcpConnectionTicketRequestInstanceTasks> instanceTasks;

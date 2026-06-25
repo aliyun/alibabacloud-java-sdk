@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSpecResponseBody extends TeaModel {
     /**
-     * <p>Indicates the current read position returned by this call. An empty value means that all data has been read.</p>
+     * <p>The token to use for the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -14,7 +14,7 @@ public class DescribeSpecResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D9888DAD-331E-5FBC-B5A0-F2445115****</p>
@@ -23,13 +23,13 @@ public class DescribeSpecResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The specifications.</p>
+     * <p>The specification information.</p>
      */
     @NameInMap("SpecInfoModel")
     public java.util.List<DescribeSpecResponseBodySpecInfoModel> specInfoModel;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -76,7 +76,7 @@ public class DescribeSpecResponseBody extends TeaModel {
 
     public static class DescribeSpecResponseBodySpecInfoModel extends TeaModel {
         /**
-         * <p>Number of CPU cores.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -85,7 +85,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public Integer core;
 
         /**
-         * <p>The maximum number of cloud phone instances.</p>
+         * <p>The maximum number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -94,7 +94,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String maxPhoneCount;
 
         /**
-         * <p>Memory size.</p>
+         * <p>The memory size in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -103,7 +103,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The minimum number of cloud phone instances.</p>
+         * <p>The minimum number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -112,6 +112,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String minPhoneCount;
 
         /**
+         * <p>The number of instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -119,6 +121,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String phoneCount;
 
         /**
+         * <p>The resolution of the cloud phone instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920*1080</p>
          */
@@ -126,7 +130,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String resolution;
 
         /**
-         * <p>Specification ID.</p>
+         * <p>The specification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp.basic.small</p>
@@ -135,7 +139,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String specId;
 
         /**
-         * <p>Specification status.</p>
+         * <p>The specification status.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -144,7 +148,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String specStatus;
 
         /**
-         * <p>Specification type.</p>
+         * <p>The specification type.</p>
          * 
          * <strong>example:</strong>
          * <p>ARM</p>
@@ -153,7 +157,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String specType;
 
         /**
-         * <p>System disk size, in GB.</p>
+         * <p>The size of the system disk, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>

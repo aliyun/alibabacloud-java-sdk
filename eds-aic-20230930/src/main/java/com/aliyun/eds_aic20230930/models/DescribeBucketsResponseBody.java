@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeBucketsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * <blockquote>
+     * <p>This parameter is returned only when the call fails.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeBucketsResponseBodyData> data;
 
     /**
+     * <p>The return status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -29,6 +41,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
      */
@@ -36,6 +50,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -96,10 +112,18 @@ public class DescribeBucketsResponseBody extends TeaModel {
     }
 
     public static class DescribeBucketsResponseBodyDataOssObjectListOwner extends TeaModel {
+        /**
+         * <p>The name of the bucket owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>佳钰</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The unique identifier of the bucket owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>395</p>
          */
@@ -131,6 +155,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
 
     public static class DescribeBucketsResponseBodyDataOssObjectList extends TeaModel {
         /**
+         * <p>The name of the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>tf-testacceu-central-1ensbucketlifecycle44222</p>
          */
@@ -138,6 +164,16 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The Entity Tag (ETag) is created when an object is generated. It is used to identify the content of an object.</p>
+         * <ul>
+         * <li><p>For an object created by a PutObject request, the ETag value is the MD5 hash of the object content.</p>
+         * </li>
+         * <li><p>For an object created by other methods, the ETag value is a unique value generated based on specific calculation rules. It is not the MD5 hash of the object content.</p>
+         * </li>
+         * <li><p>The ETag value can be used to check if the object content has changed. Do not use the ETag value as the MD5 hash to verify the data integrity of the object.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5B3C1A2E053D763E1B002CC607C5A0FE1****</p>
          */
@@ -145,6 +181,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String ETag;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>con</p>
          */
@@ -152,16 +190,29 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The time when the object was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2012-02-24T08:42:32.000Z</p>
          */
         @NameInMap("LastModified")
         public String lastModified;
 
+        /**
+         * <p>The information about the bucket owner.</p>
+         */
         @NameInMap("Owner")
         public DescribeBucketsResponseBodyDataOssObjectListOwner owner;
 
         /**
+         * <p>The information about database recovery if the database type is MSSQL. The value is a JSON string that contains the following parameters:</p>
+         * <ul>
+         * <li><p><strong>name</strong>: The name of the database.</p>
+         * </li>
+         * <li><p><strong>files</strong>: The path of the database file.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ongoing-request=&quot;true&quot;</p>
          */
@@ -169,6 +220,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String restoreInfo;
 
         /**
+         * <p>The size of the file. Unit: KB.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -176,6 +229,20 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The storage class of the bucket. Valid values:</p>
+         * <ul>
+         * <li><p>Standard (default): Standard</p>
+         * </li>
+         * <li><p>IA: Infrequent Access</p>
+         * </li>
+         * <li><p>Archive: Archive Storage</p>
+         * </li>
+         * <li><p>ColdArchive: Cold Archive</p>
+         * </li>
+         * <li><p>DeepColdArchive: Deep Cold Archive</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ARCHIVE</p>
          */
@@ -183,6 +250,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String storageClass;
 
         /**
+         * <p>The type of the trigger method.</p>
+         * 
          * <strong>example:</strong>
          * <p>InstanceGroup</p>
          */
@@ -270,6 +339,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
 
     public static class DescribeBucketsResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>zydctest</p>
          */
@@ -277,6 +348,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The public endpoint that is used to access the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou.aliyuncs.com</p>
          */
@@ -284,6 +357,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String extranetEndpoint;
 
         /**
+         * <p>The time when the bucket was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-15 17:33:59</p>
          */
@@ -291,6 +366,8 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The internal endpoint that is used by a same-region ECS instance to access the bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
          */
@@ -298,16 +375,23 @@ public class DescribeBucketsResponseBody extends TeaModel {
         public String intranetEndpoint;
 
         /**
+         * <p>The storage path, such as a path in Hadoop Distributed File System (HDFS) or OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p>center</p>
          */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The information about the objects in the bucket.</p>
+         */
         @NameInMap("OssObjectList")
         public java.util.List<DescribeBucketsResponseBodyDataOssObjectList> ossObjectList;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

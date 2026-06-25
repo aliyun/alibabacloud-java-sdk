@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMobileAgentPackageRequest extends TeaModel {
     /**
+     * <p>The number of packages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,17 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String amount;
 
     /**
+     * <p>Specifies whether to enable auto-payment. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enables auto-payment. You must ensure that your account balance is sufficient.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): An unpaid order is generated. Your account is not charged.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If your account balance is insufficient, you can set this parameter to <code>false</code> to generate an unpaid order. Then, you can log in to the Wuying Cloud Phone management console to pay for the order.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +32,14 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enables auto-renewal.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Disables auto-renewal.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +47,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>The region where the instance is located. Currently, only <code>cn-hangzhou</code> is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +56,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The credit amount.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000.0</p>
      */
@@ -40,6 +65,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String creditAmount;
 
     /**
+     * <p>The credit limit configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -50,6 +77,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>CloudPhone</p>
      */
@@ -57,6 +86,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The package specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>advanced</p>
      */
@@ -67,6 +98,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Long packageSpecId;
 
     /**
+     * <p>The callback URL to which the user is redirected after a successful payment.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></p>
      */
@@ -74,6 +107,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String paidCallbackUrl;
 
     /**
+     * <p>The subscription period. The unit of the period is specified by the <code>PeriodUnit</code> parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,6 +116,15 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription period.
+     * Valid values:</p>
+     * <ul>
+     * <li><p><strong>Month</strong></p>
+     * </li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -88,6 +132,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The promotion ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
      */

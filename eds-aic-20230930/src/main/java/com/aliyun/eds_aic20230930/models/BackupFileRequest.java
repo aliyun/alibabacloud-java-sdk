@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class BackupFileRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>A list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
     /**
-     * <p>Specifies whether to back up the whole instance.</p>
+     * <p>Specifies whether to back up the entire instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("BackupAll")
     public Boolean backupAll;
@@ -24,15 +24,15 @@ public class BackupFileRequest extends TeaModel {
      * <p>The name of the backup file.</p>
      * 
      * <strong>example:</strong>
-     * <p>defaultBackupFile</p>
+     * <p>MyBackup</p>
      */
     @NameInMap("BackupFileName")
     public String backupFileName;
 
     /**
-     * <p>The OSS path of the backup file.</p>
+     * <p>The upload URL for the backup file.</p>
      * <blockquote>
-     * <p> To upload a backup file to an OSS bucket, you must obtain the name of the bucket. When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss://${bucketName}/${key}.</p>
+     * <p>If you upload the file to an OSS bucket, call the DescribeBuckets operation to get the bucketName. Then, select a key from ossObjectList. The key represents the folder path in the OSS bucket. Combine these values into the format <code>oss://${bucketName}/${key}</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -43,7 +43,7 @@ public class BackupFileRequest extends TeaModel {
      * <p>The description of the backup file.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a backup file description.</p>
+     * <p>This is a backup/data request.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -52,21 +52,21 @@ public class BackupFileRequest extends TeaModel {
     public java.util.List<String> excludeSourceFilePathList;
 
     /**
-     * <p>The names of the application packages that you want to back up.</p>
+     * <p>A list of application package names to back up.</p>
      */
     @NameInMap("SourceAppList")
     public java.util.List<String> sourceAppList;
 
     /**
-     * <p>The paths to the source files.</p>
+     * <p>A list of file paths to back up.</p>
      */
     @NameInMap("SourceFilePathList")
     public java.util.List<String> sourceFilePathList;
 
     /**
-     * <p>The endpoint of the OSS bucket to which you want to upload the backup file.</p>
+     * <p>The domain name of the upload URL.</p>
      * <blockquote>
-     * <p>: When calling the DescribeBuckets operation to query buckets, retrieve the IntranetEndpoint value if the cloud phone and the OSS bucket are in the same region. If they are in different regions, retrieve the ExtranetEndpoint value instead.</p>
+     * <p>If you upload the file to an OSS bucket, call the DescribeBuckets operation to obtain the bucket information. If the cloud phone and the bucket are in the same region, use the value of the intranetEndpoint field. If they are in different regions, use the value of the extranetEndpoint field.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,11 +76,7 @@ public class BackupFileRequest extends TeaModel {
     public String uploadEndpoint;
 
     /**
-     * <p>The type of the backup.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>OSS: uploads the backup file to an OSS bucket.</li>
-     * </ul>
+     * <p>The backup type.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>

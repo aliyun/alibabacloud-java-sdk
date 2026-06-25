@@ -4,20 +4,33 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricLastRequest extends TeaModel {
+    /**
+     * <p>For instance-level monitoring, specify a list of Cloud Phone instance IDs.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>For matrix-level monitoring, specify a list of matrix IDs.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
+     * <p>The end time for the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-01-31 11:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The list of instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The number of monitoring data records to return on each page for a paged query.</p>
+     * <p>The default value is 1000. This means that 1000 monitoring data records are returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -25,12 +38,15 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String length;
 
     /**
+     * <p>The list of monitoring metrics.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MetricNames")
     public java.util.List<String> metricNames;
 
     /**
+     * <p>The token that marks the start of the current read position. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
      */
@@ -38,6 +54,10 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The statistic period for monitoring data.</p>
+     * <p>Valid values: 60, 900, and 3600.</p>
+     * <p>Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -45,6 +65,8 @@ public class DescribeMetricLastRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The start time for the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-01-31 10:00:00</p>
      */

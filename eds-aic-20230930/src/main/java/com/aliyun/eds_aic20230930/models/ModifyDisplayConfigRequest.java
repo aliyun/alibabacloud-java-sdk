@@ -4,9 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDisplayConfigRequest extends TeaModel {
+    /**
+     * <p>A list of instance IDs.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    /**
+     * <p>The display settings.</p>
+     */
     @NameInMap("DisplayConfig")
     public ModifyDisplayConfigRequestDisplayConfig displayConfig;
 
@@ -33,6 +39,8 @@ public class ModifyDisplayConfigRequest extends TeaModel {
 
     public static class ModifyDisplayConfigRequestDisplayConfig extends TeaModel {
         /**
+         * <p>The dots per inch (DPI). Valid values: 72 to 600.</p>
+         * 
          * <strong>example:</strong>
          * <p>240</p>
          */
@@ -40,6 +48,10 @@ public class ModifyDisplayConfigRequest extends TeaModel {
         public Integer dpi;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -47,6 +59,8 @@ public class ModifyDisplayConfigRequest extends TeaModel {
         public Integer fps;
 
         /**
+         * <p>Specifies whether to lock the resolution.</p>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
@@ -54,6 +68,8 @@ public class ModifyDisplayConfigRequest extends TeaModel {
         public String lockResolution;
 
         /**
+         * <p>The resolution height, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */
@@ -61,6 +77,8 @@ public class ModifyDisplayConfigRequest extends TeaModel {
         public Integer resolutionHeight;
 
         /**
+         * <p>The resolution width, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>720</p>
          */

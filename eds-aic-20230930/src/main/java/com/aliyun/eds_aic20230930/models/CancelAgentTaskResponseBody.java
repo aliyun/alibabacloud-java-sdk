@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelAgentTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CancelAgentTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -19,12 +23,17 @@ public class CancelAgentTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4B886792-2051-5DB4-8AE6-C8E45D3B4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of task objects.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<CancelAgentTaskResponseBodyTasks> tasks;
 
@@ -67,6 +76,8 @@ public class CancelAgentTaskResponseBody extends TeaModel {
 
     public static class CancelAgentTaskResponseBodyTasks extends TeaModel {
         /**
+         * <p>The task\&quot;s cancellation time, in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-13T17:42:19Z</p>
          */
@@ -74,6 +85,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         public String cancelAt;
 
         /**
+         * <p>The task status after the cancellation request. Possible values include:</p>
+         * <p><code>CANCELLING</code> or <code>CANCELED</code>: The task is being or has been canceled.</p>
+         * <p><code>COMPLETED</code>: The task was already complete and could not be canceled.</p>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
          */
@@ -81,6 +96,8 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
+         * <p>The failure reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>Task status [COMPLETED] does not support cancellation, only PENDING/RUNNING/CANCELLING tasks can be canceled.</p>
          */
@@ -88,6 +105,8 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         public String failedReason;
 
         /**
+         * <p>The mobile node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-ek65k51zoxia3x8xz</p>
          */
@@ -95,6 +114,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The task status before cancellation. Valid values include:</p>
+         * <p>PENDING: The task is being created.</p>
+         * <p>RUNNING: The task is running.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -102,6 +125,8 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         public String previousStatus;
 
         /**
+         * <p>The globally unique task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
          */

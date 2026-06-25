@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewMobileAgentPackageResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>223684716098****</p>
      */
@@ -12,6 +14,8 @@ public class RenewMobileAgentPackageResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
      */

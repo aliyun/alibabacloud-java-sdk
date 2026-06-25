@@ -10,6 +10,12 @@ public class StartAndroidInstanceRequest extends TeaModel {
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    /**
+     * <p>The billing mode. This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
+     */
     @NameInMap("SaleMode")
     public String saleMode;
 

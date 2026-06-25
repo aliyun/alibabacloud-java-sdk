@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemPropertyTemplatesRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return for a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,15 +14,26 @@ public class DescribeSystemPropertyTemplatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The starting position for reading. If this parameter is empty, reading starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6k****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The property template ID.</p>
+     */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 
+    /**
+     * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Template 1</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

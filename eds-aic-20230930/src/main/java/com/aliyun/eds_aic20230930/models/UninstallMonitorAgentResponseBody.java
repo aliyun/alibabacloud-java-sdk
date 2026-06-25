@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UninstallMonitorAgentResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
      */

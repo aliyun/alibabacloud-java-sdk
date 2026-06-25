@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCreditPackageResponseBody extends TeaModel {
+    /**
+     * <p>An array of credit package details.</p>
+     */
     @NameInMap("CreditsPackageInfos")
     public java.util.List<DescribeCreditPackageResponseBodyCreditsPackageInfos> creditsPackageInfos;
 
     /**
+     * <p>Indicates whether this is your first purchase.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +20,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
     public Boolean isFirstPurchase;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of available credits.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -29,6 +38,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
     public String totalAvailableCredits;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of exhausted credits.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -97,6 +110,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
 
     public static class DescribeCreditPackageResponseBodyCreditsPackageInfos extends TeaModel {
         /**
+         * <p>The number of available credits in the credit package.</p>
+         * 
          * <strong>example:</strong>
          * <p>70</p>
          */
@@ -104,6 +119,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String availableCredits;
 
         /**
+         * <p>The ID of the credit package.</p>
+         * 
          * <strong>example:</strong>
          * <p>crp-xagydbhfkah****</p>
          */
@@ -111,6 +128,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String creditPackageId;
 
         /**
+         * <p>The status of the credit package.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
@@ -118,6 +137,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String creditPackageStatus;
 
         /**
+         * <p>The time when the credit package becomes effective.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-30 00:00:00</p>
          */
@@ -125,6 +146,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
+         * <p>The number of exhausted credits in the credit package.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -132,6 +155,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String exhaustedCredits;
 
         /**
+         * <p>The time when the credit package expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-10-30 00:00:00</p>
          */
@@ -139,6 +164,8 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>The total number of credits in the credit package.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

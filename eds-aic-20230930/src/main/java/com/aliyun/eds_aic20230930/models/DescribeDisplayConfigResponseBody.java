@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDisplayConfigResponseBody extends TeaModel {
+    /**
+     * <p>A list of display settings.</p>
+     */
     @NameInMap("DisplayConfigModel")
     public java.util.List<DescribeDisplayConfigResponseBodyDisplayConfigModel> displayConfigModel;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFEF7EFE-1E36-56D1-B5BF-5BACE43B****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
 
     public static class DescribeDisplayConfigResponseBodyDisplayConfigModel extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cpn-jewjt8xryuituz4qn-****</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
+         * <p>The dots per inch (DPI). The value ranges from 72 to 600.</p>
+         * 
          * <strong>example:</strong>
          * <p>240</p>
          */
@@ -51,6 +60,10 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
         public Integer dpi;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -58,6 +71,8 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
         public Integer fps;
 
         /**
+         * <p>Indicates whether the resolution is locked.</p>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
@@ -65,6 +80,8 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
         public String lockResolution;
 
         /**
+         * <p>The height of the resolution. Unit: pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>1280</p>
          */
@@ -72,6 +89,8 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
         public Integer resolutionHeight;
 
         /**
+         * <p>The width of the resolution. Unit: pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>720</p>
          */

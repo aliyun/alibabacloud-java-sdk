@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InstallMonitorAgentResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DB070C80-45AC-52CA-8101-937C25DA****</p>
      */

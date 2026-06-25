@@ -3,12 +3,9 @@ package com.aliyun.eds_aic20230930.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteSystemPropertyTemplatesResponseBody extends TeaModel {
+public class DeleteMobileAgentPackageResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
-     * <blockquote>
-     * <p>This parameter is returned only when the API call fails.</p>
-     * </blockquote>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +14,7 @@ public class DeleteSystemPropertyTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -29,17 +26,17 @@ public class DeleteSystemPropertyTemplatesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>
+     * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteSystemPropertyTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteSystemPropertyTemplatesResponseBody self = new DeleteSystemPropertyTemplatesResponseBody();
+    public static DeleteMobileAgentPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteMobileAgentPackageResponseBody self = new DeleteMobileAgentPackageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSystemPropertyTemplatesResponseBody setCode(String code) {
+    public DeleteMobileAgentPackageResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -47,7 +44,7 @@ public class DeleteSystemPropertyTemplatesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteSystemPropertyTemplatesResponseBody setMessage(String message) {
+    public DeleteMobileAgentPackageResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -55,7 +52,7 @@ public class DeleteSystemPropertyTemplatesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteSystemPropertyTemplatesResponseBody setRequestId(String requestId) {
+    public DeleteMobileAgentPackageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

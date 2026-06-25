@@ -4,11 +4,14 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UninstallAppResponseBody extends TeaModel {
+    /**
+     * <p>A list of subtasks.</p>
+     */
     @NameInMap("ChildTaskInfo")
     public java.util.List<UninstallAppResponseBodyChildTaskInfo> childTaskInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E5138F7E-46B5-526A-8C99-82DEAE6B****</p>
@@ -17,7 +20,7 @@ public class UninstallAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-1ljew7on6ay0j****</p>
@@ -55,10 +58,15 @@ public class UninstallAppResponseBody extends TeaModel {
     }
 
     public static class UninstallAppResponseBodyChildTaskInfo extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
         /**
+         * <p>The subtask ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-ybde48cevxxxx</p>
          */
@@ -66,6 +74,8 @@ public class UninstallAppResponseBody extends TeaModel {
         public String childTaskId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-ty3bnd7b9xxxx</p>
          */

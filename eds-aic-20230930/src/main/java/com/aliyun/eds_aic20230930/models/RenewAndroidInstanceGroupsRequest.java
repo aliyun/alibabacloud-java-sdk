@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the auto-payment feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: enables the auto-payment feature. Ensure your account has sufficient balance to use this feature.</li>
-     * <li>false: disables the auto-payment feature. You need to manually complete the payment process.</li>
-     * </ul>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -19,7 +14,7 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The IDs of the instance groups.</p>
+     * <p>The instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
@@ -28,7 +23,7 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     public String paidCallBackUrl;
 
     /**
-     * <p>The duration of the renewal, measured in units defined by PeriodUnit.</p>
+     * <p>The renewal duration.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -37,12 +32,7 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration. Default value: Month.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
-     * </ul>
+     * <p>The unit of the renewal duration specified by <code>Period</code>. Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>

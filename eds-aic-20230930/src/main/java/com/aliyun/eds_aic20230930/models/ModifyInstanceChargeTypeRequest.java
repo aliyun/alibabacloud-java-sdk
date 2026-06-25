@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the auto-payment feature. Default value: false.</p>
+     * <p>Specifies whether to enable auto-payment. The default value is <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable the auto-renewal feature. Default value: false.</p>
+     * <p>Specifies whether to enable auto-renewal. The default value is <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,9 +23,9 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The new billing method for the instance groups.</p>
      * <blockquote>
-     * <p> Currently, this operation only allows you to change the billing method from <strong>pay-as-you-go to subscription</strong>.</p>
+     * <p>You can only change the billing method from pay-as-you-go to subscription.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,14 +36,14 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The IDs of the instance groups.</p>
+     * <p>The instance group IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
     /**
-     * <p>The subscription duration. The unit is specified by PeriodUnit. Valid values: 1 Month, 2 Months, 3 Months, 6 Months, and 1 Year.</p>
+     * <p>The subscription duration. The PeriodUnit parameter specifies the unit. Valid subscription durations are 1, 2, 3, and 6 months, and 1 year.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,10 +52,12 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The unit for the subscription duration. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong></li>
-     * <li><strong>Year</strong></li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,6 +66,9 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The promotion or coupon ID.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 

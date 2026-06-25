@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImageListResponseBody extends TeaModel {
     /**
-     * <p>The images.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeImageListResponseBodyData> data;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The token that is used to start the next query. An empty value indicates that all data has been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -20,7 +20,7 @@ public class DescribeImageListResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>620740FF-492F-5956-B1BA-361E966C0269</p>
@@ -29,7 +29,7 @@ public class DescribeImageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -75,9 +75,21 @@ public class DescribeImageListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListResponseBodyDataImageBizTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -115,7 +127,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The description of the image.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -141,11 +153,14 @@ public class DescribeImageListResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>An array of tag objects.</p>
+         */
         @NameInMap("ImageBizTags")
         public java.util.List<DescribeImageListResponseBodyDataImageBizTags> imageBizTags;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-075cllfeuazh****</p>
@@ -154,7 +169,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -163,24 +178,19 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The region where the image is distributed. The key is the region and the value is the distribution information.</p>
+         * <p>The image distribution information by region. The key is the region and the value is the distribution information.</p>
          */
         @NameInMap("ImageRegionDistributeMap")
         public java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap;
 
         /**
-         * <p>The list of regions.</p>
+         * <p>The list of available regions.</p>
          */
         @NameInMap("ImageRegionList")
         public java.util.List<String> imageRegionList;
 
         /**
-         * <p>The type of the image.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>User: custom images.</li>
-         * <li>System: system images.</li>
-         * </ul>
+         * <p>The image type.</p>
          * 
          * <strong>example:</strong>
          * <p>System</p>
@@ -188,11 +198,17 @@ public class DescribeImageListResponseBody extends TeaModel {
         @NameInMap("ImageType")
         public String imageType;
 
+        /**
+         * <p>The image version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20241204102337</p>
+         */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
         /**
-         * <p>The language of the image.</p>
+         * <p>The language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -211,12 +227,6 @@ public class DescribeImageListResponseBody extends TeaModel {
 
         /**
          * <p>The rendering type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>GPURemote</li>
-         * <li>CPU</li>
-         * <li>GPULocal</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
@@ -225,15 +235,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String renderingType;
 
         /**
-         * <p>The state of the image.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AVAILABLE: The image is available.</li>
-         * <li>DELETE: The image is deleted.</li>
-         * <li>INIT: The image is being initialized.</li>
-         * <li>CREATE_FAILED: The image failed to be created.</li>
-         * <li>CREATING: The image is being created.</li>
-         * </ul>
+         * <p>The image status.</p>
          * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
@@ -242,7 +244,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The OS type of the image.</p>
+         * <p>The operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Android 12</p>

@@ -8,7 +8,7 @@ public class RecoveryFileResponseBody extends TeaModel {
      * <p>The number of restored instances.</p>
      * 
      * <strong>example:</strong>
-     * <p>97</p>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Long count;
@@ -35,7 +35,7 @@ public class RecoveryFileResponseBody extends TeaModel {
      * <p>The ID of the batch task.</p>
      * 
      * <strong>example:</strong>
-     * <p>t-5prhfo7wv1gjx****</p>
+     * <p>t-3eourrxaoliqq****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
@@ -91,7 +91,7 @@ public class RecoveryFileResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>t-5prhfo7wv1gjx****</p>
+         * <p>t-ehs0yoedsskom****</p>
          */
         @NameInMap("TaskId")
         public String taskId;

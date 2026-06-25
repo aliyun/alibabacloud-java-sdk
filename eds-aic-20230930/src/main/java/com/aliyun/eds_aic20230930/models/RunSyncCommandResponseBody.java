@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RunSyncCommandResponseBody extends TeaModel {
+    /**
+     * <p>An array of objects, where each object contains the execution result for a single instance.</p>
+     */
     @NameInMap("Data")
     public java.util.List<RunSyncCommandResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>
      */
@@ -15,6 +20,8 @@ public class RunSyncCommandResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>31</p>
      */
@@ -52,6 +59,8 @@ public class RunSyncCommandResponseBody extends TeaModel {
 
     public static class RunSyncCommandResponseBodyData extends TeaModel {
         /**
+         * <p>The time when command execution finished.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-11 17:45:03</p>
          */
@@ -59,6 +68,8 @@ public class RunSyncCommandResponseBody extends TeaModel {
         public String finishTime;
 
         /**
+         * <p>The ID of the instance on which the command was executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-uto81vfd8t8z****</p>
          */
@@ -66,6 +77,8 @@ public class RunSyncCommandResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The invocation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-15775dc8****</p>
          */
@@ -73,6 +86,8 @@ public class RunSyncCommandResponseBody extends TeaModel {
         public String invocationId;
 
         /**
+         * <p>The command execution status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -80,6 +95,8 @@ public class RunSyncCommandResponseBody extends TeaModel {
         public String invocationStatus;
 
         /**
+         * <p>The command output.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -87,6 +104,8 @@ public class RunSyncCommandResponseBody extends TeaModel {
         public String output;
 
         /**
+         * <p>The time when command execution began.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
          */

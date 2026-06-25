@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstanceAdbAttributesRequest extends TeaModel {
     /**
+     * <p>The public IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>106.38.188.223</p>
      */
     @NameInMap("ExternalIp")
     public String externalIp;
 
+    /**
+     * <p>The list of cloud phone instance IDs. You can specify from 1 to 100 IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The private IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.0.3.23</p>
      */
@@ -22,6 +29,8 @@ public class ListInstanceAdbAttributesRequest extends TeaModel {
     public String internalIp;
 
     /**
+     * <p>The ADB port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>5555</p>
      */
@@ -29,6 +38,8 @@ public class ListInstanceAdbAttributesRequest extends TeaModel {
     public String internalPort;
 
     /**
+     * <p>The network protocol type.</p>
+     * 
      * <strong>example:</strong>
      * <p>TCP</p>
      */
@@ -36,6 +47,8 @@ public class ListInstanceAdbAttributesRequest extends TeaModel {
     public String ipProtocol;
 
     /**
+     * <p>The maximum number of records to return on each page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -43,6 +56,8 @@ public class ListInstanceAdbAttributesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that indicates the position from which the query starts. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */

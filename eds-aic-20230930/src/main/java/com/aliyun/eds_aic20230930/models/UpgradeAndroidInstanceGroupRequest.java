@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the auto-payment feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: enables the auto-payment feature. Make sure that your Alibaba Cloud account has sufficient balance.</li>
-     * <li>false: disables the auto-payment feature. You need to manually complete the payment process.</li>
-     * </ul>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -19,10 +14,10 @@ public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The number of instances that you want to increase.</p>
+     * <p>The number of instances to add to the instance group.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>2</p>
      */
     @NameInMap("IncreaseNumberOfInstance")
     public Integer increaseNumberOfInstance;
@@ -39,6 +34,9 @@ public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("PaidCallBackUrl")
     public String paidCallBackUrl;
 
+    /**
+     * <p>The promotion ID.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 

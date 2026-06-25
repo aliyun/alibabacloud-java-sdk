@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricLastResponseBody extends TeaModel {
     /**
+     * <p>The number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The instance monitoring data.</p>
+     */
     @NameInMap("MetricTotalModel")
     public java.util.List<DescribeMetricLastResponseBodyMetricTotalModel> metricTotalModel;
 
     /**
+     * <p>The token for the next query. If not all results are returned in a single query, the returned NextToken is not empty. You can use the returned NextToken in the next query to query the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeMetricLastResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2B9E6946-0E2A-5D2B-B275-361DF81F****</p>
      */
@@ -67,16 +76,32 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
     public static class DescribeMetricLastResponseBodyMetricTotalModelMetricModelListDataPoints extends TeaModel {
         /**
+         * <p>The average value. Unit: %.</p>
+         * <blockquote>
+         * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>99.52</p>
          */
         @NameInMap("Average")
         public Double average;
 
+        /**
+         * <p>The GPU ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpn-1t1bxvp9az2pk****-gpu-0</p>
+         */
         @NameInMap("GpuId")
         public String gpuId;
 
         /**
+         * <p>The maximum value. Unit: %.</p>
+         * <blockquote>
+         * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -84,6 +109,11 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         public Double maximum;
 
         /**
+         * <p>The minimum value. Unit: %.</p>
+         * <blockquote>
+         * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>93.1</p>
          */
@@ -91,6 +121,8 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         public Double minimum;
 
         /**
+         * <p>The timestamp of the statistics. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1548777660000</p>
          */
@@ -146,6 +178,8 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
     public static class DescribeMetricLastResponseBodyMetricTotalModelMetricModelListProcessLastInfos extends TeaModel {
         /**
+         * <p>The CPU utilization. Unit: %.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -153,6 +187,8 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         public Double cpuUsage;
 
         /**
+         * <p>The memory usage. Unit: %.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -160,16 +196,23 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         public Double memoryUsage;
 
         /**
+         * <p>The process name.</p>
+         * 
          * <strong>example:</strong>
          * <p>com.offerup</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of process IDs.</p>
+         */
         @NameInMap("ProcessIds")
         public java.util.List<Integer> processIds;
 
         /**
+         * <p>The timestamp of the statistics. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1548777660000</p>
          */
@@ -224,16 +267,27 @@ public class DescribeMetricLastResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricLastResponseBodyMetricTotalModelMetricModelList extends TeaModel {
+        /**
+         * <p>The monitoring data points.</p>
+         */
         @NameInMap("DataPoints")
         public java.util.List<DescribeMetricLastResponseBodyMetricTotalModelMetricModelListDataPoints> dataPoints;
 
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>cpu_utilization</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The process monitoring metrics.</p>
+         * <blockquote>
+         * <p>This parameter is returned when the metric is \<code>process_cpu\\</code> or \<code>process_memory\\</code>.</p>
+         * </blockquote>
+         */
         @NameInMap("ProcessLastInfos")
         public java.util.List<DescribeMetricLastResponseBodyMetricTotalModelMetricModelListProcessLastInfos> processLastInfos;
 
@@ -270,12 +324,18 @@ public class DescribeMetricLastResponseBody extends TeaModel {
 
     public static class DescribeMetricLastResponseBodyMetricTotalModel extends TeaModel {
         /**
+         * <p>For instance-level monitoring, the Cloud Phone instance ID is returned.
+         * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, the matrix ID is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-fkuit0cmyru4p****</p>
          */
         @NameInMap("AndroidInstanceId")
         public String androidInstanceId;
 
+        /**
+         * <p>The monitoring data for metrics.</p>
+         */
         @NameInMap("MetricModelList")
         public java.util.List<DescribeMetricLastResponseBodyMetricTotalModelMetricModelList> metricModelList;
 

@@ -21,12 +21,6 @@ public class OperateAppRequest extends TeaModel {
 
     /**
      * <p>The type of the operation.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>stop: closes the app.</li>
-     * <li>restart: reopens the app.</li>
-     * <li>start: open the app.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>start</p>

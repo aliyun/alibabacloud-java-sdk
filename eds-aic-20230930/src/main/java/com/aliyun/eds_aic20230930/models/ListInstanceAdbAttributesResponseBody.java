@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceAdbAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The ADB connection information for the instances.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListInstanceAdbAttributesResponseBodyData> data;
 
     /**
+     * <p>The maximum number of records returned in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -15,6 +20,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to start the next query. If a query does not return all results, NextToken is not empty. Use the returned NextToken value to query the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */
@@ -22,6 +29,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB95E410-FD1D-53C5-9F7D-93CC44D7****</p>
      */
@@ -29,6 +38,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
 
     public static class ListInstanceAdbAttributesResponseBodyData extends TeaModel {
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>183.201.219.157</p>
          */
@@ -89,6 +102,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         public String externalIp;
 
         /**
+         * <p>The public network port number.</p>
+         * 
          * <strong>example:</strong>
          * <p>14840/14849</p>
          */
@@ -96,6 +111,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         public String externalPort;
 
         /**
+         * <p>The time when the connection was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-15 17:33:59</p>
          */
@@ -103,6 +120,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the connection was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-15 17:33:59</p>
          */
@@ -110,6 +129,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the cloud phone instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-uto81vfd8t8z****</p>
          */
@@ -117,6 +138,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The private IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.239</p>
          */
@@ -124,6 +147,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         public String internalIp;
 
         /**
+         * <p>The private network port number.</p>
+         * 
          * <strong>example:</strong>
          * <p>5555/5555</p>
          */
@@ -131,6 +156,8 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         public String internalPort;
 
         /**
+         * <p>The network protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendFileResponseBody extends TeaModel {
     /**
-     * <p>The objects that are returned.</p>
+     * <p>The details of the created tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -14,7 +14,7 @@ public class SendFileResponseBody extends TeaModel {
     public java.util.List<SendFileResponseBodyData> data;
 
     /**
-     * <p>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</p>
+     * <p>A unique identifier for the request. If you encounter an issue, provide this request ID to technical support for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -23,7 +23,7 @@ public class SendFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the batch task.</p>
+     * <p>The batch task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-ehs0yoedj0xe9****</p>
@@ -62,7 +62,7 @@ public class SendFileResponseBody extends TeaModel {
 
     public static class SendFileResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the cloud phone instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-34pqe4r0kd9kn****</p>
@@ -71,7 +71,7 @@ public class SendFileResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the individual task for a specific cloud phone.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4ks224ujixw****</p>

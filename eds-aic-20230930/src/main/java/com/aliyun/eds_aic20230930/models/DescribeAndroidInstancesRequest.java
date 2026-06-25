@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAndroidInstancesRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -19,14 +19,27 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    /**
+     * <p>The application management policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amp-shigvudbyeuib****</p>
+     */
     @NameInMap("AppManagePolicyId")
     public String appManagePolicyId;
 
+    /**
+     * <p>The user ID assigned to the instance, which is the China Wuying convenience account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("AuthorizedUserId")
     public String authorizedUserId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the regions where Cloud Phone is supported.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones of different editions (Instance Edition/Matrix Edition).</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones..</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -35,12 +48,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The billing method.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PostPaid: pay-as-you-go.</li>
-     * <li>PrePaid: subscription.</li>
-     * </ul>
+     * <p>The billing type.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -49,7 +57,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the instance group.</p>
+     * <p>The instance group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ag-25nt4kk9whjh****</p>
@@ -58,13 +66,13 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String instanceGroupId;
 
     /**
-     * <p>The IDs of the instance groups.</p>
+     * <p>The list of instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
     /**
-     * <p>The name of the instance group.</p>
+     * <p>The instance group name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -85,7 +93,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -94,7 +102,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
+     * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to start reading from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -103,7 +111,8 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the node.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The matrix ID.
+     * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</p>
      * 
      * <strong>example:</strong>
      * <p>node_id</p>
@@ -112,7 +121,8 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The name of the node.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The name of the matrix.
+     * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</p>
      * 
      * <strong>example:</strong>
      * <p>node_name</p>
@@ -120,22 +130,29 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The cloud phone network ID.</p>
+     */
     @NameInMap("OfficeSiteIds")
     public java.util.List<String> officeSiteIds;
 
+    /**
+     * <p>The private IP address of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.162.136</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    /**
+     * <p>The public network rate limiting rule group ID. The rate limiting rule for instances in the basic shared network.</p>
+     */
     @NameInMap("QosRuleIds")
     public java.util.List<String> qosRuleIds;
 
     /**
      * <p>The sales mode.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Instance: the standard mode.</li>
-     * <li>Node: the node mode.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Instance</p>
@@ -150,25 +167,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String sortType;
 
     /**
-     * <p>The state of the instance.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>BACKUPING: The instance is being backed up.</li>
-     * <li>STARTING: The instance is being started.</li>
-     * <li>RUNNING: The instance group is available.</li>
-     * <li>DELETING: The instance is being deleted.</li>
-     * <li>BACKUP_FAILED: The backup operation failed.</li>
-     * <li>DELETED: The instance is deleted.</li>
-     * <li>FAILED: The instance failed to be created.</li>
-     * <li>STOPPED: The instance is stopped.</li>
-     * <li>RECOVERING: The instance has an ongoing file recovery task.</li>
-     * <li>UNAVAILABLE: The instance has an exception.</li>
-     * <li>REBOOTING: The instance is being restarted.</li>
-     * <li>RESETTING: The instance is being reset.</li>
-     * <li>STOPPING: The instance is being stopped.</li>
-     * <li>RECOVER_FAILED: The file recovery task failed.</li>
-     * <li>CREATING: The instance is being created.</li>
-     * </ul>
+     * <p>The instance status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -177,7 +176,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags of the resources.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAndroidInstancesRequestTag> tag;
@@ -373,7 +372,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
 
     public static class DescribeAndroidInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -382,7 +381,7 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

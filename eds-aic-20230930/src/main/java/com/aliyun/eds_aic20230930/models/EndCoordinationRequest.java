@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EndCoordinationRequest extends TeaModel {
     /**
+     * <p>The user ID of the coordination participant.</p>
+     * 
      * <strong>example:</strong>
      * <p>lina</p>
      */
@@ -12,6 +14,8 @@ public class EndCoordinationRequest extends TeaModel {
     public String coordinatorUserId;
 
     /**
+     * <p>The ID of the instance that is in a coordination session.</p>
+     * 
      * <strong>example:</strong>
      * <p>acp-2zecay9ponatdc4m****</p>
      */
@@ -19,6 +23,8 @@ public class EndCoordinationRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The user ID of the coordination initiator.</p>
+     * 
      * <strong>example:</strong>
      * <p>xiaoming</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExpandPhoneDataVolumeResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>223684716098****</p>
      */
@@ -12,6 +14,8 @@ public class ExpandPhoneDataVolumeResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DB070C80-45AC-52CA-8101-937C25DA****</p>
      */

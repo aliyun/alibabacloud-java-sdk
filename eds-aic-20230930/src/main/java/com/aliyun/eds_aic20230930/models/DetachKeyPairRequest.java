@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachKeyPairRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
+     * <p>The IDs of the cloud phone instances. You can specify up to 50 instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;

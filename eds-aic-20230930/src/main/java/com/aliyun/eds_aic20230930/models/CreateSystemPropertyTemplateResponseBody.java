@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSystemPropertyTemplateResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -14,6 +14,8 @@ public class CreateSystemPropertyTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the property template.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-g6gyv4a4xlf****</p>
      */

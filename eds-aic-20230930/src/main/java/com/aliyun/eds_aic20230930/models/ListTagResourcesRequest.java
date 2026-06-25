@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The number of entries to return on each page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that marks the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */
@@ -19,18 +23,24 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.
+     * &lt;props=&quot;china&quot;&gt;Set the value of this parameter to <code>cn-shanghai</code>.&lt;props=&quot;intl&quot;&gt;Set the value of this parameter to <code>ap-southeast-1</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-shanghai</p>
+     * <p>cn-shanghai / ap-southeast-1</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>A list of resource IDs. This is a list of cloud phone instance IDs. You can specify 1 to 50 IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +49,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>A list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -97,6 +110,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key. You can specify 1 to 20 tag keys.</p>
+         * 
          * <strong>example:</strong>
          * <p>department</p>
          */
@@ -104,6 +119,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. You can specify 1 to 20 tag values.</p>
+         * 
          * <strong>example:</strong>
          * <p>design</p>
          */

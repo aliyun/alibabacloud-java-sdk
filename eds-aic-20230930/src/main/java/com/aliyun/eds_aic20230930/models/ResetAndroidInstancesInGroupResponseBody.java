@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>

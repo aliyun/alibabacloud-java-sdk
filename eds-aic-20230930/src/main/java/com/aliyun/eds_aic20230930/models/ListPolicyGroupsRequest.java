@@ -32,11 +32,17 @@ public class ListPolicyGroupsRequest extends TeaModel {
      * <p>The name of the policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>defaultPolicyGroup</p>
+     * <p>Default policy</p>
      */
     @NameInMap("PolicyGroupName")
     public String policyGroupName;
 
+    /**
+     * <p>The policy type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
+     */
     @NameInMap("PolicyType")
     public String policyType;
 

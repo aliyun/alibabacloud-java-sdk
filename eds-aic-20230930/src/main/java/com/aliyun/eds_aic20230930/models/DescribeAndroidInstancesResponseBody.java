@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAndroidInstancesResponseBody extends TeaModel {
     /**
-     * <p>The cloud phone instances.</p>
+     * <p>The instance information.</p>
      */
     @NameInMap("InstanceModel")
     public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModel> instanceModel;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The pagination token that indicates the position to which the current call has read. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kmma/xxE9WtwL/ADvZ****</p>
@@ -20,7 +20,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
@@ -29,7 +29,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -75,9 +75,21 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy extends TeaModel {
+        /**
+         * <p>The application management policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amp-dgiavcvibfdds****</p>
+         */
         @NameInMap("AppManagePolicyId")
         public String appManagePolicyId;
 
+        /**
+         * <p>The name of the application management policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application group 1</p>
+         */
         @NameInMap("AppManagePolicyName")
         public String appManagePolicyName;
 
@@ -105,9 +117,21 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeAndroidInstancesResponseBodyInstanceModelBizTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>releaseFlag</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -145,7 +169,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public Integer diskSize;
 
         /**
-         * <p>The type of the disk.</p>
+         * <p>The disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -177,18 +201,48 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig extends TeaModel {
+        /**
+         * <p>DPI。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240</p>
+         */
         @NameInMap("Dpi")
         public Integer dpi;
 
+        /**
+         * <p>The frame rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Fps")
         public Integer fps;
 
+        /**
+         * <p>Indicates whether the resolution is locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("LockResolution")
         public String lockResolution;
 
+        /**
+         * <p>The height of the resolution. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("ResolutionHeight")
         public Integer resolutionHeight;
 
+        /**
+         * <p>The width of the resolution. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("ResolutionWidth")
         public Integer resolutionWidth;
 
@@ -240,9 +294,21 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo extends TeaModel {
+        /**
+         * <p>The independent device storage ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd-sbcudgidbhb****</p>
+         */
         @NameInMap("PhoneDataId")
         public String phoneDataId;
 
+        /**
+         * <p>The capacity of the independent device storage. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PhoneDataVolume")
         public Integer phoneDataVolume;
 
@@ -271,7 +337,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstancesResponseBodyInstanceModelTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -280,7 +346,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -313,7 +379,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstancesResponseBodyInstanceModel extends TeaModel {
         /**
-         * <p>The ID of the instance group.</p>
+         * <p>The ID of the instance group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-ayyhomlal7po****</p>
@@ -322,7 +388,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String androidInstanceGroupId;
 
         /**
-         * <p>The name of the instance group.</p>
+         * <p>The instance group name.</p>
          * 
          * <strong>example:</strong>
          * <p>AndroidInstanceGroupName</p>
@@ -331,7 +397,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String androidInstanceGroupName;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-8at8h6ejkadjh****</p>
@@ -340,7 +406,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -349,7 +415,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String androidInstanceName;
 
         /**
-         * <p>The state of the instance.</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -358,7 +424,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String androidInstanceStatus;
 
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-i7yv6tkn7kh8dv****</p>
@@ -367,7 +433,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The ID of the physical instance.</p>
+         * <p>The physical instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-9ey6io0q58rcd****</p>
@@ -375,11 +441,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("AppInstanceId")
         public String appInstanceId;
 
+        /**
+         * <p>The application management policy information. This corresponds to the blacklists and whitelists management of application management policies in the console.</p>
+         */
         @NameInMap("AppManagePolicy")
         public DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy appManagePolicy;
 
         /**
-         * <p>The ID of the user to whom the instance is assigned.</p>
+         * <p>The assigned user.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -387,14 +456,26 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("AuthorizedUserId")
         public String authorizedUserId;
 
+        /**
+         * <p>The bandwidth package ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-0q6ixs7vpxcizp***</p>
+         */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        /**
+         * <p>The bandwidth type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp_ecd</p>
+         */
         @NameInMap("BandwidthPackageType")
         public String bandwidthPackageType;
 
         /**
-         * <p>The ID of the bound user.</p>
+         * <p>The bound user.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -405,11 +486,17 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("BizImageType")
         public String bizImageType;
 
+        /**
+         * <p>The tag array.</p>
+         */
         @NameInMap("BizTags")
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> bizTags;
 
+        @NameInMap("Channel")
+        public String channel;
+
         /**
-         * <p>The billing method of the instance.</p>
+         * <p>The billing type of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -418,7 +505,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -427,19 +514,28 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String cpu;
 
         /**
-         * <p>The disks.</p>
+         * <p>The disk information.</p>
          */
         @NameInMap("Disks")
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelDisks> disks;
 
+        /**
+         * <p>The display settings.</p>
+         */
         @NameInMap("DisplayConfig")
         public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig displayConfig;
 
+        /**
+         * <p>The downstream bandwidth throttling. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("DownBandwidthLimit")
         public Integer downBandwidthLimit;
 
         /**
-         * <p>The cause of the instance data backup failure or restoration failure.</p>
+         * <p>The error reason for instance data backup failure or recovery failure.</p>
          * 
          * <strong>example:</strong>
          * <p>FilePathNotFound</p>
@@ -448,7 +544,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-06 10:42:10</p>
@@ -457,7 +553,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the subscription instance group expires.</p>
+         * <p>The expiration time of the subscription instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-15T02:03:33Z</p>
@@ -466,7 +562,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String gmtExpired;
 
         /**
-         * <p>The time when the instance was modified.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-06 10:42:10</p>
@@ -474,11 +570,17 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-075cllfeuazh0****</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The version of the image.</p>
+         * <p>The image version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5.3.867</p>
@@ -487,7 +589,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String imageVersion;
 
         /**
-         * <p>The type of the instance.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>acp.basic.small</p>
@@ -499,7 +601,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String internetStatus;
 
         /**
-         * <p>The ID of the key pair.</p>
+         * <p>The key pair ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kp-5hh431emkpucs****</p>
@@ -517,7 +619,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The IP address of the ENI.</p>
+         * <p>The IP address of the network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.22.48</p>
@@ -527,7 +629,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -536,11 +638,17 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceIpv6Address")
         public String networkInterfaceIpv6Address;
 
+        /**
+         * <p>The network type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network_pro_ecd</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>The office network ID.</p>
+         * <p>The network ID. This corresponds to the network selected during creation in the console (basic shared network or advanced shared network).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen+dir-211620****</p>
@@ -548,8 +656,11 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        @NameInMap("PackageId")
+        public String packageId;
+
         /**
-         * <p>The ID of the persistent session.</p>
+         * <p>The persistent session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>p-0btrd5zj8epo****</p>
@@ -557,11 +668,15 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("PersistentAppInstanceId")
         public String persistentAppInstanceId;
 
+        /**
+         * <p>&lt;props=&quot;china&quot;&gt;The independent device storage information of the cloud phone matrix edition instance.
+         * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</p>
+         */
         @NameInMap("PhoneDataInfo")
         public DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo phoneDataInfo;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-0bszojpu0seql****</p>
@@ -580,7 +695,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -589,11 +704,17 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("PublicIpv6Address")
         public String publicIpv6Address;
 
+        /**
+         * <p>The public network rate limiting rule ID (applies only to premium bandwidth).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-5605u0gelk200****</p>
+         */
         @NameInMap("QosRuleId")
         public String qosRuleId;
 
         /**
-         * <p>The progress of instance data backup or restoration.</p>
+         * <p>The progress of instance data backup or recovery.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -602,7 +723,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public Integer rate;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -619,19 +740,28 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("RenderingType")
         public String renderingType;
 
+        /**
+         * <p>&lt;props=&quot;china&quot;&gt;The matrix status.
+         * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("ServerStatus")
         public String serverStatus;
 
+        /**
+         * <p>&lt;props=&quot;china&quot;&gt;The cloud phone matrix specification.
+         * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpm.gx7.10xlarge</p>
+         */
         @NameInMap("ServerType")
         public String serverType;
 
         /**
-         * <p>The session status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>disConnect: The session is disconnected.</li>
-         * <li>connect: The session is connected.</li>
-         * </ul>
+         * <p>The session connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>connect</p>
@@ -639,24 +769,55 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        /**
+         * <p>&lt;props=&quot;china&quot;&gt;The streaming mode of instances in the cloud phone matrix.
+         * &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StreamMode")
         public Integer streamMode;
 
+        /**
+         * <p>The Android system version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Android 11</p>
+         */
         @NameInMap("SystemVersion")
         public String systemVersion;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags;
 
+        /**
+         * <p>The upstream bandwidth throttling. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("UpBandwidthLimit")
         public Integer upBandwidthLimit;
 
+        /**
+         * <p>The vSwitch ID in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zepmau2hsbhos42****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The zone ID to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -775,6 +936,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> getBizTags() {
             return this.bizTags;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setChargeType(String chargeType) {
@@ -927,6 +1096,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setPackageId(String packageId) {
+            this.packageId = packageId;
+            return this;
+        }
+        public String getPackageId() {
+            return this.packageId;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setPersistentAppInstanceId(String persistentAppInstanceId) {

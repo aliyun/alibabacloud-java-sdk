@@ -77,11 +77,6 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     public static class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules extends TeaModel {
         /**
          * <p>The type of the rule.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>prc: an application package name.</li>
-         * <li>domain: a domain name.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>domain</p>
@@ -93,7 +88,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
          * <p>The name of the application package or domain name.</p>
          * 
          * <strong>example:</strong>
-         * <p>*.example.com</p>
+         * <p>*.baidu.com</p>
          */
         @NameInMap("Target")
         public String target;
@@ -123,12 +118,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy extends TeaModel {
         /**
-         * <p>Indicates whether a custom proxy is manually configured.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Indicates whether to manually configure a custom proxy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -147,11 +137,6 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the network redirection feature is enabled. When this feature is enabled, network traffic is automatically redirected to the on-premises network by default.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -179,10 +164,6 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the proxy protocol.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>socks5.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>socks5</p>
@@ -277,9 +258,15 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources extends TeaModel {
+        /**
+         * <p>The instance group IDs.</p>
+         */
         @NameInMap("AndroidInstanceGroupIds")
         public java.util.List<String> androidInstanceGroupIds;
 
+        /**
+         * <p>The matrix IDs.</p>
+         */
         @NameInMap("CloudPhoneMatrixIds")
         public java.util.List<String> cloudPhoneMatrixIds;
 
@@ -307,21 +294,54 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModelWatermark extends TeaModel {
+        /**
+         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WatermarkColor")
         public Integer watermarkColor;
 
+        /**
+         * <p>The custom text for the watermark. The text can be up to 10 characters in length and cannot contain emoji characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom text</p>
+         */
         @NameInMap("WatermarkCustomText")
         public String watermarkCustomText;
 
+        /**
+         * <p>The font size of the watermark. Valid values: 10 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("WatermarkFontSize")
         public Integer watermarkFontSize;
 
+        /**
+         * <p>Specifies whether to enable the screen watermark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("WatermarkSwitch")
         public String watermarkSwitch;
 
+        /**
+         * <p>The opacity of the watermark. A larger value makes the watermark more opaque. Valid values: 10 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("WatermarkTransparencyValue")
         public Integer watermarkTransparencyValue;
 
+        /**
+         * <p>The content of the screen watermark.</p>
+         */
         @NameInMap("WatermarkTypes")
         public java.util.List<String> watermarkTypes;
 
@@ -383,11 +403,6 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     public static class ListPolicyGroupsResponseBodyPolicyGroupModel extends TeaModel {
         /**
          * <p>Specifies whether to enable the webcam redirection feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -397,12 +412,6 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The read/write permissions on the clipboard.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>read: read-only.</li>
-         * <li>readwrite: read and write.</li>
-         * <li>off: read/write disabled.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>readwrite</p>
@@ -421,13 +430,6 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The file transfer policy of the HTML5 client.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>all: File upload and download are supported.</li>
-         * <li>download: Only file download is supported.</li>
-         * <li>upload: Only file upload is supported.</li>
-         * <li>off: File upload or download is forbidden.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>download</p>
@@ -437,12 +439,6 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The read/write permissions on the on-premises drive.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>read: read-only.</li>
-         * <li>readwrite: ready and write.</li>
-         * <li>off: read/write denied.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -452,11 +448,6 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         /**
          * <p>Identifies whether the resolution is locked.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -483,11 +474,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
          * <p>The name of the policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default Policy</p>
+         * <p>Default policy.</p>
          */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
+        /**
+         * <p>The resources associated with the policy.</p>
+         */
         @NameInMap("PolicyRelatedResources")
         public ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources policyRelatedResources;
 
@@ -509,6 +503,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         @NameInMap("SessionResolutionWidth")
         public Integer sessionResolutionWidth;
 
+        /**
+         * <p>The screen watermark.</p>
+         */
         @NameInMap("Watermark")
         public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark watermark;
 

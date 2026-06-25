@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the instance groups.</p>
+     * <p>The instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>22326560487****</p>
@@ -20,7 +20,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>

@@ -4,6 +4,12 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodesRequest extends TeaModel {
+    /**
+     * <p>The ID of the bandwidth plan instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp-bp17psa7fhxqmm*****</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
@@ -26,7 +32,7 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The maximum number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,7 +41,7 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If a query doesn\&quot;t return all results, the response includes a NextToken value for pagination. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token for the next query. If a query does not return all results, NextToken is not empty. Use the returned NextToken in your next query to continue.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -44,13 +50,13 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The matrix IDs.</p>
+     * <p>A list of Cloud Phone matrix IDs.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
-     * <p>The matrix name.</p>
+     * <p>The name of the Cloud Phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>node_name</p>
@@ -62,29 +68,16 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public java.util.List<String> nodeNameList;
 
     /**
-     * <p>The matrix specification.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cpm.gn6.gx1</li>
-     * </ul>
+     * <p>The instance type of the Cloud Phone matrix.</p>
      * 
      * <strong>example:</strong>
-     * <p>cpm.gn6.gx1</p>
+     * <p>cpm.gx7.10xlarge</p>
      */
     @NameInMap("ServerType")
     public String serverType;
 
     /**
-     * <p>The matrix status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>FAILED: The matrix failed to be created.</li>
-     * <li>RUNNING: The matrix is available.</li>
-     * <li>DELETING: The matrix is being deleted.</li>
-     * <li>NODE_READY: The matrix is ready, and cloud phone instances are being created.</li>
-     * <li>DELETED: The matrix is deleted.</li>
-     * <li>CREATING: The matrix is being created.</li>
-     * </ul>
+     * <p>The status of the Cloud Phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>CREATING</p>

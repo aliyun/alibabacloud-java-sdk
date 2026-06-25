@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportImageRequest extends TeaModel {
     /**
+     * <p>The description of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>android 12 custom image</p>
      */
@@ -12,6 +14,8 @@ public class ImportImageRequest extends TeaModel {
     public String imageDescription;
 
     /**
+     * <p>The URL of the image. This must be an Alibaba Cloud OSS address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxx.oss-xxx/xxxx.tgz">https://xxx.oss-xxx/xxxx.tgz</a></p>
      */
@@ -19,6 +23,8 @@ public class ImportImageRequest extends TeaModel {
     public String imageFileURL;
 
     /**
+     * <p>The name of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>import custom image</p>
      */

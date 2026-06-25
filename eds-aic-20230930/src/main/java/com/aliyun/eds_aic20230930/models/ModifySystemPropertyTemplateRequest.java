@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySystemPropertyTemplateRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically generate preset system properties.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,22 +14,38 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
     public Boolean enableAuto;
 
     /**
+     * <p>The URL of the property template file. The system synchronously parses the file. If the file format is invalid, a parsing error is returned.</p>
+     * <blockquote>
+     * <p>File template format: <code>{ &quot;properties&quot;:{&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;}}</code>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://filepath****.com">https://filepath****.com</a></p>
      */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>The information about the system property template.</p>
+     */
     @NameInMap("SystemPropertyInfo")
     public ModifySystemPropertyTemplateRequestSystemPropertyInfo systemPropertyInfo;
 
     /**
+     * <p>The ID of the property template.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-angyvganxlf****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The name of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Template 1</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -78,6 +96,8 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
 
     public static class ModifySystemPropertyTemplateRequestSystemPropertyInfoCustomPropertyInfos extends TeaModel {
         /**
+         * <p>The key of the custom property.</p>
+         * 
          * <strong>example:</strong>
          * <p>propKey</p>
          */
@@ -85,6 +105,8 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String propertyName;
 
         /**
+         * <p>The value of the custom property.</p>
+         * 
          * <strong>example:</strong>
          * <p>propValue</p>
          */
@@ -115,10 +137,17 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
     }
 
     public static class ModifySystemPropertyTemplateRequestSystemPropertyInfo extends TeaModel {
+        /**
+         * <p>The information about custom properties.</p>
+         */
         @NameInMap("CustomPropertyInfos")
         public java.util.List<ModifySystemPropertyTemplateRequestSystemPropertyInfoCustomPropertyInfos> customPropertyInfos;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -126,6 +155,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBootloader;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -133,6 +166,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBuildDisplayId;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -140,6 +177,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBuildFingerprint;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -147,6 +188,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBuildHost;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -154,6 +199,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBuildId;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -161,6 +210,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBuildProduct;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -168,6 +221,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBuildTags;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -175,6 +232,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBuildType;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -182,6 +243,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roBuildUser;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -189,6 +254,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roProductBoard;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -196,6 +265,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roProductBrand;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -203,6 +276,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roProductDevice;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -210,6 +287,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roProductManufacturer;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -217,6 +298,10 @@ public class ModifySystemPropertyTemplateRequest extends TeaModel {
         public String roProductModel;
 
         /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */

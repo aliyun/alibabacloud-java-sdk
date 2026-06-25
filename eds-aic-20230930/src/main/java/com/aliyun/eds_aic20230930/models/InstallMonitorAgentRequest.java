@@ -4,10 +4,21 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class InstallMonitorAgentRequest extends TeaModel {
+    /**
+     * <p>A list of instance IDs.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
+     * <p>The monitoring type.</p>
+     * <ul>
+     * <li><p>Instance mode: Instance</p>
+     * </li>
+     * <li><p>Node mode: Node</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NODE</p>
      */

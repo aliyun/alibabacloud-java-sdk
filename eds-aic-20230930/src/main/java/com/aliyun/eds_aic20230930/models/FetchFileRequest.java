@@ -5,17 +5,23 @@ import com.aliyun.tea.*;
 
 public class FetchFileRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud phone instances.</p>
+     * <p>A list of cloud phone instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
+    /**
+     * <p>A client-generated token, up to 100 characters long, that ensures the idempotency of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The path to the file that you want to pull from the cloud phone instance.</p>
+     * <p>The path of the file or folder to fetch from the cloud phone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,22 +31,22 @@ public class FetchFileRequest extends TeaModel {
     public String sourceFilePath;
 
     /**
-     * <p>The endpoint of the OSS bucket in which you want to store the pulled file.</p>
+     * <p>The endpoint for uploading files to OSS.</p>
      * <blockquote>
-     * <p> Set the value to an internal endpoint when the cloud phone instance and the OSS bucket are in the same region to improve upload speed without incurring public traffic fees. Sample endpoint: <code>oss-cn-hangzhou-internal.aliyuncs.com</code>. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
+     * <p>If the cloud phone and the destination OSS bucket are in the same region, you can use an internal endpoint to accelerate the transfer and avoid public network charges. For example, in the China (Hangzhou) region, use <code>oss-cn-hangzhou-internal.aliyuncs.com</code>. For a complete list of endpoints, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss-cn-hangzhou.aliyuncs.com</p>
+     * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
      */
     @NameInMap("UploadEndpoint")
     public String uploadEndpoint;
 
     /**
-     * <p>The type of the storage service.</p>
+     * <p>The type of storage service for the fetched file.</p>
      * <blockquote>
-     * <p> Currently, only OSS is supported.</p>
+     * <p>Currently, only Object Storage Service (OSS) is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -51,11 +57,14 @@ public class FetchFileRequest extends TeaModel {
     public String uploadType;
 
     /**
-     * <p>The OSS URL of the pulled file.</p>
+     * <p>The destination URL in OSS.</p>
      * <blockquote>
-     * <p> The OSS bucket name must start with &quot;cloudphone-saved-bucket-&quot;, for example, &quot;cloudphone-saved-bucket-example&quot;. You must also create an OSS directory to store the backup data. Set the value for UploadUrl in this format: oss://\<BucketName>/\<OSSDirectoryName>.</p>
+     * <p>The destination bucket name must be prefixed with <code>cloudphone-saved-bucket-</code>. For example, <code>cloudphone-saved-bucket-example</code>. You must also create a folder in the bucket to serve as the destination directory. The <code>UploadUrl</code> must follow the format: <code>oss://&lt;bucket_name&gt;/&lt;folder_name&gt;</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://cloudphone-saved-bucket-example/received</p>
      */
     @NameInMap("UploadUrl")
     public String uploadUrl;

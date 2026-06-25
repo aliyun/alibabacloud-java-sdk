@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResumeAgentTaskResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -19,12 +23,17 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ResumeAgentTaskResponseBodyTasks> tasks;
 
@@ -67,6 +76,15 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
 
     public static class ResumeAgentTaskResponseBodyTasks extends TeaModel {
         /**
+         * <p>The current status of the task. Valid values:</p>
+         * <p><code>PENDING</code>: The task is being created.</p>
+         * <p><code>RUNNING</code>: The task is running.</p>
+         * <p><code>COMPLETED</code>: The task has completed.</p>
+         * <p><code>FAILED</code>: The task has failed.</p>
+         * <p><code>TIMEOUT</code>: The task has timed out.</p>
+         * <p><code>PAUSING</code>: The task is pausing.</p>
+         * <p><code>PAUSED</code>: The task is paused.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -74,6 +92,8 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
+         * <p>The reason why the task failed to resume.</p>
+         * 
          * <strong>example:</strong>
          * <p>Task status [COMPLETED] does not support resume, only PAUSED tasks can be resumed.</p>
          */
@@ -81,6 +101,8 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String failedReason;
 
         /**
+         * <p>The ID of the mobile instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-ek65k51zoxia3x8xz</p>
          */
@@ -88,6 +110,8 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time when the task was resumed, in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-13T17:42:19Z</p>
          */
@@ -95,6 +119,8 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String resumingAt;
 
         /**
+         * <p>The globally unique ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
          */

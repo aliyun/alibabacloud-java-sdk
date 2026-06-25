@@ -4,16 +4,24 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class SendSystemPropertyTemplateRequest extends TeaModel {
+    /**
+     * <p>A list of instance IDs.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
+     * <p>The ID of the property template.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-angyvganxlf****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>A list of property template IDs. If you provide multiple template IDs, the system randomly matches the specified instances with the provided templates.</p>
+     */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 
