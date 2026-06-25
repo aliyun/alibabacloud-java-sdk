@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddImageResponseBody extends TeaModel {
     /**
-     * <p>The code returned.</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>A value of 0 indicates that the request was successful.</li>
-     * <li>Values other than 0 indicate that the request failed.</li>
+     * <li>0: success.</li>
+     * <li>Non-zero: failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class AddImageResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * <blockquote>
-     * <p>No value is returned if the request was successful, and an error message is returned if the request failed.</p>
+     * <p>No data is returned for successful requests. Error messages are returned for failed requests.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class AddImageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The results of category prediction and subject identification.</p>
+     * <p>The category prediction and subject identification results.</p>
      */
     @NameInMap("PicInfo")
     public AddImageResponseBodyPicInfo picInfo;
@@ -45,7 +45,7 @@ public class AddImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -99,9 +99,21 @@ public class AddImageResponseBody extends TeaModel {
     }
 
     public static class AddImageResponseBodyPicInfoAllCategories extends TeaModel {
+        /**
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88888888</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Other</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -129,6 +141,12 @@ public class AddImageResponseBody extends TeaModel {
     }
 
     public static class AddImageResponseBodyPicInfoMultiRegion extends TeaModel {
+        /**
+         * <p>The subject identification result. The subject region of the image, in the format of x1,x2,y1,y2, where x1,y1 is the upper-left point and x2,y2 is the lower-right point. If the user specifies a subject region in the request, the specified region is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94,691,206,650</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -148,11 +166,14 @@ public class AddImageResponseBody extends TeaModel {
     }
 
     public static class AddImageResponseBodyPicInfo extends TeaModel {
+        /**
+         * <p>The information about all categories supported by the system.</p>
+         */
         @NameInMap("AllCategories")
         public java.util.List<AddImageResponseBodyPicInfoAllCategories> allCategories;
 
         /**
-         * <p>The result of category prediction. If a category is specified in the request, the specified category prevails.</p>
+         * <p>The category prediction result. If the user specifies a category in the request, the specified category is used.</p>
          * 
          * <strong>example:</strong>
          * <p>88888888</p>
@@ -160,11 +181,17 @@ public class AddImageResponseBody extends TeaModel {
         @NameInMap("CategoryId")
         public Integer categoryId;
 
+        /**
+         * <p>The collection of subject identification results.</p>
+         * <blockquote>
+         * <p>Upgrade to V3.1.1 or later to use this feature.</p>
+         * </blockquote>
+         */
         @NameInMap("MultiRegion")
         public java.util.List<AddImageResponseBodyPicInfoMultiRegion> multiRegion;
 
         /**
-         * <p>The result of subject identification. The subject area of the image is in the format of <code>x1,x2,y1,y2</code>. <code>x1 and y1</code> represent the position in the upper-left corner, in pixels. <code>x2 and y2</code> represent the position in the lower-right corner, in pixels. If a subject area is specified in the request, the specified subject area prevails.</p>
+         * <p>The subject identification result. The subject region of the image, in the format of <code>x1,x2,y1,y2</code>, where <code>x1,y1</code> is the upper-left point and <code>x2,y2</code> is the lower-right point. If the user specifies a subject region in the request, the specified region is used.</p>
          * 
          * <strong>example:</strong>
          * <p>94,691,206,650</p>

@@ -14,7 +14,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("eu-central-1", "imagesearch.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "imagesearch.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "imagesearch.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "imagesearch.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "imagesearch.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "imagesearch.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "imagesearch.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "imagesearch.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "imagesearch.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "imagesearch.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("imagesearch", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -61,7 +73,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 TeaRequest request_ = new TeaRequest();
                 java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
                 String boundary = com.aliyun.fileform.Client.getBoundary();
-                String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                String tmp = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                String host = "" + bucketName + "." + tmp + "";
                 request_.protocol = "HTTPS";
                 request_.method = "POST";
                 request_.pathname = "/";
@@ -132,15 +145,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to add an image to an Image Search instance.</p>
-     * <blockquote>
-     * <p>If you want to obtain more information about the service and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consulting</a> or join the DingTalk group (ID 35035130).</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>By default, the concurrency limit for adding an image to instances whose image capacity specifications are 0.1 million images is 1. This means that the system can process up to one request of adding an image every second. By default, the concurrency limit for adding an image to instances of other image capacity specifications is 5. This means that the system can process up to five requests of adding an image every second.</p>
+     * <h2>Description</h2>
+     * <p>This operation adds image information to an Image Search instance.</p>
+     * <h2>QPS limit</h2>
+     * <p>An instance with a maximum image capacity of 100,000 has a default concurrency of 1, which means that a maximum of 1 image addition request can be processed per second.
+     * Instances with other image capacities have a default concurrency of 5, which means that a maximum of 5 image addition requests can be processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds an image to an Image Search instance.</p>
+     * <p>Describes the syntax and provides examples of the AddImage operation, which adds image information to an Image Search instance.</p>
      * 
      * @param request AddImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -232,15 +244,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to add an image to an Image Search instance.</p>
-     * <blockquote>
-     * <p>If you want to obtain more information about the service and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consulting</a> or join the DingTalk group (ID 35035130).</p>
-     * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>By default, the concurrency limit for adding an image to instances whose image capacity specifications are 0.1 million images is 1. This means that the system can process up to one request of adding an image every second. By default, the concurrency limit for adding an image to instances of other image capacity specifications is 5. This means that the system can process up to five requests of adding an image every second.</p>
+     * <h2>Description</h2>
+     * <p>This operation adds image information to an Image Search instance.</p>
+     * <h2>QPS limit</h2>
+     * <p>An instance with a maximum image capacity of 100,000 has a default concurrency of 1, which means that a maximum of 1 image addition request can be processed per second.
+     * Instances with other image capacities have a default concurrency of 5, which means that a maximum of 5 image addition requests can be processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds an image to an Image Search instance.</p>
+     * <p>Describes the syntax and provides examples of the AddImage operation, which adds image information to an Image Search instance.</p>
      * 
      * @param request AddImageRequest
      * @return AddImageResponse
@@ -322,7 +333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -339,6 +350,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>How-To</h2>
+     * <p>This API is used to query image information in an Image Search instance based on an image.</p>
+     * <h2>QPS Limit</h2>
+     * <p>The default maximum queries per second (QPS) for query operations can be viewed in the console. It corresponds to the Visit Frequency (QPS) you selected when purchasing the instance. Supported QPS values are 1, 5, and 10.</p>
+     * <h3>SDK Version Guide</h3>
+     * <p>Upgrade the Image SDK to version V3.1.1 to use the &quot;subject identification&quot; and &quot;similarity score&quot; features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>CheckImageExists</p>
      * 
@@ -379,6 +398,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>How-To</h2>
+     * <p>This API is used to query image information in an Image Search instance based on an image.</p>
+     * <h2>QPS Limit</h2>
+     * <p>The default maximum queries per second (QPS) for query operations can be viewed in the console. It corresponds to the Visit Frequency (QPS) you selected when purchasing the instance. Supported QPS values are 1, 5, and 10.</p>
+     * <h3>SDK Version Guide</h3>
+     * <p>Upgrade the Image SDK to version V3.1.1 to use the &quot;subject identification&quot; and &quot;similarity score&quot; features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>CheckImageExists</p>
      * 
@@ -392,7 +419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对比图片相似值</p>
+     * <p>Compares two images and returns a similarity score.</p>
      * 
      * @param request CompareSimilarByImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -432,7 +459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对比图片相似值</p>
+     * <p>Compares two images and returns a similarity score.</p>
      * 
      * @param request CompareSimilarByImageRequest
      * @return CompareSimilarByImageResponse
@@ -514,7 +541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -538,7 +565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -556,15 +583,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes images from an Image Search instance.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to delete image information from an Image Search instance.</p>
      * <blockquote>
-     * <p> A success response is returned even if the specified image does not exist on the instance. Therefore, you cannot determine whether the image exists on the instance based on the response.</p>
+     * <ul>
+     * <li>If the specified image does not exist in the Image Search instance, this operation still returns a success response. Do not use the response to determine whether the image exists.</li>
+     * </ul>
      * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for delete operations is 20, which means a maximum of 20 delete requests can be processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the DeleteImage operation and provides examples of this operation. You can call this operation to delete images from an Image Search instance.</p>
+     * <p>This topic describes the syntax and examples of the DeleteImage operation, which is used to delete image information from an Image Search instance.</p>
      * 
      * @param request DeleteImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -612,15 +642,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes images from an Image Search instance.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to delete image information from an Image Search instance.</p>
      * <blockquote>
-     * <p> A success response is returned even if the specified image does not exist on the instance. Therefore, you cannot determine whether the image exists on the instance based on the response.</p>
+     * <ul>
+     * <li>If the specified image does not exist in the Image Search instance, this operation still returns a success response. Do not use the response to determine whether the image exists.</li>
+     * </ul>
      * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for delete operations is 20, which means a maximum of 20 delete requests can be processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the DeleteImage operation and provides examples of this operation. You can call this operation to delete images from an Image Search instance.</p>
+     * <p>This topic describes the syntax and examples of the DeleteImage operation, which is used to delete image information from an Image Search instance.</p>
      * 
      * @param request DeleteImageRequest
      * @return DeleteImageResponse
@@ -632,12 +665,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries instance details.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process only 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation queries instance information from an Image Search instance.</p>
+     * <blockquote>
+     * <p>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the Detail operation and provides examples of this operation. You can call this operation to query instance details.</p>
+     * <p>This topic describes the syntax and examples of the Detail operation, which queries information about an Image Search instance by name.</p>
      * 
      * @param request DetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -669,12 +706,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries instance details.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process only 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation queries instance information from an Image Search instance.</p>
+     * <blockquote>
+     * <p>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the Detail operation and provides examples of this operation. You can call this operation to query instance details.</p>
+     * <p>This topic describes the syntax and examples of the Detail operation, which queries information about an Image Search instance by name.</p>
      * 
      * @param request DetailRequest
      * @return DetailResponse
@@ -686,12 +727,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates a task for exporting metadata from an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation submits a metadata export task to an Image Search instance.</p>
+     * <blockquote>
+     * <p>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for submit operations is 1, which means a maximum of 1 request is processed per second.</p>
+     * <blockquote>
+     * <p>You cannot submit a new metadata export task while the previous metadata export task is still in progress.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the DumpMeta operation and provides examples of this operation. You can call this operation to create a task for exporting metadata from an Image Search instance.</p>
+     * <p>This topic describes the syntax and examples of the DumpMeta operation, which creates a metadata export task for Image Search by name.</p>
      * 
      * @param request DumpMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -723,12 +771,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates a task for exporting metadata from an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation submits a metadata export task to an Image Search instance.</p>
+     * <blockquote>
+     * <p>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for submit operations is 1, which means a maximum of 1 request is processed per second.</p>
+     * <blockquote>
+     * <p>You cannot submit a new metadata export task while the previous metadata export task is still in progress.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the DumpMeta operation and provides examples of this operation. You can call this operation to create a task for exporting metadata from an Image Search instance.</p>
+     * <p>This topic describes the syntax and examples of the DumpMeta operation, which creates a metadata export task for Image Search by name.</p>
      * 
      * @param request DumpMetaRequest
      * @return DumpMetaResponse
@@ -740,12 +795,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries tasks that are used for exporting metadata from an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation queries metadata export tasks in an Image Search instance.</p>
+     * <blockquote>
+     * <p>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the DumpMetaList operation and provides examples of this operation. You can call this operation to query tasks that are used for exporting metadata from an Image Search instance.</p>
+     * <p>Describes the syntax and provides examples of the DumpMetaList operation, which queries the list of metadata export tasks in an Image Search instance.</p>
      * 
      * @param request DumpMetaListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -789,12 +848,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries tasks that are used for exporting metadata from an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation queries metadata export tasks in an Image Search instance.</p>
+     * <blockquote>
+     * <p>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the DumpMetaList operation and provides examples of this operation. You can call this operation to query tasks that are used for exporting metadata from an Image Search instance.</p>
+     * <p>Describes the syntax and provides examples of the DumpMetaList operation, which queries the list of metadata export tasks in an Image Search instance.</p>
      * 
      * @param request DumpMetaListRequest
      * @return DumpMetaListResponse
@@ -806,12 +869,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates a batch task on an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to submit a batch task to an Image Search instance.</p>
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about the product or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us by using DingTalk group 35035130.</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>Only one batch task can run at a time.</p>
+     * <blockquote>
+     * <p>You cannot submit a new batch task until the previous batch task is complete.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the IncreaseInstance operation and provides examples of this operation. You can call this operation to create a batch task on an Image Search instance.</p>
+     * <p>Describes the syntax and provides examples of the IncreaseInstance operation, which is used to create a batch task for an Image Search instance by name.</p>
      * 
      * @param request IncreaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -855,12 +925,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates a batch task on an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to submit a batch task to an Image Search instance.</p>
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about the product or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us by using DingTalk group 35035130.</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>Only one batch task can run at a time.</p>
+     * <blockquote>
+     * <p>You cannot submit a new batch task until the previous batch task is complete.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the IncreaseInstance operation and provides examples of this operation. You can call this operation to create a batch task on an Image Search instance.</p>
+     * <p>Describes the syntax and provides examples of the IncreaseInstance operation, which is used to create a batch task for an Image Search instance by name.</p>
      * 
      * @param request IncreaseInstanceRequest
      * @return IncreaseInstanceResponse
@@ -872,12 +949,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries batch tasks on an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query batch tasks in an Image Search instance.</p>
+     * <blockquote>
+     * <p>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the IncreaseList operation and provides examples of this operation. You can call this operation to query batch tasks on an Image Search instance.</p>
+     * <p>Queries the list of batch tasks in an Image Search instance by calling the IncreaseList operation. This topic describes the syntax and provides examples.</p>
      * 
      * @param request IncreaseListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -929,12 +1010,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries batch tasks on an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query batch tasks in an Image Search instance.</p>
+     * <blockquote>
+     * <p>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the IncreaseList operation and provides examples of this operation. You can call this operation to query batch tasks on an Image Search instance.</p>
+     * <p>Queries the list of batch tasks in an Image Search instance by calling the IncreaseList operation. This topic describes the syntax and provides examples.</p>
      * 
      * @param request IncreaseListRequest
      * @return IncreaseListResponse
@@ -945,13 +1030,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>This topic describes the syntax and examples of SearchImageByFilter, which is used to query image information in an Image Search instance based on filter conditions.</p>
+     * 
+     * @param request SearchImageByFilterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchImageByFilterResponse
+     */
+    public SearchImageByFilterResponse searchImageByFilterWithOptions(SearchImageByFilterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            body.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.num)) {
+            body.put("Num", request.num);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.start)) {
+            body.put("Start", request.start);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchImageByFilter"),
+            new TeaPair("version", "2020-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchImageByFilterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>This topic describes the syntax and examples of SearchImageByFilter, which is used to query image information in an Image Search instance based on filter conditions.</p>
+     * 
+     * @param request SearchImageByFilterRequest
+     * @return SearchImageByFilterResponse
+     */
+    public SearchImageByFilterResponse searchImageByFilter(SearchImageByFilterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchImageByFilterWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>This operation searches for images by image name on an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.</p>
+     * <h3>Operation description</h3>
+     * <p>This operation queries image information in an Image Search instance by name (ProductId and PicName).</p>
+     * <blockquote>
+     * <p>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>The default maximum query rate can be viewed in the console. It is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the SearchByName operation and provides examples of this operation. You can call this operation to search for images by image name on an Image Search instance.</p>
+     * <p>This topic describes the syntax and examples of the SearchByName operation, which is used to query image information in an Image Search instance by name.</p>
      * 
      * @param request SearchImageByNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1017,12 +1162,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation searches for images by image name on an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.</p>
+     * <h3>Operation description</h3>
+     * <p>This operation queries image information in an Image Search instance by name (ProductId and PicName).</p>
+     * <blockquote>
+     * <p>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>The default maximum query rate can be viewed in the console. It is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the SearchByName operation and provides examples of this operation. You can call this operation to search for images by image name on an Image Search instance.</p>
+     * <p>This topic describes the syntax and examples of the SearchByName operation, which is used to query image information in an Image Search instance by name.</p>
      * 
      * @param request SearchImageByNameRequest
      * @return SearchImageByNameResponse
@@ -1034,14 +1183,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation searches for images by image name on an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.  </p>
-     * <h2>SDK release notes</h2>
-     * <p>The Image Search SDK has been upgraded to version 3.1.1, which supports multi-subject recognition and similarity scores. For more information, see <a href="/help/en/image-search/latest/version-v3-java-sdk">Image Search SDK for Java</a>.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to search for image information in an Image Search instance by image.</p>
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value that you selected when you made the purchase. The supported values are 1 QPS, 5 QPS, and 10 QPS.</p>
+     * <h3>SDK version description</h3>
+     * <p>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the SearchByPic operation and provides examples of this operation. You can call this operation to search for images by image on an Image Search Instance.</p>
+     * <p>This topic describes the syntax and examples of SearchByPic, which is used to search for image information in an Image Search instance by image.</p>
      * 
      * @param request SearchImageByPicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1111,14 +1264,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation searches for images by image name on an Image Search instance.</p>
-     * <h2>QPS limits</h2>
-     * <p>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.  </p>
-     * <h2>SDK release notes</h2>
-     * <p>The Image Search SDK has been upgraded to version 3.1.1, which supports multi-subject recognition and similarity scores. For more information, see <a href="/help/en/image-search/latest/version-v3-java-sdk">Image Search SDK for Java</a>.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to search for image information in an Image Search instance by image.</p>
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value that you selected when you made the purchase. The supported values are 1 QPS, 5 QPS, and 10 QPS.</p>
+     * <h3>SDK version description</h3>
+     * <p>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the SearchByPic operation and provides examples of this operation. You can call this operation to search for images by image on an Image Search Instance.</p>
+     * <p>This topic describes the syntax and examples of SearchByPic, which is used to search for image information in an Image Search instance by image.</p>
      * 
      * @param request SearchImageByPicRequest
      * @return SearchImageByPicResponse
@@ -1200,7 +1357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("contentType", "")
             ));
             ossHeader = TeaConverter.buildMap(
-                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
                 new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
                 new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
                 new TeaPair("Signature", authResponseBody.get("Signature")),
@@ -1217,8 +1374,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation is used to search for image information in an Image Search instance based on text. This operation is available only for instances whose service type is product multimodal search.</p>
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</p>
+     * <h3>SDK version description</h3>
+     * <p>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>SearchImageByText</p>
+     * <p>This topic describes the syntax and examples of SearchImageByText, which is used to search for image information in an Image Search instance based on text.</p>
      * 
      * @param request SearchImageByTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1275,8 +1443,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation is used to search for image information in an Image Search instance based on text. This operation is available only for instances whose service type is product multimodal search.</p>
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</p>
+     * </blockquote>
+     * <h2>QPS limit</h2>
+     * <p>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</p>
+     * <h3>SDK version description</h3>
+     * <p>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>SearchImageByText</p>
+     * <p>This topic describes the syntax and examples of SearchImageByText, which is used to search for image information in an Image Search instance based on text.</p>
      * 
      * @param request SearchImageByTextRequest
      * @return SearchImageByTextResponse
@@ -1288,18 +1467,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation updates image information on an Image Search instance.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation updates the image information in an Image Search instance based on the product ID and image name.</p>
      * <blockquote>
      * <ul>
-     * <li>Limits are imposed on the instance creation time.</li>
-     * <li>This operation is supported by instances that are created in the Singapore (Singapore) region after December 2021. This operation is not supported in other regions.</li>
+     * <li>The instance must meet the creation date requirements.
+     * &lt;props=&quot;china&quot;&gt;</li>
      * </ul>
      * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</p>
+     * <ul>
+     * <li>Instances created after June 2021 in the Shanghai and Hangzhou regions are supported. Instances in other regions can be used normally.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Instances created after December 2021 in the Singapore region are supported. Instances in other regions are currently unavailable.</li>
+     * <li>For more information about the product and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</li>
+     * </ul>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for update operations is 20, which means that a maximum of 20 requests can be processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the UpdateImage operation and provides examples of this operation. You can call this operation to update image information on an Image Search instance.</p>
+     * <p>Updates the image information in an Image Search instance.</p>
      * 
      * @param request UpdateImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1377,18 +1563,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation updates image information on an Image Search instance.</p>
+     * <h2>Usage notes</h2>
+     * <p>This operation updates the image information in an Image Search instance based on the product ID and image name.</p>
      * <blockquote>
      * <ul>
-     * <li>Limits are imposed on the instance creation time.</li>
-     * <li>This operation is supported by instances that are created in the Singapore (Singapore) region after December 2021. This operation is not supported in other regions.</li>
+     * <li>The instance must meet the creation date requirements.
+     * &lt;props=&quot;china&quot;&gt;</li>
      * </ul>
      * </blockquote>
-     * <h2>QPS limits</h2>
-     * <p>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</p>
+     * <ul>
+     * <li>Instances created after June 2021 in the Shanghai and Hangzhou regions are supported. Instances in other regions can be used normally.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Instances created after December 2021 in the Singapore region are supported. Instances in other regions are currently unavailable.</li>
+     * <li>For more information about the product and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</li>
+     * </ul>
+     * <h2>QPS limit</h2>
+     * <p>The default concurrency for update operations is 20, which means that a maximum of 20 requests can be processed per second.</p>
      * 
      * <b>summary</b> : 
-     * <p>This topic describes the syntax of the UpdateImage operation and provides examples of this operation. You can call this operation to update image information on an Image Search instance.</p>
+     * <p>Updates the image information in an Image Search instance.</p>
      * 
      * @param request UpdateImageRequest
      * @return UpdateImageResponse

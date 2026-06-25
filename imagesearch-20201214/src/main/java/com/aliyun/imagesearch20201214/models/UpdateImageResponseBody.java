@@ -5,41 +5,29 @@ import com.aliyun.tea.*;
 
 public class UpdateImageResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>A value of 0 indicates that the operation is successful.</li>
-     * <li>Values other than 0 indicate errors.</li>
+     * <li>0: The request was successful.</li>
+     * <li>Non-zero: The request failed.</li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>success</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E0845DE6-52AF-4B50-9F15-51ED4044E6AB</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class IncreaseInstanceRequest extends TeaModel {
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket.</p>
+     * <p>The name of the bucket.</p>
      * <blockquote>
-     * <p> The bucket must be in the same region as the Image Search instance.</p>
+     * <p>Only a bucket in the same region as the instance is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class IncreaseInstanceRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The callback address.</p>
+     * <p>The callback URL of the task.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxx">http://xxxxx</a></p>
@@ -27,7 +27,12 @@ public class IncreaseInstanceRequest extends TeaModel {
     public String callbackAddress;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The name of the Image Search instance. The name can be up to 20 characters in length.
+     * If you have purchased an Image Search instance, log on to the <a href="https://imagesearch.console.aliyun.com/">Image Search console</a> to view the instance name.
+     * If you have not purchased an Image Search instance, refer to <a href="https://help.aliyun.com/document_detail/179178.html">Activate the service</a> and <a href="https://help.aliyun.com/document_detail/66569.html">Create an instance</a>.</p>
+     * <blockquote>
+     * <p>The instance name is not the instance ID. Make sure that you distinguish between the two.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +42,10 @@ public class IncreaseInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The absolute path to the increment.meta file in the bucket. The path must start with a forward slash (/) and cannot end with a forward slash (/).</p>
+     * <p>The absolute path of the increment.meta file in OSS. The path must start with a forward slash (/) and must not end with a forward slash (/).</p>
+     * <blockquote>
+     * <p>Prepare the increment.meta file in advance. For more information, see <a href="https://help.aliyun.com/document_detail/66580.html">Batch operations</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

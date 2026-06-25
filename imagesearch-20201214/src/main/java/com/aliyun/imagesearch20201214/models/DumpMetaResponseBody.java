@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DumpMetaResponseBody extends TeaModel {
     /**
-     * <p>The information about the export task.</p>
+     * <p>The returned result of the task execution.</p>
      */
     @NameInMap("Data")
     public DumpMetaResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</p>
@@ -59,11 +59,11 @@ public class DumpMetaResponseBody extends TeaModel {
 
     public static class DumpMetaResponseBodyData extends TeaModel {
         /**
-         * <p>The status of the export task.</p>
+         * <p>The status of the metadata export task. Valid values:</p>
          * <ul>
-         * <li>PROCESSING: in progress</li>
-         * <li>FAIL: failed</li>
-         * <li>SUCCESS: successful</li>
+         * <li>PROCESSING: The task is being processed.</li>
+         * <li>FAIL: The task failed.</li>
+         * <li>SUCCESS: The task is completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class DumpMetaResponseBody extends TeaModel {
         public String dumpMetaStatus;
 
         /**
-         * <p>The ID of the export task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>

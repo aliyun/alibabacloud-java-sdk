@@ -4,33 +4,55 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class SearchImageByTextResponseBody extends TeaModel {
+    /**
+     * <p>The authentication details.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public SearchImageByTextResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The description information of all returned products.</p>
+     */
     @NameInMap("Auctions")
     public java.util.List<SearchImageByTextResponseBodyAuctions> auctions;
 
     /**
+     * <p>The error code. Valid values:</p>
+     * <ul>
+     * <li>0: successful.</li>
+     * <li>Non-zero value: failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The overview of the search results.</p>
+     */
     @NameInMap("Head")
     public SearchImageByTextResponseBodyHead head;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <p>The category information.</p>
+     */
     @NameInMap("PicInfo")
     public SearchImageByTextResponseBodyPicInfo picInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B3137727-7D6E-488C-BA21-0E034C38A879</p>
      */
@@ -38,6 +60,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -115,6 +139,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
 
     public static class SearchImageByTextResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The action for the authentication request.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -122,6 +148,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The authentication principal information.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */
@@ -129,6 +157,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The Alibaba Cloud account ID of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>222</p>
          */
@@ -136,6 +166,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of the authentication principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -143,6 +175,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encrypted complete diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
          */
@@ -150,6 +184,12 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ImplicitDeny: no policy is matched.</li>
+         * <li>ExplicitDeny: an explicit Deny policy is matched.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -157,6 +197,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The type of the policy that caused the access denial.</p>
+         * 
          * <strong>example:</strong>
          * <p>PauseNotify</p>
          */
@@ -228,6 +270,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
 
     public static class SearchImageByTextResponseBodyAuctions extends TeaModel {
         /**
+         * <p>The image category.</p>
+         * 
          * <strong>example:</strong>
          * <p>8888888</p>
          */
@@ -235,6 +279,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Integer categoryId;
 
         /**
+         * <p>The custom content defined by the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>zidingyi</p>
          */
@@ -242,6 +288,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String customContent;
 
         /**
+         * <p>The integer type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -249,6 +297,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Integer intAttr;
 
         /**
+         * <p>The integer type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -256,6 +306,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Integer intAttr2;
 
         /**
+         * <p>The integer type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -263,6 +315,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Integer intAttr3;
 
         /**
+         * <p>The integer type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -270,6 +324,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Integer intAttr4;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>2092061_1.jpg</p>
          */
@@ -277,6 +333,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String picName;
 
         /**
+         * <p>The product ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2092061_1</p>
          */
@@ -284,6 +342,11 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String productId;
 
         /**
+         * <p>The image similarity score. Valid values: 0 to 1.</p>
+         * <blockquote>
+         * <p>You must upgrade the SDK to V3.1.1 to use this feature.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -291,6 +354,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>The string type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -298,6 +363,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String strAttr;
 
         /**
+         * <p>The string type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -305,6 +372,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String strAttr2;
 
         /**
+         * <p>The string type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -312,6 +381,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public String strAttr3;
 
         /**
+         * <p>The string type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -431,6 +502,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
 
     public static class SearchImageByTextResponseBodyHead extends TeaModel {
         /**
+         * <p>The number of results returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -438,6 +511,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Integer docsFound;
 
         /**
+         * <p>The number of matched results in the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -445,6 +520,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Integer docsReturn;
 
         /**
+         * <p>The time consumed by the search, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>95</p>
          */
@@ -484,6 +561,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
 
     public static class SearchImageByTextResponseBodyPicInfoAllCategories extends TeaModel {
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>88888888</p>
          */
@@ -491,6 +570,8 @@ public class SearchImageByTextResponseBody extends TeaModel {
         public Integer id;
 
         /**
+         * <p>The category name.</p>
+         * 
          * <strong>example:</strong>
          * <p>other</p>
          */
@@ -521,6 +602,9 @@ public class SearchImageByTextResponseBody extends TeaModel {
     }
 
     public static class SearchImageByTextResponseBodyPicInfo extends TeaModel {
+        /**
+         * <p>All categories supported by the system.</p>
+         */
         @NameInMap("AllCategories")
         public java.util.List<SearchImageByTextResponseBodyPicInfoAllCategories> allCategories;
 

@@ -3,18 +3,18 @@ package com.aliyun.imagesearch20201214.models;
 
 import com.aliyun.tea.*;
 
-public class CheckImageExistsResponseBody extends TeaModel {
+public class SearchImageByFilterResponseBody extends TeaModel {
     /**
-     * <p>Description information of all returned products.</p>
+     * <p>The product description information returned.</p>
      */
     @NameInMap("Auctions")
-    public CheckImageExistsResponseBodyAuctions auctions;
+    public java.util.List<SearchImageByFilterResponseBodyAuctions> auctions;
 
     /**
-     * <p>Error code.  </p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>0: Succeeded.  </li>
-     * <li>Non-zero: Failed.</li>
+     * <li>0: success.</li>
+     * <li>Non-zero: failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Indicates whether the image exists.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("Exists")
-    public Boolean exists;
-
-    /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -42,7 +33,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B3137727-7D6E-488C-BA21-0E034C38A879</p>
@@ -51,7 +42,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,20 +50,20 @@ public class CheckImageExistsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static CheckImageExistsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CheckImageExistsResponseBody self = new CheckImageExistsResponseBody();
+    public static SearchImageByFilterResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SearchImageByFilterResponseBody self = new SearchImageByFilterResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CheckImageExistsResponseBody setAuctions(CheckImageExistsResponseBodyAuctions auctions) {
+    public SearchImageByFilterResponseBody setAuctions(java.util.List<SearchImageByFilterResponseBodyAuctions> auctions) {
         this.auctions = auctions;
         return this;
     }
-    public CheckImageExistsResponseBodyAuctions getAuctions() {
+    public java.util.List<SearchImageByFilterResponseBodyAuctions> getAuctions() {
         return this.auctions;
     }
 
-    public CheckImageExistsResponseBody setCode(Integer code) {
+    public SearchImageByFilterResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -80,15 +71,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CheckImageExistsResponseBody setExists(Boolean exists) {
-        this.exists = exists;
-        return this;
-    }
-    public Boolean getExists() {
-        return this.exists;
-    }
-
-    public CheckImageExistsResponseBody setMsg(String msg) {
+    public SearchImageByFilterResponseBody setMsg(String msg) {
         this.msg = msg;
         return this;
     }
@@ -96,7 +79,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         return this.msg;
     }
 
-    public CheckImageExistsResponseBody setRequestId(String requestId) {
+    public SearchImageByFilterResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -104,7 +87,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CheckImageExistsResponseBody setSuccess(Boolean success) {
+    public SearchImageByFilterResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -112,18 +95,18 @@ public class CheckImageExistsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class CheckImageExistsResponseBodyAuctions extends TeaModel {
+    public static class SearchImageByFilterResponseBodyAuctions extends TeaModel {
         /**
-         * <p>Image category.</p>
+         * <p>The image category.</p>
          * 
          * <strong>example:</strong>
-         * <p>88888888</p>
+         * <p>8888888</p>
          */
         @NameInMap("CategoryId")
         public Integer categoryId;
 
         /**
-         * <p>User-defined content.</p>
+         * <p>The user-defined content.</p>
          * 
          * <strong>example:</strong>
          * <p>zidingyi</p>
@@ -132,7 +115,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public String customContent;
 
         /**
-         * <p>Integer-type property.</p>
+         * <p>The integer type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -141,7 +124,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public Integer intAttr;
 
         /**
-         * <p>Integer-type property.</p>
+         * <p>The integer type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -150,7 +133,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public Integer intAttr2;
 
         /**
-         * <p>Integer-type property.</p>
+         * <p>The integer type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -159,7 +142,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public Integer intAttr3;
 
         /**
-         * <p>Integer-type property.</p>
+         * <p>The integer type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -168,7 +151,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public Integer intAttr4;
 
         /**
-         * <p>Image name.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>2092061_1.jpg</p>
@@ -177,7 +160,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public String picName;
 
         /**
-         * <p>Product ID.</p>
+         * <p>The product ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2092061_1</p>
@@ -186,7 +169,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>String-type property.</p>
+         * <p>The string type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -195,7 +178,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public String strAttr;
 
         /**
-         * <p>String-type property.</p>
+         * <p>The string type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -204,7 +187,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public String strAttr2;
 
         /**
-         * <p>String-type property.</p>
+         * <p>The string type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -213,7 +196,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
         public String strAttr3;
 
         /**
-         * <p>String-type property.</p>
+         * <p>The string type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -221,12 +204,12 @@ public class CheckImageExistsResponseBody extends TeaModel {
         @NameInMap("StrAttr4")
         public String strAttr4;
 
-        public static CheckImageExistsResponseBodyAuctions build(java.util.Map<String, ?> map) throws Exception {
-            CheckImageExistsResponseBodyAuctions self = new CheckImageExistsResponseBodyAuctions();
+        public static SearchImageByFilterResponseBodyAuctions build(java.util.Map<String, ?> map) throws Exception {
+            SearchImageByFilterResponseBodyAuctions self = new SearchImageByFilterResponseBodyAuctions();
             return TeaModel.build(map, self);
         }
 
-        public CheckImageExistsResponseBodyAuctions setCategoryId(Integer categoryId) {
+        public SearchImageByFilterResponseBodyAuctions setCategoryId(Integer categoryId) {
             this.categoryId = categoryId;
             return this;
         }
@@ -234,7 +217,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.categoryId;
         }
 
-        public CheckImageExistsResponseBodyAuctions setCustomContent(String customContent) {
+        public SearchImageByFilterResponseBodyAuctions setCustomContent(String customContent) {
             this.customContent = customContent;
             return this;
         }
@@ -242,7 +225,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.customContent;
         }
 
-        public CheckImageExistsResponseBodyAuctions setIntAttr(Integer intAttr) {
+        public SearchImageByFilterResponseBodyAuctions setIntAttr(Integer intAttr) {
             this.intAttr = intAttr;
             return this;
         }
@@ -250,7 +233,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.intAttr;
         }
 
-        public CheckImageExistsResponseBodyAuctions setIntAttr2(Integer intAttr2) {
+        public SearchImageByFilterResponseBodyAuctions setIntAttr2(Integer intAttr2) {
             this.intAttr2 = intAttr2;
             return this;
         }
@@ -258,7 +241,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.intAttr2;
         }
 
-        public CheckImageExistsResponseBodyAuctions setIntAttr3(Integer intAttr3) {
+        public SearchImageByFilterResponseBodyAuctions setIntAttr3(Integer intAttr3) {
             this.intAttr3 = intAttr3;
             return this;
         }
@@ -266,7 +249,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.intAttr3;
         }
 
-        public CheckImageExistsResponseBodyAuctions setIntAttr4(Integer intAttr4) {
+        public SearchImageByFilterResponseBodyAuctions setIntAttr4(Integer intAttr4) {
             this.intAttr4 = intAttr4;
             return this;
         }
@@ -274,7 +257,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.intAttr4;
         }
 
-        public CheckImageExistsResponseBodyAuctions setPicName(String picName) {
+        public SearchImageByFilterResponseBodyAuctions setPicName(String picName) {
             this.picName = picName;
             return this;
         }
@@ -282,7 +265,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.picName;
         }
 
-        public CheckImageExistsResponseBodyAuctions setProductId(String productId) {
+        public SearchImageByFilterResponseBodyAuctions setProductId(String productId) {
             this.productId = productId;
             return this;
         }
@@ -290,7 +273,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.productId;
         }
 
-        public CheckImageExistsResponseBodyAuctions setStrAttr(String strAttr) {
+        public SearchImageByFilterResponseBodyAuctions setStrAttr(String strAttr) {
             this.strAttr = strAttr;
             return this;
         }
@@ -298,7 +281,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.strAttr;
         }
 
-        public CheckImageExistsResponseBodyAuctions setStrAttr2(String strAttr2) {
+        public SearchImageByFilterResponseBodyAuctions setStrAttr2(String strAttr2) {
             this.strAttr2 = strAttr2;
             return this;
         }
@@ -306,7 +289,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.strAttr2;
         }
 
-        public CheckImageExistsResponseBodyAuctions setStrAttr3(String strAttr3) {
+        public SearchImageByFilterResponseBodyAuctions setStrAttr3(String strAttr3) {
             this.strAttr3 = strAttr3;
             return this;
         }
@@ -314,7 +297,7 @@ public class CheckImageExistsResponseBody extends TeaModel {
             return this.strAttr3;
         }
 
-        public CheckImageExistsResponseBodyAuctions setStrAttr4(String strAttr4) {
+        public SearchImageByFilterResponseBodyAuctions setStrAttr4(String strAttr4) {
             this.strAttr4 = strAttr4;
             return this;
         }

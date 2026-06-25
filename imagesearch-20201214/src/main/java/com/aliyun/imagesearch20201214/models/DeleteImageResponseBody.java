@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteImageResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li>A value of 0 indicates that the operation is successful.</li>
-     * <li>Values other than 0 indicate errors.</li>
+     * <li>0: success.</li>
+     * <li>Non-zero value: failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class DeleteImageResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about the deleted images.</p>
+     * <p>The deletion result.</p>
      */
     @NameInMap("Data")
     public DeleteImageResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -33,7 +33,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0703956F-9BCC-48FA-99F7-96C0BF449C69</p>
@@ -42,7 +42,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -97,7 +97,7 @@ public class DeleteImageResponseBody extends TeaModel {
 
     public static class DeleteImageResponseBodyData extends TeaModel {
         /**
-         * <p>The name (PicName) of the deleted image.</p>
+         * <p>The deleted PicName.</p>
          * 
          * <strong>example:</strong>
          * <p>5555.jpg</p>

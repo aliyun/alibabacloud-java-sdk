@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class IncreaseInstanceResponseBody extends TeaModel {
     /**
-     * <p>The information about the task.</p>
+     * <p>The returned result of the task.</p>
      */
     @NameInMap("Data")
     public IncreaseInstanceResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</p>
@@ -20,7 +20,7 @@ public class IncreaseInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class IncreaseInstanceResponseBody extends TeaModel {
 
     public static class IncreaseInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -68,11 +68,11 @@ public class IncreaseInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The status of the batch task. Valid values:</p>
          * <ul>
-         * <li>PROCESSING: in progress</li>
-         * <li>FAIL: failed</li>
-         * <li>SUCCESS: successful</li>
+         * <li>PROCESSING: The task is being processed.</li>
+         * <li>FAIL: The task failed.</li>
+         * <li>SUCCESS: The task is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>

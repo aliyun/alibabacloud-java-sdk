@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncreaseListRequest extends TeaModel {
     /**
-     * <p>The name of the Object Storage Service (OSS) bucket.</p>
+     * <p>The name of the bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>bucketName</p>
@@ -14,7 +14,10 @@ public class IncreaseListRequest extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The ID of the batch task.</p>
+     * <p>The batch task ID.</p>
+     * <blockquote>
+     * <p>To obtain the batch task ID, call the <a href="https://help.aliyun.com/document_detail/377468.html">batch operation</a> first and retrieve the ID from the response.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -23,7 +26,12 @@ public class IncreaseListRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the Image Search instance. The name can be up to 20 characters in length.</p>
+     * <p>The name of the Image Search instance. The name can be up to 20 characters in length.
+     * If you have purchased an Image Search instance, log on to the <a href="https://imagesearch.console.aliyun.com/">Image Search console</a> to view the instance name.
+     * If you have not purchased an Image Search instance, refer to <a href="https://help.aliyun.com/document_detail/179178.html">Activate the service</a> and <a href="https://help.aliyun.com/document_detail/66569.html">Create an instance</a>.</p>
+     * <blockquote>
+     * <p>The instance name is not the instance ID. The instance name must be unique within the same region. Make sure you use the correct value.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +41,7 @@ public class IncreaseListRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number of the first page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +50,7 @@ public class IncreaseListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of images to return on each page. Default value: 10.</p>
+     * <p>The number of entries to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +59,7 @@ public class IncreaseListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The absolute path to the increment.meta file in the bucket. The path must start with a forward slash (/) and cannot end with a forward slash (/).</p>
+     * <p>The absolute path of the increment.meta file in OSS. The path must start with a forward slash (/) and must not end with a forward slash (/).</p>
      * 
      * <strong>example:</strong>
      * <p>/xxx/xxx</p>

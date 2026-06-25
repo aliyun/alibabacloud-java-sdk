@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckImageExistsRequest extends TeaModel {
     /**
+     * <p>Image Search instance name. Supports up to 20 characters.<br>If you have already purchased an Image Search instance, you can logon to the <a href="https://imagesearch.console.aliyun.com/">Image Search console</a> to view it.<br>If you have not purchased an Image Search instance, see <a href="https://help.aliyun.com/document_detail/179178.html">Activate the service</a> and <a href="https://help.aliyun.com/document_detail/66569.html">Create an instance</a>.  </p>
+     * <blockquote>
+     * <p>The instance name here is not the instance ID. Please distinguish between them when using.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class CheckImageExistsRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class CheckImageExistsRequest extends TeaModel {
     public String picName;
 
     /**
+     * <p>Product ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

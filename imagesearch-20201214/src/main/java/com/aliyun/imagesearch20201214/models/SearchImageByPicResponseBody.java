@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class SearchImageByPicResponseBody extends TeaModel {
     /**
-     * <p>The product descriptions returned.</p>
+     * <p>The descriptions of all returned products.</p>
      */
     @NameInMap("Auctions")
     public java.util.List<SearchImageByPicResponseBodyAuctions> auctions;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * <ul>
-     * <li>A value of 0 indicates that the operation is successful.</li>
-     * <li>Values other than 0 indicate errors.</li>
+     * <li>0: successful.</li>
+     * <li>Non-zero: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,13 +24,13 @@ public class SearchImageByPicResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The summary of the search result.</p>
+     * <p>The overview of the search results.</p>
      */
     @NameInMap("Head")
     public SearchImageByPicResponseBodyHead head;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -39,13 +39,13 @@ public class SearchImageByPicResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The information such as the system-selected category and result of subject recognition.</p>
+     * <p>The information such as category prediction and subject identification results.</p>
      */
     @NameInMap("PicInfo")
     public SearchImageByPicResponseBodyPicInfo picInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B3137727-7D6E-488C-BA21-0E034C38A879</p>
@@ -125,7 +125,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
 
     public static class SearchImageByPicResponseBodyAuctions extends TeaModel {
         /**
-         * <p>The category of the image.</p>
+         * <p>The image category.</p>
          * 
          * <strong>example:</strong>
          * <p>8888888</p>
@@ -143,7 +143,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public String customContent;
 
         /**
-         * <p>The attribute, which is an integer.</p>
+         * <p>The integer type attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -152,20 +152,34 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public Integer intAttr;
 
         /**
+         * <p>The integer type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("IntAttr2")
         public Integer intAttr2;
 
+        /**
+         * <p>The integer type attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("IntAttr3")
         public Integer intAttr3;
 
+        /**
+         * <p>The integer type attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("IntAttr4")
         public Integer intAttr4;
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>2092061_1.jpg</p>
@@ -174,7 +188,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public String picName;
 
         /**
-         * <p>The ID of the product.</p>
+         * <p>The product ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2092061_1</p>
@@ -183,9 +197,9 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The similarity score of the searched image. Valid values: 0 to 1.</p>
+         * <p>The image similarity score. Valid values: 0 to 1.</p>
          * <blockquote>
-         * <p> To use this feature, you must upgrade the SDK to version 3.1.1.</p>
+         * <p>You must upgrade to V3.1.1 to use this feature.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -195,15 +209,17 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public Float score;
 
         /**
-         * <p>The score information about the image.</p>
+         * <p>The system scoring information.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is not supported. We recommend that you use the Score parameter.</li>
-         * <li>The SortExprValues parameter indicates a 2-tuple in which values are separated by a semicolon (;). The first value indicates the correlation score of the returned image. A greater value indicates a higher correlation with the sample image. Different algorithms are used.</li>
-         * <li>If the value of CategoryId is within the value range from 0 to 2, the value range of SortExprValues is from 0 to 7.33136443711219e+24.</li>
-         * <li>If the value of CategoryId is not within the value range from 0 to 2, the value range of SortExprValues is from 0 to 5.37633353624177e+24. If the returned image is identical with the sample image, the highest correlation score is generated.</li>
+         * <li>This field is deprecated. Use Score instead.</li>
          * </ul>
          * </blockquote>
+         * <ul>
+         * <li>SortExprValues is a semicolon-separated tuple. The first value indicates the relevance score of the image. A higher value indicates higher relevance to the query image. The scoring varies depending on the algorithm model.</li>
+         * <li>When the category is 0 to 2, the value range of SortExprValues is 0 to 7.33136443711219e+24.</li>
+         * <li>For other category values, the value range of SortExprValues is 0 to 5.37633353624177e+24. This score reaches its maximum when two images are identical.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>5.37633353624177e+24;0</p>
@@ -212,24 +228,38 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public String sortExprValues;
 
         /**
-         * <p>The attribute, which is a string.</p>
+         * <p>The string type attribute.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>test</p>
          */
         @NameInMap("StrAttr")
         public String strAttr;
 
         /**
+         * <p>The string type attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("StrAttr2")
         public String strAttr2;
 
+        /**
+         * <p>The string type attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("StrAttr3")
         public String strAttr3;
 
+        /**
+         * <p>The string type attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("StrAttr4")
         public String strAttr4;
 
@@ -354,7 +384,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
 
     public static class SearchImageByPicResponseBodyHead extends TeaModel {
         /**
-         * <p>The number of images returned.</p>
+         * <p>The number of results returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -363,7 +393,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public Integer docsFound;
 
         /**
-         * <p>The number of images that match the search conditions on the Image Search instance.</p>
+         * <p>The number of results matched in the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -372,7 +402,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public Integer docsReturn;
 
         /**
-         * <p>The time it takes to complete the search process. Unit: milliseconds.</p>
+         * <p>The search duration, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>95</p>
@@ -413,7 +443,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
 
     public static class SearchImageByPicResponseBodyPicInfoAllCategories extends TeaModel {
         /**
-         * <p>The ID of the category.</p>
+         * <p>The category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>88888888</p>
@@ -422,7 +452,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The category name.</p>
          * 
          * <strong>example:</strong>
          * <p>other</p>
@@ -455,7 +485,7 @@ public class SearchImageByPicResponseBody extends TeaModel {
 
     public static class SearchImageByPicResponseBodyPicInfoMultiRegion extends TeaModel {
         /**
-         * <p>The result of subject recognition. The subject area of the image, in the format of x1,x2,y1,y2. Specifically, x1 and y1 specify the upper-left pixel, and x2 and y2 specify the lower-right pixel. If a subject area is specified in the request, the specified subject area prevails.</p>
+         * <p>The subject identification result. The subject region of the image, in the format of x1,x2,y1,y2, where x1,y1 is the upper-left point and x2,y2 is the lower-right point. If the subject region is specified in the request, the value specified in the request is used.</p>
          * 
          * <strong>example:</strong>
          * <p>280,486,232,351</p>
@@ -480,13 +510,13 @@ public class SearchImageByPicResponseBody extends TeaModel {
 
     public static class SearchImageByPicResponseBodyPicInfo extends TeaModel {
         /**
-         * <p>The categories that are supported by the system.</p>
+         * <p>The information about all categories supported by the system.</p>
          */
         @NameInMap("AllCategories")
         public java.util.List<SearchImageByPicResponseBodyPicInfoAllCategories> allCategories;
 
         /**
-         * <p>The category selected by the system. If a category is specified in the request, the specified category prevails.</p>
+         * <p>The category prediction result. If the category is specified in the request, the value specified in the request is used.</p>
          * 
          * <strong>example:</strong>
          * <p>88888888</p>
@@ -495,16 +525,16 @@ public class SearchImageByPicResponseBody extends TeaModel {
         public Integer categoryId;
 
         /**
-         * <p>The recognized subjects.</p>
+         * <p>The collection of subject identification results.</p>
          * <blockquote>
-         * <p> To use this feature, you must upgrade the SDK to version 3.1.1.</p>
+         * <p>You must upgrade to V3.1.1 to use this feature.</p>
          * </blockquote>
          */
         @NameInMap("MultiRegion")
         public java.util.List<SearchImageByPicResponseBodyPicInfoMultiRegion> multiRegion;
 
         /**
-         * <p>The result of subject recognition. The subject area of the image, in the format of x1,x2,y1,y2. Specifically, x1 and y1 specify the upper-left pixel, and x2 and y2 specify the lower-right pixel. If a subject area is specified in the request, the specified subject area prevails.</p>
+         * <p>The subject identification result. The subject region of the image, in the format of x1,x2,y1,y2, where x1,y1 is the upper-left point and x2,y2 is the lower-right point. If the subject region is specified in the request, the value specified in the request is used.</p>
          * 
          * <strong>example:</strong>
          * <p>280,486,232,351</p>

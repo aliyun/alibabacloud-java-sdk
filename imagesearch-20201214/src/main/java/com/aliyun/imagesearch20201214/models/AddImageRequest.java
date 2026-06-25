@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddImageRequest extends TeaModel {
     /**
-     * <p>The category of the image. For more information, see <a href="https://help.aliyun.com/document_detail/179184.html">Category reference</a>.</p>
+     * <p>The image category. For more information, refer to <a href="https://help.aliyun.com/document_detail/179184.html">Category reference</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>For product image search, if you specify a category for an image, the specified category prevails. If you do not specify a category for an image, the system predicts the category, and returns the prediction result in the response.</li>
-     * <li>For generic image search, only 88888888 may be returned for this parameter in the response regardless of whether a category is specified.</li>
+     * <li>For product image search, if you specify a category, the specified category is used. If you do not specify a category, the system predicts the category. The predicted category result can be obtained from the response.
+     * &lt;props=&quot;china&quot;&gt;</li>
      * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>For fabric, trademark, generic, furniture, and industrial hardware image search, the system sets the category to 88888888 regardless of whether you specify a category.</p>
+     * </li>
+     * <li><p>For generic image search, the system sets the category to 88888888 regardless of whether you specify a category.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>88888888</p>
@@ -20,11 +26,12 @@ public class AddImageRequest extends TeaModel {
     public Integer categoryId;
 
     /**
-     * <p>Specifies whether to identify the subject in the image and search for images based on the subject identification result. Default value: true. Valid values:</p>
+     * <p>Specifies whether to perform subject identification. Default value: true.</p>
      * <ul>
-     * <li>true: The system identifies the subject in the image, and searches for images based on the subject identification result. The subject identification result is included in the response.</li>
-     * <li>false: The system does not identify the subject in the image, and searches for images based on the entire image.</li>
+     * <li>true: The system performs subject identification and searches based on the identified subject. The subject identification result can be obtained from the response.</li>
+     * <li>false: The system does not perform subject identification and searches based on the entire image.</li>
      * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;For fabric image search, this parameter is ignored. The system searches based on the entire image..</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,9 +40,9 @@ public class AddImageRequest extends TeaModel {
     public Boolean crop;
 
     /**
-     * <p>The user-defined content. The value can be up to 4,096 characters in length.</p>
+     * <p>The custom content defined by the user. The content can be up to 4,096 characters in length.</p>
      * <blockquote>
-     * <p>If you specify this parameter, the response includes this parameter and its value. You can add text such as an image description.</p>
+     * <p>This field is returned in query results. For example, you can add a text description of the image.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,9 +52,11 @@ public class AddImageRequest extends TeaModel {
     public String customContent;
 
     /**
-     * <p>The name of the Image Search instance. The name can be up to 20 characters in length. If an Image Search instance is purchased, you can log on to the <a href="https://imagesearch.console.aliyun.com/">Image Search console</a> to view the instance. If no Image Search instance is purchased, you must purchase an instance. For more information, see <a href="https://help.aliyun.com/document_detail/179178.html">Activate Image Search</a> and <a href="https://help.aliyun.com/document_detail/66569.html">Create an instance</a>.</p>
+     * <p>The name of the Image Search instance. The name can be up to 20 characters in length.
+     * If you have purchased an Image Search instance, log on to the <a href="https://imagesearch.console.aliyun.com/">Image Search console</a> to view the instance name.
+     * If you have not purchased an Image Search instance, refer to <a href="https://help.aliyun.com/document_detail/179178.html">Activate the service</a> and <a href="https://help.aliyun.com/document_detail/66569.html">Create an instance</a>.</p>
      * <blockquote>
-     * <p>The instance name is not the instance ID.</p>
+     * <p>The instance name is not the instance ID. Do not confuse the two.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +67,7 @@ public class AddImageRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The attribute, which is an integer. The attribute can be used to filter images when you search for images. If you specify this parameter, the response includes this parameter and its value.</p>
+     * <p>The integer attribute. This attribute can be used to filter query results and is returned in query results.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -67,7 +76,7 @@ public class AddImageRequest extends TeaModel {
     public Integer intAttr;
 
     /**
-     * <p>The attribute, which is an integer. The attribute can be used to filter images when you search for images. If you specify this parameter, the response includes this parameter and its value.</p>
+     * <p>The integer attribute. This attribute can be used to filter query results and is returned in query results.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -75,27 +84,56 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("IntAttr2")
     public Integer intAttr2;
 
+    /**
+     * <p>The integer attribute. This attribute can be used to filter query results and is returned in query results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33</p>
+     */
     @NameInMap("IntAttr3")
     public Integer intAttr3;
 
+    /**
+     * <p>The integer attribute. This attribute can be used to filter query results and is returned in query results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44</p>
+     */
     @NameInMap("IntAttr4")
     public Integer intAttr4;
 
     /**
-     * <p>The image file. The image file is encoded in Base64.</p>
+     * <p>The image content.</p>
      * <ul>
-     * <li>The file size of the image cannot exceed 4 MB.</li>
-     * <li>The following image formats are supported: PNG, JPG, JPEG, BMP, GIF, WebP, TIFF, and PPM.</li>
-     * <li>The transmission timeout period cannot exceed 5 seconds.</li>
-     * <li>For product and generic image searches, the length and width of the image must range from 100 pixels to 4,096 pixels.</li>
-     * <li>The image cannot contain rotation settings.</li>
+     * <li>The image size cannot exceed 4 MB.</li>
+     * <li>Image formats: PNG, JPG, JPEG, BMP, GIF, WEBP, TIFF, and PPM.</li>
+     * <li>The transmission wait time cannot exceed 5 seconds.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>For product image search, generic image search, furniture image search, and industrial hardware image search, the image width and height must be at least 100 pixels and at most 4,096 pixels.
+     *   For trademark image search, the image width and height must be at least 200 pixels and less than 4,096 pixels.
+     *  For fabric image search, the image width and height must be at least 448 pixels and at most 4,096 pixels.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><p>For product image search and generic image search, the image width and height must be at least 100 pixels and at most 4,096 pixels.</p>
+     * </li>
+     * <li><p>The image must not contain rotation information.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If you use SDKs to call this operation, you do not need to specify <strong>PicContent</strong>. The SDKs encapsulate this parameter and automatically encode its value in Base64. For more information about how to use Image Search SDK for Java, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</li>
-     * <li>If you use OpenAPI Explorer to call this operation, you can select only the <strong>2019-03-25</strong> version. If you call this operation of other versions, the value of <strong>PicContent</strong> cannot be encoded in Base64.</li>
+     * <li><strong>When calling by using an SDK:</strong></li>
      * </ul>
      * </blockquote>
+     * <ul>
+     * <li>If you use a V3 SDK, you do not need to set the PicContent field. The SDK encapsulates this field as PicContentObject and automatically converts it to Base64 encoding. For specific examples, refer to <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</li>
+     * <li>The SDK does not support passing image URLs directly. The V3 SDK provides an alternative method to upload images by URL. For specific examples, refer to <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</li>
+     * <li><strong>When calling by using the Alibaba Cloud OpenAPI platform:</strong><ul>
+     * <li>If you use the <strong>2019-03-25</strong> version, set the <strong>PicContent</strong> field to the <strong>Base64</strong> encoding of the image.</li>
+     * <li>If you use the <strong>2020-12-14</strong> version, click to upload the image directly in the <strong>PicContent</strong> field.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,13 +143,15 @@ public class AddImageRequest extends TeaModel {
     public String picContent;
 
     /**
-     * <p>The name of the image. The name can be up to 512 characters in length.</p>
+     * <p>The image name. The name can be up to 256 characters in length.</p>
      * <blockquote>
      * <ul>
-     * <li>An image is uniquely identified by the values of ProductId and PicName.</li>
-     * <li>If you add an image whose product ID (ProductId) and image name (PicName) are the same as those of an existing image, the newly added image overwrites the existing image.</li>
+     * <li>ProductId and PicName uniquely identify an image.</li>
      * </ul>
      * </blockquote>
+     * <ul>
+     * <li>If you add multiple images with the same ProductId and PicName, only the last added image is retained. Previously added images are overwritten.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,9 +161,9 @@ public class AddImageRequest extends TeaModel {
     public String picName;
 
     /**
-     * <p>The ID of the product. The ID can be up to 512 characters in length.</p>
+     * <p>The product ID. The ID can be up to 256 characters in length.</p>
      * <blockquote>
-     * <p>A product may have multiple images.</p>
+     * <p>A product can have multiple images.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -134,13 +174,19 @@ public class AddImageRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The subject area of the image, in the format of <code>x1,x2,y1,y2</code>. <code>x1 and y1</code> represent the position in the upper-left corner, in pixels. <code>x2 and y2</code> represent the position in the lower-right corner, in pixels.</p>
+     * <p>The subject region of the image, in the format of <code>x1,x2,y1,y2</code>, where <code>x1,y1</code> is the upper-left point and <code>x2,y2</code> is the lower-right point.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify Region, the system searches for images based on the value of Region regardless of the value of Crop.</li>
-     * <li>The value of Region does not have a unit. The value is generated based on the length and width of the image. If the length and width of the image are scaled, the value of Region must be proportionally adjusted.</li>
+     * <li>If you specify Region, the system searches based on the specified Region regardless of the Crop parameter value.
+     * &lt;props=&quot;china&quot;&gt;</li>
      * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>For fabric image search, this parameter is ignored. The system searches based on the entire image.</p>
+     * </li>
+     * <li><p>The Region parameter has no unit. The values are based on the pixel dimensions of the image. If the image is scaled, the Region parameter values must be scaled proportionally.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>280,486,232,351</p>
@@ -149,9 +195,9 @@ public class AddImageRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The attribute, which is a string. The value can be up to 128 characters in length. The attribute can be used to filter images when you search for images. If you specify this parameter, the response includes this parameter and its value.</p>
+     * <p>The string attribute. The attribute can be up to 128 characters in length. This attribute can be used to filter query results and is returned in query results.</p>
      * <blockquote>
-     * <p>The value cannot contain the following special characters: \ ¥ $ &amp; %</p>
+     * <p>Special characters such as \¥$&amp;% are not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -161,9 +207,9 @@ public class AddImageRequest extends TeaModel {
     public String strAttr;
 
     /**
-     * <p>The attribute, which is a string. The value can be up to 128 characters in length. The attribute can be used to filter images when you search for images. If you specify this parameter, the response includes this parameter and its value.</p>
+     * <p>The string attribute. The attribute can be up to 128 characters in length. This attribute can be used to filter query results and is returned in query results.</p>
      * <blockquote>
-     * <p>The value cannot contain the following special characters: \ ¥ $ &amp; %</p>
+     * <p>Special characters such as \¥$&amp;% are not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -172,9 +218,27 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("StrAttr2")
     public String strAttr2;
 
+    /**
+     * <p>The string attribute. The attribute can be up to 128 characters in length. This attribute can be used to filter query results and is returned in query results.</p>
+     * <blockquote>
+     * <p>Special characters such as \¥$&amp;% are not supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ss</p>
+     */
     @NameInMap("StrAttr3")
     public String strAttr3;
 
+    /**
+     * <p>The string attribute. The attribute can be up to 128 characters in length. This attribute can be used to filter query results and is returned in query results.</p>
+     * <blockquote>
+     * <p>Special characters such as \¥$&amp;% are not supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ss</p>
+     */
     @NameInMap("StrAttr4")
     public String strAttr4;
 

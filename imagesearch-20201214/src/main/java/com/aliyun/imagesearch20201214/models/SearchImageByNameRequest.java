@@ -5,10 +5,15 @@ import com.aliyun.tea.*;
 
 public class SearchImageByNameRequest extends TeaModel {
     /**
-     * <p>The category of the product. For more information, see <a href="https://help.aliyun.com/document_detail/179184.html">Category references</a>.</p>
+     * <p>The product category. For more information, see <a href="https://help.aliyun.com/document_detail/179184.html">Category reference</a>.</p>
      * <ul>
-     * <li>For product search: If a category is specified, the specified category prevails. If no category is specified, the system estimates and selects a category. The category selected by the system is included in the response.</li>
-     * <li>For generic search: The parameter value is set to 88888888 regardless of whether a category is specified.</li>
+     * <li>For product image search, if you specify a category, the specified category is used. If you do not specify a category, the system predicts the category. You can obtain the predicted category from the response.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>For fabric, trademark, generic, home furnishing, and industrial hardware searches, the system sets the category to 88888888 regardless of whether you specify a category.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>For generic image search, the system sets the category to 88888888 regardless of whether you specify a category..</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,17 +22,29 @@ public class SearchImageByNameRequest extends TeaModel {
     @NameInMap("CategoryId")
     public Integer categoryId;
 
+    /**
+     * <p>Specifies whether to deduplicate results based on ProductId.</p>
+     * <blockquote>
+     * <p>Set this parameter to true to enable deduplication.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DistinctProductId")
     public Boolean distinctProductId;
 
     /**
-     * <p>The filter conditions. int_attr supports the following operators: &gt;, &gt;=, &lt;, &lt;=, and =. str_attr supports the following operators: = and !=. You can set the logical operator between conditions to AND or OR.</p>
-     * <p>Examples:</p>
+     * <p>The filter condition. The int_attr field supports the following operators: in, not in, greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), less than or equal to (&lt;=), and equal to (=). The str_attr field supports the following operators: in, not in, equal to (=), and not equal to (!=). Multiple conditions can be connected by using AND and OR.
+     * Examples:</p>
      * <ul>
-     * <li>int_attr&gt;=100</li>
-     * <li>str_attr!=&quot;value1&quot;</li>
-     * <li>int_attr=1000 AND str_attr=&quot;value1&quot;</li>
+     * <li>int_attr&gt;=100.</li>
+     * <li>str_attr!=&quot;value1&quot;.</li>
+     * <li>int_attr=1000 AND str_attr=&quot;value1&quot;.</li>
      * </ul>
+     * <blockquote>
+     * <p>The maximum length is 4,096 characters.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>int_attr&gt;=100</p>
@@ -36,7 +53,12 @@ public class SearchImageByNameRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The name of the Image Search instance. The name can be up to 20 characters in length.</p>
+     * <p>The name of the Image Search instance. The name can be up to 20 characters in length.
+     * If you have purchased an Image Search instance, log on to the <a href="https://imagesearch.console.aliyun.com/">Image Search console</a> to view the instance name.
+     * If you have not purchased an Image Search instance, refer to <a href="https://help.aliyun.com/document_detail/179178.html">Activate the service</a> and <a href="https://help.aliyun.com/document_detail/66569.html">Create an instance</a>.</p>
+     * <blockquote>
+     * <p>The instance name is not the instance ID. Make sure you distinguish between them.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +68,7 @@ public class SearchImageByNameRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The number of images to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of results to return. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -55,7 +77,7 @@ public class SearchImageByNameRequest extends TeaModel {
     public Integer num;
 
     /**
-     * <p>The name of the image.</p>
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +87,7 @@ public class SearchImageByNameRequest extends TeaModel {
     public String picName;
 
     /**
-     * <p>The ID of the product.</p>
+     * <p>The product ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,11 +96,17 @@ public class SearchImageByNameRequest extends TeaModel {
     @NameInMap("ProductId")
     public String productId;
 
+    /**
+     * <p>The similarity score threshold. If you specify this parameter, only images with a similarity score greater than or equal to the threshold are returned. Valid values: 0.00 to 1.00. Up to two decimal places are supported. Default value: 0.00.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.50</p>
+     */
     @NameInMap("ScoreThreshold")
     public String scoreThreshold;
 
     /**
-     * <p>The number of the image to return. Valid values: 0 to 499. Default value: 0.</p>
+     * <p>The start position of the results to return. Valid values: 0 to 499. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

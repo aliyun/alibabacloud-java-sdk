@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DetailResponseBody extends TeaModel {
     /**
-     * <p>The details about the instance.</p>
+     * <p>The instance information.</p>
      */
     @NameInMap("Instance")
     public DetailResponseBodyInstance instance;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</p>
@@ -20,7 +20,7 @@ public class DetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class DetailResponseBody extends TeaModel {
 
     public static class DetailResponseBodyInstance extends TeaModel {
         /**
-         * <p>The capacity of the plan. Unit: × 10,000 images.</p>
+         * <p>The maximum image capacity of the plan. Unit: 10,000.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -68,7 +68,7 @@ public class DetailResponseBody extends TeaModel {
         public Integer capacity;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>imagesearchName</p>
@@ -77,7 +77,7 @@ public class DetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of queries per second supported by the plan.</p>
+         * <p>The QPS of the plan.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -86,7 +86,7 @@ public class DetailResponseBody extends TeaModel {
         public Integer qps;
 
         /**
-         * <p>The information about the region.</p>
+         * <p>The region information.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -96,7 +96,8 @@ public class DetailResponseBody extends TeaModel {
 
         /**
          * <p>The Image Search model.</p>
-         * <p>0: commodity search. 1: generic image search.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;Valid values: 0: product image search. 1: generic image search.
+         * &lt;props=&quot;china&quot;&gt;Valid values: 0: product image search. 1: generic image search. 2: fabric search. 3 and 7: trademark search. 4: copyright search. 5: furniture search. 6: hardware search..</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -114,7 +115,7 @@ public class DetailResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
-         * <p>The time when the instance was created. Unit: milliseconds.</p>
+         * <p>The creation time of the instance. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620382716000</p>

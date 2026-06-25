@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class IncreaseListResponseBody extends TeaModel {
     /**
-     * <p>The information about the batch task.</p>
+     * <p>The batch task information.</p>
      */
     @NameInMap("Data")
     public IncreaseListResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B3137727-7D6E-488C-BA21-0E034C38A879</p>
@@ -182,7 +182,7 @@ public class IncreaseListResponseBody extends TeaModel {
         public IncreaseListResponseBodyDataIncrements increments;
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,7 @@ public class IncreaseListResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

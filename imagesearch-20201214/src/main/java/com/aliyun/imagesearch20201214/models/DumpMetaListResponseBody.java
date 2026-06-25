@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DumpMetaListResponseBody extends TeaModel {
     /**
-     * <p>The information about the task that is used to export metadata.</p>
+     * <p>The metadata export information.</p>
      */
     @NameInMap("Data")
     public DumpMetaListResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B3137727-7D6E-488C-BA21-0E034C38A879</p>
@@ -42,10 +42,10 @@ public class DumpMetaListResponseBody extends TeaModel {
 
     public static class DumpMetaListResponseBodyDataDumpMetaList extends TeaModel {
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code. Valid values:</p>
          * <ul>
-         * <li>A value of 0 indicates that the operation is successful.</li>
-         * <li>Values other than 0 indicate errors.</li>
+         * <li>0: Succeeded.</li>
+         * <li>Non-zero: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DumpMetaListResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -64,7 +64,7 @@ public class DumpMetaListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The address where you can download the metadata. The address is valid for 2 hours.</p>
+         * <p>The URL for downloading the result. The URL is valid for two hours.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://imagesearchname.oss-cn-shanghai.aliyuncs.com/xxx">https://imagesearchname.oss-cn-shanghai.aliyuncs.com/xxx</a></p>
@@ -73,7 +73,7 @@ public class DumpMetaListResponseBody extends TeaModel {
         public String metaUrl;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -82,11 +82,11 @@ public class DumpMetaListResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The status of the export task.</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>PROCESSING: in progress</li>
-         * <li>FAIL: failed</li>
-         * <li>SUCCESS: successful</li>
+         * <li>PROCESSING: The task is being processed.</li>
+         * <li>FAIL: The task failed.</li>
+         * <li>SUCCESS: The task is completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DumpMetaListResponseBody extends TeaModel {
         public String utcCreate;
 
         /**
-         * <p>The time when the task was updated. Unit: milliseconds.</p>
+         * <p>The time when the task was last updated. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1629095760000</p>
@@ -178,13 +178,13 @@ public class DumpMetaListResponseBody extends TeaModel {
 
     public static class DumpMetaListResponseBodyData extends TeaModel {
         /**
-         * <p>A list of tasks that are used to export metadata.</p>
+         * <p>The collection of metadata export tasks.</p>
          */
         @NameInMap("DumpMetaList")
         public java.util.List<DumpMetaListResponseBodyDataDumpMetaList> dumpMetaList;
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -193,7 +193,7 @@ public class DumpMetaListResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
