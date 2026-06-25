@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateJobScriptResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateJobScriptResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>not support update script, please upgrade engine version to 2.2.2+</p>
      */
@@ -19,6 +23,8 @@ public class UpdateJobScriptResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The Request ID. Alibaba Cloud generates this unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>29ED6209-5DE6-5E1D-89B0-B7B1D823A1BF</p>
      */
@@ -26,6 +32,8 @@ public class UpdateJobScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

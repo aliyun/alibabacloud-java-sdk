@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowDAGRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,15 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The directed acyclic graph (DAG) of the workflow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Dag")
     public UpdateWorkflowDAGRequestDag dag;
 
     /**
+     * <p>The version of the DAG. To obtain this value, call the <a href="https://help.aliyun.com/document_detail/465989.html">ListDAGVersions</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1137005</p>
      */
@@ -36,6 +41,7 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
     public String dagVersion;
 
     /**
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,6 +97,8 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
 
     public static class UpdateWorkflowDAGRequestDagEdges extends TeaModel {
         /**
+         * <p>The job ID of the source node.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -98,6 +106,8 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
         public Long source;
 
         /**
+         * <p>The job ID of the target node.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -129,6 +139,8 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
 
     public static class UpdateWorkflowDAGRequestDagNodesCoordinate extends TeaModel {
         /**
+         * <p>Optional. The height of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -136,6 +148,8 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
         public Float height;
 
         /**
+         * <p>Optional. The width of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -143,6 +157,8 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
         public Float width;
 
         /**
+         * <p>The x-coordinate.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -150,6 +166,8 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>The y-coordinate.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -197,6 +215,8 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
 
     public static class UpdateWorkflowDAGRequestDagNodes extends TeaModel {
         /**
+         * <p>The logical expression of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;logicType&quot;: &quot;status_branch&quot;,
@@ -255,10 +275,15 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The coordinates of the node.</p>
+         */
         @NameInMap("Coordinate")
         public UpdateWorkflowDAGRequestDagNodesCoordinate coordinate;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -297,9 +322,15 @@ public class UpdateWorkflowDAGRequest extends TeaModel {
     }
 
     public static class UpdateWorkflowDAGRequestDag extends TeaModel {
+        /**
+         * <p>A list of edges in the workflow.</p>
+         */
         @NameInMap("Edges")
         public java.util.List<UpdateWorkflowDAGRequestDagEdges> edges;
 
+        /**
+         * <p>A list of nodes in the workflow.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<UpdateWorkflowDAGRequestDagNodes> nodes;
 

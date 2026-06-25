@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppNamesRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,6 +14,7 @@ public class ListAppNamesRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

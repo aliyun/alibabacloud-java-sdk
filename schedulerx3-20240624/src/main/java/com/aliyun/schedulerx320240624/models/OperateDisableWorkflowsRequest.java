@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateDisableWorkflowsRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateDisableWorkflowsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class OperateDisableWorkflowsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>A list of workflow IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowIds")

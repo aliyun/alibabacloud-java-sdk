@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateRetryJobExecutionRequest extends TeaModel {
     /**
+     * <p>The Application Name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateRetryJobExecutionRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class OperateRetryJobExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The Job Execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +34,18 @@ public class OperateRetryJobExecutionRequest extends TeaModel {
     @NameInMap("JobExecutionId")
     public String jobExecutionId;
 
+    /**
+     * <p>A list of Sub-task execution IDs for a Broadcast Sharding Job.</p>
+     * <blockquote>
+     * <p>To retry a specific Sub-task of a Broadcast Sharding Job, set this parameter to the execution ID of that Sub-task.</p>
+     * </blockquote>
+     */
     @NameInMap("TaskList")
     public java.util.List<String> taskList;
 
+    /**
+     * <p>Specifies whether to trigger downstream jobs.</p>
+     */
     @NameInMap("TriggerChild")
     public Boolean triggerChild;
 

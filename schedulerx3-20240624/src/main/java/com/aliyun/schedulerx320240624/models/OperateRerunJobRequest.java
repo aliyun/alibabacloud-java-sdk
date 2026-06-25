@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateRerunJobRequest extends TeaModel {
     /**
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The unique identifier of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The specific time of day for which to rerun the data. The format is <code>HH:mm:ss</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public String dataTime;
 
     /**
+     * <p>The end of the time range to rerun, specified as a Unix timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>The unique identifier of the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The start of the time range to rerun, specified as a Unix timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateRetryWorkflowExecutionResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OperateRetryWorkflowExecutionResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -19,7 +23,7 @@ public class OperateRetryWorkflowExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -28,6 +32,14 @@ public class OperateRetryWorkflowExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * <ul>
+     * <li><p>true: The call succeeded.</p>
+     * </li>
+     * <li><p>false: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

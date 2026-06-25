@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobScriptRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateJobScriptRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateJobScriptRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +34,24 @@ public class UpdateJobScriptRequest extends TeaModel {
     @NameInMap("JobId")
     public Long jobId;
 
+    /**
+     * <p>The script content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#!/bin/bash
+     * echo &quot;xxl-job: hello shell&quot;</p>
+     * <p>echo &quot;脚本位置: $0&quot;
+     * echo &quot;任务参数: $1&quot;
+     * echo &quot;分片序号 = $2&quot;
+     * echo &quot;分片总数 = $3&quot;</p>
+     * <p>echo &quot;Good bye!&quot;
+     * exit 0</p>
+     */
     @NameInMap("ScriptContent")
     public String scriptContent;
 
     /**
+     * <p>The description of the script version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

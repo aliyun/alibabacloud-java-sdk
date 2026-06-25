@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
     /**
+     * <p>The name of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,6 +14,7 @@ public class ListJobsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,18 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The description of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job01单机任务</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The name of the job handler.</p>
+     * 
      * <strong>example:</strong>
      * <p>jobDemoHandler</p>
      */
@@ -31,6 +42,8 @@ public class ListJobsRequest extends TeaModel {
     public String jobHandler;
 
     /**
+     * <p>The ID of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -38,6 +51,8 @@ public class ListJobsRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The name of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>job01</p>
      */
@@ -45,6 +60,8 @@ public class ListJobsRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +69,8 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -59,6 +78,8 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The status of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -66,6 +87,8 @@ public class ListJobsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCalendarsRequest extends TeaModel {
     /**
+     * <p>The name of the calendar.</p>
+     * 
      * <strong>example:</strong>
      * <p>workday</p>
      */
@@ -12,6 +14,7 @@ public class ListCalendarsRequest extends TeaModel {
     public String calendarName;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,14 @@ public class ListCalendarsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Specifies whether to return calendar details. The default value is <code>false</code>.</p>
+     * <ul>
+     * <li><p><code>false</code>: Does not return the detailed list of days for each month. Only basic information is returned.</p>
+     * </li>
+     * <li><p><code>true</code>: Returns the detailed list of days for each month.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,6 +39,8 @@ public class ListCalendarsRequest extends TeaModel {
     public Boolean fetchCalendarDetail;
 
     /**
+     * <p>The maximum number of entries returned per page. The default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +48,8 @@ public class ListCalendarsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. Set this parameter to the <code>NextToken</code> value from the previous response. Omit this parameter for the first request.</p>
+     * 
      * <strong>example:</strong>
      * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
      */
@@ -42,6 +57,8 @@ public class ListCalendarsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The year.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024</p>
      */

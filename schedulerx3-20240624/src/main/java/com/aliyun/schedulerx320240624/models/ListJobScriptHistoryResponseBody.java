@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobScriptHistoryResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of <code>200</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -13,13 +15,15 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li></li>
+     * <li>The response data.</li>
      * </ul>
      */
     @NameInMap("Data")
     public ListJobScriptHistoryResponseBodyData data;
 
     /**
+     * <p>The maximum number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -27,6 +31,7 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +41,8 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>A unique ID for the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
      */
@@ -43,6 +50,14 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -104,6 +119,8 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
 
     public static class ListJobScriptHistoryResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>The timestamp when the script version was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-29 15:56:36</p>
          */
@@ -111,16 +128,33 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator of the script version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1963096506470832</p>
          */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The content of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/bash
+         * echo &quot;xxl-job: hello shell&quot;</p>
+         * <p>echo &quot;脚本位置: $0&quot;
+         * echo &quot;任务参数: $1&quot;
+         * echo &quot;分片序号 = $2&quot;
+         * echo &quot;分片总数 = $3&quot;</p>
+         * <p>echo &quot;Good bye!&quot;
+         * exit 0</p>
+         */
         @NameInMap("ScriptContent")
         public String scriptContent;
 
         /**
+         * <p>The script version description.</p>
+         * 
          * <strong>example:</strong>
          * <p>init version</p>
          */
@@ -168,6 +202,8 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
 
     public static class ListJobScriptHistoryResponseBodyData extends TeaModel {
         /**
+         * <p>The token to retrieve the next page of results. If this parameter is empty, no more data is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
@@ -176,13 +212,15 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li></li>
+         * <li>A list of script history records.</li>
          * </ul>
          */
         @NameInMap("Records")
         public java.util.List<ListJobScriptHistoryResponseBodyDataRecords> records;
 
         /**
+         * <p>The total count of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>21</p>
          */

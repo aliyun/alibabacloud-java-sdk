@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportJobsRequest extends TeaModel {
     /**
+     * <p>Determines whether to automatically create the Application if it does not exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class ImportJobsRequest extends TeaModel {
     public Boolean autoCreateApp;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ImportJobsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The jobs to import, formatted as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;kind&quot;: &quot;SchedulerXJobs&quot;,
@@ -82,6 +87,14 @@ public class ImportJobsRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>Determines whether to overwrite jobs if they already exist. The default is <strong>true</strong>.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Overwrites existing jobs.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not overwrite existing jobs.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

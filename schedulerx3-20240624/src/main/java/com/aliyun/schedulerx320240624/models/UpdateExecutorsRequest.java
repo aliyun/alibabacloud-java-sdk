@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateExecutorsRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateExecutorsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class UpdateExecutorsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The Worker type.</p>
+     * 
      * <strong>example:</strong>
      * <p>k8s_service</p>
      */
@@ -30,6 +34,8 @@ public class UpdateExecutorsRequest extends TeaModel {
     public String workerType;
 
     /**
+     * <p>A JSON-formatted string that contains a list of Workers.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
      */

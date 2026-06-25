@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportCalendarResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,14 +14,14 @@ public class ImportCalendarResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The data returned by the call.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,6 +29,8 @@ public class ImportCalendarResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID generated for the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</p>
      */
@@ -34,6 +38,14 @@ public class ImportCalendarResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

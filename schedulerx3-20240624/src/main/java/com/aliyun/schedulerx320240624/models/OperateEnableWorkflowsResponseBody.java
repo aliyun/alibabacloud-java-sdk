@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateEnableWorkflowsResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of <code>200</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OperateEnableWorkflowsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,6 +23,8 @@ public class OperateEnableWorkflowsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
      */
@@ -26,6 +32,14 @@ public class OperateEnableWorkflowsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

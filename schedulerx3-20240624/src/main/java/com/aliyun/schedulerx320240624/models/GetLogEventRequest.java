@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLogEventRequest extends TeaModel {
     /**
+     * <p>The name of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxl-job-executor-perf-test-241</p>
      */
@@ -12,6 +14,7 @@ public class GetLogEventRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The unique identifier for the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetLogEventRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The end of the query\&quot;s time range, specified as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1721636220</p>
      */
@@ -28,6 +33,8 @@ public class GetLogEventRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The severity level for filtering events.</p>
+     * 
      * <strong>example:</strong>
      * <p>INFO</p>
      */
@@ -35,6 +42,8 @@ public class GetLogEventRequest extends TeaModel {
     public String event;
 
     /**
+     * <p>The type of event to retrieve.</p>
+     * 
      * <strong>example:</strong>
      * <p>JOB</p>
      */
@@ -42,6 +51,8 @@ public class GetLogEventRequest extends TeaModel {
     public String eventType;
 
     /**
+     * <p>The unique identifier for the job execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>101</p>
      */
@@ -49,6 +60,8 @@ public class GetLogEventRequest extends TeaModel {
     public Long jobExecutionId;
 
     /**
+     * <p>The name of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -56,6 +69,8 @@ public class GetLogEventRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>A keyword to search for in log events.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_partition_tbl</p>
      */
@@ -63,6 +78,8 @@ public class GetLogEventRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number to retrieve.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -70,6 +87,8 @@ public class GetLogEventRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -77,6 +96,14 @@ public class GetLogEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies the sort order of events.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Sorts events in descending order.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Sorts events in ascending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -84,6 +111,8 @@ public class GetLogEventRequest extends TeaModel {
     public Boolean reverse;
 
     /**
+     * <p>The start of the query\&quot;s time range, specified as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1721268302000</p>
      */
@@ -91,6 +120,8 @@ public class GetLogEventRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The unique identifier for the workflow execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>1450568762586578000</p>
      */
@@ -98,6 +129,8 @@ public class GetLogEventRequest extends TeaModel {
     public Long workflowExecutionId;
 
     /**
+     * <p>The name of the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>流程001</p>
      */

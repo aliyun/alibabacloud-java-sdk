@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAppNamesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -18,6 +20,8 @@ public class ListAppNamesResponseBody extends TeaModel {
     public java.util.List<ListAppNamesResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -25,6 +29,8 @@ public class ListAppNamesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID. Use this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>3881C59F-59F1-5B2E-8110-7D689CA9B207</p>
      */
@@ -32,6 +38,14 @@ public class ListAppNamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -85,6 +99,8 @@ public class ListAppNamesResponseBody extends TeaModel {
 
     public static class ListAppNamesResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the application group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-app</p>
          */
@@ -92,6 +108,8 @@ public class ListAppNamesResponseBody extends TeaModel {
         public String appGroupId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-app</p>
          */
@@ -99,6 +117,8 @@ public class ListAppNamesResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The app type.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -106,16 +126,26 @@ public class ListAppNamesResponseBody extends TeaModel {
         public Integer appType;
 
         /**
+         * <p>The unique identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The application title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试应用</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The registry type for manually registered workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>k8s_service</p>
          */

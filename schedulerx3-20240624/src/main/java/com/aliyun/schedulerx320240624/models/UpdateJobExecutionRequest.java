@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobExecutionRequest extends TeaModel {
     /**
+     * <p>AppName</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateJobExecutionRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateJobExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Job execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class UpdateJobExecutionRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
+     * <p>Schedule time</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-10-01 12:00:00</p>
      */

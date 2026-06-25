@@ -14,7 +14,6 @@ public class DeleteExecutorGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

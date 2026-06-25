@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCalendarNamesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -20,6 +22,8 @@ public class ListCalendarNamesResponseBody extends TeaModel {
     public java.util.List<String> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -27,6 +31,8 @@ public class ListCalendarNamesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AA3538A0-FBE6-5E31-AD88-A02C6FF0DACC</p>
      */
@@ -34,6 +40,14 @@ public class ListCalendarNamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

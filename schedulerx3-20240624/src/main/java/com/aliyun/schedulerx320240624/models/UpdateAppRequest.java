@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppRequest extends TeaModel {
     /**
+     * <p>The access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>f312159702f4469585586ed5a6904163v3</p>
      */
@@ -12,6 +14,7 @@ public class UpdateAppRequest extends TeaModel {
     public String accessToken;
 
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateAppRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,14 @@ public class UpdateAppRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Specifies whether to enable logging.</p>
+     * <ul>
+     * <li><p><code>true</code>: Enables logging.</p>
+     * </li>
+     * <li><p><code>false</code>: Disables logging.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -44,6 +56,11 @@ public class UpdateAppRequest extends TeaModel {
     public Integer labelRouteStrategy;
 
     /**
+     * <p>The task execution queue size.</p>
+     * <blockquote>
+     * <p>Sets the maximum number of concurrent task instances in the application group. Additional task instances are queued for execution and not discarded.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -51,7 +68,11 @@ public class UpdateAppRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
+     * <p>The title.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试应用</p>
      */
     @NameInMap("Title")
     public String title;

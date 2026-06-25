@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLogEventResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. A value of <code>200</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -20,6 +22,8 @@ public class GetLogEventResponseBody extends TeaModel {
     public GetLogEventResponseBodyData data;
 
     /**
+     * <p>The error message that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -27,6 +31,8 @@ public class GetLogEventResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique, server-generated ID for the request. This ID is used for troubleshooting purposes.</p>
+     * 
      * <strong>example:</strong>
      * <p>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</p>
      */
@@ -34,6 +40,14 @@ public class GetLogEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +101,8 @@ public class GetLogEventResponseBody extends TeaModel {
 
     public static class GetLogEventResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>portal-dev</p>
          */
@@ -94,6 +110,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The log content.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello word</p>
          */
@@ -101,6 +119,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The severity level of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>info</p>
          */
@@ -108,6 +128,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The type of the event.</p>
+         * 
          * <strong>example:</strong>
          * <p>JOB</p>
          */
@@ -115,6 +137,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String eventType;
 
         /**
+         * <p>The job execution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */
@@ -122,6 +146,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String jobExecutionId;
 
         /**
+         * <p>The name of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -129,6 +155,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The time when the log was recorded. The time is in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-31 16:43:51</p>
          */
@@ -136,6 +164,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>The address of the worker that runs the job.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:030225016025_9357_60125@127.0.0.1">030225016025_9357_60125@127.0.0.1</a>:51363</p>
          */
@@ -143,6 +173,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String workerAddr;
 
         /**
+         * <p>The workflow execution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1450568762586578000</p>
          */
@@ -150,6 +182,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public String workflowExecutionId;
 
         /**
+         * <p>The name of the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>工作流0001</p>
          */
@@ -245,6 +279,8 @@ public class GetLogEventResponseBody extends TeaModel {
 
     public static class GetLogEventResponseBodyData extends TeaModel {
         /**
+         * <p>The page number of the returned page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -252,6 +288,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -267,6 +305,8 @@ public class GetLogEventResponseBody extends TeaModel {
         public java.util.List<GetLogEventResponseBodyDataRecords> records;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>33</p>
          */

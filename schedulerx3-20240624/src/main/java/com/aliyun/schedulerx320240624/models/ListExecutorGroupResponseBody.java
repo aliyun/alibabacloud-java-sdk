@@ -38,8 +38,6 @@ public class ListExecutorGroupResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
      */
@@ -376,11 +374,6 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("Records")
         public java.util.List<ListExecutorGroupResponseBodyDataRecords> records;
 

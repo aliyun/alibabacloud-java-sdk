@@ -11,11 +11,6 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <ul>
-     * <li></li>
-     * </ul>
-     */
     @NameInMap("Data")
     public UpdateExecutorGroupResponseBodyData data;
 
@@ -27,8 +22,6 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>C78E2AD2-5985-515B-BAD2-31A248AFC263</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateEnableJobsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OperateEnableJobsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,6 +23,8 @@ public class OperateEnableJobsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID generated for the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>4CC4132F-B798-5D6E-9F06-D44B33E417E9</p>
      */
@@ -26,6 +32,14 @@ public class OperateEnableJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><p><code>true</code>: The call was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

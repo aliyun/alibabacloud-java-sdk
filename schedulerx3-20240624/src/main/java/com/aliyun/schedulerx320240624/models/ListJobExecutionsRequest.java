@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobExecutionsRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,6 +14,7 @@ public class ListJobExecutionsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListJobExecutionsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-12 20:50:56</p>
      */
@@ -28,6 +33,8 @@ public class ListJobExecutionsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The job execution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>
      */
@@ -35,6 +42,8 @@ public class ListJobExecutionsRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>74</p>
      */
@@ -42,6 +51,8 @@ public class ListJobExecutionsRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-job</p>
      */
@@ -49,6 +60,8 @@ public class ListJobExecutionsRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,6 +69,8 @@ public class ListJobExecutionsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -63,6 +78,8 @@ public class ListJobExecutionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-12 20:50:55</p>
      */
@@ -70,6 +87,36 @@ public class ListJobExecutionsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The job execution status. Valid values:</p>
+     * <ul>
+     * <li><p>0: <strong>UNKNOWN</strong>.</p>
+     * </li>
+     * <li><p>1: <strong>WAITING</strong>.</p>
+     * </li>
+     * <li><p>2: <strong>READY</strong>.</p>
+     * </li>
+     * <li><p>3: <strong>RUNNING</strong>.</p>
+     * </li>
+     * <li><p>4: <strong>SUCCESS</strong>.</p>
+     * </li>
+     * <li><p>5: <strong>FAILED</strong>.</p>
+     * </li>
+     * <li><p>6: <strong>PAUSED</strong>.</p>
+     * </li>
+     * <li><p>7: <strong>SUBMITTED</strong>.</p>
+     * </li>
+     * <li><p>8: <strong>REJECTED</strong>.</p>
+     * </li>
+     * <li><p>9: <strong>ACCEPTED</strong>.</p>
+     * </li>
+     * <li><p>10: <strong>PARTIAL_FAILED</strong>.</p>
+     * </li>
+     * <li><p>11: <strong>SKIPPED</strong>.</p>
+     * </li>
+     * <li><p>12: <strong>REMOVED</strong>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -77,6 +124,8 @@ public class ListJobExecutionsRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The workflow execution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

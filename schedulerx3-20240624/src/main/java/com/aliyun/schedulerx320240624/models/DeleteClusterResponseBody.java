@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteClusterResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,6 +23,8 @@ public class DeleteClusterResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID generated for the request. If you encounter an issue, provide this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>F131C3E0-3FAA-5FA4-A6F3-E974D69EF3C5</p>
      */
@@ -26,6 +32,14 @@ public class DeleteClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

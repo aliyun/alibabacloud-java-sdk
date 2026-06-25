@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx-test-1107</p>
      */

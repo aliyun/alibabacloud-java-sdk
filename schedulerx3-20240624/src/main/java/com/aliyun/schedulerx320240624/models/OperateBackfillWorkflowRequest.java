@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateBackfillWorkflowRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateBackfillWorkflowRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class OperateBackfillWorkflowRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The end date of the backfill, in YYYY-MM-DD format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class OperateBackfillWorkflowRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The start date of the backfill, in YYYY-MM-DD format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class OperateBackfillWorkflowRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

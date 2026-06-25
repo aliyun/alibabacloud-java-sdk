@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCalendarRequest extends TeaModel {
     /**
+     * <p>The name of the calendar.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateCalendarRequest extends TeaModel {
     public String calendarName;
 
     /**
+     * <p>A client token to ensure request idempotence. Generate a unique value for this parameter on your client. The token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the Request ID as the client token. The Request ID may be different for each request.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -21,6 +24,7 @@ public class CreateCalendarRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The Cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/28147.html">ListClusters</a> operation to query Cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CreateCalendarRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The days of each month, specified in a JSON array.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +57,7 @@ public class CreateCalendarRequest extends TeaModel {
     public String months;
 
     /**
+     * <p>The year.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

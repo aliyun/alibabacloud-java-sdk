@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowDAGVersionRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateWorkflowDAGVersionRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateWorkflowDAGVersionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The Workflow DAG version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class UpdateWorkflowDAGVersionRequest extends TeaModel {
     public String dagVersion;
 
     /**
+     * <p>The Workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateClusterResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,6 +23,8 @@ public class UpdateClusterResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request identifier, used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEF9AF15-AEEF-5E59-BF7B-BCBB119DC53F</p>
      */
@@ -26,6 +32,14 @@ public class UpdateClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

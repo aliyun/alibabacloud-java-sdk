@@ -5,22 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListAppsRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>test-app</p>
+     * <p>The application name.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxljob-b6ec1xxxx</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,12 +27,17 @@ public class ListAppsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The title.</p>
+     */
     @NameInMap("Title")
     public String title;
 

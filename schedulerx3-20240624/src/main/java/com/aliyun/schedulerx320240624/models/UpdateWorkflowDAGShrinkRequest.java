@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowDAGShrinkRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateWorkflowDAGShrinkRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,15 @@ public class UpdateWorkflowDAGShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The directed acyclic graph (DAG) of the workflow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Dag")
     public String dagShrink;
 
     /**
+     * <p>The version of the DAG. To obtain this value, call the <a href="https://help.aliyun.com/document_detail/465989.html">ListDAGVersions</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1137005</p>
      */
@@ -36,6 +41,7 @@ public class UpdateWorkflowDAGShrinkRequest extends TeaModel {
     public String dagVersion;
 
     /**
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

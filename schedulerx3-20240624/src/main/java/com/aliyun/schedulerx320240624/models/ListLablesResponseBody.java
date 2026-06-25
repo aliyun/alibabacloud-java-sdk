@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLablesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,14 +14,14 @@ public class ListLablesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The returned list of labels.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListLablesResponseBodyData> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -27,6 +29,8 @@ public class ListLablesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>A unique identifier for the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9079A828-9138-50F1-801E-F2BC3D222A06</p>
      */
@@ -34,6 +38,14 @@ public class ListLablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +99,8 @@ public class ListLablesResponseBody extends TeaModel {
 
     public static class ListLablesResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the label is designated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -94,6 +108,8 @@ public class ListLablesResponseBody extends TeaModel {
         public Boolean isDesignated;
 
         /**
+         * <p>The label.</p>
+         * 
          * <strong>example:</strong>
          * <p>gray</p>
          */
@@ -101,6 +117,8 @@ public class ListLablesResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>Indicates whether the Executor is online.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -108,6 +126,8 @@ public class ListLablesResponseBody extends TeaModel {
         public Boolean online;
 
         /**
+         * <p>The number of machines with this label.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

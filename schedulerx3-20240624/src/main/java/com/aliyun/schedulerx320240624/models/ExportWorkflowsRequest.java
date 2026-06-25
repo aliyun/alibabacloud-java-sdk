@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportWorkflowsRequest extends TeaModel {
     /**
+     * <p>The name of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,7 +14,7 @@ public class ExportWorkflowsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>A short description of struct</p>
+     * <p>The ID of the cluster where the Workflow is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +23,9 @@ public class ExportWorkflowsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>An array of Workflow IDs to export.</p>
+     */
     @NameInMap("WorkflowId")
     public java.util.List<Long> workflowId;
 

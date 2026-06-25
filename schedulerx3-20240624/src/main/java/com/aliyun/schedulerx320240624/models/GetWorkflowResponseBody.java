@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -20,6 +22,8 @@ public class GetWorkflowResponseBody extends TeaModel {
     public GetWorkflowResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,6 +31,8 @@ public class GetWorkflowResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. This ID is unique to each request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>27B1345D-5F71-5972-8E4C-AABA6C6232F0</p>
      */
@@ -34,6 +40,14 @@ public class GetWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +101,8 @@ public class GetWorkflowResponseBody extends TeaModel {
 
     public static class GetWorkflowResponseBodyData extends TeaModel {
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-app</p>
          */
@@ -94,6 +110,8 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The custom calendar.</p>
+         * 
          * <strong>example:</strong>
          * <p>workday</p>
          */
@@ -101,6 +119,8 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String calendar;
 
         /**
+         * <p>The user who created the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>18582193685027xx</p>
          */
@@ -108,6 +128,8 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The workflow description.</p>
+         * 
          * <strong>example:</strong>
          * <p>my first workflow</p>
          */
@@ -115,6 +137,8 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The maximum concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -122,6 +146,8 @@ public class GetWorkflowResponseBody extends TeaModel {
         public Integer maxConcurrency;
 
         /**
+         * <p>The workflow name.</p>
+         * 
          * <strong>example:</strong>
          * <p>myWorkflow</p>
          */
@@ -129,6 +155,14 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The workflow status.</p>
+         * <ul>
+         * <li><p>0: disabled</p>
+         * </li>
+         * <li><p>1: enabled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -136,6 +170,16 @@ public class GetWorkflowResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The time expression. The value of this parameter depends on the schedule type.</p>
+         * <ul>
+         * <li><p><strong>None</strong>: No expression is required.</p>
+         * </li>
+         * <li><p><strong>cron</strong>: A standard cron expression.</p>
+         * </li>
+         * <li><p><strong>API</strong>: No expression is required.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0 0 12 * * ?</p>
          */
@@ -143,6 +187,16 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String timeExpression;
 
         /**
+         * <p>The schedule type.</p>
+         * <ul>
+         * <li><p>-1: None</p>
+         * </li>
+         * <li><p>1: cron</p>
+         * </li>
+         * <li><p>100: API</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -150,6 +204,11 @@ public class GetWorkflowResponseBody extends TeaModel {
         public Integer timeType;
 
         /**
+         * <p>The time zone.</p>
+         * <blockquote>
+         * <p>If this parameter is omitted, the time zone of the server in the current region is used.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
          */
@@ -157,6 +216,8 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String timezone;
 
         /**
+         * <p>The user who last updated the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>18582193685027xx</p>
          */
@@ -164,6 +225,8 @@ public class GetWorkflowResponseBody extends TeaModel {
         public String updater;
 
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -171,6 +234,11 @@ public class GetWorkflowResponseBody extends TeaModel {
         public Long workflowId;
 
         /**
+         * <p>The extended attributes.</p>
+         * <blockquote>
+         * <p>This parameter is not supported.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

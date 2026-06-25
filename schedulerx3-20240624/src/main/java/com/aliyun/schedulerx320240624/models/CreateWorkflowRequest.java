@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateWorkflowRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The custom calendar. This parameter applies only when <code>TimeType</code> is <code>cron</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>workday</p>
      */
@@ -21,6 +24,8 @@ public class CreateWorkflowRequest extends TeaModel {
     public String calendar;
 
     /**
+     * <p>A unique client token to ensure request idempotence. The token must contain only ASCII characters. If you omit this parameter, the system uses the RequestId as the ClientToken. The RequestId is unique to each request.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -28,6 +33,7 @@ public class CreateWorkflowRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class CreateWorkflowRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The workflow description.</p>
+     * 
      * <strong>example:</strong>
      * <p>my first workflow for data analyse</p>
      */
@@ -44,6 +52,8 @@ public class CreateWorkflowRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The maximum concurrency for the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -51,6 +61,7 @@ public class CreateWorkflowRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
+     * <p>The workflow name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +71,14 @@ public class CreateWorkflowRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The status of the workflow. By default, the workflow is disabled. Valid values:</p>
+     * <ul>
+     * <li><p>0: Disabled</p>
+     * </li>
+     * <li><p>1: Enabled</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -67,6 +86,16 @@ public class CreateWorkflowRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The time expression, which depends on the <code>TimeType</code> parameter.</p>
+     * <ul>
+     * <li><p><strong>none</strong>: This parameter is not required.</p>
+     * </li>
+     * <li><p><strong>cron</strong>: Enter a standard cron expression. Online validation is supported.</p>
+     * </li>
+     * <li><p><strong>api</strong>: This parameter is not required.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0 0 4 ? * Mon/1</p>
      */
@@ -74,6 +103,16 @@ public class CreateWorkflowRequest extends TeaModel {
     public String timeExpression;
 
     /**
+     * <p>The schedule type. Valid values:</p>
+     * <ul>
+     * <li><p>-1: none<br></p>
+     * </li>
+     * <li><p>1: cron<br></p>
+     * </li>
+     * <li><p>100: api</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,6 +120,8 @@ public class CreateWorkflowRequest extends TeaModel {
     public Integer timeType;
 
     /**
+     * <p>The time zone for the schedule.</p>
+     * 
      * <strong>example:</strong>
      * <p>GMT+8</p>
      */

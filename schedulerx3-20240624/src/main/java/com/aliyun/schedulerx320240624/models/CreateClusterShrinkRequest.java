@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateClusterShrinkRequest extends TeaModel {
     /**
+     * <p>The billing type.</p>
+     * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
      */
@@ -12,22 +14,28 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The name of the cluster.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>qianxi-test-0812</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <strong>example:</strong>
-     * <p>scx.dev.x1</p>
+     * <p>The cluster specification. Valid values:</p>
+     * <ul>
+     * <li>scx.dev.x1</li>
+     * <li>scx.small.x1</li>
+     * <li>scx.small.x2</li>
+     * <li>scx.medium.x1</li>
+     * <li>scx.medium.x2.</li>
+     * </ul>
      */
     @NameInMap("ClusterSpec")
     public String clusterSpec;
 
     /**
+     * <p>The cluster type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +43,8 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public Integer clusterType;
 
     /**
+     * <p>The duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -42,30 +52,43 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <strong>example:</strong>
-     * <p>xxljob</p>
+     * <p>The engine type. Valid values: xxljob.</p>
      */
     @NameInMap("EngineType")
     public String engineType;
 
     /**
+     * <p>The pricing cycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>Year</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
+     */
+    @NameInMap("Source")
+    public String source;
+
+    /**
+     * <p>The list of tags. A maximum of 20 tags are supported.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateClusterShrinkRequestTag> tag;
 
+    /**
+     * <p>The information about the vSwitches.</p>
+     */
     @NameInMap("VSwitches")
     public String vSwitchesShrink;
 
     /**
-     * <p>VPC id</p>
-     * 
-     * <strong>example:</strong>
-     * <p>vpc-aa1a18236n90rqhuhhnhh</p>
+     * <p>The ID of the VPC.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -131,6 +154,14 @@ public class CreateClusterShrinkRequest extends TeaModel {
         return this.pricingCycle;
     }
 
+    public CreateClusterShrinkRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
     public CreateClusterShrinkRequest setTag(java.util.List<CreateClusterShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -156,9 +187,15 @@ public class CreateClusterShrinkRequest extends TeaModel {
     }
 
     public static class CreateClusterShrinkRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

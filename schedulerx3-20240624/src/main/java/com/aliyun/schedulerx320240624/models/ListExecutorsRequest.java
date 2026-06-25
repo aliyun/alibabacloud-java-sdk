@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExecutorsRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListExecutorsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ListExecutorsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>74</p>
      */
@@ -30,6 +34,8 @@ public class ListExecutorsRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The label.</p>
+     * 
      * <strong>example:</strong>
      * <p>gray</p>
      */

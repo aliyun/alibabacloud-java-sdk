@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateUnskipJobExecutionRequest extends TeaModel {
     /**
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateUnskipJobExecutionRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class OperateUnskipJobExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The ID of the job execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>
      */

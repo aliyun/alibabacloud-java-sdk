@@ -41,7 +41,6 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

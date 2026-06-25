@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateStopJobExecutionShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the Application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateStopJobExecutionShrinkRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The ID of the Cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class OperateStopJobExecutionShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The ID of the Job Execution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,9 @@ public class OperateStopJobExecutionShrinkRequest extends TeaModel {
     @NameInMap("JobExecutionId")
     public String jobExecutionId;
 
+    /**
+     * <p>A list of Task IDs.</p>
+     */
     @NameInMap("TaskList")
     public String taskListShrink;
 

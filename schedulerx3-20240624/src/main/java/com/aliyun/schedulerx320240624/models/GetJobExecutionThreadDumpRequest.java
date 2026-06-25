@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobExecutionThreadDumpRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxl-job-executor-sample</p>
      */
@@ -12,6 +14,8 @@ public class GetJobExecutionThreadDumpRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxljob-b6ec1xxxx</p>
      */
@@ -19,6 +23,8 @@ public class GetJobExecutionThreadDumpRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The executor address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://192.168.0.215:9966/">http://192.168.0.215:9966/</a></p>
      */
@@ -26,6 +32,8 @@ public class GetJobExecutionThreadDumpRequest extends TeaModel {
     public String executorAddr;
 
     /**
+     * <p>The job execution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>
      */

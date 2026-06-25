@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportJobsShrinkRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExportJobsShrinkRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ExportJobsShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The type of jobs to export. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,9 +34,7 @@ public class ExportJobsShrinkRequest extends TeaModel {
     public Integer exportJobType;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>A list of job IDs.</p>
      */
     @NameInMap("JobIds")
     public String jobIdsShrink;

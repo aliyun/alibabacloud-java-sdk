@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SyncJobsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SyncJobsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Not found: appName not found.</p>
      */
@@ -19,6 +23,8 @@ public class SyncJobsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request. This ID is used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>6BCE89B3-E882-511D-9A75-D452A56EC4B1</p>
      */
@@ -26,6 +32,14 @@ public class SyncJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

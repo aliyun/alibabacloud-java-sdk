@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCalendarResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -13,13 +15,15 @@ public class GetCalendarResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li></li>
+     * <li>The data returned.</li>
      * </ul>
      */
     @NameInMap("Data")
     public GetCalendarResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,7 +31,7 @@ public class GetCalendarResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
@@ -36,6 +40,14 @@ public class GetCalendarResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,6 +101,8 @@ public class GetCalendarResponseBody extends TeaModel {
 
     public static class GetCalendarResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the calendar.</p>
+         * 
          * <strong>example:</strong>
          * <p>workday</p>
          */
@@ -96,6 +110,8 @@ public class GetCalendarResponseBody extends TeaModel {
         public String calendarName;
 
         /**
+         * <p>A JSON string that represents an array of objects. Each object specifies the days for a particular month.</p>
+         * 
          * <strong>example:</strong>
          * <p>[
          *   {&quot;month&quot;:1,&quot;days&quot;:[1,2,3,6,7,8,9,10,13,14,15,16,17,20,21,22,23,24,27,28,29,30,31]},
@@ -116,6 +132,8 @@ public class GetCalendarResponseBody extends TeaModel {
         public String months;
 
         /**
+         * <p>The year.</p>
+         * 
          * <strong>example:</strong>
          * <p>2030</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowDAGVersionResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateWorkflowDAGVersionResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -19,6 +23,8 @@ public class UpdateWorkflowDAGVersionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID for the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>C78E2AD2-5985-515B-BAD2-31A248AFC263</p>
      */
@@ -26,6 +32,14 @@ public class UpdateWorkflowDAGVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The call succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

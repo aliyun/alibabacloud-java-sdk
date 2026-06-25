@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateDesignateExecutorsResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of <code>200</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OperateDesignateExecutorsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -19,6 +23,8 @@ public class OperateDesignateExecutorsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID generated for the request. Use this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AFD5B166-4A7D-50DF-91BF-EFAFD41F7335</p>
      */
@@ -26,6 +32,14 @@ public class OperateDesignateExecutorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

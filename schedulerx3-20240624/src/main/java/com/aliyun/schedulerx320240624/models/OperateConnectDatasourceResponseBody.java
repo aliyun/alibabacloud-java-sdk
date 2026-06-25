@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateConnectDatasourceResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OperateConnectDatasourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,7 +23,7 @@ public class OperateConnectDatasourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</p>
@@ -28,6 +32,12 @@ public class OperateConnectDatasourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the invocation succeeded.  </p>
+     * <ul>
+     * <li>true: The invocation succeeded.  </li>
+     * <li>false: The invocation failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

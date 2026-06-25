@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasourceResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDatasourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter format error</p>
      */
@@ -28,6 +32,12 @@ public class UpdateDatasourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the invocation succeeded.  </p>
+     * <ul>
+     * <li>true: The invocation succeeded.  </li>
+     * <li>false: The invocation failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListK8sResourceResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -13,13 +15,15 @@ public class ListK8sResourceResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li></li>
+     * <li>An array of k8s resources.</li>
      * </ul>
      */
     @NameInMap("Data")
     public java.util.List<ListK8sResourceResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,7 +31,7 @@ public class ListK8sResourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</p>
@@ -36,6 +40,14 @@ public class ListK8sResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,6 +101,8 @@ public class ListK8sResourceResponseBody extends TeaModel {
 
     public static class ListK8sResourceResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the k8s resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxljob-01632622cda2f</p>
          */
@@ -96,6 +110,8 @@ public class ListK8sResourceResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The name of the k8s resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>q_ecs_enterprise_spot_c</p>
          */

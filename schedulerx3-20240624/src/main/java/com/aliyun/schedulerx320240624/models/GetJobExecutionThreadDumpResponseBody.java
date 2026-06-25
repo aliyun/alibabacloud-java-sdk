@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobExecutionThreadDumpResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -13,13 +15,15 @@ public class GetJobExecutionThreadDumpResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li></li>
+     * <li>The returned data object.</li>
      * </ul>
      */
     @NameInMap("Data")
     public GetJobExecutionThreadDumpResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: appId is null.</p>
      */
@@ -27,6 +31,8 @@ public class GetJobExecutionThreadDumpResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>A unique identifier for the request. Use this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
      */
@@ -34,6 +40,8 @@ public class GetJobExecutionThreadDumpResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +95,8 @@ public class GetJobExecutionThreadDumpResponseBody extends TeaModel {
 
     public static class GetJobExecutionThreadDumpResponseBodyData extends TeaModel {
         /**
+         * <p>The thread dump.</p>
+         * 
          * <strong>example:</strong>
          * <p>\&quot;Thread-7\&quot; Id=67 TIMED_WAITING\n\tat <a href="mailto:java.base@17.0.5">java.base@17.0.5</a>/java.lang.Thread.sleep(Native Method)\n\tat app//com.xxl.job.executor.service.jobhandler.SampleXxlJob.shardingJobHandler(SampleXxlJob.java:73)\n\tat <a href="mailto:java.base@17.0.5">java.base@17.0.5</a>/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat <a href="mailto:java.base@17.0.5">java.base@17.0.5</a>/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat <a href="mailto:java.base@17.0.5">java.base@17.0.5</a>/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat <a href="mailto:java.base@17.0.5">java.base@17.0.5</a>/java.lang.reflect.Method.invoke(Method.java:568)\n\tat app//com.xxl.job.core.handler.impl.MethodJobHandler.execute(MethodJobHandler.java:29)\n\tat app//com.xxl.job.core.thread.JobThread.run(JobThread.java:152)\n</p>
          */

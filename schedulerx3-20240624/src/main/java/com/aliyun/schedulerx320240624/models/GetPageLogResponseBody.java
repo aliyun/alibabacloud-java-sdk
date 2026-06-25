@@ -11,11 +11,6 @@ public class GetPageLogResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <ul>
-     * <li></li>
-     * </ul>
-     */
     @NameInMap("Data")
     public GetPageLogResponseBodyData data;
 
@@ -27,8 +22,6 @@ public class GetPageLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
      */
@@ -215,11 +208,6 @@ public class GetPageLogResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("Records")
         public java.util.List<GetPageLogResponseBodyDataRecords> records;
 

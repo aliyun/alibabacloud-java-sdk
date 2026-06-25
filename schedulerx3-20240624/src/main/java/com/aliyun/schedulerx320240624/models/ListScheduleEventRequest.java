@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScheduleEventRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,6 +14,7 @@ public class ListScheduleEventRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The end of the time range to query events. This is a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1728872796295</p>
      */
@@ -28,13 +33,33 @@ public class ListScheduleEventRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The event status to filter by. Valid values:</p>
+     * <ul>
+     * <li><p>Scheduled</p>
+     * </li>
+     * <li><p>Running</p>
+     * </li>
+     * <li><p>Succeeded</p>
+     * </li>
+     * <li><p>Failed</p>
+     * </li>
+     * <li><p>Failing_Auto_Retry</p>
+     * </li>
+     * <li><p>Skip_Schedule</p>
+     * </li>
+     * <li><p>Execute_Log</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>INFO</p>
+     * <p>Failed</p>
      */
     @NameInMap("Event")
     public String event;
 
     /**
+     * <p>The event type.</p>
+     * 
      * <strong>example:</strong>
      * <p>JOB | WORKFLOW</p>
      */
@@ -42,6 +67,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public String eventType;
 
     /**
+     * <p>The job execution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>
      */
@@ -49,6 +76,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-job</p>
      */
@@ -56,6 +85,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>hello word</p>
      */
@@ -63,6 +94,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -70,6 +103,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of events to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -77,6 +112,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether to sort the results in descending order. Set to <code>true</code> for descending order or <code>false</code> for ascending order. Default is <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +121,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public Boolean reverse;
 
     /**
+     * <p>The start of the time range to query events. This is a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1581317873000</p>
      */
@@ -91,6 +130,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The workflow execution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1450568762586578000</p>
      */
@@ -98,6 +139,8 @@ public class ListScheduleEventRequest extends TeaModel {
     public Long workflowExecutionId;
 
     /**
+     * <p>The workflow name.</p>
+     * 
      * <strong>example:</strong>
      * <p>流程001</p>
      */

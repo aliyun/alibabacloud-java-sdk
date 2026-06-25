@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportCalendarRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ImportCalendarRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The days of each month, in JSON format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ImportCalendarRequest extends TeaModel {
     public String months;
 
     /**
+     * <p>The name of the calendar.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ImportCalendarRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The year.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

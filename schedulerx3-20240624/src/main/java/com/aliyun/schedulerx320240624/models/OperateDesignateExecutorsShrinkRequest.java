@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     /**
+     * <p>A list of machine addresses to designate.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddressList")
     public String addressListShrink;
 
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,13 @@ public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The designation type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: By worker.</p>
+     * </li>
+     * <li><p><strong>2</strong>: By label.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,7 @@ public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     public Integer designateType;
 
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +58,8 @@ public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>Specifies whether to enable failover.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

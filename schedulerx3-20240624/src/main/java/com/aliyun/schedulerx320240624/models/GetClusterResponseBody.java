@@ -5,21 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetClusterResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <ul>
-     * <li></li>
-     * </ul>
-     */
     @NameInMap("Data")
     public GetClusterResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,6 +26,8 @@ public class GetClusterResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. The value is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0DE9C33-992A-580B-89C4-B609A292748D</p>
      */
@@ -34,6 +35,12 @@ public class GetClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +94,8 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyDataVSwitches extends TeaModel {
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-8vbf1n216nshvfjdyff8a</p>
          */
@@ -94,6 +103,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
          */
@@ -125,6 +136,12 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyData extends TeaModel {
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PREPAY: subscription.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
          */
@@ -132,6 +149,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxljob-e0d018c6df8</p>
          */
@@ -139,6 +158,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxl-job-test-1730427575152</p>
          */
@@ -146,6 +167,15 @@ public class GetClusterResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>The cluster specification. Valid values:</p>
+         * <ul>
+         * <li>scx.dev.x1.</li>
+         * <li>scx.small.x1.</li>
+         * <li>scx.small.x2.</li>
+         * <li>scx.medium.x1.</li>
+         * <li>scx.medium.x2.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>scx.small.x2</p>
          */
@@ -160,6 +190,8 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer clusterType;
 
         /**
+         * <p>The time when the cluster was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-29 15:56:36</p>
          */
@@ -167,6 +199,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-29 15:56:36</p>
          */
@@ -174,6 +208,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The engine type. Valid value: xxljob.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxljob</p>
          */
@@ -181,16 +217,29 @@ public class GetClusterResponseBody extends TeaModel {
         public String engineType;
 
         /**
+         * <p>The engine version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0.0</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The public endpoint.</p>
+         * <blockquote>
+         * <p>Currently not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>暂无</p>
+         */
         @NameInMap("InternetDomain")
         public String internetDomain;
 
         /**
+         * <p>The internal endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxljob-xxxxxx.schedulerx.mse.aliyuncs.com">http://xxljob-xxxxxx.schedulerx.mse.aliyuncs.com</a></p>
          */
@@ -205,6 +254,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String ipWhitelist;
 
         /**
+         * <p>The maximum number of jobs for the current specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -212,6 +263,8 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer jobNum;
 
         /**
+         * <p>The configuration of the Kubernetes server.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;vSwitchIdList&quot;: [
@@ -242,6 +295,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String kubeConfig;
 
         /**
+         * <p>The maximum number of jobs for the current specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -249,6 +304,8 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer maxJobNum;
 
         /**
+         * <p>The maximum number of workflows supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -256,13 +313,28 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer maxWorkflowNum;
 
         /**
+         * <p>The product edition.</p>
+         * <ul>
+         * <li><p>1: Developer Edition.</p>
+         * </li>
+         * <li><p>2: Professional Edition.</p>
+         * </li>
+         * <li><p>3: Enterprise Edition.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("ProductType")
         public Integer productType;
 
+        @NameInMap("Source")
+        public String source;
+
         /**
+         * <p>The peak number of scheduling operations per minute.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -270,6 +342,17 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer spm;
 
         /**
+         * <p>The cluster status.</p>
+         * <ul>
+         * <li>1: Being created.</li>
+         * <li>2: Running.</li>
+         * <li>3: Restarting.</li>
+         * <li>4: Being released.</li>
+         * <li>5: Creation failed.</li>
+         * <li>6: Stopped.</li>
+         * <li>99: Deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -279,6 +362,9 @@ public class GetClusterResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The vSwitch information of zones.</p>
+         */
         @NameInMap("VSwitches")
         public java.util.List<GetClusterResponseBodyDataVSwitches> vSwitches;
 
@@ -286,7 +372,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String versionLifecycle;
 
         /**
-         * <p>VPC ID</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1fiz967u39lt8yuxcs0</p>
@@ -295,6 +381,8 @@ public class GetClusterResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -302,12 +390,17 @@ public class GetClusterResponseBody extends TeaModel {
         public Integer workerNum;
 
         /**
+         * <p>The current number of workflows.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("WorkflowNum")
         public Integer workflowNum;
 
+        /**
+         * <p>The list of zones.</p>
+         */
         @NameInMap("Zones")
         public java.util.List<String> zones;
 
@@ -450,6 +543,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public Integer getProductType() {
             return this.productType;
+        }
+
+        public GetClusterResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public GetClusterResponseBodyData setSpm(Integer spm) {

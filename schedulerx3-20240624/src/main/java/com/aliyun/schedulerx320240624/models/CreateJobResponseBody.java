@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateJobResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -20,6 +22,8 @@ public class CreateJobResponseBody extends TeaModel {
     public CreateJobResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,6 +31,8 @@ public class CreateJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
      */
@@ -34,6 +40,12 @@ public class CreateJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +99,8 @@ public class CreateJobResponseBody extends TeaModel {
 
     public static class CreateJobResponseBodyData extends TeaModel {
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>74</p>
          */

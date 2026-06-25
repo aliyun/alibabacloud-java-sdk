@@ -8,7 +8,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("eu-central-1", "schedulerx3.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "schedulerx3.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "schedulerx3.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "schedulerx3.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "schedulerx3.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "schedulerx3.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "schedulerx3.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "schedulerx3.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "schedulerx3.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "schedulerx3.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "schedulerx3.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "schedulerx3.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("schedulerx3", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +42,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application.</p>
+     * <p>Creates an app.</p>
      * 
      * @param request CreateAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -88,7 +102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application.</p>
+     * <p>Creates an app.</p>
      * 
      * @param request CreateAppRequest
      * @return CreateAppResponse
@@ -99,8 +113,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a custom calendar for SchedulerX.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建日历</p>
+     * <p>Creates a custom calendar.</p>
      * 
      * @param request CreateCalendarRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -147,8 +164,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a custom calendar for SchedulerX.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建日历</p>
+     * <p>Creates a custom calendar.</p>
      * 
      * @param request CreateCalendarRequest
      * @return CreateCalendarResponse
@@ -208,6 +228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PricingCycle", request.pricingCycle);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("Source", request.source);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchesShrink)) {
             body.put("VSwitches", request.vSwitchesShrink);
         }
@@ -248,7 +272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据源</p>
+     * <p>Create a data source</p>
      * 
      * @param request CreateDatasourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -300,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据源</p>
+     * <p>Create a data source</p>
      * 
      * @param request CreateDatasourceRequest
      * @return CreateDatasourceResponse
@@ -311,6 +335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>手动导入执行器</p>
+     * 
      * <b>summary</b> : 
      * <p>添加执行器组</p>
      * 
@@ -391,6 +418,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>手动导入执行器</p>
+     * 
      * <b>summary</b> : 
      * <p>添加执行器组</p>
      * 
@@ -403,8 +433,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Imports one or more executors.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加执行器</p>
+     * <p>Imports one or more executors.</p>
      * 
      * @param request CreateExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -447,8 +480,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Imports one or more executors.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加执行器</p>
+     * <p>Imports one or more executors.</p>
      * 
      * @param request CreateExecutorsRequest
      * @return CreateExecutorsResponse
@@ -460,7 +496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job.</p>
+     * <p>Creates a node.</p>
      * 
      * @param tmpReq CreateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -614,7 +650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job.</p>
+     * <p>Creates a node.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -626,7 +662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建应用</p>
+     * <p>Creates a workflow.</p>
      * 
      * @param request CreateWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -698,7 +734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建应用</p>
+     * <p>Creates a workflow.</p>
      * 
      * @param request CreateWorkflowRequest
      * @return CreateWorkflowResponse
@@ -710,7 +746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an application group.</p>
+     * <p>Deletes an App Group.</p>
      * 
      * @param request DeleteAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -746,7 +782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an application group.</p>
+     * <p>Deletes an App Group.</p>
      * 
      * @param request DeleteAppRequest
      * @return DeleteAppResponse
@@ -758,7 +794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除日历</p>
+     * <p>Deletes the specified calendar.</p>
      * 
      * @param request DeleteCalendarRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -798,7 +834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除日历</p>
+     * <p>Deletes the specified calendar.</p>
      * 
      * @param request DeleteCalendarRequest
      * @return DeleteCalendarResponse
@@ -854,7 +890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据源</p>
+     * <p>Delete data source</p>
      * 
      * @param request DeleteDatasourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -890,7 +926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据源</p>
+     * <p>Delete data source</p>
      * 
      * @param request DeleteDatasourceRequest
      * @return DeleteDatasourceResponse
@@ -954,7 +990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes multiple jobs at a time.</p>
+     * <p>Deletes multiple jobs in a batch.</p>
      * 
      * @param tmpReq DeleteJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1000,7 +1036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes multiple jobs at a time.</p>
+     * <p>Deletes multiple jobs in a batch.</p>
      * 
      * @param request DeleteJobsRequest
      * @return DeleteJobsResponse
@@ -1012,7 +1048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除工作流</p>
+     * <p>Deletes a Workflow.</p>
      * 
      * @param request DeleteWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1056,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除工作流</p>
+     * <p>Deletes a Workflow.</p>
      * 
      * @param request DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
@@ -1068,7 +1104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除工作流</p>
+     * <p>Deletes one or more workflows.</p>
      * 
      * @param tmpReq DeleteWorkflowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1118,7 +1154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除工作流</p>
+     * <p>Deletes one or more workflows.</p>
      * 
      * @param request DeleteWorkflowsRequest
      * @return DeleteWorkflowsResponse
@@ -1130,7 +1166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports the information about jobs at a time.</p>
+     * <p>Exports job information in bulk.</p>
      * 
      * @param tmpReq ExportJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1180,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports the information about jobs at a time.</p>
+     * <p>Exports job information in bulk.</p>
      * 
      * @param request ExportJobsRequest
      * @return ExportJobsResponse
@@ -1192,7 +1228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量导出工作流信息</p>
+     * <p>Exports the definitions of one or more Workflows in JSON format. The exported data includes the basic information, all Nodes, and the Directed Acyclic Graph (DAG) dependencies for each Workflow.</p>
      * 
      * @param tmpReq ExportWorkflowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1238,7 +1274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量导出工作流信息</p>
+     * <p>Exports the definitions of one or more Workflows in JSON format. The exported data includes the basic information, all Nodes, and the Directed Acyclic Graph (DAG) dependencies for each Workflow.</p>
      * 
      * @param request ExportWorkflowsRequest
      * @return ExportWorkflowsResponse
@@ -1250,7 +1286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定应用</p>
+     * <p>Retrieves the details of a specified application.</p>
      * 
      * @param request GetAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1286,7 +1322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定应用</p>
+     * <p>Retrieves the details of a specified application.</p>
      * 
      * @param request GetAppRequest
      * @return GetAppResponse
@@ -1298,7 +1334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取日历信息</p>
+     * <p>Retrieves the details of a specified calendar.</p>
      * 
      * @param request GetCalendarRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1338,7 +1374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取日历信息</p>
+     * <p>Retrieves the details of a specified calendar.</p>
      * 
      * @param request GetCalendarRequest
      * @return GetCalendarResponse
@@ -1350,7 +1386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a cluster.</p>
+     * <p>Obtains the details of a cluster.</p>
      * 
      * @param request GetClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1378,7 +1414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a cluster.</p>
+     * <p>Obtains the details of a cluster.</p>
      * 
      * @param request GetClusterRequest
      * @return GetClusterResponse
@@ -1390,7 +1426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specified machine.</p>
+     * <p>Retrieves the designation information for a job.</p>
      * 
      * @param request GetDesigateInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1418,7 +1454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specified machine.</p>
+     * <p>Retrieves the designation information for a job.</p>
      * 
      * @param request GetDesigateInfoRequest
      * @return GetDesigateInfoResponse
@@ -1429,8 +1465,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to extend the Executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>before</strong> the <code>xxl-job-core</code> dependency in the <code>pom.xml</code> file.
+     * <strong>For more information, see</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Documentation</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>查询执行器配置信息</p>
+     * <p>Retrieves the configuration for a specified Executor.</p>
      * 
      * @param request GetExecutorConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1465,8 +1507,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to extend the Executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>before</strong> the <code>xxl-job-core</code> dependency in the <code>pom.xml</code> file.
+     * <strong>For more information, see</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Documentation</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>查询执行器配置信息</p>
+     * <p>Retrieves the configuration for a specified Executor.</p>
      * 
      * @param request GetExecutorConfigRequest
      * @return GetExecutorConfigResponse
@@ -1478,7 +1526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务执行的详细信息</p>
+     * <p>Returns the details of a Task Execution.</p>
      * 
      * @param request GetJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1522,7 +1570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务执行的详细信息</p>
+     * <p>Returns the details of a Task Execution.</p>
      * 
      * @param request GetJobExecutionRequest
      * @return GetJobExecutionResponse
@@ -1533,8 +1581,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to enhance the capabilities of the Executor.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in your pom.xml.
+     * <strong>See also</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains the execution details of a job.</p>
+     * <p>Gets the details of a sharding task execution.</p>
      * 
      * @param request GetJobExecutionProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1561,8 +1615,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to enhance the capabilities of the Executor.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in your pom.xml.
+     * <strong>See also</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>Obtains the execution details of a job.</p>
+     * <p>Gets the details of a sharding task execution.</p>
      * 
      * @param request GetJobExecutionProgressRequest
      * @return GetJobExecutionProgressResponse
@@ -1573,8 +1633,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to extend the executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency.
+     * <strong>For more information, see</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin versioning documentation</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>查询任务的线程堆栈</p>
+     * <p>Retrieves the thread dump for a specific job execution.</p>
      * 
      * @param request GetJobExecutionThreadDumpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1601,8 +1667,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to extend the executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency.
+     * <strong>For more information, see</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin versioning documentation</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>查询任务的线程堆栈</p>
+     * <p>Retrieves the thread dump for a specific job execution.</p>
      * 
      * @param request GetJobExecutionThreadDumpRequest
      * @return GetJobExecutionThreadDumpResponse
@@ -1614,7 +1686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries logs.</p>
+     * <p>Retrieves log entries.</p>
      * 
      * @param request GetLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1642,7 +1714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries logs.</p>
+     * <p>Retrieves log entries.</p>
      * 
      * @param request GetLogRequest
      * @return GetLogResponse
@@ -1654,7 +1726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件</p>
+     * <p>Query Events.</p>
      * 
      * @param request GetLogEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1682,7 +1754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件</p>
+     * <p>Query Events.</p>
      * 
      * @param request GetLogEventRequest
      * @return GetLogEventResponse
@@ -1693,6 +1765,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * <b>summary</b> : 
      * <p>获取分页日志</p>
      * 
@@ -1765,6 +1843,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * <b>summary</b> : 
      * <p>获取分页日志</p>
      * 
@@ -1778,7 +1862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流</p>
+     * <p>Retrieves the basic information for a specified workflow.</p>
      * 
      * @param request GetWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1818,7 +1902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流</p>
+     * <p>Retrieves the basic information for a specified workflow.</p>
      * 
      * @param request GetWorkflowRequest
      * @return GetWorkflowResponse
@@ -1830,7 +1914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流的DAG信息</p>
+     * <p>Gets the Directed Acyclic Graph (DAG) of a workflow.</p>
      * 
      * @param request GetWorkflowDAGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1870,7 +1954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流的DAG信息</p>
+     * <p>Gets the Directed Acyclic Graph (DAG) of a workflow.</p>
      * 
      * @param request GetWorkflowDAGRequest
      * @return GetWorkflowDAGResponse
@@ -1882,7 +1966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流的DAG信息</p>
+     * <p>Gets the DAG for a previous workflow version.</p>
      * 
      * @param request GetWorkflowDAGPreviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1926,7 +2010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流的DAG信息</p>
+     * <p>Gets the DAG for a previous workflow version.</p>
      * 
      * @param request GetWorkflowDAGPreviewRequest
      * @return GetWorkflowDAGPreviewResponse
@@ -1938,7 +2022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流实例DAG信息</p>
+     * <p>Retrieve the DAG information for a workflow instance.</p>
      * 
      * @param request GetWorkflowExecutionDAGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1978,7 +2062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流实例DAG信息</p>
+     * <p>Retrieve the DAG information for a workflow instance.</p>
      * 
      * @param request GetWorkflowExecutionDAGRequest
      * @return GetWorkflowExecutionDAGResponse
@@ -2046,7 +2130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports jobs at a time.</p>
+     * <p>Imports jobs in bulk.</p>
      * 
      * @param request ImportJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2090,7 +2174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports jobs at a time.</p>
+     * <p>Imports jobs in bulk.</p>
      * 
      * @param request ImportJobsRequest
      * @return ImportJobsResponse
@@ -2102,7 +2186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量导入工作流</p>
+     * <p>Imports one or more workflows.</p>
      * 
      * @param request ImportWorkflowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2146,7 +2230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量导入工作流</p>
+     * <p>Imports one or more workflows.</p>
      * 
      * @param request ImportWorkflowsRequest
      * @return ImportWorkflowsResponse
@@ -2158,7 +2242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of alert events.</p>
+     * <p>Retrieves alert events.</p>
      * 
      * @param request ListAlarmEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2186,7 +2270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of alert events.</p>
+     * <p>Retrieves alert events.</p>
      * 
      * @param request ListAlarmEventRequest
      * @return ListAlarmEventResponse
@@ -2198,7 +2282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of application names.</p>
+     * <p>Returns a list of application names.</p>
      * 
      * @param request ListAppNamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2226,7 +2310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of application names.</p>
+     * <p>Returns a list of application names.</p>
      * 
      * @param request ListAppNamesRequest
      * @return ListAppNamesResponse
@@ -2238,7 +2322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of applications.</p>
+     * <p>Get the list of applications.</p>
      * 
      * @param request ListAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2266,7 +2350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of applications.</p>
+     * <p>Get the list of applications.</p>
      * 
      * @param request ListAppsRequest
      * @return ListAppsResponse
@@ -2278,7 +2362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of calendar names.</p>
+     * <p>Lists all Calendar names.</p>
      * 
      * @param request ListCalendarNamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2306,7 +2390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of calendar names.</p>
+     * <p>Lists all Calendar names.</p>
      * 
      * @param request ListCalendarNamesRequest
      * @return ListCalendarNamesResponse
@@ -2318,7 +2402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询日历</p>
+     * <p>Retrieves a list of calendars.</p>
      * 
      * @param request ListCalendarsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2370,7 +2454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询日历</p>
+     * <p>Retrieves a list of calendars.</p>
      * 
      * @param request ListCalendarsRequest
      * @return ListCalendarsResponse
@@ -2382,7 +2466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Query the list of instances.</p>
      * 
      * @param request ListClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2410,7 +2494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Query the list of instances.</p>
      * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
@@ -2422,7 +2506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源列表</p>
+     * <p>Retrieve the data source list</p>
      * 
      * @param request ListDatasourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2478,7 +2562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源列表</p>
+     * <p>Retrieve the data source list</p>
      * 
      * @param request ListDatasourcesRequest
      * @return ListDatasourcesResponse
@@ -2489,6 +2573,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * <b>summary</b> : 
      * <p>获取执行器组列表</p>
      * 
@@ -2545,6 +2635,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * <b>summary</b> : 
      * <p>获取执行器组列表</p>
      * 
@@ -2558,7 +2654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of executors.</p>
+     * <p>Lists executors.</p>
      * 
      * @param request ListExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2586,7 +2682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of executors.</p>
+     * <p>Lists executors.</p>
      * 
      * @param request ListExecutorsRequest
      * @return ListExecutorsResponse
@@ -2598,7 +2694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of job instances.</p>
+     * <p>Returns a list of task instances.</p>
      * 
      * @param request ListJobExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2670,7 +2766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of job instances.</p>
+     * <p>Returns a list of task instances.</p>
      * 
      * @param request ListJobExecutionsRequest
      * @return ListJobExecutionsResponse
@@ -2682,7 +2778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务脚本历史列表</p>
+     * <p>Lists the script history for a job.</p>
      * 
      * @param request ListJobScriptHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2730,7 +2826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取任务脚本历史列表</p>
+     * <p>Lists the script history for a job.</p>
      * 
      * @param request ListJobScriptHistoryRequest
      * @return ListJobScriptHistoryResponse
@@ -2742,7 +2838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of jobs.</p>
+     * <p>Returns a task list.</p>
      * 
      * @param request ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2810,7 +2906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of jobs.</p>
+     * <p>Returns a task list.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -2821,8 +2917,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to your <code>pom.xml</code> file to extend the Executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in your pom.xml file.
+     * <strong>For more information:</strong> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version release notes</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>获取k8s资源列表</p>
+     * <p>Lists k8s resources.</p>
      * 
      * @param request ListK8sResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2869,8 +2971,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to your <code>pom.xml</code> file to extend the Executor\&quot;s capabilities.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in your pom.xml file.
+     * <strong>For more information:</strong> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version release notes</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>获取k8s资源列表</p>
+     * <p>Lists k8s resources.</p>
      * 
      * @param request ListK8sResourceRequest
      * @return ListK8sResourceResponse
@@ -2882,7 +2990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of tags of an executor.</p>
+     * <p>Retrieves a list of labels for an Executor.</p>
      * 
      * @param request ListLablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2910,7 +3018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of tags of an executor.</p>
+     * <p>Retrieves a list of labels for an Executor.</p>
      * 
      * @param request ListLablesRequest
      * @return ListLablesResponse
@@ -2922,7 +3030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of zones.</p>
+     * <p>Obtain the zone list.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRegionZoneResponse
@@ -2945,7 +3053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of zones.</p>
+     * <p>Obtain the zone list.</p>
      * @return ListRegionZoneResponse
      */
     public ListRegionZoneResponse listRegionZone() throws Exception {
@@ -2955,7 +3063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of all regions.</p>
+     * <p>Obtain the List of all Regions.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRegionsResponse
@@ -2978,7 +3086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a list of all regions.</p>
+     * <p>Obtain the List of all Regions.</p>
      * @return ListRegionsResponse
      */
     public ListRegionsResponse listRegions() throws Exception {
@@ -2988,7 +3096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries scheduling events.</p>
+     * <p>Lists scheduled events.</p>
      * 
      * @param request ListScheduleEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3016,7 +3124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries scheduling events.</p>
+     * <p>Lists scheduled events.</p>
      * 
      * @param request ListScheduleEventRequest
      * @return ListScheduleEventResponse
@@ -3028,7 +3136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</p>
+     * <p>Retrieves the next five scheduled times based on the specified time type and time expression.</p>
      * 
      * @param request ListScheduleTimesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3056,7 +3164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</p>
+     * <p>Retrieves the next five scheduled times based on the specified time type and time expression.</p>
      * 
      * @param request ListScheduleTimesRequest
      * @return ListScheduleTimesResponse
@@ -3068,7 +3176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取流程实例列表</p>
+     * <p>Retrieves a list of workflow instances.</p>
      * 
      * @param request ListWorkflowExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3144,7 +3252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取流程实例列表</p>
+     * <p>Retrieves a list of workflow instances.</p>
      * 
      * @param request ListWorkflowExecutionsRequest
      * @return ListWorkflowExecutionsResponse
@@ -3156,7 +3264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前工作流版本列表</p>
+     * <p>Lists the versions for a specified workflow.</p>
      * 
      * @param request ListWorkflowVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3204,7 +3312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前工作流版本列表</p>
+     * <p>Lists the versions for a specified workflow.</p>
      * 
      * @param request ListWorkflowVersionsRequest
      * @return ListWorkflowVersionsResponse
@@ -3216,7 +3324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流列表</p>
+     * <p>Lists your workflows.</p>
      * 
      * @param request ListWorkflowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3284,7 +3392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作流列表</p>
+     * <p>Lists your workflows.</p>
      * 
      * @param request ListWorkflowsRequest
      * @return ListWorkflowsResponse
@@ -3296,7 +3404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>补数工作流</p>
+     * <p>Backfills historical data for a specified workflow.</p>
      * 
      * @param request OperateBackfillWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3344,7 +3452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>补数工作流</p>
+     * <p>Backfills historical data for a specified workflow.</p>
      * 
      * @param request OperateBackfillWorkflowRequest
      * @return OperateBackfillWorkflowResponse
@@ -3356,7 +3464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>连接数据源</p>
+     * <p>Connect to a data source</p>
      * 
      * @param request OperateConnectDatasourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3400,7 +3508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>连接数据源</p>
+     * <p>Connect to a data source</p>
      * 
      * @param request OperateConnectDatasourceRequest
      * @return OperateConnectDatasourceResponse
@@ -3412,7 +3520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Designates executors.</p>
+     * <p>Designates one or more executors for a job.</p>
      * 
      * @param tmpReq OperateDesignateExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3470,7 +3578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Designates executors.</p>
+     * <p>Designates one or more executors for a job.</p>
      * 
      * @param request OperateDesignateExecutorsRequest
      * @return OperateDesignateExecutorsResponse
@@ -3482,7 +3590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables multiple jobs at a time.</p>
+     * <p>Disables multiple jobs.</p>
      * 
      * @param tmpReq OperateDisableJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3528,7 +3636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables multiple jobs at a time.</p>
+     * <p>Disables multiple jobs.</p>
      * 
      * @param request OperateDisableJobsRequest
      * @return OperateDisableJobsResponse
@@ -3539,8 +3647,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables one or more specified workflows.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量禁用工作流</p>
+     * <p>Disables one or more workflows.</p>
      * 
      * @param tmpReq OperateDisableWorkflowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3585,8 +3696,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables one or more specified workflows.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量禁用工作流</p>
+     * <p>Disables one or more workflows.</p>
      * 
      * @param request OperateDisableWorkflowsRequest
      * @return OperateDisableWorkflowsResponse
@@ -3598,7 +3712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables multiple jobs at a time.</p>
+     * <p>Enables multiple jobs in a batch.</p>
      * 
      * @param tmpReq OperateEnableJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3644,7 +3758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables multiple jobs at a time.</p>
+     * <p>Enables multiple jobs in a batch.</p>
      * 
      * @param request OperateEnableJobsRequest
      * @return OperateEnableJobsResponse
@@ -3656,7 +3770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量启用工作流</p>
+     * <p>Enables one or more workflows.</p>
      * 
      * @param tmpReq OperateEnableWorkflowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3702,7 +3816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量启用工作流</p>
+     * <p>Enables one or more workflows.</p>
      * 
      * @param request OperateEnableWorkflowsRequest
      * @return OperateEnableWorkflowsResponse
@@ -3714,7 +3828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Runs a job once.</p>
+     * <p>Executes a job on demand.</p>
      * 
      * @param request OperateExecuteJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3766,7 +3880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Runs a job once.</p>
+     * <p>Executes a job on demand.</p>
      * 
      * @param request OperateExecuteJobRequest
      * @return OperateExecuteJobResponse
@@ -3777,8 +3891,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation starts a new workflow instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>运行一次工作流</p>
+     * <p>Executes a workflow.</p>
      * 
      * @param request OperateExecuteWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3817,8 +3934,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation starts a new workflow instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>运行一次工作流</p>
+     * <p>Executes a workflow.</p>
      * 
      * @param request OperateExecuteWorkflowRequest
      * @return OperateExecuteWorkflowResponse
@@ -3830,7 +3950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Hold住任务实例</p>
+     * <p>Holds a pending job execution.</p>
      * 
      * @param request OperateHoldJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3870,7 +3990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Hold住任务实例</p>
+     * <p>Holds a pending job execution.</p>
      * 
      * @param request OperateHoldJobExecutionRequest
      * @return OperateHoldJobExecutionResponse
@@ -3882,7 +4002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将工作流中未开始的节点置为Held状态</p>
+     * <p>Puts a Workflow Execution on hold, suspending all its unexecuted nodes.</p>
      * 
      * @param request OperateHoldWorkflowExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3922,7 +4042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将工作流中未开始的节点置为Held状态</p>
+     * <p>Puts a Workflow Execution on hold, suspending all its unexecuted nodes.</p>
      * 
      * @param request OperateHoldWorkflowExecutionRequest
      * @return OperateHoldWorkflowExecutionResponse
@@ -3934,7 +4054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标记任务实例为成功状态</p>
+     * <p>Marks a job execution as successful.</p>
      * 
      * @param request OperateMarkSuccessJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3974,7 +4094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标记任务实例为成功状态</p>
+     * <p>Marks a job execution as successful.</p>
      * 
      * @param request OperateMarkSuccessJobExecutionRequest
      * @return OperateMarkSuccessJobExecutionResponse
@@ -3986,7 +4106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将工作流实例标记为成功</p>
+     * <p>Marks a workflow execution as successful.</p>
      * 
      * @param request OperateMarkSuccessWorkflowExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4026,7 +4146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将工作流实例标记为成功</p>
+     * <p>Marks a workflow execution as successful.</p>
      * 
      * @param request OperateMarkSuccessWorkflowExecutionRequest
      * @return OperateMarkSuccessWorkflowExecutionResponse
@@ -4038,7 +4158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reprocesses the historical data of a job.</p>
+     * <p>Reruns historical data for a job within a specified time range.</p>
      * 
      * @param request OperateRerunJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4090,7 +4210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reprocesses the historical data of a job.</p>
+     * <p>Reruns historical data for a job within a specified time range.</p>
      * 
      * @param request OperateRerunJobRequest
      * @return OperateRerunJobResponse
@@ -4102,7 +4222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns failed job instances.</p>
+     * <p>Retries a failed Job Instance.</p>
      * 
      * @param tmpReq OperateRetryJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4156,7 +4276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns failed job instances.</p>
+     * <p>Retries a failed Job Instance.</p>
      * 
      * @param request OperateRetryJobExecutionRequest
      * @return OperateRetryJobExecutionResponse
@@ -4168,7 +4288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重跑工作流实例</p>
+     * <p>Retries a workflow execution.</p>
      * 
      * @param request OperateRetryWorkflowExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4212,7 +4332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重跑工作流实例</p>
+     * <p>Retries a workflow execution.</p>
      * 
      * @param request OperateRetryWorkflowExecutionRequest
      * @return OperateRetryWorkflowExecutionResponse
@@ -4224,7 +4344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>跳过任务实例</p>
+     * <p>Skips a job execution.</p>
      * 
      * @param request OperateSkipJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4264,7 +4384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>跳过任务实例</p>
+     * <p>Skips a job execution.</p>
      * 
      * @param request OperateSkipJobExecutionRequest
      * @return OperateSkipJobExecutionResponse
@@ -4276,7 +4396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops running instances.</p>
+     * <p>Stops a running Job Execution.</p>
      * 
      * @param tmpReq OperateStopJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4326,7 +4446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops running instances.</p>
+     * <p>Stops a running Job Execution.</p>
      * 
      * @param request OperateStopJobExecutionRequest
      * @return OperateStopJobExecutionResponse
@@ -4338,7 +4458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止正在运行的工作流实例</p>
+     * <p>Stops a running workflow execution.</p>
      * 
      * @param request OperateStopWorkflowExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4378,7 +4498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止正在运行的工作流实例</p>
+     * <p>Stops a running workflow execution.</p>
      * 
      * @param request OperateStopWorkflowExecutionRequest
      * @return OperateStopWorkflowExecutionResponse
@@ -4390,7 +4510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将held状态的任务恢复</p>
+     * <p>Resumes a Job Execution that is in the Hold state.</p>
      * 
      * @param request OperateUnholdJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4430,7 +4550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将held状态的任务恢复</p>
+     * <p>Resumes a Job Execution that is in the Hold state.</p>
      * 
      * @param request OperateUnholdJobExecutionRequest
      * @return OperateUnholdJobExecutionResponse
@@ -4442,7 +4562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将工作流中held状态的节点恢复</p>
+     * <p>Resumes a workflow execution that is on hold.</p>
      * 
      * @param request OperateUnholdWorkflowExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4482,7 +4602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将工作流中held状态的节点恢复</p>
+     * <p>Resumes a workflow execution that is on hold.</p>
      * 
      * @param request OperateUnholdWorkflowExecutionRequest
      * @return OperateUnholdWorkflowExecutionResponse
@@ -4494,7 +4614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将skipped状态的任务恢复</p>
+     * <p>Resumes a skipped job execution.</p>
      * 
      * @param request OperateUnskipJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4534,7 +4654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将skipped状态的任务恢复</p>
+     * <p>Resumes a skipped job execution.</p>
      * 
      * @param request OperateUnskipJobExecutionRequest
      * @return OperateUnskipJobExecutionResponse
@@ -4546,7 +4666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步任务</p>
+     * <p>Synchronizes jobs.</p>
      * 
      * @param tmpReq SyncJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4600,7 +4720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步任务</p>
+     * <p>Synchronizes jobs.</p>
      * 
      * @param request SyncJobsRequest
      * @return SyncJobsResponse
@@ -4684,7 +4804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新日历</p>
+     * <p>Updates a calendar.</p>
      * 
      * @param request UpdateCalendarRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4736,7 +4856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新日历</p>
+     * <p>Updates a calendar.</p>
      * 
      * @param request UpdateCalendarRequest
      * @return UpdateCalendarResponse
@@ -4800,7 +4920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据源</p>
+     * <p>Update data source</p>
      * 
      * @param request UpdateDatasourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4852,7 +4972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据源</p>
+     * <p>Update data source</p>
      * 
      * @param request UpdateDatasourceRequest
      * @return UpdateDatasourceResponse
@@ -4863,6 +4983,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * <b>summary</b> : 
      * <p>更新执行器组</p>
      * 
@@ -4943,6 +5069,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>引入增强插件</h1>
+     * <p>在<code>pom.xml</code>文件中添加增强插件以提升Executor的能力。
+     * <strong>注意</strong>：请确保该插件在pom中放置在<code>xxl-job-core</code> 依赖的<strong>上方</strong>。
+     * <strong>详细信息请参考</strong>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></p>
+     * 
      * <b>summary</b> : 
      * <p>更新执行器组</p>
      * 
@@ -4955,8 +5087,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to the <code>pom.xml</code> file to extend the capabilities of the Executor.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom.xml file.
+     * <strong>For more information, see the</strong> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Description Document</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新执行器</p>
+     * <p>Updates the configuration of one or more Executors.</p>
      * 
      * @param request UpdateExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4999,8 +5137,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Add the enhancement plugin</h1>
+     * <p>Add the enhancement plugin to the <code>pom.xml</code> file to extend the capabilities of the Executor.
+     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom.xml file.
+     * <strong>For more information, see the</strong> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Description Document</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新执行器</p>
+     * <p>Updates the configuration of one or more Executors.</p>
      * 
      * @param request UpdateExecutorsRequest
      * @return UpdateExecutorsResponse
@@ -5012,7 +5156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the job information.</p>
+     * <p>Update task details.</p>
      * 
      * @param tmpReq UpdateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5154,7 +5298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the job information.</p>
+     * <p>Update task details.</p>
      * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
@@ -5166,7 +5310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新任务实例</p>
+     * <p>Update task instance</p>
      * 
      * @param request UpdateJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5210,7 +5354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新任务实例</p>
+     * <p>Update task instance</p>
      * 
      * @param request UpdateJobExecutionRequest
      * @return UpdateJobExecutionResponse
@@ -5222,7 +5366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新任务脚本内容</p>
+     * <p>Updates a job script.</p>
      * 
      * @param request UpdateJobScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5270,7 +5414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新任务脚本内容</p>
+     * <p>Updates a job script.</p>
      * 
      * @param request UpdateJobScriptRequest
      * @return UpdateJobScriptResponse
@@ -5282,7 +5426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新工作流</p>
+     * <p>Updates an existing workflow.</p>
      * 
      * @param request UpdateWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5354,7 +5498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新工作流</p>
+     * <p>Updates an existing workflow.</p>
      * 
      * @param request UpdateWorkflowRequest
      * @return UpdateWorkflowResponse
@@ -5366,7 +5510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新工作流DAG</p>
+     * <p>Updates a workflow\&quot;s Directed Acyclic Graph (DAG), including node coordinates and edges.</p>
      * 
      * @param tmpReq UpdateWorkflowDAGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5420,7 +5564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新工作流DAG</p>
+     * <p>Updates a workflow\&quot;s Directed Acyclic Graph (DAG), including node coordinates and edges.</p>
      * 
      * @param request UpdateWorkflowDAGRequest
      * @return UpdateWorkflowDAGResponse
@@ -5432,7 +5576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>切换工作流DAG版本</p>
+     * <p>Updates the Directed Acyclic Graph (DAG) version for a Workflow.</p>
      * 
      * @param request UpdateWorkflowDAGVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5476,7 +5620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>切换工作流DAG版本</p>
+     * <p>Updates the Directed Acyclic Graph (DAG) version for a Workflow.</p>
      * 
      * @param request UpdateWorkflowDAGVersionRequest
      * @return UpdateWorkflowDAGVersionResponse

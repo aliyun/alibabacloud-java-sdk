@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCalendarsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -13,13 +15,15 @@ public class ListCalendarsResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li></li>
+     * <li>The returned data.</li>
      * </ul>
      */
     @NameInMap("Data")
     public ListCalendarsResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,7 +31,7 @@ public class ListCalendarsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -36,6 +40,14 @@ public class ListCalendarsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,6 +101,8 @@ public class ListCalendarsResponseBody extends TeaModel {
 
     public static class ListCalendarsResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>The name of the calendar.</p>
+         * 
          * <strong>example:</strong>
          * <p>workday</p>
          */
@@ -96,6 +110,8 @@ public class ListCalendarsResponseBody extends TeaModel {
         public String calendarName;
 
         /**
+         * <p>A JSON string that represents an array of months and their corresponding days.</p>
+         * 
          * <strong>example:</strong>
          * <p>[
          *   {&quot;month&quot;:1,&quot;days&quot;:[1,2,3,6,7,8,9,10,13,14,15,16,17,20,21,22,23,24,27,28,29,30,31]},
@@ -116,6 +132,8 @@ public class ListCalendarsResponseBody extends TeaModel {
         public String months;
 
         /**
+         * <p>The year.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025</p>
          */
@@ -155,6 +173,8 @@ public class ListCalendarsResponseBody extends TeaModel {
 
     public static class ListCalendarsResponseBodyData extends TeaModel {
         /**
+         * <p>The maximum number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -162,16 +182,23 @@ public class ListCalendarsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token for the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+         * 
          * <strong>example:</strong>
          * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>A list of calendars.</p>
+         */
         @NameInMap("Records")
         public java.util.List<ListCalendarsResponseBodyDataRecords> records;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

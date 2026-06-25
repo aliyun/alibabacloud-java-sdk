@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScheduleEventResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,14 +14,14 @@ public class ListScheduleEventResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListScheduleEventResponseBodyData data;
 
     /**
+     * <p>The returned error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -27,6 +29,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier for the request, which is used to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>B880122A-B0E4-52E8-8F54-87DB7779EB74</p>
      */
@@ -34,6 +38,14 @@ public class ListScheduleEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +99,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
 
     public static class ListScheduleEventResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-app</p>
          */
@@ -94,6 +108,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The event content.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello word</p>
          */
@@ -101,13 +117,17 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The event status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>INFO</p>
+         * <p>Failed</p>
          */
         @NameInMap("Event")
         public String event;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>JOB</p>
          */
@@ -115,7 +135,7 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>130</p>
+         * <p>The job execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1310630367761285120</p>
@@ -124,6 +144,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String jobExecutionId;
 
         /**
+         * <p>The job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-job</p>
          */
@@ -131,6 +153,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The timestamp of the event. The time is in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-31 16:43:51</p>
          */
@@ -138,6 +162,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>The worker address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://192.168.1.5:9999/">http://192.168.1.5:9999/</a></p>
          */
@@ -145,6 +171,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String workerAddr;
 
         /**
+         * <p>The workflow execution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1450568762586578000</p>
          */
@@ -152,6 +180,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String workflowExecutionId;
 
         /**
+         * <p>The workflow name.</p>
+         * 
          * <strong>example:</strong>
          * <p>工作流0001</p>
          */
@@ -247,6 +277,8 @@ public class ListScheduleEventResponseBody extends TeaModel {
 
     public static class ListScheduleEventResponseBodyData extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -254,16 +286,23 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The array of event records.</p>
+         */
         @NameInMap("Records")
         public java.util.List<ListScheduleEventResponseBodyDataRecords> records;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

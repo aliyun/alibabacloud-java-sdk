@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRegionZoneResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -20,6 +22,8 @@ public class ListRegionZoneResponseBody extends TeaModel {
     public java.util.List<ListRegionZoneResponseBodyData> data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>IllegalRequest</p>
      */
@@ -27,6 +31,8 @@ public class ListRegionZoneResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -34,6 +40,8 @@ public class ListRegionZoneResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>438737AC-760A-57D9-B646-B7EF79426243</p>
      */
@@ -41,6 +49,12 @@ public class ListRegionZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the invocation succeeded.</p>
+     * <ul>
+     * <li><strong>true</strong>: The invocation succeeded.</li>
+     * <li><strong>false</strong>: Failed to invoke.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -102,6 +116,8 @@ public class ListRegionZoneResponseBody extends TeaModel {
 
     public static class ListRegionZoneResponseBodyData extends TeaModel {
         /**
+         * <p>Local name.</p>
+         * 
          * <strong>example:</strong>
          * <p>E</p>
          */

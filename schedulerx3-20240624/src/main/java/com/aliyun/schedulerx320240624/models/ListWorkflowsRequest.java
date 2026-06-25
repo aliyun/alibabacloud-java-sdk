@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowsRequest extends TeaModel {
     /**
+     * <p>The name of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,6 +14,7 @@ public class ListWorkflowsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListWorkflowsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The description of the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>my first workflow</p>
      */
@@ -28,6 +33,8 @@ public class ListWorkflowsRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The maximum number of entries to return. The default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +42,8 @@ public class ListWorkflowsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>myWorkflow</p>
      */
@@ -42,6 +51,8 @@ public class ListWorkflowsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If the return value is empty, no more data is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
      */
@@ -49,6 +60,8 @@ public class ListWorkflowsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,6 +69,8 @@ public class ListWorkflowsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -63,6 +78,14 @@ public class ListWorkflowsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The status of the workflow. If this parameter is not specified, workflows in the <code>disabled</code> state are returned by default. Valid values:</p>
+     * <ul>
+     * <li><p><code>0</code>: disabled</p>
+     * </li>
+     * <li><p><code>1</code>: enabled</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -70,6 +93,8 @@ public class ListWorkflowsRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The ID of the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateRetryJobExecutionResponseBody extends TeaModel {
     /**
+     * <p>The Response Code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OperateRetryJobExecutionResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Returns <code>success</code> for successful requests, and an error message for failed requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class OperateRetryJobExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique Request ID. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>438737AC-760A-57D9-B646-B7EF79426243</p>
      */
@@ -26,6 +32,14 @@ public class OperateRetryJobExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

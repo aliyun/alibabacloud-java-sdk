@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateExecuteJobRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The custom parameters for the job instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>name=zhangsan</p>
      */
@@ -30,6 +34,7 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String instanceParameters;
 
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class OperateExecuteJobRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The label used to select a specific worker.</p>
+     * 
      * <strong>example:</strong>
      * <p>gray</p>
      */
@@ -46,8 +53,10 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String label;
 
     /**
+     * <p>The address (<code>workerAddr</code>) of a specific worker.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="http://192.168.1.5:9999/">http://192.168.1.5:9999/</a></p>
+     * <p><a href="http://192.168.***.5:9999/">http://192.168.***.5:9999/</a></p>
      */
     @NameInMap("Worker")
     public String worker;

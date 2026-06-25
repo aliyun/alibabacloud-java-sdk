@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobExecutionsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,14 +14,13 @@ public class ListJobExecutionsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The query result.</p>
      */
     @NameInMap("Data")
     public ListJobExecutionsResponseBodyData data;
 
     /**
+     * <p>The error message returned if the request fails.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +30,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier for the request. Alibaba Cloud generates this ID to help troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>6BCE89B3-E882-511D-9A75-D452A56EC4B1</p>
      */
@@ -36,6 +39,14 @@ public class ListJobExecutionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,6 +100,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
 
     public static class ListJobExecutionsResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-app</p>
          */
@@ -96,6 +109,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The attempt number for this execution. <code>1</code> indicates the initial run.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -103,6 +118,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Integer attempt;
 
         /**
+         * <p>The data timestamp for the job execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 14:52:42</p>
          */
@@ -110,6 +127,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String dataTime;
 
         /**
+         * <p>The duration of the job execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -117,6 +136,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The time when the job execution ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 14:52:42</p>
          */
@@ -124,6 +145,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The ID of the executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>1827811800526000</p>
          */
@@ -131,6 +154,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String executor;
 
         /**
+         * <p>The job execution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1310630367761285120</p>
          */
@@ -138,6 +163,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String jobExecutionId;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>74</p>
          */
@@ -145,6 +172,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Long jobId;
 
         /**
+         * <p>The name of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-job</p>
          */
@@ -152,6 +181,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The type of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxljob</p>
          */
@@ -159,6 +190,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The parameters of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>name=zhangsan</p>
          */
@@ -166,6 +199,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String parameters;
 
         /**
+         * <p>The execution result.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -173,6 +208,26 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>The strategy for routing the job to a worker. Valid values:</p>
+         * <ul>
+         * <li><p>1: Round-robin</p>
+         * </li>
+         * <li><p>2: Random</p>
+         * </li>
+         * <li><p>3: First</p>
+         * </li>
+         * <li><p>4: Last</p>
+         * </li>
+         * <li><p>5: Least Frequently Used</p>
+         * </li>
+         * <li><p>6: Least Recently Used</p>
+         * </li>
+         * <li><p>7: Consistent Hashing</p>
+         * </li>
+         * <li><p>8: Sharded Broadcasting</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -180,6 +235,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Integer routeStrategy;
 
         /**
+         * <p>The time when the job was scheduled.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 14:52:42</p>
          */
@@ -187,6 +244,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String scheduleTime;
 
         /**
+         * <p>The IP address of the scheduler node.</p>
+         * 
          * <strong>example:</strong>
          * <p>28.0.168.46</p>
          */
@@ -194,6 +253,36 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String serverIp;
 
         /**
+         * <p>The job execution status. Valid values:</p>
+         * <ul>
+         * <li><p>0: UNKNOWN</p>
+         * </li>
+         * <li><p>1: WAITING</p>
+         * </li>
+         * <li><p>2: READY</p>
+         * </li>
+         * <li><p>3: RUNNING</p>
+         * </li>
+         * <li><p>4: SUCCESS</p>
+         * </li>
+         * <li><p>5: FAILED</p>
+         * </li>
+         * <li><p>6: PAUSED</p>
+         * </li>
+         * <li><p>7: SUBMITTED</p>
+         * </li>
+         * <li><p>8: REJECTED</p>
+         * </li>
+         * <li><p>9: ACCEPTED</p>
+         * </li>
+         * <li><p>10: PARTIAL_FAILED</p>
+         * </li>
+         * <li><p>11: SKIPPED</p>
+         * </li>
+         * <li><p>12: REMOVED</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -201,6 +290,20 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The scheduling type. Valid values:</p>
+         * <ul>
+         * <li><p>-1: none<br></p>
+         * </li>
+         * <li><p>1: cron<br></p>
+         * </li>
+         * <li><p>3: fix_rate<br></p>
+         * </li>
+         * <li><p>5: one_time<br></p>
+         * </li>
+         * <li><p>100: api</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -208,6 +311,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Integer timeType;
 
         /**
+         * <p>The total number of tokens consumed by the job execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -215,6 +320,24 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Integer totalTokens;
 
         /**
+         * <p>The method that triggered the job. Valid values:</p>
+         * <ul>
+         * <li><p>0: unknown</p>
+         * </li>
+         * <li><p>1: schedule</p>
+         * </li>
+         * <li><p>2: rerun</p>
+         * </li>
+         * <li><p>3: api</p>
+         * </li>
+         * <li><p>4: user_retry</p>
+         * </li>
+         * <li><p>5: system_retry</p>
+         * </li>
+         * <li><p>6: manual</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -222,6 +345,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Integer triggerType;
 
         /**
+         * <p>The address of the worker that executed the job instance.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://192.168.1.9:9999/">http://192.168.1.9:9999/</a></p>
          */
@@ -229,6 +354,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String workAddr;
 
         /**
+         * <p>The ID of the parent workflow instance, if applicable.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -236,6 +363,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String workflowExecutionId;
 
         /**
+         * <p>The ID of the parent workflow, if applicable.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -243,6 +372,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Long workflowId;
 
         /**
+         * <p>The name of the parent workflow, if applicable.</p>
+         * 
          * <strong>example:</strong>
          * <p>myWorkflow</p>
          */
@@ -250,6 +381,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public String workflowName;
 
         /**
+         * <p>The extended attributes.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;sessionId&quot;:&quot;ac21f9f6-5a88-4f97-abd1-b51989166035&quot;}</p>
          */
@@ -457,6 +590,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
 
     public static class ListJobExecutionsResponseBodyData extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -464,6 +599,8 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -471,14 +608,14 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>A list of job instances.</p>
          */
         @NameInMap("Records")
         public java.util.List<ListJobExecutionsResponseBodyDataRecords> records;
 
         /**
+         * <p>The total number of entries found.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

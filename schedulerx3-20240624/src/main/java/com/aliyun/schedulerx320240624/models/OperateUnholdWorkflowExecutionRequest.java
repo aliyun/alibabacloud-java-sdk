@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateUnholdWorkflowExecutionRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateUnholdWorkflowExecutionRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class OperateUnholdWorkflowExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The workflow execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

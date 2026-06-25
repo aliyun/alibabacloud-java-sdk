@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobExecutionResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -20,6 +22,8 @@ public class GetJobExecutionResponseBody extends TeaModel {
     public GetJobExecutionResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,7 +31,7 @@ public class GetJobExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>39938688-0BAB-5AD8-BF02-F4910FAC7589</p>
@@ -36,6 +40,14 @@ public class GetJobExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,6 +101,8 @@ public class GetJobExecutionResponseBody extends TeaModel {
 
     public static class GetJobExecutionResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-app</p>
          */
@@ -96,16 +110,26 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The number of execution attempts.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Attempt")
         public Integer attempt;
 
+        /**
+         * <p>The data timestamp for the job instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11 00:06:10</p>
+         */
         @NameInMap("DataTime")
         public String dataTime;
 
         /**
+         * <p>The duration of the job execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -113,6 +137,8 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The time when the job execution ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-29 15:56:36</p>
          */
@@ -120,6 +146,8 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Details of the executor that ran the job. The value is a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Status\&quot;: \&quot;NORMAL\&quot;, \&quot;ActiveCount\&quot;: 4, \&quot;UnavailableCount\&quot;: 0, \&quot;ExpectedCount\&quot;: 4, \&quot;RiskCount\&quot;: 0}</p>
          */
@@ -127,6 +155,8 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public String executor;
 
         /**
+         * <p>The ID of the job execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>1310630367761285120</p>
          */
@@ -134,16 +164,26 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public String jobExecutionId;
 
         /**
+         * <p>The ID of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>74</p>
          */
         @NameInMap("JobId")
         public Long jobId;
 
+        /**
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>天猫-自动审单</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
         /**
+         * <p>The type of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxljob</p>
          */
@@ -151,6 +191,8 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The parameters of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/avatar/system/services/biz/payment/crontab/monitorpayment.php</p>
          */
@@ -158,6 +200,8 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public String parameters;
 
         /**
+         * <p>The result of the job execution. The value is a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -165,16 +209,44 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>The routing strategy. Valid values:</p>
+         * <ul>
+         * <li><p><code>1</code>: <code>Round Robin</code></p>
+         * </li>
+         * <li><p><code>2</code>: <code>Random</code></p>
+         * </li>
+         * <li><p><code>3</code>: <code>First</code></p>
+         * </li>
+         * <li><p><code>4</code>: <code>Last</code></p>
+         * </li>
+         * <li><p><code>5</code>: <code>Least Frequently Used</code></p>
+         * </li>
+         * <li><p><code>6</code>: <code>Least Recently Used</code></p>
+         * </li>
+         * <li><p><code>7</code>: <code>Consistent Hashing</code></p>
+         * </li>
+         * <li><p><code>8</code>: <code>Shard Broadcasting</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RouteStrategy")
         public Integer routeStrategy;
 
+        /**
+         * <p>The scheduled time for the job execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11 00:06:10</p>
+         */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
         /**
+         * <p>The IP address of the scheduling server.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.3.27.76</p>
          */
@@ -182,13 +254,31 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public String serverIp;
 
         /**
+         * <p>The time when the job execution started.</p>
+         * 
          * <strong>example:</strong>
-         * <p>2025-03-11T00:06:10Z</p>
+         * <p>2025-03-11 00:06:10</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
+         * <p>The job execution status. Valid values:</p>
+         * <ul>
+         * <li><p><code>0</code>: <code>UNKNOWN</code></p>
+         * </li>
+         * <li><p><code>1</code>: <code>WAITING</code></p>
+         * </li>
+         * <li><p><code>2</code>: <code>READY</code></p>
+         * </li>
+         * <li><p><code>3</code>: <code>RUNNING</code></p>
+         * </li>
+         * <li><p><code>4</code>: <code>SUCCESS</code></p>
+         * </li>
+         * <li><p><code>5</code>: <code>FAILED</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -196,6 +286,22 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The scheduling type of the job. Valid values:</p>
+         * <ul>
+         * <li><p><code>-1</code>: <code>none</code></p>
+         * </li>
+         * <li><p><code>1</code>: <code>cron</code></p>
+         * </li>
+         * <li><p><code>2</code>: <code>fixed_delay</code></p>
+         * </li>
+         * <li><p><code>3</code>: <code>fixed_rate</code></p>
+         * </li>
+         * <li><p><code>5</code>: <code>one_time</code></p>
+         * </li>
+         * <li><p><code>100</code>: <code>api</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -203,6 +309,24 @@ public class GetJobExecutionResponseBody extends TeaModel {
         public Integer timeType;
 
         /**
+         * <p>Indicates how the job was triggered. Valid values:</p>
+         * <ul>
+         * <li><p><code>0</code>: <code>unknown</code></p>
+         * </li>
+         * <li><p><code>1</code>: <code>timer_schedule</code></p>
+         * </li>
+         * <li><p><code>2</code>: <code>rerun</code></p>
+         * </li>
+         * <li><p><code>3</code>: <code>api_run</code></p>
+         * </li>
+         * <li><p><code>4</code>: <code>user_retry</code></p>
+         * </li>
+         * <li><p><code>5</code>: <code>system_retry</code></p>
+         * </li>
+         * <li><p><code>6</code>: <code>manual</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>timer_schedule</p>
          */

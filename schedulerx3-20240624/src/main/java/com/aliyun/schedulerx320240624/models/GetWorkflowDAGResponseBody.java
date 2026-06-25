@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowDAGResponseBody extends TeaModel {
     /**
+     * <p>The Response Code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetWorkflowDAGResponseBodyData data;
 
     /**
+     * <p>The Error Message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -22,7 +29,7 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
@@ -31,6 +38,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +93,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
 
     public static class GetWorkflowDAGResponseBodyDataEdges extends TeaModel {
         /**
+         * <p>The Job ID of the source Node.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -91,6 +102,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
         public Long source;
 
         /**
+         * <p>The Job ID of the target Node.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -122,6 +135,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
 
     public static class GetWorkflowDAGResponseBodyDataNodesCoordinate extends TeaModel {
         /**
+         * <p>Optional. The height of the Node.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -129,6 +144,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
         public Float height;
 
         /**
+         * <p>Optional. The width of the Node.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -136,6 +153,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
         public Float width;
 
         /**
+         * <p>The x-coordinate of the Node.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -143,6 +162,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
         public Float x;
 
         /**
+         * <p>The y-coordinate of the Node.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -190,16 +211,23 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
 
     public static class GetWorkflowDAGResponseBodyDataNodes extends TeaModel {
         /**
+         * <p>The Application Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>oak-payment-async-job</p>
          */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The coordinates of the Node.</p>
+         */
         @NameInMap("Coordinate")
         public GetWorkflowDAGResponseBodyDataNodesCoordinate coordinate;
 
         /**
+         * <p>The Dependency Strategy.</p>
+         * 
          * <strong>example:</strong>
          * <p>all_success</p>
          */
@@ -207,6 +235,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
         public Integer dependentStrategy;
 
         /**
+         * <p>The Job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -214,6 +244,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The Job type.</p>
+         * 
          * <strong>example:</strong>
          * <p>script_shell</p>
          */
@@ -221,6 +253,8 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The Job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>job1</p>
          */
@@ -228,6 +262,14 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Job Status.</p>
+         * <ul>
+         * <li><p>0: Disabled</p>
+         * </li>
+         * <li><p>1: Enabled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -298,9 +340,15 @@ public class GetWorkflowDAGResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowDAGResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of Edges in the Workflow DAG.</p>
+         */
         @NameInMap("Edges")
         public java.util.List<GetWorkflowDAGResponseBodyDataEdges> edges;
 
+        /**
+         * <p>A list of Nodes in the Workflow DAG.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<GetWorkflowDAGResponseBodyDataNodes> nodes;
 

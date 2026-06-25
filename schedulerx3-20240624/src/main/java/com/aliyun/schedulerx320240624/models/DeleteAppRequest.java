@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppRequest extends TeaModel {
     /**
+     * <p>The name of the App Group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteAppRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

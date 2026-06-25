@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListScheduleTimesResponseBody extends TeaModel {
     /**
+     * <p>The response code. <code>200</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>A list of the scheduled times.</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>The response message. The value is <code>success</code> if the request succeeds, or an error message if it fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -22,6 +29,8 @@ public class ListScheduleTimesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request. Use this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A48E22F-F30A-5CE5-AC7A-E0FED1B6942E</p>
      */
@@ -29,6 +38,14 @@ public class ListScheduleTimesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

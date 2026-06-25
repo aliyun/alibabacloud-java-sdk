@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxljob-d6a5243b6fa</p>
      */
@@ -12,6 +14,8 @@ public class ListClustersRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>cluster-test</p>
      */
@@ -26,6 +30,8 @@ public class ListClustersRequest extends TeaModel {
     public Integer clusterType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -33,6 +39,8 @@ public class ListClustersRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page for paginated queries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLogRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,6 +14,7 @@ public class GetLogRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetLogRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The end time. This value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1721636220</p>
      */
@@ -28,6 +33,8 @@ public class GetLogRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The job execution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>
      */
@@ -35,6 +42,8 @@ public class GetLogRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
+     * <p>The keyword to search for.</p>
+     * 
      * <strong>example:</strong>
      * <p>hello word</p>
      */
@@ -42,6 +51,8 @@ public class GetLogRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The log level.</p>
+     * 
      * <strong>example:</strong>
      * <p>INFO</p>
      */
@@ -49,7 +60,7 @@ public class GetLogRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>LineNum</p>
+     * <p>The number of log entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -58,6 +69,8 @@ public class GetLogRequest extends TeaModel {
     public Integer lineNum;
 
     /**
+     * <p>The log ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>344008</p>
      */
@@ -65,6 +78,8 @@ public class GetLogRequest extends TeaModel {
     public Long logId;
 
     /**
+     * <p>The offset.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -72,6 +87,14 @@ public class GetLogRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>Specifies whether to sort the results in descending order.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: sorts the results in descending order.</p>
+     * </li>
+     * <li><p><strong>false</strong>: sorts the results in ascending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -79,6 +102,8 @@ public class GetLogRequest extends TeaModel {
     public Boolean reverse;
 
     /**
+     * <p>The time when the job was scheduled. This value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-10-01 12:00:00</p>
      */
@@ -86,6 +111,8 @@ public class GetLogRequest extends TeaModel {
     public Long scheduleTime;
 
     /**
+     * <p>The start time. This value is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1721636220</p>
      */
@@ -93,6 +120,8 @@ public class GetLogRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The worker address.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.1.100</p>
      */

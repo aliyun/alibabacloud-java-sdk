@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateExecutorsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -13,13 +15,15 @@ public class UpdateExecutorsResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li></li>
+     * <li>The returned data.</li>
      * </ul>
      */
     @NameInMap("Data")
     public UpdateExecutorsResponseBodyData data;
 
     /**
+     * <p>The returned error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,7 +31,7 @@ public class UpdateExecutorsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -36,6 +40,14 @@ public class UpdateExecutorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,6 +101,8 @@ public class UpdateExecutorsResponseBody extends TeaModel {
 
     public static class UpdateExecutorsResponseBodyData extends TeaModel {
         /**
+         * <p>The Application Group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +110,8 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         public Long appGroupId;
 
         /**
+         * <p>The Application type.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -103,6 +119,8 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         public Integer appType;
 
         /**
+         * <p>The Kubernetes services that failed to import.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
          */
@@ -110,6 +128,8 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         public String failedService;
 
         /**
+         * <p>The Worker ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +137,8 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         public Integer workId;
 
         /**
+         * <p>The Worker type.</p>
+         * 
          * <strong>example:</strong>
          * <p>k8s_service</p>
          */
@@ -124,6 +146,8 @@ public class UpdateExecutorsResponseBody extends TeaModel {
         public String workerType;
 
         /**
+         * <p>A JSON-formatted string that contains a list of Workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
          */

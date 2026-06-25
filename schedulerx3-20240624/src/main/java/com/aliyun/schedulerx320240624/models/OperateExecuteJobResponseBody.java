@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateExecuteJobResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,14 +14,14 @@ public class OperateExecuteJobResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public OperateExecuteJobResponseBodyData data;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -27,6 +29,8 @@ public class OperateExecuteJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>6305893D-517D-5131-A767-644EDA81CEC3</p>
      */
@@ -34,6 +38,14 @@ public class OperateExecuteJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +99,8 @@ public class OperateExecuteJobResponseBody extends TeaModel {
 
     public static class OperateExecuteJobResponseBodyData extends TeaModel {
         /**
+         * <p>The job execution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1310630367761285120</p>
          */

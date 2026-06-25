@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCalendarNamesRequest extends TeaModel {
     /**
+     * <p>The Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

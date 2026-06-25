@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateMarkSuccessWorkflowExecutionResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of <code>200</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OperateMarkSuccessWorkflowExecutionResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional details about the result.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,7 +23,7 @@ public class OperateMarkSuccessWorkflowExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique ID of the request, used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>1DF6732E-15D8-5E1F-95E3-C10077F556B5</p>
@@ -28,6 +32,14 @@ public class OperateMarkSuccessWorkflowExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the operation succeeded.</p>
+     * <ul>
+     * <li><p><code>true</code>: The operation succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDatasourcesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public ListDatasourcesResponseBodyData data;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -22,7 +29,7 @@ public class ListDatasourcesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</p>
@@ -31,6 +38,12 @@ public class ListDatasourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the invocation succeeded.</p>
+     * <ul>
+     * <li><strong>true</strong>: The invocation succeeded.</li>
+     * <li><strong>false</strong>: Failed to invoke.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +97,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
 
     public static class ListDatasourcesResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>Data source connection parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;host&quot;:&quot;rm-bp1f03mxxxxx.mysql.rds.aliyuncs.com&quot;,&quot;port&quot;:3306,&quot;userName&quot;:&quot;test01&quot;,&quot;database&quot;:&quot;test01&quot;,&quot;other&quot;:{&quot;useSSL&quot;:&quot;false&quot;}}</p>
          */
@@ -91,6 +106,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String connectionParams;
 
         /**
+         * <p>DataSource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>145</p>
          */
@@ -98,6 +115,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public Long datasourceId;
 
         /**
+         * <p>Job description.</p>
+         * 
          * <strong>example:</strong>
          * <p>my first workflow</p>
          */
@@ -105,6 +124,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>job01</p>
          */
@@ -112,6 +133,11 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Specific pronunciation rule Type. Options:</p>
+         * <ul>
+         * <li>replacement: A rule that directly replaces Word with Pronunciation.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>target</p>
          */
@@ -119,6 +145,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public Integer type;
 
         /**
+         * <p>Updater.</p>
+         * 
          * <strong>example:</strong>
          * <p>1827811800555555</p>
          */
@@ -182,6 +210,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
 
     public static class ListDatasourcesResponseBodyData extends TeaModel {
         /**
+         * <p>Maximum Data Volume to read in this request. Default Value is 10.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -189,6 +219,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>When the data matching the query conditions has not been fully read, the server returns a nextToken. You can use this nextToken to continue reading subsequent data. This parameter is not required for the first query.</p>
+         * 
          * <strong>example:</strong>
          * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
          */
@@ -196,6 +228,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -203,6 +237,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -218,6 +254,8 @@ public class ListDatasourcesResponseBody extends TeaModel {
         public java.util.List<ListDatasourcesResponseBodyDataRecords> records;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */

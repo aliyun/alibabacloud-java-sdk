@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateWorkflowResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,6 +23,8 @@ public class UpdateWorkflowResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID generated for the request. If you encounter an issue, provide this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AA3538A0-FBE6-5E31-AD88-A02C6FF0DACC</p>
      */
@@ -26,6 +32,14 @@ public class UpdateWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasourceRequest extends TeaModel {
     /**
+     * <p>Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDatasourceRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Connection parameters of the data source, in JSON format</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateDatasourceRequest extends TeaModel {
     public String connectionParams;
 
     /**
+     * <p>Datasource Name</p>
+     * 
      * <strong>example:</strong>
      * <p>my first datasource</p>
      */
@@ -30,6 +34,7 @@ public class CreateDatasourceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Datasource Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class CreateDatasourceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Database password</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,11 @@ public class CreateDatasourceRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Data Source Type  </p>
+     * <ul>
+     * <li>0: MySQL  </li>
+     * <li>1: PostgreSQL</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

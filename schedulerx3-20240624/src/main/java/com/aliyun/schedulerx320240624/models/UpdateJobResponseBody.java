@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateJobResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateJobResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,6 +23,8 @@ public class UpdateJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier for the request. Alibaba Cloud generates this ID to help you troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>3808cf26-dde2-4286-8503-b0a2cd4065a7</p>
      */
@@ -26,6 +32,14 @@ public class UpdateJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

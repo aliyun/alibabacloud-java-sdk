@@ -5,44 +5,39 @@ import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>200</p>
+     * <p>The response code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
-    /**
-     * <ul>
-     * <li></li>
-     * </ul>
-     */
     @NameInMap("Data")
     public CreateClusterResponseBodyData data;
 
     /**
-     * <strong>example:</strong>
-     * <p>INVALID_PARAMETER</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <strong>example:</strong>
-     * <p>Parameter error: content is null.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <strong>example:</strong>
-     * <p>B8733786-C045-59F1-8D79-99A52863F62D</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request.
+     * You can use this ID for troubleshooting.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <strong>example:</strong>
-     * <p>true</p>
+     * <p>The status of the request. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -102,15 +97,13 @@ public class CreateClusterResponseBody extends TeaModel {
 
     public static class CreateClusterResponseBodyData extends TeaModel {
         /**
-         * <strong>example:</strong>
-         * <p>xxljob-b21969c2309</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <strong>example:</strong>
-         * <p>229317760970086</p>
+         * <p>The order ID.</p>
          */
         @NameInMap("OrderId")
         public Long orderId;

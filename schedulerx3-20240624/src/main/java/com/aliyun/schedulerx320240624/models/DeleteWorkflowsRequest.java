@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkflowsRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteWorkflowsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteWorkflowsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>If set to <code>true</code>, all jobs within the specified workflows are also deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -30,6 +34,7 @@ public class DeleteWorkflowsRequest extends TeaModel {
     public Boolean deleteJobs;
 
     /**
+     * <p>A list of workflow IDs to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowIds")

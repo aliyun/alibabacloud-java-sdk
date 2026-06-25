@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateConnectDatasourceRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateConnectDatasourceRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Connection parameters of the data source</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class OperateConnectDatasourceRequest extends TeaModel {
     public String connectionParams;
 
     /**
+     * <p>Password of the database user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class OperateConnectDatasourceRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Type of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

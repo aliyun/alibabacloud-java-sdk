@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateDisableJobsResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OperateDisableJobsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The returned message. Contains error details if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,6 +23,8 @@ public class OperateDisableJobsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>A unique ID generated for this request. If you encounter an issue, provide this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>29ED6209-5DE6-5E1D-89B0-B7B1D823A1BF</p>
      */
@@ -26,6 +32,14 @@ public class OperateDisableJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded.</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

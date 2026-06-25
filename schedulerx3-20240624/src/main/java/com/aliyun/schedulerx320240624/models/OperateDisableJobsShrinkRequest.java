@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateDisableJobsShrinkRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OperateDisableJobsShrinkRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,9 +25,7 @@ public class OperateDisableJobsShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The IDs of the jobs to disable.</p>
      */
     @NameInMap("JobIds")
     public String jobIdsShrink;

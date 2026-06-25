@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCalendarRequest extends TeaModel {
     /**
+     * <p>The calendar name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteCalendarRequest extends TeaModel {
     public String calendarName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteCalendarRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The year.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

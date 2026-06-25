@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasourcesRequest extends TeaModel {
     /**
+     * <p>Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,26 @@ public class ListDatasourcesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Maximum data volume to read in this request. Default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Job Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>修正券统计数据</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Indicates the current read position returned by the call. An empty value means all data has been read. This parameter is not required for the first query.</p>
+     * 
      * <strong>example:</strong>
      * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
      */
@@ -31,6 +42,8 @@ public class ListDatasourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -38,6 +51,8 @@ public class ListDatasourcesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -45,6 +60,8 @@ public class ListDatasourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Grafana dashboard type, including: dash-db: Dashboard; dash-folder: Folder (which can contain dashboards).</p>
+     * 
      * <strong>example:</strong>
      * <p>REDIS</p>
      */
