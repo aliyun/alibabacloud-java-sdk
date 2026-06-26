@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListProvidedSharesResponseBody extends TeaModel {
     /**
+     * <p>The token to retrieve the next page of results. A null value indicates that this is the last page.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The shares.</p>
+     */
     @NameInMap("shares")
     public java.util.List<Share> shares;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProvidedSharesRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,6 +14,8 @@ public class ListProvidedSharesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Use this token to retrieve the next page of results. If this parameter is not returned, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

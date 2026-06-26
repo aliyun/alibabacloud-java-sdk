@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FullSchemaChange extends TeaModel {
     /**
+     * <p>The type of change.</p>
+     * 
      * <strong>example:</strong>
      * <p>setOption</p>
      */
@@ -12,7 +14,7 @@ public class FullSchemaChange extends TeaModel {
     public String action;
 
     /**
-     * <p>required in UpdateComment/AddColumn</p>
+     * <p>The description. This parameter is required when <code>action</code> is <code>UpdateComment</code> or <code>AddColumn</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>col_comment</p>
@@ -20,17 +22,20 @@ public class FullSchemaChange extends TeaModel {
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <p>The column type. This parameter is required when <code>action</code> is <code>AddColumn</code>.</p>
+     */
     @NameInMap("dataType")
     public FullDataType dataType;
 
     /**
-     * <p>required in AddColumn/RenameColumn/DropColumn/UpdateColumnComment/UpdateColumnType/UpdateColumnNullability</p>
+     * <p>The table column names. This parameter is required when <code>action</code> is <code>AddColumn</code>, <code>RenameColumn</code>, <code>DropColumn</code>, <code>UpdateColumnComment</code>, <code>UpdateColumnType</code>, or <code>UpdateColumnNullability</code>.</p>
      */
     @NameInMap("fieldNames")
     public java.util.List<String> fieldNames;
 
     /**
-     * <p>required in UpdateColumnType</p>
+     * <p>Specifies whether the column is nullable. This parameter is required when the <code>action</code> is <code>UpdateColumnType</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -39,7 +44,7 @@ public class FullSchemaChange extends TeaModel {
     public Boolean keepNullability;
 
     /**
-     * <p>required in SetOption/RemoveOption</p>
+     * <p>The key for the configuration. This parameter is required when <code>action</code> is <code>SetOption</code> or <code>RemoveOption</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>\&quot;true\&quot;</p>
@@ -47,11 +52,14 @@ public class FullSchemaChange extends TeaModel {
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>The column to move. This parameter is required when <code>action</code> is <code>AddColumn</code> or <code>UpdateColumnPosition</code>.</p>
+     */
     @NameInMap("move")
     public Move move;
 
     /**
-     * <p>required in UpdateColumnComment</p>
+     * <p>The new description for the column. This parameter is required when <code>action</code> is <code>UpdateColumnComment</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>col_comment_test</p>
@@ -59,11 +67,14 @@ public class FullSchemaChange extends TeaModel {
     @NameInMap("newComment")
     public String newComment;
 
+    /**
+     * <p>The new column type. This parameter is required when <code>action</code> is <code>UpdateColumnType</code>.</p>
+     */
     @NameInMap("newDataType")
     public FullDataType newDataType;
 
     /**
-     * <p>required in RenameColumn</p>
+     * <p>The new name of the column. This parameter is required when <code>action</code> is <code>RenameColumn</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>new_col_test</p>
@@ -72,7 +83,7 @@ public class FullSchemaChange extends TeaModel {
     public String newName;
 
     /**
-     * <p>required in UpdateColumnNullability</p>
+     * <p>Specifies whether the new column is nullable. This parameter is required when <code>action</code> is <code>UpdateColumnType</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -81,7 +92,7 @@ public class FullSchemaChange extends TeaModel {
     public Boolean newNullability;
 
     /**
-     * <p>required in SetOption</p>
+     * <p>The value of the configuration. This parameter is required when <code>action</code> is <code>SetOption</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>\&quot;manifest.delete-file-drop-stats\&quot;</p>

@@ -4,9 +4,15 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class CreateTableRequest extends TeaModel {
+    /**
+     * <p>The table identifier.</p>
+     */
     @NameInMap("identifier")
     public Identifier identifier;
 
+    /**
+     * <p>The table schema.</p>
+     */
     @NameInMap("schema")
     public Schema schema;
 

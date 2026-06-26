@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DateSummary extends TeaModel {
     /**
+     * <p>The date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-01</p>
      */
@@ -12,7 +14,7 @@ public class DateSummary extends TeaModel {
     public String date;
 
     /**
-     * <p>Metric value at corresponding date</p>
+     * <p>The value.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

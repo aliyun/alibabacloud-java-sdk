@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Share extends TeaModel {
     /**
+     * <p>The comment for the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -12,6 +14,8 @@ public class Share extends TeaModel {
     public String comment;
 
     /**
+     * <p>The time when the share was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -19,6 +23,8 @@ public class Share extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The user who created the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -29,6 +35,8 @@ public class Share extends TeaModel {
     public Boolean enableWrite;
 
     /**
+     * <p>The resource descriptor of the share owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -36,6 +44,8 @@ public class Share extends TeaModel {
     public String owner;
 
     /**
+     * <p>The provider\&quot;s account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      */
@@ -43,6 +53,8 @@ public class Share extends TeaModel {
     public Long providerTenantId;
 
     /**
+     * <p>The share ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      */
@@ -50,6 +62,8 @@ public class Share extends TeaModel {
     public String shareId;
 
     /**
+     * <p>The share name.</p>
+     * 
      * <strong>example:</strong>
      * <p>share_name</p>
      */
@@ -57,6 +71,8 @@ public class Share extends TeaModel {
     public String shareName;
 
     /**
+     * <p>The time when the share was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -64,6 +80,8 @@ public class Share extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

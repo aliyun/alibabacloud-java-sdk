@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class FunctionDefinition extends TeaModel {
     /**
-     * <p>required in FileFunctionDefinition</p>
+     * <p>Required in FileFunctionDefinition.</p>
      */
     @NameInMap("className")
     public String className;
 
     /**
-     * <p>required in SQLFunctionDefinition/LambdaFunctionDefinition</p>
+     * <p>Required in SQLFunctionDefinition and LambdaFunctionDefinition.</p>
      */
     @NameInMap("definition")
     public String definition;
 
     /**
-     * <p>required in FileFunctionDefinition</p>
+     * <p>Required in FileFunctionDefinition.</p>
      */
     @NameInMap("fileResources")
     public java.util.List<FunctionFileResource> fileResources;
 
     /**
-     * <p>required in FileFunctionDefinition</p>
+     * <p>Required in FileFunctionDefinition.</p>
      */
     @NameInMap("functionName")
     public String functionName;
 
     /**
-     * <p>required in LambdaFunctionDefinition/FileFunctionDefinition</p>
+     * <p>Required in LambdaFunctionDefinition and FileFunctionDefinition.</p>
      */
     @NameInMap("language")
     public String language;

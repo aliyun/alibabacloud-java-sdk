@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPartitionSummariesRequest extends TeaModel {
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ListPartitionSummariesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class ListPartitionSummariesRequest extends TeaModel {
     public String pageToken;
 
     /**
+     * <p>The partition name pattern.</p>
+     * 
      * <strong>example:</strong>
      * <p>hh=10</p>
      */

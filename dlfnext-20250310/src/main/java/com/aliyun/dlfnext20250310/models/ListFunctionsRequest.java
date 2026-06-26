@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
     /**
+     * <p>A pattern to filter function names.</p>
+     * 
      * <strong>example:</strong>
      * <p>function%</p>
      */
@@ -12,6 +14,8 @@ public class ListFunctionsRequest extends TeaModel {
     public String functionNamePattern;
 
     /**
+     * <p>The maximum number of records to return in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -19,6 +23,8 @@ public class ListFunctionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. Use this token to retrieve the next page of results. Pass an empty string (&quot;&quot;) if this parameter is not returned in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

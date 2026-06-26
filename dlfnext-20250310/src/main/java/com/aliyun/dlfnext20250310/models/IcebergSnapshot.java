@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IcebergSnapshot extends TeaModel {
     /**
+     * <p>Number of added rows.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,7 +14,7 @@ public class IcebergSnapshot extends TeaModel {
     public Long addedRows;
 
     /**
-     * <p>id</p>
+     * <p>The snapshot ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2443368274334000657</p>
@@ -24,6 +26,8 @@ public class IcebergSnapshot extends TeaModel {
     public String idString;
 
     /**
+     * <p>The operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>append</p>
      */
@@ -31,6 +35,8 @@ public class IcebergSnapshot extends TeaModel {
     public String operation;
 
     /**
+     * <p>Parent ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -41,6 +47,8 @@ public class IcebergSnapshot extends TeaModel {
     public String parentIdString;
 
     /**
+     * <p>The schema ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -48,16 +56,23 @@ public class IcebergSnapshot extends TeaModel {
     public Long schemaId;
 
     /**
+     * <p>The sequence number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("sequenceNumber")
     public Long sequenceNumber;
 
+    /**
+     * <p>The summary.</p>
+     */
     @NameInMap("summary")
     public java.util.Map<String, String> summary;
 
     /**
+     * <p>The timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1750313724369</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Partition extends TeaModel {
     /**
+     * <p>The time when the partition was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1747120676378</p>
      */
@@ -12,6 +14,8 @@ public class Partition extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The creator of the partition.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -19,6 +23,8 @@ public class Partition extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>Indicates whether the process is complete.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class Partition extends TeaModel {
     public Boolean done;
 
     /**
+     * <p>The number of files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class Partition extends TeaModel {
     public Long fileCount;
 
     /**
+     * <p>The file size.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class Partition extends TeaModel {
     public Long fileSizeInBytes;
 
     /**
+     * <p>The time when the latest file was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1741701564261</p>
      */
@@ -47,6 +59,8 @@ public class Partition extends TeaModel {
     public Long lastFileCreationTime;
 
     /**
+     * <p>The number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +68,8 @@ public class Partition extends TeaModel {
     public Long recordCount;
 
     /**
+     * <p>The key-value pairs of the partition values.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;year&quot;:&quot;2025&quot;}</p>
      */
@@ -61,6 +77,8 @@ public class Partition extends TeaModel {
     public java.util.Map<String, ?> spec;
 
     /**
+     * <p>The status of the storage class conversion.</p>
+     * 
      * <strong>example:</strong>
      * <p>COMPLETE</p>
      */
@@ -68,6 +86,8 @@ public class Partition extends TeaModel {
     public String storageAction;
 
     /**
+     * <p>The storage class conversion time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1758189669915</p>
      */
@@ -75,16 +95,26 @@ public class Partition extends TeaModel {
     public Long storageActionTimestamp;
 
     /**
+     * <p>The storage class.</p>
+     * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
      */
     @NameInMap("storageClass")
     public String storageClass;
 
+    /**
+     * <p>The total number of buckets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalBuckets")
     public Integer totalBuckets;
 
     /**
+     * <p>The time when the partition was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -92,6 +122,8 @@ public class Partition extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the partition.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PartitionSummaries extends TeaModel {
     /**
+     * <p>The token to retrieve the next page of results. A null value indicates that the last page of results has been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>hh=10</p>
      */
@@ -12,7 +14,7 @@ public class PartitionSummaries extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>Current page of partition profiles</p>
+     * <p>The partitions.</p>
      */
     @NameInMap("partitions")
     public java.util.List<PartitionSummary> partitions;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PrepayResource extends TeaModel {
     /**
+     * <p>The catalog ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>clg-xxxx</p>
      */
@@ -12,6 +14,8 @@ public class PrepayResource extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The catalog name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_catalog</p>
      */
@@ -19,6 +23,8 @@ public class PrepayResource extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The number of CUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class PrepayResource extends TeaModel {
     public Integer cu;
 
     /**
+     * <p>The time when the subscription expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>1769356800000</p>
      */
@@ -33,6 +41,8 @@ public class PrepayResource extends TeaModel {
     public Long expireTime;
 
     /**
+     * <p>The time when the resources are purchased.</p>
+     * 
      * <strong>example:</strong>
      * <p>1764070447351</p>
      */
@@ -40,6 +50,8 @@ public class PrepayResource extends TeaModel {
     public Long gmtCreate;
 
     /**
+     * <p>The instance ID of computing resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlf-cu-quota-xxxx</p>
      */
@@ -47,6 +59,8 @@ public class PrepayResource extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The status of the computing resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING
      * UPGRADING

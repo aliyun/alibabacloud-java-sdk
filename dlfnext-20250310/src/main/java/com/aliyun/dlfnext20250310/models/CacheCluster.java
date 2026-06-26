@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CacheCluster extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>dc-wqewqr*****</p>
      */
@@ -12,6 +14,8 @@ public class CacheCluster extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Cluster name</p>
+     * 
      * <strong>example:</strong>
      * <p>cluster_name</p>
      */
@@ -19,6 +23,8 @@ public class CacheCluster extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>Creation time</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -26,6 +32,8 @@ public class CacheCluster extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>Creator name</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -33,6 +41,8 @@ public class CacheCluster extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>Version of the deployed instance</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */
@@ -40,6 +50,8 @@ public class CacheCluster extends TeaModel {
     public String deployInstanceVersion;
 
     /**
+     * <p>Deployed options version</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */
@@ -47,16 +59,23 @@ public class CacheCluster extends TeaModel {
     public Long deployOptionsVersion;
 
     /**
+     * <p>Milvus Version</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */
     @NameInMap("instanceVersion")
     public String instanceVersion;
 
+    /**
+     * <p>Cache cluster configuration</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
     /**
+     * <p>Options version</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */
@@ -64,6 +83,17 @@ public class CacheCluster extends TeaModel {
     public Long optionsVersion;
 
     /**
+     * <p>Cache cluster status. Valid values:
+     * ● NEW: Newly created and not started.
+     * ● STARTING: Starting.
+     * ● START_FAILED: Start failed.
+     * ● RUNNING: Running.
+     * ● PENDING_RESTART: Pending restart.
+     * ● PENDING_TERMINATE: Pending termination.
+     * ● TERMINATING: Terminating.
+     * ● TERMINATE_FAILED: Termination failed.
+     * ● TERMINATED: Terminated.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
@@ -71,6 +101,8 @@ public class CacheCluster extends TeaModel {
     public String status;
 
     /**
+     * <p>Update time</p>
+     * 
      * <strong>example:</strong>
      * <p>1764555848748</p>
      */
@@ -78,12 +110,17 @@ public class CacheCluster extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>Updater name</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("updatedBy")
     public String updatedBy;
 
+    /**
+     * <p>vSwitch list</p>
+     */
     @NameInMap("vSwitches")
     public java.util.List<CacheClusterVSwitches> vSwitches;
 
@@ -215,6 +252,8 @@ public class CacheCluster extends TeaModel {
 
     public static class CacheClusterVSwitches extends TeaModel {
         /**
+         * <p>vSwitch ID</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1thxw8sgypzj2j*****</p>
          */
@@ -222,6 +261,8 @@ public class CacheCluster extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>Instance zone</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>
          */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class AlterShareResourcesRequest extends TeaModel {
     /**
+     * <p>The ID of the catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>clg-paimon-xxxx</p>
      */
     @NameInMap("catalogId")
     public String catalogId;
 
+    /**
+     * <p>The shared resources.</p>
+     */
     @NameInMap("shareResourceList")
     public java.util.List<ShareResource> shareResourceList;
 

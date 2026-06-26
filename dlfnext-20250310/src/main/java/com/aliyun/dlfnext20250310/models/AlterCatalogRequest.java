@@ -4,9 +4,15 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class AlterCatalogRequest extends TeaModel {
+    /**
+     * <p>The items to delete.</p>
+     */
     @NameInMap("removals")
     public java.util.List<String> removals;
 
+    /**
+     * <p>The items to update.</p>
+     */
     @NameInMap("updates")
     public java.util.Map<String, String> updates;
 

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetCatalogTokenResponseBody extends TeaModel {
     /**
+     * <p>The token expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1749160909000</p>
      */
     @NameInMap("expiresAtMillis")
     public Long expiresAtMillis;
 
+    /**
+     * <p>The token for the catalog.</p>
+     */
     @NameInMap("token")
     public java.util.Map<String, String> token;
 

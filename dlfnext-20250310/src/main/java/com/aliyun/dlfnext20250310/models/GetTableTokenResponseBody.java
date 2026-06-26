@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetTableTokenResponseBody extends TeaModel {
     /**
+     * <p>The expiration time of the temporary access credential.</p>
+     * 
      * <strong>example:</strong>
      * <p>1749160909000</p>
      */
     @NameInMap("expiresAtMillis")
     public Long expiresAtMillis;
 
+    /**
+     * <p>The temporary access credential for the catalog hosting the table.</p>
+     */
     @NameInMap("token")
     public java.util.Map<String, String> token;
 

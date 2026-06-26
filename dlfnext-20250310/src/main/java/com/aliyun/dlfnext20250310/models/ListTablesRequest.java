@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTablesRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,12 +14,20 @@ public class ListTablesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If the response does not include this parameter, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("pageToken")
     public String pageToken;
 
+    /**
+     * <p>The table name pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table%</p>
+     */
     @NameInMap("tableNamePattern")
     public String tableNamePattern;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListViewDetailsRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,6 +14,8 @@ public class ListViewDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class ListViewDetailsRequest extends TeaModel {
     public String pageToken;
 
     /**
+     * <p>A pattern to filter view names.</p>
+     * 
      * <strong>example:</strong>
      * <p>view%</p>
      */

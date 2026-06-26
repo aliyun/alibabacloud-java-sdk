@@ -5,20 +5,31 @@ import com.aliyun.tea.*;
 
 public class CatalogSummary extends TeaModel {
     /**
+     * <p>The total number of metadata requests in the current month.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
     @NameInMap("apiVisitCountMonthly")
     public Long apiVisitCountMonthly;
 
+    /**
+     * <p>The month-over-month data on the total number of databases.</p>
+     */
     @NameInMap("databaseCount")
     public MoMValues databaseCount;
 
+    /**
+     * <p>The total number of file requests for the current month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("fileAccessCountMonthly")
     public Long fileAccessCountMonthly;
 
     /**
-     * <p>Update date of the statistics</p>
+     * <p>The date when the storage overview data was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-01</p>
@@ -26,40 +37,84 @@ public class CatalogSummary extends TeaModel {
     @NameInMap("generatedDate")
     public String generatedDate;
 
+    /**
+     * <p>The storage usage for Archive data files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeArchiveSize")
     public Long objTypeArchiveSize;
 
+    /**
+     * <p>The storage usage for Cold Archive data files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeColdArchiveSize")
     public Long objTypeColdArchiveSize;
 
+    /**
+     * <p>The storage usage for Infrequent Access (IA) data files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeIaSize")
     public Long objTypeIaSize;
 
+    /**
+     * <p>The storage usage for Standard data files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeStandardSize")
     public Long objTypeStandardSize;
 
+    /**
+     * <p>The month-over-month data on the total number of partitions.</p>
+     */
     @NameInMap("partitionCount")
     public MoMValues partitionCount;
 
+    /**
+     * <p>The month-over-month data on the total number of tables.</p>
+     */
     @NameInMap("tableCount")
     public MoMValues tableCount;
 
     /**
+     * <p>The data access traffic for the current month, in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
     @NameInMap("throughputMonthly")
     public Long throughputMonthly;
 
+    /**
+     * <p>The month-over-month data on the total number of files.</p>
+     */
     @NameInMap("totalFileCount")
     public MoMValues totalFileCount;
 
+    /**
+     * <p>The change in storage capacity from the previous period, in bytes.</p>
+     */
     @NameInMap("totalFileSizeInBytes")
     public MoMValues totalFileSizeInBytes;
 
+    /**
+     * <p>The month-over-month data for the total number of metadata files.</p>
+     */
     @NameInMap("totalMetaFileCount")
     public MoMValues totalMetaFileCount;
 
+    /**
+     * <p>The month-over-month data for the storage usage of metadata files, in bytes.</p>
+     */
     @NameInMap("totalMetaSizeInBytes")
     public MoMValues totalMetaSizeInBytes;
 

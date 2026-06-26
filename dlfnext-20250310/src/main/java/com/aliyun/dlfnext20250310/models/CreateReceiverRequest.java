@@ -4,10 +4,18 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class CreateReceiverRequest extends TeaModel {
+    /**
+     * <p>The comment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Customer A.</p>
+     */
     @NameInMap("comment")
     public String comment;
 
     /**
+     * <p>The name of the receiver.</p>
+     * 
      * <strong>example:</strong>
      * <p>receiver_name</p>
      */
@@ -15,6 +23,8 @@ public class CreateReceiverRequest extends TeaModel {
     public String receiverName;
 
     /**
+     * <p>The ID of the receiver\&quot;s account.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      */

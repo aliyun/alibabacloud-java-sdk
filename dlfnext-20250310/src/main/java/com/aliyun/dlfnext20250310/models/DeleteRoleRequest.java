@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRoleRequest extends TeaModel {
     /**
+     * <p>The resource descriptor of the role to delete.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:dlf::[accountId]:role/role_name</p>
      */

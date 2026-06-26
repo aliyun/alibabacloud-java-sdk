@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsResponseBody extends TeaModel {
     /**
+     * <p>The token used to retrieve the next page of results. If this parameter is not returned, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>A list of snapshots.</p>
+     */
     @NameInMap("snapshots")
     public java.util.List<Snapshot> snapshots;
 

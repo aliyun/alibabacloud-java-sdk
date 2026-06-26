@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FunctionFileResource extends TeaModel {
     /**
+     * <p>Resource type</p>
+     * 
      * <strong>example:</strong>
      * <p>JAR</p>
      */
@@ -12,6 +14,8 @@ public class FunctionFileResource extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Resource path</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://tmp/SimpleUdf.jar</p>
      */

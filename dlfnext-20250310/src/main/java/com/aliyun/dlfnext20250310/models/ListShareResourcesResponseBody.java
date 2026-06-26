@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListShareResourcesResponseBody extends TeaModel {
     /**
+     * <p>The ID of the catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>clg-paimon-xxxx</p>
      */
@@ -12,12 +14,17 @@ public class ListShareResourcesResponseBody extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The token used to page through results. A null value indicates that this is the last page.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The shared resources.</p>
+     */
     @NameInMap("shareResources")
     public java.util.List<ShareResource> shareResources;
 

@@ -4,13 +4,24 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class BatchGrantPermissionsResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned if the request fails. If the request is successful, this parameter is empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>空</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The permissions failed to be granted.</p>
+     */
     @NameInMap("failurePermissions")
     public java.util.List<FailurePermission> failurePermissions;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Permission extends TeaModel {
     /**
+     * <p>The access type.</p>
+     * 
      * <strong>example:</strong>
      * <p>DROP</p>
      */
@@ -15,6 +17,8 @@ public class Permission extends TeaModel {
     public PermissionColumns columns;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_name</p>
      */
@@ -28,6 +32,8 @@ public class Permission extends TeaModel {
     public String function;
 
     /**
+     * <p>The user resource descriptor.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:user/user_name</p>
      */
@@ -35,6 +41,8 @@ public class Permission extends TeaModel {
     public String principal;
 
     /**
+     * <p>The resource type of the permission.</p>
+     * 
      * <strong>example:</strong>
      * <p>CATALOG</p>
      */
@@ -45,6 +53,8 @@ public class Permission extends TeaModel {
     public RowFilter rowFilter;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_name</p>
      */

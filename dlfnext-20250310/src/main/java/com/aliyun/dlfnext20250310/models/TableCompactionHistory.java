@@ -4,36 +4,69 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class TableCompactionHistory extends TeaModel {
+    /**
+     * <p>The number of files after compaction.</p>
+     */
     @NameInMap("afterFilesCount")
     public Long afterFilesCount;
 
+    /**
+     * <p>The total size of files after compaction.</p>
+     */
     @NameInMap("afterFilesSize")
     public Long afterFilesSize;
 
+    /**
+     * <p>The number of files before compaction.</p>
+     */
     @NameInMap("beforeFilesCount")
     public Long beforeFilesCount;
 
+    /**
+     * <p>The creation time of the last file before compaction.</p>
+     */
     @NameInMap("beforeFilesLastCreationTime")
     public Long beforeFilesLastCreationTime;
 
+    /**
+     * <p>The total size of files before compaction.</p>
+     */
     @NameInMap("beforeFilesSize")
     public Long beforeFilesSize;
 
+    /**
+     * <p>The catalog ID.</p>
+     */
     @NameInMap("catalogId")
     public String catalogId;
 
+    /**
+     * <p>The compaction commit time.</p>
+     */
     @NameInMap("commitTime")
     public Long commitTime;
 
+    /**
+     * <p>The snapshot ID.</p>
+     */
     @NameInMap("snapshotId")
     public Long snapshotId;
 
+    /**
+     * <p>The table ID.</p>
+     */
     @NameInMap("tableId")
     public String tableId;
 
+    /**
+     * <p>The time when the record was last updated.</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 
+    /**
+     * <p>The user who updated the record.</p>
+     */
     @NameInMap("updatedBy")
     public String updatedBy;
 

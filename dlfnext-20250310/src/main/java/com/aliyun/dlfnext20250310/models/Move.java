@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Move extends TeaModel {
     /**
+     * <p>The name of the column.</p>
+     * 
      * <strong>example:</strong>
      * <p>other_col_test</p>
      */
@@ -12,6 +14,8 @@ public class Move extends TeaModel {
     public String fieldName;
 
     /**
+     * <p>The name of the reference column.</p>
+     * 
      * <strong>example:</strong>
      * <p>col_test</p>
      */
@@ -19,6 +23,8 @@ public class Move extends TeaModel {
     public String referenceFieldName;
 
     /**
+     * <p>The move type.</p>
+     * 
      * <strong>example:</strong>
      * <p>FIRST</p>
      */

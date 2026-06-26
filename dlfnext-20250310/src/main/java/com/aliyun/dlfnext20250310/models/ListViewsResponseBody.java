@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListViewsResponseBody extends TeaModel {
     /**
+     * <p>The token to retrieve the next page of results. A null value indicates that this is the last page.</p>
+     * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>A list of view names.</p>
+     */
     @NameInMap("views")
     public java.util.List<String> views;
 

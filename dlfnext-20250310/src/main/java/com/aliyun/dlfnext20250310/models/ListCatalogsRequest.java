@@ -4,10 +4,18 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class ListCatalogsRequest extends TeaModel {
+    /**
+     * <p>The pattern of the catalog name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mi</p>
+     */
     @NameInMap("catalogNamePattern")
     public String catalogNamePattern;
 
     /**
+     * <p>The maximum number of records to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -15,6 +23,8 @@ public class ListCatalogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

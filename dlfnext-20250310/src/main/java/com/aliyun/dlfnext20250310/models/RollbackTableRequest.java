@@ -4,6 +4,9 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class RollbackTableRequest extends TeaModel {
+    /**
+     * <p>The details of the instance.</p>
+     */
     @NameInMap("instant")
     public FullInstant instant;
 

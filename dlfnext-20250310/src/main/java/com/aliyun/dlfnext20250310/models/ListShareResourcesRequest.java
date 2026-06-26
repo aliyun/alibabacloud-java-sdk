@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListShareResourcesRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,6 +14,8 @@ public class ListShareResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to page through results. If this parameter is not returned, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

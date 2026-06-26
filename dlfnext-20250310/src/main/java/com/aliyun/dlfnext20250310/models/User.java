@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class User extends TeaModel {
     /**
+     * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -12,6 +14,8 @@ public class User extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The name of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -19,6 +23,8 @@ public class User extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The display name of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>user_display_name</p>
      */
@@ -26,6 +32,8 @@ public class User extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The type of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>RAM_USER</p>
      */
@@ -33,6 +41,8 @@ public class User extends TeaModel {
     public String type;
 
     /**
+     * <p>The time of the last update. The value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -40,6 +50,8 @@ public class User extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The name of the updater.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -47,6 +59,8 @@ public class User extends TeaModel {
     public String updatedBy;
 
     /**
+     * <p>The ID of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>222748924538****</p>
      */
@@ -54,6 +68,8 @@ public class User extends TeaModel {
     public String userId;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>user_name</p>
      */
@@ -61,6 +77,8 @@ public class User extends TeaModel {
     public String userName;
 
     /**
+     * <p>The resource descriptor of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:user/user_name</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ShareResource extends TeaModel {
     /**
+     * <p>The time when the resource was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -12,6 +14,8 @@ public class ShareResource extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The user who created the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -19,6 +23,8 @@ public class ShareResource extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_name</p>
      */
@@ -26,6 +32,8 @@ public class ShareResource extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The shared resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>TABLE</p>
      */
@@ -33,6 +41,8 @@ public class ShareResource extends TeaModel {
     public String shareType;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_name</p>
      */
@@ -40,6 +50,8 @@ public class ShareResource extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The time when the resource was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -47,6 +59,8 @@ public class ShareResource extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

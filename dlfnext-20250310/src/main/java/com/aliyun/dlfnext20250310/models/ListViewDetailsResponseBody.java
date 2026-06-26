@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListViewDetailsResponseBody extends TeaModel {
     /**
+     * <p>The token for the next page of results. If null is returned, all results have been retrieved.</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>A list of views.</p>
+     */
     @NameInMap("viewDetails")
     public java.util.List<View> viewDetails;
 

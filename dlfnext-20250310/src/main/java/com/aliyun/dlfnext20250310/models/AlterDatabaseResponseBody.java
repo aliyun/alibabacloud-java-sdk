@@ -4,12 +4,21 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class AlterDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The items that remain unchanged.</p>
+     */
     @NameInMap("missing")
     public java.util.List<String> missing;
 
+    /**
+     * <p>The deleted items.</p>
+     */
     @NameInMap("removed")
     public java.util.List<String> removed;
 
+    /**
+     * <p>The updated items.</p>
+     */
     @NameInMap("updated")
     public java.util.List<String> updated;
 

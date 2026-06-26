@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IcebergPartitionField extends TeaModel {
     /**
+     * <p>The partition ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class IcebergPartitionField extends TeaModel {
     public Long fieldId;
 
     /**
+     * <p>The partition name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ts_day</p>
      */
@@ -19,6 +23,8 @@ public class IcebergPartitionField extends TeaModel {
     public String name;
 
     /**
+     * <p>The source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class IcebergPartitionField extends TeaModel {
     public Long sourceId;
 
     /**
+     * <p>The transformation rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>day</p>
      */

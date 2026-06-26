@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateShareRequest extends TeaModel {
     /**
+     * <p>The comment for the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <p>Specifies whether to enable write permissions for the share.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enableWrite")
     public Boolean enableWrite;
 
     /**
+     * <p>The share name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

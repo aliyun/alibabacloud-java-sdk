@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Receiver extends TeaModel {
     /**
+     * <p>The comment.</p>
+     * 
      * <strong>example:</strong>
      * <p>comment</p>
      */
@@ -12,6 +14,8 @@ public class Receiver extends TeaModel {
     public String comment;
 
     /**
+     * <p>The time when the receiver was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -19,6 +23,8 @@ public class Receiver extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -26,6 +32,8 @@ public class Receiver extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The name of the receiver.</p>
+     * 
      * <strong>example:</strong>
      * <p>receiver_name</p>
      */
@@ -33,6 +41,8 @@ public class Receiver extends TeaModel {
     public String receiverName;
 
     /**
+     * <p>The receiver\&quot;s account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      */
@@ -40,6 +50,8 @@ public class Receiver extends TeaModel {
     public Long receiverTenantId;
 
     /**
+     * <p>The time when the receiver was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -47,6 +59,8 @@ public class Receiver extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the receiver.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

@@ -8,7 +8,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "dlfnext.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "dlfnext.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "dlfnext.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "dlfnext.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "dlfnext.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "dlfnext.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "dlfnext.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "dlfnext.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "dlfnext.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "dlfnext.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "dlfnext.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "dlfnext.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dlfnext", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +42,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据目录</p>
+     * <p>Updates a catalog.</p>
      * 
      * @param request AlterCatalogRequest
      * @param headers map
@@ -66,7 +80,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据目录</p>
+     * <p>Updates a catalog.</p>
      * 
      * @param request AlterCatalogRequest
      * @return AlterCatalogResponse
@@ -79,7 +93,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据库</p>
+     * <p>Updates a database.</p>
      * 
      * @param request AlterDatabaseRequest
      * @param headers map
@@ -117,7 +131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据库</p>
+     * <p>Updates a database.</p>
      * 
      * @param request AlterDatabaseRequest
      * @return AlterDatabaseResponse
@@ -130,7 +144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新接收者</p>
+     * <p>Updates a sink.</p>
      * 
      * @param request AlterReceiverRequest
      * @param headers map
@@ -168,7 +182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新接收者</p>
+     * <p>Updates a sink.</p>
      * 
      * @param request AlterReceiverRequest
      * @return AlterReceiverResponse
@@ -181,7 +195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新共享</p>
+     * <p>Updates a share.</p>
      * 
      * @param request AlterShareRequest
      * @param headers map
@@ -223,7 +237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新共享</p>
+     * <p>Updates a share.</p>
      * 
      * @param request AlterShareRequest
      * @return AlterShareResponse
@@ -236,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新共享中的接收者</p>
+     * <p>Updates the receivers of a share.</p>
      * 
      * @param request AlterShareReceiversRequest
      * @param headers map
@@ -274,7 +288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新共享中的接收者</p>
+     * <p>Updates the receivers of a share.</p>
      * 
      * @param request AlterShareReceiversRequest
      * @return AlterShareReceiversResponse
@@ -287,7 +301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改共享资源</p>
+     * <p>Modifies shared resources.</p>
      * 
      * @param request AlterShareResourcesRequest
      * @param headers map
@@ -325,7 +339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改共享资源</p>
+     * <p>Modifies shared resources.</p>
      * 
      * @param request AlterShareResourcesRequest
      * @return AlterShareResourcesResponse
@@ -338,7 +352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改Table</p>
+     * <p>Updates a table.</p>
      * 
      * @param request AlterTableRequest
      * @param headers map
@@ -372,7 +386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改Table</p>
+     * <p>Updates a table.</p>
      * 
      * @param request AlterTableRequest
      * @return AlterTableResponse
@@ -385,7 +399,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量授权</p>
+     * <p>Changes the table schema.</p>
+     * 
+     * @param request AlterTableSchemaRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AlterTableSchemaResponse
+     */
+    public AlterTableSchemaResponse alterTableSchemaWithOptions(String catalogId, String database, String table, AlterTableSchemaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            body.put("schema", request.schema);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AlterTableSchema"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + "/schema"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AlterTableSchemaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the table schema.</p>
+     * 
+     * @param request AlterTableSchemaRequest
+     * @return AlterTableSchemaResponse
+     */
+    public AlterTableSchemaResponse alterTableSchema(String catalogId, String database, String table, AlterTableSchemaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.alterTableSchemaWithOptions(catalogId, database, table, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Grants permissions to one or more DLF users or roles.</p>
      * 
      * @param request BatchGrantPermissionsRequest
      * @param headers map
@@ -419,7 +480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量授权</p>
+     * <p>Grants permissions to one or more DLF users or roles.</p>
      * 
      * @param request BatchGrantPermissionsRequest
      * @return BatchGrantPermissionsResponse
@@ -432,7 +493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量取消授权</p>
+     * <p>Revokes permissions in a batch.</p>
      * 
      * @param request BatchRevokePermissionsRequest
      * @param headers map
@@ -466,7 +527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量取消授权</p>
+     * <p>Revokes permissions in a batch.</p>
      * 
      * @param request BatchRevokePermissionsRequest
      * @return BatchRevokePermissionsResponse
@@ -479,7 +540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据目录</p>
+     * <p>Creates a catalog.</p>
      * 
      * @param request CreateCatalogRequest
      * @param headers map
@@ -529,7 +590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据目录</p>
+     * <p>Creates a catalog.</p>
      * 
      * @param request CreateCatalogRequest
      * @return CreateCatalogResponse
@@ -542,7 +603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据库</p>
+     * <p>Creates a database.</p>
      * 
      * @param request CreateDatabaseRequest
      * @param headers map
@@ -580,7 +641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据库</p>
+     * <p>Creates a database.</p>
      * 
      * @param request CreateDatabaseRequest
      * @return CreateDatabaseResponse
@@ -593,7 +654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建接收者</p>
+     * <p>Creates a receiver.</p>
      * 
      * @param request CreateReceiverRequest
      * @param headers map
@@ -635,7 +696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建接收者</p>
+     * <p>Creates a receiver.</p>
      * 
      * @param request CreateReceiverRequest
      * @return CreateReceiverResponse
@@ -648,7 +709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建角色</p>
+     * <p>Creates a DLF role.</p>
      * 
      * @param request CreateRoleRequest
      * @param headers map
@@ -690,7 +751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建角色</p>
+     * <p>Creates a DLF role.</p>
      * 
      * @param request CreateRoleRequest
      * @return CreateRoleResponse
@@ -703,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建共享</p>
+     * <p>Creates a share.</p>
      * 
      * @param request CreateShareRequest
      * @param headers map
@@ -745,7 +806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建共享</p>
+     * <p>Creates a share.</p>
      * 
      * @param request CreateShareRequest
      * @return CreateShareResponse
@@ -758,7 +819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建表</p>
+     * <p>Creates a table.</p>
      * 
      * @param request CreateTableRequest
      * @param headers map
@@ -796,7 +857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建表</p>
+     * <p>Creates a table.</p>
      * 
      * @param request CreateTableRequest
      * @return CreateTableResponse
@@ -809,7 +870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除角色</p>
+     * <p>Deletes a DLF role.</p>
      * 
      * @param request DeleteRoleRequest
      * @param headers map
@@ -843,7 +904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除角色</p>
+     * <p>Deletes a DLF role.</p>
      * 
      * @param request DeleteRoleRequest
      * @return DeleteRoleResponse
@@ -856,7 +917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 DLF 开通地域</p>
+     * <p>Retrieves the regions where DLF is activated.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -882,7 +943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 DLF 开通地域</p>
+     * <p>Retrieves the regions where DLF is activated.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -893,7 +954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据湖Catalog</p>
+     * <p>Deletes a data lake data catalog. The following conditions must be met, otherwise the deletion will fail: all tables and user-created databases under the catalog have been deleted; the databases and tables have been deleted for at least 24 hours.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -919,7 +980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据湖Catalog</p>
+     * <p>Deletes a data lake data catalog. The following conditions must be met, otherwise the deletion will fail: all tables and user-created databases under the catalog have been deleted; the databases and tables have been deleted for at least 24 hours.</p>
      * @return DropCatalogResponse
      */
     public DropCatalogResponse dropCatalog(String catalog) throws Exception {
@@ -930,7 +991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据库</p>
+     * <p>Drops a database.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -956,7 +1017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据库</p>
+     * <p>Drops a database.</p>
      * @return DropDatabaseResponse
      */
     public DropDatabaseResponse dropDatabase(String catalogId, String database) throws Exception {
@@ -967,7 +1028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除接收者</p>
+     * <p>Removes a receiver.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -993,7 +1054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除接收者</p>
+     * <p>Removes a receiver.</p>
      * @return DropReceiverResponse
      */
     public DropReceiverResponse dropReceiver(String receiver) throws Exception {
@@ -1004,7 +1065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除共享</p>
+     * <p>Deletes a share.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1030,7 +1091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除共享</p>
+     * <p>Deletes a share.</p>
      * @return DropShareResponse
      */
     public DropShareResponse dropShare(String share) throws Exception {
@@ -1041,7 +1102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除表</p>
+     * <p>Drops a table.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1067,7 +1128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除表</p>
+     * <p>Drops a table.</p>
      * @return DropTableResponse
      */
     public DropTableResponse dropTable(String catalogId, String database, String table) throws Exception {
@@ -1078,7 +1139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据湖Catalog</p>
+     * <p>Retrieves the details of a catalog.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1104,7 +1165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据湖Catalog</p>
+     * <p>Retrieves the details of a catalog.</p>
      * @return GetCatalogResponse
      */
     public GetCatalogResponse getCatalog(String catalog) throws Exception {
@@ -1115,7 +1176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据湖Catalog</p>
+     * <p>Retrieves the details of a catalog.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1141,7 +1202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据湖Catalog</p>
+     * <p>Retrieves the details of a catalog.</p>
      * @return GetCatalogByIdResponse
      */
     public GetCatalogByIdResponse getCatalogById(String id) throws Exception {
@@ -1152,7 +1213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the storage overview of a data catalog.</p>
      * 
      * @param request GetCatalogSummaryRequest
      * @param headers map
@@ -1186,7 +1247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the storage overview of a data catalog.</p>
      * 
      * @param request GetCatalogSummaryRequest
      * @return GetCatalogSummaryResponse
@@ -1199,7 +1260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the storage overview trend for a catalog.</p>
      * 
      * @param request GetCatalogSummaryTrendRequest
      * @param headers map
@@ -1237,7 +1298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the storage overview trend for a catalog.</p>
      * 
      * @param request GetCatalogSummaryTrendRequest
      * @return GetCatalogSummaryTrendResponse
@@ -1250,7 +1311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖Catalog的临时访问凭证</p>
+     * <p>Obtains a temporary access credential (token) for a catalog.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1276,7 +1337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖Catalog的临时访问凭证</p>
+     * <p>Obtains a temporary access credential (token) for a catalog.</p>
      * @return GetCatalogTokenResponse
      */
     public GetCatalogTokenResponse getCatalogToken(String catalog) throws Exception {
@@ -1287,7 +1348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据库</p>
+     * <p>Retrieves the details of a database.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1313,7 +1374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据库</p>
+     * <p>Retrieves the details of a database.</p>
      * @return GetDatabaseResponse
      */
     public GetDatabaseResponse getDatabase(String catalogId, String database) throws Exception {
@@ -1324,7 +1385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>You can view an inventory overview.</p>
      * 
      * @param request GetDatabaseSummaryRequest
      * @param headers map
@@ -1358,7 +1419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>You can view an inventory overview.</p>
      * 
      * @param request GetDatabaseSummaryRequest
      * @return GetDatabaseSummaryResponse
@@ -1371,7 +1432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看iceberg数据库</p>
+     * <p>Retrieves information about an Iceberg namespace.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1397,7 +1458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看iceberg数据库</p>
+     * <p>Retrieves information about an Iceberg namespace.</p>
      * @return GetIcebergNamespaceResponse
      */
     public GetIcebergNamespaceResponse getIcebergNamespace(String catalogId, String namespace) throws Exception {
@@ -1408,7 +1469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the details of a table.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1434,7 +1495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the details of a table.</p>
      * @return GetIcebergTableResponse
      */
     public GetIcebergTableResponse getIcebergTable(String catalogId, String namespace, String table) throws Exception {
@@ -1445,7 +1506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取接收者</p>
+     * <p>Retrieves a receiver.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1471,7 +1532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取接收者</p>
+     * <p>Retrieves a receiver.</p>
      * @return GetReceiverResponse
      */
     public GetReceiverResponse getReceiver(String receiver) throws Exception {
@@ -1482,7 +1543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 DLF 当前地域开通状态</p>
+     * <p>Queries the DLF activation status of in a region.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1508,7 +1569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 DLF 当前地域开通状态</p>
+     * <p>Queries the DLF activation status of in a region.</p>
      * @return GetRegionStatusResponse
      */
     public GetRegionStatusResponse getRegionStatus() throws Exception {
@@ -1519,7 +1580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取角色</p>
+     * <p>Retrieves a role.</p>
      * 
      * @param request GetRoleRequest
      * @param headers map
@@ -1553,7 +1614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取角色</p>
+     * <p>Retrieves a role.</p>
      * 
      * @param request GetRoleRequest
      * @return GetRoleResponse
@@ -1566,7 +1627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取共享</p>
+     * <p>Retrieves the details of a share.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1592,7 +1653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取共享</p>
+     * <p>Retrieves the details of a share.</p>
      * @return GetShareResponse
      */
     public GetShareResponse getShare(String share) throws Exception {
@@ -1603,7 +1664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the details of a table in a data lake.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1629,7 +1690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the details of a table in a data lake.</p>
      * @return GetTableResponse
      */
     public GetTableResponse getTable(String catalogId, String database, String table) throws Exception {
@@ -1640,7 +1701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表Compaction详情</p>
+     * <p>Retrieves the compaction details of a table.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1666,7 +1727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表Compaction详情</p>
+     * <p>Retrieves the compaction details of a table.</p>
      * @return GetTableCompactionResponse
      */
     public GetTableCompactionResponse getTableCompaction(String catalogId, String database, String table) throws Exception {
@@ -1677,7 +1738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表快照</p>
+     * <p>Queries a table snapshot.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1703,7 +1764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表快照</p>
+     * <p>Queries a table snapshot.</p>
      * @return GetTableSnapshotResponse
      */
     public GetTableSnapshotResponse getTableSnapshot(String catalogId, String database, String table) throws Exception {
@@ -1714,7 +1775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the storage summary for a table.</p>
      * 
      * @param request GetTableSummaryRequest
      * @param headers map
@@ -1748,7 +1809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves the storage summary for a table.</p>
      * 
      * @param request GetTableSummaryRequest
      * @return GetTableSummaryResponse
@@ -1761,7 +1822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表的临时访问凭证</p>
+     * <p>Obtains a temporary access credential for a data lake table.</p>
      * 
      * @param request GetTableTokenRequest
      * @param headers map
@@ -1795,7 +1856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表的临时访问凭证</p>
+     * <p>Obtains a temporary access credential for a data lake table.</p>
      * 
      * @param request GetTableTokenRequest
      * @return GetTableTokenResponse
@@ -1808,7 +1869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户</p>
+     * <p>Retrieves a user.</p>
      * 
      * @param request GetUserRequest
      * @param headers map
@@ -1842,7 +1903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户</p>
+     * <p>Retrieves a user.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -1855,7 +1916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取可信 VPC 配置</p>
+     * <p>Obtain the VPC configuration.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1881,7 +1942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取可信 VPC 配置</p>
+     * <p>Obtain the VPC configuration.</p>
      * @return GetVpcConfigResponse
      */
     public GetVpcConfigResponse getVpcConfig() throws Exception {
@@ -1892,7 +1953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量授予角色权限给用户</p>
+     * <p>Grants a role to one or more users.</p>
      * 
      * @param request GrantRoleToUsersRequest
      * @param headers map
@@ -1930,7 +1991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量授予角色权限给用户</p>
+     * <p>Grants a role to one or more users.</p>
      * 
      * @param request GrantRoleToUsersRequest
      * @return GrantRoleToUsersResponse
@@ -1943,7 +2004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据目录列表</p>
+     * <p>Lists catalogs.</p>
      * 
      * @param request ListCatalogsRequest
      * @param headers map
@@ -1985,7 +2046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据目录列表</p>
+     * <p>Lists catalogs.</p>
      * 
      * @param request ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -1998,7 +2059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据库列表</p>
+     * <p>Retrieves database details.</p>
      * 
      * @param request ListDatabaseDetailsRequest
      * @param headers map
@@ -2040,7 +2101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据库列表</p>
+     * <p>Retrieves database details.</p>
      * 
      * @param request ListDatabaseDetailsRequest
      * @return ListDatabaseDetailsResponse
@@ -2053,7 +2114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据库列表</p>
+     * <p>Retrieves databases.</p>
      * 
      * @param request ListDatabasesRequest
      * @param headers map
@@ -2095,7 +2156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看数据库列表</p>
+     * <p>Retrieves databases.</p>
      * 
      * @param request ListDatabasesRequest
      * @return ListDatabasesResponse
@@ -2108,7 +2169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看函数列表</p>
+     * <p>Lists functions.</p>
      * 
      * @param request ListFunctionsRequest
      * @param headers map
@@ -2150,7 +2211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看函数列表</p>
+     * <p>Lists functions.</p>
      * 
      * @param request ListFunctionsRequest
      * @return ListFunctionsResponse
@@ -2163,7 +2224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看iceberg数据库列表</p>
+     * <p>Lists Iceberg namespaces.</p>
      * 
      * @param request ListIcebergNamespaceDetailsRequest
      * @param headers map
@@ -2205,7 +2266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看iceberg数据库列表</p>
+     * <p>Lists Iceberg namespaces.</p>
      * 
      * @param request ListIcebergNamespaceDetailsRequest
      * @return ListIcebergNamespaceDetailsResponse
@@ -2218,7 +2279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看iceberg表快照列表</p>
+     * <p>Lists the snapshots of an Iceberg table.</p>
      * 
      * @param request ListIcebergSnapshotsRequest
      * @param headers map
@@ -2256,7 +2317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看iceberg表快照列表</p>
+     * <p>Lists the snapshots of an Iceberg table.</p>
      * 
      * @param request ListIcebergSnapshotsRequest
      * @return ListIcebergSnapshotsResponse
@@ -2269,7 +2330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看iceberg表详情列表</p>
+     * <p>Lists the details of Iceberg tables.</p>
      * 
      * @param request ListIcebergTableDetailsRequest
      * @param headers map
@@ -2311,7 +2372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看iceberg表详情列表</p>
+     * <p>Lists the details of Iceberg tables.</p>
      * 
      * @param request ListIcebergTableDetailsRequest
      * @return ListIcebergTableDetailsResponse
@@ -2324,7 +2385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves storage overview for partitions.</p>
      * 
      * @param request ListPartitionSummariesRequest
      * @param headers map
@@ -2366,7 +2427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表</p>
+     * <p>Retrieves storage overview for partitions.</p>
      * 
      * @param request ListPartitionSummariesRequest
      * @return ListPartitionSummariesResponse
@@ -2379,7 +2440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>listPartitions</p>
+     * <p>Lists partitions.</p>
      * 
      * @param request ListPartitionsRequest
      * @param headers map
@@ -2421,7 +2482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>listPartitions</p>
+     * <p>Lists partitions.</p>
      * 
      * @param request ListPartitionsRequest
      * @return ListPartitionsResponse
@@ -2434,7 +2495,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定资源或指定Principal的权限信息</p>
+     * <p>Retrieves a list of partitions by their names.</p>
+     * 
+     * @param request ListPartitionsByNamesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPartitionsByNamesResponse
+     */
+    public ListPartitionsByNamesResponse listPartitionsByNamesWithOptions(String catalogId, String database, String table, ListPartitionsByNamesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.specs)) {
+            body.put("specs", request.specs);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPartitionsByNames"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + "/partitions/list-by-names"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPartitionsByNamesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of partitions by their names.</p>
+     * 
+     * @param request ListPartitionsByNamesRequest
+     * @return ListPartitionsByNamesResponse
+     */
+    public ListPartitionsByNamesResponse listPartitionsByNames(String catalogId, String database, String table, ListPartitionsByNamesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPartitionsByNamesWithOptions(catalogId, database, table, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the permissions for a resource or principal.</p>
      * 
      * @param request ListPermissionsRequest
      * @param headers map
@@ -2496,7 +2604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定资源或指定Principal的权限信息</p>
+     * <p>Retrieves the permissions for a resource or principal.</p>
      * 
      * @param request ListPermissionsRequest
      * @return ListPermissionsResponse
@@ -2509,7 +2617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取提供的共享列表</p>
+     * <p>Retrieves shares.</p>
      * 
      * @param request ListProvidedSharesRequest
      * @param headers map
@@ -2547,7 +2655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取提供的共享列表</p>
+     * <p>Retrieves shares.</p>
      * 
      * @param request ListProvidedSharesRequest
      * @return ListProvidedSharesResponse
@@ -2560,7 +2668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取接收的共享列表</p>
+     * <p>Retrieves received shares.</p>
      * 
      * @param request ListReceivedSharesRequest
      * @param headers map
@@ -2598,7 +2706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取接收的共享列表</p>
+     * <p>Retrieves received shares.</p>
      * 
      * @param request ListReceivedSharesRequest
      * @return ListReceivedSharesResponse
@@ -2611,7 +2719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取接收者列表</p>
+     * <p>Queries a list of receivers.</p>
      * 
      * @param request ListReceiversRequest
      * @param headers map
@@ -2653,7 +2761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取接收者列表</p>
+     * <p>Queries a list of receivers.</p>
      * 
      * @param request ListReceiversRequest
      * @return ListReceiversResponse
@@ -2666,7 +2774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取角色用户列表</p>
+     * <p>Retrieves the users for a role.</p>
      * 
      * @param request ListRoleUsersRequest
      * @param headers map
@@ -2708,7 +2816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取角色用户列表</p>
+     * <p>Retrieves the users for a role.</p>
      * 
      * @param request ListRoleUsersRequest
      * @return ListRoleUsersResponse
@@ -2721,7 +2829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取角色列表</p>
+     * <p>Retrieves roles.</p>
      * 
      * @param request ListRolesRequest
      * @param headers map
@@ -2763,7 +2871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取角色列表</p>
+     * <p>Retrieves roles.</p>
      * 
      * @param request ListRolesRequest
      * @return ListRolesResponse
@@ -2776,7 +2884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取共享中的接收者列表</p>
+     * <p>Gets the receivers of a share.</p>
      * 
      * @param request ListShareReceiversRequest
      * @param headers map
@@ -2814,7 +2922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取共享中的接收者列表</p>
+     * <p>Gets the receivers of a share.</p>
      * 
      * @param request ListShareReceiversRequest
      * @return ListShareReceiversResponse
@@ -2827,7 +2935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取共享资源列表</p>
+     * <p>Retrieves shared resources.</p>
      * 
      * @param request ListShareResourcesRequest
      * @param headers map
@@ -2865,7 +2973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取共享资源列表</p>
+     * <p>Retrieves shared resources.</p>
      * 
      * @param request ListShareResourcesRequest
      * @return ListShareResourcesResponse
@@ -2878,7 +2986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表快照列表</p>
+     * <p>Returns a list of table snapshots.</p>
      * 
      * @param request ListSnapshotsRequest
      * @param headers map
@@ -2916,7 +3024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表快照列表</p>
+     * <p>Returns a list of table snapshots.</p>
      * 
      * @param request ListSnapshotsRequest
      * @return ListSnapshotsResponse
@@ -2929,7 +3037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表详情列表</p>
+     * <p>Lists the details of one or more tables.</p>
      * 
      * @param request ListTableDetailsRequest
      * @param headers map
@@ -2975,7 +3083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表详情列表</p>
+     * <p>Lists the details of one or more tables.</p>
      * 
      * @param request ListTableDetailsRequest
      * @return ListTableDetailsResponse
@@ -2988,7 +3096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表详情列表</p>
+     * <p>Retrieves a list of tables.</p>
      * 
      * @param request ListTablesRequest
      * @param headers map
@@ -3030,7 +3138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表详情列表</p>
+     * <p>Retrieves a list of tables.</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
@@ -3043,7 +3151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户角色列表</p>
+     * <p>Retrieves the roles assigned to a user.</p>
      * 
      * @param request ListUserRolesRequest
      * @param headers map
@@ -3085,7 +3193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户角色列表</p>
+     * <p>Retrieves the roles assigned to a user.</p>
      * 
      * @param request ListUserRolesRequest
      * @return ListUserRolesResponse
@@ -3098,7 +3206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户列表</p>
+     * <p>Retrieves a list of users.</p>
      * 
      * @param request ListUsersRequest
      * @param headers map
@@ -3144,7 +3252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户列表</p>
+     * <p>Retrieves a list of users.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -3157,7 +3265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看视图详情列表</p>
+     * <p>Lists the details of one or more views.</p>
      * 
      * @param request ListViewDetailsRequest
      * @param headers map
@@ -3199,7 +3307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看视图详情列表</p>
+     * <p>Lists the details of one or more views.</p>
      * 
      * @param request ListViewDetailsRequest
      * @return ListViewDetailsResponse
@@ -3212,7 +3320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看视图详情列表</p>
+     * <p>Returns the names of views.</p>
      * 
      * @param request ListViewsRequest
      * @param headers map
@@ -3254,7 +3362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看视图详情列表</p>
+     * <p>Returns the names of views.</p>
      * 
      * @param request ListViewsRequest
      * @return ListViewsResponse
@@ -3267,7 +3375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>刷新用户同步</p>
+     * <p>Syncs users.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3293,7 +3401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>刷新用户同步</p>
+     * <p>Syncs users.</p>
      * @return RefreshUserSyncResponse
      */
     public RefreshUserSyncResponse refreshUserSync() throws Exception {
@@ -3304,7 +3412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量取消授予角色权限给用户</p>
+     * <p>Revokes a role from one or more users.</p>
      * 
      * @param request RevokeRoleFromUsersRequest
      * @param headers map
@@ -3342,7 +3450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量取消授予角色权限给用户</p>
+     * <p>Revokes a role from one or more users.</p>
      * 
      * @param request RevokeRoleFromUsersRequest
      * @return RevokeRoleFromUsersResponse
@@ -3355,7 +3463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回滚表</p>
+     * <p>Rolls back a table.</p>
      * 
      * @param request RollbackTableRequest
      * @param headers map
@@ -3389,7 +3497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>回滚表</p>
+     * <p>Rolls back a table.</p>
      * 
      * @param request RollbackTableRequest
      * @return RollbackTableResponse
@@ -3402,7 +3510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订阅当前地域的 DLF</p>
+     * <p>Subscribes to DLF in the current region.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3428,7 +3536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订阅当前地域的 DLF</p>
+     * <p>Subscribes to DLF in the current region.</p>
      * @return SubscribeResponse
      */
     public SubscribeResponse subscribe() throws Exception {
@@ -3439,7 +3547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新角色</p>
+     * <p>Updates a DLF role.</p>
      * 
      * @param request UpdateRoleRequest
      * @param headers map
@@ -3481,7 +3589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新角色</p>
+     * <p>Updates a DLF role.</p>
      * 
      * @param request UpdateRoleRequest
      * @return UpdateRoleResponse
@@ -3494,7 +3602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新角色用户</p>
+     * <p>Updates the users for a role.</p>
      * 
      * @param request UpdateRoleUsersRequest
      * @param headers map
@@ -3532,7 +3640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新角色用户</p>
+     * <p>Updates the users for a role.</p>
      * 
      * @param request UpdateRoleUsersRequest
      * @return UpdateRoleUsersResponse

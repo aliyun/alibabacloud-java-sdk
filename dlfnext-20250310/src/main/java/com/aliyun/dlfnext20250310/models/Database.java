@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Database extends TeaModel {
     /**
+     * <p>The database creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -12,6 +14,8 @@ public class Database extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The database creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -19,6 +23,8 @@ public class Database extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The database UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class Database extends TeaModel {
     public String id;
 
     /**
+     * <p>The database URI.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://clg-paimon-xxx/db-xxx</p>
      */
@@ -33,26 +41,38 @@ public class Database extends TeaModel {
     public String location;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_database</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The extension options.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
     /**
+     * <p>The owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>The number of tables in the database.</p>
+     */
     @NameInMap("tableCount")
     public Long tableCount;
 
     /**
+     * <p>The time when the database was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -60,6 +80,8 @@ public class Database extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

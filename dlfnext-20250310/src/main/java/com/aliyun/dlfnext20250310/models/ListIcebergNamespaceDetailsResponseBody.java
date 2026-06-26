@@ -4,10 +4,15 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class ListIcebergNamespaceDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The namespaces.</p>
+     */
     @NameInMap("namespaceDetails")
     public java.util.List<Namespace> namespaceDetails;
 
     /**
+     * <p>The token for the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

@@ -4,18 +4,30 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class IcebergTableMetadata extends TeaModel {
+    /**
+     * <p>The latest snapshot of the Iceberg table.</p>
+     */
     @NameInMap("currentSnapshot")
     public IcebergSnapshot currentSnapshot;
 
+    /**
+     * <p>The fields.</p>
+     */
     @NameInMap("fields")
     public java.util.List<IcebergNestedField> fields;
 
     @NameInMap("identifierFieldIds")
     public java.util.List<Integer> identifierFieldIds;
 
+    /**
+     * <p>The partition fields.</p>
+     */
     @NameInMap("partitionFields")
     public java.util.List<IcebergPartitionField> partitionFields;
 
+    /**
+     * <p>The properties.</p>
+     */
     @NameInMap("properties")
     public java.util.Map<String, String> properties;
 

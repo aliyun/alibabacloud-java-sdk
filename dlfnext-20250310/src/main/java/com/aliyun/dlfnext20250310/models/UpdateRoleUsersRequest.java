@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateRoleUsersRequest extends TeaModel {
     /**
+     * <p>The resource descriptor of the DLF role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:dlf::[accountId]:role/role_name</p>
      */
     @NameInMap("rolePrincipal")
     public String rolePrincipal;
 
+    /**
+     * <p>The resource descriptors of the users.</p>
+     */
     @NameInMap("userPrincipals")
     public java.util.List<String> userPrincipals;
 

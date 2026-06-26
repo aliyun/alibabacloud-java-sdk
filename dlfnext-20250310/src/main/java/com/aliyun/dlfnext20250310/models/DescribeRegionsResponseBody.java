@@ -4,6 +4,9 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The regions.</p>
+     */
     @NameInMap("regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
@@ -22,13 +25,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The region description</p>
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华东 1</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The region name</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -37,13 +43,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The region show name</p>
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华东1（杭州）</p>
          */
         @NameInMap("showName")
         public String showName;
 
         /**
-         * <p>The region type</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>region</p>

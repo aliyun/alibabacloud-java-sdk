@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token used to retrieve the next page of results. If this parameter is not returned in the response, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class ListUsersRequest extends TeaModel {
     public String pageToken;
 
     /**
+     * <p>The type of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>RAM_USER</p>
      */
@@ -26,6 +32,8 @@ public class ListUsersRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The user name.</p>
+     * 
      * <strong>example:</strong>
      * <p>user_name</p>
      */

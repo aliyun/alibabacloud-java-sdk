@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IcebergNestedField extends TeaModel {
     /**
+     * <p>The comment for the field.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc1</p>
      */
@@ -12,7 +14,7 @@ public class IcebergNestedField extends TeaModel {
     public String doc;
 
     /**
-     * <p>id</p>
+     * <p>The field ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -21,6 +23,8 @@ public class IcebergNestedField extends TeaModel {
     public Long id;
 
     /**
+     * <p>The field name.</p>
+     * 
      * <strong>example:</strong>
      * <p>col1</p>
      */
@@ -28,6 +32,8 @@ public class IcebergNestedField extends TeaModel {
     public String name;
 
     /**
+     * <p>Indicates whether the field is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,6 +41,8 @@ public class IcebergNestedField extends TeaModel {
     public Boolean optional;
 
     /**
+     * <p>The field type.</p>
+     * 
      * <strong>example:</strong>
      * <p>string</p>
      */

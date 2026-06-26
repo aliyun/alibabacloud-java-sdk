@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class CatalogSummaryTrend extends TeaModel {
     /**
-     * <p>API visit count trends</p>
+     * <p>The trend of total metadata requests.</p>
      */
     @NameInMap("apiVisitCount")
     public java.util.List<DateSummary> apiVisitCount;
 
     /**
-     * <p>file access count trends</p>
+     * <p>The trend of file access count.</p>
      */
     @NameInMap("fileAccessCount")
     public java.util.List<DateSummary> fileAccessCount;
 
     /**
-     * <p>Table count trends</p>
+     * <p>The data access traffic trend.</p>
      */
     @NameInMap("throughput")
     public java.util.List<DateSummary> throughput;
 
     /**
-     * <p>Historical total file count</p>
+     * <p>The trend of total file count.</p>
      */
     @NameInMap("totalFileCount")
     public java.util.List<DateSummary> totalFileCount;
 
     /**
-     * <p>Database count trends</p>
+     * <p>The trend of total storage capacity.</p>
      */
     @NameInMap("totalFileSizeInBytes")
     public java.util.List<DateSummary> totalFileSizeInBytes;
 
     /**
-     * <p>Latest snapshot file count</p>
+     * <p>The trend of total metadata object count.</p>
      */
     @NameInMap("totalMetaCount")
     public java.util.List<DateSummary> totalMetaCount;

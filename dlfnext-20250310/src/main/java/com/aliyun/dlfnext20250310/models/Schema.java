@@ -5,21 +5,35 @@ import com.aliyun.tea.*;
 
 public class Schema extends TeaModel {
     /**
+     * <p>The comment for the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <p>A list of table column definitions.</p>
+     */
     @NameInMap("fields")
     public java.util.List<DataField> fields;
 
+    /**
+     * <p>A list of table configuration options.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <p>A list of partition column names.</p>
+     */
     @NameInMap("partitionKeys")
     public java.util.List<String> partitionKeys;
 
+    /**
+     * <p>A list of primary key column names.</p>
+     */
     @NameInMap("primaryKeys")
     public java.util.List<String> primaryKeys;
 

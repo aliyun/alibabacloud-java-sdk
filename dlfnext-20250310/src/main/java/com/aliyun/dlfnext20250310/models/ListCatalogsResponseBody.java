@@ -4,16 +4,24 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class ListCatalogsResponseBody extends TeaModel {
+    /**
+     * <p>A list of catalogs.</p>
+     */
     @NameInMap("catalogs")
     public java.util.List<Catalog> catalogs;
 
     /**
+     * <p>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>A list of subscription computing resources.</p>
+     */
     @NameInMap("prepayResource")
     public java.util.List<PrepayResource> prepayResource;
 

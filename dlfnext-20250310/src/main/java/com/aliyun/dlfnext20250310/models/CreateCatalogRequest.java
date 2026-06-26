@@ -4,22 +4,45 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class CreateCatalogRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to share the catalog.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isShared")
     public Boolean isShared;
 
     /**
+     * <p>The catalog name.</p>
+     * 
      * <strong>example:</strong>
      * <p>catalog_demo</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The configuration options for the catalog.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <p>The share ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>share-xxxx</p>
+     */
     @NameInMap("shareId")
     public String shareId;
 
+    /**
+     * <p>The catalog type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PAIMON</p>
+     */
     @NameInMap("type")
     public String type;
 

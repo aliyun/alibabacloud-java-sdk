@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DatabaseSummary extends TeaModel {
     /**
-     * <p>Creation timestamp in milliseconds</p>
+     * <p>The database creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -14,7 +14,7 @@ public class DatabaseSummary extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>库名 - Database name</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -23,7 +23,7 @@ public class DatabaseSummary extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>Last profile update date in format yyyyMMdd</p>
+     * <p>The date when the storage overview data was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-01</p>
@@ -32,7 +32,7 @@ public class DatabaseSummary extends TeaModel {
     public String generatedDate;
 
     /**
-     * <p>Storage location URI</p>
+     * <p>The storage location.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://clg-paimon-xxx/db-xxx</p>
@@ -40,19 +40,45 @@ public class DatabaseSummary extends TeaModel {
     @NameInMap("location")
     public String location;
 
+    /**
+     * <p>The storage size of Archive data files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeArchiveSize")
     public Long objTypeArchiveSize;
 
+    /**
+     * <p>The storage size of Cold Archive data files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeColdArchiveSize")
     public Long objTypeColdArchiveSize;
 
+    /**
+     * <p>The storage size of Infrequent Access data files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeIaSize")
     public Long objTypeIaSize;
 
+    /**
+     * <p>The storage size of Standard data files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeStandardSize")
     public Long objTypeStandardSize;
 
     /**
+     * <p>The total number of partitions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -60,7 +86,7 @@ public class DatabaseSummary extends TeaModel {
     public Long partitionCount;
 
     /**
-     * <p>Total storage in bytes</p>
+     * <p>The total number of tables.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -69,6 +95,8 @@ public class DatabaseSummary extends TeaModel {
     public Long tableCount;
 
     /**
+     * <p>The total number of files.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000</p>
      */
@@ -76,7 +104,7 @@ public class DatabaseSummary extends TeaModel {
     public Long totalFileCount;
 
     /**
-     * <p>Total file count</p>
+     * <p>The storage capacity.</p>
      * 
      * <strong>example:</strong>
      * <p>1048576</p>
@@ -84,9 +112,21 @@ public class DatabaseSummary extends TeaModel {
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
 
+    /**
+     * <p>The total number of metadata files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1500</p>
+     */
     @NameInMap("totalMetaFileCount")
     public Long totalMetaFileCount;
 
+    /**
+     * <p>The storage size of metadata files, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("totalMetaSizeInBytes")
     public Long totalMetaSizeInBytes;
 

@@ -4,6 +4,9 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class BatchGrantPermissionsRequest extends TeaModel {
+    /**
+     * <p>The permissions to grant.</p>
+     */
     @NameInMap("permissions")
     public java.util.List<Permission> permissions;
 

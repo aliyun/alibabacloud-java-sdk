@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoMValues extends TeaModel {
     /**
-     * <p>total</p>
+     * <p>The current value.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -14,7 +14,7 @@ public class MoMValues extends TeaModel {
     public Long currentValue;
 
     /**
-     * <p>daily addition</p>
+     * <p>The value of the previous day.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -23,7 +23,7 @@ public class MoMValues extends TeaModel {
     public Long lastDayValue;
 
     /**
-     * <p>monthly addition</p>
+     * <p>The value of the previous month.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

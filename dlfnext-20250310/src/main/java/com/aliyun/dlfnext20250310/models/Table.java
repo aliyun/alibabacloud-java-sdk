@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Table extends TeaModel {
     /**
+     * <p>The time when the table was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1741266704867</p>
      */
@@ -12,6 +14,8 @@ public class Table extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The user who created the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -22,6 +26,8 @@ public class Table extends TeaModel {
     public IcebergTableMetadata icebergTableMetadata;
 
     /**
+     * <p>The UUID of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,8 @@ public class Table extends TeaModel {
     public String id;
 
     /**
+     * <p>Indicates whether the table is an external table.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +44,8 @@ public class Table extends TeaModel {
     public Boolean isExternal;
 
     /**
+     * <p>The name of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_test</p>
      */
@@ -43,6 +53,8 @@ public class Table extends TeaModel {
     public String name;
 
     /**
+     * <p>The owner of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -50,28 +62,44 @@ public class Table extends TeaModel {
     public String owner;
 
     /**
+     * <p>The table URI.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://clg-paimon-xxx/db-xxx/tbl-xxxx</p>
      */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <p>The table schema.</p>
+     */
     @NameInMap("schema")
     public Schema schema;
 
     /**
+     * <p>The ID of the schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("schemaId")
     public Long schemaId;
 
+    /**
+     * <p>The storage action.</p>
+     */
     @NameInMap("storageAction")
     public String storageAction;
 
+    /**
+     * <p>The timestamp of the storage action.</p>
+     */
     @NameInMap("storageActionTimestamp")
     public Long storageActionTimestamp;
 
+    /**
+     * <p>The storage class of the table.</p>
+     */
     @NameInMap("storageClass")
     public String storageClass;
 
@@ -79,6 +107,8 @@ public class Table extends TeaModel {
     public String type;
 
     /**
+     * <p>The time when the table was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1741266704867</p>
      */
@@ -86,6 +116,8 @@ public class Table extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

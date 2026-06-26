@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class View extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -12,6 +14,8 @@ public class View extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -19,6 +23,8 @@ public class View extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The UUID of the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class View extends TeaModel {
     public String id;
 
     /**
+     * <p>The name of the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>view_test</p>
      */
@@ -33,16 +41,23 @@ public class View extends TeaModel {
     public String name;
 
     /**
+     * <p>The owner of the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>The view schema.</p>
+     */
     @NameInMap("schema")
     public ViewSchema schema;
 
     /**
+     * <p>The time of the last update.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -50,6 +65,8 @@ public class View extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

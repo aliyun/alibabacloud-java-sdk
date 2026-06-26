@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListRoleUsersResponseBody extends TeaModel {
     /**
+     * <p>The token to retrieve the next page of results. If null is returned, all results have been retrieved.</p>
+     * 
      * <strong>example:</strong>
-     * <p>token!</p>
+     * <p>E8ABEB1C3DB893D16576269017992F57</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The users.</p>
+     */
     @NameInMap("users")
     public java.util.List<User> users;
 

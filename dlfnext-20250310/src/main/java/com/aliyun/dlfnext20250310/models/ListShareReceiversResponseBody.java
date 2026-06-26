@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListShareReceiversResponseBody extends TeaModel {
     /**
+     * <p>The token to retrieve the next page of results. If this parameter is null, it indicates that this is the last page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The receivers.</p>
+     */
     @NameInMap("receivers")
     public java.util.List<Receiver> receivers;
 

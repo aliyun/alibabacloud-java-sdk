@@ -4,6 +4,9 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class AlterTableRequest extends TeaModel {
+    /**
+     * <p>The changes made to the table.</p>
+     */
     @NameInMap("changes")
     public java.util.List<FullSchemaChange> changes;
 

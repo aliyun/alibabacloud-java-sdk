@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseRequest extends TeaModel {
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_name</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The configuration options.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 

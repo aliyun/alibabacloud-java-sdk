@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IcebergTable extends TeaModel {
     /**
+     * <p>The table creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1747120676378</p>
      */
@@ -12,23 +14,32 @@ public class IcebergTable extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The table creator.</p>
+     * 
      * <strong>example:</strong>
-     * <p>acs:ram::1045689747920334:root</p>
+     * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("createdBy")
     public String createdBy;
 
+    /**
+     * <p>The metadata of the table.</p>
+     */
     @NameInMap("icebergTableMetadata")
     public IcebergTableMetadata icebergTableMetadata;
 
     /**
+     * <p>The table UUID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>tbl-424fc31c-4876-4df5-97a5-c78f3046e739</p>
+     * <p>tbl-xxxx</p>
      */
     @NameInMap("id")
     public String id;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>table1</p>
      */
@@ -36,20 +47,26 @@ public class IcebergTable extends TeaModel {
     public String name;
 
     /**
+     * <p>The owner of the table.</p>
+     * 
      * <strong>example:</strong>
-     * <p>acs:ram::1045689747920334:root</p>
+     * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("owner")
     public String owner;
 
     /**
+     * <p>The table URI.</p>
+     * 
      * <strong>example:</strong>
-     * <p>oss://clg-iceberg-bcc387be9d24490da5f194bbaf990906/ns-b314a3c3-dff5-4e30-8ba2-0493a60566c7.db/iceberg-tbl-56539259-1879-4d6d-bd6e-d1ddb3364cc9</p>
+     * <p>oss://clg-iceberg-xxxx/ns-xxxx/table-xxxx</p>
      */
     @NameInMap("path")
     public String path;
 
     /**
+     * <p>The time when the table was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -57,13 +74,17 @@ public class IcebergTable extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the table.</p>
+     * 
      * <strong>example:</strong>
-     * <p>acs:ram::1045689747920334:root</p>
+     * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("updatedBy")
     public String updatedBy;
 
     /**
+     * <p>The version of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

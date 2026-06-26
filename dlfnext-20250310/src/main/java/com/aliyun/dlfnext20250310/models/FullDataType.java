@@ -4,22 +4,36 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class FullDataType extends TeaModel {
+    /**
+     * <p>The data type.</p>
+     */
     @NameInMap("element")
     public FullDataType element;
 
+    /**
+     * <p>The list of field definitions. This parameter is required when <code>type</code> is <code>ROW</code>.</p>
+     */
     @NameInMap("fields")
     public java.util.List<DataField> fields;
 
+    /**
+     * <p>The data type of the key. This parameter is required when <code>type</code> is <code>MAP</code>.</p>
+     */
     @NameInMap("key")
     public FullDataType key;
 
     /**
+     * <p>The data type. This parameter is required when <code>type</code> is <code>ARRAY</code> or <code>MULTISET</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>STRING</p>
      */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The data type of the value. This parameter is required when <code>type</code> is <code>MAP</code>.</p>
+     */
     @NameInMap("value")
     public FullDataType value;
 

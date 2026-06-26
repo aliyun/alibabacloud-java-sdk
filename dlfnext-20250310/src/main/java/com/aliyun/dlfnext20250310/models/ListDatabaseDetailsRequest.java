@@ -4,10 +4,20 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class ListDatabaseDetailsRequest extends TeaModel {
+    /**
+     * <p>The database name pattern for fuzzy matching. Supports the percent sign (%).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>database%</p>
+     */
     @NameInMap("databaseNamePattern")
     public String databaseNamePattern;
 
     /**
+     * <p>The number of entries to return on each page.
+     * Default value: 1000.
+     * Maximum value: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -15,6 +25,8 @@ public class ListDatabaseDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class ViewSchema extends TeaModel {
     /**
+     * <p>The comment.</p>
+     * 
      * <strong>example:</strong>
      * <p>comment</p>
      */
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <p>Queries for different engines.</p>
+     */
     @NameInMap("dialects")
     public java.util.Map<String, String> dialects;
 
+    /**
+     * <p>The list of field definitions for the view.</p>
+     */
     @NameInMap("fields")
     public java.util.List<DataField> fields;
 
+    /**
+     * <p>The configuration parameters for the view.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
     /**
+     * <p>The default query for the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>select id from t1;</p>
      */

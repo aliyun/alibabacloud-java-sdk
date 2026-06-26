@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Catalog extends TeaModel {
     /**
+     * <p>The time when the catalog was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -12,6 +14,8 @@ public class Catalog extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The user who created the catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -19,27 +23,40 @@ public class Catalog extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The ID of the catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>clg-paimon-xxxx</p>
      */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>Whether the data catalog is shared.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isShared")
     public Boolean isShared;
 
     /**
+     * <p>The name of the catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_catalog</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The extension options.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
     /**
-     * <p>Owner。</p>
+     * <p>The catalog owner.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -47,16 +64,44 @@ public class Catalog extends TeaModel {
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>Share ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>share-xxxx</p>
+     */
     @NameInMap("shareId")
     public String shareId;
 
+    /**
+     * <p>The status of the catalog.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NEW
+     * INITIALIZING
+     * INITIALIZE_FAILED
+     * RUNNING
+     * TERMINATED
+     * DELETING
+     * DELETE_FAILED 
+     * DELETED
+     * STORAGE_RESTRICTED</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>Type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PAIMON</p>
+     */
     @NameInMap("type")
     public String type;
 
     /**
+     * <p>The time when the catalog was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -64,6 +109,8 @@ public class Catalog extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last modified the catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTableTokenRequest extends TeaModel {
     /**
+     * <p>Specifies whether the access is from a VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

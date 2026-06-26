@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataField extends TeaModel {
     /**
+     * <p>The column description.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -12,19 +14,26 @@ public class DataField extends TeaModel {
     public String description;
 
     /**
+     * <p>The column ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
      */
     @NameInMap("id")
     public Integer id;
 
     /**
+     * <p>The column name.</p>
+     * 
      * <strong>example:</strong>
      * <p>order_id</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The column type.</p>
+     */
     @NameInMap("type")
     public FullDataType type;
 

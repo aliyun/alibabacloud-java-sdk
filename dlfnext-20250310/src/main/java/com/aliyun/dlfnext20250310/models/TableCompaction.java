@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TableCompaction extends TeaModel {
     /**
+     * <p>The catalog ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>clg-paimon-xxx</p>
      */
@@ -12,6 +14,8 @@ public class TableCompaction extends TeaModel {
     public String catalogId;
 
     /**
+     * <p>The total CU usage.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class TableCompaction extends TeaModel {
     public Double cuUsage;
 
     /**
+     * <p>The time when the last file was compacted.</p>
+     * 
      * <strong>example:</strong>
      * <p>1759111660075</p>
      * 
@@ -30,6 +36,8 @@ public class TableCompaction extends TeaModel {
     public Long lastCompactedFileTime;
 
     /**
+     * <p>The earliest creation time of uncompacted files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1760321763633</p>
      */
@@ -37,6 +45,8 @@ public class TableCompaction extends TeaModel {
     public Long latencyFileEarliestTime;
 
     /**
+     * <p>The number of Level 0 files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      * 
@@ -48,6 +58,8 @@ public class TableCompaction extends TeaModel {
     public String maxLevel0FileCount;
 
     /**
+     * <p>The table ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>tbl-xxx</p>
      */

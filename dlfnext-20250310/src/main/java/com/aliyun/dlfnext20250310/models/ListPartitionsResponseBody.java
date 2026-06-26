@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListPartitionsResponseBody extends TeaModel {
     /**
+     * <p>The pagination token that is used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The partitions.</p>
+     */
     @NameInMap("partitions")
     public java.util.List<Partition> partitions;
 

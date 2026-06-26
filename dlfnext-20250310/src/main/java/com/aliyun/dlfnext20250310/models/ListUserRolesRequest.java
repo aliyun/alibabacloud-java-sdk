@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserRolesRequest extends TeaModel {
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListUserRolesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token used to retrieve the next page of data. If the response does not provide this token, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class ListUserRolesRequest extends TeaModel {
     public String pageToken;
 
     /**
+     * <p>The resource descriptor for the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:user/user_name</p>
      */

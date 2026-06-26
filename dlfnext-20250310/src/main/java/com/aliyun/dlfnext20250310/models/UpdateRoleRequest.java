@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRoleRequest extends TeaModel {
     /**
+     * <p>The description of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>role_description</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRoleRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>role_display_name</p>
      */
@@ -19,6 +23,8 @@ public class UpdateRoleRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The resource descriptor of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:dlf::[accountId]:role/role_name</p>
      */

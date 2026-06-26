@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListIcebergNamespaceDetailsRequest extends TeaModel {
     /**
+     * <p>The number of entries to return on each page.
+     * Default value: 1000.
+     * Maximum value: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,6 +16,8 @@ public class ListIcebergNamespaceDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The namespace name pattern. Supports right-hand fuzzy matching with the percent sign (%).</p>
+     * 
      * <strong>example:</strong>
      * <p>namespace%</p>
      */
@@ -19,6 +25,8 @@ public class ListIcebergNamespaceDetailsRequest extends TeaModel {
     public String namespaceNamePattern;
 
     /**
+     * <p>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

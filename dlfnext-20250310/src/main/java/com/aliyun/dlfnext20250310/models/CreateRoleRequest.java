@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRoleRequest extends TeaModel {
     /**
+     * <p>The role description.</p>
+     * 
      * <strong>example:</strong>
      * <p>role_description</p>
      */
@@ -12,6 +14,8 @@ public class CreateRoleRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The role display name.</p>
+     * 
      * <strong>example:</strong>
      * <p>role_display_name</p>
      */
@@ -19,6 +23,8 @@ public class CreateRoleRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The role name.</p>
+     * 
      * <strong>example:</strong>
      * <p>role_name</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReceivedShare extends TeaModel {
     /**
+     * <p>The catalog name.</p>
+     * 
      * <strong>example:</strong>
      * <p>catalog_name</p>
      */
@@ -12,6 +14,8 @@ public class ReceivedShare extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The comment of the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -19,6 +23,8 @@ public class ReceivedShare extends TeaModel {
     public String comment;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -26,6 +32,8 @@ public class ReceivedShare extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The creator of the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -36,6 +44,8 @@ public class ReceivedShare extends TeaModel {
     public Boolean enableWrite;
 
     /**
+     * <p>The share owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -43,6 +53,8 @@ public class ReceivedShare extends TeaModel {
     public String owner;
 
     /**
+     * <p>The provider\&quot;s account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      */
@@ -50,6 +62,8 @@ public class ReceivedShare extends TeaModel {
     public Long providerTenantId;
 
     /**
+     * <p>The share ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      */
@@ -57,6 +71,8 @@ public class ReceivedShare extends TeaModel {
     public String shareId;
 
     /**
+     * <p>The share name.</p>
+     * 
      * <strong>example:</strong>
      * <p>share_name</p>
      */
@@ -64,6 +80,8 @@ public class ReceivedShare extends TeaModel {
     public String shareName;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -71,6 +89,8 @@ public class ReceivedShare extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The user who last updated the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */

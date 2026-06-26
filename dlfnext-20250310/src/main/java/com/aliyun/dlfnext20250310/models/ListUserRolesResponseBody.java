@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListUserRolesResponseBody extends TeaModel {
     /**
+     * <p>The pagination token used to retrieve the next page of data. If null is returned, the current page is the last page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>token!</p>
+     * <p>E8ABEB1C3DB893D16576269017992F57</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The roles.</p>
+     */
     @NameInMap("roles")
     public java.util.List<Role> roles;
 

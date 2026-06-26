@@ -4,10 +4,15 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>The databases.</p>
+     */
     @NameInMap("databases")
     public java.util.List<String> databases;
 
     /**
+     * <p>The token for the next page of results. A null value indicates that this is the last page.</p>
+     * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>
      */

@@ -4,13 +4,29 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class BatchRevokePermissionsResponseBody extends TeaModel {
+    /**
+     * <ul>
+     * <li><p>A business error message is returned if \<code>success\\</code> is \<code>false\\</code>.</p>
+     * </li>
+     * <li><p>This parameter is empty if \<code>success\\</code> is \<code>true\\</code>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>空</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The permissions failed to be revoked.</p>
+     */
     @NameInMap("failurePermissions")
     public java.util.List<FailurePermission> failurePermissions;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

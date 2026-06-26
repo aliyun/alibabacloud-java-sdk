@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class AlterShareRequest extends TeaModel {
     /**
+     * <p>The comment for the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
     @NameInMap("comment")
     public String comment;
 
+    /**
+     * <p>Specifies whether to enable the write permission for the share.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enableWrite")
     public Boolean enableWrite;
 
     /**
+     * <p>The name of the share.</p>
+     * 
      * <strong>example:</strong>
      * <p>share_name</p>
      */

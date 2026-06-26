@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Identifier extends TeaModel {
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>database_name</p>
      */
@@ -12,6 +14,8 @@ public class Identifier extends TeaModel {
     public String database;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_name</p>
      */

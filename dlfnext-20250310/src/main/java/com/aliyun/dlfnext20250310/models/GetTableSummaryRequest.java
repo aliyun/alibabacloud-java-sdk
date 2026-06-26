@@ -4,6 +4,12 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class GetTableSummaryRequest extends TeaModel {
+    /**
+     * <p>The storage summary date.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-10-08</p>
+     */
     @NameInMap("date")
     public String date;
 

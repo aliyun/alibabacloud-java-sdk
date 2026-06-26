@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
     /**
+     * <p>The resource descriptor of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:user/user_name</p>
      */

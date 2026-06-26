@@ -4,6 +4,9 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class GetVpcConfigResponseBody extends TeaModel {
+    /**
+     * <p>List of trusted VPCs.</p>
+     */
     @NameInMap("trustedVpcs")
     public java.util.List<GetVpcConfigResponseBodyTrustedVpcs> trustedVpcs;
 
@@ -22,17 +25,22 @@ public class GetVpcConfigResponseBody extends TeaModel {
 
     public static class GetVpcConfigResponseBodyTrustedVpcs extends TeaModel {
         /**
+         * <p>The time when the VPC was created, in UNIX timestamp milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1744970111419</p>
          */
         @NameInMap("createdAt")
         public Long createdAt;
 
+        /**
+         * <p>List of configuration items.</p>
+         */
         @NameInMap("extendedOptions")
         public java.util.Map<String, String> extendedOptions;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf67xxxx</p>

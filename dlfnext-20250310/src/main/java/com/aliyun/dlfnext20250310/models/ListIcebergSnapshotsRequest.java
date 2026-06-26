@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIcebergSnapshotsRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,6 +14,8 @@ public class ListIcebergSnapshotsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token used to retrieve the next page of results. If the response does not return this token, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

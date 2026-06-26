@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRegionStatusResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether DLF\&quot;s service-linked role has been created.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class GetRegionStatusResponseBody extends TeaModel {
     public Boolean serviceRoleExists;
 
     /**
+     * <p>The status.</p>
+     * 
      * <strong>example:</strong>
      * <p>READY</p>
      */

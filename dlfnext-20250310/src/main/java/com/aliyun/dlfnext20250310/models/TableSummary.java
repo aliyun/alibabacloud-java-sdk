@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TableSummary extends TeaModel {
     /**
-     * <p>Latest snapshot storage size</p>
+     * <p>The timestamp, in milliseconds, indicating when the table was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -14,7 +14,7 @@ public class TableSummary extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>Database name</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -23,6 +23,8 @@ public class TableSummary extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The generation date of the storage summary.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-01</p>
      */
@@ -30,6 +32,8 @@ public class TableSummary extends TeaModel {
     public String generatedDate;
 
     /**
+     * <p>The timestamp, in milliseconds, indicating when the table data was last accessed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -39,20 +43,44 @@ public class TableSummary extends TeaModel {
     @NameInMap("lastRequester")
     public String lastRequester;
 
+    /**
+     * <p>The total size of data files in the Archive storage class, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeArchiveSize")
     public Long objTypeArchiveSize;
 
+    /**
+     * <p>The total size of data files in the Cold Archive storage class, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeColdArchiveSize")
     public Long objTypeColdArchiveSize;
 
+    /**
+     * <p>The total size of data files in the Infrequent Access storage class, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeIaSize")
     public Long objTypeIaSize;
 
+    /**
+     * <p>The total size of data files in the Standard storage class, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("objTypeStandardSize")
     public Long objTypeStandardSize;
 
     /**
-     * <p>Creation timestamp in milliseconds</p>
+     * <p>The total number of partitions in the table.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -61,23 +89,31 @@ public class TableSummary extends TeaModel {
     public Long partitionCount;
 
     /**
+     * <p>The storage location of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://clg-xxxx/db-xxxx/tbl-xxxx</p>
      */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <p>The storage action parameters.</p>
+     */
     @NameInMap("storageActionParams")
     public java.util.Map<String, String> storageActionParams;
 
     @NameInMap("storageActionTimestamp")
     public Long storageActionTimestamp;
 
+    /**
+     * <p>The storage class.</p>
+     */
     @NameInMap("storageClass")
     public String storageClass;
 
     /**
-     * <p>Table name</p>
+     * <p>The name of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>table1</p>
@@ -88,17 +124,26 @@ public class TableSummary extends TeaModel {
     @NameInMap("topRequester")
     public String topRequester;
 
+    /**
+     * <p>Total file access count.</p>
+     */
     @NameInMap("totalFileAccessNum")
     public Long totalFileAccessNum;
 
+    /**
+     * <p>Total file access count over the last 30 days.</p>
+     */
     @NameInMap("totalFileAccessNum30d")
     public Long totalFileAccessNum30d;
 
+    /**
+     * <p>Total file access count over the last 7 days.</p>
+     */
     @NameInMap("totalFileAccessNum7d")
     public Long totalFileAccessNum7d;
 
     /**
-     * <p>30-day access count</p>
+     * <p>The total number of files in the table.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -107,30 +152,53 @@ public class TableSummary extends TeaModel {
     public Long totalFileCount;
 
     /**
+     * <p>The total storage capacity of the table, in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
 
+    /**
+     * <p>The total number of metadata files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalMetaFileCount")
     public Long totalMetaFileCount;
 
+    /**
+     * <p>The total size of metadata files, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("totalMetaSizeInBytes")
     public Long totalMetaSizeInBytes;
 
     /**
-     * <p>Creation timestamp in milliseconds</p>
+     * <p>The number of Standard or Infrequent Access partitions unaccessed in the last 180 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("unaccessedStdIaPartitionCount180d")
     public Long unaccessedStdIaPartitionCount180d;
 
     /**
-     * <p>Creation timestamp in milliseconds</p>
+     * <p>The number of Standard partitions unaccessed in the last 30 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("unaccessedStdPartitionCount30d")
     public Long unaccessedStdPartitionCount30d;
 
+    /**
+     * <p>The update time.</p>
+     */
     @NameInMap("updatedAt")
     public Long updatedAt;
 

@@ -4,24 +4,45 @@ package com.aliyun.dlfnext20250310.models;
 import com.aliyun.tea.*;
 
 public class TableSnapshot extends TeaModel {
+    /**
+     * <p>The total number of files in the snapshot.</p>
+     */
     @NameInMap("fileCount")
     public Long fileCount;
 
+    /**
+     * <p>The total size of all files in the snapshot, in bytes.</p>
+     */
     @NameInMap("fileSizeInBytes")
     public Long fileSizeInBytes;
 
+    /**
+     * <p>The creation time of the most recent file in the snapshot, as a Unix timestamp in milliseconds.</p>
+     */
     @NameInMap("lastFileCreationTime")
     public Long lastFileCreationTime;
 
+    /**
+     * <p>The total number of partitions in the table.</p>
+     */
     @NameInMap("partitionCount")
     public Long partitionCount;
 
+    /**
+     * <p>The total number of records in the snapshot.</p>
+     */
     @NameInMap("recordCount")
     public Long recordCount;
 
+    /**
+     * <p>Contains detailed information about the snapshot.</p>
+     */
     @NameInMap("snapshot")
     public Snapshot snapshot;
 
+    /**
+     * <p>The total number of buckets in the table.</p>
+     */
     @NameInMap("totalBuckets")
     public Integer totalBuckets;
 

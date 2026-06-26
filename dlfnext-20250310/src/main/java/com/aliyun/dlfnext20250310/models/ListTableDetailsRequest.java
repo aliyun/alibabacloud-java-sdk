@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTableDetailsRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,15 +14,29 @@ public class ListTableDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. Pass the token that was returned by the previous request. For the first request, pass an empty string (&quot;&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("pageToken")
     public String pageToken;
 
+    /**
+     * <p>The pattern used to filter table names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table%</p>
+     */
     @NameInMap("tableNamePattern")
     public String tableNamePattern;
 
+    /**
+     * <p>The type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table</p>
+     */
     @NameInMap("type")
     public String type;
 

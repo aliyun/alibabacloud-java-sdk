@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListReceivedSharesResponseBody extends TeaModel {
     /**
+     * <p>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The received shares.</p>
+     */
     @NameInMap("shares")
     public java.util.List<ReceivedShare> shares;
 

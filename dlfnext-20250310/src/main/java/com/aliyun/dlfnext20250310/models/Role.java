@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Role extends TeaModel {
     /**
+     * <p>The time when the role was created. This is a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -12,6 +14,8 @@ public class Role extends TeaModel {
     public Long createdAt;
 
     /**
+     * <p>The name of the user who created the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
@@ -19,6 +23,8 @@ public class Role extends TeaModel {
     public String createdBy;
 
     /**
+     * <p>The role description.</p>
+     * 
      * <strong>example:</strong>
      * <p>role_description</p>
      */
@@ -26,6 +32,8 @@ public class Role extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>role_display_name</p>
      */
@@ -33,6 +41,8 @@ public class Role extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Indicates whether the role is a system role.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class Role extends TeaModel {
     public String isPredefined;
 
     /**
+     * <p>The name of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>role_name</p>
      */
@@ -47,6 +59,8 @@ public class Role extends TeaModel {
     public String roleName;
 
     /**
+     * <p>The resource descriptor of the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:dlf::[accountId]:role/role_name</p>
      */
@@ -54,6 +68,8 @@ public class Role extends TeaModel {
     public String rolePrincipal;
 
     /**
+     * <p>The time when the role was last updated. This is a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
      */
@@ -61,12 +77,17 @@ public class Role extends TeaModel {
     public Long updatedAt;
 
     /**
+     * <p>The name of the user who last updated the role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
      */
     @NameInMap("updatedBy")
     public String updatedBy;
 
+    /**
+     * <p>The users for the role.</p>
+     */
     @NameInMap("users")
     public java.util.List<User> users;
 
