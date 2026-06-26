@@ -607,16 +607,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</p>
+     * <p>This API allows users to interact with a large model through specified knowledge base collections to obtain answers based on knowledge base content. It supports configuring various parameters to customize requests, including but not limited to database instance ID, knowledge retrieval parameters, model inference parameters, etc. Additionally, it provides a default system prompt template and allows users to customize system prompts.</p>
      * <ul>
-     * <li><strong>DBInstanceId</strong>: Required. Specifies the ID of the database instance.</li>
-     * <li><strong>KnowledgeParams</strong>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</li>
-     * <li><strong>ModelParams</strong>: Required. Contains parameters for model inference, such as the message list and the model name.</li>
-     * <li><strong>PromptTemplate</strong>: Optional. Specifies a custom system prompt template.</li>
+     * <li><strong>DBInstanceId</strong>: Required. Specifies the database instance ID.</li>
+     * <li><strong>KnowledgeParams</strong>: Optional. Contains parameters related to knowledge retrieval, such as retrieval content, merge strategies, etc.</li>
+     * <li><strong>ModelParams</strong>: Required. Contains parameters related to model inference, such as message list, model name, etc.</li>
+     * <li><strong>PromptTemplate</strong>: Optional. Used to customize the system prompt template.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Combines a knowledge base with a large language model for intelligent Q&amp;A.</p>
+     * <p>Provides intelligent Q&amp;A services by combining knowledge bases with large models.</p>
      * 
      * @param tmpReq ChatWithKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -682,16 +682,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</p>
+     * <p>This API allows users to interact with a large model through specified knowledge base collections to obtain answers based on knowledge base content. It supports configuring various parameters to customize requests, including but not limited to database instance ID, knowledge retrieval parameters, model inference parameters, etc. Additionally, it provides a default system prompt template and allows users to customize system prompts.</p>
      * <ul>
-     * <li><strong>DBInstanceId</strong>: Required. Specifies the ID of the database instance.</li>
-     * <li><strong>KnowledgeParams</strong>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</li>
-     * <li><strong>ModelParams</strong>: Required. Contains parameters for model inference, such as the message list and the model name.</li>
-     * <li><strong>PromptTemplate</strong>: Optional. Specifies a custom system prompt template.</li>
+     * <li><strong>DBInstanceId</strong>: Required. Specifies the database instance ID.</li>
+     * <li><strong>KnowledgeParams</strong>: Optional. Contains parameters related to knowledge retrieval, such as retrieval content, merge strategies, etc.</li>
+     * <li><strong>ModelParams</strong>: Required. Contains parameters related to model inference, such as message list, model name, etc.</li>
+     * <li><strong>PromptTemplate</strong>: Optional. Used to customize the system prompt template.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Combines a knowledge base with a large language model for intelligent Q&amp;A.</p>
+     * <p>Provides intelligent Q&amp;A services by combining knowledge bases with large models.</p>
      * 
      * @param request ChatWithKnowledgeBaseRequest
      * @return ChatWithKnowledgeBaseResponse
@@ -703,16 +703,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</p>
+     * <p>This API allows you to interact with a large language model by using specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. A default system prompt template is provided, and you can also customize the system prompt.</p>
      * <ul>
-     * <li>DBInstanceId: Required. The ID of the database instance.</li>
-     * <li>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</li>
-     * <li>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</li>
-     * <li>PromptTemplate: Optional. A custom system prompt template.</li>
+     * <li>DBInstanceId: Required. Specifies the database instance ID.</li>
+     * <li>KnowledgeParams: Optional. Contains knowledge retrieval parameters such as retrieval content and merge strategy.</li>
+     * <li>ModelParams: Required. Contains model inference parameters such as the message list and model name.</li>
+     * <li>PromptTemplate: Optional. Specifies a custom system prompt template.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</p>
+     * <p>Provides AI chat services by combining knowledge bases with large language models. This is a streaming API called through SSE or the Java asynchronous SDK.</p>
      * 
      * @param tmpReq ChatWithKnowledgeBaseStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -778,16 +778,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</p>
+     * <p>This API allows you to interact with a large language model by using specified knowledge base collections to obtain answers based on knowledge base content. You can configure various parameters to customize requests, including but not limited to the database instance ID, knowledge retrieval parameters, and model inference parameters. A default system prompt template is provided, and you can also customize the system prompt.</p>
      * <ul>
-     * <li>DBInstanceId: Required. The ID of the database instance.</li>
-     * <li>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</li>
-     * <li>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</li>
-     * <li>PromptTemplate: Optional. A custom system prompt template.</li>
+     * <li>DBInstanceId: Required. Specifies the database instance ID.</li>
+     * <li>KnowledgeParams: Optional. Contains knowledge retrieval parameters such as retrieval content and merge strategy.</li>
+     * <li>ModelParams: Required. Contains model inference parameters such as the message list and model name.</li>
+     * <li>PromptTemplate: Optional. Specifies a custom system prompt template.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</p>
+     * <p>Provides AI chat services by combining knowledge bases with large language models. This is a streaming API called through SSE or the Java asynchronous SDK.</p>
      * 
      * @param request ChatWithKnowledgeBaseStreamRequest
      * @return ChatWithKnowledgeBaseStreamResponse
@@ -15871,6 +15871,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>删除模型服务。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>暂停SaaS服务</p>
+     * 
+     * @param request PauseSaasServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PauseSaasServiceResponse
+     */
+    public PauseSaasServiceResponse pauseSaasServiceWithOptions(PauseSaasServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            query.put("ServiceId", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PauseSaasService"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PauseSaasServiceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除模型服务。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>暂停SaaS服务</p>
+     * 
+     * @param request PauseSaasServiceRequest
+     * @return PauseSaasServiceResponse
+     */
+    public PauseSaasServiceResponse pauseSaasService(PauseSaasServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pauseSaasServiceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This operation pauses a Supabase instance.</p>
      * 
      * <b>summary</b> : 
@@ -16069,7 +16123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a document collection with natural language to retrieve vectors and metadata.</p>
+     * <p>Retrieves vectors and metadata from a specified document collection using natural language queries.</p>
      * 
      * @param tmpReq QueryContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16221,7 +16275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a document collection with natural language to retrieve vectors and metadata.</p>
+     * <p>Retrieves vectors and metadata from a specified document collection using natural language queries.</p>
      * 
      * @param request QueryContentRequest
      * @return QueryContentResponse
@@ -16321,7 +16375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</p>
+     * <p>Retrieves vectors and metadata from multiple specified document collections by using natural language statements, merges multi-channel recall results, and returns the combined results.</p>
      * 
      * @param tmpReq QueryKnowledgeBasesContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16403,7 +16457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</p>
+     * <p>Retrieves vectors and metadata from multiple specified document collections by using natural language statements, merges multi-channel recall results, and returns the combined results.</p>
      * 
      * @param request QueryKnowledgeBasesContentRequest
      * @return QueryKnowledgeBasesContentResponse
@@ -17057,6 +17111,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeInstanceResponse resumeInstance(ResumeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resumeInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除模型服务。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>恢复SaaS服务</p>
+     * 
+     * @param request ResumeSaasServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResumeSaasServiceResponse
+     */
+    public ResumeSaasServiceResponse resumeSaasServiceWithOptions(ResumeSaasServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            query.put("ServiceId", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResumeSaasService"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeSaasServiceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除模型服务。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>恢复SaaS服务</p>
+     * 
+     * @param request ResumeSaasServiceRequest
+     * @return ResumeSaasServiceResponse
+     */
+    public ResumeSaasServiceResponse resumeSaasService(ResumeSaasServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resumeSaasServiceWithOptions(request, runtime);
     }
 
     /**

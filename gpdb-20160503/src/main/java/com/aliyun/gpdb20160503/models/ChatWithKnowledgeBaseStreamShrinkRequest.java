@@ -7,7 +7,7 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specified region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to include the retrieved knowledge base results in the response. Default value: <code>false</code>.</p>
+     * <p>Specifies whether to return recall results. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,13 +27,13 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     public Boolean includeKnowledgeBaseResults;
 
     /**
-     * <p>Parameters for knowledge retrieval. If omitted, the API performs a chat-only operation.</p>
+     * <p>The knowledge retrieval parameter object. If this parameter is not specified, only chat is performed.</p>
      */
     @NameInMap("KnowledgeParams")
     public String knowledgeParamsShrink;
 
     /**
-     * <p>An object that contains parameters for the Large Language Model (LLM) call.</p>
+     * <p>The large language model (LLM) invocation parameter object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ModelParams")
@@ -43,7 +43,7 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>A template for the system prompt. It must include placeholders such as <code>{{text_chunks}}</code>, <code>{{user_system_prompt}}</code>, <code>{{graph_entities}}</code>, and <code>{{graph_relations}}</code>. If omitted, no custom prompt template is applied.</p>
+     * <p>The system prompt template. The template must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If not specified, this part does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;参考以下知识回答问题:{{ text_chunks }}&quot;</p>
@@ -52,7 +52,7 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     public String promptParams;
 
     /**
-     * <p>The instance\&quot;s region ID.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,7 +7,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     /**
      * <p>The name of the document collection.</p>
      * <blockquote>
-     * <p>A document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. Call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to list your document collections.</p>
+     * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query existing document collections.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>The text to use for retrieval.</p>
+     * <p>The text content used for retrieval.</p>
      * 
      * <strong>example:</strong>
      * <p>What is AnalyticDB for PostgreSQL?</p>
@@ -29,7 +29,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to find the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,9 +40,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The filename of the source image for a search-by-image query.</p>
+     * <p>The name of the source image file to search in image-to-image search scenarios.</p>
      * <blockquote>
-     * <p>The image file must have a file extension. The supported extensions are bmp, jpg, jpeg, png, and tiff.</p>
+     * <p>The image file must have a file extension. Supported image extensions: bmp, jpg, jpeg, png, and tiff.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,9 +52,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The publicly accessible URL of the image file for a search-by-image query.</p>
+     * <p>The publicly accessible URL of the image file in image-to-image search scenarios.</p>
      * <blockquote>
-     * <p>The image file must have a file extension. The supported extensions are bmp, jpg, jpeg, png, and tiff.</p>
+     * <p>The image file must have a file extension. Supported image extensions: bmp, jpg, jpeg, png, and tiff.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,10 +64,10 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>A filter condition for the query, specified as a SQL <code>WHERE</code> clause that returns a boolean value. The clause can use comparison operators (such as <code>=</code>, <code>&lt;&gt;</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>), logical operators (<code>AND</code>, <code>OR</code>, and <code>NOT</code>), and keywords such as <code>IN</code>, <code>BETWEEN</code>, and <code>LIKE</code>.</p>
+     * <p>The filter condition for the data to query, in SQL WHERE clause format. The filter is an expression that returns a Boolean value (true or false). Conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). Conditions can also be more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions using the IN, BETWEEN, and LIKE keywords.</p>
      * <blockquote>
      * <ul>
-     * <li>For details about the syntax, see https\://www\.postgresqltutorial.com/postgresql-tutorial/postgresql-where/.</li>
+     * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -78,7 +78,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>Specifies whether to enable knowledge graph enhancement. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to enable knowledge graph enhancement. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -87,21 +87,18 @@ public class QueryContentShrinkRequest extends TeaModel {
     public Boolean graphEnhance;
 
     /**
-     * <p>The parameters for knowledge graph retrieval.</p>
+     * <p>The knowledge graph retrieval parameters.</p>
      */
     @NameInMap("GraphSearchArgs")
     public String graphSearchArgsShrink;
 
     /**
-     * <p>Specifies the hybrid search algorithm. If this parameter is not specified, the system directly compares and sorts the scores from dense vector retrieval and full-text search.</p>
+     * <p>The multi-channel recall algorithm. Default value: empty, which indicates that the dense vector and full-text index scores are directly compared and sorted.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>RRF: reciprocal rank fusion. This method uses a <code>k</code> parameter to control the fusion effect. For more information, see the <code>HybridSearchArgs</code> parameter.</p>
-     * </li>
-     * <li><p>Weight: A weighted sorting method. This method uses parameters to control the score weights of vector retrieval and full-text search before sorting. For more information, see the <code>HybridSearchArgs</code> parameter.</p>
-     * </li>
-     * <li><p>Cascaded: Performs full-text search first, and then performs vector retrieval on the results.</p>
-     * </li>
+     * <li>RRF: Reciprocal Rank Fusion. A parameter k controls the fusion effect. For more information, see the HybridSearchArgs configuration.</li>
+     * <li>Weight: Weighted sorting. Parameters control the score weights of AISearch retrieve and full-text index results before sorting. For more information, see the HybridSearchArgs configuration.</li>
+     * <li>Cascaded: Full-text index retrieve is performed first, followed by AISearch retrieve based on the full-text index results.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,9 +108,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String hybridSearch;
 
     /**
-     * <p>Parameters for the multi-channel recall algorithm. Currently, <code>RRF</code> and <code>Weight</code> are supported. <code>HybridPathsSetting</code> can be used to specify the recall paths, including dense vector search (<code>dense</code>), sparse vector search (<code>sparse</code>), and full-text search (<code>fulltext</code>). If this parameter is not specified, the system recalls dense vectors and full-text search results by default.</p>
+     * <p>The algorithm parameters for multi-channel recall. RRF and Weight are supported. HybridPathsSetting specifies the recall paths: dense vectors (dense), sparse vectors (sparse), and full-text index (fulltext). If this value is empty, dense vectors (dense) and full-text index (fulltext) are used by default.</p>
      * <ul>
-     * <li>RRF: Specifies the constant <code>k</code> in the scoring formula <code>1/(k+rank_i)</code>. The value must be an integer greater than 1. Example:</li>
+     * <li>RRF: Specifies the constant k in the score calculation formula <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
      * </ul>
      * <pre><code>{
      *   &quot;HybridPathsSetting&quot;: {
@@ -125,11 +122,9 @@ public class QueryContentShrinkRequest extends TeaModel {
      * }
      * </code></pre>
      * <ul>
-     * <li><p>Weight:</p>
-     * <ul>
-     * <li><p>For dual-channel recall (if <code>HybridPathsSetting</code> is not specified, only <code>alpha</code> is configured):</p>
-     * <ul>
-     * <li>The score is calculated using the formula: <code>alpha * dense_score + (1-alpha) * fulltext_score</code>. The <code>alpha</code> parameter represents the score weight of dense vector retrieval relative to full-text search. The value must be in the range of 0 to 1. A value of 0 indicates that only full-text search is used, and a value of 1 indicates that only dense vector retrieval is used.</li>
+     * <li>Weight: <ul>
+     * <li>Dual-path recall (without specifying HybridPathsSetting, only specifying alpha):<ul>
+     * <li>Formula: alpha * dense_score + (1-alpha) * fulltext_score. The alpha parameter specifies the score weight between dense vectors and full-text index retrieve. Valid values: 0 to 1, where 0 indicates full-text index only and 1 indicates dense vector only:</li>
      * </ul>
      * </li>
      * </ul>
@@ -142,9 +137,8 @@ public class QueryContentShrinkRequest extends TeaModel {
      * }
      * </code></pre>
      * <ul>
-     * <li><p>For three-channel recall:</p>
-     * <ul>
-     * <li>The score is calculated using the formula: <code>normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score</code>. The <code>dense</code>, <code>sparse</code>, and <code>fulltext</code> parameters represent the weights for the dense vector, sparse vector, and full-text search results, respectively. Their values must be greater than or equal to 0. The system automatically normalizes the weights to a sum of 1 (for example, <code>normalized_x = x / (dense + sparse + fulltext)</code>).</li>
+     * <li>Three-path recall pattern:<ul>
+     * <li>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. The dense, sparse, and fulltext values represent the weights for dense vectors, sparse vectors, and full-text index retrieve respectively. Valid values: greater than or equal to 0. The system automatically performs normalization of the weights to 0 to 1 (normalized_x = x / (dense + sparse + fulltext)).</li>
      * </ul>
      * </li>
      * </ul>
@@ -164,7 +158,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String hybridSearchArgsShrink;
 
     /**
-     * <p>Specifies whether to return the URL of the document. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to synchronously return the URL of the document. By default, the URL is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -173,7 +167,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     public Boolean includeFileUrl;
 
     /**
-     * <p>The metadata fields to include in the response. If left empty, no metadata is returned. To specify multiple fields, use a comma-separated list.</p>
+     * <p>The metadata fields to return. Default value: empty. Separate multiple fields with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>title,page</p>
@@ -182,13 +176,11 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String includeMetadataFields;
 
     /**
-     * <p>Specifies whether to include the vector in the results. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to return vectors. Default value: false.</p>
      * <blockquote>
      * <ul>
-     * <li><p><strong>false</strong>: The vector is not returned.</p>
-     * </li>
-     * <li><p><strong>true</strong>: The vector is returned.</p>
-     * </li>
+     * <li><strong>false</strong>: Does not return vectors.</li>
+     * <li><strong>true</strong>: Returns vectors.</li>
      * </ul>
      * </blockquote>
      * 
@@ -199,16 +191,13 @@ public class QueryContentShrinkRequest extends TeaModel {
     public Boolean includeVector;
 
     /**
-     * <p>The similarity algorithm used for retrieval. If this parameter is not specified, the algorithm that was specified when the document collection was created is used. We recommend that you do not set this parameter unless you have specific requirements.</p>
+     * <p>The similarity algorithm used for retrieval. If this value is empty, the algorithm specified when the knowledge base was created is used. Leave this parameter empty unless you have specific requirements.</p>
      * <blockquote>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>l2</strong>: Euclidean distance.</p>
-     * </li>
-     * <li><p><strong>ip</strong>: dot product (inner product) distance.</p>
-     * </li>
-     * <li><p><strong>cosine</strong>: cosine similarity.</p>
-     * </li>
+     * <li><strong>l2</strong>: Euclidean distance.</li>
+     * <li><strong>ip</strong>: inner product distance.</li>
+     * <li><strong>cosine</strong>: cosine similarity.</li>
      * </ul>
      * </blockquote>
      * 
@@ -219,9 +208,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String metrics;
 
     /**
-     * <p>The namespace. The default value is <code>public</code>.</p>
+     * <p>The namespace. Default value: public.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list existing namespaces.</p>
+     * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -231,9 +220,9 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The password for the namespace.</p>
+     * <p>The password of the namespace.</p>
      * <blockquote>
-     * <p>This password is set when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+     * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -244,7 +233,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String namespacePassword;
 
     /**
-     * <p>The offset for paginated queries.</p>
+     * <p>The offset for paged query. Used for paging through results.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -253,8 +242,11 @@ public class QueryContentShrinkRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The field to sort the results by. By default, this parameter is empty.</p>
-     * <p>The field must be a metadata field or a default field from the table, such as <code>id</code>. Supported formats include single fields (e.g., <code>chunk_id</code>), multiple comma-separated fields (e.g., <code>block_id, chunk_id</code>), and fields with a sort direction (e.g., <code>block_id DESC, chunk_id DESC</code>).</p>
+     * <p>The field used for sorting. Default value: empty.</p>
+     * <p>The field must belong to metadata or a default field in the table, such as id. Supported formats:</p>
+     * <p>A single field, such as chunk_id.
+     * Multiple fields separated by commas, such as block_id, chunk_id.
+     * Descending order, such as block_id DESC, chunk_id DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>created_at</p>
@@ -266,13 +258,11 @@ public class QueryContentShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The recall window. If this parameter is specified, additional context is returned with the retrieval results. The value must be a two-element array, <code>[A, B]</code>, where <code>-10 &lt;= A &lt;= 0</code> and <code>0 &lt;= B &lt;= 10</code>.</p>
+     * <p>The recall window. When this value is not empty, additional context around the retrieval results is returned. The format is a two-element array: List&lt;A, B&gt;, where -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Use this parameter when documents are finely chunked and retrieval might otherwise lose contextual information.</p>
-     * </li>
-     * <li><p>Reranking is prioritized over windowing. The system first applies reranking and then processes the window.</p>
-     * </li>
+     * <li>Use this parameter when documents are split into overly small chunks and retrieval may lose contextual information.</li>
+     * <li>Reranking takes priority over windowing. Reranking is performed first, followed by windowing.</li>
      * </ul>
      * </blockquote>
      */
@@ -290,13 +280,11 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The factor for reranking vector retrieval results. The value must be greater than 1 and less than or equal to 5.</p>
+     * <p>The reranking factor. When this value is not empty, the AISearch retrieve results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Reranking may be slower if document chunks are sparse.</p>
-     * </li>
-     * <li><p>For best performance, the number of items to be reranked (<code>TopK</code> \* <code>RerankFactor</code>, rounded up) should not exceed 50.</p>
-     * </li>
+     * <li>Reranking is slow when documents are sparsely chunked.</li>
+     * <li>The total number of reranked results (TopK × Factor, rounded up) should not exceed 50.</li>
      * </ul>
      * </blockquote>
      * 
@@ -307,7 +295,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     public Double rerankFactor;
 
     /**
-     * <p>The parameters for the reranking model.</p>
+     * <p>The rerank model parameters.</p>
      */
     @NameInMap("RerankModel")
     public String rerankModelShrink;
@@ -324,13 +312,11 @@ public class QueryContentShrinkRequest extends TeaModel {
     /**
      * <p>The validity period of the returned image URL.</p>
      * <blockquote>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>The value can be specified in seconds (s) or days (d). For example, <code>300s</code> indicates that the link is valid for 300 seconds, and <code>60d</code> indicates that the link is valid for 60 days.</p>
-     * </li>
-     * <li><p>The value must be in the range of <code>60s</code> to <code>365d</code>.</p>
-     * </li>
-     * <li><p>Default value: <code>7200s</code> (2 hours).</p>
-     * </li>
+     * <li>Supports seconds (s) and days (d) as units. For example, 300s indicates a validity period of 300 seconds, and 60d indicates a validity period of 60 days.</li>
+     * <li>Valid values: 60s to 365d.</li>
+     * <li>Default value: 7200s (2 hours).</li>
      * </ul>
      * </blockquote>
      * 
@@ -341,7 +327,7 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String urlExpiration;
 
     /**
-     * <p>(Deprecated) Specifies whether to use full-text search (dual-channel recall). The default value is <code>false</code>, which means only vector retrieval is used.</p>
+     * <p>(Deprecated) Specifies whether to use full-text retrieval (dual-path recall). Default value: false, which indicates that only vector retrieval is used.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

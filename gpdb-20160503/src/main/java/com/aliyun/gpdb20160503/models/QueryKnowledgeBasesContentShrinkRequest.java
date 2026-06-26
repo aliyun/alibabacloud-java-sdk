@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     /**
-     * <p>The text content to search for.</p>
+     * <p>The text content used for retrieval.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including their instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,12 +28,10 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The method for merging results from multiple knowledge bases. The default value is <code>RRF</code>. Valid values:</p>
+     * <p>The method used to merge results from multiple knowledge bases. Default value: RRF. Valid values:</p>
      * <ul>
-     * <li><p>RRF</p>
-     * </li>
-     * <li><p>Weight</p>
-     * </li>
+     * <li>RRF</li>
+     * <li>Weight.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +41,7 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     public String mergeMethod;
 
     /**
-     * <p>The arguments for the specified <code>MergeMethod</code>.</p>
+     * <p>The parameters for the merge method of each SourceCollection.</p>
      */
     @NameInMap("MergeMethodArgs")
     public String mergeMethodArgsShrink;
@@ -62,13 +60,11 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The reranking factor. If specified, the system reranks the final merged results. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
+     * <p>The reranking factor. If this parameter is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Sparse document chunking reduces reranking efficiency.</p>
-     * </li>
-     * <li><p>We recommend that the number of items to rerank (TopK × Factor, rounded up) does not exceed 50.</p>
-     * </li>
+     * <li>Reranking is slow when document chunks are sparse.</li>
+     * <li>The recommended reranking count (TopK × Factor, rounded up) should not exceed 50.</li>
      * </ul>
      * </blockquote>
      * 
@@ -79,20 +75,20 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
     public Double rerankFactor;
 
     /**
-     * <p>Parameters for the rerank model applied to the final merged results.</p>
+     * <p>The reranking model parameters for performing an additional reranking on the overall results after multi-channel merging.</p>
      */
     @NameInMap("RerankModel")
     public String rerankModelShrink;
 
     /**
-     * <p>The source collections to search.</p>
+     * <p>The information about the multiple collections to retrieve.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceCollection")
     public String sourceCollectionShrink;
 
     /**
-     * <p>The number of top results to return after the results from all recall paths are merged.</p>
+     * <p>The number of top results to return after multi-channel recall merging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

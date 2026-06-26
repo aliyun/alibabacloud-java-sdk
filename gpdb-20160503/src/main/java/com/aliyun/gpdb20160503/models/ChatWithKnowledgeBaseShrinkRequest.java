@@ -7,7 +7,7 @@ public class ChatWithKnowledgeBaseShrinkRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to view the details of all instances in a target region, including their instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ChatWithKnowledgeBaseShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Whether to include the raw retrieval results from the knowledge base in the response. Default: <code>false</code>.</p>
+     * <p>Specifies whether to return the recall results. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,13 +27,13 @@ public class ChatWithKnowledgeBaseShrinkRequest extends TeaModel {
     public Boolean includeKnowledgeBaseResults;
 
     /**
-     * <p>Parameters for knowledge retrieval. If omitted, the operation performs a standard chat without retrieving from a knowledge base.</p>
+     * <p>The knowledge retrieval parameter object. If not specified, only chat is performed.</p>
      */
     @NameInMap("KnowledgeParams")
     public String knowledgeParamsShrink;
 
     /**
-     * <p>The parameters for calling the large language model (LLM).</p>
+     * <p>The large language model (LLM) invocation parameter object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ModelParams")
@@ -43,7 +43,7 @@ public class ChatWithKnowledgeBaseShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>A custom system prompt template. If specified, it overrides the default prompt. The template must include the {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }} placeholders.</p>
+     * <p>The system prompt template, which must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If not specified, this part does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;参考以下知识回答问题:{{ text_chunks }}&quot;</p>

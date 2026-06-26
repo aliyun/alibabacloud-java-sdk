@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryKnowledgeBasesContentRequest extends TeaModel {
     /**
-     * <p>The text content to search for.</p>
+     * <p>The text content used for retrieval.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including their instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,12 +28,10 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The method for merging results from multiple knowledge bases. The default value is <code>RRF</code>. Valid values:</p>
+     * <p>The method used to merge results from multiple knowledge bases. Default value: RRF. Valid values:</p>
      * <ul>
-     * <li><p>RRF</p>
-     * </li>
-     * <li><p>Weight</p>
-     * </li>
+     * <li>RRF</li>
+     * <li>Weight.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +41,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
     public String mergeMethod;
 
     /**
-     * <p>The arguments for the specified <code>MergeMethod</code>.</p>
+     * <p>The parameters for the merge method of each SourceCollection.</p>
      */
     @NameInMap("MergeMethodArgs")
     public QueryKnowledgeBasesContentRequestMergeMethodArgs mergeMethodArgs;
@@ -62,13 +60,11 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The reranking factor. If specified, the system reranks the final merged results. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
+     * <p>The reranking factor. If this parameter is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Sparse document chunking reduces reranking efficiency.</p>
-     * </li>
-     * <li><p>We recommend that the number of items to rerank (TopK × Factor, rounded up) does not exceed 50.</p>
-     * </li>
+     * <li>Reranking is slow when document chunks are sparse.</li>
+     * <li>The recommended reranking count (TopK × Factor, rounded up) should not exceed 50.</li>
      * </ul>
      * </blockquote>
      * 
@@ -79,20 +75,20 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
     public Double rerankFactor;
 
     /**
-     * <p>Parameters for the rerank model applied to the final merged results.</p>
+     * <p>The reranking model parameters for performing an additional reranking on the overall results after multi-channel merging.</p>
      */
     @NameInMap("RerankModel")
     public QueryKnowledgeBasesContentRequestRerankModel rerankModel;
 
     /**
-     * <p>The source collections to search.</p>
+     * <p>The information about the multiple collections to retrieve.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceCollection")
     public java.util.List<QueryKnowledgeBasesContentRequestSourceCollection> sourceCollection;
 
     /**
-     * <p>The number of top results to return after the results from all recall paths are merged.</p>
+     * <p>The number of top results to return after multi-channel recall merging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -187,7 +183,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestMergeMethodArgsRrf extends TeaModel {
         /**
-         * <p>The constant <code>k</code> in the scoring formula <code>1/(k+rank_i)</code>. It must be a positive integer greater than 1.</p>
+         * <p>The k constant in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -212,7 +208,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestMergeMethodArgsWeight extends TeaModel {
         /**
-         * <p>An array of weights for each source collection.</p>
+         * <p>The weight array for each SourceCollection.</p>
          */
         @NameInMap("Weights")
         public java.util.List<Double> weights;
@@ -234,13 +230,13 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestMergeMethodArgs extends TeaModel {
         /**
-         * <p>The parameters that you can configure when <code>MergeMethod</code> is set to <code>RRF</code>.</p>
+         * <p>The configurable parameters when MergeMethod is set to RRF.</p>
          */
         @NameInMap("Rrf")
         public QueryKnowledgeBasesContentRequestMergeMethodArgsRrf rrf;
 
         /**
-         * <p>The parameters that you can configure when <code>MergeMethod</code> is set to <code>Weight</code>.</p>
+         * <p>The configurable parameters when MergeMethod is set to Weight.</p>
          */
         @NameInMap("Weight")
         public QueryKnowledgeBasesContentRequestMergeMethodArgsWeight weight;
@@ -270,7 +266,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestRerankModel extends TeaModel {
         /**
-         * <p>This parameter can be set only when <code>RerankModel.Name</code> is <code>qwen3-rerank</code>. Use this parameter to provide a custom instruction that guides the model\&quot;s ranking strategy.</p>
+         * <p>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Specifies a custom ranking task type description that guides the model to adopt different ranking strategies.</p>
          * 
          * <strong>example:</strong>
          * <p>Given a web search query, retrieve relevant passages that answer the query</p>
@@ -279,7 +275,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String instruct;
 
         /**
-         * <p>The name of the rerank model. Valid values: <code>qwen3-rerank</code> and <code>gte-rerank-v2</code>.</p>
+         * <p>The name of the reranking model. Valid values: qwen3-rerank, gte-rerank-v2.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -312,7 +308,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsGraphSearchArgs extends TeaModel {
         /**
-         * <p>The number of top entities and relationship edges to return. The default value is 60.</p>
+         * <p>The number of top entities and relationship edges to return. Default value: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -337,7 +333,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel extends TeaModel {
         /**
-         * <p>This parameter can be set only when <code>RerankModel.Name</code> is <code>qwen3-rerank</code>. Use this parameter to provide a custom instruction that guides the model\&quot;s ranking strategy.</p>
+         * <p>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Specifies a custom ranking task type description that guides the model to adopt different ranking strategies.</p>
          * 
          * <strong>example:</strong>
          * <p>Given a web search query, retrieve relevant passages that answer the query</p>
@@ -346,13 +342,16 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String instruct;
 
         /**
-         * <p>The name of the rerank model. Valid values: <code>qwen3-rerank</code> and <code>gte-rerank-v2</code>.</p>
+         * <p>The name of the reranking model. Valid values: qwen3-rerank, gte-rerank-v2.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("RerankMetadataFields")
+        public String rerankMetadataFields;
 
         public static QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel build(java.util.Map<String, ?> map) throws Exception {
             QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel self = new QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel();
@@ -375,14 +374,22 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
             return this.name;
         }
 
+        public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel setRerankMetadataFields(String rerankMetadataFields) {
+            this.rerankMetadataFields = rerankMetadataFields;
+            return this;
+        }
+        public String getRerankMetadataFields() {
+            return this.rerankMetadataFields;
+        }
+
     }
 
     public static class QueryKnowledgeBasesContentRequestSourceCollectionQueryParams extends TeaModel {
         /**
-         * <p>A filter expression for the data to retrieve, formatted as a SQL <code>WHERE</code> clause. This is a Boolean expression that evaluates to <code>true</code> or <code>false</code>. The expression can include simple comparison operators (such as <code>=</code>, <code>&lt;&gt;</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, and <code>&lt;=</code>), logical operators (<code>AND</code>, <code>OR</code>, <code>NOT</code>), and keywords such as <code>IN</code>, <code>BETWEEN</code>, and <code>LIKE</code>.</p>
+         * <p>The filter conditions for the data to query, in SQL WHERE clause format. This is an expression that returns a Boolean value (true or false). The conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). They can also be more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions that use keywords such as IN, BETWEEN, and LIKE.</p>
          * <blockquote>
          * <ul>
-         * <li>For syntax details, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">PostgreSQL WHERE</a>.</li>
+         * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -393,7 +400,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String filter;
 
         /**
-         * <p>Specifies whether to enable knowledge graph enhancement. The default value is <code>false</code>.</p>
+         * <p>Specifies whether to enable knowledge graph enhancement. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -402,21 +409,18 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public Boolean graphEnhance;
 
         /**
-         * <p>Parameters for the graph search.</p>
+         * <p>The number of top entities and relationship edges to return. Default value: 60.</p>
          */
         @NameInMap("GraphSearchArgs")
         public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsGraphSearchArgs graphSearchArgs;
 
         /**
-         * <p>The hybrid search algorithm. If this parameter is not specified, the system directly compares and sorts the scores from dense vector and full-text searches.</p>
+         * <p>The multi-channel recall algorithm. Default value: empty (the scores from dense vectors and full-text retrieval are directly compared and sorted).</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>RRF</code>: Reciprocal rank fusion. Uses a parameter <code>k</code> to control the fusion effect. For more information, see the <code>HybridSearchArgs</code> parameter.</p>
-         * </li>
-         * <li><p><code>Weight</code>: Weighted ranking. Uses parameters to control the score weights from different retrieval paths, such as dense vector and full-text searches, before sorting. For more information, see the <code>HybridSearchArgs</code> parameter.</p>
-         * </li>
-         * <li><p><code>Cascaded</code>: Performs a full-text search first, and then performs a vector search on the results.</p>
-         * </li>
+         * <li>RRF: reciprocal rank fusion. A parameter k controls the fusion effect. For more information, see the HybridSearchArgs configuration.</li>
+         * <li>Weight: weighted ranking. Parameters control the score weights of vector retrieval and full-text retrieval before sorting. For more information, see the HybridSearchArgs configuration.</li>
+         * <li>Cascaded: full-text retrieval is performed first, followed by vector retrieval on the full-text results.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -426,9 +430,9 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String hybridSearch;
 
         /**
-         * <p>The parameters for the hybrid search algorithm. <code>RRF</code> and <code>Weight</code> are supported. <code>HybridPathsSetting</code> specifies the retrieval paths: dense vectors (<code>dense</code>), sparse vectors (<code>sparse</code>), and full-text search (<code>fulltext</code>). If this parameter is not specified, the default paths are <code>dense</code> and <code>fulltext</code>.</p>
+         * <p>The algorithm parameters for multi-channel recall. RRF and Weight are supported. HybridPathsSetting specifies the recall paths: dense vectors (dense), sparse vectors (sparse), and full-text retrieval (fulltext). If this value is empty, dense vectors (dense) and full-text retrieval (fulltext) are used by default.</p>
          * <ul>
-         * <li><code>RRF</code>: Specifies the constant <code>k</code> in the scoring formula <code>1/(k+rank_i)</code>. <code>k</code> must be a positive integer greater than 1. Format:</li>
+         * <li>RRF: specifies the k constant in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
          * </ul>
          * <pre><code>{
          *   &quot;HybridPathsSetting&quot;: {
@@ -440,11 +444,9 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
          * }
          * </code></pre>
          * <ul>
-         * <li><p><code>Weight</code>:</p>
-         * <ul>
-         * <li><p>Two-path retrieval (the default if you do not specify <code>HybridPathsSetting</code>):</p>
-         * <ul>
-         * <li>Scoring formula: <code>alpha * dense_score + (1-alpha) * fulltext_score</code>. The <code>alpha</code> parameter represents the score weight of dense vectors relative to full-text search. The value must be in the range of [0, 1]. A value of 0 indicates full-text search only, and a value of 1 indicates dense vector search only.</li>
+         * <li>Weight: <ul>
+         * <li>Dual-path recall (without specifying HybridPathsSetting, only specifying alpha):<ul>
+         * <li>Formula: alpha * dense_score + (1-alpha) * fulltext_score. The alpha parameter specifies the score weight between dense vectors and full-text retrieval. Valid values: 0 to 1, where 0 indicates full-text retrieval only and 1 indicates dense vectors only:</li>
          * </ul>
          * </li>
          * </ul>
@@ -457,9 +459,8 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
          * }
          * </code></pre>
          * <ul>
-         * <li><p>Three-path retrieval:</p>
-         * <ul>
-         * <li>Scoring formula: <code>normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score</code>. The <code>dense</code>, <code>sparse</code>, and <code>fulltext</code> parameters represent the weights for dense vectors, sparse vectors, and full-text search, respectively. The value of each weight must be greater than or equal to 0. The system automatically normalizes the weights to a range of [0, 1] (for example, <code>normalized_x = x / (dense + sparse + fulltext)</code>).</li>
+         * <li>Three-path recall pattern:<ul>
+         * <li>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. dense, sparse, and fulltext represent the weights for dense vectors, sparse vectors, and full-text retrieval respectively. Valid values: greater than or equal to 0. The system automatically performs normalization on the weights to 0 to 1 (normalized_x = x / (dense + sparse + fulltext)).</li>
          * </ul>
          * </li>
          * </ul>
@@ -479,14 +480,11 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public java.util.Map<String, ?> hybridSearchArgs;
 
         /**
-         * <p>The distance metric used for building the vector index. Valid values:</p>
+         * <p>The method used to build the vector index. Valid values:</p>
          * <ul>
-         * <li><p><code>l2</code>: Euclidean distance.</p>
-         * </li>
-         * <li><p><code>ip</code>: Inner product distance.</p>
-         * </li>
-         * <li><p><code>cosine</code>: Cosine similarity.</p>
-         * </li>
+         * <li>l2: Euclidean distance.</li>
+         * <li>ip: inner product distance.</li>
+         * <li>cosine: cosine similarity.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,7 +494,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String metrics;
 
         /**
-         * <p>The offset for paged queries.</p>
+         * <p>The offset for paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -505,9 +503,11 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public Integer offset;
 
         /**
-         * <p>Specifies the field by which to sort the results. By default, this parameter is empty.</p>
-         * <p>The field must be a metadata field or a default field in the table, such as <code>id</code>. The following formats are supported:</p>
-         * <p>A single field, such as <code>chunk_id</code>. Multiple fields separated by commas, such as <code>block_id, chunk_id</code>. Descending order, such as <code>block_id DESC, chunk_id DESC</code>.</p>
+         * <p>The field used for sorting. Default value: empty.</p>
+         * <p>The field must belong to metadata or a default field in the table, such as id. Supported formats:</p>
+         * <p>A single field, such as chunk_id.
+         * Multiple fields separated by commas, such as block_id, chunk_id.
+         * Descending order is supported, such as block_id DESC, chunk_id DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>file_id,sort_num</p>
@@ -516,13 +516,11 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String orderBy;
 
         /**
-         * <p>The recall window. If specified, adds context from surrounding document chunks to the search results. The format is a two-element array <code>[A, B]</code>, where <code>-10 &lt;= A &lt;= 0</code> and <code>0 &lt;= B &lt;= 10</code>.</p>
+         * <p>The recall window. If this value is not empty, the context of the retrieval results is included. The format is a two-element array: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
          * <blockquote>
          * <ul>
-         * <li><p>This parameter is recommended for finely chunked documents where retrieval might otherwise lose context.</p>
-         * </li>
-         * <li><p>The system applies reranking before applying the recall window.</p>
-         * </li>
+         * <li>Use this parameter when document chunks are too small and retrieval may lose context information.</li>
+         * <li>Reranking takes priority over windowing. Reranking is performed first, followed by windowing.</li>
          * </ul>
          * </blockquote>
          */
@@ -530,13 +528,11 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public java.util.List<Long> recallWindow;
 
         /**
-         * <p>The reranking factor. If specified, the system reranks the results from this source collection before they are merged. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
+         * <p>The reranking factor. If this parameter is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</p>
          * <blockquote>
          * <ul>
-         * <li><p>Sparse document chunking reduces reranking efficiency.</p>
-         * </li>
-         * <li><p>We recommend that the number of items to rerank (TopK × Factor, rounded up) does not exceed 50.</p>
-         * </li>
+         * <li>Reranking is slow when document chunks are sparse.</li>
+         * <li>The recommended reranking count (TopK × Factor, rounded up) should not exceed 50.</li>
          * </ul>
          * </blockquote>
          * 
@@ -547,13 +543,13 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public Double rerankFactor;
 
         /**
-         * <p>Parameters for the rerank model applied to the results from this specific source collection before the final merge.</p>
+         * <p>The reranking model parameters.</p>
          */
         @NameInMap("RerankModel")
         public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel rerankModel;
 
         /**
-         * <p>The number of top results to return from this source collection.</p>
+         * <p>The number of top results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>776</p>
@@ -562,7 +558,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public Long topK;
 
         /**
-         * <p>Specifies whether to use full-text search, which enables two-path retrieval. The default value is <code>false</code>, which indicates that only vector retrieval is performed.</p>
+         * <p>Specifies whether to use full-text retrieval (dual-path recall). Default value: false, which indicates that only vector retrieval is used.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -683,9 +679,9 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestSourceCollection extends TeaModel {
         /**
-         * <p>The document collection name.</p>
+         * <p>The name of the document collection.</p>
          * <blockquote>
-         * <p>To create a document collection, call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. To view existing document collections, call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation.</p>
+         * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view existing document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -698,7 +694,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         /**
          * <p>The namespace.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view existing namespaces.</p>
+         * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and view the list by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -708,9 +704,9 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The password for the namespace.</p>
+         * <p>The password of the namespace.</p>
          * <blockquote>
-         * <p>You specify this value when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+         * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -721,7 +717,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String namespacePassword;
 
         /**
-         * <p>The query parameters for the source collection.</p>
+         * <p>The filter conditions for the data to query, in SQL WHERE clause format.</p>
          */
         @NameInMap("QueryParams")
         public QueryKnowledgeBasesContentRequestSourceCollectionQueryParams queryParams;
