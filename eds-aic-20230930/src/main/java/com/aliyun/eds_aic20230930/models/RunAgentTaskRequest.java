@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunAgentTaskRequest extends TeaModel {
     /**
-     * <p>The region ID of the mobile node.</p>
+     * <p>The region ID of the Mobile node.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -14,14 +14,14 @@ public class RunAgentTaskRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>An array of mobile node IDs. Specify a maximum of 100 IDs per request.</p>
+     * <p>The list of Mobile node IDs. A maximum of 100 nodes are supported per request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The maximum number of steps the task can execute. This limit prevents infinite loops. Valid values: 30–1000. Default: 1000.</p>
+     * <p>The maximum number of execution steps for the task to prevent infinite loops. Valid values: 30 to 1000. Default value: 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -29,8 +29,14 @@ public class RunAgentTaskRequest extends TeaModel {
     @NameInMap("MaxSteps")
     public Integer maxSteps;
 
+    @NameInMap("ScheduleId")
+    public String scheduleId;
+
+    @NameInMap("TaskConfigId")
+    public String taskConfigId;
+
     /**
-     * <p>The task timeout in seconds. Valid values: 300–3600. Default: 3600.</p>
+     * <p>The task timeout period in seconds. Valid values: 300 to 3600. Default value: 3600.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -39,8 +45,7 @@ public class RunAgentTaskRequest extends TeaModel {
     public Integer timeoutSeconds;
 
     /**
-     * <p>The user prompt in natural language. The Agent completes the task based on this prompt.</p>
-     * <p>This parameter is required.</p>
+     * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
      * 
      * <strong>example:</strong>
      * <p>Download DingTalk from App Store</p>
@@ -75,6 +80,22 @@ public class RunAgentTaskRequest extends TeaModel {
     }
     public Integer getMaxSteps() {
         return this.maxSteps;
+    }
+
+    public RunAgentTaskRequest setScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
+        return this;
+    }
+    public String getScheduleId() {
+        return this.scheduleId;
+    }
+
+    public RunAgentTaskRequest setTaskConfigId(String taskConfigId) {
+        this.taskConfigId = taskConfigId;
+        return this;
+    }
+    public String getTaskConfigId() {
+        return this.taskConfigId;
     }
 
     public RunAgentTaskRequest setTimeoutSeconds(Integer timeoutSeconds) {

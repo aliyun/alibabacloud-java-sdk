@@ -6022,7 +6022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers an Agent on a mobile node to run an AI-powered automation task.</p>
+     * <p>Triggers an Agent on Mobile nodes to execute an AI automation task.</p>
      * 
      * @param request RunAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6041,6 +6041,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxSteps)) {
             query.put("MaxSteps", request.maxSteps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
+            query.put("ScheduleId", request.scheduleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskConfigId)) {
+            query.put("TaskConfigId", request.taskConfigId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeoutSeconds)) {
@@ -6070,7 +6078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers an Agent on a mobile node to run an AI-powered automation task.</p>
+     * <p>Triggers an Agent on Mobile nodes to execute an AI automation task.</p>
      * 
      * @param request RunAgentTaskRequest
      * @return RunAgentTaskResponse

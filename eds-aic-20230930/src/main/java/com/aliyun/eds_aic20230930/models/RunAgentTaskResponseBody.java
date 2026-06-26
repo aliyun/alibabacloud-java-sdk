@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunAgentTaskResponseBody extends TeaModel {
     /**
-     * <p>The response status code. A value of <code>200</code> indicates that the request was successful.</p>
+     * <p>The status code of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>For example, &quot;200&quot; indicates success.</p>
@@ -32,7 +32,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
@@ -41,7 +41,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of tasks.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<RunAgentTaskResponseBodyTasks> tasks;
@@ -94,11 +94,13 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public static class RunAgentTaskResponseBodyTasks extends TeaModel {
         /**
          * <p>The current status of the task. Valid values:</p>
-         * <p><code>PENDING</code>: The task is being created.</p>
-         * <p><code>RUNNING</code>: The task is running.</p>
-         * <p><code>COMPLETED</code>: The task completed successfully.</p>
-         * <p><code>FAILED</code>: The task failed.</p>
-         * <p><code>TIMEOUT</code>: The task timed out.</p>
+         * <ul>
+         * <li>PENDING: The task is being created.</li>
+         * <li>RUNNING: The task is running.</li>
+         * <li>COMPLETED: The task is completed.</li>
+         * <li>FAILED: The task failed.</li>
+         * <li>TIMEOUT: The task execution timed out.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -107,7 +109,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
-         * <p>The mobile node ID.</p>
+         * <p>The Mobile node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-ek65k51zoxia3x8xz</p>
@@ -116,7 +118,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the task started running, in ISO 8601 format.</p>
+         * <p>The time when the task was created, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-13T17:42:19Z</p>
@@ -125,7 +127,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String runningAt;
 
         /**
-         * <p>The globally unique task ID.</p>
+         * <p>The task ID, which is globally unique.</p>
          * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
@@ -134,7 +136,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The user prompt that the Agent used to perform the task.</p>
+         * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
          * 
          * <strong>example:</strong>
          * <p>Download DingTalk from App Store</p>
