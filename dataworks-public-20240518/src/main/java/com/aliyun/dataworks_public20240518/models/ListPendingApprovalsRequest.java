@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListPendingApprovalsRequest extends TeaModel {
     /**
-     * <p>The access types.</p>
+     * <p>Filters by requested permissions.</p>
+     * <p>Note: Different resource levels support different permission types. All are uniformly constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
      */
     @NameInMap("AccessTypes")
     public java.util.List<String> accessTypes;
 
     /**
-     * <p>The resource schema type.</p>
+     * <p>Filters by resource type.</p>
+     * <p>Note: The supported resource types for requests are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +25,7 @@ public class ListPendingApprovalsRequest extends TeaModel {
     public String defSchema;
 
     /**
-     * <p>The end time of the query range, specified as a Unix timestamp in milliseconds.</p>
+     * <p>End time of the application period (millisecond timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>1779724799999</p>
@@ -30,13 +34,15 @@ public class ListPendingApprovalsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The grantee object used to filter results.</p>
+     * <p>Filters by authorization principal.</p>
+     * <p>Note: The supported authorization principal types are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
      */
     @NameInMap("Grantee")
     public ListPendingApprovalsRequestGrantee grantee;
 
     /**
-     * <p>The token used to retrieve the next page of results.</p>
+     * <p>Cursor.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzfQ==</p>
@@ -45,7 +51,7 @@ public class ListPendingApprovalsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries to return per page. Default: 10. Maximum: 200.</p>
+     * <p>Page size (default: 10, maximum: 200).</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,13 +60,16 @@ public class ListPendingApprovalsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The criteria to filter resources.</p>
+     * <p>Filters by resource with exact or fuzzy matching. Resource descriptions are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
      */
     @NameInMap("Resource")
     public ListPendingApprovalsRequestResource resource;
 
     /**
-     * <p>The resource type, which corresponds to a leaf node name. You can specify multiple values. A business context can map to multiple leaf node names.</p>
+     * <p>Filters by minimum permission resource type.</p>
+     * <p>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +79,7 @@ public class ListPendingApprovalsRequest extends TeaModel {
     public java.util.List<String> resourceType;
 
     /**
-     * <p>The start time of the query range, specified as a Unix timestamp in milliseconds.</p>
+     * <p>Start time of the application period (millisecond timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>1771948800000</p>
@@ -157,7 +166,7 @@ public class ListPendingApprovalsRequest extends TeaModel {
 
     public static class ListPendingApprovalsRequestGrantee extends TeaModel {
         /**
-         * <p>The ID of the principal.</p>
+         * <p>Authorization principal ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ROLE_3133343434</p>
@@ -166,7 +175,7 @@ public class ListPendingApprovalsRequest extends TeaModel {
         public String principalId;
 
         /**
-         * <p>The type of principal.</p>
+         * <p>Authorization principal type.</p>
          * 
          * <strong>example:</strong>
          * <p>RamRole</p>
@@ -199,7 +208,9 @@ public class ListPendingApprovalsRequest extends TeaModel {
 
     public static class ListPendingApprovalsRequestResource extends TeaModel {
         /**
-         * <p>The <code>name</code> of the <code>ResourceSchema</code> used to parse the resource.</p>
+         * <p>Resource type.</p>
+         * <p>Note: The supported resource types for requests are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -208,7 +219,8 @@ public class ListPendingApprovalsRequest extends TeaModel {
         public String defSchema;
 
         /**
-         * <p>The <code>version</code> of the <code>ResourceSchema</code> used to parse the resource.</p>
+         * <p>Resource parsing version is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
          * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
@@ -217,7 +229,9 @@ public class ListPendingApprovalsRequest extends TeaModel {
         public String defVersion;
 
         /**
-         * <p>The resource metadata. Its content is constrained by the <code>ResourceSchema</code>.</p>
+         * <p>Resource metadata.</p>
+         * <p>Note: Metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full path metadata declaration from level 0 to the validLeaf level.</p>
+         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
          */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;

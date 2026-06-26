@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMyApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The paginated results.</p>
+     * <p>The data part of the paginated result.</p>
      */
     @NameInMap("Data")
     public ListMyApplicationsResponseBodyData data;
 
     /**
-     * <p>A unique identifier (UUID) generated for the request.</p>
+     * <p>The request ID, which is a UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc5df3a17****903790e8e8a</p>
@@ -42,22 +42,15 @@ public class ListMyApplicationsResponseBody extends TeaModel {
 
     public static class ListMyApplicationsResponseBodyDataDataContentsGrantee extends TeaModel {
         /**
-         * <p>The ID of the principal. The value of this parameter varies based on the value of <code>PrincipalType</code>:</p>
+         * <p>The principal ID for authorization:</p>
          * <ul>
-         * <li><p><code>RamUser</code>: The DataWorks user ID.</p>
-         * </li>
-         * <li><p><code>RamRole</code>: The DataWorks user ID, prefixed with <code>ROLE_</code>.</p>
-         * </li>
-         * <li><p><code>DataworksTenantMember</code>: The DataWorks user ID.</p>
-         * </li>
-         * <li><p><code>DataworksTenantRole</code>: The DataWorks tenant role code.</p>
-         * </li>
-         * <li><p><code>DataworksProjectRole</code>: The DataWorks workspace role code.</p>
-         * </li>
-         * <li><p><code>DataworksProjectMember</code>: The DataWorks user ID.</p>
-         * </li>
-         * <li><p><code>DlfRole</code>: The DlfNext role name.</p>
-         * </li>
+         * <li>RamUser: DataWorks UserId.</li>
+         * <li>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;.</li>
+         * <li>DataworksTenantMember: DataWorks UserId.</li>
+         * <li>DataworksTenantRole: DataWorks tenant roleCode.</li>
+         * <li>DataworksProjectRole: DataWorks workspace roleCode.</li>
+         * <li>DataworksProjectMember: DataWorks UserId.</li>
+         * <li>DlfRole: DlfNext role name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,22 +60,15 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String principalId;
 
         /**
-         * <p>The type of the principal. Valid values:</p>
+         * <p>The principal type for authorization:</p>
          * <ul>
-         * <li><p><code>RamRole</code></p>
-         * </li>
-         * <li><p><code>RamUser</code></p>
-         * </li>
-         * <li><p><code>DataworksTenantMember</code></p>
-         * </li>
-         * <li><p><code>DataworksTenantRole</code></p>
-         * </li>
-         * <li><p><code>DataworksProjectMember</code></p>
-         * </li>
-         * <li><p><code>DataworksProjectRole</code></p>
-         * </li>
-         * <li><p><code>DlfRole</code></p>
-         * </li>
+         * <li>RamRole</li>
+         * <li>RamUser</li>
+         * <li>DataworksTenantMember</li>
+         * <li>DataworksTenantRole</li>
+         * <li>DataworksProjectMember</li>
+         * <li>DataworksProjectRole</li>
+         * <li>DlfRole</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +102,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
 
     public static class ListMyApplicationsResponseBodyDataDataContentsResource extends TeaModel {
         /**
-         * <p><strong>The name of the <code>ResourceSchema</code> used to parse the resource.</strong></p>
+         * <p><strong>The ResourceSchema.name on which the resource parsing depends.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -125,7 +111,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
-         * <p><strong>The version of the <code>ResourceSchema</code> used to parse the resource.</strong></p>
+         * <p><strong>The ResourceSchema.version on which the resource parsing depends.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
@@ -134,7 +120,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String defVersion;
 
         /**
-         * <p><strong>The resource metadata. Its format is defined by the <code>ResourceSchema</code>.</strong></p>
+         * <p><strong>The resource metadata, whose content is constrained by ResourceSchema.</strong></p>
          */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
@@ -172,7 +158,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
 
     public static class ListMyApplicationsResponseBodyDataDataContents extends TeaModel {
         /**
-         * <p>The permissions requested for the resource.</p>
+         * <p>The resource operation permissions requested in the application.</p>
          */
         @NameInMap("AccessTypes")
         public java.util.List<String> accessTypes;
@@ -187,7 +173,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String authMethod;
 
         /**
-         * <p>The time when the item was created, in Unix timestamp format (milliseconds).</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-29 15:04:52</p>
@@ -205,7 +191,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
-         * <p>When the permission expires, in Unix timestamp format (milliseconds).</p>
+         * <p>The permission expiration date (millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1782354014507</p>
@@ -214,19 +200,19 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
-         * <p>The granted permissions.</p>
+         * <p>The resource operation permissions that were finally approved.</p>
          */
         @NameInMap("FinalAccessTypes")
         public java.util.List<String> finalAccessTypes;
 
         /**
-         * <p><strong>The principal to be granted the permission.</strong></p>
+         * <p><strong>The authorization target.</strong></p>
          */
         @NameInMap("Grantee")
         public ListMyApplicationsResponseBodyDataDataContentsGrantee grantee;
 
         /**
-         * <p>The unique ID of the application item.</p>
+         * <p>The primary key of the application content.</p>
          * 
          * <strong>example:</strong>
          * <p>a8aa620037bb410ea13837f9b4d053d8</p>
@@ -235,7 +221,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the approval process instance for the application.</p>
+         * <p>The approval process instance ID of the initiated application.</p>
          * 
          * <strong>example:</strong>
          * <p>777799223</p>
@@ -244,13 +230,13 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String processInstanceId;
 
         /**
-         * <p><strong>The requested resource.</strong></p>
+         * <p><strong>The resource declaration.</strong></p>
          */
         @NameInMap("Resource")
         public ListMyApplicationsResponseBodyDataDataContentsResource resource;
 
         /**
-         * <p>The category of the resource. For example, <code>table</code>.</p>
+         * <p>The minimum permission resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>table</p>
@@ -261,20 +247,13 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         /**
          * <p>The approval status. Valid values:</p>
          * <ul>
-         * <li><p><code>WaitApproval</code>: Pending approval</p>
-         * </li>
-         * <li><p><code>Confirmed</code>: Pending authorization</p>
-         * </li>
-         * <li><p><code>RejectApproval</code>: Rejected</p>
-         * </li>
-         * <li><p><code>AuthorizeSucceed</code>: Authorization succeeded</p>
-         * </li>
-         * <li><p><code>AuthorizeFailed</code>: Authorization failed</p>
-         * </li>
-         * <li><p><code>Deleted</code>: Deleted</p>
-         * </li>
-         * <li><p><code>Canceled</code>: Canceled</p>
-         * </li>
+         * <li>WaitApproval: pending approval.</li>
+         * <li>Confirmed: pending authorization.</li>
+         * <li>RejectApproval: approval rejected.</li>
+         * <li>AuthorizeSucceed: authorization succeeded.</li>
+         * <li>AuthorizeFailed: authorization failed.</li>
+         * <li>Deleted: deleted.</li>
+         * <li>Canceled: withdrawn.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,7 +272,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The time when the item was last updated, in Unix timestamp format (milliseconds).</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-08 23:58:59</p>
@@ -422,7 +401,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
 
     public static class ListMyApplicationsResponseBodyDataData extends TeaModel {
         /**
-         * <p>The time the application was submitted, in Unix timestamp format (milliseconds).</p>
+         * <p>The time when the application was initiated.</p>
          * 
          * <strong>example:</strong>
          * <p>1779695088000</p>
@@ -431,7 +410,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public Long applicationTime;
 
         /**
-         * <p>The content of the application.</p>
+         * <p>The application content.</p>
          */
         @NameInMap("Contents")
         public java.util.List<ListMyApplicationsResponseBodyDataDataContents> contents;
@@ -466,20 +445,13 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         /**
          * <p>The approval status. Valid values:</p>
          * <ul>
-         * <li><p><code>WaitApproval</code>: Pending approval</p>
-         * </li>
-         * <li><p><code>Confirmed</code>: Pending authorization</p>
-         * </li>
-         * <li><p><code>RejectApproval</code>: Rejected</p>
-         * </li>
-         * <li><p><code>AuthorizeSucceed</code>: Authorization succeeded</p>
-         * </li>
-         * <li><p><code>AuthorizeFailed</code>: Authorization failed</p>
-         * </li>
-         * <li><p><code>Deleted</code>: Deleted</p>
-         * </li>
-         * <li><p><code>Canceled</code>: Canceled</p>
-         * </li>
+         * <li>WaitApproval: pending approval.</li>
+         * <li>Confirmed: pending authorization.</li>
+         * <li>RejectApproval: approval rejected.</li>
+         * <li>AuthorizeSucceed: authorization succeeded.</li>
+         * <li>AuthorizeFailed: authorization failed.</li>
+         * <li>Deleted: deleted.</li>
+         * <li>Canceled: withdrawn.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -545,13 +517,13 @@ public class ListMyApplicationsResponseBody extends TeaModel {
 
     public static class ListMyApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of application details.</p>
+         * <p>The list of application order details.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListMyApplicationsResponseBodyDataData> data;
 
         /**
-         * <p>Indicates whether more results are available.</p>
+         * <p>Indicates whether more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -560,7 +532,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public Boolean hasMore;
 
         /**
-         * <p>The cursor to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+         * <p>The pagination cursor.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJpZCI6NDU2fQ==</p>
@@ -569,7 +541,7 @@ public class ListMyApplicationsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The page size. Default value: 10. Maximum value: 200.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

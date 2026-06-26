@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListMyApplicationsShrinkRequest extends TeaModel {
     /**
-     * <p>The resource type.</p>
+     * <p>Filters by resource type.</p>
+     * <p>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+     * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +17,7 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     public String defSchema;
 
     /**
-     * <p>The end time of the application, specified as a Unix timestamp in milliseconds.</p>
+     * <p>The end time of the application period (millisecond timestamp).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +27,7 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>A token that you can use in a subsequent request to retrieve the next page of results.</p>
+     * <p>The pagination cursor.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzfQ==</p>
@@ -34,7 +36,7 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 200.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,20 +45,23 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search criteria for the resource.</p>
+     * <p>Filters by resource with exact or wildcard matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+     * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
      */
     @NameInMap("Resource")
     public String resourceShrink;
 
     /**
-     * <p>The name of the leaf node that specifies the resource type. You can specify multiple resource types. Note that different leaf node names can map to the same business logic.</p>
+     * <p>Filters by minimum permission resource type.</p>
+     * <p>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+     * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceTypeShrink;
 
     /**
-     * <p>The start time of the application, specified as a Unix timestamp in milliseconds.</p>
+     * <p>The start time of the application period (millisecond timestamp).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,23 +71,19 @@ public class ListMyApplicationsShrinkRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The approval statuses for filtering. Valid values:</p>
+     * <p>Filters by approval status. Valid values:</p>
      * <ul>
-     * <li><p><code>WaitApproval</code>: Pending approval</p>
-     * </li>
-     * <li><p><code>Confirmed</code>: Pending authorization</p>
-     * </li>
-     * <li><p><code>RejectApproval</code>: Approval rejected</p>
-     * </li>
-     * <li><p><code>AuthorizeSucceed</code>: Authorization succeeded</p>
-     * </li>
-     * <li><p><code>AuthorizeFailed</code>: Authorization failed</p>
-     * </li>
-     * <li><p><code>Deleted</code>: The application was deleted.</p>
-     * </li>
-     * <li><p><code>Canceled</code>: The application was canceled.</p>
-     * </li>
+     * <li>WaitApproval: pending approval.</li>
+     * <li>Confirmed: pending authorization.</li>
+     * <li>RejectApproval: approval rejected.</li>
+     * <li>AuthorizeSucceed: authorization succeeded.</li>
+     * <li>AuthorizeFailed: authorization failed.</li>
+     * <li>Deleted: deleted.</li>
+     * <li>Canceled: withdrawn.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Deleted</p>
      */
     @NameInMap("Statuses")
     public String statusesShrink;

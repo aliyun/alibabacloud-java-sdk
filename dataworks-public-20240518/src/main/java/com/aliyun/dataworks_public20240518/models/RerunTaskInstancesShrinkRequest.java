@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RerunTaskInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>Remarks.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -14,10 +14,13 @@ public class RerunTaskInstancesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The ID list of the task instance.</p>
+     * <p>The list of node instance IDs.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
+
+    @NameInMap("UseLatestConfig")
+    public Boolean useLatestConfig;
 
     public static RerunTaskInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RerunTaskInstancesShrinkRequest self = new RerunTaskInstancesShrinkRequest();
@@ -38,6 +41,14 @@ public class RerunTaskInstancesShrinkRequest extends TeaModel {
     }
     public String getIdsShrink() {
         return this.idsShrink;
+    }
+
+    public RerunTaskInstancesShrinkRequest setUseLatestConfig(Boolean useLatestConfig) {
+        this.useLatestConfig = useLatestConfig;
+        return this;
+    }
+    public Boolean getUseLatestConfig() {
+        return this.useLatestConfig;
     }
 
 }

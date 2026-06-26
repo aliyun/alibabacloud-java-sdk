@@ -316,21 +316,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request details</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
-     * <li><strong>ApplyContents</strong>: A list of permission requests. Each request includes a resource (Resource), a principal (Grantee), the requested permission types (AccessTypes), and the permission expiration time (ExpirationTime). A single request can contain a maximum of 400 items.</li>
-     * <li><strong>Resource</strong>: The resource for which permissions are requested. You must specify the <code>name</code> and <code>version</code> of the <code>ResourceSchema</code> required for parsing, along with the resource metadata (<code>MetaData</code>).</li>
-     * <li><strong>Grantee</strong>: The principal to which permissions are granted. You must specify the principal type (<code>PrincipalType</code>) and principal ID (<code>PrincipalId</code>).</li>
-     * <li><strong>AccessTypes</strong>: A list of permission types.</li>
-     * <li><strong>ExpirationTime</strong>: The permission expiration time, specified as a Unix timestamp in milliseconds.</li>
-     * <li><strong>AuthMethod</strong>: The authorization method. This parameter is optional. If not specified, the system\&quot;s default authorization method is used.</li>
-     * <li><strong>ClientToken</strong>: A client token to ensure request idempotency. This parameter is optional.
-     * Ensure that all required fields are correctly filled out and meet their respective constraints. For example, the <code>DefVersion</code> and <code>MetaData</code> in the <code>Resource</code> object must match the selected <code>DefSchema</code>.</li>
+     * <li><strong>Reason</strong>: The reason for the application. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: Contains multiple resource permission application contents, each including the resource description (Resource), grantee description (Grantee), permission types (AccessTypes), and permission expiration time (ExpirationTime). The maximum limit per request is 400 entries.</li>
+     * <li><strong>Resource</strong>: The resource description. You need to specify the ResourceSchema.name and version that the resource parsing depends on, as well as the resource metadata MetaData.</li>
+     * <li><strong>Grantee</strong>: The grantee description. You need to specify the grantee type (PrincipalType) and the principal ID (PrincipalId).</li>
+     * <li><strong>AccessTypes</strong>: The list of permission types. Multiple permission combinations are supported.</li>
+     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a milliseconds timestamp.</li>
+     * <li><strong>AuthMethod</strong>: An optional parameter that specifies the authorization method. The system uses the built-in default authorization method if not specified.</li>
+     * <li><strong>ClientToken</strong>: The client token used to prevent duplicate requests. This parameter is optional.
+     * Ensure all required fields are filled in correctly and comply with the corresponding constraints. For example, <code>DefVersion</code> and <code>MetaData</code> in <code>Resource</code> should match the selected <code>DefSchema</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a request for permissions on specific resources.</p>
+     * <p>Submits an application for access permissions on a specific resource.</p>
      * 
      * @param tmpReq ApplyResourceAccessPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -376,21 +376,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request details</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
-     * <li><strong>ApplyContents</strong>: A list of permission requests. Each request includes a resource (Resource), a principal (Grantee), the requested permission types (AccessTypes), and the permission expiration time (ExpirationTime). A single request can contain a maximum of 400 items.</li>
-     * <li><strong>Resource</strong>: The resource for which permissions are requested. You must specify the <code>name</code> and <code>version</code> of the <code>ResourceSchema</code> required for parsing, along with the resource metadata (<code>MetaData</code>).</li>
-     * <li><strong>Grantee</strong>: The principal to which permissions are granted. You must specify the principal type (<code>PrincipalType</code>) and principal ID (<code>PrincipalId</code>).</li>
-     * <li><strong>AccessTypes</strong>: A list of permission types.</li>
-     * <li><strong>ExpirationTime</strong>: The permission expiration time, specified as a Unix timestamp in milliseconds.</li>
-     * <li><strong>AuthMethod</strong>: The authorization method. This parameter is optional. If not specified, the system\&quot;s default authorization method is used.</li>
-     * <li><strong>ClientToken</strong>: A client token to ensure request idempotency. This parameter is optional.
-     * Ensure that all required fields are correctly filled out and meet their respective constraints. For example, the <code>DefVersion</code> and <code>MetaData</code> in the <code>Resource</code> object must match the selected <code>DefSchema</code>.</li>
+     * <li><strong>Reason</strong>: The reason for the application. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: Contains multiple resource permission application contents, each including the resource description (Resource), grantee description (Grantee), permission types (AccessTypes), and permission expiration time (ExpirationTime). The maximum limit per request is 400 entries.</li>
+     * <li><strong>Resource</strong>: The resource description. You need to specify the ResourceSchema.name and version that the resource parsing depends on, as well as the resource metadata MetaData.</li>
+     * <li><strong>Grantee</strong>: The grantee description. You need to specify the grantee type (PrincipalType) and the principal ID (PrincipalId).</li>
+     * <li><strong>AccessTypes</strong>: The list of permission types. Multiple permission combinations are supported.</li>
+     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a milliseconds timestamp.</li>
+     * <li><strong>AuthMethod</strong>: An optional parameter that specifies the authorization method. The system uses the built-in default authorization method if not specified.</li>
+     * <li><strong>ClientToken</strong>: The client token used to prevent duplicate requests. This parameter is optional.
+     * Ensure all required fields are filled in correctly and comply with the corresponding constraints. For example, <code>DefVersion</code> and <code>MetaData</code> in <code>Resource</code> should match the selected <code>DefSchema</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a request for permissions on specific resources.</p>
+     * <p>Submits an application for access permissions on a specific resource.</p>
      * 
      * @param request ApplyResourceAccessPermissionRequest
      * @return ApplyResourceAccessPermissionResponse
@@ -8178,16 +8178,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>This API retrieves details for a resource permission request using the specified <code>ProcessInstanceId</code>.</li>
-     * <li>A valid <code>ProcessInstanceId</code> is required.</li>
-     * <li>The response includes basic request information, status, and a list of requested items.</li>
-     * <li>Each requested item includes detailed resource information, the principal, and the requested operation permissions.</li>
+     * <li>This API is used to query the details of resource permission applications based on the provided <code>ProcessInstanceId</code>.</li>
+     * <li>A valid <code>ProcessInstanceId</code> parameter must be provided in the request.</li>
+     * <li>The response includes the basic information, status, and the list of specific application contents.</li>
+     * <li>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a resource permission request by its process instance ID.</p>
+     * <p>Queries the content of resource permission applications under the specified process instance ID.</p>
      * 
      * @param request GetApplicationContentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8219,16 +8219,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>This API retrieves details for a resource permission request using the specified <code>ProcessInstanceId</code>.</li>
-     * <li>A valid <code>ProcessInstanceId</code> is required.</li>
-     * <li>The response includes basic request information, status, and a list of requested items.</li>
-     * <li>Each requested item includes detailed resource information, the principal, and the requested operation permissions.</li>
+     * <li>This API is used to query the details of resource permission applications based on the provided <code>ProcessInstanceId</code>.</li>
+     * <li>A valid <code>ProcessInstanceId</code> parameter must be provided in the request.</li>
+     * <li>The response includes the basic information, status, and the list of specific application contents.</li>
+     * <li>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a resource permission request by its process instance ID.</p>
+     * <p>Queries the content of resource permission applications under the specified process instance ID.</p>
      * 
      * @param request GetApplicationContentsRequest
      * @return GetApplicationContentsResponse
@@ -14831,18 +14831,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports pagination using the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
-     * <li>The required <code>DefSchema</code> parameter specifies the resource type.</li>
-     * <li>Specify multiple resource types in the <code>ResourceType</code> parameter to filter applications more precisely.</li>
-     * <li>Use the <code>StartTime</code> and <code>EndTime</code> parameters to limit the query to a specific time range.</li>
-     * <li>Use the <code>Statuses</code> parameter to filter applications by status, such as pending approval or approved.</li>
-     * <li>To filter by a specific resource or grantee, use the <code>Resource</code> and <code>Grantee</code> parameters.</li>
+     * <li>This API supports paginated queries, controlled by the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
+     * <li><code>DefSchema</code> is a required parameter that specifies the resource type.</li>
+     * <li>The <code>ResourceType</code> list can contain multiple resource types for more precise filtering of application orders.</li>
+     * <li>You can set <code>StartTime</code> and <code>EndTime</code> to limit the time range of the query.</li>
+     * <li><code>Statuses</code> allows you to filter application orders by specific statuses, such as pending approval and authorized.</li>
+     * <li>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <code>Resource</code> and <code>Grantee</code> fields.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists all resource access requests submitted by the current user.</p>
+     * <p>Queries all resource access permission application orders initiated by the current user.</p>
      * 
      * @param tmpReq ListMyApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14916,18 +14916,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports pagination using the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
-     * <li>The required <code>DefSchema</code> parameter specifies the resource type.</li>
-     * <li>Specify multiple resource types in the <code>ResourceType</code> parameter to filter applications more precisely.</li>
-     * <li>Use the <code>StartTime</code> and <code>EndTime</code> parameters to limit the query to a specific time range.</li>
-     * <li>Use the <code>Statuses</code> parameter to filter applications by status, such as pending approval or approved.</li>
-     * <li>To filter by a specific resource or grantee, use the <code>Resource</code> and <code>Grantee</code> parameters.</li>
+     * <li>This API supports paginated queries, controlled by the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
+     * <li><code>DefSchema</code> is a required parameter that specifies the resource type.</li>
+     * <li>The <code>ResourceType</code> list can contain multiple resource types for more precise filtering of application orders.</li>
+     * <li>You can set <code>StartTime</code> and <code>EndTime</code> to limit the time range of the query.</li>
+     * <li><code>Statuses</code> allows you to filter application orders by specific statuses, such as pending approval and authorized.</li>
+     * <li>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <code>Resource</code> and <code>Grantee</code> fields.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists all resource access requests submitted by the current user.</p>
+     * <p>Queries all resource access permission application orders initiated by the current user.</p>
      * 
      * @param request ListMyApplicationsRequest
      * @return ListMyApplicationsResponse
@@ -14939,17 +14939,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>This API retrieves all pending and approved permission requests where the current user is an approver.</li>
-     * <li>The <code>Statuses</code> parameter filters requests by status.</li>
-     * <li>The <code>NextToken</code> parameter enables pagination. For the first request, omit this parameter or set it to <code>null</code>. For subsequent requests, pass the <code>NextToken</code> value returned in the previous response.</li>
-     * <li>The <code>PageSize</code> parameter defaults to 10, with a maximum value of 200.</li>
-     * <li><code>DefSchema</code> and <code>ResourceType</code> are required parameters. Other parameters are optional.</li>
+     * <li>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</li>
+     * <li>You can use the <code>Statuses</code> parameter to filter application orders by specific status.</li>
+     * <li><code>NextToken</code> is used for paginated requests. It can be omitted or set to <code>null</code> for the first request. For subsequent requests, pass the <code>NextToken</code> value from the previous response.</li>
+     * <li><code>PageSize</code> defaults to 10, with a maximum of 200.</li>
+     * <li><code>DefSchema</code> and <code>ResourceType</code> are required fields. Other parameters can be filled in as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists permission requests where the current user is an approver or stakeholder.</p>
+     * <p>Query all permission application orders where the current user is an approver or stakeholder.</p>
      * 
      * @param tmpReq ListMyRelatedApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15039,17 +15039,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>This API retrieves all pending and approved permission requests where the current user is an approver.</li>
-     * <li>The <code>Statuses</code> parameter filters requests by status.</li>
-     * <li>The <code>NextToken</code> parameter enables pagination. For the first request, omit this parameter or set it to <code>null</code>. For subsequent requests, pass the <code>NextToken</code> value returned in the previous response.</li>
-     * <li>The <code>PageSize</code> parameter defaults to 10, with a maximum value of 200.</li>
-     * <li><code>DefSchema</code> and <code>ResourceType</code> are required parameters. Other parameters are optional.</li>
+     * <li>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</li>
+     * <li>You can use the <code>Statuses</code> parameter to filter application orders by specific status.</li>
+     * <li><code>NextToken</code> is used for paginated requests. It can be omitted or set to <code>null</code> for the first request. For subsequent requests, pass the <code>NextToken</code> value from the previous response.</li>
+     * <li><code>PageSize</code> defaults to 10, with a maximum of 200.</li>
+     * <li><code>DefSchema</code> and <code>ResourceType</code> are required fields. Other parameters can be filled in as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists permission requests where the current user is an approver or stakeholder.</p>
+     * <p>Query all permission application orders where the current user is an approver or stakeholder.</p>
      * 
      * @param request ListMyRelatedApprovalsRequest
      * @return ListMyRelatedApprovalsResponse
@@ -15393,31 +15393,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API queries all pending permission requests that the current user can approve. You can filter the results by criteria such as resource type, time range, and approval status.</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</p>
      * <ul>
-     * <li><strong>ResourceType</strong>: The resource type, such as a table. You can specify one or more values.</li>
-     * <li><strong>Resource</strong>: Search criteria for a resource, such as its project, database, or table name.</li>
-     * <li><strong>StartTime and EndTime</strong>: The time range when the permission requests were submitted.</li>
-     * <li><strong>Statuses</strong>: Filters the results by approval status, for example, to retrieve only requests that are pending approval.</li>
-     * <li><strong>Grantee</strong>: Filters the results by the grantee.</li>
-     * <li><strong>AccessTypes</strong>: Filters the results by the access type, such as <code>Read</code> or <code>Update</code>.</li>
-     * <li><strong>PageSize and NextToken</strong>: Enables pagination. <code>PageSize</code> specifies the number of results to return for each request, and <code>NextToken</code> is the cursor used to retrieve the next page of results.
+     * <li><strong>ResourceType</strong>: Specifies the resource type (such as table), which can have multiple values.</li>
+     * <li><strong>Resource</strong>: Provides specific resource search conditions, such as the project, database, or table name.</li>
+     * <li><strong>StartTime and EndTime</strong>: Define the time range during which the request was submitted.</li>
+     * <li><strong>Statuses</strong>: Allows filtering results by approval status, for example, to view only pending approval requests.</li>
+     * <li><strong>Grantee</strong>: Filters request orders based on the authorization principal information.</li>
+     * <li><strong>AccessTypes</strong>: Filters based on the specific permission types requested (such as read or update).</li>
+     * <li><strong>PageSize and NextToken</strong>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
      * Notes:</li>
-     * <li>If no filters are specified, the API returns all matching records.</li>
-     * <li>For the first request, you can leave the <code>NextToken</code> parameter empty or omit it. To retrieve subsequent pages, you must use the <code>NextToken</code> value returned in the previous response.</li>
-     * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If you specify a value greater than the maximum, the maximum value is used.</li>
-     * <li>If no more data is available, the <code>HasMore</code> field is <code>false</code>, and <code>NextToken</code> is omitted.</li>
+     * <li>If no filtering conditions are provided, all matching records are returned by default.</li>
+     * <li>The <code>NextToken</code> parameter can be empty or omitted for the first call. Subsequent page requests must use the <code>NextToken</code> value provided in the previous response.</li>
+     * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</li>
+     * <li>When there is no more data to return, the <code>HasMore</code> field is set to <code>false</code>, and <code>NextToken</code> will be empty or absent.</li>
      * </ul>
-     * <h2>Response</h2>
-     * <p>A successful call returns paginated results. Each permission request includes details such as the submission time, resource description, grantee, and requested permissions. The response also contains the approval process status and other relevant metadata.</p>
+     * <h2>Response Description</h2>
+     * <p>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</p>
      * <ul>
-     * <li><strong>Data</strong>: The paginated result set, containing the page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and a flag indicating if more data is available (<code>HasMore</code>).</li>
-     * <li><strong>ApplicationQueryResponse</strong>: The details of each permission request, including the justification, submission time, status, and a detailed list of requested items.</li>
+     * <li><strong>Data</strong>: The paginated result set, including page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and whether more data is available (<code>HasMore</code>).</li>
+     * <li><strong>ApplicationQueryResponse</strong>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves pending permission requests awaiting approval by the current user.</p>
+     * <p>Retrieves the list of pending permission request orders for which the current user is the approver.</p>
      * 
      * @param tmpReq ListPendingApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15499,31 +15499,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API queries all pending permission requests that the current user can approve. You can filter the results by criteria such as resource type, time range, and approval status.</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</p>
      * <ul>
-     * <li><strong>ResourceType</strong>: The resource type, such as a table. You can specify one or more values.</li>
-     * <li><strong>Resource</strong>: Search criteria for a resource, such as its project, database, or table name.</li>
-     * <li><strong>StartTime and EndTime</strong>: The time range when the permission requests were submitted.</li>
-     * <li><strong>Statuses</strong>: Filters the results by approval status, for example, to retrieve only requests that are pending approval.</li>
-     * <li><strong>Grantee</strong>: Filters the results by the grantee.</li>
-     * <li><strong>AccessTypes</strong>: Filters the results by the access type, such as <code>Read</code> or <code>Update</code>.</li>
-     * <li><strong>PageSize and NextToken</strong>: Enables pagination. <code>PageSize</code> specifies the number of results to return for each request, and <code>NextToken</code> is the cursor used to retrieve the next page of results.
+     * <li><strong>ResourceType</strong>: Specifies the resource type (such as table), which can have multiple values.</li>
+     * <li><strong>Resource</strong>: Provides specific resource search conditions, such as the project, database, or table name.</li>
+     * <li><strong>StartTime and EndTime</strong>: Define the time range during which the request was submitted.</li>
+     * <li><strong>Statuses</strong>: Allows filtering results by approval status, for example, to view only pending approval requests.</li>
+     * <li><strong>Grantee</strong>: Filters request orders based on the authorization principal information.</li>
+     * <li><strong>AccessTypes</strong>: Filters based on the specific permission types requested (such as read or update).</li>
+     * <li><strong>PageSize and NextToken</strong>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
      * Notes:</li>
-     * <li>If no filters are specified, the API returns all matching records.</li>
-     * <li>For the first request, you can leave the <code>NextToken</code> parameter empty or omit it. To retrieve subsequent pages, you must use the <code>NextToken</code> value returned in the previous response.</li>
-     * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If you specify a value greater than the maximum, the maximum value is used.</li>
-     * <li>If no more data is available, the <code>HasMore</code> field is <code>false</code>, and <code>NextToken</code> is omitted.</li>
+     * <li>If no filtering conditions are provided, all matching records are returned by default.</li>
+     * <li>The <code>NextToken</code> parameter can be empty or omitted for the first call. Subsequent page requests must use the <code>NextToken</code> value provided in the previous response.</li>
+     * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</li>
+     * <li>When there is no more data to return, the <code>HasMore</code> field is set to <code>false</code>, and <code>NextToken</code> will be empty or absent.</li>
      * </ul>
-     * <h2>Response</h2>
-     * <p>A successful call returns paginated results. Each permission request includes details such as the submission time, resource description, grantee, and requested permissions. The response also contains the approval process status and other relevant metadata.</p>
+     * <h2>Response Description</h2>
+     * <p>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</p>
      * <ul>
-     * <li><strong>Data</strong>: The paginated result set, containing the page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and a flag indicating if more data is available (<code>HasMore</code>).</li>
-     * <li><strong>ApplicationQueryResponse</strong>: The details of each permission request, including the justification, submission time, status, and a detailed list of requested items.</li>
+     * <li><strong>Data</strong>: The paginated result set, including page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and whether more data is available (<code>HasMore</code>).</li>
+     * <li><strong>ApplicationQueryResponse</strong>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves pending permission requests awaiting approval by the current user.</p>
+     * <p>Retrieves the list of pending permission request orders for which the current user is the approver.</p>
      * 
      * @param request ListPendingApprovalsRequest
      * @return ListPendingApprovalsResponse
@@ -17929,10 +17929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reruns multiple instances at a time.</p>
+     * <p>Reruns multiple node instances in a batch.</p>
      * 
      * @param tmpReq RerunTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17955,6 +17955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Ids", request.idsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useLatestConfig)) {
+            body.put("UseLatestConfig", request.useLatestConfig);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -17974,10 +17978,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reruns multiple instances at a time.</p>
+     * <p>Reruns multiple node instances in a batch.</p>
      * 
      * @param request RerunTaskInstancesRequest
      * @return RerunTaskInstancesResponse

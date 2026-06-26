@@ -11,7 +11,7 @@ public class ApplyResourceAccessPermissionResponseBody extends TeaModel {
     public java.util.List<String> data;
 
     /**
-     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc5df3a17***903790e8e8a</p>

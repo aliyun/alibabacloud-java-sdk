@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ApplyResourceAccessPermissionShrinkRequest extends TeaModel {
     /**
-     * <p>A list of permission requests.</p>
+     * <p>The list of resource permission application contents.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyContents")
     public String applyContentsShrink;
 
     /**
-     * <p>The idempotency parameter, which prevents duplicate operations from repeated calls.</p>
+     * <p>The idempotency parameter. Used to prevent duplicate operations caused by multiple calls.</p>
      * 
      * <strong>example:</strong>
      * <p>ABFUOEUOTRTRJKE</p>
@@ -21,7 +21,7 @@ public class ApplyResourceAccessPermissionShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The reason for the request.</p>
+     * <p>The reason for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

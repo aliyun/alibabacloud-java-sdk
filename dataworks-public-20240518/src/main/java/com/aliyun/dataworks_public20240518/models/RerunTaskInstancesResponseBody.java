@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RerunTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A1****</p>
@@ -14,7 +14,7 @@ public class RerunTaskInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the batch operation, which is in the MAP structure. The instance ID serves as a key, and the result serves as a value.</p>
+     * <p>The result information of the batch operation. The structure is a map in which the key is the node instance ID and the value is the result information.</p>
      */
     @NameInMap("SuccessInfo")
     public java.util.Map<String, SuccessInfoValue> successInfo;
