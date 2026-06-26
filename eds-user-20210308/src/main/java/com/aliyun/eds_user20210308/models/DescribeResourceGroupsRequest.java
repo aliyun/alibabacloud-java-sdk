@@ -4,14 +4,17 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceGroupsRequest extends TeaModel {
+    @NameInMap("AgentType")
+    public String agentType;
+
     /**
-     * <p>A list of Aliyun resource group IDs.</p>
+     * <p>The cloud platform resource group ID.</p>
      */
     @NameInMap("AliyunResourceGroupIds")
     public java.util.List<String> aliyunResourceGroupIds;
 
     /**
-     * <p>The business channel.</p>
+     * <p>The channel tag.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -40,7 +43,7 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,9 +53,9 @@ public class DescribeResourceGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>The cloud platform.</p>
+     * <p>Fixed value: AliyunConsole.</p>
      * <ul>
-     * <li>For Elastic Desktop Service (EDS) Enterprise Edition, this parameter must be set to AliyunConsole.</li>
+     * <li>For Elastic Desktop Service Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</li>
      * </ul>
      * </blockquote>
      * 
@@ -66,7 +69,7 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public String resourceClassification;
 
     /**
-     * <p>A list of resource group IDs.</p>
+     * <p>The list of resource group IDs.</p>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
@@ -83,6 +86,14 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public static DescribeResourceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceGroupsRequest self = new DescribeResourceGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeResourceGroupsRequest setAgentType(String agentType) {
+        this.agentType = agentType;
+        return this;
+    }
+    public String getAgentType() {
+        return this.agentType;
     }
 
     public DescribeResourceGroupsRequest setAliyunResourceGroupIds(java.util.List<String> aliyunResourceGroupIds) {

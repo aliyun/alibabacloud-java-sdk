@@ -4,8 +4,11 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
+    @NameInMap("AgentType")
+    public String agentType;
+
     /**
-     * <p>The business channel.</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -18,7 +21,7 @@ public class CreateResourceGroupRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is for internal use only.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +31,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Long isResourceGroupWithOfficeSite;
 
     /**
-     * <p>Set this parameter to <code>AliyunConsole</code> for Wuying Workspace Enterprise Edition.</p>
+     * <p>For WUYING Workspace Enterprise Edition, set this parameter to <code>AliyunConsole</code>. Other platforms are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunConsole</p>
@@ -51,6 +54,14 @@ public class CreateResourceGroupRequest extends TeaModel {
     public static CreateResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceGroupRequest self = new CreateResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateResourceGroupRequest setAgentType(String agentType) {
+        this.agentType = agentType;
+        return this;
+    }
+    public String getAgentType() {
+        return this.agentType;
     }
 
     public CreateResourceGroupRequest setBusinessChannel(String businessChannel) {

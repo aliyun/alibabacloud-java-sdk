@@ -431,6 +431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateResourceGroupResponse createResourceGroupWithOptions(CreateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentType)) {
+            query.put("AgentType", request.agentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
             query.put("BusinessChannel", request.businessChannel);
         }
@@ -1024,7 +1028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View resource groups.</p>
+     * <p>Queries resource groups.</p>
      * 
      * @param request DescribeResourceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1033,6 +1037,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeResourceGroupsResponse describeResourceGroupsWithOptions(DescribeResourceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentType)) {
+            query.put("AgentType", request.agentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aliyunResourceGroupIds)) {
             query.put("AliyunResourceGroupIds", request.aliyunResourceGroupIds);
         }
@@ -1088,7 +1096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View resource groups.</p>
+     * <p>Queries resource groups.</p>
      * 
      * @param request DescribeResourceGroupsRequest
      * @return DescribeResourceGroupsResponse

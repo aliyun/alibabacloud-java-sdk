@@ -14,7 +14,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of resource groups.</p>
+     * <p>The list of resource groups.</p>
      */
     @NameInMap("ResourceGroup")
     public java.util.List<DescribeResourceGroupsResponseBodyResourceGroup> resourceGroup;
@@ -109,7 +109,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Specifies whether this is the default policy.</p>
+         * <p>Indicates whether the policy is the default policy.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -222,6 +222,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceGroupsResponseBodyResourceGroup extends TeaModel {
+        @NameInMap("AgentType")
+        public String agentType;
+
         /**
          * <p>The Alibaba Cloud resource group ID.</p>
          * 
@@ -244,7 +247,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String authCount;
 
         /**
-         * <p>The time the resource group was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-29T17:25:40.000000000Z</p>
@@ -256,10 +259,8 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
          * <blockquote>
          * <p>The policies associated with the resource group.</p>
          * <ul>
-         * <li><p>These policies apply to the cloud computers in the resource group. If multiple policies are associated, they are applied in order of priority.</p>
-         * </li>
-         * <li><p>Policies associated with the resource group take precedence over policies assigned to individual cloud computers.</p>
-         * </li>
+         * <li>Associated policies take effect on cloud desktops in the resource group. If multiple policies are associated, they take effect based on policy priority.</li>
+         * <li>If a cloud desktop in the resource group already has other policies specified, the policies associated with the resource group take precedence.</li>
          * </ul>
          * </blockquote>
          */
@@ -267,7 +268,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupPolicies> policies;
 
         /**
-         * <p>The number of resources in the resource group.</p>
+         * <p>The resource count in the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>119</p>
@@ -295,9 +296,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>The scheduled tasks associated with the resource group.</p>
+         * <p>The associated scheduled tasks.</p>
          * <ul>
-         * <li>These scheduled tasks apply to cloud computers in the resource group and take precedence over any tasks associated with individual cloud computers.</li>
+         * <li>Associated scheduled tasks take effect on cloud desktops in the resource group. If a cloud desktop in the resource group already has other scheduled tasks associated, the tasks associated with the resource group take precedence.</li>
          * </ul>
          * </blockquote>
          */
@@ -307,6 +308,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public static DescribeResourceGroupsResponseBodyResourceGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceGroupsResponseBodyResourceGroup self = new DescribeResourceGroupsResponseBodyResourceGroup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroup setAgentType(String agentType) {
+            this.agentType = agentType;
+            return this;
+        }
+        public String getAgentType() {
+            return this.agentType;
         }
 
         public DescribeResourceGroupsResponseBodyResourceGroup setAliyunResourceGroupId(String aliyunResourceGroupId) {
