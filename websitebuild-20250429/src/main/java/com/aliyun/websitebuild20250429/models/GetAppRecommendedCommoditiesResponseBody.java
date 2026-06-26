@@ -202,6 +202,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     }
 
     public static class GetAppRecommendedCommoditiesResponseBodyModuleCommodities extends TeaModel {
+        @NameInMap("ActionType")
+        public String actionType;
+
         /**
          * <p>The commodity code. This code applies to both resource plans and promotional commodities.</p>
          * 
@@ -210,6 +213,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
+
+        @NameInMap("Description")
+        public String description;
 
         /**
          * <p>The extension field, such as unsupportedReason.</p>
@@ -248,6 +254,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         @NameInMap("PromotionCommodityId")
         public String promotionCommodityId;
 
+        @NameInMap("RecommendType")
+        public String recommendType;
+
         /**
          * <p>The redirect URL. This parameter is returned when a redirect is required, such as during an upgrade.</p>
          * 
@@ -266,9 +275,20 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Title")
+        public String title;
+
         public static GetAppRecommendedCommoditiesResponseBodyModuleCommodities build(java.util.Map<String, ?> map) throws Exception {
             GetAppRecommendedCommoditiesResponseBodyModuleCommodities self = new GetAppRecommendedCommoditiesResponseBodyModuleCommodities();
             return TeaModel.build(map, self);
+        }
+
+        public GetAppRecommendedCommoditiesResponseBodyModuleCommodities setActionType(String actionType) {
+            this.actionType = actionType;
+            return this;
+        }
+        public String getActionType() {
+            return this.actionType;
         }
 
         public GetAppRecommendedCommoditiesResponseBodyModuleCommodities setCommodityCode(String commodityCode) {
@@ -277,6 +297,14 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
         public String getCommodityCode() {
             return this.commodityCode;
+        }
+
+        public GetAppRecommendedCommoditiesResponseBodyModuleCommodities setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetAppRecommendedCommoditiesResponseBodyModuleCommodities setExtend(java.util.Map<String, String> extend) {
@@ -311,6 +339,14 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             return this.promotionCommodityId;
         }
 
+        public GetAppRecommendedCommoditiesResponseBodyModuleCommodities setRecommendType(String recommendType) {
+            this.recommendType = recommendType;
+            return this;
+        }
+        public String getRecommendType() {
+            return this.recommendType;
+        }
+
         public GetAppRecommendedCommoditiesResponseBodyModuleCommodities setRedirectUrl(String redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
@@ -325,6 +361,14 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetAppRecommendedCommoditiesResponseBodyModuleCommodities setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
     }
