@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsObjectsResponseBody extends TeaModel {
     /**
-     * <p>The files and subdirectories in the specified path.</p>
+     * <p>The list of directory entries.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribePolarFsObjectsResponseBodyItems> items;
 
     /**
-     * <p>The number of records returned on the current page.</p>
+     * <p>The maximum number of records that can be displayed on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -20,7 +20,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The number of records to return per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+     * <p>The number of records per page. Valid values: 30, 50, and 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -29,7 +29,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The path that was queried.</p>
+     * <p>The absolute path of the directory.</p>
      * 
      * <strong>example:</strong>
      * <p>/test</p>
@@ -56,7 +56,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the query.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -127,7 +127,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
 
     public static class DescribePolarFsObjectsResponseBodyItems extends TeaModel {
         /**
-         * <p>The size of the item in bytes.</p>
+         * <p>The capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -136,7 +136,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         public String capacity;
 
         /**
-         * <p>The time when the item was created, as a UNIX timestamp in seconds.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-25T09:37:10Z</p>
@@ -145,7 +145,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The time the item was last modified, as a UNIX timestamp in seconds.</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-25T09:37:10Z</p>
@@ -154,7 +154,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         public Long lastModified;
 
         /**
-         * <p>The target path of the symbolic link.</p>
+         * <p>The real path of the symbolic link.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -163,7 +163,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         public String linkTarget;
 
         /**
-         * <p>The file system permissions in octal format.</p>
+         * <p>The file system permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>755</p>
@@ -172,7 +172,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The number of hard links to the item.</p>
+         * <p>The number of links.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -181,7 +181,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         public Integer nlink;
 
         /**
-         * <p>The owner of the file or directory.</p>
+         * <p>Owner</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -190,7 +190,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The absolute path of the file or subdirectory.</p>
+         * <p>The absolute path of the directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>

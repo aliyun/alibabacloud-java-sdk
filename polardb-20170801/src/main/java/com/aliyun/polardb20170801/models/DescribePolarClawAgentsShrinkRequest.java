@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawAgentsShrinkRequest extends TeaModel {
     /**
-     * <p>A list of agent IDs to query.</p>
+     * <p>The list of agent IDs to describe.</p>
      * 
      * <strong>example:</strong>
      * <p>work,research</p>

@@ -3012,6 +3012,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates API keys in batches.</p>
+     * 
+     * @param request CreateBatchConsumerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBatchConsumerResponse
+     */
+    public CreateBatchConsumerResponse createBatchConsumerWithOptions(CreateBatchConsumerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerGroupId)) {
+            query.put("ConsumerGroupId", request.consumerGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.count)) {
+            query.put("Count", request.count);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gwClusterId)) {
+            query.put("GwClusterId", request.gwClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBatchConsumer"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBatchConsumerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates API keys in batches.</p>
+     * 
+     * @param request CreateBatchConsumerRequest
+     * @return CreateBatchConsumerResponse
+     */
+    public CreateBatchConsumerResponse createBatchConsumer(CreateBatchConsumerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBatchConsumerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a batch task.</p>
      * 
      * @param tmpReq CreateBatchTaskRequest
@@ -8648,7 +8708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a custom instance.</p>
+     * <p>Queries the details of a custom instance.</p>
      * 
      * @param request DescribeAIDBClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8696,7 +8756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a custom instance.</p>
+     * <p>Queries the details of a custom instance.</p>
      * 
      * @param request DescribeAIDBClusterAttributeRequest
      * @return DescribeAIDBClusterAttributeResponse
@@ -9756,6 +9816,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeActiveOperationTasksResponse describeActiveOperationTasks(DescribeActiveOperationTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeActiveOperationTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询该apikey的详细信息</p>
+     * 
+     * @param request DescribeApikeyAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApikeyAttributeResponse
+     */
+    public DescribeApikeyAttributeResponse describeApikeyAttributeWithOptions(DescribeApikeyAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            query.put("ApiKey", request.apiKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApikeyAttribute"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApikeyAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询该apikey的详细信息</p>
+     * 
+     * @param request DescribeApikeyAttributeRequest
+     * @return DescribeApikeyAttributeResponse
+     */
+    public DescribeApikeyAttributeResponse describeApikeyAttribute(DescribeApikeyAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApikeyAttributeWithOptions(request, runtime);
     }
 
     /**
@@ -14496,6 +14612,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries all API keys under the current UID.</p>
+     * 
+     * @param request DescribeGatewayApikeyListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGatewayApikeyListResponse
+     */
+    public DescribeGatewayApikeyListResponse describeGatewayApikeyListWithOptions(DescribeGatewayApikeyListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGatewayApikeyList"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGatewayApikeyListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries all API keys under the current UID.</p>
+     * 
+     * @param request DescribeGatewayApikeyListRequest
+     * @return DescribeGatewayApikeyListResponse
+     */
+    public DescribeGatewayApikeyListResponse describeGatewayApikeyList(DescribeGatewayApikeyListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeGatewayApikeyListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Viewing gateway instance details</p>
      * 
      * @param request DescribeGatewayAttributeRequest
@@ -16582,7 +16750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of agents installed in a specified application.</p>
+     * <p>Queries all installed plug-ins and their status information under a specified application.</p>
      * 
      * @param tmpReq DescribePolarClawAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16624,7 +16792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of agents installed in a specified application.</p>
+     * <p>Queries all installed plug-ins and their status information under a specified application.</p>
      * 
      * @param request DescribePolarClawAgentsRequest
      * @return DescribePolarClawAgentsResponse
@@ -16928,7 +17096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a PolarFS instance.</p>
+     * <p>Retrieves the details of a PolarLakebase instance.</p>
      * 
      * @param request DescribePolarFsAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16968,7 +17136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a PolarFS instance.</p>
+     * <p>Retrieves the details of a PolarLakebase instance.</p>
      * 
      * @param request DescribePolarFsAttributeRequest
      * @return DescribePolarFsAttributeResponse
@@ -16980,16 +17148,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>请求说明</h2>
      * <ul>
-     * <li>The <strong>Path</strong> parameter must be an absolute path.</li>
-     * <li>The <strong>Recursive</strong> parameter defaults to <code>false</code>. If set to <code>true</code>, the operation recursively lists the contents of all subdirectories.</li>
-     * <li>The <strong>Depth</strong> parameter limits the recursive depth. The default value is <code>1</code>.</li>
-     * <li>The <strong>Filter</strong> parameter supports filtering with wildcards or regular expressions.</li>
+     * <li><strong>Path</strong> 参数必须提供一个绝对路径。</li>
+     * <li><strong>Recursive</strong> 参数默认为 <code>false</code>，如果设置为 <code>true</code>，则会递归列出所有子目录的内容。</li>
+     * <li><strong>Depth</strong> 参数用于限制递归深度，默认值为 <code>1</code>。</li>
+     * <li><strong>Filter</strong> 参数支持通配符或正则表达式过滤结果。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the files and subdirectories at a specified path.</p>
+     * <p>Lists the files and subdirectories under a specified path.</p>
      * 
      * @param request DescribePolarFsObjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17025,16 +17193,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>请求说明</h2>
      * <ul>
-     * <li>The <strong>Path</strong> parameter must be an absolute path.</li>
-     * <li>The <strong>Recursive</strong> parameter defaults to <code>false</code>. If set to <code>true</code>, the operation recursively lists the contents of all subdirectories.</li>
-     * <li>The <strong>Depth</strong> parameter limits the recursive depth. The default value is <code>1</code>.</li>
-     * <li>The <strong>Filter</strong> parameter supports filtering with wildcards or regular expressions.</li>
+     * <li><strong>Path</strong> 参数必须提供一个绝对路径。</li>
+     * <li><strong>Recursive</strong> 参数默认为 <code>false</code>，如果设置为 <code>true</code>，则会递归列出所有子目录的内容。</li>
+     * <li><strong>Depth</strong> 参数用于限制递归深度，默认值为 <code>1</code>。</li>
+     * <li><strong>Filter</strong> 参数支持通配符或正则表达式过滤结果。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the files and subdirectories at a specified path.</p>
+     * <p>Lists the files and subdirectories under a specified path.</p>
      * 
      * @param request DescribePolarFsObjectsRequest
      * @return DescribePolarFsObjectsResponse
@@ -28284,6 +28452,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filesShrink)) {
             query.put("Files", request.filesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDefault)) {
+            query.put("IsDefault", request.isDefault);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keepWorkspaceFiles)) {
+            query.put("KeepWorkspaceFiles", request.keepWorkspaceFiles);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.model)) {

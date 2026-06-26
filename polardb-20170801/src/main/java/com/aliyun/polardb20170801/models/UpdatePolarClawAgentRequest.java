@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolarClawAgentRequest extends TeaModel {
     /**
-     * <p>The ID of the agent to update.</p>
+     * <p>Agent ID to update</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The application ID.</p>
+     * <p>Application ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The new avatar for the agent.</p>
+     * <p>New avatar</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
     public String avatar;
 
     /**
-     * <p>The file list to update.</p>
+     * <p>List of files to update</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;FileName&quot;:&quot;SOUL.md&quot;,&quot;FileContent&quot;:&quot;You are a helpful assistant.&quot;}]</p>
@@ -43,7 +43,21 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
     public java.util.List<UpdatePolarClawAgentRequestFiles> files;
 
     /**
-     * <p>The model to override the agent\&quot;s default setting.</p>
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("IsDefault")
+    public Boolean isDefault;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("KeepWorkspaceFiles")
+    public Boolean keepWorkspaceFiles;
+
+    /**
+     * <p>Model override</p>
      * 
      * <strong>example:</strong>
      * <p>claude-sonnet-4-5</p>
@@ -52,7 +66,7 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The new display name for the agent.</p>
+     * <p>New display name</p>
      * 
      * <strong>example:</strong>
      * <p>Work Bot</p>
@@ -61,7 +75,7 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to restart the gateway after the update. The default value is true.</p>
+     * <p>Whether to restart the gateway after creation, default is true</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -70,7 +84,7 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
     public Boolean restart;
 
     /**
-     * <p>The new path for the agent\&quot;s workspace.</p>
+     * <p>New workspace directory path</p>
      * 
      * <strong>example:</strong>
      * <p>/home/node/.openclaw/workspace-work-v2</p>
@@ -115,6 +129,22 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
         return this.files;
     }
 
+    public UpdatePolarClawAgentRequest setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    public UpdatePolarClawAgentRequest setKeepWorkspaceFiles(Boolean keepWorkspaceFiles) {
+        this.keepWorkspaceFiles = keepWorkspaceFiles;
+        return this;
+    }
+    public Boolean getKeepWorkspaceFiles() {
+        return this.keepWorkspaceFiles;
+    }
+
     public UpdatePolarClawAgentRequest setModel(String model) {
         this.model = model;
         return this;
@@ -149,7 +179,7 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
 
     public static class UpdatePolarClawAgentRequestFiles extends TeaModel {
         /**
-         * <p>The file content.</p>
+         * <p>File content</p>
          * 
          * <strong>example:</strong>
          * <p>You are a helpful assistant.</p>
@@ -158,7 +188,7 @@ public class UpdatePolarClawAgentRequest extends TeaModel {
         public String fileContent;
 
         /**
-         * <p>The file name. This must be one of the allowed file names: AGENTS.md, SOUL.md, TOOLS.md, IDENTITY.md, USER.md, HEARTBEAT.md, BOOTSTRAP.md, MEMORY.md, or MEMORY.alt.md.</p>
+         * <p>File name, must be one of the allowed file names (AGENTS.md, SOUL.md, TOOLS.md, IDENTITY.md, USER.md, HEARTBEAT.md, BOOTSTRAP.md, MEMORY.md, MEMORY.alt.md)</p>
          * 
          * <strong>example:</strong>
          * <p>SOUL.md</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdatePolarClawAgentResponseBody extends TeaModel {
     /**
-     * <p>The details of the updated agent.</p>
+     * <p>Updated Agent details</p>
      */
     @NameInMap("Agent")
     public UpdatePolarClawAgentResponseBodyAgent agent;
 
     /**
-     * <p>The agent ID.</p>
+     * <p>Agent ID</p>
      * 
      * <strong>example:</strong>
      * <p>main</p>
@@ -20,7 +20,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The application ID.</p>
+     * <p>Application ID</p>
      * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
@@ -29,7 +29,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The response status code.</p>
+     * <p>Response status code</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>Response message</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -47,7 +47,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -110,7 +110,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
 
     public static class UpdatePolarClawAgentResponseBodyAgentIdentity extends TeaModel {
         /**
-         * <p>The path or content of the avatar.</p>
+         * <p>Avatar path or content</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -119,7 +119,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String avatar;
 
         /**
-         * <p>The avatar URL.</p>
+         * <p>Avatar URL</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -128,7 +128,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String avatarUrl;
 
         /**
-         * <p>The identity\&quot;s Emoji identifier. This can be a Unicode code point, such as U+1F99E, or the Emoji character itself.</p>
+         * <p>Emoji identifier (Unicode format such as U+1F99E, or direct emoji character)</p>
          * 
          * <strong>example:</strong>
          * <p>U+1F99E</p>
@@ -137,7 +137,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String emoji;
 
         /**
-         * <p>The name of the identity.</p>
+         * <p>Identity name</p>
          * 
          * <strong>example:</strong>
          * <p>PolarClaw</p>
@@ -146,7 +146,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The theme of the identity.</p>
+         * <p>Theme</p>
          * 
          * <strong>example:</strong>
          * <p>soul lobster</p>
@@ -203,7 +203,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
 
     public static class UpdatePolarClawAgentResponseBodyAgent extends TeaModel {
         /**
-         * <p>The agent ID.</p>
+         * <p>Agent ID</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -212,13 +212,13 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The identity information of the agent.</p>
+         * <p>Identity information</p>
          */
         @NameInMap("Identity")
         public UpdatePolarClawAgentResponseBodyAgentIdentity identity;
 
         /**
-         * <p>The display name of the agent.</p>
+         * <p>Agent display name</p>
          * 
          * <strong>example:</strong>
          * <p>PolarClaw</p>
@@ -227,7 +227,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The workspace path.</p>
+         * <p>Workspace directory path</p>
          * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/workspace-work-v2</p>
