@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordingRequest extends TeaModel {
     /**
+     * <p>The conversation ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeRecordingRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

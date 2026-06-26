@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DebugDialogueResponseBody extends TeaModel {
     /**
+     * <p>The next action returned by the dialogue engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>Broadcast</p>
      */
@@ -12,6 +14,8 @@ public class DebugDialogueResponseBody extends TeaModel {
     public String action;
 
     /**
+     * <p>Parameters for the returned action, as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class DebugDialogueResponseBody extends TeaModel {
     public String actionParams;
 
     /**
+     * <p>Indicates whether the Interactive Voice Response (IVR) playback can be interrupted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class DebugDialogueResponseBody extends TeaModel {
     public Boolean interruptible;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4060</p>
      */
@@ -33,6 +41,8 @@ public class DebugDialogueResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The textual response from the dialogue engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>80d11be3-faad-4101-b4b0-59dbea28aaf0</p>
      */

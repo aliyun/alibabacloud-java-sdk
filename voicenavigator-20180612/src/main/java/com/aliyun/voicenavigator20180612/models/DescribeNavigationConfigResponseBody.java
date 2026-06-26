@@ -4,19 +4,30 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeNavigationConfigResponseBody extends TeaModel {
+    /**
+     * <p>The greeting configuration.</p>
+     */
     @NameInMap("GreetingConfig")
     public DescribeNavigationConfigResponseBodyGreetingConfig greetingConfig;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The silence timeout configuration.</p>
+     */
     @NameInMap("SilenceTimeoutConfig")
     public DescribeNavigationConfigResponseBodySilenceTimeoutConfig silenceTimeoutConfig;
 
+    /**
+     * <p>The configuration for handling unrecognized input.</p>
+     */
     @NameInMap("UnrecognizingConfig")
     public DescribeNavigationConfigResponseBodyUnrecognizingConfig unrecognizingConfig;
 
@@ -58,13 +69,27 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNavigationConfigResponseBodyGreetingConfig extends TeaModel {
+        /**
+         * <p>The greeting message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好，欢迎致电智能导航</p>
+         */
         @NameInMap("GreetingWords")
         public String greetingWords;
 
+        /**
+         * <p>The intent trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
         @NameInMap("IntentTrigger")
         public String intentTrigger;
 
         /**
+         * <p>The source of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>chatbotIntent</p>
          */
@@ -104,6 +129,8 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
 
     public static class DescribeNavigationConfigResponseBodySilenceTimeoutConfig extends TeaModel {
         /**
+         * <p>The action to perform after the final silence prompt is played. Valid values: <code>TransferToAgent</code>, <code>TransferToIVR</code>, <code>RedirectToPage</code>, or <code>HangUp</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>HangUp</p>
          */
@@ -111,12 +138,20 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         public String finalAction;
 
         /**
+         * <p>Parameters for the final action, such as a redirection target.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("FinalActionParams")
         public String finalActionParams;
 
+        /**
+         * <p>The prompt that is played when the silence timeout threshold is reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉，听不到您说话，请您稍后致电</p>
+         */
         @NameInMap("FinalPrompt")
         public String finalPrompt;
 
@@ -129,10 +164,18 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         @NameInMap("IntentTrigger")
         public String intentTrigger;
 
+        /**
+         * <p>The prompt that is played when a silence timeout occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉，我没听到您说话</p>
+         */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
+         * <p>The source of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>chatbotIntent</p>
          */
@@ -140,6 +183,8 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>The maximum number of silence timeouts.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -147,6 +192,8 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         public Integer threshold;
 
         /**
+         * <p>The duration of the silence timeout.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -226,6 +273,8 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
 
     public static class DescribeNavigationConfigResponseBodyUnrecognizingConfig extends TeaModel {
         /**
+         * <p>The action to take when the number of unrecognized inputs reaches the threshold. Valid values: <code>TransferToAgent</code>, <code>TransferToIVR</code>, <code>RedirectToPage</code>, or <code>HangUp</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>TransferToAgent</p>
          */
@@ -233,19 +282,35 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         public String finalAction;
 
         /**
+         * <p>Parameters for the final action, such as a redirection target.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ \&quot;skillGroupId\&quot;: \&quot;fallbackSkillGroup\&quot; }</p>
          */
         @NameInMap("FinalActionParams")
         public String finalActionParams;
 
+        /**
+         * <p>The prompt that is played when the unrecognized input threshold is reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉，我暂时无法处理您的问题，即将为您转接人工</p>
+         */
         @NameInMap("FinalPrompt")
         public String finalPrompt;
 
+        /**
+         * <p>The prompt that is played when user input is not recognized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉，我无法理解您的意思</p>
+         */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
+         * <p>The maximum number of times the user\&quot;s input is not recognized.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

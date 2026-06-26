@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModifyGreetingConfigRequest extends TeaModel {
     /**
+     * <p>The greeting words.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你好，欢迎使用智能导航。</p>
      */
     @NameInMap("GreetingWords")
     public String greetingWords;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,10 +24,17 @@ public class ModifyGreetingConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The intent trigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>开始</p>
+     */
     @NameInMap("IntentTrigger")
     public String intentTrigger;
 
     /**
+     * <p>The type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

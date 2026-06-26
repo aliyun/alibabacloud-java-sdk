@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConversationContextRequest extends TeaModel {
     /**
+     * <p>The ID of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeConversationContextRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

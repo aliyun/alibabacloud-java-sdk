@@ -4,39 +4,74 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The capability type of the instance.<br>
+     * DEFAULT: Full capabilities.<br>
+     * VOICE_ONLY: Voice-only capabilities, which do not include conversation intervention.<br><br></p>
+     * 
+     * <strong>example:</strong>
+     * <p>VOICE_ONLY</p>
+     */
     @NameInMap("AbilityType")
     public String abilityType;
 
+    /**
+     * <p>Applicable operations.</p>
+     */
     @NameInMap("ApplicableOperations")
     public java.util.List<String> applicableOperations;
 
     /**
+     * <p>The concurrency of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Concurrency")
     public Long concurrency;
 
+    /**
+     * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>导航测试实例描述信息</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test1_instanceId</p>
+     * <p>cd6fc91bc13445c2af7f2e3e31418520</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The last modification time of the instance.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1532436395329</p>
+     * <p>1683216000000</p>
      */
     @NameInMap("ModifyTime")
     public Long modifyTime;
 
+    /**
+     * <p>The user who last modified the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2508711*******</p>
+     */
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>导航测试实例</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -44,15 +79,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String nluServiceParamsJson;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     * <p>790B5EA3-D251-1666-B1E0-4D1F4B33A592</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The status of the instance.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Drafted</p>
+     * <p>Published</p>
      */
     @NameInMap("Status")
     public String status;

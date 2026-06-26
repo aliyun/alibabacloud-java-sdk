@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DialogueResponseBody extends TeaModel {
     /**
+     * <p>The action to be performed.</p>
+     * 
      * <strong>example:</strong>
      * <p>Broadcast</p>
      */
@@ -12,6 +14,8 @@ public class DialogueResponseBody extends TeaModel {
     public String action;
 
     /**
+     * <p>The action parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;duration\&quot;:2420,\&quot;endTime\&quot;:1651717326805,\&quot;hangUpDirection\&quot;:\&quot;client\&quot;,\&quot;hasLastPlaybackCompleted\&quot;:true,\&quot;startTime\&quot;:1651717324385}</p>
      */
@@ -19,6 +23,8 @@ public class DialogueResponseBody extends TeaModel {
     public String actionParams;
 
     /**
+     * <p>Indicates whether the IVR greeting can be interrupted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,12 +32,20 @@ public class DialogueResponseBody extends TeaModel {
     public Boolean interruptible;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The text to be broadcasted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>您好，欢迎致电智能助手</p>
+     */
     @NameInMap("TextResponse")
     public String textResponse;
 

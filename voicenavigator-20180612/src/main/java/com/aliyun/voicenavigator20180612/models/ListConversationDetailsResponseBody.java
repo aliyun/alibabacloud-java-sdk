@@ -4,10 +4,15 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListConversationDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The list of conversation details.</p>
+     */
     @NameInMap("ConversationDetails")
     public java.util.List<ListConversationDetailsResponseBodyConversationDetails> conversationDetails;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */
@@ -37,6 +42,8 @@ public class ListConversationDetailsResponseBody extends TeaModel {
 
     public static class ListConversationDetailsResponseBodyConversationDetails extends TeaModel {
         /**
+         * <p>The action performed during the turn.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dialogue</p>
          */
@@ -44,6 +51,8 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The action parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -51,6 +60,8 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         public String actionParams;
 
         /**
+         * <p>The conversation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
@@ -58,6 +69,8 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         public String conversationId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1582266750353</p>
          */
@@ -65,6 +78,8 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The sequence ID of the conversational turn.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
@@ -72,12 +87,20 @@ public class ListConversationDetailsResponseBody extends TeaModel {
         public String sequenceId;
 
         /**
+         * <p>The speaker. Valid values: <code>customer</code> and <code>chatbot</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Chatbot</p>
          */
         @NameInMap("Speaker")
         public String speaker;
 
+        /**
+         * <p>The speaker\&quot;s utterance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
         @NameInMap("Utterance")
         public String utterance;
 

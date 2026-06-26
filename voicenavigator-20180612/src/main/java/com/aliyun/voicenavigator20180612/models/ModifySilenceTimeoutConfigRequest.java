@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySilenceTimeoutConfigRequest extends TeaModel {
     /**
+     * <p>Action After Prompt</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifySilenceTimeoutConfigRequest extends TeaModel {
     public String finalAction;
 
     /**
+     * <p>Parameters for the post-prompt action, specified in a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -21,12 +24,17 @@ public class ModifySilenceTimeoutConfigRequest extends TeaModel {
     public String finalActionParams;
 
     /**
+     * <p>The prompt that plays after the silence timeout threshold is reached.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>再见</p>
      */
     @NameInMap("FinalPrompt")
     public String finalPrompt;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +44,8 @@ public class ModifySilenceTimeoutConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The intent trigger for the silence timeout.</p>
+     * 
      * <strong>example:</strong>
      * <p>Timeout</p>
      */
@@ -43,12 +53,17 @@ public class ModifySilenceTimeoutConfigRequest extends TeaModel {
     public String intentTrigger;
 
     /**
+     * <p>The prompt that plays when the system detects no user input during the specified timeout period.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不好意思，听不见您说什么</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>The type of source that triggers the action.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +73,7 @@ public class ModifySilenceTimeoutConfigRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The maximum number of times the system plays the silence timeout prompt before it performs the post-prompt action.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +83,7 @@ public class ModifySilenceTimeoutConfigRequest extends TeaModel {
     public Integer threshold;
 
     /**
+     * <p>The duration of the silence timeout, in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

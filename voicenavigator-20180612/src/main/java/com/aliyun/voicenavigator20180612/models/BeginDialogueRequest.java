@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BeginDialogueRequest extends TeaModel {
     /**
+     * <p>The called number.</p>
+     * 
      * <strong>example:</strong>
      * <p>10086</p>
      */
@@ -12,6 +14,7 @@ public class BeginDialogueRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>The calling number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class BeginDialogueRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>The conversation ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class BeginDialogueRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The conversation context.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;channelId\&quot;:\&quot;fe2559d3-5fc9-4fa5-8314-32b9f762791d\&quot;}</p>
      */
@@ -37,6 +43,7 @@ public class BeginDialogueRequest extends TeaModel {
     public String initialContext;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,8 @@ public class BeginDialogueRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance owner ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1231639035307976</p>
      */

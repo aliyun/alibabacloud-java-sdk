@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceRequest extends TeaModel {
     /**
+     * <p>The maximum number of concurrent conversations for the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class ModifyInstanceRequest extends TeaModel {
     @NameInMap("Concurrency")
     public Long concurrency;
 
+    /**
+     * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

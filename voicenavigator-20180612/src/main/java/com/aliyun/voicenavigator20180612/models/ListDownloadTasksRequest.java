@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDownloadTasksRequest extends TeaModel {
     /**
+     * <p>The page number of the results to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDownloadTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

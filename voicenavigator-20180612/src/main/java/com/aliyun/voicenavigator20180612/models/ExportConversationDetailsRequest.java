@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportConversationDetailsRequest extends TeaModel {
     /**
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1582266750353</p>
      */
@@ -12,6 +14,8 @@ public class ExportConversationDetailsRequest extends TeaModel {
     public Long beginTimeLeftRange;
 
     /**
+     * <p>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1640793599000</p>
      */
@@ -19,6 +23,8 @@ public class ExportConversationDetailsRequest extends TeaModel {
     public Long beginTimeRightRange;
 
     /**
+     * <p>The calling number.</p>
+     * 
      * <strong>example:</strong>
      * <p>13581588**</p>
      */
@@ -29,6 +35,7 @@ public class ExportConversationDetailsRequest extends TeaModel {
     public Integer debugConversation;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,15 +44,27 @@ public class ExportConversationDetailsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>An array of optional parameters.</p>
+     */
     @NameInMap("Options")
     public java.util.List<String> options;
 
+    /**
+     * <p>The result of the conversation.</p>
+     */
     @NameInMap("Result")
     public Integer result;
 
+    /**
+     * <p>The minimum number of conversation turns.</p>
+     */
     @NameInMap("RoundsLeftRange")
     public Integer roundsLeftRange;
 
+    /**
+     * <p>The maximum number of conversation turns.</p>
+     */
     @NameInMap("RoundsRightRange")
     public Integer roundsRightRange;
 

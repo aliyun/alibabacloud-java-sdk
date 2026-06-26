@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListConversationsRequest extends TeaModel {
     /**
+     * <p>The start of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1638288000000</p>
      */
@@ -12,6 +14,8 @@ public class ListConversationsRequest extends TeaModel {
     public Long beginTimeLeftRange;
 
     /**
+     * <p>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1637547875311</p>
      */
@@ -19,6 +23,8 @@ public class ListConversationsRequest extends TeaModel {
     public Long beginTimeRightRange;
 
     /**
+     * <p>The calling number.</p>
+     * 
      * <strong>example:</strong>
      * <p>138106*****</p>
      */
@@ -29,6 +35,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer debugConversation;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +45,8 @@ public class ListConversationsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether the conversation is in a sandbox environment. Valid values: <code>true</code> and <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -45,6 +54,7 @@ public class ListConversationsRequest extends TeaModel {
     public String isSandBox;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +64,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +74,8 @@ public class ListConversationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The search query for filtering conversations.</p>
+     * 
      * <strong>example:</strong>
      * <p>13788914724</p>
      */
@@ -70,15 +83,29 @@ public class ListConversationsRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The result of the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Result")
     public Long result;
 
+    /**
+     * <p>The minimum number of rounds in the conversation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoundsLeftRange")
     public Integer roundsLeftRange;
 
+    /**
+     * <p>The maximum number of rounds in the conversation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("RoundsRightRange")
     public Integer roundsRightRange;
 

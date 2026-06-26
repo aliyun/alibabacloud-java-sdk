@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyAsrConfigResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the modification.</p>
+     */
     @NameInMap("Data")
     public ModifyAsrConfigResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Not Found</p>
      */
@@ -22,6 +29,8 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
      */
@@ -36,6 +47,8 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -96,6 +109,9 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
     }
 
     public static class ModifyAsrConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of affected rows.</p>
+         */
         @NameInMap("AffectedRows")
         public Integer affectedRows;
 

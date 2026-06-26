@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveRecordingRequest extends TeaModel {
     /**
+     * <p>The ID of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SaveRecordingRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The duration of the recording, in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class SaveRecordingRequest extends TeaModel {
     public String duration;
 
     /**
+     * <p>The name of the recording file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class SaveRecordingRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The storage path of the recording file, such as a path in Object Storage Service (OSS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class SaveRecordingRequest extends TeaModel {
     public String filePath;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,8 @@ public class SaveRecordingRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the account that owns the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1971226538081821</p>
      */
@@ -57,6 +64,7 @@ public class SaveRecordingRequest extends TeaModel {
     public Long instanceOwnerId;
 
     /**
+     * <p>The Unix timestamp, in milliseconds, when the recording started.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +74,7 @@ public class SaveRecordingRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The type of the recording file. Example: Source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

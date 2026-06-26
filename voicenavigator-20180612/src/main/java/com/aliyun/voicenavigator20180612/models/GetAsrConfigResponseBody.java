@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAsrConfigResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetAsrConfigResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Not Found</p>
      */
@@ -22,6 +29,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */
@@ -36,6 +47,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +110,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
 
     public static class GetAsrConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The application key.</p>
+         * 
          * <strong>example:</strong>
          * <p>your-app-key</p>
          */
@@ -104,6 +119,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String appKey;
 
         /**
+         * <p>The acoustic model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
          */
@@ -111,6 +128,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String asrAcousticModelId;
 
         /**
+         * <p>The ASR class vocabulary ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
          */
@@ -118,6 +137,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String asrClassVocabularyId;
 
         /**
+         * <p>The customization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
          */
@@ -128,6 +149,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String asrOverrides;
 
         /**
+         * <p>The vocabulary ID. You can view the ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Vocabulary Management page</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
          */
@@ -135,6 +158,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String asrVocabularyId;
 
         /**
+         * <p>The speech engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>ali</p>
          */
@@ -142,6 +167,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String engine;
 
         /**
+         * <p>Parameters for the iFLYTEK engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>EngineXufei</p>
          */
@@ -149,6 +176,8 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String engineXufei;
 
         /**
+         * <p>The NLS service type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Authorized</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssociateChatbotInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */

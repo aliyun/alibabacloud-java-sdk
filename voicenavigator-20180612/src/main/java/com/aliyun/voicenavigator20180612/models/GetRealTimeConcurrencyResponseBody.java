@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRealTimeConcurrencyResponseBody extends TeaModel {
     /**
+     * <p>The maximum concurrency.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
     public Long maxConcurrency;
 
     /**
+     * <p>The real-time concurrency.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
     public Long realTimeConcurrency;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E6E61E1A-D2DC-5ACF-AED4-A115B6691F98</p>
      */
@@ -26,6 +32,8 @@ public class GetRealTimeConcurrencyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The timestamp of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1661584255029</p>
      */

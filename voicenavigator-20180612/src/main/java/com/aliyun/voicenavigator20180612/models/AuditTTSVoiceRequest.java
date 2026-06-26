@@ -13,7 +13,11 @@ public class AuditTTSVoiceRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("ExtParams")
+    public String extParams;
+
     /**
+     * <p>The instance ID of the navigation instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +33,7 @@ public class AuditTTSVoiceRequest extends TeaModel {
     public String secretKey;
 
     /**
+     * <p>The speech rate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +43,17 @@ public class AuditTTSVoiceRequest extends TeaModel {
     public String speechRate;
 
     /**
+     * <p>The text to preview.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你好</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>The voice.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +63,7 @@ public class AuditTTSVoiceRequest extends TeaModel {
     public String voice;
 
     /**
+     * <p>The volume.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,6 +99,14 @@ public class AuditTTSVoiceRequest extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public AuditTTSVoiceRequest setExtParams(String extParams) {
+        this.extParams = extParams;
+        return this;
+    }
+    public String getExtParams() {
+        return this.extParams;
     }
 
     public AuditTTSVoiceRequest setInstanceId(String instanceId) {

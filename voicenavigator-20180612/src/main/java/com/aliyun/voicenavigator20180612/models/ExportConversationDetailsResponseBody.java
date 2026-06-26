@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportConversationDetailsResponseBody extends TeaModel {
     /**
+     * <p>The ID of the asynchronous export task.</p>
+     * 
      * <strong>example:</strong>
      * <p>6203fc87271a420c98eab6c2bbc2d856</p>
      */
@@ -12,6 +14,8 @@ public class ExportConversationDetailsResponseBody extends TeaModel {
     public String exportTaskId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>75BAAB9B-40B2-5FF5-A59A-7BCF8154C6EE</p>
      */

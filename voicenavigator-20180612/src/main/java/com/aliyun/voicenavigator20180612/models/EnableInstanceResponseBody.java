@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3a530dc0-7cfa-48f6-9539-bf9001e77b16</p>
      */
@@ -12,6 +14,8 @@ public class EnableInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

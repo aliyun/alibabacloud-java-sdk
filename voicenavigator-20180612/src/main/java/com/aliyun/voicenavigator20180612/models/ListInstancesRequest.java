@@ -4,23 +4,62 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    /**
+     * <p>A JSON-formatted string that contains a list of digital worker instance IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;e4bebxxxxxxxxxxx&quot;]</p>
+     */
     @NameInMap("InstanceIdListJsonString")
     public String instanceIdListJsonString;
 
+    /**
+     * <p>The instance name. This parameter is used for filtering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The NLU service type. This parameter is used to filter instances by the source of their conversational AI capabilities. If you do not set this parameter, instances of all types are returned.</p>
+     * <ul>
+     * <li><p><code>MANAGED</code>: managed. This value is deprecated.</p>
+     * </li>
+     * <li><p><code>AUTHORIZED</code>: authorized. In the public cloud, this indicates the Chatbot service.</p>
+     * </li>
+     * <li><p><code>PROVIDED</code>: private. This service is configured in the console with parameters such as <code>as</code>, <code>sk</code>, and <code>chatEndpoint</code>.</p>
+     * </li>
+     * <li><p><code>CCC_AUTHORIZED</code>: a chatbot authorized by Cloud Connect Center (CCC).</p>
+     * </li>
+     * <li><p><code>CCC_FUNCTION</code>: Alibaba Cloud Function Compute.</p>
+     * </li>
+     * <li><p><code>SSE_FUNCTION</code>: a streaming function service. This refers to a Function Compute instance that supports Server-Sent Events (SSE) for integration with third-party large language model (LLM) chatbots.</p>
+     * </li>
+     * <li><p><code>PROMPTS</code>: integration with foundational models such as Qwen.</p>
+     * </li>
+     * <li><p><code>LOCAL</code>: a private cloud instance of Chatbot.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>[Managed]</p>
+     * <p>[&quot;CCC_AUTHORIZED&quot;]</p>
      */
     @NameInMap("NluServiceTypeListJsonString")
     public String nluServiceTypeListJsonString;
 
+    /**
+     * <p>The inbound number. This parameter is used for filtering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>021xxxxxxx</p>
+     */
     @NameInMap("Number")
     public String number;
 
     /**
+     * <p>The number of the page to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +69,7 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +78,42 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The instance status. This parameter is used for filtering. If you do not set this parameter, instances in all statuses are returned.</p>
+     * <ul>
+     * <li><p><code>DISABLED</code>: disabled</p>
+     * </li>
+     * <li><p><code>PUBLISHED</code>: published</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLISHED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p>If you set <code>UnionSource</code> to <code>CCC</code>, set this parameter to the ID of your CCC instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>zhyl</p>
+     */
     @NameInMap("UnionInstanceId")
     public String unionInstanceId;
 
+    /**
+     * <p>The source.</p>
+     * <ul>
+     * <li><code>CCC</code>: Cloud Connect Center</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CCC</p>
+     */
     @NameInMap("UnionSource")
     public String unionSource;
 

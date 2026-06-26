@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DialogueRequest extends TeaModel {
     /**
+     * <p>The conversation context.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class DialogueRequest extends TeaModel {
     public String additionalContext;
 
     /**
+     * <p>The called number.</p>
+     * 
      * <strong>example:</strong>
      * <p>10086</p>
      */
@@ -19,6 +23,8 @@ public class DialogueRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>The calling number.</p>
+     * 
      * <strong>example:</strong>
      * <p>18851708605</p>
      */
@@ -26,6 +32,7 @@ public class DialogueRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>The ID of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +45,7 @@ public class DialogueRequest extends TeaModel {
     public String emotion;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +55,8 @@ public class DialogueRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the Alibaba Cloud account that owns the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1426738157626835</p>
      */
@@ -54,7 +64,11 @@ public class DialogueRequest extends TeaModel {
     public Long instanceOwnerId;
 
     /**
+     * <p>The user\&quot;s input.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>行吧，那我就不打扰您了，再见。</p>
      */
     @NameInMap("Utterance")
     public String utterance;

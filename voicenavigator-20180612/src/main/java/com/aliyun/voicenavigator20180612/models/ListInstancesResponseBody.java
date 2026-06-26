@@ -4,10 +4,15 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,6 +20,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A8AED3C8-F57B-5D71-9A34-4A170287533F</p>
      */
@@ -29,6 +38,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,23 +92,42 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <p>A list of applicable operations.</p>
+         */
         @NameInMap("ApplicableOperations")
         public java.util.List<String> applicableOperations;
 
         /**
+         * <p>The maximum number of concurrent calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("Concurrency")
         public Long concurrency;
 
+        /**
+         * <p>The time when the instance was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1658202465000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试的实例</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dc437bba-5a25-4bbc-b4c2-f268864bebb5</p>
          */
@@ -105,6 +135,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time when the instance was last modified. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1582266750353</p>
          */
@@ -112,31 +144,68 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The user who last modified the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 
+        /**
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试实例</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The parameters of the NLU service in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;agentId&quot;:&quot;1213503&quot;,&quot;isCCCAgent&quot;:&quot;true&quot;,&quot;agentKey&quot;:&quot;107e04a7519243eb83c9b549ea3b6829_p_ccc_public&quot;}</p>
+         */
         @NameInMap("NluServiceParamsJson")
         public String nluServiceParamsJson;
 
+        /**
+         * <p>The list of inbound numbers.</p>
+         */
         @NameInMap("Numbers")
         public java.util.List<String> numbers;
 
         /**
+         * <p>The status of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Published</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The instance ID from the source system.</p>
+         * <blockquote>
+         * <p>If UnionSource is CCC, this parameter indicates the instance ID of the Cloud Communication Center instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zhyl</p>
+         */
         @NameInMap("UnionInstanceId")
         public String unionInstanceId;
 
+        /**
+         * <p>The source of the instance.</p>
+         * <ul>
+         * <li><code>CCC</code>: Cloud Communication Center</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CCC</p>
+         */
         @NameInMap("UnionSource")
         public String unionSource;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadUrlResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateDownloadUrlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The file URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://ssml-test.oss-cn-shanghai.aliyuncs.com/key">http://ssml-test.oss-cn-shanghai.aliyuncs.com/key</a></p>
      */
@@ -19,6 +23,8 @@ public class CreateDownloadUrlResponseBody extends TeaModel {
     public String fileHttpUrl;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateDownloadUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>get upload tool url success</p>
      */
@@ -33,6 +41,8 @@ public class CreateDownloadUrlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
      */
@@ -40,6 +50,8 @@ public class CreateDownloadUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

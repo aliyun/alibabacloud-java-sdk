@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportStatisticalDataRequest extends TeaModel {
     /**
+     * <p>The start of the query time range. The value must be a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1582266750353</p>
      */
@@ -12,6 +14,8 @@ public class ExportStatisticalDataRequest extends TeaModel {
     public Long beginTimeLeftRange;
 
     /**
+     * <p>The end of the query time range. The value must be a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1582266750353</p>
      */
@@ -19,6 +23,7 @@ public class ExportStatisticalDataRequest extends TeaModel {
     public Long beginTimeRightRange;
 
     /**
+     * <p>The export type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ExportStatisticalDataRequest extends TeaModel {
     public String exportType;
 
     /**
+     * <p>The ID of the Voice Navigator instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class ExportStatisticalDataRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The time unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

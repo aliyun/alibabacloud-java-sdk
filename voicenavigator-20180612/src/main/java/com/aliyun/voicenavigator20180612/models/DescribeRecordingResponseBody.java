@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordingResponseBody extends TeaModel {
     /**
+     * <p>The file name.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019080913202222.wav</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRecordingResponseBody extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The file download URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>url</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRecordingResponseBody extends TeaModel {
     public String filePath;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */

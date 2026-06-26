@@ -8,6 +8,7 @@ public class CollectedNumberRequest extends TeaModel {
     public String additionalContext;
 
     /**
+     * <p>The ID of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class CollectedNumberRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,8 @@ public class CollectedNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the instance owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1426738157626835</p>
      */
@@ -33,6 +37,8 @@ public class CollectedNumberRequest extends TeaModel {
     public Long instanceOwnerId;
 
     /**
+     * <p>The number entered by the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>1500060224</p>
      */

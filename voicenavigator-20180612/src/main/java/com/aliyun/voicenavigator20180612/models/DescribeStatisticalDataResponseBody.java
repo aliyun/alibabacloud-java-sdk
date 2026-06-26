@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStatisticalDataResponseBody extends TeaModel {
     /**
+     * <p>The total number of conversations.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     public Long conversationTotalNum;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */
@@ -19,16 +23,23 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of resolved questions.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
     @NameInMap("ResolvedQuestionTotalNum")
     public Long resolvedQuestionTotalNum;
 
+    /**
+     * <p>The array of statistical data over time.</p>
+     */
     @NameInMap("StatisticalDataReports")
     public java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> statisticalDataReports;
 
     /**
+     * <p>The total pass rate of multi-turn dialogues.</p>
+     * 
      * <strong>example:</strong>
      * <p>80.00%</p>
      */
@@ -36,6 +47,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     public String totalDialoguePassRate;
 
     /**
+     * <p>The total knowledge base hit rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>80.00%</p>
      */
@@ -43,6 +56,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     public String totalKnowledgeHitRate;
 
     /**
+     * <p>The total resolution rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>80.00%</p>
      */
@@ -50,6 +65,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     public String totalResolutionRate;
 
     /**
+     * <p>The total valid answer rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>80.00%</p>
      */
@@ -127,6 +144,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
 
     public static class DescribeStatisticalDataResponseBodyStatisticalDataReports extends TeaModel {
         /**
+         * <p>The pass rate of multi-turn dialogues.</p>
+         * 
          * <strong>example:</strong>
          * <p>80.00%</p>
          */
@@ -134,6 +153,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         public String dialoguePassRate;
 
         /**
+         * <p>The knowledge base hit rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>80.00%</p>
          */
@@ -141,6 +162,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         public String knowledgeHitRate;
 
         /**
+         * <p>The resolution rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>80.00%</p>
          */
@@ -148,6 +171,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         public String resolutionRate;
 
         /**
+         * <p>The number of resolved questions.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -155,6 +180,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         public Integer resolvedQuestionNum;
 
         /**
+         * <p>The date of the statistics.</p>
+         * 
          * <strong>example:</strong>
          * <p>19:00:00</p>
          */
@@ -162,6 +189,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         public String statisticalDate;
 
         /**
+         * <p>The total number of conversations.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -169,6 +198,8 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         public Integer totalConversationNum;
 
         /**
+         * <p>The valid answer rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>80.0</p>
          */

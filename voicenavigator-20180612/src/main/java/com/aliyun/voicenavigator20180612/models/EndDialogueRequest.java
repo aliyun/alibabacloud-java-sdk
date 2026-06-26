@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EndDialogueRequest extends TeaModel {
     /**
+     * <p>The ID of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class EndDialogueRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The hang-up parameters, in a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;duration\&quot;:40,\&quot;endTime\&quot;:1645082505345,\&quot;hangUpDirection\&quot;:\&quot;ivr\&quot;,\&quot;hasLastPlaybackCompleted\&quot;:true,\&quot;startTime\&quot;:1645082505305}</p>
      */
@@ -21,6 +24,7 @@ public class EndDialogueRequest extends TeaModel {
     public String hangUpParams;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class EndDialogueRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the instance owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1399572315967217</p>
      */

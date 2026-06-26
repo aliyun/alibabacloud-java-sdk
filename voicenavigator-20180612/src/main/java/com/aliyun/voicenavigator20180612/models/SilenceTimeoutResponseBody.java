@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SilenceTimeoutResponseBody extends TeaModel {
     /**
+     * <p>The system\&quot;s next action.</p>
+     * 
      * <strong>example:</strong>
      * <p>TransferToAgent</p>
      */
@@ -12,6 +14,8 @@ public class SilenceTimeoutResponseBody extends TeaModel {
     public String action;
 
     /**
+     * <p>Parameters for the action defined in the Action parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;skillGroupId&quot;: &quot;ABC&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class SilenceTimeoutResponseBody extends TeaModel {
     public String actionParams;
 
     /**
+     * <p>Indicates whether the action is interruptible.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,12 +32,20 @@ public class SilenceTimeoutResponseBody extends TeaModel {
     public Boolean interruptible;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The text response to play to the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>正在为你转接人工坐席</p>
+     */
     @NameInMap("TextResponse")
     public String textResponse;
 

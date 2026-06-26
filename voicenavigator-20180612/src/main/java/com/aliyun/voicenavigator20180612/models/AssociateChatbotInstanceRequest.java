@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class AssociateChatbotInstanceRequest extends TeaModel {
     /**
+     * <p>The chatbot ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>chatbot-720edd02b66a</p>
      */
     @NameInMap("ChatbotInstanceId")
     public String chatbotInstanceId;
 
+    /**
+     * <p>The name of the chatbot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>客服机器人</p>
+     */
     @NameInMap("ChatbotName")
     public String chatbotName;
 
     /**
+     * <p>The navigation instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

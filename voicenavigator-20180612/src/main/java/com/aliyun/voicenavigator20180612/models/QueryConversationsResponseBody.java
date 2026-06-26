@@ -4,10 +4,15 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class QueryConversationsResponseBody extends TeaModel {
+    /**
+     * <p>The conversation list.</p>
+     */
     @NameInMap("Conversations")
     public java.util.List<QueryConversationsResponseBodyConversations> conversations;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class QueryConversationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class QueryConversationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */
@@ -29,6 +38,8 @@ public class QueryConversationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of conversation records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class QueryConversationsResponseBody extends TeaModel {
 
     public static class QueryConversationsResponseBodyConversations extends TeaModel {
         /**
+         * <p>The start time. This value is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1582183381000</p>
          */
@@ -89,6 +102,8 @@ public class QueryConversationsResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
+         * <p>The calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>02811111111</p>
          */
@@ -96,6 +111,8 @@ public class QueryConversationsResponseBody extends TeaModel {
         public String callingNumber;
 
         /**
+         * <p>The conversation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
@@ -103,6 +120,8 @@ public class QueryConversationsResponseBody extends TeaModel {
         public String conversationId;
 
         /**
+         * <p>The effective answer count.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -110,6 +129,8 @@ public class QueryConversationsResponseBody extends TeaModel {
         public Integer effectiveAnswerCount;
 
         /**
+         * <p>The end time. This value is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1582183481000</p>
          */
@@ -117,6 +138,8 @@ public class QueryConversationsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The ID of the skill group.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAA</p>
          */
@@ -124,6 +147,8 @@ public class QueryConversationsResponseBody extends TeaModel {
         public String skillGroupId;
 
         /**
+         * <p>Whether the conversation was transferred to an agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -131,6 +156,8 @@ public class QueryConversationsResponseBody extends TeaModel {
         public Boolean transferredToAgent;
 
         /**
+         * <p>The user utterance count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

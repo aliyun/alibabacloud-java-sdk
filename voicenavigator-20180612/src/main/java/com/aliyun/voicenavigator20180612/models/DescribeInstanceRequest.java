@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecbfa5e3-1838-4e8a-aa08-fa8b713b82df</p>
+     * <p>cd6fc91bc13445c2af7f2e3e31418520</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

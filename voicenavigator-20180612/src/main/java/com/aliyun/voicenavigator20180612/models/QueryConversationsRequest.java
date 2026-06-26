@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryConversationsRequest extends TeaModel {
     /**
+     * <p>The start of the time range to query. This value is a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1582183381000</p>
      */
@@ -12,6 +14,8 @@ public class QueryConversationsRequest extends TeaModel {
     public Long beginTimeLeftRange;
 
     /**
+     * <p>The end of the time range to query. This value is a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1582356181000</p>
      */
@@ -19,6 +23,8 @@ public class QueryConversationsRequest extends TeaModel {
     public Long beginTimeRightRange;
 
     /**
+     * <p>The calling number.</p>
+     * 
      * <strong>example:</strong>
      * <p>02811111111</p>
      */
@@ -26,6 +32,7 @@ public class QueryConversationsRequest extends TeaModel {
     public String callingNumber;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,7 @@ public class QueryConversationsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,7 @@ public class QueryConversationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

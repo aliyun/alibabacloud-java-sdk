@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EndDialogueResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListChatbotInstancesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
@@ -18,6 +20,7 @@ public class ListChatbotInstancesRequest extends TeaModel {
     public String nluServiceType;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +30,8 @@ public class ListChatbotInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
