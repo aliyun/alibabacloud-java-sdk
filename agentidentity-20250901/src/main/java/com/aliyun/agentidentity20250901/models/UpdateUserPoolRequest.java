@@ -7,10 +7,6 @@ public class UpdateUserPoolRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

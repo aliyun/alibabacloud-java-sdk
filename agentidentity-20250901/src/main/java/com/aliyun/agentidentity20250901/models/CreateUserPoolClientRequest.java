@@ -4,48 +4,24 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateUserPoolClientRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>3600</p>
-     */
     @NameInMap("AccessTokenValidity")
     public String accessTokenValidity;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-web-app</p>
-     */
     @NameInMap("ClientName")
     public String clientName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("EnforcePKCE")
     public Boolean enforcePKCE;
 
     @NameInMap("RedirectURIs")
     public java.util.List<String> redirectURIs;
 
-    /**
-     * <strong>example:</strong>
-     * <p>86400</p>
-     */
     @NameInMap("RefreshTokenValidity")
     public String refreshTokenValidity;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("SecretRequired")
     public Boolean secretRequired;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

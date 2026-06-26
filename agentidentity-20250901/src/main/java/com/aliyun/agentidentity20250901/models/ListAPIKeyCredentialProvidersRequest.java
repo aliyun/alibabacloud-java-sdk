@@ -4,17 +4,9 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListAPIKeyCredentialProvidersRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l8i017XhgKLf/HqWDGD375</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 

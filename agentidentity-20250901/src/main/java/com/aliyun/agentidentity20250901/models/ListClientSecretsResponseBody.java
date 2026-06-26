@@ -7,10 +7,6 @@ public class ListClientSecretsResponseBody extends TeaModel {
     @NameInMap("ClientSecrets")
     public java.util.List<ListClientSecretsResponseBodyClientSecrets> clientSecrets;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,38 +32,18 @@ public class ListClientSecretsResponseBody extends TeaModel {
     }
 
     public static class ListClientSecretsResponseBodyClientSecrets extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>my-web-app</p>
-         */
         @NameInMap("ClientName")
         public String clientName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>secret_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("ClientSecretId")
         public String clientSecretId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>my-agent-userpool</p>
-         */
         @NameInMap("UserPoolName")
         public String userPoolName;
 

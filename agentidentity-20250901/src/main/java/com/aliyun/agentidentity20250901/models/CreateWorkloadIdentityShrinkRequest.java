@@ -10,24 +10,12 @@ public class CreateWorkloadIdentityShrinkRequest extends TeaModel {
     @NameInMap("CreateRAMRole")
     public Boolean createRAMRole;
 
-    /**
-     * <strong>example:</strong>
-     * <p>example agent</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>identity-provider-okta</p>
-     */
     @NameInMap("IdentityProviderName")
     public String identityProviderName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>acs:ram::123456:role/agent-101-role</p>
-     */
     @NameInMap("RoleArn")
     public String roleArn;
 
@@ -40,10 +28,6 @@ public class CreateWorkloadIdentityShrinkRequest extends TeaModel {
     @NameInMap("SourcePlatform")
     public String sourcePlatform;
 
-    /**
-     * <strong>example:</strong>
-     * <p>agent-101</p>
-     */
     @NameInMap("WorkloadIdentityName")
     public String workloadIdentityName;
 

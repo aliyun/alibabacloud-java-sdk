@@ -4,24 +4,12 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateTokenVaultRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>example description</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>acs:ram::123456:role/AliyunAgentIdentityVaultRole</p>
-     */
     @NameInMap("RoleArn")
     public String roleArn;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("TokenVaultName")
     public String tokenVaultName;
 

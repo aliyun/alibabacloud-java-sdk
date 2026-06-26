@@ -4,52 +4,24 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class SetSAMLIdentityProviderShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
-     */
     @NameInMap("EntityId")
     public String entityId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Enabled</p>
-     */
     @NameInMap("JITProvisionStatus")
     public String JITProvisionStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Enabled</p>
-     */
     @NameInMap("JITUpdateStatus")
     public String JITUpdateStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://idp.example.com/sso/saml">https://idp.example.com/sso/saml</a></p>
-     */
     @NameInMap("LoginURL")
     public String loginURL;
 
-    /**
-     * <strong>example:</strong>
-     * <p>HTTP-Redirect</p>
-     */
     @NameInMap("SAMLBindingType")
     public String SAMLBindingType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Enabled</p>
-     */
     @NameInMap("SSOStatus")
     public String SSOStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

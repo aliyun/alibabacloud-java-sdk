@@ -4,31 +4,15 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListUserPoolsResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>TGlzdFVzZXJQb29sczo6MjA=</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>5</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -81,34 +65,21 @@ public class ListUserPoolsResponseBody extends TeaModel {
     }
 
     public static class ListUserPoolsResponseBodyUserPools extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
+        @NameInMap("SourcePlatform")
+        public String sourcePlatform;
+
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>up-xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("UserPoolId")
         public String userPoolId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>my-agent-userpool</p>
-         */
         @NameInMap("UserPoolName")
         public String userPoolName;
 
@@ -131,6 +102,14 @@ public class ListUserPoolsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListUserPoolsResponseBodyUserPools setSourcePlatform(String sourcePlatform) {
+            this.sourcePlatform = sourcePlatform;
+            return this;
+        }
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
         }
 
         public ListUserPoolsResponseBodyUserPools setUpdateTime(String updateTime) {

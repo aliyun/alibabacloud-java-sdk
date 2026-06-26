@@ -4,17 +4,9 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetPolicyRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>rate-limit-policy</p>
-     */
     @NameInMap("PolicyName")
     public String policyName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default-policy-set</p>
-     */
     @NameInMap("PolicySetName")
     public String policySetName;
 

@@ -7,10 +7,6 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
     @NameInMap("APIKeyCredentialProvider")
     public GetAPIKeyCredentialProviderResponseBodyAPIKeyCredentialProvider APIKeyCredentialProvider;
 
-    /**
-     * <strong>example:</strong>
-     * <p>76BF2570-76F5-5093-87CE-0918DD85752C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,41 +32,21 @@ public class GetAPIKeyCredentialProviderResponseBody extends TeaModel {
     }
 
     public static class GetAPIKeyCredentialProviderResponseBodyAPIKeyCredentialProvider extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>api-key-dash-scope</p>
-         */
         @NameInMap("APIKeyCredentialProviderName")
         public String APIKeyCredentialProviderName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/apikeycredentialprovider/api-key-dash-scope</p>
-         */
         @NameInMap("CredentialProviderArn")
         public String credentialProviderArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example provider</p>
-         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

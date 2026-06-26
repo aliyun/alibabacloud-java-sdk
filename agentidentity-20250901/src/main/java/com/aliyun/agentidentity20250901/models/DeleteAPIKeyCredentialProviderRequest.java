@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteAPIKeyCredentialProviderRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>api-key-dash-scope</p>
-     */
     @NameInMap("APIKeyCredentialProviderName")
     public String APIKeyCredentialProviderName;
 

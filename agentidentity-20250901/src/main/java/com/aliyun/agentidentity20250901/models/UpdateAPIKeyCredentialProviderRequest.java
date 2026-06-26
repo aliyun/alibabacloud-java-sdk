@@ -4,24 +4,12 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateAPIKeyCredentialProviderRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>new example api key</p>
-     */
     @NameInMap("APIKey")
     public String APIKey;
 
-    /**
-     * <strong>example:</strong>
-     * <p>api-key-dash-scope</p>
-     */
     @NameInMap("APIKeyCredentialProviderName")
     public String APIKeyCredentialProviderName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>new example provider</p>
-     */
     @NameInMap("Description")
     public String description;
 

@@ -7,10 +7,6 @@ public class UpdateGatewayPolicyConfigResponseBody extends TeaModel {
     @NameInMap("GatewayPolicyConfig")
     public UpdateGatewayPolicyConfigResponseBodyGatewayPolicyConfig gatewayPolicyConfig;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,17 +32,9 @@ public class UpdateGatewayPolicyConfigResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayPolicyConfigResponseBodyGatewayPolicyConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ENFORCE</p>
-         */
         @NameInMap("EnforcementMode")
         public String enforcementMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set</p>
-         */
         @NameInMap("PolicySetArn")
         public String policySetArn;
 

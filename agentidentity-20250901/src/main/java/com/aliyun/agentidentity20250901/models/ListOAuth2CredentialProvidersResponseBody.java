@@ -4,34 +4,18 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lURp7zQ6t4/95+g/5jN5r/</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("OAuth2CredentialProviders")
     public java.util.List<ListOAuth2CredentialProvidersResponseBodyOAuth2CredentialProviders> OAuth2CredentialProviders;
 
-    /**
-     * <strong>example:</strong>
-     * <p>690C4C7A-AFB9-54ED-9A06-84426F5C6369</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>400</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -81,45 +65,21 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
     }
 
     public static class ListOAuth2CredentialProvidersResponseBodyOAuth2CredentialProviders extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb">https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb</a></p>
-         */
         @NameInMap("CallbackURL")
         public String callbackURL;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/oauth2credentialprovider/oauth-provider-aliyun</p>
-         */
         @NameInMap("CredentialProviderArn")
         public String credentialProviderArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AliyunOAuth2</p>
-         */
         @NameInMap("CredentialProviderVendor")
         public String credentialProviderVendor;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example provider</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>oauth2-provider-aliyun</p>
-         */
         @NameInMap("OAuth2CredentialProviderName")
         public String OAuth2CredentialProviderName;
 
@@ -129,10 +89,6 @@ public class ListOAuth2CredentialProvidersResponseBody extends TeaModel {
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

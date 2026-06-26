@@ -4,33 +4,15 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateOAuth2CredentialProviderShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb">https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb</a></p>
-     */
     @NameInMap("CallbackURL")
     public String callbackURL;
 
-    /**
-     * <p>AliyunOAuth2</p>
-     * 
-     * <strong>example:</strong>
-     * <p>AliyunOAuth2</p>
-     */
     @NameInMap("CredentialProviderVendor")
     public String credentialProviderVendor;
 
-    /**
-     * <strong>example:</strong>
-     * <p>new example provider</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>oauth2-provider-aliyun</p>
-     */
     @NameInMap("OAuth2CredentialProviderName")
     public String OAuth2CredentialProviderName;
 

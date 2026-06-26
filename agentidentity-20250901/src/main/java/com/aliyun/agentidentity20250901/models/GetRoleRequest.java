@@ -4,17 +4,9 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetRoleRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>Analyst</p>
-     */
     @NameInMap("RoleName")
     public String roleName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

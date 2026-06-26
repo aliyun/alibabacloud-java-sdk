@@ -4,19 +4,9 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class AddSAMLIdentityProviderCertificateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>-----BEGIN CERTIFICATE-----
-     * MIIDdz...
-     * -----END CERTIFICATE-----</p>
-     */
     @NameInMap("X509Certificate")
     public String x509Certificate;
 

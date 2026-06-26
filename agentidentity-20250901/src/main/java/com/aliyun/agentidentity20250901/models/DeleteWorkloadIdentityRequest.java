@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteWorkloadIdentityRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>agent-101</p>
-     */
     @NameInMap("WorkloadIdentityName")
     public String workloadIdentityName;
 

@@ -7,10 +7,6 @@ public class GetPolicyResponseBody extends TeaModel {
     @NameInMap("Policy")
     public GetPolicyResponseBodyPolicy policy;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,48 +32,24 @@ public class GetPolicyResponseBody extends TeaModel {
     }
 
     public static class GetPolicyResponseBodyPolicy extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-08T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Definition")
         public Definition definition;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example description</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set/policy/rate-limit-policy</p>
-         */
         @NameInMap("PolicyArn")
         public String policyArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rate-limit-policy</p>
-         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default-policy-set</p>
-         */
         @NameInMap("PolicySetName")
         public String policySetName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-08T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

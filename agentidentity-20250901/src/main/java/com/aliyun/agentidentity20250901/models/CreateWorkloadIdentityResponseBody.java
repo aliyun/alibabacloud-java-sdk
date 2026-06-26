@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkloadIdentityResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>D325DF9D-7CA8-5C47-BA0C-9A74873F2BE3</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -39,31 +35,15 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
         @NameInMap("AllowedResourceOAuth2ReturnURLs")
         public java.util.List<String> allowedResourceOAuth2ReturnURLs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example agent</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>identity-provider-okta</p>
-         */
         @NameInMap("IdentityProviderName")
         public String identityProviderName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:ram::123456:role/agent-101-role</p>
-         */
         @NameInMap("RoleArn")
         public String roleArn;
 
@@ -76,24 +56,12 @@ public class CreateWorkloadIdentityResponseBody extends TeaModel {
         @NameInMap("SourcePlatform")
         public String sourcePlatform;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:workloadidentitydirectory/default/workloadidentity/agent-101</p>
-         */
         @NameInMap("WorkloadIdentityArn")
         public String workloadIdentityArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>agent-101</p>
-         */
         @NameInMap("WorkloadIdentityName")
         public String workloadIdentityName;
 

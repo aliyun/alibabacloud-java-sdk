@@ -7,31 +7,15 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
     @NameInMap("APIKeyCredentialProviders")
     public java.util.List<ListAPIKeyCredentialProvidersResponseBodyAPIKeyCredentialProviders> APIKeyCredentialProviders;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAWbTEdBU0yvszsl8EEXALb8=</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>4D51596A-8A87-565B-8EDE-45141A02F11C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>452</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -81,41 +65,21 @@ public class ListAPIKeyCredentialProvidersResponseBody extends TeaModel {
     }
 
     public static class ListAPIKeyCredentialProvidersResponseBodyAPIKeyCredentialProviders extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>api-key-dash-scope</p>
-         */
         @NameInMap("APIKeyCredentialProviderName")
         public String APIKeyCredentialProviderName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/apikeycredentialprovider/api-key-dash-scope</p>
-         */
         @NameInMap("CredentialProviderArn")
         public String credentialProviderArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example provider</p>
-         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

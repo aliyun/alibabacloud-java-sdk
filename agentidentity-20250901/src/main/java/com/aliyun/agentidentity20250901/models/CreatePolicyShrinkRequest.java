@@ -7,24 +7,12 @@ public class CreatePolicyShrinkRequest extends TeaModel {
     @NameInMap("Definition")
     public String definitionShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>example description</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>rate-limit-policy</p>
-     */
     @NameInMap("PolicyName")
     public String policyName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default-policy-set</p>
-     */
     @NameInMap("PolicySetName")
     public String policySetName;
 

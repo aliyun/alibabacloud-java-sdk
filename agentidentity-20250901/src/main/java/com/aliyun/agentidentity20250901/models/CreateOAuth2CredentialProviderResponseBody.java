@@ -7,10 +7,6 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
     @NameInMap("OAuth2CredentialProvider")
     public CreateOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider OAuth2CredentialProvider;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,45 +32,21 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
     }
 
     public static class CreateOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb">https://agentidentitydata.cn-beijing.aliyuncs.com/oauth2/callback/d51171bc-0dae-3219-8e65-6b4cdafa3beb</a></p>
-         */
         @NameInMap("CallbackURL")
         public String callbackURL;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default/oauth2credentialprovider/oauth-provider-aliyun</p>
-         */
         @NameInMap("CredentialProviderArn")
         public String credentialProviderArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AliyunOAuth2</p>
-         */
         @NameInMap("CredentialProviderVendor")
         public String credentialProviderVendor;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example provider</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>oauth-provider-aliyun</p>
-         */
         @NameInMap("OAuth2CredentialProviderName")
         public String OAuth2CredentialProviderName;
 
@@ -84,10 +56,6 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

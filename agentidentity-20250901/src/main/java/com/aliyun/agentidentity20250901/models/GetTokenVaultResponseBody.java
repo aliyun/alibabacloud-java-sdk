@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetTokenVaultResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,17 +32,9 @@ public class GetTokenVaultResponseBody extends TeaModel {
     }
 
     public static class GetTokenVaultResponseBodyTokenVaultEncryptionConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>SERVICE_MANAGED_KEY</p>
-         */
         @NameInMap("KeyType")
         public String keyType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:kms:cn-beijing:123456:key/key-bjxxxxxxxx</p>
-         */
         @NameInMap("KmsKeyArn")
         public String kmsKeyArn;
 
@@ -74,48 +62,24 @@ public class GetTokenVaultResponseBody extends TeaModel {
     }
 
     public static class GetTokenVaultResponseBodyTokenVault extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-08T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example description</p>
-         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("EncryptionConfig")
         public GetTokenVaultResponseBodyTokenVaultEncryptionConfig encryptionConfig;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:ram::123456:role/AliyunAgentIdentityVaultRole</p>
-         */
         @NameInMap("RoleArn")
         public String roleArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:tokenvault/default</p>
-         */
         @NameInMap("TokenVaultArn")
         public String tokenVaultArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-08T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

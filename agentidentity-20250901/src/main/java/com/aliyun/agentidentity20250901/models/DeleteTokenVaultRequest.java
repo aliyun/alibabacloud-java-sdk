@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteTokenVaultRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
     @NameInMap("TokenVaultName")
     public String tokenVaultName;
 

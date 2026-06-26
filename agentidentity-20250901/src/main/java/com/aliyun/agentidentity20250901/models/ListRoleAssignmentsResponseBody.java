@@ -7,31 +7,15 @@ public class ListRoleAssignmentsResponseBody extends TeaModel {
     @NameInMap("Assignments")
     public java.util.List<ListRoleAssignmentsResponseBodyAssignments> assignments;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>TGlzdEFzc2lnbm1lbnRzOjoyMA==</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -81,52 +65,24 @@ public class ListRoleAssignmentsResponseBody extends TeaModel {
     }
 
     public static class ListRoleAssignmentsResponseBodyAssignments extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("PrincipalId")
         public String principalId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>alice</p>
-         */
         @NameInMap("PrincipalName")
         public String principalName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>User</p>
-         */
         @NameInMap("PrincipalType")
         public String principalType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("RoleId")
         public String roleId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Analyst</p>
-         */
         @NameInMap("RoleName")
         public String roleName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>up_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("UserPoolId")
         public String userPoolId;
 

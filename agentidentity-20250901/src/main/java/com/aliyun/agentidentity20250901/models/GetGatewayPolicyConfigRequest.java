@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayPolicyConfigRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
-     */
     @NameInMap("GatewayArn")
     public String gatewayArn;
 

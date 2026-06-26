@@ -4,31 +4,15 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteClientSecretRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>client-xxxxxxxxxxxxxxxxxxxx</p>
-     */
     @NameInMap("ClientId")
     public String clientId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-web-app</p>
-     */
     @NameInMap("ClientName")
     public String clientName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>secret-xxxxxxxxxxxxxxxxxxxx</p>
-     */
     @NameInMap("ClientSecretId")
     public String clientSecretId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetIdentityProviderRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>identity-provider-okta</p>
-     */
     @NameInMap("IdentityProviderName")
     public String identityProviderName;
 

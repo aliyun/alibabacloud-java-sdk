@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleAssignmentResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,52 +32,24 @@ public class CreateRoleAssignmentResponseBody extends TeaModel {
     }
 
     public static class CreateRoleAssignmentResponseBodyRoleAssignment extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("PrincipalId")
         public String principalId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>alice</p>
-         */
         @NameInMap("PrincipalName")
         public String principalName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>User</p>
-         */
         @NameInMap("PrincipalType")
         public String principalType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("RoleId")
         public String roleId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Analyst</p>
-         */
         @NameInMap("RoleName")
         public String roleName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>up_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("UserPoolId")
         public String userPoolId;
 

@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,41 +32,30 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Alice Wang</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
+        @NameInMap("Email")
+        public String email;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>user_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>alice</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
@@ -101,6 +86,30 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public GetUserResponseBodyUser setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public GetUserResponseBodyUser setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetUserResponseBodyUser setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public GetUserResponseBodyUser setUpdateTime(String updateTime) {

@@ -7,31 +7,15 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     @NameInMap("IdentityProviders")
     public java.util.List<ListIdentityProvidersResponseBodyIdentityProviders> identityProviders;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lsy4U8Dgz6TCndCo6o5TB8</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>D325DF9D-7CA8-5C47-BA0C-9A74873F2BE3</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>33</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -84,45 +68,21 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         @NameInMap("AllowedAudience")
         public java.util.List<String> allowedAudience;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ods_api_public_ios_wanxin_boxgame_user_behavior_integration_di</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://oauth.aliyun.com/.well-known/openid-configuration">https://oauth.aliyun.com/.well-known/openid-configuration</a></p>
-         */
         @NameInMap("DiscoveryURL")
         public String discoveryURL;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:identityprovider/identity-provider-okta</p>
-         */
         @NameInMap("IdentityProviderArn")
         public String identityProviderArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>identity-provider-okta</p>
-         */
         @NameInMap("IdentityProviderName")
         public String identityProviderName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-06-09T02:04:23</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

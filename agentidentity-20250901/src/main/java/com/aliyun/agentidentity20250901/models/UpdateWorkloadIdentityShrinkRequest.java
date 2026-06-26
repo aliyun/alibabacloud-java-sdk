@@ -11,34 +11,18 @@ public class UpdateWorkloadIdentityShrinkRequest extends TeaModel {
     @NameInMap("AllowedResourceOAuth2ReturnURLs")
     public String allowedResourceOAuth2ReturnURLsShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>example agent</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>identity-provider-okta</p>
-     */
     @NameInMap("IdentityProviderName")
     public String identityProviderName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>acs:ram::123456:role/agent-101-role</p>
-     */
     @NameInMap("RoleArn")
     public String roleArn;
 
     @NameInMap("SessionBindingEnabled")
     public String sessionBindingEnabled;
 
-    /**
-     * <strong>example:</strong>
-     * <p>agent-101</p>
-     */
     @NameInMap("WorkloadIdentityName")
     public String workloadIdentityName;
 

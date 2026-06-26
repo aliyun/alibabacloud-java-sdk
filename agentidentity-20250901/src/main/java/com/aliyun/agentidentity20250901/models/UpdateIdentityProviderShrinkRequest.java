@@ -7,24 +7,12 @@ public class UpdateIdentityProviderShrinkRequest extends TeaModel {
     @NameInMap("AllowedAudience")
     public String allowedAudienceShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>example identity provider</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://oauth.aliyun.com/.well-known/openid-configuration">https://oauth.aliyun.com/.well-known/openid-configuration</a></p>
-     */
     @NameInMap("DiscoveryURL")
     public String discoveryURL;
 
-    /**
-     * <strong>example:</strong>
-     * <p>identity-provider-okta</p>
-     */
     @NameInMap("IdentityProviderName")
     public String identityProviderName;
 

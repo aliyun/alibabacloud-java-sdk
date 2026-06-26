@@ -7,24 +7,12 @@ public class ListPolicySetAttachedGatewaysRequest extends TeaModel {
     @NameInMap("GatewayType")
     public String gatewayType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAdDWBF2</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default-policy-set</p>
-     */
     @NameInMap("PolicySetName")
     public String policySetName;
 

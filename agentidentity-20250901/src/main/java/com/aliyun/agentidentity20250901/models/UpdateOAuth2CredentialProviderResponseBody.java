@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class UpdateOAuth2CredentialProviderResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>D9A9DC39-61BB-53FD-9ADC-B14884F21038</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

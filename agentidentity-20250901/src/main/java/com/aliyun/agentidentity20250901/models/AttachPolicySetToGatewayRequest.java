@@ -4,27 +4,15 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class AttachPolicySetToGatewayRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>ENFORCE</p>
-     */
     @NameInMap("EnforcementMode")
     public String enforcementMode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
-     */
     @NameInMap("GatewayArn")
     public String gatewayArn;
 
     @NameInMap("GatewayType")
     public String gatewayType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>default-policy-set</p>
-     */
     @NameInMap("PolicySetName")
     public String policySetName;
 

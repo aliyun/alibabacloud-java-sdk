@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class GetRoleResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,41 +32,21 @@ public class GetRoleResponseBody extends TeaModel {
     }
 
     public static class GetRoleResponseBodyRole extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>role_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("RoleId")
         public String roleId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Analyst</p>
-         */
         @NameInMap("RoleName")
         public String roleName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Manual</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

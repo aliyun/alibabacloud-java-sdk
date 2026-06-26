@@ -7,31 +7,15 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
     @NameInMap("AttachedGateways")
     public java.util.List<ListPolicySetAttachedGatewaysResponseBodyAttachedGateways> attachedGateways;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAdDWBF2</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2A48EB1D-D645-5758-91AF-EDF8E36E257B</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -81,31 +65,15 @@ public class ListPolicySetAttachedGatewaysResponseBody extends TeaModel {
     }
 
     public static class ListPolicySetAttachedGatewaysResponseBodyAttachedGateways extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>default-policy-set</p>
-         */
         @NameInMap("AttachedPolicySetName")
         public String attachedPolicySetName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-08T06:19:17Z</p>
-         */
         @NameInMap("AttachedTime")
         public String attachedTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ENFORCE</p>
-         */
         @NameInMap("EnforcementMode")
         public String enforcementMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:gateway/my-gateway</p>
-         */
         @NameInMap("GatewayArn")
         public String gatewayArn;
 

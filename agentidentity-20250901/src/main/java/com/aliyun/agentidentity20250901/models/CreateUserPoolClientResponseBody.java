@@ -7,10 +7,6 @@ public class CreateUserPoolClientResponseBody extends TeaModel {
     @NameInMap("Client")
     public CreateUserPoolClientResponseBodyClient client;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,17 +32,9 @@ public class CreateUserPoolClientResponseBody extends TeaModel {
     }
 
     public static class CreateUserPoolClientResponseBodyClientClientScopes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>OpenID Connect authentication</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>openid</p>
-         */
         @NameInMap("ScopeName")
         public String scopeName;
 
@@ -74,72 +62,39 @@ public class CreateUserPoolClientResponseBody extends TeaModel {
     }
 
     public static class CreateUserPoolClientResponseBodyClient extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>3600</p>
-         */
         @NameInMap("AccessTokenValidity")
         public String accessTokenValidity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("ClientId")
         public String clientId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>my-web-app</p>
-         */
         @NameInMap("ClientName")
         public String clientName;
 
         @NameInMap("ClientScopes")
         public java.util.List<CreateUserPoolClientResponseBodyClientClientScopes> clientScopes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
+        @NameInMap("ClientType")
+        public String clientType;
+
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("EnforcePKCE")
         public Boolean enforcePKCE;
 
         @NameInMap("RedirectURIs")
         public java.util.List<String> redirectURIs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>86400</p>
-         */
         @NameInMap("RefreshTokenValidity")
         public String refreshTokenValidity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("SecretRequired")
         public Boolean secretRequired;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2026-05-07T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>my-agent-userpool</p>
-         */
         @NameInMap("UserPoolName")
         public String userPoolName;
 
@@ -178,6 +133,14 @@ public class CreateUserPoolClientResponseBody extends TeaModel {
         }
         public java.util.List<CreateUserPoolClientResponseBodyClientClientScopes> getClientScopes() {
             return this.clientScopes;
+        }
+
+        public CreateUserPoolClientResponseBodyClient setClientType(String clientType) {
+            this.clientType = clientType;
+            return this;
+        }
+        public String getClientType() {
+            return this.clientType;
         }
 
         public CreateUserPoolClientResponseBodyClient setCreateTime(String createTime) {

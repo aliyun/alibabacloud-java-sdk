@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class ListSAMLIdentityProviderCertificatesResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,19 +32,9 @@ public class ListSAMLIdentityProviderCertificatesResponseBody extends TeaModel {
     }
 
     public static class ListSAMLIdentityProviderCertificatesResponseBodyX509Certificates extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cert-xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("CertificateId")
         public String certificateId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-----BEGIN CERTIFICATE-----
-         * MIIDdz...
-         * -----END CERTIFICATE-----</p>
-         */
         @NameInMap("X509Certificate")
         public String x509Certificate;
 

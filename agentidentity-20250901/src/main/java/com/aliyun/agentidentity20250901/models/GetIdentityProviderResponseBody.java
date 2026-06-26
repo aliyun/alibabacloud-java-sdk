@@ -7,10 +7,6 @@ public class GetIdentityProviderResponseBody extends TeaModel {
     @NameInMap("IdentityProvider")
     public GetIdentityProviderResponseBodyIdentityProvider identityProvider;
 
-    /**
-     * <strong>example:</strong>
-     * <p>117E1427-1D4C-59CF-A0A8-D7DCDFE88863</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -39,45 +35,21 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @NameInMap("AllowedAudience")
         public java.util.List<String> allowedAudience;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>example agent</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://oauth.aliyun.com/.well-known/openid-configuration">https://oauth.aliyun.com/.well-known/openid-configuration</a></p>
-         */
         @NameInMap("DiscoveryURL")
         public String discoveryURL;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs:agentidentity:cn-beijing:123456:identityprovider/identity-provider-okta</p>
-         */
         @NameInMap("IdentityProviderArn")
         public String identityProviderArn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>identity-provider-okta</p>
-         */
         @NameInMap("IdentityProviderName")
         public String identityProviderName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-12-18T06:19:17Z</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

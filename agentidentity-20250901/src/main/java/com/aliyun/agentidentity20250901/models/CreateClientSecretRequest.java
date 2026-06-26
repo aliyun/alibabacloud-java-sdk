@@ -4,24 +4,12 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class CreateClientSecretRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>client_xxxxxxxxxxxxxxxxxxxx</p>
-     */
     @NameInMap("ClientId")
     public String clientId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-web-app</p>
-     */
     @NameInMap("ClientName")
     public String clientName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

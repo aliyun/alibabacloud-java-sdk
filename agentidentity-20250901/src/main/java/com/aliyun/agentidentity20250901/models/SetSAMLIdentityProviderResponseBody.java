@@ -4,10 +4,6 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class SetSAMLIdentityProviderResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>AABD6E03-4B3A-5687-88FF-72232670ED0C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,19 +32,9 @@ public class SetSAMLIdentityProviderResponseBody extends TeaModel {
     }
 
     public static class SetSAMLIdentityProviderResponseBodySSOIdentityProviderConfigurationX509Certificates extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cert-xxxxxxxxxxxxxxxxxxxx</p>
-         */
         @NameInMap("CertificateId")
         public String certificateId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-----BEGIN CERTIFICATE-----
-         * MIIDdz...
-         * -----END CERTIFICATE-----</p>
-         */
         @NameInMap("X509Certificate")
         public String x509Certificate;
 
@@ -76,45 +62,21 @@ public class SetSAMLIdentityProviderResponseBody extends TeaModel {
     }
 
     public static class SetSAMLIdentityProviderResponseBodySSOIdentityProviderConfiguration extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
-         */
         @NameInMap("EntityId")
         public String entityId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Enabled</p>
-         */
         @NameInMap("JITProvisionStatus")
         public String JITProvisionStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Enabled</p>
-         */
         @NameInMap("JITUpdateStatus")
         public String JITUpdateStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://idp.example.com/sso/saml">https://idp.example.com/sso/saml</a></p>
-         */
         @NameInMap("LoginURL")
         public String loginURL;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HTTP-Redirect</p>
-         */
         @NameInMap("SAMLBindingType")
         public String SAMLBindingType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Enabled</p>
-         */
         @NameInMap("SSOStatus")
         public String SSOStatus;
 

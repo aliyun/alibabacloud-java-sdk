@@ -7,17 +7,9 @@ public class CreateRoleRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Analyst</p>
-     */
     @NameInMap("RoleName")
     public String roleName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 

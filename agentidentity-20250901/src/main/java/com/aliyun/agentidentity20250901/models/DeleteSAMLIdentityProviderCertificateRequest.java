@@ -4,17 +4,9 @@ package com.aliyun.agentidentity20250901.models;
 import com.aliyun.tea.*;
 
 public class DeleteSAMLIdentityProviderCertificateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>xxxxxxxxxxxxxxxxxxxx</p>
-     */
     @NameInMap("CertificateId")
     public String certificateId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>my-agent-userpool</p>
-     */
     @NameInMap("UserPoolName")
     public String userPoolName;
 
