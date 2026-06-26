@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Filter extends TeaModel {
     /**
-     * <p>The description of the event filtering rule.</p>
+     * <p>Description of event filter rules.</p>
      */
     @NameInMap("key")
     public Key key;

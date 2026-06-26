@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PutScalingConfigInput extends TeaModel {
     /**
+     * <p>Specifies whether to enable the mix mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -12,16 +14,23 @@ public class PutScalingConfigInput extends TeaModel {
     public Boolean enableMixMode;
 
     /**
+     * <p>Specifies whether to enable on-demand scaling.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
     @NameInMap("enableOnDemandScaling")
     public Boolean enableOnDemandScaling;
 
+    /**
+     * <p>The horizontal scaling policies.</p>
+     */
     @NameInMap("horizontalScalingPolicies")
     public java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
     /**
+     * <p>The minimum number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class PutScalingConfigInput extends TeaModel {
     public Long minInstances;
 
     /**
+     * <p>The request dispatch policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>Balanced</p>
      */
@@ -36,12 +47,17 @@ public class PutScalingConfigInput extends TeaModel {
     public String requestDispatchPolicy;
 
     /**
+     * <p>The ID of the resident resource pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>fc-pool-a2b664c1f87171j4******</p>
      */
     @NameInMap("residentPoolId")
     public String residentPoolId;
 
+    /**
+     * <p>The scheduled elastic policies.</p>
+     */
     @NameInMap("scheduledPolicies")
     public java.util.List<ScheduledPolicy> scheduledPolicies;
 

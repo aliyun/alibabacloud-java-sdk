@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class TracingConfig extends TeaModel {
     /**
-     * <p>The parameters of Managed Service for OpenTelemetry. Specify the value in the map[string]string format, where the key is &quot;endpoint&quot;, and the value is the internal endpoint of Tracing Analysis. Example: endpoint: <a href="http://tracing-analysis-dc-hz.aliyuncs.com/adapt_xxx/api/otlp/traces">http://tracing-analysis-dc-hz.aliyuncs.com/adapt_xxx/api/otlp/traces</a>.</p>
+     * <p>The parameters for Tracing Analysis. The value is a map[string]string where the key is &quot;endpoint&quot; and the value is the internal network endpoint for Tracing Analysis. For example: endpoint: http\://tracing-analysis-dc-hz.aliyuncs.com/adapt_xxx/api/otlp/traces.</p>
      */
     @NameInMap("params")
     public java.util.Map<String, String> params;
 
     /**
-     * <p>The type of protocol for Managed Service for OpenTelemetry. Only Jaeger is supported.</p>
+     * <p>The Protocol Type for Tracing Analysis. Only Jaeger is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Jaeger</p>

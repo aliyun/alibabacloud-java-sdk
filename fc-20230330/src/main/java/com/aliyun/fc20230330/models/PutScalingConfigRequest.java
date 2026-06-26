@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PutScalingConfigRequest extends TeaModel {
     /**
-     * <p>The function scalability configuration.</p>
+     * <p>Elastic scaling configuration for the function</p>
      */
     @NameInMap("body")
     public PutScalingConfigInput body;
 
     /**
-     * <p>The function alias.</p>
+     * <p>Function alias</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

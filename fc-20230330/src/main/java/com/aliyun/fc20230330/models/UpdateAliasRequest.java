@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAliasRequest extends TeaModel {
     /**
-     * <p>The alias information to be updated.</p>
+     * <p>The alias information to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

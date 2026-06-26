@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class EventSourceParameters extends TeaModel {
     /**
-     * <p>The custom configurations when the event source is Data Transmission Service (DTS).</p>
+     * <p>Custom parameter settings when the event source is Data Transmission Service DTS.</p>
      */
     @NameInMap("sourceDTSParameters")
     public SourceDTSParameters sourceDTSParameters;
 
     /**
-     * <p>The custom configurations when the event source is ApsaraMQ for Kafka.</p>
+     * <p>Custom parameter settings when the event source is Kafka.</p>
      */
     @NameInMap("sourceKafkaParameters")
     public SourceKafkaParameters sourceKafkaParameters;
 
     /**
-     * <p>The custom configurations when the event source is Simple Message Queue (formerly MNS).</p>
+     * <p>Custom parameter settings when the event source is Simple Message Queue (formerly MNS).</p>
      */
     @NameInMap("sourceMNSParameters")
     public SourceMNSParameters sourceMNSParameters;
 
     /**
-     * <p>The custom configurations when the event source is ApsaraMQ for MQTT.</p>
+     * <p>Custom parameter settings when the event source is ApsaraMQ for MQTT.</p>
      */
     @NameInMap("sourceMQTTParameters")
     public SourceMQTTParameters sourceMQTTParameters;
 
     /**
-     * <p>The custom configurations when the event source is ApsaraMQ for RabbitMQ.</p>
+     * <p>Custom parameter settings when the event source is Message Queue for RabbitMQ.</p>
      */
     @NameInMap("sourceRabbitMQParameters")
     public SourceRabbitMQParameters sourceRabbitMQParameters;
 
     /**
-     * <p>The custom configurations when the event source is ApsaraMQ for RocketMQ.</p>
+     * <p>Custom parameter settings when the event source is Message Queue for RocketMQ.</p>
      */
     @NameInMap("sourceRocketMQParameters")
     public SourceRocketMQParameters sourceRocketMQParameters;

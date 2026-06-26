@@ -30,6 +30,9 @@ public class CDNTriggerConfig extends TeaModel {
 
     /**
      * <p>The description of the trigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>缓存事件触发器</p>
      */
     @NameInMap("notes")
     public String notes;

@@ -4,15 +4,27 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    /**
+     * <p>The end time of the query range, specified as a UNIX timestamp in milliseconds.</p>
+     */
     @NameInMap("endTimeMs")
     public Long endTimeMs;
 
+    /**
+     * <p>A list of instance IDs to return.</p>
+     */
     @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>An array of instance statuses. The operation returns only instances whose status is in this array.</p>
+     */
     @NameInMap("instanceStatus")
     public java.util.List<String> instanceStatus;
 
+    /**
+     * <p>The maximum number of instances to return.</p>
+     */
     @NameInMap("limit")
     public String limit;
 
@@ -25,14 +37,20 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("qualifier")
     public String qualifier;
 
+    /**
+     * <p>The token that specifies where to start the query. It is returned in a truncated response and can be used to retrieve the next page of results.</p>
+     */
     @NameInMap("startKey")
     public String startKey;
 
+    /**
+     * <p>The start time of the query range, specified as a UNIX timestamp in milliseconds.</p>
+     */
     @NameInMap("startTimeMs")
     public Long startTimeMs;
 
     /**
-     * <p>Specifies whether to list all instances. Valid values: true and false.</p>
+     * <p>Specifies whether to list all active instances.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HTTPTriggerConfig extends TeaModel {
     /**
-     * <p>The authentication configurations.</p>
+     * <p>Authentication configuration</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;JWKS&quot;:{&quot;foo&quot;:&quot;bar&quot;},&quot;TokenLookup&quot;:&quot;header:Authorization:Bearer,cookie:AuthorizationCookie&quot;,&quot;ClaimPassBy&quot;:&quot;query:uid:uid,header:name:name&quot;}</p>
@@ -14,13 +14,15 @@ public class HTTPTriggerConfig extends TeaModel {
     public String authConfig;
 
     /**
-     * <p>The authentication type. Valid values:</p>
+     * <p>The authentication type. Valid values are:</p>
      * <ul>
-     * <li><strong>function</strong>: requires authentication.</li>
-     * <li><strong>anonymous</strong>: does not require authentication.</li>
+     * <li><p><strong>function</strong>: Authentication is required.</p>
+     * </li>
+     * <li><p><strong>anonymous</strong>: Authentication is not required.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The default value is <strong>function</strong></p>
+     * <p>The default type is <strong>function</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class HTTPTriggerConfig extends TeaModel {
     public CORSConfig corsConfig;
 
     /**
-     * <p>Specifies whether to disable access to the default Internet domain. If you set this parameter to true, a 403 error is returned if you access the default public URL provided by the function. A value of false does not have affect the running of the function.</p>
+     * <p>Specifies whether to disable access from the default public domain name. If set to true, accessing the function\&quot;s default public URL returns a 403 error. If set to false, this parameter has no effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

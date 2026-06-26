@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateFunctionInput extends TeaModel {
     /**
-     * <p>The code package of the function. Configure either code or customContainerConfig.</p>
+     * <p>The ZIP package of the function code. Specify either code or customContainerConfig.</p>
      */
     @NameInMap("code")
     public InputCodeLocation code;
 
     /**
-     * <p>The CPU power allocated to the function. Unit: vCPUs. The value must be a multiple of 0.05.</p>
+     * <p>The CPU specification of the function. Unit: vCPU. The value must be a multiple of 0.05 vCPU.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,19 +20,19 @@ public class UpdateFunctionInput extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The configurations of the Custom Container runtime. After you configure a Custom Container runtime for your function, Function Compute can execute the function in a custom container image. Configure either code or customContainerConfig.</p>
+     * <p>The configuration of the custom container runtime. After this parameter is configured, the function can use a custom container image for execution. Specify either code or customContainerConfig.</p>
      */
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
 
     /**
-     * <p>The custom DNS settings of the function.</p>
+     * <p>The custom DNS configuration.</p>
      */
     @NameInMap("customDNS")
     public CustomDNS customDNS;
 
     /**
-     * <p>The configurations of the custom runtime.</p>
+     * <p>The custom runtime configuration.</p>
      */
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
@@ -46,15 +46,30 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Specifies whether to disable STS token injection. Valid values:</p>
+     * <ul>
+     * <li>None: STS tokens are injected in all methods.</li>
+     * <li>Env: STS tokens are not injected through environment variables.</li>
+     * <li>Request: STS tokens are not injected through requests, including context and headers.</li>
+     * <li>All: STS tokens are not injected in any method.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Env</p>
+     */
     @NameInMap("disableInjectCredentials")
     public String disableInjectCredentials;
 
+    /**
+     * <p>Specifies whether to disable the creation of on-demand instances. If this feature is enabled, on-demand instances are not created, and only provisioned instances can be used.</p>
+     */
     @NameInMap("disableOndemand")
     @Deprecated
     public Boolean disableOndemand;
 
     /**
-     * <p>The disk size of the function. Unit: MB. Valid values: 512 and 10240.</p>
+     * <p>The disk specification of the function. Unit: MB. Valid values: 512 and 10240.</p>
      * 
      * <strong>example:</strong>
      * <p>512</p>
@@ -62,24 +77,27 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    /**
+     * <p>Specifies whether to allow provisioned instances of GPU functions to be long-running. When this feature is enabled, function instances that are created are not injected with STS tokens.</p>
+     */
     @NameInMap("enableLongLiving")
     @Deprecated
     public Boolean enableLongLiving;
 
     /**
-     * <p>The environment variables of the function. You can access the specified environment variables in the runtime.</p>
+     * <p>The environment variables of the function. You can access the configured environment variables in the runtime environment.</p>
      */
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
     /**
-     * <p>The GPU configurations of the function.</p>
+     * <p>The GPU configuration of the function.</p>
      */
     @NameInMap("gpuConfig")
     public GPUConfig gpuConfig;
 
     /**
-     * <p>The handler of the function. The format of the handler is related to the runtime you use.</p>
+     * <p>The function entry point. The specific format depends on the runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>index.handler</p>
@@ -88,6 +106,8 @@ public class UpdateFunctionInput extends TeaModel {
     public String handler;
 
     /**
+     * <p>The deferred release time of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -95,7 +115,7 @@ public class UpdateFunctionInput extends TeaModel {
     public Integer idleTimeout;
 
     /**
-     * <p>The maximum number of requests that a function instance can process at a time.</p>
+     * <p>The maximum concurrency of an instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -103,17 +123,20 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("instanceConcurrency")
     public Integer instanceConcurrency;
 
+    /**
+     * <p>The instance isolation mode.</p>
+     */
     @NameInMap("instanceIsolationMode")
     public String instanceIsolationMode;
 
     /**
-     * <p>The configurations of instance lifecycle hooks.</p>
+     * <p>The instance lifecycle hook configuration.</p>
      */
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
     /**
-     * <p>Specifies whether to allow the function to access the Internet.</p>
+     * <p>Specifies whether to allow access to the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -125,19 +148,19 @@ public class UpdateFunctionInput extends TeaModel {
     public JuiceFsConfig juiceFsConfig;
 
     /**
-     * <p>The layers. Multiple layers are merged based on the order of array subscripts. If two layers have the same file name, the content of the layer with the smaller subscript will overwrite the content of the layer with the larger subscript.</p>
+     * <p>The list of layers. Multiple layers are merged in descending order of array index. Files in a layer with a smaller index overwrite files with the same name in a layer with a larger index.</p>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;
 
     /**
-     * <p>The logging configurations. Logs generated by the function are written to the specified Logstore.</p>
+     * <p>The log configuration. Logs generated by the function are written to the configured Logstore.</p>
      */
     @NameInMap("logConfig")
     public LogConfig logConfig;
 
     /**
-     * <p>The memory capacity for the function. Unit: MB. The value must be a multiple of 64. The capacity varies based on the type of the function instance.</p>
+     * <p>The memory specification of the function. Unit: MB. The value must be a multiple of 64 MB. The memory specification varies based on the function instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>512</p>
@@ -145,23 +168,29 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("memorySize")
     public Integer memorySize;
 
+    @NameInMap("microSandboxConfig")
+    public MicroSandboxConfig microSandboxConfig;
+
     /**
-     * <p>The File Storage NAS (NAS) configurations. The configurations allow the function to access the specified NAS file system.</p>
+     * <p>The NAS configuration. After this parameter is configured, the function can access the specified NAS resources.</p>
      */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
     /**
-     * <p>The Object Storage Service (OSS) mounting configurations.</p>
+     * <p>The OSS mount configuration.</p>
      */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    /**
+     * <p>The PolarFs configuration. After this parameter is configured, the function can access the specified PolarFs resources.</p>
+     */
     @NameInMap("polarFsConfig")
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>The Resource Access Management (RAM) role that grants the necessary permissions to Function Compute. The role can be used in the following scenarios: 1. When Function Compute sends logs generated by the function to your Logstore. 2. When Function Compute obtains a Security Token Service (STS) token, which serves as a temporary key for your function to access other Alibaba Cloud services.</p>
+     * <p>The Alibaba Cloud Resource Access Management (RAM) role that grants Function Compute the required permissions. Scenarios include: 1. Sending logs generated by the function to your Logstore. 2. Generating temporary access tokens for the function to access other cloud resources during the execute procedure.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::188077086902****:role/fc-test</p>
@@ -170,7 +199,7 @@ public class UpdateFunctionInput extends TeaModel {
     public String role;
 
     /**
-     * <p>The runtime of the function.</p>
+     * <p>The runtime environment of the function.</p>
      * 
      * <strong>example:</strong>
      * <p>nodejs14</p>
@@ -179,17 +208,25 @@ public class UpdateFunctionInput extends TeaModel {
     public String runtime;
 
     /**
+     * <p>The affinity policy for Function Compute invocation requests. To implement request affinity for the MCP SSE protocol, set this parameter to MCP_SSE. To use cookie-based affinity, set this parameter to GENERATED_COOKIE. To use header-based affinity, set this parameter to HEADER_FIELD. If this parameter is not set or is set to NONE, no affinity is applied, and requests are routed based on the default scheduling policy of Function Compute.</p>
+     * 
      * <strong>example:</strong>
      * <p>MCP_SSE</p>
      */
     @NameInMap("sessionAffinity")
     public String sessionAffinity;
 
+    /**
+     * <p>The affinity configuration that corresponds to the sessionAffinity type. For MCP_SSE affinity, configure MCPSSESessionAffinityConfig. For cookie-based affinity, configure CookieSessionAffinityConfig. For header field affinity, configure HeaderFieldSessionAffinityConfig.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;sseEndpointPath\&quot;:\&quot;/sse\&quot;, \&quot;sessionConcurrencyPerInstance\&quot;:20}</p>
+     */
     @NameInMap("sessionAffinityConfig")
     public String sessionAffinityConfig;
 
     /**
-     * <p>The timeout period for function execution. Unit: seconds. Minimum value: 1. Default value: 3. The execution of the function is terminated when the timeout period expires.</p>
+     * <p>The timeout period for function execution. Unit: seconds. Minimum value: 1. Default value: 3. The function is terminated if it exceeds this time limit.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -198,13 +235,13 @@ public class UpdateFunctionInput extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The configurations of Managed Service for OpenTelemetry. After Function Compute is integrated with Managed Service for OpenTelemetry, you can record the invocation duration of a request, view the cold start duration of a function, and track the execution duration of the function.</p>
+     * <p>The Tracing Analysis configuration. After Function Compute is integrated with Tracing Analysis, you can record the time consumed by requests in Function Compute, view the cold start time of functions, and record the time consumed by internal function operations.</p>
      */
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;
 
     /**
-     * <p>The Virtual Private Cloud (VPC) configurations. The configurations allow the function to access the specified VPC resources.</p>
+     * <p>The VPC configuration. After this parameter is configured, the function can access the specified VPC resources.</p>
      */
     @NameInMap("vpcConfig")
     public VPCConfig vpcConfig;
@@ -390,6 +427,14 @@ public class UpdateFunctionInput extends TeaModel {
     }
     public Integer getMemorySize() {
         return this.memorySize;
+    }
+
+    public UpdateFunctionInput setMicroSandboxConfig(MicroSandboxConfig microSandboxConfig) {
+        this.microSandboxConfig = microSandboxConfig;
+        return this;
+    }
+    public MicroSandboxConfig getMicroSandboxConfig() {
+        return this.microSandboxConfig;
     }
 
     public UpdateFunctionInput setNasConfig(NASConfig nasConfig) {

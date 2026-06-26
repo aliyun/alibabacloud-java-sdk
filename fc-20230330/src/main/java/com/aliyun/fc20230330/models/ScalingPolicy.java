@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScalingPolicy extends TeaModel {
     /**
+     * <p>The time when the policy expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-10T10:10:10Z</p>
      */
@@ -12,6 +14,8 @@ public class ScalingPolicy extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The maximum number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ScalingPolicy extends TeaModel {
     public Long maxInstances;
 
     /**
+     * <p>The target value for the metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.6</p>
      */
@@ -26,6 +32,8 @@ public class ScalingPolicy extends TeaModel {
     public Float metricTarget;
 
     /**
+     * <p>The type of metric to track. ProvisionedConcurrencyUtilization is the concurrency utilization of provisioned instances. CPUUtilization is the CPU utilization. GPUMemUtilization is the GPU memory utilization.</p>
+     * 
      * <strong>example:</strong>
      * <p>CPUUtilization</p>
      */
@@ -33,6 +41,8 @@ public class ScalingPolicy extends TeaModel {
     public String metricType;
 
     /**
+     * <p>The minimum number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ScalingPolicy extends TeaModel {
     public Long minInstances;
 
     /**
+     * <p>The name of the policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -47,6 +59,8 @@ public class ScalingPolicy extends TeaModel {
     public String name;
 
     /**
+     * <p>The time when the policy takes effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-10T10:10:10Z</p>
      */
@@ -54,6 +68,8 @@ public class ScalingPolicy extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The time zone. If this parameter is empty, the times for startTime, endTime, and scheduleExpression must be in Coordinated Universal Time (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class InstanceLifecycleConfig extends TeaModel {
     /**
-     * <p>The configurations of the Initializer hook.</p>
+     * <p>Initializer method configuration</p>
      */
     @NameInMap("initializer")
     public LifecycleHook initializer;
 
     /**
-     * <p>The configurations of the PreStop hook.</p>
+     * <p>PreStop method configuration</p>
      */
     @NameInMap("preStop")
     public LifecycleHook preStop;

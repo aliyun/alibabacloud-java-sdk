@@ -11,7 +11,7 @@ public class InstanceInfo extends TeaModel {
     public Long destroyedTimeMs;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef6b6ff-7f7b-485e-ab49-501ac681****</p>
@@ -29,7 +29,7 @@ public class InstanceInfo extends TeaModel {
     public String status;
 
     /**
-     * <p>The version of the function to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.</p>
+     * <p>The version of the function to which the instance belongs. If the instance is under the LATEST alias of the function, the returned version number is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

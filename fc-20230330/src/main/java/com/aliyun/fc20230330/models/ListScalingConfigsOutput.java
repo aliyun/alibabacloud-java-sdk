@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListScalingConfigsOutput extends TeaModel {
     /**
+     * <p>Paging token for the next request.</p>
+     * 
      * <strong>example:</strong>
      * <p>next_token</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>Function scaling configuration information</p>
+     */
     @NameInMap("scalingConfigs")
     public java.util.List<ScalingConfigStatus> scalingConfigs;
 

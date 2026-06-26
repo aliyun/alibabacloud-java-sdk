@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
     /**
-     * <p>The provisioned configuration information.</p>
+     * <p>The provisioned configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
@@ -15,7 +15,7 @@ public class PutProvisionConfigRequest extends TeaModel {
      * <p>The function alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>LATEST</p>
+     * <p>prod</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

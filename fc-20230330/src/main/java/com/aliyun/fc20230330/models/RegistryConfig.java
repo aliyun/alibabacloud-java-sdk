@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class RegistryConfig extends TeaModel {
     /**
-     * <p>The permission authentication configurations.</p>
+     * <p>The authentication configuration.</p>
      */
     @NameInMap("authConfig")
     public RegistryAuthConfig authConfig;
 
     /**
-     * <p>The certificate configurations.</p>
+     * <p>The certificate configuration.</p>
      */
     @NameInMap("certConfig")
     public RegistryCertConfig certConfig;
 
     /**
-     * <p>The network settings.</p>
+     * <p>The network configuration.</p>
      */
     @NameInMap("networkConfig")
     public RegistryNetworkConfig networkConfig;

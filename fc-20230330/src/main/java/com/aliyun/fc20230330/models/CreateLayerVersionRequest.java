@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLayerVersionRequest extends TeaModel {
     /**
-     * <p>The information about layer configurations.</p>
+     * <p>The configuration of the layer.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

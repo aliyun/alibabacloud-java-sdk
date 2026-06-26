@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProvisionConfigsRequest extends TeaModel {
     /**
-     * <p>The name of the function. If this parameter is not specified, the provisioned configurations of all functions are listed.</p>
+     * <p>The name of the function. If you do not specify this parameter, the provisioned configurations for all functions are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>my-func</p>
@@ -14,7 +14,7 @@ public class ListProvisionConfigsRequest extends TeaModel {
     public String functionName;
 
     /**
-     * <p>Number of provisioned configurations to return.</p>
+     * <p>The number of provisioned configurations to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListProvisionConfigsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>A pagination token.</p>
+     * <p>The token to start the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>

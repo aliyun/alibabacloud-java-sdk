@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTriggerRequest extends TeaModel {
     /**
-     * <p>The trigger configurations.</p>
+     * <p>The trigger configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

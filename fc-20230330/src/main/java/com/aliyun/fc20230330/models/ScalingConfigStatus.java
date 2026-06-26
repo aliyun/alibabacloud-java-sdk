@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScalingConfigStatus extends TeaModel {
     /**
+     * <p>The error message that is returned when an instance fails to be created.</p>
+     * 
      * <strong>example:</strong>
      * <p>image not found</p>
      */
@@ -12,6 +14,8 @@ public class ScalingConfigStatus extends TeaModel {
     public String currentError;
 
     /**
+     * <p>The current number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ScalingConfigStatus extends TeaModel {
     public Long currentInstances;
 
     /**
+     * <p>Specifies whether mix mode is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -26,6 +32,8 @@ public class ScalingConfigStatus extends TeaModel {
     public Boolean enableMixMode;
 
     /**
+     * <p>Specifies whether on-demand scaling is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -33,16 +41,23 @@ public class ScalingConfigStatus extends TeaModel {
     public Boolean enableOnDemandScaling;
 
     /**
+     * <p>The resource identifier of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:124:functions/myFunction/prod</p>
      */
     @NameInMap("functionArn")
     public String functionArn;
 
+    /**
+     * <p>The horizontal scaling policies.</p>
+     */
     @NameInMap("horizontalScalingPolicies")
     public java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
     /**
+     * <p>The minimum number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -50,6 +65,8 @@ public class ScalingConfigStatus extends TeaModel {
     public Long minInstances;
 
     /**
+     * <p>The request dispatch policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>Balanced</p>
      */
@@ -57,16 +74,23 @@ public class ScalingConfigStatus extends TeaModel {
     public String requestDispatchPolicy;
 
     /**
+     * <p>The ID of the resident resource pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>fc-pool-a2b664c1f87171j4******</p>
      */
     @NameInMap("residentPoolId")
     public String residentPoolId;
 
+    /**
+     * <p>The scheduled scaling policies.</p>
+     */
     @NameInMap("scheduledPolicies")
     public java.util.List<ScheduledPolicy> scheduledPolicies;
 
     /**
+     * <p>The target number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

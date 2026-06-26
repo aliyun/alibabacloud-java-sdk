@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListAsyncTasksRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return input parameters of the asynchronous tasks. Valid values:</p>
+     * <p>Specifies whether to return the input parameters of the asynchronous task.</p>
      * <ul>
-     * <li>true: returns the <code>invocationPayload</code> parameter in the response.</li>
-     * <li>false: does not return the <code>invocationPayload</code> parameter in the response.</li>
+     * <li><p>true: If this parameter is set to true, the <code>invocationPayload</code> field is returned.</p>
+     * </li>
+     * <li><p>false: If this parameter is set to false, the <code>invocationPayload</code> field is not returned.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The <code>invocationPayload</code> parameter indicates the input parameters of an asynchronous task.</p>
+     * <p>The <code>invocationPayload</code> field specifies the input parameters of the function for the asynchronous task.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public Boolean includePayload;
 
     /**
-     * <p>The number of asynchronous tasks to return. The default value is 20. Valid values: [1,100].</p>
+     * <p>The number of asynchronous tasks to return. The default value is 20. The value must be in the range of [1, 100].</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -30,7 +32,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token to return more results. You do not need to provide this parameter for the first query. Obtain the token for a subsequent query from the response to the previous query.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>
@@ -39,7 +41,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID prefix of asynchronous tasks. If this parameter is specified, a list of asynchronous tasks whose IDs match the prefix is returned.</p>
+     * <p>The prefix of the asynchronous task ID. The system returns a list of asynchronous tasks that match the prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>job-</p>
@@ -57,10 +59,12 @@ public class ListAsyncTasksRequest extends TeaModel {
     public String qualifier;
 
     /**
-     * <p>The order in which the returned asynchronous tasks are sorted.</p>
+     * <p>The sorting order of the returned asynchronous tasks.</p>
      * <ul>
-     * <li>asc: in ascending order.</li>
-     * <li>desc: in descending order.</li>
+     * <li><p>asc: ascending order</p>
+     * </li>
+     * <li><p>desc: descending order</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +74,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public String sortOrderByTime;
 
     /**
-     * <p>The start time of the period during which the asynchronous tasks are initiated.</p>
+     * <p>The start of the time range when the asynchronous task was started.</p>
      * 
      * <strong>example:</strong>
      * <p>1640966400000</p>
@@ -79,7 +83,7 @@ public class ListAsyncTasksRequest extends TeaModel {
     public Long startedTimeBegin;
 
     /**
-     * <p>The end time of the period during which the asynchronous tasks are initiated.</p>
+     * <p>The end of the time range when the asynchronous task was started.</p>
      * 
      * <strong>example:</strong>
      * <p>1640966400000</p>
@@ -88,18 +92,28 @@ public class ListAsyncTasksRequest extends TeaModel {
     public Long startedTimeEnd;
 
     /**
-     * <p>The state of asynchronous tasks. The following items list the states of an asynchronous task:</p>
+     * <p>The execution status of the asynchronous task.</p>
      * <ul>
-     * <li>Enqueued: The asynchronous invocation is enqueued and waiting to be executed.</li>
-     * <li>Dequeued: The asynchronous invocation is dequeued and waiting to be triggered.</li>
-     * <li>Running: The invocation is being executed.</li>
-     * <li>Succeeded: The invocation is successful.</li>
-     * <li>Failed: The invocation fails.</li>
-     * <li>Stopped: The invocation is terminated.</li>
-     * <li>Stopping: The invocation is being terminated.</li>
-     * <li>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages expires.</li>
-     * <li>Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.</li>
-     * <li>Retrying: The asynchronous invocation is being retried due to an execution error.</li>
+     * <li><p>Enqueued: The asynchronous message is enqueued and waits for processing.</p>
+     * </li>
+     * <li><p>Dequeued: The asynchronous message is dequeued and waits to be triggered.</p>
+     * </li>
+     * <li><p>Running: The invocation is in progress.</p>
+     * </li>
+     * <li><p>Succeeded: The invocation succeeded.</p>
+     * </li>
+     * <li><p>Failed: The invocation failed.</p>
+     * </li>
+     * <li><p>Stopped: The invocation was stopped.</p>
+     * </li>
+     * <li><p>Stopping: The invocation is being stopped.</p>
+     * </li>
+     * <li><p>Expired: The task was discarded because its configured maximum queuing duration was exceeded. The task was not executed.</p>
+     * </li>
+     * <li><p>Invalid: The execution is invalid because the function was deleted or for other reasons. The task was not executed.</p>
+     * </li>
+     * <li><p>Retrying: The asynchronous invocation is being retried because of an execution error.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

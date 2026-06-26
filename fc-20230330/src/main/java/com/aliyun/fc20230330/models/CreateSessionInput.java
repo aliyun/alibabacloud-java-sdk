@@ -4,22 +4,39 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateSessionInput extends TeaModel {
+    /**
+     * <p>A value of false (the default) allows an expired session ID to be reused for a new session, which the system then binds to a new instance. If set to true, an expired session ID cannot be reused.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
     @NameInMap("juiceFsConfig")
     public JuiceFsConfig juiceFsConfig;
 
+    /**
+     * <p>Allows instances in the session to access specified NAS resources.</p>
+     */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    /**
+     * <p>Allows instances in the session to access specified OSS resources.</p>
+     */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    /**
+     * <p>Allows instances in the session to access specified PolarFS resources.</p>
+     */
     @NameInMap("polarFsConfig")
     public PolarFsConfig polarFsConfig;
 
     /**
+     * <p>A customizable session ID. If you do not specify a value, the server generates one. This parameter applies only to the HEADER_FIELD affinity mode. The value must be 0 to 64 characters long. The first character must be a character in <strong>a-zA-Z0-9_</strong>. Subsequent characters can be any character in <strong>a-zA-Z0-9_-</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom-test-session-id</p>
      */
@@ -27,6 +44,8 @@ public class CreateSessionInput extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The session idle timeout in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1800</p>
      */
@@ -34,6 +53,8 @@ public class CreateSessionInput extends TeaModel {
     public Long sessionIdleTimeoutInSeconds;
 
     /**
+     * <p>The session lifetime in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>21600</p>
      */

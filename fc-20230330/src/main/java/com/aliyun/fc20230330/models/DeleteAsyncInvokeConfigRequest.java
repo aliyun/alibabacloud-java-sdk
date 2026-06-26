@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAsyncInvokeConfigRequest extends TeaModel {
     /**
-     * <p>The version or alias of the function.</p>
+     * <p>The function version or alias.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFunctionVersionsRequest extends TeaModel {
     /**
-     * <p>The sorting mode of function versions. Valid values: BACKWARD and FORWARD.</p>
+     * <p>The order in which to sort the versions. Valid values: BACKWARD and FORWARD.</p>
      * 
      * <strong>example:</strong>
      * <p>BACKWARD</p>
@@ -14,7 +14,7 @@ public class ListFunctionVersionsRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The number of function versions that are returned.</p>
+     * <p>The number of versions to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListFunctionVersionsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that marks the start of the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>

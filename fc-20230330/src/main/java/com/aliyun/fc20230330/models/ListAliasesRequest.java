@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAliasesRequest extends TeaModel {
     /**
-     * <p>The number of aliases returned.</p>
+     * <p>The number of aliases to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListAliasesRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that marks the start of the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>
@@ -23,7 +23,7 @@ public class ListAliasesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The alias prefix.</p>
+     * <p>The prefix of the alias name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-alias</p>

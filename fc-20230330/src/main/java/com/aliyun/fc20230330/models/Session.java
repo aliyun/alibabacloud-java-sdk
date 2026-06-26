@@ -22,11 +22,17 @@ public class Session extends TeaModel {
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <p>Specifies whether an expired session ID can be reused. If <code>true</code>, an expired session ID cannot be reused. If <code>false</code> (the default), sending a request with an expired session ID creates a new session bound to a new instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
     /**
-     * <p>The name of the function to which the session belongs.</p>
+     * <p>The name of the function associated with the session.</p>
      * 
      * <strong>example:</strong>
      * <p>functionName1</p>
@@ -34,6 +40,9 @@ public class Session extends TeaModel {
     @NameInMap("functionName")
     public String functionName;
 
+    /**
+     * <p>The JuiceFS mount configuration, enabling the associated function instance to access specified JuiceFS resources.</p>
+     */
     @NameInMap("juiceFsConfig")
     public JuiceFsConfig juiceFsConfig;
 
@@ -47,19 +56,25 @@ public class Session extends TeaModel {
     public String lastModifiedTime;
 
     /**
-     * <p>The File Storage NAS (NAS) configuration. Once configured, the instance associated with the session can access designated NAS resources.</p>
+     * <p>The NAS configuration, enabling the associated function instance to access specified NAS resources.</p>
      */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    /**
+     * <p>The OSS mount configuration, enabling the associated function instance to access specified OSS resources.</p>
+     */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    /**
+     * <p>The PolarFS mount configuration, enabling the associated function instance to access specified PolarFS resources.</p>
+     */
     @NameInMap("polarFsConfig")
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>The qualifier specified when creating a session. If not provided, the default value is LATEST.</p>
+     * <p>The qualifier, which specifies a function version or alias. Defaults to <code>LATEST</code> if unspecified.</p>
      * 
      * <strong>example:</strong>
      * <p>AliasName1</p>
@@ -68,7 +83,7 @@ public class Session extends TeaModel {
     public String qualifier;
 
     /**
-     * <p>The session affinity type.</p>
+     * <p>The type of session affinity.</p>
      * 
      * <strong>example:</strong>
      * <p>HEADER_FIELD</p>
@@ -77,7 +92,7 @@ public class Session extends TeaModel {
     public String sessionAffinityType;
 
     /**
-     * <p>The unique identifier of the function session.</p>
+     * <p>The unique identifier for the function session.</p>
      * 
      * <strong>example:</strong>
      * <p>81f70ae156904eb9b7d43e12f511fe58</p>
@@ -86,7 +101,7 @@ public class Session extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The timeout period for idle sessions.</p>
+     * <p>The maximum duration, in seconds, that the session can be idle before it expires.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -95,7 +110,7 @@ public class Session extends TeaModel {
     public Long sessionIdleTimeoutInSeconds;
 
     /**
-     * <p>The session status, which can be either Active (session is valid) or Expired (session has expired).</p>
+     * <p>The status of the session. <code>Active</code> indicates the session is valid, and <code>Expired</code> indicates it is no longer valid.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -104,7 +119,7 @@ public class Session extends TeaModel {
     public String sessionStatus;
 
     /**
-     * <p>The maximum session lifecycle.</p>
+     * <p>The maximum lifespan of the session, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>21600</p>

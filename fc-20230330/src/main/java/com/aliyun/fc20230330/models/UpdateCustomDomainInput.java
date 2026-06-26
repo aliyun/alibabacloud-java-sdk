@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomDomainInput extends TeaModel {
     /**
-     * <p>The configuration of permission authentication.</p>
+     * <p>The authentication configuration.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>The configuration of the HTTPS certificate.</p>
+     * <p>Information about the HTTPS certificate.</p>
      */
     @NameInMap("certConfig")
     public CertConfig certConfig;
@@ -20,7 +20,7 @@ public class UpdateCustomDomainInput extends TeaModel {
     public CORSConfig corsConfig;
 
     /**
-     * <p>The protocol type that is supported by the custom domain name. Valid values: HTTP HTTPS HTTP,HTTPS</p>
+     * <p>The protocol type that the domain name supports. \<code>HTTP\\</code>: supports only the HTTP protocol. \<code>HTTPS\\</code>: supports only the HTTPS protocol. \<code>HTTP,HTTPS\\</code>: supports both HTTP and HTTPS protocols.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -29,13 +29,13 @@ public class UpdateCustomDomainInput extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The route table that maps paths to functions when the function is invoked by using the custom domain name.</p>
+     * <p>The route table that maps the access paths of the custom domain name to functions.</p>
      */
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
     /**
-     * <p>The Transport Layer Security (TLS) configuration.</p>
+     * <p>The TLS configuration.</p>
      */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;

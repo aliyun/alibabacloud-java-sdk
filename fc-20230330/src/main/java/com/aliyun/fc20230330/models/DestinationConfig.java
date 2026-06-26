@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DestinationConfig extends TeaModel {
     /**
-     * <p>The destination struct of a failed callback.</p>
+     * <p>Structure that defines the destination for failed invocations.</p>
      */
     @NameInMap("onFailure")
     public Destination onFailure;
 
     /**
-     * <p>The destination struct of a successful callback.</p>
+     * <p>Structure that defines the destination for successful invocations.</p>
      */
     @NameInMap("onSuccess")
     public Destination onSuccess;

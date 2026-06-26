@@ -4,22 +4,42 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateSessionInput extends TeaModel {
+    /**
+     * <p>Defaults to <code>false</code>. If set to <code>false</code>, you can reuse a <code>SessionID</code> to start a new session on a new instance after the original session expires. If set to <code>true</code>, you cannot reuse a <code>SessionID</code> after its session expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
+    /**
+     * <p>The JuiceFS configuration.</p>
+     */
     @NameInMap("juiceFsConfig")
     public JuiceFsConfig juiceFsConfig;
 
+    /**
+     * <p>The NAS configuration.</p>
+     */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    /**
+     * <p>The OSS mount configuration.</p>
+     */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    /**
+     * <p>The PolarFS configuration.</p>
+     */
     @NameInMap("polarFsConfig")
     public PolarFsConfig polarFsConfig;
 
     /**
+     * <p>The session idle timeout, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1800</p>
      */
@@ -27,6 +47,8 @@ public class UpdateSessionInput extends TeaModel {
     public Long sessionIdleTimeoutInSeconds;
 
     /**
+     * <p>The session duration, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>21600</p>
      */

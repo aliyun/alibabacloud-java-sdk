@@ -8,7 +8,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "fcv3.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "fcv3.us-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "me-central-1.fc.aliyuncs.com"),
+            new TeaPair("eu-west-1", "fcv3.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "fcv3.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "fcv3.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "fcv3.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "fcv3.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "cn-shanghai-finance-1.fc.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "fcv3.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "fcv3.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "fcv3.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "fcv3.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "cn-heyuan-acdr-1.fc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "cn-hangzhou-finance.fc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "fcv3.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "fcv3.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "fcv3.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "fcv3.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "fcv3.ap-southeast-5.aliyuncs.com	"),
+            new TeaPair("ap-southeast-3", "fcv3.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "fcv3.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "fcv3.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "fcv3.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "fcv3.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "fcv3.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("fc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,10 +56,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To update the resource group of a Function Compute resource, you must grant the user the ChangeResourceGroup permission on both the current resource group and the target resource group.</p>
+     * <p>To change the resource group of a Function Compute resource, you must have the ChangeResourceGroup permission for both the current and target resource groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the resource group of a Function Compute resource.</p>
+     * <p>Changes the resource group of a Function Compute resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -60,10 +88,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To update the resource group of a Function Compute resource, you must grant the user the ChangeResourceGroup permission on both the current resource group and the target resource group.</p>
+     * <p>To change the resource group of a Function Compute resource, you must have the ChangeResourceGroup permission for both the current and target resource groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the resource group of a Function Compute resource.</p>
+     * <p>Changes the resource group of a Function Compute resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -118,7 +146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</p>
+     * <p>You can attach a custom domain name to an application or function in Function Compute to access it through a fixed domain name in a production environment, or to resolve the forced download behavior when you access an HTTP trigger.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a custom domain name.</p>
@@ -150,7 +178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</p>
+     * <p>You can attach a custom domain name to an application or function in Function Compute to access it through a fixed domain name in a production environment, or to resolve the forced download behavior when you access an HTTP trigger.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a custom domain name.</p>
@@ -166,10 +194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</p>
+     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a function.</p>
+     * <p>Creates a function by calling the CreateFunction operation.</p>
      * 
      * @param request CreateFunctionRequest
      * @param headers map
@@ -198,10 +226,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</p>
+     * <p>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a function.</p>
+     * <p>Creates a function by calling the CreateFunction operation.</p>
      * 
      * @param request CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -214,7 +242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a layer version.</p>
+     * <p>This operation publishes a layer version.</p>
      * 
      * @param request CreateLayerVersionRequest
      * @param headers map
@@ -243,7 +271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a layer version.</p>
+     * <p>This operation publishes a layer version.</p>
      * 
      * @param request CreateLayerVersionRequest
      * @return CreateLayerVersionResponse
@@ -256,7 +284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The CreateSession operation creates an explicit session resource. The system automatically generates a unique session ID, pre-allocates a function instance, and associates it with the session. You can specify values for TTL and idle timeout. This method applies to the HEADER_FIELD and GENERATED_COOKIE affinity types. It handles session preload and configuration initialization. After you call the InvokeFunction API, the session information can be included in the InvokeFunction request to enable request routing.</p>
+     * <p>Creates an explicit session resource by automatically generating a unique session ID, pre-allocating a function instance, and attaching the session. This operation supports custom Time to Live (TTL) and idle timeout values, applies to HEADER_FIELD or GENERATED_COOKIE affinity types, and is used for session prefetching and configuration initialization. After the session is created, include the session ID in InvokeFunction requests for request routing.</p>
      * 
      * @param request CreateSessionRequest
      * @param headers map
@@ -291,7 +319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The CreateSession operation creates an explicit session resource. The system automatically generates a unique session ID, pre-allocates a function instance, and associates it with the session. You can specify values for TTL and idle timeout. This method applies to the HEADER_FIELD and GENERATED_COOKIE affinity types. It handles session preload and configuration initialization. After you call the InvokeFunction API, the session information can be included in the InvokeFunction request to enable request routing.</p>
+     * <p>Creates an explicit session resource by automatically generating a unique session ID, pre-allocating a function instance, and attaching the session. This operation supports custom Time to Live (TTL) and idle timeout values, applies to HEADER_FIELD or GENERATED_COOKIE affinity types, and is used for session prefetching and configuration initialization. After the session is created, include the session ID in InvokeFunction requests for request routing.</p>
      * 
      * @param request CreateSessionRequest
      * @return CreateSessionResponse
@@ -798,7 +826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a trigger.</p>
+     * <p>Deletes the specified trigger.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -824,7 +852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a trigger.</p>
+     * <p>Deletes the specified trigger.</p>
      * @return DeleteTriggerResponse
      */
     public DeleteTriggerResponse deleteTrigger(String functionName, String triggerName) throws Exception {
@@ -835,7 +863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an access control policy from a specified policy group for a VPC firewall.</p>
+     * <p>Deletes an access control policy from a specified VPC firewall policy group.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -861,7 +889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an access control policy from a specified policy group for a VPC firewall.</p>
+     * <p>Deletes an access control policy from a specified VPC firewall policy group.</p>
      * @return DeleteVpcBindingResponse
      */
     public DeleteVpcBindingResponse deleteVpcBinding(String functionName, String vpcId) throws Exception {
@@ -919,10 +947,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</p>
+     * <p>Use caution when calling this API for functions in a production environment because disabling function invocations can disrupt your services.</p>
      * 
      * <b>summary</b> : 
-     * <p>The DisableFunctionInvocation operation prevents a function from being invoked and optionally terminates all requests that are being processed. Once a function\&quot;s invocation is disabled, no new instances can be created, and the existing provisioned instances are destroyed. This operation is currently in private preview.</p>
+     * <p>Disables function invocations. You can also stop all ongoing requests. When a function is disabled, new instances cannot be created and provisioned instances are destroyed. This OpenAPI is in beta.</p>
      * 
      * @param request DisableFunctionInvocationRequest
      * @param headers map
@@ -960,10 +988,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</p>
+     * <p>Use caution when calling this API for functions in a production environment because disabling function invocations can disrupt your services.</p>
      * 
      * <b>summary</b> : 
-     * <p>The DisableFunctionInvocation operation prevents a function from being invoked and optionally terminates all requests that are being processed. Once a function\&quot;s invocation is disabled, no new instances can be created, and the existing provisioned instances are destroyed. This operation is currently in private preview.</p>
+     * <p>Disables function invocations. You can also stop all ongoing requests. When a function is disabled, new instances cannot be created and provisioned instances are destroyed. This OpenAPI is in beta.</p>
      * 
      * @param request DisableFunctionInvocationRequest
      * @return DisableFunctionInvocationResponse
@@ -1013,7 +1041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an alias.</p>
+     * <p>Retrieves information about an alias.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1039,7 +1067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an alias.</p>
+     * <p>Retrieves information about an alias.</p>
      * @return GetAliasResponse
      */
     public GetAliasResponse getAlias(String functionName, String aliasName) throws Exception {
@@ -1050,7 +1078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets asynchronous invocation configurations of a function.</p>
+     * <p>Retrieves the asynchronous invocation configuration of a specified function.</p>
      * 
      * @param request GetAsyncInvokeConfigRequest
      * @param headers map
@@ -1084,7 +1112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets asynchronous invocation configurations of a function.</p>
+     * <p>Retrieves the asynchronous invocation configuration of a specified function.</p>
      * 
      * @param request GetAsyncInvokeConfigRequest
      * @return GetAsyncInvokeConfigResponse
@@ -1097,7 +1125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an asynchronous task.</p>
+     * <p>Retrieves the details of a specified asynchronous task.</p>
      * 
      * @param request GetAsyncTaskRequest
      * @param headers map
@@ -1131,7 +1159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an asynchronous task.</p>
+     * <p>Retrieves the details of a specified asynchronous task.</p>
      * 
      * @param request GetAsyncTaskRequest
      * @return GetAsyncTaskResponse
@@ -1144,7 +1172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a concurrency configuration.</p>
+     * <p>Retrieves the concurrency configuration.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1170,7 +1198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains a concurrency configuration.</p>
+     * <p>Retrieves the concurrency configuration.</p>
      * @return GetConcurrencyConfigResponse
      */
     public GetConcurrencyConfigResponse getConcurrencyConfig(String functionName) throws Exception {
@@ -1181,7 +1209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a custom domain name.</p>
+     * <p>Retrieves the configuration of a custom domain name.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1207,7 +1235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a custom domain name.</p>
+     * <p>Retrieves the configuration of a custom domain name.</p>
      * @return GetCustomDomainResponse
      */
     public GetCustomDomainResponse getCustomDomain(String domainName) throws Exception {
@@ -1218,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></p>
+     * <p>Retrieves information about a function.</p>
      * 
      * @param request GetFunctionRequest
      * @param headers map
@@ -1252,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></p>
+     * <p>Retrieves information about a function.</p>
      * 
      * @param request GetFunctionRequest
      * @return GetFunctionResponse
@@ -1265,7 +1293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a code package of a function.</p>
+     * <p>Retrieves the details of a function code package.</p>
      * 
      * @param request GetFunctionCodeRequest
      * @param headers map
@@ -1299,7 +1327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a code package of a function.</p>
+     * <p>Retrieves the details of a function code package.</p>
      * 
      * @param request GetFunctionCodeRequest
      * @return GetFunctionCodeResponse
@@ -1312,7 +1340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries versions of a layer.</p>
+     * <p>Retrieves information about a layer version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1338,7 +1366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries versions of a layer.</p>
+     * <p>Retrieves information about a layer version.</p>
      * @return GetLayerVersionResponse
      */
     public GetLayerVersionResponse getLayerVersion(String layerName, String version) throws Exception {
@@ -1349,7 +1377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain version information of a layer by using ARNs.</p>
+     * <p>Retrieves the version information of a layer by its Alibaba Cloud Resource Name (ARN).</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1375,7 +1403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain version information of a layer by using ARNs.</p>
+     * <p>Retrieves the version information of a layer by its Alibaba Cloud Resource Name (ARN).</p>
      * @return GetLayerVersionByArnResponse
      */
     public GetLayerVersionByArnResponse getLayerVersionByArn(String arn) throws Exception {
@@ -1386,7 +1414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries provisioned configurations.</p>
+     * <p>Retrieves the provisioned configuration.</p>
      * 
      * @param request GetProvisionConfigRequest
      * @param headers map
@@ -1420,7 +1448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries provisioned configurations.</p>
+     * <p>Retrieves the provisioned configuration.</p>
      * 
      * @param request GetProvisionConfigRequest
      * @return GetProvisionConfigResponse
@@ -1433,7 +1461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the scaling settings of a function.</p>
+     * <p>Retrieves the scaling configuration for a function.</p>
      * 
      * @param request GetScalingConfigRequest
      * @param headers map
@@ -1467,7 +1495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the scaling settings of a function.</p>
+     * <p>Retrieves the scaling configuration for a function.</p>
      * 
      * @param request GetScalingConfigRequest
      * @return GetScalingConfigResponse
@@ -1527,7 +1555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a trigger.</p>
+     * <p>Retrieves the details of a specified trigger.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1553,7 +1581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a trigger.</p>
+     * <p>Retrieves the details of a specified trigger.</p>
      * @return GetTriggerResponse
      */
     public GetTriggerResponse getTrigger(String functionName, String triggerName) throws Exception {
@@ -1647,7 +1675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries aliases.</p>
+     * <p>Lists aliases.</p>
      * 
      * @param request ListAliasesRequest
      * @param headers map
@@ -1689,7 +1717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries aliases.</p>
+     * <p>Lists aliases.</p>
      * 
      * @param request ListAliasesRequest
      * @return ListAliasesResponse
@@ -1702,7 +1730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all asynchronous configurations of a function.</p>
+     * <p>Lists the asynchronous invocation configurations for one or more functions.</p>
      * 
      * @param request ListAsyncInvokeConfigsRequest
      * @param headers map
@@ -1744,7 +1772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all asynchronous configurations of a function.</p>
+     * <p>Lists the asynchronous invocation configurations for one or more functions.</p>
      * 
      * @param request ListAsyncInvokeConfigsRequest
      * @return ListAsyncInvokeConfigsResponse
@@ -1757,7 +1785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists asynchronous tasks.</p>
+     * <p>Lists the details of asynchronous tasks.</p>
      * 
      * @param request ListAsyncTasksRequest
      * @param headers map
@@ -1823,7 +1851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists asynchronous tasks.</p>
+     * <p>Lists the details of asynchronous tasks.</p>
      * 
      * @param request ListAsyncTasksRequest
      * @return ListAsyncTasksResponse
@@ -1836,7 +1864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of concurrency configurations.</p>
+     * <p>Lists the concurrency configurations.</p>
      * 
      * @param request ListConcurrencyConfigsRequest
      * @param headers map
@@ -1878,7 +1906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of concurrency configurations.</p>
+     * <p>Lists the concurrency configurations.</p>
      * 
      * @param request ListConcurrencyConfigsRequest
      * @return ListConcurrencyConfigsResponse
@@ -1891,7 +1919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries custom domain names.</p>
+     * <p>Retrieves a list of custom domain names.</p>
      * 
      * @param request ListCustomDomainsRequest
      * @param headers map
@@ -1933,7 +1961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries custom domain names.</p>
+     * <p>Retrieves a list of custom domain names.</p>
      * 
      * @param request ListCustomDomainsRequest
      * @return ListCustomDomainsResponse
@@ -1946,7 +1974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries versions of a function.</p>
+     * <p>Lists the versions of a specified function.</p>
      * 
      * @param request ListFunctionVersionsRequest
      * @param headers map
@@ -1988,7 +2016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries versions of a function.</p>
+     * <p>Lists the versions of a specified function.</p>
      * 
      * @param request ListFunctionVersionsRequest
      * @return ListFunctionVersionsResponse
@@ -2001,10 +2029,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * <p>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of functions.</p>
+     * <p>Retrieves a list of functions.</p>
      * 
      * @param tmpReq ListFunctionsRequest
      * @param headers map
@@ -2080,10 +2108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * <p>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of functions.</p>
+     * <p>Retrieves a list of functions.</p>
      * 
      * @param request ListFunctionsRequest
      * @return ListFunctionsResponse
@@ -2096,7 +2124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of function instances.</p>
+     * <p>Lists function instances.</p>
      * 
      * @param tmpReq ListInstancesRequest
      * @param headers map
@@ -2168,7 +2196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of function instances.</p>
+     * <p>Lists function instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -2181,7 +2209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets a list of layer versions.</p>
+     * <p>Retrieves a list of layer versions.</p>
      * 
      * @param request ListLayerVersionsRequest
      * @param headers map
@@ -2219,7 +2247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets a list of layer versions.</p>
+     * <p>Retrieves a list of layer versions.</p>
      * 
      * @param request ListLayerVersionsRequest
      * @return ListLayerVersionsResponse
@@ -2232,7 +2260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets a list of layers.</p>
+     * <p>Lists layers.</p>
      * 
      * @param request ListLayersRequest
      * @param headers map
@@ -2282,7 +2310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets a list of layers.</p>
+     * <p>Lists layers.</p>
      * 
      * @param request ListLayersRequest
      * @return ListLayersResponse
@@ -2295,7 +2323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of provisioned configurations.</p>
+     * <p>Retrieves a list of provisioned configurations.</p>
      * 
      * @param request ListProvisionConfigsRequest
      * @param headers map
@@ -2337,7 +2365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of provisioned configurations.</p>
+     * <p>Retrieves a list of provisioned configurations.</p>
      * 
      * @param request ListProvisionConfigsRequest
      * @return ListProvisionConfigsResponse
@@ -2350,7 +2378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the scaling settings of a function.</p>
+     * <p>Lists the auto scaling configurations for a function.</p>
      * 
      * @param request ListScalingConfigsRequest
      * @param headers map
@@ -2392,7 +2420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the scaling settings of a function.</p>
+     * <p>Lists the auto scaling configurations for a function.</p>
      * 
      * @param request ListScalingConfigsRequest
      * @return ListScalingConfigsResponse
@@ -2541,7 +2569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the triggers of a function.</p>
+     * <p>Lists the triggers for a specified function.</p>
      * 
      * @param request ListTriggersRequest
      * @param headers map
@@ -2583,7 +2611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the triggers of a function.</p>
+     * <p>Lists the triggers for a specified function.</p>
      * 
      * @param request ListTriggersRequest
      * @return ListTriggersResponse
@@ -2596,7 +2624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of existing VPC connections.</p>
+     * <p>Queries existing VPC attachments.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2622,7 +2650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of existing VPC connections.</p>
+     * <p>Queries existing VPC attachments.</p>
      * @return ListVpcBindingsResponse
      */
     public ListVpcBindingsResponse listVpcBindings(String functionName) throws Exception {
@@ -2632,8 +2660,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pauses an active session. This operation saves the state of the associated execution environment and then releases the compute resources. After you call this operation, the session state changes to Paused. A paused session does not accept function invocation requests. The operation retains the session configuration, such as the SessionTTL and SessionID. Use this operation to interrupt long-running tasks or save snapshots of a development environment. This helps optimize costs and manage state. This operation applies to custom image functions that use HEADER_FIELD or GENERATED_COOKIE affinity types and session isolation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>暂停/保存会话</p>
+     * <p>Pauses and saves a session.</p>
      * 
      * @param request PauseSessionRequest
      * @param headers map
@@ -2666,8 +2697,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pauses an active session. This operation saves the state of the associated execution environment and then releases the compute resources. After you call this operation, the session state changes to Paused. A paused session does not accept function invocation requests. The operation retains the session configuration, such as the SessionTTL and SessionID. Use this operation to interrupt long-running tasks or save snapshots of a development environment. This helps optimize costs and manage state. This operation applies to custom image functions that use HEADER_FIELD or GENERATED_COOKIE affinity types and session isolation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>暂停/保存会话</p>
+     * <p>Pauses and saves a session.</p>
      * 
      * @param request PauseSessionRequest
      * @return PauseSessionResponse
@@ -2722,7 +2756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies an asynchronous invocation configuration for a function.</p>
+     * <p>Creates or updates the asynchronous invocation configuration for a function.</p>
      * 
      * @param request PutAsyncInvokeConfigRequest
      * @param headers map
@@ -2757,7 +2791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies an asynchronous invocation configuration for a function.</p>
+     * <p>Creates or updates the asynchronous invocation configuration for a function.</p>
      * 
      * @param request PutAsyncInvokeConfigRequest
      * @return PutAsyncInvokeConfigResponse
@@ -2770,7 +2804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures concurrency of a function.</p>
+     * <p>Sets the concurrency for a function.</p>
      * 
      * @param request PutConcurrencyConfigRequest
      * @param headers map
@@ -2799,7 +2833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures concurrency of a function.</p>
+     * <p>Sets the concurrency for a function.</p>
      * 
      * @param request PutConcurrencyConfigRequest
      * @return PutConcurrencyConfigResponse
@@ -2812,7 +2846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies permissions of a layer.</p>
+     * <p>Modifies the permissions of a layer.</p>
      * 
      * @param request PutLayerACLRequest
      * @param headers map
@@ -2850,7 +2884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies permissions of a layer.</p>
+     * <p>Modifies the permissions of a layer.</p>
      * 
      * @param request PutLayerACLRequest
      * @return PutLayerACLResponse
@@ -2863,7 +2897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates provisioned configurations.</p>
+     * <p>Creates a provisioned configuration.</p>
      * 
      * @param request PutProvisionConfigRequest
      * @param headers map
@@ -2898,7 +2932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates provisioned configurations.</p>
+     * <p>Creates a provisioned configuration.</p>
      * 
      * @param request PutProvisionConfigRequest
      * @return PutProvisionConfigResponse
@@ -2911,7 +2945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scaling settings</p>
+     * <p>Set the elastic scaling configuration for a function.</p>
      * 
      * @param request PutScalingConfigRequest
      * @param headers map
@@ -2946,7 +2980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scaling settings</p>
+     * <p>Set the elastic scaling configuration for a function.</p>
      * 
      * @param request PutScalingConfigRequest
      * @return PutScalingConfigResponse
@@ -2958,8 +2992,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resumes a session that is in the Paused state. The system quickly resumes the session in a new execution environment using its previously persisted state. After a successful resume, the session status changes to Active, and the session begins accepting function invocation requests and routing them to the resumed instance. Use this operation with custom image functions that use HEADER_FIELD or GENERATED_COOKIE session affinity and session isolation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>恢复会话</p>
+     * <p>Resume a session</p>
      * 
      * @param request ResumeSessionRequest
      * @param headers map
@@ -2996,8 +3033,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resumes a session that is in the Paused state. The system quickly resumes the session in a new execution environment using its previously persisted state. After a successful resume, the session status changes to Active, and the session begins accepting function invocation requests and routing them to the resumed instance. Use this operation with custom image functions that use HEADER_FIELD or GENERATED_COOKIE session affinity and session isolation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>恢复会话</p>
+     * <p>Resume a session</p>
      * 
      * @param request ResumeSessionRequest
      * @return ResumeSessionResponse
@@ -3056,11 +3096,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Adds tags to a resource.</p>
+     * <p>Adds tags to specified resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -3088,11 +3125,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Adds tags to a resource.</p>
+     * <p>Adds tags to specified resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -3105,7 +3139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from a resource.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -3161,7 +3195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from a resource.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -3216,7 +3250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a custom domain name.</p>
+     * <p>Updates a custom domain name.</p>
      * 
      * @param request UpdateCustomDomainRequest
      * @param headers map
@@ -3245,7 +3279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a custom domain name.</p>
+     * <p>Updates a custom domain name.</p>
      * 
      * @param request UpdateCustomDomainRequest
      * @return UpdateCustomDomainResponse
@@ -3258,7 +3292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a function.</p>
+     * <p>Updates a function\&quot;s configuration.</p>
      * 
      * @param request UpdateFunctionRequest
      * @param headers map
@@ -3287,7 +3321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information about a function.</p>
+     * <p>Updates a function\&quot;s configuration.</p>
      * 
      * @param request UpdateFunctionRequest
      * @return UpdateFunctionResponse
@@ -3348,7 +3382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a trigger.</p>
+     * <p>Updates the information of a trigger.</p>
      * 
      * @param request UpdateTriggerRequest
      * @param headers map
@@ -3377,7 +3411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a trigger.</p>
+     * <p>Updates the information of a trigger.</p>
      * 
      * @param request UpdateTriggerRequest
      * @return UpdateTriggerResponse

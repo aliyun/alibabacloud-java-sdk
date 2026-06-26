@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CustomDomain extends TeaModel {
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account (primary account).</p>
      * 
      * <strong>example:</strong>
      * <p>186851234023****</p>
@@ -14,7 +14,7 @@ public class CustomDomain extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The version of the Function Compute API.</p>
+     * <p>The API version of Function Compute.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-30</p>
@@ -23,22 +23,25 @@ public class CustomDomain extends TeaModel {
     public String apiVersion;
 
     /**
-     * <p>The configuration of permission authentication.</p>
+     * <p>The authentication configuration.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>The configuration of the HTTPS certificate.</p>
+     * <p>The HTTPS certificate configuration.</p>
      */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <p>The cross-origin resource sharing (CORS) configuration.</p>
+     */
     @NameInMap("corsConfig")
     public CORSConfig corsConfig;
 
     /**
-     * <p>The time when the custom domain name was created.</p>
+     * <p>The time when the custom domain was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
@@ -59,7 +62,7 @@ public class CustomDomain extends TeaModel {
     public Boolean isE2B;
 
     /**
-     * <p>The time when the custom domain name was last updated.</p>
+     * <p>The time when the custom domain was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
@@ -68,7 +71,7 @@ public class CustomDomain extends TeaModel {
     public String lastModifiedTime;
 
     /**
-     * <p>The protocol type that is supported by the custom domain name. Valid values: HTTP HTTPS HTTP,HTTPS</p>
+     * <p>The protocols that are supported by the domain name. Valid values: HTTP (HTTP only), HTTPS (HTTPS only), and HTTP,HTTPS (both HTTP and HTTPS).</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -77,13 +80,13 @@ public class CustomDomain extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The route table that maps paths to functions when the function is invoked by using the custom domain name.</p>
+     * <p>The route table that maps paths to functions.</p>
      */
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
     /**
-     * <p>The number of added subdomains.</p>
+     * <p>The number of subdomains.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -92,13 +95,13 @@ public class CustomDomain extends TeaModel {
     public String subdomainCount;
 
     /**
-     * <p>The Transport Layer Security (TLS) configuration.</p>
+     * <p>The TLS configuration.</p>
      */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
     /**
-     * <p>The Web Application Firewall (WAF) configuration.</p>
+     * <p>The Web Application Firewall (WAF) aconfiguration.</p>
      */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;

@@ -5,47 +5,56 @@ import com.aliyun.tea.*;
 
 public class ResidentResourcePool extends TeaModel {
     /**
-     * <p>资源池实时分配情况，包含每个函数的具体分配情况</p>
+     * <p>The real-time allocation status of the resource pool, including the specific allocation details for each function.</p>
      */
     @NameInMap("allocationStatus")
     public ResidentResourceAllocationStatus allocationStatus;
 
+    @NameInMap("associatedPoolId")
+    public String associatedPoolId;
+
     /**
-     * <p>代表创建时间的资源属性字段</p>
+     * <p>The resource property field that represents the creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
 
     /**
-     * <p>资源池过期时间</p>
+     * <p>The expiration time of the resource pool.</p>
      */
     @NameInMap("expireTime")
     public String expireTime;
 
     /**
-     * <p>上次修改时间，包含扩容、续费、更名等操作</p>
+     * <p>The last modification time, including operations such as scaling, renewal, and renaming.</p>
      */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
+
+    @NameInMap("poolType")
+    public String poolType;
 
     @NameInMap("residentResourcePoolId")
     public String residentResourcePoolId;
 
     /**
-     * <p>代表资源名称的资源属性字段</p>
+     * <p>The resource property field that represents the resource name.</p>
      */
     @NameInMap("residentResourcePoolName")
     public String residentResourcePoolName;
 
     /**
-     * <p>资源池总体规格</p>
+     * <p>The overall specifications of the resource pool.</p>
      */
     @NameInMap("resourcePoolCapacity")
     public ResidentResourceCapacity resourcePoolCapacity;
 
     @NameInMap("resourcePoolConfig")
     public ResidentResourceCapacity resourcePoolConfig;
+
+    @NameInMap("timedConfig")
+    public TimedPoolConfig timedConfig;
 
     public static ResidentResourcePool build(java.util.Map<String, ?> map) throws Exception {
         ResidentResourcePool self = new ResidentResourcePool();
@@ -58,6 +67,14 @@ public class ResidentResourcePool extends TeaModel {
     }
     public ResidentResourceAllocationStatus getAllocationStatus() {
         return this.allocationStatus;
+    }
+
+    public ResidentResourcePool setAssociatedPoolId(String associatedPoolId) {
+        this.associatedPoolId = associatedPoolId;
+        return this;
+    }
+    public String getAssociatedPoolId() {
+        return this.associatedPoolId;
     }
 
     public ResidentResourcePool setCreatedTime(String createdTime) {
@@ -82,6 +99,14 @@ public class ResidentResourcePool extends TeaModel {
     }
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
+    }
+
+    public ResidentResourcePool setPoolType(String poolType) {
+        this.poolType = poolType;
+        return this;
+    }
+    public String getPoolType() {
+        return this.poolType;
     }
 
     public ResidentResourcePool setResidentResourcePoolId(String residentResourcePoolId) {
@@ -114,6 +139,14 @@ public class ResidentResourcePool extends TeaModel {
     }
     public ResidentResourceCapacity getResourcePoolConfig() {
         return this.resourcePoolConfig;
+    }
+
+    public ResidentResourcePool setTimedConfig(TimedPoolConfig timedConfig) {
+        this.timedConfig = timedConfig;
+        return this;
+    }
+    public TimedPoolConfig getTimedConfig() {
+        return this.timedConfig;
     }
 
 }

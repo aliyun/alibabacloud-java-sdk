@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFunctionRequest extends TeaModel {
     /**
-     * <p>The function information</p>
+     * <p>The function\&quot;s configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

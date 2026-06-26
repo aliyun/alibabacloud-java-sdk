@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class EventBridgeTriggerConfig extends TeaModel {
     /**
-     * <p>Whether to invoke the function in asynchronous mode. Valid values:</p>
+     * <p>The method used by the trigger to invoke the function. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: synchronous call.</p>
+     * </li>
+     * <li><p><strong>false</strong>: asynchronous invocation.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The default value is <strong>false</strong>.</p>
+     * <p>Default value: <strong>false</strong></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class EventBridgeTriggerConfig extends TeaModel {
     public Boolean asyncInvocationType;
 
     /**
-     * <p>The event pattern. The value is in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/181432.html">Event patterns</a>.</p>
+     * <p>Event pattern. Use JSON format. For detailed rules, see <a href="https://help.aliyun.com/document_detail/181432.html">event pattern</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -30,19 +32,19 @@ public class EventBridgeTriggerConfig extends TeaModel {
     public String eventRuleFilterPattern;
 
     /**
-     * <p>The event destination configurations.</p>
+     * <p>Event target configuration</p>
      */
     @NameInMap("eventSinkConfig")
     public EventSinkConfig eventSinkConfig;
 
     /**
-     * <p>The event source configurations.</p>
+     * <p>Event source configuration.</p>
      */
     @NameInMap("eventSourceConfig")
     public EventSourceConfig eventSourceConfig;
 
     /**
-     * <p>The runtime configurations.</p>
+     * <p>Environment parameter configuration</p>
      */
     @NameInMap("runOptions")
     public RunOptions runOptions;
@@ -50,11 +52,13 @@ public class EventBridgeTriggerConfig extends TeaModel {
     /**
      * <p>Whether to enable the trigger. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: enable the trigger.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disable the trigger.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The default value is <strong>true</strong>.</p>
+     * <p>Default value: <strong>true</strong></p>
      * </blockquote>
      * 
      * <strong>example:</strong>

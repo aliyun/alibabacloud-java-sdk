@@ -4,9 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class JuiceFsConfig extends TeaModel {
+    /**
+     * <p>A map of environment variables (key-value pairs) to set for the JuiceFS client.</p>
+     */
     @NameInMap("envs")
     public java.util.Map<String, String> envs;
 
+    /**
+     * <p>An array of JuiceFsMountConfig objects, each specifying the configuration for a mount point.</p>
+     */
     @NameInMap("mountPoints")
     public java.util.List<JuiceFsMountConfig> mountPoints;
 

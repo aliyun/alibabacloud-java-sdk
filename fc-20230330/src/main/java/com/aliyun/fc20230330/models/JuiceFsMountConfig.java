@@ -4,18 +4,33 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class JuiceFsMountConfig extends TeaModel {
+    /**
+     * <p>An array of strings containing additional command-line arguments for the mount command. For example, use these arguments to set cache sizes or other performance-tuning options.</p>
+     */
     @NameInMap("args")
     public java.util.List<String> args;
 
+    /**
+     * <p>The path within the function\&quot;s local filesystem to mount the volume. For example, /mnt/data. This parameter is required.</p>
+     */
     @NameInMap("mountDir")
     public String mountDir;
 
+    /**
+     * <p>The subdirectory within the JuiceFS volume to mount. If not specified, the root of the volume is mounted.</p>
+     */
     @NameInMap("remoteDir")
     public String remoteDir;
 
+    /**
+     * <p>The authentication token to access the JuiceFS volume.</p>
+     */
     @NameInMap("token")
     public String token;
 
+    /**
+     * <p>The name of the JuiceFS volume to mount. This parameter is required.</p>
+     */
     @NameInMap("volumeName")
     public String volumeName;
 

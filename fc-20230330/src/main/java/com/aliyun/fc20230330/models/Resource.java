@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Resource extends TeaModel {
     /**
-     * <p>The name of the resource type. Valid values: ALIYUN::FC::FUNCTION and ALIYUN::FC::SERVICE. The former name is used in Function Compute 3.0, and the latter name is used in earlier versions of Function Compute.</p>
+     * <p>The name of the resource type. For a function in Function Compute 3.0, use ALIYUN::FC::FUNCTION. For a service in an earlier version of Function Compute, use ALIYUN::FC::SERVICE.</p>
      * 
      * <strong>example:</strong>
      * <p>ALIYUN::FC::FUNCTION</p>
@@ -14,7 +14,7 @@ public class Resource extends TeaModel {
     public String resouceType;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+     * <p>The Alibaba Cloud resource descriptor.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:****:functions/demo</p>

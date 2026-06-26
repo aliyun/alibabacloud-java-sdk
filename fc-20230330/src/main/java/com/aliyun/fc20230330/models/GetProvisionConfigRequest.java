@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetProvisionConfigRequest extends TeaModel {
     /**
-     * <p>The function alias.</p>
+     * <p>The alias of the function.</p>
      * 
      * <strong>example:</strong>
-     * <p>LATEST</p>
+     * <p>prod</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScalingConfigsRequest extends TeaModel {
     /**
-     * <p>The name of the function.</p>
+     * <p>The function name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-func</p>
@@ -14,7 +14,7 @@ public class ListScalingConfigsRequest extends TeaModel {
     public String functionName;
 
     /**
-     * <p>The number of scaling settings to return.</p>
+     * <p>The number of auto scaling configurations to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListScalingConfigsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The token for the next page.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>

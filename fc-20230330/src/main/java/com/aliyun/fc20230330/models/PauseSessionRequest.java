@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PauseSessionRequest extends TeaModel {
     /**
+     * <p>The function alias or version associated with the session to pause</p>
+     * 
      * <strong>example:</strong>
      * <p>aliasName1</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTriggersRequest extends TeaModel {
     /**
-     * <p>The number of triggers returned.</p>
+     * <p>The number of triggers to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListTriggersRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The token for the next page.</p>
+     * <p>The token that marks the start of the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>

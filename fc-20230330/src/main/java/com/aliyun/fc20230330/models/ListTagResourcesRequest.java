@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>
@@ -23,24 +23,24 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>The list of resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ALIYUN::FC:FUNCTION</p>
+     * <p>ALIYUN::FC::FUNCTION</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
-     * <p>You can query up to 20 tags at a time.</p>
+     * <p>The list of tags.</p>
+     * <p>You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -93,7 +93,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>k1</p>
@@ -103,7 +103,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be up to 128 characters in length and can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It can be an empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateSessionRequest extends TeaModel {
     /**
-     * <p>Creates session configurations.</p>
+     * <p>The configuration of the session.</p>
      */
     @NameInMap("body")
     public CreateSessionInput body;
 
     /**
-     * <p>Specifies the version or alias to which the sesion belongs.</p>
+     * <p>The version or alias to which the session belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>aliasName1</p>

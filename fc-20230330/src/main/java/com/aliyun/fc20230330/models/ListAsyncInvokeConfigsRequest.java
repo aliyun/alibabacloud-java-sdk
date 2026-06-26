@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAsyncInvokeConfigsRequest extends TeaModel {
     /**
-     * <p>The function name. If you do not configure this parameter, the asynchronous invocation configurations of all functions are displayed.</p>
+     * <p>The name of the function. If you do not specify this parameter, the asynchronous invocation configurations of all functions are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>my-func</p>
@@ -14,7 +14,7 @@ public class ListAsyncInvokeConfigsRequest extends TeaModel {
     public String functionName;
 
     /**
-     * <p>The maximum number of entries to be returned.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListAsyncInvokeConfigsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The paging information. This parameter specifies the start point of the query.</p>
+     * <p>The token that is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>

@@ -4,15 +4,27 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PolarFsMountConfig extends TeaModel {
+    /**
+     * <p>The ID of the PolarFS file system instance to mount.</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The local mount directory in the function\&quot;s runtime environment.</p>
+     */
     @NameInMap("mountDir")
     public String mountDir;
 
+    /**
+     * <p>Specifies whether the file system is mounted as read-only. If <code>true</code>, write operations are prohibited.</p>
+     */
     @NameInMap("readOnly")
     public Boolean readOnly;
 
+    /**
+     * <p>The directory within the PolarFS file system to mount.</p>
+     */
     @NameInMap("remoteDir")
     public String remoteDir;
 

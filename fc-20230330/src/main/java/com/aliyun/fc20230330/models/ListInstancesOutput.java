@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesOutput extends TeaModel {
     /**
-     * <p>public</p>
+     * <p>List of instance information.</p>
      */
     @NameInMap("instances")
     public java.util.List<InstanceInfo> instances;

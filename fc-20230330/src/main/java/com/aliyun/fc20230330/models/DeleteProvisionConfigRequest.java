@@ -8,7 +8,7 @@ public class DeleteProvisionConfigRequest extends TeaModel {
      * <p>The function alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>LATEST</p>
+     * <p>prod</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

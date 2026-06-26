@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
     /**
-     * <p>The description of the functions to retrieve.</p>
+     * <p>The function description to filter by.</p>
      * 
      * <strong>example:</strong>
      * <p>test_description</p>
@@ -14,12 +14,12 @@ public class ListFunctionsRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The version of Function Compute to which the functions belong.</p>
+     * <p>The version to which the function belongs. Valid values:</p>
      * <ul>
-     * <li>v3: Only lists functions of Function Compute 3.0.</li>
-     * <li>v2: Only lists functions of Function Compute 2.0.</li>
+     * <li>v3: lists only FC 3.0 functions.</li>
+     * <li>v2: lists only FC 2.0 functions.</li>
      * </ul>
-     * <p>By default, this parameter is left empty and functions in both Function Compute 3.0 and Function Compute 2.0 are listed.</p>
+     * <p>If not specified, both FC 3.0 and FC 2.0 functions are listed.</p>
      * 
      * <strong>example:</strong>
      * <p>v3</p>
@@ -27,11 +27,14 @@ public class ListFunctionsRequest extends TeaModel {
     @NameInMap("fcVersion")
     public String fcVersion;
 
+    /**
+     * <p>The function name.</p>
+     */
     @NameInMap("functionName")
     public String functionName;
 
     /**
-     * <p>The GPU type of the functions to retrieve.</p>
+     * <p>The function GPU type to filter by.</p>
      * 
      * <strong>example:</strong>
      * <p>fc.gpu.tesla.1</p>
@@ -40,7 +43,7 @@ public class ListFunctionsRequest extends TeaModel {
     public String gpuType;
 
     /**
-     * <p>The number of functions to return. The minimum value is 1 and the maximum value is 100.</p>
+     * <p>The number of functions to return. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -58,7 +61,7 @@ public class ListFunctionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The prefix of the function name.</p>
+     * <p>The function name prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>my-func</p>
@@ -66,11 +69,14 @@ public class ListFunctionsRequest extends TeaModel {
     @NameInMap("prefix")
     public String prefix;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The runtime of the functions to retrieve.</p>
+     * <p>The function runtime to filter by.</p>
      * 
      * <strong>example:</strong>
      * <p>python3.10</p>
@@ -79,7 +85,7 @@ public class ListFunctionsRequest extends TeaModel {
     public String runtime;
 
     /**
-     * <p>The tag of the functions to retrieve.</p>
+     * <p>The function tags to filter by.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;

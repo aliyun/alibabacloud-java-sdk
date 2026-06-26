@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The configuration of the resource tag.</p>
+     * <p>The resource tag configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

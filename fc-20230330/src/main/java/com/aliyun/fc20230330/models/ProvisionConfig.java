@@ -24,6 +24,8 @@ public class ProvisionConfig extends TeaModel {
     public Boolean alwaysAllocateCPU;
 
     /**
+     * <p>是否始终分配GPU给函数实例。</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -58,6 +60,8 @@ public class ProvisionConfig extends TeaModel {
     public Long defaultTarget;
 
     /**
+     * <p>函数的资源描述</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-shanghai:124:functions/myFunction/prod</p>
      */
@@ -71,12 +75,25 @@ public class ProvisionConfig extends TeaModel {
     public java.util.List<ScheduledAction> scheduledActions;
 
     /**
+     * <p>当前目标资源个数，如果存在指标追踪伸缩策略或定时策略，为策略计算的资源个数，否则为默认预留实例数。</p>
+     * <blockquote>
+     * <p>与 defaultTarget 有什么区别？\
+     * 假设配置预留实例数为1后，新增了定时伸缩策略，设置某个时间段内的预留实例数为5。</p>
+     * <ul>
+     * <li>在定时伸缩策略<strong>生效期间</strong>，target 与 defaultTarget 分别为 5 和 1。</li>
+     * <li>在定时伸缩策略<strong>失效期间</strong>，target 与 defaultTarget 都为 1。</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("target")
     public Long target;
 
+    /**
+     * <p>指标追踪伸缩策略配置。</p>
+     */
     @NameInMap("targetTrackingPolicies")
     public java.util.List<TargetTrackingPolicy> targetTrackingPolicies;
 
