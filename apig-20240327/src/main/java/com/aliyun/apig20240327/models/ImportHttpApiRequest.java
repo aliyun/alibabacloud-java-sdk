@@ -20,7 +20,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run. If this parameter is enabled, only validation is performed without the actual import.</p>
+     * <p>Specifies whether to perform a dry run. If enabled, only validation is performed without the actual import.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -74,7 +74,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String specContentBase64;
 
     /**
-     * <p>The download URL of the API definition file. The URL must be accessible over the public network or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, refer to References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</p>
+     * <p>The download URL of the API definition file. The URL must be accessible over the public network or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, see References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</p>
      */
     @NameInMap("specFileUrl")
     public String specFileUrl;

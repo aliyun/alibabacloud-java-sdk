@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteConsumerAuthorizationRuleRequest extends TeaModel {
     /**
-     * <p>The rule IDs.</p>
+     * <p>The list of API consumer authorization rule IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>car-cus2d1em1hkg7732kuk0</p>

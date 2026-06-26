@@ -52,14 +52,8 @@ public class HttpApiApiInfo extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>Specifies whether to enable authentication.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("enabelAuth")
-    public Boolean enabelAuth;
+    @NameInMap("enableAuth")
+    public Boolean enableAuth;
 
     /**
      * <p>The API environment information.</p>
@@ -208,12 +202,12 @@ public class HttpApiApiInfo extends TeaModel {
         return this.description;
     }
 
-    public HttpApiApiInfo setEnabelAuth(Boolean enabelAuth) {
-        this.enabelAuth = enabelAuth;
+    public HttpApiApiInfo setEnableAuth(Boolean enableAuth) {
+        this.enableAuth = enableAuth;
         return this;
     }
-    public Boolean getEnabelAuth() {
-        return this.enabelAuth;
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     public HttpApiApiInfo setEnvironments(java.util.List<HttpApiApiInfoEnvironments> environments) {

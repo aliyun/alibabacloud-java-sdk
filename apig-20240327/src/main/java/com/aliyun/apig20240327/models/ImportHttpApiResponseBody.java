@@ -209,8 +209,8 @@ public class ImportHttpApiResponseBody extends TeaModel {
         /**
          * <p>The action to be performed after the dry run. Valid values:</p>
          * <ul>
-         * <li>Create: create.</li>
-         * <li>Update: update.</li>
+         * <li>Create: Create.</li>
+         * <li>Update: Update.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,8 +255,8 @@ public class ImportHttpApiResponseBody extends TeaModel {
         /**
          * <p>The action to be performed after the dry run. Valid values:</p>
          * <ul>
-         * <li>Create: create.</li>
-         * <li>Update: update.</li>
+         * <li>Create: Create.</li>
+         * <li>Update: Update.</li>
          * </ul>
          * 
          * <strong>example:</strong>

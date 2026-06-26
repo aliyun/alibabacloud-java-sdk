@@ -198,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a security group that authorizes an instance to access services.</p>
+     * <p>Authorizes a security group to allow gateway access to services.</p>
      * 
      * @param request AddGatewaySecurityGroupRuleRequest
      * @param headers map
@@ -240,7 +240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a security group that authorizes an instance to access services.</p>
+     * <p>Authorizes a security group to allow gateway access to services.</p>
      * 
      * @param request AddGatewaySecurityGroupRuleRequest
      * @return AddGatewaySecurityGroupRuleResponse
@@ -253,7 +253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes consumer authentication rules.</p>
+     * <p>Revokes API consumer authorization rules in batches.</p>
      * 
      * @param request BatchDeleteConsumerAuthorizationRuleRequest
      * @param headers map
@@ -287,7 +287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes consumer authentication rules.</p>
+     * <p>Revokes API consumer authorization rules in batches.</p>
      * 
      * @param request BatchDeleteConsumerAuthorizationRuleRequest
      * @return BatchDeleteConsumerAuthorizationRuleResponse
@@ -872,7 +872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>$.parameters[0].schema.properties.ingressConfig.example</p>
+     * <p>Creates an HTTP API.</p>
      * 
      * @param request CreateHttpApiRequest
      * @param headers map
@@ -978,7 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>$.parameters[0].schema.properties.ingressConfig.example</p>
+     * <p>Creates an HTTP API.</p>
      * 
      * @param request CreateHttpApiRequest
      * @return CreateHttpApiResponse
@@ -3447,7 +3447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tracing configurations of a Cloud-native API Gateway instance.</p>
+     * <p>Retrieves the Tracing Analysis configuration.</p>
      * 
      * @param request GetTraceConfigRequest
      * @param headers map
@@ -3481,7 +3481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tracing configurations of a Cloud-native API Gateway instance.</p>
+     * <p>Retrieves the Tracing Analysis configuration.</p>
      * 
      * @param request GetTraceConfigRequest
      * @return GetTraceConfigResponse

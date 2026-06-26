@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRequest extends TeaModel {
     /**
-     * <p>Agent protocols</p>
+     * <p>The list of protocols supported by the agent.</p>
      */
     @NameInMap("agentProtocols")
     public java.util.List<String> agentProtocols;
 
     /**
-     * <p>$.parameters[0].schema.properties.authConfig.enumValueTitles</p>
+     * <p>The AI API protocols. The following protocols are supported:</p>
+     * <ul>
+     * <li>OpenAI/v1.</li>
+     * </ul>
      */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
     /**
-     * <p>The request parameters for API creation.</p>
+     * <p>The authentication configuration.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>$.parameters[0].schema.properties.deployConfigs.items.example</p>
+     * <p>The base path of the API. The value must start with a forward slash (/).</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -32,7 +35,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String basePath;
 
     /**
-     * <p>ID of the gateway to which the API belongs.</p>
+     * <p>The ID of the gateway to which the API belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-abc123xyz789</p>
@@ -41,13 +44,13 @@ public class CreateHttpApiRequest extends TeaModel {
     public String belongGatewayId;
 
     /**
-     * <p>$.parameters[0].schema.example</p>
+     * <p>The API deployment configurations. Currently, only AI APIs support deployment configurations, and only a single deployment configuration can be specified.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>$.parameters[0].schema.properties.aiProtocols.items.description</p>
+     * <p>The API description.</p>
      * 
      * <strong>example:</strong>
      * <p>测试专用API。</p>
@@ -56,7 +59,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether to preview without execution.</p>
+     * <p>Specifies whether to perform a dry run without executing the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +69,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Create an API of HTTP type</p>
+     * <p>Specifies whether to enable authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -75,7 +78,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public Boolean enableAuth;
 
     /**
-     * <p>First byte timeout</p>
+     * <p>The timeout period for waiting for the first byte from the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -84,13 +87,13 @@ public class CreateHttpApiRequest extends TeaModel {
     public Integer firstByteTimeout;
 
     /**
-     * <p>$.parameters[0].schema.properties.deployConfigs.example</p>
+     * <p>The HTTP Ingress API configuration.</p>
      */
     @NameInMap("ingressConfig")
     public CreateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>Model category</p>
+     * <p>The model category.</p>
      * 
      * <strong>example:</strong>
      * <p>llm/text-to-image</p>
@@ -99,7 +102,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String modelCategory;
 
     /**
-     * <p>$.parameters[0].schema.example</p>
+     * <p>The API name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,13 +112,13 @@ public class CreateHttpApiRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>$.parameters[0].schema.properties.aiProtocols.description</p>
+     * <p>The list of API access protocols.</p>
      */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
     /**
-     * <p>Whether to remove base path when forwarding</p>
+     * <p>Specifies whether to remove the base path when forwarding requests.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +127,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public Boolean removeBasePathOnForward;
 
     /**
-     * <p>$.parameters[0].schema.properties.authConfig.example</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-xxx</p>
@@ -133,7 +136,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The conflict merge strategy for import.</p>
+     * <p>The conflict merge strategy for the import.</p>
      * 
      * <strong>example:</strong>
      * <p>ExistFirst</p>
@@ -142,7 +145,15 @@ public class CreateHttpApiRequest extends TeaModel {
     public String strategy;
 
     /**
-     * <p>$.parameters[0].schema.properties.deployConfigs.description</p>
+     * <p>The type of the HTTP API. Valid values:</p>
+     * <ul>
+     * <li>Http</li>
+     * <li>Rest</li>
+     * <li>WebSocket</li>
+     * <li>HttpIngress</li>
+     * <li>LLM</li>
+     * <li>Agent.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Http</p>
@@ -151,7 +162,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>$.parameters[0].schema.properties.deployConfigs.items.enumValueTitles</p>
+     * <p>The API versioning configuration.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
@@ -316,7 +327,7 @@ public class CreateHttpApiRequest extends TeaModel {
 
     public static class CreateHttpApiRequestIngressConfig extends TeaModel {
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>k7v5eobfzttudni2pw***</p>
@@ -325,7 +336,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>$.parameters[0].schema.properties.deployConfigs.enumValueTitles</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cq146allhtgk***</p>
@@ -334,7 +345,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>$.parameters[0].schema.properties.enableAuth.example</p>
+         * <p>The Ingress class to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -343,7 +354,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>$.parameters[0].schema.properties.authConfig.description</p>
+         * <p>Specifies whether to update the address in the Ingress status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -352,7 +363,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public Boolean overrideIngressIp;
 
         /**
-         * <p>$.parameters[0].schema.properties.enableAuth.description</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgtr***</p>
@@ -362,7 +373,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>$.parameters[0].schema.properties.enableAuth.enumValueTitles</p>
+         * <p>The namespace to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
